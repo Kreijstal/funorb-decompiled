@@ -267,7 +267,7 @@ final class nf extends DualLinkNode {
             }
             if (var3_int != 0) {
               if (AgeValidator.field_s) {
-                param2 = jk.a(new String[]{param2}, oi.field_G, 30496);
+                param2 = jk.a(new String[]{param2}, DraggableWidgetContainer.field_G, 30496);
               }
               if (jd.field_l) {
                 param2 = kk.field_t;

@@ -85,7 +85,7 @@ final class n {
         return this;
     }
 
-    final void a(lh param0, w param1, int param2, int param3, int param4) {
+    final void a(lh param0, UiWidget param1, int param2, int param3, int param4) {
         BitmapFont stackIn_20_0 = null;
         String stackIn_20_1 = null;
         int stackIn_21_2 = 0;
@@ -267,7 +267,7 @@ final class n {
         }
     }
 
-    final void a(int param0, n param1, byte param2, int param3, lh param4, w param5) {
+    final void a(int param0, n param1, byte param2, int param3, lh param4, UiWidget param5) {
         RuntimeException stackIn_24_0 = null;
         StringBuilder stackIn_24_1 = null;
         String stackIn_25_2 = null;

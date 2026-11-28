@@ -14,22 +14,22 @@ class InteractiveWidget extends UiWidget {
           super.updateMouseOver(param0, param1, param2, param3);
           if (this.field_u != 0 &&
             this.field_u != LevitateEvent.field_t) {
-            if (this.a(gd.field_m, mk.field_p, 0, param0, param1) &&
+            if (this.containsPointer(gd.field_m, mk.field_p, 0, param0, param1) &&
               LevitateEvent.field_t == 0) {
               this.activateFromInput(-param0 + mk.field_p, this.field_u, false, -param1 + gd.field_m);
             }
-            this.a(param0, mk.field_p, (byte) -101, param2, gd.field_m, param1);
+            this.pointerReleased(param0, mk.field_p, (byte) -101, param2, gd.field_m, param1);
           }
         } catch (RuntimeException runtimeException) {
           throw pe.wrapException((Throwable) ((Object) runtimeException), "hf.O(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
     }
 
-    final void a(int param0, int param1, byte param2, UiWidget param3, int param4, int param5) {
+    final void pointerReleased(int param0, int param1, byte param2, UiWidget param3, int param4, int param5) {
         try {
           if (null != this.listener &&
             this.listener instanceof WidgetPointerListener) {
-            ((WidgetPointerListener) (this.listener)).a(param5, param0, param2 - 10256, this, param4, param1);
+            ((WidgetPointerListener) (this.listener)).onWidgetPointerReleased(param5, param0, param2 - 10256, this, param4, param1);
           }
           if (param2 != -101) {
             this.field_C = true;
@@ -49,7 +49,7 @@ class InteractiveWidget extends UiWidget {
           this.field_C = false;
           if (null != this.listener) {
             if (this.listener instanceof WidgetFocusListener) {
-              ((WidgetFocusListener) (this.listener)).a(this.field_C, param0 + 6171, (UiWidget) (this));
+              ((WidgetFocusListener) (this.listener)).onWidgetFocusChanged(this.field_C, param0 + 6171, (UiWidget) (this));
             }
             return;
           }
@@ -63,12 +63,12 @@ class InteractiveWidget extends UiWidget {
           return;
         }
         if (this.listener instanceof WidgetFocusListener) {
-          ((WidgetFocusListener) (this.listener)).a(this.field_C, param0 + 6171, (UiWidget) (this));
+          ((WidgetFocusListener) (this.listener)).onWidgetFocusChanged(this.field_C, param0 + 6171, (UiWidget) (this));
           return;
         }
     }
 
-    boolean b(int param0, int param1, int param2, int param3, int param4, UiWidget param5, int param6) {
+    boolean pointerPressed(int param0, int param1, int param2, int param3, int param4, UiWidget param5, int param6) {
         RuntimeException var8 = null;
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
@@ -79,12 +79,12 @@ class InteractiveWidget extends UiWidget {
             this.field_z = true;
           }
           if (this.field_z &&
-            this.a(param6, param0, param1 ^ -7375, param2, param4)) {
+            this.containsPointer(param6, param0, param1 ^ -7375, param2, param4)) {
             this.acquireFocus(param5, param1 ^ 7328);
             this.field_u = param3;
             if (this.listener != null &&
               this.listener instanceof WidgetPointerListener) {
-              ((WidgetPointerListener) (this.listener)).a(param3, param6, this, param4, param2, param0, true);
+              ((WidgetPointerListener) (this.listener)).onWidgetPointerPressed(param3, param6, this, param4, param2, param0, true);
             }
             return true;
           }
@@ -146,7 +146,7 @@ class InteractiveWidget extends UiWidget {
             this.field_C = true;
             if (this.listener != null &&
               this.listener instanceof WidgetFocusListener) {
-              ((WidgetFocusListener) (this.listener)).a(this.field_C, 6202, (UiWidget) (this));
+              ((WidgetFocusListener) (this.listener)).onWidgetFocusChanged(this.field_C, 6202, (UiWidget) (this));
             }
             return true;
           }
@@ -189,7 +189,7 @@ class InteractiveWidget extends UiWidget {
             return false;
           }
           var6 = (UiWidget) null;
-          this.b(-23, -63, 65, 37, -115, (UiWidget) null, 80);
+          this.pointerPressed(-23, -63, 65, 37, -115, (UiWidget) null, 80);
           return false;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -205,7 +205,7 @@ class InteractiveWidget extends UiWidget {
         }
     }
 
-    final StringBuilder a(Hashtable param0, int param1, byte param2, StringBuilder param3) {
+    final StringBuilder appendDebugTree(Hashtable param0, int param1, byte param2, StringBuilder param3) {
         StringBuilder discarded$2 = null;
         StringBuilder discarded$3 = null;
         RuntimeException var5 = null;
@@ -218,8 +218,8 @@ class InteractiveWidget extends UiWidget {
         String stackIn_16_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (this.a(param0, param1, param3, (byte) 110)) {
-            this.a(9, param0, param3, param1);
+          if (this.beginDebugTreeEntry(param0, param1, param3, (byte) 110)) {
+            this.appendDebugProperties(9, param0, param3, param1);
             if (this.field_B) {
               discarded$2 = param3.append(" active");
             }

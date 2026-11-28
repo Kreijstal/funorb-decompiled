@@ -59,7 +59,7 @@ final class sf extends DefaultTextWidgetRenderer {
         }
     }
 
-    public final void a(byte param0, int param1, int param2, boolean param3, mf param4) {
+    public final void paintWidget(byte param0, int param1, int param2, boolean param3, UiWidget param4) {
         int stackIn_8_0 = 0;
         int stackIn_16_0 = 0;
         int stackIn_19_0 = 0;
@@ -76,7 +76,7 @@ final class sf extends DefaultTextWidgetRenderer {
             sf.clearStaticReferences(95);
           }
           if (!param4.field_w) {
-            stackIn_8_0 = (param4.d((byte) -67)) ? 1 : 0;
+            stackIn_8_0 = (param4.isFocused((byte) -67)) ? 1 : 0;
           } else {
             stackIn_8_0 = 1;
           }

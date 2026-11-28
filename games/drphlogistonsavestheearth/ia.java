@@ -11,7 +11,7 @@ final class ia {
         int var2 = DrPhlogistonSavesTheEarth.field_D ? 1 : 0;
         try {
           el.field_sb.serviceOutput();
-          k.field_J.serviceOutput();
+          ModalDialogHost.field_J.serviceOutput();
           vb.field_k = vb.field_k - 1;
           if (param0 < 4) {
             field_c = -62;
@@ -47,7 +47,7 @@ final class ia {
         int var2 = 0;
         Throwable decompiledCaughtException = null;
         Object var1 = null;
-        var1 = pj.field_G;
+        var1 = DequeWidgetContainer.field_G;
         synchronized (var1) {
           db.field_a = tf.field_mb;
           th.field_e = th.field_e + 1;

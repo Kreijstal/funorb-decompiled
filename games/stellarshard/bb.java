@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class bb implements uk {
+final class bb implements WidgetRenderer {
     private int field_r;
     private int field_j;
     private int field_p;
@@ -34,7 +34,7 @@ final class bb implements uk {
         field_m = null;
     }
 
-    public final void a(boolean param0, int param1, int param2, UiWidget param3, int param4) {
+    public final void paintWidget(boolean param0, int param1, int param2, UiWidget param3, int param4) {
         UiWidget stackIn_3_0 = null;
         RuntimeException stackIn_17_0 = null;
         StringBuilder stackIn_17_1 = null;

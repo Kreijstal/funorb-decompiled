@@ -23,7 +23,7 @@ abstract class TextFieldValidator extends DebouncedFieldValidator implements Tex
     }
 
     final static void performAction1828(int integerArgument1) {
-        MixedSupport089.stringState0372 = UiComponentPart006.cipherPacketBufferState0001.readNullTerminatedString((byte) -38);
+        MixedSupport089.stringState0372 = LabeledWidgetContainer.cipherPacketBufferState0001.readNullTerminatedString((byte) -38);
         CharSequence charSequenceLocal1 = (CharSequence) ((Object) MixedSupport089.stringState0372);
         MixedSupport051.stringState0212 = ComponentContainer.computeString0894(charSequenceLocal1, (byte) 2);
         if (integerArgument1 != 140) {
@@ -58,9 +58,9 @@ abstract class TextFieldValidator extends DebouncedFieldValidator implements Tex
         }
         if (byteArgument1 <= 123) {
           TextFieldValidator.performAction1828(74);
-          return (java.awt.Container) ((Object) UiComponentPart029.computeApplet1485(25144));
+          return (java.awt.Container) ((Object) DraggableWidgetContainer.computeApplet1485(25144));
         }
-        return (java.awt.Container) ((Object) UiComponentPart029.computeApplet1485(25144));
+        return (java.awt.Container) ((Object) DraggableWidgetContainer.computeApplet1485(25144));
     }
 
     public final void onTextSubmitted(int integerArgument1, EditableTextField uiComponentPart028Argument2) {

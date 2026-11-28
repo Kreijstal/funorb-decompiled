@@ -219,7 +219,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
             this.field_g = true;
             System.out.println("error_game_" + param0);
             try {
-              JavaScriptBridge.callWithoutArguments(true, "loggedout", bh.i(81));
+              JavaScriptBridge.callWithoutArguments(true, "loggedout", ArrayWidgetContainer.i(81));
               if (param1 != -58) {
                 GameAppletShell.a((byte) -79);
               }
@@ -347,14 +347,14 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
           if (1 != tk.field_b &&
             tk.field_b != 4) {
             EditableTextField.field_M = 0;
-            bh.field_H = null;
+            ArrayWidgetContainer.field_H = null;
             if (var7 != 0) {
               EditableTextField.field_M = var2.readUnsignedShort(674914976);
-              bh.field_H = var2.readString(0);
+              ArrayWidgetContainer.field_H = var2.readString(0);
             }
           } else {
             EditableTextField.field_M = var2.readUnsignedShort(674914976);
-            bh.field_H = var2.readString(0);
+            ArrayWidgetContainer.field_H = var2.readString(0);
           }
           if (!param1) {
             HuffmanCodec.field_g = am.a(var2, 80, (byte) 89);
@@ -523,7 +523,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
                     }
                   }
                   if (decompiledFrameRemainder0) {
-                    hk.field_M = v.field_e.waitAndCountTicks(ji.field_U, -102);
+                    hk.field_M = v.field_e.waitAndCountTicks(DropTargetWidgetContainer.field_U, -102);
                     stackIn_95_0 = 0;
                   }
                   var3 = stackIn_95_0;
@@ -735,7 +735,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
               cg.field_a = param3;
               em.field_O = param0;
               hk.field_H = param0;
-              ba.field_L = bh.i(81);
+              ba.field_L = ArrayWidgetContainer.i(81);
               dupTemp$0 = new PlatformTaskDispatcher(param4, param2, param6, true);
               MatchingFieldValidator.field_l = dupTemp$0;
               ResourceArchive.field_g = dupTemp$0;

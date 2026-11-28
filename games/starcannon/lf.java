@@ -49,20 +49,20 @@ final class lf extends kc {
         this.field_W.field_D = false;
     }
 
-    lf(tc param0, String param1) {
+    lf(ModalDialogHost param0, String param1) {
         super(param0, 300, 120);
         int var3_int = 0;
         try {
           this.field_X = param1;
           if (null != this.field_X) {
             var3_int = AwtRasterBuffer.field_a.textHeight(this.field_X, 260, AwtRasterBuffer.field_a.field_p);
-            this.b(300, (byte) 57, var3_int + 150);
+            this.setCenteredSize(300, (byte) 57, var3_int + 150);
           }
           this.field_W = new fa(13, 50, 274, 30, 15, 2113632, 4210752);
           this.field_Y = false;
           this.field_fb = false;
           this.field_W.field_D = true;
-          this.a(true, this.field_W);
+          this.addChild(true, this.field_W);
         } catch (RuntimeException runtimeException) {
           throw sd.wrapClientException((Throwable) ((Object) runtimeException), "lf.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

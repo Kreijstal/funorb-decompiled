@@ -22,7 +22,7 @@ final class ck extends ud {
         field_cb = null;
     }
 
-    final void a(qm param0, byte param1) {
+    final void a(UiWidget param0, byte param1) {
         try {
           super.a(param0, param1);
         } catch (RuntimeException runtimeException) {
@@ -134,7 +134,7 @@ final class ck extends ud {
         }
     }
 
-    ck(ol param0, qm param1) {
+    ck(ModalDialogHost param0, UiWidget param1) {
         super(param0, param1, 33, 20, 30);
     }
 

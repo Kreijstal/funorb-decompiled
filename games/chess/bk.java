@@ -42,12 +42,12 @@ final class bk extends IntrusiveNode {
         String stackIn_25_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (ji.field_T != DelegatingCanvas.field_a) {
+          if (DropTargetWidgetContainer.field_T != DelegatingCanvas.field_a) {
             return false;
           }
           var8 = new AccountCreationResultPanel(jh.field_e, param3);
           var7 = var8;
-          jh.field_e.b(var8, (byte) -93);
+          jh.field_e.showDialog(var8, (byte) -93);
           if (jn.a(32359)) {
             var8.o(-10896);
           } else {

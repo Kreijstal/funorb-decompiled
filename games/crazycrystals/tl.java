@@ -318,7 +318,7 @@ abstract class tl {
           ge.field_b = param1;
           var2 = LevelProgressUpdate.loadRootArchiveFile("gamename", 1);
           if (null != var2) {
-            ei.field_G = fa.a((byte) -100, var2);
+            LabeledWidgetContainer.field_G = fa.a((byte) -100, var2);
           }
           var2Lifetime1 = LevelProgressUpdate.loadRootArchiveFile("crystalplacement", 1);
           if (var2Lifetime1 != null) {
@@ -1185,7 +1185,7 @@ abstract class tl {
           }
           var2Lifetime216 = LevelProgressUpdate.loadRootArchiveFile("player_movemessage_tutorial", 1);
           if (null != var2Lifetime216) {
-            ol.field_E = fa.a((byte) -96, var2Lifetime216);
+            ModalDialogHost.field_E = fa.a((byte) -96, var2Lifetime216);
           }
           var2Lifetime217 = LevelProgressUpdate.loadRootArchiveFile("player_movemessage_helper", 1);
           if (var2Lifetime217 != null) {
@@ -1261,7 +1261,7 @@ abstract class tl {
           }
           var2Lifetime235 = LevelProgressUpdate.loadRootArchiveFile("bonus_allbombs", 1);
           if (null != var2Lifetime235) {
-            og.field_y = fa.a((byte) -99, var2Lifetime235);
+            DequeWidgetContainer.field_y = fa.a((byte) -99, var2Lifetime235);
           }
           var2Lifetime236 = LevelProgressUpdate.loadRootArchiveFile("bonus_lastbomb", 1);
           if (var2Lifetime236 != null) {
@@ -1269,7 +1269,7 @@ abstract class tl {
           }
           var2Lifetime237 = LevelProgressUpdate.loadRootArchiveFile("bonus_allballs", 1);
           if (null != var2Lifetime237) {
-            og.field_u = fa.a((byte) -92, var2Lifetime237);
+            DequeWidgetContainer.field_u = fa.a((byte) -92, var2Lifetime237);
           }
           var2Lifetime238 = LevelProgressUpdate.loadRootArchiveFile("bonus_lastball", 1);
           if (var2Lifetime238 != null) {
@@ -1345,7 +1345,7 @@ abstract class tl {
           }
           var2Lifetime256 = LevelProgressUpdate.loadRootArchiveFile("tutorial_3_30", 1);
           if (null != var2Lifetime256) {
-            oj.field_C = fa.a((byte) -99, var2Lifetime256);
+            DraggableWidgetContainer.field_C = fa.a((byte) -99, var2Lifetime256);
           }
           var2Lifetime257 = LevelProgressUpdate.loadRootArchiveFile("tutorial_4_5", 1);
           if (var2Lifetime257 != null) {
@@ -1373,7 +1373,7 @@ abstract class tl {
           }
           var2Lifetime263 = LevelProgressUpdate.loadRootArchiveFile("tutorial_5_9", 1);
           if (null != var2Lifetime263) {
-            oj.field_M = fa.a((byte) -118, var2Lifetime263);
+            DraggableWidgetContainer.field_M = fa.a((byte) -118, var2Lifetime263);
           }
           var2Lifetime264 = LevelProgressUpdate.loadRootArchiveFile("tutorial_5_13", 1);
           if (var2Lifetime264 != null) {

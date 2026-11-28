@@ -259,7 +259,7 @@ public final class SolKnight extends ab {
           pg.resetStaticState((byte) 127);
           he.a(false);
           jc.clearStaticReferences(1731);
-          i.clearStaticReferences((byte) 30);
+          ModalDialogHost.clearStaticReferences((byte) 30);
           AccountCreationResultPanel.discardDeclaredStaticReferences(6);
           lb.discardDeclaredStaticReferences(121);
           s.discardDeclaredStaticReferences(-1);
@@ -329,9 +329,9 @@ public final class SolKnight extends ab {
           TextLayout.clearStaticReferences(-25616);
           UiWidget.e(-24922);
           InteractiveWidget.clearDeclaredStaticReferences(85);
-          si.i(126);
+          SingleChildWidgetContainer.i(126);
           ld.releaseDeclaredStaticReferences(73);
-          kf.clearDeclaredStaticReferences(112);
+          ModalDialog.clearDeclaredStaticReferences(112);
           WidgetContainer.resetStaticState(false);
           gd.clearStaticReferences(103);
           mj.clearStaticReferences((byte) 11);
@@ -351,7 +351,7 @@ public final class SolKnight extends ab {
           fi.clearStaticReferences(-18120);
           fc.a((byte) 124);
           g.a(-6960);
-          ke.d((byte) -61);
+          LabeledWidgetContainer.d((byte) -61);
           ValidatedTextField.clearStaticReferences((byte) -80);
           EditableTextField.releaseDeclaredStaticReferences(106);
           gf.clearStaticReferences((byte) 87);
@@ -371,8 +371,8 @@ public final class SolKnight extends ab {
           RichTextLayout.resetStaticState(-14275);
           DirectByteStorage.clearStaticReferences(0);
           of.resetStaticState(1);
-          bc.clearStaticReferences(false);
-          th.clearDeclaredStaticReferences(114);
+          DraggableWidgetContainer.clearStaticReferences(false);
+          DropTargetWidgetContainer.clearDeclaredStaticReferences(114);
           ff.clearStaticReferences(255);
           IterableNodeHashTable.clearStaticReferences(7903);
           SecondaryNodeDeque.clearStaticReferences((byte) -61);
@@ -392,7 +392,7 @@ public final class SolKnight extends ab {
           uf.clearDeclaredStaticReferences(22645);
           bg.f(-24631);
           pb.clearStaticReferences(83);
-          te.clearStaticReferences((byte) 45);
+          AlphaWidgetContainer.clearStaticReferences((byte) 45);
           dj.clearDeclaredStaticReferences(-77);
           rh.resetStaticState(0);
           ib.clearDeclaredStaticReferences(0);
@@ -554,11 +554,11 @@ public final class SolKnight extends ab {
                       stackIn_34_0 = pb.field_c;
                       return stackIn_34_0;
                     }
-                    TextFieldValidator.a((byte) 102, ab.a(ValidatedTextField.field_cb, th.field_L, je.field_b, "", false), 40.0f);
+                    TextFieldValidator.a((byte) 102, ab.a(ValidatedTextField.field_cb, DropTargetWidgetContainer.field_L, je.field_b, "", false), 40.0f);
                     stackIn_29_0 = pb.field_c;
                     return stackIn_29_0;
                   }
-                  TextFieldValidator.a((byte) 102, ok.a(0, -18884, je.field_b, NetworkArchiveRequest.field_u, th.field_L), 30.0f);
+                  TextFieldValidator.a((byte) 102, ok.a(0, -18884, je.field_b, NetworkArchiveRequest.field_u, DropTargetWidgetContainer.field_L), 30.0f);
                   stackIn_24_0 = pb.field_c;
                   return stackIn_24_0;
                 }
@@ -777,10 +777,10 @@ public final class SolKnight extends ab {
               }
             }
             if (ClientException.field_b >= 0) {
-              si.field_E = 240 - ClientException.field_b;
+              SingleChildWidgetContainer.field_E = 240 - ClientException.field_b;
               ArchiveSource.field_c = -160;
-              if (si.field_E < 0) {
-                si.field_E = 0;
+              if (SingleChildWidgetContainer.field_E < 0) {
+                SingleChildWidgetContainer.field_E = 0;
               }
             }
             if (0 < kh.field_d) {
@@ -928,7 +928,7 @@ public final class SolKnight extends ab {
             ih.a(20753, (java.awt.Canvas) (var2));
             return;
           }
-          SoftwareRasterizer.fillRectangleVerticalGradient(-320 - ArchiveSource.field_c, -si.field_E, 1280, 720, 0, il.field_e[kb.field_b]);
+          SoftwareRasterizer.fillRectangleVerticalGradient(-320 - ArchiveSource.field_c, -SingleChildWidgetContainer.field_E, 1280, 720, 0, il.field_e[kb.field_b]);
           kc.field_O = kc.field_O + 1;
           var3 = 0;
           if (nf.field_W.length < kc.field_O) {
@@ -944,7 +944,7 @@ public final class SolKnight extends ab {
               var3 = 0;
             }
             var5 = 320 + (-ArchiveSource.field_c + nf.field_W[var4_int]);
-            var6 = -si.field_E + nf.field_W[1 + var4_int];
+            var6 = -SingleChildWidgetContainer.field_E + nf.field_W[1 + var4_int];
             var7 = var4_int - kc.field_O;
             if (-nf.field_W.length / 2 > var7) {
               var7 = var7 + nf.field_W.length;
@@ -1116,7 +1116,7 @@ public final class SolKnight extends ab {
           var8 = wc.a(var7, 0);
           var9 = wc.a(var8, 0);
           PasswordValidator.field_k = param0[3];
-          th.field_H = wc.a(wc.a(PasswordValidator.field_k, 0), 0);
+          DropTargetWidgetContainer.field_H = wc.a(wc.a(PasswordValidator.field_k, 0), 0);
           h.field_d = new Sprite[9];
           h.field_d[2] = var7;
           h.field_d[0] = var34;

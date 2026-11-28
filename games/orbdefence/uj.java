@@ -35,8 +35,8 @@ final class uj implements Runnable {
           oh.field_b = oh.field_b + (param1.readUnsignedByte((byte) 90) << 7);
           var2_intLifetime2 = param1.readUnsignedByte((byte) 90);
           oh.field_b = oh.field_b + (var2_intLifetime2 >> 1);
-          h.field_E = (var2_intLifetime2 & 1) << 16;
-          h.field_E = h.field_E + param1.readUnsignedShort(param0 + 98203261);
+          LabeledWidgetContainer.field_E = (var2_intLifetime2 & 1) << 16;
+          LabeledWidgetContainer.field_E = LabeledWidgetContainer.field_E + param1.readUnsignedShort(param0 + 98203261);
           if (param0 != -85) {
             field_b = (qd) null;
           }
@@ -51,7 +51,7 @@ final class uj implements Runnable {
           } else {
             stackIn_6_2 = "{...}";
           }
-          throw dd.wrapClientException((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_5_1).append(stackIn_6_2).append(')').toString());
+          throw DraggableWidgetContainer.wrapClientException((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_5_1).append(stackIn_6_2).append(')').toString());
         }
     }
 
@@ -209,7 +209,7 @@ final class uj implements Runnable {
           } else {
             stackIn_39_2 = "{...}";
           }
-          throw dd.wrapClientException((Throwable) ((Object) stackIn_38_0), ((StringBuilder) (Object) stackIn_38_1).append(stackIn_39_2).append(',').append(param1).append(')').toString());
+          throw DraggableWidgetContainer.wrapClientException((Throwable) ((Object) stackIn_38_0), ((StringBuilder) (Object) stackIn_38_1).append(stackIn_39_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -352,7 +352,7 @@ final class uj implements Runnable {
           this.field_c = param1;
           this.field_e = new PacketBuffer(param2);
         } catch (RuntimeException runtimeException) {
-          throw dd.wrapClientException((Throwable) ((Object) runtimeException), "uj.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw DraggableWidgetContainer.wrapClientException((Throwable) ((Object) runtimeException), "uj.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 

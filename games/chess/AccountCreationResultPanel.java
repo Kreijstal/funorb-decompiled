@@ -80,7 +80,7 @@ final class AccountCreationResultPanel extends vn implements WidgetActivationLis
                 var5.a(17, 39, HuffmanCodec.field_b);
               }
             } else {
-              var5.a((byte) -114, (rg) (this), sg.field_e);
+              var5.a((byte) -114, (WidgetEventListener) (this), sg.field_e);
             }
             if (param1.statusCode != 3) {
               if (param1.statusCode == 6) {
@@ -94,7 +94,7 @@ final class AccountCreationResultPanel extends vn implements WidgetActivationLis
               this.c(new ba(this), param2 ^ -101);
               return;
             }
-            var5.a((byte) -114, (rg) (this), sg.field_e);
+            var5.a((byte) -114, (WidgetEventListener) (this), sg.field_e);
           }
           this.c(var5, 108);
           return;
@@ -112,7 +112,7 @@ final class AccountCreationResultPanel extends vn implements WidgetActivationLis
         }
     }
 
-    AccountCreationResultPanel(fm param0, AccountRegistrationPanel param1) {
+    AccountCreationResultPanel(ModalDialogHost param0, AccountRegistrationPanel param1) {
         super(param0, tk.field_a, ka.field_e, false, false);
         try {
           this.field_Ib = param1;
@@ -121,36 +121,36 @@ final class AccountCreationResultPanel extends vn implements WidgetActivationLis
         }
     }
 
-    final boolean g(byte param0) {
+    final boolean advanceDialogAnimation(byte param0) {
         AccountServiceResult var2 = null;
         AccountServiceResult var2Lifetime1;
         if (param0 > -4) {
           AccountCreationResultPanel.discardDeclaredStaticReferences((byte) -32);
           if (!this.field_P) {
-            return super.g((byte) -90);
+            return super.advanceDialogAnimation((byte) -90);
           }
           if (this.field_Hb) {
-            return super.g((byte) -90);
+            return super.advanceDialogAnimation((byte) -90);
           }
           var2 = NodeHashTableIterator.pollAccountCreationResult(6792);
           if (var2 != null) {
             this.showAccountCreationResult(false, var2, -1);
-            return super.g((byte) -90);
+            return super.advanceDialogAnimation((byte) -90);
           }
-          return super.g((byte) -90);
+          return super.advanceDialogAnimation((byte) -90);
         }
         if (!this.field_P) {
-          return super.g((byte) -90);
+          return super.advanceDialogAnimation((byte) -90);
         }
         if (this.field_Hb) {
-          return super.g((byte) -90);
+          return super.advanceDialogAnimation((byte) -90);
         }
         var2Lifetime1 = NodeHashTableIterator.pollAccountCreationResult(6792);
         if (var2Lifetime1 != null) {
           this.showAccountCreationResult(false, var2Lifetime1, -1);
-          return super.g((byte) -90);
+          return super.advanceDialogAnimation((byte) -90);
         }
-        return super.g((byte) -90);
+        return super.advanceDialogAnimation((byte) -90);
     }
 
     public static void discardDeclaredStaticReferences(byte param0) {

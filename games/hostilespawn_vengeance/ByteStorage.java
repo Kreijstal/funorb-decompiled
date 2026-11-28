@@ -59,7 +59,7 @@ abstract class ByteStorage {
           var7 = 0;
           for (var1_int = 0; ib.field_c > var1_int; var1_int++) {
             regionExit1: {
-              var8_ref_p = jn.field_F[var1_int];
+              var8_ref_p = AlphaWidgetContainer.field_F[var1_int];
               var9 = var8_ref_p.field_j.getClampedTileIndex(-4);
               var3 = (int)(24.0 * (var8_ref_p.field_l.field_a + (double)var8_ref_p.field_j.field_g)) - var5;
               var2 = -var4 + (int)(24.0 * (var8_ref_p.field_l.field_f + (double)var8_ref_p.field_j.field_e));

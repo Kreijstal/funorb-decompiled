@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class rf implements nn {
+final class rf implements WidgetRenderer {
     private int field_g;
     static int field_f;
     private int field_h;
@@ -74,8 +74,8 @@ final class rf implements nn {
         }
     }
 
-    public final void a(int param0, int param1, int param2, ag param3, boolean param4) {
-        ag stackIn_3_0 = null;
+    public final void paintWidget(int param0, int param1, int param2, UiWidget param3, boolean param4) {
+        UiWidget stackIn_3_0 = null;
         RuntimeException stackIn_20_0 = null;
         StringBuilder stackIn_20_1 = null;
         String stackIn_21_2 = null;
@@ -88,7 +88,7 @@ final class rf implements nn {
         vf var11 = null;
         try {
           if (param3 instanceof vf) {
-            stackIn_3_0 = (ag) (param3);
+            stackIn_3_0 = (UiWidget) (param3);
           } else {
             stackIn_3_0 = null;
           }
@@ -145,7 +145,7 @@ final class rf implements nn {
           for (var4_int = 0; var1 > var4_int; var4_int++) {
             var3[var4_int] = bf.field_d[PcmOutputWorker.bitwiseAnd((int) var7[var4_int], 255)];
           }
-          var4 = new RgbSprite(ra.field_a, GameCanvas.field_e, th.field_Jb[0], nh.field_O[0], TextInputField.field_X[0], ConfirmedEmailAvailabilityValidator.field_r[0], var3);
+          var4 = new RgbSprite(ra.field_a, GameCanvas.field_e, th.field_Jb[0], LabeledWidgetContainer.field_O[0], TextInputField.field_X[0], ConfirmedEmailAvailabilityValidator.field_r[0], var3);
           uj.d(92);
           return var4;
         }
@@ -153,7 +153,7 @@ final class rf implements nn {
         for (var4_intLifetime1 = 0; var1 > var4_intLifetime1; var4_intLifetime1++) {
           var3[var4_intLifetime1] = bf.field_d[PcmOutputWorker.bitwiseAnd((int) var7[var4_intLifetime1], 255)];
         }
-        var4Lifetime1 = new RgbSprite(ra.field_a, GameCanvas.field_e, th.field_Jb[0], nh.field_O[0], TextInputField.field_X[0], ConfirmedEmailAvailabilityValidator.field_r[0], var3);
+        var4Lifetime1 = new RgbSprite(ra.field_a, GameCanvas.field_e, th.field_Jb[0], LabeledWidgetContainer.field_O[0], TextInputField.field_X[0], ConfirmedEmailAvailabilityValidator.field_r[0], var3);
         uj.d(92);
         return var4Lifetime1;
     }

@@ -175,7 +175,7 @@ final class AccountNameAvailabilityValidator extends TextFieldValidator {
         RuntimeException decompiledCaughtException = null;
         try {
           var5 = (CharSequence) ((Object) param1);
-          var3 = of.a(var5, (byte) 113);
+          var3 = DropTargetWidgetContainer.a(var5, (byte) 113);
           if (var3 != null) {
             stackIn_3_0 = var3;
             return stackIn_3_0;

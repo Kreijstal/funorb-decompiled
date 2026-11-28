@@ -5,12 +5,12 @@ class dd extends DefaultTextWidgetRenderer {
     static int field_o;
     static String field_p;
 
-    public final void a(int param0, UiWidget param1, int param2, boolean param3, int param4) {
+    public final void paintWidget(int param0, UiWidget param1, int param2, boolean param3, int param4) {
         try {
           if (param3) {
             IntrusiveNode.a(param1.field_x, param2 + param1.field_m, param1.field_u, (byte) -22, param1.field_p + param4);
           }
-          super.a(param0, param1, param2, param3, param4);
+          super.paintWidget(param0, param1, param2, param3, param4);
         } catch (RuntimeException runtimeException) {
           throw LevelGrid.toClientException((Throwable) ((Object) runtimeException), "dd.L(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }

@@ -16,13 +16,13 @@ final class lr extends InteractiveWidget {
     static String field_T;
     private FieldValidator field_R;
 
-    final void a(byte param0, int param1, int param2, UiWidget param3) {
+    final void updatePointer(byte param0, int param1, int param2, UiWidget param3) {
         try {
           if (param0 <= 6) {
             lr.clearStaticReferences((byte) 76);
           }
           this.field_Q = this.field_Q + 1;
-          super.a((byte) 114, param1, param2, param3);
+          super.updatePointer((byte) 114, param1, param2, param3);
         } catch (RuntimeException runtimeException) {
           throw wn.wrapClientException((Throwable) ((Object) runtimeException), "lr.E(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
@@ -54,7 +54,7 @@ final class lr extends InteractiveWidget {
         field_P = null;
     }
 
-    final boolean a(byte param0, UiWidget param1) {
+    final boolean takeFocus(byte param0, UiWidget param1) {
         RuntimeException var3 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
@@ -96,7 +96,7 @@ final class lr extends InteractiveWidget {
         }
     }
 
-    final void a(boolean param0, int param1, int param2, int param3) {
+    final void drawWidget(boolean param0, int param1, int param2, int param3) {
         Sprite var15 = null;
         Sprite var16 = null;
         Sprite var13 = null;
@@ -105,7 +105,7 @@ final class lr extends InteractiveWidget {
         int var11 = Vertigo2.field_L ? 1 : 0;
         int var9Lifetime1;
         int var10Lifetime1;
-        super.a(param0, param1, param2, param3);
+        super.drawWidget(param0, param1, param2, param3);
         if (param1 != 0) {
           return;
         }
@@ -376,7 +376,7 @@ final class lr extends InteractiveWidget {
             }
             var2 = 1;
           }
-          ve.field_d.a((byte) -29, CrossfadingMidiPcmStream.b(gb.field_d, 1282642017, PacketBuffer.field_n), CrossfadingMidiPcmStream.b(no.field_e, 1282642017, sd.field_N));
+          ve.field_d.a((byte) -29, CrossfadingMidiPcmStream.b(gb.field_d, 1282642017, PacketBuffer.field_n), CrossfadingMidiPcmStream.b(no.field_e, 1282642017, ModalDialogHost.field_N));
           if (ve.field_d.a(84)) {
             var1_int = 1;
           }

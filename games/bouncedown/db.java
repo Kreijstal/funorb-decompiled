@@ -56,20 +56,20 @@ final class db extends wk {
         }
     }
 
-    db(pf param0, String param1) {
+    db(ModalDialogHost param0, String param1) {
         super(param0, 300, 120);
         int var3_int = 0;
         try {
           this.field_P = param1;
           if (null != this.field_P) {
             var3_int = ne.field_v.textHeight(this.field_P, 260, ne.field_v.field_s);
-            this.c(-463076575, 300, var3_int + 150);
+            this.setCenteredSize(-463076575, 300, var3_int + 150);
           }
           this.field_N = new ll(13, 50, 274, 30, 15, 2113632, 4210752);
           this.field_N.field_C = true;
           this.field_U = false;
           this.field_Q = false;
-          this.b(this.field_N, true);
+          this.addChild(this.field_N, true);
         } catch (RuntimeException runtimeException) {
           throw CipherPacketBuffer.wrapClientException((Throwable) ((Object) runtimeException), "db.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

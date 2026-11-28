@@ -124,7 +124,7 @@ final class pd extends ci {
           for (var2_int = 0; var2_int < AccountRequestState.field_b; var2_int++) {
             vn.field_Ab[var2_int + param0] = var2_int;
           }
-          dc.a(bh.field_F, param0 + param0, false, (byte) -118, eb.field_y, AccountRequestState.field_b + param0, param0);
+          dc.a(ArrayWidgetContainer.field_F, param0 + param0, false, (byte) -118, eb.field_y, AccountRequestState.field_b + param0, param0);
           if (param1 >= -102) {
             pd.a(-89, -57, 110);
           }
@@ -170,7 +170,7 @@ final class pd extends ci {
         if (vg.field_a == 11 &&
           dc.field_m) {
           if (vg.field_f == 2 &&
-            !kn.a(hd.field_e, EmailFormatValidator.field_m, 29712)) {
+            !SingleChildWidgetContainer.a(hd.field_e, EmailFormatValidator.field_m, 29712)) {
             return false;
           }
           if (vg.field_f != 2 &&

@@ -77,7 +77,7 @@ class oj extends p {
           return Bzip2State.field_y[this.field_w][this.field_z % Bzip2State.field_y[this.field_w].length];
         }
         if (var2 == 25) {
-          return vd.field_y[this.field_w][this.field_z % vd.field_y[this.field_w].length];
+          return DequeWidgetContainer.field_y[this.field_w][this.field_z % DequeWidgetContainer.field_y[this.field_w].length];
         }
         if (var2 == 27) {
           return pa.field_i[this.field_w][this.field_z % pa.field_i[this.field_w].length];
@@ -1197,7 +1197,7 @@ class oj extends p {
     }
 
     final void c(byte param0) {
-        int var2 = vd.a(18475, this.field_i);
+        int var2 = DequeWidgetContainer.a(18475, this.field_i);
         if (var2 >= 0) {
           this.field_e = 250;
           this.field_b = false;
@@ -1347,7 +1347,7 @@ class oj extends p {
           return Bzip2State.field_y;
         }
         if (var2 == 25) {
-          return vd.field_y;
+          return DequeWidgetContainer.field_y;
         }
         if (var2 == 27) {
           return pa.field_i;

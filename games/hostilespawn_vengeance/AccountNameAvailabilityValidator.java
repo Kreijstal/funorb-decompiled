@@ -140,7 +140,7 @@ final class AccountNameAvailabilityValidator extends TextFieldValidator {
         if (jh.field_ab != 1) {
           return;
         }
-        jn.l(0);
+        AlphaWidgetContainer.l(0);
         if (param0) {
           PasswordValidator.a(true, 256, vg.field_h);
         } else {

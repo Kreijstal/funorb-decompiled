@@ -21,7 +21,7 @@ final class ae {
           if (null == oi.field_k) {
             return false;
           }
-          if (oi.field_k.e((byte) -118) != null) {
+          if (oi.field_k.getTopOpenDialog((byte) -118) != null) {
             return true;
           }
           return false;
@@ -29,7 +29,7 @@ final class ae {
         if (null == oi.field_k) {
           return false;
         }
-        if (oi.field_k.e((byte) -118) != null) {
+        if (oi.field_k.getTopOpenDialog((byte) -118) != null) {
           return true;
         }
         return false;

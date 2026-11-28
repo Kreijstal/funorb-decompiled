@@ -16,7 +16,7 @@ abstract class DebouncedFieldValidator implements FieldValidator {
     final static boolean c(byte param0) {
         if (param0 >= -23) {
           DebouncedFieldValidator.clearStaticReferences(44);
-          if (null == ag.field_t) {
+          if (null == UiWidget.field_t) {
             return false;
           }
           if (rc.field_a.a(true)) {
@@ -24,7 +24,7 @@ abstract class DebouncedFieldValidator implements FieldValidator {
           }
           return false;
         }
-        if (null == ag.field_t) {
+        if (null == UiWidget.field_t) {
           return false;
         }
         if (rc.field_a.a(true)) {

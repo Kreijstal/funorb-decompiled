@@ -100,7 +100,7 @@ final class tg extends InteractiveWidget {
         super.activateFromInput(param0, param1, param2, param3);
     }
 
-    tg(String param0, dg param1, boolean param2) {
+    tg(String param0, WidgetEventListener param1, boolean param2) {
         this(param0, param1);
         try {
           this.field_F = param2 ? true : false;
@@ -109,7 +109,7 @@ final class tg extends InteractiveWidget {
         }
     }
 
-    private tg(String param0, dg param1) {
+    private tg(String param0, WidgetEventListener param1) {
         this(param0, ph.field_f.field_i, param1);
         try {
           this.field_w = ph.field_f.field_r;
@@ -118,7 +118,7 @@ final class tg extends InteractiveWidget {
         }
     }
 
-    private tg(String param0, j param1, dg param2) {
+    private tg(String param0, WidgetRenderer param1, WidgetEventListener param2) {
         super(param0, param1, param2);
         try {
           this.field_w = ph.field_f.field_r;

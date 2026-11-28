@@ -235,14 +235,14 @@ class gk extends IntrusiveNode {
 
     final static void a(boolean param0, String param1, byte param2, boolean param3) {
         im.a((byte) -110);
-        TunnelCamera.field_Z.g((byte) 105);
+        TunnelCamera.field_Z.closeAllDialogs((byte) 105);
         om.field_p = new LoginPanel(kj.field_c, (String) null, IntrusiveNode.field_f, param0, param3);
         dn.field_b = new ef(TunnelCamera.field_Z, om.field_p);
         if (param2 >= -110) {
           return;
         }
         try {
-          TunnelCamera.field_Z.c(dn.field_b, 0);
+          TunnelCamera.field_Z.showDialog(dn.field_b, 0);
         } catch (RuntimeException runtimeException) {
           throw TextLineMetrics.a((Throwable) ((Object) runtimeException), "gk.L(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
         }
@@ -380,14 +380,14 @@ class gk extends IntrusiveNode {
     /* Full JVM integer arguments; original narrow signature preserved. */
     final static void $cfr$intArgs$a$c13c9cd76cbe(boolean param0, String param1, int param2, boolean param3) {
         im.a((byte) -110);
-        TunnelCamera.field_Z.g((byte) 105);
+        TunnelCamera.field_Z.closeAllDialogs((byte) 105);
         om.field_p = new LoginPanel(kj.field_c, (String) null, IntrusiveNode.field_f, param0, param3);
         dn.field_b = new ef(TunnelCamera.field_Z, om.field_p);
         if (param2 >= -110) {
           return;
         }
         try {
-          TunnelCamera.field_Z.c(dn.field_b, 0);
+          TunnelCamera.field_Z.showDialog(dn.field_b, 0);
         } catch (RuntimeException runtimeException) {
           throw TextLineMetrics.a((Throwable) ((Object) runtimeException), "gk.L(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
         }

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class kf implements uk {
+final class kf implements WidgetRenderer {
     static String field_c;
     static li field_a;
     static String field_d;
@@ -277,7 +277,7 @@ final class kf implements uk {
         }
     }
 
-    public final void a(boolean param0, int param1, int param2, UiWidget param3, int param4) {
+    public final void paintWidget(boolean param0, int param1, int param2, UiWidget param3, int param4) {
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
         String stackIn_12_2 = null;
@@ -298,7 +298,7 @@ final class kf implements uk {
           if (param4 != 4549) {
             return;
           }
-          if (param3.e(0)) {
+          if (param3.isFocused(0)) {
             og.a(2 + var6_int, (byte) 105, -4 + param3.field_p, -4 + param3.field_t, 2 + var7);
           }
           return;

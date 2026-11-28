@@ -17,8 +17,8 @@ final class jh {
         int var3 = 0;
         int var4 = SolKnight.field_L ? 1 : 0;
         try {
-          wb.field_a = BufferedSocket.field_b.stringWidth(te.field_I[12]);
-          var1_int = BufferedSocket.field_b.stringWidth(te.field_I[13]);
+          wb.field_a = BufferedSocket.field_b.stringWidth(AlphaWidgetContainer.field_I[12]);
+          var1_int = BufferedSocket.field_b.stringWidth(AlphaWidgetContainer.field_I[13]);
           if (!(var1_int <= wb.field_a)) {
             wb.field_a = var1_int;
           }
@@ -43,7 +43,7 @@ final class jh {
           var2[0] = true;
           var3 = BufferedSocket.field_b.field_s + (BufferedSocket.field_b.field_m + 4);
           ah.field_i[8] = BufferedSocket.field_b.field_s + dd.field_b - (-BufferedSocket.field_b.field_F - var3);
-          si.field_F[8] = 37 + var3 * 2;
+          SingleChildWidgetContainer.field_F[8] = 37 + var3 * 2;
         } catch (RuntimeException runtimeException) {
           throw fc.wrapClientException((Throwable) ((Object) runtimeException), "jh.H(" + param0 + ')');
         }

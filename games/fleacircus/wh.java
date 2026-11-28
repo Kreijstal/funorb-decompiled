@@ -69,7 +69,7 @@ final class wh {
     }
 
     final static void a(int param0) {
-        tf.d(true);
+        AlphaWidgetContainer.d(true);
         if (param0 >= -71) {
           wh.a(-58);
         }

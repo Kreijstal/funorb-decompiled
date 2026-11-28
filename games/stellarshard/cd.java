@@ -14,7 +14,7 @@ final class cd extends RichTextWidget {
         try {
           this.field_R = param0;
           this.field_Q = param1;
-          this.b(param4, param2, param3, param5, 23987);
+          this.setBounds(param4, param2, param3, param5, 23987);
         } catch (RuntimeException runtimeException) {
           throw ma.a((Throwable) ((Object) runtimeException), "cd.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }
@@ -51,10 +51,10 @@ final class cd extends RichTextWidget {
         return GameEntity.b(64, ue.field_b);
     }
 
-    final void a(int param0, boolean param1, int param2, UiWidget param3) {
+    final void updatePointer(int param0, boolean param1, int param2, UiWidget param3) {
         try {
           this.field_N = this.field_N + 1;
-          super.a(param0, param1, param2, param3);
+          super.updatePointer(param0, param1, param2, param3);
         } catch (RuntimeException runtimeException) {
           throw ma.a((Throwable) ((Object) runtimeException), "cd.N(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
@@ -148,7 +148,7 @@ final class cd extends RichTextWidget {
         }
     }
 
-    final void a(int param0, byte param1, int param2, int param3) {
+    final void drawWidget(int param0, byte param1, int param2, int param3) {
         String var5;
         cg var6;
         int var9;
@@ -214,12 +214,12 @@ final class cd extends RichTextWidget {
         var13 = stellarshard.field_B;
         var6 = this.field_R.getValidationStatus(-28036);
         if (var6 == eh.field_c) {
-          var17 = ui.field_D;
+          var17 = ModalDialog.field_D;
           if (!var17.equals(this.field_m)) {
             this.field_m = var17;
             this.rebuildHotspotBounds((byte) -92);
           }
-          super.a(param0, param1, param2, param3);
+          super.drawWidget(param0, param1, param2, param3);
           var6 = this.field_R.getValidationStatus(param1 ^ 28091);
           var41 = (TextWidgetRenderer) ((Object) this.field_u);
           var9 = this.field_w + param3;
@@ -264,12 +264,12 @@ final class cd extends RichTextWidget {
           return;
         }
         if (var6 == TextLayout.field_d) {
-          var22 = ui.field_D;
+          var22 = ModalDialog.field_D;
           if (!var22.equals(this.field_m)) {
             this.field_m = var22;
             this.rebuildHotspotBounds((byte) -92);
           }
-          super.a(param0, param1, param2, param3);
+          super.drawWidget(param0, param1, param2, param3);
           var6 = this.field_R.getValidationStatus(param1 ^ 28091);
           var42 = (TextWidgetRenderer) ((Object) this.field_u);
           var9Lifetime1 = this.field_w + param3;
@@ -321,7 +321,7 @@ final class cd extends RichTextWidget {
             this.field_m = var27;
             this.rebuildHotspotBounds((byte) -92);
           }
-          super.a(param0, param1, param2, param3);
+          super.drawWidget(param0, param1, param2, param3);
           var6Lifetime1 = this.field_R.getValidationStatus(param1 ^ 28091);
           var43 = (TextWidgetRenderer) ((Object) this.field_u);
           var9Lifetime2 = this.field_w + param3;
@@ -368,7 +368,7 @@ final class cd extends RichTextWidget {
         if (!var5.equals(this.field_m)) {
           this.field_m = var5;
           this.rebuildHotspotBounds((byte) -92);
-          super.a(param0, param1, param2, param3);
+          super.drawWidget(param0, param1, param2, param3);
           var6Lifetime2 = this.field_R.getValidationStatus(param1 ^ 28091);
           var44 = (TextWidgetRenderer) ((Object) this.field_u);
           var9Lifetime3 = this.field_w + param3;
@@ -412,7 +412,7 @@ final class cd extends RichTextWidget {
           this.field_O.drawAdditive(var9Lifetime3 - (var33.field_w >> 1), -var33.field_x + var10Lifetime3, 256);
           return;
         }
-        super.a(param0, param1, param2, param3);
+        super.drawWidget(param0, param1, param2, param3);
         var6Lifetime3 = this.field_R.getValidationStatus(param1 ^ 28091);
         var45 = (TextWidgetRenderer) ((Object) this.field_u);
         var9Lifetime4 = this.field_w + param3;
@@ -511,7 +511,7 @@ final class cd extends RichTextWidget {
         return wl.field_W;
     }
 
-    final boolean a(int param0, UiWidget param1) {
+    final boolean takeFocus(int param0, UiWidget param1) {
         RuntimeException var3 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;

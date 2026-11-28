@@ -97,7 +97,7 @@ final class rb {
             stackIn_7_0 = !(13 <= rd.field_z);
             kf.field_a = b.createAccountSuccessResult(stackIn_7_0, 93);
             var6 = (String[]) null;
-            pi.a(true, (String[]) null);
+            DraggableWidgetContainer.a(true, (String[]) null);
             return;
           }
           if (100 > param0) {
@@ -109,7 +109,7 @@ final class rb {
             return;
           }
           var4 = param1;
-          pi.a(true, var4);
+          DraggableWidgetContainer.a(true, var4);
           kf.field_a = sa.createAccountSuggestionsResult((byte) 3, param1);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -133,7 +133,7 @@ final class rb {
     }
 
     final static void a(byte param0) {
-        pi.field_Q = -1;
+        DraggableWidgetContainer.field_Q = -1;
         TextLayout.field_c = false;
         dd.field_l = 0;
         ie.field_C = null;

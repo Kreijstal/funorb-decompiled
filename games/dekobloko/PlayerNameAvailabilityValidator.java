@@ -84,7 +84,7 @@ final class PlayerNameAvailabilityValidator extends TextFieldValidator {
           if (!UiComponentPart023.computeBoolean1242(-30146)) {
             SocketFactory.cipherPacketBufferState0002.performAction1641(9, -4);
             MixedSupport083.booleanState0118 = true;
-            UiComponentPart010.integerState0188 = UiComponentPart009.integerState0149;
+            AlphaWidgetContainer.integerState0188 = UiComponentPart009.integerState0149;
             return;
           }
           UiComponentPart033.performAction1814(0, -80, true, 2, booleanArgument2, MixedSupport009.stringState0041);
@@ -93,7 +93,7 @@ final class PlayerNameAvailabilityValidator extends TextFieldValidator {
         if (!UiComponentPart023.computeBoolean1242(-30146)) {
           SocketFactory.cipherPacketBufferState0002.performAction1641(9, -4);
           MixedSupport083.booleanState0118 = true;
-          UiComponentPart010.integerState0188 = UiComponentPart009.integerState0149;
+          AlphaWidgetContainer.integerState0188 = UiComponentPart009.integerState0149;
           return;
         }
         UiComponentPart033.performAction1814(0, -80, true, 2, booleanArgument2, MixedSupport009.stringState0041);
@@ -284,7 +284,7 @@ final class PlayerNameAvailabilityValidator extends TextFieldValidator {
             integerLocal7 = integerLocal7 | 16;
           }
           SocketFactory.cipherPacketBufferState0002.writeByte(true, integerLocal7);
-          stringLocal8 = DefaultTextWidgetRenderer.computeString0015(UiComponentPart029.computeApplet1485(25144), (byte) 114);
+          stringLocal8 = DefaultTextWidgetRenderer.computeString0015(DraggableWidgetContainer.computeApplet1485(25144), (byte) 114);
           if (stringLocal8 == null) {
             stringLocal8 = "";
           }

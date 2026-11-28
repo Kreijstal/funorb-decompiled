@@ -12,10 +12,10 @@ class ButtonWidget extends UiWidget {
     static String field_y;
     static BitmapFont field_z;
 
-    final void e(int param0) {
+    final void blur(int param0) {
         if (param0 != 13104) {
           UiWidget var3 = (UiWidget) null;
-          this.a(-78, 95, 39, 80, (UiWidget) null, -32, 69);
+          this.pointerPressed(-78, 95, 39, 80, (UiWidget) null, -32, 69);
           if (!this.field_A) {
             return;
           }
@@ -23,10 +23,10 @@ class ButtonWidget extends UiWidget {
           if (this.field_o == null) {
             return;
           }
-          if (!(this.field_o instanceof bj)) {
+          if (!(this.field_o instanceof WidgetFocusListener)) {
             return;
           }
-          ((bj) (this.field_o)).a(false, (UiWidget) (this), this.field_A);
+          ((WidgetFocusListener) (this.field_o)).onWidgetFocusChanged(false, (UiWidget) (this), this.field_A);
           return;
         }
         if (!this.field_A) {
@@ -36,13 +36,13 @@ class ButtonWidget extends UiWidget {
         if (this.field_o == null) {
           return;
         }
-        if (!(this.field_o instanceof bj)) {
+        if (!(this.field_o instanceof WidgetFocusListener)) {
           return;
         }
-        ((bj) (this.field_o)).a(false, (UiWidget) (this), this.field_A);
+        ((WidgetFocusListener) (this.field_o)).onWidgetFocusChanged(false, (UiWidget) (this), this.field_A);
     }
 
-    boolean a(int param0, int param1, int param2, int param3, UiWidget param4, int param5, int param6) {
+    boolean pointerPressed(int param0, int param1, int param2, int param3, UiWidget param4, int param5, int param6) {
         RuntimeException var8 = null;
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
@@ -50,14 +50,14 @@ class ButtonWidget extends UiWidget {
         RuntimeException decompiledCaughtException = null;
         try {
           if (this.field_w &&
-            this.a(param1, param0, param6, param5, (byte) 45)) {
-            this.a(param4, false);
+            this.containsPointer(param1, param0, param6, param5, (byte) 45)) {
+            this.takeFocus(param4, false);
             this.field_t = param2;
             if (this.field_o != null) {
-              if (!(this.field_o instanceof jb)) {
+              if (!(this.field_o instanceof WidgetPointerListener)) {
                 return true;
               }
-              ((jb) (this.field_o)).a(param6, param1, -29446, param2, param5, this, param0);
+              ((WidgetPointerListener) (this.field_o)).onWidgetPointerPressed(param6, param1, -29446, param2, param5, this, param0);
             }
             return true;
           }
@@ -79,39 +79,39 @@ class ButtonWidget extends UiWidget {
         }
     }
 
-    ButtonWidget(String param0, ml param1, of param2) {
+    ButtonWidget(String param0, WidgetRenderer param1, WidgetEventListener param2) {
         super(param0, param1, param2);
         this.field_w = true;
         this.field_A = false;
         this.field_x = true;
     }
 
-    final boolean b(byte param0) {
+    final boolean isFocused(byte param0) {
         if (param0 < 38) {
           return false;
         }
         return this.field_A;
     }
 
-    ButtonWidget(String param0, of param1) {
+    ButtonWidget(String param0, WidgetEventListener param1) {
         this(param0, GzipDecompressor.field_b.field_i, param1);
     }
 
-    void a(UiWidget param0, int param1, int param2, byte param3) {
+    void updatePointer(UiWidget param0, int param1, int param2, byte param3) {
         RuntimeException var5 = null;
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
         String stackIn_14_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          super.a(param0, param1, param2, (byte) -48);
+          super.updatePointer(param0, param1, param2, (byte) -48);
           if (this.field_t != 0 &&
             this.field_t != SecondaryNodeDeque.field_a) {
-            if (this.a(ei.field_a, param1, param2, p.field_a, (byte) 45) &&
+            if (this.containsPointer(ei.field_a, param1, param2, p.field_a, (byte) 45) &&
               0 == SecondaryNodeDeque.field_a) {
               this.activateFromInput(-93, ei.field_a - param2, -param1 + p.field_a, this.field_t);
             }
-            this.a(param1, ei.field_a, param0, p.field_a, 0, param2);
+            this.pointerReleased(param1, ei.field_a, param0, p.field_a, 0, param2);
           }
           if (param3 < -13) {
             return;
@@ -132,7 +132,7 @@ class ButtonWidget extends UiWidget {
         }
     }
 
-    final StringBuilder a(boolean param0, StringBuilder param1, Hashtable param2, int param3) {
+    final StringBuilder appendDebugTree(boolean param0, StringBuilder param1, Hashtable param2, int param3) {
         StringBuilder discarded$2 = null;
         StringBuilder discarded$3 = null;
         RuntimeException var5 = null;
@@ -145,8 +145,8 @@ class ButtonWidget extends UiWidget {
         String stackIn_17_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (this.a(param2, (byte) -125, param3, param1)) {
-            this.a(param2, param3, param1, -108);
+          if (this.beginDebugTreeEntry(param2, (byte) -125, param3, param1)) {
+            this.appendDebugProperties(param2, param3, param1, -108);
             if (this.field_u) {
               discarded$2 = param1.append(" active");
             }
@@ -183,7 +183,7 @@ class ButtonWidget extends UiWidget {
     void activateFromInput(int param0, int param1, int param2, int param3) {
         if (param0 > -23) {
           UiWidget var6 = (UiWidget) null;
-          this.a((UiWidget) null, 14, 64, (byte) 66);
+          this.updatePointer((UiWidget) null, 14, 64, (byte) 66);
           if (null == this.field_o) {
             return;
           }
@@ -202,11 +202,11 @@ class ButtonWidget extends UiWidget {
         }
     }
 
-    final void a(int param0, int param1, UiWidget param2, int param3, int param4, int param5) {
+    final void pointerReleased(int param0, int param1, UiWidget param2, int param3, int param4, int param5) {
         try {
           if (this.field_o != null &&
-            this.field_o instanceof jb) {
-            ((jb) (this.field_o)).a((byte) -14, param0, param1, param5, param3, this);
+            this.field_o instanceof WidgetPointerListener) {
+            ((WidgetPointerListener) (this.field_o)).onWidgetPointerReleased((byte) -14, param0, param1, param5, param3, this);
           }
           this.field_t = param4;
         } catch (RuntimeException runtimeException) {
@@ -239,7 +239,7 @@ class ButtonWidget extends UiWidget {
         }
     }
 
-    boolean a(UiWidget param0, char param1, int param2, int param3) {
+    boolean handleKey(UiWidget param0, char param1, int param2, int param3) {
         int var5_int = 0;
         RuntimeException var5 = null;
         RuntimeException stackIn_10_0 = null;
@@ -247,7 +247,7 @@ class ButtonWidget extends UiWidget {
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (this.b((byte) 96) && (param2 == 84 ||
+          if (this.isFocused((byte) 96) && (param2 == 84 ||
             param2 == 83)) {
             this.activateFromInput(-64, -1, -1, 1);
             return true;
@@ -268,7 +268,7 @@ class ButtonWidget extends UiWidget {
         }
     }
 
-    boolean a(UiWidget param0, boolean param1) {
+    boolean takeFocus(UiWidget param0, boolean param1) {
         RuntimeException var3 = null;
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
@@ -278,15 +278,15 @@ class ButtonWidget extends UiWidget {
           if (this.field_w &&
             this.field_x) {
             if (param1) {
-              this.e(-62);
+              this.blur(-62);
             }
-            param0.e(13104);
+            param0.blur(13104);
             this.field_A = true;
             if (this.field_o != null) {
-              if (!(this.field_o instanceof bj)) {
+              if (!(this.field_o instanceof WidgetFocusListener)) {
                 return true;
               }
-              ((bj) (this.field_o)).a(false, (UiWidget) (this), this.field_A);
+              ((WidgetFocusListener) (this.field_o)).onWidgetFocusChanged(false, (UiWidget) (this), this.field_A);
             }
             return true;
           }

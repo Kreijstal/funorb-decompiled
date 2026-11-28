@@ -83,7 +83,7 @@ final class d extends InteractiveWidget {
         }
     }
 
-    final boolean a(int param0, lk param1, int param2, int param3, int param4, int param5, int param6) {
+    final boolean pointerPressed(int param0, UiWidget param1, int param2, int param3, int param4, int param5, int param6) {
         int stackIn_25_0 = 0;
         RuntimeException stackIn_38_0 = null;
         StringBuilder stackIn_38_1 = null;
@@ -99,7 +99,7 @@ final class d extends InteractiveWidget {
         int var14 = 0;
         var14 = Bounce.field_N;
         try {
-          if (!super.a(param0, param1, param2, param3, param4, param5, param6)) {
+          if (!super.pointerPressed(param0, param1, param2, param3, param4, param5, param6)) {
             return false;
           }
           var8_int = -this.field_C + param3 - param2;
@@ -172,7 +172,7 @@ final class d extends InteractiveWidget {
             d.f((byte) 70);
           }
           gi.field_b = param2;
-          ak.field_w = param0;
+          SingleChildWidgetContainer.field_w = param0;
           AppletShell.a(param1, sh.field_jb, -1);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class vc extends nb implements WidgetActivationListener {
+final class vc extends DequeWidgetContainer implements WidgetActivationListener {
     private BitmapFont field_E;
     private int field_J;
     static String field_G;
@@ -12,13 +12,13 @@ final class vc extends nb implements WidgetActivationListener {
     static int[] field_K;
     private int[] field_B;
 
-    final void a(byte param0, int param1, int param2, int param3) {
-        super.a(param0, param1, param2, param3);
+    final void drawWidget(byte param0, int param1, int param2, int param3) {
+        super.drawWidget(param0, param1, param2, param3);
         this.field_E.drawParagraph(this.field_L, this.field_t + param2 + 14, 10 + param1 + this.field_o, this.field_j - 28, this.field_v, 16777215, -1, 0, 0, this.field_E.field_E);
     }
 
     vc(uc param0, BitmapFont param1, String param2) {
-        super(0, 0, 288, 0, (rd) null);
+        super(0, 0, 288, 0, (WidgetRenderer) null);
         int var4_int = 0;
         this.field_J = 0;
         try {
@@ -26,7 +26,7 @@ final class vc extends nb implements WidgetActivationListener {
           this.field_L = param2;
           this.field_F = param0;
           var4_int = null == this.field_L ? 0 : this.field_E.textHeight(this.field_L, 260, this.field_E.field_E);
-          this.a(var4_int + 22, 288, true, 0, 0);
+          this.setBounds(var4_int + 22, 288, true, 0, 0);
         } catch (RuntimeException runtimeException) {
           throw ld.wrapClientException((Throwable) ((Object) runtimeException), "vc.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
@@ -42,7 +42,7 @@ final class vc extends nb implements WidgetActivationListener {
         }
     }
 
-    final InteractiveWidget a(int param0, String param1, vd param2) {
+    final InteractiveWidget a(int param0, String param1, WidgetEventListener param2) {
         InteractiveWidget var4 = null;
         RuntimeException var4_ref = null;
         int var5 = 0;
@@ -55,14 +55,14 @@ final class vc extends nb implements WidgetActivationListener {
         RuntimeException decompiledCaughtException = null;
         try {
           var4 = new InteractiveWidget(param1, param2);
-          var4.field_i = (rd) ((Object) new v());
+          var4.field_i = (WidgetRenderer) ((Object) new v());
           if (param0 != -1) {
             field_G = (String) null;
           }
           var5 = -2 + this.field_v;
-          this.a(34 + this.field_v, this.field_j, true, 0, 0);
-          var4.a(30, this.field_j - 14, true, var5, 7);
-          this.b((byte) -106, var4);
+          this.setBounds(34 + this.field_v, this.field_j, true, 0, 0);
+          var4.setBounds(30, this.field_j - 14, true, var5, 7);
+          this.addChild((byte) -106, var4);
           stackIn_3_0 = var4;
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -91,7 +91,7 @@ final class vc extends nb implements WidgetActivationListener {
           var4_int = this.field_J;
           this.b(102, var4_int + 1);
           int var5 = 61 / ((param2 - 47) / 58);
-          this.field_H[var4_int] = this.a(-1, param0, (vd) (this));
+          this.field_H[var4_int] = this.a(-1, param0, (WidgetEventListener) (this));
           this.field_B[var4_int] = param1;
         } catch (RuntimeException runtimeException) {
           throw ld.wrapClientException((Throwable) ((Object) runtimeException), "vc.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
@@ -102,7 +102,7 @@ final class vc extends nb implements WidgetActivationListener {
         int var6_int = 0;
         int var7 = 0;
         int var8 = 0;
-        vd var9 = null;
+        WidgetEventListener var9 = null;
         RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
         String stackIn_15_2 = null;
@@ -111,8 +111,8 @@ final class vc extends nb implements WidgetActivationListener {
         var8 = Lexicominos.field_L ? 1 : 0;
         try {
           if (param2 != 215535458) {
-            var9 = (vd) null;
-            this.a(-94, (String) null, (vd) null);
+            var9 = (WidgetEventListener) null;
+            this.a(-94, (String) null, (WidgetEventListener) null);
           }
           for (var6_int = 0; this.field_J > var6_int; var6_int++) {
             if (this.field_H[var6_int] != param4) {

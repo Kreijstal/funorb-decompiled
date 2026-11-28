@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class wn implements wo {
+final class wn implements WidgetRenderer {
     static int field_c;
     static int field_b;
     static String field_a;
@@ -84,7 +84,7 @@ final class wn implements wo {
         }
     }
 
-    public final void a(int param0, boolean param1, int param2, qm param3, boolean param4) {
+    public final void paintWidget(int param0, boolean param1, int param2, UiWidget param3, boolean param4) {
         int var6_int = 0;
         RuntimeException var6 = null;
         int var7 = 0;
@@ -105,7 +105,7 @@ final class wn implements wo {
             ((InteractiveWidget) (param3)).field_A) {
             var8.drawAdditive(var6_int + 1 + (param3.field_g - var8.field_n >> 1), var7 + 1 + (param3.field_f - var8.field_o >> 1), 256);
           }
-          if (!param3.e(-122)) {
+          if (!param3.isFocused(-122)) {
             return;
           }
           AgeValidator.a(var6_int + 2, var7 + 2, false, param3.field_f - 4, -4 + param3.field_g);

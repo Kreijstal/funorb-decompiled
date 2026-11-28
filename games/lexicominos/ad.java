@@ -22,9 +22,9 @@ final class ad {
         int var9 = 0;
         int var10 = 0;
         int var3 = m.a(param1, (byte) -89);
-        int var4 = nb.a(-117, param1);
+        int var4 = DequeWidgetContainer.a(-117, param1);
         int var5 = m.a(param2, (byte) -125);
-        int var6 = nb.a(-60, param2);
+        int var6 = DequeWidgetContainer.a(-60, param2);
         if (!param0) {
           var7 = (int)((long)var5 * (long)var3 >> 16);
           var8 = (int)((long)var6 * (long)var3 >> 16);

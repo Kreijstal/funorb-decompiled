@@ -29,7 +29,7 @@ final class oe {
             return null;
           }
           if (param5 == ~param3) {
-            var10 = dl.a(param0, false);
+            var10 = DraggableWidgetContainer.a(param0, false);
             var6 = var10;
             if (var6 == null) {
               stackIn_8_0 = null;

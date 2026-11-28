@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class qi extends vd implements WidgetActivationListener {
+final class qi extends DequeWidgetContainer implements WidgetActivationListener {
     private dg field_F;
     private String field_I;
     static RgbSprite field_H;
@@ -111,7 +111,7 @@ final class qi extends vd implements WidgetActivationListener {
         }
     }
 
-    final InteractiveWidget a(mh param0, String param1, int param2) {
+    final InteractiveWidget a(WidgetEventListener param0, String param1, int param2) {
         InteractiveWidget var4 = null;
         RuntimeException var4_ref = null;
         int var5 = 0;
@@ -124,11 +124,11 @@ final class qi extends vd implements WidgetActivationListener {
         RuntimeException decompiledCaughtException = null;
         try {
           var4 = new InteractiveWidget(param1, param0);
-          var4.field_h = (nn) ((Object) new ke());
+          var4.field_h = (WidgetRenderer) ((Object) new ke());
           var5 = -2 + this.field_x;
-          this.a(this.field_s, 0, 0, 0, this.field_x + 34);
-          var4.a(this.field_s - 14, var5, param2 - 30, 7, param2);
-          this.a(51448, var4);
+          this.setBounds(this.field_s, 0, 0, 0, this.field_x + 34);
+          var4.setBounds(this.field_s - 14, var5, param2 - 30, 7, param2);
+          this.addChild(51448, var4);
           stackIn_1_0 = var4;
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -168,15 +168,15 @@ final class qi extends vd implements WidgetActivationListener {
         }
     }
 
-    final void a(int param0, int param1, byte param2, int param3) {
+    final void drawWidget(int param0, int param1, byte param2, int param3) {
         if (param2 >= 42) {
-          super.a(param0, param1, (byte) 80, param3);
+          super.drawWidget(param0, param1, (byte) 80, param3);
           this.field_L.drawParagraph(this.field_I, param1 - (-this.field_v - 14), this.field_m + param0 + 10, this.field_s - 28, this.field_x, 16777215, -1, 0, 0, this.field_L.field_y);
           return;
         }
         ResourceArchive var6 = (ResourceArchive) null;
         qi.a(79, (byte) 30, -49, (ResourceArchive) null);
-        super.a(param0, param1, (byte) 80, param3);
+        super.drawWidget(param0, param1, (byte) 80, param3);
         this.field_L.drawParagraph(this.field_I, param1 - (-this.field_v - 14), this.field_m + param0 + 10, this.field_s - 28, this.field_x, 16777215, -1, 0, 0, this.field_L.field_y);
     }
 
@@ -204,7 +204,7 @@ final class qi extends vd implements WidgetActivationListener {
         try {
           var4_int = this.field_E;
           this.b(0, 1 + var4_int);
-          this.field_K[var4_int] = this.a((mh) (this), param2, 30);
+          this.field_K[var4_int] = this.a((WidgetEventListener) (this), param2, 30);
           this.field_M[var4_int] = param1;
           if (param0 == 22770) {
             return;
@@ -234,7 +234,7 @@ final class qi extends vd implements WidgetActivationListener {
     }
 
     qi(dg param0, BitmapFont param1, String param2) {
-        super(0, 0, 288, 0, (nn) null);
+        super(0, 0, 288, 0, (WidgetRenderer) null);
         int var4_int = 0;
         this.field_E = 0;
         try {
@@ -242,7 +242,7 @@ final class qi extends vd implements WidgetActivationListener {
           this.field_I = param2;
           this.field_L = param1;
           var4_int = null == this.field_I ? 0 : this.field_L.textHeight(this.field_I, 260, this.field_L.field_y);
-          this.a(288, 0, 0, 0, 22 + var4_int);
+          this.setBounds(288, 0, 0, 0, 22 + var4_int);
         } catch (RuntimeException runtimeException) {
           throw AccountCreationResultPanel.wrapClientException((Throwable) ((Object) runtimeException), "qi.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }

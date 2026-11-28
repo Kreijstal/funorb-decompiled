@@ -22,7 +22,7 @@ final class vi extends IntrusiveNode {
 
     final static void b(byte param0) {
         if (null != AccountServiceResult.field_e) {
-          AccountServiceResult.field_e.h(0);
+          AccountServiceResult.field_e.snapAndPruneDialogs(0);
         }
         if (null != bb.field_F) {
           bb.field_F.c(true);

@@ -5,7 +5,7 @@ final class ff extends InteractiveWidget {
     static double field_C;
     static FrameTimer field_D;
 
-    ff(String param0, sk param1, boolean param2) {
+    ff(String param0, WidgetEventListener param1, boolean param2) {
         this(param0, param1);
         try {
           this.field_z = param2 ? true : false;
@@ -69,7 +69,7 @@ final class ff extends InteractiveWidget {
         }
     }
 
-    private ff(String param0, fc param1, sk param2) {
+    private ff(String param0, WidgetRenderer param1, WidgetEventListener param2) {
         super(param0, param1, param2);
         try {
           this.field_j = SpriteGeometry.field_m.field_a;
@@ -87,7 +87,7 @@ final class ff extends InteractiveWidget {
         field_D = (FrameTimer) null;
     }
 
-    private ff(String param0, sk param1) {
+    private ff(String param0, WidgetEventListener param1) {
         this(param0, SpriteGeometry.field_m.field_b, param1);
         try {
           this.field_j = SpriteGeometry.field_m.field_a;

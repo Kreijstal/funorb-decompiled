@@ -426,7 +426,7 @@ final class re {
                                 if (var2 == 10) {
                                   this.field_l = 8;
                                   this.field_p = 2;
-                                  this.field_r = kh.field_O;
+                                  this.field_r = ModalDialog.field_O;
                                   this.field_g[0] = 100;
                                   this.field_o = 25;
                                   this.field_b[0] = 25;

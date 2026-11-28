@@ -17,7 +17,7 @@ final class nb extends InteractiveWidget {
         try {
           if (PcmOutputWorker.field_d == null) {
             PcmOutputWorker.field_d = new ql(IsaacRandom.field_d, ii.field_F);
-            IsaacRandom.field_d.a((byte) -104, (UiWidget) (PcmOutputWorker.field_d));
+            IsaacRandom.field_d.showDialog((byte) -104, (UiWidget) (PcmOutputWorker.field_d));
           }
           if (param3 > -117) {
             String var5 = (String) null;
@@ -36,7 +36,7 @@ final class nb extends InteractiveWidget {
         return this.field_J;
     }
 
-    final boolean a(UiWidget param0, int param1, int param2, int param3, int param4, byte param5, int param6) {
+    final boolean pointerPressed(UiWidget param0, int param1, int param2, int param3, int param4, byte param5, int param6) {
         int var12 = 0;
         RuntimeException stackIn_27_0 = null;
         StringBuilder stackIn_27_1 = null;
@@ -51,7 +51,7 @@ final class nb extends InteractiveWidget {
         int var14 = 0;
         var14 = stellarshard.field_B;
         try {
-          if (!super.a(param0, param1, param2, param3, param4, (byte) 65, param6)) {
+          if (!super.pointerPressed(param0, param1, param2, param3, param4, (byte) 65, param6)) {
             if (param5 < 24) {
               nb.clearStaticReferences((byte) 61);
             }
@@ -115,7 +115,7 @@ final class nb extends InteractiveWidget {
     final int d(boolean param0) {
         if (!param0) {
           UiWidget var3 = (UiWidget) null;
-          this.a((UiWidget) null, -89, -58, -17, 18, (byte) 87, -5);
+          this.pointerPressed((UiWidget) null, -89, -58, -17, 18, (byte) 87, -5);
         }
         return this.field_L.a(19692);
     }

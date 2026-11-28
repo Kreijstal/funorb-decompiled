@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class hf implements j {
+final class hf implements WidgetRenderer {
     static Sprite field_a;
     static int field_c;
     static byte[] field_d;
@@ -175,7 +175,7 @@ final class hf implements j {
         fk.a(true, 4);
     }
 
-    public final void a(UiComponent param0, int param1, int param2, byte param3, boolean param4) {
+    public final void paintWidget(UiComponent param0, int param1, int param2, byte param3, boolean param4) {
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
         String stackIn_12_2 = null;
@@ -196,7 +196,7 @@ final class hf implements j {
             ((InteractiveWidget) (param0)).field_D) {
             var8.drawAdditiveWithIntensity(var6_int + 1 + (param0.field_p - var8.fullWidth >> 1), (-var8.fullHeight + param0.field_l >> 1) + (var7 + 1), 256);
           }
-          if (param0.c(param3 - 11)) {
+          if (param0.isFocused(param3 - 11)) {
             jc.a((byte) -115, var6_int + 2, param0.field_l - 4, param0.field_p - 4, 2 + var7);
           }
           return;

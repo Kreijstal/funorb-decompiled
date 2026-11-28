@@ -51,17 +51,17 @@ final class TextHotspotBounds extends IntrusiveNode {
         RuntimeException decompiledCaughtException = null;
         var2 = Vertigo2.field_L ? 1 : 0;
         try {
-          AccountServiceResult.field_e.a(qj.field_c, true, (byte) -71, qe.field_Z);
+          AccountServiceResult.field_e.processPointerInput(qj.field_c, true, (byte) -71, qe.field_Z);
           if (param0 != 1) {
             stackIn_3_0 = 16;
             return stackIn_3_0;
           }
-          AccountServiceResult.field_e.l(0);
+          AccountServiceResult.field_e.advanceDialogs(0);
           while (NodeHashTableIterator.a(false)) {
-            AccountServiceResult.field_e.a(param0 - 93, DebouncedFieldValidator.field_f, TextureOperator.field_r);
+            AccountServiceResult.field_e.processKeyInput(param0 - 93, DebouncedFieldValidator.field_f, TextureOperator.field_r);
           }
-          if (nm.field_F != -1) {
-            var1_int = nm.field_F;
+          if (ModalDialog.field_F != -1) {
+            var1_int = ModalDialog.field_F;
             rh.b(-14, -1);
             stackIn_9_0 = var1_int;
             return stackIn_9_0;
@@ -70,7 +70,7 @@ final class TextHotspotBounds extends IntrusiveNode {
             stackIn_12_0 = 3;
             return stackIn_12_0;
           }
-          if (bf.field_b == um.field_F) {
+          if (bf.field_b == ArrayWidgetContainer.field_F) {
             stackIn_16_0 = 1;
             return stackIn_16_0;
           }

@@ -97,17 +97,17 @@ final class ValidatedTextField extends EditableTextField implements FieldValidat
         }
     }
 
-    ValidatedTextField(String param0, kd param1, int param2) {
+    ValidatedTextField(String param0, WidgetEventListener param1, int param2) {
         super(param0, param1, param2);
     }
 
-    final void a(int param0, int param1, UiComponent param2, byte param3) {
+    final void updatePointer(int param0, int param1, UiComponent param2, byte param3) {
         try {
-          super.a(param0, param1, param2, (byte) -93);
+          super.updatePointer(param0, param1, param2, (byte) -93);
           this.field_X = ag.field_f - this.field_y - param1;
           if (param3 >= -85) {
             UiComponent var6 = (UiComponent) null;
-            this.a(-113, 27, (UiComponent) null, (byte) 36);
+            this.updatePointer(-113, 27, (UiComponent) null, (byte) 36);
           }
         } catch (RuntimeException runtimeException) {
           throw pf.wrapClientException((Throwable) ((Object) runtimeException), "bc.I(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');

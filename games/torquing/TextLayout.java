@@ -98,7 +98,7 @@ abstract class TextLayout {
             TextLayout.a((da) null, (byte) 17, (da) null);
           }
           var5 = (String) null;
-          stackIn_3_0 = na.a(param2, (String) null, -25978, param0, 0, false, 0);
+          stackIn_3_0 = LabeledWidgetContainer.a(param2, (String) null, -25978, param0, 0, false, 0);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

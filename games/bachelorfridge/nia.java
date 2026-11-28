@@ -93,7 +93,7 @@ final class nia extends lw {
         if (param0 != -31768) {
           return (java.applet.Applet) null;
         }
-        return (java.applet.Applet) ((Object) re.field_C);
+        return (java.applet.Applet) ((Object) DropTargetWidgetContainer.field_C);
     }
 
     final void a(byte param0) {

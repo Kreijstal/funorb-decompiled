@@ -14,7 +14,7 @@ final class sh {
         if (param0 == -59) {
           SecondaryNodeHashTable.field_g = true;
           bc.field_d = true;
-          jh.field_e.i(param0 ^ -59);
+          jh.field_e.closeAllDialogs(param0 ^ -59);
           qd.a(-1845, AgeValidator.field_n, false);
           return;
         }
@@ -46,7 +46,7 @@ final class sh {
     final static void a(int param0) {
         int var1 = 121 / ((param0 - 40) / 53);
         if (jh.field_e != null) {
-          jh.field_e.j(10907);
+          jh.field_e.snapAndPruneDialogs(10907);
         }
         if (null == mk.field_e) {
           of.d(-103);

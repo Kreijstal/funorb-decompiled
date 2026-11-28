@@ -22,7 +22,7 @@ abstract class kj {
             return;
           }
           var1 = wa.field_d;
-          while (jd.g((byte) -126)) {
+          while (DropTargetWidgetContainer.g((byte) -126)) {
             var1.f(73, 8);
             fieldTemp$0 = var1.position + 1;
             var1.position = var1.position + 1;

@@ -260,7 +260,7 @@ final class NetworkArchiveRequestManager extends NetworkSupport003 {
               SocketFactory.cipherPacketBufferState0002.writeByte(true, 18);
               SocketFactory.cipherPacketBufferState0002.position = SocketFactory.cipherPacketBufferState0002.position + 2;
               integerLocal27 = SocketFactory.cipherPacketBufferState0002.position;
-              stringLocal37 = DefaultTextWidgetRenderer.computeString0015(UiComponentPart029.computeApplet1485(25144), (byte) 121);
+              stringLocal37 = DefaultTextWidgetRenderer.computeString0015(DraggableWidgetContainer.computeApplet1485(25144), (byte) 121);
               if (stringLocal37 == null) {
                 stringLocal37 = "";
               }
@@ -273,15 +273,15 @@ final class NetworkArchiveRequestManager extends NetworkSupport003 {
           }
           if (MixedSupport067.mixedSupport132State0003 == UiComponentPart023.mixedSupport132State0009 &&
             MixedSupport098.computeBoolean1219(25973, 1)) {
-            integerLocal39 = UiComponentPart006.cipherPacketBufferState0001.readUnsignedByte((byte) -70);
-            UiComponentPart006.cipherPacketBufferState0001.position = 0;
+            integerLocal39 = LabeledWidgetContainer.cipherPacketBufferState0001.readUnsignedByte((byte) -70);
+            LabeledWidgetContainer.cipherPacketBufferState0001.position = 0;
             if (integerLocal39 >= 100 &&
               integerLocal39 <= 105) {
               UiComponentPart023.mixedSupport132State0009 = MixedSupport079.mixedSupport132State0006;
               UiComponentPart023.stringArrayState0030 = new String[-100 + integerLocal39];
             } else {
               if (integerLocal39 == 248) {
-                LoginCredentials.performAction0790(UiComponentPart029.computeApplet1485(25144), 0);
+                LoginCredentials.performAction0790(DraggableWidgetContainer.computeApplet1485(25144), 0);
                 EditableTextField.stringState0483 = SceneWidgetPart012.stringState0533;
                 NodeHashTable.performAction1498(89);
                 SceneWidgetPart006.booleanState0083 = false;
@@ -290,8 +290,8 @@ final class NetworkArchiveRequestManager extends NetworkSupport003 {
               }
               if (99 == integerLocal39) {
                 MixedSupport098.computeBoolean1219(25973, MixedSupport140.computeInteger1729(1));
-                SceneWidgetPart014.booleanState0220 = new Boolean(MixedSupport033.computeBoolean0496(UiComponentPart006.cipherPacketBufferState0001, 19));
-                UiComponentPart006.cipherPacketBufferState0001.position = 0;
+                SceneWidgetPart014.booleanState0220 = new Boolean(MixedSupport033.computeBoolean0496(LabeledWidgetContainer.cipherPacketBufferState0001, 19));
+                LabeledWidgetContainer.cipherPacketBufferState0001.position = 0;
               } else {
                 NetworkSupport012.integerState0759 = -1;
                 HashNode.integerState0070 = integerLocal39;
@@ -302,12 +302,12 @@ final class NetworkArchiveRequestManager extends NetworkSupport003 {
           if (UiComponentPart023.mixedSupport132State0009 == MixedSupport079.mixedSupport132State0006) {
             integerLocal40 = 2;
             if (MixedSupport098.computeBoolean1219(25973, integerLocal40)) {
-              integerLocal38 = UiComponentPart006.cipherPacketBufferState0001.readUnsignedShort(3);
-              UiComponentPart006.cipherPacketBufferState0001.position = 0;
+              integerLocal38 = LabeledWidgetContainer.cipherPacketBufferState0001.readUnsignedShort(3);
+              LabeledWidgetContainer.cipherPacketBufferState0001.position = 0;
               if (MixedSupport098.computeBoolean1219(25973, integerLocal38)) {
                 integerLocal29 = UiComponentPart023.stringArrayState0030.length;
                 for (integerLocal1 = 0; integerLocal29 > integerLocal1; integerLocal1++) {
-                  UiComponentPart023.stringArrayState0030[integerLocal1] = UiComponentPart006.cipherPacketBufferState0001.readNullCircumfixedString(true);
+                  UiComponentPart023.stringArrayState0030[integerLocal1] = LabeledWidgetContainer.cipherPacketBufferState0001.readNullCircumfixedString(true);
                 }
                 NodeHashTable.performAction1498(60);
                 SceneWidgetPart006.booleanState0083 = false;
@@ -319,12 +319,12 @@ final class NetworkArchiveRequestManager extends NetworkSupport003 {
           if (MixedSupport107.mixedSupport132State0010 == UiComponentPart023.mixedSupport132State0009 &&
             MixedSupport039.computeBoolean0524((byte) 117)) {
             if (255 == HashNode.integerState0070) {
-              stringLocal26 = UiComponentPart006.cipherPacketBufferState0001.readNullableString(-16829);
+              stringLocal26 = LabeledWidgetContainer.cipherPacketBufferState0001.readNullableString(-16829);
               if (stringLocal26 != null) {
-                DefaultTextWidgetRenderer.performAction0016(stringLocal26, false, UiComponentPart029.computeApplet1485(25144));
+                DefaultTextWidgetRenderer.performAction0016(stringLocal26, false, DraggableWidgetContainer.computeApplet1485(25144));
               }
             } else {
-              EditableTextField.stringState0483 = UiComponentPart006.cipherPacketBufferState0001.readNullTerminatedString((byte) -38);
+              EditableTextField.stringState0483 = LabeledWidgetContainer.cipherPacketBufferState0001.readNullTerminatedString((byte) -38);
             }
             NodeHashTable.performAction1498(105);
             SceneWidgetPart006.booleanState0083 = false;
@@ -343,9 +343,9 @@ final class NetworkArchiveRequestManager extends NetworkSupport003 {
               return stackIntegerLocal12;
             }
             integerLocal41 = MixedSupport052.integerState0270;
-            MixedSupport052.integerState0270 = UiComponentPart010.integerState0189;
+            MixedSupport052.integerState0270 = AlphaWidgetContainer.integerState0189;
             SceneWidgetPart006.booleanState0083 = true;
-            UiComponentPart010.integerState0189 = integerLocal41;
+            AlphaWidgetContainer.integerState0189 = integerLocal41;
           }
           stackIntegerLocal13 = -1;
           return stackIntegerLocal13;

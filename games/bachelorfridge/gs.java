@@ -68,7 +68,7 @@ final class gs {
           this.field_b > 0) {
           return 2;
         }
-        if (~this.field_a == ~ge.field_F) {
+        if (~this.field_a == ~LabeledWidgetContainer.field_F) {
           return 1;
         }
         if (um.field_c == 2 &&

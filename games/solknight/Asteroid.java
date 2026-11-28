@@ -274,12 +274,12 @@ final class Asteroid {
                           this.field_e = this.field_e + 1;
                           this.field_g = 6;
                           var4 = 320 + (-ArchiveSource.field_c + (this.field_a >> 4));
-                          var5 = (this.field_b >> 4) - si.field_E;
+                          var5 = (this.field_b >> 4) - SingleChildWidgetContainer.field_E;
                           var6 = -var4 + PacketBuffer.field_j;
                           var7 = BufferedSocket.field_m - var5;
                           if (ClientException.field_b >= 0) {
                             var6 = -var4 + (ArchiveRequest.field_o >> 4) - ArchiveSource.field_c + 320;
-                            var7 = -var5 + ((AccountServiceResult.field_e >> 4) - si.field_E);
+                            var7 = -var5 + ((AccountServiceResult.field_e >> 4) - SingleChildWidgetContainer.field_E);
                           }
                           var8 = (int)Math.sqrt((double)(var7 * var7 + var6 * var6));
                           if (var8 > 8) {
@@ -782,11 +782,11 @@ final class Asteroid {
                 }
                 if (this.field_e < 100) {
                   var4 = (this.field_a >> 4) - ArchiveSource.field_c + 320;
-                  var5 = (this.field_b >> 4) - si.field_E;
+                  var5 = (this.field_b >> 4) - SingleChildWidgetContainer.field_E;
                   var6 = -var4 + PacketBuffer.field_j;
                   var7 = -var5 + BufferedSocket.field_m;
                   if (ClientException.field_b >= 0) {
-                    var7 = -si.field_E + (AccountServiceResult.field_e >> 4) - var5;
+                    var7 = -SingleChildWidgetContainer.field_E + (AccountServiceResult.field_e >> 4) - var5;
                     var6 = -var4 + 320 + (-ArchiveSource.field_c + (ArchiveRequest.field_o >> 4));
                   }
                   var8 = (int)Math.sqrt((double)(var7 * var7 + var6 * var6));
@@ -855,9 +855,9 @@ final class Asteroid {
         if (param1 != -19) {
           field_f = -7;
         }
-        for (var8 = 0; var8 < kf.field_G.length; var8++) {
-          if (null != kf.field_G[var8]) {
-            var12 = kf.field_G[var8];
+        for (var8 = 0; var8 < ModalDialog.field_G.length; var8++) {
+          if (null != ModalDialog.field_G[var8]) {
+            var12 = ModalDialog.field_G[var8];
             if (0 < var12.field_g &&
               !var12.field_h &&
               var12.field_j >= 25 &&
@@ -964,7 +964,7 @@ final class Asteroid {
         int var11;
         var11 = SolKnight.field_L ? 1 : 0;
         var4 = (this.field_a >> 4) + (-ArchiveSource.field_c + 320);
-        var5 = -si.field_E + (this.field_b >> 4);
+        var5 = -SingleChildWidgetContainer.field_E + (this.field_b >> 4);
         if (param0 <= 69) {
           this.a((byte) 84);
         }

@@ -167,9 +167,9 @@ abstract class nk extends GameAppletShell {
             !(var3 >= rf.a(30448))) {
             this.field_w = false;
             ProxyAuthenticationRequiredException.$cfr$intArgs$b$e683eeaaf5b5(-125);
-            ia.a((byte) 93);
+            AlphaWidgetContainer.a((byte) 93);
             sc.a(2, (byte) -128, RichTextLayout.field_i);
-            l.i(57);
+            DropTargetWidgetContainer.i(57);
             MusicPatchPcmStream.field_o = true;
             mc.field_i = rf.correctedCurrentTimeMillis(0) + 15000L;
           }
@@ -212,7 +212,7 @@ abstract class nk extends GameAppletShell {
             }
           } else {
             if (ta.field_g >= 10) {
-              ia.a((byte) 103);
+              AlphaWidgetContainer.a((byte) 103);
               if (nc.field_r == 3) {
                 sc.a(256, (byte) -98, mh.field_H);
               } else {
@@ -285,7 +285,7 @@ abstract class nk extends GameAppletShell {
           ValidatedTextField.a(ej.field_d, we.field_h, GzipDecompressor.field_a, (byte) 127) &&
           oh.a(ej.field_d, -109)) {
           qa.b(0);
-          mg.e(0);
+          SingleChildWidgetContainer.e(0);
           AccountCreationResultPanel.field_tb = false;
           pb.field_j = qk.field_a;
           fk.a(MidiPcmStream.field_F, we.field_h, (byte) 40, ej.field_d, GzipDecompressor.field_a);
@@ -313,15 +313,15 @@ abstract class nk extends GameAppletShell {
         }
         if (PacketBuffer.field_i == 10) {
           if (DebouncedFieldValidator.field_e != 0) {
-            eg.field_C = oj.a(false, BoundedRandomAccessFile.field_d);
+            ModalDialogHost.field_C = oj.a(false, BoundedRandomAccessFile.field_d);
           }
           PacketBuffer.field_i = 11;
         }
         boolean decompiledFrameRemainder0 = true;
         if (11 == PacketBuffer.field_i) {
-          if (null != eg.field_C && (!eg.field_C.ensureIndexLoaded(param1 - 104) ||
-            !eg.field_C.tryLoadAllGroups((byte) 60))) {
-            al.a(16, MouseWheelInput.a((byte) 126, oh.field_a, we.field_c, eg.field_C), 0.0f);
+          if (null != ModalDialogHost.field_C && (!ModalDialogHost.field_C.ensureIndexLoaded(param1 - 104) ||
+            !ModalDialogHost.field_C.tryLoadAllGroups((byte) 60))) {
+            ModalDialog.a(16, MouseWheelInput.a((byte) 126, oh.field_a, we.field_c, ModalDialogHost.field_C), 0.0f);
             decompiledFrameRemainder0 = false;
           }
           else {
@@ -338,7 +338,7 @@ abstract class nk extends GameAppletShell {
           if (gd.field_i != null) {
             stackIn_138_0 = (!gd.field_i.a(-71)) ? 0 : 1;
             var3Lifetime2 = stackIn_138_0;
-            al.a(param1 + 17, gd.field_i.field_f, gd.field_i.field_c);
+            ModalDialog.a(param1 + 17, gd.field_i.field_f, gd.field_i.field_c);
           }
           if (var3Lifetime2 != 0) {
             PacketBuffer.field_i = 20;
@@ -480,7 +480,7 @@ abstract class nk extends GameAppletShell {
           if (!ByteStorage.field_c) {
             this.a("reconnect", 89);
           }
-          ia.a((byte) 83);
+          AlphaWidgetContainer.a((byte) 83);
           sc.a(var2, (byte) 99, wj.field_p);
           MusicPatchPcmStream.field_o = true;
           mc.field_i = rf.correctedCurrentTimeMillis(0) + 15000L;
@@ -544,13 +544,13 @@ abstract class nk extends GameAppletShell {
             throw new IllegalStateException();
           }
           if (1 == var4) {
-            var5_int = mg.a(0, fk.a(85), qd.a(false));
+            var5_int = SingleChildWidgetContainer.a(0, fk.a(85), qd.a(false));
             if (var5_int != -1) {
               AccountServiceResult.a(105, var5_int, wj.field_p, fc.field_S);
               wj.field_p = null;
               fc.field_S = null;
             }
-            var11 = al.e((byte) -117);
+            var11 = ModalDialog.e((byte) -117);
             if (var11 != null) {
               mc.a(var11.booleanValue(), 0);
             }

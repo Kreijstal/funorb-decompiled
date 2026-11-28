@@ -5,7 +5,7 @@ abstract class mh extends wk {
     private qc field_V;
     static int field_U;
     static lj field_R;
-    private lk field_X;
+    private UiWidget field_X;
     private int field_Q;
     private int field_T;
     static int field_Y;
@@ -14,9 +14,9 @@ abstract class mh extends wk {
     private int field_O;
     static int field_Z;
     private int field_N;
-    private jg field_S;
+    private AlphaWidgetContainer field_S;
 
-    boolean a(lk param0, char param1, int param2, int param3) {
+    boolean handleKey(UiWidget param0, char param1, int param2, int param3) {
         RuntimeException var5 = null;
         RuntimeException stackIn_17_0 = null;
         StringBuilder stackIn_17_1 = null;
@@ -26,15 +26,15 @@ abstract class mh extends wk {
           if (param3 != -14565) {
             return false;
           }
-          if (super.a(param0, param1, param2, param3 ^ 0)) {
+          if (super.handleKey(param0, param1, param2, param3 ^ 0)) {
             return true;
           }
           if (null != this.field_S) {
             if (param2 == 98) {
-              this.field_S.a(param0, false);
+              this.field_S.takeFocus(param0, false);
             }
             if (param2 == 99) {
-              this.field_S.a(param0, false);
+              this.field_S.takeFocus(param0, false);
               return false;
             }
           }
@@ -53,7 +53,7 @@ abstract class mh extends wk {
         }
     }
 
-    void a(int param0, lk param1) {
+    void a(int param0, UiWidget param1) {
         RuntimeException var3 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
@@ -62,7 +62,7 @@ abstract class mh extends wk {
         try {
           this.field_X = param1;
           if (param0 != 10768) {
-            this.e((byte) -12);
+            this.advanceDialogAnimation((byte) -12);
           }
           if (RichTextLayout.field_n == this.field_V) {
             this.a((byte) 126, this.field_ab, 12 + this.field_Q + this.field_X.field_m, 12 + this.field_X.field_k);
@@ -101,7 +101,7 @@ abstract class mh extends wk {
         int var2 = -66 / ((31 - param0) / 35);
         if (null != this.field_V) {
           if (this.field_V != vb.field_g) {
-            this.c(-463076575, this.field_X.field_k + 12, this.field_X.field_m + 12 + this.field_Q);
+            this.setCenteredSize(-463076575, this.field_X.field_k + 12, this.field_X.field_m + 12 + this.field_Q);
             this.b(this.field_X, 6);
           }
           this.field_V = null;
@@ -110,7 +110,7 @@ abstract class mh extends wk {
         super.i((byte) -58);
     }
 
-    mh(pf param0, lk param1, int param2, int param3, int param4) {
+    mh(ModalDialogHost param0, UiWidget param1, int param2, int param3, int param4) {
         super(param0, 12 + param1.field_k, param2 + (12 + param1.field_m));
         try {
           this.field_Q = param2;
@@ -185,28 +185,28 @@ abstract class mh extends wk {
         }
     }
 
-    boolean e(byte param0) {
+    boolean advanceDialogAnimation(byte param0) {
         int fieldTemp$0 = 0;
         int fieldTemp$1 = 0;
         int fieldTemp$2 = 0;
         int var3 = Bounce.field_N;
         if (param0 == 21) {
           if (null == this.field_V) {
-            return super.e((byte) 21);
+            return super.advanceDialogAnimation((byte) 21);
           }
           if (ub.field_b != this.field_V) {
             if (vb.field_g != this.field_V) {
-              return super.e((byte) 21);
+              return super.advanceDialogAnimation((byte) 21);
             }
             fieldTemp$0 = this.field_T + 1;
             this.field_T = this.field_T + 1;
             if (fieldTemp$0 == this.field_O) {
               this.field_V = null;
               this.field_S.field_E = 256;
-              return super.e((byte) 21);
+              return super.advanceDialogAnimation((byte) 21);
             }
             this.field_S.field_E = (this.field_T << 8) / this.field_O;
-            return super.e((byte) 21);
+            return super.advanceDialogAnimation((byte) 21);
           }
           fieldTemp$1 = this.field_T + 1;
           this.field_T = this.field_T + 1;
@@ -215,28 +215,28 @@ abstract class mh extends wk {
             this.a((byte) 126, this.field_ab, this.field_Q + 12 + this.field_X.field_m, this.field_X.field_k + 12);
             this.field_T = 0;
             this.field_S.field_E = 0;
-            return super.e((byte) 21);
+            return super.advanceDialogAnimation((byte) 21);
           }
           this.field_S.field_E = -((this.field_T << 8) / this.field_N) + 256;
-          return super.e((byte) 21);
+          return super.advanceDialogAnimation((byte) 21);
         }
         this.i((byte) 37);
         if (null == this.field_V) {
-          return super.e((byte) 21);
+          return super.advanceDialogAnimation((byte) 21);
         }
         if (ub.field_b != this.field_V) {
           if (vb.field_g != this.field_V) {
-            return super.e((byte) 21);
+            return super.advanceDialogAnimation((byte) 21);
           }
           fieldTemp$2 = this.field_T + 1;
           this.field_T = this.field_T + 1;
           if (fieldTemp$2 == this.field_O) {
             this.field_V = null;
             this.field_S.field_E = 256;
-            return super.e((byte) 21);
+            return super.advanceDialogAnimation((byte) 21);
           }
           this.field_S.field_E = (this.field_T << 8) / this.field_O;
-          return super.e((byte) 21);
+          return super.advanceDialogAnimation((byte) 21);
         }
         int fieldTemp$3 = this.field_T + 1;
         this.field_T = this.field_T + 1;
@@ -245,10 +245,10 @@ abstract class mh extends wk {
           this.a((byte) 126, this.field_ab, this.field_Q + 12 + this.field_X.field_m, this.field_X.field_k + 12);
           this.field_T = 0;
           this.field_S.field_E = 0;
-          return super.e((byte) 21);
+          return super.advanceDialogAnimation((byte) 21);
         }
         this.field_S.field_E = -((this.field_T << 8) / this.field_N) + 256;
-        return super.e((byte) 21);
+        return super.advanceDialogAnimation((byte) 21);
     }
 
     final static void a(java.awt.Canvas param0, byte param1) {
@@ -266,35 +266,35 @@ abstract class mh extends wk {
         }
     }
 
-    private final void b(lk param0, int param1) {
+    private final void b(UiWidget param0, int param1) {
         try {
           if (null != this.field_S) {
             this.field_S.unlink(2);
           }
           if (param1 != 6) {
-            lk var4 = (lk) null;
-            this.a(112, (lk) null);
+            UiWidget var4 = (UiWidget) null;
+            this.a(112, (UiWidget) null);
           }
           if (param0 != null) {
-            param0.b(param0.field_m, param1 + 74, param0.field_k, 6, this.field_Q + 6);
-            this.field_S = new jg(param0);
+            param0.setBounds(param0.field_m, param1 + 74, param0.field_k, 6, this.field_Q + 6);
+            this.field_S = new AlphaWidgetContainer(param0);
           } else {
-            this.field_S = new jg();
+            this.field_S = new AlphaWidgetContainer();
           }
-          this.b(this.field_S, true);
+          this.addChild(this.field_S, true);
           this.field_X = null;
         } catch (RuntimeException runtimeException) {
           throw CipherPacketBuffer.wrapClientException((Throwable) ((Object) runtimeException), "mh.N(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
-    final boolean f(byte param0) {
+    final boolean snapDialogAnimation(byte param0) {
         this.i((byte) -119);
         if (param0 != -33) {
           this.field_T = -104;
-          return super.f((byte) -33);
+          return super.snapDialogAnimation((byte) -33);
         }
-        return super.f((byte) -33);
+        return super.snapDialogAnimation((byte) -33);
     }
 
     final void l(int param0) {

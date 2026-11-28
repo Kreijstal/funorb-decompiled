@@ -58,14 +58,14 @@ final class si {
         RuntimeException decompiledCaughtException = null;
         var3 = MinerDisturbance.field_ab;
         try {
-          jc.a(0, AccountRequestState.field_g, fb.field_c, -125, true, he.field_e, param0);
+          SingleChildWidgetContainer.a(0, AccountRequestState.field_g, fb.field_c, -125, true, he.field_e, param0);
           if (param1 != -14391) {
             si.a(-79);
           }
           for (var2_int = 0; fb.field_c > var2_int; var2_int++) {
             BoundedRandomAccessFile.field_a[param0 + var2_int] = var2_int;
           }
-          jc.a(param0, v.field_c, param0 + fb.field_c, -2, false, SecondaryNodeDequeIterator.field_d, param0 + param0);
+          SingleChildWidgetContainer.a(param0, v.field_c, param0 + fb.field_c, -2, false, SecondaryNodeDequeIterator.field_d, param0 + param0);
           if (fb.field_c <= param0) {
             return;
           }

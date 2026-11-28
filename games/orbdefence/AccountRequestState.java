@@ -39,7 +39,7 @@ final class AccountRequestState {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw dd.wrapClientException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param3).append(')').toString());
+          throw DraggableWidgetContainer.wrapClientException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -51,7 +51,7 @@ final class AccountRequestState {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw dd.wrapClientException((Throwable) ((Object) var1), "va.toString()");
+          throw DraggableWidgetContainer.wrapClientException((Throwable) ((Object) var1), "va.toString()");
         }
     }
 
@@ -63,7 +63,7 @@ final class AccountRequestState {
           field_a = null;
           field_b = null;
         } catch (RuntimeException runtimeException) {
-          throw dd.wrapClientException((Throwable) ((Object) runtimeException), "va.C(" + param0 + ')');
+          throw DraggableWidgetContainer.wrapClientException((Throwable) ((Object) runtimeException), "va.C(" + param0 + ')');
         }
     }
 
@@ -111,7 +111,7 @@ final class AccountRequestState {
           } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
             decompiledCaughtException = decompiledCaughtParameter1;
             var2 = (RuntimeException) (Object) decompiledCaughtException;
-            throw dd.wrapClientException((Throwable) ((Object) var2), "va.D(" + param0 + ',' + param1 + ')');
+            throw DraggableWidgetContainer.wrapClientException((Throwable) ((Object) var2), "va.D(" + param0 + ',' + param1 + ')');
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -1074,7 +1074,7 @@ final class AccountRequestState {
           } else {
             stackIn_665_2 = "{...}";
           }
-          throw dd.wrapClientException((Throwable) ((Object) stackIn_664_0), ((StringBuilder) (Object) stackIn_664_1).append(stackIn_665_2).append(',').append(param1).append(')').toString());
+          throw DraggableWidgetContainer.wrapClientException((Throwable) ((Object) stackIn_664_0), ((StringBuilder) (Object) stackIn_664_1).append(stackIn_665_2).append(',').append(param1).append(')').toString());
         }
         if (GameAppletShell.field_e) {
           OrbDefence.field_D = (var3 == 0);

@@ -10,8 +10,8 @@ final class qh extends DefaultTextWidgetRenderer {
     static String field_u;
     static String field_z;
 
-    public final void a(byte param0, int param1, boolean param2, fj param3, int param4) {
-        fj stackIn_3_0 = null;
+    public final void paintWidget(byte param0, int param1, boolean param2, UiWidget param3, int param4) {
+        UiWidget stackIn_3_0 = null;
         RuntimeException stackIn_34_0 = null;
         StringBuilder stackIn_34_1 = null;
         String stackIn_35_2 = null;
@@ -28,7 +28,7 @@ final class qh extends DefaultTextWidgetRenderer {
           if (!(param3 instanceof InteractiveWidget)) {
             stackIn_3_0 = null;
           } else {
-            stackIn_3_0 = (fj) (param3);
+            stackIn_3_0 = (UiWidget) (param3);
           }
           var10 = (InteractiveWidget) (stackIn_3_0);
           TunnelMesh.pushAndIntersectRasterClip(param1 + param3.field_q, param3.field_F + (param1 + param3.field_q), param4 - (-param3.field_m - param3.field_z), param4 + param3.field_m, 14907);
@@ -61,7 +61,7 @@ final class qh extends DefaultTextWidgetRenderer {
               }
             }
           }
-          if (param3.e((byte) -125)) {
+          if (param3.isFocused((byte) -125)) {
             var13 = this.field_B[5];
             if (var13 != null) {
               var13.a(param4, this.field_v, param1, 2147483647, param3, this);

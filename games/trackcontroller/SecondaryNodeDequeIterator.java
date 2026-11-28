@@ -226,7 +226,7 @@ final class SecondaryNodeDequeIterator implements Iterator {
           }
           var1 = uj.a(-119);
           LevelView.field_y = new LoginPanel(var1, (String) null, true, false, false);
-          gl.field_E.d((byte) -120, GameApplet.field_g);
+          AlphaWidgetContainer.field_E.showDialog((byte) -120, GameApplet.field_g);
           GameApplet.field_g.b(LevelView.field_y, -82);
           GameApplet.field_g.o(0);
           return;

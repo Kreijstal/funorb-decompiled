@@ -16,7 +16,7 @@ final class ca {
             ca.a((ResourceArchive) null, (PcmStreamMixer) null, -27, -28);
           }
           Crc32Table.field_a = new af(sd.field_c, vd.field_p, param0, DirectByteArrayStore.field_e, ij.field_g);
-          sd.field_c.b(Crc32Table.field_a, (byte) -98);
+          sd.field_c.showDialog(Crc32Table.field_a, (byte) -98);
         } catch (RuntimeException runtimeException) {
           throw ma.wrapException((Throwable) ((Object) runtimeException), "ca.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
@@ -61,11 +61,11 @@ final class ca {
           eg.field_c = gl.a("button", param1, "commonui", -13244);
           gh.field_n = ProxyAuthenticationRequiredException.a("validation", "commonui", 0, param1);
           me.field_c = (BitmapFont) ((Object) NanoFrameTimer.a("commonui", param2, false, "arezzo12", param1));
-          j.field_C = (BitmapFont) ((Object) NanoFrameTimer.a("commonui", param2, false, "arezzo14", param1));
+          ModalDialogHost.field_C = (BitmapFont) ((Object) NanoFrameTimer.a("commonui", param2, false, "arezzo14", param1));
           vd.field_p = (BitmapFont) ((Object) NanoFrameTimer.a("commonui", param2, false, "arezzo14bold", param1));
           var17 = new RgbSprite(param0.getFileByName((byte) 7, "", "button.gif"), (java.awt.Component) ((Object) tb.field_c));
           lh.a("dropdown", param1, "commonui", 105);
-          var5 = lk.a("screen_options", "commonui", (byte) 98, param1);
+          var5 = UiWidget.a("screen_options", "commonui", (byte) 98, param1);
           ri.field_d = new wb[4];
           fb.field_b = new wb[4];
           nb.field_d = new wb[4];

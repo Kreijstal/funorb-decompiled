@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 abstract class t {
-    static si field_b;
+    static ModalDialogHost field_b;
     static String[] field_a;
 
     final static boolean a(int param0, int param1, int param2) {
@@ -35,7 +35,7 @@ abstract class t {
             }
           }
           if (!param0) {
-            field_b = (si) null;
+            field_b = (ModalDialogHost) null;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -57,8 +57,8 @@ abstract class t {
         we.field_c[4] = new String[]{MouseWheelInput.field_b};
         we.field_c[2] = new String[]{a.field_e};
         we.field_c[6] = new String[]{ImageProducerRasterBuffer.field_o};
-        we.field_c[0] = new String[]{si.field_M};
-        we.field_c[12] = new String[]{kj.field_H};
+        we.field_c[0] = new String[]{ModalDialogHost.field_M};
+        we.field_c[12] = new String[]{DequeWidgetContainer.field_H};
         we.field_c[3] = new String[]{DebouncedFieldValidator.field_g};
         we.field_c[1] = new String[]{eb.field_i};
         we.field_c[11] = new String[]{ResourceArchive.field_d};

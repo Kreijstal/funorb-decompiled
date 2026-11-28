@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class oi extends fe {
+final class oi extends UiWidget {
     private Sprite field_F;
     private int field_Q;
     private int field_H;
@@ -19,8 +19,8 @@ final class oi extends fe {
 
     final void a(int param0, int param1, byte param2) {
         if (param2 > -103) {
-          fe var5 = (fe) null;
-          this.a(55, 86, (byte) 13, (fe) null);
+          UiWidget var5 = (UiWidget) null;
+          this.updatePointer(55, 86, (byte) 13, (UiWidget) null);
         }
         this.field_L = param1 >> 1 & 8355711;
         this.field_Q = (param0 & 16711422) >> 1;
@@ -215,7 +215,7 @@ final class oi extends fe {
         }
     }
 
-    final void a(byte param0, int param1, int param2, int param3) {
+    final void drawWidget(byte param0, int param1, int param2, int param3) {
         if (param3 != 0) {
           return;
         }
@@ -233,15 +233,15 @@ final class oi extends fe {
         }
     }
 
-    final void a(int param0, int param1, int param2, int param3, int param4) {
+    final void setBounds(int param0, int param1, int param2, int param3, int param4) {
         if (param1 > -33) {
           this.field_F = (Sprite) null;
         }
-        super.a(param0, -67, param2, param3, param4);
+        super.setBounds(param0, -67, param2, param3, param4);
         this.a(-1262785631);
     }
 
-    final void a(int param0, int param1, byte param2, fe param3) {
+    final void updatePointer(int param0, int param1, byte param2, UiWidget param3) {
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         String stackIn_10_2 = null;
@@ -278,7 +278,7 @@ final class oi extends fe {
         this.field_P = param5;
         this.field_N = param4;
         this.field_Q = param8;
-        this.a(param3, -72, param0, param2, param1);
+        this.setBounds(param3, -72, param0, param2, param1);
     }
 
     static {

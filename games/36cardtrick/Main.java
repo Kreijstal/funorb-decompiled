@@ -205,7 +205,7 @@ public final class Main extends c {
             this.l(40);
           }
           if (null != ue.field_a) {
-            qi.a((byte) -87, ue.field_a);
+            DraggableWidgetContainer.a((byte) -87, ue.field_a);
             ue.field_a = null;
             AccountNameAvailabilityValidator.b((byte) -20);
           }
@@ -315,7 +315,7 @@ public final class Main extends c {
                       return;
                     }
                     dj.field_a = 0;
-                    mb.a(qa.field_b.field_s * 3 >> 1, 18, g.field_C, true, 9414, 240, tc.field_a, 6, 320, 2, 18, qa.field_b);
+                    mb.a(qa.field_b.field_s * 3 >> 1, 18, DequeWidgetContainer.field_C, true, 9414, 240, tc.field_a, 6, 320, 2, 18, qa.field_b);
                     if (var3 == 0) {
                       return;
                     }
@@ -591,7 +591,7 @@ public final class Main extends c {
           if (null != DiskCacheWorker.field_a &&
             DiskCacheWorker.field_a.focusLost) {
             PcmOutputWorker.exitFullscreenAndRestoreFocus(!param0);
-            g.k(4);
+            DequeWidgetContainer.k(4);
           }
           stackIn_15_1 = -71;
           stackIn_16_2 = (DiskCacheWorker.field_a != null);
@@ -697,7 +697,7 @@ public final class Main extends c {
                     var2_int = nl.a(true);
                     switch (var2_int) {
                       case 3:
-                        mb.a(qa.field_b.field_s * 3 >> 1, 18, g.field_C, true, 9414, 240, tc.field_a, 6, 320, 2, 18, qa.field_b);
+                        mb.a(qa.field_b.field_s * 3 >> 1, 18, DequeWidgetContainer.field_C, true, 9414, 240, tc.field_a, 6, 320, 2, 18, qa.field_b);
                       default:
                         break;
                       case 4:
@@ -767,7 +767,7 @@ public final class Main extends c {
               tb.a(4, 78);
             }
             if (2 == var2_int) {
-              r.a(18, 6, -250, 320, qa.field_b.field_s * 3 >> 1, g.field_C, 2, qa.field_b, 6, tc.field_a, 240);
+              r.a(18, 6, -250, 320, qa.field_b.field_s * 3 >> 1, DequeWidgetContainer.field_C, 2, qa.field_b, 6, tc.field_a, 240);
             }
           }
           return;
@@ -1661,7 +1661,7 @@ public final class Main extends c {
             return stackIn_9_0;
           }
           if (null != ll.field_e) {
-            ug.a(85.0f, 105, j.field_A);
+            ug.a(85.0f, 105, ModalDialogHost.field_A);
             this.renderClientFrame((byte) 59);
             var3_ref3 = new da(sh.field_g, fb.field_a);
             sh.field_g = null;
@@ -1684,7 +1684,7 @@ public final class Main extends c {
           }
           if (EditableTextField.field_H != null) {
             vb.field_k = DelegatingCanvas.a(-126, "unachieved", "basic", EditableTextField.field_H);
-            qi.field_D = DelegatingCanvas.a(-128, "orbcoin", "basic", EditableTextField.field_H);
+            DraggableWidgetContainer.field_D = DelegatingCanvas.a(-128, "orbcoin", "basic", EditableTextField.field_H);
             EditableTextField.field_H = null;
             stackIn_74_0 = 1;
             return stackIn_74_0;
@@ -1715,14 +1715,14 @@ public final class Main extends c {
           ug.a(95.0f, 77, lb.field_f);
           this.renderClientFrame((byte) 59);
           var3_array = id.field_a.getFileByName((byte) 7, "font", "");
-          var4_ref_wb__ = lk.a("font", "", (byte) 49, mh.field_c);
+          var4_ref_wb__ = UiWidget.a("font", "", (byte) 49, mh.field_c);
           qa.field_b = PcmOutputWorker.a(121, var4_ref_wb__, var3_array);
           eb.field_c = kk.a(var4_ref_wb__, var3_array, 1, 256, 16777215);
           var5Lifetime1 = qa.field_b.field_s + qa.field_b.field_x;
           sk.field_c = new RgbSprite(var5Lifetime1, var5Lifetime1);
           sk.field_c.bindAsRenderTarget();
-          qi.field_D.drawDownscaledAreaAveraged(0, 0, var5Lifetime1, var5Lifetime1);
-          qi.field_D = null;
+          DraggableWidgetContainer.field_D.drawDownscaledAreaAveraged(0, 0, var5Lifetime1, var5Lifetime1);
+          DraggableWidgetContainer.field_D = null;
           gf.field_e.setAsRasterTarget(200);
           this.field_I = gl.a("tiles", mh.field_c, "", -13244);
           var6_ref = lh.a("canyonmask2", mh.field_c, "", 120);
@@ -1985,64 +1985,64 @@ public final class Main extends c {
           do {
             if (var32_int >= 9) {
               tc.field_a[4] = null;
-              g.field_C = new RgbSprite[9];
-              g.field_C[0] = new RgbSprite(2, 2);
+              DequeWidgetContainer.field_C = new RgbSprite[9];
+              DequeWidgetContainer.field_C[0] = new RgbSprite(2, 2);
               break;
             }
             tc.field_a[var32_int] = var28;
             var32_int++;
           } while (var46 == 0);
-          var32 = g.field_C[0].field_r;
-          g.field_C[0].field_r[2] = 12217600;
-          var33 = g.field_C[0].field_r;
+          var32 = DequeWidgetContainer.field_C[0].field_r;
+          DequeWidgetContainer.field_C[0].field_r[2] = 12217600;
+          var33 = DequeWidgetContainer.field_C[0].field_r;
           var33[1] = 12217600;
           var32[0] = 12217600;
-          g.field_C[0].field_r[3] = 7619584;
-          g.field_C[1] = new RgbSprite(2, 2);
-          g.field_C[1].field_r[1] = 12217600;
-          var34 = g.field_C[1].field_r;
+          DequeWidgetContainer.field_C[0].field_r[3] = 7619584;
+          DequeWidgetContainer.field_C[1] = new RgbSprite(2, 2);
+          DequeWidgetContainer.field_C[1].field_r[1] = 12217600;
+          var34 = DequeWidgetContainer.field_C[1].field_r;
           var34[0] = 12217600;
-          g.field_C[1].field_r[3] = 7619584;
-          var35 = g.field_C[1].field_r;
+          DequeWidgetContainer.field_C[1].field_r[3] = 7619584;
+          var35 = DequeWidgetContainer.field_C[1].field_r;
           var35[2] = 7619584;
-          g.field_C[2] = new RgbSprite(2, 2);
-          g.field_C[2].field_r[1] = 12217600;
-          var36 = g.field_C[2].field_r;
+          DequeWidgetContainer.field_C[2] = new RgbSprite(2, 2);
+          DequeWidgetContainer.field_C[2].field_r[1] = 12217600;
+          var36 = DequeWidgetContainer.field_C[2].field_r;
           var36[0] = 12217600;
-          g.field_C[2].field_r[2] = 7619584;
-          g.field_C[2].field_r[3] = 3548426;
-          g.field_C[3] = new RgbSprite(2, 2);
-          g.field_C[3].field_r[2] = 12217600;
-          var37 = g.field_C[3].field_r;
+          DequeWidgetContainer.field_C[2].field_r[2] = 7619584;
+          DequeWidgetContainer.field_C[2].field_r[3] = 3548426;
+          DequeWidgetContainer.field_C[3] = new RgbSprite(2, 2);
+          DequeWidgetContainer.field_C[3].field_r[2] = 12217600;
+          var37 = DequeWidgetContainer.field_C[3].field_r;
           var37[0] = 12217600;
-          g.field_C[3].field_r[3] = 7619584;
-          var38 = g.field_C[3].field_r;
+          DequeWidgetContainer.field_C[3].field_r[3] = 7619584;
+          var38 = DequeWidgetContainer.field_C[3].field_r;
           var38[1] = 7619584;
-          g.field_C[5] = new RgbSprite(2, 2);
-          g.field_C[5].field_r[2] = 5059597;
-          var39 = g.field_C[5].field_r;
+          DequeWidgetContainer.field_C[5] = new RgbSprite(2, 2);
+          DequeWidgetContainer.field_C[5].field_r[2] = 5059597;
+          var39 = DequeWidgetContainer.field_C[5].field_r;
           var39[0] = 5059597;
-          var40 = g.field_C[5].field_r;
-          g.field_C[5].field_r[3] = 3548426;
+          var40 = DequeWidgetContainer.field_C[5].field_r;
+          DequeWidgetContainer.field_C[5].field_r[3] = 3548426;
           var40[1] = 3548426;
-          g.field_C[6] = new RgbSprite(2, 2);
-          g.field_C[6].field_r[2] = 12217600;
-          var41 = g.field_C[6].field_r;
-          g.field_C[6].field_r[1] = 7619584;
+          DequeWidgetContainer.field_C[6] = new RgbSprite(2, 2);
+          DequeWidgetContainer.field_C[6].field_r[2] = 12217600;
+          var41 = DequeWidgetContainer.field_C[6].field_r;
+          DequeWidgetContainer.field_C[6].field_r[1] = 7619584;
           var41[0] = 12217600;
-          g.field_C[6].field_r[3] = 3548426;
-          g.field_C[7] = new RgbSprite(2, 2);
-          var42 = g.field_C[7].field_r;
-          g.field_C[7].field_r[1] = 5059597;
+          DequeWidgetContainer.field_C[6].field_r[3] = 3548426;
+          DequeWidgetContainer.field_C[7] = new RgbSprite(2, 2);
+          var42 = DequeWidgetContainer.field_C[7].field_r;
+          DequeWidgetContainer.field_C[7].field_r[1] = 5059597;
           var42[0] = 5059597;
-          var43 = g.field_C[7].field_r;
-          g.field_C[7].field_r[3] = 3548426;
+          var43 = DequeWidgetContainer.field_C[7].field_r;
+          DequeWidgetContainer.field_C[7].field_r[3] = 3548426;
           var43[2] = 3548426;
-          g.field_C[8] = new RgbSprite(2, 2);
-          g.field_C[8].field_r[0] = 5059597;
-          var44 = g.field_C[8].field_r;
-          g.field_C[8].field_r[3] = 3548426;
-          var45 = g.field_C[8].field_r;
+          DequeWidgetContainer.field_C[8] = new RgbSprite(2, 2);
+          DequeWidgetContainer.field_C[8].field_r[0] = 5059597;
+          var44 = DequeWidgetContainer.field_C[8].field_r;
+          DequeWidgetContainer.field_C[8].field_r[3] = 3548426;
+          var45 = DequeWidgetContainer.field_C[8].field_r;
           var45[2] = 3548426;
           mh.field_c = null;
           var44[1] = 3548426;
@@ -2120,7 +2120,7 @@ public final class Main extends c {
           wf.a(param0 ^ 3);
           al.clearStaticReferences((byte) -70);
           hk.a(121);
-          j.releaseDeclaredStaticReferences(param0 + 46);
+          ModalDialogHost.releaseDeclaredStaticReferences(param0 + 46);
           AccountCreationResultPanel.resetStaticState(-2113);
           rk.clearStaticReferences((byte) -30);
           AccountRegistrationPanel.clearDeclaredStaticReferences(-23573);
@@ -2184,12 +2184,12 @@ public final class Main extends c {
           db.clearStaticReferences(0);
           tb.a(param0 + 128);
           TextLayout.a((byte) 126);
-          lk.clearStaticReferences(0);
+          UiWidget.clearStaticReferences(0);
           InteractiveWidget.clearDeclaredStaticReferences((byte) -69);
-          qg.clearDeclaredStaticReferences(80);
+          SingleChildWidgetContainer.clearDeclaredStaticReferences(80);
           jc.clearDeclaredStaticReferences(42);
-          qf.n(param0 + 8736);
-          g.clearStaticReferences(true);
+          ModalDialog.n(param0 + 8736);
+          DequeWidgetContainer.clearStaticReferences(true);
           qd.resetStaticState(param0 ^ -2057);
           ji.a(-61);
           kb.clearStaticReferences(480);
@@ -2208,7 +2208,7 @@ public final class Main extends c {
           hi.clearStaticReferences(0);
           PcmOutputWorker.clearStaticAssetReferences(true);
           dd.clearStaticReferences(false);
-          ck.clearStaticReferences((byte) 41);
+          LabeledWidgetContainer.clearStaticReferences((byte) 41);
           EditableTextField.o(-31141);
           ta.clearStaticReferences((byte) 116);
           ng.resetStaticState(2);
@@ -2231,8 +2231,8 @@ public final class Main extends c {
           DirectByteArrayStore.clearDeclaredStaticReferences(0);
           RichTextLayout.d(-126);
           fl.clearStaticReferences(param0 ^ 31237);
-          qi.d((byte) 77);
-          wc.releaseDeclaredStaticReferences(param0 - 21693);
+          DraggableWidgetContainer.d((byte) 77);
+          DropTargetWidgetContainer.releaseDeclaredStaticReferences(param0 - 21693);
           de.resetStaticState(false);
           IterableNodeHashTable.resetStaticState(3663);
           tf.g(-1);
@@ -2243,7 +2243,7 @@ public final class Main extends c {
           nb.clearStaticReferences(-98);
           r.b(19017);
           rl.c((byte) -98);
-          n.clearStaticReferences((byte) -89);
+          AlphaWidgetContainer.clearStaticReferences((byte) -89);
           uh.clearStaticReferences(param0 ^ -12908);
           ad.clearStaticReferences(95);
           bl.clearStaticReferences((byte) 114);
@@ -2375,7 +2375,7 @@ public final class Main extends c {
                 tc.a(param0 ^ -17180, Crc32Table.field_d, 26 + TextFieldValidator.field_i.field_o, 1 + (23 + TextFieldValidator.field_i.field_p));
                 if (ff.field_b == 9) {
                   var3 = hb.field_d << 3;
-                  var4 = qf.m(-32749);
+                  var4 = ModalDialog.m(-32749);
                   var5 = ValidatedTextField.g((byte) -111);
                   if (0 < var3) {
                     SoftwareRasterizer.fillRectangleAlpha((-var4 + 640 >> 1) - 10, (480 - var5 >> 1) - 10, 20 + var4, 20 + var5, 0, var3);
@@ -2388,7 +2388,7 @@ public final class Main extends c {
             tc.a(param0 ^ -17180, Crc32Table.field_d, 26 + TextFieldValidator.field_i.field_o, 1 + (23 + TextFieldValidator.field_i.field_p));
             if (ff.field_b == 9) {
               var3 = hb.field_d << 3;
-              var4 = qf.m(-32749);
+              var4 = ModalDialog.m(-32749);
               var5 = ValidatedTextField.g((byte) -111);
               if (0 < var3) {
                 SoftwareRasterizer.fillRectangleAlpha((-var4 + 640 >> 1) - 10, (480 - var5 >> 1) - 10, 20 + var4, 20 + var5, 0, var3);
@@ -2656,7 +2656,7 @@ public final class Main extends c {
           }
           var2_int = -64 % ((-32 - param0) / 49);
           var3 = id.correctedCurrentTimeMillis(96);
-          if (qf.field_G != 0 &&
+          if (ModalDialog.field_G != 0 &&
             vd.field_u < 0) {
             var5_ref_kf = (kf) (jl.field_e.beginForward((byte) 74));
             if (var5_ref_kf != null &&
@@ -2700,8 +2700,8 @@ public final class Main extends c {
             if (!stackIn_36_0) {
               return false;
             }
-            if (qf.field_G != 0) {
-              var5 = qf.field_G;
+            if (ModalDialog.field_G != 0) {
+              var5 = ModalDialog.field_G;
               if (DebouncedFieldValidator.field_a != 0.0) {
                 var5 = (int)((double)var5 + pg.field_a.nextGaussian() * DebouncedFieldValidator.field_a);
                 if (var5 < 0) {

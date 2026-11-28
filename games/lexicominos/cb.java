@@ -116,8 +116,8 @@ final class cb extends IntrusiveNode {
         if (param0 < 13) {
           cb.b(73);
         }
-        var4 = MidiPcmStream.field_N[param3] + oc.field_a[param3] + l.field_D[param3];
-        var5 = MidiPcmStream.field_N[param2] + oc.field_a[param2] + l.field_D[param2];
+        var4 = MidiPcmStream.field_N[param3] + oc.field_a[param3] + DropTargetWidgetContainer.field_D[param3];
+        var5 = MidiPcmStream.field_N[param2] + oc.field_a[param2] + DropTargetWidgetContainer.field_D[param2];
         if (var4 < var5) {
           return true;
         }

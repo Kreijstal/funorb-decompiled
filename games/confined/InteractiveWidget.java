@@ -3,7 +3,7 @@
  */
 import java.util.*;
 
-class InteractiveWidget extends fj {
+class InteractiveWidget extends UiWidget {
     private boolean field_H;
     static int field_M;
     boolean field_L;
@@ -13,7 +13,7 @@ class InteractiveWidget extends fj {
     static int[] field_I;
     private boolean field_N;
 
-    boolean a(int param0, int param1, byte param2, int param3, fj param4, int param5, int param6) {
+    boolean pointerPressed(int param0, int param1, byte param2, int param3, UiWidget param4, int param5, int param6) {
         RuntimeException var8 = null;
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
@@ -24,12 +24,12 @@ class InteractiveWidget extends fj {
             InteractiveWidget.clearStaticReferences((byte) 85);
           }
           if (this.field_L &&
-            this.a(param1, (byte) 126, param0, param5, param3)) {
-            this.a(param4, 418);
+            this.containsPointer(param1, (byte) 126, param0, param5, param3)) {
+            this.takeFocus(param4, 418);
             this.field_o = param6;
             if (this.field_t != null &&
-              this.field_t instanceof nc) {
-              ((nc) (this.field_t)).a(param0, param5, this, param3, (byte) -115, param1, param6);
+              this.field_t instanceof WidgetPointerListener) {
+              ((WidgetPointerListener) (this.field_t)).onWidgetPointerPressed(param0, param5, this, param3, (byte) -115, param1, param6);
             }
             return true;
           }
@@ -61,11 +61,11 @@ class InteractiveWidget extends fj {
         }
     }
 
-    InteractiveWidget(String param0, uk param1) {
+    InteractiveWidget(String param0, WidgetEventListener param1) {
         this(param0, KeyboardInput.field_d.field_h, param1);
     }
 
-    boolean a(fj param0, int param1) {
+    boolean takeFocus(UiWidget param0, int param1) {
         RuntimeException var3 = null;
         RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
@@ -74,14 +74,14 @@ class InteractiveWidget extends fj {
         try {
           if (this.field_L &&
             this.field_N) {
-            param0.b(param1 - 334);
+            param0.blur(param1 - 334);
             if (param1 != 418) {
               field_M = 32;
             }
             this.field_H = true;
             if (null != this.field_t &&
-              this.field_t instanceof vi) {
-              ((vi) (this.field_t)).a((fj) (this), this.field_H, (byte) -85);
+              this.field_t instanceof WidgetFocusListener) {
+              ((WidgetFocusListener) (this.field_t)).onWidgetFocusChanged((UiWidget) (this), this.field_H, (byte) -85);
             }
             return true;
           }
@@ -108,7 +108,7 @@ class InteractiveWidget extends fj {
         field_I = null;
     }
 
-    final StringBuilder a(StringBuilder param0, int param1, Hashtable param2, boolean param3) {
+    final StringBuilder appendDebugTree(StringBuilder param0, int param1, Hashtable param2, boolean param3) {
         StringBuilder discarded$2 = null;
         StringBuilder discarded$3 = null;
         RuntimeException var5 = null;
@@ -120,8 +120,8 @@ class InteractiveWidget extends fj {
         String stackIn_17_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (this.a((byte) -13, param1, param2, param0)) {
-            this.a(param0, param2, (byte) -63, param1);
+          if (this.beginDebugTreeEntry((byte) -13, param1, param2, param0)) {
+            this.appendDebugProperties(param0, param2, (byte) -63, param1);
             if (this.field_O) {
               discarded$2 = param0.append(" active");
             }
@@ -130,7 +130,7 @@ class InteractiveWidget extends fj {
             }
           }
           if (param3) {
-            this.e((byte) 17);
+            this.isFocused((byte) 17);
           }
           stackIn_10_0 = (StringBuilder) (param0);
           return stackIn_10_0;
@@ -154,32 +154,32 @@ class InteractiveWidget extends fj {
         }
     }
 
-    void a(fj param0, int param1, int param2, int param3) {
+    void updatePointer(UiWidget param0, int param1, int param2, int param3) {
         try {
-          super.a(param0, param1, param2, param3);
+          super.updatePointer(param0, param1, param2, param3);
           if (0 != this.field_o) {
             if (this.field_o == Confined.field_I) {
               return;
             }
-            if (this.a(ld.field_l, (byte) 124, param2, jh.field_R, param3) &&
+            if (this.containsPointer(ld.field_l, (byte) 124, param2, jh.field_R, param3) &&
               Confined.field_I == 0) {
               this.activateFromInput(25124, jh.field_R - param3, ld.field_l - param2, this.field_o);
             }
-            this.a(-38, param3, ld.field_l, param0, jh.field_R, param2);
+            this.pointerReleased(-38, param3, ld.field_l, param0, jh.field_R, param2);
           }
         } catch (RuntimeException runtimeException) {
           throw TextLineMetrics.a((Throwable) ((Object) runtimeException), "rg.V(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
-    InteractiveWidget(String param0, fe param1, uk param2) {
+    InteractiveWidget(String param0, WidgetRenderer param1, WidgetEventListener param2) {
         super(param0, param1, param2);
         this.field_L = true;
         this.field_H = false;
         this.field_N = true;
     }
 
-    final void b(int param0) {
+    final void blur(int param0) {
         if (param0 != 84) {
           this.field_H = true;
           if (!this.field_H) {
@@ -189,8 +189,8 @@ class InteractiveWidget extends fj {
           if (this.field_t == null) {
             return;
           }
-          if (this.field_t instanceof vi) {
-            ((vi) (this.field_t)).a((fj) (this), this.field_H, (byte) -110);
+          if (this.field_t instanceof WidgetFocusListener) {
+            ((WidgetFocusListener) (this.field_t)).onWidgetFocusChanged((UiWidget) (this), this.field_H, (byte) -110);
             return;
           }
           return;
@@ -202,13 +202,13 @@ class InteractiveWidget extends fj {
         if (this.field_t == null) {
           return;
         }
-        if (this.field_t instanceof vi) {
-          ((vi) (this.field_t)).a((fj) (this), this.field_H, (byte) -110);
+        if (this.field_t instanceof WidgetFocusListener) {
+          ((WidgetFocusListener) (this.field_t)).onWidgetFocusChanged((UiWidget) (this), this.field_H, (byte) -110);
           return;
         }
     }
 
-    boolean a(fj param0, byte param1, int param2, char param3) {
+    boolean handleKey(UiWidget param0, byte param1, int param2, char param3) {
         int var5_int = 0;
         RuntimeException var5 = null;
         RuntimeException stackIn_10_0 = null;
@@ -216,7 +216,7 @@ class InteractiveWidget extends fj {
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (this.e((byte) 60) && (param2 == 84 ||
+          if (this.isFocused((byte) 60) && (param2 == 84 ||
             param2 == 83)) {
             this.activateFromInput(25124, -1, -1, 1);
             return true;
@@ -237,20 +237,20 @@ class InteractiveWidget extends fj {
         }
     }
 
-    final boolean e(byte param0) {
+    final boolean isFocused(byte param0) {
         int var2 = -119 % ((param0 + 74) / 49);
         return this.field_H;
     }
 
-    final void a(int param0, int param1, int param2, fj param3, int param4, int param5) {
+    final void pointerReleased(int param0, int param1, int param2, UiWidget param3, int param4, int param5) {
         try {
           if (param0 >= -18) {
-            fj var8 = (fj) null;
-            this.a((fj) null, 87, -34, -5);
+            UiWidget var8 = (UiWidget) null;
+            this.updatePointer((UiWidget) null, 87, -34, -5);
           }
           if (this.field_t != null &&
-            this.field_t instanceof nc) {
-            ((nc) (this.field_t)).a(this, -126, param2, param1, param4, param5);
+            this.field_t instanceof WidgetPointerListener) {
+            ((WidgetPointerListener) (this.field_t)).onWidgetPointerReleased(this, -126, param2, param1, param4, param5);
           }
           this.field_o = 0;
         } catch (RuntimeException runtimeException) {

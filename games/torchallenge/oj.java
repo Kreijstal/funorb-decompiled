@@ -1085,7 +1085,7 @@ final class oj {
                 }
                 var2 = dl.a("goback", false);
                 if (var2 != null) {
-                  uk.field_Q = re.a(18990, var2);
+                  DraggableWidgetContainer.field_Q = re.a(18990, var2);
                 }
                 var2 = dl.a("otheroptions", false);
                 if (var2 != null) {
@@ -1145,7 +1145,7 @@ final class oj {
                 }
                 var2 = dl.a("back", false);
                 if (var2 != null) {
-                  b.field_R = re.a(18990, var2);
+                  ModalDialog.field_R = re.a(18990, var2);
                 }
                 var2 = dl.a("exitfullscreenmode", false);
                 if (null != var2) {
@@ -1773,7 +1773,7 @@ final class oj {
                 }
                 var2 = dl.a("waitingfor_graphics", false);
                 if (null != var2) {
-                  uk.field_K = re.a(18990, var2);
+                  DraggableWidgetContainer.field_K = re.a(18990, var2);
                 }
                 var2 = dl.a("waitingfor_models", false);
                 if (null != var2) {
@@ -1905,7 +1905,7 @@ final class oj {
                 }
                 var2 = dl.a("sound_colon", false);
                 if (null != var2) {
-                  kj.field_H = re.a(18990, var2);
+                  DequeWidgetContainer.field_H = re.a(18990, var2);
                 }
                 var2 = dl.a("music_colon", false);
                 if (null != var2) {
@@ -1993,7 +1993,7 @@ final class oj {
                 }
                 var2 = dl.a("startgame", false);
                 if (null != var2) {
-                  si.field_M = re.a(18990, var2);
+                  ModalDialogHost.field_M = re.a(18990, var2);
                 }
                 var2 = dl.a("newgame", false);
                 if (null != var2) {
@@ -2079,7 +2079,7 @@ final class oj {
                 }
                 var2 = dl.a("returntogame", false);
                 if (var2 != null) {
-                  kj.field_E = re.a(param0 ^ -17660, var2);
+                  DequeWidgetContainer.field_E = re.a(param0 ^ -17660, var2);
                 }
                 var2 = dl.a("endgameresign", false);
                 if (null != var2) {
@@ -2535,7 +2535,7 @@ final class oj {
                 }
                 var2 = dl.a("keychar_the_character_under_questionmark", false);
                 if (var2 != null) {
-                  ic.decodeCp1252Byte(var2[0], param0 ^ 8989);
+                  SingleChildWidgetContainer.decodeCp1252Byte(var2[0], param0 ^ 8989);
                 }
                 var2 = dl.a("rating_noratings", false);
                 if (null != var2) {

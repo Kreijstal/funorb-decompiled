@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class gh implements t {
+final class gh implements WidgetRenderer {
     static boolean field_k;
     static String field_c;
     private int field_g;
@@ -35,7 +35,7 @@ final class gh implements t {
         return true;
     }
 
-    public final void a(int param0, UiWidget param1, int param2, boolean param3, int param4) {
+    public final void paintWidget(int param0, UiWidget param1, int param2, boolean param3, int param4) {
         int var8 = 0;
         int var13 = 0;
         double var9 = 0.0;

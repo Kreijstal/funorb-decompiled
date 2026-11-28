@@ -276,7 +276,7 @@ final class IsaacRandom {
           if (param2.length() == 0) {
             return true;
           }
-          if (pf.a(128, param1, param2)) {
+          if (ModalDialogHost.a(128, param1, param2)) {
             return false;
           }
           if (ee.a(-1, param2, param1)) {

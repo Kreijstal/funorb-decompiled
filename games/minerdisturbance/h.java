@@ -26,7 +26,7 @@ final class h {
         var9 = MinerDisturbance.field_ab;
         try {
           var10 = (CharSequence) ((Object) param2);
-          var3_int = fe.a((byte) 74, param0, var10);
+          var3_int = UiWidget.a((byte) 74, param0, var10);
           var4 = new String[var3_int + 1];
           var5 = 0;
           var6 = 0;

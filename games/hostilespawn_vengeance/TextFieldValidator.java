@@ -53,7 +53,7 @@ abstract class TextFieldValidator extends DebouncedFieldValidator implements Tex
           var4 = uj.field_p.field_e + 24;
           var5 = uj.field_p.field_g;
           for (var1_int = 0; var1_int < ib.field_c; var1_int++) {
-            var6 = jn.field_F[var1_int];
+            var6 = AlphaWidgetContainer.field_F[var1_int];
             var3 = -var5 + (int)(((double)var6.field_j.field_g + var6.field_l.field_a) * 24.0);
             var2 = (int)(24.0 * ((double)var6.field_j.field_e + var6.field_l.field_f)) - var4;
             if (var2 >= -96 &&

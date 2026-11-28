@@ -20,7 +20,7 @@ final class vg {
         try {
           if (param1 != null &&
             param1.length() >= eb.field_a) {
-            if (param1.length() > vd.field_D) {
+            if (param1.length() > DequeWidgetContainer.field_D) {
               return true;
             }
             if (param0) {

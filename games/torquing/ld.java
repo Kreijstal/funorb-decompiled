@@ -15,7 +15,7 @@ final class ld implements WidgetRenderer {
     private BitmapFont field_j;
     static String field_b;
 
-    public final void a(int param0, int param1, int param2, boolean param3, UiWidget param4) {
+    public final void paintWidget(int param0, int param1, int param2, boolean param3, UiWidget param4) {
         va var6 = null;
         int var7 = 0;
         int var8 = 0;

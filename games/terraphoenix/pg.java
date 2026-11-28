@@ -12,8 +12,8 @@ final class pg {
 
     final static void a(float param0, boolean param1, String param2, int param3) {
         if (vi.field_n == null) {
-          vi.field_n = new na(jl.field_I, PcmResampler.field_e);
-          jl.field_I.a((UiWidget) (vi.field_n), (byte) -1);
+          vi.field_n = new na(AlphaWidgetContainer.field_I, PcmResampler.field_e);
+          AlphaWidgetContainer.field_I.showDialog((UiWidget) (vi.field_n), (byte) -1);
         }
         vi.field_n.a((byte) 60, param1, param2, param0);
         SoftwareRasterizer.clearRaster();

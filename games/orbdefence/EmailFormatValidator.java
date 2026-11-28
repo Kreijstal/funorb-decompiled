@@ -51,7 +51,7 @@ final class EmailFormatValidator extends TextFieldValidator {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw dd.wrapClientException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
+          throw DraggableWidgetContainer.wrapClientException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
         }
     }
 
@@ -87,7 +87,7 @@ final class EmailFormatValidator extends TextFieldValidator {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw dd.wrapClientException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param1).append(')').toString());
+          throw DraggableWidgetContainer.wrapClientException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param1).append(')').toString());
         }
     }
 

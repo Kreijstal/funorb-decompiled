@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class kc extends qd {
+abstract class kc extends ModalDialog {
     static int field_Q;
     static wd field_P;
     private int field_R;
@@ -16,12 +16,12 @@ abstract class kc extends qd {
     static byte[][][] field_O;
     private int field_T;
 
-    boolean i(int param0) {
+    boolean snapDialogAnimation(int param0) {
         this.j(-126);
         if (param0 >= -121) {
           return false;
         }
-        return super.i(-125);
+        return super.snapDialogAnimation(-125);
     }
 
     void j(int param0) {
@@ -31,12 +31,12 @@ abstract class kc extends qd {
         if (0 >= this.field_K) {
           return;
         }
-        this.b(this.field_J, (byte) 57, this.field_L);
+        this.setCenteredSize(this.field_J, (byte) 57, this.field_L);
         this.field_K = 0;
         this.k(-108);
     }
 
-    kc(tc param0, int param1, int param2) {
+    kc(ModalDialogHost param0, int param1, int param2) {
         super(param0, param1, param2);
         this.field_K = 0;
         this.field_I = 0;
@@ -168,7 +168,7 @@ abstract class kc extends qd {
 
     final void b(int param0, int param1, byte param2, int param3) {
         if (param3 <= 0) {
-          this.b(param0, (byte) 57, param1);
+          this.setCenteredSize(param0, (byte) 57, param1);
           return;
         }
         this.field_R = this.field_f;
@@ -188,14 +188,14 @@ abstract class kc extends qd {
         }
     }
 
-    boolean g(byte param0) {
+    boolean advanceDialogAnimation(byte param0) {
         int var2 = 0;
         int var3 = 0;
         int fieldTemp$0 = 0;
         int var4 = 0;
         int var5 = 0;
         if (param0 != -124) {
-          this.g((byte) -68);
+          this.advanceDialogAnimation((byte) -68);
         }
         if (this.field_K > 0) {
           var2 = this.field_J;
@@ -211,9 +211,9 @@ abstract class kc extends qd {
             var2 = var4 * (-this.field_T + this.field_J) / var5 + this.field_T;
             var3 = var4 * (this.field_L - this.field_R) / var5 + this.field_R;
           }
-          this.b(var2, (byte) 57, var3);
+          this.setCenteredSize(var2, (byte) 57, var3);
         }
-        return super.g((byte) -124);
+        return super.advanceDialogAnimation((byte) -124);
     }
 
     static {

@@ -4,7 +4,7 @@
 final class ia extends tb implements WidgetActivationListener {
     private InteractiveWidget field_P;
 
-    ia(ei param0, di param1) {
+    ia(ModalDialogHost param0, di param1) {
         super(param0, 200, 150);
         Object var3 = null;
         Object stackIn_12_0 = null;
@@ -24,7 +24,7 @@ final class ia extends tb implements WidgetActivationListener {
               var3 = wh.field_d;
               if (GameApplet.b((byte) 124)) {
                 this.field_t = this.field_t + 20;
-                var3 = dl.field_B;
+                var3 = DraggableWidgetContainer.field_B;
               }
             } else {
               if (param1 == jj.field_k) {
@@ -33,14 +33,14 @@ final class ia extends tb implements WidgetActivationListener {
               }
             }
           }
-          var4 = new UiWidget((String) (var3), (lf) null);
+          var4 = new UiWidget((String) (var3), (WidgetEventListener) null);
           var4.field_p = this.field_p;
           var4.field_k = 50;
           var4.field_t = 80;
           var4.field_w = 0;
-          var4.field_u = (uk) ((Object) new DefaultTextWidgetRenderer(de.field_c, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true));
-          this.b(4, var4);
-          this.field_P = this.a(-120, (lf) (this), td.field_a);
+          var4.field_u = (WidgetRenderer) ((Object) new DefaultTextWidgetRenderer(de.field_c, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true));
+          this.addChild(4, var4);
+          this.field_P = this.a(-120, (WidgetEventListener) (this), td.field_a);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -167,7 +167,7 @@ final class ia extends tb implements WidgetActivationListener {
         }
     }
 
-    private final InteractiveWidget a(int param0, lf param1, String param2) {
+    private final InteractiveWidget a(int param0, WidgetEventListener param1, String param2) {
         InteractiveWidget var4 = null;
         RuntimeException var4_ref = null;
         int var5 = 0;
@@ -180,12 +180,12 @@ final class ia extends tb implements WidgetActivationListener {
         RuntimeException decompiledCaughtException = null;
         try {
           var4 = new InteractiveWidget(param2, param1);
-          var4.field_u = (uk) ((Object) new b());
+          var4.field_u = (WidgetRenderer) ((Object) new b());
           var5 = -6 + this.field_t;
           this.field_t = this.field_t + 38;
-          var4.b(-30 + this.field_p, 15, var5, 30, 23987);
-          this.b(4, var4);
-          this.f(0);
+          var4.setBounds(-30 + this.field_p, 15, var5, 30, 23987);
+          this.addChild(4, var4);
+          this.refreshLayout(0);
           if (param0 >= -116) {
             this.k(-89);
           }

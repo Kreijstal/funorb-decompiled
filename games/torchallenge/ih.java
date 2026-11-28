@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ih extends kj implements WidgetActivationListener {
+final class ih extends DequeWidgetContainer implements WidgetActivationListener {
     static int[] field_O;
     private InteractiveWidget field_M;
     private InteractiveWidget field_P;
@@ -11,28 +11,28 @@ final class ih extends kj implements WidgetActivationListener {
     static int field_J;
 
     public ih() {
-        super(0, 0, 476, 225, (j) null);
-        this.field_M = new InteractiveWidget(RandomAccessCacheFile.field_a, (gg) null);
-        this.field_P = new InteractiveWidget(uk.field_Q, (gg) null);
-        this.field_L = new InteractiveWidget(cj.field_k, (gg) null);
+        super(0, 0, 476, 225, (WidgetRenderer) null);
+        this.field_M = new InteractiveWidget(RandomAccessCacheFile.field_a, (WidgetEventListener) null);
+        this.field_P = new InteractiveWidget(DraggableWidgetContainer.field_Q, (WidgetEventListener) null);
+        this.field_L = new InteractiveWidget(cj.field_k, (WidgetEventListener) null);
         cl var1 = new cl();
-        this.field_M.field_q = (j) ((Object) var1);
-        this.field_P.field_q = (j) ((Object) var1);
-        this.field_L.field_q = (j) ((Object) var1);
+        this.field_M.field_q = (WidgetRenderer) ((Object) var1);
+        this.field_P.field_q = (WidgetRenderer) ((Object) var1);
+        this.field_L.field_q = (WidgetRenderer) ((Object) var1);
         int var2 = 4;
         int var3 = 326;
         int var4 = var3 - var2 >> 1;
-        this.field_P.a((byte) 111, -var3 + this.field_p >> 1, 30, var4, -var2 + (this.field_l - 48));
-        this.field_L.a((byte) 116, var4 + (-var3 + this.field_p >> 1) + var2, 30, var4, -var2 - 48 + this.field_l);
-        this.field_M.a((byte) 123, this.field_p - var3 >> 1, 30, var3, -(2 * var2) + (this.field_l - 78));
-        this.field_P.field_k = (gg) (this);
-        this.field_M.field_k = (gg) (this);
-        this.field_L.field_k = (gg) (this);
+        this.field_P.setBounds((byte) 111, -var3 + this.field_p >> 1, 30, var4, -var2 + (this.field_l - 48));
+        this.field_L.setBounds((byte) 116, var4 + (-var3 + this.field_p >> 1) + var2, 30, var4, -var2 - 48 + this.field_l);
+        this.field_M.setBounds((byte) 123, this.field_p - var3 >> 1, 30, var3, -(2 * var2) + (this.field_l - 78));
+        this.field_P.field_k = (WidgetEventListener) (this);
+        this.field_M.field_k = (WidgetEventListener) (this);
+        this.field_L.field_k = (WidgetEventListener) (this);
         this.field_M.field_r = am.field_c;
         this.field_L.field_r = vk.field_c;
-        this.a(0, this.field_P);
-        this.a(0, this.field_M);
-        this.a(0, this.field_L);
+        this.addChild(0, this.field_P);
+        this.addChild(0, this.field_M);
+        this.addChild(0, this.field_L);
     }
 
     public final void onWidgetActivated(InteractiveWidget param0, int param1, int param2, int param3, boolean param4) {
@@ -127,7 +127,7 @@ final class ih extends kj implements WidgetActivationListener {
         id.field_d = (int[][]) null;
         wj.field_a = 0;
         eb.field_n = false;
-        wk.field_F = 0;
+        DropTargetWidgetContainer.field_F = 0;
         ii.field_e = false;
         kl.field_a = false;
         ql.field_j = false;
@@ -147,7 +147,7 @@ final class ih extends kj implements WidgetActivationListener {
         sd.b(116);
     }
 
-    final boolean a(int param0, char param1, byte param2, UiComponent param3) {
+    final boolean handleKey(int param0, char param1, byte param2, UiComponent param3) {
         RuntimeException var5 = null;
         UiComponent var6 = null;
         boolean stackIn_6_0 = false;
@@ -157,22 +157,22 @@ final class ih extends kj implements WidgetActivationListener {
         String stackIn_17_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (super.a(param0, param1, (byte) 98, param3)) {
+          if (super.handleKey(param0, param1, (byte) 98, param3)) {
             return true;
           }
           if (98 == param0) {
-            stackIn_6_0 = this.a(param3, (byte) -16);
+            stackIn_6_0 = this.focusPreviousChild(param3, (byte) -16);
             return stackIn_6_0;
           }
           if (param0 == 99) {
-            stackIn_9_0 = this.b(113, param3);
+            stackIn_9_0 = this.focusNextChild(113, param3);
             return stackIn_9_0;
           }
           if (param2 > 9) {
             return false;
           }
           var6 = (UiComponent) null;
-          this.a(20, 'Q', (byte) 83, (UiComponent) null);
+          this.handleKey(20, 'Q', (byte) 83, (UiComponent) null);
           return false;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -298,11 +298,11 @@ final class ih extends kj implements WidgetActivationListener {
         field_N = null;
     }
 
-    final void a(int param0, int param1, boolean param2, int param3) {
+    final void drawWidget(int param0, int param1, boolean param2, int param3) {
         int var5 = this.field_m + param1;
         int var6 = this.field_i + param0;
         RasterBuffer.field_g.drawParagraph(dk.field_g, 20 + var5, var6 + 20, -40 + this.field_p, this.field_l - 50, 16777215, -1, 1, 0, RasterBuffer.field_g.field_x);
-        super.a(param0, param1, param2, param3);
+        super.drawWidget(param0, param1, param2, param3);
     }
 
     static {

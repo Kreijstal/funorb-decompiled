@@ -265,13 +265,13 @@ final class sc implements Runnable {
           var4_int = 0;
           var5 = 0;
           while (0 == param1.field_e) {
-            jn.field_F[ib.field_c].field_c = 256.0 * Math.random();
+            AlphaWidgetContainer.field_F[ib.field_c].field_c = 256.0 * Math.random();
             var4_int++;
-            jn.field_F[ib.field_c].field_j.copyCoordinatesFrom((byte) 46, param1.field_j);
-            jn.field_F[ib.field_c].field_l.a(param1.field_l, -28860);
-            jn.field_F[ib.field_c].field_e = -var4_int;
-            jn.field_F[ib.field_c].field_h = 0;
-            jn.field_F[ib.field_c].field_i = 6;
+            AlphaWidgetContainer.field_F[ib.field_c].field_j.copyCoordinatesFrom((byte) 46, param1.field_j);
+            AlphaWidgetContainer.field_F[ib.field_c].field_l.a(param1.field_l, -28860);
+            AlphaWidgetContainer.field_F[ib.field_c].field_e = -var4_int;
+            AlphaWidgetContainer.field_F[ib.field_c].field_h = 0;
+            AlphaWidgetContainer.field_F[ib.field_c].field_i = 6;
             ib.field_c = ib.field_c + 1;
             param1.field_l.a(5, (byte) 94, param1.field_c);
             param1.a(8573);
@@ -294,7 +294,7 @@ final class sc implements Runnable {
                 var11 > var8Lifetime1 &&
                 var9.field_I > 0 && (var10 < 12 ||
                 var10 >= 18)) {
-                jn.field_F[ib.field_c - 1].field_i = 1;
+                AlphaWidgetContainer.field_F[ib.field_c - 1].field_i = 1;
                 stackIn_28_0 = (var9.field_I <= 0) ? 0 : 1;
                 var12 = stackIn_28_0;
                 if (var9.a(param1.field_i, -101)) {
@@ -333,7 +333,7 @@ final class sc implements Runnable {
                   }
                 }
                 var9.field_F = 255;
-                jn.field_F[-1 + ib.field_c].field_e = 1;
+                AlphaWidgetContainer.field_F[-1 + ib.field_c].field_e = 1;
                 if (var9.field_I <= 0) {
                   var9.field_I = 0;
                   if (var9.field_b &&
@@ -349,9 +349,9 @@ final class sc implements Runnable {
                       ti.a(245, (byte) -6, 10);
                     }
                   }
-                  jn.field_F[-1 + ib.field_c].field_i = 3;
+                  AlphaWidgetContainer.field_F[-1 + ib.field_c].field_i = 3;
                 }
-                nh.a(var9, -29966);
+                LabeledWidgetContainer.a(var9, -29966);
               }
             }
             param2[param0] = 3;

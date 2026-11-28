@@ -12,16 +12,16 @@ final class kc extends InteractiveWidget {
     static long field_P;
     static String field_M;
 
-    final void a(int param0, int param1, int param2, UiWidget param3) {
+    final void updatePointer(int param0, int param1, int param2, UiWidget param3) {
         try {
           this.field_N = this.field_N + 1;
-          super.a(param0, param1, param2, param3);
+          super.updatePointer(param0, param1, param2, param3);
         } catch (RuntimeException runtimeException) {
           throw fc.wrapClientException((Throwable) ((Object) runtimeException), "kc.JA(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 
-    final boolean a(int param0, UiWidget param1) {
+    final boolean takeFocus(int param0, UiWidget param1) {
         RuntimeException var3 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
@@ -55,7 +55,7 @@ final class kc extends InteractiveWidget {
         field_M = null;
     }
 
-    final void a(int param0, int param1, int param2, int param3) {
+    final void drawWidget(int param0, int param1, int param2, int param3) {
         Sprite var15 = null;
         Sprite var16 = null;
         Sprite var13 = null;
@@ -65,7 +65,7 @@ final class kc extends InteractiveWidget {
         int var11 = SolKnight.field_L ? 1 : 0;
         int var9Lifetime1;
         int var10Lifetime1;
-        super.a(param0, param1, param2, 0);
+        super.drawWidget(param0, param1, param2, 0);
         if (param1 != param3) {
           return;
         }

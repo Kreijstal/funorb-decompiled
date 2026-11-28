@@ -213,7 +213,7 @@ final class SecondaryNodeDeque implements Iterable {
         jg var2 = AccountRegistrationPanel.field_O;
         if (param0 == 16384) {
           if (var2 != null) {
-            var2.a(true, AccountNameAvailabilityValidator.field_m.field_wb, AccountNameAvailabilityValidator.field_m.field_U);
+            var2.drawAllLayers(true, AccountNameAvailabilityValidator.field_m.field_wb, AccountNameAvailabilityValidator.field_m.field_U);
           }
           return;
         }

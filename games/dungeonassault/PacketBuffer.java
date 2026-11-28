@@ -1503,7 +1503,7 @@ class PacketBuffer extends IntrusiveNode {
                 }
                 var2 = gm.a("tutorial_construction2,1", false);
                 if (null != var2) {
-                  dg.field_O[1] = dj.a(var2, param1);
+                  LabeledWidgetContainer.field_O[1] = dj.a(var2, param1);
                 }
                 var2 = gm.a("tutorial_placeroom1,1", false);
                 if (var2 != null) {
@@ -1627,7 +1627,7 @@ class PacketBuffer extends IntrusiveNode {
                 }
                 var2 = gm.a("saurus_warrior", false);
                 if (null != var2) {
-                  sd.field_I = dj.a(var2, false);
+                  AlphaWidgetContainer.field_I = dj.a(var2, false);
                 }
                 var2 = gm.a("orc_shaman", false);
                 if (null != var2) {
@@ -1705,7 +1705,7 @@ class PacketBuffer extends IntrusiveNode {
                 }
                 var2 = gm.a("dryad", false);
                 if (null != var2) {
-                  lm.field_r = dj.a(var2, false);
+                  UiWidget.field_r = dj.a(var2, false);
                 }
                 var2 = gm.a("none", false);
                 if (null != var2) {
@@ -2221,7 +2221,7 @@ class PacketBuffer extends IntrusiveNode {
                 }
                 var2 = gm.a("tip_magical_guardian_room", false);
                 if (var2 != null) {
-                  ii.field_J = dj.a(var2, param1);
+                  DequeWidgetContainer.field_J = dj.a(var2, param1);
                 }
                 var2 = gm.a("ability_pitimmunity,0", false);
                 if (var2 != null) {
@@ -2329,11 +2329,11 @@ class PacketBuffer extends IntrusiveNode {
                 }
                 var2 = gm.a("ability_intimidate,0", param1);
                 if (null != var2) {
-                  rf.field_N[0] = dj.a(var2, false);
+                  ModalDialog.field_N[0] = dj.a(var2, false);
                 }
                 var2 = gm.a("ability_intimidate,1", param1);
                 if (null != var2) {
-                  rf.field_N[1] = dj.a(var2, false);
+                  ModalDialog.field_N[1] = dj.a(var2, false);
                 }
                 var2 = gm.a("ability_ferocity,0", false);
                 if (var2 != null) {
@@ -2441,11 +2441,11 @@ class PacketBuffer extends IntrusiveNode {
                 }
                 var2 = gm.a("ability_retreat_brief,0", false);
                 if (var2 != null) {
-                  bj.field_H[0] = dj.a(var2, false);
+                  DropTargetWidgetContainer.field_H[0] = dj.a(var2, false);
                 }
                 var2 = gm.a("ability_retreat_brief,1", false);
                 if (null != var2) {
-                  bj.field_H[1] = dj.a(var2, param1);
+                  DropTargetWidgetContainer.field_H[1] = dj.a(var2, param1);
                 }
                 var2 = gm.a("ability_sacrifice_green_brief,0", false);
                 if (var2 != null) {
@@ -2639,7 +2639,7 @@ class PacketBuffer extends IntrusiveNode {
                 }
                 var2 = gm.a("orb_preservation_desc", false);
                 if (var2 != null) {
-                  da.field_E = dj.a(var2, false);
+                  SingleChildWidgetContainer.field_E = dj.a(var2, false);
                 }
                 var2 = gm.a("orb_majesty_desc", false);
                 if (var2 != null) {
@@ -2651,7 +2651,7 @@ class PacketBuffer extends IntrusiveNode {
                 }
                 var2 = gm.a("orb_war_desc", false);
                 if (null != var2) {
-                  bj.field_J = dj.a(var2, false);
+                  DropTargetWidgetContainer.field_J = dj.a(var2, false);
                 }
                 var2 = gm.a("titles_age_male,0", false);
                 if (null != var2) {
@@ -3363,7 +3363,7 @@ class PacketBuffer extends IntrusiveNode {
                 }
                 var2 = gm.a("text_charging_hint_x", false);
                 if (var2 != null) {
-                  dg.field_G = dj.a(var2, false);
+                  LabeledWidgetContainer.field_G = dj.a(var2, false);
                 }
                 var2 = gm.a("text_charging_hint_one", false);
                 if (null != var2) {
@@ -3415,7 +3415,7 @@ class PacketBuffer extends IntrusiveNode {
                 }
                 var2 = gm.a("text_status_pregame", false);
                 if (null != var2) {
-                  bj.field_I = dj.a(var2, false);
+                  DropTargetWidgetContainer.field_I = dj.a(var2, false);
                 }
                 var2 = gm.a("text_flee_tooltip", false);
                 if (var2 != null) {
@@ -3665,7 +3665,7 @@ class PacketBuffer extends IntrusiveNode {
                 }
                 var2 = gm.a("text_defeated", param1);
                 if (var2 != null) {
-                  ii.field_C = dj.a(var2, param1);
+                  DequeWidgetContainer.field_C = dj.a(var2, param1);
                 }
                 var2 = gm.a("text_modifier_blinded", false);
                 if (null != var2) {
@@ -3781,7 +3781,7 @@ class PacketBuffer extends IntrusiveNode {
                 }
                 var2 = gm.a("text_save_and_exit_brief", false);
                 if (var2 != null) {
-                  oi.field_M = dj.a(var2, param1);
+                  DraggableWidgetContainer.field_M = dj.a(var2, param1);
                 }
                 var2 = gm.a("text_exit_without_saving_brief", false);
                 if (var2 != null) {
@@ -3913,7 +3913,7 @@ class PacketBuffer extends IntrusiveNode {
                 }
                 var2 = gm.a("text_acv_hunter", false);
                 if (var2 != null) {
-                  ji.field_H = dj.a(var2, false);
+                  ModalDialogHost.field_H = dj.a(var2, false);
                 }
                 var2 = gm.a("text_acv_riches", false);
                 if (null != var2) {

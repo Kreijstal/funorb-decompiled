@@ -1,16 +1,16 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class NameSuggestionsPanel extends lc implements WidgetActivationListener {
+final class NameSuggestionsPanel extends DequeWidgetContainer implements WidgetActivationListener {
     private String[] field_D;
     static int[] field_F;
     private InteractiveWidget[] field_z;
     static int field_E;
     static String field_G;
     private NameSuggestionListener field_C;
-    static bj field_A;
+    static DraggableWidgetContainer field_A;
 
-    final boolean a(lk param0, char param1, int param2, int param3) {
+    final boolean handleKey(UiWidget param0, char param1, int param2, int param3) {
         RuntimeException var5 = null;
         boolean stackIn_6_0 = false;
         boolean stackIn_9_0 = false;
@@ -19,17 +19,17 @@ final class NameSuggestionsPanel extends lc implements WidgetActivationListener 
         String stackIn_15_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (super.a(param0, param1, param2, param3)) {
+          if (super.handleKey(param0, param1, param2, param3)) {
             return true;
           }
           if (param2 == 98) {
-            stackIn_6_0 = this.a((byte) -126, param0);
+            stackIn_6_0 = this.focusPreviousChild((byte) -126, param0);
             return stackIn_6_0;
           }
           if (99 != param2) {
             return false;
           }
-          stackIn_9_0 = this.a(param0, param3 ^ -30160);
+          stackIn_9_0 = this.focusNextChild(param0, param3 ^ -30160);
           return stackIn_9_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -85,7 +85,7 @@ final class NameSuggestionsPanel extends lc implements WidgetActivationListener 
     }
 
     NameSuggestionsPanel(NameSuggestionListener param0) {
-        super(0, 0, 0, 0, (fc) null);
+        super(0, 0, 0, 0, (WidgetRenderer) null);
         try {
           this.field_C = param0;
         } catch (RuntimeException runtimeException) {
@@ -136,13 +136,13 @@ final class NameSuggestionsPanel extends lc implements WidgetActivationListener 
 
     final static int a(int param0) {
         if (param0 != -21065) {
-          field_A = (bj) null;
+          field_A = (DraggableWidgetContainer) null;
         }
         return AwtRasterBuffer.field_a;
     }
 
-    final void a(int param0, int param1, int param2, int param3) {
-        super.a(param0, param1, 48, param3);
+    final void drawWidget(int param0, int param1, int param2, int param3) {
+        super.drawWidget(param0, param1, 48, param3);
         if (param0 != 0) {
           return;
         }
@@ -182,16 +182,16 @@ final class NameSuggestionsPanel extends lc implements WidgetActivationListener 
             var4 = new r(FrameTimer.field_a, 0, 1);
             this.field_z = new InteractiveWidget[1 + var3_int];
             for (var5 = 0; var5 < var3_int; var5++) {
-              this.field_z[var5] = new InteractiveWidget(this.field_D[var5], (sk) (this));
-              this.field_z[var5].field_j = (fc) ((Object) var4);
+              this.field_z[var5] = new InteractiveWidget(this.field_D[var5], (WidgetEventListener) (this));
+              this.field_z[var5].field_j = (WidgetRenderer) ((Object) var4);
               this.field_z[var5].field_q = eg.field_p;
-              this.field_z[var5].b(15, 80, 80, 0, var5 * 16 + 20);
-              this.b(this.field_z[var5], true);
+              this.field_z[var5].setBounds(15, 80, 80, 0, var5 * 16 + 20);
+              this.addChild(this.field_z[var5], true);
             }
-            this.field_z[var3_int] = new InteractiveWidget(kj.field_g, (sk) (this));
-            this.field_z[var3_int].field_j = (fc) ((Object) var4);
-            this.field_z[var3_int].b(15, 80, 100, 0, var3_int * 16 + 36);
-            this.b(this.field_z[var3_int], true);
+            this.field_z[var3_int] = new InteractiveWidget(kj.field_g, (WidgetEventListener) (this));
+            this.field_z[var3_int].field_j = (WidgetRenderer) ((Object) var4);
+            this.field_z[var3_int].setBounds(15, 80, 100, 0, var3_int * 16 + 36);
+            this.addChild(this.field_z[var3_int], true);
             return;
           }
           this.field_D = null;

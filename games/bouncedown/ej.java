@@ -9,7 +9,7 @@ final class ej {
     static String field_e;
 
     final static void a(int param0, String param1) {
-        System.out.println("Error: " + ak.a(param0 ^ 123, "%0a", "\n", param1));
+        System.out.println("Error: " + SingleChildWidgetContainer.a(param0 ^ 123, "%0a", "\n", param1));
         if (param0 != 100) {
           field_d = -84;
         }

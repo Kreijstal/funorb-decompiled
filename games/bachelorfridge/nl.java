@@ -52,7 +52,7 @@ final class nl {
         try {
           if (null == hp.field_d) {
             hp.field_d = new hga(gja.field_m, AnimationNode.field_i);
-            gja.field_m.a((UiWidget) (hp.field_d), (byte) 124);
+            gja.field_m.showDialog((UiWidget) (hp.field_d), (byte) 124);
           }
           hp.field_d.a(50, param2, param0, param1);
           SoftwareRasterizer.clear();

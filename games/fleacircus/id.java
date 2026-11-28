@@ -50,7 +50,7 @@ final class id {
               rj.field_k = stackIn_13_0;
               vi.field_a = stackIn_13_0;
               ob.a(cj.field_b, RichTextLayout.field_g, (byte) -127, InteractiveWidget.field_E, ud.field_b);
-              dk.b((byte) 41, -1);
+              SingleChildWidgetContainer.b((byte) 41, -1);
             } catch (java.io.IOException decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var2 = (IOException) (Object) decompiledCaughtException;
@@ -212,7 +212,7 @@ final class id {
           }
           var2_int = param0.length();
           if (var2_int == 0) {
-            stackIn_6_0 = tf.field_H;
+            stackIn_6_0 = AlphaWidgetContainer.field_H;
             return stackIn_6_0;
           }
           if (var2_int > 255) {
@@ -221,7 +221,7 @@ final class id {
           }
           var3 = m.a('.', 114, param0);
           if (var3.length < 2) {
-            stackIn_14_0 = tf.field_H;
+            stackIn_14_0 = AlphaWidgetContainer.field_H;
             return stackIn_14_0;
           }
           var4 = var3;

@@ -83,7 +83,7 @@ class DualLinkNode extends IntrusiveNode {
     }
 
     final static void a(int param0) {
-        rf.field_K = new fm(InteractiveWidget.field_H);
+        ModalDialog.field_K = new fm(InteractiveWidget.field_H);
         le.field_b = new gn[25][];
         le.field_b[0] = lc.a(-27711, new String[][]{RichTextWidget.field_J, nf.field_C});
         le.field_b[1] = lc.a(-27711, new String[][]{rl.field_e, DiskArchiveRequest.field_J});
@@ -104,7 +104,7 @@ class DualLinkNode extends IntrusiveNode {
         le.field_b[15] = lc.a(-27711, new String[][]{qa.field_e});
         le.field_b[16] = lc.a(-27711, new String[][]{tl.field_m});
         le.field_b[17] = lc.a(-27711, new String[][]{MidiPcmStream.field_M});
-        le.field_b[18] = lc.a(-27711, new String[][]{qh.field_E, dg.field_O});
+        le.field_b[18] = lc.a(-27711, new String[][]{qh.field_E, LabeledWidgetContainer.field_O});
         le.field_b[19] = lc.a(-27711, new String[][]{TextLineMetrics.field_e, uo.field_g});
         le.field_b[20] = lc.a(-27711, new String[][]{DefaultTextWidgetRenderer.field_n, fj.field_a, k.field_a});
         le.field_b[21] = lc.a(-27711, new String[][]{rn.field_g});

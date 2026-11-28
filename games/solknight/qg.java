@@ -71,7 +71,7 @@ final class qg {
             boolean decompiledFrameRemainder0 = true;
             if (kc.field_K[var3].field_i == param0.field_i) {
               var4 = kc.field_K[var3].a(1910696752);
-              if (i.field_K < SolKnight.field_K[var4]) {
+              if (ModalDialogHost.field_K < SolKnight.field_K[var4]) {
                 SolKnight.field_K[var4] = SolKnight.field_K[var4] - 1;
                 decompiledFrameRemainder0 = false;
               }

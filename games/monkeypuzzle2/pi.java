@@ -134,9 +134,9 @@ final class pi extends DualLinkNode {
         var6 = MonkeyPuzzle2.field_F ? 1 : 0;
         try {
           while (AwtRasterBuffer.a(-1)) {
-            if (oa.field_H != 13 &&
-              oa.field_H != 83 &&
-              oa.field_H != 84) {
+            if (DropTargetWidgetContainer.field_H != 13 &&
+              DropTargetWidgetContainer.field_H != 83 &&
+              DropTargetWidgetContainer.field_H != 84) {
               continue;
             }
             return true;

@@ -15,7 +15,7 @@ final class ia {
           if (s.field_d == null) {
             return false;
           }
-          if (null != s.field_d.d((byte) 94)) {
+          if (null != s.field_d.getTopOpenDialog((byte) 94)) {
             return true;
           }
           return false;
@@ -23,7 +23,7 @@ final class ia {
         if (s.field_d == null) {
           return false;
         }
-        if (null != s.field_d.d((byte) 94)) {
+        if (null != s.field_d.getTopOpenDialog((byte) 94)) {
           return true;
         }
         return false;

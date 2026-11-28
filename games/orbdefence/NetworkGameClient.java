@@ -56,7 +56,7 @@ abstract class NetworkGameClient extends GameAppletShell {
         k.a(0);
         mj.field_i = de.createMouseWheelInput((byte) -112);
         l.a(GameAppletShell.field_f, 59);
-        pj.field_p = param3;
+        UiWidget.field_p = param3;
         BufferedSocket.field_e = param5;
         ve.field_Q = param6;
         ValidatedTextField.field_V = param4;
@@ -82,7 +82,7 @@ abstract class NetworkGameClient extends GameAppletShell {
           int var4_int = 68 % ((-44 - param2) / 62);
           this.a(480, 73, 640, param1, param0);
         } catch (RuntimeException runtimeException) {
-          throw dd.wrapClientException((Throwable) ((Object) runtimeException), "ph.BA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw DraggableWidgetContainer.wrapClientException((Throwable) ((Object) runtimeException), "ph.BA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
@@ -181,7 +181,7 @@ abstract class NetworkGameClient extends GameAppletShell {
             bm.a(param1 + 12980, uj.b((byte) -120));
           }
           if (var4 == 12) {
-            jj.a(Bzip2State.a(-103), (byte) 53, uj.b((byte) -120));
+            AlphaWidgetContainer.a(Bzip2State.a(-103), (byte) 53, uj.b((byte) -120));
           }
           if (var4 == 13) {
             try {
@@ -394,7 +394,7 @@ abstract class NetworkGameClient extends GameAppletShell {
           } else {
             stackIn_24_2 = "{...}";
           }
-          throw dd.wrapClientException((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(',').append(param4).append(')').toString());
+          throw DraggableWidgetContainer.wrapClientException((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -485,7 +485,7 @@ abstract class NetworkGameClient extends GameAppletShell {
           if (var3Lifetime1 != 0 &&
             DualLinkNode.field_j == 0 &&
             TextFieldValidator.field_k == 11 &&
-            !sg.c(true)) {
+            !ModalDialog.c(true)) {
             id.a(false);
           }
           if (-1 != DualLinkNode.field_j &&
@@ -539,7 +539,7 @@ abstract class NetworkGameClient extends GameAppletShell {
         }
         if ((-1 != DualLinkNode.field_j &&
           DualLinkNode.field_j != 0 ||
-          sg.c(true)) &&
+          ModalDialog.c(true)) &&
           ji.correctedCurrentTimeMillis(-125) >= lm.field_c) {
           fa.field_a = false;
           if (DualLinkNode.field_j != -1 &&
@@ -549,7 +549,7 @@ abstract class NetworkGameClient extends GameAppletShell {
           }
         }
         if (0 == DualLinkNode.field_j &&
-          !sg.c(true)) {
+          !ModalDialog.c(true)) {
           mf.field_d = false;
         }
         if (vh.field_n == 0 &&
@@ -601,7 +601,7 @@ abstract class NetworkGameClient extends GameAppletShell {
             hm.$cfr$intArgs$a$e5d4dced95c1(stackIn_103_0, stackIn_103_1, stackIn_104_2, stackIn_107_3);
           }
           if (field_v) {
-            kj.j(4);
+            SingleChildWidgetContainer.j(4);
           }
           if (null == de.field_a) {
             de.field_a = fb.c(false);
@@ -611,13 +611,13 @@ abstract class NetworkGameClient extends GameAppletShell {
           og.field_g = null;
           DebouncedFieldValidator.field_b = null;
           am.field_b = null;
-          pj.a(127, (java.applet.Applet) (this));
+          UiWidget.a(127, (java.applet.Applet) (this));
           vd.a(99);
           vh.field_n = 10;
         }
         if (vh.field_n == 10) {
           if (ArchiveRequest.field_m != 0) {
-            eg.field_x = qk.a(pj.field_p, -32585);
+            eg.field_x = qk.a(UiWidget.field_p, -32585);
           }
           vh.field_n = 11;
         }
@@ -756,7 +756,7 @@ abstract class NetworkGameClient extends GameAppletShell {
         if (this.field_h) {
           return -1;
         }
-        if (!sg.c(true)) {
+        if (!ModalDialog.c(true)) {
           return -1;
         }
         if (fa.field_a) {

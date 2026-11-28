@@ -90,17 +90,17 @@ final class NameSuggestionsPanel extends WidgetContainer implements WidgetAction
               this.field_E[var5] = new InteractiveWidget(this.field_F[var5], (WidgetListener) (this));
               this.field_E[var5].renderer = (WidgetRenderer) ((Object) var4);
               this.field_E[var5].tooltip = a.field_p;
-              this.field_E[var5].a(0, 15, (byte) 59, 80, 16 * var5 + 20);
-              this.c(this.field_E[var5], -125);
+              this.field_E[var5].setBounds(0, 15, (byte) 59, 80, 16 * var5 + 20);
+              this.addChild(this.field_E[var5], -125);
             }
             this.field_E[var3_int] = new InteractiveWidget(ScavengerSpecial.field_t, (WidgetListener) (this));
             this.field_E[var3_int].renderer = (WidgetRenderer) ((Object) var4);
-            this.field_E[var3_int].a(0, 15, (byte) 59, 100, 20 + var3_int * 16 + 16);
+            this.field_E[var3_int].setBounds(0, 15, (byte) 59, 100, 20 + var3_int * 16 + 16);
             if (param1 >= -19) {
               var7 = (UiWidget) null;
               this.handleKey(28, 90, '￺', (UiWidget) null);
             }
-            this.c(this.field_E[var3_int], 112);
+            this.addChild(this.field_E[var3_int], 112);
             return;
           }
           this.field_F = null;
@@ -152,7 +152,7 @@ final class NameSuggestionsPanel extends WidgetContainer implements WidgetAction
             return true;
           }
           if (param1 == 98) {
-            stackIn_6_0 = this.a(-124, param3);
+            stackIn_6_0 = this.focusPreviousChild(-124, param3);
             return stackIn_6_0;
           }
           if (param0 != 10) {
@@ -161,7 +161,7 @@ final class NameSuggestionsPanel extends WidgetContainer implements WidgetAction
           if (param1 != 99) {
             return false;
           }
-          stackIn_11_0 = this.b(param3, 1);
+          stackIn_11_0 = this.focusNextChild(param3, 1);
           return stackIn_11_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

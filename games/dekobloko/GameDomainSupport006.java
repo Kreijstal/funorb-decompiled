@@ -101,7 +101,7 @@ class GameDomainSupport006 extends MixedSupport043 {
           return;
         }
         if (integerLocal2 == 2) {
-          UiComponentPart003.performAction0164(integerArgument3, 12618);
+          ModalDialog.performAction0164(integerArgument3, 12618);
           return;
         }
         if (3 != integerLocal2) {

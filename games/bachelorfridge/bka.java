@@ -54,7 +54,7 @@ final class bka implements WidgetRenderer {
         }
     }
 
-    public final void a(int param0, UiWidget param1, int param2, int param3, boolean param4) {
+    public final void paintWidget(int param0, UiWidget param1, int param2, int param3, boolean param4) {
         int var10 = 0;
         RuntimeException var6 = null;
         int var7 = 0;

@@ -24,7 +24,7 @@ final class sc extends WidgetContainer implements TextHotspotListener, WidgetAct
         int var6 = 0;
         try {
           this.field_C = param0;
-          this.field_E = new InteractiveWidget(vd.field_d, (ca) null);
+          this.field_E = new InteractiveWidget(vd.field_d, (WidgetEventListener) null);
           this.field_E.renderer = (WidgetRenderer) ((Object) new rf());
           var7 = ff.a(new String[]{this.h(-29996), this.i(119)}, 0, DelegatingCanvas.field_d);
           var3 = 20;
@@ -34,16 +34,16 @@ final class sc extends WidgetContainer implements TextHotspotListener, WidgetAct
           this.field_D.a(0, (byte) -115, Js5Transport.field_e);
           this.field_D.a(1, (byte) -93, Js5Transport.field_e);
           this.field_D.width = -40 + this.width;
-          this.field_D.listener = (ca) (this);
+          this.field_D.listener = (WidgetEventListener) (this);
           this.field_D.a((byte) 46, 26, this.width - 40, var3);
           var3 = var3 + (15 + this.field_D.height);
-          this.a(this.field_D, -6938);
+          this.addChild(this.field_D, -6938);
           var5 = 4;
           var6 = 200;
-          this.field_E.a((byte) -97, 300 - var6 >> 1, var3, 40, var6);
-          this.field_E.listener = (ca) (this);
-          this.a(this.field_E, -6938);
-          this.a((byte) -49, 0, 0, var3 - (-55 - var5), 300);
+          this.field_E.setBounds((byte) -97, 300 - var6 >> 1, var3, 40, var6);
+          this.field_E.listener = (WidgetEventListener) (this);
+          this.addChild(this.field_E, -6938);
+          this.setBounds((byte) -49, 0, 0, var3 - (-55 - var5), 300);
         } catch (RuntimeException runtimeException) {
           throw RichTextWidget.wrapThrowable((Throwable) ((Object) runtimeException), "sc.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
@@ -209,7 +209,7 @@ final class sc extends WidgetContainer implements TextHotspotListener, WidgetAct
         }
     }
 
-    final boolean a(int param0, UiWidget param1, char param2, int param3) {
+    final boolean handleKey(int param0, UiWidget param1, char param2, int param3) {
         int var5_int = 0;
         RuntimeException var5 = null;
         boolean stackIn_7_0 = false;
@@ -219,18 +219,18 @@ final class sc extends WidgetContainer implements TextHotspotListener, WidgetAct
         String stackIn_16_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (super.a(param0, param1, param2, 98)) {
+          if (super.handleKey(param0, param1, param2, 98)) {
             return true;
           }
           if (param0 == 98) {
-            stackIn_7_0 = this.a((byte) 19, param1);
+            stackIn_7_0 = this.focusPreviousChild((byte) 19, param1);
             return stackIn_7_0;
           }
           var5_int = -40 % ((-33 - param3) / 57);
           if (99 != param0) {
             return false;
           }
-          stackIn_10_0 = this.b(param1, -9928);
+          stackIn_10_0 = this.focusNextChild(param1, -9928);
           return stackIn_10_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

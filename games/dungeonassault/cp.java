@@ -257,14 +257,14 @@ final class cp extends gd {
             if (cm.field_R != null &&
               cm.field_R.focusLost) {
               ib.a(930);
-              na.field_D.a(new nm(na.field_D, of.field_g), -1);
+              na.field_D.showDialog(new nm(na.field_D, of.field_g), -1);
             }
             return;
           }
-          na.field_D.a(am.field_e, (byte) 66, bp.field_d, true);
-          na.field_D.b(true);
+          na.field_D.processPointerInput(am.field_e, (byte) 66, bp.field_d, true);
+          na.field_D.advanceDialogs(true);
           while (ha.b((byte) 47)) {
-            na.field_D.a(param0 + 30335, mm.field_t, ob.field_Yb);
+            na.field_D.processKeyInput(param0 + 30335, mm.field_t, ob.field_Yb);
           }
           if (param0 != -30208) {
             cp.resetStaticState((byte) 49);

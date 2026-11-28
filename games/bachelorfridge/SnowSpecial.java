@@ -239,7 +239,7 @@ final class SnowSpecial extends SpecialOrder {
           var7_ref = (nea) (es.field_j.beginForward((byte) 90));
           scanLoop1: while (true) {
             if (var7_ref != null) {
-              stackOut_49_0 = re.a(param0 ^ -29797, var7_ref, var6Lifetime1);
+              stackOut_49_0 = DropTargetWidgetContainer.a(param0 ^ -29797, var7_ref, var6Lifetime1);
               stackIn_60_0 = stackOut_49_0 ? 1 : 0;
               stackIn_50_0 = stackOut_49_0;
               if (var9 != 0) {

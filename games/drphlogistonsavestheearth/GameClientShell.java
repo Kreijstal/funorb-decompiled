@@ -32,13 +32,13 @@ abstract class GameClientShell extends GameAppletShell {
         int var3Lifetime1;
         int var3Lifetime2;
         var5 = DrPhlogistonSavesTheEarth.field_D ? 1 : 0;
-        if (null != pi.field_V) {
+        if (null != DraggableWidgetContainer.field_V) {
           if (null == df.field_l) {
             var6 = MatchingFieldValidator.b(false);
             var4 = var6.getSize();
-            pi.field_V.a(var4.height, var4.width, 2);
+            DraggableWidgetContainer.field_V.a(var4.height, var4.width, 2);
           }
-          pi.field_V.a((byte) 123);
+          DraggableWidgetContainer.field_V.a((byte) 123);
         }
         GameAppletShell.b((byte) -81);
         ia.a(-116);
@@ -60,7 +60,7 @@ abstract class GameClientShell extends GameAppletShell {
             this.field_r = false;
             eg.a((byte) 126);
             MusicPatchPcmStream.e(11);
-            dl.a(EmailFormatValidator.field_u, 2, 120);
+            AlphaWidgetContainer.a(EmailFormatValidator.field_u, 2, 120);
             fj.e(115);
             dd.field_j = true;
             ab.field_a = la.correctedCurrentTimeMillis(false) + 15000L;
@@ -107,20 +107,20 @@ abstract class GameClientShell extends GameAppletShell {
               MusicPatchPcmStream.e(11);
               if (mh.field_d != 3) {
                 if (4 == mh.field_d) {
-                  dl.a(MidiPcmStream.field_p, 256, 102);
+                  AlphaWidgetContainer.a(MidiPcmStream.field_p, 256, 102);
                 } else {
                   if (mh.field_d != 2) {
                     if (mh.field_d != 5) {
-                      dl.a(db.field_f, 256, 68);
+                      AlphaWidgetContainer.a(db.field_f, 256, 68);
                     } else {
-                      dl.a(gm.field_K, 5, 105);
+                      AlphaWidgetContainer.a(gm.field_K, 5, 105);
                     }
                   } else {
-                    dl.a(ce.field_d, 256, 75);
+                    AlphaWidgetContainer.a(ce.field_d, 256, 75);
                   }
                 }
               } else {
-                dl.a(IntrusiveDeque.field_e, 256, 66);
+                AlphaWidgetContainer.a(IntrusiveDeque.field_e, 256, 66);
               }
               dd.field_j = true;
             }
@@ -152,7 +152,7 @@ abstract class GameClientShell extends GameAppletShell {
           AccountCreationResultPanel.field_Jb = lk.a(false, true, hb.field_q, 1, 8);
           sb.field_i = lk.a(false, true, field_q, 1, 8);
           ig.field_t = lk.a(false, true, NameSuggestionsPanel.field_O, 1, 8);
-          si.field_E = sb.field_i;
+          SingleChildWidgetContainer.field_E = sb.field_i;
           hj.field_f = 2;
           ph.field_b = AccountCreationResultPanel.field_Jb;
         }
@@ -180,7 +180,7 @@ abstract class GameClientShell extends GameAppletShell {
           ue.a(false);
           rh.field_d = ha.field_e;
           gm.field_M = false;
-          wh.a(-80, sb.field_i, ig.field_t, AccountCreationResultPanel.field_Jb, bd.field_N);
+          wh.a(-80, sb.field_i, ig.field_t, AccountCreationResultPanel.field_Jb, ModalDialog.field_N);
           if (fm.field_l ||
             null != hb.field_b) {
             stackIn_101_0 = hb.field_b;
@@ -213,7 +213,7 @@ abstract class GameClientShell extends GameAppletShell {
         if (hj.field_f == 11) {
           if (df.field_m != null && (!df.field_m.ensureIndexLoaded(0) ||
             !df.field_m.tryLoadAllGroups((byte) 126))) {
-            we.a(EditableTextField.a(TextLineMetrics.field_d, df.field_m, 27867, dh.field_J), -125, 0.0f);
+            we.a(EditableTextField.a(TextLineMetrics.field_d, df.field_m, 27867, LabeledWidgetContainer.field_J), -125, 0.0f);
             decompiledFrameRemainder0 = false;
           }
           else {
@@ -243,7 +243,7 @@ abstract class GameClientShell extends GameAppletShell {
           ej.a(DiskCacheWorker.field_g, (byte) 95);
         }
         if (AgeValidator.field_p[8]) {
-          vg.b((byte) 75);
+          UiWidget.b((byte) 75);
         }
     }
 
@@ -307,7 +307,7 @@ abstract class GameClientShell extends GameAppletShell {
             this.a(-51, "reconnect");
           }
           MusicPatchPcmStream.e(11);
-          dl.a(cc.field_p, var2, 105);
+          AlphaWidgetContainer.a(cc.field_p, var2, 105);
           dd.field_j = true;
           ab.field_a = 15000L + la.correctedCurrentTimeMillis(param0);
           return var2;
@@ -439,11 +439,11 @@ abstract class GameClientShell extends GameAppletShell {
                               return;
                             }
                             stackIn_29_0 = (var2 == 12);
-                            var3 = dl.a(stackIn_29_0, -120);
+                            var3 = AlphaWidgetContainer.a(stackIn_29_0, -120);
                             gk.a(var3, -15980);
                           }
                         } else {
-                          hd.a((byte) 109, dh.field_N, sb.field_d, gf.field_C);
+                          hd.a((byte) 109, LabeledWidgetContainer.field_N, sb.field_d, gf.field_C);
                         }
                       } else {
                         this.i(-115);
@@ -458,7 +458,7 @@ abstract class GameClientShell extends GameAppletShell {
                   uk.a(-31114);
                 }
               } else {
-                dh.k(-3);
+                LabeledWidgetContainer.k(-3);
               }
             } else {
               sf.a((byte) -4);
@@ -607,7 +607,7 @@ abstract class GameClientShell extends GameAppletShell {
     }
 
     private final void k(int param0) {
-        int var2 = dh.field_N.readUnsignedByte(31760);
+        int var2 = LabeledWidgetContainer.field_N.readUnsignedByte(31760);
         if (param0 != 28586) {
           byte[] var6 = (byte[]) null;
           GameClientShell.a((byte) 74, (byte[]) null);
@@ -615,7 +615,7 @@ abstract class GameClientShell extends GameAppletShell {
         int var3 = (1 & var2) != 0 ? 1 : 0;
         int var4 = gf.field_C - 1;
         byte[] var5 = new byte[var4];
-        dh.field_N.readCipheredBytes(var4, 0, var5, (byte) -118);
+        LabeledWidgetContainer.field_N.readCipheredBytes(var4, 0, var5, (byte) -118);
         LoginPanel.a(mj.a((byte) 127, var5), var3 != 0, nb.a(89), (byte) 9);
     }
 
@@ -689,7 +689,7 @@ abstract class GameClientShell extends GameAppletShell {
               var5_intLifetime2 = f.a(this.field_u, -73, false, fl.a(false), IntrusiveDeque.f(89), this.field_y);
               if (var5_intLifetime2 != -1) {
                 if (var5_intLifetime2 != 0) {
-                  dl.a(cc.field_p, var5_intLifetime2, 79);
+                  AlphaWidgetContainer.a(cc.field_p, var5_intLifetime2, 79);
                   cc.field_p = null;
                 } else {
                   sf.field_l = ld.field_b;
@@ -701,7 +701,7 @@ abstract class GameClientShell extends GameAppletShell {
             }
           }
           if (4 == var4) {
-            if (!bd.field_N) {
+            if (!ModalDialog.field_N) {
               af.field_b = 10;
               gf.field_G = true;
             } else {

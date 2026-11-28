@@ -81,7 +81,7 @@ final class SecondaryNodeDequeIterator implements Iterator {
         int var13Lifetime1;
         var19 = DungeonAssault.field_K;
         try {
-          sd.field_F = new int[]{0, 0, -8144, 65536, 0, 0, 0, -65536, 0, 0, 0, 65536};
+          AlphaWidgetContainer.field_F = new int[]{0, 0, -8144, 65536, 0, 0, 0, -65536, 0, 0, 0, 65536};
           var1_int = RaiderRecruitmentScreen.field_w.length;
           var22 = new int[var1_int];
           var21 = var22;
@@ -93,17 +93,17 @@ final class SecondaryNodeDequeIterator implements Iterator {
             var5 = var4_ref_qh.field_i + var4_ref_qh.field_H >> 1;
             var6 = var4_ref_qh.field_p + var4_ref_qh.field_M >> 1;
             var7 = var4_ref_qh.field_a + var4_ref_qh.field_b >> 1;
-            var8 = sd.field_F[9] >> 2;
-            var9 = sd.field_F[10] >> 2;
-            var10_int = sd.field_F[11] >> 2;
+            var8 = AlphaWidgetContainer.field_F[9] >> 2;
+            var9 = AlphaWidgetContainer.field_F[10] >> 2;
+            var10_int = AlphaWidgetContainer.field_F[11] >> 2;
             var11 = var10_int * CombatState.field_e[5] + (var8 * CombatState.field_e[3] + CombatState.field_e[4] * var9) >> 14;
             var12 = CombatState.field_e[8] * var10_int + var9 * CombatState.field_e[7] + CombatState.field_e[6] * var8 >> 14;
             var13 = var9 * CombatState.field_e[10] + var8 * CombatState.field_e[9] + CombatState.field_e[11] * var10_int >> 14;
             var2[var3] = var13 * var7 + (var5 * var11 + var6 * var12) >> 16;
           }
-          var3Lifetime1 = sd.field_F[9] >> 8;
-          var4 = sd.field_F[10] >> 8;
-          var5Lifetime1 = sd.field_F[11] >> 8;
+          var3Lifetime1 = AlphaWidgetContainer.field_F[9] >> 8;
+          var4 = AlphaWidgetContainer.field_F[10] >> 8;
+          var5Lifetime1 = AlphaWidgetContainer.field_F[11] >> 8;
           var6Lifetime1 = MouseWheelInput.field_d << 4;
           var7Lifetime1 = 0;
           var8Lifetime1 = oj.a(var6Lifetime1, (byte) 51) >> 8;
@@ -142,7 +142,7 @@ final class SecondaryNodeDequeIterator implements Iterator {
             for (var18 = 0; var18 < 3; var18++) {
               CombatState.field_e[var18] = CombatState.field_e[var18] + lk.field_R[var15][var18];
             }
-            pb.a(true, 0, sd.field_F, false, var17, false, CombatState.field_e);
+            pb.a(true, 0, AlphaWidgetContainer.field_F, false, var17, false, CombatState.field_e);
             ad.a(var13Lifetime1, var8Lifetime1, var7Lifetime1, var14, -106, var12Lifetime1, var9Lifetime1, var17);
           }
           return;

@@ -113,7 +113,7 @@ final class pm {
         }
     }
 
-    final void a(fk param0, int param1, qm param2, int param3, int param4) {
+    final void a(fk param0, int param1, UiWidget param2, int param3, int param4) {
         BitmapFont stackIn_20_0;
         String stackIn_20_1;
         int stackIn_20_2;
@@ -239,7 +239,7 @@ final class pm {
         }
     }
 
-    final void a(fk param0, int param1, int param2, qm param3, int param4, pm param5) {
+    final void a(fk param0, int param1, int param2, UiWidget param3, int param4, pm param5) {
         RuntimeException stackIn_25_0 = null;
         StringBuilder stackIn_25_1 = null;
         String stackIn_26_2 = null;

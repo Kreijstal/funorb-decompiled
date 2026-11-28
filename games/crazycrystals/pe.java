@@ -73,12 +73,12 @@ final class pe extends IntrusiveNode {
             return;
           }
           if (var4 != 0) {
-            th.field_A[0] = je.field_g;
+            AlphaWidgetContainer.field_A[0] = je.field_g;
             var5 = var3.field_j;
             for (var6_int = 1; var6_int < var4; var6_int++) {
-              th.field_A[var6_int] = var14.readString(param0 + 128);
+              AlphaWidgetContainer.field_A[var6_int] = var14.readString(param0 + 128);
             }
-            ei.a(var4, var5, false);
+            LabeledWidgetContainer.a(var4, var5, false);
             for (var6_intLifetime1 = 0; var6_intLifetime1 < var4; var6_intLifetime1++) {
               TextLayout.a(-31416, var14);
               if (var6_intLifetime1 != 0) {
@@ -95,12 +95,12 @@ final class pe extends IntrusiveNode {
             var10 = 0;
             while (var9 < var8) {
               var11 = wp.field_d[var9];
-              var6[0][var10] = th.field_A[var11];
+              var6[0][var10] = AlphaWidgetContainer.field_A[var11];
               var18[0][var10 * 4] = mh.field_l[var11];
               var18[0][1 + var10 * 4] = dk.field_l[var11];
               var18[0][2 + var10 * 4] = BufferedSocket.field_i[var11];
               var18[0][3 + var10 * 4] = cd.field_u[var11];
-              if (ai.a((byte) 82, th.field_A[var11]) &&
+              if (ai.a((byte) 82, AlphaWidgetContainer.field_A[var11]) &&
                 0 == BufferedSocket.field_i[var11] + dk.field_l[var11] + cd.field_u[var11]) {
                 var6[0][var10] = null;
                 var10--;
@@ -113,12 +113,12 @@ final class pe extends IntrusiveNode {
             var10Lifetime1 = var13;
             while (var8 > var9Lifetime1) {
               var11Lifetime1 = wp.field_d[var9Lifetime1 + var5];
-              var6[1][var13] = th.field_A[var11Lifetime1];
+              var6[1][var13] = AlphaWidgetContainer.field_A[var11Lifetime1];
               var18[1][4 * var13] = mh.field_l[var11Lifetime1];
               var18[1][var13 * 4 + 1] = dk.field_l[var11Lifetime1];
               var18[1][var13 * 4 + 2] = BufferedSocket.field_i[var11Lifetime1];
               var18[1][4 * var13 + 3] = cd.field_u[var11Lifetime1];
-              if (ai.a((byte) 82, th.field_A[var11Lifetime1]) &&
+              if (ai.a((byte) 82, AlphaWidgetContainer.field_A[var11Lifetime1]) &&
                 BufferedSocket.field_i[var11Lifetime1] + (dk.field_l[var11Lifetime1] + cd.field_u[var11Lifetime1]) == 0) {
                 var6[1][var13] = null;
                 var13--;

@@ -123,7 +123,7 @@ final class ja extends IntrusiveNode {
           var3_int = -105 % ((72 - param0) / 48);
           pe.field_e = param2;
           if (0 == pe.field_e) {
-            var4 = DebouncedFieldValidator.a(DelegatingCanvas.field_d, da.field_h, -3, kh.field_F, ch.field_c);
+            var4 = DebouncedFieldValidator.a(DelegatingCanvas.field_d, da.field_h, -3, ModalDialog.field_F, ch.field_c);
             var5 = var4 + 3;
             rb.field_d = new String[var5];
             f.field_a = new int[var5];
@@ -132,7 +132,7 @@ final class ja extends IntrusiveNode {
             }
             pj.field_l = new int[2];
             for (var6 = 0; var4 > var6; var6++) {
-              rb.field_d[var6] = kh.field_F[var6];
+              rb.field_d[var6] = ModalDialog.field_F[var6];
             }
             rb.field_d[var5 - 3] = "";
             rb.field_d[var5 - 2] = BufferedRandomAccessFile.field_g;
@@ -142,7 +142,7 @@ final class ja extends IntrusiveNode {
             f.field_a[var5 - 1] = 1;
             pj.field_l[1] = 5;
           } else if (pe.field_e == 1) {
-            var4 = DebouncedFieldValidator.a(DelegatingCanvas.field_d, da.field_h, -3, kh.field_F, ch.field_c);
+            var4 = DebouncedFieldValidator.a(DelegatingCanvas.field_d, da.field_h, -3, ModalDialog.field_F, ch.field_c);
             var5 = 2 + var4;
             f.field_a = new int[var5];
             rb.field_d = new String[var5];
@@ -151,7 +151,7 @@ final class ja extends IntrusiveNode {
             }
             pj.field_l = new int[1];
             for (var6 = 0; var4 > var6; var6++) {
-              rb.field_d[var6] = kh.field_F[var6];
+              rb.field_d[var6] = ModalDialog.field_F[var6];
             }
             rb.field_d[-2 + var5] = "";
             rb.field_d[var5 - 1] = RasterBuffer.field_e;
@@ -160,9 +160,9 @@ final class ja extends IntrusiveNode {
           } else if (2 != pe.field_e) {
             if (3 == pe.field_e) {
               if (DirectByteStorage.field_l.privilegedTasksEnabled) {
-                var4 = DebouncedFieldValidator.a(SecondaryNodeDeque.field_d, da.field_h, -3, kh.field_F, ch.field_c);
+                var4 = DebouncedFieldValidator.a(SecondaryNodeDeque.field_d, da.field_h, -3, ModalDialog.field_F, ch.field_c);
               } else {
-                var4 = DebouncedFieldValidator.a(ra.field_h, da.field_h, -3, kh.field_F, ch.field_c);
+                var4 = DebouncedFieldValidator.a(ra.field_h, da.field_h, -3, ModalDialog.field_F, ch.field_c);
               }
               var5 = 2 + var4;
               rb.field_d = new String[var5];
@@ -172,14 +172,14 @@ final class ja extends IntrusiveNode {
               }
               pj.field_l = new int[1];
               for (var6 = 0; var6 < var4; var6++) {
-                rb.field_d[var6] = kh.field_F[var6];
+                rb.field_d[var6] = ModalDialog.field_F[var6];
               }
               rb.field_d[var5 - 2] = "";
               rb.field_d[-1 + var5] = RasterBuffer.field_e;
               f.field_a[var5 - 1] = 0;
               pj.field_l[0] = 5;
             } else if (pe.field_e == 4) {
-              var4 = DebouncedFieldValidator.a(tb.field_i, da.field_h, -3, kh.field_F, ch.field_c);
+              var4 = DebouncedFieldValidator.a(tb.field_i, da.field_h, -3, ModalDialog.field_F, ch.field_c);
               var5 = var4 + 2;
               f.field_a = new int[var5];
               rb.field_d = new String[var5];
@@ -188,7 +188,7 @@ final class ja extends IntrusiveNode {
               }
               pj.field_l = new int[1];
               for (var6 = 0; var6 < var4; var6++) {
-                rb.field_d[var6] = kh.field_F[var6];
+                rb.field_d[var6] = ModalDialog.field_F[var6];
               }
               rb.field_d[var5 - 2] = "";
               rb.field_d[-1 + var5] = RasterBuffer.field_e;
@@ -198,7 +198,7 @@ final class ja extends IntrusiveNode {
               if (5 != pe.field_e) {
                 throw new IllegalArgumentException();
               }
-              var4 = DebouncedFieldValidator.a(va.field_a, da.field_h, -3, kh.field_F, ch.field_c);
+              var4 = DebouncedFieldValidator.a(va.field_a, da.field_h, -3, ModalDialog.field_F, ch.field_c);
               var5 = 3 + var4;
               rb.field_d = new String[var5];
               f.field_a = new int[var5];
@@ -207,7 +207,7 @@ final class ja extends IntrusiveNode {
               }
               pj.field_l = new int[2];
               for (var6 = 0; var6 < var4; var6++) {
-                rb.field_d[var6] = kh.field_F[var6];
+                rb.field_d[var6] = ModalDialog.field_F[var6];
               }
               rb.field_d[var5 - 3] = "";
               rb.field_d[-2 + var5] = LevelEditor.field_h;
@@ -218,10 +218,10 @@ final class ja extends IntrusiveNode {
               pj.field_l[1] = 5;
             }
           } else {
-            var4 = DebouncedFieldValidator.a(MessageKeys.a(new String[]{"<br><%0><br>"}, -1, hj.field_H), da.field_h, -3, kh.field_F, ch.field_c);
+            var4 = DebouncedFieldValidator.a(MessageKeys.a(new String[]{"<br><%0><br>"}, -1, DropTargetWidgetContainer.field_H), da.field_h, -3, ModalDialog.field_F, ch.field_c);
             var5 = -1;
             for (var6 = 0; var4 > var6; var6++) {
-              if (!"<%0>".equals(kh.field_F[var6])) {
+              if (!"<%0>".equals(ModalDialog.field_F[var6])) {
                 continue;
               }
               var5 = var6;
@@ -231,13 +231,13 @@ final class ja extends IntrusiveNode {
               throw new IllegalStateException();
             }
             AccountNameAvailabilityValidator.field_r = new String[var5];
-            ka.a(kh.field_F, 0, AccountNameAvailabilityValidator.field_r, 0, var5);
+            ka.a(ModalDialog.field_F, 0, AccountNameAvailabilityValidator.field_r, 0, var5);
             kj.field_c = new String[-1 + (var4 - var5)];
-            ka.a(kh.field_F, 1 + var5, kj.field_c, 0, -1 + var4 - var5);
-            var4 = DebouncedFieldValidator.a(MessageKeys.a(new String[]{"<br><%0><br>"}, -1, wj.field_b), da.field_h, -3, kh.field_F, ch.field_c);
+            ka.a(ModalDialog.field_F, 1 + var5, kj.field_c, 0, -1 + var4 - var5);
+            var4 = DebouncedFieldValidator.a(MessageKeys.a(new String[]{"<br><%0><br>"}, -1, wj.field_b), da.field_h, -3, ModalDialog.field_F, ch.field_c);
             var5 = -1;
             for (var6 = 0; var4 > var6; var6++) {
-              if (!"<%0>".equals(kh.field_F[var6])) {
+              if (!"<%0>".equals(ModalDialog.field_F[var6])) {
                 continue;
               }
               var5 = var6;
@@ -247,9 +247,9 @@ final class ja extends IntrusiveNode {
               throw new IllegalStateException();
             }
             ArchiveIndex.field_c = new String[var5];
-            ka.a(kh.field_F, 0, ArchiveIndex.field_c, 0, var5);
+            ka.a(ModalDialog.field_F, 0, ArchiveIndex.field_c, 0, var5);
             ec.field_d = new String[-1 + var4 - var5];
-            ka.a(kh.field_F, var5 + 1, ec.field_d, 0, -var5 + (var4 - 1));
+            ka.a(ModalDialog.field_F, var5 + 1, ec.field_d, 0, -var5 + (var4 - 1));
             if (AccountNameAvailabilityValidator.field_r.length >= ArchiveIndex.field_c.length) {
               stackIn_58_0 = AccountNameAvailabilityValidator.field_r.length;
             } else {
@@ -303,7 +303,7 @@ final class ja extends IntrusiveNode {
               }
               stackIn_73_0[stackIn_73_1] = stackIn_76_2;
             }
-            hj.field_I = ll.correctedCurrentTimeMillis(1000);
+            DropTargetWidgetContainer.field_I = ll.correctedCurrentTimeMillis(1000);
           }
           ai.field_i.field_g = pj.field_l.length;
           var4Lifetime1 = 0;

@@ -76,7 +76,7 @@ final class go extends am {
     }
 
     final static void b(int param0) {
-        na.field_G = null;
+        LabeledWidgetContainer.field_G = null;
         if (param0 != 0) {
           return;
         }

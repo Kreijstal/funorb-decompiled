@@ -21,13 +21,13 @@ final class AccountFieldStatusIndicator extends RichTextWidget {
         try {
           this.stringState0400 = stringArgument2;
           this.callbackContract011State0003 = callbackContract011Argument1;
-          this.performAction0222(integerArgument6, integerArgument5, integerArgument3, integerArgument4, -16555);
+          this.setBounds(integerArgument6, integerArgument5, integerArgument3, integerArgument4, -16555);
         } catch (RuntimeException runtimeException) {
           throw ClientException.computeDiagnosticSupport0020365((Throwable) ((Object) runtimeException), "pa.<init>(" + (callbackContract011Argument1 != null ? "{...}" : "null") + ',' + (stringArgument2 != null ? "{...}" : "null") + ',' + integerArgument3 + ',' + integerArgument4 + ',' + integerArgument5 + ',' + integerArgument6 + ')');
         }
     }
 
-    final void performAction0162(int integerArgument1, int integerArgument2, int integerArgument3, int integerArgument4) {
+    final void drawWidget(int integerArgument1, int integerArgument2, int integerArgument3, int integerArgument4) {
         ValidationStatus validationStatusLocal1;
         int integerLocal2;
         int integerLocal3;
@@ -94,13 +94,13 @@ final class AccountFieldStatusIndicator extends RichTextWidget {
             this.stringState0078 = stringLocal6;
             this.rebuildHotspotBounds(2874);
           }
-          super.performAction0162(integerArgument1, -105, integerArgument3, integerArgument4);
+          super.drawWidget(integerArgument1, -105, integerArgument3, integerArgument4);
           validationStatusLocal1 = this.callbackContract011State0003.getValidationStatus(20350);
           callbackContract012Local12 = (TextWidgetRenderer) ((Object) this.callbackContract004State0006);
           integerLocal2 = this.integerState0110 + integerArgument1;
           if (integerArgument2 >= -103) {
             uiComponentLocal5 = (UiComponent) null;
-            this.computeBoolean0221(true, (UiComponent) null);
+            this.takeFocus(true, (UiComponent) null);
             integerLocal3 = callbackContract012Local12.getTextOriginY(integerArgument4, 0, (UiComponent) (this)) + (callbackContract012Local12.getTextLayout((UiComponent) (this), (byte) 44).getLayoutHeight(-1) >> 1);
             if (MixedSupport076.validationStatusState0004 != validationStatusLocal1 &&
               DiagnosticSupport002.validationStatusState0002 != validationStatusLocal1) {
@@ -182,13 +182,13 @@ final class AccountFieldStatusIndicator extends RichTextWidget {
           stringLocal13 = RichTextWidget.stringState0451;
         }
         if (stringLocal13.equals(this.stringState0078)) {
-          super.performAction0162(integerArgument1, -105, integerArgument3, integerArgument4);
+          super.drawWidget(integerArgument1, -105, integerArgument3, integerArgument4);
           validationStatusLocal52 = this.callbackContract011State0003.getValidationStatus(20350);
           callbackContract012Local33 = (TextWidgetRenderer) ((Object) this.callbackContract004State0006);
           integerLocal35 = this.integerState0110 + integerArgument1;
           if (integerArgument2 >= -103) {
             uiComponentLocal54 = (UiComponent) null;
-            this.computeBoolean0221(true, (UiComponent) null);
+            this.takeFocus(true, (UiComponent) null);
             integerLocal37 = callbackContract012Local33.getTextOriginY(integerArgument4, 0, (UiComponent) (this)) + (callbackContract012Local33.getTextLayout((UiComponent) (this), (byte) 44).getLayoutHeight(-1) >> 1);
             if (MixedSupport076.validationStatusState0004 != validationStatusLocal52 &&
               DiagnosticSupport002.validationStatusState0002 != validationStatusLocal52) {
@@ -263,7 +263,7 @@ final class AccountFieldStatusIndicator extends RichTextWidget {
         }
         this.stringState0078 = stringLocal13;
         this.rebuildHotspotBounds(2874);
-        super.performAction0162(integerArgument1, -105, integerArgument3, integerArgument4);
+        super.drawWidget(integerArgument1, -105, integerArgument3, integerArgument4);
         validationStatusLocal53 = this.callbackContract011State0003.getValidationStatus(20350);
         callbackContract012Local34 = (TextWidgetRenderer) ((Object) this.callbackContract004State0006);
         integerLocal36 = this.integerState0110 + integerArgument1;
@@ -309,7 +309,7 @@ final class AccountFieldStatusIndicator extends RichTextWidget {
           return;
         }
         uiComponentLocal55 = (UiComponent) null;
-        this.computeBoolean0221(true, (UiComponent) null);
+        this.takeFocus(true, (UiComponent) null);
         integerLocal39 = callbackContract012Local34.getTextOriginY(integerArgument4, 0, (UiComponent) (this)) + (callbackContract012Local34.getTextLayout((UiComponent) (this), (byte) 44).getLayoutHeight(-1) >> 1);
         if (MixedSupport076.validationStatusState0004 != validationStatusLocal53 &&
           DiagnosticSupport002.validationStatusState0002 != validationStatusLocal53) {
@@ -377,7 +377,7 @@ final class AccountFieldStatusIndicator extends RichTextWidget {
         return 400 + 50 * (-2 + integerArgument1) * (integerArgument1 - 3);
     }
 
-    final boolean computeBoolean0221(boolean booleanArgument1, UiComponent uiComponentArgument2) {
+    final boolean takeFocus(boolean booleanArgument1, UiComponent uiComponentArgument2) {
         RuntimeException runtimeExceptionLocal1 = null;
         RuntimeException stackRuntimeExceptionLocal2 = null;
         StringBuilder stackStringBuilderLocal3 = null;
@@ -407,7 +407,7 @@ final class AccountFieldStatusIndicator extends RichTextWidget {
           return null;
         }
         UiComponent uiComponentLocal1 = (UiComponent) null;
-        this.performAction0218((UiComponent) null, -51, 86, -72);
+        this.updatePointer((UiComponent) null, -51, 86, -72);
         return null;
     }
 
@@ -420,13 +420,13 @@ final class AccountFieldStatusIndicator extends RichTextWidget {
         TextFieldValidator.sceneWidgetState0151.performAction1764(438, 0, 0, -4 + (SoftwareRaster.integerState0284 - 120), 202 + (integerLocal1 + 438 * integerLocal3 / integerLocal2));
     }
 
-    final void performAction0218(UiComponent uiComponentArgument1, int integerArgument2, int integerArgument3, int integerArgument4) {
+    final void updatePointer(UiComponent uiComponentArgument1, int integerArgument2, int integerArgument3, int integerArgument4) {
         try {
           this.integerState0574 = this.integerState0574 + 1;
           if (integerArgument2 <= 38) {
             stringArrayState0027 = (String[]) null;
           }
-          super.performAction0218(uiComponentArgument1, 109, integerArgument3, integerArgument4);
+          super.updatePointer(uiComponentArgument1, 109, integerArgument3, integerArgument4);
         } catch (RuntimeException runtimeException) {
           throw ClientException.computeDiagnosticSupport0020365((Throwable) ((Object) runtimeException), "pa.A(" + (uiComponentArgument1 != null ? "{...}" : "null") + ',' + integerArgument2 + ',' + integerArgument3 + ',' + integerArgument4 + ')');
         }

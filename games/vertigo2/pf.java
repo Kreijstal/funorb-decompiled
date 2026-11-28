@@ -71,7 +71,7 @@ final class pf {
           stackIn_4_1 = param2 * ((2 + Archive.field_f) * 3);
           stackIn_4_2 = 2;
           stackIn_4_3 = param1;
-          stackIn_5_4 = (wq.field_M == h.field_D.field_Lb);
+          stackIn_5_4 = (AlphaWidgetContainer.field_M == h.field_D.field_Lb);
           var3_int = ((od) (Object) stackIn_4_0).a(stackIn_4_1, stackIn_4_2, stackIn_4_3, stackIn_5_4, -5, 2 + Archive.field_f) ? 1 : 0;
           var4 = h.field_D.field_Mb.field_M;
           if (param0) {

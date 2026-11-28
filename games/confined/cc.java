@@ -72,11 +72,11 @@ final class cc extends IntrusiveNode {
               var11 = sj.field_rb[var9];
               var6[0][var10] = em.field_f[var11];
               var19[0][4 * var10] = an.field_n[var11];
-              var19[0][4 * var10 + 1] = am.field_I[var11];
+              var19[0][4 * var10 + 1] = SingleChildWidgetContainer.field_I[var11];
               var19[0][4 * var10 + 2] = em.field_b[var11];
               var19[0][4 * var10 + 3] = oc.field_m[var11];
               if (im.a(em.field_f[var11], -110) &&
-                em.field_b[var11] + am.field_I[var11] + oc.field_m[var11] == 0) {
+                em.field_b[var11] + SingleChildWidgetContainer.field_I[var11] + oc.field_m[var11] == 0) {
                 var6[0][var10] = null;
                 var10--;
               }
@@ -90,11 +90,11 @@ final class cc extends IntrusiveNode {
               var11Lifetime1 = sj.field_rb[var5 + var9Lifetime1];
               var6[1][var14] = em.field_f[var11Lifetime1];
               var19[1][4 * var14] = an.field_n[var11Lifetime1];
-              var19[1][var14 * 4 + 1] = am.field_I[var11Lifetime1];
+              var19[1][var14 * 4 + 1] = SingleChildWidgetContainer.field_I[var11Lifetime1];
               var19[1][2 + 4 * var14] = em.field_b[var11Lifetime1];
               var19[1][4 * var14 + 3] = oc.field_m[var11Lifetime1];
               if (im.a(em.field_f[var11Lifetime1], param0 ^ 44) &&
-                em.field_b[var11Lifetime1] + am.field_I[var11Lifetime1] + oc.field_m[var11Lifetime1] == 0) {
+                em.field_b[var11Lifetime1] + SingleChildWidgetContainer.field_I[var11Lifetime1] + oc.field_m[var11Lifetime1] == 0) {
                 var6[1][var14] = null;
                 var14--;
               }

@@ -50,7 +50,7 @@ final class hq extends IntrusiveNode {
 
     final static void b(int param0, int param1) {
         int var4 = 0;
-        int var2 = (qg.field_G - 640) / 2;
+        int var2 = (DraggableWidgetContainer.field_G - 640) / 2;
         int var3 = ld.field_b * ld.field_b;
         int var4Lifetime1;
         if (param1 < -126) {

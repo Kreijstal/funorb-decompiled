@@ -11,22 +11,22 @@ abstract class a extends bi {
     private int field_P;
     static int field_Q;
     private int field_U;
-    private gl field_Z;
+    private AlphaWidgetContainer field_Z;
     static boolean field_bb;
     static Sprite field_R;
     private int field_Y;
 
-    boolean m(int param0) {
+    boolean advanceDialogAnimation(int param0) {
         int fieldTemp$2 = 0;
         int fieldTemp$3 = 0;
         int var3;
         var3 = Transmogrify.field_A ? 1 : 0;
         if (null == this.field_W) {
           if (param0 == 0) {
-            return super.m(0);
+            return super.advanceDialogAnimation(0);
           }
           this.p(-97);
-          return super.m(0);
+          return super.advanceDialogAnimation(0);
         }
         if (this.field_W == uh.field_r) {
           fieldTemp$2 = this.field_ab + 1;
@@ -40,17 +40,17 @@ abstract class a extends bi {
             this.field_Z.field_A = 0;
           }
           if (param0 == 0) {
-            return super.m(0);
+            return super.advanceDialogAnimation(0);
           }
           this.p(-97);
-          return super.m(0);
+          return super.advanceDialogAnimation(0);
         }
         if (this.field_W != hg.field_b) {
           if (param0 == 0) {
-            return super.m(0);
+            return super.advanceDialogAnimation(0);
           }
           this.p(-97);
-          return super.m(0);
+          return super.advanceDialogAnimation(0);
         }
         fieldTemp$3 = this.field_ab + 1;
         this.field_ab = this.field_ab + 1;
@@ -61,13 +61,13 @@ abstract class a extends bi {
           this.field_W = null;
         }
         if (param0 == 0) {
-          return super.m(0);
+          return super.advanceDialogAnimation(0);
         }
         this.p(-97);
-        return super.m(0);
+        return super.advanceDialogAnimation(0);
     }
 
-    a(da param0, UiWidget param1, int param2, int param3, int param4) {
+    a(ModalDialogHost param0, UiWidget param1, int param2, int param3, int param4) {
         super(param0, 12 + param1.field_l, param1.field_h + 12 + param2);
         try {
           this.field_U = param2;
@@ -89,12 +89,12 @@ abstract class a extends bi {
         }
         try {
           if (param1 != null) {
-            param1.a(28, 6 + this.field_U, 6, param1.field_l, param1.field_h);
-            this.field_Z = new gl(param1);
+            param1.setBounds(28, 6 + this.field_U, 6, param1.field_l, param1.field_h);
+            this.field_Z = new AlphaWidgetContainer(param1);
           } else {
-            this.field_Z = new gl();
+            this.field_Z = new AlphaWidgetContainer();
           }
-          this.a((UiWidget) (this.field_Z), (byte) -88);
+          this.addChild((UiWidget) (this.field_Z), (byte) -88);
           this.field_V = null;
         } catch (RuntimeException runtimeException) {
           throw ch.wrapClientException((Throwable) ((Object) runtimeException), "a.SB(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
@@ -119,7 +119,7 @@ abstract class a extends bi {
     final void p(int param0) {
         if (this.field_W != null) {
           if (hg.field_b != this.field_W) {
-            this.a(12 + this.field_V.field_l, 12 + this.field_U + this.field_V.field_h, false);
+            this.setCenteredSize(12 + this.field_V.field_l, 12 + this.field_U + this.field_V.field_h, false);
             this.a((byte) 93, this.field_V);
           }
           this.field_W = null;
@@ -133,12 +133,12 @@ abstract class a extends bi {
         super.p(param0 + 0);
     }
 
-    final boolean a(byte param0) {
+    final boolean snapDialogAnimation(byte param0) {
         this.p(param0 + 27927);
         if (param0 != -97) {
           return true;
         }
-        return super.a((byte) -97);
+        return super.snapDialogAnimation((byte) -97);
     }
 
     void b(int param0, UiWidget param1) {
@@ -198,7 +198,7 @@ abstract class a extends bi {
         }
     }
 
-    boolean a(int param0, UiWidget param1, byte param2, char param3) {
+    boolean handleKey(int param0, UiWidget param1, byte param2, char param3) {
         int var5_int = 0;
         RuntimeException var5 = null;
         RuntimeException stackIn_13_0 = null;
@@ -206,15 +206,15 @@ abstract class a extends bi {
         String stackIn_14_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (super.a(param0, param1, (byte) 122, param3)) {
+          if (super.handleKey(param0, param1, (byte) 122, param3)) {
             return true;
           }
           if (null != this.field_Z) {
             if (98 == param0) {
-              this.field_Z.a(param1, -90);
+              this.field_Z.takeFocus(param1, -90);
             }
             if (param0 == 99) {
-              this.field_Z.a(param1, -24);
+              this.field_Z.takeFocus(param1, -24);
             }
           }
           var5_int = -38 % ((param2 - 65) / 55);

@@ -14,7 +14,7 @@ final class uma extends sh {
     uma(WidgetRenderer param0, boolean param1, int param2, int param3, int param4, int param5) {
         this(param0, param1);
         try {
-          this.a(param2, param5, (byte) 59, param4, param3);
+          this.setBounds(param2, param5, (byte) 59, param4, param3);
         } catch (RuntimeException runtimeException) {
           throw pe.wrapException((Throwable) ((Object) runtimeException), "uma.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }
@@ -169,17 +169,17 @@ final class uma extends sh {
         }
     }
 
-    final void a(int param0, int param1, byte param2, int param3, int param4) {
-        super.a(param0, param1, (byte) 59, param3, param4);
+    final void setBounds(int param0, int param1, byte param2, int param3, int param4) {
+        super.setBounds(param0, param1, (byte) 59, param3, param4);
         int var6 = -130 + param3 >> 1;
         if (!this.field_K) {
-          this.field_Q.a(var6, param1, (byte) 59, 25, 0);
-          this.field_N.a(var6 + 45, param1, (byte) 59, 25, 0);
+          this.field_Q.setBounds(var6, param1, (byte) 59, 25, 0);
+          this.field_N.setBounds(var6 + 45, param1, (byte) 59, 25, 0);
         } else {
-          this.field_N.a(var6, param1, (byte) 59, 25, 0);
-          this.field_Q.a(45 + var6, param1, (byte) 59, 25, 0);
+          this.field_N.setBounds(var6, param1, (byte) 59, 25, 0);
+          this.field_Q.setBounds(45 + var6, param1, (byte) 59, 25, 0);
         }
-        this.field_L.a(var6 + 90, param1, param2, 40, 0);
+        this.field_L.setBounds(var6 + 90, param1, param2, 40, 0);
     }
 
     private final void a(byte param0, UiWidget param1, String param2, int param3, int param4) {
@@ -204,13 +204,13 @@ final class uma extends sh {
           this.field_Q.renderer = param0;
           this.field_K = param1 ? true : false;
           if (this.field_K) {
-            this.c(this.field_N, 42);
-            this.c(this.field_Q, -127);
+            this.addChild(this.field_N, 42);
+            this.addChild(this.field_Q, -127);
           } else {
-            this.c(this.field_Q, -120);
-            this.c(this.field_N, -126);
+            this.addChild(this.field_Q, -120);
+            this.addChild(this.field_N, -126);
           }
-          this.c(this.field_L, -128);
+          this.addChild(this.field_L, -128);
         } catch (RuntimeException runtimeException) {
           throw pe.wrapException((Throwable) ((Object) runtimeException), "uma.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }

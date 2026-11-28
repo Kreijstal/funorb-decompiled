@@ -1058,10 +1058,10 @@ final class db extends DungeonAssaultScreen {
           if (1 >= gm.field_d.field_e) {
             var4 = oc.field_v;
             if (var9 != 0) {
-              var4 = jk.a(new String[]{Integer.toString(gm.field_d.field_e)}, dg.field_G, 30496);
+              var4 = jk.a(new String[]{Integer.toString(gm.field_d.field_e)}, LabeledWidgetContainer.field_G, 30496);
             }
           } else {
-            var4 = jk.a(new String[]{Integer.toString(gm.field_d.field_e)}, dg.field_G, 30496);
+            var4 = jk.a(new String[]{Integer.toString(gm.field_d.field_e)}, LabeledWidgetContainer.field_G, 30496);
           }
           var5Lifetime1 = 16711680;
           var6 = jk.a(new String[]{jk.a(120, gm.field_d.field_A)}, fl.field_n, 30496);

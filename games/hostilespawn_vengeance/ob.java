@@ -271,7 +271,7 @@ final class ob extends ql {
         }
         this.field_d = new v(e.field_k, 0, 0);
         CrossfadingMidiPcmStream.a(param0, param0 ^ 1);
-        nh.field_E.copyCoordinatesFrom((byte) 46, this.field_o);
+        LabeledWidgetContainer.field_E.copyCoordinatesFrom((byte) 46, this.field_o);
         return;
     }
 

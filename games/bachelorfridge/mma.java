@@ -36,7 +36,7 @@ final class mma {
           var9 = BachelorFridge.field_y;
           try {
             if (dma.field_b == null &&
-              !ge.a(-29510, param3)) {
+              !LabeledWidgetContainer.a(-29510, param3)) {
               stackIn_5_0 = -1;
               return stackIn_5_0;
             }
@@ -116,10 +116,10 @@ final class mma {
                 stackIn_49_0 = ((4 & var7) != 0);
                 FlirtAnimation.field_y = stackIn_49_0;
                 stackIn_52_0 = ((var7 & 8) != 0);
-                hl.field_I = stackIn_52_0;
+                AlphaWidgetContainer.field_I = stackIn_52_0;
                 stackIn_55_0 = ((2 & var7) != 0);
                 sea.field_j = stackIn_55_0;
-                if (hl.field_I) {
+                if (AlphaWidgetContainer.field_I) {
                   sea.field_j = true;
                 }
               }

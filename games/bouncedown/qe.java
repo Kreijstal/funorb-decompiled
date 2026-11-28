@@ -37,12 +37,12 @@ final class qe extends ng {
             field_j = (String) null;
           }
           var4 = jl.field_a;
-          while (var3_int < se.field_E.length) {
+          while (var3_int < DropTargetWidgetContainer.field_E.length) {
             var5 = IterableNodeHashTable.field_a[var3_int];
             if (var5 < 0) {
               var4 = var4 + k.field_D;
             } else {
-              var6 = SectorCacheStore.a(true, se.field_E[var3_int], true);
+              var6 = SectorCacheStore.a(true, DropTargetWidgetContainer.field_E[var3_int], true);
               var4 = var4 + hj.field_a;
               var7 = bi.field_h - (var6 >> 1);
               if (AwtRasterBuffer.a(var4, -GameClient.field_z + var7, -78, (ConfirmedEmailAvailabilityValidator.field_m << 1) + pb.field_j, (GameClient.field_z << 1) + var6, param0, param2)) {
@@ -105,7 +105,7 @@ final class qe extends ng {
             return stackIn_3_0;
           }
           if (var2_int > param0) {
-            stackIn_6_0 = lk.field_t;
+            stackIn_6_0 = UiWidget.field_t;
             return stackIn_6_0;
           }
           var3 = SecondaryNodeDequeIterator.a(-108, '.', param1);

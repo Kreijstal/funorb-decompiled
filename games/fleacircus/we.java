@@ -171,9 +171,9 @@ final class we {
         int var2 = 71 / ((param0 - 0) / 55);
         param1 = param1 & 8191;
         if (4096 > param1) {
-          return param1 < 2048 ? dk.field_D[-param1 + 2048] : -dk.field_D[param1 - 2048];
+          return param1 < 2048 ? SingleChildWidgetContainer.field_D[-param1 + 2048] : -SingleChildWidgetContainer.field_D[param1 - 2048];
         }
-        return param1 < 6144 ? -dk.field_D[-param1 + 6144] : dk.field_D[param1 - 6144];
+        return param1 < 6144 ? -SingleChildWidgetContainer.field_D[-param1 + 6144] : SingleChildWidgetContainer.field_D[param1 - 6144];
     }
 
     we(IntrusiveDeque param0) {

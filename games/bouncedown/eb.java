@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class eb extends lc implements TextHotspotListener, WidgetActivationListener {
+final class eb extends DequeWidgetContainer implements TextHotspotListener, WidgetActivationListener {
     private InteractiveWidget field_H;
     static String field_D;
     static String field_z;
@@ -70,7 +70,7 @@ final class eb extends lc implements TextHotspotListener, WidgetActivationListen
         field_z = null;
     }
 
-    final boolean a(lk param0, char param1, int param2, int param3) {
+    final boolean handleKey(UiWidget param0, char param1, int param2, int param3) {
         RuntimeException var5 = null;
         boolean stackIn_6_0 = false;
         boolean stackIn_10_0 = false;
@@ -79,17 +79,17 @@ final class eb extends lc implements TextHotspotListener, WidgetActivationListen
         String stackIn_14_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (super.a(param0, param1, param2, param3)) {
+          if (super.handleKey(param0, param1, param2, param3)) {
             return true;
           }
           if (param2 == 98) {
-            stackIn_6_0 = this.a((byte) -89, param0);
+            stackIn_6_0 = this.focusPreviousChild((byte) -89, param0);
             return stackIn_6_0;
           }
           if (param2 != 99) {
             return false;
           }
-          stackIn_10_0 = this.a(param0, 19755);
+          stackIn_10_0 = this.focusNextChild(param0, 19755);
           return stackIn_10_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -159,7 +159,7 @@ final class eb extends lc implements TextHotspotListener, WidgetActivationListen
     }
 
     eb(AccountCreationResultPanel param0) {
-        super(0, 0, 288, 0, (fc) null);
+        super(0, 0, 288, 0, (WidgetRenderer) null);
         String var7 = null;
         int var3 = 0;
         DefaultTextWidgetRenderer var4 = null;
@@ -167,8 +167,8 @@ final class eb extends lc implements TextHotspotListener, WidgetActivationListen
         int var6 = 0;
         try {
           this.field_A = param0;
-          this.field_H = new InteractiveWidget(BufferedSocket.field_i, (sk) null);
-          this.field_H.field_j = (fc) ((Object) new jh());
+          this.field_H = new InteractiveWidget(BufferedSocket.field_i, (WidgetEventListener) null);
+          this.field_H.field_j = (WidgetRenderer) ((Object) new jh());
           var7 = BufferedRandomAccessFile.a(pa.field_b, new String[]{this.a(false), this.c(false)}, (byte) -126);
           var3 = 20;
           var4 = new DefaultTextWidgetRenderer(FrameTimer.field_a, 0, 0, 0, 0, 16777215, -1, 3, 0, FrameTimer.field_a.field_s, -1, 2147483647, true);
@@ -176,17 +176,17 @@ final class eb extends lc implements TextHotspotListener, WidgetActivationListen
           this.field_B.field_q = "";
           this.field_B.a(Slime.field_b, 0, (byte) 107);
           this.field_B.a(Slime.field_b, 1, (byte) 125);
-          this.field_B.field_n = (sk) (this);
+          this.field_B.field_n = (WidgetEventListener) (this);
           this.field_B.field_k = -40 + this.field_k;
           this.field_B.a(var3, (byte) -65, 26, this.field_k - 40);
           var3 = var3 + (15 + this.field_B.field_m);
-          this.b(this.field_B, true);
+          this.addChild(this.field_B, true);
           var5 = 4;
           var6 = 200;
-          this.field_H.b(40, 80, var6, -var6 + 300 >> 1, var3);
-          this.field_H.field_n = (sk) (this);
-          this.b(this.field_H, true);
-          this.b(var5 + var3 + 55, 80, 300, 0, 0);
+          this.field_H.setBounds(40, 80, var6, -var6 + 300 >> 1, var3);
+          this.field_H.field_n = (WidgetEventListener) (this);
+          this.addChild(this.field_H, true);
+          this.setBounds(var5 + var3 + 55, 80, 300, 0, 0);
         } catch (RuntimeException runtimeException) {
           throw CipherPacketBuffer.wrapClientException((Throwable) ((Object) runtimeException), "eb.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }

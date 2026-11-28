@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class h implements nn {
+final class h implements WidgetRenderer {
     static String field_f;
     private int field_g;
     private int field_a;
@@ -20,9 +20,9 @@ final class h implements nn {
         field_b = null;
     }
 
-    public final void a(int param0, int param1, int param2, ag param3, boolean param4) {
+    public final void paintWidget(int param0, int param1, int param2, UiWidget param3, boolean param4) {
         int var10 = 0;
-        ag stackIn_4_0 = null;
+        UiWidget stackIn_4_0 = null;
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
         String stackIn_16_2 = null;
@@ -38,7 +38,7 @@ final class h implements nn {
           if (!(param3 instanceof tb)) {
             stackIn_4_0 = null;
           } else {
-            stackIn_4_0 = (ag) (param3);
+            stackIn_4_0 = (UiWidget) (param3);
           }
           var12 = (tb) (stackIn_4_0);
           SoftwareRasterizer.fillRectangle(param1 + param3.field_v, param3.field_m + param0, param3.field_s, param3.field_x, this.field_g);

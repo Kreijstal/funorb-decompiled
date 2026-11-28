@@ -72,7 +72,7 @@ final class ae extends InteractiveWidget {
         throw new Error();
     }
 
-    final boolean a(int param0, int param1, w param2, int param3, int param4, int param5, int param6) {
+    final boolean pointerPressed(int param0, int param1, UiWidget param2, int param3, int param4, int param5, int param6) {
         RuntimeException stackIn_19_0 = null;
         StringBuilder stackIn_19_1 = null;
         String stackIn_20_2 = null;
@@ -84,7 +84,7 @@ final class ae extends InteractiveWidget {
         int var12 = 0;
         var12 = Lexicominos.field_L ? 1 : 0;
         try {
-          if (!super.a(param0, param1, param2, param3, param4, param5, param6)) {
+          if (!super.pointerPressed(param0, param1, param2, param3, param4, param5, param6)) {
             return false;
           }
           var8_int = -this.field_t - (param5 + this.field_L - param6);

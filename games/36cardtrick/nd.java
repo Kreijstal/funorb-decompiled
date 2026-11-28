@@ -86,8 +86,8 @@ final class nd extends DefaultTextWidgetRenderer {
 
     final oc a(byte param0, int param1) {
         if (param0 != -1) {
-          lk var4 = (lk) null;
-          this.a(8, (lk) null, 72, -15, true);
+          UiWidget var4 = (UiWidget) null;
+          this.paintWidget(8, (UiWidget) null, 72, -15, true);
         }
         oc dupTemp$0 = new oc();
         this.field_q[param1] = dupTemp$0;
@@ -184,8 +184,8 @@ final class nd extends DefaultTextWidgetRenderer {
         }
     }
 
-    public final void a(int param0, lk param1, int param2, int param3, boolean param4) {
-        lk stackIn_3_0 = null;
+    public final void paintWidget(int param0, UiWidget param1, int param2, int param3, boolean param4) {
+        UiWidget stackIn_3_0 = null;
         RuntimeException stackIn_32_0 = null;
         StringBuilder stackIn_32_1 = null;
         String stackIn_33_2 = null;
@@ -200,7 +200,7 @@ final class nd extends DefaultTextWidgetRenderer {
         oc var14 = null;
         try {
           if (param1 instanceof InteractiveWidget) {
-            stackIn_3_0 = (lk) (param1);
+            stackIn_3_0 = (UiWidget) (param1);
           } else {
             stackIn_3_0 = null;
           }
@@ -235,7 +235,7 @@ final class nd extends DefaultTextWidgetRenderer {
               }
             }
           }
-          if (param1.d(88)) {
+          if (param1.isFocused(88)) {
             var13 = this.field_q[5];
             if (var13 != null) {
               var13.a(param3, param1, param0, this, this.field_p, (byte) -120);

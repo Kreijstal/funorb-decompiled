@@ -62,7 +62,7 @@ final class pd {
               return stackIn_16_0;
             }
           }
-          stackIn_19_0 = vg.a((byte) -126, var3[var3.length - 1]);
+          stackIn_19_0 = UiWidget.a((byte) -126, var3[var3.length - 1]);
           return stackIn_19_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

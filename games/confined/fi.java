@@ -14,7 +14,7 @@ final class fi {
           IntrusiveNode.a(param0, param1 ^ 122, param4, param3);
           jk.a((byte) -81);
           RichTextWidget.field_S = ml.field_a;
-          oe.field_Q = ml.field_a;
+          ModalDialog.field_Q = ml.field_a;
           if (param1 != 0) {
             field_d = (RgbSprite[]) null;
           }

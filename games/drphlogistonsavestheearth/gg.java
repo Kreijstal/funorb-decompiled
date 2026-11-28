@@ -86,7 +86,7 @@ final class gg {
             this.a(50, 43, false, -8, (byte) 104, -89, -59, -100, -0.605813202968837);
           }
           var11 = (int)((double)param7 * ji.a(65535, param8)) + param1;
-          var12 = param6 + (int)(pj.a(param8, 32768) * (double)param7);
+          var12 = param6 + (int)(DequeWidgetContainer.a(param8, 32768) * (double)param7);
           var13 = hi.a((int)(2.0 * this.field_k), 4, this.field_r);
           var14 = 126 * param7 / this.field_c + 60;
           if (param2) {

@@ -12,7 +12,7 @@ final class dc extends DefaultTextWidgetRenderer {
     static String field_o;
     static Sprite field_p;
 
-    public final void a(int param0, UiWidget param1, int param2, boolean param3, int param4) {
+    public final void paintWidget(int param0, UiWidget param1, int param2, boolean param3, int param4) {
         int stackIn_6_0 = 0;
         int stackIn_15_0 = 0;
         int stackIn_18_0 = 0;
@@ -26,7 +26,7 @@ final class dc extends DefaultTextWidgetRenderer {
         int var8 = 0;
         try {
           if (!param1.field_q) {
-            stackIn_6_0 = (param1.h(-87)) ? 1 : 0;
+            stackIn_6_0 = (param1.isFocused(-87)) ? 1 : 0;
           } else {
             stackIn_6_0 = 1;
           }

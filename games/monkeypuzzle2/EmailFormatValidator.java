@@ -20,7 +20,7 @@ final class EmailFormatValidator extends TextFieldValidator {
             field_q = -107;
           }
           if (this.getValidationStatus(param1, 3917) != IsaacRandom.field_h) {
-            return ue.field_E;
+            return AlphaWidgetContainer.field_E;
           }
           stackIn_5_0 = AwtRasterBuffer.field_d;
           return stackIn_5_0;

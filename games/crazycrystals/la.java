@@ -65,28 +65,28 @@ final class la {
         int var9_intLifetime3;
         var10 = CrazyCrystals.field_B;
         try {
-          if (null != oj.field_H &&
-            oj.field_H.ensureIndexLoaded((byte) 102) &&
-            oj.field_H.tryLoadGroupByName(-20402, "benefits") &&
+          if (null != DraggableWidgetContainer.field_H &&
+            DraggableWidgetContainer.field_H.ensureIndexLoaded((byte) 102) &&
+            DraggableWidgetContainer.field_H.tryLoadGroupByName(-20402, "benefits") &&
             MusicPatchPcmStream.field_m != null &&
             MusicPatchPcmStream.field_m.ensureIndexLoaded((byte) 102) &&
             MusicPatchPcmStream.field_m.tryLoadGroupByName(-20402, "benefits")) {
-            so.field_d = ArchiveRequest.a("headline", oj.field_H, 10, "benefits");
-            uh.field_q = ArchiveRequest.a("blurbpane", oj.field_H, 10, "benefits");
-            ad.field_h = ArchiveRequest.a("button", oj.field_H, 10, "benefits");
-            EditableTextField.field_E = ArchiveRequest.a("signup_text", oj.field_H, 10, "benefits");
-            el.field_g = ArchiveRequest.a("menu_text", oj.field_H, 10, "benefits");
-            fl.field_a = ArchiveRequest.a("button_frame", oj.field_H, 10, "benefits");
-            DisplayNameSelectionPanel.field_H = ArchiveRequest.a("arrow", oj.field_H, 10, "benefits");
-            ra.field_c = (BitmapFont) ((Object) hp.a(MusicPatchPcmStream.field_m, 0, "large_font", oj.field_H, "benefits"));
-            rn.field_k = (BitmapFont) ((Object) hp.a(MusicPatchPcmStream.field_m, 0, "small_font", oj.field_H, "benefits"));
+            so.field_d = ArchiveRequest.a("headline", DraggableWidgetContainer.field_H, 10, "benefits");
+            uh.field_q = ArchiveRequest.a("blurbpane", DraggableWidgetContainer.field_H, 10, "benefits");
+            ad.field_h = ArchiveRequest.a("button", DraggableWidgetContainer.field_H, 10, "benefits");
+            EditableTextField.field_E = ArchiveRequest.a("signup_text", DraggableWidgetContainer.field_H, 10, "benefits");
+            el.field_g = ArchiveRequest.a("menu_text", DraggableWidgetContainer.field_H, 10, "benefits");
+            fl.field_a = ArchiveRequest.a("button_frame", DraggableWidgetContainer.field_H, 10, "benefits");
+            DisplayNameSelectionPanel.field_H = ArchiveRequest.a("arrow", DraggableWidgetContainer.field_H, 10, "benefits");
+            ra.field_c = (BitmapFont) ((Object) hp.a(MusicPatchPcmStream.field_m, 0, "large_font", DraggableWidgetContainer.field_H, "benefits"));
+            rn.field_k = (BitmapFont) ((Object) hp.a(MusicPatchPcmStream.field_m, 0, "small_font", DraggableWidgetContainer.field_H, "benefits"));
             var28 = SoftwareRasterizer.field_i;
             var2 = SoftwareRasterizer.field_l;
             var3 = SoftwareRasterizer.field_d;
             SoftwareRasterizer.saveClip(SpriteGeometry.field_m);
             var11 = new RgbSprite(4 + DisplayNameSelectionPanel.field_H.field_l, 4 + DisplayNameSelectionPanel.field_H.field_u);
             var11.bindAsRenderTarget();
-            DisplayNameSelectionPanel.field_H.drawGrayModulated(2, 2, qm.field_n);
+            DisplayNameSelectionPanel.field_H.drawGrayModulated(2, 2, UiWidget.field_n);
             hb.a(2, var11.field_u, 0, var11.field_l, var11, -46, 1, 0);
             DisplayNameSelectionPanel.field_H = var11;
             bf.field_a = DisplayNameSelectionPanel.field_H.copyMirroredHorizontally();
@@ -104,7 +104,7 @@ final class la {
             var12.draw(-uh.field_q.field_v + 18, -uh.field_q.field_t + 241);
             for (var7 = 0; var7 < hf.field_c.length; var7++) {
               NetworkArchiveRequest.field_v[var7].bindAsRenderTarget();
-              rn.field_k.drawParagraph(hf.field_c[var7], 3, 3, NetworkArchiveRequest.field_v[var7].field_l - 6, -6 + NetworkArchiveRequest.field_v[var7].field_u, qm.field_n, -1, 1, 1, rn.field_k.field_u + rn.field_k.field_o);
+              rn.field_k.drawParagraph(hf.field_c[var7], 3, 3, NetworkArchiveRequest.field_v[var7].field_l - 6, -6 + NetworkArchiveRequest.field_v[var7].field_u, UiWidget.field_n, -1, 1, 1, rn.field_k.field_u + rn.field_k.field_o);
               hb.a(3, NetworkArchiveRequest.field_v[var7].field_u, 0, NetworkArchiveRequest.field_v[var7].field_l, NetworkArchiveRequest.field_v[var7], -76, 1, 0);
             }
             hf.field_c = null;
@@ -113,7 +113,7 @@ final class la {
             ne.a(0, SoftwareRasterizer.field_l, -102, 64, 0, 2 * SoftwareRasterizer.field_d / 3);
             SoftwareRasterizer.setRasterBuffer(var28, var2, var3);
             SoftwareRasterizer.restoreClip(SpriteGeometry.field_m);
-            oj.field_H = null;
+            DraggableWidgetContainer.field_H = null;
             kb.field_a = (ad.field_h.field_u - fl.field_a.field_u) / 2 + 390;
             pa.field_F = 231 + (ad.field_h.field_l - fl.field_a.field_l) / 2;
             CipherPacketBuffer.field_q = 434 + (-fl.field_a.field_l + ad.field_h.field_l) / 2;

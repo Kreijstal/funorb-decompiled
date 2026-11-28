@@ -23,7 +23,7 @@ final class je extends InteractiveWidget {
         }
     }
 
-    final void a(int param0, int param1, UiComponent param2, byte param3) {
+    final void updatePointer(int param0, int param1, UiComponent param2, byte param3) {
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         String stackIn_9_2 = null;
@@ -34,7 +34,7 @@ final class je extends InteractiveWidget {
             field_O = (RgbSprite[]) null;
           }
           this.field_L = this.field_L + 1;
-          super.a(param0, param1, param2, (byte) -104);
+          super.updatePointer(param0, param1, param2, (byte) -104);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -1109,7 +1109,7 @@ final class je extends InteractiveWidget {
                 }
                 var2 = ad.a("goback", 0);
                 if (null != var2) {
-                  qj.field_J = ab.a(0, var2);
+                  DropTargetWidgetContainer.field_J = ab.a(0, var2);
                 }
                 var2 = ad.a("otheroptions", 0);
                 if (var2 != null) {
@@ -1185,7 +1185,7 @@ final class je extends InteractiveWidget {
                 }
                 var2 = ad.a("warning_ifyouquit", 0);
                 if (null != var2) {
-                  db.field_F = ab.a(0, var2);
+                  ModalDialog.field_F = ab.a(0, var2);
                 }
                 var2 = ad.a("warning_ifyouquitorleavepage", 0);
                 if (null != var2) {
@@ -1887,7 +1887,7 @@ final class je extends InteractiveWidget {
                 }
                 var2 = ad.a("unpacking_graphics", 0);
                 if (var2 != null) {
-                  f.field_H = ab.a(0, var2);
+                  ModalDialogHost.field_H = ab.a(0, var2);
                 }
                 var2 = ad.a("unpacking_models", 0);
                 if (null != var2) {
@@ -2809,11 +2809,11 @@ final class je extends InteractiveWidget {
                 }
                 var2 = ad.a("rating_mode_name,0", 0);
                 if (null != var2) {
-                  gj.field_B[0] = ab.a(0, var2);
+                  DequeWidgetContainer.field_B[0] = ab.a(0, var2);
                 }
                 var2 = ad.a("rating_mode_name,1", 0);
                 if (var2 != null) {
-                  gj.field_B[1] = ab.a(0, var2);
+                  DequeWidgetContainer.field_B[1] = ab.a(0, var2);
                 }
                 var2 = ad.a("rating_mode_long_name,0", 0);
                 if (var2 != null) {
@@ -2978,31 +2978,31 @@ final class je extends InteractiveWidget {
                 }
                 var2 = ad.a("mustlogin_alternate,1", 0);
                 if (null != var2) {
-                  ml.field_N[1] = ab.a(0, var2);
+                  LabeledWidgetContainer.field_N[1] = ab.a(0, var2);
                 }
                 var2 = ad.a("mustlogin_alternate,2", 0);
                 if (var2 != null) {
-                  ml.field_N[2] = ab.a(0, var2);
+                  LabeledWidgetContainer.field_N[2] = ab.a(0, var2);
                 }
                 var2 = ad.a("mustlogin_alternate,3", 0);
                 if (null != var2) {
-                  ml.field_N[3] = ab.a(0, var2);
+                  LabeledWidgetContainer.field_N[3] = ab.a(0, var2);
                 }
                 var2 = ad.a("mustlogin_alternate,4", 0);
                 if (null != var2) {
-                  ml.field_N[4] = ab.a(0, var2);
+                  LabeledWidgetContainer.field_N[4] = ab.a(0, var2);
                 }
                 var2 = ad.a("mustlogin_alternate,5", 0);
                 if (null != var2) {
-                  ml.field_N[5] = ab.a(0, var2);
+                  LabeledWidgetContainer.field_N[5] = ab.a(0, var2);
                 }
                 var2 = ad.a("mustlogin_alternate,6", 0);
                 if (var2 != null) {
-                  ml.field_N[6] = ab.a(0, var2);
+                  LabeledWidgetContainer.field_N[6] = ab.a(0, var2);
                 }
                 var2 = ad.a("mustlogin_alternate,7", 0);
                 if (var2 != null) {
-                  ml.field_N[7] = ab.a(0, var2);
+                  LabeledWidgetContainer.field_N[7] = ab.a(0, var2);
                 }
                 var2 = ad.a("subscription_cost_monthly,0", 0);
                 if (null != var2) {
@@ -3093,7 +3093,7 @@ final class je extends InteractiveWidget {
         decompiledBody.run();
     }
 
-    final boolean a(UiComponent param0, int param1) {
+    final boolean takeFocus(UiComponent param0, int param1) {
         RuntimeException var3 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
@@ -3118,7 +3118,7 @@ final class je extends InteractiveWidget {
         }
     }
 
-    final void b(int param0, int param1, boolean param2, int param3) {
+    final void drawWidget(int param0, int param1, boolean param2, int param3) {
         RuntimeException decompiledCaughtException = null;
         int var5_int = 0;
         RuntimeException var5 = null;
@@ -3132,7 +3132,7 @@ final class je extends InteractiveWidget {
         RgbSprite var7Lifetime2;
         var11 = fleas.field_A ? 1 : 0;
         try {
-          super.b(param0, param1, param2, param3);
+          super.drawWidget(param0, param1, param2, param3);
           if (param3 != 0) {
             return;
           }
@@ -3164,7 +3164,7 @@ final class je extends InteractiveWidget {
               return;
             }
           }
-          if (ml.field_K != var8) {
+          if (LabeledWidgetContainer.field_K != var8) {
             if (var8 != hm.field_b) {
               return;
             }

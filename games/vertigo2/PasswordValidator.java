@@ -523,7 +523,7 @@ final class PasswordValidator extends TextFieldValidator {
                 }
                 var2 = tk.a("mu_options_ratedgametype", false);
                 if (var2 != null) {
-                  um.field_H = in.a(0, var2);
+                  ArrayWidgetContainer.field_H = in.a(0, var2);
                 }
                 var2 = tk.a("yes", false);
                 if (null != var2) {
@@ -647,7 +647,7 @@ final class PasswordValidator extends TextFieldValidator {
                 }
                 var2 = tk.a("mu_chat_game_friends", false);
                 if (var2 != null) {
-                  um.field_D = in.a(0, var2);
+                  ArrayWidgetContainer.field_D = in.a(0, var2);
                 }
                 var2 = tk.a("mu_chat_game_hide", false);
                 if (null != var2) {
@@ -1067,11 +1067,11 @@ final class PasswordValidator extends TextFieldValidator {
                 }
                 var2 = tk.a("gameopt_needchanging2", false);
                 if (null != var2) {
-                  mg.field_G = in.a(0, var2);
+                  LabeledWidgetContainer.field_G = in.a(0, var2);
                 }
                 var2 = tk.a("gameopt_mightchange", false);
                 if (null != var2) {
-                  ac.field_J = in.a(0, var2);
+                  DropTargetWidgetContainer.field_J = in.a(0, var2);
                 }
                 var2 = tk.a("gameopt_playersdontqualify", false);
                 if (var2 != null) {
@@ -1131,7 +1131,7 @@ final class PasswordValidator extends TextFieldValidator {
                 }
                 var2 = tk.a("ra_intro_no_name", false);
                 if (var2 != null) {
-                  sd.field_H = in.a(param0 + 0, var2);
+                  ModalDialogHost.field_H = in.a(param0 + 0, var2);
                 }
                 var2 = tk.a("ra_explanation", false);
                 if (null != var2) {
@@ -1185,7 +1185,7 @@ final class PasswordValidator extends TextFieldValidator {
                 }
                 var2 = tk.a("rule_1_3", false);
                 if (var2 != null) {
-                  ac.field_M = in.a(0, var2);
+                  DropTargetWidgetContainer.field_M = in.a(0, var2);
                 }
                 var2 = tk.a("rule_1_4", false);
                 if (var2 != null) {
@@ -1201,7 +1201,7 @@ final class PasswordValidator extends TextFieldValidator {
                 }
                 var2 = tk.a("rule_2_1", false);
                 if (null != var2) {
-                  mg.field_L = in.a(0, var2);
+                  LabeledWidgetContainer.field_L = in.a(0, var2);
                 }
                 var2 = tk.a("rule_2_2", false);
                 if (null != var2) {
@@ -1513,7 +1513,7 @@ final class PasswordValidator extends TextFieldValidator {
                 }
                 var2 = tk.a("creatingyouraccount", false);
                 if (null != var2) {
-                  ac.field_L = in.a(0, var2);
+                  DropTargetWidgetContainer.field_L = in.a(0, var2);
                 }
                 var2 = tk.a("create_youmustaccept", false);
                 if (null != var2) {
@@ -1537,7 +1537,7 @@ final class PasswordValidator extends TextFieldValidator {
                 }
                 var2 = tk.a("year", false);
                 if (var2 != null) {
-                  um.field_C = in.a(0, var2);
+                  ArrayWidgetContainer.field_C = in.a(0, var2);
                 }
                 var2 = tk.a("monthnames,0", false);
                 if (var2 != null) {
@@ -2283,7 +2283,7 @@ final class PasswordValidator extends TextFieldValidator {
                 }
                 var2 = tk.a("canceldraw", false);
                 if (null != var2) {
-                  mg.field_T = in.a(0, var2);
+                  LabeledWidgetContainer.field_T = in.a(0, var2);
                 }
                 var2 = tk.a("acceptdraw", false);
                 if (null != var2) {
@@ -2678,31 +2678,31 @@ final class PasswordValidator extends TextFieldValidator {
                 }
                 var2 = tk.a("quickchat_help_title", false);
                 if (null != var2) {
-                  ac.field_N = in.a(0, var2);
+                  DropTargetWidgetContainer.field_N = in.a(0, var2);
                 }
                 var2 = tk.a("quickchat_shortcut_help,0", false);
                 if (var2 != null) {
-                  sd.field_M[0] = in.a(0, var2);
+                  ModalDialogHost.field_M[0] = in.a(0, var2);
                 }
                 var2 = tk.a("quickchat_shortcut_help,1", false);
                 if (var2 != null) {
-                  sd.field_M[1] = in.a(0, var2);
+                  ModalDialogHost.field_M[1] = in.a(0, var2);
                 }
                 var2 = tk.a("quickchat_shortcut_help,2", false);
                 if (var2 != null) {
-                  sd.field_M[2] = in.a(0, var2);
+                  ModalDialogHost.field_M[2] = in.a(0, var2);
                 }
                 var2 = tk.a("quickchat_shortcut_help,3", false);
                 if (null != var2) {
-                  sd.field_M[3] = in.a(0, var2);
+                  ModalDialogHost.field_M[3] = in.a(0, var2);
                 }
                 var2 = tk.a("quickchat_shortcut_help,4", false);
                 if (var2 != null) {
-                  sd.field_M[4] = in.a(0, var2);
+                  ModalDialogHost.field_M[4] = in.a(0, var2);
                 }
                 var2 = tk.a("quickchat_shortcut_help,5", false);
                 if (null != var2) {
-                  sd.field_M[5] = in.a(tk.a(param0, 0), var2);
+                  ModalDialogHost.field_M[5] = in.a(tk.a(param0, 0), var2);
                 }
                 var2 = tk.a("quickchat_shortcut_keys,0", false);
                 if (var2 != null) {
@@ -3030,7 +3030,7 @@ final class PasswordValidator extends TextFieldValidator {
                 }
                 var2 = tk.a("serviceunavailable", false);
                 if (null != var2) {
-                  sd.field_G = in.a(0, var2);
+                  ModalDialogHost.field_G = in.a(0, var2);
                 }
                 var2 = tk.a("createtouse", false);
                 if (null != var2) {

@@ -3,21 +3,21 @@
  */
 final class dk {
     int field_p;
-    ml field_l;
+    WidgetRenderer field_l;
     int field_n;
     BitmapFont field_m;
     int field_r;
     int field_k;
     static int field_j;
-    ml field_a;
+    WidgetRenderer field_a;
     private boolean field_q;
     int field_f;
-    ml field_o;
-    ml field_i;
+    WidgetRenderer field_o;
+    WidgetRenderer field_i;
     static ib field_d;
     int field_b;
     private int field_c;
-    ml field_g;
+    WidgetRenderer field_g;
     int field_s;
     static ib field_h;
     static PcmStreamMixer field_e;
@@ -216,7 +216,7 @@ final class dk {
         try {
           var17 = new DefaultTextWidgetRenderer(param0, 2, 2, 2236962, 1, 1, 1, param0.field_C + param0.field_D + 2);
           var17.field_f = 16777215;
-          this.field_a = (ml) ((Object) var17);
+          this.field_a = (WidgetRenderer) ((Object) var17);
           var4 = new ak();
           var17.a(false, var4);
           this.field_m = param0;
@@ -242,21 +242,21 @@ final class dk {
           var5[4] = (Sprite) ((Object) var18);
           var4.a((byte) -102, 4).a((byte) -48, true).a(-20433, var5);
           var4.a((byte) -102, 5).a(-20433, jc.a(65793, 0, 64, 0, 0)).a((byte) -48, true).a(-1, (byte) -3);
-          this.field_i = (ml) ((Object) var4);
+          this.field_i = (WidgetRenderer) ((Object) var4);
           var6 = new ak(var4, true);
           var6.field_l = 0;
           var7 = new ak(var4, true);
           var7.field_l = 0;
           var7.a(DequeCursor.a(8947848, -14377), 250);
           var7.a((byte) -102, 1).a(-20433, DequeCursor.a(11184810, -14377)).a(2236962, (byte) -3);
-          this.field_l = (ml) ((Object) new pb(param0, 2, 2, 16777215, -1, 5, 5, 15, 15, 4473924));
+          this.field_l = (WidgetRenderer) ((Object) new pb(param0, 2, 2, 16777215, -1, 5, 5, 15, 15, 4473924));
           discarded$0 = new db(param0, 2, 2, 16777215, -1, 16777215, 16729156, 4473924);
           discarded$1 = new mc(param0, 16777215, -1, 125269879, 4473924, 3, 268435455);
           var8 = new ak();
           var17.a(param1, var8);
           var8.a((byte) -102, 0).a(-20433, vl.a(7829367, 10066329, 15658734, true)).a(1118481, (byte) -3).a(true, -1);
           var8.a((byte) -102, 4).a((byte) -48, true).a(-20433, var5);
-          this.field_o = (ml) ((Object) var8);
+          this.field_o = (WidgetRenderer) ((Object) var8);
           var9 = new Sprite[9];
           var9[4] = new Sprite(2, 1);
           var10 = new Sprite[9];

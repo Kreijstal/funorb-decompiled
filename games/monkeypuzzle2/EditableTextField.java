@@ -29,7 +29,7 @@ class EditableTextField extends ButtonWidget {
         }
     }
 
-    final boolean a(UiWidget param0, char param1, int param2, int param3) {
+    final boolean handleKey(UiWidget param0, char param1, int param2, int param3) {
         int dupTemp$0 = 0;
         int stackIn_39_1 = 0;
         int stackIn_68_1 = 0;
@@ -173,7 +173,7 @@ class EditableTextField extends ButtonWidget {
         this.pasteClipboardText((byte) 122);
     }
 
-    EditableTextField(String param0, of param1, int param2) {
+    EditableTextField(String param0, WidgetEventListener param1, int param2) {
         super(param0, param1);
         this.field_J = -1;
         this.field_C = false;
@@ -215,7 +215,7 @@ class EditableTextField extends ButtonWidget {
         field_H = null;
     }
 
-    final void a(int param0, int param1, int param2, int param3) {
+    final void drawWidget(int param0, int param1, int param2, int param3) {
         String var8 = null;
         long var6 = 0L;
         String var8Lifetime1;
@@ -241,7 +241,7 @@ class EditableTextField extends ButtonWidget {
           }
           return;
         }
-        this.field_h.a(this.field_w, (UiWidget) (this), param2, param3, 110);
+        this.field_h.paintWidget(this.field_w, (UiWidget) (this), param2, param3, 110);
         if (!(this.field_h instanceof TextWidgetRenderer)) {
           if (param0 == 30) {
             return;
@@ -287,14 +287,14 @@ class EditableTextField extends ButtonWidget {
         this.setText(false, 120, (String) null);
     }
 
-    void a(UiWidget param0, int param1, int param2, byte param3) {
+    void updatePointer(UiWidget param0, int param1, int param2, byte param3) {
         TextWidgetRenderer var7 = null;
         int var6 = 0;
         try {
           if (param3 >= -13) {
             EditableTextField.clearDeclaredStaticReferences(59);
           }
-          super.a(param0, param1, param2, (byte) -98);
+          super.updatePointer(param0, param1, param2, (byte) -98);
           this.scrollCaretIntoView(95);
           if (this.field_t == 1) {
             if (this.field_h instanceof TextWidgetRenderer) {
@@ -564,7 +564,7 @@ class EditableTextField extends ButtonWidget {
         this.deleteSelection(false);
     }
 
-    final boolean a(int param0, int param1, int param2, int param3, UiWidget param4, int param5, int param6) {
+    final boolean pointerPressed(int param0, int param1, int param2, int param3, UiWidget param4, int param5, int param6) {
         int stackIn_7_1 = 0;
         boolean stackIn_10_1 = false;
         RuntimeException stackIn_24_0 = null;
@@ -575,7 +575,7 @@ class EditableTextField extends ButtonWidget {
         long var8_long = 0L;
         RuntimeException var8 = null;
         try {
-          if (super.a(param0, param1, param2, param3 ^ 0, param4, param5, param6) &&
+          if (super.pointerPressed(param0, param1, param2, param3 ^ 0, param4, param5, param6) &&
             this.field_h instanceof TextWidgetRenderer) {
             var8_int = ((TextWidgetRenderer) ((Object) this.field_h)).findTextOffsetAtScreenPosition(param6, p.field_a, (UiWidget) (this), ei.field_a, true, param0);
             if (var8_int == -1) {

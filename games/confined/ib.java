@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ib extends fj {
+final class ib extends UiWidget {
     private int field_Y;
     private RgbSprite field_L;
     int field_R;
@@ -30,8 +30,8 @@ final class ib extends fj {
         field_J = null;
     }
 
-    final void a(int param0, int param1, int param2, int param3, int param4) {
-        super.a(-119, param1, param2, param3, param4);
+    final void setBounds(int param0, int param1, int param2, int param3, int param4) {
+        super.setBounds(-119, param1, param2, param3, param4);
         this.g((byte) -111);
         if (param0 >= -109) {
           this.field_Y = 98;
@@ -127,7 +127,7 @@ final class ib extends fj {
         this.g((byte) -127);
     }
 
-    final void a(fj param0, int param1, int param2, int param3) {
+    final void updatePointer(UiWidget param0, int param1, int param2, int param3) {
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         String stackIn_9_2 = null;
@@ -284,10 +284,10 @@ final class ib extends fj {
           return;
         }
         CipherPacketBuffer.field_u = new DisplayNameSelectionPanel();
-        dn.field_b.a((fj) (CipherPacketBuffer.field_u), (byte) -72);
+        dn.field_b.a((UiWidget) (CipherPacketBuffer.field_u), (byte) -72);
     }
 
-    final void a(int param0, int param1, byte param2, int param3) {
+    final void drawWidget(int param0, int param1, byte param2, int param3) {
         if (0 != param1) {
           return;
         }
@@ -320,7 +320,7 @@ final class ib extends fj {
         this.field_S = param7;
         this.field_Z = param5;
         this.field_I = param6;
-        this.a(-126, param2, param1, param3, param0);
+        this.setBounds(-126, param2, param1, param3, param0);
     }
 
     static {

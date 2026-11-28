@@ -360,7 +360,7 @@ final class an {
                 ea.a(param3, true);
               }
             }
-            mg.a(false, param3, true, sj.field_d);
+            LabeledWidgetContainer.a(false, param3, true, sj.field_d);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -400,7 +400,7 @@ final class an {
           }
           var9 = param1.requestDisplayModes(-108);
           while (var9.status == 0) {
-            um.sleepMillis(true, 10L);
+            ArrayWidgetContainer.sleepMillis(true, 10L);
           }
           if (2 == var9.status) {
             stackIn_13_0 = new cl[]{};
@@ -455,7 +455,7 @@ final class an {
           if (hn.field_w == 11) {
             pc.clearStaticReferences((byte) -111);
           }
-          mg.a(param0 + 1244, DiskArchiveRequest.field_E, InteractiveWidget.field_C, IntrusiveNode.field_h);
+          LabeledWidgetContainer.a(param0 + 1244, DiskArchiveRequest.field_E, InteractiveWidget.field_C, IntrusiveNode.field_h);
           ByteStorage.a(0, (byte) -99, param1, 0);
           if (param0 != -1243) {
             var3 = (String) null;

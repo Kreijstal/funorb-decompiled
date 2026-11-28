@@ -38,28 +38,28 @@ final class se extends WidgetContainer implements WidgetActivationListener {
     }
 
     public se() {
-        super(0, 0, 476, 225, (uk) null);
-        this.field_D = new InteractiveWidget(gk.field_g, (lf) null);
-        this.field_F = new InteractiveWidget(ProxySocketConnector.field_h, (lf) null);
-        this.field_I = new InteractiveWidget(o.field_c, (lf) null);
+        super(0, 0, 476, 225, (WidgetRenderer) null);
+        this.field_D = new InteractiveWidget(gk.field_g, (WidgetEventListener) null);
+        this.field_F = new InteractiveWidget(ProxySocketConnector.field_h, (WidgetEventListener) null);
+        this.field_I = new InteractiveWidget(o.field_c, (WidgetEventListener) null);
         b var1 = new b();
-        this.field_D.field_u = (uk) ((Object) var1);
-        this.field_F.field_u = (uk) ((Object) var1);
-        this.field_I.field_u = (uk) ((Object) var1);
+        this.field_D.field_u = (WidgetRenderer) ((Object) var1);
+        this.field_F.field_u = (WidgetRenderer) ((Object) var1);
+        this.field_I.field_u = (WidgetRenderer) ((Object) var1);
         int var2 = 4;
         int var3 = 326;
         int var4 = -var2 + var3 >> 1;
-        this.field_F.b(var4, -var3 + this.field_p >> 1, -var2 + this.field_t - 48, 30, 23987);
-        this.field_I.b(var4, var4 + ((this.field_p - var3 >> 1) + var2), -48 + (this.field_t - var2), 30, 23987);
-        this.field_D.b(var3, this.field_p - var3 >> 1, -(var2 * 2) - 78 + this.field_t, 30, 23987);
-        this.field_F.field_v = (lf) (this);
-        this.field_D.field_v = (lf) (this);
-        this.field_I.field_v = (lf) (this);
+        this.field_F.setBounds(var4, -var3 + this.field_p >> 1, -var2 + this.field_t - 48, 30, 23987);
+        this.field_I.setBounds(var4, var4 + ((this.field_p - var3 >> 1) + var2), -48 + (this.field_t - var2), 30, 23987);
+        this.field_D.setBounds(var3, this.field_p - var3 >> 1, -(var2 * 2) - 78 + this.field_t, 30, 23987);
+        this.field_F.field_v = (WidgetEventListener) (this);
+        this.field_D.field_v = (WidgetEventListener) (this);
+        this.field_I.field_v = (WidgetEventListener) (this);
         this.field_D.field_x = DelegatingCanvas.field_c;
         this.field_I.field_x = ua.field_f;
-        this.b(4, this.field_F);
-        this.b(4, this.field_D);
-        this.b(4, this.field_I);
+        this.addChild(4, this.field_F);
+        this.addChild(4, this.field_D);
+        this.addChild(4, this.field_I);
     }
 
     public static void clearStaticReferences(byte param0) {
@@ -142,7 +142,7 @@ final class se extends WidgetContainer implements WidgetActivationListener {
         }
     }
 
-    final boolean a(int param0, int param1, char param2, UiWidget param3) {
+    final boolean handleKey(int param0, int param1, char param2, UiWidget param3) {
         RuntimeException var5 = null;
         boolean stackIn_6_0 = false;
         boolean stackIn_10_0 = false;
@@ -151,17 +151,17 @@ final class se extends WidgetContainer implements WidgetActivationListener {
         String stackIn_14_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (super.a(param0, param1, param2, param3)) {
+          if (super.handleKey(param0, param1, param2, param3)) {
             return true;
           }
           if (param1 == 98) {
-            stackIn_6_0 = this.a(param3, param0 - 38323);
+            stackIn_6_0 = this.focusPreviousChild(param3, param0 - 38323);
             return stackIn_6_0;
           }
           if (param1 != 99) {
             return false;
           }
-          stackIn_10_0 = this.a(param3, (byte) -118);
+          stackIn_10_0 = this.focusNextChild(param3, (byte) -118);
           return stackIn_10_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -177,11 +177,11 @@ final class se extends WidgetContainer implements WidgetActivationListener {
         }
     }
 
-    final void a(int param0, byte param1, int param2, int param3) {
+    final void drawWidget(int param0, byte param1, int param2, int param3) {
         int var5 = param3 + this.field_w;
         int var6 = param2 + this.field_k;
         si.field_V.drawParagraph(e.field_b, 20 + var5, 20 + var6, -40 + this.field_p, this.field_t - 50, 16777215, -1, 1, 0, si.field_V.field_N);
-        super.a(param0, param1, param2, param3);
+        super.drawWidget(param0, param1, param2, param3);
     }
 
     static {

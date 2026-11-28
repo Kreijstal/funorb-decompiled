@@ -27,7 +27,7 @@ final class MixedSupport063 {
           IOException iOExceptionLocal7 = null;
           RuntimeException runtimeExceptionLocal8 = null;
           try {
-            UiComponentPart006.cipherPacketBufferState0001 = new CipherPacketBuffer(integerArgument4);
+            LabeledWidgetContainer.cipherPacketBufferState0001 = new CipherPacketBuffer(integerArgument4);
             SocketFactory.cipherPacketBufferState0002 = new CipherPacketBuffer(integerArgument5);
             MixedSupport081.stringState0340 = stringArgument14;
             GzipDecompressor.platformServiceState0002 = platformServiceArgument3;
@@ -39,7 +39,7 @@ final class MixedSupport063 {
             BufferedSocket.integerState0662 = integerArgument1;
             UiComponent.booleanState0017 = booleanArgument11;
             MixedSupport110.longState0045 = longArgument6;
-            UiComponentPart010.integerState0189 = integerArgument10;
+            AlphaWidgetContainer.integerState0189 = integerArgument10;
             MixedSupport052.integerState0270 = integerArgument13;
             MixedSupport018.booleanState0021 = booleanArgument8;
             MatchingFieldValidator.integerState0686 = integerArgument2;

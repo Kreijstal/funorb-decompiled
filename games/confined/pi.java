@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class pi extends ga implements TextHotspotListener, WidgetActivationListener {
+final class pi extends DequeWidgetContainer implements TextHotspotListener, WidgetActivationListener {
     private InteractiveWidget field_Q;
     private RichTextWidget field_R;
     private AccountCreationResultPanel field_O;
@@ -118,7 +118,7 @@ final class pi extends ga implements TextHotspotListener, WidgetActivationListen
         }
     }
 
-    final boolean a(fj param0, byte param1, int param2, char param3) {
+    final boolean handleKey(UiWidget param0, byte param1, int param2, char param3) {
         int var5_int = 0;
         RuntimeException var5 = null;
         boolean stackIn_5_0 = false;
@@ -128,18 +128,18 @@ final class pi extends ga implements TextHotspotListener, WidgetActivationListen
         String stackIn_13_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (super.a(param0, (byte) -80, param2, param3)) {
+          if (super.handleKey(param0, (byte) -80, param2, param3)) {
             return true;
           }
           if (param2 == 98) {
-            stackIn_5_0 = this.c(param0, 32);
+            stackIn_5_0 = this.focusPreviousChild(param0, 32);
             return stackIn_5_0;
           }
           var5_int = 103 % ((47 - param1) / 43);
           if (99 != param2) {
             return false;
           }
-          stackIn_9_0 = this.a(17731, param0);
+          stackIn_9_0 = this.focusNextChild(17731, param0);
           return stackIn_9_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -229,7 +229,7 @@ final class pi extends ga implements TextHotspotListener, WidgetActivationListen
         RuntimeException decompiledCaughtException = null;
         try {
           if (this.field_Q == param3) {
-            la.j(29);
+            LabeledWidgetContainer.j(29);
             this.field_O.n(10);
           }
           if (param0 > 68) {
@@ -252,7 +252,7 @@ final class pi extends ga implements TextHotspotListener, WidgetActivationListen
     }
 
     pi(AccountCreationResultPanel param0) {
-        super(0, 0, 288, 0, (fe) null);
+        super(0, 0, 288, 0, (WidgetRenderer) null);
         String var7 = null;
         int var3 = 0;
         DefaultTextWidgetRenderer var4 = null;
@@ -260,8 +260,8 @@ final class pi extends ga implements TextHotspotListener, WidgetActivationListen
         int var6 = 0;
         try {
           this.field_O = param0;
-          this.field_Q = new InteractiveWidget(gi.field_fb, (uk) null);
-          this.field_Q.field_n = (fe) ((Object) new je());
+          this.field_Q = new InteractiveWidget(gi.field_fb, (WidgetEventListener) null);
+          this.field_Q.field_n = (WidgetRenderer) ((Object) new je());
           var7 = b.a(new String[]{this.k(-99), this.l(99)}, ja.field_g, 1177);
           var3 = 20;
           var4 = new DefaultTextWidgetRenderer(gm.field_cb, 0, 0, 0, 0, 16777215, -1, 3, 0, gm.field_cb.field_C, -1, 2147483647, true);
@@ -269,17 +269,17 @@ final class pi extends ga implements TextHotspotListener, WidgetActivationListen
           this.field_R.field_C = "";
           this.field_R.a(0, (byte) 9, om.field_o);
           this.field_R.a(1, (byte) 9, om.field_o);
-          this.field_R.field_t = (uk) (this);
+          this.field_R.field_t = (WidgetEventListener) (this);
           this.field_R.field_F = -40 + this.field_F;
           this.field_R.b(var3, 26, this.field_F - 40, 8888);
           var3 = var3 + (15 + this.field_R.field_z);
-          this.b(this.field_R, 10);
+          this.addChild(this.field_R, 10);
           var5 = 4;
           var6 = 200;
-          this.field_Q.a(-121, var6, var3, 40, 300 - var6 >> 1);
-          this.field_Q.field_t = (uk) (this);
-          this.b(this.field_Q, 10);
-          this.a(-126, 300, 0, var5 + (var3 + 55), 0);
+          this.field_Q.setBounds(-121, var6, var3, 40, 300 - var6 >> 1);
+          this.field_Q.field_t = (WidgetEventListener) (this);
+          this.addChild(this.field_Q, 10);
+          this.setBounds(-126, 300, 0, var5 + (var3 + 55), 0);
         } catch (RuntimeException runtimeException) {
           throw TextLineMetrics.a((Throwable) ((Object) runtimeException), "pi.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }

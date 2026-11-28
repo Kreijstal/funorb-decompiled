@@ -23,7 +23,7 @@ class dfa {
         int var12 = 0;
         var12 = BachelorFridge.field_y;
         try {
-          ge.field_F = -1L;
+          LabeledWidgetContainer.field_F = -1L;
           StampedeSpecial.field_s = param4;
           kb.field_j = param5;
           ld.field_q = param4.length;

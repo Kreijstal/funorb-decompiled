@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class kc extends ii implements WidgetActivationListener {
+final class kc extends DequeWidgetContainer implements WidgetActivationListener {
     private int[] field_N;
     private BitmapFont field_K;
     private int field_O;
@@ -22,20 +22,20 @@ final class kc extends ii implements WidgetActivationListener {
         }
         try {
           this.a(var4_int + 1, 0);
-          this.field_T[var4_int] = this.a(param2, (pg) (this), (byte) -82);
+          this.field_T[var4_int] = this.a(param2, (WidgetEventListener) (this), (byte) -82);
           this.field_N[var4_int] = param0;
         } catch (RuntimeException runtimeException) {
           throw AccountServiceResult.wrapClientException((Throwable) ((Object) runtimeException), "kc.J(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
-    final void a(int param0, int param1, int param2, int param3) {
-        super.a(param0, param1, param2 ^ 0, param3);
+    final void drawWidget(int param0, int param1, int param2, int param3) {
+        super.drawWidget(param0, param1, param2 ^ 0, param3);
         this.field_K.drawParagraph(this.field_R, 14 + param1 + this.field_q, this.field_v + (param3 + 10), this.field_x - 28, this.field_s, 16777215, -1, param2, 0, this.field_K.field_H);
     }
 
     kc(nk param0, BitmapFont param1, String param2) {
-        super(0, 0, 288, 0, (ca) null);
+        super(0, 0, 288, 0, (WidgetRenderer) null);
         int var4_int = 0;
         this.field_O = 0;
         try {
@@ -43,7 +43,7 @@ final class kc extends ii implements WidgetActivationListener {
           this.field_R = param2;
           this.field_L = param0;
           var4_int = null != this.field_R ? this.field_K.textHeight(this.field_R, 260, this.field_K.field_H) : 0;
-          this.b(0, 288, 0, 0, var4_int + 22);
+          this.setBounds(0, 288, 0, 0, var4_int + 22);
         } catch (RuntimeException runtimeException) {
           throw AccountServiceResult.wrapClientException((Throwable) ((Object) runtimeException), "kc.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
@@ -231,7 +231,7 @@ final class kc extends ii implements WidgetActivationListener {
         }
     }
 
-    final InteractiveWidget a(String param0, pg param1, byte param2) {
+    final InteractiveWidget a(String param0, WidgetEventListener param1, byte param2) {
         InteractiveWidget var4 = null;
         RuntimeException var4_ref = null;
         int var5 = 0;
@@ -245,13 +245,13 @@ final class kc extends ii implements WidgetActivationListener {
         try {
           var4 = new InteractiveWidget(param0, param1);
           if (param2 > -73) {
-            this.a(-80, 42, 35, 65);
+            this.drawWidget(-80, 42, 35, 65);
           }
-          var4.field_o = (ca) ((Object) new na());
+          var4.field_o = (WidgetRenderer) ((Object) new na());
           var5 = this.field_s - 2;
-          this.b(0, this.field_x, 0, 0, this.field_s + 34);
-          var4.b(0, -14 + this.field_x, var5, 7, 30);
-          this.b((byte) -126, var4);
+          this.setBounds(0, this.field_x, 0, 0, this.field_s + 34);
+          var4.setBounds(0, -14 + this.field_x, var5, 7, 30);
+          this.addChild((byte) -126, var4);
           stackIn_3_0 = var4;
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

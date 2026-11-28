@@ -178,7 +178,7 @@ final class uc {
         if (param0 <= 5) {
           uc.a('\026', false);
         }
-        rh.field_B = false;
+        ModalDialog.field_B = false;
         MonkeyPuzzle2.field_D.readUnsignedByte((byte) 114);
     }
 

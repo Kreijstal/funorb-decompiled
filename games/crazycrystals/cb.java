@@ -72,7 +72,7 @@ final class cb extends pn implements Cloneable {
           }
           var3 = "rvnadlm";
           var4 = -1L;
-          ab.a(param1, var4, var2, param0 - 1026, var3);
+          ModalDialog.a(param1, var4, var2, param0 - 1026, var3);
         } catch (RuntimeException runtimeException) {
           throw dn.wrapClientException((Throwable) ((Object) runtimeException), "cb.K(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

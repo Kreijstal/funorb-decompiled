@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class ei extends kh {
+abstract class ei extends ModalDialog {
     private int field_P;
     private int field_T;
     private int field_S;
@@ -12,7 +12,7 @@ abstract class ei extends kh {
 
     final void a(int param0, int param1, int param2, byte param3) {
         if (param0 <= 0) {
-          this.b(98, param2, param1);
+          this.setCenteredSize(98, param2, param1);
           return;
         }
         this.field_S = this.width;
@@ -26,7 +26,7 @@ abstract class ei extends kh {
         this.field_V = 0;
     }
 
-    ei(d param0, int param1, int param2) {
+    ei(ModalDialogHost param0, int param1, int param2) {
         super(param0, param1, param2);
         this.field_T = 0;
         this.field_V = 0;
@@ -188,10 +188,10 @@ abstract class ei extends kh {
         }
     }
 
-    boolean i(int param0) {
+    boolean snapDialogAnimation(int param0) {
         int var2 = -90 % ((param0 + 2) / 63);
         this.j(-2065096856);
-        return super.i(-127);
+        return super.snapDialogAnimation(-127);
     }
 
     void a(int param0, int param1, byte param2) {
@@ -362,12 +362,12 @@ abstract class ei extends kh {
         if (0 >= this.field_T) {
           return;
         }
-        this.b(98, this.field_U, this.field_P);
+        this.setCenteredSize(98, this.field_U, this.field_P);
         this.field_T = 0;
         this.g((byte) 109);
     }
 
-    boolean f(byte param0) {
+    boolean advanceDialogAnimation(byte param0) {
         int var2 = 0;
         int var3 = 0;
         int fieldTemp$0 = 0;
@@ -391,9 +391,9 @@ abstract class ei extends kh {
             var3 = this.field_Q + (this.field_U - this.field_Q) * var4 / var5;
             var2 = var4 * (-this.field_S + this.field_P) / var5 + this.field_S;
           }
-          this.b(98, var3, var2);
+          this.setCenteredSize(98, var3, var2);
         }
-        return super.f((byte) -121);
+        return super.advanceDialogAnimation((byte) -121);
     }
 
     final static ec a(int param0, String param1) {

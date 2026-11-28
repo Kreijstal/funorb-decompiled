@@ -173,7 +173,7 @@ final class ik {
                 return stackIn_61_0;
               }
             }
-            while (kj.e((byte) -44)) {
+            while (DequeWidgetContainer.e((byte) -44)) {
               ByteStorage.field_c.a(0, 0);
               if (ByteStorage.field_c.c((byte) 79)) {
                 if (ByteStorage.field_c.field_j == 0) {
@@ -185,7 +185,7 @@ final class ik {
                   return stackIn_73_0;
                 }
               }
-              if (13 != b.field_J) {
+              if (13 != ModalDialog.field_J) {
                 continue;
               }
               stackIn_77_0 = 1;
@@ -320,7 +320,7 @@ final class ik {
                 return stackIn_61_0;
               }
             }
-            while (kj.e((byte) -44)) {
+            while (DequeWidgetContainer.e((byte) -44)) {
               ByteStorage.field_c.a(0, 0);
               if (ByteStorage.field_c.c((byte) 79)) {
                 if (ByteStorage.field_c.field_j == 0) {
@@ -332,7 +332,7 @@ final class ik {
                   return stackIn_73_0;
                 }
               }
-              if (13 != b.field_J) {
+              if (13 != ModalDialog.field_J) {
                 continue;
               }
               stackIn_77_0 = 1;

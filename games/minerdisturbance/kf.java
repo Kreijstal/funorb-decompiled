@@ -19,7 +19,7 @@ final class kf {
         GzipDecompressor.field_b = param0;
         mc.field_w = 4;
         q.field_c = 4;
-        oj.field_J = 4;
+        AlphaWidgetContainer.field_J = 4;
         int[] var3 = new int[]{24, 23, 22, 1, 2, 3, 4};
         int[] var2 = var3;
         nb.field_i[4] = new ml(4, var2, 10, 200, kb.field_c != 2 ? 320 : 350, 270, 270 / var3.length, true, 1);

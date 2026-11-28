@@ -49,7 +49,7 @@ final class pb {
         if (GameScreen.field_b == null) {
           return false;
         }
-        if (null != GameScreen.field_b.j(-6121)) {
+        if (null != GameScreen.field_b.getTopOpenDialog(-6121)) {
           return true;
         }
         return false;

@@ -121,14 +121,14 @@ final class AccountNameAvailabilityValidator extends TextFieldValidator {
 
     final static boolean d(byte param0) {
         if (-1 == nj.field_b) {
-          if (!oi.a(-12929, 1)) {
+          if (!DraggableWidgetContainer.a(-12929, 1)) {
             return false;
           }
           nj.field_b = ra.field_c.readUnsignedByte(true);
           ra.field_c.position = 0;
         }
         if (nj.field_b == -2) {
-          if (!oi.a(-12929, 2)) {
+          if (!DraggableWidgetContainer.a(-12929, 2)) {
             return false;
           }
           nj.field_b = ra.field_c.readUnsignedShort(0);
@@ -137,7 +137,7 @@ final class AccountNameAvailabilityValidator extends TextFieldValidator {
         if (param0 > -59) {
           field_q = (long[]) null;
         }
-        return oi.a(-12929, nj.field_b);
+        return DraggableWidgetContainer.a(-12929, nj.field_b);
     }
 
     final static boolean d(boolean param0) {

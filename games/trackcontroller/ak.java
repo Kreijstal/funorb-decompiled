@@ -58,10 +58,10 @@ final class ak {
           var17 = new Sprite(param0.getFileByName("button.gif", -1, ""), (java.awt.Component) ((Object) ki.field_f));
           ti.a("dropdown", param1, "commonui", 17);
           var5 = ie.a("commonui", param1, "screen_options", 124);
-          fj.field_M = new IndexedSprite[4];
+          DraggableWidgetContainer.field_M = new IndexedSprite[4];
           UiWidget.field_j = new IndexedSprite[4];
           WhirlpoolDigest.field_e = new IndexedSprite[4];
-          var6 = new IndexedSprite[][]{UiWidget.field_j, WhirlpoolDigest.field_e, fj.field_M};
+          var6 = new IndexedSprite[][]{UiWidget.field_j, WhirlpoolDigest.field_e, DraggableWidgetContainer.field_M};
           var19 = new int[4][];
           var16 = var19;
           var7 = var16;

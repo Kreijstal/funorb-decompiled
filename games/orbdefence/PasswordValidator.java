@@ -39,7 +39,7 @@ final class PasswordValidator extends TextFieldValidator {
           BufferedSocket.field_a.a(param0 ^ -101);
           li.field_a.drawScaledAdditive(0, 0, 640, 480, ef.field_k);
         } catch (RuntimeException runtimeException) {
-          throw dd.wrapClientException((Throwable) ((Object) runtimeException), "em.V(" + param0 + ')');
+          throw DraggableWidgetContainer.wrapClientException((Throwable) ((Object) runtimeException), "em.V(" + param0 + ')');
         }
     }
 
@@ -104,7 +104,7 @@ final class PasswordValidator extends TextFieldValidator {
           } else {
             stackIn_18_2 = "{...}";
           }
-          throw dd.wrapClientException((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param1).append(')').toString());
+          throw DraggableWidgetContainer.wrapClientException((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -123,7 +123,7 @@ final class PasswordValidator extends TextFieldValidator {
           ih.a(tl.field_e, 0, q.field_b, mf.field_d);
           kg.a(0, (byte) -83, param0, param1);
         } catch (RuntimeException runtimeException) {
-          throw dd.wrapClientException((Throwable) ((Object) runtimeException), "em.U(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw DraggableWidgetContainer.wrapClientException((Throwable) ((Object) runtimeException), "em.U(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -133,7 +133,7 @@ final class PasswordValidator extends TextFieldValidator {
           this.field_n = param1;
           this.field_p = param2;
         } catch (RuntimeException runtimeException) {
-          throw dd.wrapClientException((Throwable) ((Object) runtimeException), "em.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw DraggableWidgetContainer.wrapClientException((Throwable) ((Object) runtimeException), "em.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -181,7 +181,7 @@ final class PasswordValidator extends TextFieldValidator {
           } else {
             stackIn_18_2 = "{...}";
           }
-          throw dd.wrapClientException((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param1).append(')').toString());
+          throw DraggableWidgetContainer.wrapClientException((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -215,8 +215,8 @@ final class PasswordValidator extends TextFieldValidator {
             this.field_p = (EditableTextField) null;
           }
           var5 = var4;
-          if (mm.a(var5, (byte) 51)) {
-            stackIn_8_0 = sg.field_F;
+          if (DropTargetWidgetContainer.a(var5, (byte) 51)) {
+            stackIn_8_0 = ModalDialog.field_F;
             return stackIn_8_0;
           }
           if (md.a(-20767, var5)) {
@@ -244,7 +244,7 @@ final class PasswordValidator extends TextFieldValidator {
             return stackIn_27_0;
           }
           if (!l.a(122, var5, var6)) {
-            stackIn_32_0 = sg.field_F;
+            stackIn_32_0 = ModalDialog.field_F;
             return stackIn_32_0;
           }
           stackIn_30_0 = mf.field_a;
@@ -259,7 +259,7 @@ final class PasswordValidator extends TextFieldValidator {
           } else {
             stackIn_38_2 = "{...}";
           }
-          throw dd.wrapClientException((Throwable) ((Object) stackIn_37_0), ((StringBuilder) (Object) stackIn_37_1).append(stackIn_38_2).append(')').toString());
+          throw DraggableWidgetContainer.wrapClientException((Throwable) ((Object) stackIn_37_0), ((StringBuilder) (Object) stackIn_37_1).append(stackIn_38_2).append(')').toString());
         }
     }
 

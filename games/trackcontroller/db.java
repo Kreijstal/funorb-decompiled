@@ -5,7 +5,7 @@ abstract class db extends wd {
     private int field_U;
     static int clickX;
     private jb field_ab;
-    private gl field_cb;
+    private AlphaWidgetContainer field_cb;
     private UiWidget field_V;
     private int field_T;
     static volatile int liveMouseButton;
@@ -15,9 +15,9 @@ abstract class db extends wd {
     static int field_db;
     static int field_Z;
 
-    final boolean k(int param0) {
+    final boolean snapDialogAnimation(int param0) {
         this.o(param0);
-        return super.k(0);
+        return super.snapDialogAnimation(0);
     }
 
     final void o(int param0) {
@@ -26,7 +26,7 @@ abstract class db extends wd {
           return;
         }
         if (uj.field_b != this.field_ab) {
-          this.a(this.field_V.field_x + 12, (byte) -86, 12 - (-this.field_W - this.field_V.field_u));
+          this.setCenteredSize(this.field_V.field_x + 12, (byte) -86, 12 - (-this.field_W - this.field_V.field_u));
           this.b((byte) 19, this.field_V);
         } else {
           this.field_ab = null;
@@ -39,7 +39,7 @@ abstract class db extends wd {
         super.o(param0 + param0);
     }
 
-    db(vl param0, UiWidget param1, int param2, int param3, int param4) {
+    db(ModalDialogHost param0, UiWidget param1, int param2, int param3, int param4) {
         super(param0, param1.field_x + 12, param1.field_u + 12 + param2);
         try {
           this.field_T = param3;
@@ -98,19 +98,19 @@ abstract class db extends wd {
             this.field_cb.unlink(-84);
           }
           if (param1 == null) {
-            this.field_cb = new gl();
+            this.field_cb = new AlphaWidgetContainer();
           } else {
-            param1.a(param1.field_u, -3050, 6 + this.field_W, param1.field_x, 6);
-            this.field_cb = new gl(param1);
+            param1.setBounds(param1.field_u, -3050, 6 + this.field_W, param1.field_x, 6);
+            this.field_cb = new AlphaWidgetContainer(param1);
           }
-          this.a(false, this.field_cb);
+          this.addChild(false, this.field_cb);
           this.field_V = null;
         } catch (RuntimeException runtimeException) {
           throw LevelGrid.toClientException((Throwable) ((Object) runtimeException), "db.N(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
-    boolean j(int param0) {
+    boolean advanceDialogAnimation(int param0) {
         int fieldTemp$0 = 0;
         int fieldTemp$1 = 0;
         Sprite var4 = null;
@@ -124,9 +124,9 @@ abstract class db extends wd {
           if (param0 > -18) {
             var4 = (Sprite) null;
             db.a(99, 48, (Sprite) null, -61, 106, (byte) 90);
-            return super.j(-94);
+            return super.advanceDialogAnimation(-94);
           }
-          return super.j(-94);
+          return super.advanceDialogAnimation(-94);
         }
         if (ArchiveSource.field_c == this.field_ab) {
           fieldTemp$0 = this.field_U + 1;
@@ -136,20 +136,20 @@ abstract class db extends wd {
             if (param0 > -18) {
               var4Lifetime1 = (Sprite) null;
               db.a(99, 48, (Sprite) null, -61, 106, (byte) 90);
-              return super.j(-94);
+              return super.advanceDialogAnimation(-94);
             }
-            return super.j(-94);
+            return super.advanceDialogAnimation(-94);
           }
           this.field_ab = dc.field_w;
           this.a(this.field_V.field_x + 12, this.field_S, false, this.field_V.field_u + 12 + this.field_W);
           this.field_cb.field_H = 0;
           this.field_U = 0;
           if (param0 <= -18) {
-            return super.j(-94);
+            return super.advanceDialogAnimation(-94);
           }
           var4Lifetime1Lifetime1 = (Sprite) null;
           db.a(99, 48, (Sprite) null, -61, 106, (byte) 90);
-          return super.j(-94);
+          return super.advanceDialogAnimation(-94);
         }
         if (uj.field_b == this.field_ab) {
           fieldTemp$1 = this.field_U + 1;
@@ -158,26 +158,26 @@ abstract class db extends wd {
             this.field_cb.field_H = 256;
             this.field_ab = null;
             if (param0 <= -18) {
-              return super.j(-94);
+              return super.advanceDialogAnimation(-94);
             }
             var4Lifetime2 = (Sprite) null;
             db.a(99, 48, (Sprite) null, -61, 106, (byte) 90);
-            return super.j(-94);
+            return super.advanceDialogAnimation(-94);
           }
           this.field_cb.field_H = (this.field_U << 8) / this.field_T;
           if (param0 <= -18) {
-            return super.j(-94);
+            return super.advanceDialogAnimation(-94);
           }
           var4Lifetime2Lifetime1 = (Sprite) null;
           db.a(99, 48, (Sprite) null, -61, 106, (byte) 90);
-          return super.j(-94);
+          return super.advanceDialogAnimation(-94);
         }
         if (param0 <= -18) {
-          return super.j(-94);
+          return super.advanceDialogAnimation(-94);
         }
         var4Lifetime3 = (Sprite) null;
         db.a(99, 48, (Sprite) null, -61, 106, (byte) 90);
-        return super.j(-94);
+        return super.advanceDialogAnimation(-94);
     }
 
     final void a(byte param0) {
@@ -203,7 +203,7 @@ abstract class db extends wd {
         ob.a(209, CachedArchiveSource.b((byte) 77));
     }
 
-    boolean a(byte param0, char param1, UiWidget param2, int param3) {
+    boolean handleKey(byte param0, char param1, UiWidget param2, int param3) {
         int var5_int = 0;
         RuntimeException var5 = null;
         RuntimeException stackIn_15_0 = null;
@@ -211,7 +211,7 @@ abstract class db extends wd {
         String stackIn_16_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (super.a((byte) -76, param1, param2, param3)) {
+          if (super.handleKey((byte) -76, param1, param2, param3)) {
             return true;
           }
           var5_int = -125 % ((param0 - 17) / 51);
@@ -219,10 +219,10 @@ abstract class db extends wd {
             return false;
           }
           if (98 == param3) {
-            this.field_cb.a((byte) -126, param2);
+            this.field_cb.takeFocus((byte) -126, param2);
           }
           if (param3 == 99) {
-            this.field_cb.a((byte) -125, param2);
+            this.field_cb.takeFocus((byte) -125, param2);
           }
           return false;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

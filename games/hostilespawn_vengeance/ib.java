@@ -223,7 +223,7 @@ final class ib {
                 }
                 var2 = AccountRegistrationPanel.b("misdat8", (byte) -119);
                 if (null != var2) {
-                  od.field_E = PcmResampler.a(125, var2);
+                  DropTargetWidgetContainer.field_E = PcmResampler.a(125, var2);
                 }
                 var2 = AccountRegistrationPanel.b("misdat7", (byte) -122);
                 if (null != var2) {
@@ -858,7 +858,7 @@ final class ib {
                 }
                 var2 = AccountRegistrationPanel.b("tut4", (byte) -127);
                 if (null != var2) {
-                  jn.field_E = PcmResampler.a(124, var2);
+                  AlphaWidgetContainer.field_E = PcmResampler.a(124, var2);
                 }
                 var2 = AccountRegistrationPanel.b("tut3", (byte) -128);
                 if (var2 != null) {
@@ -1352,7 +1352,7 @@ final class ib {
                 }
                 var2 = AccountRegistrationPanel.b("ratingdashfaff", (byte) -125);
                 if (var2 != null) {
-                  ag.field_j = PcmResampler.a(123, var2);
+                  UiWidget.field_j = PcmResampler.a(123, var2);
                 }
                 var2 = AccountRegistrationPanel.b("desc_plasma_cannon", (byte) -125);
                 if (null != var2) {
@@ -1384,7 +1384,7 @@ final class ib {
                 }
                 var2 = AccountRegistrationPanel.b("desc_grenade_launcher", (byte) -126);
                 if (null != var2) {
-                  od.field_C = PcmResampler.a(126, var2);
+                  DropTargetWidgetContainer.field_C = PcmResampler.a(126, var2);
                 }
                 var2 = AccountRegistrationPanel.b("weapontitle", (byte) -125);
                 if (var2 != null) {
@@ -1392,7 +1392,7 @@ final class ib {
                 }
                 var2 = AccountRegistrationPanel.b("desc_powerup_health", (byte) -123);
                 if (null != var2) {
-                  od.field_B = PcmResampler.a(126, var2);
+                  DropTargetWidgetContainer.field_B = PcmResampler.a(126, var2);
                 }
                 var2 = AccountRegistrationPanel.b("desc_explosive_charge", (byte) -123);
                 if (var2 != null) {

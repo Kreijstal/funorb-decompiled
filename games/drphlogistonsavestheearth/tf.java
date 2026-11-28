@@ -99,7 +99,7 @@ final class tf extends ca {
               if (wg.field_k.field_f == var4) {
                 var5 = a.field_i;
               } else {
-                var5 = pj.field_E;
+                var5 = DequeWidgetContainer.field_E;
               }
             }
             var6 = sg.field_f[var3];
@@ -172,20 +172,20 @@ final class tf extends ca {
         }
     }
 
-    tf(k param0, String param1) {
+    tf(ModalDialogHost param0, String param1) {
         super(param0, 300, 120);
         int var3_int = 0;
         try {
           this.field_ob = param1;
           if (null != this.field_ob) {
             var3_int = wi.field_e.textHeight(this.field_ob, 260, wi.field_e.field_x);
-            this.b(300, 1688990433, var3_int + 150);
+            this.setCenteredSize(300, 1688990433, var3_int + 150);
           }
           this.field_fb = new hd(13, 50, 274, 30, 15, 2113632, 4210752);
           this.field_gb = false;
           this.field_hb = false;
           this.field_fb.field_E = true;
-          this.b(this.field_fb, (byte) 61);
+          this.addChild(this.field_fb, (byte) 61);
         } catch (RuntimeException runtimeException) {
           throw ie.wrapClientException((Throwable) ((Object) runtimeException), "tf.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

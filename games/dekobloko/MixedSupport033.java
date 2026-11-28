@@ -94,7 +94,7 @@ final class MixedSupport033 extends HashNode {
           renderingSupport007Local19.performAction0852(new GameDomainSupport002(2, UiComponentPart002.stringState0037, DefaultTextWidgetRenderer.renderingSupport009State0001), integerArgument6 ^ 32281);
           renderingSupport007Local19.performAction0852(new GameDomainSupport002(3, MixedSupport089.stringState0373, DefaultTextWidgetRenderer.renderingSupport009State0001), 117);
         }
-        renderingSupport007Local19.performAction0852(new GameDomainSupport002(4, UiComponentPart006.stringState0109, DefaultTextWidgetRenderer.renderingSupport009State0001), 117);
+        renderingSupport007Local19.performAction0852(new GameDomainSupport002(4, LabeledWidgetContainer.stringState0109, DefaultTextWidgetRenderer.renderingSupport009State0001), 117);
         if (booleanArgument4) {
           renderingSupport007Local19.performAction0852(new GameDomainSupport002(5, BirthDateInput.stringState0581, DefaultTextWidgetRenderer.renderingSupport009State0001), 119);
         }
@@ -130,7 +130,7 @@ final class MixedSupport033 extends HashNode {
             integerLocal14 += 2;
             integerLocal15 -= 2;
           }
-          renderingSupport007Local19.integerState0370 = UiComponentPart016.computeInteger0830((byte) 114, integerLocal15, AccountRegistrationPanel.randomState0003) + integerLocal14;
+          renderingSupport007Local19.integerState0370 = ModalDialogHost.computeInteger0830((byte) 114, integerLocal15, AccountRegistrationPanel.randomState0003) + integerLocal14;
           if (booleanArgument1) {
             integerLocal13 = 96;
             if (booleanArgument2) {
@@ -263,18 +263,18 @@ final class MixedSupport033 extends HashNode {
           if (integerArgument1 != -11079) {
             MixedSupport033.computeRenderingSupport0070497(false, false, 6, true, true, -105, true, true);
           }
-          if (AccountFieldStatusIndicator.mixedSupport004State0003 == UiComponentPart016.mixedSupport004State0001) {
+          if (AccountFieldStatusIndicator.mixedSupport004State0003 == ModalDialogHost.mixedSupport004State0001) {
             stackObjectLocal2 = null;
             return (MixedSupport016) (stackObjectLocal2);
           }
-          if (UiComponentPart016.mixedSupport004State0001 == MixedSupport071.mixedSupport004State0002 &&
+          if (ModalDialogHost.mixedSupport004State0001 == MixedSupport071.mixedSupport004State0002 &&
             stringArgument2.equals(BirthDateTextFields.stringState0435)) {
-            UiComponentPart016.mixedSupport004State0001 = MixedSupport127.mixedSupport004State0005;
+            ModalDialogHost.mixedSupport004State0001 = MixedSupport127.mixedSupport004State0005;
             stackMixedSupport016Local4 = PcmResampler.mixedSupport016State0002;
             return stackMixedSupport016Local4;
           }
           PcmResampler.mixedSupport016State0002 = null;
-          UiComponentPart016.mixedSupport004State0001 = AccountFieldStatusIndicator.mixedSupport004State0003;
+          ModalDialogHost.mixedSupport004State0001 = AccountFieldStatusIndicator.mixedSupport004State0003;
           BirthDateTextFields.stringState0435 = stringArgument2;
           stackObjectLocal3 = null;
           return (MixedSupport016) (stackObjectLocal3);
@@ -294,7 +294,7 @@ final class MixedSupport033 extends HashNode {
 
     final static void performAction0499(int integerArgument1) {
         MixedSupport094.performAction1203((byte) -100);
-        MixedSupport130.performAction1665(ComponentContainer.integerState0377, MixedSupport139.integerState0855, UiComponentPart010.rgbSpriteArrayState0010[0].integerState0254, GameApplet.integerState0292, SecondaryNodeHashTable.integerState0540, integerArgument1 ^ -110);
+        MixedSupport130.performAction1665(ComponentContainer.integerState0377, MixedSupport139.integerState0855, AlphaWidgetContainer.rgbSpriteArrayState0010[0].integerState0254, GameApplet.integerState0292, SecondaryNodeHashTable.integerState0540, integerArgument1 ^ -110);
         if (integerArgument1 != 18) {
           MixedSupport033.performAction0494(79, true);
         }
@@ -320,7 +320,7 @@ final class MixedSupport033 extends HashNode {
           booleanArgument2 = false;
         }
         MixedSupport017.performAction0250(booleanArgument2, 0);
-        if (UiComponentPart006.booleanState0027) {
+        if (LabeledWidgetContainer.booleanState0027) {
           SoftwareRaster.darkenRectangleHalf(PcmResampler.mixedSupport006State0002.sceneWidgetPart011State0001.integerState0890, PcmResampler.mixedSupport006State0002.sceneWidgetPart011State0001.integerState0903, PcmResampler.mixedSupport006State0002.sceneWidgetPart011State0001.integerState0896, PcmResampler.mixedSupport006State0002.sceneWidgetPart011State0001.integerState0915);
           PcmResampler.mixedSupport006State0002.sceneWidgetPart011State0001.performAction1767(integerArgument1 ^ 1141039776, booleanArgument2);
         }
@@ -341,7 +341,7 @@ final class MixedSupport033 extends HashNode {
         if (!ThemeTips.mixedSupport119State0001.computeBoolean1561(85)) {
           return ThemeTips.mixedSupport119State0001.computeString1566((byte) 62);
         }
-        if (UiComponentPart016.mixedSupport004State0001 == AccountFieldStatusIndicator.mixedSupport004State0003) {
+        if (ModalDialogHost.mixedSupport004State0001 == AccountFieldStatusIndicator.mixedSupport004State0003) {
           return ThemeTips.mixedSupport119State0001.computeString1566((byte) 123);
         }
         if (integerArgument1 == 116) {

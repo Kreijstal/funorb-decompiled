@@ -26,7 +26,7 @@ abstract class FrameTimer {
     abstract int advanceTicks(boolean param0, long param1);
 
     final static void a(int param0, int param1, int param2, long param3, String param4) {
-        nm.field_E = param0;
+        ModalDialog.field_E = param0;
         FullscreenFocusCanvas.field_b = param4;
         if (param1 != -3) {
           return;
@@ -158,7 +158,7 @@ abstract class FrameTimer {
         if (!param1) {
           this.resetTiming(-10);
           if (0L < var4) {
-            um.sleepMillis(param1, var4);
+            ArrayWidgetContainer.sleepMillis(param1, var4);
             return this.advanceTicks(true, param0);
           }
           return this.advanceTicks(true, param0);
@@ -166,7 +166,7 @@ abstract class FrameTimer {
         if (0L >= var4) {
           return this.advanceTicks(true, param0);
         }
-        um.sleepMillis(param1, var4);
+        ArrayWidgetContainer.sleepMillis(param1, var4);
         return this.advanceTicks(true, param0);
     }
 

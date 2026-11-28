@@ -9,7 +9,7 @@ final class ug {
     static int field_b;
 
     final static void a(int param0) {
-        AchievementNotification.setBackgroundMusicTrack(el.field_y[eh.a(28207, sk.field_n, el.field_y.length)], -102);
+        AchievementNotification.setBackgroundMusicTrack(el.field_y[ModalDialog.a(28207, sk.field_n, el.field_y.length)], -102);
         if (param0 < 81) {
           field_a = -35;
         }

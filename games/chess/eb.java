@@ -62,7 +62,7 @@ final class eb extends pk {
         if (0 != param0) {
           ib.field_a = bc.field_b;
           rf.b(80, bc.field_b / 3);
-          mf.a(gl.field_b, 0);
+          UiWidget.a(gl.field_b, 0);
         } else {
           if (param1 != 0) {
             LoginPanel.a(ResourceArchive.field_l[8], 114);

@@ -16,7 +16,7 @@ final class wi extends DefaultTextWidgetRenderer {
     static RawPcmStream field_v;
     static String field_z;
 
-    public final void a(int param0, int param1, fe param2, int param3, boolean param4) {
+    public final void paintWidget(int param0, int param1, UiWidget param2, int param3, boolean param4) {
         int stackIn_8_0 = 0;
         int stackIn_15_0 = 0;
         int stackIn_18_0 = 0;
@@ -33,7 +33,7 @@ final class wi extends DefaultTextWidgetRenderer {
             field_w = -30;
           }
           if (!param2.field_x) {
-            stackIn_8_0 = (param2.k(38)) ? 1 : 0;
+            stackIn_8_0 = (param2.isFocused(38)) ? 1 : 0;
           } else {
             stackIn_8_0 = 1;
           }

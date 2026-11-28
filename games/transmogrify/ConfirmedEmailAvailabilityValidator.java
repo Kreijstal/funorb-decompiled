@@ -111,7 +111,7 @@ final class ConfirmedEmailAvailabilityValidator extends TextFieldValidator {
           if (!param1.equals(this.field_l)) {
             var3 = AchievementUnlockEvent.a(17118, param1);
             if (!var3.b(-26753)) {
-              stackIn_8_0 = fi.field_u;
+              stackIn_8_0 = SingleChildWidgetContainer.field_u;
               return stackIn_8_0;
             }
             this.field_l = param1;

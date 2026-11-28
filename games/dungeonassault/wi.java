@@ -98,20 +98,20 @@ final class wi extends sj {
         this.field_ub.field_R = false;
     }
 
-    wi(ji param0, String param1) {
+    wi(ModalDialogHost param0, String param1) {
         super(param0, 300, 120);
         int var3_int = 0;
         try {
           this.field_ib = param1;
           if (this.field_ib != null) {
             var3_int = hc.field_f.textHeight(this.field_ib, 260, hc.field_f.field_H);
-            this.b(120, 150 + var3_int, 300);
+            this.setCenteredSize(120, 150 + var3_int, 300);
           }
           this.field_ub = new uc(13, 50, 274, 30, 15, 2113632, 4210752);
           this.field_pb = false;
           this.field_sb = false;
           this.field_ub.field_R = true;
-          this.b((byte) -84, this.field_ub);
+          this.addChild((byte) -84, this.field_ub);
         } catch (RuntimeException runtimeException) {
           throw AccountServiceResult.wrapClientException((Throwable) ((Object) runtimeException), "wi.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

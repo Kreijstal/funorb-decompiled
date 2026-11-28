@@ -756,7 +756,7 @@ abstract class DungeonAssaultScreen {
           } else {
             incrementValue$6 = var5;
             var5++;
-            param4[incrementValue$6] = new StatusEffectIndicator(ii.field_C, ue.field_i[4], 16777215);
+            param4[incrementValue$6] = new StatusEffectIndicator(DequeWidgetContainer.field_C, ue.field_i[4], 16777215);
           }
         }
         return var5;

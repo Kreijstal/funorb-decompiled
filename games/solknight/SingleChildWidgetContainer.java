@@ -1,0 +1,541 @@
+/*
+ * Decompiled by CFR-JS 0.4.0.
+ */
+import java.util.*;
+
+abstract class SingleChildWidgetContainer extends UiWidget implements WidgetContainerMarker {
+    UiWidget field_G;
+    static pc field_C;
+    static int field_E;
+    static String field_D;
+    static int field_B;
+    static int[] field_F;
+    static int field_A;
+
+    String getTooltipText(byte param0) {
+        String var3 = null;
+        if (param0 <= 14) {
+          field_E = -28;
+        }
+        String var2 = super.getTooltipText((byte) 89);
+        if (this.field_G != null) {
+          var3 = this.field_G.getTooltipText((byte) 72);
+          if (var3 != null) {
+            return var3;
+          }
+        }
+        return var2;
+    }
+
+    final void blur(int param0) {
+        if (this.field_G != null) {
+          this.field_G.blur(0);
+        }
+        if (param0 != 0) {
+          this.field_G = (UiWidget) null;
+        }
+    }
+
+    final void appendChildDebugTree(Hashtable param0, StringBuilder param1, int param2, int param3) {
+        StringBuilder discarded$12 = null;
+        int var5_int = 0;
+        StringBuilder discarded$14 = null;
+        StringBuilder discarded$13 = null;
+        int var6 = 0;
+        RuntimeException stackIn_12_0 = null;
+        StringBuilder stackIn_12_1 = null;
+        String stackIn_13_2 = null;
+        StringBuilder stackIn_15_1 = null;
+        String stackIn_16_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException var5 = null;
+        var6 = SolKnight.field_L ? 1 : 0;
+        try {
+          discarded$12 = param1.append('\n');
+          if (param3 != -19156) {
+            return;
+          }
+          for (var5_int = 0; var5_int <= param2; var5_int++) {
+            discarded$14 = param1.append(' ');
+          }
+          if (null == this.field_G) {
+            discarded$13 = param1.append("null");
+          } else {
+            this.field_G.appendDebugTree(-62, param0, param1, 1 + param2);
+          }
+          return;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var5 = decompiledCaughtException;
+          stackIn_12_0 = var5;
+          stackIn_12_1 = new StringBuilder().append("si.T(");
+          if (param0 == null) {
+            stackIn_13_2 = "null";
+          } else {
+            stackIn_13_2 = "{...}";
+          }
+          stackIn_15_1 = ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',');
+          if (param1 == null) {
+            stackIn_16_2 = "null";
+          } else {
+            stackIn_16_2 = "{...}";
+          }
+          throw fc.wrapClientException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+        }
+    }
+
+    final boolean handleKey(char param0, byte param1, int param2, UiWidget param3) {
+        int var5_int = 0;
+        RuntimeException var5 = null;
+        int var6 = 0;
+        boolean stackIn_11_0 = false;
+        RuntimeException stackIn_14_0 = null;
+        StringBuilder stackIn_14_1 = null;
+        String stackIn_15_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        try {
+          if (null != this.field_G &&
+            this.field_G.isFocused(true) &&
+            this.field_G.handleKey(param0, (byte) 127, param2, param3)) {
+            return true;
+          }
+          var5_int = 122 / ((31 - param1) / 56);
+          var6 = param2;
+          if (var6 != 80) {
+            return false;
+          }
+          if (fh.field_d[81]) {
+            stackIn_11_0 = this.focusPreviousChild(param3, -125);
+          } else {
+            stackIn_11_0 = this.focusNextChild(32, param3);
+          }
+          return stackIn_11_0;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var5 = decompiledCaughtException;
+          stackIn_14_0 = var5;
+          stackIn_14_1 = new StringBuilder().append("si.C(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
+          if (param3 == null) {
+            stackIn_15_2 = "null";
+          } else {
+            stackIn_15_2 = "{...}";
+          }
+          throw fc.wrapClientException((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
+        }
+    }
+
+    UiWidget getFocusedChild(int param0) {
+        if (param0 != 0) {
+          this.getMaximumRenderLayer(-42);
+        }
+        UiWidget var2 = this.field_G;
+        if (var2 == null) {
+          return null;
+        }
+        if (!var2.isFocused(true)) {
+          return null;
+        }
+        return var2;
+    }
+
+    void drawWidget(int param0, int param1, int param2, int param3) {
+        if (param3 == param1 &&
+          null != this.field_w) {
+          this.field_w.paintWidget((byte) 118, param0, true, param2, (UiWidget) (this));
+        }
+        if (this.field_G != null) {
+          this.field_G.drawWidget(param0 + this.field_j, param1, param2 + this.field_m, 0);
+        }
+    }
+
+    public static void i(int param0) {
+        if (param0 < 122) {
+          Archive var2 = (Archive) null;
+          SingleChildWidgetContainer.a((Archive) null, (String) null, true, (String) null, (Archive) null);
+        }
+        field_F = null;
+        field_D = null;
+        field_C = null;
+    }
+
+    SingleChildWidgetContainer(int param0, int param1, int param2, int param3, WidgetRenderer param4, WidgetEventListener param5) {
+        super(param0, param1, param2, param3, param4, param5);
+    }
+
+    private final boolean focusNextChild(int param0, UiWidget param1) {
+        RuntimeException var3 = null;
+        boolean stackIn_7_0 = false;
+        RuntimeException stackIn_10_0 = null;
+        StringBuilder stackIn_10_1 = null;
+        String stackIn_11_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        try {
+          if (param0 != 32) {
+            this.field_G = (UiWidget) null;
+          }
+          stackIn_7_0 = (null != this.field_G) && (!this.field_G.isFocused(true)) && (this.field_G.takeFocus(param0 ^ -1431, param1));
+          return stackIn_7_0;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var3 = decompiledCaughtException;
+          stackIn_10_0 = var3;
+          stackIn_10_1 = new StringBuilder().append("si.AA(").append(param0).append(',');
+          if (param1 == null) {
+            stackIn_11_2 = "null";
+          } else {
+            stackIn_11_2 = "{...}";
+          }
+          throw fc.wrapClientException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
+        }
+    }
+
+    boolean pointerPressed(int param0, int param1, boolean param2, int param3, int param4, int param5, UiWidget param6) {
+        RuntimeException var8 = null;
+        boolean stackIn_7_0 = false;
+        RuntimeException stackIn_10_0 = null;
+        StringBuilder stackIn_10_1 = null;
+        String stackIn_11_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        try {
+          if (param2) {
+            return true;
+          }
+          stackIn_7_0 = (null != this.field_G) && (this.field_G.pointerPressed(param0, param1 + this.field_m, param2, param3, param4, param5 + this.field_j, param6));
+          return stackIn_7_0;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var8 = decompiledCaughtException;
+          stackIn_10_0 = var8;
+          stackIn_10_1 = new StringBuilder().append("si.S(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',');
+          if (param6 == null) {
+            stackIn_11_2 = "null";
+          } else {
+            stackIn_11_2 = "{...}";
+          }
+          throw fc.wrapClientException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
+        }
+    }
+
+    final static int a(mb param0, mb param1, int param2) {
+        RuntimeException var3 = null;
+        mb var4 = null;
+        String var5 = null;
+        int stackIn_3_0 = 0;
+        RuntimeException stackIn_6_0 = null;
+        StringBuilder stackIn_6_1 = null;
+        String stackIn_7_2 = null;
+        StringBuilder stackIn_9_1 = null;
+        String stackIn_10_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        try {
+          if (param2 >= -75) {
+            var4 = (mb) null;
+            SingleChildWidgetContainer.a((mb) null, (mb) null, -96);
+          }
+          var5 = (String) null;
+          stackIn_3_0 = vb.a(0, 0, false, (String) null, param0, param1, -21760);
+          return stackIn_3_0;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var3 = decompiledCaughtException;
+          stackIn_6_0 = var3;
+          stackIn_6_1 = new StringBuilder().append("si.R(");
+          if (param0 == null) {
+            stackIn_7_2 = "null";
+          } else {
+            stackIn_7_2 = "{...}";
+          }
+          stackIn_9_1 = ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',');
+          if (param1 == null) {
+            stackIn_10_2 = "null";
+          } else {
+            stackIn_10_2 = "{...}";
+          }
+          throw fc.wrapClientException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param2).append(')').toString());
+        }
+    }
+
+    final int getMaximumRenderLayer(int param0) {
+        int var2 = 101 % ((17 - param0) / 43);
+        return null == this.field_G ? 0 : this.field_G.getMaximumRenderLayer(-124);
+    }
+
+    void layoutChild(int param0) {
+        if (param0 >= -102) {
+          field_B = 1;
+        }
+        if (this.field_G != null) {
+          this.field_G.refreshLayout(1);
+        }
+    }
+
+    final boolean takeFocus(int param0, UiWidget param1) {
+        RuntimeException var3 = null;
+        boolean stackIn_6_0 = false;
+        RuntimeException stackIn_9_0 = null;
+        StringBuilder stackIn_9_1 = null;
+        String stackIn_10_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        try {
+          if (param0 != -1463) {
+            field_C = (pc) null;
+          }
+          stackIn_6_0 = (this.field_G != null) && (this.field_G.takeFocus(-1463, param1));
+          return stackIn_6_0;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var3 = decompiledCaughtException;
+          stackIn_9_0 = var3;
+          stackIn_9_1 = new StringBuilder().append("si.MA(").append(param0).append(',');
+          if (param1 == null) {
+            stackIn_10_2 = "null";
+          } else {
+            stackIn_10_2 = "{...}";
+          }
+          throw fc.wrapClientException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
+        }
+    }
+
+    final static CoverageBitmapFont a(Archive param0, String param1, boolean param2, String param3, Archive param4) {
+        int var5_int = 0;
+        RuntimeException var5 = null;
+        int var6 = 0;
+        CoverageBitmapFont stackIn_2_0 = null;
+        CoverageBitmapFont stackIn_4_0 = null;
+        RuntimeException stackIn_7_0 = null;
+        StringBuilder stackIn_7_1 = null;
+        String stackIn_8_2 = null;
+        StringBuilder stackIn_10_1 = null;
+        String stackIn_11_2 = null;
+        StringBuilder stackIn_13_1 = null;
+        String stackIn_14_2 = null;
+        StringBuilder stackIn_16_1 = null;
+        String stackIn_17_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        try {
+          if (!param2) {
+            stackIn_2_0 = (CoverageBitmapFont) null;
+            return stackIn_2_0;
+          }
+          var5_int = param4.getGroupIdByName(91, param1);
+          var6 = param4.getFileIdByName(param3, -1, var5_int);
+          stackIn_4_0 = cd.a(param4, var6, var5_int, true, param0);
+          return stackIn_4_0;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var5 = decompiledCaughtException;
+          stackIn_7_0 = var5;
+          stackIn_7_1 = new StringBuilder().append("si.U(");
+          if (param0 == null) {
+            stackIn_8_2 = "null";
+          } else {
+            stackIn_8_2 = "{...}";
+          }
+          stackIn_10_1 = ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',');
+          if (param1 == null) {
+            stackIn_11_2 = "null";
+          } else {
+            stackIn_11_2 = "{...}";
+          }
+          stackIn_13_1 = ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param2).append(',');
+          if (param3 == null) {
+            stackIn_14_2 = "null";
+          } else {
+            stackIn_14_2 = "{...}";
+          }
+          stackIn_16_1 = ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',');
+          if (param4 == null) {
+            stackIn_17_2 = "null";
+          } else {
+            stackIn_17_2 = "{...}";
+          }
+          throw fc.wrapClientException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
+        }
+    }
+
+    final static void a(int param0, byte param1, int param2, int param3, PacketBuffer param4) {
+        try {
+          param4.writeByte(-115, 12);
+          param4.writeShort(true, 17);
+          if (param1 != 22) {
+            field_B = -110;
+          }
+          param4.writeShort(true, param3);
+          param4.writeShort(true, param0);
+          param4.writeByte(-119, param2);
+        } catch (RuntimeException runtimeException) {
+          throw fc.wrapClientException((Throwable) ((Object) runtimeException), "si.CA(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ')');
+        }
+    }
+
+    void updatePointer(int param0, int param1, int param2, UiWidget param3) {
+        RuntimeException stackIn_6_0 = null;
+        StringBuilder stackIn_6_1 = null;
+        String stackIn_7_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException var5 = null;
+        try {
+          super.updatePointer(param0, param1, param2, param3);
+          if (this.field_G != null) {
+            this.field_G.updatePointer(param0 + this.field_m, 18874, param2 + this.field_j, param3);
+          }
+          return;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var5 = decompiledCaughtException;
+          stackIn_6_0 = var5;
+          stackIn_6_1 = new StringBuilder().append("si.JA(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
+          if (param3 == null) {
+            stackIn_7_2 = "null";
+          } else {
+            stackIn_7_2 = "{...}";
+          }
+          throw fc.wrapClientException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+        }
+    }
+
+    final void setBounds(int param0, int param1, int param2, int param3, int param4) {
+        super.setBounds(param0, param1, param2, param3 ^ param3, param4);
+        this.layoutChild(-126);
+    }
+
+    void pointerReleased(int param0, int param1, UiWidget param2, int param3, int param4, int param5) {
+        boolean discarded$1 = false;
+        UiWidget var8 = null;
+        RuntimeException stackIn_7_0 = null;
+        StringBuilder stackIn_7_1 = null;
+        String stackIn_8_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException var7 = null;
+        try {
+          if (this.field_G != null) {
+            this.field_G.pointerReleased(param0, param1 + 0, param2, param3 + this.field_j, param4, this.field_m + param5);
+          }
+          if (param1 != 0) {
+            var8 = (UiWidget) null;
+            discarded$1 = this.focusNextChild(-57, (UiWidget) null);
+          }
+          return;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var7 = decompiledCaughtException;
+          stackIn_7_0 = var7;
+          stackIn_7_1 = new StringBuilder().append("si.O(").append(param0).append(',').append(param1).append(',');
+          if (param2 == null) {
+            stackIn_8_2 = "null";
+          } else {
+            stackIn_8_2 = "{...}";
+          }
+          throw fc.wrapClientException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
+        }
+    }
+
+    private final boolean focusPreviousChild(UiWidget param0, int param1) {
+        RuntimeException var3 = null;
+        boolean stackIn_7_0 = false;
+        RuntimeException stackIn_10_0 = null;
+        StringBuilder stackIn_10_1 = null;
+        String stackIn_11_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        try {
+          if (param1 >= -23) {
+            this.drawWidget(93, -58, -93, 34);
+          }
+          stackIn_7_0 = (null != this.field_G) && (!this.field_G.isFocused(true)) && (this.field_G.takeFocus(-1463, param0));
+          return stackIn_7_0;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var3 = decompiledCaughtException;
+          stackIn_10_0 = var3;
+          stackIn_10_1 = new StringBuilder().append("si.P(");
+          if (param0 == null) {
+            stackIn_11_2 = "null";
+          } else {
+            stackIn_11_2 = "{...}";
+          }
+          throw fc.wrapClientException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(')').toString());
+        }
+    }
+
+    StringBuilder appendDebugTree(int param0, Hashtable param1, StringBuilder param2, int param3) {
+        RuntimeException var5 = null;
+        StringBuilder stackIn_2_0 = null;
+        StringBuilder stackIn_7_0 = null;
+        RuntimeException stackIn_10_0 = null;
+        StringBuilder stackIn_10_1 = null;
+        String stackIn_11_2 = null;
+        StringBuilder stackIn_13_1 = null;
+        String stackIn_14_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        try {
+          if (param0 >= -41) {
+            stackIn_2_0 = (StringBuilder) null;
+            return stackIn_2_0;
+          }
+          if (this.beginDebugTreeEntry(param2, -1, param1, param3)) {
+            this.appendDebugProperties(param2, 77, param1, param3);
+            this.appendChildDebugTree(param1, param2, param3, -19156);
+          }
+          stackIn_7_0 = (StringBuilder) (param2);
+          return stackIn_7_0;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var5 = decompiledCaughtException;
+          stackIn_10_0 = var5;
+          stackIn_10_1 = new StringBuilder().append("si.GA(").append(param0).append(',');
+          if (param1 == null) {
+            stackIn_11_2 = "null";
+          } else {
+            stackIn_11_2 = "{...}";
+          }
+          stackIn_13_1 = ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',');
+          if (param2 == null) {
+            stackIn_14_2 = "null";
+          } else {
+            stackIn_14_2 = "{...}";
+          }
+          throw fc.wrapClientException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param3).append(')').toString());
+        }
+    }
+
+    final boolean isFocused(boolean param0) {
+        if (!param0) {
+          field_D = (String) null;
+        }
+        return this.getFocusedChild(0) != null ? true : false;
+    }
+
+    final boolean handleWheel(int param0, UiWidget param1, int param2, int param3, int param4, int param5, byte param6) {
+        RuntimeException var8 = null;
+        boolean stackIn_7_0 = false;
+        RuntimeException stackIn_10_0 = null;
+        StringBuilder stackIn_10_1 = null;
+        String stackIn_11_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        try {
+          if (param6 <= 33) {
+            field_F = (int[]) null;
+          }
+          stackIn_7_0 = (null != this.field_G) && (this.field_G.isFocused(true)) && (this.field_G.handleWheel(param0, param1, param2, param3, param4, param5, (byte) 123));
+          return stackIn_7_0;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var8 = decompiledCaughtException;
+          stackIn_10_0 = var8;
+          stackIn_10_1 = new StringBuilder().append("si.LA(").append(param0).append(',');
+          if (param1 == null) {
+            stackIn_11_2 = "null";
+          } else {
+            stackIn_11_2 = "{...}";
+          }
+          throw fc.wrapClientException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(')').toString());
+        }
+    }
+
+    static {
+        field_C = new pc();
+        field_D = "Click";
+        field_F = new int[10];
+        field_B = 0;
+    }
+}

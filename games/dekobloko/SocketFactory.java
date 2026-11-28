@@ -44,7 +44,7 @@ abstract class SocketFactory {
           if (integerArgument2 >= -123) {
             SocketFactory.performAction1792((byte) 55);
           }
-          stackRgbSpriteArrayLocal2 = UiComponentPart006.computeRgbSpriteArray0356(false);
+          stackRgbSpriteArrayLocal2 = LabeledWidgetContainer.computeRgbSpriteArray0356(false);
           return stackRgbSpriteArrayLocal2;
         } catch (java.lang.RuntimeException caughtParameterLocal7) {
           caughtExceptionLocal6 = caughtParameterLocal7;
@@ -104,7 +104,7 @@ abstract class SocketFactory {
           integerLocal3 = 0;
           if (integerLocal1 != 0 &&
             UiComponentPart033.mixedSupport116State0004.integerState0754 >= 0) {
-            integerLocal3 = UiComponentPart010.integerArrayState0039[UiComponentPart033.mixedSupport116State0004.integerState0754];
+            integerLocal3 = AlphaWidgetContainer.integerArrayState0039[UiComponentPart033.mixedSupport116State0004.integerState0754];
             if (integerLocal3 == 2) {
               InteractiveComponent.performAction0465(-1209);
             }

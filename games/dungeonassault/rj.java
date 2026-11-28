@@ -261,7 +261,7 @@ abstract class rj extends IntrusiveNode {
           CipherPacketBuffer var5 = null;
           CipherPacketBuffer var6 = null;
           if (ImageProducerRasterBuffer.field_m == null) {
-            ImageProducerRasterBuffer.field_m = sc.field_q.requestDirectSocket(-74, an.field_E, ii.field_D);
+            ImageProducerRasterBuffer.field_m = sc.field_q.requestDirectSocket(-74, an.field_E, DequeWidgetContainer.field_D);
           }
           if (param0 <= 23) {
             byte[] var3 = (byte[]) null;

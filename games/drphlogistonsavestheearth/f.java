@@ -59,40 +59,40 @@ final class f extends IntrusiveNode {
             if (hh.field_b == tl.field_O) {
               if (param2) {
                 var11 = (String) null;
-                dl.field_H = IterableNodeHashTable.a(ld.field_b, param3, (String) null, 0, false);
+                AlphaWidgetContainer.field_H = IterableNodeHashTable.a(ld.field_b, param3, (String) null, 0, false);
               } else {
-                dl.field_H = wi.a(param4, 7957, false, param3);
+                AlphaWidgetContainer.field_H = wi.a(param4, 7957, false, param3);
               }
               nj.field_p.position = 0;
               nj.field_p.writeByte(14, (byte) -107);
-              nj.field_p.writeByte(dl.field_H.b((byte) -98).field_c, (byte) -115);
+              nj.field_p.writeByte(AlphaWidgetContainer.field_H.b((byte) -98).field_c, (byte) -115);
               qj.a(-1, 14656);
               tl.field_O = i.field_b;
             }
             if (i.field_b == tl.field_O &&
               NameSuggestionsPanel.a(1, 5929)) {
-              var7 = dh.field_N.readUnsignedByte(31760);
+              var7 = LabeledWidgetContainer.field_N.readUnsignedByte(31760);
               if (var7 == 0) {
-                tl.field_O = bd.field_T;
+                tl.field_O = ModalDialog.field_T;
               } else {
                 t.field_b = var7;
                 gf.field_C = -1;
                 tl.field_O = tf.field_qb;
               }
-              dh.field_N.position = 0;
+              LabeledWidgetContainer.field_N.position = 0;
             }
-            if (tl.field_O == bd.field_T &&
+            if (tl.field_O == ModalDialog.field_T &&
               NameSuggestionsPanel.a(8, 5929)) {
-              s.field_c = dh.field_N.readLong((byte) -53);
-              dh.field_N.position = 0;
-              le.a(dl.field_H, param5, param0, param2, 16);
+              s.field_c = LabeledWidgetContainer.field_N.readLong((byte) -53);
+              LabeledWidgetContainer.field_N.position = 0;
+              le.a(AlphaWidgetContainer.field_H, param5, param0, param2, 16);
               tl.field_O = uf.field_c;
             }
             boolean decompiledFrameRemainder0 = true;
             if (tl.field_O == uf.field_c &&
               NameSuggestionsPanel.a(1, 5929)) {
-              var7Lifetime1 = dh.field_N.readUnsignedByte(31760);
-              dh.field_N.position = 0;
+              var7Lifetime1 = LabeledWidgetContainer.field_N.readUnsignedByte(31760);
+              LabeledWidgetContainer.field_N.position = 0;
               cj.field_i = null;
               t.field_b = var7Lifetime1;
               if (0 != var7Lifetime1 &&
@@ -116,12 +116,12 @@ final class f extends IntrusiveNode {
             }
             if (sg.field_d == tl.field_O &&
               GameAppletShell.d(-29427)) {
-              ld.field_b = dh.field_N.readLong((byte) -53);
-              nj.field_j = dh.field_N.readUnsignedByte(31760);
-              dh.field_N.readUnsignedByte(31760);
-              hb.field_g = dh.field_N.readUnsignedShort(-788751192);
-              var7_ref_String = dh.field_N.readNullableString(715718304);
-              var8 = dh.field_N.readUnsignedByte(31760);
+              ld.field_b = LabeledWidgetContainer.field_N.readLong((byte) -53);
+              nj.field_j = LabeledWidgetContainer.field_N.readUnsignedByte(31760);
+              LabeledWidgetContainer.field_N.readUnsignedByte(31760);
+              hb.field_g = LabeledWidgetContainer.field_N.readUnsignedShort(-788751192);
+              var7_ref_String = LabeledWidgetContainer.field_N.readNullableString(715718304);
+              var8 = LabeledWidgetContainer.field_N.readUnsignedByte(31760);
               if ((1 & var8) != 0) {
                 cd.a(4);
               }
@@ -134,24 +134,24 @@ final class f extends IntrusiveNode {
                 }
               }
               if (wg.field_d) {
-                dh.field_N.readUnsignedByte(31760);
-                dh.field_N.readUnsignedByte(31760);
-                dh.field_N.readInt(-108);
-                ka.field_n = dh.field_N.readUnsignedShort(-788751192);
+                LabeledWidgetContainer.field_N.readUnsignedByte(31760);
+                LabeledWidgetContainer.field_N.readUnsignedByte(31760);
+                LabeledWidgetContainer.field_N.readInt(-108);
+                ka.field_n = LabeledWidgetContainer.field_N.readUnsignedShort(-788751192);
                 cf.field_b = new byte[ka.field_n];
                 for (var9 = 0; var9 < ka.field_n; var9++) {
-                  cf.field_b[var9] = dh.field_N.readByte(-82);
+                  cf.field_b[var9] = LabeledWidgetContainer.field_N.readByte(-82);
                 }
               }
-              SecondaryNodeDequeIterator.field_d = dh.field_N.readString((byte) -64);
+              SecondaryNodeDequeIterator.field_d = LabeledWidgetContainer.field_N.readString((byte) -64);
               var12 = (CharSequence) ((Object) SecondaryNodeDequeIterator.field_d);
               tf.field_pb = rh.a(117, var12);
-              rh.field_a = dh.field_N.readUnsignedByte(31760);
+              rh.field_a = LabeledWidgetContainer.field_N.readUnsignedByte(31760);
               tl.field_O = SectorCacheStore.field_d;
-              if (dl.field_H.b((byte) -98) == ll.field_p) {
+              if (AlphaWidgetContainer.field_H.b((byte) -98) == ll.field_p) {
                 p.field_d.a(nb.a(108), (byte) -50);
               } else {
-                if (dl.field_H.b((byte) -98) == si.field_A) {
+                if (AlphaWidgetContainer.field_H.b((byte) -98) == SingleChildWidgetContainer.field_A) {
                   ka.field_q.a(nb.a(124), (byte) -50);
                 }
               }
@@ -176,13 +176,13 @@ final class f extends IntrusiveNode {
                 }
               }
               if (0 < hb.field_g) {
-                bd.field_N = true;
+                ModalDialog.field_N = true;
               }
               nj.field_p.setCipherSeed((byte) -101, PcmOutputWorker.field_b);
               for (var9Lifetime1 = 0; 4 > var9Lifetime1; var9Lifetime1++) {
                 PcmOutputWorker.field_b[var9Lifetime1] = PcmOutputWorker.field_b[var9Lifetime1] + 50;
               }
-              dh.field_N.setCipherSeed((byte) -105, PcmOutputWorker.field_b);
+              LabeledWidgetContainer.field_N.setCipherSeed((byte) -105, PcmOutputWorker.field_b);
               stackIn_75_0 = t.field_b;
               return stackIn_75_0;
             }
@@ -198,7 +198,7 @@ final class f extends IntrusiveNode {
               if (t.field_b == 7) {
                 t.field_b = 3;
               }
-              cc.field_p = dh.field_N.readString((byte) -107);
+              cc.field_p = LabeledWidgetContainer.field_N.readString((byte) -107);
               dk.field_b = false;
               stackIn_85_0 = t.field_b;
               return stackIn_85_0;

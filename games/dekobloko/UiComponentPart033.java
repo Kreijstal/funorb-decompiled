@@ -14,7 +14,7 @@ final class UiComponentPart033 extends UiComponentPart012 implements WidgetActiv
     static MixedSupport116 mixedSupport116State0004;
     static int integerState0934;
 
-    final boolean computeBoolean0169(byte byteArgument1) {
+    final boolean advanceDialogAnimation(byte byteArgument1) {
         MixedSupport016 mixedSupport016Local1 = null;
         if (byteArgument1 <= 15) {
           this.uiComponentPart031State0002 = (AccountRegistrationPanel) null;
@@ -26,7 +26,7 @@ final class UiComponentPart033 extends UiComponentPart012 implements WidgetActiv
             this.performAction1816(false, mixedSupport016Local1, false);
           }
         }
-        return super.computeBoolean0169((byte) 117);
+        return super.advanceDialogAnimation((byte) 117);
     }
 
     final static void performAction1819(int integerArgument1) {
@@ -34,7 +34,7 @@ final class UiComponentPart033 extends UiComponentPart012 implements WidgetActiv
         int integerLocal1 = -22 % ((-14 - integerArgument1) / 35);
         BirthDateInput.booleanState0198 = false;
         MouseWheelInput.performAction0670(-1, (byte) -122);
-        UiComponentPart016.mixedSupport004State0001 = MixedSupport127.mixedSupport004State0005;
+        ModalDialogHost.mixedSupport004State0001 = MixedSupport127.mixedSupport004State0005;
         GameAssets.mixedSupport004State0004 = MixedSupport127.mixedSupport004State0005;
     }
 
@@ -62,7 +62,7 @@ final class UiComponentPart033 extends UiComponentPart012 implements WidgetActiv
         RuntimeException caughtExceptionLocal5 = null;
         RuntimeException runtimeExceptionLocal6 = null;
         try {
-          UiComponentPart006.performAction0355(booleanArgument5, -5540, stringArgument6, integerArgument1, booleanArgument3);
+          LabeledWidgetContainer.performAction0355(booleanArgument5, -5540, stringArgument6, integerArgument1, booleanArgument3);
           MixedSupport037.integerState0224 = integerArgument4;
           CacheWorkQueue.booleanState0079 = !booleanArgument3;
           if (integerArgument2 >= -70) {
@@ -167,7 +167,7 @@ final class UiComponentPart033 extends UiComponentPart012 implements WidgetActiv
         }
     }
 
-    UiComponentPart033(UiComponentPart016 uiComponentPart016Argument1, AccountRegistrationPanel uiComponentPart031Argument2) {
+    UiComponentPart033(ModalDialogHost uiComponentPart016Argument1, AccountRegistrationPanel uiComponentPart031Argument2) {
         super(uiComponentPart016Argument1, GameDomainSupport002.bitmapFontState0012, NodeHashTableIterator.stringState0098, false, false);
         try {
           this.uiComponentPart031State0002 = uiComponentPart031Argument2;
@@ -214,10 +214,10 @@ final class UiComponentPart033 extends UiComponentPart012 implements WidgetActiv
                 uiComponentPart008Local7.performAction0371(GameDomainSupport005.stringState0406, 11, 14);
                 uiComponentPart008Local7.performAction0371(SceneWidgetPart005.stringState0255, 17, 14);
               } else {
-                uiComponentPart008Local7.performAction0371(UiComponentPart003.stringState0060, -1, 14);
+                uiComponentPart008Local7.performAction0371(ModalDialog.stringState0060, -1, 14);
               }
             } else {
-              uiComponentPart008Local7.computeInteractiveComponent0370(115, MixedSupport034.stringState0163, (CallbackContract006) (this));
+              uiComponentPart008Local7.computeInteractiveComponent0370(115, MixedSupport034.stringState0163, (WidgetEventListener) (this));
             }
             if (mixedSupport016Argument2.integerState0101 == 3) {
               uiComponentPart008Local7.performAction0371(UiComponent.stringState0079, 7, 14);
@@ -231,7 +231,7 @@ final class UiComponentPart033 extends UiComponentPart012 implements WidgetActiv
               this.performAction0185(new UiComponentPart018(this), (byte) 79);
               return;
             }
-            uiComponentPart008Local7.computeInteractiveComponent0370(119, MixedSupport034.stringState0163, (CallbackContract006) (this));
+            uiComponentPart008Local7.computeInteractiveComponent0370(119, MixedSupport034.stringState0163, (WidgetEventListener) (this));
           }
           this.performAction0185(uiComponentPart008Local7, (byte) 68);
           if (booleanArgument3) {

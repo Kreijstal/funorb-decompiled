@@ -31,20 +31,20 @@ final class uk extends ql {
         }
     }
 
-    uk(eg param0, String param1) {
+    uk(ModalDialogHost param0, String param1) {
         super(param0, 300, 120);
         int var3_int = 0;
         try {
           this.field_R = param1;
           if (this.field_R != null) {
             var3_int = FullscreenFocusCanvas.field_c.textHeight(this.field_R, 260, FullscreenFocusCanvas.field_c.field_E);
-            this.b(300, -114, 150 + var3_int);
+            this.setCenteredSize(300, -114, 150 + var3_int);
           }
           this.field_X = new md(13, 50, 274, 30, 15, 2113632, 4210752);
           this.field_X.field_G = true;
           this.field_T = false;
           this.field_S = false;
-          this.b((byte) 70, this.field_X);
+          this.addChild((byte) 70, this.field_X);
         } catch (RuntimeException runtimeException) {
           throw ld.wrapClientException((Throwable) ((Object) runtimeException), "uk.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
@@ -118,7 +118,7 @@ final class uk extends ql {
         RuntimeException decompiledCaughtException = null;
         try {
           var4_int = 45 / ((62 - param0) / 60);
-          if (nb.a(param2, param3, (byte) -45, param1)) {
+          if (DequeWidgetContainer.a(param2, param3, (byte) -45, param1)) {
             return ql.e(false);
           }
           return null;

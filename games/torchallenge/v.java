@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class v extends b {
+abstract class v extends ModalDialog {
     private int field_T;
     static p field_Y;
     static int[] field_S;
@@ -233,14 +233,14 @@ abstract class v extends b {
 
     final static void a(boolean param0, byte param1, boolean param2, String param3) {
         LoginPanel.i(126);
-        t.field_b.i(param1 + 8389929);
+        t.field_b.closeAllDialogs(param1 + 8389929);
         if (param1 != -24) {
           return;
         }
         try {
           MidiPcmStream.field_O = new LoginPanel(TextLayout.field_b, (String) null, eb.field_m, param2, param0);
-          bg.field_K = new jf(t.field_b, MidiPcmStream.field_O);
-          t.field_b.a((byte) 88, (UiComponent) (bg.field_K));
+          LabeledWidgetContainer.field_K = new jf(t.field_b, MidiPcmStream.field_O);
+          t.field_b.showDialog((byte) 88, (UiComponent) (LabeledWidgetContainer.field_K));
         } catch (RuntimeException runtimeException) {
           throw oj.wrapException((Throwable) ((Object) runtimeException), "v.QA(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
@@ -253,7 +253,7 @@ abstract class v extends b {
         return lc.a(param0 ^ -106);
     }
 
-    boolean j(int param0) {
+    boolean advanceDialogAnimation(int param0) {
         int var2 = 0;
         int var3 = 0;
         int fieldTemp$0 = 0;
@@ -274,13 +274,13 @@ abstract class v extends b {
             var2 = this.field_U + var4 * (-this.field_U + this.field_ab) / var5;
             var3 = this.field_O + (-this.field_O + this.field_V) * var4 / var5;
           }
-          this.b(0, var3, var2);
+          this.setCenteredSize(0, var3, var2);
         }
         if (param0 != 1) {
           PlatformTaskDispatcher var6 = (PlatformTaskDispatcher) null;
           v.a(-22, -2, 27, 60, (PlatformTaskDispatcher) null, 20);
         }
-        return super.j(1);
+        return super.advanceDialogAnimation(1);
     }
 
     final static Sprite[] a(int param0, int param1, int param2, int param3) {
@@ -292,7 +292,7 @@ abstract class v extends b {
 
     final void a(int param0, int param1, int param2, boolean param3) {
         if (param1 <= 0) {
-          this.b(0, param0, param2);
+          this.setCenteredSize(0, param0, param2);
           return;
         }
         if (param3) {
@@ -306,15 +306,15 @@ abstract class v extends b {
         this.field_ab = param2;
     }
 
-    boolean h(int param0) {
+    boolean snapDialogAnimation(int param0) {
         if (param0 <= 83) {
           v.b(-11, -50, 45, -103, 85);
         }
         this.d(true);
-        return super.h(88);
+        return super.snapDialogAnimation(88);
     }
 
-    v(si param0, int param1, int param2) {
+    v(ModalDialogHost param0, int param1, int param2) {
         super(param0, param1, param2);
         this.field_T = 0;
         this.field_Q = 0;
@@ -439,7 +439,7 @@ abstract class v extends b {
         if (!param0) {
           return;
         }
-        this.b(0, this.field_V, this.field_ab);
+        this.setCenteredSize(0, this.field_V, this.field_ab);
         this.field_Q = 0;
         this.k(0);
     }
@@ -542,14 +542,14 @@ abstract class v extends b {
     /* Full JVM integer arguments; original narrow signature preserved. */
     final static void $cfr$intArgs$a$b1efba5c64a3(boolean param0, int param1, boolean param2, String param3) {
         LoginPanel.i(126);
-        t.field_b.i(param1 + 8389929);
+        t.field_b.closeAllDialogs(param1 + 8389929);
         if (param1 != -24) {
           return;
         }
         try {
           MidiPcmStream.field_O = new LoginPanel(TextLayout.field_b, (String) null, eb.field_m, param2, param0);
-          bg.field_K = new jf(t.field_b, MidiPcmStream.field_O);
-          t.field_b.a((byte) 88, (UiComponent) (bg.field_K));
+          LabeledWidgetContainer.field_K = new jf(t.field_b, MidiPcmStream.field_O);
+          t.field_b.showDialog((byte) 88, (UiComponent) (LabeledWidgetContainer.field_K));
         } catch (RuntimeException runtimeException) {
           throw oj.wrapException((Throwable) ((Object) runtimeException), "v.QA(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }

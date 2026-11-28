@@ -111,9 +111,9 @@ abstract class MixedSupport140 extends DualNode {
               renderingSupport001Local9.longState0004 < longLocal7) {
               renderingSupport001Local9.unlink((byte) 112);
               NetworkSupport012.integerState0759 = renderingSupport001Local9.byteArrayState0003.length;
-              UiComponentPart006.cipherPacketBufferState0001.position = 0;
+              LabeledWidgetContainer.cipherPacketBufferState0001.position = 0;
               for (integerLocal1 = 0; integerLocal1 < NetworkSupport012.integerState0759; integerLocal1++) {
-                UiComponentPart006.cipherPacketBufferState0001.payload[integerLocal1] = renderingSupport001Local9.byteArrayState0003[integerLocal1];
+                LabeledWidgetContainer.cipherPacketBufferState0001.payload[integerLocal1] = renderingSupport001Local9.byteArrayState0003[integerLocal1];
               }
               UiComponentPart017.integerState0438 = GameDomainSupport001.integerState0051;
               GameDomainSupport001.integerState0051 = ComponentContainer.integerState0378;
@@ -127,12 +127,12 @@ abstract class MixedSupport140 extends DualNode {
           }
           while (true) {
             if (0 > UiComponentPart009.integerState0150) {
-              UiComponentPart006.cipherPacketBufferState0001.position = 0;
+              LabeledWidgetContainer.cipherPacketBufferState0001.position = 0;
               if (!MixedSupport098.computeBoolean1219(integerArgument2 + 25973, 1)) {
                 return false;
               }
-              UiComponentPart009.integerState0150 = UiComponentPart006.cipherPacketBufferState0001.computeInteger1644((byte) 81);
-              UiComponentPart006.cipherPacketBufferState0001.position = 0;
+              UiComponentPart009.integerState0150 = LabeledWidgetContainer.cipherPacketBufferState0001.computeInteger1644((byte) 81);
+              LabeledWidgetContainer.cipherPacketBufferState0001.position = 0;
               NetworkSupport012.integerState0759 = integerArrayArgument1[UiComponentPart009.integerState0150];
             }
             if (!MixedSupport039.computeBoolean0524((byte) 116)) {
@@ -155,7 +155,7 @@ abstract class MixedSupport140 extends DualNode {
             }
             renderingSupport001Local11 = new RenderingSupport001(longLocal7 + (long)integerLocal10, UiComponentPart009.integerState0150, new byte[NetworkSupport012.integerState0759]);
             for (integerLocal2 = 0; NetworkSupport012.integerState0759 > integerLocal2; integerLocal2++) {
-              renderingSupport001Local11.byteArrayState0003[integerLocal2] = UiComponentPart006.cipherPacketBufferState0001.payload[integerLocal2];
+              renderingSupport001Local11.byteArrayState0003[integerLocal2] = LabeledWidgetContainer.cipherPacketBufferState0001.payload[integerLocal2];
             }
             MixedSupport018.nodeDequeState0006.addFirst(renderingSupport001Local11, integerArgument2 ^ 2777);
             UiComponentPart009.integerState0150 = -1;

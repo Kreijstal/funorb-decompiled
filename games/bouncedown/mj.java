@@ -111,7 +111,7 @@ final class mj {
             return stackIn_29_0;
           }
           if (!ea.field_e.ensureIndexLoaded(-111)) {
-            stackIn_34_0 = se.field_F;
+            stackIn_34_0 = DropTargetWidgetContainer.field_F;
             return stackIn_34_0;
           }
           if (!ea.field_e.tryLoadAllGroups((byte) -100)) {

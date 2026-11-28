@@ -9,7 +9,7 @@ class RichTextWidget extends ButtonWidget {
     static String field_B;
     private IntrusiveDeque field_G;
 
-    void a(UiWidget param0, int param1, int param2, byte param3) {
+    void updatePointer(UiWidget param0, int param1, int param2, byte param3) {
         int var5_int = 0;
         int var6 = 0;
         RuntimeException stackIn_8_0 = null;
@@ -18,7 +18,7 @@ class RichTextWidget extends ButtonWidget {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var5 = null;
         try {
-          super.a(param0, param1, param2, (byte) -28);
+          super.updatePointer(param0, param1, param2, (byte) -28);
           this.field_C = null;
           if (param3 >= -13) {
             this.field_D = (String[]) null;
@@ -75,12 +75,12 @@ class RichTextWidget extends ButtonWidget {
 
     final void c(int param0, int param1, int param2, int param3) {
         if (param3 != -1) {
-          this.a(-61, 36, 65, -22);
+          this.drawWidget(-61, 36, 65, -22);
         }
-        this.a(((TextWidgetRenderer) ((Object) this.field_h)).getPreferredHeight((UiWidget) (this), false), 13361, param0, param2, param1);
+        this.setBounds(((TextWidgetRenderer) ((Object) this.field_h)).getPreferredHeight((UiWidget) (this), false), 13361, param0, param2, param1);
     }
 
-    boolean a(UiWidget param0, boolean param1) {
+    boolean takeFocus(UiWidget param0, boolean param1) {
         RuntimeException var3 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -106,11 +106,11 @@ class RichTextWidget extends ButtonWidget {
         }
     }
 
-    final void a(int param0, int param1, int param2, int param3, int param4) {
+    final void setBounds(int param0, int param1, int param2, int param3, int param4) {
         if (param1 != 13361) {
           RichTextWidget.c((byte) -53);
         }
-        super.a(param0, param1 + 0, param2, param3, param4);
+        super.setBounds(param0, param1 + 0, param2, param3, param4);
         this.rebuildHotspotBounds(true);
     }
 
@@ -534,10 +534,10 @@ class RichTextWidget extends ButtonWidget {
         }
     }
 
-    void a(int param0, int param1, int param2, int param3) {
+    void drawWidget(int param0, int param1, int param2, int param3) {
         int var7 = 0;
         int var8 = 0;
-        super.a(param0, param1, param2, param3);
+        super.drawWidget(param0, param1, param2, param3);
         if (0 != param1) {
           return;
         }
@@ -652,8 +652,8 @@ class RichTextWidget extends ButtonWidget {
         return this.field_D[this.field_C.field_h];
     }
 
-    RichTextWidget(String param0, ml param1) {
-        super(param0, (of) null);
+    RichTextWidget(String param0, WidgetRenderer param1) {
+        super(param0, (WidgetEventListener) null);
         this.field_C = null;
         try {
           this.field_h = param1;

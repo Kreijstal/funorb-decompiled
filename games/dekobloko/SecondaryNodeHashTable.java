@@ -159,7 +159,7 @@ final class SecondaryNodeHashTable {
           MixedSupport057.nodeDequeState0010.clear(118);
           MixedSupport090.secondaryNodeHashTableState0004 = new SecondaryNodeHashTable(integerArgument5);
           ReturnedShape.integerState0693 = -1;
-          UiComponentPart006.integerState0137 = -1;
+          LabeledWidgetContainer.integerState0137 = -1;
           MixedSupport019.integerState0113 = 0;
           MixedSupport119.integerState0772 = 0;
           if (null == sceneWidgetArgument1.nodeDequeState0034) {
@@ -227,7 +227,7 @@ final class SecondaryNodeHashTable {
             return false;
           }
           uiComponentPart033Local2 = new UiComponentPart033(MixedSupport005.uiComponentPart016State0001, uiComponentPart031Argument3);
-          MixedSupport005.uiComponentPart016State0001.performAction0831((byte) -123, uiComponentPart033Local2);
+          MixedSupport005.uiComponentPart016State0001.showDialog((byte) -123, uiComponentPart033Local2);
           if (!SecondaryNodeDequeIterator.computeBoolean0363(-40)) {
             LobbyRoomRow.stringState0586 = stringArgument1;
             RichTextLayout.mixedSupport016State0001 = null;

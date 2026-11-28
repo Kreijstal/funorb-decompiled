@@ -80,7 +80,7 @@ final class gk {
             stackIn_8_0 = -1;
             return stackIn_8_0;
           }
-          if (GzipDecompressor.field_d == oa.field_C) {
+          if (GzipDecompressor.field_d == AlphaWidgetContainer.field_C) {
             pg.field_fb.position = 0;
             nb.field_M = null;
             if (param3 != null) {

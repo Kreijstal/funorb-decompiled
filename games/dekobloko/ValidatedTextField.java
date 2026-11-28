@@ -31,7 +31,7 @@ final class ValidatedTextField extends EditableTextField implements FieldValidat
         }
     }
 
-    ValidatedTextField(String stringArgument1, CallbackContract006 callbackContract006Argument2, int integerArgument3) {
+    ValidatedTextField(String stringArgument1, WidgetEventListener callbackContract006Argument2, int integerArgument3) {
         super(stringArgument1, callbackContract006Argument2, integerArgument3);
     }
 
@@ -76,8 +76,8 @@ final class ValidatedTextField extends EditableTextField implements FieldValidat
         stringState0384 = null;
     }
 
-    final void performAction0218(UiComponent uiComponentArgument1, int integerArgument2, int integerArgument3, int integerArgument4) {
-        super.performAction0218(uiComponentArgument1, 50, integerArgument3, integerArgument4);
+    final void updatePointer(UiComponent uiComponentArgument1, int integerArgument2, int integerArgument3, int integerArgument4) {
+        super.updatePointer(uiComponentArgument1, 50, integerArgument3, integerArgument4);
         if (integerArgument2 < 38) {
           return;
         }

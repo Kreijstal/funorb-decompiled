@@ -10,14 +10,14 @@ final class NetworkSupport002 {
     BitmapFont bitmapFontState0008;
     int integerState0084;
     static NodeDeque nodeDequeState0002;
-    CallbackContract004 callbackContract004State0001;
+    WidgetRenderer callbackContract004State0001;
     int integerState0085;
     int integerState0086;
-    CallbackContract004 callbackContract004State0002;
+    WidgetRenderer callbackContract004State0002;
     int integerState0087;
-    CallbackContract004 callbackContract004State0003;
-    CallbackContract004 callbackContract004State0004;
-    CallbackContract004 callbackContract004State0005;
+    WidgetRenderer callbackContract004State0003;
+    WidgetRenderer callbackContract004State0004;
+    WidgetRenderer callbackContract004State0005;
     private int integerState0088;
     static RgbSprite[] rgbSpriteArrayState0003;
 
@@ -114,7 +114,7 @@ final class NetworkSupport002 {
         try {
           mixedSupport001Local1 = new DefaultTextWidgetRenderer(bitmapFontArgument2, 2, 2, 2236962, 1, 1, 1, 2 + bitmapFontArgument2.integerState0523 + bitmapFontArgument2.integerState0518);
           mixedSupport001Local1.integerState0002 = 16777215;
-          this.callbackContract004State0005 = (CallbackContract004) ((Object) mixedSupport001Local1);
+          this.callbackContract004State0005 = (WidgetRenderer) ((Object) mixedSupport001Local1);
           mixedSupport009Local2 = new MixedSupport009();
           mixedSupport001Local1.performAction0008(-12253, mixedSupport009Local2);
           mixedSupport009Local2.integerState0007 = 11711154;
@@ -140,21 +140,21 @@ final class NetworkSupport002 {
           rgbSpriteArrayLocal3[4] = (RgbSprite) ((Object) renderingSupport008Local5);
           mixedSupport009Local2.computeMixedSupport1180099(4, 25).computeMixedSupport1181542(integerArgument1 - 13438370, true).computeMixedSupport1181543(113, rgbSpriteArrayLocal3);
           mixedSupport009Local2.computeMixedSupport1180099(5, 44).computeMixedSupport1181543(integerArgument1 ^ 13421739, MixedSupport119.computeRgbSpriteArray1565(false, 0, 65793, 0, 0)).computeMixedSupport1181542(integerArgument1 - 13438370, true).computeMixedSupport1181539(-1, (byte) 106);
-          this.callbackContract004State0001 = (CallbackContract004) ((Object) mixedSupport009Local2);
+          this.callbackContract004State0001 = (WidgetRenderer) ((Object) mixedSupport009Local2);
           mixedSupport009Local7 = new MixedSupport009(mixedSupport009Local2, true);
           mixedSupport009Local7.integerState0009 = 0;
           mixedSupport009Local8 = new MixedSupport009(mixedSupport009Local2, true);
           mixedSupport009Local8.integerState0009 = 0;
           mixedSupport009Local8.performAction0103(MixedSupport106.computeRgbSpriteArray1384(9, 8947848), false);
           mixedSupport009Local8.computeMixedSupport1180099(1, 95).computeMixedSupport1181543(-128, MixedSupport106.computeRgbSpriteArray1384(9, 11184810)).computeMixedSupport1181539(2236962, (byte) 106);
-          this.callbackContract004State0004 = (CallbackContract004) ((Object) new MixedSupport070(bitmapFontArgument2, 2, 2, 16777215, -1, 5, 5, 15, 15, 4473924));
+          this.callbackContract004State0004 = (WidgetRenderer) ((Object) new MixedSupport070(bitmapFontArgument2, 2, 2, 16777215, -1, 5, 5, 15, 15, 4473924));
           discarded$0 = new InputAdapter001(bitmapFontArgument2, 2, 2, 16777215, -1, 16777215, 16729156, 4473924);
           discarded$1 = new MixedSupport105(bitmapFontArgument2, 16777215, -1, 125269879, 4473924, 3, 268435455);
           mixedSupport009Local11 = new MixedSupport009();
           mixedSupport001Local1.performAction0008(-12253, mixedSupport009Local11);
           mixedSupport009Local11.computeMixedSupport1180099(0, 78).computeMixedSupport1181543(integerArgument1 ^ -13421740, MixedSupport042.computeRgbSpriteArray0535(10066329, 15658734, 7829367, integerArgument1 - 13389632)).computeMixedSupport1181539(1118481, (byte) 106).computeMixedSupport1181550(-83, -1);
           mixedSupport009Local11.computeMixedSupport1180099(4, integerArgument1 ^ 13421812).computeMixedSupport1181542(-16598, true).computeMixedSupport1181543(-27, rgbSpriteArrayLocal3);
-          this.callbackContract004State0002 = (CallbackContract004) ((Object) mixedSupport009Local11);
+          this.callbackContract004State0002 = (WidgetRenderer) ((Object) mixedSupport009Local11);
           rgbSpriteArrayLocal12 = new RgbSprite[9];
           rgbSpriteArrayLocal12[4] = new RgbSprite(2, 1);
           rgbSpriteArrayLocal13 = new RgbSprite[9];

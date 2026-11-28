@@ -270,7 +270,7 @@ final class cj extends qf implements Cloneable {
                 }
                 case 1: {
                     try {
-                        if (ab.field_D != null) {
+                        if (ModalDialog.field_D != null) {
                             statePc = 11;
                             continue scanLoop1;
                         } else {

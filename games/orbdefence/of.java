@@ -9,21 +9,21 @@ final class of extends InteractiveWidget {
     static int field_K;
     static int field_G;
 
-    of(String param0, ag param1, boolean param2) {
+    of(String param0, WidgetEventListener param1, boolean param2) {
         this(param0, param1);
         try {
           this.field_D = param2 ? true : false;
         } catch (RuntimeException runtimeException) {
-          throw dd.wrapClientException((Throwable) ((Object) runtimeException), "of.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw DraggableWidgetContainer.wrapClientException((Throwable) ((Object) runtimeException), "of.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
-    private of(String param0, td param1, ag param2) {
+    private of(String param0, WidgetRenderer param1, WidgetEventListener param2) {
         super(param0, param1, param2);
         try {
           this.field_j = mb.field_a.field_e;
         } catch (RuntimeException runtimeException) {
-          throw dd.wrapClientException((Throwable) ((Object) runtimeException), "of.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw DraggableWidgetContainer.wrapClientException((Throwable) ((Object) runtimeException), "of.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -43,12 +43,12 @@ final class of extends InteractiveWidget {
         super.activateFromInput(param0, param1, param2, param3);
     }
 
-    private of(String param0, ag param1) {
+    private of(String param0, WidgetEventListener param1) {
         this(param0, mb.field_a.field_l, param1);
         try {
           this.field_j = mb.field_a.field_e;
         } catch (RuntimeException runtimeException) {
-          throw dd.wrapClientException((Throwable) ((Object) runtimeException), "of.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw DraggableWidgetContainer.wrapClientException((Throwable) ((Object) runtimeException), "of.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

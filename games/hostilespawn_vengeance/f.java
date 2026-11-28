@@ -3,7 +3,7 @@
  */
 import java.io.*;
 
-final class f implements nn {
+final class f implements WidgetRenderer {
     static RgbSprite field_d;
     static String[][] field_a;
     static String field_c;
@@ -27,7 +27,7 @@ final class f implements nn {
         field_a = (String[][]) null;
     }
 
-    public final void a(int param0, int param1, int param2, ag param3, boolean param4) {
+    public final void paintWidget(int param0, int param1, int param2, UiWidget param3, boolean param4) {
         int var6_int = 0;
         int var7 = 0;
         RgbSprite var8 = null;
@@ -48,7 +48,7 @@ final class f implements nn {
             ((InteractiveWidget) (param3)).field_A) {
             var8.drawAdditive(var6_int + (1 + (param3.field_s - var8.field_u >> 1)), (-var8.field_r + param3.field_x >> 1) + (var7 + 1), 256);
           }
-          if (param3.g(-9015)) {
+          if (param3.isFocused(-9015)) {
             bh.a(param3.field_x - 4, 2 + var7, (byte) 65, 2 + var6_int, param3.field_s - 4);
           }
           return;

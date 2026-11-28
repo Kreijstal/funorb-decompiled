@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class UiComponentPart017 extends ComponentContainer implements WidgetActivationListener {
-    static UiComponentPart029 uiComponentPart029State0001;
+    static DraggableWidgetContainer uiComponentPart029State0001;
     private InteractiveComponent interactiveComponentState0007;
     private InteractiveComponent interactiveComponentState0008;
     private InteractiveComponent interactiveComponentState0009;
@@ -11,28 +11,28 @@ final class UiComponentPart017 extends ComponentContainer implements WidgetActiv
     static int integerState0438;
 
     public UiComponentPart017() {
-        super(0, 0, 476, 225, (CallbackContract004) null);
-        this.interactiveComponentState0009 = new InteractiveComponent(MixedSupport057.stringState0246, (CallbackContract006) null);
-        this.interactiveComponentState0008 = new InteractiveComponent(GameDomainSupport002.stringState0146, (CallbackContract006) null);
-        this.interactiveComponentState0007 = new InteractiveComponent(MixedSupport058.stringState0250, (CallbackContract006) null);
+        super(0, 0, 476, 225, (WidgetRenderer) null);
+        this.interactiveComponentState0009 = new InteractiveComponent(MixedSupport057.stringState0246, (WidgetEventListener) null);
+        this.interactiveComponentState0008 = new InteractiveComponent(GameDomainSupport002.stringState0146, (WidgetEventListener) null);
+        this.interactiveComponentState0007 = new InteractiveComponent(MixedSupport058.stringState0250, (WidgetEventListener) null);
         MixedSupport041 mixedSupport041Local1 = new MixedSupport041();
-        this.interactiveComponentState0009.callbackContract004State0006 = (CallbackContract004) ((Object) mixedSupport041Local1);
-        this.interactiveComponentState0008.callbackContract004State0006 = (CallbackContract004) ((Object) mixedSupport041Local1);
-        this.interactiveComponentState0007.callbackContract004State0006 = (CallbackContract004) ((Object) mixedSupport041Local1);
+        this.interactiveComponentState0009.callbackContract004State0006 = (WidgetRenderer) ((Object) mixedSupport041Local1);
+        this.interactiveComponentState0008.callbackContract004State0006 = (WidgetRenderer) ((Object) mixedSupport041Local1);
+        this.interactiveComponentState0007.callbackContract004State0006 = (WidgetRenderer) ((Object) mixedSupport041Local1);
         int integerLocal2 = 4;
         int integerLocal3 = 326;
         int integerLocal4 = integerLocal3 - integerLocal2 >> 1;
-        this.interactiveComponentState0008.performAction0222(30, integerLocal4, -integerLocal3 + this.integerState0107 >> 1, -integerLocal2 + (this.integerState0108 - 48), -16555);
-        this.interactiveComponentState0007.performAction0222(30, integerLocal4, integerLocal4 + ((-integerLocal3 + this.integerState0107 >> 1) + integerLocal2), -48 + (this.integerState0108 - integerLocal2), -16555);
-        this.interactiveComponentState0009.performAction0222(30, integerLocal3, this.integerState0107 - integerLocal3 >> 1, -(2 * integerLocal2) - 78 + this.integerState0108, -16555);
-        this.interactiveComponentState0008.callbackContract006State0001 = (CallbackContract006) (this);
-        this.interactiveComponentState0009.callbackContract006State0001 = (CallbackContract006) (this);
+        this.interactiveComponentState0008.setBounds(30, integerLocal4, -integerLocal3 + this.integerState0107 >> 1, -integerLocal2 + (this.integerState0108 - 48), -16555);
+        this.interactiveComponentState0007.setBounds(30, integerLocal4, integerLocal4 + ((-integerLocal3 + this.integerState0107 >> 1) + integerLocal2), -48 + (this.integerState0108 - integerLocal2), -16555);
+        this.interactiveComponentState0009.setBounds(30, integerLocal3, this.integerState0107 - integerLocal3 >> 1, -(2 * integerLocal2) - 78 + this.integerState0108, -16555);
+        this.interactiveComponentState0008.callbackContract006State0001 = (WidgetEventListener) (this);
+        this.interactiveComponentState0009.callbackContract006State0001 = (WidgetEventListener) (this);
         this.interactiveComponentState0009.stringState0080 = MixedSupport123.stringState0541;
-        this.interactiveComponentState0007.callbackContract006State0001 = (CallbackContract006) (this);
+        this.interactiveComponentState0007.callbackContract006State0001 = (WidgetEventListener) (this);
         this.interactiveComponentState0007.stringState0080 = MixedSupport069.stringState0312;
-        this.performAction0895(this.interactiveComponentState0008, (byte) -55);
-        this.performAction0895(this.interactiveComponentState0009, (byte) -55);
-        this.performAction0895(this.interactiveComponentState0007, (byte) -55);
+        this.addChild(this.interactiveComponentState0008, (byte) -55);
+        this.addChild(this.interactiveComponentState0009, (byte) -55);
+        this.addChild(this.interactiveComponentState0007, (byte) -55);
     }
 
     public static void clearStaticReferences(byte byteArgument1) {
@@ -192,7 +192,7 @@ final class UiComponentPart017 extends ComponentContainer implements WidgetActiv
 
     final static void performAction0954(int integerArgument1) {
         if (integerArgument1 != 8927) {
-          uiComponentPart029State0001 = (UiComponentPart029) null;
+          uiComponentPart029State0001 = (DraggableWidgetContainer) null;
           MouseWheelInput.performAction0670(4, (byte) -111);
           return;
         }
@@ -210,7 +210,7 @@ final class UiComponentPart017 extends ComponentContainer implements WidgetActiv
         }
     }
 
-    final void performAction0162(int integerArgument1, int integerArgument2, int integerArgument3, int integerArgument4) {
+    final void drawWidget(int integerArgument1, int integerArgument2, int integerArgument3, int integerArgument4) {
         int integerLocal1 = 0;
         int integerLocal2 = 0;
         int integerLocal3;
@@ -219,14 +219,14 @@ final class UiComponentPart017 extends ComponentContainer implements WidgetActiv
           integerLocal1 = integerArgument1 + this.integerState0110;
           integerLocal2 = this.integerState0104 + integerArgument4;
           GameDomainSupport003.bitmapFontState0015.drawParagraph(GameDomainSupport003.stringState0234, integerLocal1 + 20, integerLocal2 + 20, this.integerState0107 - 40, this.integerState0108 - 50, 16777215, -1, 1, 0, GameDomainSupport003.bitmapFontState0015.integerState0518);
-          super.performAction0162(integerArgument1, -109, integerArgument3, integerArgument4);
+          super.drawWidget(integerArgument1, -109, integerArgument3, integerArgument4);
           return;
         }
         integerState0437 = 48;
         integerLocal3 = integerArgument1 + this.integerState0110;
         integerLocal4 = this.integerState0104 + integerArgument4;
         GameDomainSupport003.bitmapFontState0015.drawParagraph(GameDomainSupport003.stringState0234, integerLocal3 + 20, integerLocal4 + 20, this.integerState0107 - 40, this.integerState0108 - 50, 16777215, -1, 1, 0, GameDomainSupport003.bitmapFontState0015.integerState0518);
-        super.performAction0162(integerArgument1, -109, integerArgument3, integerArgument4);
+        super.drawWidget(integerArgument1, -109, integerArgument3, integerArgument4);
     }
 
     public final void onWidgetActivated(byte byteArgument1, int integerArgument2, InteractiveComponent interactiveComponentArgument3, int integerArgument4, int integerArgument5) {
@@ -268,7 +268,7 @@ final class UiComponentPart017 extends ComponentContainer implements WidgetActiv
         }
     }
 
-    final boolean computeBoolean0182(int integerArgument1, int integerArgument2, UiComponent uiComponentArgument3, char characterArgument4) {
+    final boolean handleKey(int integerArgument1, int integerArgument2, UiComponent uiComponentArgument3, char characterArgument4) {
         int integerLocal1 = 0;
         RuntimeException runtimeExceptionLocal2 = null;
         boolean stackBooleanLocal3 = false;
@@ -278,15 +278,15 @@ final class UiComponentPart017 extends ComponentContainer implements WidgetActiv
         String stackStringLocal7 = null;
         RuntimeException caughtExceptionLocal8 = null;
         try {
-          if (super.computeBoolean0182(95, integerArgument2, uiComponentArgument3, characterArgument4)) {
+          if (super.handleKey(95, integerArgument2, uiComponentArgument3, characterArgument4)) {
             return true;
           }
           if (integerArgument2 == 98) {
-            stackBooleanLocal3 = this.computeBoolean0893(uiComponentArgument3, (byte) -74);
+            stackBooleanLocal3 = this.focusPreviousChild(uiComponentArgument3, (byte) -74);
             return stackBooleanLocal3;
           }
           if (integerArgument2 == 99) {
-            stackBooleanLocal4 = this.computeBoolean0892(32, uiComponentArgument3);
+            stackBooleanLocal4 = this.focusNextChild(32, uiComponentArgument3);
             return stackBooleanLocal4;
           }
           integerLocal1 = 86 / ((integerArgument1 + 22) / 49);

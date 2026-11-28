@@ -143,7 +143,7 @@ final class fo {
             }
             gj.a((byte) 116, false, LevelRenderer.field_n, -1);
           }
-          this.field_a.a((byte) -29, this.a(31, PacketBuffer.field_n, gb.field_d), this.a(121, sd.field_N, no.field_e));
+          this.field_a.a((byte) -29, this.a(31, PacketBuffer.field_n, gb.field_d), this.a(121, ModalDialogHost.field_N, no.field_e));
           if (this.field_a.selectedIndex != -1) {
             this.b(this.field_a.selectedIndex, true, 404);
           }
@@ -283,7 +283,7 @@ final class fo {
         int var3 = 54 % ((param1 + 46) / 59);
         ConfirmedEmailAvailabilityValidator.field_q = this.a(param0, PacketBuffer.field_n, (byte) 121, gb.field_d);
         if (kf.field_c == 1) {
-          var4 = this.a(param0, sd.field_N, (byte) 119, no.field_e);
+          var4 = this.a(param0, ModalDialogHost.field_N, (byte) 119, no.field_e);
           if (qc.field_t == var4) {
             qc.field_t = -1;
           } else {
@@ -323,7 +323,7 @@ final class fo {
         boolean decompiledFrameRemainder0 = true;
         if (fm.field_d < SocketConnector.field_c[GameKeyHandler.field_d]) {
           DefaultTextWidgetRenderer.field_s.a(16777215, (byte) 120, -1, 180, Vertigo2.a(new String[]{Integer.toString(1 + GameKeyHandler.field_d)}, fa.field_r, -123), 210);
-          tk.field_c.drawRightAligned(Vertigo2.a(new String[]{gl.a(-36, true, false, fm.field_d)}, wq.field_L, -121), 460, 240, 16777215, -1);
+          tk.field_c.drawRightAligned(Vertigo2.a(new String[]{gl.a(-36, true, false, fm.field_d)}, AlphaWidgetContainer.field_L, -121), 460, 240, 16777215, -1);
           tk.field_c.drawRightAligned(Vertigo2.a(new String[]{gl.a(-99, true, false, (int) SocketConnector.field_c[GameKeyHandler.field_d])}, or.field_g, -20), 460, 260, 16777215, -1);
           tk.field_c.drawRightAligned(Vertigo2.a(new String[]{gl.a(-65, true, false, -fm.field_d + SocketConnector.field_c[GameKeyHandler.field_d])}, to.field_f, -120), 460, 280, 65280, -1);
           if (te.field_B[GameKeyHandler.field_d] < fm.field_d) {
@@ -365,7 +365,7 @@ final class fo {
           }
         } else {
           DefaultTextWidgetRenderer.field_s.a(16777215, (byte) 124, -1, 180, Vertigo2.a(new String[]{Integer.toString(1 + GameKeyHandler.field_d)}, Bzip2State.field_k, -11), 210);
-          tk.field_c.drawRightAligned(Vertigo2.a(new String[]{gl.a(-89, true, false, fm.field_d)}, wq.field_L, -127), 460, 240, 16777215, -1);
+          tk.field_c.drawRightAligned(Vertigo2.a(new String[]{gl.a(-89, true, false, fm.field_d)}, AlphaWidgetContainer.field_L, -127), 460, 240, 16777215, -1);
           tk.field_c.drawRightAligned(Vertigo2.a(new String[]{gl.a(-72, true, false, (int) SocketConnector.field_c[GameKeyHandler.field_d])}, he.field_t, 62), 460, 260, 16777215, -1);
           tk.field_c.drawRightAligned(Vertigo2.a(new String[]{gl.a(-48, true, false, fm.field_d - SocketConnector.field_c[GameKeyHandler.field_d])}, lr.field_K, 39), 460, 280, 16711680, -1);
           tk.field_c.drawString(HuffmanCodec.field_c, 180, 240, 16777215, -1);
@@ -921,7 +921,7 @@ final class fo {
               var7 += 18;
             }
           } else {
-            var3Lifetime2 = sd.field_G;
+            var3Lifetime2 = ModalDialogHost.field_G;
           }
         } else {
           var3Lifetime2 = b.field_f;
@@ -1195,7 +1195,7 @@ final class fo {
               }
               break regionExit1;
             }
-            var2 = sd.field_G;
+            var2 = ModalDialogHost.field_G;
           }
         }
         var6 = DefaultTextWidgetRenderer.field_s.field_j + 225;
@@ -1790,7 +1790,7 @@ final class fo {
                       if (null != SocketConnector.field_c &&
                         ap.field_d.field_t >= 0 &&
                         ap.field_d.field_t < 50) {
-                        tk.field_c.drawCentred(Vertigo2.a(new String[]{gl.a(-49, true, false, var2)}, wq.field_L, ~param0), 404, 125, 16777215, -1);
+                        tk.field_c.drawCentred(Vertigo2.a(new String[]{gl.a(-49, true, false, var2)}, AlphaWidgetContainer.field_L, ~param0), 404, 125, 16777215, -1);
                       }
                       MouseWheelInput.field_c.drawScaled(350, 140, 28, 26);
                       tk.field_c.drawString(gl.a(-42, false, false, te.field_B[ap.field_d.field_t]), 390, 160, 16777215, -1);
@@ -1959,7 +1959,7 @@ final class fo {
               }
               break regionExit1;
             }
-            var4 = sd.field_G;
+            var4 = ModalDialogHost.field_G;
           }
         }
         var2Lifetime1 = DefaultTextWidgetRenderer.field_s.field_j + 365;

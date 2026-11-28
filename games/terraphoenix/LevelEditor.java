@@ -54,8 +54,8 @@ final class LevelEditor {
             this.field_m = this.field_m - 16;
           }
         }
-        if (0 < j.field_R) {
-          j.field_R = j.field_R - 1;
+        if (0 < LabeledWidgetContainer.field_R) {
+          LabeledWidgetContainer.field_R = LabeledWidgetContainer.field_R - 1;
         }
         if (this.field_a == 2) {
           if (this.field_b > 0) {
@@ -352,7 +352,7 @@ final class LevelEditor {
         }
         this.a((byte) -118);
         fg.field_c = "LEVEL CHANGED";
-        j.field_R = 256;
+        LabeledWidgetContainer.field_R = 256;
     }
 
     final void c(int param0) {
@@ -360,12 +360,12 @@ final class LevelEditor {
           return;
         }
         fg.field_c = "MAP SAVING";
-        j.field_R = 256;
+        LabeledWidgetContainer.field_R = 256;
         String var2 = PasswordValidator.field_n[this.field_c] + ".lev";
         byte[] var3 = this.map.a(true);
         ImageProducerRasterBuffer.field_k[wf.a(var2, true)] = var3;
         fg.field_c = "MAP SAVED";
-        j.field_R = 256;
+        LabeledWidgetContainer.field_R = 256;
         if (param0 != -13859) {
           this.b(-93, 17);
         }
@@ -404,13 +404,13 @@ final class LevelEditor {
         RuntimeException var3 = null;
         try {
           fg.field_c = "MAP LOADING";
-          j.field_R = 256;
+          LabeledWidgetContainer.field_R = 256;
           this.map = new LevelMap(param1);
           if (param0) {
             this.b((byte) -127);
           }
           fg.field_c = "MAP LOADED";
-          j.field_R = 256;
+          LabeledWidgetContainer.field_R = 256;
           if (this.map != null) {
             this.map.editor = this;
           }
@@ -620,12 +620,12 @@ final class LevelEditor {
         this.a(false, "WISH TO KEEP", var3Lifetime2, 16711680, var2Lifetime2);
         var3Lifetime2 += 14;
         if (null != fg.field_c) {
-          FrameTimer.field_f.drawString(fg.field_c, 24, 456, j.field_R, -1);
+          FrameTimer.field_f.drawString(fg.field_c, 24, 456, LabeledWidgetContainer.field_R, -1);
         }
     }
 
     LevelEditor() {
-        j.field_R = 256;
+        LabeledWidgetContainer.field_R = 256;
         this.field_l = 0;
         this.field_a = 0;
         this.field_n = 0;

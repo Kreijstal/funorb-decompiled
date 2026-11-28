@@ -28,7 +28,7 @@ abstract class c extends GameApplet {
         var3 = Main.field_T;
         try {
           if (!ri.b((byte) 23)) {
-            if (!(g.field_A < 10)) {
+            if (!(DequeWidgetContainer.field_A < 10)) {
               if (lc.a((byte) -94)) {
                 if (cd.field_e == 0) {
                   discarded$2 = this.a(false, false, 10);
@@ -1177,7 +1177,7 @@ abstract class c extends GameApplet {
                 }
                 var2 = SectorCacheStore.a("connectionlost_withreason", (byte) -127);
                 if (var2 != null) {
-                  lk.field_p = GzipInflater.a(var2, (byte) 107);
+                  UiWidget.field_p = GzipInflater.a(var2, (byte) 107);
                 }
                 var2 = SectorCacheStore.a("passwordverificationrequired", (byte) -127);
                 if (null != var2) {
@@ -1297,7 +1297,7 @@ abstract class c extends GameApplet {
                 }
                 var2 = SectorCacheStore.a("checking", (byte) -127);
                 if (null != var2) {
-                  n.field_C = GzipInflater.a(var2, (byte) 114);
+                  AlphaWidgetContainer.field_C = GzipInflater.a(var2, (byte) 114);
                 }
                 var2 = SectorCacheStore.a("create_namealreadytaken", (byte) -127);
                 if (var2 != null) {
@@ -1525,7 +1525,7 @@ abstract class c extends GameApplet {
                 }
                 var2 = SectorCacheStore.a("create_agreeterms", (byte) -127);
                 if (null != var2) {
-                  lk.field_t = GzipInflater.a(var2, (byte) 81);
+                  UiWidget.field_t = GzipInflater.a(var2, (byte) 81);
                 }
                 var2 = SectorCacheStore.a("create_u13terms", (byte) -127);
                 if (null != var2) {
@@ -1533,7 +1533,7 @@ abstract class c extends GameApplet {
                 }
                 var2 = SectorCacheStore.a("login_username_email", (byte) -127);
                 if (var2 != null) {
-                  ck.field_F = GzipInflater.a(var2, (byte) 103);
+                  LabeledWidgetContainer.field_F = GzipInflater.a(var2, (byte) 103);
                 }
                 var2 = SectorCacheStore.a("login_username", (byte) -127);
                 if (null != var2) {
@@ -1661,7 +1661,7 @@ abstract class c extends GameApplet {
                 }
                 var2 = SectorCacheStore.a("create_alert_doublespace", (byte) -127);
                 if (null != var2) {
-                  g.field_B = GzipInflater.a(var2, (byte) 121);
+                  DequeWidgetContainer.field_B = GzipInflater.a(var2, (byte) 121);
                 }
                 var2 = SectorCacheStore.a("create_alert_passchars", (byte) -127);
                 if (null != var2) {
@@ -1677,7 +1677,7 @@ abstract class c extends GameApplet {
                 }
                 var2 = SectorCacheStore.a("create_alert_passcontainsname", (byte) -127);
                 if (null != var2) {
-                  qi.field_F = GzipInflater.a(var2, (byte) 92);
+                  DraggableWidgetContainer.field_F = GzipInflater.a(var2, (byte) 92);
                 }
                 var2 = SectorCacheStore.a("create_alert_passcontainsemail", (byte) -127);
                 if (null != var2) {
@@ -1924,7 +1924,7 @@ abstract class c extends GameApplet {
                 }
                 var2 = SectorCacheStore.a("unpacking_music", (byte) -127);
                 if (null != var2) {
-                  j.field_A = GzipInflater.a(var2, (byte) 83);
+                  ModalDialogHost.field_A = GzipInflater.a(var2, (byte) 83);
                 }
                 var2 = SectorCacheStore.a("unpacking_levels", (byte) -127);
                 if (var2 != null) {
@@ -1972,7 +1972,7 @@ abstract class c extends GameApplet {
                 }
                 var2 = SectorCacheStore.a("highscores", (byte) -127);
                 if (var2 != null) {
-                  n.field_D = GzipInflater.a(var2, (byte) 94);
+                  AlphaWidgetContainer.field_D = GzipInflater.a(var2, (byte) 94);
                 }
                 var2 = SectorCacheStore.a("rankings", (byte) -127);
                 if (null != var2) {
@@ -2356,7 +2356,7 @@ abstract class c extends GameApplet {
                 }
                 var2 = SectorCacheStore.a("no_highscores", (byte) -127);
                 if (null != var2) {
-                  j.field_F = GzipInflater.a(var2, (byte) 100);
+                  ModalDialogHost.field_F = GzipInflater.a(var2, (byte) 100);
                 }
                 var2 = SectorCacheStore.a("hs_name", (byte) -127);
                 if (var2 != null) {
@@ -2624,15 +2624,15 @@ abstract class c extends GameApplet {
                 }
                 var2 = SectorCacheStore.a("members_expansion_benefits,0", (byte) -127);
                 if (var2 != null) {
-                  n.field_B[0] = GzipInflater.a(var2, (byte) 93);
+                  AlphaWidgetContainer.field_B[0] = GzipInflater.a(var2, (byte) 93);
                 }
                 var2 = SectorCacheStore.a("members_expansion_benefits,1", (byte) -127);
                 if (var2 != null) {
-                  n.field_B[1] = GzipInflater.a(var2, (byte) 109);
+                  AlphaWidgetContainer.field_B[1] = GzipInflater.a(var2, (byte) 109);
                 }
                 var2 = SectorCacheStore.a("members_expansion_benefits,2", (byte) -127);
                 if (var2 != null) {
-                  n.field_B[2] = GzipInflater.a(var2, (byte) 121);
+                  AlphaWidgetContainer.field_B[2] = GzipInflater.a(var2, (byte) 121);
                 }
                 var2 = SectorCacheStore.a("members_expansion_price_top", (byte) -127);
                 if (var2 != null) {
@@ -2744,7 +2744,7 @@ abstract class c extends GameApplet {
                 }
                 var2 = SectorCacheStore.a("fs_button_members", (byte) -127);
                 if (null != var2) {
-                  ck.field_I = GzipInflater.a(var2, (byte) 120);
+                  LabeledWidgetContainer.field_I = GzipInflater.a(var2, (byte) 120);
                 }
                 var2 = SectorCacheStore.a("fs_unavailable", (byte) -127);
                 if (null != var2) {
@@ -3389,13 +3389,13 @@ abstract class c extends GameApplet {
         int var3_intLifetime2;
         var5 = Main.field_T;
         try {
-          if (wc.field_A != null) {
+          if (DropTargetWidgetContainer.field_A != null) {
             if (null == DiskCacheWorker.field_a) {
               var3 = af.t(3);
               var4_ref_java_awt_Dimension = var3.getSize();
-              wc.field_A.a(var4_ref_java_awt_Dimension.height, (byte) 115, var4_ref_java_awt_Dimension.width);
+              DropTargetWidgetContainer.field_A.a(var4_ref_java_awt_Dimension.height, (byte) 115, var4_ref_java_awt_Dimension.width);
             }
-            wc.field_A.b(5718);
+            DropTargetWidgetContainer.field_A.b(5718);
           }
           i.a(-125);
           rf.c(-54);
@@ -3406,7 +3406,7 @@ abstract class c extends GameApplet {
           if (Main.field_V != null) {
             eg.field_f = Main.field_V.pollRotation(-119);
           }
-          if (g.j(7)) {
+          if (DequeWidgetContainer.j(7)) {
             var3_int = 1200 * SecondaryNodeDeque.a(22018);
             if (this.field_v ||
               !(var3_int >= PasswordValidator.h(-1)) &&
@@ -3415,7 +3415,7 @@ abstract class c extends GameApplet {
               mc.a((byte) -128);
               wd.a(31668);
               AccountServiceResult.a(2, -9, jc.field_S);
-              wc.j(-9636);
+              DropTargetWidgetContainer.j(-9636);
               ve.field_a = true;
               mf.field_j = 15000L + id.correctedCurrentTimeMillis(74);
             }
@@ -3440,7 +3440,7 @@ abstract class c extends GameApplet {
           var3_intLifetime2 = 14 / ((param0 - 5) / 57);
           if (-1 != BitPacketBuffer.field_n &&
             BitPacketBuffer.field_n != 0) {
-            if (10 > g.field_A) {
+            if (10 > DequeWidgetContainer.field_A) {
               if (BitPacketBuffer.field_n == 3) {
                 this.a((byte) -115, "js5crc");
                 decompiledFrameRemainder1 = (var5 != 0);
@@ -3521,21 +3521,21 @@ abstract class c extends GameApplet {
             !SpriteGeometry.b((byte) 34)) {
             sg.field_b = false;
           }
-          if (g.field_A == 0 &&
+          if (DequeWidgetContainer.field_A == 0 &&
             eh.a(37)) {
-            g.field_A = 1;
+            DequeWidgetContainer.field_A = 1;
           }
-          if (g.field_A == 1) {
+          if (DequeWidgetContainer.field_A == 1) {
             if (EditableTextField.field_I != 0) {
               lb.field_a = aj.a(1, jj.field_b);
             }
-            jk.field_c = qi.a(true, eb.field_f, 1, false, 2147483647);
-            aa.field_db = qi.a(true, jh.field_b, 1, false, 2147483647);
-            sg.field_a = qi.a(true, ia.field_e, 1, false, 2147483647);
-            g.field_A = 2;
+            jk.field_c = DraggableWidgetContainer.a(true, eb.field_f, 1, false, 2147483647);
+            aa.field_db = DraggableWidgetContainer.a(true, jh.field_b, 1, false, 2147483647);
+            sg.field_a = DraggableWidgetContainer.a(true, ia.field_e, 1, false, 2147483647);
+            DequeWidgetContainer.field_A = 2;
             EditableTextField.field_H = jk.field_c;
           }
-          if (g.field_A == 2) {
+          if (DequeWidgetContainer.field_A == 2) {
             if (null != lb.field_a &&
               lb.field_a.ensureIndexLoaded(4)) {
               if (lb.field_a.hasGroupName(0, "")) {
@@ -3552,15 +3552,15 @@ abstract class c extends GameApplet {
               }
             }
             if (lb.field_a == null) {
-              g.field_A = 3;
+              DequeWidgetContainer.field_A = 3;
             }
           }
-          if (g.field_A == 3 &&
+          if (DequeWidgetContainer.field_A == 3 &&
             uh.a(jk.field_c, sg.field_a, aa.field_db, 2) &&
             sk.a((byte) 33, sg.field_a)) {
             sg.a((byte) -12);
             ad.a(51);
-            ck.field_G = FrameTimer.field_c;
+            LabeledWidgetContainer.field_G = FrameTimer.field_c;
             tj.field_K = false;
             cj.a(aa.field_db, RichTextWidget.field_F, sg.field_a, jk.field_c, 126);
             if (PacketBuffer.field_h ||
@@ -3582,22 +3582,22 @@ abstract class c extends GameApplet {
             aa.field_db = null;
             jk.field_c = null;
             sg.field_a = null;
-            qg.a((java.applet.Applet) (this), 18478);
+            SingleChildWidgetContainer.a((java.applet.Applet) (this), 18478);
             AccountNameAvailabilityValidator.b((byte) -77);
-            g.field_A = 10;
+            DequeWidgetContainer.field_A = 10;
           }
-          if (10 == g.field_A) {
+          if (10 == DequeWidgetContainer.field_A) {
             if (0 != EditableTextField.field_I) {
               ue.field_a = aj.a(1, bf.field_a);
             }
-            g.field_A = 11;
+            DequeWidgetContainer.field_A = 11;
           }
-          if (g.field_A == 11) {
+          if (DequeWidgetContainer.field_A == 11) {
             boolean decompiledSharedTail0 = (null != ue.field_a &&
               (!(ue.field_a.ensureIndexLoaded(4)) ||
               !(ue.field_a.tryLoadAllGroups((byte) 56))));
             if (!decompiledSharedTail0) {
-              g.field_A = 12;
+              DequeWidgetContainer.field_A = 12;
               kj.field_P = true;
               decompiledSharedTail0 = (var5 != 0);
             }
@@ -3605,18 +3605,18 @@ abstract class c extends GameApplet {
               ug.a(0.0f, 106, pf.a(ue.field_a, FullscreenFocusCanvas.field_d, MatchingFieldValidator.field_j, true));
             }
           }
-          if (12 == g.field_A &&
+          if (12 == DequeWidgetContainer.field_A &&
             !kj.field_P) {
-            g.field_A = 13;
+            DequeWidgetContainer.field_A = 13;
           }
-          if (g.field_A == 13) {
+          if (DequeWidgetContainer.field_A == 13) {
             var4 = 1;
             if (null != rh.field_l) {
               var4 = rh.field_l.a(110) ? 1 : 0;
               ug.a(rh.field_l.field_g, 115, rh.field_l.field_i);
             }
             if (var4 != 0) {
-              g.field_A = 20;
+              DequeWidgetContainer.field_A = 20;
             }
           }
           if (!param1 &&

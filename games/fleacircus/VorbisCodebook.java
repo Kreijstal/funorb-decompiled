@@ -11,7 +11,7 @@ final class VorbisCodebook {
 
     private final static int lookup1Values(int param0, int param1) {
         int var2 = 0;
-        for (var2 = (int)Math.pow((double)param0, 1.0 / (double)param1) + 1; tf.integerPower(var2, param1, -2) > param0; var2--) {
+        for (var2 = (int)Math.pow((double)param0, 1.0 / (double)param1) + 1; AlphaWidgetContainer.integerPower(var2, param1, -2) > param0; var2--) {
         }
         return var2;
     }
@@ -163,7 +163,7 @@ final class VorbisCodebook {
           var2 = 0;
           var3_int = hk.readBits(5) + 1;
           while (var2 < this.field_a) {
-            var4_int = hk.readBits(dk.bitLength(this.field_a - var2, (byte) -57));
+            var4_int = hk.readBits(SingleChildWidgetContainer.bitLength(this.field_a - var2, (byte) -57));
             for (var5 = 0; var5 < var4_int; var5++) {
               incrementValue$0 = var2;
               var2++;

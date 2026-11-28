@@ -33,11 +33,11 @@ final class wm {
         }
         String var1 = vg.c((byte) 104);
         mk.field_b = new LoginPanel(var1, (String) null, true, false, false);
-        qe.field_g.b(-3264, MouseWheelInput.field_d);
+        qe.field_g.showDialog(-3264, MouseWheelInput.field_d);
         if (param0 != -12) {
           field_d = -98L;
         }
-        MouseWheelInput.field_d.a((qm) (mk.field_b), (byte) -50);
+        MouseWheelInput.field_d.a((UiWidget) (mk.field_b), (byte) -50);
         MouseWheelInput.field_d.j(param0 + 11);
     }
 

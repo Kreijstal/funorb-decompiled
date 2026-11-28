@@ -316,7 +316,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
 
     public final void stop() {
         if (vk.field_B != this ||
-          fq.field_E) {
+          AlphaWidgetContainer.field_E) {
           return;
         }
         try {
@@ -691,7 +691,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
         RuntimeException decompiledCaughtException = null;
         try {
           if (this == vk.field_B &&
-            !fq.field_E) {
+            !AlphaWidgetContainer.field_E) {
             DebouncedFieldValidator.field_d = km.correctedCurrentTimeMillis(-1);
             ub.sleepMillis(1976, 5000L);
             FullscreenFocusCanvas.field_f = null;
@@ -804,7 +804,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
         RuntimeException decompiledCaughtException = null;
         try {
           if (this == vk.field_B &&
-            !fq.field_E) {
+            !AlphaWidgetContainer.field_E) {
             DebouncedFieldValidator.field_d = 0L;
             return;
           }
@@ -890,7 +890,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
         RuntimeException var2_ref = null;
         try {
           if (vk.field_B == this &&
-            !fq.field_E) {
+            !AlphaWidgetContainer.field_E) {
             cf.field_c = true;
             if (fn.field_b &&
               km.correctedCurrentTimeMillis(-1) - aa.field_Q > 1000L) {
@@ -1047,10 +1047,10 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
           }
           var3_ref = this;
           synchronized (var3_ref) {
-            if (fq.field_E) {
+            if (AlphaWidgetContainer.field_E) {
               return;
             }
-            fq.field_E = true;
+            AlphaWidgetContainer.field_E = true;
           }
           if (wj.field_g != null) {
             wj.field_g.destroy();

@@ -60,9 +60,9 @@ final class qk {
               if (var3 == 1) {
                 Bzip2Decoder.decompress(var14, var6, param1, var4, 9);
               } else {
-                var8 = al.field_F;
+                var8 = ModalDialog.field_F;
                 synchronized (var8) {
-                  al.field_F.decompress(8, var14, var10);
+                  ModalDialog.field_F.decompress(8, var14, var10);
                 }
               }
               stackIn_21_0 = var7;

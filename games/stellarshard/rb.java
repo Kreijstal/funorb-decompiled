@@ -121,7 +121,7 @@ abstract class rb extends GameApplet {
             }
           }
           if (var4 == 2) {
-            var5_intLifetime1 = GameEntity.a(tc.c(-5), kg.e(false), param2, rb.j(5), this.field_v, wh.a((byte) 88), AccountCreationResultPanel.i((byte) 113));
+            var5_intLifetime1 = GameEntity.a(tc.c(-5), LabeledWidgetContainer.e(false), param2, rb.j(5), this.field_v, wh.a((byte) 88), AccountCreationResultPanel.i((byte) 113));
             if (var5_intLifetime1 != -1) {
               pk.a(NodeHashTableIterator.field_a, fc.field_b, var5_intLifetime1, (byte) 125);
               NodeHashTableIterator.field_a = null;
@@ -129,9 +129,9 @@ abstract class rb extends GameApplet {
             }
           }
           if (3 == var4) {
-            if (ei.field_F != -1 &&
-              ei.field_F != 0) {
-              ei.field_F = -1;
+            if (ModalDialogHost.field_F != -1 &&
+              ModalDialogHost.field_F != 0) {
+              ModalDialogHost.field_F = -1;
               ee.a(112);
             }
             if (!param1) {
@@ -173,7 +173,7 @@ abstract class rb extends GameApplet {
             ResourceArchive.clearSessionAndReloadPage(hf.a((byte) -85), (byte) 123);
           }
           if (var4 == 9) {
-            of.a((byte) 99, hf.a((byte) -101));
+            DropTargetWidgetContainer.a((byte) 99, hf.a((byte) -101));
           }
           if (var4 == 10) {
             pg.field_fb.f(17, 950);
@@ -356,38 +356,38 @@ abstract class rb extends GameApplet {
             vc.field_a = ih.correctedCurrentTimeMillis((byte) -98) + 15000L;
           }
         }
-        if (ei.field_F == -1 ||
-          ei.field_F == 0) {
-          stackIn_24_0 = (-1 != ei.field_F) ? 0 : 1;
+        if (ModalDialogHost.field_F == -1 ||
+          ModalDialogHost.field_F == 0) {
+          stackIn_24_0 = (-1 != ModalDialogHost.field_F) ? 0 : 1;
           var3Lifetime1 = stackIn_24_0;
-          ei.field_F = fa.d(0);
+          ModalDialogHost.field_F = fa.d(0);
           if (var3Lifetime1 != 0 &&
-            ei.field_F == 0 &&
+            ModalDialogHost.field_F == 0 &&
             eg.field_d == 11 &&
             !il.e(32525)) {
             db.a(111);
           }
-          if (ei.field_F != -1 &&
-            ei.field_F != 0) {
+          if (ModalDialogHost.field_F != -1 &&
+            ModalDialogHost.field_F != 0) {
             vc.field_a = ih.correctedCurrentTimeMillis((byte) -98) + 15000L;
           }
         }
         if (param0 <= 15) {
           field_t = (String) null;
         }
-        if (-1 != ei.field_F &&
-          ei.field_F != 0) {
+        if (-1 != ModalDialogHost.field_F &&
+          ModalDialogHost.field_F != 0) {
           if (DiskCacheWorker.field_f < 10) {
-            if (ei.field_F == 3) {
+            if (ModalDialogHost.field_F == 3) {
               this.a(1, "js5crc");
             } else {
-              if (4 == ei.field_F) {
+              if (4 == ModalDialogHost.field_F) {
                 this.a(1, "js5io");
               } else {
-                if (2 == ei.field_F) {
+                if (2 == ModalDialogHost.field_F) {
                   this.a(1, "js5connect_full");
                 } else {
-                  if (5 != ei.field_F) {
+                  if (5 != ModalDialogHost.field_F) {
                     this.a(1, "js5connect");
                   } else {
                     this.a(1, "outofdate");
@@ -398,15 +398,15 @@ abstract class rb extends GameApplet {
           } else {
             if (eg.field_d >= 10) {
               pk.a(4);
-              if (ei.field_F == 3) {
+              if (ModalDialogHost.field_F == 3) {
                 wl.a(256, -8440, al.field_a);
               } else {
-                if (ei.field_F == 4) {
+                if (ModalDialogHost.field_F == 4) {
                   wl.a(256, -8440, KeyHandler.field_d);
                 } else {
-                  if (2 != ei.field_F) {
-                    if (ei.field_F != 5) {
-                      wl.a(256, -8440, ui.field_B);
+                  if (2 != ModalDialogHost.field_F) {
+                    if (ModalDialogHost.field_F != 5) {
+                      wl.a(256, -8440, ModalDialog.field_B);
                     } else {
                       wl.a(5, -8440, DualLinkNode.field_n);
                     }
@@ -419,18 +419,18 @@ abstract class rb extends GameApplet {
             }
           }
         }
-        if ((ei.field_F != -1 &&
-          ei.field_F != 0 ||
+        if ((ModalDialogHost.field_F != -1 &&
+          ModalDialogHost.field_F != 0 ||
           il.e(32525)) &&
           ih.correctedCurrentTimeMillis((byte) -98) >= vc.field_a) {
           BufferedRandomAccessFile.field_m = false;
-          if (ei.field_F != -1 &&
-            ei.field_F != 0) {
-            ei.field_F = -1;
+          if (ModalDialogHost.field_F != -1 &&
+            ModalDialogHost.field_F != 0) {
+            ModalDialogHost.field_F = -1;
             ee.a(88);
           }
         }
-        if (ei.field_F == 0 &&
+        if (ModalDialogHost.field_F == 0 &&
           !il.e(32525)) {
           b.field_v = false;
         }
@@ -844,7 +844,7 @@ abstract class rb extends GameApplet {
           return var2;
         }
         if (11 == eg.field_d &&
-          ei.field_F == 0) {
+          ModalDialogHost.field_F == 0) {
           db.a(-113);
         }
         return var2;

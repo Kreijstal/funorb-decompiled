@@ -59,7 +59,7 @@ final class nc extends UiWidget {
         this.a(15035);
     }
 
-    final void a(int param0, byte param1, int param2, int param3) {
+    final void drawWidget(int param0, byte param1, int param2, int param3) {
         if (param0 != 0) {
           return;
         }
@@ -76,11 +76,11 @@ final class nc extends UiWidget {
         }
     }
 
-    final void b(int param0, int param1, int param2, int param3, int param4) {
+    final void setBounds(int param0, int param1, int param2, int param3, int param4) {
         if (param4 != 23987) {
           this.field_K = -78;
         }
-        super.b(param0, param1, param2, param3, param4 + 0);
+        super.setBounds(param0, param1, param2, param3, param4 + 0);
         this.a(15035);
     }
 
@@ -110,7 +110,7 @@ final class nc extends UiWidget {
         TextLayout.field_b = param1;
     }
 
-    final void a(int param0, boolean param1, int param2, UiWidget param3) {
+    final void updatePointer(int param0, boolean param1, int param2, UiWidget param3) {
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         String stackIn_9_2 = null;
@@ -271,7 +271,7 @@ final class nc extends UiWidget {
         this.field_L = param6;
         this.field_M = param4;
         this.field_D = param5;
-        this.b(param2, param0, param1, param3, 23987);
+        this.setBounds(param2, param0, param1, param3, 23987);
     }
 
     static {

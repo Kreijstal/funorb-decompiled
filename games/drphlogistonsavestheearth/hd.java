@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class hd extends vg {
+final class hd extends UiWidget {
     boolean field_E;
     private int field_A;
     static String field_O;
@@ -67,8 +67,8 @@ final class hd extends vg {
         return var14;
     }
 
-    final void a(int param0, int param1, int param2, int param3, int param4) {
-        super.a(param0, param1, param2, param3, param4);
+    final void setBounds(int param0, int param1, int param2, int param3, int param4) {
+        super.setBounds(param0, param1, param2, param3, param4);
         this.f(2);
     }
 
@@ -76,7 +76,7 @@ final class hd extends vg {
         this(param0, param1, param2, param3, param4, param5, param6, param5 >> 1 & 8355711, (16711422 & param6) >> 1);
     }
 
-    final void a(int param0, int param1, byte param2, int param3) {
+    final void drawWidget(int param0, int param1, byte param2, int param3) {
         if (0 != param1) {
           return;
         }
@@ -249,7 +249,7 @@ final class hd extends vg {
         }
     }
 
-    final void a(vg param0, int param1, int param2, byte param3) {
+    final void updatePointer(UiWidget param0, int param1, int param2, byte param3) {
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         String stackIn_9_2 = null;
@@ -319,8 +319,8 @@ final class hd extends vg {
         if (!param0) {
           return (RgbSprite[]) null;
         }
-        RgbSprite[] var1 = new RgbSprite[bd.field_M];
-        for (var2 = 0; var2 < bd.field_M; var2++) {
+        RgbSprite[] var1 = new RgbSprite[ModalDialog.field_M];
+        for (var2 = 0; var2 < ModalDialog.field_M; var2++) {
           var3 = gf.field_o[var2] * RichTextWidget.field_J[var2];
           var4 = a.field_e[var2];
           var5 = new int[var3];
@@ -404,7 +404,7 @@ final class hd extends vg {
         this.field_N = param5;
         this.field_K = param8;
         this.field_J = param4;
-        this.a(param1, param3, param0, 16535, param2);
+        this.setBounds(param1, param3, param0, 16535, param2);
     }
 
     static {

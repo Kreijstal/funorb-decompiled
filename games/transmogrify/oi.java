@@ -6,7 +6,7 @@ final class oi extends IntrusiveNode {
     static String field_j;
     static ResourceArchive field_g;
     static long field_i;
-    static da field_k;
+    static ModalDialogHost field_k;
     static String[] field_l;
     int field_h;
 

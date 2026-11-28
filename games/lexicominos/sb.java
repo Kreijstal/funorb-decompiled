@@ -15,7 +15,7 @@ final class sb {
         wj.c(-6399);
         DualLinkNode.field_k = true;
         SectorCacheStore.field_g = true;
-        ug.field_A.h(0);
+        ug.field_A.closeAllDialogs(0);
         if (param0 >= -121) {
           return;
         }
@@ -53,7 +53,7 @@ final class sb {
             AccountNameAvailabilityValidator.field_n = param10;
             bl.field_b = param6;
             ig.field_b = param7;
-            mg.field_y = param2;
+            SingleChildWidgetContainer.field_y = param2;
             MidiPcmStream.field_F = param13;
             nj.field_a = param9;
             if (vl.field_a.field_w != null) {

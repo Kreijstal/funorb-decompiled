@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class wk extends ri {
+abstract class wk extends ModalDialog {
     private int field_K;
     private int field_J;
     static int field_G;
@@ -35,7 +35,7 @@ abstract class wk extends ri {
         if (this.field_M <= 0) {
           return;
         }
-        this.c(-463076575, this.field_L, this.field_F);
+        this.setCenteredSize(-463076575, this.field_L, this.field_F);
         this.field_M = 0;
         this.l(-4993);
         int var2 = -109 / ((param0 - 31) / 35);
@@ -158,7 +158,7 @@ abstract class wk extends ri {
         }
     }
 
-    boolean e(byte param0) {
+    boolean advanceDialogAnimation(byte param0) {
         int var2 = 0;
         int var3 = 0;
         int fieldTemp$0 = 0;
@@ -181,22 +181,22 @@ abstract class wk extends ri {
             this.field_M = 0;
             this.l(-4993);
           }
-          this.c(-463076575, var2, var3);
+          this.setCenteredSize(-463076575, var2, var3);
         }
-        return super.e((byte) 21);
+        return super.advanceDialogAnimation((byte) 21);
     }
 
-    boolean f(byte param0) {
+    boolean snapDialogAnimation(byte param0) {
         if (param0 != -33) {
           return false;
         }
         this.i((byte) 117);
-        return super.f((byte) -33);
+        return super.snapDialogAnimation((byte) -33);
     }
 
     final void a(byte param0, int param1, int param2, int param3) {
         if (0 >= param1) {
-          this.c(-463076575, param3, param2);
+          this.setCenteredSize(-463076575, param3, param2);
           return;
         }
         this.field_L = param3;
@@ -210,7 +210,7 @@ abstract class wk extends ri {
         this.field_M = param1;
     }
 
-    wk(pf param0, int param1, int param2) {
+    wk(ModalDialogHost param0, int param1, int param2) {
         super(param0, param1, param2);
         this.field_M = 0;
         this.field_K = 0;

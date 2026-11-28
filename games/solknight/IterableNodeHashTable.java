@@ -194,7 +194,7 @@ final class IterableNodeHashTable implements Iterable {
           }
           var11 = param2.requestFullscreenEnter(param5, param3, param4, (byte) -106, param1);
           while (0 == var11.status) {
-            i.sleepMillis((byte) 89, 10L);
+            ModalDialogHost.sleepMillis((byte) 89, 10L);
           }
           var7 = (java.awt.Frame) (var11.result);
           if (var7 == null) {

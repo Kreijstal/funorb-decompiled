@@ -49,7 +49,7 @@ final class pg {
             return false;
           }
           var8 = new AccountCreationResultPanel(DisplayNameSelectionPanel.field_N, param1);
-          DisplayNameSelectionPanel.field_N.b(var8, false);
+          DisplayNameSelectionPanel.field_N.showDialog(var8, false);
           if (param0 != 2) {
             pg.a(103);
           }

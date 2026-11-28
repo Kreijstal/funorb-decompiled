@@ -43,7 +43,7 @@ final class ei {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw dd.wrapClientException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
+          throw DraggableWidgetContainer.wrapClientException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
         }
     }
 
@@ -82,10 +82,10 @@ final class ei {
               rc.field_a.drawParagraph(cj.field_c, 245, 199, 365, 139, 16777215, -1, 1, 1, 0);
             }
           }
-          if (og.field_b > h.field_A) {
+          if (og.field_b > LabeledWidgetContainer.field_A) {
             var8 = TextLayout.field_b[MidiPcmStream.field_u];
             if (var8 != null) {
-              var2_int = h.field_A * (var8.field_s + 60) / og.field_b;
+              var2_int = LabeledWidgetContainer.field_A * (var8.field_s + 60) / og.field_b;
               var3 = -30 + var2_int;
               if (bh.field_b) {
                 jf.a((byte) -20, var3 * -256 / 30, var8, 256 * (var8.field_s - var3) / 30, 199, 245);
@@ -120,7 +120,7 @@ final class ei {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw dd.wrapClientException((Throwable) ((Object) var1), "ei.B(" + param0 + ')');
+          throw DraggableWidgetContainer.wrapClientException((Throwable) ((Object) var1), "ei.B(" + param0 + ')');
         }
     }
 

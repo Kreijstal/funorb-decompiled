@@ -79,14 +79,14 @@ final class TextHotspotBounds extends IntrusiveNode {
           if (DebouncedFieldValidator.field_h == null) {
             return;
           }
-          var4 = db.field_J;
+          var4 = ModalDialog.field_J;
           synchronized (var4) {
             DebouncedFieldValidator.field_h.a(param1, true, -1);
             if (param3 == AccountRequestState.field_b) {
               return;
             }
             DebouncedFieldValidator.field_h.stopPlayback(-398);
-            db.field_J.flushAndMarkDrainCheck();
+            ModalDialog.field_J.flushAndMarkDrainCheck();
             AccountRequestState.field_b = param3;
             if (AccountRequestState.field_b != null) {
               DebouncedFieldValidator.field_h.a(param2, 68, AccountRequestState.field_b);

@@ -19,12 +19,12 @@ final class wh {
 
     final static void a(int param0, byte param1) {
         IntrusiveNode.field_a = (param0 & 52) >> 4;
-        jf.field_K = param0 >> 2 & 3;
+        LabeledWidgetContainer.field_K = param0 >> 2 & 3;
         if (IntrusiveNode.field_a > 2) {
           IntrusiveNode.field_a = 2;
           fi.field_b = 3 & param0;
-          if (!(jf.field_K <= 2)) {
-            jf.field_K = 2;
+          if (!(LabeledWidgetContainer.field_K <= 2)) {
+            LabeledWidgetContainer.field_K = 2;
           }
           if (fi.field_b <= 2) {
             if (param1 == 63) {
@@ -41,8 +41,8 @@ final class wh {
           return;
         }
         fi.field_b = 3 & param0;
-        if (!(jf.field_K <= 2)) {
-          jf.field_K = 2;
+        if (!(LabeledWidgetContainer.field_K <= 2)) {
+          LabeledWidgetContainer.field_K = 2;
         }
         if (fi.field_b > 2) {
           fi.field_b = 2;

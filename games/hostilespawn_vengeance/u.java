@@ -91,23 +91,23 @@ final class u {
           var6_int = 256 / param3;
           var7 = (int)((double)var6_int * Math.random());
           for (var8 = 0; var8 < 256; var8 = var8 + var6_int) {
-            jn.field_F[ib.field_c].field_c = (double)(var7 + var8);
-            jn.field_F[ib.field_c].field_j.copyCoordinatesFrom((byte) 46, param1);
-            jn.field_F[ib.field_c].field_l.a(param4, -28860);
-            jn.field_F[ib.field_c].field_l.b(12.0, (double)var8, 118);
-            jn.field_F[ib.field_c].b((byte) 117);
-            jn.field_F[ib.field_c].field_e = 0;
-            jn.field_F[ib.field_c].field_h = 0;
-            jn.field_F[ib.field_c].field_i = param5;
+            AlphaWidgetContainer.field_F[ib.field_c].field_c = (double)(var7 + var8);
+            AlphaWidgetContainer.field_F[ib.field_c].field_j.copyCoordinatesFrom((byte) 46, param1);
+            AlphaWidgetContainer.field_F[ib.field_c].field_l.a(param4, -28860);
+            AlphaWidgetContainer.field_F[ib.field_c].field_l.b(12.0, (double)var8, 118);
+            AlphaWidgetContainer.field_F[ib.field_c].b((byte) 117);
+            AlphaWidgetContainer.field_F[ib.field_c].field_e = 0;
+            AlphaWidgetContainer.field_F[ib.field_c].field_h = 0;
+            AlphaWidgetContainer.field_F[ib.field_c].field_i = param5;
             ib.field_c = ib.field_c + 1;
-            jn.field_F[ib.field_c].field_c = (double)(var8 + var7);
-            jn.field_F[ib.field_c].field_j.copyCoordinatesFrom((byte) 46, param1);
-            jn.field_F[ib.field_c].field_l.a(param4, -28860);
-            jn.field_F[ib.field_c].field_l.b(12.0, (double)var8, 126);
-            jn.field_F[ib.field_c].b((byte) 117);
-            jn.field_F[ib.field_c].field_e = 0;
-            jn.field_F[ib.field_c].field_h = 0;
-            jn.field_F[ib.field_c].field_i = param0;
+            AlphaWidgetContainer.field_F[ib.field_c].field_c = (double)(var8 + var7);
+            AlphaWidgetContainer.field_F[ib.field_c].field_j.copyCoordinatesFrom((byte) 46, param1);
+            AlphaWidgetContainer.field_F[ib.field_c].field_l.a(param4, -28860);
+            AlphaWidgetContainer.field_F[ib.field_c].field_l.b(12.0, (double)var8, 126);
+            AlphaWidgetContainer.field_F[ib.field_c].b((byte) 117);
+            AlphaWidgetContainer.field_F[ib.field_c].field_e = 0;
+            AlphaWidgetContainer.field_F[ib.field_c].field_h = 0;
+            AlphaWidgetContainer.field_F[ib.field_c].field_i = param0;
             ib.field_c = ib.field_c + 1;
           }
           if (param2) {

@@ -65,7 +65,7 @@ final class dl {
           var5_int = param4.getGroupIdByName(param3, false);
           var7 = -19 % ((param1 - 3) / 59);
           var6 = param4.getFileIdByName(param2, true, var5_int);
-          stackIn_1_0 = qd.a(var5_int, var6, param0, (byte) 108, param4);
+          stackIn_1_0 = ModalDialog.a(var5_int, var6, param0, (byte) 108, param4);
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

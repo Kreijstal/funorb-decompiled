@@ -24,8 +24,8 @@ final class t {
         try {
           try {
             var9 = DiskCacheWorker.field_g.getGraphics();
-            if (bd.field_S == null) {
-              bd.field_S = new java.awt.Font("Helvetica", 1, 13);
+            if (ModalDialog.field_S == null) {
+              ModalDialog.field_S = new java.awt.Font("Helvetica", 1, 13);
             }
             if (param0) {
               var9.setColor(java.awt.Color.black);
@@ -45,7 +45,7 @@ final class t {
               var10.setColor(java.awt.Color.black);
               var10.drawRect(1, 1, 301, 31);
               var10.fillRect(param1 * 3 + 2, 2, 300 - param1 * 3, 30);
-              var10.setFont(bd.field_S);
+              var10.setFont(ModalDialog.field_S);
               var10.setColor(java.awt.Color.white);
               var10.drawString(param2, (-(param2.length() * 6) + 304) / 2, 22);
               var9.drawImage(ac.field_h, -152 + fg.field_h / 2, ByteStorage.field_a / param3 - 18, (java.awt.image.ImageObserver) null);
@@ -60,14 +60,14 @@ final class t {
               var9.setColor(java.awt.Color.black);
               var9.drawRect(var7 + 1, 1 + var8, 301, 31);
               var9.fillRect(param1 * 3 + (2 + var7), 2 + var8, -(3 * param1) + 300, 30);
-              var9.setFont(bd.field_S);
+              var9.setFont(ModalDialog.field_S);
               var9.setColor(java.awt.Color.white);
               var9.drawString(param2, var7 + (304 - param2.length() * 6) / 2, var8 + 22);
             }
             if (null == pc.field_d) {
               return;
             }
-            var9.setFont(bd.field_S);
+            var9.setFont(ModalDialog.field_S);
             var9.setColor(java.awt.Color.white);
             var9.drawString(pc.field_d, fg.field_h / 2 - pc.field_d.length() * 6 / 2, ByteStorage.field_a / 2 - 26);
             return;

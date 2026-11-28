@@ -175,7 +175,7 @@ class DualLinkNode extends IntrusiveNode {
                 var18.field_y[var5] = -5;
               }
             }
-            mg.field_N.addFirst(var18, false);
+            LabeledWidgetContainer.field_N.addFirst(var18, false);
             return;
           } catch (java.lang.RuntimeException decompiledCaughtParameter5) {
             decompiledCaughtException = decompiledCaughtParameter5;

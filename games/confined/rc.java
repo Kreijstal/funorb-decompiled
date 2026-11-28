@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class rc implements fe {
+final class rc implements WidgetRenderer {
     private int field_f;
     static int field_i;
     private int field_e;
@@ -42,8 +42,8 @@ final class rc implements fe {
         }
     }
 
-    public final void a(byte param0, int param1, boolean param2, fj param3, int param4) {
-        fj stackIn_5_0 = null;
+    public final void paintWidget(byte param0, int param1, boolean param2, UiWidget param3, int param4) {
+        UiWidget stackIn_5_0 = null;
         RuntimeException stackIn_22_0 = null;
         StringBuilder stackIn_22_1 = null;
         String stackIn_23_2 = null;
@@ -58,7 +58,7 @@ final class rc implements fe {
         var11 = Confined.field_J ? 1 : 0;
         try {
           if (param3 instanceof nj) {
-            stackIn_5_0 = (fj) (param3);
+            stackIn_5_0 = (UiWidget) (param3);
           } else {
             stackIn_5_0 = null;
           }

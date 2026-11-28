@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class jg extends bh implements WidgetActivationListener {
+final class jg extends ArrayWidgetContainer implements WidgetActivationListener {
     static int field_K;
     static int field_I;
     static String field_L;
@@ -24,18 +24,18 @@ final class jg extends bh implements WidgetActivationListener {
         }
     }
 
-    final void a(int param0, int param1, int param2, int param3) {
-        super.a(param0, param1, -115, param3);
+    final void drawWidget(int param0, int param1, int param2, int param3) {
+        super.drawWidget(param0, param1, -115, param3);
         if (param2 <= -80) {
           rc.field_a.drawString(gi.field_b, this.field_u + (param3 + 4), rc.field_a.field_C + (this.field_r + (param0 + 4)), 16777215, -1);
           return;
         }
-        this.a(-61, -119, -11, -21);
+        this.drawWidget(-61, -119, -11, -21);
         rc.field_a.drawString(gi.field_b, this.field_u + (param3 + 4), rc.field_a.field_C + (this.field_r + (param0 + 4)), 16777215, -1);
     }
 
     final static void n(int param0) {
-        kn.field_L = true;
+        SingleChildWidgetContainer.field_L = true;
         if (param0 >= -50) {
           return;
         }
@@ -71,18 +71,18 @@ final class jg extends bh implements WidgetActivationListener {
 
     final void a(int param0) {
         int var2 = 250;
-        this.field_J.a(20 + (this.field_C - 25) >> 1, 34, 25, 140, this.field_y - var2 >> 1);
-        this.field_N.a(2 + (-30 + (this.field_C + 20) >> 1), 34, param0, 100, 10 + (140 + (this.field_y - var2 >> 1)));
+        this.field_J.setBounds(20 + (this.field_C - 25) >> 1, 34, 25, 140, this.field_y - var2 >> 1);
+        this.field_N.setBounds(2 + (-30 + (this.field_C + 20) >> 1), 34, param0, 100, 10 + (140 + (this.field_y - var2 >> 1)));
     }
 
     jg(int param0, int param1, int param2, int param3) {
-        super(param0, param1, param2, param3, (jm) null);
+        super(param0, param1, param2, param3, (WidgetRenderer) null);
         this.field_J = new ih(new wc(10000536), ej.field_f, 0, 0, 140, 25);
         this.field_J.a(false, new BirthDateValidator());
-        this.field_N = new InteractiveWidget(sg.field_e, (rg) (this));
-        this.field_E = new mf[]{(mf) ((Object) this.field_J), (mf) ((Object) this.field_N)};
-        this.field_N.field_n = (jm) ((Object) new sf());
-        this.c((byte) 113);
+        this.field_N = new InteractiveWidget(sg.field_e, (WidgetEventListener) (this));
+        this.field_E = new UiWidget[]{(UiWidget) ((Object) this.field_J), (UiWidget) ((Object) this.field_N)};
+        this.field_N.field_n = (WidgetRenderer) ((Object) new sf());
+        this.refreshLayout((byte) 113);
     }
 
     final static ci k(int param0) {
@@ -93,7 +93,7 @@ final class jg extends bh implements WidgetActivationListener {
         return ci.field_zb.field_Kb;
     }
 
-    final void a(int param0, int param1, mf param2, int param3) {
+    final void updatePointer(int param0, int param1, UiWidget param2, int param3) {
         RuntimeException var5 = null;
         InteractiveWidget stackIn_2_0 = null;
         boolean stackIn_3_1 = false;
@@ -102,7 +102,7 @@ final class jg extends bh implements WidgetActivationListener {
         String stackIn_9_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          super.a(param0, -103, param2, param3);
+          super.updatePointer(param0, -103, param2, param3);
           stackIn_2_0 = this.field_N;
           stackIn_3_1 = (this.field_J.getFieldValidator(-112).getValidationStatus(21314) == ProxyAuthenticationRequiredException.field_a);
           stackIn_2_0.field_H = stackIn_3_1;

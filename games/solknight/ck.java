@@ -25,7 +25,7 @@ final class ck {
             var2 = 3;
           } else {
             var2 = 2;
-            th.a((byte) -50, dj.field_k);
+            DropTargetWidgetContainer.a((byte) -50, dj.field_k);
           }
           if (null != fc.field_l) {
             return;

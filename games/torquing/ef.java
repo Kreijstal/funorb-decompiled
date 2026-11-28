@@ -11,8 +11,8 @@ final class ef {
         if (param4 >= 88) {
           if (Bzip2State.field_q <= param2 &&
             param2 <= LevelCompletionUpdate.field_p) {
-            param3 = ln.a(qg.field_z, RasterBuffer.field_e, param3, 111);
-            param0 = ln.a(qg.field_z, RasterBuffer.field_e, param0, 96);
+            param3 = ModalDialogHost.a(qg.field_z, RasterBuffer.field_e, param3, 111);
+            param0 = ModalDialogHost.a(qg.field_z, RasterBuffer.field_e, param0, 96);
             rh.a((byte) -111, param0, param2, param3, param1);
           }
           return;

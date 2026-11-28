@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class cj implements fe {
+final class cj implements WidgetRenderer {
     static int[] field_b;
     static String field_c;
     static boolean field_d;
@@ -63,7 +63,7 @@ final class cj implements fe {
         }
     }
 
-    public final void a(byte param0, int param1, boolean param2, fj param3, int param4) {
+    public final void paintWidget(byte param0, int param1, boolean param2, UiWidget param3, int param4) {
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
         String stackIn_13_2 = null;
@@ -84,7 +84,7 @@ final class cj implements fe {
             ((InteractiveWidget) (param3)).field_O) {
             var8.drawAdditive((-var8.field_t + param3.field_F >> 1) + (1 + var6_int), (param3.field_z - var8.field_x >> 1) + 1 + var7, 256);
           }
-          if (!param3.e((byte) -1)) {
+          if (!param3.isFocused((byte) -1)) {
             return;
           }
           tj.a(-4 + param3.field_z, 1, var6_int + 2, var7 + 2, param3.field_F - 4);

@@ -3,7 +3,7 @@
  */
 final class ah {
     static String field_a;
-    static oi field_b;
+    static DraggableWidgetContainer field_b;
     static String[] field_c;
 
     final static void a(boolean param0, int param1, int param2) {
@@ -31,7 +31,7 @@ final class ah {
         if (param0) {
           ah.clearStaticReferences(-19);
         }
-        lm.a(hc.field_a, (byte) -91);
+        UiWidget.a(hc.field_a, (byte) -91);
         re.b();
         SoftwareRasterizer.clearRaster();
         SecondaryNodeDequeIterator.a(439027688);

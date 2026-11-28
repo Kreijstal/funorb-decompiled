@@ -50,7 +50,7 @@ final class ek extends IntrusiveNode {
           BitPacketBuffer var4 = null;
           BitPacketBuffer var5 = null;
           if (null == de.field_q) {
-            de.field_q = pi.field_I.requestDirectSocket(ml.field_n, TextFieldValidator.field_o, 105);
+            de.field_q = DraggableWidgetContainer.field_I.requestDirectSocket(ml.field_n, TextFieldValidator.field_o, 105);
           }
           if (de.field_q.status == 0) {
             return false;
@@ -62,8 +62,8 @@ final class ek extends IntrusiveNode {
             tl.field_O = sg.field_b;
           } else {
             try {
-              uj.field_j = new BufferedSocket((java.net.Socket) (de.field_q.result), pi.field_I);
-              var4 = dh.field_N;
+              uj.field_j = new BufferedSocket((java.net.Socket) (de.field_q.result), DraggableWidgetContainer.field_I);
+              var4 = LabeledWidgetContainer.field_N;
               var5 = var4;
               nj.field_p.position = 0;
               stackIn_10_0 = (!param1) ? -1 : -2;
@@ -118,16 +118,16 @@ final class ek extends IntrusiveNode {
         if (null != el.field_sb) {
           el.field_sb.dispose();
           if (param0 == -2) {
-            if (k.field_J != null) {
-              k.field_J.dispose();
+            if (ModalDialogHost.field_J != null) {
+              ModalDialogHost.field_J.dispose();
             }
             return;
           }
           return;
         }
         if (param0 == -2) {
-          if (k.field_J != null) {
-            k.field_J.dispose();
+          if (ModalDialogHost.field_J != null) {
+            ModalDialogHost.field_J.dispose();
           }
           return;
         }

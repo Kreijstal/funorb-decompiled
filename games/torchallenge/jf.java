@@ -17,7 +17,7 @@ final class jf extends n {
         }
     }
 
-    jf(si param0, UiComponent param1) {
+    jf(ModalDialogHost param0, UiComponent param1) {
         super(param0, param1, 33, 20, 30);
     }
 

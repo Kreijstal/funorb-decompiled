@@ -54,8 +54,8 @@ final class tf {
         int var6 = 0;
         String var7 = null;
         try {
-          WallTile.field_r[0] = og.field_w.nextInt();
-          WallTile.field_r[1] = og.field_w.nextInt();
+          WallTile.field_r[0] = DequeWidgetContainer.field_w.nextInt();
+          WallTile.field_r[1] = DequeWidgetContainer.field_w.nextInt();
           WallTile.field_r[2] = (int)(CipherPacketBuffer.field_m >> 32);
           WallTile.field_r[3] = (int)CipherPacketBuffer.field_m;
           SectorCacheStore.field_c.position = 0;

@@ -286,7 +286,7 @@ final class DiskCacheWorker implements Runnable {
         try {
           var2 = param0.requestThreadStart(5, -51, (Runnable) (this));
           while (var2.status == 0) {
-            i.sleepMillis((byte) 90, 10L);
+            ModalDialogHost.sleepMillis((byte) 90, 10L);
           }
           if (2 == var2.status) {
             throw new RuntimeException();

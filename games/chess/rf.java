@@ -73,19 +73,19 @@ final class rf {
         int var2 = Chess.field_G;
         ec.field_d.field_C = true;
         if ((1 << MatchingFieldValidator.field_p.field_a & MatchingFieldValidator.field_p.field_B.field_m) != 0) {
-          fm.field_R[9] = wc.field_A;
+          ModalDialogHost.field_R[9] = wc.field_A;
         } else {
           if (MatchingFieldValidator.field_p.field_B.field_m == 0) {
             ec.field_d.field_C = false;
-            fm.field_R[9] = gl.field_a;
+            ModalDialogHost.field_R[9] = gl.field_a;
           } else {
-            fm.field_R[9] = mf.field_x;
+            ModalDialogHost.field_R[9] = UiWidget.field_x;
           }
         }
         if (param0 > -74) {
           return;
         }
-        ec.field_d.field_q = fm.field_R[9];
+        ec.field_d.field_q = ModalDialogHost.field_R[9];
         df.a(ec.field_d, 0);
     }
 

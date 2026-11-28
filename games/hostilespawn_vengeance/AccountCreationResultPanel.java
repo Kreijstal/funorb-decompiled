@@ -15,7 +15,7 @@ final class AccountCreationResultPanel extends dg implements WidgetActivationLis
           return;
         }
         try {
-          ul.e((byte) -25);
+          ModalDialog.e((byte) -25);
           this.g((byte) -5);
           int var6_int = 22 % ((param4 + 63) / 52);
         } catch (RuntimeException runtimeException) {
@@ -172,7 +172,7 @@ final class AccountCreationResultPanel extends dg implements WidgetActivationLis
         return var3;
     }
 
-    final boolean l(int param0) {
+    final boolean advanceDialogAnimation(int param0) {
         AccountServiceResult var2 = null;
         if (param0 != 65393) {
           field_zb = (RgbSprite) null;
@@ -184,7 +184,7 @@ final class AccountCreationResultPanel extends dg implements WidgetActivationLis
             this.showAccountCreationResult(var2, true, false);
           }
         }
-        return super.l(65393);
+        return super.advanceDialogAnimation(65393);
     }
 
     final static void d(int param0, int param1) {
@@ -237,7 +237,7 @@ final class AccountCreationResultPanel extends dg implements WidgetActivationLis
           var5 = new qi((dg) (this), pe.field_eb, var4);
           if (!param0.success) {
             if (this.field_wb) {
-              var5.a((mh) (this), jf.field_e, 30);
+              var5.a((WidgetEventListener) (this), jf.field_e, 30);
             } else {
               if (param0.statusCode == 5) {
                 var5.a(22770, 11, im.field_b);
@@ -258,7 +258,7 @@ final class AccountCreationResultPanel extends dg implements WidgetActivationLis
               this.b(new te(this), (byte) 110);
               return;
             }
-            var5.a((mh) (this), jf.field_e, 30);
+            var5.a((WidgetEventListener) (this), jf.field_e, 30);
           }
           this.b(var5, (byte) 110);
           return;
@@ -276,7 +276,7 @@ final class AccountCreationResultPanel extends dg implements WidgetActivationLis
         }
     }
 
-    AccountCreationResultPanel(gg param0, AccountRegistrationPanel param1) {
+    AccountCreationResultPanel(ModalDialogHost param0, AccountRegistrationPanel param1) {
         super(param0, pe.field_eb, ud.field_a, false, false);
         try {
           this.field_xb = param1;

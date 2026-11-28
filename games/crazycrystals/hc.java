@@ -7,9 +7,9 @@ final class hc {
     static String field_c;
 
     final static void a(boolean param0, boolean param1) {
-        if (null != ab.field_D) {
-          ab.field_D.disposeResultScene(-1);
-          ab.field_D = null;
+        if (null != ModalDialog.field_D) {
+          ModalDialog.field_D.disposeResultScene(-1);
+          ModalDialog.field_D = null;
         }
         fn.field_j = TextLineMetrics.field_c;
         wd.field_j = df.field_c;

@@ -4,14 +4,14 @@
 final class b extends IntrusiveNode {
     byte[] field_h;
     long field_g;
-    static vl field_i;
+    static DraggableWidgetContainer field_i;
     static int field_k;
     int field_j;
 
     public static void clearStaticReferences(int param0) {
         field_i = null;
         if (param0 != -22826) {
-          field_i = (vl) null;
+          field_i = (DraggableWidgetContainer) null;
         }
     }
 
@@ -24,7 +24,7 @@ final class b extends IntrusiveNode {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 == 24) {
-            stackIn_6_0 = (null != mk.a(param1 ^ 108, param0));
+            stackIn_6_0 = (null != ModalDialog.a(param1 ^ 108, param0));
             return stackIn_6_0;
           }
           return false;

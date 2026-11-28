@@ -94,20 +94,20 @@ final class na extends ei {
         this.field_ab = true;
     }
 
-    na(d param0, String param1) {
+    na(ModalDialogHost param0, String param1) {
         super(param0, 300, 120);
         int var3_int = 0;
         try {
           this.field_bb = param1;
           if (this.field_bb != null) {
             var3_int = be.field_x.textHeight(this.field_bb, 260, be.field_x.field_s);
-            this.b(98, 150 + var3_int, 300);
+            this.setCenteredSize(98, 150 + var3_int, 300);
           }
           this.field_cb = new hm(13, 50, 274, 30, 15, 2113632, 4210752);
           this.field_ab = false;
           this.field_W = false;
           this.field_cb.field_P = true;
-          this.b((byte) 95, this.field_cb);
+          this.addChild((byte) 95, this.field_cb);
         } catch (RuntimeException runtimeException) {
           throw qk.wrapException((Throwable) ((Object) runtimeException), "na.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

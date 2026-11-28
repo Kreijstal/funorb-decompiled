@@ -81,7 +81,7 @@ final class NodeHashTableIterator implements Iterator {
           if (JaggrabClient.field_d == null) {
             return false;
           }
-          if (null != JaggrabClient.field_d.k(0)) {
+          if (null != JaggrabClient.field_d.getTopOpenDialog(0)) {
             return true;
           }
           return false;
@@ -89,7 +89,7 @@ final class NodeHashTableIterator implements Iterator {
         if (JaggrabClient.field_d == null) {
           return false;
         }
-        if (null != JaggrabClient.field_d.k(0)) {
+        if (null != JaggrabClient.field_d.getTopOpenDialog(0)) {
           return true;
         }
         return false;

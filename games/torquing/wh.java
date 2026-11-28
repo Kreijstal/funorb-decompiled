@@ -117,7 +117,7 @@ final class wh extends am {
           var44 = var29[2];
           for (var10 = 0; var10 < ci.field_c; var10++) {
             var14 = this.field_v * (-var40[var10] + var41[var10]);
-            var15 = (var5[jh.field_A & var10 + 1] - var5[var10 - 1 & jh.field_A]) * this.field_v;
+            var15 = (var5[SingleChildWidgetContainer.field_A & var10 + 1] - var5[var10 - 1 & SingleChildWidgetContainer.field_A]) * this.field_v;
             var16 = var15 >> 12;
             var17 = var14 >> 12;
             var18 = var16 * var16 >> 12;

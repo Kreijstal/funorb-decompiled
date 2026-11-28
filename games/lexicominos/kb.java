@@ -1033,7 +1033,7 @@ abstract class kb {
                 }
                 var2 = qj.a(33, "invaliduserorpass");
                 if (var2 != null) {
-                  l.field_C = ni.a((byte) -55, var2);
+                  DropTargetWidgetContainer.field_C = ni.a((byte) -55, var2);
                 }
                 var2 = qj.a(33, "pleasetryagain");
                 if (null != var2) {
@@ -1483,7 +1483,7 @@ abstract class kb {
                 }
                 var2 = qj.a(33, "login_username_email");
                 if (null != var2) {
-                  nb.field_y = ni.a((byte) -55, var2);
+                  DequeWidgetContainer.field_y = ni.a((byte) -55, var2);
                 }
                 var2 = qj.a(33, "login_username");
                 if (null != var2) {
@@ -2281,7 +2281,7 @@ abstract class kb {
                 }
                 var2 = qj.a(33, "orbpoints");
                 if (null != var2) {
-                  w.field_s = ni.a((byte) -55, var2);
+                  UiWidget.field_s = ni.a((byte) -55, var2);
                 }
                 var2 = qj.a(33, "orbcoins");
                 if (null != var2) {
@@ -2665,7 +2665,7 @@ abstract class kb {
                 }
                 var2 = qj.a(33, "fs_accept_afteraccept");
                 if (var2 != null) {
-                  eg.field_F = ni.a((byte) -55, var2);
+                  ModalDialogHost.field_F = ni.a((byte) -55, var2);
                 }
                 var2 = qj.a(33, "fs_button_cancel");
                 if (null != var2) {
@@ -2681,7 +2681,7 @@ abstract class kb {
                 }
                 var2 = qj.a(33, "fs_accept_countdown_pl");
                 if (null != var2) {
-                  mg.field_z = ni.a((byte) -55, var2);
+                  SingleChildWidgetContainer.field_z = ni.a((byte) -55, var2);
                 }
                 var2 = qj.a(33, "fs_nonmember");
                 if (var2 != null) {
@@ -2693,7 +2693,7 @@ abstract class kb {
                 }
                 var2 = qj.a(33, "fs_button_members");
                 if (null != var2) {
-                  l.field_E = ni.a((byte) -55, var2);
+                  DropTargetWidgetContainer.field_E = ni.a((byte) -55, var2);
                 }
                 var2 = qj.a(33, "fs_unavailable");
                 if (null != var2) {
@@ -2837,7 +2837,7 @@ abstract class kb {
                 }
                 var2 = qj.a(33, "createtouse");
                 if (var2 != null) {
-                  al.field_G = ni.a((byte) -55, var2);
+                  ModalDialog.field_G = ni.a((byte) -55, var2);
                 }
                 var2 = qj.a(33, "achievementsoffline");
                 if (var2 != null) {
@@ -2857,31 +2857,31 @@ abstract class kb {
                 }
                 var2 = qj.a(33, "mustlogin2,1");
                 if (var2 != null) {
-                  jf.field_C[1] = ni.a((byte) -55, var2);
+                  LabeledWidgetContainer.field_C[1] = ni.a((byte) -55, var2);
                 }
                 var2 = qj.a(33, "mustlogin2,2");
                 if (var2 != null) {
-                  jf.field_C[2] = ni.a((byte) -55, var2);
+                  LabeledWidgetContainer.field_C[2] = ni.a((byte) -55, var2);
                 }
                 var2 = qj.a(33, "mustlogin2,3");
                 if (null != var2) {
-                  jf.field_C[3] = ni.a((byte) -55, var2);
+                  LabeledWidgetContainer.field_C[3] = ni.a((byte) -55, var2);
                 }
                 var2 = qj.a(33, "mustlogin2,4");
                 if (null != var2) {
-                  jf.field_C[4] = ni.a((byte) -55, var2);
+                  LabeledWidgetContainer.field_C[4] = ni.a((byte) -55, var2);
                 }
                 var2 = qj.a(33, "mustlogin2,5");
                 if (null != var2) {
-                  jf.field_C[5] = ni.a((byte) -55, var2);
+                  LabeledWidgetContainer.field_C[5] = ni.a((byte) -55, var2);
                 }
                 var2 = qj.a(33, "mustlogin2,6");
                 if (null != var2) {
-                  jf.field_C[6] = ni.a((byte) -55, var2);
+                  LabeledWidgetContainer.field_C[6] = ni.a((byte) -55, var2);
                 }
                 var2 = qj.a(33, "mustlogin2,7");
                 if (var2 != null) {
-                  jf.field_C[7] = ni.a((byte) -55, var2);
+                  LabeledWidgetContainer.field_C[7] = ni.a((byte) -55, var2);
                 }
                 var2 = qj.a(33, "mustlogin3,1");
                 if (null != var2) {

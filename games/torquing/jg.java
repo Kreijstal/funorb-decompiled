@@ -27,20 +27,20 @@ final class jg extends am {
         int var15Lifetime2;
         var17 = Torquing.field_u;
         try {
-          var11 = ln.a(LevelCompletionUpdate.field_p, Bzip2State.field_q, param4, 113);
-          var12 = ln.a(LevelCompletionUpdate.field_p, Bzip2State.field_q, param6, 69);
-          var13 = ln.a(qg.field_z, RasterBuffer.field_e, param5, 96);
-          var14 = ln.a(qg.field_z, RasterBuffer.field_e, param1, 113);
-          var7_int = ln.a(LevelCompletionUpdate.field_p, Bzip2State.field_q, param3 + param4, 99);
-          var8 = ln.a(LevelCompletionUpdate.field_p, Bzip2State.field_q, -param3 + param6, 71);
+          var11 = ModalDialogHost.a(LevelCompletionUpdate.field_p, Bzip2State.field_q, param4, 113);
+          var12 = ModalDialogHost.a(LevelCompletionUpdate.field_p, Bzip2State.field_q, param6, 69);
+          var13 = ModalDialogHost.a(qg.field_z, RasterBuffer.field_e, param5, 96);
+          var14 = ModalDialogHost.a(qg.field_z, RasterBuffer.field_e, param1, 113);
+          var7_int = ModalDialogHost.a(LevelCompletionUpdate.field_p, Bzip2State.field_q, param3 + param4, 99);
+          var8 = ModalDialogHost.a(LevelCompletionUpdate.field_p, Bzip2State.field_q, -param3 + param6, 71);
           for (var15 = var11; var7_int > var15; var15++) {
             IndexedSpriteLayer.a(var13, (byte) -92, param0, qd.field_a[var15], var14);
           }
           for (var15Lifetime1 = var12; var8 < var15Lifetime1; var15Lifetime1--) {
             IndexedSpriteLayer.a(var13, (byte) 90, param0, qd.field_a[var15Lifetime1], var14);
           }
-          var9 = ln.a(qg.field_z, RasterBuffer.field_e, param5 + param3, 75);
-          var10 = ln.a(qg.field_z, RasterBuffer.field_e, -param3 + param1, 119);
+          var9 = ModalDialogHost.a(qg.field_z, RasterBuffer.field_e, param5 + param3, 75);
+          var10 = ModalDialogHost.a(qg.field_z, RasterBuffer.field_e, -param3 + param1, 119);
           for (var15Lifetime2 = var7_int; var15Lifetime2 <= var8; var15Lifetime2++) {
             var21 = qd.field_a[var15Lifetime2];
             IndexedSpriteLayer.a(var13, (byte) -118, param0, var21, var9);

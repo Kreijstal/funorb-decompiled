@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class jc extends qf {
+abstract class jc extends ModalDialog {
     static String[] field_L;
     static AccountRequestState field_P;
     static ik field_O;
@@ -15,7 +15,7 @@ abstract class jc extends qf {
     private int field_V;
     private int field_U;
 
-    jc(j param0, int param1, int param2) {
+    jc(ModalDialogHost param0, int param1, int param2) {
         super(param0, param1, param2);
         this.field_K = 0;
         this.field_Q = 0;
@@ -23,7 +23,7 @@ abstract class jc extends qf {
 
     final void a(byte param0, int param1, int param2, int param3) {
         if (param3 <= 0) {
-          this.a(param2, param1, -1);
+          this.setCenteredSize(param2, param1, -1);
           return;
         }
         this.field_Q = param3;
@@ -41,7 +41,7 @@ abstract class jc extends qf {
         if (this.field_Q <= 0) {
           return;
         }
-        this.a(this.field_T, this.field_U, -1);
+        this.setCenteredSize(this.field_T, this.field_U, -1);
         this.field_Q = param0;
         this.d((byte) -120);
     }
@@ -133,16 +133,16 @@ abstract class jc extends qf {
 
     void d(byte param0) {
         if (param0 > -29) {
-          this.o(-87);
+          this.snapDialogAnimation(-87);
         }
     }
 
-    boolean o(int param0) {
+    boolean snapDialogAnimation(int param0) {
         if (param0 != 928516712) {
-          this.o(22);
+          this.snapDialogAnimation(22);
         }
         this.q(0);
-        return super.o(928516712);
+        return super.snapDialogAnimation(928516712);
     }
 
     final static short[] a(BitPacketBuffer param0, int param1, int param2, short[] param3) {
@@ -324,7 +324,7 @@ abstract class jc extends qf {
         }
     }
 
-    boolean a(boolean param0) {
+    boolean advanceDialogAnimation(boolean param0) {
         int var2 = 0;
         int var3 = 0;
         int fieldTemp$0 = 0;
@@ -345,12 +345,12 @@ abstract class jc extends qf {
             this.field_Q = 0;
             this.d((byte) -117);
           }
-          this.a(var3, var2, -1);
+          this.setCenteredSize(var3, var2, -1);
         }
         if (!param0) {
           this.d((byte) -65);
         }
-        return super.a(true);
+        return super.advanceDialogAnimation(true);
     }
 
     static {

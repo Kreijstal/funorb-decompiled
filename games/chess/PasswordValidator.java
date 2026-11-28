@@ -36,7 +36,7 @@ final class PasswordValidator extends TextFieldValidator {
           }
           var5 = var4;
           if (gl.a(0, var5)) {
-            stackIn_8_0 = kg.field_T;
+            stackIn_8_0 = LabeledWidgetContainer.field_T;
             return stackIn_8_0;
           }
           if (RichTextLayout.a(var5, (byte) -29)) {
@@ -59,12 +59,12 @@ final class PasswordValidator extends TextFieldValidator {
             stackIn_27_0 = ArchiveRequest.field_t;
             return stackIn_27_0;
           }
-          if (ma.a(var6, param1 ^ -9279, var5)) {
+          if (DequeWidgetContainer.a(var6, param1 ^ -9279, var5)) {
             stackIn_30_0 = bi.field_e;
             return stackIn_30_0;
           }
           if (!MatchingFieldValidator.a(var5, -125, var6)) {
-            return kg.field_T;
+            return LabeledWidgetContainer.field_T;
           }
           stackIn_34_0 = ArchiveRequest.field_t;
           return stackIn_34_0;

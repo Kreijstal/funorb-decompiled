@@ -195,7 +195,7 @@ final class ak {
               cg.a(fj.field_c, -126, sd.field_i, ud.field_b, de.field_k);
               ud.field_b.backpatchShortLength((byte) 121, -var10 + ud.field_b.position);
             }
-            dk.b((byte) 41, -1);
+            SingleChildWidgetContainer.b((byte) 41, -1);
             ResourceArchive.field_k = ue.field_c;
           }
           if (ResourceArchive.field_k == ue.field_c &&

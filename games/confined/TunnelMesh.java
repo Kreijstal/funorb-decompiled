@@ -453,11 +453,11 @@ final class TunnelMesh {
         if (param0 > -36) {
           field_l = (String[]) null;
         }
-        if (ml.field_a == oe.field_Q) {
+        if (ml.field_a == ModalDialog.field_Q) {
           throw new IllegalStateException();
         }
-        if (oe.field_Q == b.field_a) {
-          oe.field_Q = ml.field_a;
+        if (ModalDialog.field_Q == b.field_a) {
+          ModalDialog.field_Q = ml.field_a;
           return ji.field_d;
         }
         return null;

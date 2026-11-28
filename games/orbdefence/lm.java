@@ -36,7 +36,7 @@ final class lm {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw dd.wrapClientException((Throwable) ((Object) var2), "lm.A(" + param0 + ',' + param1 + ')');
+          throw DraggableWidgetContainer.wrapClientException((Throwable) ((Object) var2), "lm.A(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -1482,7 +1482,7 @@ final class lm {
                 }
                 var2 = CrossfadingMidiPcmStream.a(15136, "create_more_suggestions");
                 if (var2 != null) {
-                  mm.field_B = ProxyAuthenticationRequiredException.a(var2, -12465);
+                  DropTargetWidgetContainer.field_B = ProxyAuthenticationRequiredException.a(var2, -12465);
                 }
                 var2 = CrossfadingMidiPcmStream.a(15136, "create_select_alternative");
                 if (null != var2) {
@@ -1642,7 +1642,7 @@ final class lm {
                 }
                 var2 = CrossfadingMidiPcmStream.a(15136, "create_alert_passlength");
                 if (null != var2) {
-                  sg.field_F = ProxyAuthenticationRequiredException.a(var2, param0 ^ -12485);
+                  ModalDialog.field_F = ProxyAuthenticationRequiredException.a(var2, param0 ^ -12485);
                 }
                 var2 = CrossfadingMidiPcmStream.a(15136, "create_alert_passcontainsname");
                 if (null != var2) {
@@ -1790,7 +1790,7 @@ final class lm {
                 }
                 var2 = CrossfadingMidiPcmStream.a(15136, "waitingfor_graphics");
                 if (null != var2) {
-                  jj.field_B = ProxyAuthenticationRequiredException.a(var2, -12465);
+                  AlphaWidgetContainer.field_B = ProxyAuthenticationRequiredException.a(var2, -12465);
                 }
                 var2 = CrossfadingMidiPcmStream.a(15136, "waitingfor_models");
                 if (null != var2) {
@@ -1834,7 +1834,7 @@ final class lm {
                 }
                 var2 = CrossfadingMidiPcmStream.a(15136, "loading_graphics");
                 if (var2 != null) {
-                  kj.field_z = ProxyAuthenticationRequiredException.a(var2, param0 ^ -12485);
+                  SingleChildWidgetContainer.field_z = ProxyAuthenticationRequiredException.a(var2, param0 ^ -12485);
                 }
                 var2 = CrossfadingMidiPcmStream.a(15136, "loading_models");
                 if (var2 != null) {
@@ -2124,7 +2124,7 @@ final class lm {
                 }
                 var2 = CrossfadingMidiPcmStream.a(15136, "cont");
                 if (var2 != null) {
-                  sk.field_C = ProxyAuthenticationRequiredException.a(var2, param0 - 12581);
+                  ModalDialogHost.field_C = ProxyAuthenticationRequiredException.a(var2, param0 - 12581);
                 }
                 var2 = CrossfadingMidiPcmStream.a(15136, "continue_spectating");
                 if (var2 != null) {
@@ -2704,7 +2704,7 @@ final class lm {
                 }
                 var2 = CrossfadingMidiPcmStream.a(15136, "fs_nonmember");
                 if (var2 != null) {
-                  ta.field_y = ProxyAuthenticationRequiredException.a(var2, -12465);
+                  DequeWidgetContainer.field_y = ProxyAuthenticationRequiredException.a(var2, -12465);
                 }
                 var2 = CrossfadingMidiPcmStream.a(param0 + 15020, "fs_button_close");
                 if (null != var2) {
@@ -2772,7 +2772,7 @@ final class lm {
                 }
                 var2 = CrossfadingMidiPcmStream.a(15136, "mb_exclusive_2");
                 if (var2 != null) {
-                  mm.field_E = ProxyAuthenticationRequiredException.a(var2, -12465);
+                  DropTargetWidgetContainer.field_E = ProxyAuthenticationRequiredException.a(var2, -12465);
                 }
                 var2 = CrossfadingMidiPcmStream.a(15136, "me_extra_benefits");
                 if (null != var2) {
@@ -2780,7 +2780,7 @@ final class lm {
                 }
                 var2 = CrossfadingMidiPcmStream.a(15136, "hs_friend_tip");
                 if (var2 != null) {
-                  h.field_L = ProxyAuthenticationRequiredException.a(var2, -12465);
+                  LabeledWidgetContainer.field_L = ProxyAuthenticationRequiredException.a(var2, -12465);
                 }
                 var2 = CrossfadingMidiPcmStream.a(15136, "hs_friend_tip_multi");
                 if (null != var2) {
@@ -3075,7 +3075,7 @@ final class lm {
                   } else {
                     stackIn_2617_2 = "{...}";
                   }
-                  throw dd.wrapClientException((Throwable) ((Object) stackIn_2616_0), ((StringBuilder) (Object) stackIn_2616_1).append(stackIn_2617_2).append(')').toString());
+                  throw DraggableWidgetContainer.wrapClientException((Throwable) ((Object) stackIn_2616_0), ((StringBuilder) (Object) stackIn_2616_1).append(stackIn_2617_2).append(')').toString());
                 }
                 if (var3 != 0) {
                   stackIn_2625_0 = (!GameAppletShell.field_e);
@@ -3120,7 +3120,7 @@ final class lm {
                 var5[var6] = vc.field_g[EditableTextField.a(255, (int) var4[var6])];
                 var6++;
               }
-              var1[var2] = new RgbSprite(sg.field_B, he.field_r, jd.field_g[var2], wc.field_a[var2], wh.field_b[var2], m.field_a[var2], var5);
+              var1[var2] = new RgbSprite(ModalDialog.field_B, he.field_r, jd.field_g[var2], wc.field_a[var2], wh.field_b[var2], m.field_a[var2], var5);
               var2++;
               continue scanLoop1;
             }
@@ -3133,7 +3133,7 @@ final class lm {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw dd.wrapClientException((Throwable) ((Object) var1_ref), "lm.C(" + param0 + ')');
+          throw DraggableWidgetContainer.wrapClientException((Throwable) ((Object) var1_ref), "lm.C(" + param0 + ')');
         }
     }
 
@@ -3150,7 +3150,7 @@ final class lm {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw dd.wrapClientException((Throwable) ((Object) var1), "lm.B(" + param0 + ')');
+          throw DraggableWidgetContainer.wrapClientException((Throwable) ((Object) var1), "lm.B(" + param0 + ')');
         }
     }
 
@@ -3163,7 +3163,7 @@ final class lm {
           field_f = null;
           field_e = null;
         } catch (RuntimeException runtimeException) {
-          throw dd.wrapClientException((Throwable) ((Object) runtimeException), "lm.E(" + param0 + ')');
+          throw DraggableWidgetContainer.wrapClientException((Throwable) ((Object) runtimeException), "lm.E(" + param0 + ')');
         }
     }
 

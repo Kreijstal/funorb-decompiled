@@ -335,7 +335,7 @@ final class ni {
           var6 = (ae) (bk.field_t.first((byte) 122));
           var3 = -23 % ((param1 - 23) / 38);
           while (var6 != null) {
-            bg.a(param0, (byte) 26, var6);
+            LabeledWidgetContainer.a(param0, (byte) 26, var6);
             var6 = (ae) (bk.field_t.next(-270));
           }
           return;

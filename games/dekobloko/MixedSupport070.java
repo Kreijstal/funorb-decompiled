@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class MixedSupport070 implements CallbackContract004 {
+final class MixedSupport070 implements WidgetRenderer {
     private int integerState0392;
     private int integerState0393;
     private int integerState0394;
@@ -90,7 +90,7 @@ final class MixedSupport070 implements CallbackContract004 {
         mixedSupport132State0004 = null;
     }
 
-    public final void performAction0017(boolean booleanArgument1, int integerArgument2, int integerArgument3, byte byteArgument4, UiComponent uiComponentArgument5) {
+    public final void paintWidget(boolean booleanArgument1, int integerArgument2, int integerArgument3, byte byteArgument4, UiComponent uiComponentArgument5) {
         UiComponent stackUiComponentLocal1 = null;
         RuntimeException stackRuntimeExceptionLocal2 = null;
         StringBuilder stackStringBuilderLocal3 = null;

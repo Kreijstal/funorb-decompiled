@@ -290,7 +290,7 @@ final class ChangeCreatureStatOrHealthEffect extends EventEffect {
             stackIn_31_0 = cia.a(0) ? 1 : 0;
           }
           if (stackIn_31_0 != 0 &&
-            !hl.field_I) {
+            !AlphaWidgetContainer.field_I) {
             return;
           }
           ao.field_d = new d(0, 0, 0, 0);

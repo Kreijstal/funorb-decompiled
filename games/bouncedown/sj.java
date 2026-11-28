@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class sj implements fc {
+final class sj implements WidgetRenderer {
     static FullscreenFocusCanvas field_f;
     private int field_e;
     static int[] field_j;
@@ -15,7 +15,7 @@ final class sj implements fc {
     private int field_h;
     private int field_l;
 
-    public final void a(int param0, lk param1, byte param2, boolean param3, int param4) {
+    public final void paintWidget(int param0, UiWidget param1, byte param2, boolean param3, int param4) {
         RuntimeException var6 = null;
         int var7 = 0;
         int var8 = 0;
@@ -25,7 +25,7 @@ final class sj implements fc {
         int var13 = 0;
         int var14 = 0;
         fh var15 = null;
-        lk stackIn_3_0 = null;
+        UiWidget stackIn_3_0 = null;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
         String stackIn_13_2 = null;
@@ -35,7 +35,7 @@ final class sj implements fc {
         int var12Lifetime1;
         try {
           if (param1 instanceof fh) {
-            stackIn_3_0 = (lk) (param1);
+            stackIn_3_0 = (UiWidget) (param1);
           } else {
             stackIn_3_0 = null;
           }

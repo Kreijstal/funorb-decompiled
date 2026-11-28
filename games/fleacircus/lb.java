@@ -58,7 +58,7 @@ final class lb implements ComponentLayout {
         }
     }
 
-    public final void a(int param0, int param1, boolean param2, UiComponent param3, int param4) {
+    public final void paintWidget(int param0, int param1, boolean param2, UiComponent param3, int param4) {
         UiComponent stackIn_3_0 = null;
         RuntimeException stackIn_17_0 = null;
         StringBuilder stackIn_17_1 = null;
@@ -89,7 +89,7 @@ final class lb implements ComponentLayout {
           var8 = this.field_g + param3.field_y + param1;
           if (param0 >= -36) {
             var11 = (UiComponent) null;
-            this.a(-124, -13, false, (UiComponent) null, -107);
+            this.paintWidget(-124, -13, false, (UiComponent) null, -107);
           }
           var9 = this.field_b + param3.field_z + param4;
           SoftwareRasterizer.drawRectangleShadow(var8, var9, this.field_e, this.field_l, 5592405);

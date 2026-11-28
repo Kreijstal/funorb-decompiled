@@ -23,7 +23,7 @@ final class EmailFormatValidator extends TextFieldValidator {
         if (bo.field_c) {
           dc.field_q.a((byte) 127, fe.field_h);
         }
-        dc.field_q.a((byte) 124, bh.field_G);
+        dc.field_q.a((byte) 124, ArrayWidgetContainer.field_G);
         LoginPanel.field_W = new id(DirectByteStorage.field_c, dc.field_q);
         ql.field_d = new ci(0L, (ci) null);
         ql.field_d.a((byte) 124, LoginPanel.field_W.field_a);
@@ -165,7 +165,7 @@ final class EmailFormatValidator extends TextFieldValidator {
           var2_long = ud.correctedCurrentTimeMillis(2);
           if (0 != fh.field_d &&
             0 > da.field_p) {
-            var4_ref_tf = (tf) (kn.field_I.beginBackward(-18110));
+            var4_ref_tf = (tf) (SingleChildWidgetContainer.field_I.beginBackward(-18110));
             if (var4_ref_tf != null &&
               var4_ref_tf.field_m < var2_long) {
               var4_ref_tf.unlink(-2193);
@@ -174,7 +174,7 @@ final class EmailFormatValidator extends TextFieldValidator {
               for (var5_int = 0; var5_int < sb.field_sb; var5_int++) {
                 tk.field_h.data[var5_int] = var4_ref_tf.field_j[var5_int];
               }
-              lf.field_T = wc.field_u;
+              AlphaWidgetContainer.field_T = wc.field_u;
               wc.field_u = hh.field_o;
               hh.field_o = wg.field_B;
               wg.field_B = var4_ref_tf.field_n;
@@ -209,7 +209,7 @@ final class EmailFormatValidator extends TextFieldValidator {
               return false;
             }
             if (fh.field_d == 0) {
-              lf.field_T = wc.field_u;
+              AlphaWidgetContainer.field_T = wc.field_u;
               wc.field_u = hh.field_o;
               hh.field_o = wg.field_B;
               wg.field_B = da.field_p;
@@ -227,7 +227,7 @@ final class EmailFormatValidator extends TextFieldValidator {
             for (var6 = 0; var6 < sb.field_sb; var6++) {
               var5.field_j[var6] = tk.field_h.data[var6];
             }
-            kn.field_I.addFirst((IntrusiveNode) (var5), (byte) -122);
+            SingleChildWidgetContainer.field_I.addFirst((IntrusiveNode) (var5), (byte) -122);
             da.field_p = -1;
             stackIn_20_0 = da.field_p;
           }

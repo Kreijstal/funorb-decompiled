@@ -53,7 +53,7 @@ final class IsaacPacketBuffer extends PacketBuffer {
 
     final static void a(float param0, int param1, String param2) {
         try {
-          aj.field_E = param0;
+          DraggableWidgetContainer.field_E = param0;
           ob.field_b = param2;
           int var3_int = -112 % ((-29 - param1) / 32);
         } catch (RuntimeException runtimeException) {

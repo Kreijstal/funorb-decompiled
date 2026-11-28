@@ -224,7 +224,7 @@ abstract class NetworkGameClient extends GameAppletShell {
           BoundedRandomAccessFile.a(kc.field_d, 0)) {
           l.a((byte) -56);
           sd.clearStaticReferences((byte) -63);
-          qj.field_I = MouseWheelInput.field_a;
+          DropTargetWidgetContainer.field_I = MouseWheelInput.field_a;
           tb.field_c = false;
           oh.a(kc.field_d, oa.field_l, va.field_m, (byte) 28, BoundedRandomAccessFile.field_d);
           if (of.field_i ||
@@ -626,7 +626,7 @@ abstract class NetworkGameClient extends GameAppletShell {
             pg.a(-68, 6);
           }
           if (ui.field_mb[6]) {
-            ml.a(7, 960240129);
+            LabeledWidgetContainer.a(7, 960240129);
           }
           if (ui.field_mb[8]) {
             ge.a(119);

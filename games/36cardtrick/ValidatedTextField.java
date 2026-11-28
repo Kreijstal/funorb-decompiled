@@ -7,9 +7,9 @@ final class ValidatedTextField extends EditableTextField implements FieldValidat
     static int field_Q;
     private FieldValidator field_P;
 
-    final void a(int param0, int param1, lk param2, int param3) {
+    final void updatePointer(int param0, int param1, UiWidget param2, int param3) {
         try {
-          super.a(param0, param1, param2, param3 ^ 0);
+          super.updatePointer(param0, param1, param2, param3 ^ 0);
           this.field_E = -param1 + eg.field_b - this.field_o;
           if (param3 != 3) {
             this.notifyTextChanged(25);
@@ -26,7 +26,7 @@ final class ValidatedTextField extends EditableTextField implements FieldValidat
             return null;
           }
           if (null != this.field_n) {
-            wc.a(ij.field_e, -16923, eg.field_b + (-this.field_E + this.field_h));
+            DropTargetWidgetContainer.a(ij.field_e, -16923, eg.field_b + (-this.field_E + this.field_h));
             return this.field_n;
           }
           return null;
@@ -35,7 +35,7 @@ final class ValidatedTextField extends EditableTextField implements FieldValidat
           return null;
         }
         if (null != this.field_n) {
-          wc.a(ij.field_e, -16923, eg.field_b + (-this.field_E + this.field_h));
+          DropTargetWidgetContainer.a(ij.field_e, -16923, eg.field_b + (-this.field_E + this.field_h));
           return this.field_n;
         }
         return null;
@@ -64,15 +64,15 @@ final class ValidatedTextField extends EditableTextField implements FieldValidat
         try {
           this.field_P = param1;
           if (param0 != 68) {
-            lk var4 = (lk) null;
-            this.a(-14, 64, (lk) null, 35);
+            UiWidget var4 = (UiWidget) null;
+            this.updatePointer(-14, 64, (UiWidget) null, 35);
           }
         } catch (RuntimeException runtimeException) {
           throw ma.wrapException((Throwable) ((Object) runtimeException), "v.I(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
-    ValidatedTextField(String param0, pl param1, int param2) {
+    ValidatedTextField(String param0, WidgetEventListener param1, int param2) {
         super(param0, param1, param2);
     }
 

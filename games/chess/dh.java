@@ -263,7 +263,7 @@ final class dh {
     }
 
     final static void c(byte param0) {
-        hh var1 = (hh) (eh.field_R.beginBackward(-18110));
+        hh var1 = (hh) (ModalDialog.field_R.beginBackward(-18110));
         if (var1 == null) {
           ImageProducerRasterBuffer.d(65280);
           return;

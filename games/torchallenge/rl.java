@@ -99,7 +99,7 @@ final class rl {
           return;
         }
         if (this.field_i == 0 &&
-          b.field_J == 98) {
+          ModalDialog.field_J == 98) {
           if (this.field_j <= 0) {
             this.field_j = this.field_b;
           }
@@ -107,12 +107,12 @@ final class rl {
           this.field_j = this.field_j - 1;
         }
         if (this.field_i == 0) {
-          this.field_a = b.field_J;
+          this.field_a = ModalDialog.field_J;
         }
         if (0 != this.field_i) {
           return;
         }
-        if (99 != b.field_J) {
+        if (99 != ModalDialog.field_J) {
           return;
         }
         this.field_j = this.field_j + 1;
@@ -149,7 +149,7 @@ final class rl {
         this.field_a = param0;
         this.field_d = 0;
         if (this.field_i == 0 &&
-          b.field_J == 96) {
+          ModalDialog.field_J == 96) {
           if (this.field_j <= 0) {
             this.field_j = this.field_b;
           }
@@ -157,12 +157,12 @@ final class rl {
           this.field_e = false;
         }
         if (0 == this.field_i) {
-          this.field_a = b.field_J;
+          this.field_a = ModalDialog.field_J;
         }
         if (0 != this.field_i) {
           return;
         }
-        if (b.field_J != 97) {
+        if (ModalDialog.field_J != 97) {
           return;
         }
         this.field_j = this.field_j + 1;
@@ -185,7 +185,7 @@ final class rl {
         this.field_d = 0;
         this.field_a = 0;
         if (this.field_i == 0 &&
-          b.field_J == 96) {
+          ModalDialog.field_J == 96) {
           if (this.field_j <= 0) {
             this.field_j = this.field_b;
           }
@@ -193,10 +193,10 @@ final class rl {
           this.field_j = this.field_j - 1;
         }
         if (this.field_i == param0) {
-          this.field_a = b.field_J;
+          this.field_a = ModalDialog.field_J;
         }
         if (this.field_i == 0 &&
-          97 == b.field_J) {
+          97 == ModalDialog.field_J) {
           this.field_j = this.field_j + 1;
           if (this.field_b <= this.field_j) {
             this.field_j = 0;
@@ -206,8 +206,8 @@ final class rl {
         if (this.field_i != 0) {
           return;
         }
-        if (b.field_J != 98 &&
-          b.field_J != 99) {
+        if (ModalDialog.field_J != 98 &&
+          ModalDialog.field_J != 99) {
           return;
         }
         if (this.field_j < 0) {
@@ -220,7 +220,7 @@ final class rl {
         int var1 = 0;
         int var1Lifetime1;
         ij.c((byte) -98);
-        if (null == bg.field_P) {
+        if (null == LabeledWidgetContainer.field_P) {
           var1 = 0 / ((-30 - param0) / 53);
           cg.a((byte) -102);
           tc.c(-119);
@@ -232,7 +232,7 @@ final class rl {
           ob.b(-95);
           return;
         }
-        BufferedCacheFile.a((byte) -100, bg.field_P);
+        BufferedCacheFile.a((byte) -100, LabeledWidgetContainer.field_P);
         var1Lifetime1 = 0 / ((-30 - param0) / 53);
         cg.a((byte) -102);
         tc.c(-119);
@@ -248,7 +248,7 @@ final class rl {
         this.field_a = 0;
         this.field_d = param0;
         if (this.field_i == 0) {
-          this.field_a = b.field_J;
+          this.field_a = ModalDialog.field_J;
         }
     }
 

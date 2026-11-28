@@ -17,7 +17,7 @@ final class oj implements WidgetRenderer {
     private int field_j;
     static String field_a;
 
-    public final void a(int param0, int param1, int param2, boolean param3, UiWidget param4) {
+    public final void paintWidget(int param0, int param1, int param2, boolean param3, UiWidget param4) {
         UiWidget stackIn_3_0 = null;
         RuntimeException stackIn_18_0 = null;
         StringBuilder stackIn_18_1 = null;

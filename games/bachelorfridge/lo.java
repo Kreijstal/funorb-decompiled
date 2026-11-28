@@ -57,7 +57,7 @@ final class lo {
             }
             stackIn_21_0 = (BoundedRandomAccessFile.field_e[0] == -1) ? 1 : 0;
             rba.field_b = stackIn_21_0;
-            raa.e((byte) 31);
+            DraggableWidgetContainer.e((byte) 31);
           }
           if (f.correctedCurrentTimeMillis((byte) 73) > (3500L + cr.field_a)) {
             fieldTemp$0 = rba.field_b + 1;
@@ -65,7 +65,7 @@ final class lo {
             if (fieldTemp$0 == BoundedRandomAccessFile.field_e.length) {
               rba.field_b = 0;
             }
-            raa.e((byte) 31);
+            DraggableWidgetContainer.e((byte) 31);
           }
           if (param0 <= 73) {
             field_b = (PalettedBitmapFont) null;

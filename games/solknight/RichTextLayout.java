@@ -162,28 +162,28 @@ final class RichTextLayout extends TextLayout {
           var1_int = -16000;
           var2 = -7680;
           var3 = ud.field_k;
-          if (kf.field_G != null) {
-            for (var5 = kf.field_G.length - 1; var5 > 0; var5--) {
-              if (null != kf.field_G[var5] &&
-                kf.field_G[var5].field_j >= 25 &&
-                kf.field_G[var5].field_j != 31) {
-                if (Math.abs(kf.field_G[var5].field_a) + Math.abs(-7680 + kf.field_G[var5].field_b) < Math.abs(var1_int) + Math.abs(var2 - 7680) &&
-                  kf.field_G[var5].field_b < 7040) {
-                  var1_int = kf.field_G[var5].field_c * 15 + kf.field_G[var5].field_a;
-                  var2 = kf.field_G[var5].field_d * 15 + kf.field_G[var5].field_b;
+          if (ModalDialog.field_G != null) {
+            for (var5 = ModalDialog.field_G.length - 1; var5 > 0; var5--) {
+              if (null != ModalDialog.field_G[var5] &&
+                ModalDialog.field_G[var5].field_j >= 25 &&
+                ModalDialog.field_G[var5].field_j != 31) {
+                if (Math.abs(ModalDialog.field_G[var5].field_a) + Math.abs(-7680 + ModalDialog.field_G[var5].field_b) < Math.abs(var1_int) + Math.abs(var2 - 7680) &&
+                  ModalDialog.field_G[var5].field_b < 7040) {
+                  var1_int = ModalDialog.field_G[var5].field_c * 15 + ModalDialog.field_G[var5].field_a;
+                  var2 = ModalDialog.field_G[var5].field_d * 15 + ModalDialog.field_G[var5].field_b;
                 }
-                if (null == kf.field_G[-1 + var5] ||
-                  !(kf.field_G[-1 + var5].field_j >= 25) ||
-                  31 == kf.field_G[var5 - 1].field_j) {
-                  var4_ref_rb = kf.field_G[var5];
-                  kf.field_G[var5] = kf.field_G[-1 + var5];
-                  kf.field_G[var5 - 1] = var4_ref_rb;
+                if (null == ModalDialog.field_G[-1 + var5] ||
+                  !(ModalDialog.field_G[-1 + var5].field_j >= 25) ||
+                  31 == ModalDialog.field_G[var5 - 1].field_j) {
+                  var4_ref_rb = ModalDialog.field_G[var5];
+                  ModalDialog.field_G[var5] = ModalDialog.field_G[-1 + var5];
+                  ModalDialog.field_G[var5 - 1] = var4_ref_rb;
                 }
               }
             }
-            for (var5Lifetime1 = 0; kf.field_G.length > var5Lifetime1; var5Lifetime1++) {
-              if (kf.field_G[var5Lifetime1] != null) {
-                kf.field_G[var5Lifetime1] = kf.field_G[var5Lifetime1].b(15);
+            for (var5Lifetime1 = 0; ModalDialog.field_G.length > var5Lifetime1; var5Lifetime1++) {
+              if (ModalDialog.field_G[var5Lifetime1] != null) {
+                ModalDialog.field_G[var5Lifetime1] = ModalDialog.field_G[var5Lifetime1].b(15);
               }
             }
           }

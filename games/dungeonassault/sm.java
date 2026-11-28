@@ -170,7 +170,7 @@ final class sm {
               JavaScriptBridge.evaluate("document.cookie=\"" + var5Lifetime6 + "\"", (byte) -46, param0);
             } catch (Throwable throwable) {
             }
-            lm.a((byte) -106, param0);
+            UiWidget.a((byte) -106, param0);
           } catch (RuntimeException runtimeException) {
             throw AccountServiceResult.wrapClientException((Throwable) ((Object) runtimeException), "sm.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
           }

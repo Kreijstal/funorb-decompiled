@@ -140,7 +140,7 @@ class nh extends sk {
           for (var6 = var2_int; var3 > var6; var6++) {
             var7 = param0.charAt(var6);
             if (DualLinkDequeIterator.a(45, (char) var7)) {
-              var8 = of.a(-119, (char) var7);
+              var8 = DropTargetWidgetContainer.a(-119, (char) var7);
               if (var8 != 0) {
                 discarded$0 = var5.append((char) var8);
               }

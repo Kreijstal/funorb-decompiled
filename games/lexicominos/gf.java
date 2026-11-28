@@ -38,7 +38,7 @@ final class gf {
             return;
           }
           this.field_n = this.field_j;
-          if (ia.field_C >= this.field_p) {
+          if (AlphaWidgetContainer.field_C >= this.field_p) {
             this.c(115);
           } else {
             this.field_r = false;
@@ -190,7 +190,7 @@ final class gf {
         if (param0 != 0) {
           return true;
         }
-        stackIn_6_0 = (ia.field_C >= this.field_p) && (jd.field_c > 0);
+        stackIn_6_0 = (AlphaWidgetContainer.field_C >= this.field_p) && (jd.field_c > 0);
         return stackIn_6_0;
     }
 
@@ -408,7 +408,7 @@ final class gf {
           var17 = var16;
           var17.position = param1.length - 2;
           BitPacketBuffer.field_t = var17.readUnsignedShort(-1698573656);
-          mg.field_x = new int[BitPacketBuffer.field_t];
+          SingleChildWidgetContainer.field_x = new int[BitPacketBuffer.field_t];
           MidiPcmStream.field_o = new byte[BitPacketBuffer.field_t][];
           me.field_w = new boolean[BitPacketBuffer.field_t];
           rg.field_c = new int[BitPacketBuffer.field_t];
@@ -420,7 +420,7 @@ final class gf {
           eh.field_b = var17.readUnsignedShort(-1698573656);
           var3 = (var17.readUnsignedByte(true) & 255) + 1;
           for (var4 = 0; BitPacketBuffer.field_t > var4; var4++) {
-            mg.field_x[var4] = var16.readUnsignedShort(-1698573656);
+            SingleChildWidgetContainer.field_x[var4] = var16.readUnsignedShort(-1698573656);
           }
           for (var4Lifetime1 = 0; BitPacketBuffer.field_t > var4Lifetime1; var4Lifetime1++) {
             rg.field_c[var4Lifetime1] = var17.readUnsignedShort(-1698573656);

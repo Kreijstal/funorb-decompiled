@@ -215,7 +215,7 @@ abstract class BirthDateInput extends ComponentContainer implements FieldValidat
         }
     }
 
-    BirthDateInput(int integerArgument1, int integerArgument2, int integerArgument3, int integerArgument4, CallbackContract004 callbackContract004Argument5) {
+    BirthDateInput(int integerArgument1, int integerArgument2, int integerArgument3, int integerArgument4, WidgetRenderer callbackContract004Argument5) {
         super(integerArgument1, integerArgument2, integerArgument3, integerArgument4, callbackContract004Argument5);
     }
 

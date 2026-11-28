@@ -140,7 +140,7 @@ class EditableTextField extends InteractiveWidget {
         this.notifyTextChanged(64);
     }
 
-    EditableTextField(String param0, pl param1, int param2) {
+    EditableTextField(String param0, WidgetEventListener param1, int param2) {
         super(param0, param1);
         this.field_O = 0L;
         this.field_L = -1;
@@ -156,7 +156,7 @@ class EditableTextField extends InteractiveWidget {
         }
     }
 
-    final boolean a(int param0, int param1, int param2, int param3, lk param4, int param5, int param6) {
+    final boolean pointerPressed(int param0, int param1, int param2, int param3, UiWidget param4, int param5, int param6) {
         int stackIn_8_1 = 0;
         boolean stackIn_11_1 = false;
         RuntimeException stackIn_22_0 = null;
@@ -166,19 +166,19 @@ class EditableTextField extends InteractiveWidget {
         int var8_int = 0;
         long var8_long = 0L;
         RuntimeException var8 = null;
-        lk var10 = null;
+        UiWidget var10 = null;
         try {
           if (param3 >= -14) {
-            var10 = (lk) null;
-            this.a('k', (byte) 63, -72, (lk) null);
+            var10 = (UiWidget) null;
+            this.handleKey('k', (byte) 63, -72, (UiWidget) null);
           }
-          if (!super.a(param0, param1, param2, -83, param4, param5, param6)) {
+          if (!super.pointerPressed(param0, param1, param2, -83, param4, param5, param6)) {
             return false;
           }
           if (!(this.field_v instanceof TextWidgetRenderer)) {
             return false;
           }
-          var8_int = ((TextWidgetRenderer) ((Object) this.field_v)).findTextOffsetAtScreenPosition(eg.field_b, param1, -10989, param0, (lk) (this), ij.field_e);
+          var8_int = ((TextWidgetRenderer) ((Object) this.field_v)).findTextOffsetAtScreenPosition(eg.field_b, param1, -10989, param0, (UiWidget) (this), ij.field_e);
           if (-1 == var8_int) {
             stackIn_8_1 = 0;
           } else {
@@ -255,7 +255,7 @@ class EditableTextField extends InteractiveWidget {
         }
     }
 
-    final boolean a(char param0, byte param1, int param2, lk param3) {
+    final boolean handleKey(char param0, byte param1, int param2, UiWidget param3) {
         int dupTemp$0 = 0;
         int stackIn_18_1 = 0;
         int stackIn_47_1 = 0;
@@ -403,14 +403,14 @@ class EditableTextField extends InteractiveWidget {
     private final void copySelection(boolean param0) {
         String var2 = this.getSelectedText(121);
         if (!param0) {
-          this.a(93, -60, 36, -119);
+          this.drawWidget(93, -60, 36, -119);
         }
         if (var2.length() > 0) {
           java.awt.Toolkit.getDefaultToolkit().getSystemClipboard().setContents((java.awt.datatransfer.Transferable) ((Object) new java.awt.datatransfer.StringSelection(this.getSelectedText(88))), (java.awt.datatransfer.ClipboardOwner) null);
         }
     }
 
-    void a(int param0, int param1, lk param2, int param3) {
+    void updatePointer(int param0, int param1, UiWidget param2, int param3) {
         int var6 = 0;
         TextWidgetRenderer var7 = null;
         RuntimeException stackIn_16_0 = null;
@@ -422,12 +422,12 @@ class EditableTextField extends InteractiveWidget {
           if (param3 != 3) {
             this.field_L = -18;
           }
-          super.a(param0, param1, param2, param3 + 0);
+          super.updatePointer(param0, param1, param2, param3 + 0);
           this.scrollCaretIntoView((byte) -120);
           if (this.field_x == 1) {
             if (this.field_v instanceof TextWidgetRenderer) {
               var7 = (TextWidgetRenderer) ((Object) this.field_v);
-              var6 = var7.findTextOffsetAtScreenPosition(eg.field_b, param0, -10989, param1, (lk) (this), ij.field_e);
+              var6 = var7.findTextOffsetAtScreenPosition(eg.field_b, param0, -10989, param1, (UiWidget) (this), ij.field_e);
               if (-1 != var6) {
                 if (this.field_G &&
                   this.field_L > var6 &&
@@ -527,20 +527,20 @@ class EditableTextField extends InteractiveWidget {
         return this.field_r.substring(var3, var4);
     }
 
-    final void a(int param0, int param1, int param2, int param3) {
+    final void drawWidget(int param0, int param1, int param2, int param3) {
         TextWidgetRenderer var8 = null;
         long var6 = 0L;
         if (null != this.field_v &&
           0 == param3) {
-          this.field_v.a(param0, (lk) (this), 11447, param1, this.field_B);
+          this.field_v.paintWidget(param0, (UiWidget) (this), 11447, param1, this.field_B);
           if (this.field_v instanceof TextWidgetRenderer) {
             var8 = (TextWidgetRenderer) ((Object) this.field_v);
             if (this.field_F != this.field_N) {
-              var8.paintSelection((lk) (this), (byte) 67, param1, param0, this.field_N, this.field_F);
+              var8.paintSelection((UiWidget) (this), (byte) 67, param1, param0, this.field_N, this.field_F);
             }
             var6 = id.correctedCurrentTimeMillis(62);
             if ((-this.field_M + var6) % 1000L < 500L) {
-              var8.paintCaret(param0, this.field_N, param1, (byte) 55, (lk) (this));
+              var8.paintCaret(param0, this.field_N, param1, (byte) 55, (UiWidget) (this));
             }
           }
         }
@@ -570,9 +570,9 @@ class EditableTextField extends InteractiveWidget {
           return;
         }
         var9 = (TextWidgetRenderer) ((Object) this.field_v);
-        var3 = var9.getTextLayout((byte) -96, (lk) (this));
+        var3 = var9.getTextLayout((byte) -96, (UiWidget) (this));
         var4 = var3.getMaxLineRightX((byte) -5);
-        var5 = var9.getTextAreaWidth((lk) (this), 0);
+        var5 = var9.getTextAreaWidth((UiWidget) (this), 0);
         var6 = var9.getFontLineHeight(-1) >> 1;
         if (var5 - var6 > var4) {
           this.field_l = 0;

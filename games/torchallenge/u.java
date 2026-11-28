@@ -177,7 +177,7 @@ final class u {
     }
 
     final static void a(boolean param0, ResourceArchive param1) {
-        Sprite var2 = new Sprite(param1.getFileByName(-2, "", "final_frame.jpg"), (java.awt.Component) ((Object) bg.field_P));
+        Sprite var2 = new Sprite(param1.getFileByName(-2, "", "final_frame.jpg"), (java.awt.Component) ((Object) LabeledWidgetContainer.field_P));
         int var3 = var2.storedWidth;
         int var4 = var2.storedHeight;
         BufferedSocket.b((byte) 66);

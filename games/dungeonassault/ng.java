@@ -29,7 +29,7 @@ final class ng extends InteractiveWidget {
         }
     }
 
-    final void a(int param0, int param1, lm param2, boolean param3) {
+    final void updatePointer(int param0, int param1, UiWidget param2, boolean param3) {
         RuntimeException runtimeException = null;
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
@@ -37,7 +37,7 @@ final class ng extends InteractiveWidget {
         RuntimeException decompiledCaughtException = null;
         try {
           this.field_O = this.field_O + 1;
-          super.a(param0, param1, param2, param3);
+          super.updatePointer(param0, param1, param2, param3);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -1181,7 +1181,7 @@ final class ng extends InteractiveWidget {
                 }
                 var2 = rp.a("connectionlost_withreason", param0 + 27171);
                 if (var2 != null) {
-                  oi.field_G = dj.a(var2, false);
+                  DraggableWidgetContainer.field_G = dj.a(var2, false);
                 }
                 var2 = rp.a("passwordverificationrequired", 106);
                 if (null != var2) {
@@ -1601,7 +1601,7 @@ final class ng extends InteractiveWidget {
                 }
                 var2 = rp.a("create_password_confirm_tooltip", param0 + 27141);
                 if (var2 != null) {
-                  lm.field_p = dj.a(var2, false);
+                  UiWidget.field_p = dj.a(var2, false);
                 }
                 var2 = rp.a("create_email_tooltip", 75);
                 if (var2 != null) {
@@ -1833,7 +1833,7 @@ final class ng extends InteractiveWidget {
                 }
                 var2 = rp.a("waitingfor_fonts", param0 + 27170);
                 if (null != var2) {
-                  rf.field_L = dj.a(var2, false);
+                  ModalDialog.field_L = dj.a(var2, false);
                 }
                 var2 = rp.a("waitingfor_soundeffects", param0 + 27191);
                 if (var2 != null) {
@@ -1885,7 +1885,7 @@ final class ng extends InteractiveWidget {
                 }
                 var2 = rp.a("loading_music", 57);
                 if (null != var2) {
-                  dg.field_P = dj.a(var2, false);
+                  LabeledWidgetContainer.field_P = dj.a(var2, false);
                 }
                 var2 = rp.a("loading_instruments", param0 + 27129);
                 if (var2 != null) {
@@ -2061,7 +2061,7 @@ final class ng extends InteractiveWidget {
                 }
                 var2 = rp.a("skip", 82);
                 if (var2 != null) {
-                  ii.field_E = dj.a(var2, false);
+                  DequeWidgetContainer.field_E = dj.a(var2, false);
                 }
                 var2 = rp.a("skiptutorial", 43);
                 if (var2 != null) {
@@ -2539,27 +2539,27 @@ final class ng extends InteractiveWidget {
                 }
                 var2 = rp.a("quickchat_shortcut_help,0", param0 ^ -27107);
                 if (null != var2) {
-                  ii.field_I[0] = dj.a(var2, false);
+                  DequeWidgetContainer.field_I[0] = dj.a(var2, false);
                 }
                 var2 = rp.a("quickchat_shortcut_help,1", 119);
                 if (var2 != null) {
-                  ii.field_I[1] = dj.a(var2, false);
+                  DequeWidgetContainer.field_I[1] = dj.a(var2, false);
                 }
                 var2 = rp.a("quickchat_shortcut_help,2", param0 ^ -27040);
                 if (var2 != null) {
-                  ii.field_I[2] = dj.a(var2, false);
+                  DequeWidgetContainer.field_I[2] = dj.a(var2, false);
                 }
                 var2 = rp.a("quickchat_shortcut_help,3", 77);
                 if (var2 != null) {
-                  ii.field_I[3] = dj.a(var2, false);
+                  DequeWidgetContainer.field_I[3] = dj.a(var2, false);
                 }
                 var2 = rp.a("quickchat_shortcut_help,4", 82);
                 if (var2 != null) {
-                  ii.field_I[4] = dj.a(var2, false);
+                  DequeWidgetContainer.field_I[4] = dj.a(var2, false);
                 }
                 var2 = rp.a("quickchat_shortcut_help,5", 64);
                 if (var2 != null) {
-                  ii.field_I[5] = dj.a(var2, false);
+                  DequeWidgetContainer.field_I[5] = dj.a(var2, false);
                 }
                 var2 = rp.a("quickchat_shortcut_keys,0", 68);
                 if (var2 != null) {
@@ -3311,7 +3311,7 @@ final class ng extends InteractiveWidget {
         }
     }
 
-    final void a(int param0, int param1, int param2, int param3) {
+    final void drawWidget(int param0, int param1, int param2, int param3) {
         RuntimeException decompiledCaughtException = null;
         int var5_int = 0;
         RuntimeException var5 = null;
@@ -3325,7 +3325,7 @@ final class ng extends InteractiveWidget {
         RgbSprite var7Lifetime2;
         var11 = DungeonAssault.field_K;
         try {
-          super.a(param0, param1, 0, param3);
+          super.drawWidget(param0, param1, 0, param3);
           if (param0 != param2) {
             return;
           }
@@ -3341,13 +3341,13 @@ final class ng extends InteractiveWidget {
               !(var9 <= ta.field_b.field_y) ||
               !(ta.field_b.field_v >= var10));
             if (!decompiledSharedTail0) {
-              lm.a(ta.field_b, (byte) -111);
+              UiWidget.a(ta.field_b, (byte) -111);
               SoftwareRasterizer.clearRaster();
               decompiledSharedTail0 = (var11 != 0);
             }
             if (decompiledSharedTail0) {
               ta.field_b = new RgbSprite(var9, var10);
-              lm.a(ta.field_b, (byte) 108);
+              UiWidget.a(ta.field_b, (byte) 108);
             }
             var7.drawRotatedAboutBilinear(112, 144, var7.field_E << 4, var7.field_G << 4, -this.field_O << 10, 4096);
             ti.c(true);
@@ -3376,7 +3376,7 @@ final class ng extends InteractiveWidget {
         }
     }
 
-    final boolean a(int param0, lm param1) {
+    final boolean takeFocus(int param0, UiWidget param1) {
         RuntimeException var3 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;

@@ -178,14 +178,14 @@ final class hh {
             if (var4 == -1) {
               throw new IllegalStateException();
             }
-            gg.field_D = new String[var4];
-            kf.a(gf.field_c, 0, gg.field_D, 0, var4);
+            ModalDialogHost.field_D = new String[var4];
+            kf.a(gf.field_c, 0, ModalDialogHost.field_D, 0, var4);
             uh.field_j = new String[var3_int - var4 - 1];
             kf.a(gf.field_c, 1 + var4, uh.field_j, 0, -var4 + var3_int - 1);
-            if (EmailFormatValidator.field_o.length >= gg.field_D.length) {
+            if (EmailFormatValidator.field_o.length >= ModalDialogHost.field_D.length) {
               stackIn_65_0 = EmailFormatValidator.field_o.length;
             } else {
-              stackIn_65_0 = gg.field_D.length;
+              stackIn_65_0 = ModalDialogHost.field_D.length;
             }
             var5 = stackIn_65_0;
             if (p.field_k.length < uh.field_j.length) {
@@ -214,10 +214,10 @@ final class hh {
             for (var8Lifetime2 = 0; var5 > var8Lifetime2; var8Lifetime2++) {
               stackIn_75_0 = hf.field_d;
               stackIn_75_1 = 6 + var8Lifetime2;
-              if (gg.field_D.length + (var8Lifetime2 - var5) < 0) {
+              if (ModalDialogHost.field_D.length + (var8Lifetime2 - var5) < 0) {
                 stackIn_76_2 = "";
               } else {
-                stackIn_76_2 = gg.field_D[gg.field_D.length + (var8Lifetime2 - var5)];
+                stackIn_76_2 = ModalDialogHost.field_D[ModalDialogHost.field_D.length + (var8Lifetime2 - var5)];
               }
               stackIn_75_0[stackIn_75_1] = stackIn_76_2;
             }
@@ -458,7 +458,7 @@ final class hh {
                 }
                 else {
                   if (var11 != null &&
-                    od.a(var11.field_i, 1) &&
+                    DropTargetWidgetContainer.a(var11.field_i, 1) &&
                     0 != var11.field_h) {
                     var13Lifetime1 = var11.field_j.getClampedTileIndex(-4);
                     if (var13Lifetime1 == var9) {
@@ -521,12 +521,12 @@ final class hh {
             if (param1.field_i == 27) {
               u.a(30, param1.field_j, true, 48, param1.field_l, 28);
             }
-            jn.field_F[ib.field_c].field_c = (double)(int)(Math.random() * 256.0);
-            jn.field_F[ib.field_c].field_j.copyCoordinatesFrom((byte) 46, param1.field_j);
-            jn.field_F[ib.field_c].field_l.a(param1.field_l, -28860);
-            jn.field_F[ib.field_c].field_e = 0;
-            jn.field_F[ib.field_c].field_h = 1;
-            jn.field_F[ib.field_c].field_i = 12;
+            AlphaWidgetContainer.field_F[ib.field_c].field_c = (double)(int)(Math.random() * 256.0);
+            AlphaWidgetContainer.field_F[ib.field_c].field_j.copyCoordinatesFrom((byte) 46, param1.field_j);
+            AlphaWidgetContainer.field_F[ib.field_c].field_l.a(param1.field_l, -28860);
+            AlphaWidgetContainer.field_F[ib.field_c].field_e = 0;
+            AlphaWidgetContainer.field_F[ib.field_c].field_h = 1;
+            AlphaWidgetContainer.field_F[ib.field_c].field_i = 12;
             ib.field_c = ib.field_c + 1;
             u.a(-1, param1.field_j, true, 32, param1.field_l, 35);
             param1.field_i = -1;

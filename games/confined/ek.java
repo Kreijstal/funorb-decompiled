@@ -424,8 +424,8 @@ final class ek {
           if (param0 >= -77) {
             ek.c(-125);
           }
-          var4 = oc.field_m[param3] + am.field_I[param3] + em.field_b[param3];
-          var5 = em.field_b[param1] + (am.field_I[param1] + oc.field_m[param1]);
+          var4 = oc.field_m[param3] + SingleChildWidgetContainer.field_I[param3] + em.field_b[param3];
+          var5 = em.field_b[param1] + (SingleChildWidgetContainer.field_I[param1] + oc.field_m[param1]);
           if (var4 < var5) {
             return true;
           }
@@ -447,8 +447,8 @@ final class ek {
           return false;
         }
         if (param0 < -77) {
-          var4Lifetime1 = oc.field_m[param3] + am.field_I[param3] + em.field_b[param3];
-          var5Lifetime1 = em.field_b[param1] + (am.field_I[param1] + oc.field_m[param1]);
+          var4Lifetime1 = oc.field_m[param3] + SingleChildWidgetContainer.field_I[param3] + em.field_b[param3];
+          var5Lifetime1 = em.field_b[param1] + (SingleChildWidgetContainer.field_I[param1] + oc.field_m[param1]);
           if (var4Lifetime1 < var5Lifetime1) {
             return true;
           }
@@ -458,8 +458,8 @@ final class ek {
           return !(param3 >= param1);
         }
         ek.c(-125);
-        var4Lifetime2 = oc.field_m[param3] + am.field_I[param3] + em.field_b[param3];
-        var5Lifetime2 = em.field_b[param1] + (am.field_I[param1] + oc.field_m[param1]);
+        var4Lifetime2 = oc.field_m[param3] + SingleChildWidgetContainer.field_I[param3] + em.field_b[param3];
+        var5Lifetime2 = em.field_b[param1] + (SingleChildWidgetContainer.field_I[param1] + oc.field_m[param1]);
         if (var4Lifetime2 < var5Lifetime2) {
           return true;
         }
@@ -574,7 +574,7 @@ final class ek {
                 return;
               }
               if (!this.field_h) {
-                stackIn_30_0 = s.field_M;
+                stackIn_30_0 = DropTargetWidgetContainer.field_M;
               } else {
                 stackIn_30_0 = qd.field_c;
               }

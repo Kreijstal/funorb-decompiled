@@ -84,7 +84,7 @@ class w implements q {
                 stackIn_18_0 = HomingMissileAnimation.field_x;
               }
               var9 = stackIn_18_0;
-              var2 = var2 + raa.field_J;
+              var2 = var2 + DraggableWidgetContainer.field_J;
               if (var9 != null) {
                 var9.a(BoardView.field_t + (ShieldEvent.field_r << 1), 28, -ConfirmedEmailAvailabilityValidator.field_k + var8, var2, var7 + (ConfirmedEmailAvailabilityValidator.field_k << 1));
               }
@@ -92,7 +92,7 @@ class w implements q {
             }
             if (0 <= var4) {
               lha.field_b.drawText(var6, var8, var2 + mha.field_g, var5, -1);
-              var2 = var2 + (ShieldEvent.field_r + (raa.field_J + BoardView.field_t));
+              var2 = var2 + (ShieldEvent.field_r + (DraggableWidgetContainer.field_J + BoardView.field_t));
             } else {
               RasterBuffer.field_a.drawText(var6, var8, ah.field_l + var2, var5, -1);
               var2 = var2 + un.field_i;

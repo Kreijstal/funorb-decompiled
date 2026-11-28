@@ -35,7 +35,7 @@ final class v {
 
     private final boolean d(int param0) {
         int var2 = -48 / ((79 - param0) / 42);
-        return this.field_f == ul.field_L ? true : false;
+        return this.field_f == ModalDialog.field_L ? true : false;
     }
 
     v(String param0, int param1, int param2) {
@@ -220,7 +220,7 @@ final class v {
           if (!this.field_e) {
             return var6 != 0;
           }
-          nh.field_P.b((byte) -61);
+          LabeledWidgetContainer.field_P.b((byte) -61);
           return var6 != 0;
         }
         if (640 < var2 - 8) {
@@ -232,7 +232,7 @@ final class v {
           if (!this.field_e) {
             return var6 != 0;
           }
-          nh.field_P.b((byte) -61);
+          LabeledWidgetContainer.field_P.b((byte) -61);
           return var6 != 0;
         }
         if (8 + (var5 + var3) < 0) {
@@ -244,7 +244,7 @@ final class v {
           if (!this.field_e) {
             return var6 != 0;
           }
-          nh.field_P.b((byte) -61);
+          LabeledWidgetContainer.field_P.b((byte) -61);
           return var6 != 0;
         }
         if (-8 + var3 > 480) {
@@ -256,7 +256,7 @@ final class v {
           if (!this.field_e) {
             return var6 != 0;
           }
-          nh.field_P.b((byte) -61);
+          LabeledWidgetContainer.field_P.b((byte) -61);
           return var6 != 0;
         }
         if (var6 != 0) {
@@ -266,7 +266,7 @@ final class v {
         if (!this.field_e) {
           return var6 != 0;
         }
-        nh.field_P.b((byte) -61);
+        LabeledWidgetContainer.field_P.b((byte) -61);
         return var6 != 0;
     }
 

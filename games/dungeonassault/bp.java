@@ -171,7 +171,7 @@ final class bp {
     final static void a(RgbSprite param0, byte param1, String param2) {
         try {
           lg.field_m = param2;
-          rf.field_Q = param0;
+          ModalDialog.field_Q = param0;
           if (param1 != 51) {
             field_h = (String) null;
           }

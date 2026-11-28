@@ -138,7 +138,7 @@ final class lb {
           var8 = param4.a(16751324);
           var11_ref_StringLifetime1 = var8;
           var11_ref_StringLifetime2 = var8;
-          if (null == ag.field_t &&
+          if (null == UiWidget.field_t &&
             !me.a(false, 96)) {
             stackIn_9_0 = -1;
             return stackIn_9_0;
@@ -213,7 +213,7 @@ final class lb {
                 RichTextWidget.a(BufferedRandomAccessFile.c(-1), 0);
                 km.field_x = sg.field_g;
                 le.c((byte) 119);
-                jn.field_C = false;
+                AlphaWidgetContainer.field_C = false;
                 stackIn_36_0 = var9Lifetime1;
                 return stackIn_36_0;
               }
@@ -239,7 +239,7 @@ final class lb {
                   ea.field_a[var12] = sc.field_g.n(-31298);
                 }
                 le.c((byte) 98);
-                jn.field_C = false;
+                AlphaWidgetContainer.field_C = false;
                 stackIn_46_0 = var11 + 100;
                 return stackIn_46_0;
               }
@@ -256,24 +256,24 @@ final class lb {
               km.field_x = sc.field_g.o(32);
             }
             le.c((byte) 84);
-            jn.field_C = false;
+            AlphaWidgetContainer.field_C = false;
             stackIn_57_0 = ImageProducerRasterBuffer.field_k;
             return stackIn_57_0;
           }
-          if (null == ag.field_t) {
-            if (jn.field_C) {
+          if (null == UiWidget.field_t) {
+            if (AlphaWidgetContainer.field_C) {
               if (m.a(true) <= 30000L) {
                 km.field_x = fl.field_d;
               } else {
-                km.field_x = od.field_H;
+                km.field_x = DropTargetWidgetContainer.field_H;
               }
-              jn.field_C = false;
+              AlphaWidgetContainer.field_C = false;
               stackIn_65_0 = 249;
               return stackIn_65_0;
             }
             var9Lifetime3 = cb.field_c;
             cb.field_c = GzipDecompressor.field_b;
-            jn.field_C = true;
+            AlphaWidgetContainer.field_C = true;
             GzipDecompressor.field_b = var9Lifetime3;
           }
           stackIn_67_0 = -1;

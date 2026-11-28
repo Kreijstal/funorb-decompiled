@@ -18,13 +18,13 @@ final class kk extends RichTextWidget {
         try {
           this.field_R = param1;
           this.field_T = param0;
-          this.a(param2, param3, param5, (byte) -90, param4);
+          this.setBounds(param2, param3, param5, (byte) -90, param4);
         } catch (RuntimeException runtimeException) {
-          throw dd.wrapClientException((Throwable) ((Object) runtimeException), "kk.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
+          throw DraggableWidgetContainer.wrapClientException((Throwable) ((Object) runtimeException), "kk.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }
     }
 
-    final boolean a(int param0, pj param1) {
+    final boolean takeFocus(int param0, UiWidget param1) {
         RuntimeException var3 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -46,20 +46,20 @@ final class kk extends RichTextWidget {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw dd.wrapClientException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw DraggableWidgetContainer.wrapClientException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 
     final static int a(int param0, int param1) {
         int var3 = OrbDefence.field_D ? 1 : 0;
         cf.field_a = null;
-        dd.field_A = null;
+        DraggableWidgetContainer.field_A = null;
         mc.field_j = 0;
         if (param0 != -30179) {
           return 72;
         }
-        int var2 = ta.field_z;
-        ta.field_z = hf.field_k;
+        int var2 = DequeWidgetContainer.field_z;
+        DequeWidgetContainer.field_z = hf.field_k;
         hf.field_k = var2;
         kg.field_h.field_b = kg.field_h.field_b + 1;
         if (param1 == 51) {
@@ -96,7 +96,7 @@ final class kk extends RichTextWidget {
         field_V = null;
     }
 
-    final void a(int param0, int param1, int param2, int param3) {
+    final void drawWidget(int param0, int param1, int param2, int param3) {
         String var5;
         qd var6;
         TextWidgetRenderer var8;
@@ -133,14 +133,14 @@ final class kk extends RichTextWidget {
             this.rebuildHotspotBounds((byte) -127);
           }
         }
-        super.a(param0, param1, param2 ^ 0, param3);
+        super.drawWidget(param0, param1, param2 ^ 0, param3);
         if (param2 != 1048575) {
           this.field_R = (String) null;
         }
         var6Lifetime1 = this.field_T.getValidationStatus(-7847);
         var8 = (TextWidgetRenderer) ((Object) this.field_j);
         var9 = param3 + this.field_s;
-        var10 = var8.getTextOriginY((pj) (this), 9534, param0) + (var8.getTextLayout((pj) (this), true).getLayoutHeight(122) >> 1);
+        var10 = var8.getTextOriginY((UiWidget) (this), 9534, param0) + (var8.getTextLayout((UiWidget) (this), true).getLayoutHeight(122) >> 1);
         if (var6Lifetime1 != ml.field_a &&
           uj.field_b != var6Lifetime1) {
           if (vh.field_h == var6Lifetime1) {
@@ -252,7 +252,7 @@ final class kk extends RichTextWidget {
           if (me.a(param1, (byte) -44)) {
             return false;
           }
-          if (mm.a(param1, (byte) 51)) {
+          if (DropTargetWidgetContainer.a(param1, (byte) 51)) {
             return false;
           }
           if (param2 == ~param0.length()) {
@@ -284,7 +284,7 @@ final class kk extends RichTextWidget {
           } else {
             stackIn_32_2 = "{...}";
           }
-          throw dd.wrapClientException((Throwable) ((Object) stackIn_28_0), ((StringBuilder) (Object) stackIn_31_1).append(stackIn_32_2).append(',').append(param2).append(')').toString());
+          throw DraggableWidgetContainer.wrapClientException((Throwable) ((Object) stackIn_28_0), ((StringBuilder) (Object) stackIn_31_1).append(stackIn_32_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -295,12 +295,12 @@ final class kk extends RichTextWidget {
         return (String) null;
     }
 
-    final void a(byte param0, pj param1, int param2, int param3) {
+    final void updatePointer(byte param0, UiWidget param1, int param2, int param3) {
         try {
           this.field_Q = this.field_Q + 1;
-          super.a(param0, param1, param2, param3);
+          super.updatePointer(param0, param1, param2, param3);
         } catch (RuntimeException runtimeException) {
-          throw dd.wrapClientException((Throwable) ((Object) runtimeException), "kk.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
+          throw DraggableWidgetContainer.wrapClientException((Throwable) ((Object) runtimeException), "kk.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
         }
     }
 

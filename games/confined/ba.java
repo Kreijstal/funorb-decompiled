@@ -30,7 +30,7 @@ final class ba extends InteractiveWidget {
         return null;
     }
 
-    final boolean a(fj param0, int param1) {
+    final boolean takeFocus(UiWidget param0, int param1) {
         RuntimeException var3 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -79,16 +79,16 @@ final class ba extends InteractiveWidget {
         }
     }
 
-    final void a(fj param0, int param1, int param2, int param3) {
+    final void updatePointer(UiWidget param0, int param1, int param2, int param3) {
         try {
           this.field_R = this.field_R + 1;
-          super.a(param0, param1, param2, param3);
+          super.updatePointer(param0, param1, param2, param3);
         } catch (RuntimeException runtimeException) {
           throw TextLineMetrics.a((Throwable) ((Object) runtimeException), "ba.V(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
-    final void a(int param0, int param1, byte param2, int param3) {
+    final void drawWidget(int param0, int param1, byte param2, int param3) {
         int var5;
         int var6;
         fi var8;
@@ -111,7 +111,7 @@ final class ba extends InteractiveWidget {
         int var10Lifetime2;
         fi var8Lifetime1;
         var11 = Confined.field_J ? 1 : 0;
-        super.a(param0, param1, (byte) 54, param3);
+        super.drawWidget(param0, param1, (byte) 54, param3);
         if (param1 != 0) {
           return;
         }

@@ -91,7 +91,7 @@ final class uf extends ql {
         ih.field_y[1] = new GridPoint(ln.field_a.field_v[2], ln.field_a.field_v[3]);
         ih.field_y[2] = new GridPoint(ln.field_a.field_v[4], ln.field_a.field_v[5]);
         CrossfadingMidiPcmStream.a(6, 1);
-        nh.field_E.copyCoordinatesFrom((byte) 46, ih.field_y[0]);
+        LabeledWidgetContainer.field_E.copyCoordinatesFrom((byte) 46, ih.field_y[0]);
         vg.field_e = new v[4];
         vg.field_e[0] = new v(tm.field_s, -120 + (ti.field_f.field_e * 24 + 50), 24 * (-7 + ti.field_f.field_g) - 20, 200, false);
         vg.field_e[1] = new v(ProxySocketFactory.field_g, 24 * ih.field_y[0].field_e - 140, ih.field_y[0].field_g * 24, 200, false);
@@ -280,7 +280,7 @@ final class uf extends ql {
           if (2 > var3) {
             ca.a(0.5 + (double)ih.field_y[1].field_e, 1, 1.0 + (double)ih.field_y[1].field_g, true, 64);
             CrossfadingMidiPcmStream.a(0, 1);
-            nh.field_E.copyCoordinatesFrom((byte) 46, ih.field_y[0]);
+            LabeledWidgetContainer.field_E.copyCoordinatesFrom((byte) 46, ih.field_y[0]);
             vg.field_e[2].field_a = 1;
           }
           if (0 != vg.field_e[3].field_a) {
@@ -299,13 +299,13 @@ final class uf extends ql {
         if (var3Lifetime1 < 2) {
           CrossfadingMidiPcmStream.a(9, 1);
           vg.field_e[1].field_a = 1;
-          nh.field_E.copyCoordinatesFrom((byte) 46, ih.field_y[1]);
+          LabeledWidgetContainer.field_E.copyCoordinatesFrom((byte) 46, ih.field_y[1]);
         }
         var3Lifetime2 = ih.a(var4, (byte) -105, ih.field_y[1]);
         if (2 > var3Lifetime2) {
           ca.a(0.5 + (double)ih.field_y[1].field_e, 1, 1.0 + (double)ih.field_y[1].field_g, true, 64);
           CrossfadingMidiPcmStream.a(0, 1);
-          nh.field_E.copyCoordinatesFrom((byte) 46, ih.field_y[0]);
+          LabeledWidgetContainer.field_E.copyCoordinatesFrom((byte) 46, ih.field_y[0]);
           vg.field_e[2].field_a = 1;
         }
         if (0 != vg.field_e[3].field_a) {

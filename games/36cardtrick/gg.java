@@ -80,7 +80,7 @@ final class gg {
         SoftwareRasterizer.setRasterBuffer(var1.field_h, var1.field_i, var1.field_g);
         SoftwareRasterizer.setClip(var1.field_k, var1.field_n, var1.field_m, var1.field_j);
         var1.field_h = null;
-        lk.field_g.addLast(var1, 27362);
+        UiWidget.field_g.addLast(var1, 27362);
         if (param0 == 14756) {
           return;
         }

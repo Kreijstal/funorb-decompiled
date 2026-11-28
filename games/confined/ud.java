@@ -62,7 +62,7 @@ final class ud extends IntrusiveNode {
         RuntimeException decompiledCaughtException = null;
         var5 = Confined.field_J ? 1 : 0;
         try {
-          oe.field_Q = b.field_a;
+          ModalDialog.field_Q = b.field_a;
           if (param0) {
             return;
           }

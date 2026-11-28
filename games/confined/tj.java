@@ -49,7 +49,7 @@ final class tj extends tk {
             ki.field_c.n(10);
           }
           om.field_p = new LoginPanel(param1, param2, false, true, true);
-          dn.field_b.a((fj) (om.field_p), (byte) -72);
+          dn.field_b.a((UiWidget) (om.field_p), (byte) -72);
         } catch (RuntimeException runtimeException) {
           throw TextLineMetrics.a((Throwable) ((Object) runtimeException), "tj.I(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }

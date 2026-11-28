@@ -18,7 +18,7 @@ final class ua extends ButtonWidget {
         return null;
     }
 
-    final boolean a(byte param0, UiWidget param1) {
+    final boolean takeFocus(byte param0, UiWidget param1) {
         RuntimeException var3 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
@@ -54,16 +54,16 @@ final class ua extends ButtonWidget {
         field_K = null;
     }
 
-    final void a(int param0, int param1, byte param2, UiWidget param3) {
+    final void updatePointer(int param0, int param1, byte param2, UiWidget param3) {
         try {
           this.field_J = this.field_J + 1;
-          super.a(param0, param1, param2, param3);
+          super.updatePointer(param0, param1, param2, param3);
         } catch (RuntimeException runtimeException) {
           throw LevelGrid.toClientException((Throwable) ((Object) runtimeException), "ua.EA(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 
-    final void a(int param0, int param1, int param2, int param3) {
+    final void drawWidget(int param0, int param1, int param2, int param3) {
         int var5;
         int var6;
         ud var8;
@@ -77,7 +77,7 @@ final class ua extends ButtonWidget {
         int var9Lifetime1;
         int var10Lifetime1;
         var11 = TrackController.field_F ? 1 : 0;
-        super.a(param0, param1, param2, param3);
+        super.drawWidget(param0, param1, param2, param3);
         if (param0 != 0) {
           return;
         }

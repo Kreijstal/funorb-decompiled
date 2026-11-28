@@ -190,9 +190,9 @@ final class kf extends UiWidget {
         }
     }
 
-    final void a(byte param0, int param1, int param2, int param3, int param4) {
+    final void setBounds(byte param0, int param1, int param2, int param3, int param4) {
         int var6 = -126 / ((66 - param0) / 57);
-        super.a((byte) 125, param1, param2, param3, param4);
+        super.setBounds((byte) 125, param1, param2, param3, param4);
         this.h(-917474783);
     }
 
@@ -217,7 +217,7 @@ final class kf extends UiWidget {
           }
         }
         if (param0) {
-          this.a(74, (byte) 84, -119, 72);
+          this.drawWidget(74, (byte) 84, -119, 72);
         }
         r.a(126);
         return var3;
@@ -316,7 +316,7 @@ final class kf extends UiWidget {
         }
     }
 
-    final void a(int param0, byte param1, int param2, int param3) {
+    final void drawWidget(int param0, byte param1, int param2, int param3) {
         if (param0 != 0) {
           return;
         }
@@ -333,7 +333,7 @@ final class kf extends UiWidget {
         }
     }
 
-    final void a(int param0, UiWidget param1, int param2, int param3) {
+    final void updatePointer(int param0, UiWidget param1, int param2, int param3) {
         int var5_int = 0;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -370,7 +370,7 @@ final class kf extends UiWidget {
         this.field_A = param4;
         this.field_I = param6;
         this.field_y = param7;
-        this.a((byte) -122, param0, param1, param3, param2);
+        this.setBounds((byte) -122, param0, param1, param3, param2);
     }
 
     static {

@@ -16,21 +16,21 @@ class RichTextWidget extends InteractiveWidget {
         if (param1 != 53) {
           return;
         }
-        this.a(param3, param0, ((TextWidgetRenderer) ((Object) this.field_j)).getPreferredHeight((pj) (this), true), (byte) -90, param2);
+        this.setBounds(param3, param0, ((TextWidgetRenderer) ((Object) this.field_j)).getPreferredHeight((UiWidget) (this), true), (byte) -90, param2);
     }
 
-    final void a(int param0, int param1, int param2, byte param3, int param4) {
-        super.a(param0, param1, param2, param3, param4);
+    final void setBounds(int param0, int param1, int param2, byte param3, int param4) {
+        super.setBounds(param0, param1, param2, param3, param4);
         this.rebuildHotspotBounds((byte) -127);
     }
 
-    RichTextWidget(String param0, td param1) {
-        super(param0, (ag) null);
+    RichTextWidget(String param0, WidgetRenderer param1) {
+        super(param0, (WidgetEventListener) null);
         this.field_H = null;
         try {
           this.field_j = param1;
         } catch (RuntimeException runtimeException) {
-          throw dd.wrapClientException((Throwable) ((Object) runtimeException), "te.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw DraggableWidgetContainer.wrapClientException((Throwable) ((Object) runtimeException), "te.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -74,7 +74,7 @@ class RichTextWidget extends InteractiveWidget {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw dd.wrapClientException((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param2).append(')').toString());
+          throw DraggableWidgetContainer.wrapClientException((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -96,19 +96,19 @@ class RichTextWidget extends InteractiveWidget {
         int var14;
         TextHotspotBounds var15;
         int var16;
-        pj var17;
+        UiWidget var17;
         int var7Lifetime1;
         var16 = OrbDefence.field_D ? 1 : 0;
         this.field_I = new IntrusiveDeque();
         var2 = 0;
         var3 = (TextWidgetRenderer) ((Object) this.field_j);
-        var4 = var3.getTextLayout((pj) (this), true);
+        var4 = var3.getTextLayout((UiWidget) (this), true);
         while (true) {
           var5 = this.field_l.indexOf("<hotspot=", var2);
           if (var5 == -1) {
             if (param0 != -127) {
-              var17 = (pj) null;
-              this.a(-25, (pj) null);
+              var17 = (UiWidget) null;
+              this.takeFocus(-25, (UiWidget) null);
             }
             return;
           }
@@ -151,14 +151,14 @@ class RichTextWidget extends InteractiveWidget {
         if (param0 != 2) {
           RichTextWidget.releaseDeclaredStaticReferences(-128);
         }
-        return h.field_H;
+        return LabeledWidgetContainer.field_H;
     }
 
-    void a(int param0, int param1, int param2, int param3) {
+    void drawWidget(int param0, int param1, int param2, int param3) {
         TextHotspotBounds discarded$0 = null;
         int var7 = 0;
         int var8 = 0;
-        super.a(param0, param1, param2 + 0, param3);
+        super.drawWidget(param0, param1, param2 + 0, param3);
         if (param2 != 1048575) {
           discarded$0 = this.findHotspotAt(-110, 35, 78);
         }
@@ -169,8 +169,8 @@ class RichTextWidget extends InteractiveWidget {
         TextHotspotBounds var6 = this.field_H;
         if (var6 == null) {
         } else {
-          var7 = var9.getTextOriginX((pj) (this), param3, (byte) 54);
-          var8 = var9.getTextOriginY((pj) (this), 9534, param0);
+          var7 = var9.getTextOriginX((UiWidget) (this), param3, (byte) 54);
+          var8 = var9.getTextOriginY((UiWidget) (this), 9534, param0);
           do {
             wh.a(var6.field_s + 2, false, -2 + var7 + var6.field_o, var6.field_n + 2, -2 + var8 + var6.field_g);
             var6 = var6.field_p;
@@ -178,11 +178,11 @@ class RichTextWidget extends InteractiveWidget {
         }
     }
 
-    void a(byte param0, pj param1, int param2, int param3) {
+    void updatePointer(byte param0, UiWidget param1, int param2, int param3) {
         int var5_int = 0;
         int var6 = 0;
         try {
-          super.a(param0, param1, param2, param3);
+          super.updatePointer(param0, param1, param2, param3);
           this.field_H = null;
           if (this.field_t) {
             var5_int = ua.field_a - param2 - this.field_s;
@@ -190,11 +190,11 @@ class RichTextWidget extends InteractiveWidget {
             this.field_H = this.findHotspotAt(-2, var6, var5_int);
           }
         } catch (RuntimeException runtimeException) {
-          throw dd.wrapClientException((Throwable) ((Object) runtimeException), "te.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
+          throw DraggableWidgetContainer.wrapClientException((Throwable) ((Object) runtimeException), "te.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
         }
     }
 
-    boolean a(int param0, pj param1) {
+    boolean takeFocus(int param0, UiWidget param1) {
         RuntimeException var3 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -215,7 +215,7 @@ class RichTextWidget extends InteractiveWidget {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw dd.wrapClientException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw DraggableWidgetContainer.wrapClientException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 

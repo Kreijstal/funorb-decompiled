@@ -7,16 +7,16 @@ final class AccountCreationResultPanel extends mf implements WidgetActionListene
     private boolean field_nb;
     private boolean field_mb;
 
-    final boolean a(int param0) {
+    final boolean advanceDialogAnimation(int param0) {
         if (!this.field_C) {
           if (param0 <= -32) {
-            return super.a(-98);
+            return super.advanceDialogAnimation(-98);
           }
           return false;
         }
         if (this.field_nb) {
           if (param0 <= -32) {
-            return super.a(-98);
+            return super.advanceDialogAnimation(-98);
           }
           return false;
         }
@@ -24,12 +24,12 @@ final class AccountCreationResultPanel extends mf implements WidgetActionListene
         if (var2 != null) {
           this.showAccountCreationResult(-12331, false, var2);
           if (param0 <= -32) {
-            return super.a(-98);
+            return super.advanceDialogAnimation(-98);
           }
           return false;
         }
         if (param0 <= -32) {
-          return super.a(-98);
+          return super.advanceDialogAnimation(-98);
         }
         return false;
     }
@@ -126,7 +126,7 @@ final class AccountCreationResultPanel extends mf implements WidgetActionListene
         }
     }
 
-    AccountCreationResultPanel(rp param0, AccountCreationPanel param1) {
+    AccountCreationResultPanel(ModalDialogHost param0, AccountCreationPanel param1) {
         super(param0, qia.field_a, SocketConnector.field_c, false, false);
         try {
           this.field_ob = param1;

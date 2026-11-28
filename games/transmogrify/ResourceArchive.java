@@ -5,7 +5,7 @@ final class ResourceArchive {
     private ih field_c;
     static boolean[] field_g;
     private Object[][] field_d;
-    static da field_f;
+    static ModalDialogHost field_f;
     private int field_e;
     private boolean field_a;
     private el field_b;
@@ -118,7 +118,7 @@ final class ResourceArchive {
             return null;
           }
           if (param1 <= 66) {
-            field_f = (da) (this.field_h[3]);
+            field_f = (ModalDialogHost) (this.field_h[3]);
           }
           var7 = (CharSequence) ((Object) param0);
           var5 = this.field_b.field_t[var4_int].a(gb.a(-14741, var7), false);

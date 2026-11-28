@@ -57,7 +57,7 @@ final class ii {
         dj.a();
         SoftwareRasterizer.clearRaster();
         mn.field_x = 0;
-        oj.o(param0 - 1236579268);
+        AlphaWidgetContainer.o(param0 - 1236579268);
         Sprite var2 = var1.copy();
         if (param0 != 140) {
           return;

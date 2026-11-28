@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class NameSuggestionsPanel extends ta implements WidgetActivationListener {
+final class NameSuggestionsPanel extends DequeWidgetContainer implements WidgetActivationListener {
     static String field_F;
     static String field_A;
     static boolean field_B;
@@ -40,11 +40,11 @@ final class NameSuggestionsPanel extends ta implements WidgetActivationListener 
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw dd.wrapClientException((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param4).append(')').toString());
+          throw DraggableWidgetContainer.wrapClientException((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param4).append(')').toString());
         }
     }
 
-    final boolean a(char param0, int param1, pj param2, int param3) {
+    final boolean handleKey(char param0, int param1, UiWidget param2, int param3) {
         RuntimeException var5 = null;
         boolean stackIn_6_0 = false;
         boolean stackIn_10_0 = false;
@@ -53,17 +53,17 @@ final class NameSuggestionsPanel extends ta implements WidgetActivationListener 
         String stackIn_14_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (super.a(param0, param1, param2, param3)) {
+          if (super.handleKey(param0, param1, param2, param3)) {
             return true;
           }
           if (param1 == 98) {
-            stackIn_6_0 = this.a(param2, false);
+            stackIn_6_0 = this.focusPreviousChild(param2, false);
             return stackIn_6_0;
           }
           if (param1 != 99) {
             return false;
           }
-          stackIn_10_0 = this.b(param2, false);
+          stackIn_10_0 = this.focusNextChild(param2, false);
           return stackIn_10_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -75,21 +75,21 @@ final class NameSuggestionsPanel extends ta implements WidgetActivationListener 
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw dd.wrapClientException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param3).append(')').toString());
+          throw DraggableWidgetContainer.wrapClientException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param3).append(')').toString());
         }
     }
 
     NameSuggestionsPanel(NameSuggestionListener param0) {
-        super(0, 0, 0, 0, (td) null);
+        super(0, 0, 0, 0, (WidgetRenderer) null);
         try {
           this.field_E = param0;
         } catch (RuntimeException runtimeException) {
-          throw dd.wrapClientException((Throwable) ((Object) runtimeException), "we.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw DraggableWidgetContainer.wrapClientException((Throwable) ((Object) runtimeException), "we.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
-    final void a(int param0, int param1, int param2, int param3) {
-        super.a(param0, param1, param2, param3);
+    final void drawWidget(int param0, int param1, int param2, int param3) {
+        super.drawWidget(param0, param1, param2, param3);
         if (param1 != 0) {
           return;
         }
@@ -123,19 +123,19 @@ final class NameSuggestionsPanel extends ta implements WidgetActivationListener 
             var4 = new qc(lm.field_f, 0, 1);
             this.field_C = new InteractiveWidget[1 + var3_int];
             for (var5 = 0; var3_int > var5; var5++) {
-              this.field_C[var5] = new InteractiveWidget(this.field_D[var5], (ag) (this));
-              this.field_C[var5].field_j = (td) ((Object) var4);
+              this.field_C[var5] = new InteractiveWidget(this.field_D[var5], (WidgetEventListener) (this));
+              this.field_C[var5].field_j = (WidgetRenderer) ((Object) var4);
               this.field_C[var5].field_i = PcmOutputWorker.field_f;
-              this.field_C[var5].a(0, var5 * 16 + 20, 15, (byte) -90, 80);
-              this.a(this.field_C[var5], (byte) 74);
+              this.field_C[var5].setBounds(0, var5 * 16 + 20, 15, (byte) -90, 80);
+              this.addChild(this.field_C[var5], (byte) 74);
             }
             if (param1 != -34) {
-              this.a(95, -43, 80, 127);
+              this.drawWidget(95, -43, 80, 127);
             }
-            this.field_C[var3_int] = new InteractiveWidget(mm.field_B, (ag) (this));
-            this.field_C[var3_int].field_j = (td) ((Object) var4);
-            this.field_C[var3_int].a(0, 20 + (var3_int + 1) * 16, 15, (byte) -90, 100);
-            this.a(this.field_C[var3_int], (byte) 74);
+            this.field_C[var3_int] = new InteractiveWidget(DropTargetWidgetContainer.field_B, (WidgetEventListener) (this));
+            this.field_C[var3_int].field_j = (WidgetRenderer) ((Object) var4);
+            this.field_C[var3_int].setBounds(0, 20 + (var3_int + 1) * 16, 15, (byte) -90, 100);
+            this.addChild(this.field_C[var3_int], (byte) 74);
             return;
           }
           this.field_D = null;
@@ -150,7 +150,7 @@ final class NameSuggestionsPanel extends ta implements WidgetActivationListener 
           } else {
             stackIn_19_2 = "{...}";
           }
-          throw dd.wrapClientException((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param1).append(')').toString());
+          throw DraggableWidgetContainer.wrapClientException((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -235,7 +235,7 @@ final class NameSuggestionsPanel extends ta implements WidgetActivationListener 
           } else {
             stackIn_45_2 = "{...}";
           }
-          throw dd.wrapClientException((Throwable) ((Object) stackIn_44_0), ((StringBuilder) (Object) stackIn_44_1).append(stackIn_45_2).append(',').append(param3).append(')').toString());
+          throw DraggableWidgetContainer.wrapClientException((Throwable) ((Object) stackIn_44_0), ((StringBuilder) (Object) stackIn_44_1).append(stackIn_45_2).append(',').append(param3).append(')').toString());
         }
     }
 

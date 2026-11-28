@@ -35,7 +35,7 @@ final class MixedSupport098 {
         byte[] byteArrayLocal11 = null;
         integerLocal8 = DekoBlokoClient.obfuscationControl ? 1 : 0;
         try {
-          cipherPacketBufferLocal10 = UiComponentPart006.cipherPacketBufferState0001;
+          cipherPacketBufferLocal10 = LabeledWidgetContainer.cipherPacketBufferState0001;
           integerLocal3 = cipherPacketBufferLocal10.readUnsignedByte((byte) -119);
           if (integerArgument1 != 14750) {
             sceneWidgetState0096 = (SceneWidget) null;
@@ -96,7 +96,7 @@ final class MixedSupport098 {
           if (integerArgument1 != 25973) {
             stringState0416 = (String) null;
           }
-          if (UiComponentPart006.cipherPacketBufferState0001.position >= integerArgument2) {
+          if (LabeledWidgetContainer.cipherPacketBufferState0001.position >= integerArgument2) {
             return true;
           }
           if (GameSession.bufferedSocketState0002 == null) {
@@ -105,16 +105,16 @@ final class MixedSupport098 {
           try {
             integerLocal1 = GameSession.bufferedSocketState0002.computeInteger1377(0);
             if (integerLocal1 > 0) {
-              if (-UiComponentPart006.cipherPacketBufferState0001.position + integerArgument2 < integerLocal1) {
-                integerLocal1 = -UiComponentPart006.cipherPacketBufferState0001.position + integerArgument2;
+              if (-LabeledWidgetContainer.cipherPacketBufferState0001.position + integerArgument2 < integerLocal1) {
+                integerLocal1 = -LabeledWidgetContainer.cipherPacketBufferState0001.position + integerArgument2;
               }
-              GameSession.bufferedSocketState0002.performAction1373(integerLocal1, UiComponentPart006.cipherPacketBufferState0001.position, (byte) 17, UiComponentPart006.cipherPacketBufferState0001.payload);
+              GameSession.bufferedSocketState0002.performAction1373(integerLocal1, LabeledWidgetContainer.cipherPacketBufferState0001.position, (byte) 17, LabeledWidgetContainer.cipherPacketBufferState0001.payload);
               MixedSupport095.longState0040 = MixedSupport062.correctedCurrentTimeMillis(4);
-              UiComponentPart006.cipherPacketBufferState0001.position = UiComponentPart006.cipherPacketBufferState0001.position + integerLocal1;
-              if (integerArgument2 > UiComponentPart006.cipherPacketBufferState0001.position) {
+              LabeledWidgetContainer.cipherPacketBufferState0001.position = LabeledWidgetContainer.cipherPacketBufferState0001.position + integerLocal1;
+              if (integerArgument2 > LabeledWidgetContainer.cipherPacketBufferState0001.position) {
                 return false;
               }
-              UiComponentPart006.cipherPacketBufferState0001.position = 0;
+              LabeledWidgetContainer.cipherPacketBufferState0001.position = 0;
               return true;
             }
             if (integerLocal1 < 0) {

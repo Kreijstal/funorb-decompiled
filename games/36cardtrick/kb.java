@@ -12,18 +12,18 @@ final class kb {
     final static boolean a(boolean param0) {
         if (param0) {
           kb.a(false);
-          if (wc.field_A == null) {
+          if (DropTargetWidgetContainer.field_A == null) {
             return false;
           }
-          if (wc.field_A.b(true)) {
+          if (DropTargetWidgetContainer.field_A.b(true)) {
             return true;
           }
           return false;
         }
-        if (wc.field_A == null) {
+        if (DropTargetWidgetContainer.field_A == null) {
           return false;
         }
-        if (wc.field_A.b(true)) {
+        if (DropTargetWidgetContainer.field_A.b(true)) {
           return true;
         }
         return false;

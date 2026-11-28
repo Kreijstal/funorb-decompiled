@@ -51,7 +51,7 @@ final class DiskArchiveRequest extends ArchiveRequest {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw dd.wrapClientException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
+          throw DraggableWidgetContainer.wrapClientException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
         }
     }
 

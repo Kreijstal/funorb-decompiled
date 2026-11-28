@@ -177,7 +177,7 @@ final class gg {
           }
           var1 = dm.a(param0 + 121);
           wo.field_e = new LoginPanel(var1, (String) null, true, false, false);
-          lg.field_w.a(ta.field_a, -1);
+          lg.field_w.showDialog(ta.field_a, -1);
           ta.field_a.b(1, wo.field_e);
           ta.field_a.h((byte) 59);
           return;

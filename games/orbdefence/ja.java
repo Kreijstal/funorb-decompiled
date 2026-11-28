@@ -463,7 +463,7 @@ final class ja {
             } else {
               stackIn_8_2 = "{...}";
             }
-            throw dd.wrapClientException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
+            throw DraggableWidgetContainer.wrapClientException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -671,8 +671,8 @@ final class ja {
               break regionExit1;
             }
             MouseInputListener.a(mh.field_a[44], (byte) -11);
-            kj.field_x = null;
-            mm.field_A = null;
+            SingleChildWidgetContainer.field_x = null;
+            DropTargetWidgetContainer.field_A = null;
             il.field_f = new nk(-19 + var4);
             rh.a((byte) -79, -1, param2);
             stackIn_76_0 = (0 < tc.field_b) ? 0 : 7;
@@ -704,8 +704,8 @@ final class ja {
               break regionExit1;
             }
             MouseInputListener.a(mh.field_a[44], (byte) -11);
-            kj.field_x = null;
-            mm.field_A = null;
+            SingleChildWidgetContainer.field_x = null;
+            DropTargetWidgetContainer.field_A = null;
             il.field_f = new nk(0);
             rh.a((byte) 117, -1, param2);
             stackIn_81_0 = (tc.field_b > 0) ? 0 : 7;
@@ -991,7 +991,7 @@ final class ja {
               ia.b(256, -23235);
             }
             if (this.field_f.e(100)) {
-              kj.i(117);
+              SingleChildWidgetContainer.i(117);
             }
             if (this.field_f.b((byte) 125)) {
               MouseInputListener.b(2);
@@ -1063,7 +1063,7 @@ final class ja {
             MouseInputListener.a(mh.field_a[45], (byte) -11);
             if (!n.b((byte) 73)) {
               il.field_f.c(-1);
-              kj.field_x = null;
+              SingleChildWidgetContainer.field_x = null;
               if (TextLayout.field_f == 0) {
                 rh.a((byte) -7, 2, param2);
                 decompiledFrameRemainder0 = (var9 != 0);
@@ -1372,7 +1372,7 @@ final class ja {
                 !(ua.field_a >= (var10 + 80)) &&
                 !((60 + var11_int) <= DiskCacheWorker.field_d) &&
                 of.field_G == 1) {
-                kj.field_x = null;
+                SingleChildWidgetContainer.field_x = null;
                 n.field_a = var9_int;
               }
             } else {
@@ -1385,18 +1385,18 @@ final class ja {
         }
         if ((decompiledFrameCompleted1) &&
           (decompiledFrameRemainder2 = !(n.b((byte) -99))) &&
-          (decompiledFrameRemainder1 = (kj.field_x == null))) {
+          (decompiledFrameRemainder1 = (SingleChildWidgetContainer.field_x == null))) {
           stackIn_51_0 = 1;
           stackIn_51_1 = 3;
         }
         if ((decompiledFrameRemainder2) &&
           (decompiledFrameRemainder1)) {
-          kj.field_x = RasterBuffer.a(stackIn_51_0, stackIn_51_1, n.field_a, 10, (byte) -38);
+          SingleChildWidgetContainer.field_x = RasterBuffer.a(stackIn_51_0, stackIn_51_1, n.field_a, 10, (byte) -38);
         }
         if (decompiledFrameRemainder2) {
           boolean decompiledFrameRemainder0 = true;
           var10_ref_sc = ob.field_I;
-          var11 = kj.field_x;
+          var11 = SingleChildWidgetContainer.field_x;
           if (!var11.field_h) {
             var9 = ql.field_f;
             decompiledFrameRemainder0 = (var28 != 0);
@@ -1410,7 +1410,7 @@ final class ja {
               var9 = PcmOutputWorker.field_a;
               var12 = var11.field_i[TextLayout.field_e];
               var32 = var11.field_l[TextLayout.field_e];
-              var14 = ValidatedTextField.a(TextLayout.field_e, -1, mm.field_A, var11);
+              var14 = ValidatedTextField.a(TextLayout.field_e, -1, DropTargetWidgetContainer.field_A, var11);
               var10_ref_sc.stringWidth("10. ");
               var15 = jd.field_c.field_H + 140;
               var16 = 310;
@@ -1526,7 +1526,7 @@ final class ja {
         var10Lifetime1 = stackIn_93_0 + stackIn_93_1;
         ob.field_I.drawCentred(var9, 320, var10Lifetime1, 16777215, -1);
         if (!n.b((byte) -92)) {
-          stackIn_96_0 = h.field_L;
+          stackIn_96_0 = LabeledWidgetContainer.field_L;
         } else {
           stackIn_96_0 = qk.field_a;
         }
@@ -2876,7 +2876,7 @@ final class ja {
           TextHotspotBounds.field_t.drawCentred(param1, 320, 96, 0, -1);
           BufferedSocket.field_a.a(-40);
         } catch (RuntimeException runtimeException) {
-          throw dd.wrapClientException((Throwable) ((Object) runtimeException), "ja.Q(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw DraggableWidgetContainer.wrapClientException((Throwable) ((Object) runtimeException), "ja.Q(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

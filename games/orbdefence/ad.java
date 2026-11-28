@@ -63,9 +63,9 @@ final class ad {
             for (var6_intLifetime1 = 0; var6_intLifetime1 < var4; var6_intLifetime1++) {
               uj.a((byte) -85, var15);
               if (var6_intLifetime1 != 0) {
-                a.a(var6_intLifetime1, TextHotspotBounds.field_l, 9664, h.field_E, oh.field_b, fd.field_f);
+                a.a(var6_intLifetime1, TextHotspotBounds.field_l, 9664, LabeledWidgetContainer.field_E, oh.field_b, fd.field_f);
               } else {
-                a.a(var6_intLifetime1, TextHotspotBounds.field_l, 9664, h.field_E, oh.field_b, fd.field_f);
+                a.a(var6_intLifetime1, TextHotspotBounds.field_l, 9664, LabeledWidgetContainer.field_E, oh.field_b, fd.field_f);
               }
             }
             fe.a(var5, true);
@@ -115,7 +115,7 @@ final class ad {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw dd.wrapClientException((Throwable) ((Object) var1), "ad.C(" + param0 + ')');
+          throw DraggableWidgetContainer.wrapClientException((Throwable) ((Object) var1), "ad.C(" + param0 + ')');
         }
     }
 
@@ -136,7 +136,7 @@ final class ad {
           lh.a(param1, "", false);
           bm.a(12979, param1);
         } catch (RuntimeException runtimeException) {
-          throw dd.wrapClientException((Throwable) ((Object) runtimeException), "ad.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw DraggableWidgetContainer.wrapClientException((Throwable) ((Object) runtimeException), "ad.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

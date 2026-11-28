@@ -173,7 +173,7 @@ final class dl extends jla {
         var3 = 0;
         while (rga.field_a.length > var2) {
           if (null != rga.field_a[var2]) {
-            rga.field_a[var2].field_f.a(false, false, 2048, 2048, 0, -115, 256, (640 - raa.field_F * 80 >> 1) + (80 * var3 - 30), 250);
+            rga.field_a[var2].field_f.a(false, false, 2048, 2048, 0, -115, 256, (640 - DraggableWidgetContainer.field_F * 80 >> 1) + (80 * var3 - 30), 250);
             var3++;
           }
           var2++;

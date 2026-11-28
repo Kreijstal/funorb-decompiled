@@ -163,7 +163,7 @@ final class sg {
             SecondaryNodeDeque.field_d = null;
           }
         } else {
-          SecondaryNodeDeque.field_d = tf.a(var8, 0, 80);
+          SecondaryNodeDeque.field_d = AlphaWidgetContainer.a(var8, 0, 80);
           l.field_c = null;
         }
         return new sg(param0);

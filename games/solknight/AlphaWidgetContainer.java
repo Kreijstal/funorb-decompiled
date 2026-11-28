@@ -1,0 +1,83 @@
+/*
+ * Decompiled by CFR-JS 0.4.0.
+ */
+final class AlphaWidgetContainer extends SingleChildWidgetContainer {
+    static ng field_L;
+    static BitPacketBuffer field_N;
+    static int field_O;
+    int field_H;
+    static String[] field_I;
+    static String field_K;
+    static String field_J;
+    static int field_M;
+
+    public static void clearStaticReferences(byte param0) {
+        field_L = null;
+        field_N = null;
+        field_K = null;
+        if (param0 != 45) {
+          return;
+        }
+        field_J = null;
+        field_I = null;
+    }
+
+    final void drawWidget(int param0, int param1, int param2, int param3) {
+        if (param1 != 0) {
+          return;
+        }
+        if (this.field_G == null) {
+          return;
+        }
+        if (this.field_H == 0) {
+          return;
+        }
+        if (this.field_H == 256) {
+          this.field_G.drawWidget(param0 + this.field_j, param1, param2 + this.field_m, 0);
+          return;
+        }
+        Sprite var6 = new Sprite(this.field_G.field_t, this.field_G.field_x);
+        AgeValidator.a(-119, var6);
+        this.field_G.drawWidget(0, param1, 0, param3);
+        MidiPcmStream.e(4096);
+        var6.drawWithOpacity(param2 + this.field_m, this.field_j + param0, this.field_H);
+    }
+
+    final static int b(int param0, int param1, int param2) {
+        int var3 = 0;
+        if (param0 == 25403) {
+          var3 = -1 + param1 & param2 >> 31;
+          return (param2 + (param2 >>> 31)) % param1 + var3;
+        }
+        return -126;
+    }
+
+    final static String d(byte param0) {
+        if (param0 != 18) {
+          AlphaWidgetContainer.clearStaticReferences((byte) -93);
+          return vc.field_c;
+        }
+        return vc.field_c;
+    }
+
+    public AlphaWidgetContainer() {
+        super(0, 0, 0, 0, (WidgetRenderer) null, (WidgetEventListener) null);
+        this.field_H = 256;
+    }
+
+    AlphaWidgetContainer(UiWidget param0) {
+        super(param0.field_m, param0.field_j, param0.field_t, param0.field_x, (WidgetRenderer) null, (WidgetEventListener) null);
+        try {
+          param0.setBounds(this.field_x, this.field_t, 0, 0, 0);
+          this.field_H = 256;
+          this.field_G = param0;
+        } catch (RuntimeException runtimeException) {
+          throw fc.wrapClientException((Throwable) ((Object) runtimeException), "te.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+        }
+    }
+
+    static {
+        field_L = new ng();
+        field_J = "Loading...";
+    }
+}

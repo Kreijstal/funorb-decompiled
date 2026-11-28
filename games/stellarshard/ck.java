@@ -12,7 +12,7 @@ class ck extends wl implements WidgetActivationListener {
     private boolean field_kb;
     private boolean field_gb;
 
-    ck(ei param0, BitmapFont param1, String param2, boolean param3, boolean param4) {
+    ck(ModalDialogHost param0, BitmapFont param1, String param2, boolean param3, boolean param4) {
         super(param0, new vf((ck) null, param1, param2), 77, 10, 10);
         try {
           this.field_jb = param1;
@@ -22,7 +22,7 @@ class ck extends wl implements WidgetActivationListener {
           this.field_eb = param3 ? true : false;
           this.field_cb = new nc(13, 50, 274, 30, 15, 2113632, 4210752);
           this.field_cb.field_B = true;
-          this.b(4, this.field_cb);
+          this.addChild(4, this.field_cb);
         } catch (RuntimeException runtimeException) {
           throw ma.a((Throwable) ((Object) runtimeException), "ck.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ')');
         }
@@ -55,7 +55,7 @@ class ck extends wl implements WidgetActivationListener {
           var4 = var6;
           if (5 != param1) {
             if (param1 == 256) {
-              var6.a((lf) (this), EmailFormatValidator.field_l, (byte) -69);
+              var6.a((WidgetEventListener) (this), EmailFormatValidator.field_l, (byte) -69);
             } else {
               stackIn_11_0 = var6;
               stackIn_11_1 = -31805;
@@ -82,7 +82,7 @@ class ck extends wl implements WidgetActivationListener {
             } else {
               if (param1 != 6) {
                 if (param1 == 9) {
-                  var6.a((lf) (this), eg.field_c, (byte) 72);
+                  var6.a((WidgetEventListener) (this), eg.field_c, (byte) 72);
                 }
               } else {
                 var6.a(param2 - 31882, 9, a.field_d);
@@ -105,7 +105,7 @@ class ck extends wl implements WidgetActivationListener {
         }
     }
 
-    final boolean a(int param0, int param1, char param2, UiWidget param3) {
+    final boolean handleKey(int param0, int param1, char param2, UiWidget param3) {
         RuntimeException var5 = null;
         boolean stackIn_6_0 = false;
         RuntimeException stackIn_9_0 = null;
@@ -117,7 +117,7 @@ class ck extends wl implements WidgetActivationListener {
             ck.a(-53, 99, true, false);
           }
           if (param1 != 13) {
-            stackIn_6_0 = super.a(29657, param1, param2, param3);
+            stackIn_6_0 = super.handleKey(29657, param1, param2, param3);
             return stackIn_6_0;
           }
           this.o(3);

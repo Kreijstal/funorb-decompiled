@@ -20,10 +20,10 @@ final class tj {
           return mi.field_e;
         }
         if (!og.field_g.ensureIndexLoaded(-1)) {
-          return jj.field_B;
+          return AlphaWidgetContainer.field_B;
         }
         if (!og.field_g.tryLoadGroupByName((byte) 91, "commonui")) {
-          return kj.field_z + " - " + og.field_g.getGroupLoadPercentByName((byte) -41, "commonui") + "%";
+          return SingleChildWidgetContainer.field_z + " - " + og.field_g.getGroupLoadPercentByName((byte) -41, "commonui") + "%";
         }
         if (!am.field_b.ensureIndexLoaded(-1)) {
           return ProxyAuthenticationRequiredException.field_a;
@@ -157,7 +157,7 @@ final class tj {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw dd.wrapClientException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param2).append(')').toString());
+          throw DraggableWidgetContainer.wrapClientException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -225,7 +225,7 @@ final class tj {
           } else {
             stackIn_18_2 = "{...}";
           }
-          throw dd.wrapClientException((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(')').toString());
+          throw DraggableWidgetContainer.wrapClientException((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(')').toString());
         }
     }
 
@@ -258,7 +258,7 @@ final class tj {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw dd.wrapClientException((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
+          throw DraggableWidgetContainer.wrapClientException((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
         }
     }
 
@@ -278,7 +278,7 @@ final class tj {
         for (var4_int = 0; var4_int < var1; var4_int++) {
           var3[var4_int] = vc.field_g[EditableTextField.a(255, (int) var2[var4_int])];
         }
-        RgbSprite var4 = new RgbSprite(sg.field_B, he.field_r, jd.field_g[0], wc.field_a[0], wh.field_b[0], m.field_a[0], var3);
+        RgbSprite var4 = new RgbSprite(ModalDialog.field_B, he.field_r, jd.field_g[0], wc.field_a[0], wh.field_b[0], m.field_a[0], var3);
         md.$cfr$intArgs$a$6121ff5511c4(-125);
         return var4;
     }

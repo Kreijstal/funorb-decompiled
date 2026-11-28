@@ -52,7 +52,7 @@ final class AccountCreationResultPanel extends sh implements WidgetActivationLis
         }
     }
 
-    AccountCreationResultPanel(pf param0, AccountRegistrationPanel param1) {
+    AccountCreationResultPanel(ModalDialogHost param0, AccountRegistrationPanel param1) {
         super(param0, ne.field_v, ce.field_t, false, false);
         try {
           this.field_kb = param1;
@@ -111,10 +111,10 @@ final class AccountCreationResultPanel extends sh implements WidgetActivationLis
               this.a(10768, new eb(this));
               return;
             }
-            var5.a(BufferedSocket.field_i, (sk) (this), -4);
+            var5.a(BufferedSocket.field_i, (WidgetEventListener) (this), -4);
           } else {
             if (this.field_nb) {
-              var5.a(BufferedSocket.field_i, (sk) (this), -4);
+              var5.a(BufferedSocket.field_i, (WidgetEventListener) (this), -4);
             } else {
               if (param2.statusCode == 5) {
                 var5.a(ta.field_e, 11, (byte) 114);
@@ -147,36 +147,36 @@ final class AccountCreationResultPanel extends sh implements WidgetActivationLis
         }
     }
 
-    final boolean e(byte param0) {
+    final boolean advanceDialogAnimation(byte param0) {
         AccountServiceResult var2 = null;
         AccountServiceResult var2Lifetime1;
         if (param0 != 21) {
-          this.e((byte) -34);
+          this.advanceDialogAnimation((byte) -34);
           if (!this.field_D) {
-            return super.e((byte) 21);
+            return super.advanceDialogAnimation((byte) 21);
           }
           if (this.field_ob) {
-            return super.e((byte) 21);
+            return super.advanceDialogAnimation((byte) 21);
           }
           var2 = BufferedRandomAccessFile.pollAccountCreationResult(true);
           if (var2 != null) {
             this.showAccountCreationResult(-1, false, var2);
-            return super.e((byte) 21);
+            return super.advanceDialogAnimation((byte) 21);
           }
-          return super.e((byte) 21);
+          return super.advanceDialogAnimation((byte) 21);
         }
         if (!this.field_D) {
-          return super.e((byte) 21);
+          return super.advanceDialogAnimation((byte) 21);
         }
         if (this.field_ob) {
-          return super.e((byte) 21);
+          return super.advanceDialogAnimation((byte) 21);
         }
         var2Lifetime1 = BufferedRandomAccessFile.pollAccountCreationResult(true);
         if (var2Lifetime1 != null) {
           this.showAccountCreationResult(-1, false, var2Lifetime1);
-          return super.e((byte) 21);
+          return super.advanceDialogAnimation((byte) 21);
         }
-        return super.e((byte) 21);
+        return super.advanceDialogAnimation((byte) 21);
     }
 
     static {

@@ -150,7 +150,7 @@ final class we {
 
     final static void a(int param0) {
         pj.field_a = TextFieldValidator.b(true);
-        sd.field_c = new j();
+        sd.field_c = new ModalDialogHost();
         nf.a(true, (byte) -2, true);
         if (param0 != 0) {
           String var2 = (String) null;

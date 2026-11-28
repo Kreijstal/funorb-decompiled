@@ -31,7 +31,7 @@ final class PcmOutputWorker implements Runnable {
           if (param1 != 0) {
             field_a = (String) null;
           }
-          ug.field_A.a(param1 - 14579, var8);
+          ug.field_A.showDialog(param1 - 14579, var8);
           if (MatchingFieldValidator.f(256)) {
             var8.k((byte) -92);
             return true;

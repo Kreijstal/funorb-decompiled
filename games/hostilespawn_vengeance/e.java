@@ -127,7 +127,7 @@ final class e {
           }
         }
         if (o.field_e) {
-          while (jn.e((byte) -100)) {
+          while (AlphaWidgetContainer.e((byte) -100)) {
             var5 = this.a(true);
             if (var5 != 0) {
               return var5;
@@ -545,7 +545,7 @@ final class e {
           mn.field_e = ArchiveIndex.a("arialish12", cl.field_i, 84, jk.field_c, "");
           ra.field_e = th.a(jk.field_c, 126, "", cl.field_i, "pump32");
           FullscreenFocusCanvas.field_j = fg.a("members_expansion_screen", "benefit_orbs", jk.field_c, false);
-          od.field_D = fg.a("members_expansion_screen", "button_text", jk.field_c, false);
+          DropTargetWidgetContainer.field_D = fg.a("members_expansion_screen", "button_text", jk.field_c, false);
           vj.field_h = DelayedPacket.loadNamedRgbSprites(jk.field_c, param0 ^ -49, "members_expansion_screen", "button_highlights");
           cl.field_i = null;
           jk.field_c = null;
@@ -590,7 +590,7 @@ final class e {
         mn.field_e.drawParagraph(TextHotspotBounds.field_n[0], 17, 428, 111, 35, 16754688, -1, 1, 1, 0);
         mn.field_e.drawParagraph(TextHotspotBounds.field_n[1], 138, 428, 111, 35, 16754688, -1, 1, 1, 0);
         mn.field_e.drawParagraph(TextHotspotBounds.field_n[2], 259, 428, 111, 35, 16754688, -1, 1, 1, 0);
-        od.field_D.draw((127 - od.field_D.field_u) / 2 + 508, 315);
+        DropTargetWidgetContainer.field_D.draw((127 - DropTargetWidgetContainer.field_D.field_u) / 2 + 508, 315);
         if (this.field_u.field_f != 0) {
           if (this.field_u.field_f == 1) {
             vj.field_h[1].draw(508, 387);

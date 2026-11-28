@@ -1,0 +1,273 @@
+/*
+ * Decompiled by CFR-JS 0.4.0.
+ */
+final class LabeledWidgetContainer extends ComponentDecorator {
+    static int integerState0133;
+    static UiComponentPart023 uiComponentPart023State0001;
+    private BitmapFont bitmapFontState0009;
+    private int integerState0134;
+    static MixedSupport106 mixedSupport106State0001;
+    static String stringState0108;
+    private boolean booleanState0026;
+    static String stringState0109;
+    private int integerState0135;
+    private int integerState0136;
+    static int integerState0137;
+    static CipherPacketBuffer cipherPacketBufferState0001;
+    static boolean booleanState0027;
+    private String stringState0110;
+
+    LabeledWidgetContainer(int integerArgument1, int integerArgument2, int integerArgument3, int integerArgument4, UiComponent uiComponentArgument5, boolean booleanArgument6, int integerArgument7, int integerArgument8, BitmapFont bitmapFontArgument9, int integerArgument10, String stringArgument11) {
+        super(integerArgument1, integerArgument2, integerArgument3, integerArgument4, (WidgetRenderer) null, (WidgetEventListener) null);
+        boolean stackBooleanLocal1 = false;
+        int stackIntegerLocal2 = 0;
+        RuntimeException stackRuntimeExceptionLocal3 = null;
+        StringBuilder stackStringBuilderLocal4 = null;
+        String stackStringLocal5 = null;
+        StringBuilder stackStringBuilderLocal6 = null;
+        String stackStringLocal7 = null;
+        StringBuilder stackStringBuilderLocal8 = null;
+        String stackStringLocal9 = null;
+        RuntimeException caughtExceptionLocal10 = null;
+        int integerLocal11 = 0;
+        RuntimeException runtimeExceptionLocal12 = null;
+        int integerLocal13 = 0;
+        int integerLocal14 = 0;
+        try {
+          stackBooleanLocal1 = (booleanArgument6);
+          this.booleanState0026 = stackBooleanLocal1;
+          this.integerState0135 = integerArgument10;
+          this.uiComponentState0002 = uiComponentArgument5;
+          this.integerState0134 = integerArgument8;
+          this.bitmapFontState0009 = bitmapFontArgument9;
+          this.stringState0110 = stringArgument11;
+          this.integerState0136 = integerArgument7;
+          integerLocal11 = -this.integerState0134 + this.integerState0136;
+          integerLocal13 = this.bitmapFontState0009.textHeight(stringArgument11, integerLocal11, this.bitmapFontState0009.integerState0518) + this.integerState0134 * 2;
+          if (integerLocal13 > integerArgument4) {
+            this.setBounds(integerLocal13, integerArgument3, integerArgument1, integerArgument2, -16555);
+          } else {
+            integerLocal13 = integerArgument4;
+          }
+          if (!this.booleanState0026) {
+            stackIntegerLocal2 = this.integerState0136 + this.integerState0134 * 2;
+          } else {
+            stackIntegerLocal2 = 0;
+          }
+          integerLocal14 = stackIntegerLocal2;
+          this.uiComponentState0002.setBounds(-(this.integerState0134 * 2) + integerArgument4, integerArgument3 - this.integerState0136 - 3 * this.integerState0134, integerLocal14, this.integerState0134 + (integerLocal13 - integerArgument4 >> 1), -16555);
+          return;
+        } catch (java.lang.RuntimeException caughtParameterLocal15) {
+          caughtExceptionLocal10 = caughtParameterLocal15;
+          runtimeExceptionLocal12 = caughtExceptionLocal10;
+          stackRuntimeExceptionLocal3 = runtimeExceptionLocal12;
+          stackStringBuilderLocal4 = new StringBuilder().append("de.<init>(").append(integerArgument1).append(',').append(integerArgument2).append(',').append(integerArgument3).append(',').append(integerArgument4).append(',');
+          if (uiComponentArgument5 == null) {
+            stackStringLocal5 = "null";
+          } else {
+            stackStringLocal5 = "{...}";
+          }
+          stackStringBuilderLocal6 = ((StringBuilder) (Object) stackStringBuilderLocal4).append(stackStringLocal5).append(',').append(booleanArgument6).append(',').append(integerArgument7).append(',').append(integerArgument8).append(',');
+          if (bitmapFontArgument9 == null) {
+            stackStringLocal7 = "null";
+          } else {
+            stackStringLocal7 = "{...}";
+          }
+          stackStringBuilderLocal8 = ((StringBuilder) (Object) stackStringBuilderLocal6).append(stackStringLocal7).append(',').append(integerArgument10).append(',');
+          if (stringArgument11 == null) {
+            stackStringLocal9 = "null";
+          } else {
+            stackStringLocal9 = "{...}";
+          }
+          throw ClientException.computeDiagnosticSupport0020365((Throwable) ((Object) stackRuntimeExceptionLocal3), ((StringBuilder) (Object) stackStringBuilderLocal8).append(stackStringLocal9).append(')').toString());
+        }
+    }
+
+    public static void clearStaticReferences(int integerArgument1) {
+        uiComponentPart023State0001 = null;
+        cipherPacketBufferState0001 = null;
+        stringState0109 = null;
+        mixedSupport106State0001 = null;
+        if (integerArgument1 >= -117) {
+          stringState0109 = (String) null;
+        }
+        stringState0108 = null;
+    }
+
+    static int bitwiseOr(int integerArgument1, int integerArgument2) {
+        return integerArgument1 | integerArgument2;
+    }
+
+    final static void performAction0355(boolean booleanArgument1, int integerArgument2, String stringArgument3, int integerArgument4, boolean booleanArgument5) {
+        String stackStringLocal1 = null;
+        int stackIntegerLocal2 = 0;
+        String stackStringLocal3 = null;
+        boolean stackBooleanLocal4 = false;
+        int stackIntegerLocal5 = 0;
+        int stackIntegerLocal6 = 0;
+        RuntimeException stackRuntimeExceptionLocal7 = null;
+        StringBuilder stackStringBuilderLocal8 = null;
+        String stackStringLocal9 = null;
+        RuntimeException caughtExceptionLocal10 = null;
+        RuntimeException runtimeExceptionLocal11 = null;
+        String stringLocal12 = null;
+        int integerLocal13 = 0;
+        int integerLocal14 = 0;
+        int integerLocal15 = 0;
+        int integerLocal16 = 0;
+        String stringLocal17 = null;
+        int integerLocal18;
+        int integerLocal19;
+        int integerLocal20;
+        int integerLocal21;
+        integerLocal16 = DekoBlokoClient.obfuscationControl ? 1 : 0;
+        try {
+          UiComponentPart023.booleanState0134 = true;
+          MixedSupport070.integerState0395 = integerArgument4;
+          stringLocal17 = stringArgument3;
+          if (!booleanArgument5) {
+            stackStringLocal1 = NetworkSupport007.stringState0345;
+          } else {
+            stackStringLocal1 = UiComponentPart026.stringState0461;
+          }
+          stringLocal12 = stackStringLocal1;
+          if (MixedSupport070.integerState0395 == 0) {
+            integerLocal13 = PasswordValidator.wrapBalancedText(stringLocal17, 116, 480, ResourceSupport004.stringArrayState0031, SoftwareFramebuffer.bitmapFontState0021);
+            integerLocal14 = integerLocal13 + 3;
+            MixedSupport129.integerArrayState0211 = new int[integerLocal14];
+            AlphaWidgetContainer.stringArrayState0012 = new String[integerLocal14];
+            for (integerLocal15 = 0; integerLocal15 < integerLocal14; integerLocal15++) {
+              MixedSupport129.integerArrayState0211[integerLocal15] = -1;
+            }
+            AlphaWidgetContainer.integerArrayState0039 = new int[2];
+            for (integerLocal15 = 0; integerLocal15 < integerLocal13; integerLocal15++) {
+              AlphaWidgetContainer.stringArrayState0012[integerLocal15] = ResourceSupport004.stringArrayState0031[integerLocal15];
+            }
+            AlphaWidgetContainer.stringArrayState0012[-3 + integerLocal14] = "";
+            AlphaWidgetContainer.stringArrayState0012[integerLocal14 - 2] = stringLocal12;
+            MixedSupport129.integerArrayState0211[integerLocal14 - 2] = 0;
+            AlphaWidgetContainer.integerArrayState0039[0] = 1;
+            AlphaWidgetContainer.stringArrayState0012[-1 + integerLocal14] = ValidatedTextField.stringState0383;
+            MixedSupport129.integerArrayState0211[-1 + integerLocal14] = 1;
+            AlphaWidgetContainer.integerArrayState0039[1] = 2;
+          } else {
+            if (MixedSupport070.integerState0395 != 1) {
+              throw new IllegalArgumentException();
+            }
+            integerLocal13 = PasswordValidator.wrapBalancedText(stringLocal17, 104, 480, ResourceSupport004.stringArrayState0031, SoftwareFramebuffer.bitmapFontState0021);
+            integerLocal14 = 2 + integerLocal13;
+            MixedSupport129.integerArrayState0211 = new int[integerLocal14];
+            AlphaWidgetContainer.stringArrayState0012 = new String[integerLocal14];
+            for (integerLocal15 = 0; integerLocal15 < integerLocal14; integerLocal15++) {
+              MixedSupport129.integerArrayState0211[integerLocal15] = -1;
+            }
+            AlphaWidgetContainer.integerArrayState0039 = new int[1];
+            for (integerLocal15 = 0; integerLocal15 < integerLocal13; integerLocal15++) {
+              AlphaWidgetContainer.stringArrayState0012[integerLocal15] = ResourceSupport004.stringArrayState0031[integerLocal15];
+            }
+            AlphaWidgetContainer.stringArrayState0012[integerLocal14 - 2] = "";
+            AlphaWidgetContainer.stringArrayState0012[-1 + integerLocal14] = ValidatedTextField.stringState0383;
+            MixedSupport129.integerArrayState0211[-1 + integerLocal14] = 0;
+            AlphaWidgetContainer.integerArrayState0039[0] = 2;
+          }
+          UiComponentPart033.mixedSupport116State0004.integerState0756 = AlphaWidgetContainer.integerArrayState0039.length;
+          integerLocal18 = 0;
+          integerLocal20 = 0;
+          if (integerArgument2 != -5540) {
+            return;
+          }
+          while (integerLocal20 < AlphaWidgetContainer.stringArrayState0012.length) {
+            stackIntegerLocal2 = 0;
+            stackStringLocal3 = AlphaWidgetContainer.stringArrayState0012[integerLocal20];
+            stackBooleanLocal4 = !(0 > MixedSupport129.integerArrayState0211[integerLocal20]);
+            integerLocal19 = NetworkArchiveRequestManager.computeInteger1288(stackIntegerLocal2, stackStringLocal3, stackBooleanLocal4);
+            if (MixedSupport129.integerArrayState0211[integerLocal20] != -1) {
+              integerLocal19 = integerLocal19 + DebouncedFieldValidator.integerState0050 * 2;
+            }
+            if (integerLocal19 > integerLocal18) {
+              integerLocal18 = integerLocal19;
+            }
+            integerLocal20++;
+          }
+          MixedSupport003.integerState0018 = (PcmResampler.integerState0344 + MixedSupport076.integerState0433 << 1) * UiComponentPart033.mixedSupport116State0004.integerState0756;
+          MixedSupport035.integerState0219 = -(integerLocal18 >> 1) + (MixedSupport004.integerState0029 + integerLocal18);
+          ResourceSupport001.integerState0021 = MixedSupport004.integerState0029 - (integerLocal18 >> 1);
+          for (integerLocal21 = 0; integerLocal21 < AlphaWidgetContainer.stringArrayState0012.length; integerLocal21++) {
+            stackIntegerLocal5 = MixedSupport003.integerState0018;
+            if (MixedSupport129.integerArrayState0211[integerLocal21] < 0) {
+              stackIntegerLocal6 = ComponentDecorator.integerState0497;
+            } else {
+              stackIntegerLocal6 = BirthDateInput.integerState0835;
+            }
+            MixedSupport003.integerState0018 = stackIntegerLocal5 + stackIntegerLocal6;
+          }
+          MixedSupport111.integerState0721 = MixedSupport070.integerState0402 - (MixedSupport003.integerState0018 >> 1);
+          UiComponentPart033.mixedSupport116State0004.performAction1516(0, 0, MixedSupport101.computeInteger1269(MixedSupport101.integerState0590, -2141435999, HashNode.integerState0069), booleanArgument1);
+          return;
+        } catch (java.lang.RuntimeException caughtParameterLocal22) {
+          caughtExceptionLocal10 = caughtParameterLocal22;
+          runtimeExceptionLocal11 = caughtExceptionLocal10;
+          stackRuntimeExceptionLocal7 = runtimeExceptionLocal11;
+          stackStringBuilderLocal8 = new StringBuilder().append("de.B(").append(booleanArgument1).append(',').append(integerArgument2).append(',');
+          if (stringArgument3 == null) {
+            stackStringLocal9 = "null";
+          } else {
+            stackStringLocal9 = "{...}";
+          }
+          throw ClientException.computeDiagnosticSupport0020365((Throwable) ((Object) stackRuntimeExceptionLocal7), ((StringBuilder) (Object) stackStringBuilderLocal8).append(stackStringLocal9).append(',').append(integerArgument4).append(',').append(booleanArgument5).append(')').toString());
+        }
+    }
+
+    final void drawWidget(int integerArgument1, int integerArgument2, int integerArgument3, int integerArgument4) {
+        int integerLocal1 = integerArgument1 + this.integerState0110;
+        int integerLocal2 = this.integerState0104 + integerArgument4;
+        if (integerArgument2 > -103) {
+          return;
+        }
+        super.drawWidget(integerArgument1, -109, integerArgument3, integerArgument4);
+        if (integerArgument3 != 0) {
+          return;
+        }
+        int integerLocal3 = this.booleanState0026 ? this.integerState0107 + (-this.integerState0136 - 2 * this.integerState0134) : 0;
+        this.bitmapFontState0009.drawParagraph(this.stringState0110, integerLocal3 + integerLocal1 + this.integerState0134, integerLocal2 + this.integerState0134, -this.integerState0134 + this.integerState0136, this.integerState0108 - 2 * this.integerState0134, this.integerState0135, -1, this.booleanState0026 ? 0 : 2, 1, this.bitmapFontState0009.integerState0518);
+    }
+
+    final static RgbSprite[] computeRgbSpriteArray0356(boolean booleanArgument1) {
+        int integerLocal1 = 0;
+        int integerLocal2 = 0;
+        byte[] byteArrayLocal3 = null;
+        int[] integerArrayLocal4 = null;
+        int integerLocal5 = 0;
+        int integerLocal6 = DekoBlokoClient.obfuscationControl ? 1 : 0;
+        RgbSprite[] rgbSpriteArrayLocal7 = new RgbSprite[GameDomainSupport002.integerState0177];
+        for (integerLocal1 = 0; integerLocal1 < GameDomainSupport002.integerState0177; integerLocal1++) {
+          integerLocal2 = MixedSupport052.integerArrayState0054[integerLocal1] * MixedSupport123.integerArrayState0208[integerLocal1];
+          byteArrayLocal3 = SceneWidgetPart011.byteArrayArrayState0008[integerLocal1];
+          integerArrayLocal4 = new int[integerLocal2];
+          for (integerLocal5 = 0; integerLocal5 < integerLocal2; integerLocal5++) {
+            integerArrayLocal4[integerLocal5] = NetworkSupport006.integerArrayState0152[PlayerBoardUpdateQueue.bitwiseAnd((int) byteArrayLocal3[integerLocal5], 255)];
+          }
+          rgbSpriteArrayLocal7[integerLocal1] = new RgbSprite(MixedSupport029.integerState0181, MixedSupport057.integerState0297, InputAdapter003.integerArrayState0206[integerLocal1], MixedSupport039.integerArrayState0047[integerLocal1], MixedSupport123.integerArrayState0208[integerLocal1], MixedSupport052.integerArrayState0054[integerLocal1], integerArrayLocal4);
+        }
+        MixedSupport089.performAction1138(126);
+        if (booleanArgument1) {
+          uiComponentPart023State0001 = (UiComponentPart023) null;
+        }
+        return rgbSpriteArrayLocal7;
+    }
+
+    final String getTooltipText(byte byteArgument1) {
+        int integerLocal1 = this.uiComponentState0002.booleanState0018 ? 1 : 0;
+        this.uiComponentState0002.booleanState0018 = this.booleanState0018;
+        String stringLocal2 = this.uiComponentState0002.getTooltipText(byteArgument1);
+        this.uiComponentState0002.booleanState0018 = integerLocal1 != 0 ? true : false;
+        return stringLocal2;
+    }
+
+    static {
+        stringState0108 = "If you do nothing the game will revert to normal view in <%0> second.";
+        stringState0109 = "Instructions";
+        booleanState0027 = false;
+        mixedSupport106State0001 = new MixedSupport106(12, 0, 1, 0);
+    }
+}

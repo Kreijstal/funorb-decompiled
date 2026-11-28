@@ -113,7 +113,7 @@ final class MixedSupport147 {
           MixedSupport023.booleanState0025 = booleanArgument1;
           SceneWidgetPart007.booleanState0113 = true;
           MixedSupport020.uiComponentPart012State0001 = new UiComponentPart012(MixedSupport005.uiComponentPart016State0001, GameDomainSupport002.bitmapFontState0012, stringArgument3, BirthDateInput.booleanState0198, MixedSupport023.booleanState0025);
-          MixedSupport005.uiComponentPart016State0001.performAction0831((byte) -115, MixedSupport020.uiComponentPart012State0001);
+          MixedSupport005.uiComponentPart016State0001.showDialog((byte) -115, MixedSupport020.uiComponentPart012State0001);
           if (integerArgument2 > -20) {
             integerState0933 = -117;
           }

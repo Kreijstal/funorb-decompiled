@@ -81,9 +81,9 @@ final class ko extends af {
           if (param0 != -11808) {
             this.e(true);
           }
-          this.field_N.field_v = (uf) ((Object) param1);
-          this.field_T.field_v = (uf) ((Object) param1);
-          this.field_R.field_v = (uf) ((Object) param1);
+          this.field_N.field_v = (WidgetEventListener) ((Object) param1);
+          this.field_T.field_v = (WidgetEventListener) ((Object) param1);
+          this.field_R.field_v = (WidgetEventListener) ((Object) param1);
         } catch (RuntimeException runtimeException) {
           throw wn.wrapClientException((Throwable) ((Object) runtimeException), "ko.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
@@ -159,7 +159,7 @@ final class ko extends af {
           td.field_c.a(0, param0);
           if (TextLineMetrics.field_a != null) {
             if (pe.field_r) {
-              TextLineMetrics.field_a.a(td.field_c.field_C, param0, (byte) 82, td.field_c.field_ob);
+              TextLineMetrics.field_a.processPointerInput(td.field_c.field_C, param0, (byte) 82, td.field_c.field_ob);
             } else {
               TextLineMetrics.field_a = null;
             }
@@ -172,7 +172,7 @@ final class ko extends af {
               }
               var6 = ab.a(0, var4_int);
               w.field_C[var4_int].field_Db = kb.field_d[var6];
-              mg.field_M[var4_int].field_S = ba.field_f[var6];
+              LabeledWidgetContainer.field_M[var4_int].field_S = ba.field_f[var6];
             }
           }
           if (ea.field_c.field_tb != 0) {
@@ -210,34 +210,34 @@ final class ko extends af {
     private ko(WidgetListener param0, boolean param1) {
         super(0, 0, 0, 0, (WidgetListener) null);
         try {
-          this.field_N = (EditableTextField) ((Object) new ValidatedTextField("", (uf) null, 2));
-          this.field_T = (EditableTextField) ((Object) new ValidatedTextField("", (uf) null, 2));
-          this.field_R = (EditableTextField) ((Object) new ValidatedTextField("", (uf) null, 4));
+          this.field_N = (EditableTextField) ((Object) new ValidatedTextField("", (WidgetEventListener) null, 2));
+          this.field_T = (EditableTextField) ((Object) new ValidatedTextField("", (WidgetEventListener) null, 2));
+          this.field_R = (EditableTextField) ((Object) new ValidatedTextField("", (WidgetEventListener) null, 4));
           this.field_Q = param1 ? true : false;
           this.field_R.listener = param0;
           this.field_T.listener = param0;
           this.field_N.listener = param0;
           if (!this.field_Q) {
-            this.c((byte) -91, this.field_N);
-            this.c((byte) -27, this.field_T);
+            this.addChild((byte) -91, this.field_N);
+            this.addChild((byte) -27, this.field_T);
           } else {
-            this.c((byte) 79, this.field_T);
-            this.c((byte) 82, this.field_N);
+            this.addChild((byte) 79, this.field_T);
+            this.addChild((byte) 82, this.field_N);
           }
-          this.c((byte) 77, this.field_R);
+          this.addChild((byte) 77, this.field_R);
         } catch (RuntimeException runtimeException) {
           throw wn.wrapClientException((Throwable) ((Object) runtimeException), "ko.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
-    final void a(boolean param0, int param1, int param2, int param3) {
-        super.a(param0, param1, param2, param3);
+    final void drawWidget(boolean param0, int param1, int param2, int param3) {
+        super.drawWidget(param0, param1, param2, param3);
         if (param1 == 0) {
           param2 = param2 + this.x;
           param3 = param3 + this.y;
           this.a(param3, -626, param2, this.field_N, gl.field_m);
           this.a(param3, -626, param2, this.field_T, ff.field_v);
-          this.a(param3, -626, param2, this.field_R, um.field_C);
+          this.a(param3, -626, param2, this.field_R, ArrayWidgetContainer.field_C);
           return;
         }
     }

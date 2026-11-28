@@ -53,7 +53,7 @@ final class sd extends am {
           regionExit1: {
             var7 = var7 - (var7 & -4096);
             if (this.field_t == 0) {
-              var7 = jh.field_x[(var7 & 4091) >> 4] + 4096 >> 1;
+              var7 = SingleChildWidgetContainer.field_x[(var7 & 4091) >> 4] + 4096 >> 1;
             } else {
               if (2 == this.field_t) {
                 var7 -= 2048;

@@ -62,7 +62,7 @@ final class be {
         int var31 = 0;
         double var9 = (double)(param2 - param0);
         double var11 = (double)(param3 - param1);
-        double var13 = dl.a(true, var9, var11);
+        double var13 = AlphaWidgetContainer.a(true, var9, var11);
         double var15 = Math.atan2(var11, var9);
         double var17 = param4 / 3.0;
         double var19 = -param4 / 2.0;
@@ -73,9 +73,9 @@ final class be {
             var24 = 0.0;
           }
           for (var26 = var19; var26 < var21; var26 = var26 + var17) {
-            var28 = param0 + (int)(var24 * pj.a(var15 + var26, 32768));
+            var28 = param0 + (int)(var24 * DequeWidgetContainer.a(var15 + var26, 32768));
             var29 = param1 + (int)(var24 * ji.a(65535, var15 + var26));
-            var30 = param0 + (int)(var24 * pj.a(var15 + var26 + var17, 32768));
+            var30 = param0 + (int)(var24 * DequeWidgetContainer.a(var15 + var26 + var17, 32768));
             var31 = param1 + (int)(var24 * ji.a(65535, var15 + var26 + var17));
             SoftwareRasterizer.drawLineAlphaExcludingEnd(var28, var29, var30, var31, param5, 64 - 8 * var23);
           }

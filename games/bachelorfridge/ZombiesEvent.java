@@ -90,10 +90,10 @@ final class ZombiesEvent extends SpecialEvent {
 
     final static boolean d(int param0) {
         if (param0 < -116) {
-          return SnowAnimation.field_w.field_Sb == ge.field_F ? true : false;
+          return SnowAnimation.field_w.field_Sb == LabeledWidgetContainer.field_F ? true : false;
         }
         field_q = (IndexedSprite) null;
-        return SnowAnimation.field_w.field_Sb == ge.field_F ? true : false;
+        return SnowAnimation.field_w.field_Sb == LabeledWidgetContainer.field_F ? true : false;
     }
 
     static {

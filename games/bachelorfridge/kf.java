@@ -27,7 +27,7 @@ final class kf {
           ScavengerSpecial.field_q.a(30, param0 ^ -31403, 48, 155, 5);
           SplitSpecial.field_p.a(30, 31407, 48, 205, 5);
           var2 = IntrusiveDeque.field_c ? 250 : 200;
-          vf.field_F.a(30, param0 + 31413, -var2 + 363, var2 + 5, 5);
+          ModalDialog.field_F.a(30, param0 + 31413, -var2 + 363, var2 + 5, 5);
           TextLinkRegion.field_l.a(30, 31407, -370 + FullHealSpecial.field_r.field_sb - 5, 370, 5);
           p.field_n.a((byte) -58, -10 + (nea.field_yb.field_p - 32), 5, 37, -5 + (nea.field_yb.field_sb - 5), rj.field_j, 2);
           var3 = (FullHealSpecial.field_r.field_sb + 2) / 2;

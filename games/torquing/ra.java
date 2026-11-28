@@ -53,17 +53,17 @@ final class ra {
             ra.a((byte) 101);
           }
           if (im.l(169)) {
-            w.field_G.a(true, FrameTimer.field_e, oe.field_a, false);
-            w.field_G.g((byte) -107);
+            w.field_G.processPointerInput(true, FrameTimer.field_e, oe.field_a, false);
+            w.field_G.advanceDialogs((byte) -107);
             while (NanoFrameTimer.a((byte) -13)) {
-              w.field_G.a(e.field_f, 24454, m.field_t);
+              w.field_G.processKeyInput(e.field_f, 24454, m.field_t);
             }
             return;
           }
           if (TranslucentSpriteLayer.field_i != null &&
             TranslucentSpriteLayer.field_i.focusLost) {
             ug.a(-116);
-            w.field_G.a(new i(w.field_G, bl.field_b), (byte) 100);
+            w.field_G.showDialog(new i(w.field_G, bl.field_b), (byte) 100);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

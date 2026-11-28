@@ -178,14 +178,14 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
                 return;
               }
               BirthDateTextFields.integerState0592 = 0;
-              UiComponentPart006.integerState0133 = integerArgument6;
-              UiComponentPart020.integerState0551 = integerArgument6;
+              LabeledWidgetContainer.integerState0133 = integerArgument6;
+              ArrayWidgetContainer.integerState0551 = integerArgument6;
               IconLabelWidget.integerState0648 = 0;
               MixedSupport090.integerState0548 = integerArgument5;
               GzipDecompressor.integerState0436 = integerArgument5;
               MixedSupport119.gameAppletState0001 = this;
               SceneWidgetPart014.integerState0919 = integerArgument7;
-              MixedSupport122.appletState0002 = UiComponentPart029.computeApplet1485(25144);
+              MixedSupport122.appletState0002 = DraggableWidgetContainer.computeApplet1485(25144);
               cachedPlatformServiceLocal1 = new PlatformService(integerArgument2, stringArgument1, integerArgument3, booleanArgument4);
               GzipDecompressor.platformServiceState0003 = cachedPlatformServiceLocal1;
               MixedSupport088.platformServiceState0004 = cachedPlatformServiceLocal1;
@@ -301,7 +301,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
           if (integerLocal1 > 50) {
             MixedSupport016.booleanState0016 = true;
             DiagnosticSupport002.integerState0339 = DiagnosticSupport002.integerState0339 - 50;
-            GameDomainSupport004.canvasState0001.setSize(UiComponentPart006.integerState0133, MixedSupport090.integerState0548);
+            GameDomainSupport004.canvasState0001.setSize(LabeledWidgetContainer.integerState0133, MixedSupport090.integerState0548);
             GameDomainSupport004.canvasState0001.setVisible(true);
             boolean sharedTailLocal8 = (null != MixedSupport054.frameState0001 &&
               NetworkSupport009.frameState0002 == null);
@@ -364,7 +364,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
           ((java.awt.Container) (objectLocal2)).setLayout((java.awt.LayoutManager) null);
           GameDomainSupport004.canvasState0001 = (java.awt.Canvas) ((Object) new DelegatingCanvas((java.awt.Component) (this)));
           ((java.awt.Container) (objectLocal2)).add((java.awt.Component) ((Object) GameDomainSupport004.canvasState0001));
-          GameDomainSupport004.canvasState0001.setSize(UiComponentPart006.integerState0133, MixedSupport090.integerState0548);
+          GameDomainSupport004.canvasState0001.setSize(LabeledWidgetContainer.integerState0133, MixedSupport090.integerState0548);
           GameDomainSupport004.canvasState0001.setVisible(true);
           if (MixedSupport054.frameState0001 == objectLocal2) {
             insetsLocal3 = MixedSupport054.frameState0001.getInsets();
@@ -486,7 +486,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
             this.booleanState0071 = true;
             System.out.println("error_game_" + stringArgument2);
             try {
-              JavaScriptBridge.callWithoutArguments(booleanArgument1, "loggedout", UiComponentPart029.computeApplet1485(25144));
+              JavaScriptBridge.callWithoutArguments(booleanArgument1, "loggedout", DraggableWidgetContainer.computeApplet1485(25144));
             } catch (java.lang.Throwable caughtParameterLocal8) {
               caughtExceptionLocal4 = caughtParameterLocal8;
               throwableLocal5 = caughtExceptionLocal4;
@@ -686,7 +686,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
                 }
                 NodeHashTable.performAction1505(1);
                 this.performAction0680((byte) 125);
-                MixedSupport076.framebufferState0001 = ArchiveRequestManager.computeFramebuffer0466(MixedSupport090.integerState0548, (byte) 120, UiComponentPart006.integerState0133, (java.awt.Component) ((Object) GameDomainSupport004.canvasState0001));
+                MixedSupport076.framebufferState0001 = ArchiveRequestManager.computeFramebuffer0466(MixedSupport090.integerState0548, (byte) 120, LabeledWidgetContainer.integerState0133, (java.awt.Component) ((Object) GameDomainSupport004.canvasState0001));
                 this.initializeGame(false);
                 NodeHashTableIterator.mixedSupport059State0001 = MixedSupport031.computeMixedSupport0590417((byte) 63);
                 do {
@@ -800,7 +800,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
               -NetworkSupport004.longState0018 + MixedSupport062.correctedCurrentTimeMillis(4) > 1000L) {
               rectangleLocal5 = graphicsArgument1.getClipBounds();
               if (null != rectangleLocal5) {
-                if (UiComponentPart020.integerState0551 > rectangleLocal5.width) {
+                if (ArrayWidgetContainer.integerState0551 > rectangleLocal5.width) {
                   return;
                 }
                 if (rectangleLocal5.height < GzipDecompressor.integerState0436) {

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class hk implements fe {
+final class hk implements WidgetRenderer {
     private int field_c;
     static java.math.BigInteger field_a;
     private BitmapFont field_e;
@@ -10,7 +10,7 @@ final class hk implements fe {
     private int field_g;
     static long field_d;
 
-    public final void a(byte param0, int param1, boolean param2, fj param3, int param4) {
+    public final void paintWidget(byte param0, int param1, boolean param2, UiWidget param3, int param4) {
         int stackIn_5_0 = 0;
         RuntimeException stackIn_22_0 = null;
         StringBuilder stackIn_22_1 = null;
@@ -26,14 +26,14 @@ final class hk implements fe {
         var11 = Confined.field_J ? 1 : 0;
         try {
           if (!param3.field_w &&
-            !param3.e((byte) -124)) {
+            !param3.isFocused((byte) -124)) {
             stackIn_5_0 = 2188450;
           } else {
             stackIn_5_0 = 3249872;
           }
           var6_int = stackIn_5_0;
           this.field_e.drawParagraph("<u=" + Integer.toString(var6_int, 16) + ">" + param3.field_B + "</u>", param1 + param3.field_q, param4 + param3.field_m, param3.field_F, param3.field_z, var6_int, -1, this.field_g, this.field_c, this.field_e.field_C + this.field_e.field_D);
-          if (param3.e((byte) -125)) {
+          if (param3.isFocused((byte) -125)) {
             var7 = this.field_e.stringWidth(param3.field_B);
             var8 = this.field_e.field_D + this.field_e.field_C;
             var9 = param1 + param3.field_q;

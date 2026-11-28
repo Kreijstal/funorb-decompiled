@@ -130,7 +130,7 @@ final class uc extends InteractiveWidget {
         }
     }
 
-    final boolean a(int param0, int param1, int param2, int param3, int param4, int param5, UiComponent param6) {
+    final boolean pointerPressed(int param0, int param1, int param2, int param3, int param4, int param5, UiComponent param6) {
         RuntimeException stackIn_18_0 = null;
         StringBuilder stackIn_18_1 = null;
         String stackIn_19_2 = null;
@@ -142,7 +142,7 @@ final class uc extends InteractiveWidget {
         int var12 = 0;
         var12 = TorChallenge.field_F ? 1 : 0;
         try {
-          if (!super.a(param0, param1, param2, param3, param4, param5, param6)) {
+          if (!super.pointerPressed(param0, param1, param2, param3, param4, param5, param6)) {
             return false;
           }
           var8_int = -param4 - (this.field_m + this.field_S - param1);

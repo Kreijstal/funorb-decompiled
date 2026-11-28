@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class wf extends cc {
+abstract class wf extends ModalDialog {
     static String[][] field_Y;
     static int[] field_P;
     private int field_T;
@@ -15,12 +15,12 @@ abstract class wf extends cc {
     private int field_X;
     private int field_R;
 
-    boolean a(boolean param0) {
+    boolean snapDialogAnimation(boolean param0) {
         if (param0) {
           this.field_S = 78;
         }
         this.o(24619);
-        return super.a(false);
+        return super.snapDialogAnimation(false);
     }
 
     final static void p(int param0) {
@@ -163,7 +163,7 @@ abstract class wf extends cc {
 
     final void a(int param0, boolean param1, int param2, int param3) {
         if (param0 <= 0) {
-          this.a(param3, param2, (byte) 55);
+          this.setCenteredSize(param3, param2, (byte) 55);
           return;
         }
         this.field_R = this.field_v;
@@ -184,7 +184,7 @@ abstract class wf extends cc {
         return -vh.field_g + (MidiPcmStream.field_X + qd.field_M * ac.field_b) == 11055064 + a.field_c ? true : false;
     }
 
-    wf(hm param0, int param1, int param2) {
+    wf(ModalDialogHost param0, int param1, int param2) {
         super(param0, param1, param2);
         this.field_W = 0;
         this.field_O = 0;
@@ -202,7 +202,7 @@ abstract class wf extends cc {
         if (this.field_O <= 0) {
           return;
         }
-        this.a(this.field_X, this.field_S, (byte) 55);
+        this.setCenteredSize(this.field_X, this.field_S, (byte) 55);
         if (param0 != 24619) {
           return;
         }
@@ -228,7 +228,7 @@ abstract class wf extends cc {
         field_U = null;
     }
 
-    boolean n(int param0) {
+    boolean advanceDialogAnimation(int param0) {
         int var2 = 0;
         int var3 = 0;
         int fieldTemp$0 = 0;
@@ -251,9 +251,9 @@ abstract class wf extends cc {
             this.field_O = 0;
             this.b(true);
           }
-          this.a(var3, var2, (byte) 55);
+          this.setCenteredSize(var3, var2, (byte) 55);
         }
-        return super.n(param0 + 0);
+        return super.advanceDialogAnimation(param0 + 0);
     }
 
     static {

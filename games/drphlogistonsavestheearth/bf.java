@@ -384,10 +384,10 @@ final class bf {
           }
           boolean decompiledFrameCompleted0 = true;
           if ((this.field_V & 1) == 0 &&
-            vg.field_r[this.field_Q] != -1) {
+            UiWidget.field_r[this.field_Q] != -1) {
             var3 = 0;
             while (this.field_i.length > var3) {
-              this.field_i[var3].a(ArchiveRequest.field_B[this.field_Q], 30, (double)vg.field_r[this.field_Q], (double)(int)((double)dd.field_h[this.field_Q] + this.field_N), 0, -1.0, 1.0, (double)(int)((double)nc.field_L[this.field_Q] + this.field_o), 64);
+              this.field_i[var3].a(ArchiveRequest.field_B[this.field_Q], 30, (double)UiWidget.field_r[this.field_Q], (double)(int)((double)dd.field_h[this.field_Q] + this.field_N), 0, -1.0, 1.0, (double)(int)((double)nc.field_L[this.field_Q] + this.field_o), 64);
               var3++;
               if (var6 != 0) {
                 decompiledFrameCompleted0 = false;
@@ -518,7 +518,7 @@ final class bf {
         int var5 = 0;
         try {
           var2_int = -(int)this.field_N + 430;
-          var3 = (double)(this.field_e % k.field_M[this.field_Q]) / (0.5 * (double)k.field_M[this.field_Q]);
+          var3 = (double)(this.field_e % ModalDialogHost.field_M[this.field_Q]) / (0.5 * (double)ModalDialogHost.field_M[this.field_Q]);
           var5 = 126 % ((param0 - 26) / 63);
           stackIn_1_0 = (int)((-var3 + 1.0) * (double)var2_int);
           return stackIn_1_0;
@@ -593,7 +593,7 @@ final class bf {
             44 != this.field_Q) {
             return true;
           }
-          stackIn_16_0 = !(!(200.0 > dl.a(true, -sd.field_a.field_N + this.field_o, -sd.field_a.field_D + this.field_N)));
+          stackIn_16_0 = !(!(200.0 > AlphaWidgetContainer.a(true, -sd.field_a.field_N + this.field_o, -sd.field_a.field_D + this.field_N)));
           return stackIn_16_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -867,7 +867,7 @@ final class bf {
             }
           }
           if (((decompiledFrameRemainder15) && (decompiledFrameRemainder14) && (decompiledFrameRemainder13) && (decompiledFrameRemainder12) && (decompiledFrameRemainder11) && (decompiledFrameRemainder10) && (decompiledFrameRemainder9) && (decompiledFrameRemainder8) && (decompiledFrameRemainder7)) &&
-            (decompiledFrameRemainder15 = !(40 <= this.field_V % k.field_M[this.field_Q])) &&
+            (decompiledFrameRemainder15 = !(40 <= this.field_V % ModalDialogHost.field_M[this.field_Q])) &&
             (decompiledFrameRemainder15 = ((3 & (int)this.field_o) == 0))) {
             this.e(63);
             decompiledFrameRemainder15 = (var5 != 0);
@@ -1081,7 +1081,7 @@ final class bf {
               if (this.field_Q == 62) {
                 stackIn_52_1 = lc.field_i[var11];
               } else {
-                stackIn_52_1 = jk.field_I[var11];
+                stackIn_52_1 = DropTargetWidgetContainer.field_I[var11];
               }
               this.field_D = stackIn_52_1;
               this.field_p = -this.field_t + (int)this.field_N;
@@ -1531,10 +1531,10 @@ final class bf {
               var12 = var10 + 3.141592653589793;
               var10 = var10 + (double)hi.a(10, 4, this.field_T) / 30.0;
               var12 = var12 + (double)hi.a(10, param0 ^ 4, this.field_T) / 30.0;
-              sd.field_a.a(24, new gf(var16, -60.0 + var2_double, var4, ji.a(param0 ^ 65535, var10) * var14, var14 * pj.a(var10, 32768), -10.0, this.field_N));
-              sd.field_a.a(24, new gf(var16, 60.0 + var2_double, var4, var14 * ji.a(65535, var12), var14 * pj.a(var12, param0 ^ 32768), -10.0, this.field_N));
-              sd.field_a.a(24, new gf(var16, var2_double - 60.0, var4, ji.a(65535, var10) * -var14, pj.a(var10, 32768) * var14, -10.0, this.field_N));
-              sd.field_a.a(24, new gf(var16, 60.0 + var2_double, var4, ji.a(65535, var12) * -var14, pj.a(var12, 32768) * var14, -10.0, this.field_N));
+              sd.field_a.a(24, new gf(var16, -60.0 + var2_double, var4, ji.a(param0 ^ 65535, var10) * var14, var14 * DequeWidgetContainer.a(var10, 32768), -10.0, this.field_N));
+              sd.field_a.a(24, new gf(var16, 60.0 + var2_double, var4, var14 * ji.a(65535, var12), var14 * DequeWidgetContainer.a(var12, param0 ^ 32768), -10.0, this.field_N));
+              sd.field_a.a(24, new gf(var16, var2_double - 60.0, var4, ji.a(65535, var10) * -var14, DequeWidgetContainer.a(var10, 32768) * var14, -10.0, this.field_N));
+              sd.field_a.a(24, new gf(var16, 60.0 + var2_double, var4, ji.a(65535, var12) * -var14, DequeWidgetContainer.a(var12, 32768) * var14, -10.0, this.field_N));
               return;
             }
             if ((var23 == 18)) {
@@ -1579,8 +1579,8 @@ final class bf {
             var10Lifetime1 = (double)this.field_V / 10.0;
             var16 = 18;
             var10Lifetime1 = var10Lifetime1 + 1.5707963267948966;
-            sd.field_a.a(24, new gf(var16, var2_double - 60.0, var4, var14 * ji.a(65535, var10Lifetime1), pj.a(var10Lifetime1, 32768) * var14, -10.0, this.field_N));
-            sd.field_a.a(24, new gf(var16, 60.0 + var2_double, var4, ji.a(65535, -var10Lifetime1) * var14, pj.a(-var10Lifetime1, 32768) * var14, -10.0, this.field_N));
+            sd.field_a.a(24, new gf(var16, var2_double - 60.0, var4, var14 * ji.a(65535, var10Lifetime1), DequeWidgetContainer.a(var10Lifetime1, 32768) * var14, -10.0, this.field_N));
+            sd.field_a.a(24, new gf(var16, 60.0 + var2_double, var4, ji.a(65535, -var10Lifetime1) * var14, DequeWidgetContainer.a(-var10Lifetime1, 32768) * var14, -10.0, this.field_N));
             return;
           }
           if (var16 != -1) {
@@ -1701,7 +1701,7 @@ final class bf {
                         var21 = Math.atan2(var8, var10);
                         var21 = var21 + (Math.random() - 0.5) / 32.0;
                         var8 = ji.a(65535, var21) * 15.0;
-                        var10 = pj.a(var21, param0 ^ 32831) * 15.0;
+                        var10 = DequeWidgetContainer.a(var21, param0 ^ 32831) * 15.0;
                         if (var24 == 0) {
                           break regionExit1;
                         }
@@ -1926,7 +1926,7 @@ final class bf {
                 var5 = (1.0 + Math.random()) / 2.0;
                 var7 = Math.random() * 6.283185307179586;
                 var4.field_l = this.field_l + var5 * ji.a(65535, var7);
-                var4.field_j = this.field_j + var5 * pj.a(var7, 32768);
+                var4.field_j = this.field_j + var5 * DequeWidgetContainer.a(var7, 32768);
                 var3_intLifetime1++;
                 if (var9 != 0) {
                   decompiledFrameCompleted1 = false;
@@ -1946,7 +1946,7 @@ final class bf {
                 var5Lifetime1 = (1.0 + Math.random()) / 2.0;
                 var7Lifetime1 = Math.random() * 6.283185307179586;
                 var4Lifetime1.field_l = this.field_l + var5Lifetime1 * ji.a(param1 + 65525, var7Lifetime1);
-                var4Lifetime1.field_j = this.field_j + pj.a(var7Lifetime1, 32768) * var5Lifetime1;
+                var4Lifetime1.field_j = this.field_j + DequeWidgetContainer.a(var7Lifetime1, 32768) * var5Lifetime1;
                 var3_intLifetime1Lifetime1++;
                 if (var9 != 0) {
                   decompiledFrameCompleted0 = false;
@@ -2072,7 +2072,7 @@ final class bf {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 <= -117) {
-            stackIn_4_0 = (int)((double)k.field_M[param1] / cd.a((byte) 116));
+            stackIn_4_0 = (int)((double)ModalDialogHost.field_M[param1] / cd.a((byte) 116));
             return stackIn_4_0;
           }
           stackIn_2_0 = -23;
@@ -2096,7 +2096,7 @@ final class bf {
             stackIn_4_0 = -1.0;
             return stackIn_4_0;
           }
-          stackIn_2_0 = dl.a(true, this.field_o - sd.field_a.field_N, -sd.field_a.field_D + this.field_N);
+          stackIn_2_0 = AlphaWidgetContainer.a(true, this.field_o - sd.field_a.field_N, -sd.field_a.field_D + this.field_N);
           return stackIn_2_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -2350,21 +2350,21 @@ final class bf {
             0.333 > Math.random()) {
             this.field_V = 0;
             if (var11 != 0) {
-              if (k.field_M[this.field_Q] == 0) {
+              if (ModalDialogHost.field_M[this.field_Q] == 0) {
                 this.field_V = 0;
-                this.field_V = hi.a(k.field_M[this.field_Q], 4, this.field_T);
+                this.field_V = hi.a(ModalDialogHost.field_M[this.field_Q], 4, this.field_T);
               } else {
-                this.field_V = hi.a(k.field_M[this.field_Q], 4, this.field_T);
+                this.field_V = hi.a(ModalDialogHost.field_M[this.field_Q], 4, this.field_T);
               }
             }
           } else {
-            boolean decompiledSharedTail1 = (k.field_M[this.field_Q] != 0);
+            boolean decompiledSharedTail1 = (ModalDialogHost.field_M[this.field_Q] != 0);
             if (!decompiledSharedTail1) {
               this.field_V = 0;
               decompiledSharedTail1 = (var11 != 0);
             }
             if (decompiledSharedTail1) {
-              this.field_V = hi.a(k.field_M[this.field_Q], 4, this.field_T);
+              this.field_V = hi.a(ModalDialogHost.field_M[this.field_Q], 4, this.field_T);
             }
           }
           boolean decompiledFrameRemainder1 = true;

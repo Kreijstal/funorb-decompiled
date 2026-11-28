@@ -51,7 +51,7 @@ final class NameSuggestionsPanel extends ComponentContainer implements WidgetAct
         }
     }
 
-    final boolean computeBoolean0182(int integerArgument1, int integerArgument2, UiComponent uiComponentArgument3, char characterArgument4) {
+    final boolean handleKey(int integerArgument1, int integerArgument2, UiComponent uiComponentArgument3, char characterArgument4) {
         int integerLocal1 = 0;
         RuntimeException runtimeExceptionLocal2 = null;
         boolean stackBooleanLocal3 = false;
@@ -61,18 +61,18 @@ final class NameSuggestionsPanel extends ComponentContainer implements WidgetAct
         String stackStringLocal7 = null;
         RuntimeException caughtExceptionLocal8 = null;
         try {
-          if (super.computeBoolean0182(86, integerArgument2, uiComponentArgument3, characterArgument4)) {
+          if (super.handleKey(86, integerArgument2, uiComponentArgument3, characterArgument4)) {
             return true;
           }
           integerLocal1 = 11 / ((-22 - integerArgument1) / 49);
           if (integerArgument2 == 98) {
-            stackBooleanLocal3 = this.computeBoolean0893(uiComponentArgument3, (byte) -121);
+            stackBooleanLocal3 = this.focusPreviousChild(uiComponentArgument3, (byte) -121);
             return stackBooleanLocal3;
           }
           if (integerArgument2 != 99) {
             return false;
           }
-          stackBooleanLocal4 = this.computeBoolean0892(32, uiComponentArgument3);
+          stackBooleanLocal4 = this.focusNextChild(32, uiComponentArgument3);
           return stackBooleanLocal4;
         } catch (java.lang.RuntimeException caughtParameterLocal9) {
           caughtExceptionLocal8 = caughtParameterLocal9;
@@ -89,7 +89,7 @@ final class NameSuggestionsPanel extends ComponentContainer implements WidgetAct
     }
 
     NameSuggestionsPanel(NameSuggestionListener callbackContract002Argument1) {
-        super(0, 0, 0, 0, (CallbackContract004) null);
+        super(0, 0, 0, 0, (WidgetRenderer) null);
         try {
           this.callbackContract002State0001 = callbackContract002Argument1;
         } catch (RuntimeException runtimeException) {
@@ -97,13 +97,13 @@ final class NameSuggestionsPanel extends ComponentContainer implements WidgetAct
         }
     }
 
-    final void performAction0162(int integerArgument1, int integerArgument2, int integerArgument3, int integerArgument4) {
-        super.performAction0162(integerArgument1, -124, integerArgument3, integerArgument4);
+    final void drawWidget(int integerArgument1, int integerArgument2, int integerArgument3, int integerArgument4) {
+        super.drawWidget(integerArgument1, -124, integerArgument3, integerArgument4);
         if (integerArgument3 != 0) {
           return;
         }
         if (integerArgument2 > -103) {
-          this.performAction0162(-127, -2, -30, -66);
+          this.drawWidget(-127, -2, -30, -66);
         }
         BitmapFont bitmapFontLocal1 = GameDomainSupport003.bitmapFontState0015;
         if (this.stringArrayState0005 != null) {
@@ -163,16 +163,16 @@ final class NameSuggestionsPanel extends ComponentContainer implements WidgetAct
             mixedSupport094Local9 = new MixedSupport094(GameDomainSupport003.bitmapFontState0015, 0, 1);
             this.interactiveComponentArrayState0001 = new InteractiveComponent[1 + integerLocal7];
             for (integerLocal2 = 0; integerLocal7 > integerLocal2; integerLocal2++) {
-              this.interactiveComponentArrayState0001[integerLocal2] = new InteractiveComponent(this.stringArrayState0005[integerLocal2], (CallbackContract006) (this));
-              this.interactiveComponentArrayState0001[integerLocal2].callbackContract004State0006 = (CallbackContract004) ((Object) mixedSupport094Local9);
+              this.interactiveComponentArrayState0001[integerLocal2] = new InteractiveComponent(this.stringArrayState0005[integerLocal2], (WidgetEventListener) (this));
+              this.interactiveComponentArrayState0001[integerLocal2].callbackContract004State0006 = (WidgetRenderer) ((Object) mixedSupport094Local9);
               this.interactiveComponentArrayState0001[integerLocal2].stringState0080 = DekoBlokoClient.stringState0097;
-              this.interactiveComponentArrayState0001[integerLocal2].performAction0222(15, 80, 0, integerLocal2 * 16 + 20, -16555);
-              this.performAction0895(this.interactiveComponentArrayState0001[integerLocal2], (byte) -55);
+              this.interactiveComponentArrayState0001[integerLocal2].setBounds(15, 80, 0, integerLocal2 * 16 + 20, -16555);
+              this.addChild(this.interactiveComponentArrayState0001[integerLocal2], (byte) -55);
             }
-            this.interactiveComponentArrayState0001[integerLocal7] = new InteractiveComponent(NineSliceSprite.stringState0074, (CallbackContract006) (this));
-            this.interactiveComponentArrayState0001[integerLocal7].callbackContract004State0006 = (CallbackContract004) ((Object) mixedSupport094Local9);
-            this.interactiveComponentArrayState0001[integerLocal7].performAction0222(15, 100, 0, 20 + 16 * (1 + integerLocal7), -16555);
-            this.performAction0895(this.interactiveComponentArrayState0001[integerLocal7], (byte) -55);
+            this.interactiveComponentArrayState0001[integerLocal7] = new InteractiveComponent(NineSliceSprite.stringState0074, (WidgetEventListener) (this));
+            this.interactiveComponentArrayState0001[integerLocal7].callbackContract004State0006 = (WidgetRenderer) ((Object) mixedSupport094Local9);
+            this.interactiveComponentArrayState0001[integerLocal7].setBounds(15, 100, 0, 20 + 16 * (1 + integerLocal7), -16555);
+            this.addChild(this.interactiveComponentArrayState0001[integerLocal7], (byte) -55);
             return;
           }
           this.stringArrayState0005 = null;

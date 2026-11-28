@@ -16,10 +16,10 @@ final class sh {
         RuntimeException decompiledCaughtException = null;
         var2 = Torquing.field_u;
         try {
-          dc.field_a.a(true, ld.field_l, bf.field_d, false);
-          dc.field_a.g((byte) -125);
+          dc.field_a.processPointerInput(true, ld.field_l, bf.field_d, false);
+          dc.field_a.advanceDialogs((byte) -125);
           while (NanoFrameTimer.a((byte) -13)) {
-            dc.field_a.a(e.field_f, 24454, m.field_t);
+            dc.field_a.processKeyInput(e.field_f, 24454, m.field_t);
           }
           if (param0 != ~om.field_h) {
             var1_int = om.field_h;

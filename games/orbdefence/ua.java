@@ -31,14 +31,14 @@ final class ua {
           var2_int = 0;
           var3 = param1.length();
           while (var2_int < var3) {
-            if (sk.a(param1.charAt(var2_int), -46)) {
+            if (ModalDialogHost.a(param1.charAt(var2_int), -46)) {
               var2_int++;
               continue;
             }
             break;
           }
           while (var3 > var2_int) {
-            if (sk.a(param1.charAt(var3 - 1), -46)) {
+            if (ModalDialogHost.a(param1.charAt(var3 - 1), -46)) {
               var3--;
               continue;
             }
@@ -76,7 +76,7 @@ final class ua {
           } else {
             stackIn_31_2 = "{...}";
           }
-          throw dd.wrapClientException((Throwable) ((Object) stackIn_30_0), ((StringBuilder) (Object) stackIn_30_1).append(stackIn_31_2).append(')').toString());
+          throw DraggableWidgetContainer.wrapClientException((Throwable) ((Object) stackIn_30_0), ((StringBuilder) (Object) stackIn_30_1).append(stackIn_31_2).append(')').toString());
         }
     }
 
@@ -124,7 +124,7 @@ final class ua {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw dd.wrapClientException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw DraggableWidgetContainer.wrapClientException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 

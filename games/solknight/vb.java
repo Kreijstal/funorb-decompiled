@@ -126,12 +126,12 @@ final class vb extends il {
           }
           if (AccountRequestState.field_e == di.field_l &&
             bf.c(param6 ^ -21696, 1)) {
-            var9Lifetime1 = te.field_N.readUnsignedByte(255);
-            te.field_N.position = 0;
+            var9Lifetime1 = AlphaWidgetContainer.field_N.readUnsignedByte(255);
+            AlphaWidgetContainer.field_N.position = 0;
             if (100 <= var9Lifetime1 &&
               var9Lifetime1 <= 105) {
               AccountRequestState.field_e = ta.field_e;
-              ke.field_O = new String[var9Lifetime1 - 100];
+              LabeledWidgetContainer.field_O = new String[var9Lifetime1 - 100];
             } else {
               if (var9Lifetime1 == 248) {
                 wb.a(ia.g(-103), (byte) -79);
@@ -142,25 +142,25 @@ final class vb extends il {
                 return stackIn_32_0;
               }
               if (var9Lifetime1 != 99) {
-                te.field_O = -1;
+                AlphaWidgetContainer.field_O = -1;
                 ob.field_h = var9Lifetime1;
                 AccountRequestState.field_e = bj.field_a;
               } else {
                 bf.c(54, ArchiveRequest.g(-9917));
-                NodeHashTableIterator.field_b = new Boolean(lj.a(te.field_N, -2));
-                te.field_N.position = 0;
+                NodeHashTableIterator.field_b = new Boolean(lj.a(AlphaWidgetContainer.field_N, -2));
+                AlphaWidgetContainer.field_N.position = 0;
               }
             }
           }
           if (ta.field_e == AccountRequestState.field_e) {
             var9Lifetime2 = 2;
             if (bf.c(110, var9Lifetime2)) {
-              var10Lifetime1 = te.field_N.readUnsignedShort(-121);
-              te.field_N.position = 0;
+              var10Lifetime1 = AlphaWidgetContainer.field_N.readUnsignedShort(-121);
+              AlphaWidgetContainer.field_N.position = 0;
               if (bf.c(82, var10Lifetime1)) {
-                var11 = ke.field_O.length;
+                var11 = LabeledWidgetContainer.field_O.length;
                 for (var12 = 0; var11 > var12; var12++) {
-                  ke.field_O[var12] = te.field_N.readPrefixedString(false);
+                  LabeledWidgetContainer.field_O[var12] = AlphaWidgetContainer.field_N.readPrefixedString(false);
                 }
                 je.a(false);
                 je.field_c = false;
@@ -172,9 +172,9 @@ final class vb extends il {
           if (bj.field_a == AccountRequestState.field_e &&
             qd.b((byte) 125)) {
             if (ob.field_h != 255) {
-              DiskArchiveRequest.field_v = te.field_N.readString(15);
+              DiskArchiveRequest.field_v = AlphaWidgetContainer.field_N.readString(15);
             } else {
-              var9_ref_String = te.field_N.readNullableString(86);
+              var9_ref_String = AlphaWidgetContainer.field_N.readNullableString(86);
               if (var9_ref_String != null) {
                 MouseInputHandler.a(ia.g(param6 + 21721), var9_ref_String, 13536);
               }

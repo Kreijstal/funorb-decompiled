@@ -108,17 +108,17 @@ final class bj extends InteractiveWidget {
               kg.field_i[var18] = kg.field_i[var18] + ne.field_a[var15][var18];
             }
             bg.a(kg.field_i, var17, 90, true, false, false, ve.field_V);
-            ta.a(var8Lifetime1, var17, var12Lifetime1, var9Lifetime1, var14, var13Lifetime1, var7Lifetime1, (byte) 23);
+            DequeWidgetContainer.a(var8Lifetime1, var17, var12Lifetime1, var9Lifetime1, var14, var13Lifetime1, var7Lifetime1, (byte) 23);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw dd.wrapClientException((Throwable) ((Object) var1), "bj.K(" + param0 + ')');
+          throw DraggableWidgetContainer.wrapClientException((Throwable) ((Object) var1), "bj.K(" + param0 + ')');
         }
     }
 
-    final boolean a(byte param0, pj param1, int param2, int param3, int param4, int param5, int param6) {
+    final boolean pointerPressed(byte param0, UiWidget param1, int param2, int param3, int param4, int param5, int param6) {
         RuntimeException stackIn_21_0 = null;
         StringBuilder stackIn_21_1 = null;
         String stackIn_22_2 = null;
@@ -128,15 +128,15 @@ final class bj extends InteractiveWidget {
         int var9 = 0;
         double var10 = 0.0;
         int var12 = 0;
-        pj var13 = null;
+        UiWidget var13 = null;
         var12 = OrbDefence.field_D ? 1 : 0;
         try {
-          if (!super.a((byte) -122, param1, param2, param3, param4, param5, param6)) {
+          if (!super.pointerPressed((byte) -122, param1, param2, param3, param4, param5, param6)) {
             if (param0 <= -115) {
               return false;
             }
-            var13 = (pj) null;
-            this.a((byte) 126, (pj) null, -115, 38, 73, 82, 38);
+            var13 = (UiWidget) null;
+            this.pointerPressed((byte) 126, (UiWidget) null, -115, 38, 73, 82, 38);
             return false;
           }
           var8_int = -this.field_s + (-param3 - (this.field_H - param5));
@@ -169,7 +169,7 @@ final class bj extends InteractiveWidget {
           } else {
             stackIn_22_2 = "{...}";
           }
-          throw dd.wrapClientException((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(')').toString());
+          throw DraggableWidgetContainer.wrapClientException((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(')').toString());
         }
     }
 

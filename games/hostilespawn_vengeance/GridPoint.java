@@ -102,7 +102,7 @@ final class GridPoint {
           if (var2 == 0) {
             if (null == AccountNameAvailabilityValidator.field_t) {
               AccountNameAvailabilityValidator.field_t = new cb(128);
-              vd.field_A = 0;
+              DequeWidgetContainer.field_A = 0;
             }
             stackIn_14_0 = (var1.readUnsignedByte(32270) != 1) ? 0 : 1;
             var3_int = stackIn_14_0;
@@ -125,8 +125,8 @@ final class GridPoint {
             if (var5 == null) {
               var5 = new vb();
               AccountNameAvailabilityValidator.field_t.a((long)var7.hashCode(), var5, 320);
-              fieldTemp$0 = vd.field_A;
-              vd.field_A = vd.field_A + 1;
+              fieldTemp$0 = DequeWidgetContainer.field_A;
+              DequeWidgetContainer.field_A = DequeWidgetContainer.field_A + 1;
               var5.field_Gb = fieldTemp$0;
               uj.field_o.addLast(var5, 121);
             }
@@ -312,13 +312,13 @@ final class GridPoint {
         String stackIn_8_0 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (ul.field_E == null) {
-            ul.field_E = new java.text.DecimalFormat("0.00");
+          if (ModalDialog.field_E == null) {
+            ModalDialog.field_E = new java.text.DecimalFormat("0.00");
           }
           if (param0 != -1) {
             GridPoint.formatTwoDecimals(47, -0.5022005601801744);
           }
-          stackIn_8_0 = ul.field_E.format(param1);
+          stackIn_8_0 = ModalDialog.field_E.format(param1);
           return stackIn_8_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

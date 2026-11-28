@@ -17,7 +17,7 @@ final class sea implements WidgetRenderer {
     private int field_d;
     private int field_g;
 
-    public final void a(int param0, UiWidget param1, int param2, int param3, boolean param4) {
+    public final void paintWidget(int param0, UiWidget param1, int param2, int param3, boolean param4) {
         UiWidget stackIn_3_0 = null;
         RuntimeException stackIn_17_0 = null;
         StringBuilder stackIn_17_1 = null;

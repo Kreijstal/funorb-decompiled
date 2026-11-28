@@ -110,7 +110,7 @@ final class AttackUpAllAnimation extends EventAnimation {
 
     final static void d(int param0) {
         if (null != gja.field_m) {
-          gja.field_m.g((byte) 127);
+          gja.field_m.snapAndPruneDialogs((byte) 127);
           if (param0 != 18) {
             return;
           }

@@ -77,7 +77,7 @@ final class DirectByteStorage extends ByteStorage {
     }
 
     final static void a(boolean param0, int param1) {
-        dc.field_a.a(0, 0, (byte) 113);
+        dc.field_a.drawAllLayers(0, 0, (byte) 113);
         if (param1 <= -85) {
           return;
         }

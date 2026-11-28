@@ -134,7 +134,7 @@ final class SceneWidgetPart014 extends SceneWidget {
                   integerLocal7 = integerLocal5 & 65280;
                   integerLocal7 = (integerLocal7 >> 1) - (integerLocal7 >> 5) & 65280;
                   integerLocal8 = 31 & integerLocal5 >> 3;
-                  SoftwareRaster.integerArrayState0063[integerLocal2] = UiComponentPart006.bitwiseOr(integerLocal8, UiComponentPart006.bitwiseOr(integerLocal6 << 16, integerLocal7));
+                  SoftwareRaster.integerArrayState0063[integerLocal2] = LabeledWidgetContainer.bitwiseOr(integerLocal8, LabeledWidgetContainer.bitwiseOr(integerLocal6 << 16, integerLocal7));
                 }
                 integerLocal2++;
               }

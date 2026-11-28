@@ -53,10 +53,10 @@ final class TextHotspotBounds extends IntrusiveNode {
 
     final static aa[] e(int param0) {
         if (param0 == 0) {
-          return new aa[]{hl.field_C, mj.field_e, ia.field_a, MouseInputHandler.field_b, ProxyAuthenticationRequiredException.field_b, CrossfadingMidiPcmStream.field_n, LevelGrid.field_e, DualLinkNode.field_n, MouseInputHandler.field_d, gi.field_q, PasswordValidator.field_m, uj.field_a, kb.field_e, oj.field_a};
+          return new aa[]{ModalDialog.field_C, mj.field_e, ia.field_a, MouseInputHandler.field_b, ProxyAuthenticationRequiredException.field_b, CrossfadingMidiPcmStream.field_n, LevelGrid.field_e, DualLinkNode.field_n, MouseInputHandler.field_d, gi.field_q, PasswordValidator.field_m, uj.field_a, kb.field_e, oj.field_a};
         }
         TextHotspotBounds.clearStaticReferences(93);
-        return new aa[]{hl.field_C, mj.field_e, ia.field_a, MouseInputHandler.field_b, ProxyAuthenticationRequiredException.field_b, CrossfadingMidiPcmStream.field_n, LevelGrid.field_e, DualLinkNode.field_n, MouseInputHandler.field_d, gi.field_q, PasswordValidator.field_m, uj.field_a, kb.field_e, oj.field_a};
+        return new aa[]{ModalDialog.field_C, mj.field_e, ia.field_a, MouseInputHandler.field_b, ProxyAuthenticationRequiredException.field_b, CrossfadingMidiPcmStream.field_n, LevelGrid.field_e, DualLinkNode.field_n, MouseInputHandler.field_d, gi.field_q, PasswordValidator.field_m, uj.field_a, kb.field_e, oj.field_a};
     }
 
     TextHotspotBounds(int param0, int param1, int param2, int param3, int param4) {

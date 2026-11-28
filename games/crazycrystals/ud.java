@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 abstract class ud extends en {
-    private th field_V;
+    private AlphaWidgetContainer field_V;
     private int field_W;
     private int field_ab;
     private int field_T;
@@ -10,23 +10,23 @@ abstract class ud extends en {
     static int[] field_bb;
     static int field_Z;
     static hm[] field_S;
-    private qm field_X;
+    private UiWidget field_X;
     private int field_R;
     private fp field_Q;
     private int field_Y;
 
-    private final void a(int param0, qm param1) {
+    private final void a(int param0, UiWidget param1) {
         try {
           if (null != this.field_V) {
             this.field_V.unlink(false);
           }
           if (param1 == null) {
-            this.field_V = new th();
+            this.field_V = new AlphaWidgetContainer();
           } else {
-            param1.a(param1.field_f, 6, this.field_R + 6, param1.field_g, (byte) -52);
-            this.field_V = new th(param1);
+            param1.setBounds(param1.field_f, 6, this.field_R + 6, param1.field_g, (byte) -52);
+            this.field_V = new AlphaWidgetContainer(param1);
           }
-          this.b(this.field_V, param0 + 26550);
+          this.addChild(this.field_V, param0 + 26550);
           if (param0 != -26498) {
             this.k(103);
           }
@@ -36,20 +36,20 @@ abstract class ud extends en {
         }
     }
 
-    final boolean e(byte param0) {
+    final boolean snapDialogAnimation(byte param0) {
         if (param0 == 79) {
           this.j(-1);
-          return super.e((byte) 79);
+          return super.snapDialogAnimation((byte) 79);
         }
         this.field_Q = (fp) null;
         this.j(-1);
-        return super.e((byte) 79);
+        return super.snapDialogAnimation((byte) 79);
     }
 
     final void j(int param0) {
         if (null != this.field_Q) {
           if (mi.field_D != this.field_Q) {
-            this.a(12 + this.field_R + this.field_X.field_f, (byte) -94, 12 + this.field_X.field_g);
+            this.setCenteredSize(12 + this.field_R + this.field_X.field_f, (byte) -94, 12 + this.field_X.field_g);
             this.a(-26498, this.field_X);
           }
           this.field_V.field_z = 256;
@@ -58,7 +58,7 @@ abstract class ud extends en {
         super.j(param0);
     }
 
-    void a(qm param0, byte param1) {
+    void a(UiWidget param0, byte param1) {
         RuntimeException var3 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
@@ -78,7 +78,7 @@ abstract class ud extends en {
           if (param1 == -50) {
             return;
           }
-          this.field_V = (th) null;
+          this.field_V = (AlphaWidgetContainer) null;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -110,24 +110,24 @@ abstract class ud extends en {
         this.field_X = null;
     }
 
-    boolean a(int param0, int param1, qm param2, char param3) {
+    boolean handleKey(int param0, int param1, UiWidget param2, char param3) {
         RuntimeException var5 = null;
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
         String stackIn_16_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (super.a(param0, param1, param2, param3)) {
+          if (super.handleKey(param0, param1, param2, param3)) {
             return true;
           }
           if (this.field_V == null) {
             return false;
           }
           if (98 == param0) {
-            this.field_V.a(true, param2);
+            this.field_V.takeFocus(true, param2);
           }
           if (99 == param0) {
-            this.field_V.a(true, param2);
+            this.field_V.takeFocus(true, param2);
           }
           return false;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -156,28 +156,28 @@ abstract class ud extends en {
         field_S = null;
     }
 
-    boolean g(byte param0) {
+    boolean advanceDialogAnimation(byte param0) {
         int fieldTemp$0 = 0;
         int var3 = CrazyCrystals.field_B;
         if (param0 != 8) {
           return true;
         }
         if (this.field_Q == null) {
-          return super.g((byte) 8);
+          return super.advanceDialogAnimation((byte) 8);
         }
         if (this.field_Q != jh.field_f) {
           if (mi.field_D != this.field_Q) {
-            return super.g((byte) 8);
+            return super.advanceDialogAnimation((byte) 8);
           }
           fieldTemp$0 = this.field_Y + 1;
           this.field_Y = this.field_Y + 1;
           if (fieldTemp$0 == this.field_W) {
             this.field_V.field_z = 256;
             this.field_Q = null;
-            return super.g((byte) 8);
+            return super.advanceDialogAnimation((byte) 8);
           }
           this.field_V.field_z = (this.field_Y << 8) / this.field_W;
-          return super.g((byte) 8);
+          return super.advanceDialogAnimation((byte) 8);
         }
         int fieldTemp$1 = this.field_Y + 1;
         this.field_Y = this.field_Y + 1;
@@ -186,13 +186,13 @@ abstract class ud extends en {
           this.a(this.field_ab, this.field_X.field_f + (12 + this.field_R), (byte) -93, this.field_X.field_g + 12);
           this.field_Y = 0;
           this.field_V.field_z = 0;
-          return super.g((byte) 8);
+          return super.advanceDialogAnimation((byte) 8);
         }
         this.field_V.field_z = 256 - (this.field_Y << 8) / this.field_T;
-        return super.g((byte) 8);
+        return super.advanceDialogAnimation((byte) 8);
     }
 
-    ud(ol param0, qm param1, int param2, int param3, int param4) {
+    ud(ModalDialogHost param0, UiWidget param1, int param2, int param3, int param4) {
         super(param0, 12 + param1.field_g, param1.field_f + 12 + param2);
         try {
           this.field_R = param2;

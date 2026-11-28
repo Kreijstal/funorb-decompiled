@@ -14,7 +14,7 @@ final class ta extends me {
         return DirectByteStorage.field_k;
     }
 
-    final void b(ag param0, byte param1) {
+    final void b(UiWidget param0, byte param1) {
         try {
           super.b(param0, param1);
         } catch (RuntimeException runtimeException) {
@@ -67,7 +67,7 @@ final class ta extends me {
           dn.field_b = 0;
           PacketBuffer.field_p = null;
           om.field_a = false;
-          nh.field_H = 0;
+          LabeledWidgetContainer.field_H = 0;
           wk.field_h = false;
           tb.field_N = 0;
           ec.$cfr$intArgs$a$7ffe4b125357(-123, hk.field_q);
@@ -152,9 +152,9 @@ final class ta extends me {
           ProxySocketFactory.field_j = 0;
           if (bm.field_c == 0 &&
             rl.field_c == 0) {
-            ul.field_L = 0;
+            ModalDialog.field_L = 0;
           } else {
-            ul.field_L = -1;
+            ModalDialog.field_L = -1;
           }
           ll.field_a = 0;
           ib.field_c = 0;
@@ -415,7 +415,7 @@ final class ta extends me {
         field_lb = null;
     }
 
-    ta(gg param0, ag param1) {
+    ta(ModalDialogHost param0, UiWidget param1) {
         super(param0, param1, 33, 20, 30);
     }
 

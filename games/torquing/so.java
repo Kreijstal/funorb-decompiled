@@ -92,7 +92,7 @@ final class so extends am {
           var3Lifetime1 = od.field_t[9] >> 8;
           var4 = od.field_t[10] >> 8;
           var5Lifetime1 = od.field_t[11] >> 8;
-          var6Lifetime1 = jh.field_z << 4;
+          var6Lifetime1 = SingleChildWidgetContainer.field_z << 4;
           var7Lifetime1 = 0;
           var8Lifetime1 = ah.a((byte) 127, var6Lifetime1) >> 8;
           var9Lifetime1 = SocketConnector.b(2048, var6Lifetime1) >> 8;

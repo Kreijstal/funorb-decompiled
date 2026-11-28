@@ -7,7 +7,7 @@ final class AccountCreationResultPanel extends ci implements WidgetActivationLis
     private boolean field_wb;
     static Archive field_ub;
 
-    AccountCreationResultPanel(i param0, AccountRegistrationPanel param1) {
+    AccountCreationResultPanel(ModalDialogHost param0, AccountRegistrationPanel param1) {
         super(param0, uc.field_g, UiWidget.field_p, false, false);
         try {
           this.field_vb = param1;
@@ -70,7 +70,7 @@ final class AccountCreationResultPanel extends ci implements WidgetActivationLis
           var5 = new lj((ci) (this), uc.field_g, var4);
           if (!param2.success) {
             if (this.field_wb) {
-              var5.a(0, dd.field_a, (dg) (this));
+              var5.a(0, dd.field_a, (WidgetEventListener) (this));
             } else {
               if (param2.statusCode == 5) {
                 var5.a(11, AgeValidator.field_k, 1);
@@ -91,7 +91,7 @@ final class AccountCreationResultPanel extends ci implements WidgetActivationLis
               this.c(-3399, new qe(this));
               return;
             }
-            var5.a(0, dd.field_a, (dg) (this));
+            var5.a(0, dd.field_a, (WidgetEventListener) (this));
           }
           this.c(-3399, var5);
           if (param1 > 19) {
@@ -120,36 +120,36 @@ final class AccountCreationResultPanel extends ci implements WidgetActivationLis
         }
     }
 
-    final boolean h(int param0) {
+    final boolean advanceDialogAnimation(int param0) {
         AccountServiceResult var2 = null;
         AccountServiceResult var2Lifetime1;
         if (param0 != 1784) {
           this.field_vb = (AccountRegistrationPanel) null;
           if (!this.field_J) {
-            return super.h(1784);
+            return super.advanceDialogAnimation(1784);
           }
           if (this.field_tb) {
-            return super.h(1784);
+            return super.advanceDialogAnimation(1784);
           }
           var2 = IsaacRandom.pollAccountCreationResult(83);
           if (var2 != null) {
             this.showAccountCreationResult(false, (byte) 97, var2);
-            return super.h(1784);
+            return super.advanceDialogAnimation(1784);
           }
-          return super.h(1784);
+          return super.advanceDialogAnimation(1784);
         }
         if (!this.field_J) {
-          return super.h(1784);
+          return super.advanceDialogAnimation(1784);
         }
         if (this.field_tb) {
-          return super.h(1784);
+          return super.advanceDialogAnimation(1784);
         }
         var2Lifetime1 = IsaacRandom.pollAccountCreationResult(83);
         if (var2Lifetime1 != null) {
           this.showAccountCreationResult(false, (byte) 97, var2Lifetime1);
-          return super.h(1784);
+          return super.advanceDialogAnimation(1784);
         }
-        return super.h(1784);
+        return super.advanceDialogAnimation(1784);
     }
 
     final static int i(byte param0) {

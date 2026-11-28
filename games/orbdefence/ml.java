@@ -205,7 +205,7 @@ final class ml {
         if (null == ConfirmedEmailAvailabilityValidator.field_n) {
           return false;
         }
-        if (ConfirmedEmailAvailabilityValidator.field_n.k(3469) != null) {
+        if (ConfirmedEmailAvailabilityValidator.field_n.getTopOpenDialog(3469) != null) {
           return true;
         }
         return false;

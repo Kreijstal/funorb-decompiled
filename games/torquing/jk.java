@@ -18,7 +18,7 @@ final class jk {
           hj.field_c.drawOpaque(0, 0);
           if (SocketJs5Transport.field_r >= 35) {
             if (SocketJs5Transport.field_r >= 70) {
-              jh.field_B.drawTranslucentSprite(false, 0, 0);
+              SingleChildWidgetContainer.field_B.drawTranslucentSprite(false, 0, 0);
               ResourceArchive.field_j.draw(je.field_a - ResourceArchive.field_j.field_s / 2, -(ResourceArchive.field_j.field_t / 2) + kc.field_v);
               jb.field_b.drawFramedPanel((byte) 81, 0, nn.field_e);
               nh.field_l.drawOpaque(0, nn.field_e);
@@ -28,18 +28,18 @@ final class jk {
                   var5.a(false, var5.a(23, var2) + nn.field_e, var2, 0);
                 }
               }
-              fq.field_F.drawTranslucentSprite(false, hb.field_s, ra.field_e);
+              AlphaWidgetContainer.field_F.drawTranslucentSprite(false, hb.field_s, ra.field_e);
               VertexMesh.field_l.draw(hb.field_s, ra.field_e);
               cq.field_w.draw(0, nn.field_e);
             } else {
-              fq.field_F.drawTranslucentSprite(false, hb.field_s, ra.field_e);
+              AlphaWidgetContainer.field_F.drawTranslucentSprite(false, hb.field_s, ra.field_e);
               VertexMesh.field_l.draw(hb.field_s, ra.field_e);
               var1_int = ResourceArchive.field_j.field_s * MouseWheelInput.field_d / 100;
               var2 = ResourceArchive.field_j.field_t * MouseWheelInput.field_d / 100;
               ResourceArchive.field_j.drawScaled(-(var1_int / 2) + je.field_a, -(var2 / 2) + kc.field_v, var1_int, var2);
             }
           } else {
-            fq.field_F.drawTranslucentSprite(false, ub.field_E, ra.field_e);
+            AlphaWidgetContainer.field_F.drawTranslucentSprite(false, ub.field_E, ra.field_e);
             VertexMesh.field_l.b(4096, 1326547364, tj.field_l, ra.field_e + VertexMesh.field_l.field_t / 2, VertexMesh.field_l.field_s / 2 + ub.field_E);
           }
           SoftwareRasterizer.drawRectangleOutline(0, 0, 640, 480, 16777215);
@@ -63,7 +63,7 @@ final class jk {
           ArchiveRequest.field_t = param2;
           aq.field_c = true;
           IsaacCipher.field_m = new mn(dc.field_a, LoginPanel.field_E, param0, ff.field_a, ArchiveRequest.field_t);
-          dc.field_a.a(IsaacCipher.field_m, (byte) 112);
+          dc.field_a.showDialog(IsaacCipher.field_m, (byte) 112);
         } catch (RuntimeException runtimeException) {
           throw RichTextWidget.wrapThrowable((Throwable) ((Object) runtimeException), "jk.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }

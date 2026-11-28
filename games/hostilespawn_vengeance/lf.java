@@ -120,7 +120,7 @@ class lf {
 
     final static void a(byte param0, boolean param1) {
         int var2 = 80 % ((param0 - 32) / 39);
-        im.field_e.a(0, 0, (byte) 126);
+        im.field_e.drawAllLayers(0, 0, (byte) 126);
     }
 
     lf() {

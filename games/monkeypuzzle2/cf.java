@@ -17,7 +17,7 @@ final class cf {
     final static void a(byte param0) {
         if (k.field_g == 10 ||
           !ej.a(12931)) {
-          rh.d((byte) -117);
+          ModalDialog.d((byte) -117);
           k.field_g = 11;
         }
         lh.field_e = true;

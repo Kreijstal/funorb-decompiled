@@ -44,8 +44,8 @@ final class kn {
           AchievementIconEntry.field_s > 0) {
           fieldTemp$5 = AchievementIconEntry.field_s - 1;
           AchievementIconEntry.field_s = AchievementIconEntry.field_s - 1;
-          var2_ref_byte__Lifetime2 = lm.field_l[fieldTemp$5];
-          lm.field_l[AchievementIconEntry.field_s] = null;
+          var2_ref_byte__Lifetime2 = UiWidget.field_l[fieldTemp$5];
+          UiWidget.field_l[AchievementIconEntry.field_s] = null;
           return var2_ref_byte__Lifetime2;
         }
         if (lo.field_c != null) {
@@ -168,7 +168,7 @@ final class kn {
             field_c = true;
           }
           var5 = param0.getFileIdByName(0, param2, var4_int);
-          stackIn_3_0 = oi.a(0, var4_int, var5, param0);
+          stackIn_3_0 = DraggableWidgetContainer.a(0, var4_int, var5, param0);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

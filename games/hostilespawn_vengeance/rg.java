@@ -23,7 +23,7 @@ final class rg {
     }
 
     final static IndexedSprite b(int param0) {
-        IndexedSprite var1 = new IndexedSprite(ra.field_a, GameCanvas.field_e, th.field_Jb[0], nh.field_O[0], TextInputField.field_X[0], ConfirmedEmailAvailabilityValidator.field_r[0], ja.field_e[param0], bf.field_d);
+        IndexedSprite var1 = new IndexedSprite(ra.field_a, GameCanvas.field_e, th.field_Jb[0], LabeledWidgetContainer.field_O[0], TextInputField.field_X[0], ConfirmedEmailAvailabilityValidator.field_r[0], ja.field_e[param0], bf.field_d);
         uj.d(param0 ^ -43);
         return var1;
     }
@@ -65,10 +65,10 @@ final class rg {
           }
           var14 = sc.field_g;
           var2 = var14.readUnsignedByte(32270);
-          var3 = (qj) (rj.field_G.beginForward(-83));
+          var3 = (qj) (DraggableWidgetContainer.field_G.beginForward(-83));
           while (var3 != null) {
             if (var3.field_i != var2) {
-              var3 = (qj) (rj.field_G.nextForward(param0 + 12683));
+              var3 = (qj) (DraggableWidgetContainer.field_G.nextForward(param0 + 12683));
               continue;
             }
             break;
@@ -88,15 +88,15 @@ final class rg {
             for (var6_intLifetime1 = 0; var4 > var6_intLifetime1; var6_intLifetime1++) {
               qj.a(var14, (byte) -12);
               if (var6_intLifetime1 != 0) {
-                TextLineMetrics.a(var6_intLifetime1, s.field_e, 75, AwtRasterBuffer.field_g, jn.field_J, hf.field_a);
+                TextLineMetrics.a(var6_intLifetime1, s.field_e, 75, AwtRasterBuffer.field_g, AlphaWidgetContainer.field_J, hf.field_a);
               } else {
-                TextLineMetrics.a(var6_intLifetime1, s.field_e, 80, AwtRasterBuffer.field_g, jn.field_J, hf.field_a);
+                TextLineMetrics.a(var6_intLifetime1, s.field_e, 80, AwtRasterBuffer.field_g, AlphaWidgetContainer.field_J, hf.field_a);
               }
             }
             ve.a((byte) -125, var5);
             var6 = new String[2][var5];
             var18 = new int[2][var5 * 4];
-            var8 = fc.field_z;
+            var8 = SingleChildWidgetContainer.field_z;
             var9 = 0;
             var10 = 0;
             while (var9 < var8) {

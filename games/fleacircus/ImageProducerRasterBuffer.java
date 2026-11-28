@@ -108,7 +108,7 @@ final class ImageProducerRasterBuffer extends AwtRasterBuffer implements java.aw
         try {
           var2_int = param1.length();
           if (var2_int == 0) {
-            stackIn_3_0 = tf.field_H;
+            stackIn_3_0 = AlphaWidgetContainer.field_H;
             return stackIn_3_0;
           }
           if (~var2_int < param0) {
@@ -170,7 +170,7 @@ final class ImageProducerRasterBuffer extends AwtRasterBuffer implements java.aw
           return;
         }
         try {
-          qj.field_G = true;
+          DropTargetWidgetContainer.field_G = true;
           var2 = "tuhstatbut";
           var3 = "rvnadlm";
           var4 = -1L;

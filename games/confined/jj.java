@@ -22,20 +22,20 @@ final class jj extends ug {
         field_hb = null;
     }
 
-    jj(sh param0, String param1) {
+    jj(ModalDialogHost param0, String param1) {
         super(param0, 300, 120);
         int var3_int = 0;
         try {
           this.field_ib = param1;
           if (this.field_ib != null) {
             var3_int = fd.field_k.textHeight(this.field_ib, 260, fd.field_k.field_C);
-            this.a(-68, var3_int + 150, 300);
+            this.setCenteredSize(-68, var3_int + 150, 300);
           }
           this.field_kb = new ib(13, 50, 274, 30, 15, 2113632, 4210752);
           this.field_kb.field_N = true;
           this.field_jb = false;
           this.field_nb = false;
-          this.b(this.field_kb, 10);
+          this.addChild(this.field_kb, 10);
         } catch (RuntimeException runtimeException) {
           throw TextLineMetrics.a((Throwable) ((Object) runtimeException), "jj.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
@@ -120,7 +120,7 @@ final class jj extends ug {
                 dc.d(125);
                 return false;
               }
-              if (la.h(118) <= 30000L) {
+              if (LabeledWidgetContainer.h(118) <= 30000L) {
                 return false;
               }
               dc.d(125);

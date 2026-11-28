@@ -275,11 +275,11 @@ final class BufferedSocket implements Runnable {
           wd.field_c = wd.field_c + (param1.readUnsignedShort((byte) -112) << 2);
           var2_intLifetime1 = param1.readUnsignedByte(false);
           wd.field_c = wd.field_c + (var2_intLifetime1 >> 6);
-          dk.field_B = 2064384 & var2_intLifetime1 << 15;
-          dk.field_B = dk.field_B + (param1.readUnsignedByte(false) << 7);
+          SingleChildWidgetContainer.field_B = 2064384 & var2_intLifetime1 << 15;
+          SingleChildWidgetContainer.field_B = SingleChildWidgetContainer.field_B + (param1.readUnsignedByte(false) << 7);
           var2_intLifetime2 = param1.readUnsignedByte(false);
           w.field_a = var2_intLifetime2 << 16 & 65536;
-          dk.field_B = dk.field_B + (var2_intLifetime2 >> 1);
+          SingleChildWidgetContainer.field_B = SingleChildWidgetContainer.field_B + (var2_intLifetime2 >> 1);
           w.field_a = w.field_a + param1.readUnsignedShort((byte) -88);
           if (param0 != -107) {
             BufferedSocket.b(13);

@@ -144,10 +144,10 @@ final class sc {
             var4 = (String) null;
             sc.a((String) null, (ResourceArchive) null, 101, (String) null, (byte) 55);
           }
-          var5 = (hh) (eh.field_R.beginBackward(-18110));
+          var5 = (hh) (ModalDialog.field_R.beginBackward(-18110));
           while (var5 != null) {
             ue.a(param1, var5, (byte) 126);
-            var5 = (hh) (eh.field_R.nextBackward((byte) -128));
+            var5 = (hh) (ModalDialog.field_R.nextBackward((byte) -128));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

@@ -19,7 +19,7 @@ final class ki extends DefaultTextWidgetRenderer {
         return si.field_l > 250 ? true : false;
     }
 
-    public final void a(int param0, int param1, boolean param2, byte param3, UiWidget param4) {
+    public final void paintWidget(int param0, int param1, boolean param2, byte param3, UiWidget param4) {
         UiWidget stackIn_3_0 = null;
         RuntimeException stackIn_31_0 = null;
         StringBuilder stackIn_31_1 = null;
@@ -68,7 +68,7 @@ final class ki extends DefaultTextWidgetRenderer {
               }
             }
           }
-          if (param4.b((byte) -111)) {
+          if (param4.isFocused((byte) -111)) {
             var14 = this.field_o[5];
             if (var14 != null) {
               var14.a(this, (byte) -107, param0, param1, this.field_p, param4);
@@ -82,7 +82,7 @@ final class ki extends DefaultTextWidgetRenderer {
             }
           }
           this.field_p.a((byte) 21, this, param1, param4, param0);
-          fi.c(true);
+          SingleChildWidgetContainer.c(true);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

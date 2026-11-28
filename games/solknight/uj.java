@@ -12,7 +12,7 @@ final class uj {
         try {
           if (pc.field_b == null) {
             pc.field_b = new lb(u.field_b, v.field_a);
-            u.field_b.b(pc.field_b, -49);
+            u.field_b.showDialog(pc.field_b, -49);
           }
           if (param3 != -77) {
             uj.clearStaticReferences(-106);

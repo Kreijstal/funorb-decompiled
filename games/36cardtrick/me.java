@@ -116,7 +116,7 @@ final class me {
                 if (param6) {
                   fd.field_g[var23Lifetime2] = var27Lifetime1 >> th.field_a;
                   pe.field_a[var23Lifetime2] = var28Lifetime1 >> th.field_a;
-                  n.field_F[var23Lifetime2] = var29Lifetime1;
+                  AlphaWidgetContainer.field_F[var23Lifetime2] = var29Lifetime1;
                 }
                 var23Lifetime2++;
                 continue;
@@ -138,7 +138,7 @@ final class me {
                   var26Lifetime1 = param4.field_G[var23Lifetime2];
                   ti.field_d[var23Lifetime2] = var9 + (var18 * var26Lifetime1 + (var12 * var24Lifetime1 + var15 * var25Lifetime1) >> 16);
                   oa.field_a[var23Lifetime2] = var10 + (var24Lifetime1 * var13 + var25Lifetime1 * var16 + var26Lifetime1 * var19 >> 16);
-                  j.field_E[var23Lifetime2] = (var24Lifetime1 * var14 - (-(var17 * var25Lifetime1) - var26Lifetime1 * var20) >> 16) + var11;
+                  ModalDialogHost.field_E[var23Lifetime2] = (var24Lifetime1 * var14 - (-(var17 * var25Lifetime1) - var26Lifetime1 * var20) >> 16) + var11;
                   var24Lifetime1 = param4.field_m[var23Lifetime2];
                   var25Lifetime1 = param4.field_x[var23Lifetime2];
                   var26Lifetime1 = param4.field_P[var23Lifetime2];

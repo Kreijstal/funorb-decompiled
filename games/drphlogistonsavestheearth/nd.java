@@ -29,7 +29,7 @@ final class nd extends InteractiveWidget {
         field_K = null;
     }
 
-    final boolean a(int param0, vg param1, int param2, byte param3, int param4, int param5, int param6) {
+    final boolean pointerPressed(int param0, UiWidget param1, int param2, byte param3, int param4, int param5, int param6) {
         RuntimeException stackIn_22_0 = null;
         StringBuilder stackIn_22_1 = null;
         String stackIn_23_2 = null;
@@ -41,7 +41,7 @@ final class nd extends InteractiveWidget {
         int var12 = 0;
         var12 = DrPhlogistonSavesTheEarth.field_D ? 1 : 0;
         try {
-          if (!super.a(param0, param1, param2, (byte) 117, param4, param5, param6)) {
+          if (!super.pointerPressed(param0, param1, param2, (byte) 117, param4, param5, param6)) {
             if (param3 >= 113) {
               return false;
             }
@@ -84,7 +84,7 @@ final class nd extends InteractiveWidget {
 
     final static void a(int param0, String param1) {
         try {
-          pi.field_J = param1;
+          DraggableWidgetContainer.field_J = param1;
           if (param0 != -1) {
             String var3 = (String) null;
             nd.a(100, (String) null);

@@ -42,7 +42,7 @@ final class uc {
         var8 = SolKnight.field_L ? 1 : 0;
         try {
           var3_int = 0;
-          var4 = th.field_J;
+          var4 = DropTargetWidgetContainer.field_J;
           while (vc.field_d.length > var3_int) {
             var5 = ImageProducerRasterBuffer.field_l[var3_int];
             if (var5 >= 0) {

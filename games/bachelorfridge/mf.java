@@ -191,7 +191,7 @@ class mf extends uda implements WidgetActionListener {
         }
     }
 
-    mf(rp param0, BitmapFont param1, String param2, boolean param3, boolean param4) {
+    mf(ModalDialogHost param0, BitmapFont param1, String param2, boolean param3, boolean param4) {
         super(param0, new hc((mf) null, param1, param2), 77, 10, 10);
         try {
           this.field_jb = param3 ? true : false;
@@ -201,7 +201,7 @@ class mf extends uda implements WidgetActionListener {
           this.field_hb = param1;
           this.field_kb = new de(13, 50, 274, 30, 15, 2113632, 4210752);
           this.field_kb.field_P = true;
-          this.c(this.field_kb, -123);
+          this.addChild(this.field_kb, -123);
         } catch (RuntimeException runtimeException) {
           throw pe.wrapException((Throwable) ((Object) runtimeException), "mf.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ')');
         }

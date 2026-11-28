@@ -41,7 +41,7 @@ final class Bzip2State {
 
     final static void a(byte param0) {
         if (TunnelCamera.field_Z != null) {
-          TunnelCamera.field_Z.h((byte) -3);
+          TunnelCamera.field_Z.snapAndPruneDialogs((byte) -3);
         }
         if (ui.field_c != null) {
           ui.field_c.i((byte) 127);

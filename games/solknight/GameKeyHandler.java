@@ -12,7 +12,7 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
         int var2_int = 0;
         int var3 = 0;
         try {
-          if (null != i.field_J) {
+          if (null != ModalDialogHost.field_J) {
             var2_int = param0.getKeyChar();
             if (var2_int != 0 &&
               var2_int != 65535 &&
@@ -50,7 +50,7 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         try {
-          if (null != i.field_J) {
+          if (null != ModalDialogHost.field_J) {
             MouseWheelInput.field_c = 0;
             var2_int = param0.getKeyCode();
             if (var2_int >= 0 &&
@@ -94,7 +94,7 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
         int var3 = 0;
         int var3Lifetime1;
         try {
-          if (i.field_J != null) {
+          if (ModalDialogHost.field_J != null) {
             MouseWheelInput.field_c = 0;
             var2_int = param0.getKeyCode();
             if (var2_int >= 0 &&
@@ -169,7 +169,7 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (null == i.field_J) {
+          if (null == ModalDialogHost.field_J) {
             return;
           }
           fg.field_b = -1;

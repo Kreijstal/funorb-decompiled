@@ -102,7 +102,7 @@ final class JavaSoundAudioOutput extends PcmPlayerService {
           this.field_x.start();
           this.field_v = param0;
         } catch (javax.sound.sampled.LineUnavailableException lineUnavailableException) {
-          if (hj.countSetBits(true, param0) != 1) {
+          if (DropTargetWidgetContainer.countSetBits(true, param0) != 1) {
             this.openDevice(MusicPatchPcmStream.roundUpPowerOfTwo(param0, 17603));
             return;
           }

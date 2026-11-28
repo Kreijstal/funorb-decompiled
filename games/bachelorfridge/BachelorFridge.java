@@ -193,7 +193,7 @@ public final class BachelorFridge extends NetworkGameClient {
                   BuffVendorEvent.d((byte) -125);
                   SuperSpeedAllSpecial.b(-122);
                   kaa.field_m = ActorAnimation.field_l;
-                  if (ge.field_L) {
+                  if (LabeledWidgetContainer.field_L) {
                     oq.a(false, false);
                   }
                   if (SuperSpeedEvent.field_r) {
@@ -210,7 +210,7 @@ public final class BachelorFridge extends NetworkGameClient {
             if (decompiledFrameRemainder2) {
               StampedeAnimation.field_A = StampedeAnimation.field_A + 1;
               if (StampedeAnimation.field_A == 16) {
-                if (ge.field_L) {
+                if (LabeledWidgetContainer.field_L) {
                   ft.c((byte) -41);
                   if (var8 != 0) {
                     PasswordValidator.a(false);
@@ -666,7 +666,7 @@ public final class BachelorFridge extends NetworkGameClient {
         mba.releaseStatics(-90);
         DualLinkNode.releaseStatics((byte) 114);
         st.releaseStatics((byte) 120);
-        rp.releaseStatics((byte) 104);
+        ModalDialogHost.releaseStatics((byte) 104);
         AccountCreationResultPanel.releaseStatics(10462);
         hga.releaseStatics(8405024);
         sja.releaseStatics(33);
@@ -830,7 +830,7 @@ public final class BachelorFridge extends NetworkGameClient {
         UiWidget.c(1023);
         WidgetWrapper.releaseStatics(-81);
         am.resetStaticState(true);
-        vf.releaseStatics(-99);
+        ModalDialog.releaseStatics(-99);
         WidgetContainer.releaseStatics(20742);
         IntrusiveDequeCursor.releaseStatics(7);
         gk.releaseStatics(false);
@@ -841,7 +841,7 @@ public final class BachelorFridge extends NetworkGameClient {
         ImageProducerRasterBuffer.releaseStatics((byte) 81);
         lba.clearStaticReferences((byte) -68);
         bi.d((byte) -97);
-        ge.clearStaticReferences((byte) -111);
+        LabeledWidgetContainer.clearStaticReferences((byte) -111);
         ValidatedTextField.k(-9063);
         TextInputWidget.releaseStatics((byte) -127);
         uda.releaseStatics(114);
@@ -865,7 +865,7 @@ public final class BachelorFridge extends NetworkGameClient {
         faa.releaseStatics((byte) -113);
         BirthDateValidator.releaseStatics(-44);
         uma.releaseStatics(-30829);
-        lq.releaseStatics(71);
+        ArrayWidgetContainer.releaseStatics(71);
         sh.releaseStatics((byte) -92);
         lla.clearStaticReferences((byte) 0);
         sha.releaseStatics(3);
@@ -951,8 +951,8 @@ public final class BachelorFridge extends NetworkGameClient {
         ul.releaseStatics(false);
         SoundFilter.releaseStatics();
         RichTextLayout.releaseStatics(-15298);
-        raa.releaseStatics(2);
-        re.releaseStatics(-124);
+        DraggableWidgetContainer.releaseStatics(2);
+        DropTargetWidgetContainer.releaseStatics(-124);
         du.releaseStatics(8192);
         oea.releaseStatics(-8333);
         Crc32Table.releaseStatics(false);
@@ -972,7 +972,7 @@ public final class BachelorFridge extends NetworkGameClient {
           oka.releaseStatics((byte) 115);
           cm.releaseStatics(-75);
           pt.a(65);
-          hl.h(2);
+          AlphaWidgetContainer.h(2);
           gu.a(true);
           nea.releaseStatics(18178);
           ap.releaseStatics(54);
@@ -1583,13 +1583,13 @@ public final class BachelorFridge extends NetworkGameClient {
           DiveBomberAnimation.field_w.wrapText(fu.field_l[1], new int[]{60}, TileEffectAnimation.field_j[1]);
           var2Lifetime1 = BoardTile.field_b.getFileByName((byte) 123, "tinyfont", "basic");
           var3Lifetime1 = RageSpecial.a(29611, "basic", "tinyfont", vb.field_j);
-          CreatureActor.field_h = hl.a(16777215, (byte) 107, var3Lifetime1, 65793, var2Lifetime1);
+          CreatureActor.field_h = AlphaWidgetContainer.a(16777215, (byte) 107, var3Lifetime1, 65793, var2Lifetime1);
           CreatureActor.field_h.field_M = ce.field_w;
           wt.field_k = RaiseEvent.a(4676, var3Lifetime1, var2Lifetime1);
           g.field_g = ClamsSpecial.a("midfont", vb.field_j, -50, "basic", BoardTile.field_b);
           var2Lifetime2 = BoardTile.field_b.getFileByName((byte) 123, "arenafont", "basic");
           var3Lifetime2 = RageSpecial.a(29611, "basic", "arenafont", vb.field_j);
-          b.field_t = hl.a(16777215, (byte) 107, var3Lifetime2, 65793, var2Lifetime2);
+          b.field_t = AlphaWidgetContainer.a(16777215, (byte) 107, var3Lifetime2, 65793, var2Lifetime2);
           b.field_t.field_M = ce.field_w;
           fu.a(vb.field_j, false);
           uq.field_zb = an.a((byte) -127, vb.field_j, "basic", "generic_frame");
@@ -1716,7 +1716,7 @@ public final class BachelorFridge extends NetworkGameClient {
                     default:
                       break;
                     case 4:
-                      ge.field_L = true;
+                      LabeledWidgetContainer.field_L = true;
                       au.a(0, im.field_a, false);
                       if (var8 == 0) {
                         break;
@@ -1843,7 +1843,7 @@ public final class BachelorFridge extends NetworkGameClient {
                           kaa.field_m = 0;
                           sia.field_h = false;
                           ByteStorage.field_b = true;
-                          ge.field_D = true;
+                          LabeledWidgetContainer.field_D = true;
                         }
                         hm.field_b = false;
                         ArchiveIndex.a(-128);
@@ -1972,7 +1972,7 @@ public final class BachelorFridge extends NetworkGameClient {
                   OhNoEvent.field_s != 12) {
                   if (hm.field_b) {
                     ByteStorage.field_b = true;
-                    ge.field_D = true;
+                    LabeledWidgetContainer.field_D = true;
                     sia.field_h = false;
                     if (!vs.field_d) {
                       lg.a(true, 0, false);

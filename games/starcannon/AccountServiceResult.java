@@ -238,7 +238,7 @@ final class AccountServiceResult {
               }
               stackIn_46_0[stackIn_46_1] = stackIn_47_2;
             }
-            af.field_x = dd.correctedCurrentTimeMillis(124);
+            DropTargetWidgetContainer.field_x = dd.correctedCurrentTimeMillis(124);
           }
           ja.field_c.field_b = od.field_h.length;
           var3_intLifetime1 = 0;

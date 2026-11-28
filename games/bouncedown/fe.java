@@ -2,19 +2,19 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class fe {
-    fc field_l;
+    WidgetRenderer field_l;
     int field_m;
-    fc field_e;
-    fc field_c;
+    WidgetRenderer field_e;
+    WidgetRenderer field_c;
     int field_o;
     int field_k;
-    fc field_a;
+    WidgetRenderer field_a;
     private boolean field_j;
     static int field_i;
     private int field_p;
     static boolean field_g;
     int field_h;
-    fc field_b;
+    WidgetRenderer field_b;
     int field_q;
     int field_n;
     int field_f;
@@ -107,7 +107,7 @@ final class fe {
     final void a(int param0, int param1, int param2, boolean param3, int param4, int param5) {
         SoftwareRasterizer.drawLine(param0, param1, param4, param5, param2);
         if (param3) {
-          this.field_e = (fc) null;
+          this.field_e = (WidgetRenderer) null;
         }
     }
 
@@ -210,7 +210,7 @@ final class fe {
         qi var14Lifetime2;
         try {
           var17 = new DefaultTextWidgetRenderer(param1, 2, 2, 2236962, 1, 1, 1, param1.field_s + (param1.field_x + 2));
-          this.field_c = (fc) ((Object) var17);
+          this.field_c = (WidgetRenderer) ((Object) var17);
           var17.field_h = 16777215;
           var4 = new qi();
           var17.a(var4, (byte) -122);
@@ -237,21 +237,21 @@ final class fe {
           var5[4] = (RgbSprite) ((Object) var18);
           var4.b(-1, 4).a(true, (byte) -118).a(var5, -1);
           var4.b(-1, 5).a(BoundedRandomAccessFile.a(param0 ^ 18906, 0, 0, 0, 65793), -1).a(true, (byte) -46).a(-1, param0 - 34);
-          this.field_b = (fc) ((Object) var4);
+          this.field_b = (WidgetRenderer) ((Object) var4);
           var6 = new qi(var4, true);
           var6.field_d = 0;
           var7 = new qi(var4, true);
           var7.field_d = 0;
           var7.a(param0 - 25, wj.a((byte) -67, 8947848));
           var7.b(-1, 1).a(wj.a((byte) -63, 11184810), param0 ^ -33).a(2236962, param0 ^ -34);
-          this.field_a = (fc) ((Object) new vb(param1, 2, 2, 16777215, -1, 5, 5, 15, 15, 4473924));
+          this.field_a = (WidgetRenderer) ((Object) new vb(param1, 2, 2, 16777215, -1, 5, 5, 15, 15, 4473924));
           discarded$0 = new sj(param1, 2, 2, 16777215, -1, 16777215, 16729156, 4473924);
           discarded$1 = new vg(param1, 16777215, -1, 125269879, 4473924, 3, 268435455);
           var8 = new qi();
           var17.a(var8, (byte) -122);
           var8.b(-1, 0).a(TextLayout.a(15658734, 10066329, 67, 7829367), -1).a(1118481, param0 ^ -34).a(-1, (byte) -49);
           var8.b(param0 ^ -33, 4).a(true, (byte) -61).a(var5, -1);
-          this.field_e = (fc) ((Object) var8);
+          this.field_e = (WidgetRenderer) ((Object) var8);
           var9 = new RgbSprite[9];
           var9[4] = new RgbSprite(2, 1);
           var10 = new RgbSprite[9];

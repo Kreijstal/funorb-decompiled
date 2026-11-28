@@ -7,7 +7,7 @@ final class qj extends re {
     static String field_eb;
     static String field_db;
 
-    qj(eg param0, w param1) {
+    qj(ModalDialogHost param0, UiWidget param1) {
         super(param0, param1, 33, 20, 30);
     }
 
@@ -59,12 +59,12 @@ final class qj extends re {
         return var1;
     }
 
-    final void b(int param0, w param1) {
+    final void b(int param0, UiWidget param1) {
         try {
           super.b(127, param1);
           if (param0 < 115) {
-            w var4 = (w) null;
-            this.b(90, (w) null);
+            UiWidget var4 = (UiWidget) null;
+            this.b(90, (UiWidget) null);
           }
         } catch (RuntimeException runtimeException) {
           throw ld.wrapClientException((Throwable) ((Object) runtimeException), "qj.AA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');

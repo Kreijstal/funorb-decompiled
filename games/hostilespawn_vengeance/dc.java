@@ -9,12 +9,12 @@ final class dc {
     static volatile int field_d;
 
     final static void a(byte param0) {
-        im.field_e.f((byte) 32);
+        im.field_e.closeAllDialogs((byte) 32);
         if (param0 < -83) {
           if (hj.field_t == null) {
             hj.field_t = new pe(im.field_e, GameAppletShell.field_g);
           }
-          im.field_e.c(hj.field_t, 108);
+          im.field_e.showDialog(hj.field_t, 108);
           return;
         }
         java.awt.Component var2 = (java.awt.Component) null;
@@ -22,7 +22,7 @@ final class dc {
         if (hj.field_t == null) {
           hj.field_t = new pe(im.field_e, GameAppletShell.field_g);
         }
-        im.field_e.c(hj.field_t, 108);
+        im.field_e.showDialog(hj.field_t, 108);
     }
 
     final static void a(byte param0, int param1, int param2) {

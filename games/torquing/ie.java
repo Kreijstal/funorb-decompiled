@@ -21,13 +21,13 @@ final class ie {
           return;
         }
         try {
-          if (null == jh.field_x ||
+          if (null == SingleChildWidgetContainer.field_x ||
             null == de.field_d) {
-            jh.field_x = new int[256];
+            SingleChildWidgetContainer.field_x = new int[256];
             de.field_d = new int[256];
             for (var1_int = 0; 256 > var1_int; var1_int++) {
               var2 = 6.283185307179586 * ((double)var1_int / 255.0);
-              jh.field_x[var1_int] = (int)(4096.0 * Math.sin(var2));
+              SingleChildWidgetContainer.field_x[var1_int] = (int)(4096.0 * Math.sin(var2));
               de.field_d[var1_int] = (int)(Math.cos(var2) * 4096.0);
             }
           }

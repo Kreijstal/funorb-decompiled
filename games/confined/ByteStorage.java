@@ -38,21 +38,21 @@ abstract class ByteStorage {
         String stackIn_24_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (ml.field_a != oe.field_Q) {
+          if (ml.field_a != ModalDialog.field_Q) {
             return false;
           }
           if (param0 != 30692) {
             return true;
           }
           var8 = new AccountCreationResultPanel(TunnelCamera.field_Z, param3);
-          TunnelCamera.field_Z.c(var8, 0);
+          TunnelCamera.field_Z.showDialog(var8, 0);
           if (TextFieldValidator.c(109)) {
             var8.o(param0 - 30583);
             return true;
           }
           hd.field_d = param2;
           ji.field_d = null;
-          oe.field_Q = ValidatedTextField.field_fb;
+          ModalDialog.field_Q = ValidatedTextField.field_fb;
           wc.field_Ob = param6;
           kc.field_n = param4;
           rd.field_Jb = param1;

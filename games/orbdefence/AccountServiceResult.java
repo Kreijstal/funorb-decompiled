@@ -44,7 +44,7 @@ final class AccountServiceResult {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw dd.wrapClientException((Throwable) ((Object) var2), "qj.A(" + param0 + ',' + param1 + ')');
+          throw DraggableWidgetContainer.wrapClientException((Throwable) ((Object) var2), "qj.A(" + param0 + ',' + param1 + ')');
         }
     }
 

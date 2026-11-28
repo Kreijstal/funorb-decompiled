@@ -121,30 +121,30 @@ final class ri {
           for (var13 = 0; rb.field_hb.length > var13; var13++) {
             boolean decompiledFrameRemainder0 = true;
             if (0 != (1 << var13 & var4) &&
-              ee.field_F != var13) {
+              DraggableWidgetContainer.field_F != var13) {
               ie.field_b[var13].drawQuarterSizeAveraged(var11, var12);
             } else {
               if (param2 &&
                 0 == (var4 & 1 << var13)) {
-                if ((ee.field_F == var13)) {
-                  ee.field_F = -1;
+                if ((DraggableWidgetContainer.field_F == var13)) {
+                  DraggableWidgetContainer.field_F = -1;
                 }
                 decompiledFrameRemainder0 = false;
               }
               else {
-                if (var13 != ee.field_F) {
+                if (var13 != DraggableWidgetContainer.field_F) {
                   ByteStorage.field_b.drawQuarterSizeAveraged(var11, var12);
                 }
               }
             }
             if (decompiledFrameRemainder0) {
-              if (var13 == ee.field_F ||
+              if (var13 == DraggableWidgetContainer.field_F ||
                 var9Lifetime1 >= var11 &&
                 var9Lifetime1 <= var11 + 32 &&
                 var12 <= var10 &&
                 var12 + 32 >= var10) {
                 SoftwareRasterizer.setClip(0, 6, var6, var7 - 6);
-                var14_float = ProxySocketConnector.a(true, (float)jk.field_B * 0.10000000149011612f);
+                var14_float = ProxySocketConnector.a(true, (float)SingleChildWidgetContainer.field_B * 0.10000000149011612f);
                 if ((var4 & 1 << var13) == 0) {
                   stackIn_34_0 = ByteStorage.field_b;
                 } else {
@@ -162,7 +162,7 @@ final class ri {
                 var17 = stackIn_43_0 + (1 + (var15_ref_le.field_k >> 3) - var16_int / 2);
                 var15_ref_le.drawDownscaledAreaAveraged(var11 + var17, var17 + var12, var16_int, var16_int);
                 var15_ref_le.drawScaledAdditive(var17 + var11, var17 + var12, var16_int, var16_int, (int)(40.0f * var14_float) + 40);
-                if (ee.field_F != var13) {
+                if (DraggableWidgetContainer.field_F != var13) {
                   var5 = var13;
                 }
               }
@@ -175,8 +175,8 @@ final class ri {
           ke.field_f[1].bindAsRenderTarget();
           SoftwareRasterizer.fillRectangle(3, 3, 215, 184, 16249775);
           lb.a(0, 221, (byte) -119, NodeHashTableIterator.field_e, 0, 190);
-          if (ee.field_F >= 0) {
-            var5 = ee.field_F;
+          if (DraggableWidgetContainer.field_F >= 0) {
+            var5 = DraggableWidgetContainer.field_F;
           }
           if (var5 >= 0) {
             var13Lifetime1 = var20.field_D + var20.field_C;

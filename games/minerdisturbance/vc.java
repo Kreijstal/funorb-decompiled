@@ -20,7 +20,7 @@ final class vc extends IntrusiveNode {
         if (!param0) {
           return true;
         }
-        stackIn_7_0 = (oj.field_J == -1) || (nb.field_i[oj.field_J].c(-78));
+        stackIn_7_0 = (AlphaWidgetContainer.field_J == -1) || (nb.field_i[AlphaWidgetContainer.field_J].c(-78));
         return stackIn_7_0;
     }
 

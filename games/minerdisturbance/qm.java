@@ -33,7 +33,7 @@ final class qm {
         li.field_a[fb.field_c] = param1;
         int var6 = param1 + (param5 + param4);
         int var7 = var6 == 0 ? 0 : param4 * 1000 / var6;
-        cc.field_L[fb.field_c] = var7;
+        ModalDialog.field_L[fb.field_c] = var7;
         if (v.field_c < var7) {
           v.field_c = var7;
         }

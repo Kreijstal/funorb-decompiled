@@ -65,12 +65,12 @@ final class qm extends oj {
     final static void a(boolean param0) {
         gf.field_e = wl.c(11);
         if (!param0) {
-          im.field_e = new gg();
+          im.field_e = new ModalDialogHost();
           pc.a(true, true, param0);
           return;
         }
         qm.clearDeclaredStaticReferences(46);
-        im.field_e = new gg();
+        im.field_e = new ModalDialogHost();
         pc.a(true, true, param0);
     }
 

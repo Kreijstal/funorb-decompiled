@@ -153,13 +153,13 @@ final class vma extends pv {
         Sprite[] var1 = new Sprite[ok.field_vb];
         int var3Lifetime1;
         for (var2 = 0; var2 < ok.field_vb; var2++) {
-          var3 = lq.field_A[var2] * InsanoSauceSpecial.field_s[var2];
+          var3 = ArrayWidgetContainer.field_A[var2] * InsanoSauceSpecial.field_s[var2];
           var4 = BananarangAnimation.field_P[var2];
           var5 = new int[var3];
           for (var6 = 0; var6 < var3; var6++) {
             var5[var6] = hk.field_f[dda.a(255, (int) var4[var6])];
           }
-          var1[var2] = new Sprite(ok.field_Bb, MassPoisonEvent.field_r, fl.field_j[var2], AirstrikeAnimation.field_D[var2], lq.field_A[var2], InsanoSauceSpecial.field_s[var2], var5);
+          var1[var2] = new Sprite(ok.field_Bb, MassPoisonEvent.field_r, fl.field_j[var2], AirstrikeAnimation.field_D[var2], ArrayWidgetContainer.field_A[var2], InsanoSauceSpecial.field_s[var2], var5);
         }
         var3Lifetime1 = 60 / ((-56 - param0) / 46);
         al.releaseStatics(-18073);
@@ -192,10 +192,10 @@ final class vma extends pv {
             field_j = (Sprite[]) null;
           }
           InsanoSauceSpecial.c(false);
-          gja.field_m.f((byte) -66);
+          gja.field_m.closeAllDialogs((byte) -66);
           FridgeScreen.field_e = new LoginPanel(IncomingSpecial.field_p, (String) null, gfa.field_i, param2, param1);
           kka.field_l = new sja(gja.field_m, FridgeScreen.field_e);
-          gja.field_m.a((UiWidget) (kka.field_l), (byte) 63);
+          gja.field_m.showDialog((UiWidget) (kka.field_l), (byte) 63);
         } catch (RuntimeException runtimeException) {
           throw pe.wrapException((Throwable) ((Object) runtimeException), "vma.F(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
@@ -219,10 +219,10 @@ final class vma extends pv {
             field_j = (Sprite[]) null;
           }
           InsanoSauceSpecial.c(false);
-          gja.field_m.f((byte) -66);
+          gja.field_m.closeAllDialogs((byte) -66);
           FridgeScreen.field_e = new LoginPanel(IncomingSpecial.field_p, (String) null, gfa.field_i, param2, param1);
           kka.field_l = new sja(gja.field_m, FridgeScreen.field_e);
-          gja.field_m.a((UiWidget) (kka.field_l), (byte) 63);
+          gja.field_m.showDialog((UiWidget) (kka.field_l), (byte) 63);
         } catch (RuntimeException runtimeException) {
           throw pe.wrapException((Throwable) ((Object) runtimeException), "vma.F(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }

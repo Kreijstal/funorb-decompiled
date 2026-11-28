@@ -91,7 +91,7 @@ final class DelayedPacket extends IntrusiveNode {
         try {
           param9.field_G = 2;
           var17 = TextHotspotBounds.field_m[0];
-          var18 = nh.a(-12149, param9, var17);
+          var18 = LabeledWidgetContainer.a(-12149, param9, var17);
           if (var18 < 0.0) {
             var18 = var18 + 256.0;
           }
@@ -194,29 +194,29 @@ final class DelayedPacket extends IntrusiveNode {
                               param9.field_p == 2) {
                               param9.field_e = 50;
                               tk.a(3, jc.field_c, 62, true);
-                              jn.field_F[ib.field_c].field_c = param9.field_c;
-                              jn.field_F[ib.field_c].field_j.copyCoordinatesFrom((byte) 46, param2);
-                              jn.field_F[ib.field_c].field_l.a(param4, -28860);
-                              dupTemp$1 = jn.field_F[ib.field_c].field_l;
+                              AlphaWidgetContainer.field_F[ib.field_c].field_c = param9.field_c;
+                              AlphaWidgetContainer.field_F[ib.field_c].field_j.copyCoordinatesFrom((byte) 46, param2);
+                              AlphaWidgetContainer.field_F[ib.field_c].field_l.a(param4, -28860);
+                              dupTemp$1 = AlphaWidgetContainer.field_F[ib.field_c].field_l;
                               dupTemp$1.field_f = dupTemp$1.field_f - 0.5;
-                              dupTemp$2 = jn.field_F[ib.field_c].field_l;
+                              dupTemp$2 = AlphaWidgetContainer.field_F[ib.field_c].field_l;
                               dupTemp$2.field_a = dupTemp$2.field_a - 0.5;
-                              if (0.0 > jn.field_F[ib.field_c].field_l.field_f) {
-                                dupTemp$3 = jn.field_F[ib.field_c].field_l;
+                              if (0.0 > AlphaWidgetContainer.field_F[ib.field_c].field_l.field_f) {
+                                dupTemp$3 = AlphaWidgetContainer.field_F[ib.field_c].field_l;
                                 dupTemp$3.field_f = dupTemp$3.field_f + 1.0;
-                                dupTemp$4 = jn.field_F[ib.field_c].field_j;
+                                dupTemp$4 = AlphaWidgetContainer.field_F[ib.field_c].field_j;
                                 dupTemp$4.field_e = dupTemp$4.field_e - 1;
                               }
-                              if (jn.field_F[ib.field_c].field_l.field_a < 0.0) {
-                                dupTemp$5 = jn.field_F[ib.field_c].field_l;
+                              if (AlphaWidgetContainer.field_F[ib.field_c].field_l.field_a < 0.0) {
+                                dupTemp$5 = AlphaWidgetContainer.field_F[ib.field_c].field_l;
                                 dupTemp$5.field_a = dupTemp$5.field_a + 1.0;
-                                dupTemp$6 = jn.field_F[ib.field_c].field_j;
+                                dupTemp$6 = AlphaWidgetContainer.field_F[ib.field_c].field_j;
                                 dupTemp$6.field_g = dupTemp$6.field_g - 1;
                               }
-                              jn.field_F[ib.field_c].field_e = 0;
-                              jn.field_F[ib.field_c].field_h = 0;
-                              jn.field_F[ib.field_c].field_i = 13;
-                              jn.field_F[ib.field_c].field_l.a(20, (byte) 94, jn.field_F[ib.field_c].field_c);
+                              AlphaWidgetContainer.field_F[ib.field_c].field_e = 0;
+                              AlphaWidgetContainer.field_F[ib.field_c].field_h = 0;
+                              AlphaWidgetContainer.field_F[ib.field_c].field_i = 13;
+                              AlphaWidgetContainer.field_F[ib.field_c].field_l.a(20, (byte) 94, AlphaWidgetContainer.field_F[ib.field_c].field_c);
                               ib.field_c = ib.field_c + 1;
                               if (Math.random() < 0.5) {
                                 param9.field_c = param9.field_c + 64.0;

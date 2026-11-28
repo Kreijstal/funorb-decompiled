@@ -65,7 +65,7 @@ public final class TrackController extends GameShell {
             }
             if ((decompiledFrameRemainder1) &&
               (decompiledFrameRemainder0)) {
-              vl.n(-27145);
+              ModalDialogHost.n(-27145);
               vg.field_p = true;
               NodeHashTable.field_g = NodeHashTable.field_g + 1;
               if (NodeHashTable.field_g == 31) {
@@ -144,7 +144,7 @@ public final class TrackController extends GameShell {
               }
             }
           } else {
-            vl.n(-27145);
+            ModalDialogHost.n(-27145);
             NodeHashTable.field_g = NodeHashTable.field_g + 1;
             if (NodeHashTable.field_g == 32) {
               if (ag.b(74)) {
@@ -361,7 +361,7 @@ public final class TrackController extends GameShell {
         pb.clearStaticReferences(false);
         bb.a(true);
         ld.clearStaticReferences(-16723);
-        vl.clearDeclaredStaticReferences((byte) 9);
+        ModalDialogHost.clearDeclaredStaticReferences((byte) 9);
         AccountCreationResultPanel.discardDeclaredStaticReferences(-106);
         rk.discardDeclaredStaticReferences(4210752);
         jj.clearStaticReferences((byte) 105);
@@ -432,9 +432,9 @@ public final class TrackController extends GameShell {
         TextLayout.clearStaticReferences(-2857);
         UiWidget.clearDeclaredStaticReferences(param0 ^ -59);
         ButtonWidget.i(param0 - 222);
-        ok.clearStaticReferences((byte) -7);
+        SingleChildWidgetContainer.clearStaticReferences((byte) -7);
         wd.clearStaticReferences(35);
-        hl.releaseDeclaredStaticReferences(param0 ^ -66);
+        ModalDialog.releaseDeclaredStaticReferences(param0 ^ -66);
         IntrusiveDequeCursor.clearStaticReferences(param0 ^ -18);
         ie.clearStaticReferences(82);
         VorbisFloor.clearStaticReferences();
@@ -456,7 +456,7 @@ public final class TrackController extends GameShell {
         WhirlpoolDigest.clearStaticReferences((byte) -125);
         mh.resetStaticState(-24011);
         uh.clearStaticReferences((byte) 104);
-        sa.clearStaticReferences(true);
+        LabeledWidgetContainer.clearStaticReferences(true);
         ValidatedTextField.f((byte) -71);
         EditableTextField.clearStaticReferences(-85);
         dg.clearStaticReferences((byte) 16);
@@ -473,8 +473,8 @@ public final class TrackController extends GameShell {
         DirectByteStorage.clearStaticReferences(param0 - 105);
         RichTextLayout.clearDeclaredStaticReferences(4);
         qh.clearStaticReferences(-51);
-        fj.clearDeclaredStaticReferences((byte) 118);
-        mc.clearStaticReferences(false);
+        DraggableWidgetContainer.clearDeclaredStaticReferences((byte) 118);
+        DropTargetWidgetContainer.clearStaticReferences(false);
         aa.clearStaticReferences((byte) -14);
         IterableNodeHashTable.clearStaticReferences((byte) 72);
         SecondaryNodeDeque.resetStaticState((byte) 59);
@@ -493,7 +493,7 @@ public final class TrackController extends GameShell {
         dd.clearStaticReferences(-3674);
         ql.c(42);
         ma.resetStaticState((byte) -50);
-        gl.clearStaticReferences(-101);
+        AlphaWidgetContainer.clearStaticReferences(-101);
         jf.clearStaticReferences(640);
         sg.clearStaticReferences(-8217);
         nk.clearStaticReferences(23985);
@@ -802,7 +802,7 @@ public final class TrackController extends GameShell {
                 LoginPanel.field_D.tryLoadAllGroups((byte) 48)) {
                 if (PasswordValidator.a(0, true) && (!sg.field_a.ensureIndexLoaded(-115) ||
                   !sg.field_a.tryLoadGroupByName("halloween", (byte) -3))) {
-                  ud.a(param0 ^ 339, 11.0f, wf.a("halloween", sa.field_K, gj.field_e, sg.field_a, param0 ^ 479));
+                  ud.a(param0 ^ 339, 11.0f, wf.a("halloween", LabeledWidgetContainer.field_K, gj.field_e, sg.field_a, param0 ^ 479));
                   return false;
                 }
                 if (sg.field_a.ensureIndexLoaded(91) &&
@@ -875,16 +875,16 @@ public final class TrackController extends GameShell {
                     ud.a(param0 - 339, 31.0f, wf.a("", IndexedSpriteState.field_f, DebouncedFieldValidator.field_c, si.field_c, param0 - 394));
                     return false;
                   }
-                  ud.a(128, 30.0f, wf.a("", sa.field_K, gj.field_e, sg.field_a, 119));
+                  ud.a(128, 30.0f, wf.a("", LabeledWidgetContainer.field_K, gj.field_e, sg.field_a, 119));
                   return false;
                 }
-                ud.a(param0 - 339, 30.0f, wf.a("", sa.field_K, gj.field_e, sg.field_a, 91));
+                ud.a(param0 - 339, 30.0f, wf.a("", LabeledWidgetContainer.field_K, gj.field_e, sg.field_a, 91));
                 return false;
               }
               ud.a(128, 6.0f, wf.a("", ValidatedTextField.field_W, ei.field_k, LoginPanel.field_D, param0 - 413));
               return false;
             }
-            ud.a(128, 2.0f, wf.a("basic", sa.field_K, gj.field_e, RichTextWidget.field_L, param0 ^ 413));
+            ud.a(128, 2.0f, wf.a("basic", LabeledWidgetContainer.field_K, gj.field_e, RichTextWidget.field_L, param0 ^ 413));
             return false;
           }
           if (sg.field_a == null) {
@@ -936,12 +936,12 @@ public final class TrackController extends GameShell {
             }
             if (null != wl.field_l) {
               for (var3 = 0; var3 < 4; var3++) {
-                stackIn_146_0 = fj.field_P.a(wl.field_l, (byte) -27, 176400, od.field_d, Model.field_P[var3]);
+                stackIn_146_0 = DraggableWidgetContainer.field_P.a(wl.field_l, (byte) -27, 176400, od.field_d, Model.field_P[var3]);
                 if (!stackIn_146_0) {
                   return false;
                 }
               }
-              fj.field_P.b(true);
+              DraggableWidgetContainer.field_P.b(true);
               od.field_d = null;
               wl.field_l = null;
               qi.d(param0 ^ 399);
@@ -1005,8 +1005,8 @@ public final class TrackController extends GameShell {
             return true;
           }
           var3 = DisplayNameSelectionPanel.font.field_u + DisplayNameSelectionPanel.font.field_G;
-          mc.field_E = new Sprite(var3, var3);
-          mc.field_E.bindAsRenderTarget();
+          DropTargetWidgetContainer.field_E = new Sprite(var3, var3);
+          DropTargetWidgetContainer.field_E.bindAsRenderTarget();
           dc.field_p.drawDownscaledAreaAveraged(0, 0, var3, var3);
           dc.field_p = null;
           ia.field_b.a(-91);
@@ -1118,7 +1118,7 @@ public final class TrackController extends GameShell {
           WhirlpoolDigest.field_o = dupTemp$3;
           var11 = dupTemp$3;
           dupTemp$4 = new Sprite(156, var8Lifetime2);
-          vl.field_K = dupTemp$4;
+          ModalDialogHost.field_K = dupTemp$4;
           var12 = dupTemp$4;
           var13 = var9;
           var14 = var10;

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ip implements wo {
+final class ip implements WidgetRenderer {
     static String field_b;
     private int field_c;
     private int field_a;
@@ -20,9 +20,9 @@ final class ip implements wo {
         field_b = null;
     }
 
-    public final void a(int param0, boolean param1, int param2, qm param3, boolean param4) {
+    public final void paintWidget(int param0, boolean param1, int param2, UiWidget param3, boolean param4) {
         int var10 = 0;
-        qm stackIn_4_0 = null;
+        UiWidget stackIn_4_0 = null;
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
         String stackIn_16_2 = null;
@@ -38,7 +38,7 @@ final class ip implements wo {
           if (!(param3 instanceof dq)) {
             stackIn_4_0 = null;
           } else {
-            stackIn_4_0 = (qm) (param3);
+            stackIn_4_0 = (UiWidget) (param3);
           }
           var12 = (dq) (stackIn_4_0);
           if (param1) {
@@ -79,7 +79,7 @@ final class ip implements wo {
         ue.field_a = 0;
         wn.field_b = 0;
         AwtRasterBuffer.field_f = new jh(2);
-        AwtRasterBuffer.field_f.a((byte) 41, param1, og.a(param0, IsaacRandom.field_h, qh.field_i), -1);
+        AwtRasterBuffer.field_f.a((byte) 41, param1, DequeWidgetContainer.a(param0, IsaacRandom.field_h, qh.field_i), -1);
     }
 
     final static void a(int param0, RgbSprite[] param1, int param2, int param3, int param4, int param5, int param6) {

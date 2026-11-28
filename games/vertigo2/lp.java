@@ -52,8 +52,8 @@ final class lp extends TextureOperator {
             return stackIn_4_0;
           }
           if (NetworkArchiveRequest.field_C == DebouncedFieldValidator.field_f) {
-            stackIn_9_0 = !(wq.field_H);
-            wq.field_H = stackIn_9_0;
+            stackIn_9_0 = !(AlphaWidgetContainer.field_H);
+            AlphaWidgetContainer.field_H = stackIn_9_0;
           }
           for (var1_int = 0; var1_int < al.field_o.length; var1_int++) {
             if (~al.field_o[var1_int] == ~DebouncedFieldValidator.field_f) {

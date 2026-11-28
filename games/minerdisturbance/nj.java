@@ -110,7 +110,7 @@ final class nj {
                 if (el.field_c) {
                   IsaacRandom.field_c.drawWithOpacity(0, 0, var1);
                 } else {
-                  if (oj.field_J <= 11) {
+                  if (AlphaWidgetContainer.field_J <= 11) {
                     IsaacRandom.field_c.drawOpaque(0, 0);
                   } else {
                     IsaacRandom.field_c.drawWithOpacity(0, 0, var1);
@@ -142,7 +142,7 @@ final class nj {
                 if (el.field_c) {
                   IsaacRandom.field_c.drawWithOpacity(0, 0, var1);
                 } else {
-                  if (oj.field_J > 11) {
+                  if (AlphaWidgetContainer.field_J > 11) {
                     IsaacRandom.field_c.drawWithOpacity(0, 0, var1);
                   } else {
                     IsaacRandom.field_c.drawOpaque(0, 0);
@@ -172,7 +172,7 @@ final class nj {
               if (el.field_c) {
                 IsaacRandom.field_c.drawWithOpacity(0, 0, var1Lifetime1);
               } else {
-                if (oj.field_J > 11) {
+                if (AlphaWidgetContainer.field_J > 11) {
                   IsaacRandom.field_c.drawWithOpacity(0, 0, var1Lifetime1);
                 } else {
                   IsaacRandom.field_c.drawOpaque(0, 0);
@@ -197,7 +197,7 @@ final class nj {
                 if (el.field_c) {
                   IsaacRandom.field_c.drawWithOpacity(0, 0, var1Lifetime1);
                 } else {
-                  if (oj.field_J > 11) {
+                  if (AlphaWidgetContainer.field_J > 11) {
                     IsaacRandom.field_c.drawWithOpacity(0, 0, var1Lifetime1);
                   } else {
                     IsaacRandom.field_c.drawOpaque(0, 0);
@@ -229,7 +229,7 @@ final class nj {
                 if (el.field_c) {
                   IsaacRandom.field_c.drawWithOpacity(0, 0, var1Lifetime1);
                 } else {
-                  if (oj.field_J <= 11) {
+                  if (AlphaWidgetContainer.field_J <= 11) {
                     IsaacRandom.field_c.drawOpaque(0, 0);
                   } else {
                     IsaacRandom.field_c.drawWithOpacity(0, 0, var1Lifetime1);

@@ -10,8 +10,8 @@ final class AccountCreationResultPanel extends jj implements ButtonListener {
     static String field_nb;
     private boolean field_ob;
 
-    AccountCreationResultPanel(vl param0, AccountRegistrationPanel param1) {
-        super(param0, p.field_a, sa.field_J, false, false);
+    AccountCreationResultPanel(ModalDialogHost param0, AccountRegistrationPanel param1) {
+        super(param0, p.field_a, LabeledWidgetContainer.field_J, false, false);
         try {
           this.field_mb = param1;
         } catch (RuntimeException runtimeException) {
@@ -19,22 +19,22 @@ final class AccountCreationResultPanel extends jj implements ButtonListener {
         }
     }
 
-    final boolean j(int param0) {
+    final boolean advanceDialogAnimation(int param0) {
         if (param0 >= -18) {
           return false;
         }
         if (!this.field_E) {
-          return super.j(-56);
+          return super.advanceDialogAnimation(-56);
         }
         if (this.field_ob) {
-          return super.j(-56);
+          return super.advanceDialogAnimation(-56);
         }
         AccountServiceResult var2 = dd.pollAccountCreationResult((byte) 91);
         if (var2 != null) {
           this.showAccountCreationResult(false, var2, 7);
-          return super.j(-56);
+          return super.advanceDialogAnimation(-56);
         }
-        return super.j(-56);
+        return super.advanceDialogAnimation(-56);
     }
 
     final static void f(byte param0) {
@@ -87,10 +87,10 @@ final class AccountCreationResultPanel extends jj implements ButtonListener {
               this.b(new ge(this), param2 ^ -118);
               return;
             }
-            var5.a(param2 - 21, (tg) (this), ConfirmedEmailAvailabilityValidator.field_m);
+            var5.a(param2 - 21, (WidgetEventListener) (this), ConfirmedEmailAvailabilityValidator.field_m);
           } else {
             if (this.field_lb) {
-              var5.a(-14, (tg) (this), ConfirmedEmailAvailabilityValidator.field_m);
+              var5.a(-14, (WidgetEventListener) (this), ConfirmedEmailAvailabilityValidator.field_m);
             } else {
               if (param1.statusCode == 5) {
                 var5.a(-17040, dh.field_r, 11);

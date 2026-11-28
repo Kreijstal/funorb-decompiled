@@ -169,7 +169,7 @@ final class pb extends wf {
                   var25Lifetime1 = param4.field_m[var23Lifetime2];
                   var26Lifetime1 = param4.field_T[var23Lifetime2];
                   NanoFrameTimer.field_d[var23Lifetime2] = var9 + (var12 * var24Lifetime1 - (-(var15 * var25Lifetime1) - var18 * var26Lifetime1) >> 16);
-                  lm.field_m[var23Lifetime2] = var10 + (var16 * var25Lifetime1 + var13 * var24Lifetime1 + var19 * var26Lifetime1 >> 16);
+                  UiWidget.field_m[var23Lifetime2] = var10 + (var16 * var25Lifetime1 + var13 * var24Lifetime1 + var19 * var26Lifetime1 >> 16);
                   CrossfadingMidiPcmStream.field_m[var23Lifetime2] = (var20 * var26Lifetime1 + (var14 * var24Lifetime1 + var17 * var25Lifetime1) >> 16) + var11;
                   var24Lifetime1 = param4.field_u[var23Lifetime2];
                   var25Lifetime1 = param4.field_K[var23Lifetime2];

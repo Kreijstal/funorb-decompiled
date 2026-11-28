@@ -421,7 +421,7 @@ final class ae {
             jn.field_d = stackIn_114_0 + stackIn_115_1;
           }
           jm.field_c = -(jn.field_d >> 1) + bl.field_p;
-          dg.field_L = new int[DungeonRaidScreen.field_A.length][];
+          LabeledWidgetContainer.field_L = new int[DungeonRaidScreen.field_A.length][];
           var4Lifetime3 = 0;
           var5Lifetime3 = jm.field_c;
           while (DungeonRaidScreen.field_A.length > var4Lifetime3) {
@@ -430,12 +430,12 @@ final class ae {
               var7Lifetime2 = KeyboardInput.a(true, DungeonRaidScreen.field_A[var4Lifetime3], param2 ^ 30632);
               var8Lifetime1 = -(var7Lifetime2 >> 1) + PasswordValidator.field_r;
               var5Lifetime3 = var5Lifetime3 + TextHotspotBounds.field_j;
-              dg.field_L[var4Lifetime3] = new int[4];
-              dg.field_L[var4Lifetime3][0] = -oh.field_t + var8Lifetime1;
-              dg.field_L[var4Lifetime3][1] = var5Lifetime3;
-              dg.field_L[var4Lifetime3][2] = var7Lifetime2 + (oh.field_t << 1);
+              LabeledWidgetContainer.field_L[var4Lifetime3] = new int[4];
+              LabeledWidgetContainer.field_L[var4Lifetime3][0] = -oh.field_t + var8Lifetime1;
+              LabeledWidgetContainer.field_L[var4Lifetime3][1] = var5Lifetime3;
+              LabeledWidgetContainer.field_L[var4Lifetime3][2] = var7Lifetime2 + (oh.field_t << 1);
               var5Lifetime3 = var5Lifetime3 + (mj.field_g + ((RaiderDefinition.field_q << 1) + TextHotspotBounds.field_j));
-              dg.field_L[var4Lifetime3][3] = (RaiderDefinition.field_q << 1) + mj.field_g;
+              LabeledWidgetContainer.field_L[var4Lifetime3][3] = (RaiderDefinition.field_q << 1) + mj.field_g;
             } else {
               var5Lifetime3 = var5Lifetime3 + ag.field_a;
             }

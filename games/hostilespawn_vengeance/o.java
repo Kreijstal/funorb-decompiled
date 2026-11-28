@@ -92,7 +92,7 @@ final class o extends ql {
         this.field_d.field_d = (this.field_i.field_g - 1) * 24;
         this.field_k = new v(ch.field_f, this.field_m.field_e * 24, (this.field_m.field_g + 2) * 24);
         CrossfadingMidiPcmStream.a(14, param0 ^ 1);
-        nh.field_E.setCoordinates(-1, param0 + 8360, -1);
+        LabeledWidgetContainer.field_E.setCoordinates(-1, param0 + 8360, -1);
     }
 
     final void c(int param0) {

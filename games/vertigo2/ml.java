@@ -21,12 +21,12 @@ class ml extends DefaultTextWidgetRenderer {
         super(param0, 4, 2, 2, 2, param1, -1, 0, 1, param0.field_z, -1, 2147483647, false);
     }
 
-    public final void a(boolean param0, int param1, boolean param2, UiWidget param3, int param4) {
+    public final void paintWidget(boolean param0, int param1, boolean param2, UiWidget param3, int param4) {
         try {
           if (param0) {
             h.a(param1 + param3.x, 1, param3.y + param4, param3.width, param3.height);
           }
-          super.a(param0, param1, param2, param3, param4);
+          super.paintWidget(param0, param1, param2, param3, param4);
         } catch (RuntimeException runtimeException) {
           throw wn.wrapClientException((Throwable) ((Object) runtimeException), "ml.A(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ')');
         }
@@ -146,7 +146,7 @@ class ml extends DefaultTextWidgetRenderer {
           var22 = null;
           var12 = Vertigo2.field_L ? 1 : 0;
           try {
-            var13 = (oc) (mg.field_N.beginBackward((byte) 100));
+            var13 = (oc) (LabeledWidgetContainer.field_N.beginBackward((byte) 100));
             var17 = var13;
             if (var17 == null) {
               return;

@@ -12,7 +12,7 @@ final class il {
         String var2 = null;
         String var2Lifetime1;
         if (null != DisplayNameSelectionPanel.field_N) {
-          DisplayNameSelectionPanel.field_N.l(-26623);
+          DisplayNameSelectionPanel.field_N.snapAndPruneDialogs(-26623);
           if (DisplayNameSelectionPanel.field_A != null) {
             DisplayNameSelectionPanel.field_A.m(65536);
           }

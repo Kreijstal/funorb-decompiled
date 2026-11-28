@@ -56,7 +56,7 @@ final class rk extends wd {
           dupTemp$3 = new LevelView(var6, 21, 48);
           he.field_f[1] = dupTemp$3;
           he.field_f[0] = dupTemp$3;
-          var7 = new LevelData(-1, vl.field_E);
+          var7 = new LevelData(-1, ModalDialogHost.field_E);
           dupTemp$4 = new LevelView(var7, 16, 48);
           he.field_f[param0] = dupTemp$4;
           he.field_f[12] = dupTemp$4;
@@ -171,20 +171,20 @@ final class rk extends wd {
         field_X = null;
     }
 
-    rk(vl param0, String param1) {
+    rk(ModalDialogHost param0, String param1) {
         super(param0, 300, 120);
         int var3_int = 0;
         try {
           this.field_db = param1;
           if (this.field_db != null) {
             var3_int = p.field_a.textHeight(this.field_db, 260, p.field_a.field_G);
-            this.a(300, (byte) -115, var3_int + 150);
+            this.setCenteredSize(300, (byte) -115, var3_int + 150);
           }
           this.field_S = new dg(13, 50, 274, 30, 15, 2113632, 4210752);
           this.field_S.field_C = true;
           this.field_U = false;
           this.field_W = false;
-          this.a(false, this.field_S);
+          this.addChild(false, this.field_S);
         } catch (RuntimeException runtimeException) {
           throw LevelGrid.toClientException((Throwable) ((Object) runtimeException), "rk.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

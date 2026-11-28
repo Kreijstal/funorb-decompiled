@@ -19,7 +19,7 @@ final class i extends im implements WidgetActivationListener {
         field_N = null;
     }
 
-    i(ln param0, hh param1) {
+    i(ModalDialogHost param0, hh param1) {
         super(param0, 200, 150);
         Object var3 = null;
         Object stackIn_12_0 = null;
@@ -48,14 +48,14 @@ final class i extends im implements WidgetActivationListener {
               }
             }
           }
-          var4 = new UiWidget((String) (var3), (ca) null);
+          var4 = new UiWidget((String) (var3), (WidgetEventListener) null);
           var4.height = 80;
           var4.x = 0;
           var4.width = this.width;
           var4.y = 50;
           var4.renderer = (WidgetRenderer) ((Object) new DefaultTextWidgetRenderer(sp.field_R, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true));
-          this.a(var4, -6938);
-          this.field_O = this.a((ca) (this), true, qd.field_i);
+          this.addChild(var4, -6938);
+          this.field_O = this.a((WidgetEventListener) (this), true, qd.field_i);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -91,7 +91,7 @@ final class i extends im implements WidgetActivationListener {
           }
           if (param0 > -85) {
             var7 = (String) null;
-            discarded$1 = this.a((ca) null, false, (String) null);
+            discarded$1 = this.a((WidgetEventListener) null, false, (String) null);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -157,7 +157,7 @@ final class i extends im implements WidgetActivationListener {
         this.field_D = false;
     }
 
-    private final InteractiveWidget a(ca param0, boolean param1, String param2) {
+    private final InteractiveWidget a(WidgetEventListener param0, boolean param1, String param2) {
         InteractiveWidget var4 = null;
         RuntimeException var4_ref = null;
         int var5 = 0;
@@ -176,9 +176,9 @@ final class i extends im implements WidgetActivationListener {
           var4.renderer = (WidgetRenderer) ((Object) new rf());
           var5 = -6 + this.height;
           this.height = this.height + 38;
-          var4.a((byte) -85, 15, var5, 30, -16 + (-14 + this.width));
-          this.a(var4, -6938);
-          this.e((byte) 88);
+          var4.setBounds((byte) -85, 15, var5, 30, -16 + (-14 + this.width));
+          this.addChild(var4, -6938);
+          this.refreshLayout((byte) 88);
           stackIn_3_0 = var4;
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

@@ -212,7 +212,7 @@ final class hd {
             var8Lifetime1 = wd.field_j - (var7Lifetime1 >> 1);
             if (var4 >= 0) {
               if (var4 != bk.field_c.field_d) {
-                stackIn_46_0 = gl.field_B;
+                stackIn_46_0 = AlphaWidgetContainer.field_B;
               } else {
                 stackIn_46_0 = DiskCacheWorker.field_f;
               }
@@ -225,7 +225,7 @@ final class hd {
             }
             if (var4 < 0) {
               GameKeyHandler.field_b.drawString(var6, var8Lifetime1, var1_int + field_d, var5, -1);
-              var1_int = var1_int + fi.field_x;
+              var1_int = var1_int + SingleChildWidgetContainer.field_x;
             } else {
               tb.field_c.drawString(var6, var8Lifetime1, var1_int + AchievementUnlockEvent.field_k, var5, -1);
               var1_int = var1_int + (hi.field_c + (ee.field_D + jl.field_o));

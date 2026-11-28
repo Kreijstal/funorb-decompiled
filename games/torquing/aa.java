@@ -12,7 +12,7 @@ abstract class aa extends im {
     static byte[] field_X;
     private UiWidget field_V;
     static volatile long field_Q;
-    private fq field_T;
+    private AlphaWidgetContainer field_T;
 
     private final void b(byte param0, UiWidget param1) {
         try {
@@ -21,12 +21,12 @@ abstract class aa extends im {
           }
           int var3_int = 54 % ((-33 - param0) / 56);
           if (param1 != null) {
-            param1.a((byte) 125, 6, this.field_N + 6, param1.height, param1.width);
-            this.field_T = new fq(param1);
+            param1.setBounds((byte) 125, 6, this.field_N + 6, param1.height, param1.width);
+            this.field_T = new AlphaWidgetContainer(param1);
           } else {
-            this.field_T = new fq();
+            this.field_T = new AlphaWidgetContainer();
           }
-          this.a(this.field_T, -6938);
+          this.addChild(this.field_T, -6938);
           this.field_V = null;
         } catch (RuntimeException runtimeException) {
           throw RichTextWidget.wrapThrowable((Throwable) ((Object) runtimeException), "aa.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
@@ -69,7 +69,7 @@ abstract class aa extends im {
         }
     }
 
-    aa(ln param0, UiWidget param1, int param2, int param3, int param4) {
+    aa(ModalDialogHost param0, UiWidget param1, int param2, int param3, int param4) {
         super(param0, param1.width + 12, param1.height + 12 + param2);
         try {
           this.field_R = param3;
@@ -90,7 +90,7 @@ abstract class aa extends im {
         field_U = null;
     }
 
-    boolean h(int param0) {
+    boolean advanceDialogAnimation(int param0) {
         int fieldTemp$0 = 0;
         int fieldTemp$1 = 0;
         int var3 = Torquing.field_u;
@@ -102,9 +102,9 @@ abstract class aa extends im {
               this.field_T.field_D = 256 - (this.field_P << 8) / this.field_W;
               if (param0 != -7) {
                 this.g((byte) 13);
-                return super.h(param0 + 0);
+                return super.advanceDialogAnimation(param0 + 0);
               }
-              return super.h(param0 + 0);
+              return super.advanceDialogAnimation(param0 + 0);
             }
             this.field_S = IsaacCipher.field_b;
             this.b(this.field_V.height + (12 + this.field_N), (byte) -15, this.field_O, 12 + this.field_V.width);
@@ -112,43 +112,43 @@ abstract class aa extends im {
             this.field_P = 0;
             if (param0 != -7) {
               this.g((byte) 13);
-              return super.h(param0 + 0);
+              return super.advanceDialogAnimation(param0 + 0);
             }
-            return super.h(param0 + 0);
+            return super.advanceDialogAnimation(param0 + 0);
           }
           if (ql.field_s != this.field_S) {
             if (param0 == -7) {
-              return super.h(param0 + 0);
+              return super.advanceDialogAnimation(param0 + 0);
             }
             this.g((byte) 13);
-            return super.h(param0 + 0);
+            return super.advanceDialogAnimation(param0 + 0);
           }
           fieldTemp$1 = this.field_P + 1;
           this.field_P = this.field_P + 1;
           if (this.field_R != fieldTemp$1) {
             this.field_T.field_D = (this.field_P << 8) / this.field_R;
             if (param0 == -7) {
-              return super.h(param0 + 0);
+              return super.advanceDialogAnimation(param0 + 0);
             }
             this.g((byte) 13);
-            return super.h(param0 + 0);
+            return super.advanceDialogAnimation(param0 + 0);
           }
           this.field_T.field_D = 256;
           this.field_S = null;
           if (param0 == -7) {
-            return super.h(param0 + 0);
+            return super.advanceDialogAnimation(param0 + 0);
           }
           this.g((byte) 13);
-          return super.h(param0 + 0);
+          return super.advanceDialogAnimation(param0 + 0);
         }
         if (param0 == -7) {
-          return super.h(param0 + 0);
+          return super.advanceDialogAnimation(param0 + 0);
         }
         this.g((byte) 13);
-        return super.h(param0 + 0);
+        return super.advanceDialogAnimation(param0 + 0);
     }
 
-    boolean a(int param0, UiWidget param1, char param2, int param3) {
+    boolean handleKey(int param0, UiWidget param1, char param2, int param3) {
         int var5_int = 0;
         RuntimeException var5 = null;
         RuntimeException stackIn_13_0 = null;
@@ -157,17 +157,17 @@ abstract class aa extends im {
         RuntimeException decompiledCaughtException = null;
         try {
           var5_int = 55 % ((-33 - param3) / 57);
-          if (super.a(param0, param1, param2, 36)) {
+          if (super.handleKey(param0, param1, param2, 36)) {
             return true;
           }
           if (this.field_T == null) {
             return false;
           }
           if (param0 == 98) {
-            this.field_T.a(param1, false);
+            this.field_T.takeFocus(param1, false);
           }
           if (param0 == 99) {
-            this.field_T.a(param1, false);
+            this.field_T.takeFocus(param1, false);
           }
           return false;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -190,7 +190,7 @@ abstract class aa extends im {
           return;
         }
         if (ql.field_s != this.field_S) {
-          this.a(this.field_V.width + 12, (byte) -25, this.field_N + 12 + this.field_V.height);
+          this.setCenteredSize(this.field_V.width + 12, (byte) -25, this.field_N + 12 + this.field_V.height);
           this.b((byte) -101, this.field_V);
         } else {
           this.field_S = null;
@@ -221,12 +221,12 @@ abstract class aa extends im {
         this.field_T.field_D = 0;
     }
 
-    final boolean a(byte param0) {
+    final boolean snapDialogAnimation(byte param0) {
         this.j(0);
         if (param0 < 114) {
           return false;
         }
-        return super.a((byte) 122);
+        return super.snapDialogAnimation((byte) 122);
     }
 
     static {

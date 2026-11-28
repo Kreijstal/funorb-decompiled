@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class wd extends hl {
+abstract class wd extends ModalDialog {
     static String field_H;
     private int field_N;
     private int field_M;
@@ -14,7 +14,7 @@ abstract class wd extends hl {
     static String[] field_O;
     private int field_P;
 
-    boolean j(int param0) {
+    boolean advanceDialogAnimation(int param0) {
         int var2 = 0;
         int var3 = 0;
         int fieldTemp$0 = 0;
@@ -35,12 +35,12 @@ abstract class wd extends hl {
             this.field_N = 0;
             this.a((byte) -48);
           }
-          this.a(var2, (byte) -78, var3);
+          this.setCenteredSize(var2, (byte) -78, var3);
         }
         if (param0 >= -18) {
           return false;
         }
-        return super.j(-87);
+        return super.advanceDialogAnimation(-87);
     }
 
     final static StringBuilder a(StringBuilder param0, char param1, int param2, int param3) {
@@ -81,14 +81,14 @@ abstract class wd extends hl {
         }
     }
 
-    boolean k(int param0) {
+    boolean snapDialogAnimation(int param0) {
         this.o(param0);
-        return super.k(0);
+        return super.snapDialogAnimation(0);
     }
 
     final void a(int param0, int param1, boolean param2, int param3) {
         if (0 >= param1) {
-          this.a(param0, (byte) -75, param3);
+          this.setCenteredSize(param0, (byte) -75, param3);
           return;
         }
         this.field_P = this.field_x;
@@ -123,12 +123,12 @@ abstract class wd extends hl {
         if (0 >= this.field_N) {
           return;
         }
-        this.a(this.field_M, (byte) -88, this.field_L);
+        this.setCenteredSize(this.field_M, (byte) -88, this.field_L);
         this.field_N = param0;
         this.a((byte) -48);
     }
 
-    wd(vl param0, int param1, int param2) {
+    wd(ModalDialogHost param0, int param1, int param2) {
         super(param0, param1, param2);
         this.field_N = 0;
         this.field_Q = 0;

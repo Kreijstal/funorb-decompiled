@@ -212,14 +212,14 @@ final class qj extends IntrusiveNode {
           AwtRasterBuffer.field_g = AwtRasterBuffer.field_g + (param0.readUnsignedShort(8) << 2);
           var2_intLifetime1 = param0.readUnsignedByte(32270);
           AwtRasterBuffer.field_g = AwtRasterBuffer.field_g + (var2_intLifetime1 >> 6);
-          jn.field_J = var2_intLifetime1 << 15 & 2064384;
-          jn.field_J = jn.field_J + (param0.readUnsignedByte(32270) << 7);
+          AlphaWidgetContainer.field_J = var2_intLifetime1 << 15 & 2064384;
+          AlphaWidgetContainer.field_J = AlphaWidgetContainer.field_J + (param0.readUnsignedByte(32270) << 7);
           if (param1 != -12) {
             PacketBuffer var3 = (PacketBuffer) null;
             qj.a((PacketBuffer) null, (byte) -75);
           }
           var2_intLifetime2 = param0.readUnsignedByte(32270);
-          jn.field_J = jn.field_J + (var2_intLifetime2 >> 1);
+          AlphaWidgetContainer.field_J = AlphaWidgetContainer.field_J + (var2_intLifetime2 >> 1);
           s.field_e = (var2_intLifetime2 & 1) << 16;
           s.field_e = s.field_e + param0.readUnsignedShort(8);
         } catch (RuntimeException runtimeException) {
@@ -289,8 +289,8 @@ final class qj extends IntrusiveNode {
           if (1 == FullscreenFocusCanvas.field_d) {
             return;
           }
-          if (ul.field_L > -1 &&
-            10 > ul.field_L) {
+          if (ModalDialog.field_L > -1 &&
+            10 > ModalDialog.field_L) {
             return;
           }
           if (var7.field_i == 27) {

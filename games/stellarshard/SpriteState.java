@@ -26,17 +26,17 @@ abstract class SpriteState extends DualLinkNode {
             if (RichTextLayout.field_f != null &&
               RichTextLayout.field_f.focusLost) {
               ih.b((byte) -25);
-              dg.field_z.a((byte) -111, (UiWidget) (new ia(dg.field_z, nb.field_K)));
+              SingleChildWidgetContainer.field_z.showDialog((byte) -111, (UiWidget) (new ia(SingleChildWidgetContainer.field_z, nb.field_K)));
             }
             return;
           }
-          dg.field_z.a(true, (byte) -128, li.field_d, af.field_q);
+          SingleChildWidgetContainer.field_z.processPointerInput(true, (byte) -128, li.field_d, af.field_q);
           if (param0 >= -33) {
             return;
           }
-          dg.field_z.f((byte) -127);
+          SingleChildWidgetContainer.field_z.advanceDialogs((byte) -127);
           while (PcmResampler.c(119)) {
-            dg.field_z.a(SectorCacheStore.field_f, AccountRequestState.field_b, true);
+            SingleChildWidgetContainer.field_z.processKeyInput(SectorCacheStore.field_f, AccountRequestState.field_b, true);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

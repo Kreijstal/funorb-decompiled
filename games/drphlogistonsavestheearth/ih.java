@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ih extends pj implements TextHotspotListener, WidgetActivationListener {
+final class ih extends DequeWidgetContainer implements TextHotspotListener, WidgetActivationListener {
     static String field_N;
     private AccountCreationResultPanel field_M;
     static int[] field_O;
@@ -18,15 +18,15 @@ final class ih extends pj implements TextHotspotListener, WidgetActivationListen
         if (param0 != 24782) {
           return (he[]) null;
         }
-        he[] var1 = new he[bd.field_M];
-        for (var2 = 0; var2 < bd.field_M; var2++) {
+        he[] var1 = new he[ModalDialog.field_M];
+        for (var2 = 0; var2 < ModalDialog.field_M; var2++) {
           var1[var2] = new he(oe.field_b, field_K, kh.field_i[var2], vi.field_b[var2], gf.field_o[var2], RichTextWidget.field_J[var2], a.field_e[var2], MouseInput.field_a);
         }
         Bzip2State.a((byte) -21);
         return var1;
     }
 
-    final boolean a(int param0, char param1, vg param2, int param3) {
+    final boolean handleKey(int param0, char param1, UiWidget param2, int param3) {
         RuntimeException var5 = null;
         boolean stackIn_9_0 = false;
         boolean stackIn_13_0 = false;
@@ -38,17 +38,17 @@ final class ih extends pj implements TextHotspotListener, WidgetActivationListen
           if (param3 < 63) {
             return true;
           }
-          if (super.a(param0, param1, param2, 88)) {
+          if (super.handleKey(param0, param1, param2, 88)) {
             return true;
           }
           if (param0 == 98) {
-            stackIn_9_0 = this.a(param2, 65535);
+            stackIn_9_0 = this.focusPreviousChild(param2, 65535);
             return stackIn_9_0;
           }
           if (param0 != 99) {
             return false;
           }
-          stackIn_13_0 = this.a(param2, (byte) 105);
+          stackIn_13_0 = this.focusNextChild(param2, (byte) 105);
           return stackIn_13_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -65,7 +65,7 @@ final class ih extends pj implements TextHotspotListener, WidgetActivationListen
     }
 
     ih(AccountCreationResultPanel param0) {
-        super(0, 0, 288, 0, (cg) null);
+        super(0, 0, 288, 0, (WidgetRenderer) null);
         String var7 = null;
         int var3 = 0;
         DefaultTextWidgetRenderer var4 = null;
@@ -73,8 +73,8 @@ final class ih extends pj implements TextHotspotListener, WidgetActivationListen
         int var6 = 0;
         try {
           this.field_M = param0;
-          this.field_L = new InteractiveWidget(cd.field_a, (fd) null);
-          this.field_L.field_l = (cg) ((Object) new ie());
+          this.field_L = new InteractiveWidget(cd.field_a, (WidgetEventListener) null);
+          this.field_L.field_l = (WidgetRenderer) ((Object) new ie());
           var7 = a.a(5044, wk.field_l, new String[]{this.i(88), this.j(-84)});
           var3 = 20;
           var4 = new DefaultTextWidgetRenderer(DualLinkNode.field_i, 0, 0, 0, 0, 16777215, -1, 3, 0, DualLinkNode.field_i.field_x, -1, 2147483647, true);
@@ -82,17 +82,17 @@ final class ih extends pj implements TextHotspotListener, WidgetActivationListen
           this.field_Q.field_v = "";
           this.field_Q.a(we.field_d, 0, 124);
           this.field_Q.a(we.field_d, 1, 115);
-          this.field_Q.field_u = (fd) (this);
+          this.field_Q.field_u = (WidgetEventListener) (this);
           this.field_Q.field_w = -40 + this.field_w;
           this.field_Q.b(0, -40 + this.field_w, 26, var3);
           var3 = var3 + (15 + this.field_Q.field_k);
-          this.b(this.field_Q, (byte) 50);
+          this.addChild(this.field_Q, (byte) 50);
           var5 = 4;
           var6 = 200;
-          this.field_L.a(var3, 40, 300 - var6 >> 1, 16535, var6);
-          this.field_L.field_u = (fd) (this);
-          this.b(this.field_L, (byte) 125);
-          this.a(0, 55 + (var3 + var5), 0, 16535, 300);
+          this.field_L.setBounds(var3, 40, 300 - var6 >> 1, 16535, var6);
+          this.field_L.field_u = (WidgetEventListener) (this);
+          this.addChild(this.field_L, (byte) 125);
+          this.setBounds(0, 55 + (var3 + var5), 0, 16535, 300);
         } catch (RuntimeException runtimeException) {
           throw ie.wrapClientException((Throwable) ((Object) runtimeException), "ih.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }

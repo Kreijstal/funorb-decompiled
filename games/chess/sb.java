@@ -7,7 +7,7 @@ final class sb extends bj {
     static int field_tb;
 
     final static boolean j(byte param0) {
-        if (!kn.field_L) {
+        if (!SingleChildWidgetContainer.field_L) {
           return false;
         }
         if (param0 != 78) {
@@ -38,9 +38,9 @@ final class sb extends bj {
           if (ci.field_ub == MidiPcmStream.field_A) {
             return null;
           }
-          if (MidiPcmStream.field_A == kn.field_D &&
+          if (MidiPcmStream.field_A == SingleChildWidgetContainer.field_D &&
             param0.equals(BufferedRandomAccessFile.field_e)) {
-            MidiPcmStream.field_A = ji.field_T;
+            MidiPcmStream.field_A = DropTargetWidgetContainer.field_T;
             stackIn_8_0 = kf.field_j;
             return stackIn_8_0;
           }
@@ -123,12 +123,12 @@ final class sb extends bj {
                 ChessBoardState.field_e = true;
               }
             }
-            fm.field_S = ac.field_k;
+            ModalDialogHost.field_S = ac.field_k;
           }
           if (!ChessBoardState.field_e &&
             ei.field_u < be.field_f &&
-            lf.field_O) {
-            fm.field_S = ac.field_k;
+            AlphaWidgetContainer.field_O) {
+            ModalDialogHost.field_S = ac.field_k;
             ei.field_u = 0;
             vn.field_Db = kj.field_c;
           }
@@ -155,7 +155,7 @@ final class sb extends bj {
         }
     }
 
-    final void c(mf param0, int param1) {
+    final void c(UiWidget param0, int param1) {
         try {
           super.c(param0, 117);
           if (param1 < 45) {
@@ -175,7 +175,7 @@ final class sb extends bj {
         }
     }
 
-    sb(fm param0, mf param1) {
+    sb(ModalDialogHost param0, UiWidget param1) {
         super(param0, param1, 33, 20, 30);
     }
 

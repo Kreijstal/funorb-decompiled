@@ -64,10 +64,10 @@ final class oc {
         RuntimeException decompiledCaughtException = null;
         var2 = Confined.field_J ? 1 : 0;
         try {
-          TunnelCamera.field_Z.a(true, true, ih.field_b, jf.field_k);
-          TunnelCamera.field_Z.i((byte) 70);
+          TunnelCamera.field_Z.processPointerInput(true, true, ih.field_b, jf.field_k);
+          TunnelCamera.field_Z.advanceDialogs((byte) 70);
           while (nm.e((byte) -96)) {
-            TunnelCamera.field_Z.a((byte) 101, ad.field_h, gk.field_r);
+            TunnelCamera.field_Z.processKeyInput((byte) 101, ad.field_h, gk.field_r);
           }
           if (qn.field_n != -1) {
             var1_int = qn.field_n;
@@ -78,7 +78,7 @@ final class oc {
           if (param0 != 1) {
             field_b = (String) null;
           }
-          if (s.field_K) {
+          if (DropTargetWidgetContainer.field_K) {
             stackIn_13_0 = 3;
             return stackIn_13_0;
           }
@@ -90,7 +90,7 @@ final class oc {
             stackIn_21_0 = 1;
             return stackIn_21_0;
           }
-          if (ValidatedTextField.field_fb != oe.field_Q) {
+          if (ValidatedTextField.field_fb != ModalDialog.field_Q) {
             stackIn_26_0 = -1;
             return stackIn_26_0;
           }

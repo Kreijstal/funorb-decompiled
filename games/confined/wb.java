@@ -1524,7 +1524,7 @@ final class wb {
                 }
                 var2 = ha.a("create_email_confirm", (byte) 82);
                 if (null != var2) {
-                  fj.field_A = va.a(0, var2);
+                  UiWidget.field_A = va.a(0, var2);
                 }
                 var2 = ha.a("create_age", (byte) 118);
                 if (var2 != null) {
@@ -1636,7 +1636,7 @@ final class wb {
                 }
                 var2 = ha.a("create_password_tooltip", (byte) 75);
                 if (var2 != null) {
-                  oe.field_O = va.a(param0 ^ 6, var2);
+                  ModalDialog.field_O = va.a(param0 ^ 6, var2);
                 }
                 var2 = ha.a("create_password_hint", (byte) 101);
                 if (null != var2) {
@@ -1712,7 +1712,7 @@ final class wb {
                 }
                 var2 = ha.a("create_alert_passchars", (byte) 73);
                 if (null != var2) {
-                  oe.field_T = va.a(0, var2);
+                  ModalDialog.field_T = va.a(0, var2);
                 }
                 var2 = ha.a("create_alert_passrepeated", (byte) 67);
                 if (null != var2) {
@@ -2374,7 +2374,7 @@ final class wb {
                 }
                 var2 = ha.a("achieved", (byte) 53);
                 if (null != var2) {
-                  fj.field_r = va.a(param0 ^ 6, var2);
+                  UiWidget.field_r = va.a(param0 ^ 6, var2);
                 }
                 var2 = ha.a("orbpoints", (byte) 49);
                 if (null != var2) {
@@ -2789,7 +2789,7 @@ final class wb {
                 }
                 var2 = ha.a("fs_button_close", (byte) 27);
                 if (null != var2) {
-                  s.field_J = va.a(0, var2);
+                  DropTargetWidgetContainer.field_J = va.a(0, var2);
                 }
                 var2 = ha.a("fs_button_members", (byte) 112);
                 if (var2 != null) {

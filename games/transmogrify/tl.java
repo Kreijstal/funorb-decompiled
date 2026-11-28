@@ -84,7 +84,7 @@ final class tl {
           while (var3_int < qb.field_f.length) {
             var5 = GameKeyHandler.field_a[var3_int];
             if (var5 < 0) {
-              var4 = var4 + fi.field_x;
+              var4 = var4 + SingleChildWidgetContainer.field_x;
             } else {
               var6 = uc.a(qb.field_f[var3_int], false, true);
               var7 = -(var6 >> 1) + wd.field_j;

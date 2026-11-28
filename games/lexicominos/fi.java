@@ -252,7 +252,7 @@ final class fi {
           if (param2 <= 54) {
             field_j = -68;
           }
-          if (nb.a(param3, param1, (byte) 126, param0)) {
+          if (DequeWidgetContainer.a(param3, param1, (byte) 126, param0)) {
             return df.a((byte) 91);
           }
           return null;

@@ -132,7 +132,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
           if (ib.field_l == this &&
             !fc.field_m) {
             lj.field_G = je.correctedCurrentTimeMillis(1);
-            i.sleepMillis((byte) 125, 5000L);
+            ModalDialogHost.sleepMillis((byte) 125, 5000L);
             CachedArchiveSource.field_l = null;
             this.shutdownApplet(false, true);
             return;
@@ -869,7 +869,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
               ib.field_j = 0;
               cf.field_d = param5;
               ph.field_c = param5;
-              ke.field_J = param6;
+              LabeledWidgetContainer.field_J = param6;
               IntrusiveDeque.field_g = 0;
               SecondaryNodeDeque.field_c = ia.g(-33);
               dupTemp$0 = new PlatformTaskDispatcher(param3, param1, param4, true);
@@ -878,7 +878,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
               var8 = wh.field_c.requestThreadStart(1, -95, (Runnable) (this));
               while (true) {
                 if (var8.status == 0) {
-                  i.sleepMillis((byte) 114, 10L);
+                  ModalDialogHost.sleepMillis((byte) 114, 10L);
                   if (var9 == 0) {
                     continue;
                   }

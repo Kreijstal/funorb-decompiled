@@ -196,9 +196,9 @@ final class qi {
           if (var45.field_x != null &&
             1 < var45.field_a) {
             var61 = var45.field_x;
-            pl.a(ok.field_F, 1240830180, 0, 0, var61);
+            pl.a(SingleChildWidgetContainer.field_F, 1240830180, 0, 0, var61);
           } else {
-            sa.j(75);
+            LabeledWidgetContainer.j(75);
           }
           var55 = new int[param7.field_l];
           var50 = var55;

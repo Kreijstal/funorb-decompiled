@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class me implements j {
+final class me implements WidgetRenderer {
     static String[] field_a;
     static String field_d;
     static Sprite field_e;
@@ -60,7 +60,7 @@ final class me implements j {
         }
     }
 
-    public final void a(UiComponent param0, int param1, int param2, byte param3, boolean param4) {
+    public final void paintWidget(UiComponent param0, int param1, int param2, byte param3, boolean param4) {
         int stackIn_6_0 = 0;
         RuntimeException stackIn_23_0 = null;
         StringBuilder stackIn_23_1 = null;
@@ -76,7 +76,7 @@ final class me implements j {
         var11 = TorChallenge.field_F ? 1 : 0;
         try {
           if (!param0.field_w &&
-            !param0.c(115)) {
+            !param0.isFocused(115)) {
             stackIn_6_0 = 2188450;
           } else {
             stackIn_6_0 = 3249872;
@@ -86,7 +86,7 @@ final class me implements j {
             this.field_h = 7;
           }
           this.field_c.drawParagraph("<u=" + Integer.toString(var6_int, 16) + ">" + param0.field_v + "</u>", param2 + param0.field_m, param0.field_i + param1, param0.field_p, param0.field_l, var6_int, -1, this.field_h, this.field_f, this.field_c.field_x + this.field_c.field_K);
-          if (param0.c(94)) {
+          if (param0.isFocused(94)) {
             var7 = this.field_c.stringWidth(param0.field_v);
             var8 = this.field_c.field_x + this.field_c.field_K;
             var9 = param2 + param0.field_m;

@@ -49,7 +49,7 @@ final class ql extends DefaultTextWidgetRenderer {
         }
     }
 
-    public final void a(byte param0, int param1, boolean param2, int param3, UiWidget param4) {
+    public final void paintWidget(byte param0, int param1, boolean param2, int param3, UiWidget param4) {
         UiWidget stackIn_5_0 = null;
         RuntimeException stackIn_32_0 = null;
         StringBuilder stackIn_32_1 = null;
@@ -73,7 +73,7 @@ final class ql extends DefaultTextWidgetRenderer {
             stackIn_5_0 = null;
           }
           var10 = (InteractiveWidget) (stackIn_5_0);
-          kf.a((byte) 97, param3 + param4.field_m, param1 + param4.field_j, param3 + param4.field_m + param4.field_t, param4.field_x + (param4.field_j + param1));
+          ModalDialog.a((byte) 97, param3 + param4.field_m, param1 + param4.field_j, param3 + param4.field_m + param4.field_t, param4.field_x + (param4.field_j + param1));
           if (var10 != null) {
             param2 = param2 & var10.field_B;
           }
@@ -100,7 +100,7 @@ final class ql extends DefaultTextWidgetRenderer {
               }
             }
           }
-          if (param4.b(true)) {
+          if (param4.isFocused(true)) {
             var13 = this.field_t[5];
             if (var13 != null) {
               var13.a(this.field_w, param3, param4, -2147483648, param1, this);
@@ -254,11 +254,11 @@ final class ql extends DefaultTextWidgetRenderer {
     }
 
     final static void d(int param0) {
-        u.field_b.j(1);
+        u.field_b.closeAllDialogs(1);
         if (pc.field_b == null) {
           pc.field_b = new lb(u.field_b, v.field_a);
         }
-        u.field_b.b(pc.field_b, -120);
+        u.field_b.showDialog(pc.field_b, -120);
         if (param0 != 18962) {
           field_p = (Sprite) null;
         }

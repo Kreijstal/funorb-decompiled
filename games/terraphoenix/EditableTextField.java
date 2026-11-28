@@ -325,7 +325,7 @@ class EditableTextField extends InteractiveWidget {
         }
     }
 
-    void a(UiWidget param0, int param1, int param2, int param3) {
+    void updatePointer(UiWidget param0, int param1, int param2, int param3) {
         RuntimeException var5 = null;
         int var6 = 0;
         TextWidgetRenderer var7 = null;
@@ -337,7 +337,7 @@ class EditableTextField extends InteractiveWidget {
           if (param3 < 25) {
             EditableTextField.m(-23);
           }
-          super.a(param0, param1, param2, 86);
+          super.updatePointer(param0, param1, param2, 86);
           this.scrollCaretIntoView((byte) 105);
           if (this.field_j != 1) {
             return;
@@ -370,7 +370,7 @@ class EditableTextField extends InteractiveWidget {
         }
     }
 
-    final void a(int param0, int param1, int param2, int param3) {
+    final void drawWidget(int param0, int param1, int param2, int param3) {
         long var6;
         TextWidgetRenderer var8;
         if (this.listener == null) {
@@ -387,7 +387,7 @@ class EditableTextField extends InteractiveWidget {
           this.field_T = -91;
           return;
         }
-        this.listener.a(param3, (UiWidget) (this), param0, -24381, this.field_A);
+        this.listener.paintWidget(param3, (UiWidget) (this), param0, -24381, this.field_A);
         if (!(this.listener instanceof TextWidgetRenderer)) {
           if (param1 < -106) {
             return;
@@ -432,7 +432,7 @@ class EditableTextField extends InteractiveWidget {
         }
     }
 
-    EditableTextField(String param0, sc param1, int param2) {
+    EditableTextField(String param0, WidgetEventListener param1, int param2) {
         super(param0, param1);
         this.field_L = -1;
         this.field_O = false;
@@ -457,7 +457,7 @@ class EditableTextField extends InteractiveWidget {
           return;
         }
         UiWidget var3 = (UiWidget) null;
-        this.a(false, 4, -51, -52, -78, (UiWidget) null, 121);
+        this.pointerPressed(false, 4, -51, -52, -78, (UiWidget) null, 121);
         this.notifyTextChanged(122);
     }
 
@@ -476,7 +476,7 @@ class EditableTextField extends InteractiveWidget {
         }
     }
 
-    final boolean a(boolean param0, int param1, int param2, int param3, int param4, UiWidget param5, int param6) {
+    final boolean pointerPressed(boolean param0, int param1, int param2, int param3, int param4, UiWidget param5, int param6) {
         int stackIn_5_1 = 0;
         int stackIn_6_2 = 0;
         boolean stackIn_9_1 = false;
@@ -488,7 +488,7 @@ class EditableTextField extends InteractiveWidget {
         long var8_long = 0L;
         RuntimeException var8 = null;
         try {
-          if (super.a(param0, param1, param2, param3, param4, param5, param6) &&
+          if (super.pointerPressed(param0, param1, param2, param3, param4, param5, param6) &&
             this.listener instanceof TextWidgetRenderer) {
             var8_int = ((TextWidgetRenderer) ((Object) this.listener)).findTextOffsetAtScreenPosition(ef.field_j, -3477, MouseWheelInput.field_b, (UiWidget) (this), param2, param3);
             stackIn_5_1 = 19;
@@ -554,7 +554,7 @@ class EditableTextField extends InteractiveWidget {
         return kj.field_f;
     }
 
-    final boolean a(char param0, UiWidget param1, int param2, int param3) {
+    final boolean handleKey(char param0, UiWidget param1, int param2, int param3) {
         int dupTemp$0 = 0;
         int stackIn_37_1 = 0;
         int stackIn_38_2 = 0;

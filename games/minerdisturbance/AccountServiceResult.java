@@ -90,7 +90,7 @@ final class AccountServiceResult {
             sj.field_h.s(2121792);
           }
           MidiPcmStream.field_D = new LoginPanel(param1, param0, false, true, true);
-          de.field_a.a((byte) -126, (fe) (MidiPcmStream.field_D));
+          de.field_a.a((byte) -126, (UiWidget) (MidiPcmStream.field_D));
           if (param2 == -1) {
             return;
           }
@@ -125,7 +125,7 @@ final class AccountServiceResult {
           int stackIn_9_0 = 0;
           Throwable decompiledCaughtException = null;
           if (dk.field_b == null) {
-            dk.field_b = mm.field_b.requestDirectSocket(wf.field_U, jc.field_E, (byte) 73);
+            dk.field_b = mm.field_b.requestDirectSocket(wf.field_U, SingleChildWidgetContainer.field_E, (byte) 73);
           }
           var2 = -97 % ((-24 - param1) / 56);
           if (dk.field_b.status == 0) {

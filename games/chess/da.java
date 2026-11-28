@@ -67,7 +67,7 @@ final class da extends ArchiveProvider {
         int var20 = 0;
         var20 = Chess.field_G;
         try {
-          eh.field_M = param10;
+          ModalDialog.field_M = param10;
           TextFieldValidator.field_i[3] = 16736511;
           dn.field_b = param8;
           TextFieldValidator.field_i[2] = 9474303;
@@ -75,11 +75,11 @@ final class da extends ArchiveProvider {
           TextFieldValidator.field_i[0] = 16764000;
           TextFieldValidator.field_i[1] = 6356832;
           sc.field_a = param11;
-          kg.field_P[2] = 16736352;
-          kg.field_P[1] = 6356832;
+          LabeledWidgetContainer.field_P[2] = 16736352;
+          LabeledWidgetContainer.field_P[1] = 6356832;
           TextFieldValidator.field_i[4] = 16711935;
-          kg.field_P[3] = 16736511;
-          kg.field_P[0] = 16764000;
+          LabeledWidgetContainer.field_P[3] = 16736511;
+          LabeledWidgetContainer.field_P[0] = 16764000;
           AccountNameAvailabilityValidator.field_l = 8421504;
           var12 = new RgbSprite(4, 4);
           var13 = var12.field_x;
@@ -92,17 +92,17 @@ final class da extends ArchiveProvider {
           var16 = new RgbSprite[9];
           var16[4] = var12;
           AccountNameAvailabilityValidator.field_m = new ci(0L, param3);
-          ji.field_N = new ci(0L, param6);
+          DropTargetWidgetContainer.field_N = new ci(0L, param6);
           if (param9) {
             da.a((String) null, (String) null, (ResourceArchive) null, -40);
           }
-          AccountNameAvailabilityValidator.field_m.a((byte) 125, ji.field_N);
+          AccountNameAvailabilityValidator.field_m.a((byte) 125, DropTargetWidgetContainer.field_N);
           var17 = new ci(0L, (ci) null);
           var17.field_I = new IntrusiveDeque();
           ac.field_j = new nb(0L, var17, param1, param4);
-          ji.field_N.a((byte) 123, ac.field_j);
+          DropTargetWidgetContainer.field_N.a((byte) 123, ac.field_j);
           qj.field_e = new ci(0L, param2);
-          ji.field_N.a((byte) 126, qj.field_e);
+          DropTargetWidgetContainer.field_N.a((byte) 126, qj.field_e);
           BoundedRandomAccessFile.field_f = new ci(0L, param5);
           BoundedRandomAccessFile.field_f.field_xb = sc.field_a;
           qj.field_e.a((byte) 125, BoundedRandomAccessFile.field_f);
@@ -112,7 +112,7 @@ final class da extends ArchiveProvider {
           qj.field_e.a((byte) 124, uc.field_c);
           NameSuggestionsPanel.field_K = new ci[5];
           ig.field_i = new ci[5];
-          mf.field_l = new ci[5];
+          UiWidget.field_l = new ci[5];
           DelegatingCanvas.field_d = new ci[5];
           var18 = 0;
           boolean decompiledNaturalLoopExit0 = false;
@@ -140,14 +140,14 @@ final class da extends ArchiveProvider {
               }
               if (decompiledFrameRemainder0) {
                 DelegatingCanvas.field_d[var18] = new ci(0L, param0);
-                NameSuggestionsPanel.field_K[var18] = new ci(0L, eh.field_M, var19);
+                NameSuggestionsPanel.field_K[var18] = new ci(0L, ModalDialog.field_M, var19);
                 ig.field_i[var18] = new ci(0L, (ci) null);
                 ig.field_i[var18].field_cb = 1;
-                mf.field_l[var18] = new ci(0L, eh.field_M);
-                mf.field_l[var18].field_cb = 1;
+                UiWidget.field_l[var18] = new ci(0L, ModalDialog.field_M);
+                UiWidget.field_l[var18].field_cb = 1;
                 DelegatingCanvas.field_d[var18].a((byte) 125, NameSuggestionsPanel.field_K[var18]);
                 DelegatingCanvas.field_d[var18].a((byte) 123, ig.field_i[var18]);
-                DelegatingCanvas.field_d[var18].a((byte) 127, mf.field_l[var18]);
+                DelegatingCanvas.field_d[var18].a((byte) 127, UiWidget.field_l[var18]);
                 DelegatingCanvas.field_d[var18].h(0);
                 AccountNameAvailabilityValidator.field_m.a((byte) 127, DelegatingCanvas.field_d[var18]);
                 qm.field_d = qm.field_d + 1;
@@ -305,7 +305,7 @@ final class da extends ArchiveProvider {
               EditableTextField.field_U.writeByte(18, (byte) 96);
               EditableTextField.field_U.position = EditableTextField.field_U.position + 2;
               var10 = EditableTextField.field_U.position;
-              var11_ref_String = m.a(bh.i(81), (byte) 87);
+              var11_ref_String = m.a(ArrayWidgetContainer.i(81), (byte) 87);
               if (null == var11_ref_String) {
                 var11_ref_String = "";
               }
@@ -350,7 +350,7 @@ final class da extends ArchiveProvider {
             if (var9 < 100 ||
               var9 > 105) {
               if (var9 == 248) {
-                bo.a(bh.i(81), (byte) -12);
+                bo.a(ArrayWidgetContainer.i(81), (byte) -12);
                 n.field_c = rb.field_d;
                 ImageProducerRasterBuffer.d(param5 + 65350);
                 DirectByteStorage.field_f = false;
@@ -414,7 +414,7 @@ final class da extends ArchiveProvider {
             if (decompiledSharedTail0) {
               var9_ref_String = tk.field_h.readNullableString(true);
               if (null != var9_ref_String) {
-                aa.a(bh.i(81), -1, var9_ref_String);
+                aa.a(ArrayWidgetContainer.i(81), -1, var9_ref_String);
               }
             }
             ImageProducerRasterBuffer.d(65280);
@@ -857,9 +857,9 @@ final class da extends ArchiveProvider {
             try {
               if (var5 != null &&
                 2 < var5.length) {
-                eh.field_O.reset();
-                eh.field_O.update(var5, 0, var5.length - 2);
-                var6_int = (int)eh.field_O.getValue();
+                ModalDialog.field_O.reset();
+                ModalDialog.field_O.update(var5, 0, var5.length - 2);
+                var6_int = (int)ModalDialog.field_O.getValue();
                 if (~var6_int != ~this.field_n.field_p[param0]) {
                   throw new RuntimeException();
                 }
@@ -925,9 +925,9 @@ final class da extends ArchiveProvider {
             boolean decompiledFrameCompleted0 = true;
             if (null != var5 &&
               var5.length > 2) {
-              eh.field_O.reset();
-              eh.field_O.update(var5, 0, -2 + var5.length);
-              var6_int = (int)eh.field_O.getValue();
+              ModalDialog.field_O.reset();
+              ModalDialog.field_O.update(var5, 0, -2 + var5.length);
+              var6_int = (int)ModalDialog.field_O.getValue();
               if (var6_int != this.field_n.field_p[param0]) {
                 throw new RuntimeException();
               }

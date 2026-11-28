@@ -161,8 +161,8 @@ final class tb extends uj {
             TextFieldValidator.field_l.position = 0;
             if (param0 == null) {
               nc.field_c.position = 0;
-              nc.field_c.writeInt(j.field_H.nextInt(), param5 + 8863);
-              nc.field_c.writeInt(j.field_H.nextInt(), 8959);
+              nc.field_c.writeInt(LabeledWidgetContainer.field_H.nextInt(), param5 + 8863);
+              nc.field_c.writeInt(LabeledWidgetContainer.field_H.nextInt(), 8959);
               stackIn_21_0 = nc.field_c;
               if (!param2.c(1)) {
                 stackIn_22_1 = "";
@@ -188,8 +188,8 @@ final class tb extends uj {
                 var9 = var9 | 1;
               }
               nc.field_c.position = 0;
-              nc.field_c.writeInt(j.field_H.nextInt(), 8959);
-              nc.field_c.writeInt(j.field_H.nextInt(), param5 + 8863);
+              nc.field_c.writeInt(LabeledWidgetContainer.field_H.nextInt(), 8959);
+              nc.field_c.writeInt(LabeledWidgetContainer.field_H.nextInt(), param5 + 8863);
               nc.field_c.writePrefixedString(var14, -33);
               nc.field_c.writePrefixedString(var8, -101);
               var15 = (CharSequence) ((Object) param0);
@@ -234,7 +234,7 @@ final class tb extends uj {
                 qk.field_b = var9Lifetime1;
               } else {
                 FrameTimer.a(-111, dc.b((byte) 30));
-                ge.field_d = new Boolean(cb.a(LevelEditor.field_j, 102));
+                ge.field_d = new Boolean(DraggableWidgetContainer.a(LevelEditor.field_j, 102));
                 LevelEditor.field_j.position = 0;
               }
             }

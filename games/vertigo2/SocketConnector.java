@@ -52,7 +52,7 @@ abstract class SocketConnector {
             return;
           }
           dc.field_L = DiskCacheWorker.field_m.c((byte) 115);
-          nm.b(false, 2);
+          ModalDialog.b(false, 2);
           if (null == dc.field_L) {
             var2 = 3;
             if (DiskCacheWorker.field_m == null) {
@@ -88,7 +88,7 @@ abstract class SocketConnector {
               return;
             }
             dc.field_L = DiskCacheWorker.field_m.c((byte) 115);
-            nm.b(false, 2);
+            ModalDialog.b(false, 2);
             if (null == dc.field_L) {
               var2 = 3;
             } else {

@@ -277,7 +277,7 @@ final class lc extends ro {
           var7 = SoftwareRasterizer.field_d;
           var29 = rh.a((byte) -101, var28, var4, vd.field_a);
           var1 = var29;
-          ln.a(1, 0, var29, (byte) -58);
+          ModalDialogHost.a(1, 0, var29, (byte) -58);
           if (param0 != -1339942685) {
             field_B = (String) null;
           }
@@ -287,12 +287,12 @@ final class lc extends ro {
           var31[0].addFlexibleVerticalSpace((byte) 101, 1);
           var32 = rh.a((byte) 125, var31, var4, IntrusiveNode.field_i);
           var1Lifetime1 = var32;
-          ln.a(1, 0, var32, (byte) -58);
+          ModalDialogHost.a(1, 0, var32, (byte) -58);
           var1Lifetime1[-1 + var32.length].justifyPanelContents(0);
           var1Lifetime1[var32.length - 1].finishPanelLayout(102);
           var33 = rh.a((byte) -122, var32, var4, DebouncedFieldValidator.field_c);
           var1Lifetime2 = var33;
-          ln.a(0, dd.field_c.field_x, var33, (byte) -58);
+          ModalDialogHost.a(0, dd.field_c.field_x, var33, (byte) -58);
           hh.field_e = new Sprite[m.field_n.length];
           be.field_g = 30;
           var34 = var2;
@@ -358,13 +358,13 @@ final class lc extends ro {
               }
               var38 = rh.a((byte) 111, var1Lifetime2, var16_ref_t, m.field_n[var10]);
               var1Lifetime2 = var38;
-              ln.a(0, dd.field_c.field_x, var38, (byte) -58);
+              ModalDialogHost.a(0, dd.field_c.field_x, var38, (byte) -58);
             }
           }
           var1Lifetime2[-1 + var1Lifetime2.length].finishPanelLayout(param0 ^ -1339942758);
           var39 = rh.a((byte) -110, var1Lifetime2, var4, NameSuggestionsPanel.field_G);
           var1Lifetime3 = var39;
-          ln.a(0, dd.field_c.field_x, var39, (byte) -58);
+          ModalDialogHost.a(0, dd.field_c.field_x, var39, (byte) -58);
           var40 = new Model(new MeshGeometry(8, 2, 2));
           var40.field_q = new mp(2);
           var40.field_l.a(-60, -60, 0);
@@ -407,7 +407,7 @@ final class lc extends ro {
             var11.a(new int[]{0, 0, -1024, 65535, 0, 0, 0, 65535, 0, 0, 0, 65535});
             var41 = rh.a((byte) 120, var1Lifetime3, var15, ClientException.field_d[var3[var14Lifetime2]]);
             var1Lifetime3 = var41;
-            ln.a(0, dd.field_c.field_x, var41, (byte) -58);
+            ModalDialogHost.a(0, dd.field_c.field_x, var41, (byte) -58);
           }
           var1Lifetime3[var1Lifetime3.length - 1].justifyPanelContents(0);
           hg.field_b = var1Lifetime3;

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class NameSuggestionsPanel extends kn implements WidgetActivationListener {
+final class NameSuggestionsPanel extends DequeWidgetContainer implements WidgetActivationListener {
     private InteractiveWidget[] field_N;
     static int[] field_J;
     private NameSuggestionListener field_I;
@@ -49,16 +49,16 @@ final class NameSuggestionsPanel extends kn implements WidgetActivationListener 
             var5 = -58 % ((-20 - param0) / 54);
             this.field_N = new InteractiveWidget[1 + var3_int];
             for (var6 = 0; var6 < var3_int; var6++) {
-              this.field_N[var6] = new InteractiveWidget(this.field_O[var6], (rm) (this));
-              this.field_N[var6].field_A = (ad) ((Object) var4);
+              this.field_N[var6] = new InteractiveWidget(this.field_O[var6], (WidgetEventListener) (this));
+              this.field_N[var6].field_A = (WidgetRenderer) ((Object) var4);
               this.field_N[var6].field_n = DiskArchiveRequest.field_I;
-              this.field_N[var6].a(15, -52, 0, 80, 20 + var6 * 16);
-              this.a(-1, this.field_N[var6]);
+              this.field_N[var6].setBounds(15, -52, 0, 80, 20 + var6 * 16);
+              this.addChild(-1, this.field_N[var6]);
             }
-            this.field_N[var3_int] = new InteractiveWidget(gl.field_t, (rm) (this));
-            this.field_N[var3_int].field_A = (ad) ((Object) var4);
-            this.field_N[var3_int].a(15, -112, 0, 100, 16 * (var3_int + 1) + 20);
-            this.a(-1, this.field_N[var3_int]);
+            this.field_N[var3_int] = new InteractiveWidget(gl.field_t, (WidgetEventListener) (this));
+            this.field_N[var3_int].field_A = (WidgetRenderer) ((Object) var4);
+            this.field_N[var3_int].setBounds(15, -112, 0, 100, 16 * (var3_int + 1) + 20);
+            this.addChild(-1, this.field_N[var3_int]);
             return;
           }
           this.field_O = null;
@@ -84,8 +84,8 @@ final class NameSuggestionsPanel extends kn implements WidgetActivationListener 
         return hn.field_b;
     }
 
-    final void a(byte param0, int param1, int param2, int param3) {
-        super.a(param0, param1, param2, param3);
+    final void drawWidget(byte param0, int param1, int param2, int param3) {
+        super.drawWidget(param0, param1, param2, param3);
         if (param3 != 0) {
           return;
         }
@@ -96,7 +96,7 @@ final class NameSuggestionsPanel extends kn implements WidgetActivationListener 
     }
 
     NameSuggestionsPanel(NameSuggestionListener param0) {
-        super(0, 0, 0, 0, (ad) null);
+        super(0, 0, 0, 0, (WidgetRenderer) null);
         try {
           this.field_I = param0;
         } catch (RuntimeException runtimeException) {
@@ -104,7 +104,7 @@ final class NameSuggestionsPanel extends kn implements WidgetActivationListener 
         }
     }
 
-    final boolean a(char param0, fe param1, byte param2, int param3) {
+    final boolean handleKey(char param0, UiWidget param1, byte param2, int param3) {
         RuntimeException var5 = null;
         boolean stackIn_6_0 = false;
         boolean stackIn_9_0 = false;
@@ -113,17 +113,17 @@ final class NameSuggestionsPanel extends kn implements WidgetActivationListener 
         String stackIn_15_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (super.a(param0, param1, param2, param3)) {
+          if (super.handleKey(param0, param1, param2, param3)) {
             return true;
           }
           if (param3 == 98) {
-            stackIn_6_0 = this.b(param1, param2 ^ -79);
+            stackIn_6_0 = this.focusPreviousChild(param1, param2 ^ -79);
             return stackIn_6_0;
           }
           if (param3 != 99) {
             return false;
           }
-          stackIn_9_0 = this.a(param1, (byte) 12);
+          stackIn_9_0 = this.focusNextChild(param1, (byte) 12);
           return stackIn_9_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

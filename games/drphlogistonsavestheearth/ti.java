@@ -58,7 +58,7 @@ final class ti {
         MatchingFieldValidator.field_w = 0;
         ig.field_k = param1;
         la.field_b = rd.field_F;
-        k.field_L = 0;
+        ModalDialogHost.field_L = 0;
         ArchiveRequest.field_w = new ql(2);
         ArchiveRequest.field_w.a(-1, DelegatingCanvas.a(ob.field_g, -13412, ck.field_c), param0, -76);
     }

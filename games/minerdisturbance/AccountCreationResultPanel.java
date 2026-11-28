@@ -7,25 +7,25 @@ final class AccountCreationResultPanel extends rg implements WidgetActivationLis
     static ResourceArchive field_xb;
     private boolean field_zb;
 
-    final boolean n(int param0) {
+    final boolean advanceDialogAnimation(int param0) {
         if (param0 != -4) {
           return true;
         }
         if (!this.field_K) {
-          return super.n(-4);
+          return super.advanceDialogAnimation(-4);
         }
         if (this.field_yb) {
-          return super.n(-4);
+          return super.advanceDialogAnimation(-4);
         }
         AccountServiceResult var2 = pa.pollAccountCreationResult((byte) -107);
         if (var2 == null) {
-          return super.n(-4);
+          return super.advanceDialogAnimation(-4);
         }
         this.showAccountCreationResult(var2, 11, false);
-        return super.n(-4);
+        return super.advanceDialogAnimation(-4);
     }
 
-    AccountCreationResultPanel(hm param0, AccountRegistrationPanel param1) {
+    AccountCreationResultPanel(ModalDialogHost param0, AccountRegistrationPanel param1) {
         super(param0, Bzip2State.field_g, vh.field_e, false, false);
         try {
           this.field_Ab = param1;
@@ -72,7 +72,7 @@ final class AccountCreationResultPanel extends rg implements WidgetActivationLis
           this.field_yb = true;
           if (!param0.success) {
             if (param0.suggestions != null) {
-              var4 = hm.field_L;
+              var4 = ModalDialogHost.field_L;
               if (this.field_Ab != null) {
                 this.field_Ab.onNameSuggestionsRefreshRequested((byte) 47);
               }
@@ -92,10 +92,10 @@ final class AccountCreationResultPanel extends rg implements WidgetActivationLis
           var5 = new fm((rg) (this), Bzip2State.field_g, var4);
           if (param0.success) {
             if (param0.field_i) {
-              this.a((byte) -53, (fe) (new ba(this)));
+              this.a((byte) -53, (UiWidget) (new ba(this)));
               return;
             }
-            var5.a(oh.field_A, 53, (rm) (this));
+            var5.a(oh.field_A, 53, (WidgetEventListener) (this));
           } else {
             if (!this.field_zb) {
               if (5 == param0.statusCode) {
@@ -105,7 +105,7 @@ final class AccountCreationResultPanel extends rg implements WidgetActivationLis
                 var5.a(-1, hk.field_d, param1 ^ -107);
               }
             } else {
-              var5.a(oh.field_A, 82, (rm) (this));
+              var5.a(oh.field_A, 82, (WidgetEventListener) (this));
             }
             if (param0.statusCode != 3) {
               if (param0.statusCode == 6) {
@@ -115,7 +115,7 @@ final class AccountCreationResultPanel extends rg implements WidgetActivationLis
               var5.a(7, wb.field_q, -77);
             }
           }
-          this.a((byte) -99, (fe) (var5));
+          this.a((byte) -99, (UiWidget) (var5));
           if (param1 == 11) {
             return;
           }

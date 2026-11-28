@@ -137,7 +137,7 @@ final class pd {
         if (DequeCursor.field_b < 0) {
           return;
         }
-        int var1 = jk.field_u * AgeValidator.field_o[DequeCursor.field_b] / 30;
+        int var1 = SingleChildWidgetContainer.field_u * AgeValidator.field_o[DequeCursor.field_b] / 30;
         if (var1 > AgeValidator.field_o[DequeCursor.field_b]) {
           var1 = AgeValidator.field_o[DequeCursor.field_b];
         }

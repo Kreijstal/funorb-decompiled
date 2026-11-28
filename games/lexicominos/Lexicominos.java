@@ -80,17 +80,17 @@ public final class Lexicominos extends nk {
             if (BitPacketBuffer.field_p.ensureIndexLoaded(-61) &&
               BitPacketBuffer.field_p.tryLoadGroupByName("basic", 10762)) {
               if (!BitPacketBuffer.field_p.tryLoadGroupByName("roman20", param0 + 10848)) {
-                al.a(16, rh.a(BitPacketBuffer.field_p, (byte) 68, "roman20", v.field_t, li.field_P), 0.0f);
+                ModalDialog.a(16, rh.a(BitPacketBuffer.field_p, (byte) 68, "roman20", v.field_t, li.field_P), 0.0f);
                 return false;
               }
               if (!BitPacketBuffer.field_p.tryLoadGroupByName("roman12", 10762)) {
-                al.a(16, rh.a(BitPacketBuffer.field_p, (byte) 94, "roman12", v.field_t, li.field_P), 0.0f);
+                ModalDialog.a(16, rh.a(BitPacketBuffer.field_p, (byte) 94, "roman12", v.field_t, li.field_P), 0.0f);
                 return false;
               }
               if (gg.field_d.ensureIndexLoaded(106) &&
                 gg.field_d.tryLoadGroupByName("roman20", 10762)) {
                 if (!gg.field_d.tryLoadGroupByName("roman12", param0 ^ -10848)) {
-                  al.a(16, rh.a(gg.field_d, (byte) 124, "roman12", v.field_t, li.field_P), 0.0f);
+                  ModalDialog.a(16, rh.a(gg.field_d, (byte) 124, "roman12", v.field_t, li.field_P), 0.0f);
                   return false;
                 }
                 if (gl.field_a.ensureIndexLoaded(81) &&
@@ -105,11 +105,11 @@ public final class Lexicominos extends nk {
                           SectorCacheStore.field_d.tryLoadAllGroups((byte) -118)) {
                           if (ci.field_e.ensureIndexLoaded(param0 ^ -5) &&
                             ci.field_e.tryLoadAllGroups((byte) 55)) {
-                            if (hh.field_L.ensureIndexLoaded(99) &&
-                              hh.field_L.tryLoadAllGroups((byte) -127)) {
+                            if (DraggableWidgetContainer.field_L.ensureIndexLoaded(99) &&
+                              DraggableWidgetContainer.field_L.tryLoadAllGroups((byte) -127)) {
                               if (ci.field_a.ensureIndexLoaded(118) &&
                                 ci.field_a.tryLoadAllGroups((byte) 15)) {
-                                al.a(param0 + 102, qk.field_b, 90.0f);
+                                ModalDialog.a(param0 + 102, qk.field_b, 90.0f);
                                 this.renderClientFrame(18380);
                                 if (!param1) {
                                   return false;
@@ -132,38 +132,38 @@ public final class Lexicominos extends nk {
                                 SectorCacheStore.b(5);
                                 return false;
                               }
-                              al.a(16, rh.a(ci.field_a, (byte) 97, "index", fg.field_a, sg.field_f), 86.0f);
+                              ModalDialog.a(16, rh.a(ci.field_a, (byte) 97, "index", fg.field_a, sg.field_f), 86.0f);
                               return false;
                             }
-                            al.a(16, rh.a(hh.field_L, (byte) 119, "", ia.field_F, MouseWheelInput.field_e), (float)(10 + hh.field_L.getGroupLoadPercentByName("", (byte) 112) * 76 / 100));
+                            ModalDialog.a(16, rh.a(DraggableWidgetContainer.field_L, (byte) 119, "", AlphaWidgetContainer.field_F, MouseWheelInput.field_e), (float)(10 + DraggableWidgetContainer.field_L.getGroupLoadPercentByName("", (byte) 112) * 76 / 100));
                             return false;
                           }
-                          al.a(16, rh.a(ci.field_e, (byte) 113, "", v.field_t, li.field_P), 10.0f);
+                          ModalDialog.a(16, rh.a(ci.field_e, (byte) 113, "", v.field_t, li.field_P), 10.0f);
                           return false;
                         }
-                        al.a(16, rh.a(SectorCacheStore.field_d, (byte) 98, "", IsaacRandom.field_e, qf.field_s), 9.0f);
+                        ModalDialog.a(16, rh.a(SectorCacheStore.field_d, (byte) 98, "", IsaacRandom.field_e, qf.field_s), 9.0f);
                         return false;
                       }
-                      al.a(16, rh.a(SecondaryNodeDequeIterator.field_b, (byte) 42, "", ni.field_d, DiskArchiveRequest.field_y), 6.0f);
+                      ModalDialog.a(16, rh.a(SecondaryNodeDequeIterator.field_b, (byte) 42, "", ni.field_d, DiskArchiveRequest.field_y), 6.0f);
                       return false;
                     }
-                    al.a(16, qg.a((byte) 100, ga.field_a, ni.field_d, 0, DiskArchiveRequest.field_y), 5.0f);
+                    ModalDialog.a(16, qg.a((byte) 100, ga.field_a, ni.field_d, 0, DiskArchiveRequest.field_y), 5.0f);
                     return false;
                   }
-                  al.a(param0 + 102, rh.a(hc.field_gb, (byte) 37, "", MusicPatchPcmStream.field_p, e.field_h), 4.0f);
+                  ModalDialog.a(param0 + 102, rh.a(hc.field_gb, (byte) 37, "", MusicPatchPcmStream.field_p, e.field_h), 4.0f);
                   return false;
                 }
-                al.a(param0 + 102, rh.a(gl.field_a, (byte) 122, "", MusicPatchPcmStream.field_p, e.field_h), 1.0f);
+                ModalDialog.a(param0 + 102, rh.a(gl.field_a, (byte) 122, "", MusicPatchPcmStream.field_p, e.field_h), 1.0f);
                 return false;
               }
-              al.a(16, rh.a(gg.field_d, (byte) 37, "roman20", v.field_t, li.field_P), 0.0f);
+              ModalDialog.a(16, rh.a(gg.field_d, (byte) 37, "roman20", v.field_t, li.field_P), 0.0f);
               return false;
             }
-            al.a(16, rh.a(BitPacketBuffer.field_p, (byte) 55, "basic", IsaacRandom.field_e, qf.field_s), 0.0f);
+            ModalDialog.a(16, rh.a(BitPacketBuffer.field_p, (byte) 55, "basic", IsaacRandom.field_e, qf.field_s), 0.0f);
             return false;
           }
           if (SecondaryNodeDequeIterator.field_b != null) {
-            al.a(16, pl.field_b, 91.0f);
+            ModalDialog.a(16, pl.field_b, 91.0f);
             this.renderClientFrame(param0 + 18466);
             hc.field_gb = null;
             gl.field_a = null;
@@ -210,15 +210,15 @@ public final class Lexicominos extends nk {
             if (param0 != -86) {
               return true;
             }
-            if (hh.field_L != null) {
-              al.a(16, qa.field_b, 93.0f);
+            if (DraggableWidgetContainer.field_L != null) {
+              ModalDialog.a(16, qa.field_b, 93.0f);
               this.renderClientFrame(param0 + 18466);
-              ib.field_a = ig.a(hh.field_L.getFileByName((byte) 127, "introanim.acp", ""), -66);
-              hh.field_L = null;
+              ib.field_a = ig.a(DraggableWidgetContainer.field_L.getFileByName((byte) 127, "introanim.acp", ""), -66);
+              DraggableWidgetContainer.field_L = null;
             }
             if (ci.field_a == null) {
               if (qc.field_d == null) {
-                qc.field_d = el.a(0, ia.field_H);
+                qc.field_d = el.a(0, AlphaWidgetContainer.field_H);
                 v.field_B.setAsRasterTarget(1);
                 SectorCacheStore.b(5);
                 return false;
@@ -244,7 +244,7 @@ public final class Lexicominos extends nk {
               return true;
             }
             boolean decompiledFrameCompleted0 = true;
-            al.a(16, we.field_j, 99.0f);
+            ModalDialog.a(16, we.field_j, 99.0f);
             this.renderClientFrame(param0 ^ -18330);
             if (id.field_w == null) {
               var3 = SpriteGeometry.a(ci.field_a, true);
@@ -312,7 +312,7 @@ public final class Lexicominos extends nk {
             }
             return stackIn_261_0;
           }
-          al.a(param0 ^ -70, gf.field_q, 92.0f);
+          ModalDialog.a(param0 ^ -70, gf.field_q, 92.0f);
           this.renderClientFrame(18380);
           cb.field_n = df.a("", "bookbg", SectorCacheStore.field_d, (byte) -69);
           pa.field_a = df.a("", "leftpage", SectorCacheStore.field_d, (byte) -83);
@@ -474,7 +474,7 @@ public final class Lexicominos extends nk {
             do {
               if (!(var7_int < fg.field_e.length)) {
                 v.field_B.setAsRasterTarget(1);
-                ia.field_H = df.a("", "letterBkgnd", SectorCacheStore.field_d, (byte) -47);
+                AlphaWidgetContainer.field_H = df.a("", "letterBkgnd", SectorCacheStore.field_d, (byte) -47);
                 lg.field_c = df.a("", "letterBkgndGrey", SectorCacheStore.field_d, (byte) -56);
                 jj.field_f = td.a("", "highlight", SectorCacheStore.field_d, 22306);
                 BitPacketBuffer.field_l = td.a("", "multipliers", SectorCacheStore.field_d, 22306);
@@ -566,8 +566,8 @@ public final class Lexicominos extends nk {
                     continue;
                   }
                 } else {
-                  jf.field_N = df.a("", "slider", SectorCacheStore.field_d, (byte) -121);
-                  ia.field_G = df.a("", "cursors", SectorCacheStore.field_d, (byte) -43);
+                  LabeledWidgetContainer.field_N = df.a("", "slider", SectorCacheStore.field_d, (byte) -121);
+                  AlphaWidgetContainer.field_G = df.a("", "cursors", SectorCacheStore.field_d, (byte) -43);
                   SectorCacheStore.b(5);
                   stackIn_219_0 = 0;
                 }
@@ -981,7 +981,7 @@ public final class Lexicominos extends nk {
           jl.clearStaticReferences(-15699);
           fl.clearStaticReferences(false);
           jj.clearStaticReferences(100);
-          eg.clearStaticReferences(-102);
+          ModalDialogHost.clearStaticReferences(-102);
           AccountCreationResultPanel.j((byte) -50);
           uk.clearStaticReferences(78);
           qj.clearStaticReferences(true);
@@ -1044,12 +1044,12 @@ public final class Lexicominos extends nk {
           ib.clearStaticReferences(false);
           og.clearStaticReferences((byte) 124);
           TextLayout.resetStaticState(true);
-          w.releaseDeclaredStaticReferences(false);
+          UiWidget.releaseDeclaredStaticReferences(false);
           InteractiveWidget.clearStaticReferences(-85);
-          mg.clearStaticReferences(false);
+          SingleChildWidgetContainer.clearStaticReferences(false);
           ql.resetStaticState((byte) 42);
-          al.clearStaticReferences((byte) 102);
-          nb.d(false);
+          ModalDialog.clearStaticReferences((byte) 102);
+          DequeWidgetContainer.d(false);
           ta.f(0);
           sk.clearStaticReferences(82);
           oe.a(param0 + 32034);
@@ -1072,7 +1072,7 @@ public final class Lexicominos extends nk {
           kc.clearStaticReferences(0);
           wj.c(false);
           rc.clearStaticReferences(870040769);
-          jf.h(-127);
+          LabeledWidgetContainer.h(-127);
           ValidatedTextField.clearDeclaredStaticReferences(-60);
           EditableTextField.clearStaticReferences((byte) 93);
           re.clearDeclaredStaticReferences((byte) -27);
@@ -1090,8 +1090,8 @@ public final class Lexicominos extends nk {
           hd.a(-115);
           RichTextLayout.resetStaticState(param0 - 159);
           gl.clearStaticReferences(-116);
-          hh.clearStaticReferences(225);
-          l.clearStaticReferences(4);
+          DraggableWidgetContainer.clearStaticReferences(225);
+          DropTargetWidgetContainer.clearStaticReferences(4);
           IterableNodeHashTable.clearStaticReferences((byte) -70);
           SecondaryNodeDeque.clearStaticReferences((byte) 70);
           rh.clearStaticReferences(-119);
@@ -1108,7 +1108,7 @@ public final class Lexicominos extends nk {
           uj.a(true);
           id.clearStaticReferences((byte) 96);
           di.clearStaticReferences(false);
-          ia.clearStaticReferences(0);
+          AlphaWidgetContainer.clearStaticReferences(0);
           hc.releaseDeclaredStaticReferences(-1);
           f.clearStaticReferences((byte) 69);
           sa.a(0);
@@ -1161,8 +1161,8 @@ public final class Lexicominos extends nk {
           nh.a(0, 1000000, 6, true);
           if (!AccountRequestState.a((byte) -118)) {
             vc.field_D = ce.a(4, 109);
-            hh.field_N = ud.a(1, -108, 10, 3, 9);
-            al.a(16, ef.field_c, 100.0f);
+            DraggableWidgetContainer.field_N = ud.a(1, -108, 10, 3, 9);
+            ModalDialog.a(16, ef.field_c, 100.0f);
           }
           if (param0 != -83) {
             this.initializeClient(true);
@@ -1266,15 +1266,15 @@ public final class Lexicominos extends nk {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         try {
-          if (null != eg.field_C) {
-            ce.a(false, eg.field_C);
-            eg.field_C = null;
+          if (null != ModalDialogHost.field_C) {
+            ce.a(false, ModalDialogHost.field_C);
+            ModalDialogHost.field_C = null;
             SectorCacheStore.b(5);
           }
           SectorCacheStore.field_d = oj.a(false, 1);
           ci.field_a = oj.a(false, 2);
           gl.field_a = oj.a(false, 3);
-          hh.field_L = oj.a(false, 5);
+          DraggableWidgetContainer.field_L = oj.a(false, 5);
           ga.field_a = oj.a(false, 6);
           SecondaryNodeDequeIterator.field_b = oj.a(false, 7);
           if (param0 <= 77) {
@@ -1375,32 +1375,32 @@ public final class Lexicominos extends nk {
           if (ImageProducerRasterBuffer.field_j != -2 &&
             BitPacketBuffer.field_r != -2) {
             if (~ImageProducerRasterBuffer.field_j == ~BitPacketBuffer.field_r) {
-              this.a(param0 + 3730, ValidatedTextField.field_S, jf.field_O, ImageProducerRasterBuffer.field_j);
-              this.a(jf.field_O.field_y, ValidatedTextField.field_S.field_y, false);
+              this.a(param0 + 3730, ValidatedTextField.field_S, LabeledWidgetContainer.field_O, ImageProducerRasterBuffer.field_j);
+              this.a(LabeledWidgetContainer.field_O.field_y, ValidatedTextField.field_S.field_y, false);
               decompiledFrameRemainder0 = (var4 != 0);
             }
             if (decompiledFrameRemainder0) {
               boolean decompiledSharedTail0 = !(cg.field_j > 0);
               if (!decompiledSharedTail0) {
-                this.a(param0 ^ 4498, ValidatedTextField.field_S, jf.field_O, ImageProducerRasterBuffer.field_j);
+                this.a(param0 ^ 4498, ValidatedTextField.field_S, LabeledWidgetContainer.field_O, ImageProducerRasterBuffer.field_j);
                 this.a(22110, v.field_z, NameSuggestionsPanel.field_C, BitPacketBuffer.field_r);
                 decompiledSharedTail0 = (var4 != 0);
               }
               if (decompiledSharedTail0) {
-                this.a(22110, ValidatedTextField.field_S, jf.field_O, BitPacketBuffer.field_r);
+                this.a(22110, ValidatedTextField.field_S, LabeledWidgetContainer.field_O, BitPacketBuffer.field_r);
                 this.a(22110, v.field_z, NameSuggestionsPanel.field_C, ImageProducerRasterBuffer.field_j);
               }
               if (SpriteGeometry.field_v == 0) {
-                this.a(jf.field_O.field_y, ValidatedTextField.field_S.field_y, false);
+                this.a(LabeledWidgetContainer.field_O.field_y, ValidatedTextField.field_S.field_y, false);
                 decompiledFrameRemainder0 = (var4 != 0);
               }
               if (decompiledFrameRemainder0) {
                 if (SpriteGeometry.field_v != 40) {
-                  this.a(jf.field_O.field_y, v.field_z.field_y, false);
+                  this.a(LabeledWidgetContainer.field_O.field_y, v.field_z.field_y, false);
                   this.a(SpriteGeometry.field_v, NameSuggestionsPanel.field_C, (byte) 34, ValidatedTextField.field_S);
                   if (var4 != 0) {
                     this.a(NameSuggestionsPanel.field_C.field_y, v.field_z.field_y, false);
-                    this.a(22110, v.field_z, jf.field_O, 0);
+                    this.a(22110, v.field_z, LabeledWidgetContainer.field_O, 0);
                     if (SpriteGeometry.field_v > 40) {
                       stackIn_64_0 = 40;
                     } else {
@@ -1413,7 +1413,7 @@ public final class Lexicominos extends nk {
                 } else {
                   this.a(NameSuggestionsPanel.field_C.field_y, v.field_z.field_y, false);
                   if (var4 != 0) {
-                    this.a(22110, v.field_z, jf.field_O, 0);
+                    this.a(22110, v.field_z, LabeledWidgetContainer.field_O, 0);
                     if (SpriteGeometry.field_v > 40) {
                       stackIn_64_0 = 40;
                     } else {
@@ -1427,7 +1427,7 @@ public final class Lexicominos extends nk {
               }
             }
           } else {
-            this.a(22110, v.field_z, jf.field_O, 0);
+            this.a(22110, v.field_z, LabeledWidgetContainer.field_O, 0);
             if (SpriteGeometry.field_v > 40) {
               stackIn_64_0 = 40;
             } else {
@@ -1699,13 +1699,13 @@ public final class Lexicominos extends nk {
                     !el.field_c.field_h) {
                     AccountRequestState.field_d = gl.a(65526, 9, el.field_c.field_i, 3, el.field_c.field_f, (byte) 56, el.field_c.field_R, new int[]{el.field_c.field_J * 64 + el.field_c.field_m.field_i}, el.field_c.field_a);
                   }
-                  hh.field_N = ud.a(1, -118, 10, 3, 9);
+                  DraggableWidgetContainer.field_N = ud.a(1, -118, 10, 3, 9);
                   ImageProducerRasterBuffer.field_j = hf.field_a;
                   if (7 == ImageProducerRasterBuffer.field_j &&
                     MouseWheelInput.field_a == 0) {
                     ImageProducerRasterBuffer.field_j = 1;
                   }
-                  al.a(16, ef.field_c, 100.0f);
+                  ModalDialog.a(16, ef.field_c, 100.0f);
                   if (var4 != 0) {
                     ImageProducerRasterBuffer.field_j = hc.field_db;
                   }
@@ -1756,12 +1756,12 @@ public final class Lexicominos extends nk {
                       if (ci.isAcceptedTextInputCharacter(true, IsaacRandom.field_b)) {
                         discarded$3 = sk.field_a.append(IsaacRandom.field_b);
                         if (na.a(1048576, (CharSequence) ((Object) sk.field_a)) == -26658124) {
-                          stackIn_265_0 = !(mg.field_B);
-                          mg.field_B = stackIn_265_0;
+                          stackIn_265_0 = !(SingleChildWidgetContainer.field_B);
+                          SingleChildWidgetContainer.field_B = stackIn_265_0;
                           ob.a(0, sk.field_a, (byte) 22, ' ');
                         } else {
                           if (na.a(1048576, (CharSequence) ((Object) sk.field_a)) == -1039745817) {
-                            mg.field_B = false;
+                            SingleChildWidgetContainer.field_B = false;
                             ob.a(0, sk.field_a, (byte) 22, ' ');
                           }
                         }
@@ -2237,7 +2237,7 @@ public final class Lexicominos extends nk {
             (decompiledFrameCompleted0)) {
             if (BitPacketBuffer.field_r == 1 &&
               !AccountRequestState.a((byte) -127)) {
-              hh.field_N = ud.a(1, -85, 10, 3, 9);
+              DraggableWidgetContainer.field_N = ud.a(1, -85, 10, 3, 9);
               decompiledFrameRemainder0 = (var8 != 0);
             }
             if ((decompiledFrameRemainder0) &&

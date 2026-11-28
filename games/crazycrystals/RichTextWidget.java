@@ -31,12 +31,12 @@ class RichTextWidget extends InteractiveWidget {
         this.field_B = new IntrusiveDeque();
         var2 = 0;
         var3 = (TextWidgetRenderer) ((Object) this.field_i);
-        var4 = var3.getTextLayout((qm) (this), 1);
+        var4 = var3.getTextLayout((UiWidget) (this), 1);
         while (true) {
           var5 = this.field_o.indexOf("<hotspot=", var2);
           if (-1 == var5) {
             if (!param0) {
-              this.a(89, (byte) 16, 73, -80);
+              this.drawWidget(89, (byte) 16, 73, -80);
             }
             return;
           }
@@ -122,11 +122,11 @@ class RichTextWidget extends InteractiveWidget {
         if (param0 != 3) {
           RichTextWidget.clearStaticReferences((byte) 124);
         }
-        qe.field_g.g((byte) -119);
+        qe.field_g.closeAllDialogs((byte) -119);
         if (null == td.field_b) {
           td.field_b = new kl(qe.field_g, ValidatedTextField.field_T);
         }
-        qe.field_g.b(param0 ^ -3261, td.field_b);
+        qe.field_g.showDialog(param0 ^ -3261, td.field_b);
     }
 
     final static void a(IntrusiveNode param0, IntrusiveNode param1, int param2) {
@@ -153,11 +153,11 @@ class RichTextWidget extends InteractiveWidget {
         field_C = null;
     }
 
-    void a(qm param0, int param1, int param2, int param3) {
+    void updatePointer(UiWidget param0, int param1, int param2, int param3) {
         int var6 = 0;
         int var7 = 0;
         try {
-          super.a(param0, -114, param2, param3);
+          super.updatePointer(param0, -114, param2, param3);
           this.field_D = null;
           int var5_int = 37 / ((param1 + 50) / 59);
           if (this.field_m) {
@@ -331,13 +331,13 @@ class RichTextWidget extends InteractiveWidget {
     }
 
     final void b(int param0, int param1, int param2, int param3) {
-        this.a(((TextWidgetRenderer) ((Object) this.field_i)).getPreferredHeight((qm) (this), -1), param2, param0, param3, (byte) -52);
+        this.setBounds(((TextWidgetRenderer) ((Object) this.field_i)).getPreferredHeight((UiWidget) (this), -1), param2, param0, param3, (byte) -52);
         if (param1 != 47) {
           this.field_B = (IntrusiveDeque) null;
         }
     }
 
-    boolean a(boolean param0, qm param1) {
+    boolean takeFocus(boolean param0, UiWidget param1) {
         RuntimeException var3 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
@@ -406,10 +406,10 @@ class RichTextWidget extends InteractiveWidget {
         }
     }
 
-    void a(int param0, byte param1, int param2, int param3) {
+    void drawWidget(int param0, byte param1, int param2, int param3) {
         int var7 = 0;
         int var8 = 0;
-        super.a(param0, (byte) -33, param2, param3);
+        super.drawWidget(param0, (byte) -33, param2, param3);
         if (param1 >= -12) {
           CharSequence var9 = (CharSequence) null;
           RichTextWidget.a((CharSequence) null, 14);
@@ -421,8 +421,8 @@ class RichTextWidget extends InteractiveWidget {
         TextHotspotBounds var6 = this.field_D;
         if (var6 == null) {
         } else {
-          var7 = var10.getTextOriginX(-527227295, (qm) (this), param2);
-          var8 = var10.getTextOriginY(param0, (byte) 50, (qm) (this));
+          var7 = var10.getTextOriginX(-527227295, (UiWidget) (this), param2);
+          var8 = var10.getTextOriginY(param0, (byte) 50, (UiWidget) (this));
           do {
             AgeValidator.a(var6.field_f + var7 - 2, -2 + (var6.field_h + var8), false, 2 + var6.field_l, var6.field_j + 2);
             var6 = var6.field_k;
@@ -430,8 +430,8 @@ class RichTextWidget extends InteractiveWidget {
         }
     }
 
-    RichTextWidget(String param0, wo param1) {
-        super(param0, (bi) null);
+    RichTextWidget(String param0, WidgetRenderer param1) {
+        super(param0, (WidgetEventListener) null);
         this.field_D = null;
         try {
           this.field_i = param1;
@@ -440,8 +440,8 @@ class RichTextWidget extends InteractiveWidget {
         }
     }
 
-    final void a(int param0, int param1, int param2, int param3, byte param4) {
-        super.a(param0, param1, param2, param3, param4);
+    final void setBounds(int param0, int param1, int param2, int param3, byte param4) {
+        super.setBounds(param0, param1, param2, param3, param4);
         this.rebuildHotspotBounds(true);
     }
 

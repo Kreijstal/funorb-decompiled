@@ -17,7 +17,7 @@ final class mr {
           PlayerState.field_s = ej.field_f;
           ej.field_f = param0;
           kf.field_c = kc.field_a;
-          sd.field_N = hn.field_o;
+          ModalDialogHost.field_N = hn.field_o;
           no.field_e = NodeHashTableIterator.field_e;
           kc.field_a = 0;
         }

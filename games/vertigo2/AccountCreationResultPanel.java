@@ -100,7 +100,7 @@ final class AccountCreationResultPanel extends fj implements WidgetActivationLis
         }
     }
 
-    final boolean j(int param0) {
+    final boolean advanceDialogAnimation(int param0) {
         AccountServiceResult var2 = null;
         if (param0 != 17) {
           this.field_ub = false;
@@ -112,7 +112,7 @@ final class AccountCreationResultPanel extends fj implements WidgetActivationLis
             this.showAccountCreationResult(var2, false, param0 ^ -64);
           }
         }
-        return super.j(17);
+        return super.advanceDialogAnimation(17);
     }
 
     private final void showAccountCreationResult(AccountServiceResult param0, boolean param1, int param2) {
@@ -159,7 +159,7 @@ final class AccountCreationResultPanel extends fj implements WidgetActivationLis
                 var5.a(jd.field_b, 17, -50);
               }
             } else {
-              var5.a(vi.field_x, (uf) (this), -116);
+              var5.a(vi.field_x, (WidgetEventListener) (this), -116);
             }
             if (param0.statusCode == 3) {
               var5.a(PlayerAvatarRenderer.field_o, 7, -33);
@@ -175,7 +175,7 @@ final class AccountCreationResultPanel extends fj implements WidgetActivationLis
               this.a(false, new ue(this));
               return;
             }
-            var5.a(vi.field_x, (uf) (this), -110);
+            var5.a(vi.field_x, (WidgetEventListener) (this), -110);
           }
           this.a(false, var5);
           return;
@@ -193,8 +193,8 @@ final class AccountCreationResultPanel extends fj implements WidgetActivationLis
         }
     }
 
-    AccountCreationResultPanel(sd param0, AccountRegistrationPanel param1) {
-        super(param0, sg.field_a, ac.field_L, false, false);
+    AccountCreationResultPanel(ModalDialogHost param0, AccountRegistrationPanel param1) {
+        super(param0, sg.field_a, DropTargetWidgetContainer.field_L, false, false);
         try {
           this.field_tb = param1;
         } catch (RuntimeException runtimeException) {

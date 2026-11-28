@@ -87,7 +87,7 @@ public final class Vertigo2 extends GameShell {
         try {
           jq.a((byte) 29);
           AccountRegistrationPanel.field_M = PlayerAvatarRenderer.getMouseIdleTicks((byte) 119);
-          um.h(0);
+          ArrayWidgetContainer.h(0);
           var2_int = -90 % ((-13 - param0) / 47);
           if (dc.field_L != null &&
             dc.field_L.field_e) {
@@ -476,7 +476,7 @@ public final class Vertigo2 extends GameShell {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         try {
-          nm.k(8);
+          ModalDialog.k(8);
           if (param0 >= -113) {
             this.disposeClient((byte) 27);
           }
@@ -656,7 +656,7 @@ public final class Vertigo2 extends GameShell {
         int var4_intLifetime5;
         var9 = field_L ? 1 : 0;
         try {
-          tk.field_c = (BitmapFont) ((Object) w.a(ac.field_G, ml.field_y, "", "kartika13", 119));
+          tk.field_c = (BitmapFont) ((Object) w.a(DropTargetWidgetContainer.field_G, ml.field_y, "", "kartika13", 119));
           vj.field_b = BitPacketBuffer.a("achievementsgame", MovingLevelTile.field_u, (byte) 34, "");
           var11 = new u[19];
           var2 = var11;
@@ -761,7 +761,7 @@ public final class Vertigo2 extends GameShell {
           kq.field_Kb = (ArgbSprite) (MusicPatchPcmStream.a(MovingLevelTile.field_u, "timeattack_silver", "", (byte) 98));
           MouseWheelInput.field_c = (ArgbSprite) (MusicPatchPcmStream.a(MovingLevelTile.field_u, "timeattack_gold", "", (byte) 98));
           var4 = new Sprite[][]{new Sprite[]{tn.a("coop_icon", MovingLevelTile.field_u, -79, ""), tn.a("versus_icon", MovingLevelTile.field_u, -108, "")}, gk.a(MovingLevelTile.field_u, "", "start_icon", true), gk.a(MovingLevelTile.field_u, "", "end_icon", true)};
-          mh.a(true, var4, fd.field_q, 3, ac.field_G, m.field_z, true, BlastDebrisBatch.field_e, PlayerState.field_V, IsaacCipher.field_e, var4, 2, IsaacCipher.field_e, rm.field_A, ml.field_y);
+          mh.a(true, var4, fd.field_q, 3, DropTargetWidgetContainer.field_G, m.field_z, true, BlastDebrisBatch.field_e, PlayerState.field_V, IsaacCipher.field_e, var4, 2, IsaacCipher.field_e, rm.field_A, ml.field_y);
           jl.field_g = (Sprite) ((Object) NameSuggestionsPanel.field_L);
           ll.a((byte) -111, 200);
           DirectByteStorage.field_g = true;
@@ -886,7 +886,7 @@ public final class Vertigo2 extends GameShell {
           GzipDecompressor.clearStaticReferences(-102);
           ab.resetStaticState(0);
           pd.clearStaticReferences(1000000);
-          sd.clearStaticReferences(-25849);
+          ModalDialogHost.clearStaticReferences(-25849);
           AccountCreationResultPanel.releaseDeclaredStaticReferences(12705);
           fg.clearStaticReferences(-15691);
           ga.m(11840);
@@ -986,7 +986,7 @@ public final class Vertigo2 extends GameShell {
           UiWidget.b((byte) -73);
           WidgetWrapper.e((byte) -122);
           TextLayout.c((byte) 76);
-          mg.h(2);
+          LabeledWidgetContainer.h(2);
           ValidatedTextField.clearStaticReferences(-17131);
           sp.resetStaticState(-6);
           we.clearStaticReferences(false);
@@ -1014,7 +1014,7 @@ public final class Vertigo2 extends GameShell {
           ud.clearStaticReferences((byte) -37);
           BirthDateValidator.clearDeclaredStaticReferences(-3);
           ko.clearDeclaredStaticReferences(false);
-          um.clearStaticReferences(46);
+          ArrayWidgetContainer.clearStaticReferences(46);
           kl.clearDeclaredStaticReferences(true);
           un.clearStaticReferences(-67);
           po.clearStaticReferences((byte) -43);
@@ -1091,7 +1091,7 @@ public final class Vertigo2 extends GameShell {
           DirectByteStorage.resetStaticState((byte) -54);
           RichTextLayout.clearStaticReferences((byte) 53);
           re.resetStaticState(-124);
-          ac.clearStaticReferences((byte) 101);
+          DropTargetWidgetContainer.clearStaticReferences((byte) 101);
           ng.b(16952);
           IterableNodeHashTable.clearStaticReferences(false);
           SecondaryNodeDeque.clearStaticReferences(true);
@@ -1132,7 +1132,7 @@ public final class Vertigo2 extends GameShell {
           ml.clearDeclaredStaticReferences(-15);
           om.c((byte) 122);
           kb.clearStaticReferences(96);
-          wq.clearStaticReferences(-12477);
+          AlphaWidgetContainer.clearStaticReferences(-12477);
           qp.a(-19721);
           rh.clearStaticReferences((byte) -126);
           BlastDebrisModel.resetStaticState((byte) -114);
@@ -1366,7 +1366,7 @@ public final class Vertigo2 extends GameShell {
             }
             var1_int = 1;
           }
-          kg.field_G.a((byte) -29, we.a(gb.field_d, true, PacketBuffer.field_n), we.a(no.field_e, true, sd.field_N));
+          kg.field_G.a((byte) -29, we.a(gb.field_d, true, PacketBuffer.field_n), we.a(no.field_e, true, ModalDialogHost.field_N));
           if (kg.field_G.a(84)) {
             var1_int = 1;
           }
@@ -1527,24 +1527,24 @@ public final class Vertigo2 extends GameShell {
               ProxySocketConnector.a(false, 4.0f, gr.a(vc.field_a, (byte) 66, ml.field_y, vd.field_c, "roman20"));
               return false;
             }
-            if (ac.field_G.ensureIndexLoaded(0) &&
-              ac.field_G.tryLoadGroupByName("roman20", 0)) {
+            if (DropTargetWidgetContainer.field_G.ensureIndexLoaded(0) &&
+              DropTargetWidgetContainer.field_G.tryLoadGroupByName("roman20", 0)) {
               if (!ml.field_y.tryLoadGroupByName("kartika13", 0)) {
                 ProxySocketConnector.a(false, 6.0f, gr.a(vc.field_a, (byte) 103, ml.field_y, vd.field_c, "kartika13"));
                 return false;
               }
-              if (ac.field_G.ensureIndexLoaded(param0 ^ 16777215) &&
-                ac.field_G.tryLoadGroupByName("kartika13", 0)) {
+              if (DropTargetWidgetContainer.field_G.ensureIndexLoaded(param0 ^ 16777215) &&
+                DropTargetWidgetContainer.field_G.tryLoadGroupByName("kartika13", 0)) {
                 if (!ml.field_y.tryLoadGroupByName("comic20", param0 ^ 16777215)) {
                   ProxySocketConnector.a(false, 8.0f, gr.a(vc.field_a, (byte) 47, ml.field_y, vd.field_c, "comic20"));
                   return false;
                 }
-                if (ac.field_G.ensureIndexLoaded(param0 ^ 16777215) &&
-                  ac.field_G.tryLoadGroupByName("comic20", param0 ^ 16777215)) {
+                if (DropTargetWidgetContainer.field_G.ensureIndexLoaded(param0 ^ 16777215) &&
+                  DropTargetWidgetContainer.field_G.tryLoadGroupByName("comic20", param0 ^ 16777215)) {
                   if (ml.field_y.ensureIndexLoaded(0) &&
                     ml.field_y.tryLoadGroupByName("lobby", 0)) {
-                    if (ac.field_G.ensureIndexLoaded(0) &&
-                      ac.field_G.tryLoadGroupByName("lobby", 0)) {
+                    if (DropTargetWidgetContainer.field_G.ensureIndexLoaded(0) &&
+                      DropTargetWidgetContainer.field_G.tryLoadGroupByName("lobby", 0)) {
                       if (DualLinkNode.field_s.ensureIndexLoaded(0) &&
                         DualLinkNode.field_s.tryLoadGroupByName("", 0)) {
                         if (mj.field_b.ensureIndexLoaded(0) &&
@@ -1632,19 +1632,19 @@ public final class Vertigo2 extends GameShell {
                       ProxySocketConnector.a(false, 12.0f, gr.a(lc.field_c, (byte) 95, DualLinkNode.field_s, DebouncedFieldValidator.field_a, ""));
                       return false;
                     }
-                    ProxySocketConnector.a(false, 11.0f, gr.a(vc.field_a, (byte) 119, ac.field_G, vd.field_c, "lobby"));
+                    ProxySocketConnector.a(false, 11.0f, gr.a(vc.field_a, (byte) 119, DropTargetWidgetContainer.field_G, vd.field_c, "lobby"));
                     return false;
                   }
                   ProxySocketConnector.a(false, 10.0f, gr.a(ib.field_b, (byte) 50, ml.field_y, me.field_b, "lobby"));
                   return false;
                 }
-                ProxySocketConnector.a(false, 9.0f, gr.a(vc.field_a, (byte) 39, ac.field_G, vd.field_c, "comic20"));
+                ProxySocketConnector.a(false, 9.0f, gr.a(vc.field_a, (byte) 39, DropTargetWidgetContainer.field_G, vd.field_c, "comic20"));
                 return false;
               }
-              ProxySocketConnector.a(false, 7.0f, gr.a(vc.field_a, (byte) 64, ac.field_G, vd.field_c, "kartika13"));
+              ProxySocketConnector.a(false, 7.0f, gr.a(vc.field_a, (byte) 64, DropTargetWidgetContainer.field_G, vd.field_c, "kartika13"));
               return false;
             }
-            ProxySocketConnector.a(false, 5.0f, gr.a(vc.field_a, (byte) 37, ac.field_G, vd.field_c, "roman20"));
+            ProxySocketConnector.a(false, 5.0f, gr.a(vc.field_a, (byte) 37, DropTargetWidgetContainer.field_G, vd.field_c, "roman20"));
             return false;
           }
           ProxySocketConnector.a(false, 1.0f, gr.a(ib.field_b, (byte) 60, ml.field_y, me.field_b, "basic"));

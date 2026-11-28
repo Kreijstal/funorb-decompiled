@@ -60,7 +60,7 @@ final class mi extends RichTextWidget {
         }
     }
 
-    final void a(int param0, int param1, int param2, int param3) {
+    final void drawWidget(int param0, int param1, int param2, int param3) {
         String var5;
         ud var6;
         TextWidgetRenderer var8;
@@ -102,7 +102,7 @@ final class mi extends RichTextWidget {
           this.field_s = var5;
           this.rebuildHotspotBounds(true);
         }
-        super.a(param0, param1, param2, param3 ^ 0);
+        super.drawWidget(param0, param1, param2, param3 ^ 0);
         var6Lifetime1 = this.field_S.getValidationStatus((byte) -5);
         var8 = (TextWidgetRenderer) ((Object) this.field_y);
         var9 = param1 + this.field_p;
@@ -135,16 +135,16 @@ final class mi extends RichTextWidget {
         }
     }
 
-    final void a(int param0, int param1, byte param2, UiWidget param3) {
+    final void updatePointer(int param0, int param1, byte param2, UiWidget param3) {
         try {
           this.field_Q = this.field_Q + 1;
-          super.a(param0, param1, param2, param3);
+          super.updatePointer(param0, param1, param2, param3);
         } catch (RuntimeException runtimeException) {
           throw LevelGrid.toClientException((Throwable) ((Object) runtimeException), "mi.EA(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 
-    final boolean a(byte param0, UiWidget param1) {
+    final boolean takeFocus(byte param0, UiWidget param1) {
         RuntimeException var3 = null;
         UiWidget var4 = null;
         RuntimeException stackIn_6_0 = null;
@@ -154,7 +154,7 @@ final class mi extends RichTextWidget {
         try {
           if (param0 >= -104) {
             var4 = (UiWidget) null;
-            this.a(66, -39, (byte) 109, (UiWidget) null);
+            this.updatePointer(66, -39, (byte) 109, (UiWidget) null);
           }
           return false;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -184,7 +184,7 @@ final class mi extends RichTextWidget {
         try {
           this.field_S = param0;
           this.field_R = param1;
-          this.a(param5, -3050, param3, param4, param2);
+          this.setBounds(param5, -3050, param3, param4, param2);
         } catch (RuntimeException runtimeException) {
           throw LevelGrid.toClientException((Throwable) ((Object) runtimeException), "mi.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }

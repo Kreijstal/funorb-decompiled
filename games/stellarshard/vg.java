@@ -48,12 +48,12 @@ class vg extends DefaultTextWidgetRenderer {
         super(param0, 4, 2, 2, 2, param1, -1, 0, 1, param0.field_N, -1, 2147483647, false);
     }
 
-    public final void a(boolean param0, int param1, int param2, UiWidget param3, int param4) {
+    public final void paintWidget(boolean param0, int param1, int param2, UiWidget param3, int param4) {
         try {
           if (param0) {
             nd.a(param3.field_p, param2 + param3.field_k, param3.field_t, param3.field_w + param1, (byte) -103);
           }
-          super.a(param0, param1, param2, param3, param4);
+          super.paintWidget(param0, param1, param2, param3, param4);
         } catch (RuntimeException runtimeException) {
           throw ma.a((Throwable) ((Object) runtimeException), "vg.A(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ')');
         }

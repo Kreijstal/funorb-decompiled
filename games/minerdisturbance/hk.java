@@ -92,7 +92,7 @@ final class hk {
     }
 
     final static void a(byte param0) {
-        nb.field_i[oj.field_J].c(-1, mc.field_w);
+        nb.field_i[AlphaWidgetContainer.field_J].c(-1, mc.field_w);
         if (param0 >= -117) {
           field_e = 125;
         }
@@ -188,11 +188,11 @@ final class hk {
 
     final static void c(int param0) {
         if (param0 <= -94) {
-          de.field_a.a((byte) -116, (fe) (new qd()));
+          de.field_a.a((byte) -116, (UiWidget) (new qd()));
           return;
         }
         field_c = (String) null;
-        de.field_a.a((byte) -116, (fe) (new qd()));
+        de.field_a.a((byte) -116, (UiWidget) (new qd()));
     }
 
     private hk() throws Throwable {

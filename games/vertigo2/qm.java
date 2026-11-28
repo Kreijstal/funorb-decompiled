@@ -9,9 +9,9 @@ final class qm extends WidgetContainer implements WidgetActivationListener {
 
     public qm() {
         super(0, 0, 476, 225, (WidgetListener) null);
-        this.field_F = new InteractiveWidget(TextHotspotBounds.field_r, (uf) null);
-        this.field_E = new InteractiveWidget(tc.field_a, (uf) null);
-        this.field_H = new InteractiveWidget(fd.field_o, (uf) null);
+        this.field_F = new InteractiveWidget(TextHotspotBounds.field_r, (WidgetEventListener) null);
+        this.field_E = new InteractiveWidget(tc.field_a, (WidgetEventListener) null);
+        this.field_H = new InteractiveWidget(fd.field_o, (WidgetEventListener) null);
         vo var1 = new vo();
         this.field_F.listener = (WidgetListener) ((Object) var1);
         this.field_E.listener = (WidgetListener) ((Object) var1);
@@ -22,17 +22,17 @@ final class qm extends WidgetContainer implements WidgetActivationListener {
         this.field_E.setBounds(false, -var3 + this.width >> 1, -48 + this.height - var2, 30, var4);
         this.field_H.setBounds(false, var2 + (-var3 + this.width >> 1) + var4, -var2 + (this.height - 48), 30, var4);
         this.field_F.setBounds(false, -var3 + this.width >> 1, -(var2 * 2) + this.height - 78, 30, var3);
-        this.field_E.field_v = (uf) (this);
-        this.field_F.field_v = (uf) (this);
-        this.field_H.field_v = (uf) (this);
+        this.field_E.field_v = (WidgetEventListener) (this);
+        this.field_F.field_v = (WidgetEventListener) (this);
+        this.field_H.field_v = (WidgetEventListener) (this);
         this.field_F.field_q = ni.field_h;
         this.field_H.field_q = he.field_z;
-        this.c((byte) -30, this.field_E);
-        this.c((byte) 113, this.field_F);
-        this.c((byte) -29, this.field_H);
+        this.addChild((byte) -30, this.field_E);
+        this.addChild((byte) 113, this.field_F);
+        this.addChild((byte) -29, this.field_H);
     }
 
-    final boolean a(char param0, int param1, int param2, UiWidget param3) {
+    final boolean handleKey(char param0, int param1, int param2, UiWidget param3) {
         RuntimeException var5 = null;
         boolean stackIn_9_0 = false;
         boolean stackIn_12_0 = false;
@@ -44,17 +44,17 @@ final class qm extends WidgetContainer implements WidgetActivationListener {
           if (param1 != 13) {
             return false;
           }
-          if (super.a(param0, param1 + 0, param2, param3)) {
+          if (super.handleKey(param0, param1 + 0, param2, param3)) {
             return true;
           }
           if (98 == param2) {
-            stackIn_9_0 = this.a(32345, param3);
+            stackIn_9_0 = this.focusPreviousChild(32345, param3);
             return stackIn_9_0;
           }
           if (param2 != 99) {
             return false;
           }
-          stackIn_12_0 = this.b((byte) -124, param3);
+          stackIn_12_0 = this.focusNextChild((byte) -124, param3);
           return stackIn_12_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -85,11 +85,11 @@ final class qm extends WidgetContainer implements WidgetActivationListener {
               ff.b((byte) -104);
             } else {
               if (param1 == this.field_H) {
-                wq.i(0);
+                AlphaWidgetContainer.i(0);
               }
             }
           } else {
-            sd.f((byte) -1);
+            ModalDialogHost.f((byte) -1);
           }
           var6_int = 21 % ((param2 + 63) / 51);
           return;
@@ -162,11 +162,11 @@ final class qm extends WidgetContainer implements WidgetActivationListener {
         }
     }
 
-    final void a(boolean param0, int param1, int param2, int param3) {
+    final void drawWidget(boolean param0, int param1, int param2, int param3) {
         int var5 = this.x + param2;
         int var6 = this.y + param3;
         qc.field_x.drawParagraph(kl.field_Jb, var5 + 20, var6 + 20, -40 + this.width, -50 + this.height, 16777215, -1, 1, 0, qc.field_x.field_z);
-        super.a(param0, param1, param2, param3);
+        super.drawWidget(param0, param1, param2, param3);
     }
 
     public static void clearStaticReferences(int param0) {

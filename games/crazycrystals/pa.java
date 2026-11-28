@@ -12,7 +12,7 @@ final class pa extends InteractiveWidget {
     int field_J;
     static int field_F;
 
-    final boolean a(int param0, int param1, qm param2, boolean param3, int param4, int param5, int param6) {
+    final boolean pointerPressed(int param0, int param1, UiWidget param2, boolean param3, int param4, int param5, int param6) {
         RuntimeException stackIn_20_0 = null;
         StringBuilder stackIn_20_1 = null;
         String stackIn_21_2 = null;
@@ -27,7 +27,7 @@ final class pa extends InteractiveWidget {
           if (param3) {
             field_E = -37;
           }
-          if (!super.a(param0, param1, param2, param3, param4, param5, param6)) {
+          if (!super.pointerPressed(param0, param1, param2, param3, param4, param5, param6)) {
             return false;
           }
           var8_int = param6 - this.field_J - this.field_r - param0;

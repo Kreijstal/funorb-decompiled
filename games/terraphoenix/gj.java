@@ -50,8 +50,8 @@ final class gj {
         int var6 = 0;
         String var7 = null;
         try {
-          ab.field_g[0] = j.field_H.nextInt();
-          ab.field_g[param2] = j.field_H.nextInt();
+          ab.field_g[0] = LabeledWidgetContainer.field_H.nextInt();
+          ab.field_g[param2] = LabeledWidgetContainer.field_H.nextInt();
           ab.field_g[3] = (int)kd.field_c;
           nc.field_c.position = 0;
           ab.field_g[2] = (int)(kd.field_c >> 32);

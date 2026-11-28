@@ -417,7 +417,7 @@ final class IntrusiveDequeCursor {
         if (Character.isISOControl(param1)) {
           return false;
         }
-        if (vl.a(param1, 18102)) {
+        if (ModalDialogHost.a(param1, 18102)) {
           return true;
         }
         if (param1 != 45 &&

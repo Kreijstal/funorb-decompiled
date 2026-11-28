@@ -178,7 +178,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
                 }
               }
               if (decompiledFrameRemainder3) {
-                var1 = re.field_C;
+                var1 = DropTargetWidgetContainer.field_C;
                 if (ov.field_f != null) {
                   var1 = ov.field_f;
                 }
@@ -257,7 +257,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
           var10 = BachelorFridge.field_y;
           try {
             try {
-              if (re.field_C != null) {
+              if (DropTargetWidgetContainer.field_C != null) {
                 pe.field_k = pe.field_k + 1;
                 if (pe.field_k < 3) {
                   this.getAppletContext().showDocument(this.getDocumentBase(), "_self");
@@ -273,7 +273,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
               ej.field_p = param1;
               MouseInputHandler.field_b = param6;
               DreamsSpecial.field_q = param6;
-              re.field_C = this;
+              DropTargetWidgetContainer.field_C = this;
               jia.field_m = nia.d(-31768);
               var8_int = -118 / ((35 - param3) / 54);
               dupTemp$0 = new PlatformTaskDispatcher(param2, param0, param5, true);
@@ -316,7 +316,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
     }
 
     public final void stop() {
-        if (re.field_C != this ||
+        if (DropTargetWidgetContainer.field_C != this ||
           NameSuggestionsPanel.field_H) {
           return;
         }
@@ -470,7 +470,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2_ref = null;
         try {
-          if (this == re.field_C &&
+          if (this == DropTargetWidgetContainer.field_C &&
             !NameSuggestionsPanel.field_H) {
             nf.field_K = true;
             if (bha.field_n &&
@@ -580,11 +580,11 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
               if (null != ov.field_f) {
                 var2 = ov.field_f;
                 if (var4 != 0) {
-                  var2 = re.field_C;
+                  var2 = DropTargetWidgetContainer.field_C;
                   var2 = RemoveDefeatedCreatureEffect.field_j;
                 }
               } else {
-                var2 = re.field_C;
+                var2 = DropTargetWidgetContainer.field_C;
                 if (var4 != 0) {
                   var2 = RemoveDefeatedCreatureEffect.field_j;
                 }
@@ -698,7 +698,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
     }
 
     public final void destroy() {
-        if (re.field_C != this ||
+        if (DropTargetWidgetContainer.field_C != this ||
           NameSuggestionsPanel.field_H) {
           return;
         }
@@ -713,7 +713,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
     }
 
     public final void start() {
-        if (re.field_C != this ||
+        if (DropTargetWidgetContainer.field_C != this ||
           NameSuggestionsPanel.field_H) {
           return;
         }

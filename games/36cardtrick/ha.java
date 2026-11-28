@@ -141,7 +141,7 @@ final class ha {
                 }
                 else {
                   mc.a((byte) -126);
-                  lk.field_w = false;
+                  UiWidget.field_w = false;
                   stackIn_29_0 = var6_intLifetime1;
                   return stackIn_29_0;
                 }
@@ -192,9 +192,9 @@ final class ha {
               } else {
                 ke.field_c.a(PasswordValidator.g(-125), 0);
               }
-              lk.field_w = false;
+              UiWidget.field_w = false;
               if (var11 != null) {
-                lk.a(PasswordValidator.g(-128), 0, var11);
+                UiWidget.a(PasswordValidator.g(-128), 0, var11);
               }
               if (d.field_c <= 0 &&
                 !bi.field_c) {
@@ -227,8 +227,8 @@ final class ha {
               gl.a(false)) {
               mc.a((byte) -125);
               if (7 == pd.field_l &&
-                !lk.field_w) {
-                lk.field_w = true;
+                !UiWidget.field_w) {
+                UiWidget.field_w = true;
                 stackIn_79_0 = -1;
                 return stackIn_79_0;
               }
@@ -236,7 +236,7 @@ final class ha {
                 pd.field_l = 3;
               }
               e.field_a = EmailFormatValidator.field_j.readString(false);
-              lk.field_w = false;
+              UiWidget.field_w = false;
               stackIn_84_0 = pd.field_l;
               return stackIn_84_0;
             }
@@ -244,19 +244,19 @@ final class ha {
               ha.clearStaticReferences(-3);
             }
             if (cb.field_j == null) {
-              if (lk.field_w) {
+              if (UiWidget.field_w) {
                 if (we.a((byte) 79) > 30000L) {
                   e.field_a = ImageProducerRasterBuffer.field_k;
                 } else {
                   e.field_a = e.field_f;
                 }
-                lk.field_w = false;
+                UiWidget.field_w = false;
                 stackIn_95_0 = 3;
                 return stackIn_95_0;
               }
               var6_intLifetime2 = MouseInputHandler.field_e;
               MouseInputHandler.field_e = AccountNameAvailabilityValidator.field_l;
-              lk.field_w = true;
+              UiWidget.field_w = true;
               AccountNameAvailabilityValidator.field_l = var6_intLifetime2;
             }
             stackIn_97_0 = -1;

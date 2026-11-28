@@ -52,7 +52,7 @@ final class AccountCreationResultPanel extends dh implements WidgetActivationLis
                 var5.a(param0 + 96, al.field_c, 17);
               }
             } else {
-              var5.a(gi.field_fb, (uk) (this), false);
+              var5.a(gi.field_fb, (WidgetEventListener) (this), false);
             }
             if (param2.statusCode == 3) {
               var5.a(0, ui.field_d, 7);
@@ -63,12 +63,12 @@ final class AccountCreationResultPanel extends dh implements WidgetActivationLis
             }
           } else {
             if (param2.field_i) {
-              this.a((fj) (new pi(this)), (byte) -72);
+              this.a((UiWidget) (new pi(this)), (byte) -72);
               return;
             }
-            var5.a(gi.field_fb, (uk) (this), false);
+            var5.a(gi.field_fb, (WidgetEventListener) (this), false);
           }
-          this.a((fj) (var5), (byte) -72);
+          this.a((UiWidget) (var5), (byte) -72);
           if (param0 == -96) {
             return;
           }
@@ -98,44 +98,44 @@ final class AccountCreationResultPanel extends dh implements WidgetActivationLis
           return;
         }
         try {
-          la.j(31);
+          LabeledWidgetContainer.j(31);
           this.n(10);
         } catch (RuntimeException runtimeException) {
           throw TextLineMetrics.a((Throwable) ((Object) runtimeException), "v.FA(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ')');
         }
     }
 
-    final boolean l(int param0) {
+    final boolean advanceDialogAnimation(int param0) {
         AccountServiceResult var2;
         InteractiveWidget var3;
         AccountServiceResult var2Lifetime1;
         if (param0 == -6) {
           if (!this.field_H) {
-            return super.l(-6);
+            return super.advanceDialogAnimation(-6);
           }
           if (this.field_Fb) {
-            return super.l(-6);
+            return super.advanceDialogAnimation(-6);
           }
           var2 = TunnelMesh.pollAccountCreationResult((byte) -100);
           if (var2 == null) {
-            return super.l(-6);
+            return super.advanceDialogAnimation(-6);
           }
           this.showAccountCreationResult((byte) -96, false, var2);
-          return super.l(-6);
+          return super.advanceDialogAnimation(-6);
         }
         var3 = (InteractiveWidget) null;
         this.onWidgetActivated(-51, -9, 28, (InteractiveWidget) null, -54);
         if (!this.field_H) {
-          return super.l(-6);
+          return super.advanceDialogAnimation(-6);
         }
         if (this.field_Fb) {
-          return super.l(-6);
+          return super.advanceDialogAnimation(-6);
         }
         var2Lifetime1 = TunnelMesh.pollAccountCreationResult((byte) -100);
         if (var2Lifetime1 != null) {
           this.showAccountCreationResult((byte) -96, false, var2Lifetime1);
         }
-        return super.l(-6);
+        return super.advanceDialogAnimation(-6);
     }
 
     final void o(int param0) {
@@ -145,7 +145,7 @@ final class AccountCreationResultPanel extends dh implements WidgetActivationLis
         }
     }
 
-    AccountCreationResultPanel(sh param0, AccountRegistrationPanel param1) {
+    AccountCreationResultPanel(ModalDialogHost param0, AccountRegistrationPanel param1) {
         super(param0, fd.field_k, un.field_d, false, false);
         try {
           this.field_Hb = param1;

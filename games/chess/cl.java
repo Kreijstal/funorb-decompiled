@@ -77,7 +77,7 @@ final class cl {
           var4 = new fn[var3];
           for (var5 = 0; var3 > var5; var5++) {
             if (!r.a(true, param1)) {
-              var6 = param1.readBits(-63, kb.a(-1 + var5, param0 ^ -4904));
+              var6 = param1.readBits(-63, DraggableWidgetContainer.a(-1 + var5, param0 ^ -4904));
               var4[var5] = var4[var6];
             } else {
               var6_ref_fn = new fn();

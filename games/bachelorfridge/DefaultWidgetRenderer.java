@@ -526,7 +526,7 @@ class DefaultWidgetRenderer implements WidgetRenderer, WidgetMetrics {
         }
     }
 
-    public void a(int param0, UiWidget param1, int param2, int param3, boolean param4) {
+    public void paintWidget(int param0, UiWidget param1, int param2, int param3, boolean param4) {
         if (param2 != 32679) {
           return;
         }

@@ -48,7 +48,7 @@ final class ub {
           if (256 > var5) {
             SoftwareRasterizer.fillRectangleAlpha(0, 0, SoftwareRasterizer.field_c, SoftwareRasterizer.field_g, 0, 256 - var5);
           }
-          fi.c(true);
+          SingleChildWidgetContainer.c(true);
           if (150 > si.field_l) {
             IsaacRandom.field_f.drawHalfSize(var3, var4);
           } else {
@@ -75,14 +75,14 @@ final class ub {
           f.a((byte) 16);
           if (256 > var5) {
             SoftwareRasterizer.fillRectangleAlpha(0, 0, SoftwareRasterizer.field_c, SoftwareRasterizer.field_g, 0, 256 - var5);
-            fi.c(true);
+            SingleChildWidgetContainer.c(true);
             if (150 > si.field_l) {
               IsaacRandom.field_f.drawHalfSize(var3, var4);
             } else {
               ch.field_c.drawWithOpacity(var3 + 15, var4 + 10, var5);
             }
           } else {
-            fi.c(true);
+            SingleChildWidgetContainer.c(true);
             if (150 > si.field_l) {
               IsaacRandom.field_f.drawHalfSize(var3, var4);
               var6 = si.field_l - 125;

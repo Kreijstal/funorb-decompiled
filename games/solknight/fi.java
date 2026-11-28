@@ -35,7 +35,7 @@ final class fi {
     final static void a(int param0, boolean param1, int param2, int param3, int param4, int param5, int param6) {
         uj.a(param4, param5, param2, h.field_d, param6, 2);
         uj.a(param3, param0, (param4 - param3 >> 1) + param2, of.field_b, param6 - (param0 - 18 >> 1), 2);
-        th.field_H.draw((param4 - param3 >> 1) + param2 - 20, -10 + param6);
+        DropTargetWidgetContainer.field_H.draw((param4 - param3 >> 1) + param2 - 20, -10 + param6);
         PasswordValidator.field_k.draw(-18 + param3 + ((-param3 + param4 >> 1) + param2), param6 - 10);
         if (!param1) {
           fi.clearStaticReferences(-46);
@@ -68,7 +68,7 @@ final class fi {
         var2 = 0;
         var3 = 0;
         while (var2 < 8) {
-          this.field_k[var2] = ke.a(tk.a((long)this.field_g[var3 + 7], 255L), ke.a(tk.a((long)this.field_g[6 + var3] << 8, 65280L), ke.a(tk.a((long)this.field_g[5 + var3], 255L) << 16, ke.a(ke.a(tk.a(255L, (long)this.field_g[3 + var3]) << 32, ke.a(ke.a((long)this.field_g[var3] << 56, tk.a((long)this.field_g[1 + var3], 255L) << 48), tk.a((long)this.field_g[var3 + 2] << 40, 280375465082880L))), tk.a(255L, (long)this.field_g[4 + var3]) << 24))));
+          this.field_k[var2] = LabeledWidgetContainer.a(tk.a((long)this.field_g[var3 + 7], 255L), LabeledWidgetContainer.a(tk.a((long)this.field_g[6 + var3] << 8, 65280L), LabeledWidgetContainer.a(tk.a((long)this.field_g[5 + var3], 255L) << 16, LabeledWidgetContainer.a(LabeledWidgetContainer.a(tk.a(255L, (long)this.field_g[3 + var3]) << 32, LabeledWidgetContainer.a(LabeledWidgetContainer.a((long)this.field_g[var3] << 56, tk.a((long)this.field_g[1 + var3], 255L) << 48), tk.a((long)this.field_g[var3 + 2] << 40, 280375465082880L))), tk.a(255L, (long)this.field_g[4 + var3]) << 24))));
           var3 += 8;
           var2++;
         }
@@ -76,7 +76,7 @@ final class fi {
           dupTemp$0 = this.field_d[var2Lifetime1];
           arrayValue$1 = this.field_k[var2Lifetime1];
           this.field_b[var2Lifetime1] = dupTemp$0;
-          this.field_i[var2Lifetime1] = ke.a(arrayValue$1, dupTemp$0);
+          this.field_i[var2Lifetime1] = LabeledWidgetContainer.a(arrayValue$1, dupTemp$0);
         }
         for (var2Lifetime2 = 1; var2Lifetime2 <= 10; var2Lifetime2++) {
           for (var3Lifetime1 = 0; var3Lifetime1 < 8; var3Lifetime1++) {
@@ -84,7 +84,7 @@ final class fi {
             var4 = 0;
             var5 = 56;
             while (var4 < 8) {
-              this.field_h[var3Lifetime1] = ke.a(this.field_h[var3Lifetime1], MenuScreen.field_c[var4][fi.a(255, (int)(this.field_b[fi.a(7, var3Lifetime1 - var4)] >>> var5))]);
+              this.field_h[var3Lifetime1] = LabeledWidgetContainer.a(this.field_h[var3Lifetime1], MenuScreen.field_c[var4][fi.a(255, (int)(this.field_b[fi.a(7, var3Lifetime1 - var4)] >>> var5))]);
               var5 -= 8;
               var4++;
             }
@@ -92,14 +92,14 @@ final class fi {
           for (var3Lifetime1Lifetime1 = 0; var3Lifetime1Lifetime1 < 8; var3Lifetime1Lifetime1++) {
             this.field_b[var3Lifetime1Lifetime1] = this.field_h[var3Lifetime1Lifetime1];
           }
-          this.field_b[0] = ke.a(this.field_b[0], MenuScreen.field_g[var2Lifetime2]);
+          this.field_b[0] = LabeledWidgetContainer.a(this.field_b[0], MenuScreen.field_g[var2Lifetime2]);
           for (var3Lifetime1Lifetime2 = 0; var3Lifetime1Lifetime2 < 8; var3Lifetime1Lifetime2++) {
             this.field_h[var3Lifetime1Lifetime2] = this.field_b[var3Lifetime1Lifetime2];
             var7 = 0;
             var4Lifetime1 = var7;
             var5Lifetime1 = 56;
             while (8 > var7) {
-              this.field_h[var3Lifetime1Lifetime2] = ke.a(this.field_h[var3Lifetime1Lifetime2], MenuScreen.field_c[var7][fi.a(255, (int)(this.field_i[fi.a(7, -var7 + var3Lifetime1Lifetime2)] >>> var5Lifetime1))]);
+              this.field_h[var3Lifetime1Lifetime2] = LabeledWidgetContainer.a(this.field_h[var3Lifetime1Lifetime2], MenuScreen.field_c[var7][fi.a(255, (int)(this.field_i[fi.a(7, -var7 + var3Lifetime1Lifetime2)] >>> var5Lifetime1))]);
               var5Lifetime1 -= 8;
               var7++;
             }
@@ -112,7 +112,7 @@ final class fi {
           field_j = (String) null;
         }
         for (var2Lifetime3 = 0; var2Lifetime3 < 8; var2Lifetime3++) {
-          this.field_d[var2Lifetime3] = ke.a(this.field_d[var2Lifetime3], ke.a(this.field_i[var2Lifetime3], this.field_k[var2Lifetime3]));
+          this.field_d[var2Lifetime3] = LabeledWidgetContainer.a(this.field_d[var2Lifetime3], LabeledWidgetContainer.a(this.field_i[var2Lifetime3], this.field_k[var2Lifetime3]));
         }
     }
 

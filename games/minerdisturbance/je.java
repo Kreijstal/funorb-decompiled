@@ -1757,7 +1757,7 @@ final class je {
           }
           var8Lifetime1 = var6 - GzipDecompressor.field_a.field_x - 1;
           var9Lifetime1 = var7 - 1;
-          var10Lifetime1 = kn.field_E;
+          var10Lifetime1 = DequeWidgetContainer.field_E;
           if (!qe.field_b[19]) {
             if (!qe.field_b[2]) {
               if (var10Lifetime1 < 450) {

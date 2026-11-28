@@ -684,12 +684,12 @@ class UiPanel extends fh {
         if (!sj.field_e &&
           param4 &&
           kf.field_c != 0 &&
-          sd.field_N >= SoftwareRasterizer.field_d &&
-          sd.field_N < SoftwareRasterizer.field_i &&
+          ModalDialogHost.field_N >= SoftwareRasterizer.field_d &&
+          ModalDialogHost.field_N < SoftwareRasterizer.field_i &&
           no.field_e >= SoftwareRasterizer.field_f &&
           no.field_e < SoftwareRasterizer.field_c) {
           this.field_tb = kf.field_c;
-          this.field_ub = -this.field_ob + sd.field_N;
+          this.field_ub = -this.field_ob + ModalDialogHost.field_N;
           var12 = 1;
           this.field_xb = kf.field_c;
           this.field_fb = -this.field_C + no.field_e;

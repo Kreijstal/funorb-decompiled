@@ -151,7 +151,7 @@ final class Js5ArchiveManager {
         }
         BirthDateInput.booleanState0198 = true;
         SceneWidgetPart012.booleanState0188 = true;
-        MixedSupport005.uiComponentPart016State0001.performAction0834(true);
+        MixedSupport005.uiComponentPart016State0001.closeAllDialogs(true);
         MixedSupport147.performAction1811(false, integerArgument1 ^ 49, MixedSupport006.stringState0027);
     }
 
@@ -213,7 +213,7 @@ final class Js5ArchiveManager {
 
     final static void performAction1101(int integerArgument1) {
         MixedSupport144.booleanState0221 = false;
-        PacketBuffer.booleanState0228 = 0 == UiComponentPart006.cipherPacketBufferState0001.readUnsignedByte((byte) -96) ? true : false;
+        PacketBuffer.booleanState0228 = 0 == LabeledWidgetContainer.cipherPacketBufferState0001.readUnsignedByte((byte) -96) ? true : false;
         if (integerArgument1 != 27721) {
           Js5ArchiveManager.clearStaticReferences((byte) 94);
         }

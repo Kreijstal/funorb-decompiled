@@ -41,7 +41,7 @@ final class lj extends WidgetContainer implements WidgetActivationListener {
         }
     }
 
-    final InteractiveWidget a(int param0, String param1, dg param2) {
+    final InteractiveWidget a(int param0, String param1, WidgetEventListener param2) {
         InteractiveWidget var4 = null;
         RuntimeException var4_ref = null;
         int var5 = 0;
@@ -54,11 +54,11 @@ final class lj extends WidgetContainer implements WidgetActivationListener {
         RuntimeException decompiledCaughtException = null;
         try {
           var4 = new InteractiveWidget(param1, param2);
-          var4.field_w = (j) ((Object) new gh());
+          var4.field_w = (WidgetRenderer) ((Object) new gh());
           var5 = -2 + this.field_x;
-          this.b(this.field_x + 34, this.field_t, param0, 0, 0);
-          var4.b(30, -14 + this.field_t, 7, 0, var5);
-          this.a(var4, 5411);
+          this.setBounds(this.field_x + 34, this.field_t, param0, 0, 0);
+          var4.setBounds(30, -14 + this.field_t, 7, 0, var5);
+          this.addChild(var4, 5411);
           stackIn_1_0 = var4;
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -81,9 +81,9 @@ final class lj extends WidgetContainer implements WidgetActivationListener {
         }
     }
 
-    final void a(int param0, int param1, int param2, int param3) {
+    final void drawWidget(int param0, int param1, int param2, int param3) {
         try {
-          super.a(param0, param1, param2, param3 ^ param3);
+          super.drawWidget(param0, param1, param2, param3 ^ param3);
           this.field_J.drawParagraph(this.field_I, param2 + this.field_m + 14, this.field_j + param0 + 10, -28 + this.field_t, this.field_x, 16777215, -1, 0, 0, this.field_J.field_F);
         } catch (RuntimeException runtimeException) {
           throw fc.wrapClientException((Throwable) ((Object) runtimeException), "lj.A(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
@@ -91,7 +91,7 @@ final class lj extends WidgetContainer implements WidgetActivationListener {
     }
 
     lj(ci param0, BitmapFont param1, String param2) {
-        super(0, 0, 288, 0, (j) null);
+        super(0, 0, 288, 0, (WidgetRenderer) null);
         RuntimeException runtimeException = null;
         int var4_int = 0;
         int stackIn_4_0 = 0;
@@ -114,7 +114,7 @@ final class lj extends WidgetContainer implements WidgetActivationListener {
             stackIn_4_0 = 0;
           }
           var4_int = stackIn_4_0;
-          this.b(var4_int + 22, 288, 0, 0, 0);
+          this.setBounds(var4_int + 22, 288, 0, 0, 0);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -799,7 +799,7 @@ final class lj extends WidgetContainer implements WidgetActivationListener {
                 }
                 var2 = vd.a("loading", param0 - 26704);
                 if (null != var2) {
-                  te.field_J = Archive.decodeCp1252(true, var2);
+                  AlphaWidgetContainer.field_J = Archive.decodeCp1252(true, var2);
                 }
                 var2 = vd.a("offline", param0 - 26704);
                 if (null != var2) {
@@ -1608,7 +1608,7 @@ final class lj extends WidgetContainer implements WidgetActivationListener {
                 }
                 var2 = vd.a("login_username", 4);
                 if (null != var2) {
-                  kf.field_H = Archive.decodeCp1252(true, var2);
+                  ModalDialog.field_H = Archive.decodeCp1252(true, var2);
                 }
                 var2 = vd.a("login_email", 4);
                 if (var2 != null) {
@@ -1952,7 +1952,7 @@ final class lj extends WidgetContainer implements WidgetActivationListener {
                 }
                 var2 = vd.a("loading_music", param0 ^ 26704);
                 if (var2 != null) {
-                  th.field_L = Archive.decodeCp1252(true, var2);
+                  DropTargetWidgetContainer.field_L = Archive.decodeCp1252(true, var2);
                 }
                 var2 = vd.a("loading_instruments", param0 - 26704);
                 if (var2 != null) {
@@ -2196,7 +2196,7 @@ final class lj extends WidgetContainer implements WidgetActivationListener {
                 }
                 var2 = vd.a("returntogame", 4);
                 if (null != var2) {
-                  kf.field_F = Archive.decodeCp1252(true, var2);
+                  ModalDialog.field_F = Archive.decodeCp1252(true, var2);
                 }
                 var2 = vd.a("endgameresign", 4);
                 if (var2 != null) {
@@ -2778,7 +2778,7 @@ final class lj extends WidgetContainer implements WidgetActivationListener {
                 }
                 var2 = vd.a("fs_accept_beforeaccept", 4);
                 if (var2 != null) {
-                  si.field_D = Archive.decodeCp1252(true, var2);
+                  SingleChildWidgetContainer.field_D = Archive.decodeCp1252(true, var2);
                 }
                 var2 = vd.a("fs_button_accept", 4);
                 if (var2 != null) {
@@ -3195,17 +3195,17 @@ final class lj extends WidgetContainer implements WidgetActivationListener {
             if (null != dj.field_k &&
               dj.field_k.field_a) {
               ProxySocketConnector.d(14995);
-              EditableTextField.field_J.b(new nf(EditableTextField.field_J, ne.field_i), 100);
+              EditableTextField.field_J.showDialog(new nf(EditableTextField.field_J, ne.field_i), 100);
             }
             return;
           }
           if (param0) {
             field_D = (int[]) null;
           }
-          EditableTextField.field_J.a(-1, g.field_a, true, NameSuggestionsPanel.field_N);
-          EditableTextField.field_J.c(param0);
+          EditableTextField.field_J.processPointerInput(-1, g.field_a, true, NameSuggestionsPanel.field_N);
+          EditableTextField.field_J.advanceDialogs(param0);
           while (DelegatingCanvas.a((byte) -56)) {
-            EditableTextField.field_J.a(MatchingFieldValidator.field_n, ta.field_d, (byte) -108);
+            EditableTextField.field_J.processKeyInput(MatchingFieldValidator.field_n, ta.field_d, (byte) -108);
             if (var2 != 0) {
               return;
             }
@@ -3238,9 +3238,9 @@ final class lj extends WidgetContainer implements WidgetActivationListener {
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          si.field_A = param0;
+          SingleChildWidgetContainer.field_A = param0;
           kb.field_f = param3;
-          ke.field_H = param2;
+          LabeledWidgetContainer.field_H = param2;
           ProxySocketConnector.a(SoftwareRasterizer.field_a / 2, SoftwareRasterizer.field_d / 2, -120);
           FrameTimer.a(param3.field_s + param3.field_m, param3.field_m, (byte) 81, param2.field_s + param2.field_m, param2.field_m);
           if (param1 < 124) {
@@ -3327,7 +3327,7 @@ final class lj extends WidgetContainer implements WidgetActivationListener {
         try {
           var4_int = this.field_K;
           this.b(param2 + var4_int, param2 - 1);
-          this.field_E[var4_int] = this.a(param2 - 1, param1, (dg) (this));
+          this.field_E[var4_int] = this.a(param2 - 1, param1, (WidgetEventListener) (this));
           this.field_L[var4_int] = param0;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

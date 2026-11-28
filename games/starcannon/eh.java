@@ -182,7 +182,7 @@ abstract class eh {
                 }
                 var2 = rd.a("create_unable", param0 ^ 73);
                 if (null != var2) {
-                  vk.field_x = DualLinkNode.a(122, var2);
+                  DequeWidgetContainer.field_x = DualLinkNode.a(122, var2);
                 }
                 var2 = rd.a("create_ineligible", 97);
                 if (var2 != null) {
@@ -1146,7 +1146,7 @@ abstract class eh {
                 }
                 var2 = rd.a("toserverlist", 99);
                 if (null != var2) {
-                  kf.field_u = DualLinkNode.a(118, var2);
+                  SingleChildWidgetContainer.field_u = DualLinkNode.a(118, var2);
                 }
                 var2 = rd.a("tocustomersupport", 122);
                 if (var2 != null) {
@@ -1252,7 +1252,7 @@ abstract class eh {
                 }
                 var2 = rd.a("warning_ifyouquit", -71);
                 if (null != var2) {
-                  qd.field_B = DualLinkNode.a(120, var2);
+                  ModalDialog.field_B = DualLinkNode.a(120, var2);
                 }
                 var2 = rd.a("warning_ifyouquitorleavepage", -123);
                 if (null != var2) {
@@ -1508,7 +1508,7 @@ abstract class eh {
                 }
                 var2 = rd.a("create_password", -105);
                 if (var2 != null) {
-                  tj.field_y = DualLinkNode.a(param0 ^ 72, var2);
+                  DraggableWidgetContainer.field_y = DualLinkNode.a(param0 ^ 72, var2);
                 }
                 var2 = rd.a("create_password_confirm", param0 ^ 123);
                 if (var2 != null) {
@@ -1768,7 +1768,7 @@ abstract class eh {
                 }
                 var2 = rd.a("create_account_success", 126);
                 if (null != var2) {
-                  qd.field_C = DualLinkNode.a(121, var2);
+                  ModalDialog.field_C = DualLinkNode.a(121, var2);
                 }
                 var2 = rd.a("invalid_name", -39);
                 if (null != var2) {
@@ -2834,7 +2834,7 @@ abstract class eh {
                 }
                 var2 = rd.a("mb_achievement_count_1", 126);
                 if (null != var2) {
-                  vk.field_t = DualLinkNode.a(123, var2);
+                  DequeWidgetContainer.field_t = DualLinkNode.a(123, var2);
                 }
                 var2 = rd.a("mb_achievement_count_2", -62);
                 if (var2 != null) {
@@ -3228,7 +3228,7 @@ abstract class eh {
           if (param0 != 2) {
             field_j = (sg) null;
           }
-          if (ad.a(param2, 111)) {
+          if (LabeledWidgetContainer.a(param2, 111)) {
             stackIn_10_0 = (int)((4294967295L & (long)param1.nextInt()) * (long)param2 >> 32);
             return stackIn_10_0;
           }

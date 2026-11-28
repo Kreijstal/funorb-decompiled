@@ -31,7 +31,7 @@ final class ac {
           SoftwareRasterizer.fillRectangle(244, 198, 367, 141, 0);
           if (null == jb.field_d) {
             if (ArchiveRequest.field_n != null) {
-              ArchiveRequest.field_n.drawParagraph(te.field_J, 245, 199, 365, 139, 16777215, -1, 1, 1, 0);
+              ArchiveRequest.field_n.drawParagraph(AlphaWidgetContainer.field_J, 245, 199, 365, 139, 16777215, -1, 1, 1, 0);
             }
             return;
           }
@@ -40,7 +40,7 @@ final class ac {
           var7Lifetime1 = var6;
           if (var6 == null) {
             if (null != ArchiveRequest.field_n) {
-              ArchiveRequest.field_n.drawParagraph(te.field_J, 245, 199, 365, 139, 16777215, -1, 1, 1, 0);
+              ArchiveRequest.field_n.drawParagraph(AlphaWidgetContainer.field_J, 245, 199, 365, 139, 16777215, -1, 1, 1, 0);
             }
           } else {
             var6.draw(245, 199);

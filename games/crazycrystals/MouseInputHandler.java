@@ -34,10 +34,10 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
             sb.field_I = param0.getY();
             lo.correctedCurrentTimeMillis((byte) -57);
             if (javax.swing.SwingUtilities.isRightMouseButton(param0)) {
-              th.field_y = 2;
+              AlphaWidgetContainer.field_y = 2;
               MenuOverlay.field_b = 2;
             } else {
-              th.field_y = 1;
+              AlphaWidgetContainer.field_y = 1;
               MenuOverlay.field_b = 1;
             }
             var2_int = param0.getModifiers();

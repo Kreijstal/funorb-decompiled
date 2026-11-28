@@ -8,11 +8,11 @@ final class ig extends WidgetContainer implements WidgetActivationListener {
     static int[] field_D;
     private InteractiveWidget field_F;
 
-    final void a(int param0, int param1, int param2, int param3) {
+    final void drawWidget(int param0, int param1, int param2, int param3) {
         int var5 = param2 + this.field_m;
         int var6 = this.field_j + param0;
         NameSuggestionsPanel.field_G.drawParagraph(CrossfadingMidiPcmStream.field_z, 20 + var5, 20 + var6, -40 + this.field_t, -50 + this.field_x, 16777215, -1, 1, param3, NameSuggestionsPanel.field_G.field_F);
-        super.a(param0, param1, param2, 0);
+        super.drawWidget(param0, param1, param2, 0);
     }
 
     public static void e(byte param0) {
@@ -27,31 +27,31 @@ final class ig extends WidgetContainer implements WidgetActivationListener {
     }
 
     public ig() {
-        super(0, 0, 476, 225, (j) null);
-        this.field_E = new InteractiveWidget(DelegatingCanvas.field_g, (dg) null);
-        this.field_F = new InteractiveWidget(MidiPcmStream.field_F, (dg) null);
-        this.field_G = new InteractiveWidget(pf.field_c, (dg) null);
+        super(0, 0, 476, 225, (WidgetRenderer) null);
+        this.field_E = new InteractiveWidget(DelegatingCanvas.field_g, (WidgetEventListener) null);
+        this.field_F = new InteractiveWidget(MidiPcmStream.field_F, (WidgetEventListener) null);
+        this.field_G = new InteractiveWidget(pf.field_c, (WidgetEventListener) null);
         gh var1 = new gh();
-        this.field_E.field_w = (j) ((Object) var1);
-        this.field_F.field_w = (j) ((Object) var1);
-        this.field_G.field_w = (j) ((Object) var1);
+        this.field_E.field_w = (WidgetRenderer) ((Object) var1);
+        this.field_F.field_w = (WidgetRenderer) ((Object) var1);
+        this.field_G.field_w = (WidgetRenderer) ((Object) var1);
         int var2 = 4;
         int var3 = 326;
         int var4 = -var2 + var3 >> 1;
-        this.field_F.b(30, var4, this.field_t - var3 >> 1, 0, -var2 + (-48 + this.field_x));
-        this.field_G.b(30, var4, var2 + ((this.field_t - var3 >> 1) + var4), 0, -var2 + (-48 + this.field_x));
-        this.field_E.b(30, var3, -var3 + this.field_t >> 1, 0, -(2 * var2) + (-78 + this.field_x));
-        this.field_F.field_n = (dg) (this);
-        this.field_E.field_n = (dg) (this);
+        this.field_F.setBounds(30, var4, this.field_t - var3 >> 1, 0, -var2 + (-48 + this.field_x));
+        this.field_G.setBounds(30, var4, var2 + ((this.field_t - var3 >> 1) + var4), 0, -var2 + (-48 + this.field_x));
+        this.field_E.setBounds(30, var3, -var3 + this.field_t >> 1, 0, -(2 * var2) + (-78 + this.field_x));
+        this.field_F.field_n = (WidgetEventListener) (this);
+        this.field_E.field_n = (WidgetEventListener) (this);
         this.field_E.field_z = id.field_b;
-        this.field_G.field_n = (dg) (this);
+        this.field_G.field_n = (WidgetEventListener) (this);
         this.field_G.field_z = TextFieldValidator.field_g;
-        this.a(this.field_F, 5411);
-        this.a(this.field_E, 5411);
-        this.a(this.field_G, 5411);
+        this.addChild(this.field_F, 5411);
+        this.addChild(this.field_E, 5411);
+        this.addChild(this.field_G, 5411);
     }
 
-    final boolean a(char param0, byte param1, int param2, UiWidget param3) {
+    final boolean handleKey(char param0, byte param1, int param2, UiWidget param3) {
         int var5_int = 0;
         RuntimeException var5 = null;
         boolean stackIn_6_0 = false;
@@ -61,18 +61,18 @@ final class ig extends WidgetContainer implements WidgetActivationListener {
         String stackIn_14_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (super.a(param0, (byte) -106, param2, param3)) {
+          if (super.handleKey(param0, (byte) -106, param2, param3)) {
             return true;
           }
           if (param2 == 98) {
-            stackIn_6_0 = this.a((byte) -122, param3);
+            stackIn_6_0 = this.focusPreviousChild((byte) -122, param3);
             return stackIn_6_0;
           }
           var5_int = 67 % ((param1 - 31) / 56);
           if (param2 != 99) {
             return false;
           }
-          stackIn_10_0 = this.b(97, param3);
+          stackIn_10_0 = this.focusNextChild(97, param3);
           return stackIn_10_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

@@ -78,10 +78,10 @@ final class mh {
     final static void a(boolean param0, boolean param1) {
         if (param1) {
           field_c = (int[]) null;
-          AccountServiceResult.field_e.a(0, 86, 0);
+          AccountServiceResult.field_e.drawAllLayers(0, 86, 0);
           return;
         }
-        AccountServiceResult.field_e.a(0, 86, 0);
+        AccountServiceResult.field_e.drawAllLayers(0, 86, 0);
     }
 
     final static void a(boolean param0, Sprite[][] param1, byte[] param2, int param3, Archive param4, Archive param5, boolean param6, int[] param7, String[] param8, String[][] param9, Sprite[][] param10, int param11, String[][] param12, byte[] param13, Archive param14) {

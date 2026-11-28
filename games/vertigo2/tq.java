@@ -455,7 +455,7 @@ final class tq {
 
     final static void b(byte param0) {
         eb.field_c = uo.a(107);
-        AccountServiceResult.field_e = new sd();
+        AccountServiceResult.field_e = new ModalDialogHost();
         if (param0 != 44) {
           String var2 = (String) null;
           tq.a((java.awt.Color) null, false, (String) null, (byte) 8, 11);

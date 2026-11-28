@@ -15,7 +15,7 @@ final class td implements WidgetListener {
     static mp field_a;
     static String[] field_l;
 
-    public final void a(boolean param0, int param1, boolean param2, UiWidget param3, int param4) {
+    public final void paintWidget(boolean param0, int param1, boolean param2, UiWidget param3, int param4) {
         int var7 = 0;
         int var8 = 0;
         double var9 = 0.0;

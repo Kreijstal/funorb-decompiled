@@ -46,7 +46,7 @@ final class dc {
             if (AccountRegistrationPanel.a(false, 0)) {
               for (var3_int = 0; var3_int < ua.bonusWords.length; var3_int++) {
                 if (ua.bonusWords[var3_int].equalsIgnoreCase(of.wordBuffer.toString())) {
-                  fi.unlockAchievement(0, 240, 15);
+                  SingleChildWidgetContainer.unlockAchievement(0, 240, 15);
                 }
               }
             }
@@ -112,15 +112,15 @@ final class dc {
                 DirectByteStorage.field_j = DirectByteStorage.field_j + (wk.field_d << 5);
                 IsaacRandom.b(true);
                 if (100 <= wk.field_d) {
-                  if (fi.unlockAchievement(0, 243, 12)) {
+                  if (SingleChildWidgetContainer.unlockAchievement(0, 243, 12)) {
                     var6Lifetime1++;
                   }
                   if (wk.field_d >= 150 &&
-                    fi.unlockAchievement(0, 242, 13)) {
+                    SingleChildWidgetContainer.unlockAchievement(0, 242, 13)) {
                     var6Lifetime1++;
                   }
                   if (eh.totalScore >= 600 &&
-                    fi.unlockAchievement(0, 241, 14)) {
+                    SingleChildWidgetContainer.unlockAchievement(0, 241, 14)) {
                     var6Lifetime1++;
                   }
                 }
@@ -137,11 +137,11 @@ final class dc {
                   break;
                 }
                 if (var9 >= 1) {
-                  if (fi.unlockAchievement(0, 249, 6)) {
+                  if (SingleChildWidgetContainer.unlockAchievement(0, 249, 6)) {
                     var6Lifetime1++;
                   }
                   if (var9 >= 2 &&
-                    fi.unlockAchievement(0, 248, 7)) {
+                    SingleChildWidgetContainer.unlockAchievement(0, 248, 7)) {
                     var6Lifetime1++;
                   }
                   if (eh.totalScore >= 300) {
@@ -178,16 +178,16 @@ final class dc {
                     var6Lifetime1++;
                   }
                   if (eh.totalScore >= 600) {
-                    if (fi.unlockAchievement(0, 255, 0)) {
+                    if (SingleChildWidgetContainer.unlockAchievement(0, 255, 0)) {
                       var6Lifetime1++;
                     }
                     if (1000 <= eh.totalScore &&
-                      fi.unlockAchievement(param0 + 22991, 254, 1)) {
+                      SingleChildWidgetContainer.unlockAchievement(param0 + 22991, 254, 1)) {
                       var6Lifetime1++;
                     }
                   }
                   if (100 <= var2_int &&
-                    fi.unlockAchievement(0, 244, 11)) {
+                    SingleChildWidgetContainer.unlockAchievement(0, 244, 11)) {
                     var6Lifetime1++;
                   }
                   var8 = 2147483647;
@@ -230,16 +230,16 @@ final class dc {
               }
               if (decompiledFrameCompleted0) {
                 if (eh.totalScore >= 600) {
-                  if (fi.unlockAchievement(0, 255, 0)) {
+                  if (SingleChildWidgetContainer.unlockAchievement(0, 255, 0)) {
                     var6Lifetime1++;
                   }
                   if (1000 <= eh.totalScore &&
-                    fi.unlockAchievement(param0 + 22991, 254, 1)) {
+                    SingleChildWidgetContainer.unlockAchievement(param0 + 22991, 254, 1)) {
                     var6Lifetime1++;
                   }
                 }
                 if (100 <= var2_int &&
-                  fi.unlockAchievement(0, 244, 11)) {
+                  SingleChildWidgetContainer.unlockAchievement(0, 244, 11)) {
                   var6Lifetime1++;
                 }
                 var8 = 2147483647;
@@ -259,21 +259,21 @@ final class dc {
               }
             }
             if (var7 >= 10) {
-              if (fi.unlockAchievement(0, 247, 8)) {
+              if (SingleChildWidgetContainer.unlockAchievement(0, 247, 8)) {
                 var6Lifetime1++;
               }
               if (var7 == 12 &&
-                fi.unlockAchievement(0, 246, 9)) {
+                SingleChildWidgetContainer.unlockAchievement(0, 246, 9)) {
                 var6Lifetime1++;
               }
             }
             if (0 < var7 &&
               var8 >= 2) {
-              if (fi.unlockAchievement(0, 251, 4)) {
+              if (SingleChildWidgetContainer.unlockAchievement(0, 251, 4)) {
                 var6Lifetime1++;
               }
               if (var8 >= 3 &&
-                fi.unlockAchievement(0, 250, 5)) {
+                SingleChildWidgetContainer.unlockAchievement(0, 250, 5)) {
                 var6Lifetime1++;
               }
             }
@@ -283,16 +283,16 @@ final class dc {
                 if (var7 != var10Lifetime1) {
                   if (var7 >= 3 + var10Lifetime1 &&
                     var10Lifetime1 >= 4 &&
-                    fi.unlockAchievement(0, 245, 10)) {
+                    SingleChildWidgetContainer.unlockAchievement(0, 245, 10)) {
                     var6Lifetime1++;
                   }
                 } else {
                   if (var7 >= 6) {
-                    if (fi.unlockAchievement(0, 253, 2)) {
+                    if (SingleChildWidgetContainer.unlockAchievement(0, 253, 2)) {
                       var6Lifetime1++;
                     }
                     if (var7 >= 9 &&
-                      fi.unlockAchievement(param0 ^ -22991, 252, 3)) {
+                      SingleChildWidgetContainer.unlockAchievement(param0 ^ -22991, 252, 3)) {
                       var6Lifetime1++;
                     }
                   }
@@ -363,7 +363,7 @@ final class dc {
 
     final static void a(int param0, int param1, int param2, int param3, int param4) {
         hi.field_c = param4;
-        fi.field_x = param3;
+        SingleChildWidgetContainer.field_x = param3;
         if (param2 > -35) {
           field_a = -68;
         }

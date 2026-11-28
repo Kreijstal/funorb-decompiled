@@ -9,7 +9,7 @@ final class kb implements WidgetListener {
     static Archive field_b;
     static String field_f;
 
-    public final void a(boolean param0, int param1, boolean param2, UiWidget param3, int param4) {
+    public final void paintWidget(boolean param0, int param1, boolean param2, UiWidget param3, int param4) {
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         String stackIn_11_2 = null;
@@ -30,7 +30,7 @@ final class kb implements WidgetListener {
             ((InteractiveWidget) (param3)).field_G) {
             var8.drawAdditive(var6_int + 1 + (param3.width - var8.field_x >> 1), (param3.height - var8.field_B >> 1) + (var7 + 1), 256);
           }
-          if (!param3.f(86)) {
+          if (!param3.isFocused(86)) {
             return;
           }
           mr.a(-4 + param3.width, var7 + 2, param3.height - 4, 0, var6_int + 2);

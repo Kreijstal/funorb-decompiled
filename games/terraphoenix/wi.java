@@ -41,7 +41,7 @@ final class wi extends InteractiveWidget {
         return this.field_N.c(-16952);
     }
 
-    final boolean a(boolean param0, int param1, int param2, int param3, int param4, UiWidget param5, int param6) {
+    final boolean pointerPressed(boolean param0, int param1, int param2, int param3, int param4, UiWidget param5, int param6) {
         int var12 = 0;
         RuntimeException stackIn_25_0 = null;
         StringBuilder stackIn_25_1 = null;
@@ -56,7 +56,7 @@ final class wi extends InteractiveWidget {
         int var14 = 0;
         var14 = Terraphoenix.field_V;
         try {
-          if (!super.a(param0, param1, param2, param3, param4, param5, param6)) {
+          if (!super.pointerPressed(param0, param1, param2, param3, param4, param5, param6)) {
             return false;
           }
           var8_int = param1 - param3 - this.field_M;

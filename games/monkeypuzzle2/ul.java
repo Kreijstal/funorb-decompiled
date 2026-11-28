@@ -84,20 +84,20 @@ final class ul extends nf {
         field_O = null;
     }
 
-    ul(kj param0, String param1) {
+    ul(ModalDialogHost param0, String param1) {
         super(param0, 300, 120);
         int var3_int = 0;
         try {
           this.field_P = param1;
           if (this.field_P != null) {
             var3_int = IntrusiveDeque.field_c.textHeight(this.field_P, 260, IntrusiveDeque.field_c.field_C);
-            this.a(150 + var3_int, (byte) 110, 300);
+            this.setCenteredSize(150 + var3_int, (byte) 110, 300);
           }
           this.field_Q = new jh(13, 50, 274, 30, 15, 2113632, 4210752);
           this.field_R = false;
           this.field_S = false;
           this.field_Q.field_G = true;
-          this.b((byte) -28, this.field_Q);
+          this.addChild((byte) -28, this.field_Q);
         } catch (RuntimeException runtimeException) {
           throw la.a((Throwable) ((Object) runtimeException), "ul.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

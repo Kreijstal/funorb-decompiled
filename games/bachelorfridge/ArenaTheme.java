@@ -300,7 +300,7 @@ abstract class ArenaTheme {
             }
           }
           if (var9 == 34) {
-            ge.field_K.draw(param4, param5);
+            LabeledWidgetContainer.field_K.draw(param4, param5);
           } else {
             if (var9 == 35) {
               HuffmanCodec.field_b.draw(param4, param5);

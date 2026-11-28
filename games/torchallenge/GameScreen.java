@@ -432,7 +432,7 @@ final class GameScreen {
           }
           scanLoop1: while (true) {
             boolean decompiledFrameRemainder0 = true;
-            if (kj.e((byte) -109)) {
+            if (DequeWidgetContainer.e((byte) -109)) {
               DelegatingCanvas.field_f = true;
               stackIn_167_0 = ~RichTextLayout.field_g;
               stackIn_167_1 = -3;
@@ -452,7 +452,7 @@ final class GameScreen {
                 }
                 pi.field_f = pi.field_f - 32;
               }
-              if (13 != b.field_J) {
+              if (13 != ModalDialog.field_J) {
                 this.b(false);
                 if (10 == this.screenId) {
                   c.a(94);
@@ -606,9 +606,9 @@ final class GameScreen {
               n.field_jb = EditableTextField.field_Q;
             }
             DirectByteStorage.field_g = false;
-            if (kj.field_A >= 0 &&
-              kj.field_A != AccountNameAvailabilityValidator.field_r) {
-              AccountNameAvailabilityValidator.field_r = kj.field_A;
+            if (DequeWidgetContainer.field_A >= 0 &&
+              DequeWidgetContainer.field_A != AccountNameAvailabilityValidator.field_r) {
+              AccountNameAvailabilityValidator.field_r = DequeWidgetContainer.field_A;
               if (var4 == 0) {
                 return;
               }
@@ -737,7 +737,7 @@ final class GameScreen {
                 var10 = 1;
               }
               qf.field_c[var10].drawTransparent(var5_int, var6 + var23);
-              if (kj.field_I[var27]) {
+              if (DequeWidgetContainer.field_I[var27]) {
                 hb.field_c.drawQuarterSize(var5_int + var15, var16 + var6 + var23);
               } else if (pa.field_s[ok.field_b][var27]) {
                 DisplayNameSelectionPanel.field_M[2].drawTransparent(var5_int, var23 + var6);
@@ -841,7 +841,7 @@ final class GameScreen {
               if (RandomAccessCacheFile.field_e <= 450 &&
                 !NodeHashTableIterator.field_a) {
                 boolean decompiledFrameRemainder0 = true;
-                var3 = uk.field_J;
+                var3 = DraggableWidgetContainer.field_J;
                 if (var3 < 6) {
                   if ((RandomAccessCacheFile.field_e == m.field_c[1][var3]) &&
                     (decompiledFrameRemainder0 = !(6 <= var3))) {
@@ -1480,10 +1480,10 @@ final class GameScreen {
           var8 = 7;
           var9 = 0;
           while (3 > var9) {
-            var4 = bg.field_I[var9][2];
-            var5 = bg.field_I[var9][3];
-            var2_int = bg.field_I[var9][0];
-            var3 = bg.field_I[var9][1];
+            var4 = LabeledWidgetContainer.field_I[var9][2];
+            var5 = LabeledWidgetContainer.field_I[var9][3];
+            var2_int = LabeledWidgetContainer.field_I[var9][0];
+            var3 = LabeledWidgetContainer.field_I[var9][1];
             if (var10 != 0) {
               return;
             }
@@ -1498,9 +1498,9 @@ final class GameScreen {
             var2_int = var2_int + var8;
             var3 = var8 + var3;
             SoftwareRasterizer.intersectClip(var2_int, var3, var2_int + var4 - 2 * var8, -var8 + (var5 >> 1) + var3);
-            var2_intLifetime1 = bg.field_I[var9][0];
+            var2_intLifetime1 = LabeledWidgetContainer.field_I[var9][0];
             var2_intLifetime1 = (-(var6.fullWidth >> 1) + var4 >> 1) + var2_intLifetime1;
-            var3Lifetime1 = bg.field_I[var9][1];
+            var3Lifetime1 = LabeledWidgetContainer.field_I[var9][1];
             var3Lifetime1 = ((var5 >> 1) - (var6.fullHeight >> 1) >> 1) + var3Lifetime1 + 32;
             if (var9 == 0) {
               var3Lifetime1 += 48;
@@ -1508,14 +1508,14 @@ final class GameScreen {
             }
             od.a(var6, var2_intLifetime1, var3Lifetime1);
             SoftwareRasterizer.restoreClip(pf.field_g);
-            var3Lifetime2 = bg.field_I[var9][1];
-            var2_intLifetime2 = bg.field_I[var9][0];
+            var3Lifetime2 = LabeledWidgetContainer.field_I[var9][1];
+            var2_intLifetime2 = LabeledWidgetContainer.field_I[var9][0];
             var7[0].drawTransparent(var2_intLifetime2, var3Lifetime2);
             var2_intLifetime2 = -var7[0].fullWidth + var4 + var2_intLifetime2;
             var7[2].drawTransparent(var2_intLifetime2, var3Lifetime2);
-            var2_intLifetime3 = bg.field_I[var9][0];
+            var2_intLifetime3 = LabeledWidgetContainer.field_I[var9][0];
             var3Lifetime3 = TextLayout.field_d[this.screenId][3] + TextLayout.field_d[this.screenId][8];
-            var5Lifetime1 = -var3Lifetime3 + (bg.field_I[var9][1] + bg.field_I[var9][3]);
+            var5Lifetime1 = -var3Lifetime3 + (LabeledWidgetContainer.field_I[var9][1] + LabeledWidgetContainer.field_I[var9][3]);
             this.a((byte) 42, var4, var2_intLifetime3, var5Lifetime1, var9, true, var3Lifetime3);
             var9++;
           }
@@ -2204,7 +2204,7 @@ final class GameScreen {
         try {
           if (this.screenId == 2 &&
             !GameClientBase.p(-91)) {
-            if (b.field_J == 96) {
+            if (ModalDialog.field_J == 96) {
               boolean decompiledSharedTail0 = !(this.field_k.field_j <= 0);
               if (!decompiledSharedTail0) {
                 this.field_k.b(-127, 2);
@@ -2215,7 +2215,7 @@ final class GameScreen {
                 this.field_k.b(-124, -1 + this.field_k.field_j);
               }
             }
-            if (97 == b.field_J) {
+            if (97 == ModalDialog.field_J) {
               if (this.field_k.field_j >= 2) {
                 if (this.field_k.field_j == 2) {
                   this.field_k.b(-127, 0);
@@ -2227,7 +2227,7 @@ final class GameScreen {
                 this.field_k.b(-123, 1 + this.field_k.field_j);
               }
             }
-            if (b.field_J == 99) {
+            if (ModalDialog.field_J == 99) {
               if (!(this.field_k.field_j >= 0) ||
                 !(this.field_k.field_j <= 2)) {
                 this.field_k.b(-121, tj.field_b);
@@ -2238,7 +2238,7 @@ final class GameScreen {
                 this.field_k.b(-121, 3);
               }
             }
-            if (b.field_J == 98) {
+            if (ModalDialog.field_J == 98) {
               if (this.field_k.field_j == 3) {
                 this.field_k.b(-121, tj.field_b);
                 if (var6 != 0) {
@@ -2257,8 +2257,8 @@ final class GameScreen {
             stackIn_65_0 = (~TextFieldValidator.field_j != ~(ol.field_b.length - 1)) ? 0 : 1;
             var3 = stackIn_65_0;
             if ((var2_int != 0 ||
-              var3 != 0) && (b.field_J == 96 ||
-              b.field_J == 97)) {
+              var3 != 0) && (ModalDialog.field_J == 96 ||
+              ModalDialog.field_J == 97)) {
               this.field_k.a(0);
               if (var2_int == 0 ||
                 this.field_k.field_j != 0) {
@@ -2305,8 +2305,8 @@ final class GameScreen {
             }
             if (0 != var3) {
               this.field_k.b(15275);
-              if (b.field_J != 98 &&
-                99 != b.field_J) {
+              if (ModalDialog.field_J != 98 &&
+                99 != ModalDialog.field_J) {
                 return;
               }
               do {
@@ -2330,9 +2330,9 @@ final class GameScreen {
             } while (var6 == 0);
             return;
           }
-          if (b.field_J >= 0 && (this.screenId == 10 ||
+          if (ModalDialog.field_J >= 0 && (this.screenId == 10 ||
             this.screenId == 8)) {
-            ec.field_d = b.field_J;
+            ec.field_d = ModalDialog.field_J;
           }
           if ((8 == this.screenId ||
             9 == this.screenId) &&
@@ -2574,7 +2574,7 @@ final class GameScreen {
             }
             var2_intLifetime2 = ea.field_e + 1;
             if (rj.field_g == 2) {
-              var2_intLifetime2 = uk.field_J;
+              var2_intLifetime2 = DraggableWidgetContainer.field_J;
             }
             var19Lifetime1 = 0;
             var7Lifetime2 = 450;
@@ -2721,7 +2721,7 @@ final class GameScreen {
                           }
                           if (decompiledFrameRemainder1) {
                             if (this.screenId == 0) {
-                              wk.c(true);
+                              DropTargetWidgetContainer.c(true);
                               this.a(323, 151, -1, 348, 148, false, GzipDecoder.field_a);
                               decompiledFrameRemainder1 = (var11 != 0);
                             }
@@ -2778,7 +2778,7 @@ final class GameScreen {
                       stackIn_85_2 = 8586514;
                       stackIn_86_3 = (tf.field_o != 0);
                       stackIn_90_4 = (eh.field_l != 0);
-                      var3_intLifetime2 = ((BitmapFont) (Object) stackIn_85_0).stringWidth(si.a(stackIn_85_1, stackIn_85_2, stackIn_86_3, stackIn_90_4));
+                      var3_intLifetime2 = ((BitmapFont) (Object) stackIn_85_0).stringWidth(ModalDialogHost.a(stackIn_85_1, stackIn_85_2, stackIn_86_3, stackIn_90_4));
                       if (var3_intLifetime2 > var2_intLifetime2) {
                         var2_intLifetime2 = var3_intLifetime2;
                       }
@@ -2816,7 +2816,7 @@ final class GameScreen {
                       stackIn_121_2 = 8586514;
                       stackIn_122_3 = (tf.field_o != 0);
                       stackIn_126_4 = (eh.field_l != 0);
-                      ((BitmapFont) (Object) stackIn_121_0).drawCentred(si.a(stackIn_121_1, stackIn_121_2, stackIn_122_3, stackIn_126_4), 320, var9 + var8, var10, -1);
+                      ((BitmapFont) (Object) stackIn_121_0).drawCentred(ModalDialogHost.a(stackIn_121_1, stackIn_121_2, stackIn_122_3, stackIn_126_4), 320, var9 + var8, var10, -1);
                       stackIn_129_0 = tf.field_x;
                       stackIn_129_1 = -15;
                       stackIn_130_2 = (eh.field_l != 0);
@@ -3072,7 +3072,7 @@ final class GameScreen {
             field_c = -98;
           }
           rc.field_r = null;
-          ji.field_m = new wl(uk.field_J, ok.field_b, bl.field_U);
+          ji.field_m = new wl(DraggableWidgetContainer.field_J, ok.field_b, bl.field_U);
           DefaultTextWidgetRenderer.field_o = -1;
           stackIn_7_0 = (0 < UiComponent.field_o) ? 0 : 7;
           ConfirmedEmailAvailabilityValidator.field_v = stackIn_7_0;
@@ -3707,7 +3707,7 @@ final class GameScreen {
                                               be.a(3, (byte) -103, param0);
                                               ConfirmedEmailAvailabilityValidator.field_v = this.screenId;
                                               DirectByteStorage.field_g = true;
-                                              kj.field_A = AccountNameAvailabilityValidator.field_r;
+                                              DequeWidgetContainer.field_A = AccountNameAvailabilityValidator.field_r;
                                               EditableTextField.field_Q = n.field_jb;
                                               if (var12 == 0) {
                                                 return;
@@ -4091,7 +4091,7 @@ final class GameScreen {
                                               }
                                             }
                                             if (this.field_k.c((byte) 99)) {
-                                              uk.field_J = 0;
+                                              DraggableWidgetContainer.field_J = 0;
                                               o.a(0, true);
                                             }
                                             if (ec.field_d != 84) {
@@ -4100,14 +4100,14 @@ final class GameScreen {
                                             if (cf.field_b != 10) {
                                               return;
                                             }
-                                            uk.field_J = 0;
+                                            DraggableWidgetContainer.field_J = 0;
                                             o.a(0, true);
                                             if (var12 == 0) {
                                               return;
                                             }
                                           }
                                           if (this.field_k.c((byte) 50)) {
-                                            uk.field_J = 1;
+                                            DraggableWidgetContainer.field_J = 1;
                                             o.a(0, true);
                                           }
                                           if (ec.field_d != 84) {
@@ -4116,14 +4116,14 @@ final class GameScreen {
                                           if (cf.field_b != 10) {
                                             return;
                                           }
-                                          uk.field_J = 1;
+                                          DraggableWidgetContainer.field_J = 1;
                                           o.a(0, true);
                                           if (var12 == 0) {
                                             return;
                                           }
                                         }
                                         if (this.field_k.c((byte) 110)) {
-                                          uk.field_J = 2;
+                                          DraggableWidgetContainer.field_J = 2;
                                           o.a(0, true);
                                         }
                                         if (ec.field_d != 84) {
@@ -4132,14 +4132,14 @@ final class GameScreen {
                                         if (cf.field_b != 10) {
                                           return;
                                         }
-                                        uk.field_J = 2;
+                                        DraggableWidgetContainer.field_J = 2;
                                         o.a(0, true);
                                         if (var12 == 0) {
                                           return;
                                         }
                                       }
                                       if (this.field_k.c((byte) 79)) {
-                                        uk.field_J = 3;
+                                        DraggableWidgetContainer.field_J = 3;
                                         o.a(0, true);
                                       }
                                       if (84 != ec.field_d) {
@@ -4148,14 +4148,14 @@ final class GameScreen {
                                       if (cf.field_b != 10) {
                                         return;
                                       }
-                                      uk.field_J = 3;
+                                      DraggableWidgetContainer.field_J = 3;
                                       o.a(0, true);
                                       if (var12 == 0) {
                                         return;
                                       }
                                     }
                                     if (this.field_k.c((byte) 43)) {
-                                      uk.field_J = 4;
+                                      DraggableWidgetContainer.field_J = 4;
                                       o.a(0, true);
                                     }
                                     if (ec.field_d != 84) {
@@ -4164,14 +4164,14 @@ final class GameScreen {
                                     if (10 != cf.field_b) {
                                       return;
                                     }
-                                    uk.field_J = 4;
+                                    DraggableWidgetContainer.field_J = 4;
                                     o.a(0, true);
                                     if (var12 == 0) {
                                       return;
                                     }
                                   }
                                   if (this.field_k.c((byte) 38)) {
-                                    uk.field_J = 5;
+                                    DraggableWidgetContainer.field_J = 5;
                                     o.a(0, true);
                                   }
                                   if (ec.field_d != 84) {
@@ -4180,7 +4180,7 @@ final class GameScreen {
                                   if (cf.field_b != 10) {
                                     return;
                                   }
-                                  uk.field_J = 5;
+                                  DraggableWidgetContainer.field_J = 5;
                                   o.a(0, true);
                                   if (var12 == 0) {
                                     return;
@@ -4822,10 +4822,10 @@ final class GameScreen {
                 return;
               }
             }
-            var13 = bg.field_I[ok.field_b][0];
-            var14 = bg.field_I[ok.field_b][1];
-            var15 = bg.field_I[ok.field_b][2];
-            var16_int = bg.field_I[ok.field_b][3];
+            var13 = LabeledWidgetContainer.field_I[ok.field_b][0];
+            var14 = LabeledWidgetContainer.field_I[ok.field_b][1];
+            var15 = LabeledWidgetContainer.field_I[ok.field_b][2];
+            var16_int = LabeledWidgetContainer.field_I[ok.field_b][3];
             var17 = ue.field_j[0];
             var18 = ue.field_j[1];
             var19 = ue.field_j[2];
@@ -4886,10 +4886,10 @@ final class GameScreen {
               var37 != 0) {
               var6 = -1;
               var7 = -1;
-              var4 = bg.field_I[var13][2];
-              var2_int = bg.field_I[var13][0];
-              var3 = bg.field_I[var13][1];
-              var5 = bg.field_I[var13][3];
+              var4 = LabeledWidgetContainer.field_I[var13][2];
+              var2_int = LabeledWidgetContainer.field_I[var13][0];
+              var3 = LabeledWidgetContainer.field_I[var13][1];
+              var5 = LabeledWidgetContainer.field_I[var13][3];
               var9 = var3 + var5;
               var12 = dh.field_cb[0];
               var11 = we.field_m[var13 + 1];
@@ -4906,8 +4906,8 @@ final class GameScreen {
               SoftwareRasterizer.saveClip(pf.field_g);
               var2_int = var8 + var2_int;
               SoftwareRasterizer.intersectClip(var2_int, var3, -(2 * var8) + var4 + var2_int, (var5 >> 1) + (var3 - var8));
-              var2_int = bg.field_I[var13][0];
-              var3 = bg.field_I[var13][1];
+              var2_int = LabeledWidgetContainer.field_I[var13][0];
+              var3 = LabeledWidgetContainer.field_I[var13][1];
               var2_int = (var4 - (var11.fullWidth >> 1) >> 1) + var2_int;
               var3 = (-(var11.fullHeight >> 1) + (var5 >> 1) >> 1) + (var3 + 32);
               var3 = var3 + var10;
@@ -4954,8 +4954,8 @@ final class GameScreen {
               var17 = 24;
               tf.field_x.drawCentred(var16, (var14 >> 1) + var2_int, 18 + (var3 + (-var17 + var5 >> 1)), 0, -1);
               var3 = TextLayout.field_d[8][3] + TextLayout.field_d[8][8];
-              var2_int = bg.field_I[var13][0];
-              var4 = bg.field_I[var13][2];
+              var2_int = LabeledWidgetContainer.field_I[var13][0];
+              var4 = LabeledWidgetContainer.field_I[var13][2];
               var5 = jj.field_a[ok.field_b].fullHeight;
               var3 = var3 + var10;
               this.a((byte) 42, var4, 0, var5, var13, false, 0);
@@ -4977,10 +4977,10 @@ final class GameScreen {
               return;
             }
             if (~var13 == ~ok.field_b) {
-              var5 = bg.field_I[var13][3];
-              var4 = bg.field_I[var13][2];
-              var2_int = bg.field_I[var13][0];
-              var3 = bg.field_I[var13][1];
+              var5 = LabeledWidgetContainer.field_I[var13][3];
+              var4 = LabeledWidgetContainer.field_I[var13][2];
+              var2_int = LabeledWidgetContainer.field_I[var13][0];
+              var3 = LabeledWidgetContainer.field_I[var13][1];
               var6 = -1;
               var6 = cd.field_b * 255 / (aa.field_f >> 2);
               var9 = var3 + var5;
@@ -5026,25 +5026,25 @@ final class GameScreen {
               var17 = 24;
               tf.field_x.drawCentred(var16, var2_int + (var14 >> 1), var3 + ((var5 - var17 >> 1) + 18), 0, -1);
               var3 = TextLayout.field_d[8][8] + TextLayout.field_d[8][3];
-              var2_int = bg.field_I[var13][0];
+              var2_int = LabeledWidgetContainer.field_I[var13][0];
               var5 = jj.field_a[ok.field_b].fullHeight;
-              var4 = bg.field_I[var13][2];
+              var4 = LabeledWidgetContainer.field_I[var13][2];
               var3 = var10 + var3;
               this.a((byte) 42, var4, var2_int, var5, var13, true, var3);
               SoftwareRasterizer.restoreClip(pf.field_g);
               oj.field_d.bindAsRenderTarget();
               SoftwareRasterizer.clearRaster();
-              var4 = bg.field_I[var13][2];
-              var5 = bg.field_I[var13][3];
-              var2_int = bg.field_I[var13][0];
-              var3 = bg.field_I[var13][1];
+              var4 = LabeledWidgetContainer.field_I[var13][2];
+              var5 = LabeledWidgetContainer.field_I[var13][3];
+              var2_int = LabeledWidgetContainer.field_I[var13][0];
+              var3 = LabeledWidgetContainer.field_I[var13][1];
               var2_int = var8 + var2_int;
               SoftwareRasterizer.saveClip(pf.field_g);
               var3 = var8 + var3;
               SoftwareRasterizer.intersectClip(var2_int, var3, -(2 * var8) + (var2_int + var4), -TextLayout.field_d[8][8] + ((var5 >> 1) + var3) + var10 - var8);
-              var2_int = bg.field_I[var13][0];
+              var2_int = LabeledWidgetContainer.field_I[var13][0];
               var2_int = (var4 - (var11.fullWidth >> 1) >> 1) + var2_int;
-              var3 = bg.field_I[var13][1];
+              var3 = LabeledWidgetContainer.field_I[var13][1];
               var3 = var3 + ((-(var11.fullHeight >> 1) + (var5 >> 1) >> 1) + 32);
               if (var13 == 0) {
                 var2_int -= 16;
@@ -5623,14 +5623,14 @@ final class GameScreen {
                     var15_int = 0;
                     var16_intLifetime1 = 0;
                     var17Lifetime1 = 0;
-                    if (~var13Lifetime1Lifetime1 != ~uk.field_G ||
+                    if (~var13Lifetime1Lifetime1 != ~DraggableWidgetContainer.field_G ||
                       IterableNodeHashTable.field_h == null) {
                       IterableNodeHashTable.field_h = new Sprite(ie.field_f[var13Lifetime1Lifetime1][1].fullWidth, ie.field_f[var13Lifetime1Lifetime1][1].fullHeight);
                       ac.field_a = new Sprite(ie.field_f[var13Lifetime1Lifetime1][1].fullWidth, ie.field_f[var13Lifetime1Lifetime1][1].fullHeight);
                       IterableNodeHashTable.field_h.bindAsRenderTarget();
                       ie.field_f[var13Lifetime1Lifetime1][1].drawBlendedTowardColor(0, 0, 0, 47211);
                       SectorCacheStore.field_f.bindAsTarget(105);
-                      uk.field_G = var13Lifetime1Lifetime1;
+                      DraggableWidgetContainer.field_G = var13Lifetime1Lifetime1;
                     }
                     var3 = var3 - IterableNodeHashTable.field_h.fullHeight;
                     if (var12Lifetime1Lifetime1 >= 100) {
@@ -5640,11 +5640,11 @@ final class GameScreen {
                     }
                     if (var12Lifetime1Lifetime1 < 100 ||
                       var21 != 0) {
-                      kj.field_D = 0;
+                      DequeWidgetContainer.field_D = 0;
                       var15_int = 4 * var12Lifetime1Lifetime1 / 100;
                     }
                     var2_intLifetime1 = -(IterableNodeHashTable.field_h.fullWidth >> 1) + var2_intLifetime1;
-                    kj.field_D = be.a(var17Lifetime1 != 0, var15_int, var13Lifetime1Lifetime1, var3, var2_intLifetime1, param0 ^ 19, kj.field_D, var16_intLifetime1);
+                    DequeWidgetContainer.field_D = be.a(var17Lifetime1 != 0, var15_int, var13Lifetime1Lifetime1, var3, var2_intLifetime1, param0 ^ 19, DequeWidgetContainer.field_D, var16_intLifetime1);
                     ie.field_f[var13Lifetime1Lifetime1][0].drawTransparent(var2_intLifetime1, var3);
                     var3 = 10 + (129 + DebouncedFieldValidator.field_i[0].fullHeight);
                     var2_intLifetime1 = -16 + (604 - DebouncedFieldValidator.field_i[0].fullWidth - 90);
@@ -5783,7 +5783,7 @@ final class GameScreen {
                               if (cd.field_c != 30) {
                                 hf.$cfr$intArgs$a$759f676cf37b(-73, true, cd.field_c, AgeValidator.field_q, MatchingFieldValidator.field_v, false);
                               }
-                              ic.$cfr$intArgs$a$ceabca3815d0(ec.field_a[5].fullHeight / 2 + var7Lifetime1Lifetime2, cd.field_c, var6Lifetime1Lifetime2, var4, MatchingFieldValidator.field_v, MatchingFieldValidator.field_v, 127, true);
+                              SingleChildWidgetContainer.$cfr$intArgs$a$ceabca3815d0(ec.field_a[5].fullHeight / 2 + var7Lifetime1Lifetime2, cd.field_c, var6Lifetime1Lifetime2, var4, MatchingFieldValidator.field_v, MatchingFieldValidator.field_v, 127, true);
                             }
                             if (119 > var11Lifetime2Lifetime4 ||
                               var21 != 0) {
@@ -6196,7 +6196,7 @@ final class GameScreen {
                 if (decompiledFrameRemainder1) {
                   if (var7[var8] != null) {
                     var2 = MouseInputHandler.field_c;
-                    var9 = bg.a(var8, kf.field_a, 21179, var5_ref_ae);
+                    var9 = LabeledWidgetContainer.a(var8, kf.field_a, 21179, var5_ref_ae);
                     var10 = SecondaryNodeDequeIterator.field_e.stringWidth("10. ") >> 1;
                     var11 = (SecondaryNodeDequeIterator.field_e.stringWidth("10. ") >> 1) + DebouncedFieldValidator.field_i[0].fullWidth;
                     GzipDecoder.drawNineSlice(DebouncedFieldValidator.field_i, DebouncedFieldValidator.field_i[6].fullHeight + DebouncedFieldValidator.field_i[0].fullHeight + var3 * var4, 2 * var11 + 315, (byte) 113, 123 - DebouncedFieldValidator.field_i[0].fullHeight, -var11 + 162);
@@ -6715,10 +6715,10 @@ final class GameScreen {
           if (stackIn_26_0 == 8) {
             var8 = 0;
             while (var8 < 3) {
-              var4_intLifetime1 = bg.field_I[var8][0];
-              var7 = bg.field_I[var8][3];
-              var5Lifetime1 = bg.field_I[var8][1];
-              var6 = bg.field_I[var8][2];
+              var4_intLifetime1 = LabeledWidgetContainer.field_I[var8][0];
+              var7 = LabeledWidgetContainer.field_I[var8][3];
+              var5Lifetime1 = LabeledWidgetContainer.field_I[var8][1];
+              var6 = LabeledWidgetContainer.field_I[var8][2];
               stackIn_48_0 = ~var4_intLifetime1;
               if (var9 != 0) {
                 decompiledFrameCompleted0 = false;
@@ -6861,7 +6861,7 @@ final class GameScreen {
           jj.field_c = 0;
           eh.field_l = 0;
           wc.field_g.clear(-14341);
-          kj.field_B.clear(-14341);
+          DequeWidgetContainer.field_B.clear(-14341);
           if (hf.field_d != null) {
             var2_int = 0;
             while (!(var2_int >= hf.field_d.length)) {

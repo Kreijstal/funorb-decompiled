@@ -22,7 +22,7 @@ final class rj extends am {
             Sprite var4 = (Sprite) null;
             rj.a(87, (String) null, (Sprite) null);
           }
-          jd.field_D = param2;
+          DropTargetWidgetContainer.field_D = param2;
         } catch (RuntimeException runtimeException) {
           throw RichTextWidget.wrapThrowable((Throwable) ((Object) runtimeException), "rj.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }

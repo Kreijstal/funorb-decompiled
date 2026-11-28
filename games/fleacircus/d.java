@@ -216,7 +216,7 @@ final class d extends InteractiveWidget {
         return this.field_K.b(param0, false);
     }
 
-    final boolean a(int param0, boolean param1, int param2, UiComponent param3, int param4, int param5, int param6) {
+    final boolean pointerPressed(int param0, boolean param1, int param2, UiComponent param3, int param4, int param5, int param6) {
         int var12 = 0;
         RuntimeException stackIn_25_0 = null;
         StringBuilder stackIn_25_1 = null;
@@ -231,7 +231,7 @@ final class d extends InteractiveWidget {
         int var14 = 0;
         var14 = fleas.field_A ? 1 : 0;
         try {
-          if (!super.a(param0, param1, param2, param3, param4, param5, param6)) {
+          if (!super.pointerPressed(param0, param1, param2, param3, param4, param5, param6)) {
             return false;
           }
           var8_int = param4 - (param6 + this.field_M);

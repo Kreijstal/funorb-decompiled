@@ -146,7 +146,7 @@ class ai extends em {
             e.field_c.position = 0;
             if (var9Lifetime1 >= 100 &&
               var9Lifetime1 <= 105) {
-              lk.field_d = la.field_M;
+              lk.field_d = LabeledWidgetContainer.field_M;
               TextLayout.field_g = new String[var9Lifetime1 - 100];
             } else {
               if (248 == var9Lifetime1) {
@@ -159,7 +159,7 @@ class ai extends em {
               }
               if (99 == var9Lifetime1) {
                 jj.a(lb.c(-30316), (byte) 16);
-                ca.field_o = new Boolean(qe.a((byte) -73, e.field_c));
+                ca.field_o = new Boolean(DraggableWidgetContainer.a((byte) -73, e.field_c));
                 e.field_c.position = 0;
               } else {
                 Confined.field_F = var9Lifetime1;
@@ -168,7 +168,7 @@ class ai extends em {
               }
             }
           }
-          if (lk.field_d == la.field_M) {
+          if (lk.field_d == LabeledWidgetContainer.field_M) {
             var9Lifetime2 = 2;
             if (jj.a(var9Lifetime2, (byte) -126)) {
               var10Lifetime1 = e.field_c.readUnsignedShort((byte) 25);
@@ -206,7 +206,7 @@ class ai extends em {
           }
           if (kl.field_G == null) {
             if (sg.field_y) {
-              if (la.h(112) <= 30000L) {
+              if (LabeledWidgetContainer.h(112) <= 30000L) {
                 PasswordValidator.field_k = ka.field_G;
               } else {
                 PasswordValidator.field_k = HomingProjectile.field_S;
@@ -270,7 +270,7 @@ class ai extends em {
           var21_int = -30 % ((-19 - param12) / 55);
           pb.a(param13, (byte) -71, param8, param16, param10, param14);
           kc.a(13421772, param3, param1, param20);
-          am.a(param19, (byte) -18, param6, param4);
+          SingleChildWidgetContainer.a(param19, (byte) -18, param6, param4);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

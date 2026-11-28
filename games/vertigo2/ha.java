@@ -171,37 +171,37 @@ final class ha {
           fd.field_s = new UiPanel(0L, dj.field_b);
           pc.field_b = new UiPanel(0L, gn.field_f, me.field_c.toUpperCase());
           IterableNodeHashTable.field_h = new UiPanel[4 + param7];
-          mg.field_S = new nk[param7 + 4][];
+          LabeledWidgetContainer.field_S = new nk[param7 + 4][];
           IterableNodeHashTable.field_h[0] = new UiPanel(0L, fm.field_e, PlayerState.field_b);
-          mg.field_S[0] = new nk[6];
+          LabeledWidgetContainer.field_S[0] = new nk[6];
           for (var17_int = 0; var17_int < 5; var17_int++) {
-            mg.field_S[0][1 + var17_int] = new nk(0L, GameplayScreen.field_l, (UiPanel) null, ja.field_e, eg.field_r[var17_int], gm.field_c[var17_int]);
+            LabeledWidgetContainer.field_S[0][1 + var17_int] = new nk(0L, GameplayScreen.field_l, (UiPanel) null, ja.field_e, eg.field_r[var17_int], gm.field_c[var17_int]);
           }
           if (rc.field_a.length >= 2) {
             IterableNodeHashTable.field_h[1] = new UiPanel(0L, fm.field_e, MusicPatchPcmStream.field_v);
             array$0 = new nk[rc.field_a.length + 1];
-            mg.field_S[1] = array$0;
-            mg.field_S[1][0] = new nk(0L, GameplayScreen.field_l, (UiPanel) null, ja.field_e, (Sprite) null, pp.field_r);
+            LabeledWidgetContainer.field_S[1] = array$0;
+            LabeledWidgetContainer.field_S[1][0] = new nk(0L, GameplayScreen.field_l, (UiPanel) null, ja.field_e, (Sprite) null, pp.field_r);
             for (var17_intLifetime1 = 0; var17_intLifetime1 < rc.field_a.length; var17_intLifetime1++) {
-              mg.field_S[1][var17_intLifetime1 + 1] = new nk(0L, GameplayScreen.field_l, (UiPanel) null, ja.field_e, (Sprite) null, Integer.toString(rc.field_a[var17_intLifetime1]));
+              LabeledWidgetContainer.field_S[1][var17_intLifetime1 + 1] = new nk(0L, GameplayScreen.field_l, (UiPanel) null, ja.field_e, (Sprite) null, Integer.toString(rc.field_a[var17_intLifetime1]));
             }
           }
           IterableNodeHashTable.field_h[2] = new UiPanel(0L, fm.field_e, in.field_f);
-          mg.field_S[2] = new nk[]{new nk(0L, GameplayScreen.field_l, (UiPanel) null, ja.field_e, (Sprite) null, pp.field_r), new nk(0L, GameplayScreen.field_l, (UiPanel) null, ja.field_e, sf.field_a[0], nf.field_w), new nk(0L, GameplayScreen.field_l, (UiPanel) null, ja.field_e, sf.field_a[1], ProxyAuthenticationRequiredException.field_h)};
+          LabeledWidgetContainer.field_S[2] = new nk[]{new nk(0L, GameplayScreen.field_l, (UiPanel) null, ja.field_e, (Sprite) null, pp.field_r), new nk(0L, GameplayScreen.field_l, (UiPanel) null, ja.field_e, sf.field_a[0], nf.field_w), new nk(0L, GameplayScreen.field_l, (UiPanel) null, ja.field_e, sf.field_a[1], ProxyAuthenticationRequiredException.field_h)};
           if (sp.field_O > 1) {
-            IterableNodeHashTable.field_h[3] = new UiPanel(0L, fm.field_e, um.field_H);
+            IterableNodeHashTable.field_h[3] = new UiPanel(0L, fm.field_e, ArrayWidgetContainer.field_H);
             array$1 = new nk[1 + sp.field_O];
-            mg.field_S[3] = array$1;
-            mg.field_S[3][0] = new nk(0L, GameplayScreen.field_l, (UiPanel) null, ja.field_e, (Sprite) null, pp.field_r);
+            LabeledWidgetContainer.field_S[3] = array$1;
+            LabeledWidgetContainer.field_S[3][0] = new nk(0L, GameplayScreen.field_l, (UiPanel) null, ja.field_e, (Sprite) null, pp.field_r);
             for (var17_intLifetime2 = 0; var17_intLifetime2 < sp.field_O; var17_intLifetime2++) {
-              mg.field_S[3][var17_intLifetime2 + 1] = new nk(0L, GameplayScreen.field_l, (UiPanel) null, ja.field_e, (Sprite) null, gl.field_p[var17_intLifetime2]);
+              LabeledWidgetContainer.field_S[3][var17_intLifetime2 + 1] = new nk(0L, GameplayScreen.field_l, (UiPanel) null, ja.field_e, (Sprite) null, gl.field_p[var17_intLifetime2]);
             }
           }
           for (var17_intLifetime3 = 0; var17_intLifetime3 < param7; var17_intLifetime3++) {
             IterableNodeHashTable.field_h[var17_intLifetime3 + 4] = new UiPanel(0L, fm.field_e, md.field_C[var17_intLifetime3]);
             array$2 = new nk[b.a((int) oq.field_G[var17_intLifetime3], 255) + 1];
-            mg.field_S[var17_intLifetime3 + 4] = array$2;
-            mg.field_S[4 + var17_intLifetime3][0] = new nk(0L, GameplayScreen.field_l, (UiPanel) null, ja.field_e, (Sprite) null, pp.field_r);
+            LabeledWidgetContainer.field_S[var17_intLifetime3 + 4] = array$2;
+            LabeledWidgetContainer.field_S[4 + var17_intLifetime3][0] = new nk(0L, GameplayScreen.field_l, (UiPanel) null, ja.field_e, (Sprite) null, pp.field_r);
             for (var18 = 0; (255 & oq.field_G[var17_intLifetime3]) > var18; var18++) {
               if (kh.field_d != null) {
                 if (kh.field_d[var17_intLifetime3] == null) {
@@ -221,18 +221,18 @@ final class ha {
               } else {
                 var20 = null;
               }
-              mg.field_S[4 + var17_intLifetime3][1 + var18] = new nk(0L, GameplayScreen.field_l, (UiPanel) null, ja.field_e, (Sprite) (var19_ref), (String) (var20));
+              LabeledWidgetContainer.field_S[4 + var17_intLifetime3][1 + var18] = new nk(0L, GameplayScreen.field_l, (UiPanel) null, ja.field_e, (Sprite) (var19_ref), (String) (var20));
             }
           }
           for (var17_intLifetime4 = 0; var17_intLifetime4 < param7 + 4; var17_intLifetime4++) {
             if (IterableNodeHashTable.field_h[var17_intLifetime4] != null) {
               IterableNodeHashTable.field_h[var17_intLifetime4].field_qb = 11;
             }
-            if (null != mg.field_S[var17_intLifetime4]) {
-              for (var18Lifetime1 = 0; var18Lifetime1 < mg.field_S[var17_intLifetime4].length; var18Lifetime1++) {
-                if (mg.field_S[var17_intLifetime4][var18Lifetime1] != null &&
-                  null != mg.field_S[var17_intLifetime4][var18Lifetime1].field_Jb) {
-                  mg.field_S[var17_intLifetime4][var18Lifetime1].field_Jb.field_qb = 11;
+            if (null != LabeledWidgetContainer.field_S[var17_intLifetime4]) {
+              for (var18Lifetime1 = 0; var18Lifetime1 < LabeledWidgetContainer.field_S[var17_intLifetime4].length; var18Lifetime1++) {
+                if (LabeledWidgetContainer.field_S[var17_intLifetime4][var18Lifetime1] != null &&
+                  null != LabeledWidgetContainer.field_S[var17_intLifetime4][var18Lifetime1].field_Jb) {
+                  LabeledWidgetContainer.field_S[var17_intLifetime4][var18Lifetime1].field_Jb.field_qb = 11;
                 }
               }
             }
@@ -253,9 +253,9 @@ final class ha {
               !(rc.field_a.length < 2)) && (var18Lifetime2 != 3 ||
               !(sp.field_O <= 1))) {
               fd.field_s.b(IterableNodeHashTable.field_h[var18Lifetime2], param9 + 121);
-              for (var19 = 0; mg.field_S[var18Lifetime2].length > var19; var19++) {
-                if (mg.field_S[var18Lifetime2][var19] != null) {
-                  fd.field_s.b(mg.field_S[var18Lifetime2][var19], 123);
+              for (var19 = 0; LabeledWidgetContainer.field_S[var18Lifetime2].length > var19; var19++) {
+                if (LabeledWidgetContainer.field_S[var18Lifetime2][var19] != null) {
+                  fd.field_s.b(LabeledWidgetContainer.field_S[var18Lifetime2][var19], 123);
                 }
               }
             }

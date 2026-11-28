@@ -115,10 +115,10 @@ final class gl extends InteractiveWidget {
         }
     }
 
-    final void a(int param0, int param1, lk param2, int param3) {
+    final void updatePointer(int param0, int param1, UiWidget param2, int param3) {
         try {
           this.field_E = this.field_E + 1;
-          super.a(param0, param1, param2, param3);
+          super.updatePointer(param0, param1, param2, param3);
         } catch (RuntimeException runtimeException) {
           throw ma.wrapException((Throwable) ((Object) runtimeException), "gl.E(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
@@ -173,7 +173,7 @@ final class gl extends InteractiveWidget {
         }
     }
 
-    final void a(int param0, int param1, int param2, int param3) {
+    final void drawWidget(int param0, int param1, int param2, int param3) {
         RgbSprite var15 = null;
         RgbSprite var16 = null;
         RgbSprite var13 = null;
@@ -183,7 +183,7 @@ final class gl extends InteractiveWidget {
         int var11 = Main.field_T;
         int var9Lifetime1;
         int var10Lifetime1;
-        super.a(param0, param1, -1, param3);
+        super.drawWidget(param0, param1, -1, param3);
         if (param2 != ~param3) {
           return;
         }
@@ -272,7 +272,7 @@ final class gl extends InteractiveWidget {
         }
     }
 
-    final boolean a(int param0, lk param1) {
+    final boolean takeFocus(int param0, UiWidget param1) {
         RuntimeException var3 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;

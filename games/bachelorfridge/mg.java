@@ -14,7 +14,7 @@ final class mg extends AnimationNode {
         if (param0 != 320) {
           return (String) null;
         }
-        return re.field_D;
+        return DropTargetWidgetContainer.field_D;
     }
 
     final boolean isFinished(byte param0) {

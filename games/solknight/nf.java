@@ -9,7 +9,7 @@ final class nf extends ld implements WidgetActivationListener {
     private InteractiveWidget field_T;
     static int field_U;
 
-    nf(i param0, ng param1) {
+    nf(ModalDialogHost param0, ng param1) {
         super(param0, 200, 150);
         Object var3 = null;
         Object stackIn_12_0 = null;
@@ -21,7 +21,7 @@ final class nf extends ld implements WidgetActivationListener {
         UiWidget var4 = null;
         try {
           var3 = null;
-          if (te.field_L == param1) {
+          if (AlphaWidgetContainer.field_L == param1) {
             var3 = NetworkArchiveRequest.field_x;
           } else {
             if (param1 == ne.field_i) {
@@ -38,14 +38,14 @@ final class nf extends ld implements WidgetActivationListener {
               }
             }
           }
-          var4 = new UiWidget((String) (var3), (dg) null);
+          var4 = new UiWidget((String) (var3), (WidgetEventListener) null);
           var4.field_j = 50;
           var4.field_m = 0;
           var4.field_t = this.field_t;
           var4.field_x = 80;
-          var4.field_w = (j) ((Object) new DefaultTextWidgetRenderer(jh.field_g, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true));
-          this.a(var4, 5411);
-          this.field_T = this.a(38, (dg) (this), TextLineMetrics.field_a);
+          var4.field_w = (WidgetRenderer) ((Object) new DefaultTextWidgetRenderer(jh.field_g, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true));
+          this.addChild(var4, 5411);
+          this.field_T = this.a(38, (WidgetEventListener) (this), TextLineMetrics.field_a);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -75,7 +75,7 @@ final class nf extends ld implements WidgetActivationListener {
         try {
           ce.field_b = true;
           ah.field_e = new ci(u.field_b, uc.field_g, param1, k.field_b, DisplayNameSelectionPanel.field_G);
-          u.field_b.b(ah.field_e, -55);
+          u.field_b.showDialog(ah.field_e, -55);
         } catch (RuntimeException runtimeException) {
           throw fc.wrapClientException((Throwable) ((Object) runtimeException), "nf.PA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
@@ -134,7 +134,7 @@ final class nf extends ld implements WidgetActivationListener {
           }
           var8 = new AccountCreationResultPanel(u.field_b, param4);
           var7 = var8;
-          u.field_b.b(var8, -113);
+          u.field_b.showDialog(var8, -113);
           if (Asteroid.a(-1)) {
             var8.h((byte) -63);
             return true;
@@ -143,7 +143,7 @@ final class nf extends ld implements WidgetActivationListener {
           SocketConnector.field_d = param2;
           ma.field_o = gf.field_Z;
           og.field_b = param1;
-          te.field_K = param3;
+          AlphaWidgetContainer.field_K = param3;
           vb.field_j = null;
           uh.field_d = param0;
           return true;
@@ -210,7 +210,7 @@ final class nf extends ld implements WidgetActivationListener {
         }
     }
 
-    private final InteractiveWidget a(int param0, dg param1, String param2) {
+    private final InteractiveWidget a(int param0, WidgetEventListener param1, String param2) {
         InteractiveWidget var4 = null;
         RuntimeException var4_ref = null;
         int var5 = 0;
@@ -223,12 +223,12 @@ final class nf extends ld implements WidgetActivationListener {
         RuntimeException decompiledCaughtException = null;
         try {
           var4 = new InteractiveWidget(param2, param1);
-          var4.field_w = (j) ((Object) new gh());
+          var4.field_w = (WidgetRenderer) ((Object) new gh());
           var5 = -6 + this.field_x;
           this.field_x = this.field_x + param0;
-          var4.b(30, this.field_t - 14 - 16, 15, 0, var5);
-          this.a(var4, 5411);
-          this.d(1);
+          var4.setBounds(30, this.field_t - 14 - 16, 15, 0, var5);
+          this.addChild(var4, 5411);
+          this.refreshLayout(1);
           stackIn_1_0 = var4;
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

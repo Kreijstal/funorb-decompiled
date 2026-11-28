@@ -26,14 +26,14 @@ final class eb {
 
     final static void a(String param0, boolean param1, boolean param2, int param3) {
         cf.a((byte) -107);
-        PcmResampler.field_c.j(300);
-        pi.field_O = new LoginPanel(qf.field_c, (String) null, sg.field_a, param1, param2);
-        PcmOutputWorker.field_e = new el(PcmResampler.field_c, pi.field_O);
+        PcmResampler.field_c.closeAllDialogs(300);
+        DraggableWidgetContainer.field_O = new LoginPanel(qf.field_c, (String) null, sg.field_a, param1, param2);
+        PcmOutputWorker.field_e = new el(PcmResampler.field_c, DraggableWidgetContainer.field_O);
         if (param3 != 10) {
           return;
         }
         try {
-          PcmResampler.field_c.a((byte) -125, (vg) (PcmOutputWorker.field_e));
+          PcmResampler.field_c.showDialog((byte) -125, (UiWidget) (PcmOutputWorker.field_e));
         } catch (RuntimeException runtimeException) {
           throw ie.wrapClientException((Throwable) ((Object) runtimeException), "eb.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
@@ -46,10 +46,10 @@ final class eb {
           return;
         }
         try {
-          var3 = (nl) (dl.field_M.beginForward(param0 ^ -11163));
+          var3 = (nl) (AlphaWidgetContainer.field_M.beginForward(param0 ^ -11163));
           while (var3 != null) {
             rc.a(5, var3, -11659);
-            var3 = (nl) (dl.field_M.nextForward(0));
+            var3 = (nl) (AlphaWidgetContainer.field_M.nextForward(0));
           }
           vi.field_c = ck.a(0, 5, 1, true);
         } catch (RuntimeException runtimeException) {

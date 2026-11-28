@@ -85,11 +85,11 @@ final class ea {
     }
 
     final static void a(int param0) {
-        ti.field_b.l(26756);
+        ti.field_b.closeAllDialogs(26756);
         if (null == ve.field_f) {
           ve.field_f = new lf(ti.field_b, sg.field_n);
         }
-        ti.field_b.a((byte) 81, (UiWidget) (ve.field_f));
+        ti.field_b.showDialog((byte) 81, (UiWidget) (ve.field_f));
         if (param0 > -19) {
           ea.clearStaticReferences((byte) -78);
         }

@@ -47,7 +47,7 @@ final class TextHotspotBounds extends IntrusiveNode {
         String var4_ref_StringLifetime1;
         var8 = SolKnight.field_L ? 1 : 0;
         try {
-          var1 = te.field_N;
+          var1 = AlphaWidgetContainer.field_N;
           var2 = var1.readUnsignedByte(255);
           if (var2 == 0) {
             if (null == lc.field_m) {

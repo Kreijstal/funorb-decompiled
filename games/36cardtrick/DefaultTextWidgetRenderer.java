@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class DefaultTextWidgetRenderer implements ci, TextWidgetRenderer {
+class DefaultTextWidgetRenderer implements WidgetRenderer, TextWidgetRenderer {
     int field_i;
     int field_h;
     int field_b;
@@ -18,7 +18,7 @@ class DefaultTextWidgetRenderer implements ci, TextWidgetRenderer {
     static String[] field_a;
     int field_n;
 
-    private final void a(lk param0, boolean param1) {
+    private final void a(UiWidget param0, boolean param1) {
         RuntimeException stackIn_32_0 = null;
         StringBuilder stackIn_32_1 = null;
         String stackIn_33_2 = null;
@@ -29,13 +29,13 @@ class DefaultTextWidgetRenderer implements ci, TextWidgetRenderer {
         int var5 = 0;
         int var6 = 0;
         int var7 = 0;
-        lk var8 = null;
+        UiWidget var8 = null;
         int var6Lifetime1;
         var7 = Main.field_T;
         try {
           if (!param1) {
-            var8 = (lk) null;
-            this.findTextOffsetAtScreenPosition(-100, -38, -40, 81, (lk) null, 47);
+            var8 = (UiWidget) null;
+            this.findTextOffsetAtScreenPosition(-100, -38, -40, 81, (UiWidget) null, 47);
           }
           if (null == param0.field_s) {
             param0.field_s = (TextLayout) ((Object) new RichTextLayout());
@@ -92,12 +92,12 @@ class DefaultTextWidgetRenderer implements ci, TextWidgetRenderer {
         }
     }
 
-    private final void a(int param0, lk param1, int param2, int param3) {
+    private final void a(int param0, UiWidget param1, int param2, int param3) {
         int discarded$0 = 0;
         try {
           if (param3 != 2) {
-            lk var6 = (lk) null;
-            discarded$0 = this.b((lk) null, -123, -52, -32);
+            UiWidget var6 = (UiWidget) null;
+            discarded$0 = this.b((UiWidget) null, -123, -52, -32);
           }
           this.a(0, 0, (byte) 108, this.field_h, param2, param0, this.field_d, param1);
         } catch (RuntimeException runtimeException) {
@@ -140,7 +140,7 @@ class DefaultTextWidgetRenderer implements ci, TextWidgetRenderer {
         SoftwareRasterizer.drawHorizontalLine(1 + param7, param6 + param4 - 1, -2 + param8, param2);
     }
 
-    String b(int param0, lk param1) {
+    String b(int param0, UiWidget param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         String stackIn_1_0 = null;
@@ -166,7 +166,7 @@ class DefaultTextWidgetRenderer implements ci, TextWidgetRenderer {
         }
     }
 
-    public final void paintSelection(lk param0, byte param1, int param2, int param3, int param4, int param5) {
+    public final void paintSelection(UiWidget param0, byte param1, int param2, int param3, int param4, int param5) {
         int var12 = 0;
         int stackIn_15_0 = 0;
         int stackIn_20_0 = 0;
@@ -193,7 +193,7 @@ class DefaultTextWidgetRenderer implements ci, TextWidgetRenderer {
           if (param5 == param4) {
             return;
           }
-          if (param0.d(69)) {
+          if (param0.isFocused(69)) {
             var17 = this.getTextLayout((byte) -63, param0);
             var18 = var17;
             if (param4 > param5) {
@@ -244,7 +244,7 @@ class DefaultTextWidgetRenderer implements ci, TextWidgetRenderer {
         }
     }
 
-    private final int b(lk param0, int param1) {
+    private final int b(UiWidget param0, int param1) {
         RuntimeException var3 = null;
         int stackIn_3_0 = 0;
         RuntimeException stackIn_6_0 = null;
@@ -271,7 +271,7 @@ class DefaultTextWidgetRenderer implements ci, TextWidgetRenderer {
         }
     }
 
-    public final void paintCaret(int param0, int param1, int param2, byte param3, lk param4) {
+    public final void paintCaret(int param0, int param1, int param2, byte param3, UiWidget param4) {
         int var7 = 0;
         TextLineMetrics var8 = null;
         int var9 = 0;
@@ -293,7 +293,7 @@ class DefaultTextWidgetRenderer implements ci, TextWidgetRenderer {
           if (param3 < 26) {
             return;
           }
-          if (param4.d(111)) {
+          if (param4.isFocused(111)) {
             var13 = this.getTextLayout((byte) -74, param4);
             var14 = var13;
             var7 = var14.getLineIndexForTextOffset(-13453, param1);
@@ -329,7 +329,7 @@ class DefaultTextWidgetRenderer implements ci, TextWidgetRenderer {
         }
     }
 
-    public final int getPreferredWidth(lk param0, byte param1) {
+    public final int getPreferredWidth(UiWidget param0, byte param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int stackIn_1_0 = 0;
@@ -356,9 +356,9 @@ class DefaultTextWidgetRenderer implements ci, TextWidgetRenderer {
         }
     }
 
-    private final int a(lk param0, int param1, int param2, int param3) {
+    private final int a(UiWidget param0, int param1, int param2, int param3) {
         RuntimeException var5 = null;
-        lk var6 = null;
+        UiWidget var6 = null;
         int stackIn_3_0 = 0;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -366,8 +366,8 @@ class DefaultTextWidgetRenderer implements ci, TextWidgetRenderer {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param3 != -3) {
-            var6 = (lk) null;
-            this.b(-108, (lk) null);
+            var6 = (UiWidget) null;
+            this.b(-108, (UiWidget) null);
           }
           stackIn_3_0 = param0.field_o + (param2 - (-this.field_k - param0.field_l) + param1);
           return stackIn_3_0;
@@ -385,7 +385,7 @@ class DefaultTextWidgetRenderer implements ci, TextWidgetRenderer {
         }
     }
 
-    private final void a(int param0, int param1, byte param2, int param3, int param4, int param5, int param6, lk param7) {
+    private final void a(int param0, int param1, byte param2, int param3, int param4, int param5, int param6, UiWidget param7) {
         RuntimeException stackIn_26_0 = null;
         StringBuilder stackIn_26_1 = null;
         String stackIn_27_2 = null;
@@ -454,9 +454,9 @@ class DefaultTextWidgetRenderer implements ci, TextWidgetRenderer {
         }
     }
 
-    public final int getTextOriginY(lk param0, int param1, int param2) {
+    public final int getTextOriginY(UiWidget param0, int param1, int param2) {
         RuntimeException var4 = null;
-        lk var5 = null;
+        UiWidget var5 = null;
         int stackIn_3_0 = 0;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -464,8 +464,8 @@ class DefaultTextWidgetRenderer implements ci, TextWidgetRenderer {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 != -1815612287) {
-            var5 = (lk) null;
-            this.a(5, (lk) null, -31, -114, false);
+            var5 = (UiWidget) null;
+            this.paintWidget(5, (UiWidget) null, -31, -114, false);
           }
           stackIn_3_0 = this.b(param0, 115, param2, 0);
           return stackIn_3_0;
@@ -490,7 +490,7 @@ class DefaultTextWidgetRenderer implements ci, TextWidgetRenderer {
         field_a = null;
     }
 
-    public final TextLayout getTextLayout(byte param0, lk param1) {
+    public final TextLayout getTextLayout(byte param0, UiWidget param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         TextLayout stackIn_7_0 = null;
@@ -524,10 +524,10 @@ class DefaultTextWidgetRenderer implements ci, TextWidgetRenderer {
         }
     }
 
-    public final int getTextAreaWidth(lk param0, int param1) {
+    public final int getTextAreaWidth(UiWidget param0, int param1) {
         int discarded$1 = 0;
         RuntimeException var3 = null;
-        lk var4 = null;
+        UiWidget var4 = null;
         int stackIn_3_0 = 0;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -535,8 +535,8 @@ class DefaultTextWidgetRenderer implements ci, TextWidgetRenderer {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 != 0) {
-            var4 = (lk) null;
-            discarded$1 = this.a((lk) null, 75, 43, -98);
+            var4 = (UiWidget) null;
+            discarded$1 = this.a((UiWidget) null, 75, 43, -98);
           }
           stackIn_3_0 = param0.field_h - (this.field_k + this.field_n);
           return stackIn_3_0;
@@ -558,9 +558,9 @@ class DefaultTextWidgetRenderer implements ci, TextWidgetRenderer {
         this(param0, param1, param1, param2, param2, param3, param4, param5, param6, param7, -1, 2147483647, false);
     }
 
-    private final int b(lk param0, int param1, int param2, int param3) {
+    private final int b(UiWidget param0, int param1, int param2, int param3) {
         RuntimeException var5 = null;
-        lk var6 = null;
+        UiWidget var6 = null;
         int stackIn_3_0 = 0;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -568,8 +568,8 @@ class DefaultTextWidgetRenderer implements ci, TextWidgetRenderer {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 <= 113) {
-            var6 = (lk) null;
-            this.a((lk) null, false);
+            var6 = (UiWidget) null;
+            this.a((UiWidget) null, false);
           }
           stackIn_3_0 = this.field_m + param0.field_i + (param2 + param0.field_m + param3);
           return stackIn_3_0;
@@ -587,7 +587,7 @@ class DefaultTextWidgetRenderer implements ci, TextWidgetRenderer {
         }
     }
 
-    public final int findTextOffsetAtScreenPosition(int param0, int param1, int param2, int param3, lk param4, int param5) {
+    public final int findTextOffsetAtScreenPosition(int param0, int param1, int param2, int param3, UiWidget param4, int param5) {
         RuntimeException var7 = null;
         int stackIn_3_0 = 0;
         RuntimeException stackIn_6_0 = null;
@@ -615,7 +615,7 @@ class DefaultTextWidgetRenderer implements ci, TextWidgetRenderer {
         }
     }
 
-    public void a(int param0, lk param1, int param2, int param3, boolean param4) {
+    public void paintWidget(int param0, UiWidget param1, int param2, int param3, boolean param4) {
         int discarded$0 = 0;
         if (null == this.field_c) {
           return;
@@ -623,15 +623,15 @@ class DefaultTextWidgetRenderer implements ci, TextWidgetRenderer {
         try {
           this.a(param3, param1, param0, param2 ^ 11445);
           if (param2 != 11447) {
-            lk var7 = (lk) null;
-            discarded$0 = this.a((lk) null, -92, 108, -40);
+            UiWidget var7 = (UiWidget) null;
+            discarded$0 = this.a((UiWidget) null, -92, 108, -40);
           }
         } catch (RuntimeException runtimeException) {
           throw ma.wrapException((Throwable) ((Object) runtimeException), "ek.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
-    public final int getPreferredHeight(int param0, lk param1) {
+    public final int getPreferredHeight(int param0, UiWidget param1) {
         RuntimeException var3 = null;
         int stackIn_2_0 = 0;
         int stackIn_4_0 = 0;
@@ -669,7 +669,7 @@ class DefaultTextWidgetRenderer implements ci, TextWidgetRenderer {
         SoftwareRasterizer.intersectClip(param2, param0, param1, param4);
     }
 
-    public final int getTextOriginX(int param0, byte param1, lk param2) {
+    public final int getTextOriginX(int param0, byte param1, UiWidget param2) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int stackIn_1_0 = 0;

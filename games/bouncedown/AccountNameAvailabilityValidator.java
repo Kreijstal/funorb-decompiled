@@ -11,7 +11,7 @@ final class AccountNameAvailabilityValidator extends TextFieldValidator {
 
     final static int f(int param0) {
         int var1 = 18 % ((3 - param0) / 57);
-        return (int)(1000000000L / hb.field_H);
+        return (int)(1000000000L / LabeledWidgetContainer.field_H);
     }
 
     final vf getValidationStatus(String param0, byte param1) {
@@ -117,7 +117,7 @@ final class AccountNameAvailabilityValidator extends TextFieldValidator {
               AccountNameAvailabilityValidator.a((byte) 33, (String) null);
             }
             if (PlatformTaskDispatcher.field_a.startsWith("win") &&
-              lc.a(-29935, param2)) {
+              DequeWidgetContainer.a(-29935, param2)) {
               return;
             }
             try {

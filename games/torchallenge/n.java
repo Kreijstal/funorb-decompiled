@@ -8,7 +8,7 @@ abstract class n extends v {
     private int field_gb;
     static String field_fb;
     private int field_bb;
-    private hi field_eb;
+    private AlphaWidgetContainer field_eb;
     static int[][][] field_kb;
     private p field_mb;
     private UiComponent field_ib;
@@ -27,18 +27,18 @@ abstract class n extends v {
         if (IntrusiveNode.field_c == null) {
           var1 = GameScreen.f((byte) 48);
           MidiPcmStream.field_O = new LoginPanel(var1, (String) null, true, false, false);
-          t.field_b.a((byte) 69, (UiComponent) (bg.field_K));
-          bg.field_K.c(0, MidiPcmStream.field_O);
-          bg.field_K.d(true);
+          t.field_b.showDialog((byte) 69, (UiComponent) (LabeledWidgetContainer.field_K));
+          LabeledWidgetContainer.field_K.c(0, MidiPcmStream.field_O);
+          LabeledWidgetContainer.field_K.d(true);
           var2 = 9 / ((param0 + 2) / 62);
           return;
         }
         IntrusiveNode.field_c.o(77);
         var1Lifetime1 = GameScreen.f((byte) 48);
         MidiPcmStream.field_O = new LoginPanel(var1Lifetime1, (String) null, true, false, false);
-        t.field_b.a((byte) 69, (UiComponent) (bg.field_K));
-        bg.field_K.c(0, MidiPcmStream.field_O);
-        bg.field_K.d(true);
+        t.field_b.showDialog((byte) 69, (UiComponent) (LabeledWidgetContainer.field_K));
+        LabeledWidgetContainer.field_K.c(0, MidiPcmStream.field_O);
+        LabeledWidgetContainer.field_K.d(true);
         var2Lifetime1 = 9 / ((param0 + 2) / 62);
     }
 
@@ -56,7 +56,7 @@ abstract class n extends v {
         field_kb = (int[][][]) null;
     }
 
-    n(si param0, UiComponent param1, int param2, int param3, int param4) {
+    n(ModalDialogHost param0, UiComponent param1, int param2, int param3, int param4) {
         super(param0, 12 + param1.field_p, 12 + param2 + param1.field_l);
         try {
           this.field_bb = param3;
@@ -69,7 +69,7 @@ abstract class n extends v {
         }
     }
 
-    boolean j(int param0) {
+    boolean advanceDialogAnimation(int param0) {
         int fieldTemp$0 = 0;
         int fieldTemp$1 = 0;
         int var3;
@@ -78,7 +78,7 @@ abstract class n extends v {
           if (param0 != 1) {
             return false;
           }
-          return super.j(1);
+          return super.advanceDialogAnimation(1);
         }
         if (v.field_Y == this.field_mb) {
           fieldTemp$0 = this.field_lb + 1;
@@ -94,13 +94,13 @@ abstract class n extends v {
           if (param0 != 1) {
             return false;
           }
-          return super.j(1);
+          return super.advanceDialogAnimation(1);
         }
         if (this.field_mb != ac.field_c) {
           if (param0 != 1) {
             return false;
           }
-          return super.j(1);
+          return super.advanceDialogAnimation(1);
         }
         fieldTemp$1 = this.field_lb + 1;
         this.field_lb = this.field_lb + 1;
@@ -113,10 +113,10 @@ abstract class n extends v {
         if (param0 != 1) {
           return false;
         }
-        return super.j(1);
+        return super.advanceDialogAnimation(1);
     }
 
-    boolean a(int param0, char param1, byte param2, UiComponent param3) {
+    boolean handleKey(int param0, char param1, byte param2, UiComponent param3) {
         RuntimeException var5 = null;
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
@@ -126,15 +126,15 @@ abstract class n extends v {
           if (param2 <= 9) {
             this.k(41);
           }
-          if (super.a(param0, param1, (byte) 33, param3)) {
+          if (super.handleKey(param0, param1, (byte) 33, param3)) {
             return true;
           }
           if (this.field_eb != null) {
             if (98 == param0) {
-              this.field_eb.a(param3, 0);
+              this.field_eb.takeFocus(param3, 0);
             }
             if (99 == param0) {
-              this.field_eb.a(param3, 0);
+              this.field_eb.takeFocus(param3, 0);
               return false;
             }
           }
@@ -170,7 +170,7 @@ abstract class n extends v {
           return;
         }
         if (this.field_mb != ac.field_c) {
-          this.b(0, this.field_ib.field_l + 12 + this.field_gb, 12 + this.field_ib.field_p);
+          this.setCenteredSize(0, this.field_ib.field_l + 12 + this.field_gb, 12 + this.field_ib.field_p);
           this.b(this.field_ib, 18744);
         } else {
           this.field_eb.field_H = 256;
@@ -194,12 +194,12 @@ abstract class n extends v {
             this.field_eb.unlink(true);
           }
           if (param0 == null) {
-            this.field_eb = new hi();
+            this.field_eb = new AlphaWidgetContainer();
           } else {
-            param0.a((byte) 105, 6, param0.field_l, param0.field_p, 6 + this.field_gb);
-            this.field_eb = new hi(param0);
+            param0.setBounds((byte) 105, 6, param0.field_l, param0.field_p, 6 + this.field_gb);
+            this.field_eb = new AlphaWidgetContainer(param0);
           }
-          this.a(param1 - 18744, this.field_eb);
+          this.addChild(param1 - 18744, this.field_eb);
           this.field_ib = null;
           if (param1 == 18744) {
             return;
@@ -258,12 +258,12 @@ abstract class n extends v {
         }
     }
 
-    final boolean h(int param0) {
+    final boolean snapDialogAnimation(int param0) {
         this.d(true);
         if (param0 < 83) {
           return true;
         }
-        return super.h(113);
+        return super.snapDialogAnimation(113);
     }
 
     static {

@@ -25,7 +25,7 @@ final class tb {
           if (!DiskArchiveRequest.field_I.ensureIndexLoaded(0)) {
             return TextLineMetrics.field_d;
           }
-          return dh.field_J;
+          return LabeledWidgetContainer.field_J;
         }
         if (!AccountCreationResultPanel.field_Jb.ensureIndexLoaded(0)) {
           return td.field_o;

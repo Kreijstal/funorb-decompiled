@@ -326,22 +326,22 @@ final class rd {
               var12 = var10.field_g;
               if (ha.field_t != 5) {
                 if (ha.field_t == 6 &&
-                  var11 >= nh.field_E.field_e &&
-                  nh.field_E.field_g <= var12 &&
-                  nh.field_E.field_e + 2 >= var11 &&
-                  var12 <= 2 + nh.field_E.field_g) {
+                  var11 >= LabeledWidgetContainer.field_E.field_e &&
+                  LabeledWidgetContainer.field_E.field_g <= var12 &&
+                  LabeledWidgetContainer.field_E.field_e + 2 >= var11 &&
+                  var12 <= 2 + LabeledWidgetContainer.field_E.field_g) {
                   CrossfadingMidiPcmStream.a(9, 1);
                 } else {
                   if ((ha.field_t == 0 &&
-                    var11 >= nh.field_E.field_e &&
-                    var12 >= nh.field_E.field_g &&
-                    nh.field_E.field_e + 2 >= var11 &&
-                    var12 <= 2 + nh.field_E.field_g ||
+                    var11 >= LabeledWidgetContainer.field_E.field_e &&
+                    var12 >= LabeledWidgetContainer.field_E.field_g &&
+                    LabeledWidgetContainer.field_E.field_e + 2 >= var11 &&
+                    var12 <= 2 + LabeledWidgetContainer.field_E.field_g ||
                     ha.field_t == 14 &&
-                    !(nh.field_E.field_e > var11) &&
-                    !(var12 < -3 + nh.field_E.field_g) &&
-                    !(var11 > nh.field_E.field_e + 4) &&
-                    !(var12 > 4 + nh.field_E.field_g)) && bm.field_c == 0) {
+                    !(LabeledWidgetContainer.field_E.field_e > var11) &&
+                    !(var12 < -3 + LabeledWidgetContainer.field_E.field_g) &&
+                    !(var11 > LabeledWidgetContainer.field_E.field_e + 4) &&
+                    !(var12 > 4 + LabeledWidgetContainer.field_E.field_g)) && bm.field_c == 0) {
                     if (rl.field_c == 0 &&
                       !DebouncedFieldValidator.field_a) {
                       DebouncedFieldValidator.field_a = true;
@@ -369,11 +369,11 @@ final class rd {
                   }
                 }
               } else {
-                var13 = var11 - nh.field_E.field_e;
+                var13 = var11 - LabeledWidgetContainer.field_E.field_e;
                 if (0 > var13) {
                   var13 = -var13;
                 }
-                var14 = var12 - nh.field_E.field_g;
+                var14 = var12 - LabeledWidgetContainer.field_E.field_g;
                 if (var14 < 0) {
                   var14 = -var14;
                 }
@@ -451,7 +451,7 @@ final class rd {
             NanoFrameTimer.a(var4, 0, 0, var3);
             bi.a(var4, -457, var41, var3);
             gn.a(var4, var8Lifetime1, var3, 101, var9Lifetime1, var42, var34);
-            if (14 == ul.field_L ||
+            if (14 == ModalDialog.field_L ||
               tg.field_a &&
               ClientLookupTables.field_d != dn.field_i) {
               var21Lifetime1 = 688 - var3;
@@ -514,8 +514,8 @@ final class rd {
             decompiledFrameRemainder0 = (null == q.field_g ||
               q.field_g.b(96));
             if (decompiledFrameRemainder0) {
-              if (ul.field_L <= 1) {
-                stackIn_140_0 = (ul.field_L == -1) ? 1 : 0;
+              if (ModalDialog.field_L <= 1) {
+                stackIn_140_0 = (ModalDialog.field_L == -1) ? 1 : 0;
               } else {
                 stackIn_140_0 = 1;
               }
@@ -537,7 +537,7 @@ final class rd {
                 var21Lifetime2 = 0;
               }
               if (var21Lifetime2 != 0) {
-                nh.field_P.a((byte) -46);
+                LabeledWidgetContainer.field_P.a((byte) -46);
                 decompiledFrameRemainder0 = false;
               }
               else {

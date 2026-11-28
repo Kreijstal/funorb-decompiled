@@ -192,8 +192,8 @@ class fd extends ja {
           }
           var1 = hn.c(105);
           MidiPcmStream.field_D = new LoginPanel(var1, (String) null, param0, false, false);
-          mb.field_b.b(1, de.field_a);
-          de.field_a.a((byte) -127, (fe) (MidiPcmStream.field_D));
+          mb.field_b.showDialog(1, de.field_a);
+          de.field_a.a((byte) -127, (UiWidget) (MidiPcmStream.field_D));
           de.field_a.o(24619);
           return;
         }
@@ -287,11 +287,11 @@ class fd extends ja {
     }
 
     final static ql a(int param0, int param1, int param2) {
-        if (kn.field_H[param0].length > param2) {
+        if (DequeWidgetContainer.field_H[param0].length > param2) {
           if (param1 != -1) {
             fd.a(93, 0);
           }
-          return kn.field_H[param0][param2];
+          return DequeWidgetContainer.field_H[param0][param2];
         }
         return null;
     }

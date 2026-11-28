@@ -19,7 +19,7 @@ final class gr extends sp implements WidgetActivationListener {
         }
     }
 
-    gr(sd param0, ll param1) {
+    gr(ModalDialogHost param0, ll param1) {
         super(param0, 200, 150);
         Object var3 = null;
         UiWidget var4 = null;
@@ -32,7 +32,7 @@ final class gr extends sp implements WidgetActivationListener {
         try {
           var3 = null;
           if (param1 != b.field_d) {
-            if (sd.field_I != param1) {
+            if (ModalDialogHost.field_I != param1) {
               if (IterableNodeHashTable.field_d == param1) {
                 var3 = w.field_D;
                 this.height = this.height + 30;
@@ -48,14 +48,14 @@ final class gr extends sp implements WidgetActivationListener {
           } else {
             var3 = ko.field_U;
           }
-          var4 = new UiWidget((String) (var3), (uf) null);
+          var4 = new UiWidget((String) (var3), (WidgetEventListener) null);
           var4.width = this.width;
           var4.height = 80;
           var4.y = 50;
           var4.x = 0;
           var4.listener = (WidgetListener) ((Object) new DefaultTextWidgetRenderer(bl.field_N, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true));
-          this.c((byte) 119, var4);
-          this.field_X = this.a(-6, (uf) (this), lr.field_N);
+          this.addChild((byte) 119, var4);
+          this.field_X = this.a(-6, (WidgetEventListener) (this), lr.field_N);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -132,7 +132,7 @@ final class gr extends sp implements WidgetActivationListener {
         this.field_I = false;
     }
 
-    private final InteractiveWidget a(int param0, uf param1, String param2) {
+    private final InteractiveWidget a(int param0, WidgetEventListener param1, String param2) {
         InteractiveWidget var4 = null;
         RuntimeException var4_ref = null;
         int var5 = 0;
@@ -149,8 +149,8 @@ final class gr extends sp implements WidgetActivationListener {
           var5 = param0 + this.height;
           this.height = this.height + 38;
           var4.setBounds(false, 15, var5, 30, -16 + (this.width - 14));
-          this.c((byte) -119, var4);
-          this.g(param0 - 97);
+          this.addChild((byte) -119, var4);
+          this.refreshLayout(param0 - 97);
           stackIn_1_0 = var4;
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

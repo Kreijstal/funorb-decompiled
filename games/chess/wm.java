@@ -110,15 +110,15 @@ abstract class wm {
           gf.field_a[3] = uc.field_f;
           gf.field_a[2] = dn.field_a;
           gf.field_a[0] = pd.field_Jb;
-          bh.field_G = new ci(0L, (ci) null);
+          ArrayWidgetContainer.field_G = new ci(0L, (ci) null);
           hd.field_c = new ci(0L, bo.field_e, ei.field_s);
           ChessBoardState.field_c = new ci(0L, DualLinkNode.field_j, IntrusiveDeque.field_e);
           ib.field_c = new nb(0L, new ci(0L, (ci) null), FrameTimer.field_b, Bzip2State.field_o);
-          bh.field_G.a((byte) 123, hd.field_c);
+          ArrayWidgetContainer.field_G.a((byte) 123, hd.field_c);
           if (bo.field_c) {
-            bh.field_G.a((byte) 127, ChessBoardState.field_c);
+            ArrayWidgetContainer.field_G.a((byte) 127, ChessBoardState.field_c);
           }
-          bh.field_G.a((byte) 123, ib.field_c);
+          ArrayWidgetContainer.field_G.a((byte) 123, ib.field_c);
           ib.field_c.field_Jb.a(EditableTextField.field_P, -2147483648);
           ib.field_c.field_Jb.field_cb = 1;
           var23 = ib.field_c.field_Jb;
@@ -127,7 +127,7 @@ abstract class wm {
           fe.field_h = new ci(0L, EditableTextField.field_P);
           fe.field_h.field_fb = 1;
           ln.field_cc = new ci(0L, sc.field_h, qf.field_h.toUpperCase());
-          he.field_Hb = new ci((long)param2, ma.field_G, em.field_M.toUpperCase());
+          he.field_Hb = new ci((long)param2, DequeWidgetContainer.field_G, em.field_M.toUpperCase());
           oh.field_a = new ci(0L, DefaultTextWidgetRenderer.field_d);
           ue.field_d = new ci(0L, bo.field_e, ql.field_b);
           in.field_b = new ci(0L, e.field_M, de.field_a);
@@ -193,7 +193,7 @@ abstract class wm {
           }
           de.field_d.a((byte) 125, RichTextWidget.field_S);
           sc.field_d = new ci(0L, sc.field_h, kl.field_f.toUpperCase());
-          sc.field_f = new ci(0L, ma.field_G);
+          sc.field_f = new ci(0L, DequeWidgetContainer.field_G);
           ce.field_d = new ci(0L, DefaultTextWidgetRenderer.field_d);
           DisplayNameSelectionPanel.field_M = new ci(0L, wc.field_B, ob.field_r.toUpperCase());
           ba.field_P = new tl[param6 + 4][];

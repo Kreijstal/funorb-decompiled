@@ -16,10 +16,10 @@ final class nh {
           jh.field_R = rd.field_Nb;
           GameSession.field_D = th.field_cb;
           th.field_cb = param0;
-          rh.field_X = sh.field_K;
+          rh.field_X = ModalDialogHost.field_K;
           wm.field_hb = va.field_a;
           m.field_a = ByteStorage.field_f;
-          sh.field_K = 0;
+          ModalDialogHost.field_K = 0;
           b.field_f = mg.field_e;
         }
     }

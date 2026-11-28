@@ -52,7 +52,7 @@ final class tc {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw dd.wrapClientException((Throwable) ((Object) var2_ref), "tc.A(" + param0 + ',' + param1 + ')');
+          throw DraggableWidgetContainer.wrapClientException((Throwable) ((Object) var2_ref), "tc.A(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -139,7 +139,7 @@ final class tc {
             } else {
               stackIn_21_2 = "{...}";
             }
-            throw dd.wrapClientException((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(')').toString());
+            throw DraggableWidgetContainer.wrapClientException((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;

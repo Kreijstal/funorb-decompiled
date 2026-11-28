@@ -3,7 +3,7 @@
  */
 import java.io.*;
 
-final class ec extends ta implements WidgetActivationListener {
+final class ec extends DequeWidgetContainer implements WidgetActivationListener {
     static int field_K;
     static String field_J;
     static int[] field_E;
@@ -36,7 +36,7 @@ final class ec extends ta implements WidgetActivationListener {
           this.field_D = param0;
           return;
         }
-        this.a(44, 28, 45, 89);
+        this.drawWidget(44, 28, 45, 89);
         for (var5Lifetime1 = 0; this.field_D > var5Lifetime1; var5Lifetime1++) {
           var7[var5Lifetime1] = this.field_B[var5Lifetime1];
           var4[var5Lifetime1] = this.field_C[var5Lifetime1];
@@ -47,7 +47,7 @@ final class ec extends ta implements WidgetActivationListener {
     }
 
     ec(dh param0, BitmapFont param1, String param2) {
-        super(0, 0, 288, 0, (td) null);
+        super(0, 0, 288, 0, (WidgetRenderer) null);
         int var4_int = 0;
         this.field_D = 0;
         try {
@@ -55,13 +55,13 @@ final class ec extends ta implements WidgetActivationListener {
           this.field_A = param2;
           this.field_I = param1;
           var4_int = null != this.field_A ? this.field_I.textHeight(this.field_A, 260, this.field_I.field_H) : 0;
-          this.a(0, 0, var4_int + 22, (byte) -90, 288);
+          this.setBounds(0, 0, var4_int + 22, (byte) -90, 288);
         } catch (RuntimeException runtimeException) {
-          throw dd.wrapClientException((Throwable) ((Object) runtimeException), "ec.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw DraggableWidgetContainer.wrapClientException((Throwable) ((Object) runtimeException), "ec.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
-    final InteractiveWidget a(String param0, int param1, ag param2) {
+    final InteractiveWidget a(String param0, int param1, WidgetEventListener param2) {
         InteractiveWidget var4 = null;
         RuntimeException var4_ref = null;
         int var5 = 0;
@@ -74,11 +74,11 @@ final class ec extends ta implements WidgetActivationListener {
         RuntimeException decompiledCaughtException = null;
         try {
           var4 = new InteractiveWidget(param0, param2);
-          var4.field_j = (td) ((Object) new vk());
+          var4.field_j = (WidgetRenderer) ((Object) new vk());
           var5 = -2 + this.field_r;
-          this.a(0, 0, this.field_r - param1, (byte) -90, this.field_m);
-          var4.a(7, var5, 30, (byte) -90, -14 + this.field_m);
-          this.a(var4, (byte) 74);
+          this.setBounds(0, 0, this.field_r - param1, (byte) -90, this.field_m);
+          var4.setBounds(7, var5, 30, (byte) -90, -14 + this.field_m);
+          this.addChild(var4, (byte) 74);
           stackIn_1_0 = var4;
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -97,7 +97,7 @@ final class ec extends ta implements WidgetActivationListener {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw dd.wrapClientException((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
+          throw DraggableWidgetContainer.wrapClientException((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
         }
     }
 
@@ -120,7 +120,7 @@ final class ec extends ta implements WidgetActivationListener {
           }
           var6_intLifetime1 = -66 / ((param0 + 3) / 62);
         } catch (RuntimeException runtimeException) {
-          throw dd.wrapClientException((Throwable) ((Object) runtimeException), "ec.M(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ')');
+          throw DraggableWidgetContainer.wrapClientException((Throwable) ((Object) runtimeException), "ec.M(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ')');
         }
     }
 
@@ -134,7 +134,7 @@ final class ec extends ta implements WidgetActivationListener {
         try {
           var4_int = this.field_D;
           this.a(1 + var4_int, 11339);
-          this.field_B[var4_int] = this.a(param0, gi.a(param2, 15824), (ag) (this));
+          this.field_B[var4_int] = this.a(param0, gi.a(param2, 15824), (WidgetEventListener) (this));
           this.field_C[var4_int] = param1;
           if (param2 == -15858) {
             return;
@@ -151,7 +151,7 @@ final class ec extends ta implements WidgetActivationListener {
           } else {
             stackIn_6_2 = "{...}";
           }
-          throw dd.wrapClientException((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_5_1).append(stackIn_6_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw DraggableWidgetContainer.wrapClientException((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_5_1).append(stackIn_6_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -209,7 +209,7 @@ final class ec extends ta implements WidgetActivationListener {
             } else {
               stackIn_20_2 = "{...}";
             }
-            throw dd.wrapClientException((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(param12).append(',').append(param13).append(')').toString());
+            throw DraggableWidgetContainer.wrapClientException((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(param12).append(',').append(param13).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -248,7 +248,7 @@ final class ec extends ta implements WidgetActivationListener {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw dd.wrapClientException((Throwable) ((Object) var1_ref), "ec.H(" + param0 + ')');
+          throw DraggableWidgetContainer.wrapClientException((Throwable) ((Object) var1_ref), "ec.H(" + param0 + ')');
         }
     }
 
@@ -262,8 +262,8 @@ final class ec extends ta implements WidgetActivationListener {
         }
     }
 
-    final void a(int param0, int param1, int param2, int param3) {
-        super.a(param0, param1, param2, param3);
+    final void drawWidget(int param0, int param1, int param2, int param3) {
+        super.drawWidget(param0, param1, param2, param3);
         this.field_I.drawParagraph(this.field_A, param3 + this.field_s + 14, param0 + this.field_n + 10, -28 + this.field_m, this.field_r, 16777215, -1, 0, 0, this.field_I.field_H);
     }
 

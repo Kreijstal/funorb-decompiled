@@ -125,7 +125,7 @@ abstract class SessionGameApplet extends GameApplet {
           }
           return -107;
         }
-        if (gl.field_y == 11 &&
+        if (AlphaWidgetContainer.field_y == 11 &&
           tb.field_a == 0) {
           BoundedRandomAccessFile.d(-4690);
         }
@@ -147,7 +147,7 @@ abstract class SessionGameApplet extends GameApplet {
             if (!ki.b(true)) {
               ga.a((byte) 94);
             } else {
-              if (gl.field_y == 0) {
+              if (AlphaWidgetContainer.field_y == 0) {
                 discarded$6 = this.a(2625, false, false);
               } else {
                 BufferedSocket.a(true, f.field_a);
@@ -427,7 +427,7 @@ abstract class SessionGameApplet extends GameApplet {
           this.field_p = -31;
         }
         if (!rd.b(70) &&
-          11 != gl.field_y) {
+          11 != AlphaWidgetContainer.field_y) {
           NanoFrameTimer.d(param0 ^ 10019);
         }
         if (null != ga.field_a) {
@@ -454,7 +454,7 @@ abstract class SessionGameApplet extends GameApplet {
           tb.field_a = rl.b((byte) -6);
           if (var3Lifetime1 != 0 &&
             tb.field_a == 0 &&
-            gl.field_y == 11 &&
+            AlphaWidgetContainer.field_y == 11 &&
             !ValidatedTextField.e(false)) {
             BoundedRandomAccessFile.d(-4690);
           }
@@ -466,7 +466,7 @@ abstract class SessionGameApplet extends GameApplet {
         if (tb.field_a != -1 &&
           tb.field_a != 0) {
           if (bi.field_L >= 10) {
-            if (10 <= gl.field_y) {
+            if (10 <= AlphaWidgetContainer.field_y) {
               je.a(-11);
               if (3 == tb.field_a) {
                 gb.a(256, -102, uc.field_e);
@@ -515,12 +515,12 @@ abstract class SessionGameApplet extends GameApplet {
           if (-1 != tb.field_a &&
             0 != tb.field_a) {
             tb.field_a = -1;
-            aj.k(0);
+            DequeWidgetContainer.k(0);
           }
         }
         if (tb.field_a == 0 &&
           !ValidatedTextField.e(false)) {
-          g.field_A = false;
+          DropTargetWidgetContainer.field_A = false;
         }
         if (0 == bi.field_L &&
           LetterTile.e(31)) {
@@ -692,7 +692,7 @@ abstract class SessionGameApplet extends GameApplet {
             if (tb.field_a != -1 &&
               tb.field_a != 0) {
               tb.field_a = -1;
-              aj.k(0);
+              DequeWidgetContainer.k(0);
             }
             if (param2) {
               wi.field_p = false;
@@ -705,7 +705,7 @@ abstract class SessionGameApplet extends GameApplet {
                 } else {
                   oi.field_i = ac.field_j;
                   BoundedRandomAccessFile.d(-4690);
-                  gl.field_y = 10;
+                  AlphaWidgetContainer.field_y = 10;
                   ge.field_x = false;
                 }
               }
@@ -714,7 +714,7 @@ abstract class SessionGameApplet extends GameApplet {
           if (4 == var4) {
             if (!wd.field_g) {
               ge.field_x = true;
-              gl.field_y = 10;
+              AlphaWidgetContainer.field_y = 10;
             } else {
               ki.a((byte) 3, ha.b(75));
             }
@@ -723,11 +723,11 @@ abstract class SessionGameApplet extends GameApplet {
             this.b(-119, false);
           }
           if (var4 == 5) {
-            vl.a((byte) -98, ha.b(74));
+            DraggableWidgetContainer.a((byte) -98, ha.b(74));
           }
           if (var4 == 6 &&
             PasswordValidator.field_n) {
-            gl.field_y = 10;
+            AlphaWidgetContainer.field_y = 10;
           }
           if (7 == var4) {
             uc.a(0, ha.b(param0 - 2534));
@@ -773,7 +773,7 @@ abstract class SessionGameApplet extends GameApplet {
             }
           }
           if (var4 == 15) {
-            gl.field_y = 10;
+            AlphaWidgetContainer.field_y = 10;
           }
           if (var4 == 16) {
             return 1;

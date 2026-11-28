@@ -59,7 +59,7 @@ final class DiskCacheWorker implements Runnable {
           } else {
             stackIn_22_2 = "{...}";
           }
-          throw dd.wrapClientException((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw DraggableWidgetContainer.wrapClientException((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -93,7 +93,7 @@ final class DiskCacheWorker implements Runnable {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw dd.wrapClientException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param2).append(')').toString());
+          throw DraggableWidgetContainer.wrapClientException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -156,12 +156,12 @@ final class DiskCacheWorker implements Runnable {
             if (param2 > -119) {
               return true;
             }
-            if (!sk.a(var4.charAt(0), -46) &&
-              !sk.a(var4.charAt(var4.length() - 1), -46)) {
+            if (!ModalDialogHost.a(var4.charAt(0), -46) &&
+              !ModalDialogHost.a(var4.charAt(var4.length() - 1), -46)) {
               var5 = 0;
               for (var6 = 0; var6 < param1.length(); var6++) {
                 var7 = param1.charAt(var6);
-                if (sk.a((char) var7, -46)) {
+                if (ModalDialogHost.a((char) var7, -46)) {
                   var5++;
                 } else {
                   var5 = 0;
@@ -189,7 +189,7 @@ final class DiskCacheWorker implements Runnable {
           } else {
             stackIn_40_2 = "{...}";
           }
-          throw dd.wrapClientException((Throwable) ((Object) stackIn_39_0), ((StringBuilder) (Object) stackIn_39_1).append(stackIn_40_2).append(',').append(param2).append(')').toString());
+          throw DraggableWidgetContainer.wrapClientException((Throwable) ((Object) stackIn_39_0), ((StringBuilder) (Object) stackIn_39_1).append(stackIn_40_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -221,7 +221,7 @@ final class DiskCacheWorker implements Runnable {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw dd.wrapClientException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
+          throw DraggableWidgetContainer.wrapClientException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
         }
     }
 
@@ -261,7 +261,7 @@ final class DiskCacheWorker implements Runnable {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw dd.wrapClientException((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param3).append(')').toString());
+          throw DraggableWidgetContainer.wrapClientException((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -274,7 +274,7 @@ final class DiskCacheWorker implements Runnable {
             DiskCacheWorker.a(-76, -35, (vg) null);
           }
         } catch (RuntimeException runtimeException) {
-          throw dd.wrapClientException((Throwable) ((Object) runtimeException), "vl.C(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw DraggableWidgetContainer.wrapClientException((Throwable) ((Object) runtimeException), "vl.C(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -362,7 +362,7 @@ final class DiskCacheWorker implements Runnable {
           }
           this.field_c = (Thread) (var2.result);
         } catch (RuntimeException runtimeException) {
-          throw dd.wrapClientException((Throwable) ((Object) runtimeException), "vl.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw DraggableWidgetContainer.wrapClientException((Throwable) ((Object) runtimeException), "vl.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

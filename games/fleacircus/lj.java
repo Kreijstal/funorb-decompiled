@@ -20,21 +20,21 @@ final class lj {
           lj.correctedCurrentTimeMillis((byte) 69);
           var1 = System.currentTimeMillis();
           if (var1 < tg.field_k) {
-            ml.field_P = ml.field_P + (tg.field_k - var1);
+            LabeledWidgetContainer.field_P = LabeledWidgetContainer.field_P + (tg.field_k - var1);
             tg.field_k = var1;
-            return var1 + ml.field_P;
+            return var1 + LabeledWidgetContainer.field_P;
           }
           tg.field_k = var1;
-          return var1 + ml.field_P;
+          return var1 + LabeledWidgetContainer.field_P;
         }
         var1Lifetime1 = System.currentTimeMillis();
         if (var1Lifetime1 >= tg.field_k) {
           tg.field_k = var1Lifetime1;
-          return var1Lifetime1 + ml.field_P;
+          return var1Lifetime1 + LabeledWidgetContainer.field_P;
         }
-        ml.field_P = ml.field_P + (tg.field_k - var1Lifetime1);
+        LabeledWidgetContainer.field_P = LabeledWidgetContainer.field_P + (tg.field_k - var1Lifetime1);
         tg.field_k = var1Lifetime1;
-        return var1Lifetime1 + ml.field_P;
+        return var1Lifetime1 + LabeledWidgetContainer.field_P;
     }
 
     public static void clearStaticReferences(int param0) {

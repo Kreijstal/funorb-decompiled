@@ -574,7 +574,7 @@ final class mi extends ea implements Cloneable {
         sl var9 = null;
         var8 = CrazyCrystals.field_B;
         try {
-          if (null == ab.field_D) {
+          if (null == ModalDialog.field_D) {
             pm.field_d = pm.field_d - 1;
             if (param2 != null) {
               var6_int = param2.getAttributedPlayerMask(false);
@@ -595,13 +595,13 @@ final class mi extends ea implements Cloneable {
                   fn.field_j = fn.field_j + 20;
                   mb.field_g = mb.field_g + 20;
                   if (pm.field_d == 0) {
-                    ol.field_B = ol.field_B | 1 << var7_int;
+                    ModalDialogHost.field_B = ModalDialogHost.field_B | 1 << var7_int;
                   }
                   wd.field_j = wd.field_j + 1;
                   fn.field_j = fn.field_j - ob.field_l;
                 }
               }
-              ol.field_B = ol.field_B | 8;
+              ModalDialogHost.field_B = ModalDialogHost.field_B | 8;
             }
           }
           if (!(param2 instanceof qf) &&

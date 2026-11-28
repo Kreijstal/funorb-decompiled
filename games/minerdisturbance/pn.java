@@ -31,9 +31,9 @@ final class pn implements uj {
           }
           if (null == li.field_a) {
             li.field_a = new int[2 * param0];
-            if (cc.field_L == null ||
-              !(param0 <= cc.field_L.length)) {
-              cc.field_L = new int[param0 * 2];
+            if (ModalDialog.field_L == null ||
+              !(param0 <= ModalDialog.field_L.length)) {
+              ModalDialog.field_L = new int[param0 * 2];
             }
             if (BoundedRandomAccessFile.field_a == null ||
               !(param0 + param2 <= BoundedRandomAccessFile.field_a.length)) {
@@ -46,9 +46,9 @@ final class pn implements uj {
           } else {
             if (li.field_a.length < param0) {
               li.field_a = new int[2 * param0];
-              if (cc.field_L == null ||
-                !(param0 <= cc.field_L.length)) {
-                cc.field_L = new int[param0 * 2];
+              if (ModalDialog.field_L == null ||
+                !(param0 <= ModalDialog.field_L.length)) {
+                ModalDialog.field_L = new int[param0 * 2];
               }
               if (BoundedRandomAccessFile.field_a == null ||
                 !(param0 + param2 <= BoundedRandomAccessFile.field_a.length)) {
@@ -59,8 +59,8 @@ final class pn implements uj {
                 rg.field_ub = new boolean[2 * param0];
               }
             } else {
-              if (cc.field_L == null) {
-                cc.field_L = new int[param0 * 2];
+              if (ModalDialog.field_L == null) {
+                ModalDialog.field_L = new int[param0 * 2];
                 if (BoundedRandomAccessFile.field_a == null ||
                   !(param0 + param2 <= BoundedRandomAccessFile.field_a.length)) {
                   BoundedRandomAccessFile.field_a = new int[2 * (param0 + param2)];
@@ -70,8 +70,8 @@ final class pn implements uj {
                   rg.field_ub = new boolean[2 * param0];
                 }
               } else {
-                if (param0 > cc.field_L.length) {
-                  cc.field_L = new int[param0 * 2];
+                if (param0 > ModalDialog.field_L.length) {
+                  ModalDialog.field_L = new int[param0 * 2];
                   if (BoundedRandomAccessFile.field_a == null ||
                     !(param0 + param2 <= BoundedRandomAccessFile.field_a.length)) {
                     BoundedRandomAccessFile.field_a = new int[2 * (param0 + param2)];
@@ -109,9 +109,9 @@ final class pn implements uj {
             }
             if (null == li.field_a) {
               li.field_a = new int[2 * param0];
-              if (cc.field_L == null ||
-                !(param0 <= cc.field_L.length)) {
-                cc.field_L = new int[param0 * 2];
+              if (ModalDialog.field_L == null ||
+                !(param0 <= ModalDialog.field_L.length)) {
+                ModalDialog.field_L = new int[param0 * 2];
               }
               if (BoundedRandomAccessFile.field_a == null ||
                 !(param0 + param2 <= BoundedRandomAccessFile.field_a.length)) {
@@ -124,9 +124,9 @@ final class pn implements uj {
             } else {
               if (li.field_a.length < param0) {
                 li.field_a = new int[2 * param0];
-                if (cc.field_L == null ||
-                  !(param0 <= cc.field_L.length)) {
-                  cc.field_L = new int[param0 * 2];
+                if (ModalDialog.field_L == null ||
+                  !(param0 <= ModalDialog.field_L.length)) {
+                  ModalDialog.field_L = new int[param0 * 2];
                 }
                 if (BoundedRandomAccessFile.field_a == null ||
                   !(param0 + param2 <= BoundedRandomAccessFile.field_a.length)) {
@@ -137,8 +137,8 @@ final class pn implements uj {
                   rg.field_ub = new boolean[2 * param0];
                 }
               } else {
-                if (cc.field_L == null) {
-                  cc.field_L = new int[param0 * 2];
+                if (ModalDialog.field_L == null) {
+                  ModalDialog.field_L = new int[param0 * 2];
                   if (BoundedRandomAccessFile.field_a == null ||
                     !(param0 + param2 <= BoundedRandomAccessFile.field_a.length)) {
                     BoundedRandomAccessFile.field_a = new int[2 * (param0 + param2)];
@@ -148,8 +148,8 @@ final class pn implements uj {
                     rg.field_ub = new boolean[2 * param0];
                   }
                 } else {
-                  if (param0 > cc.field_L.length) {
-                    cc.field_L = new int[param0 * 2];
+                  if (param0 > ModalDialog.field_L.length) {
+                    ModalDialog.field_L = new int[param0 * 2];
                     if (BoundedRandomAccessFile.field_a == null ||
                       !(param0 + param2 <= BoundedRandomAccessFile.field_a.length)) {
                       BoundedRandomAccessFile.field_a = new int[2 * (param0 + param2)];
@@ -185,9 +185,9 @@ final class pn implements uj {
             }
             if (null == li.field_a) {
               li.field_a = new int[2 * param0];
-              if (cc.field_L == null ||
-                !(param0 <= cc.field_L.length)) {
-                cc.field_L = new int[param0 * 2];
+              if (ModalDialog.field_L == null ||
+                !(param0 <= ModalDialog.field_L.length)) {
+                ModalDialog.field_L = new int[param0 * 2];
               }
               if (BoundedRandomAccessFile.field_a == null ||
                 !(param0 + param2 <= BoundedRandomAccessFile.field_a.length)) {
@@ -203,9 +203,9 @@ final class pn implements uj {
             } else {
               if (li.field_a.length < param0) {
                 li.field_a = new int[2 * param0];
-                if (cc.field_L == null ||
-                  !(param0 <= cc.field_L.length)) {
-                  cc.field_L = new int[param0 * 2];
+                if (ModalDialog.field_L == null ||
+                  !(param0 <= ModalDialog.field_L.length)) {
+                  ModalDialog.field_L = new int[param0 * 2];
                 }
                 if (BoundedRandomAccessFile.field_a == null ||
                   !(param0 + param2 <= BoundedRandomAccessFile.field_a.length)) {
@@ -216,20 +216,20 @@ final class pn implements uj {
                   rg.field_ub = new boolean[2 * param0];
                 }
               } else {
-                if (cc.field_L == null) {
-                  cc.field_L = new int[param0 * 2];
+                if (ModalDialog.field_L == null) {
+                  ModalDialog.field_L = new int[param0 * 2];
                   if (BoundedRandomAccessFile.field_a == null ||
                     !(param0 + param2 <= BoundedRandomAccessFile.field_a.length)) {
                     BoundedRandomAccessFile.field_a = new int[2 * (param0 + param2)];
                   }
                 } else {
-                  if (param0 <= cc.field_L.length) {
+                  if (param0 <= ModalDialog.field_L.length) {
                     if (BoundedRandomAccessFile.field_a == null ||
                       !(param0 + param2 <= BoundedRandomAccessFile.field_a.length)) {
                       BoundedRandomAccessFile.field_a = new int[2 * (param0 + param2)];
                     }
                   } else {
-                    cc.field_L = new int[param0 * 2];
+                    ModalDialog.field_L = new int[param0 * 2];
                     if (BoundedRandomAccessFile.field_a == null ||
                       !(param0 + param2 <= BoundedRandomAccessFile.field_a.length)) {
                       BoundedRandomAccessFile.field_a = new int[2 * (param0 + param2)];
@@ -261,14 +261,14 @@ final class pn implements uj {
         int var1 = 0;
         if (oc.field_f < 224) {
           var1 = oc.field_f % 32;
-          ma.a(param0 - 181, 32 + oc.field_f - var1);
+          DraggableWidgetContainer.a(param0 - 181, 32 + oc.field_f - var1);
           if (param0 != 60) {
             pn.a(-31, -49, 109);
             return;
           }
           return;
         }
-        ma.a(-121, 256);
+        DraggableWidgetContainer.a(-121, 256);
         if (param0 != 60) {
           pn.a(-31, -49, 109);
           return;

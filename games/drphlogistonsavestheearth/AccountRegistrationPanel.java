@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class AccountRegistrationPanel extends pj implements TextHotspotListener, WidgetActivationListener, NameSuggestionListener {
+final class AccountRegistrationPanel extends DequeWidgetContainer implements TextHotspotListener, WidgetActivationListener, NameSuggestionListener {
     private ValidatedTextField field_S;
     private ValidatedTextField field_Q;
     private ValidatedTextField field_K;
@@ -20,10 +20,10 @@ final class AccountRegistrationPanel extends pj implements TextHotspotListener, 
     private ValidatedTextField field_J;
     static RgbSprite field_O;
 
-    private final int a(String param0, int param1, vg param2, byte param3, int param4, String param5, int param6) {
+    private final int a(String param0, int param1, UiWidget param2, byte param3, int param4, String param5, int param6) {
         RuntimeException var8 = null;
         ci var9 = null;
-        dh var10 = null;
+        LabeledWidgetContainer var10 = null;
         int stackIn_3_0 = 0;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -34,14 +34,14 @@ final class AccountRegistrationPanel extends pj implements TextHotspotListener, 
         String stackIn_13_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var10 = new dh(20, param4, param1 + 120, 25, param2, false, 120, 3, DualLinkNode.field_i, 16777215, param0);
+          var10 = new LabeledWidgetContainer(20, param4, param1 + 120, 25, param2, false, 120, 3, DualLinkNode.field_i, 16777215, param0);
           if (param3 > -74) {
             this.field_Q = (ValidatedTextField) null;
           }
-          this.b(var10, (byte) 51);
+          this.addChild(var10, (byte) 51);
           var9 = new ci(((FieldValidatorProvider) ((Object) param2)).getFieldValidator((byte) 36), param5, 126, param4 + var10.field_k, param1 + 50, param6);
-          var9.field_u = (fd) (this);
-          this.b(var9, (byte) 89);
+          var9.field_u = (WidgetEventListener) (this);
+          this.addChild(var9, (byte) 89);
           stackIn_3_0 = var9.field_k + var10.field_k;
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -85,8 +85,8 @@ final class AccountRegistrationPanel extends pj implements TextHotspotListener, 
         }
     }
 
-    private final int a(int param0, vg param1, String param2, int param3, int param4) {
-        dh var6 = null;
+    private final int a(int param0, UiWidget param1, String param2, int param3, int param4) {
+        LabeledWidgetContainer var6 = null;
         RuntimeException var6_ref = null;
         int stackIn_1_0 = 0;
         RuntimeException stackIn_4_0 = null;
@@ -96,8 +96,8 @@ final class AccountRegistrationPanel extends pj implements TextHotspotListener, 
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var6 = new dh(20, param4, param0 + 120, 25, param1, false, 120, 3, DualLinkNode.field_i, param3, param2);
-          this.b(var6, (byte) 127);
+          var6 = new LabeledWidgetContainer(20, param4, param0 + 120, 25, param1, false, 120, 3, DualLinkNode.field_i, param3, param2);
+          this.addChild(var6, (byte) 127);
           stackIn_1_0 = var6.field_k;
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -154,9 +154,9 @@ final class AccountRegistrationPanel extends pj implements TextHotspotListener, 
         }
     }
 
-    final void a(vg param0, int param1, int param2, byte param3) {
+    final void updatePointer(UiWidget param0, int param1, int param2, byte param3) {
         try {
-          super.a(param0, param1, param2, (byte) -128);
+          super.updatePointer(param0, param1, param2, (byte) -128);
           if (param3 >= -127) {
             this.field_J = (ValidatedTextField) null;
           }
@@ -201,7 +201,7 @@ final class AccountRegistrationPanel extends pj implements TextHotspotListener, 
           if (var4 == ai.field_A) {
             return false;
           }
-          if (pi.field_P != var4) {
+          if (DraggableWidgetContainer.field_P != var4) {
             return true;
           }
           return false;
@@ -219,7 +219,7 @@ final class AccountRegistrationPanel extends pj implements TextHotspotListener, 
         }
     }
 
-    final boolean a(int param0, char param1, vg param2, int param3) {
+    final boolean handleKey(int param0, char param1, UiWidget param2, int param3) {
         RuntimeException var5 = null;
         boolean stackIn_9_0 = false;
         boolean stackIn_12_0 = false;
@@ -228,20 +228,20 @@ final class AccountRegistrationPanel extends pj implements TextHotspotListener, 
         String stackIn_18_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (super.a(param0, param1, param2, 86)) {
+          if (super.handleKey(param0, param1, param2, 86)) {
             return true;
           }
           if (param3 < 63) {
             AccountRegistrationPanel.releaseDeclaredStaticReferences(24);
           }
           if (param0 == 98) {
-            stackIn_9_0 = this.a(param2, 65535);
+            stackIn_9_0 = this.focusPreviousChild(param2, 65535);
             return stackIn_9_0;
           }
           if (param0 != 99) {
             return false;
           }
-          stackIn_12_0 = this.a(param2, (byte) 43);
+          stackIn_12_0 = this.focusNextChild(param2, (byte) 43);
           return stackIn_12_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -292,12 +292,12 @@ final class AccountRegistrationPanel extends pj implements TextHotspotListener, 
         return false;
     }
 
-    private final int a(vg param0, int param1, byte param2, int param3, String param4) {
+    private final int a(UiWidget param0, int param1, byte param2, int param3, String param4) {
         int discarded$1 = 0;
         RuntimeException var6 = null;
         gm var7 = null;
         String var8 = null;
-        dh var9 = null;
+        LabeledWidgetContainer var9 = null;
         int stackIn_3_0 = 0;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -306,15 +306,15 @@ final class AccountRegistrationPanel extends pj implements TextHotspotListener, 
         String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var9 = new dh(20, param1, 120 + param3, 25, param0, false, 120, 3, DualLinkNode.field_i, 16777215, param4);
-          this.b(var9, (byte) 62);
+          var9 = new LabeledWidgetContainer(20, param1, 120 + param3, 25, param0, false, 120, 3, DualLinkNode.field_i, 16777215, param4);
+          this.addChild(var9, (byte) 62);
           if (param2 >= -25) {
             var8 = (String) null;
-            discarded$1 = this.a(-113, (vg) null, (String) null, 70, 32);
+            discarded$1 = this.a(-113, (UiWidget) null, (String) null, 70, 32);
           }
           var7 = new gm(((FieldValidatorProvider) ((Object) param0)).getFieldValidator((byte) 21));
-          this.b(var7, (byte) 67);
-          var7.a((-15 + var9.field_k >> 1) + var9.field_m, 15, var9.field_w + var9.field_o + 3, 16535, 15);
+          this.addChild(var7, (byte) 67);
+          var7.setBounds((-15 + var9.field_k >> 1) + var9.field_m, 15, var9.field_w + var9.field_o + 3, 16535, 15);
           stackIn_3_0 = var9.field_k;
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -392,7 +392,7 @@ final class AccountRegistrationPanel extends pj implements TextHotspotListener, 
         }
     }
 
-    private final int a(int param0, vg param1, String param2, int param3, byte param4, String param5) {
+    private final int a(int param0, UiWidget param1, String param2, int param3, byte param4, String param5) {
         RuntimeException var7 = null;
         int stackIn_2_0 = 0;
         int stackIn_4_0 = 0;
@@ -446,17 +446,17 @@ final class AccountRegistrationPanel extends pj implements TextHotspotListener, 
     }
 
     public AccountRegistrationPanel() {
-        super(0, 0, 496, 0, (cg) null);
-        this.field_K = new ValidatedTextField("", (fd) null, 12);
-        this.field_P = new ValidatedTextField("", (fd) null, 100);
-        this.field_J = new ValidatedTextField("", (fd) null, 100);
-        this.field_S = new ValidatedTextField("", (fd) null, 20);
-        this.field_ab = new ValidatedTextField("", (fd) null, 20);
-        this.field_Q = new ValidatedTextField("", (fd) null, 3);
+        super(0, 0, 496, 0, (WidgetRenderer) null);
+        this.field_K = new ValidatedTextField("", (WidgetEventListener) null, 12);
+        this.field_P = new ValidatedTextField("", (WidgetEventListener) null, 100);
+        this.field_J = new ValidatedTextField("", (WidgetEventListener) null, 100);
+        this.field_S = new ValidatedTextField("", (WidgetEventListener) null, 20);
+        this.field_ab = new ValidatedTextField("", (WidgetEventListener) null, 20);
+        this.field_Q = new ValidatedTextField("", (WidgetEventListener) null, 3);
         int var1 = 1;
-        this.field_T = new nc("", (fd) null, var1 != 0);
-        this.field_R = new InteractiveWidget(IntrusiveDeque.field_d, (fd) null);
-        this.field_L = new InteractiveWidget(ej.field_c, (fd) null);
+        this.field_T = new nc("", (WidgetEventListener) null, var1 != 0);
+        this.field_R = new InteractiveWidget(IntrusiveDeque.field_d, (WidgetEventListener) null);
+        this.field_L = new InteractiveWidget(ej.field_c, (WidgetEventListener) null);
         this.field_K.field_v = bj.field_c;
         this.field_P.field_v = fm.field_i;
         this.field_J.field_v = PasswordValidator.field_r;
@@ -471,17 +471,17 @@ final class AccountRegistrationPanel extends pj implements TextHotspotListener, 
         this.field_ab.setFieldValidator(new MatchingFieldValidator(this.field_ab, this.field_S), (byte) -57);
         this.field_Q.setFieldValidator(new AgeValidator(this.field_Q), (byte) -57);
         this.field_R.field_E = false;
-        this.field_R.field_l = (cg) ((Object) new ie());
-        this.field_L.field_l = (cg) ((Object) new uk());
-        this.field_K.field_l = (cg) ((Object) new mj(10000536));
+        this.field_R.field_l = (WidgetRenderer) ((Object) new ie());
+        this.field_L.field_l = (WidgetRenderer) ((Object) new uk());
+        this.field_K.field_l = (WidgetRenderer) ((Object) new mj(10000536));
         mj dupTemp$0 = new mj(10000536);
-        this.field_J.field_l = (cg) ((Object) dupTemp$0);
-        this.field_P.field_l = (cg) ((Object) dupTemp$0);
-        this.field_Q.field_l = (cg) ((Object) new mj(10000536));
-        this.field_T.field_l = (cg) ((Object) new ue());
+        this.field_J.field_l = (WidgetRenderer) ((Object) dupTemp$0);
+        this.field_P.field_l = (WidgetRenderer) ((Object) dupTemp$0);
+        this.field_Q.field_l = (WidgetRenderer) ((Object) new mj(10000536));
+        this.field_T.field_l = (WidgetRenderer) ((Object) new ue());
         dm dupTemp$1 = new dm(10000536);
-        this.field_ab.field_l = (cg) ((Object) dupTemp$1);
-        this.field_S.field_l = (cg) ((Object) dupTemp$1);
+        this.field_ab.field_l = (WidgetRenderer) ((Object) dupTemp$1);
+        this.field_S.field_l = (WidgetRenderer) ((Object) dupTemp$1);
         String var2 = a.a(5044, TextHotspotBounds.field_p, new String[]{this.l(15), this.i(-87)});
         int var3 = 20;
         var3 = var3 + this.a(170, this.field_P, BufferedRandomAccessFile.field_c, 16777215, var3);
@@ -490,30 +490,30 @@ final class AccountRegistrationPanel extends pj implements TextHotspotListener, 
         var3 = var3 + (this.a(var3, this.field_ab, cf.field_a, 170, (byte) -105, ob.field_d) + 5);
         var3 = var3 + (this.a(var3, this.field_K, hj.field_h, 170, (byte) -83, vh.field_b) + 5);
         var3 = var3 + this.a(this.field_Q, var3, (byte) -77, 170, ri.field_c);
-        dh var4 = new dh(46, var3, -90 + this.field_w, 25, this.field_T, true, -120 + this.field_w, 5, u.field_d, 11579568, GameAppletShell.field_d);
-        this.b(var4, (byte) 105);
+        LabeledWidgetContainer var4 = new LabeledWidgetContainer(46, var3, -90 + this.field_w, 25, this.field_T, true, -120 + this.field_w, 5, u.field_d, 11579568, GameAppletShell.field_d);
+        this.addChild(var4, (byte) 105);
         var3 = var3 + var4.field_k;
         DefaultTextWidgetRenderer var5 = new DefaultTextWidgetRenderer(DualLinkNode.field_i, 0, 0, 0, 0, 16777215, -1, 0, 0, DualLinkNode.field_i.field_x, -1, 2147483647, true);
         this.field_Z = new RichTextWidget(var2, var5);
         this.field_Z.field_v = "";
         this.field_Z.a(we.field_d, 0, -64);
         this.field_Z.a(we.field_d, 1, -73);
-        this.field_Z.field_u = (fd) (this);
+        this.field_Z.field_u = (WidgetEventListener) (this);
         this.field_Z.b(0, this.field_w - 90, 46, var3);
         var3 = var3 + (this.field_Z.field_k + 15);
-        this.b(this.field_Z, (byte) 81);
+        this.addChild(this.field_Z, (byte) 81);
         int var6 = 4;
         int var7 = 200;
-        this.field_R.a(var3, 40, -var7 + 496 >> 1, 16535, var7);
-        this.field_L.a(15 + var3, 40, var6 + 3, 16535, 60);
-        this.field_L.field_u = (fd) (this);
-        this.field_R.field_u = (fd) (this);
-        this.b(this.field_R, (byte) 105);
-        this.b(this.field_L, (byte) 39);
+        this.field_R.setBounds(var3, 40, -var7 + 496 >> 1, 16535, var7);
+        this.field_L.setBounds(15 + var3, 40, var6 + 3, 16535, 60);
+        this.field_L.field_u = (WidgetEventListener) (this);
+        this.field_R.field_u = (WidgetEventListener) (this);
+        this.addChild(this.field_R, (byte) 105);
+        this.addChild(this.field_L, (byte) 39);
         this.field_V = new NameSuggestionsPanel((NameSuggestionListener) (this));
-        this.field_V.a(this.field_K.field_m + 20, 150, this.field_K.field_o + this.field_K.field_w + 60, 16535, -60 - this.field_K.field_w + (this.field_w - this.field_K.field_o));
-        this.b(this.field_V, (byte) 118);
-        this.a(0, var6 + (55 + var3), 0, 16535, 496);
+        this.field_V.setBounds(this.field_K.field_m + 20, 150, this.field_K.field_o + this.field_K.field_w + 60, 16535, -60 - this.field_K.field_w + (this.field_w - this.field_K.field_o));
+        this.addChild(this.field_V, (byte) 118);
+        this.setBounds(0, var6 + (55 + var3), 0, 16535, 496);
     }
 
     static {

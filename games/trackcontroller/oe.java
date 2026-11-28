@@ -104,8 +104,8 @@ final class oe {
 
     final static void a(boolean param0, Archive param1, Archive param2, Archive param3, int param4) {
         try {
-          sa.field_Q = c.a("", param4 + 59176);
-          sa.field_Q.a(false, true);
+          LabeledWidgetContainer.field_Q = c.a("", param4 + 59176);
+          LabeledWidgetContainer.field_Q.a(false, true);
           ak.a(param3, param1, param2, 127);
           jh.a(-128);
           IndexedSpriteState.field_h = DiskArchiveStore.field_f;

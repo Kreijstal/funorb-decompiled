@@ -33,7 +33,7 @@ final class MixedSupport072 extends HashNode {
         }
         try {
           integerLocal1 = 2;
-          if (UiComponentPart029.renderingSupport009State0005 == bitmapFontArgument1) {
+          if (DraggableWidgetContainer.renderingSupport009State0005 == bitmapFontArgument1) {
             integerLocal1 = 1;
           }
           bitmapFontArgument1.drawRightAligned(stringArgument4, -integerLocal1 + integerArgument6, -integerLocal1 + integerArgument3, 0, -1);

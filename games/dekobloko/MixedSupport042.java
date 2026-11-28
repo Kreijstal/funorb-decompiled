@@ -117,7 +117,7 @@ final class MixedSupport042 {
 
     final static void performAction0537(int integerArgument1, int integerArgument2, int integerArgument3, String stringArgument4, int integerArgument5, BitmapFont bitmapFontArgument6) {
         int integerLocal1 = 2;
-        if (UiComponentPart029.renderingSupport009State0005 == bitmapFontArgument6) {
+        if (DraggableWidgetContainer.renderingSupport009State0005 == bitmapFontArgument6) {
           integerLocal1 = 1;
         }
         bitmapFontArgument6.drawString(stringArgument4, -integerLocal1 + integerArgument5, integerArgument1 - integerLocal1, 0, -1);

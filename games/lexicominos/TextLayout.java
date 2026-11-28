@@ -201,7 +201,7 @@ abstract class TextLayout {
               cb.field_t = ProxyAuthenticationRequiredException.a(var11, (byte) -48);
               BufferedRandomAccessFile.field_l = ig.field_a.readUnsignedByte(true);
               AgeValidator.field_m = gg.field_b;
-              if (fa.field_b.a((byte) 45) == jf.field_M) {
+              if (fa.field_b.a((byte) 45) == LabeledWidgetContainer.field_M) {
                 NameSuggestionsPanel.field_J.a(RichTextLayout.c(-14047), 4096);
               } else {
                 if (fa.field_b.a((byte) 45) == ej.field_a) {
@@ -231,11 +231,11 @@ abstract class TextLayout {
               if (jd.field_c > 0) {
                 MidiPcmStream.field_F = true;
               }
-              SpriteGeometry.field_q.setCipherSeed(l.field_F, param1 ^ -48);
+              SpriteGeometry.field_q.setCipherSeed(DropTargetWidgetContainer.field_F, param1 ^ -48);
               for (var8Lifetime1 = 0; var8Lifetime1 < 4; var8Lifetime1++) {
-                l.field_F[var8Lifetime1] = l.field_F[var8Lifetime1] + 50;
+                DropTargetWidgetContainer.field_F[var8Lifetime1] = DropTargetWidgetContainer.field_F[var8Lifetime1] + 50;
               }
-              ig.field_a.setCipherSeed(l.field_F, 16);
+              ig.field_a.setCipherSeed(DropTargetWidgetContainer.field_F, 16);
               stackIn_73_0 = pg.field_d;
               return stackIn_73_0;
             }
@@ -268,9 +268,9 @@ abstract class TextLayout {
                 return stackIn_93_0;
               }
               var6_intLifetime2 = nj.field_a;
-              nj.field_a = mg.field_y;
+              nj.field_a = SingleChildWidgetContainer.field_y;
               fb.field_p = true;
-              mg.field_y = var6_intLifetime2;
+              SingleChildWidgetContainer.field_y = var6_intLifetime2;
             }
             stackIn_96_0 = -1;
             return stackIn_96_0;

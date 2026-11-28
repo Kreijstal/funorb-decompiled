@@ -62,7 +62,7 @@ final class df {
             for (var6_int = 0; var6_int < var3; var6_int++) {
               var9[var6_int] = ci.field_b[vg.a(255, (int) var20[var6_int])];
             }
-            var1[var2] = new RgbSprite(uc.field_fb, eh.field_b, mg.field_x[var2], rg.field_c[var2], pb.field_h[var2], bd.field_m[var2], var21);
+            var1[var2] = new RgbSprite(uc.field_fb, eh.field_b, SingleChildWidgetContainer.field_x[var2], rg.field_c[var2], pb.field_h[var2], bd.field_m[var2], var21);
           } else {
             var22 = MidiPcmStream.field_o[var2];
             var16 = new int[var3];
@@ -71,7 +71,7 @@ final class df {
             for (var7 = 0; var3 > var7; var7++) {
               var6[var7] = FrameTimer.a(vg.a(255, (int) var22[var7]) << 24, ci.field_b[vg.a(255, (int) var20[var7])]);
             }
-            var1[var2] = (RgbSprite) ((Object) new ArgbSprite(uc.field_fb, eh.field_b, mg.field_x[var2], rg.field_c[var2], pb.field_h[var2], bd.field_m[var2], var16));
+            var1[var2] = (RgbSprite) ((Object) new ArgbSprite(uc.field_fb, eh.field_b, SingleChildWidgetContainer.field_x[var2], rg.field_c[var2], pb.field_h[var2], bd.field_m[var2], var16));
           }
         }
         GzipDecompressor.a(12428);
@@ -142,7 +142,7 @@ final class df {
           this.field_b = null;
         }
         this.field_i = PcmOutputWorker.field_g;
-        this.field_f = jf.field_P;
+        this.field_f = LabeledWidgetContainer.field_P;
         this.field_j = GzipDecompressor.field_c;
         this.field_h = oe.field_b;
         this.field_e = tf.field_a;

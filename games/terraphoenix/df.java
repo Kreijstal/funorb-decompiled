@@ -38,7 +38,7 @@ final class df extends InteractiveWidget {
         }
     }
 
-    private df(String param0, WidgetActionListener param1, sc param2) {
+    private df(String param0, WidgetActionListener param1, WidgetEventListener param2) {
         super(param0, param1, param2);
         try {
           this.listener = FrameTimer.field_c.field_q;
@@ -47,7 +47,7 @@ final class df extends InteractiveWidget {
         }
     }
 
-    df(String param0, sc param1, boolean param2) {
+    df(String param0, WidgetEventListener param1, boolean param2) {
         this(param0, param1);
         try {
           this.field_C = param2 ? true : false;
@@ -56,7 +56,7 @@ final class df extends InteractiveWidget {
         }
     }
 
-    private df(String param0, sc param1) {
+    private df(String param0, WidgetEventListener param1) {
         this(param0, FrameTimer.field_c.field_n, param1);
         try {
           this.listener = FrameTimer.field_c.field_q;

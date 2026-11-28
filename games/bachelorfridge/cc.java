@@ -189,7 +189,7 @@ final class cc {
             var54[var13] = var14Lifetime2;
             var64[var13] = var15Lifetime2;
           }
-          for (var13Lifetime1 = 0; var13Lifetime1 < lq.field_y; var13Lifetime1++) {
+          for (var13Lifetime1 = 0; var13Lifetime1 < ArrayWidgetContainer.field_y; var13Lifetime1++) {
             var14Lifetime1 = PizzaPartySpecial.field_q[var13Lifetime1];
             var15Lifetime1 = param4.field_C[var14Lifetime1];
             var16 = param4.field_h[var14Lifetime1];

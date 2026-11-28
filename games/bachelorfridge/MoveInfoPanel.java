@@ -916,7 +916,7 @@ final class MoveInfoPanel {
         }
         stackIn_52_0 = this.field_g[param5];
         if (var10 == 0) {
-          stackIn_53_1 = hl.field_D[var9];
+          stackIn_53_1 = AlphaWidgetContainer.field_D[var9];
         } else {
           stackIn_53_1 = hh.field_b[var9];
         }

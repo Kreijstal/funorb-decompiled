@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class hb implements cg {
+final class hb implements WidgetRenderer {
     private int field_h;
     private int field_e;
     private int field_l;
@@ -20,8 +20,8 @@ final class hb implements cg {
     static int field_q;
     private int field_j;
 
-    public final void a(boolean param0, int param1, vg param2, int param3, int param4) {
-        vg stackIn_3_0 = null;
+    public final void paintWidget(boolean param0, int param1, UiWidget param2, int param3, int param4) {
+        UiWidget stackIn_3_0 = null;
         RuntimeException stackIn_19_0 = null;
         StringBuilder stackIn_19_1 = null;
         String stackIn_20_2 = null;
@@ -34,7 +34,7 @@ final class hb implements cg {
         nc var11 = null;
         try {
           if (param2 instanceof nc) {
-            stackIn_3_0 = (vg) (param2);
+            stackIn_3_0 = (UiWidget) (param2);
           } else {
             stackIn_3_0 = null;
           }
@@ -181,7 +181,7 @@ final class hb implements cg {
 
     final static void a(int param0, java.awt.Canvas param1) {
         tb.a(param0 ^ 4, (java.awt.Component) ((Object) param1));
-        pi.a((java.awt.Component) ((Object) param1), 1);
+        DraggableWidgetContainer.a((java.awt.Component) ((Object) param1), 1);
         if (param0 != -5) {
           return;
         }
@@ -212,7 +212,7 @@ final class hb implements cg {
           var8 = 85 % ((param0 - 53) / 54);
           var7 = new a(param5);
           var9 = new a(param3);
-          stackIn_1_0 = pj.a(param1, param4, var9, var7, 0, param2, param6);
+          stackIn_1_0 = DequeWidgetContainer.a(param1, param4, var9, var7, 0, param2, param6);
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

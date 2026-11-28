@@ -9,14 +9,14 @@ final class cg extends WidgetContainer implements WidgetActivationListener {
     private InteractiveWidget field_F;
     static String field_I;
 
-    final void a(int param0, int param1, int param2, int param3) {
+    final void drawWidget(int param0, int param1, int param2, int param3) {
         if (param1 > -106) {
           return;
         }
         int var5 = param0 + this.x;
         int var6 = this.y + param3;
         qk.field_e.drawParagraph(WidgetContainer.field_A, 20 + var5, 20 + var6, -40 + this.width, this.height - 50, 16777215, -1, 1, 0, qk.field_e.field_s);
-        super.a(param0, -125, param2, param3);
+        super.drawWidget(param0, -125, param2, param3);
     }
 
     final static void f(byte param0) {
@@ -99,7 +99,7 @@ final class cg extends WidgetContainer implements WidgetActivationListener {
         }
     }
 
-    final boolean a(char param0, UiWidget param1, int param2, int param3) {
+    final boolean handleKey(char param0, UiWidget param1, int param2, int param3) {
         RuntimeException var5 = null;
         boolean stackIn_5_0 = false;
         boolean stackIn_8_0 = false;
@@ -108,17 +108,17 @@ final class cg extends WidgetContainer implements WidgetActivationListener {
         String stackIn_14_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (super.a(param0, param1, param2, param3)) {
+          if (super.handleKey(param0, param1, param2, param3)) {
             return true;
           }
           if (param3 == 98) {
-            stackIn_5_0 = this.a(48, param1);
+            stackIn_5_0 = this.focusPreviousChild(48, param1);
             return stackIn_5_0;
           }
           if (param3 != 99) {
             return false;
           }
-          stackIn_8_0 = this.a(param1, (byte) 100);
+          stackIn_8_0 = this.focusNextChild(param1, (byte) 100);
           return stackIn_8_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -136,9 +136,9 @@ final class cg extends WidgetContainer implements WidgetActivationListener {
 
     public cg() {
         super(0, 0, 476, 225, (WidgetActionListener) null);
-        this.field_F = new InteractiveWidget(IndexedSpriteState.field_j, (sc) null);
-        this.field_G = new InteractiveWidget(sl.field_f, (sc) null);
-        this.field_J = new InteractiveWidget(aj.field_c, (sc) null);
+        this.field_F = new InteractiveWidget(IndexedSpriteState.field_j, (WidgetEventListener) null);
+        this.field_G = new InteractiveWidget(sl.field_f, (WidgetEventListener) null);
+        this.field_J = new InteractiveWidget(aj.field_c, (WidgetEventListener) null);
         ic var1 = new ic();
         this.field_F.listener = (WidgetActionListener) ((Object) var1);
         this.field_G.listener = (WidgetActionListener) ((Object) var1);
@@ -146,17 +146,17 @@ final class cg extends WidgetContainer implements WidgetActivationListener {
         int var2 = 4;
         int var3 = 326;
         int var4 = -var2 + var3 >> 1;
-        this.field_G.a(-var2 + (this.height - 48), (byte) 48, var4, this.width - var3 >> 1, 30);
-        this.field_J.a(this.height - 48 - var2, (byte) 51, var4, var4 + (-var3 + this.width >> 1) + var2, 30);
-        this.field_F.a(-(2 * var2) - 78 + this.height, (byte) 111, var3, this.width - var3 >> 1, 30);
-        this.field_G.field_r = (sc) (this);
-        this.field_F.field_r = (sc) (this);
-        this.field_J.field_r = (sc) (this);
+        this.field_G.setBounds(-var2 + (this.height - 48), (byte) 48, var4, this.width - var3 >> 1, 30);
+        this.field_J.setBounds(this.height - 48 - var2, (byte) 51, var4, var4 + (-var3 + this.width >> 1) + var2, 30);
+        this.field_F.setBounds(-(2 * var2) - 78 + this.height, (byte) 111, var3, this.width - var3 >> 1, 30);
+        this.field_G.field_r = (WidgetEventListener) (this);
+        this.field_F.field_r = (WidgetEventListener) (this);
+        this.field_J.field_r = (WidgetEventListener) (this);
         this.field_F.field_x = sj.field_d;
         this.field_J.field_x = qf.field_b;
-        this.b((byte) 95, this.field_G);
-        this.b((byte) 95, this.field_F);
-        this.b((byte) 95, this.field_J);
+        this.addChild((byte) 95, this.field_G);
+        this.addChild((byte) 95, this.field_F);
+        this.addChild((byte) 95, this.field_J);
     }
 
     static {

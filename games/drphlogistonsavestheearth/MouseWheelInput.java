@@ -56,7 +56,7 @@ abstract class MouseWheelInput {
           if (param2 != -85) {
             MouseWheelInput.clearStaticReferences((byte) -77);
           }
-          stackIn_3_0 = pj.a((String) null, 0, param0, param1, param2 + 85, 0, false);
+          stackIn_3_0 = DequeWidgetContainer.a((String) null, 0, param0, param1, param2 + 85, 0, false);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

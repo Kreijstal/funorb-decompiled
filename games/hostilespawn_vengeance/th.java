@@ -70,7 +70,7 @@ final class th extends le {
             stackIn_2_0 = null;
             return (BinaryBitmapFont) (stackIn_2_0);
           }
-          var2 = new BinaryBitmapFont(param1, field_Jb, nh.field_O, TextInputField.field_X, ConfirmedEmailAvailabilityValidator.field_r, ja.field_e);
+          var2 = new BinaryBitmapFont(param1, field_Jb, LabeledWidgetContainer.field_O, TextInputField.field_X, ConfirmedEmailAvailabilityValidator.field_r, ja.field_e);
           uj.d(-63);
           if (param0 != -5427) {
             var3 = (String) null;

@@ -163,7 +163,7 @@ final class PcmResampler {
                   SoftwareRasterizer.addRadialGlow(var10 << 4, var11 << 4, Math.abs(-SectorCacheStore.field_e + 50) + 24 << 4, SectorCacheStore.field_e, VolumeRampingMidiPcmStream.field_bb);
                 }
                 if (0 < eh.field_g) {
-                  var12_ref_bd__ = ng.field_p[nh.field_H];
+                  var12_ref_bd__ = ng.field_p[LabeledWidgetContainer.field_H];
                   if (var12_ref_bd__ != null) {
                     if (cg.field_b >= var12_ref_bd__.length) {
                       cg.field_b = 0;
@@ -175,8 +175,8 @@ final class PcmResampler {
                     if (ClientLookupTables.field_d.length <= dn.field_b) {
                       dn.field_b = 0;
                     }
-                    if (ClientLookupTables.field_d == od.field_G &&
-                      nh.field_H == 0) {
+                    if (ClientLookupTables.field_d == DropTargetWidgetContainer.field_G &&
+                      LabeledWidgetContainer.field_H == 0) {
                       dn.field_b = 0;
                     }
                     ClientLookupTables.field_d[dn.field_b].a(true, 128, (int)var13_double, var10, var11);
@@ -252,7 +252,7 @@ final class PcmResampler {
                                 } else {
                                   if (var11Lifetime1 != 23) {
                                     if (var11Lifetime1 == 25) {
-                                      var26 = vd.field_y[var8.field_w][var8.field_z % vd.field_y[var8.field_w].length];
+                                      var26 = DequeWidgetContainer.field_y[var8.field_w][var8.field_z % DequeWidgetContainer.field_y[var8.field_w].length];
                                       var26.a(true, 128, (int)var8.field_c, -12 + var3, -12 + var4);
                                     } else {
                                       if (var11Lifetime1 != 27) {

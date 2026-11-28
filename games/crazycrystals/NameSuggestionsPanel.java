@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class NameSuggestionsPanel extends og implements WidgetActivationListener {
+final class NameSuggestionsPanel extends DequeWidgetContainer implements WidgetActivationListener {
     private String[] field_B;
     private InteractiveWidget[] field_D;
     private NameSuggestionListener field_E;
@@ -46,7 +46,7 @@ final class NameSuggestionsPanel extends og implements WidgetActivationListener 
         }
     }
 
-    final boolean a(int param0, int param1, qm param2, char param3) {
+    final boolean handleKey(int param0, int param1, UiWidget param2, char param3) {
         RuntimeException var5 = null;
         boolean stackIn_5_0 = false;
         boolean stackIn_9_0 = false;
@@ -55,17 +55,17 @@ final class NameSuggestionsPanel extends og implements WidgetActivationListener 
         String stackIn_13_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (super.a(param0, param1, param2, param3)) {
+          if (super.handleKey(param0, param1, param2, param3)) {
             return true;
           }
           if (param0 == 98) {
-            stackIn_5_0 = this.a((byte) -73, param2);
+            stackIn_5_0 = this.focusPreviousChild((byte) -73, param2);
             return stackIn_5_0;
           }
           if (param0 != 99) {
             return false;
           }
-          stackIn_9_0 = this.a(param2, -25911);
+          stackIn_9_0 = this.focusNextChild(param2, -25911);
           return stackIn_9_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -254,8 +254,8 @@ final class NameSuggestionsPanel extends og implements WidgetActivationListener 
         }
     }
 
-    final void a(int param0, byte param1, int param2, int param3) {
-        super.a(param0, (byte) -30, param2, param3);
+    final void drawWidget(int param0, byte param1, int param2, int param3) {
+        super.drawWidget(param0, (byte) -30, param2, param3);
         if (param1 > -12) {
           this.field_E = (NameSuggestionListener) null;
         }
@@ -279,7 +279,7 @@ final class NameSuggestionsPanel extends og implements WidgetActivationListener 
     }
 
     NameSuggestionsPanel(NameSuggestionListener param0) {
-        super(0, 0, 0, 0, (wo) null);
+        super(0, 0, 0, 0, (WidgetRenderer) null);
         try {
           this.field_E = param0;
         } catch (RuntimeException runtimeException) {
@@ -311,16 +311,16 @@ final class NameSuggestionsPanel extends og implements WidgetActivationListener 
             var4 = new ok(ai.field_h, 0, 1);
             this.field_D = new InteractiveWidget[var3_int + 1];
             for (var5 = param1; var3_int > var5; var5++) {
-              this.field_D[var5] = new InteractiveWidget(this.field_B[var5], (bi) (this));
-              this.field_D[var5].field_i = (wo) ((Object) var4);
+              this.field_D[var5] = new InteractiveWidget(this.field_B[var5], (WidgetEventListener) (this));
+              this.field_D[var5].field_i = (WidgetRenderer) ((Object) var4);
               this.field_D[var5].field_t = fg.field_l;
-              this.field_D[var5].a(15, 0, 16 * var5 + 20, 80, (byte) -52);
-              this.b(this.field_D[var5], param1 + 60);
+              this.field_D[var5].setBounds(15, 0, 16 * var5 + 20, 80, (byte) -52);
+              this.addChild(this.field_D[var5], param1 + 60);
             }
-            this.field_D[var3_int] = new InteractiveWidget(qo.field_p, (bi) (this));
-            this.field_D[var3_int].field_i = (wo) ((Object) var4);
-            this.field_D[var3_int].a(15, 0, 20 + (1 + var3_int) * 16, 100, (byte) -52);
-            this.b(this.field_D[var3_int], param1 - 118);
+            this.field_D[var3_int] = new InteractiveWidget(qo.field_p, (WidgetEventListener) (this));
+            this.field_D[var3_int].field_i = (WidgetRenderer) ((Object) var4);
+            this.field_D[var3_int].setBounds(15, 0, 20 + (1 + var3_int) * 16, 100, (byte) -52);
+            this.addChild(this.field_D[var3_int], param1 - 118);
             return;
           }
           this.field_B = null;

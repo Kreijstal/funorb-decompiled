@@ -229,7 +229,7 @@ final class gi extends pn implements Cloneable {
             pm.field_b.a(128, 12 * (param2 + param5), (param3 + param0) * 12, 0, (byte) -111);
             var10Lifetime1 += 4;
           }
-          if (ab.field_D == null) {
+          if (ModalDialog.field_D == null) {
             var11 = q.field_a[var15.field_u];
             dupTemp$0 = q.field_a[var15.field_u];
             fieldTemp$1 = dupTemp$0.field_m;

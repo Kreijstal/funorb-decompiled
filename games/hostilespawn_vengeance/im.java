@@ -4,7 +4,7 @@
 final class im {
     static String field_b;
     static RgbSprite[] field_a;
-    static gg field_e;
+    static ModalDialogHost field_e;
     static String field_d;
     static int field_f;
     static IndexedSprite field_g;

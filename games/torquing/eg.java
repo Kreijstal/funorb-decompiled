@@ -50,7 +50,7 @@ final class eg extends am {
           WidgetContainer.field_z = param1;
           LoginRequestBuilder.field_b = param4;
           aq.field_b = param3;
-          ln.field_D = param0;
+          ModalDialogHost.field_D = param0;
           kc.field_x = param2;
           if (!param5) {
             field_v = (ResourceArchive) null;

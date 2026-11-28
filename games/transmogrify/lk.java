@@ -14,10 +14,10 @@ final class lk {
         }
         long var1 = System.currentTimeMillis();
         if (var1 < DiskArchiveRequest.field_y) {
-          vl.field_B = vl.field_B + (DiskArchiveRequest.field_y - var1);
+          DraggableWidgetContainer.field_B = DraggableWidgetContainer.field_B + (DiskArchiveRequest.field_y - var1);
         }
         DiskArchiveRequest.field_y = var1;
-        return var1 + vl.field_B;
+        return var1 + DraggableWidgetContainer.field_B;
     }
 
     public static void resetStaticState(byte param0) {

@@ -77,7 +77,7 @@ final class pj extends db {
         return new q(param0);
     }
 
-    pj(vl param0, UiWidget param1) {
+    pj(ModalDialogHost param0, UiWidget param1) {
         super(param0, param1, 33, 20, 30);
     }
 

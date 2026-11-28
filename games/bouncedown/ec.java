@@ -64,7 +64,7 @@ final class ec extends mh {
         }
     }
 
-    final void a(int param0, lk param1) {
+    final void a(int param0, UiWidget param1) {
         try {
           super.a(param0, param1);
         } catch (RuntimeException runtimeException) {
@@ -72,7 +72,7 @@ final class ec extends mh {
         }
     }
 
-    ec(pf param0, lk param1) {
+    ec(ModalDialogHost param0, UiWidget param1) {
         super(param0, param1, 33, 20, 30);
     }
 

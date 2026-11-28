@@ -12,7 +12,7 @@ final class nh extends v implements WidgetActivationListener {
     static int[] field_db;
     static int field_bb;
 
-    private final InteractiveWidget a(String param0, int param1, gg param2) {
+    private final InteractiveWidget a(String param0, int param1, WidgetEventListener param2) {
         InteractiveWidget var4 = null;
         RuntimeException var4_ref = null;
         int var5 = 0;
@@ -25,15 +25,15 @@ final class nh extends v implements WidgetActivationListener {
         RuntimeException decompiledCaughtException = null;
         try {
           var4 = new InteractiveWidget(param0, param2);
-          var4.field_q = (j) ((Object) new cl());
+          var4.field_q = (WidgetRenderer) ((Object) new cl());
           var5 = -6 + this.field_l;
           this.field_l = this.field_l + 38;
-          var4.a((byte) 117, 15, 30, -16 + this.field_p - 14, var5);
+          var4.setBounds((byte) 117, 15, 30, -16 + this.field_p - 14, var5);
           if (param1 != 2) {
             field_cb = (IntrusiveDeque) null;
           }
-          this.a(0, var4);
-          this.b((byte) 112);
+          this.addChild(0, var4);
+          this.refreshLayout((byte) 112);
           stackIn_3_0 = var4;
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -84,10 +84,10 @@ final class nh extends v implements WidgetActivationListener {
         int var5Lifetime1;
         int var5Lifetime2;
         if (param0) {
-          if (bg.field_Q[param2] < bg.field_Q[param3]) {
+          if (LabeledWidgetContainer.field_Q[param2] < LabeledWidgetContainer.field_Q[param3]) {
             return true;
           }
-          if (bg.field_Q[param2] > bg.field_Q[param3]) {
+          if (LabeledWidgetContainer.field_Q[param2] > LabeledWidgetContainer.field_Q[param3]) {
             return false;
           }
           if (ProxyAuthenticationRequiredException.field_b[param2] < ProxyAuthenticationRequiredException.field_b[param3]) {
@@ -115,10 +115,10 @@ final class nh extends v implements WidgetActivationListener {
         if (ProxyAuthenticationRequiredException.field_b[param2] > ProxyAuthenticationRequiredException.field_b[param3]) {
           return false;
         }
-        if (bg.field_Q[param2] < bg.field_Q[param3]) {
+        if (LabeledWidgetContainer.field_Q[param2] < LabeledWidgetContainer.field_Q[param3]) {
           return true;
         }
-        if (bg.field_Q[param2] > bg.field_Q[param3]) {
+        if (LabeledWidgetContainer.field_Q[param2] > LabeledWidgetContainer.field_Q[param3]) {
           return false;
         }
         if (param1 == 0) {
@@ -176,7 +176,7 @@ final class nh extends v implements WidgetActivationListener {
         }
     }
 
-    nh(si param0, ll param1) {
+    nh(ModalDialogHost param0, ll param1) {
         super(param0, 200, 150);
         Object var3 = null;
         UiComponent var4 = null;
@@ -205,14 +205,14 @@ final class nh extends v implements WidgetActivationListener {
           } else {
             var3 = GameClientBase.field_z;
           }
-          var4 = new UiComponent((String) (var3), (gg) null);
+          var4 = new UiComponent((String) (var3), (WidgetEventListener) null);
           var4.field_m = 0;
           var4.field_i = 50;
           var4.field_p = this.field_p;
           var4.field_l = 80;
-          var4.field_q = (j) ((Object) new DefaultTextWidgetRenderer(GameApplet.field_f, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true));
-          this.a(0, var4);
-          this.field_gb = this.a(ab.field_n, 2, (gg) (this));
+          var4.field_q = (WidgetRenderer) ((Object) new DefaultTextWidgetRenderer(GameApplet.field_f, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true));
+          this.addChild(0, var4);
+          this.field_gb = this.a(ab.field_n, 2, (WidgetEventListener) (this));
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

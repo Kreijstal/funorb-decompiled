@@ -46,7 +46,7 @@ final class fa extends UiWidget {
         DelayedPcmStream.field_p = DelayedPcmStream.field_p + 1;
     }
 
-    final void a(int param0, int param1, byte param2, int param3) {
+    final void drawWidget(int param0, int param1, byte param2, int param3) {
         if (param0 != 0) {
           return;
         }
@@ -157,8 +157,8 @@ final class fa extends UiWidget {
         return var3;
     }
 
-    final void a(int param0, int param1, byte param2, int param3, int param4) {
-        super.a(param0, param1, (byte) 124, param3, param4);
+    final void setBounds(int param0, int param1, byte param2, int param3, int param4) {
+        super.setBounds(param0, param1, (byte) 124, param3, param4);
         this.e((byte) 34);
         if (param2 <= 115) {
           this.field_w = 40;
@@ -171,10 +171,10 @@ final class fa extends UiWidget {
         this.field_u = param7;
         this.field_B = param5;
         this.field_C = param4;
-        this.a(param0, param2, (byte) 118, param3, param1);
+        this.setBounds(param0, param2, (byte) 118, param3, param1);
     }
 
-    final void a(int param0, int param1, UiWidget param2, int param3) {
+    final void updatePointer(int param0, int param1, UiWidget param2, int param3) {
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         String stackIn_11_2 = null;

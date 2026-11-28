@@ -30,7 +30,7 @@ final class lg {
     q field_v;
     static String field_l;
     private int field_A;
-    static ji field_w;
+    static ModalDialogHost field_w;
     static String field_h;
 
     final void a(int param0, boolean param1) {

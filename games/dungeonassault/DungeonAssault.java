@@ -81,13 +81,13 @@ public final class DungeonAssault extends NetworkGameClient {
               }
             }
           } else {
-            if (fm.field_a == dg.field_H) {
+            if (fm.field_a == LabeledWidgetContainer.field_H) {
               pk.field_t = pk.field_t + 1;
               if (pk.field_t == 16) {
                 if (tl.field_d) {
                   LoginPanel.b(false);
                 } else {
-                  bj.i(81);
+                  DropTargetWidgetContainer.i(81);
                 }
                 gm.field_d = null;
                 fm.field_a = bn.field_n;
@@ -116,7 +116,7 @@ public final class DungeonAssault extends NetworkGameClient {
                     AccountRequestState.a((byte) 114);
                   }
                 }
-                fm.field_a = ii.field_F;
+                fm.field_a = DequeWidgetContainer.field_F;
               }
             }
           }
@@ -132,10 +132,10 @@ public final class DungeonAssault extends NetworkGameClient {
             var9.field_v = GzipDecompressor.a(0, new Random());
             for (var4 = 0; 49 > var4; var4++) {
               stackIn_112_0 = 0;
-              stackIn_112_1 = oi.b(0, 5);
+              stackIn_112_1 = DraggableWidgetContainer.b(0, 5);
               if (stackIn_112_0 == stackIn_112_1 &&
                 var9.field_h[var4].field_a == 0) {
-                var9.field_h[var4] = new DungeonTileState(ji.a(37, false, 4));
+                var9.field_h[var4] = new DungeonTileState(ModalDialogHost.a(37, false, 4));
               }
             }
             if (null == gm.field_d) {
@@ -167,7 +167,7 @@ public final class DungeonAssault extends NetworkGameClient {
             } else {
               var4_ref_Random = new Random();
               var10.field_v = GzipDecompressor.a(0, var4_ref_Random);
-              var10.field_h = da.a(var10.field_v, (byte) 71, var4_ref_Random);
+              var10.field_h = SingleChildWidgetContainer.a(var10.field_v, (byte) 71, var4_ref_Random);
               if (ed.c(true)) {
                 gm.field_d = new PlayerDungeonProfile();
                 gm.field_d.field_L = var10.field_h;
@@ -419,7 +419,7 @@ public final class DungeonAssault extends NetworkGameClient {
                 for (var5Lifetime4 = 0; var5Lifetime4 < 8; var5Lifetime4++) {
                   var15[var5Lifetime4] = mp.a(var15[var5Lifetime4], var16[var5Lifetime4]);
                 }
-                rf.field_S = true;
+                ModalDialog.field_S = true;
                 continue scanLoop1;
               }
               if (hc.field_c == 55) {
@@ -736,7 +736,7 @@ public final class DungeonAssault extends NetworkGameClient {
           InstructionsScreen.clearStaticReferences((byte) -106);
           BoundedRandomAccessFile.b((byte) 56);
           qd.a(true);
-          ji.clearDeclaredStaticReferences((byte) -98);
+          ModalDialogHost.clearDeclaredStaticReferences((byte) -98);
           AccountCreationResultPanel.discardDeclaredStaticReferences(-71);
           wi.discardDeclaredStaticReferences((byte) -97);
           jk.releaseDeclaredStaticReferences(-18554);
@@ -796,12 +796,12 @@ public final class DungeonAssault extends NetworkGameClient {
           jn.resetStaticState(1);
           im.clearStaticReferences(-1);
           TextLayout.a((byte) -24);
-          lm.clearStaticReferences((byte) -123);
+          UiWidget.clearStaticReferences((byte) -123);
           InteractiveWidget.b(!param0);
-          da.clearDeclaredStaticReferences(6);
+          SingleChildWidgetContainer.clearDeclaredStaticReferences(6);
           sj.releaseDeclaredStaticReferences((byte) -10);
-          rf.clearStaticReferences(param0);
-          ii.clearDeclaredStaticReferences((byte) -21);
+          ModalDialog.clearStaticReferences(param0);
+          DequeWidgetContainer.clearDeclaredStaticReferences((byte) -21);
           dj.a((byte) 113);
           am.a(30111);
           VorbisFloor.clearStaticReferences();
@@ -834,7 +834,7 @@ public final class DungeonAssault extends NetworkGameClient {
           ti.clearStaticReferences(true);
           sh.clearStaticReferences(false);
           ArchiveRequest.d(21);
-          dg.clearStaticReferences(false);
+          LabeledWidgetContainer.clearStaticReferences(false);
           ValidatedTextField.clearDeclaredStaticReferences((byte) -41);
           EditableTextField.resetStaticState(4);
           hf.clearDeclaredStaticReferences(0);
@@ -860,8 +860,8 @@ public final class DungeonAssault extends NetworkGameClient {
           RichTextLayout.clearStaticReferences((byte) -34);
           DirectByteStorage.clearStaticReferences(124);
           bp.a(-1);
-          oi.releaseDeclaredStaticReferences(119);
-          bj.h(31029);
+          DraggableWidgetContainer.releaseDeclaredStaticReferences(119);
+          DropTargetWidgetContainer.h(31029);
           ad.clearStaticReferences(1);
           IterableNodeHashTable.clearStaticReferences(true);
           SecondaryNodeDeque.clearStaticReferences(20);
@@ -890,7 +890,7 @@ public final class DungeonAssault extends NetworkGameClient {
           mc.clearDeclaredStaticReferences(24);
           ic.releaseDeclaredStaticReferences(4741);
           dk.clearStaticReferences((byte) -107);
-          sd.clearStaticReferences(false);
+          AlphaWidgetContainer.clearStaticReferences(false);
           al.clearStaticReferences((byte) 17);
           fn.clearDeclaredStaticReferences(1);
           mj.clearStaticReferences(127);

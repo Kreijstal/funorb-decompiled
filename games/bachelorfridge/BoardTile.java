@@ -119,7 +119,7 @@ class BoardTile {
             SoftwareRasterizer.darkenRectangle(BitPacketBuffer.field_n.field_a.field_kb, BitPacketBuffer.field_n.field_a.field_rb, BitPacketBuffer.field_n.field_a.field_sb, BitPacketBuffer.field_n.field_a.field_p);
             BitPacketBuffer.field_n.field_a.a(param0, 7802);
           }
-          hl.a(0, param0);
+          AlphaWidgetContainer.a(0, param0);
           return;
         }
         BoardTile.renderInterfaceLayers(true, (byte) 28);
@@ -127,7 +127,7 @@ class BoardTile {
           SoftwareRasterizer.darkenRectangle(BitPacketBuffer.field_n.field_a.field_kb, BitPacketBuffer.field_n.field_a.field_rb, BitPacketBuffer.field_n.field_a.field_sb, BitPacketBuffer.field_n.field_a.field_p);
           BitPacketBuffer.field_n.field_a.a(param0, 7802);
         }
-        hl.a(0, param0);
+        AlphaWidgetContainer.a(0, param0);
     }
 
     final int computeTileChecksum(int param0) {

@@ -77,7 +77,7 @@ final class fm {
           return df.field_e;
         }
         if (param1 == 19) {
-          return bj.field_F;
+          return DropTargetWidgetContainer.field_F;
         }
         if (param1 == 20) {
           return DebouncedFieldValidator.field_c;
@@ -267,7 +267,7 @@ final class fm {
         if (param0 > -115) {
           field_i = 2;
         }
-        stackIn_6_0 = (null != na.field_D) && (na.field_D.i(32) != null);
+        stackIn_6_0 = (null != na.field_D) && (na.field_D.getTopOpenDialog(32) != null);
         return stackIn_6_0;
     }
 

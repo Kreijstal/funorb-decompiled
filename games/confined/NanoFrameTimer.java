@@ -128,9 +128,9 @@ final class NanoFrameTimer extends FrameTimer {
             var3_int = ri.a(cf.field_cb, 69, hd.field_c, rn.field_e, wg.field_a);
             var4 = 3 + var3_int;
             dl.field_c = new String[var4];
-            la.field_T = new int[var4];
+            LabeledWidgetContainer.field_T = new int[var4];
             for (var5 = 0; var5 < var4; var5++) {
-              la.field_T[var5] = -1;
+              LabeledWidgetContainer.field_T[var5] = -1;
             }
             uc.field_ab = new int[2];
             for (var5 = 0; var3_int > var5; var5++) {
@@ -138,26 +138,26 @@ final class NanoFrameTimer extends FrameTimer {
             }
             dl.field_c[var4 - 3] = "";
             dl.field_c[-2 + var4] = nl.field_e;
-            la.field_T[var4 - 2] = 0;
+            LabeledWidgetContainer.field_T[var4 - 2] = 0;
             uc.field_ab[0] = 4;
-            dl.field_c[var4 - 1] = s.field_J;
-            la.field_T[var4 - 1] = 1;
+            dl.field_c[var4 - 1] = DropTargetWidgetContainer.field_J;
+            LabeledWidgetContainer.field_T[var4 - 1] = 1;
             uc.field_ab[1] = 5;
           } else if (ea.field_a == 1) {
             var3_int = ri.a(cf.field_cb, 21, hd.field_c, rn.field_e, wg.field_a);
             var4 = var3_int + 2;
-            la.field_T = new int[var4];
+            LabeledWidgetContainer.field_T = new int[var4];
             dl.field_c = new String[var4];
             for (var5 = 0; var5 < var4; var5++) {
-              la.field_T[var5] = -1;
+              LabeledWidgetContainer.field_T[var5] = -1;
             }
             uc.field_ab = new int[1];
             for (var5 = 0; var5 < var3_int; var5++) {
               dl.field_c[var5] = cf.field_cb[var5];
             }
             dl.field_c[-2 + var4] = "";
-            dl.field_c[var4 - 1] = s.field_J;
-            la.field_T[-1 + var4] = 0;
+            dl.field_c[var4 - 1] = DropTargetWidgetContainer.field_J;
+            LabeledWidgetContainer.field_T[-1 + var4] = 0;
             uc.field_ab[0] = 5;
           } else if (ea.field_a != 2) {
             if (3 == ea.field_a) {
@@ -167,34 +167,34 @@ final class NanoFrameTimer extends FrameTimer {
                 var3_int = ri.a(cf.field_cb, -113, IntrusiveNodeHashTable.field_d, rn.field_e, wg.field_a);
               }
               var4 = 2 + var3_int;
-              la.field_T = new int[var4];
+              LabeledWidgetContainer.field_T = new int[var4];
               dl.field_c = new String[var4];
               for (var5 = 0; var5 < var4; var5++) {
-                la.field_T[var5] = -1;
+                LabeledWidgetContainer.field_T[var5] = -1;
               }
               uc.field_ab = new int[1];
               for (var5 = 0; var3_int > var5; var5++) {
                 dl.field_c[var5] = cf.field_cb[var5];
               }
               dl.field_c[var4 - 2] = "";
-              dl.field_c[var4 - 1] = s.field_J;
-              la.field_T[var4 - 1] = 0;
+              dl.field_c[var4 - 1] = DropTargetWidgetContainer.field_J;
+              LabeledWidgetContainer.field_T[var4 - 1] = 0;
               uc.field_ab[0] = 5;
             } else if (ea.field_a == 4) {
               var3_int = ri.a(cf.field_cb, 118, sf.field_s, rn.field_e, wg.field_a);
               var4 = 2 + var3_int;
-              la.field_T = new int[var4];
+              LabeledWidgetContainer.field_T = new int[var4];
               dl.field_c = new String[var4];
               for (var5 = 0; var5 < var4; var5++) {
-                la.field_T[var5] = -1;
+                LabeledWidgetContainer.field_T[var5] = -1;
               }
               uc.field_ab = new int[1];
               for (var5 = 0; var3_int > var5; var5++) {
                 dl.field_c[var5] = cf.field_cb[var5];
               }
               dl.field_c[-2 + var4] = "";
-              dl.field_c[-1 + var4] = s.field_J;
-              la.field_T[-1 + var4] = 0;
+              dl.field_c[-1 + var4] = DropTargetWidgetContainer.field_J;
+              LabeledWidgetContainer.field_T[-1 + var4] = 0;
               uc.field_ab[0] = 5;
             } else {
               if (ea.field_a != 5) {
@@ -202,10 +202,10 @@ final class NanoFrameTimer extends FrameTimer {
               }
               var3_int = ri.a(cf.field_cb, -120, StageDirector.field_A, rn.field_e, wg.field_a);
               var4 = 3 + var3_int;
-              la.field_T = new int[var4];
+              LabeledWidgetContainer.field_T = new int[var4];
               dl.field_c = new String[var4];
               for (var5 = 0; var4 > var5; var5++) {
-                la.field_T[var5] = -1;
+                LabeledWidgetContainer.field_T[var5] = -1;
               }
               uc.field_ab = new int[2];
               for (var5 = 0; var3_int > var5; var5++) {
@@ -213,10 +213,10 @@ final class NanoFrameTimer extends FrameTimer {
               }
               dl.field_c[var4 - 3] = "";
               dl.field_c[-2 + var4] = SecondaryNodeDequeIterator.field_a;
-              la.field_T[-2 + var4] = 0;
+              LabeledWidgetContainer.field_T[-2 + var4] = 0;
               uc.field_ab[0] = 3;
-              dl.field_c[-1 + var4] = s.field_J;
-              la.field_T[var4 - 1] = 1;
+              dl.field_c[-1 + var4] = DropTargetWidgetContainer.field_J;
+              LabeledWidgetContainer.field_T[var4 - 1] = 1;
               uc.field_ab[1] = 5;
             }
           } else {
@@ -248,12 +248,12 @@ final class NanoFrameTimer extends FrameTimer {
             if (var4 == -1) {
               throw new IllegalStateException();
             }
-            fj.field_s = new String[var4];
-            lj.a(cf.field_cb, 0, fj.field_s, 0, var4);
+            UiWidget.field_s = new String[var4];
+            lj.a(cf.field_cb, 0, UiWidget.field_s, 0, var4);
             tk.field_e = new String[-var4 + (var3_int - 1)];
             lj.a(cf.field_cb, var4 + 1, tk.field_e, 0, -var4 + var3_int - 1);
-            if (fj.field_s.length > jc.field_d.length) {
-              stackIn_58_0 = fj.field_s.length;
+            if (UiWidget.field_s.length > jc.field_d.length) {
+              stackIn_58_0 = UiWidget.field_s.length;
             } else {
               stackIn_58_0 = jc.field_d.length;
             }
@@ -265,16 +265,16 @@ final class NanoFrameTimer extends FrameTimer {
             }
             var6 = stackIn_61_0;
             var7 = var5 + 7 + var6;
-            la.field_T = new int[var7];
+            LabeledWidgetContainer.field_T = new int[var7];
             dl.field_c = new String[var7];
             for (var8 = 0; var7 > var8; var8++) {
-              la.field_T[var8] = -1;
+              LabeledWidgetContainer.field_T[var8] = -1;
             }
             dl.field_c[1] = AccountServiceResult.field_d;
             uc.field_ab = new int[2];
-            la.field_T[1] = 0;
+            LabeledWidgetContainer.field_T[1] = 0;
             dl.field_c[0] = qa.field_d;
-            la.field_T[3] = 1;
+            LabeledWidgetContainer.field_T[3] = 1;
             uc.field_ab[1] = 2;
             dl.field_c[2] = LightningArc.field_mb;
             dl.field_c[5] = "";
@@ -284,15 +284,15 @@ final class NanoFrameTimer extends FrameTimer {
             for (var8Lifetime2 = 0; var5 > var8Lifetime2; var8Lifetime2++) {
               stackIn_68_0 = dl.field_c;
               stackIn_68_1 = 6 + var8Lifetime2;
-              if (var8Lifetime2 + (fj.field_s.length - var5) < 0) {
+              if (var8Lifetime2 + (UiWidget.field_s.length - var5) < 0) {
                 stackIn_69_2 = "";
               } else {
-                stackIn_69_2 = fj.field_s[-var5 + var8Lifetime2 + fj.field_s.length];
+                stackIn_69_2 = UiWidget.field_s[-var5 + var8Lifetime2 + UiWidget.field_s.length];
               }
               stackIn_68_0[stackIn_68_1] = stackIn_69_2;
             }
             dl.field_c[var5 + 6] = null;
-            la.field_T[6 + var5] = -2;
+            LabeledWidgetContainer.field_T[6 + var5] = -2;
             for (var8Lifetime3 = 0; var6 > var8Lifetime3; var8Lifetime3++) {
               stackIn_74_0 = dl.field_c;
               stackIn_74_1 = var8Lifetime3 + (var5 + 7);
@@ -303,14 +303,14 @@ final class NanoFrameTimer extends FrameTimer {
               }
               stackIn_74_0[stackIn_74_1] = stackIn_75_2;
             }
-            ga.field_M = ri.correctedCurrentTimeMillis(-3);
+            DequeWidgetContainer.field_M = ri.correctedCurrentTimeMillis(-3);
           }
           ij.field_q.field_k = uc.field_ab.length;
           var3_intLifetime1 = 0;
           for (var4Lifetime1 = 0; dl.field_c.length > var4Lifetime1; var4Lifetime1++) {
             stackIn_88_0 = -3;
             stackIn_88_1 = dl.field_c[var4Lifetime1];
-            stackIn_89_2 = !(0 > la.field_T[var4Lifetime1]);
+            stackIn_89_2 = !(0 > LabeledWidgetContainer.field_T[var4Lifetime1]);
             var5Lifetime1 = PowerUpPickup.a(stackIn_88_0, stackIn_88_1, stackIn_89_2);
             if (var3_intLifetime1 < var5Lifetime1) {
               var3_intLifetime1 = var5Lifetime1;
@@ -343,7 +343,7 @@ final class NanoFrameTimer extends FrameTimer {
           ef.field_sb = -(var3_intLifetime1 >> 1) + ef.field_vb;
           for (var4Lifetime2 = 0; var4Lifetime2 < dl.field_c.length; var4Lifetime2++) {
             stackIn_113_0 = nh.field_b;
-            if (la.field_T[var4Lifetime2] < 0) {
+            if (LabeledWidgetContainer.field_T[var4Lifetime2] < 0) {
               stackIn_114_1 = wm.field_bb;
             } else {
               stackIn_114_1 = af.field_Z;
@@ -355,7 +355,7 @@ final class NanoFrameTimer extends FrameTimer {
           var4Lifetime3 = 0;
           var5Lifetime3 = uh.field_c;
           while (var4Lifetime3 < dl.field_c.length) {
-            var6Lifetime1 = la.field_T[var4Lifetime3];
+            var6Lifetime1 = LabeledWidgetContainer.field_T[var4Lifetime3];
             if (var6Lifetime1 < 0) {
               var5Lifetime3 = var5Lifetime3 + wm.field_bb;
             } else {

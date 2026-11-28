@@ -26,7 +26,7 @@ final class ll {
     }
 
     final static void a(byte param0, int param1) {
-        wq.field_I = new int[3];
+        AlphaWidgetContainer.field_I = new int[3];
         field_b = param1;
         eo.field_l = new tn[param1 * 15];
         no.field_d = 0;

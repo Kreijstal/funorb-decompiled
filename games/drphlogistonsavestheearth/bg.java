@@ -258,13 +258,13 @@ final class bg extends IntrusiveNode {
             var1.draw(0, 0);
             stackIn_51_0 = 40;
             stackIn_51_1 = 0;
-            stackIn_51_2 = k.field_L;
+            stackIn_51_2 = ModalDialogHost.field_L;
             if (ArchiveRequest.field_w.field_f == 0) {
               stackIn_52_3 = 4;
             } else {
               stackIn_52_3 = 3;
             }
-            var2Lifetime4 = stackIn_51_0 + (k.b(stackIn_51_1, stackIn_51_2 << stackIn_52_3) * 40 >> 16);
+            var2Lifetime4 = stackIn_51_0 + (ModalDialogHost.b(stackIn_51_1, stackIn_51_2 << stackIn_52_3) * 40 >> 16);
             if (var2Lifetime4 > 0) {
               r.field_b.drawAdditive(230, 389, var2Lifetime4);
               r.field_b.drawAdditive(232, 389, var2Lifetime4);
@@ -294,7 +294,7 @@ final class bg extends IntrusiveNode {
             ArchiveRequest.field_x.draw(586, var1_int);
             if (ob.field_g > var1_int &&
               var1_int + sc.field_c.field_w > ob.field_g) {
-              var2Lifetime5 = 40 + (k.b(0, k.field_L << 4) * 40 >> 16);
+              var2Lifetime5 = 40 + (ModalDialogHost.b(0, ModalDialogHost.field_L << 4) * 40 >> 16);
               if (var2Lifetime5 <= 0) {
                 wd.b(139);
                 ByteStorage.field_c[ig.field_k].draw(269, 340);
@@ -366,8 +366,8 @@ final class bg extends IntrusiveNode {
           this.field_u = param0;
           this.field_l = param6;
           this.field_m = param1;
-          fieldTemp$0 = vg.field_i;
-          vg.field_i = vg.field_i + 1;
+          fieldTemp$0 = UiWidget.field_i;
+          UiWidget.field_i = UiWidget.field_i + 1;
           this.field_i = 65535 & fieldTemp$0;
           this.field_h = param5;
         } catch (RuntimeException runtimeException) {

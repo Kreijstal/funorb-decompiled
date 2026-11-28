@@ -83,7 +83,7 @@ final class tk implements uj {
         if (param0 <= 126) {
           return false;
         }
-        stackIn_6_0 = (null != BufferedSocket.field_a) && (BufferedSocket.field_a.e((byte) 83) != null);
+        stackIn_6_0 = (null != BufferedSocket.field_a) && (BufferedSocket.field_a.getTopOpenDialog((byte) 83) != null);
         return stackIn_6_0;
     }
 

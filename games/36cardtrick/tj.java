@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class tj extends g implements WidgetActivationListener {
+final class tj extends DequeWidgetContainer implements WidgetActivationListener {
     static String field_H;
     private InteractiveWidget field_E;
     static String field_D;
@@ -24,7 +24,7 @@ final class tj extends g implements WidgetActivationListener {
         field_J = null;
     }
 
-    final boolean a(char param0, byte param1, int param2, lk param3) {
+    final boolean handleKey(char param0, byte param1, int param2, UiWidget param3) {
         RuntimeException var5 = null;
         boolean stackIn_5_0 = false;
         boolean stackIn_8_0 = false;
@@ -33,19 +33,19 @@ final class tj extends g implements WidgetActivationListener {
         String stackIn_16_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (super.a(param0, (byte) -117, param2, param3)) {
+          if (super.handleKey(param0, (byte) -117, param2, param3)) {
             return true;
           }
           if (98 == param2) {
-            stackIn_5_0 = this.b(127, param3);
+            stackIn_5_0 = this.focusPreviousChild(127, param3);
             return stackIn_5_0;
           }
           if (param2 == 99) {
-            stackIn_8_0 = this.a(param3, (byte) -28);
+            stackIn_8_0 = this.focusNextChild(param3, (byte) -28);
             return stackIn_8_0;
           }
           if (param1 >= -99) {
-            this.a(-88, -56, 19, 33);
+            this.drawWidget(-88, -56, 19, 33);
           }
           return false;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -63,35 +63,35 @@ final class tj extends g implements WidgetActivationListener {
     }
 
     public tj() {
-        super(0, 0, 476, 225, (ci) null);
-        this.field_E = new InteractiveWidget(mg.field_K, (pl) null);
-        this.field_I = new InteractiveWidget(dl.field_j, (pl) null);
-        this.field_G = new InteractiveWidget(oa.field_b, (pl) null);
+        super(0, 0, 476, 225, (WidgetRenderer) null);
+        this.field_E = new InteractiveWidget(mg.field_K, (WidgetEventListener) null);
+        this.field_I = new InteractiveWidget(dl.field_j, (WidgetEventListener) null);
+        this.field_G = new InteractiveWidget(oa.field_b, (WidgetEventListener) null);
         ki var1 = new ki();
-        this.field_E.field_v = (ci) ((Object) var1);
-        this.field_I.field_v = (ci) ((Object) var1);
-        this.field_G.field_v = (ci) ((Object) var1);
+        this.field_E.field_v = (WidgetRenderer) ((Object) var1);
+        this.field_I.field_v = (WidgetRenderer) ((Object) var1);
+        this.field_G.field_v = (WidgetRenderer) ((Object) var1);
         int var2 = 4;
         int var3 = 326;
         int var4 = -var2 + var3 >> 1;
-        this.field_I.a(30, -48 + (this.field_q - var2), var4, -var3 + this.field_h >> 1, true);
-        this.field_G.a(30, -48 + this.field_q - var2, var4, (this.field_h - var3 >> 1) - (-var4 - var2), true);
-        this.field_E.a(30, this.field_q - 78 - var2 * 2, var3, -var3 + this.field_h >> 1, true);
-        this.field_I.field_k = (pl) (this);
-        this.field_E.field_k = (pl) (this);
-        this.field_G.field_k = (pl) (this);
+        this.field_I.setBounds(30, -48 + (this.field_q - var2), var4, -var3 + this.field_h >> 1, true);
+        this.field_G.setBounds(30, -48 + this.field_q - var2, var4, (this.field_h - var3 >> 1) - (-var4 - var2), true);
+        this.field_E.setBounds(30, this.field_q - 78 - var2 * 2, var3, -var3 + this.field_h >> 1, true);
+        this.field_I.field_k = (WidgetEventListener) (this);
+        this.field_E.field_k = (WidgetEventListener) (this);
+        this.field_G.field_k = (WidgetEventListener) (this);
         this.field_E.field_n = bl.field_b;
         this.field_G.field_n = BitPacketBuffer.field_m;
-        this.b(this.field_I, (byte) 118);
-        this.b(this.field_E, (byte) 118);
-        this.b(this.field_G, (byte) 118);
+        this.addChild(this.field_I, (byte) 118);
+        this.addChild(this.field_E, (byte) 118);
+        this.addChild(this.field_G, (byte) 118);
     }
 
-    final void a(int param0, int param1, int param2, int param3) {
+    final void drawWidget(int param0, int param1, int param2, int param3) {
         int var5 = this.field_o + param0;
         int var6 = this.field_i + param1;
-        j.field_C.drawParagraph(FrameTimer.field_e, var5 + 20, 20 + var6, this.field_h - 40, -50 + this.field_q, 16777215, param2, 1, 0, j.field_C.field_s);
-        super.a(param0, param1, -1, param3);
+        ModalDialogHost.field_C.drawParagraph(FrameTimer.field_e, var5 + 20, 20 + var6, this.field_h - 40, -50 + this.field_q, 16777215, param2, 1, 0, ModalDialogHost.field_C.field_s);
+        super.drawWidget(param0, param1, -1, param3);
     }
 
     final static void a(boolean param0, java.applet.Applet param1) {

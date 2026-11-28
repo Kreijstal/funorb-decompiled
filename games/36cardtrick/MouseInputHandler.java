@@ -12,7 +12,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
 
     public final synchronized void mouseExited(java.awt.event.MouseEvent param0) {
         try {
-          if (wc.field_B != null) {
+          if (DropTargetWidgetContainer.field_B != null) {
             qd.field_a = 0;
             r.field_s = -1;
             vd.field_s = -1;
@@ -61,7 +61,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (wc.field_B != null) {
+          if (DropTargetWidgetContainer.field_B != null) {
             qd.field_a = 0;
             GzipInflater.field_a = 0;
             oa.field_d = true;
@@ -101,7 +101,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
         }
         String var1 = hh.b((byte) 23);
         i.field_a = new LoginPanel(var1, (String) null, true, false, false);
-        sd.field_c.b(vb.field_h, (byte) -71);
+        sd.field_c.showDialog(vb.field_h, (byte) -71);
         if (param0 == -9145) {
           vb.field_h.c(i.field_a, (byte) 33);
           vb.field_h.q(0);
@@ -114,7 +114,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
 
     public final synchronized void mouseEntered(java.awt.event.MouseEvent param0) {
         try {
-          if (wc.field_B != null) {
+          if (DropTargetWidgetContainer.field_B != null) {
             qd.field_a = 0;
             r.field_s = param0.getX();
             vd.field_s = param0.getY();
@@ -133,7 +133,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
         String stackIn_14_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (wc.field_B != null) {
+          if (DropTargetWidgetContainer.field_B != null) {
             qd.field_a = 0;
             nl.field_d = param0.getX();
             FrameTimer.field_b = param0.getY();
@@ -197,7 +197,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
 
     public final synchronized void mouseMoved(java.awt.event.MouseEvent param0) {
         try {
-          if (null != wc.field_B) {
+          if (null != DropTargetWidgetContainer.field_B) {
             qd.field_a = 0;
             r.field_s = param0.getX();
             vd.field_s = param0.getY();
@@ -215,7 +215,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (null == wc.field_B) {
+          if (null == DropTargetWidgetContainer.field_B) {
             return;
           }
           GzipInflater.field_a = 0;
@@ -241,7 +241,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (null == wc.field_B) {
+          if (null == DropTargetWidgetContainer.field_B) {
             return;
           }
           qd.field_a = 0;

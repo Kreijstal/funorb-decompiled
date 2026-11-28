@@ -48,7 +48,7 @@ final class eda extends TileEffect {
 
     final void a(int param0, int param1, int param2) {
         this.field_h.e(66);
-        Sprite var4 = lq.a(this.field_g, 8533, bd.field_i, (bd.field_i.field_p >> 1) - (this.field_f + 60), param1);
+        Sprite var4 = ArrayWidgetContainer.a(this.field_g, 8533, bd.field_i, (bd.field_i.field_p >> 1) - (this.field_f + 60), param1);
         var4.drawScaled(param2 + 16, -64 + (param0 - (40 - (this.field_f >> 1))), var4.field_q >> 1, var4.field_p >> 1);
         this.field_g.draw(param2, param0);
     }

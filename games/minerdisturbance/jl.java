@@ -74,20 +74,20 @@ final class jl extends wf {
         field_gb = null;
     }
 
-    jl(hm param0, String param1) {
+    jl(ModalDialogHost param0, String param1) {
         super(param0, 300, 120);
         int var3_int = 0;
         try {
           this.field_ab = param1;
           if (null != this.field_ab) {
             var3_int = Bzip2State.field_g.textHeight(this.field_ab, 260, Bzip2State.field_g.field_I);
-            this.a(150 + var3_int, 300, (byte) 55);
+            this.setCenteredSize(150 + var3_int, 300, (byte) 55);
           }
           this.field_cb = new oi(13, 50, 274, 30, 15, 2113632, 4210752);
           this.field_Z = false;
           this.field_cb.field_O = true;
           this.field_eb = false;
-          this.a(-1, this.field_cb);
+          this.addChild(-1, this.field_cb);
         } catch (RuntimeException runtimeException) {
           throw lj.wrapClientException((Throwable) ((Object) runtimeException), "jl.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

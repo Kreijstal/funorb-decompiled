@@ -28,12 +28,12 @@ final class LevelScreen extends ib {
             if (!(mk.field_k > 0)) {
               var3--;
               if (var4 != 0 &&
-                of.field_A <= 1) {
+                DropTargetWidgetContainer.field_A <= 1) {
                 var2_int = 1;
               }
             }
           } else {
-            if (of.field_A <= 1) {
+            if (DropTargetWidgetContainer.field_A <= 1) {
               var2_int = 1;
             }
           }
@@ -202,7 +202,7 @@ final class LevelScreen extends ib {
             if (0 == ProxyAuthenticationRequiredException.field_c) {
               if (1 != param3 ||
                 DualLinkDequeIterator.field_i ||
-                !(of.field_A > 1)) {
+                !(DropTargetWidgetContainer.field_A > 1)) {
                 if (param3 != 3) {
                   if (4 != param3) {
                     super.a(param0, param1, (byte) 8, param3, param4, param5);
@@ -231,7 +231,7 @@ final class LevelScreen extends ib {
                       decompiledFrameRemainder0 = (var8 != 0);
                     }
                   }
-                  if ((decompiledFrameRemainder0) && ((320 - l.field_f.stringWidth(of.field_D)) <= param1 &&
+                  if ((decompiledFrameRemainder0) && ((320 - l.field_f.stringWidth(DropTargetWidgetContainer.field_D)) <= param1 &&
                     param1 < 320 &&
                     !param5)) {
                     if (null != vf.field_L) {
@@ -313,7 +313,7 @@ final class LevelScreen extends ib {
               if (100 < var7_int) {
                 var7_int = 100;
               }
-              qi.level = 1 + (-2 + of.field_A * var7_int) / 100;
+              qi.level = 1 + (-2 + DropTargetWidgetContainer.field_A * var7_int) / 100;
               if (var8 == 0) {
                 return;
               }
@@ -353,7 +353,7 @@ final class LevelScreen extends ib {
           boolean decompiledFrameRemainder0 = true;
           if (1 == param0 &&
             !DualLinkDequeIterator.field_i &&
-            of.field_A > 1 &&
+            DropTargetWidgetContainer.field_A > 1 &&
             ProxyAuthenticationRequiredException.field_c == 0) {
             qi.level = qi.level - 1;
             decompiledFrameRemainder0 = !(1 <= qi.level);
@@ -443,11 +443,11 @@ final class LevelScreen extends ib {
                   this.field_l = 7;
                 }
                 ProxyAuthenticationRequiredException.field_c = 0;
-                if (oa.field_D) {
+                if (AlphaWidgetContainer.field_D) {
                   return;
                 }
                 ProxyAuthenticationRequiredException.field_c = 8;
-                oa.field_D = true;
+                AlphaWidgetContainer.field_D = true;
                 ta.a(v.field_e, 713);
                 if (var4 == 0) {
                   return;
@@ -489,10 +489,10 @@ final class LevelScreen extends ib {
                   this.field_l = -1;
                 }
                 ProxyAuthenticationRequiredException.field_c = 0;
-                if (oa.field_D) {
+                if (AlphaWidgetContainer.field_D) {
                   return;
                 }
-                oa.field_D = true;
+                AlphaWidgetContainer.field_D = true;
                 ProxyAuthenticationRequiredException.field_c = 8;
                 ta.a(v.field_e, 713);
                 if (var4 == 0) {
@@ -535,7 +535,7 @@ final class LevelScreen extends ib {
                     return;
                   }
                   stackIn_150_0 = !(mk.field_k <= 0);
-                  oa.field_D = stackIn_150_0;
+                  AlphaWidgetContainer.field_D = stackIn_150_0;
                   if (var4 == 0) {
                     return;
                   }
@@ -571,7 +571,7 @@ final class LevelScreen extends ib {
                 if (decompiledFrameRemainder0) {
                   if ((param1 == 0 && (null == a.entities[0] ||
                     a.entities[0].kind != -1)) &&
-                    (decompiledFrameRemainder0 = !(of.field_A <= 1))) {
+                    (decompiledFrameRemainder0 = !(DropTargetWidgetContainer.field_A <= 1))) {
                     MatchingFieldValidator.e((byte) 97);
                     vc.field_h.m((byte) 127);
                     IsaacRandom.field_j = null;
@@ -688,7 +688,7 @@ final class LevelScreen extends ib {
                       var4 != 0)) {
                       if (a.entities[0] == null ||
                         a.entities[0].kind != -1) {
-                        if (!(of.field_A > 1)) {
+                        if (!(DropTargetWidgetContainer.field_A > 1)) {
                           MatchingFieldValidator.e((byte) 93);
                           vc.field_h.m((byte) 127);
                           DualLinkDequeIterator.field_i = true;
@@ -754,7 +754,7 @@ final class LevelScreen extends ib {
                   return;
                 }
               }
-              if (1 >= of.field_A &&
+              if (1 >= DropTargetWidgetContainer.field_A &&
                 !DualLinkDequeIterator.field_i) {
                 stackIn_348_1 = 3;
               } else {
@@ -770,7 +770,7 @@ final class LevelScreen extends ib {
                 decompiledSharedTail0 = (var4 != 0);
               }
               if (decompiledSharedTail0) {
-                if (of.field_A <= 1) {
+                if (DropTargetWidgetContainer.field_A <= 1) {
                   stackIn_27_1 = 1;
                 } else {
                   stackIn_27_1 = 0;
@@ -812,7 +812,7 @@ final class LevelScreen extends ib {
           ProxyAuthenticationRequiredException.field_c = 0;
           this.field_l = 0;
           if (!DualLinkDequeIterator.field_i &&
-            of.field_A <= 1) {
+            DropTargetWidgetContainer.field_A <= 1) {
             this.field_l = 1;
           }
           vc.field_h = param0;
@@ -870,7 +870,7 @@ final class LevelScreen extends ib {
                   return;
                 }
               }
-              if (1 >= of.field_A) {
+              if (1 >= DropTargetWidgetContainer.field_A) {
                 return;
               }
               DebouncedFieldValidator.a(kf.field_c + qi.level, param2, -1, false, 320, var5_int, param3);
@@ -886,11 +886,11 @@ final class LevelScreen extends ib {
                   return;
                 }
               }
-              if (of.field_A > 1) {
+              if (DropTargetWidgetContainer.field_A > 1) {
                 DebouncedFieldValidator.a(PcmOutputWorker.field_f, param2, -1, false, 320, var5_int, param3);
                 BufferedSocket.field_k[0].draw(316, param3 + 3);
                 BufferedSocket.field_k[2].draw(418, 3 + param3);
-                BufferedSocket.field_k[1].draw(-3 + ((100 * qi.level - 100) / (-1 + of.field_A) + 320), 3 + param3);
+                BufferedSocket.field_k[1].draw(-3 + ((100 * qi.level - 100) / (-1 + DropTargetWidgetContainer.field_A) + 320), 3 + param3);
                 if (var6 == 0) {
                   return;
                 }
@@ -1001,13 +1001,13 @@ final class LevelScreen extends ib {
           }
           if (param1 == 1 &&
             !DualLinkDequeIterator.field_i &&
-            of.field_A > 1 &&
+            DropTargetWidgetContainer.field_A > 1 &&
             ProxyAuthenticationRequiredException.field_c == 0) {
             qi.level = qi.level + 1;
-            if (qi.level <= of.field_A) {
+            if (qi.level <= DropTargetWidgetContainer.field_A) {
               return;
             }
-            qi.level = of.field_A;
+            qi.level = DropTargetWidgetContainer.field_A;
             if (var4 == 0) {
               return;
             }
@@ -1358,38 +1358,38 @@ final class LevelScreen extends ib {
               if (var8 > 0) {
                 if (var8 > var9 &&
                   Bzip2State.field_t <= var9) {
-                  SoftwareRasterizer.addRadialGlow(var6 + 320 << 4, 240 + var7 << 4, 256, 255 * var9 / var8, ei.field_I);
+                  SoftwareRasterizer.addRadialGlow(var6 + 320 << 4, 240 + var7 << 4, 256, 255 * var9 / var8, ModalDialogHost.field_I);
                 } else if (var8 == var9) {
-                  SoftwareRasterizer.addRadialGlow(320 + var6 << 4, 240 + var7 << 4, 256, var9 * 255 / var8, ei.field_B);
+                  SoftwareRasterizer.addRadialGlow(320 + var6 << 4, 240 + var7 << 4, 256, var9 * 255 / var8, ModalDialogHost.field_B);
                 } else {
-                  SoftwareRasterizer.addRadialGlow(var6 + 320 << 4, var7 + 240 << 4, 128, 64, ei.field_I);
+                  SoftwareRasterizer.addRadialGlow(var6 + 320 << 4, var7 + 240 << 4, 128, 64, ModalDialogHost.field_I);
                 }
                 var6 = var6 * 9 / 10;
                 var7 = 9 * var7 / 10;
                 if (var8 > var9 &&
                   Bzip2State.field_t <= var9) {
-                  SoftwareRasterizer.addRadialGlow(var6 + 320 << 4, 240 + var7 << 4, 192, var9 * 255 / var8, ei.field_I);
+                  SoftwareRasterizer.addRadialGlow(var6 + 320 << 4, 240 + var7 << 4, 192, var9 * 255 / var8, ModalDialogHost.field_I);
                 }
                 if (var9 == var8) {
-                  SoftwareRasterizer.addRadialGlow(320 + var6 << 4, var7 + 240 << 4, 192, 255 * var9 / var8, ei.field_B);
+                  SoftwareRasterizer.addRadialGlow(320 + var6 << 4, var7 + 240 << 4, 192, 255 * var9 / var8, ModalDialogHost.field_B);
                 }
                 var7 = 9 * var7 / 10;
                 var6 = 9 * var6 / 10;
                 if (var8 > var9 &&
                   var9 >= Bzip2State.field_t) {
-                  SoftwareRasterizer.addRadialGlow(320 + var6 << 4, 240 + var7 << 4, 128, var9 * 255 / var8, ei.field_I);
+                  SoftwareRasterizer.addRadialGlow(320 + var6 << 4, 240 + var7 << 4, 128, var9 * 255 / var8, ModalDialogHost.field_I);
                 }
                 if (~var9 == ~var8) {
-                  SoftwareRasterizer.addRadialGlow(320 + var6 << 4, var7 + 240 << 4, 128, 255 * var9 / var8, ei.field_B);
+                  SoftwareRasterizer.addRadialGlow(320 + var6 << 4, var7 + 240 << 4, 128, 255 * var9 / var8, ModalDialogHost.field_B);
                 }
                 var6 = 9 * var6 / 10;
                 var7 = 9 * var7 / 10;
                 if (var8 > var9 &&
                   Bzip2State.field_t <= var9) {
-                  SoftwareRasterizer.addRadialGlow(var6 + 320 << 4, 240 + var7 << 4, 64, var9 * 255 / var8, ei.field_I);
+                  SoftwareRasterizer.addRadialGlow(var6 + 320 << 4, 240 + var7 << 4, 64, var9 * 255 / var8, ModalDialogHost.field_I);
                 }
                 if (~var8 == ~var9) {
-                  SoftwareRasterizer.addRadialGlow(var6 + 320 << 4, 240 + var7 << 4, 64, 255 * var9 / var8, ei.field_B);
+                  SoftwareRasterizer.addRadialGlow(var6 + 320 << 4, 240 + var7 << 4, 64, 255 * var9 / var8, ModalDialogHost.field_B);
                 }
               }
               var9++;
@@ -1488,7 +1488,7 @@ final class LevelScreen extends ib {
             var4Lifetime1 = var3Lifetime1;
             e.field_g[0].draw(var2_intLifetime1, var3Lifetime1);
             var3Lifetime1 += 40;
-            qj.field_a.drawString(ei.field_A, var2_intLifetime1 + 68, 12 + var3Lifetime1, 16777215, -1);
+            qj.field_a.drawString(ModalDialogHost.field_A, var2_intLifetime1 + 68, 12 + var3Lifetime1, 16777215, -1);
             e.field_g[1].draw(var2_intLifetime1, var3Lifetime1);
             var3Lifetime1 += 40;
             qj.field_a.drawString(gf.field_a, var2_intLifetime1 + 68, 12 + var3Lifetime1, 16777215, -1);

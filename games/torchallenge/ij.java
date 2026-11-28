@@ -55,7 +55,7 @@ final class ij extends fk {
           if (tf.field_h != null) {
             tf.field_h.d(-1);
           }
-          bg.field_P.requestFocus();
+          LabeledWidgetContainer.field_P.requestFocus();
           return;
         }
         field_w = (k) null;
@@ -64,7 +64,7 @@ final class ij extends fk {
         if (tf.field_h != null) {
           tf.field_h.d(-1);
         }
-        bg.field_P.requestFocus();
+        LabeledWidgetContainer.field_P.requestFocus();
     }
 
     public static void clearStaticReferences(int param0) {

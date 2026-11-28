@@ -38,7 +38,7 @@ final class gn extends en implements WidgetActivationListener {
         field_S = null;
     }
 
-    private final InteractiveWidget a(bi param0, String param1, byte param2) {
+    private final InteractiveWidget a(WidgetEventListener param0, String param1, byte param2) {
         InteractiveWidget var4 = null;
         RuntimeException var4_ref = null;
         int var5 = 0;
@@ -51,15 +51,15 @@ final class gn extends en implements WidgetActivationListener {
         RuntimeException decompiledCaughtException = null;
         try {
           var4 = new InteractiveWidget(param1, param0);
-          var4.field_i = (wo) ((Object) new ve());
+          var4.field_i = (WidgetRenderer) ((Object) new ve());
           var5 = this.field_f - 6;
           if (param2 <= 115) {
             field_Q = (IntrusiveDeque) null;
           }
           this.field_f = this.field_f + 38;
-          var4.a(30, 15, var5, -16 + (-14 + this.field_g), (byte) -52);
-          this.b(var4, -20);
-          this.f(-30);
+          var4.setBounds(30, 15, var5, -16 + (-14 + this.field_g), (byte) -52);
+          this.addChild(var4, -20);
+          this.refreshLayout(-30);
           stackIn_3_0 = var4;
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -94,7 +94,7 @@ final class gn extends en implements WidgetActivationListener {
         this.field_C = false;
     }
 
-    gn(ol param0, bf param1) {
+    gn(ModalDialogHost param0, bf param1) {
         super(param0, 200, 150);
         Object var3 = null;
         Object stackIn_12_0 = null;
@@ -103,13 +103,13 @@ final class gn extends en implements WidgetActivationListener {
         StringBuilder stackIn_15_1 = null;
         String stackIn_16_2 = null;
         RuntimeException decompiledCaughtException = null;
-        qm var4 = null;
+        UiWidget var4 = null;
         try {
           var3 = null;
           if (NetworkGameClient.field_w == param1) {
             var3 = field_U;
           } else {
-            if (ab.field_A == param1) {
+            if (ModalDialog.field_A == param1) {
               this.field_f = this.field_f + 10;
               var3 = NameSuggestionsPanel.field_C;
               if (jl.a(100)) {
@@ -123,14 +123,14 @@ final class gn extends en implements WidgetActivationListener {
               }
             }
           }
-          var4 = new qm((String) (var3), (bi) null);
+          var4 = new UiWidget((String) (var3), (WidgetEventListener) null);
           var4.field_g = this.field_g;
           var4.field_r = 0;
           var4.field_f = 80;
           var4.field_j = 50;
-          var4.field_i = (wo) ((Object) new DefaultTextWidgetRenderer(ba.field_i, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true));
-          this.b(var4, 125);
-          this.field_V = this.a((bi) (this), qo.field_o, (byte) 118);
+          var4.field_i = (WidgetRenderer) ((Object) new DefaultTextWidgetRenderer(ba.field_i, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true));
+          this.addChild(var4, 125);
+          this.field_V = this.a((WidgetEventListener) (this), qo.field_o, (byte) 118);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

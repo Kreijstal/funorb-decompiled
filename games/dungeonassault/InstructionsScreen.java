@@ -248,7 +248,7 @@ final class InstructionsScreen extends DungeonAssaultScreen {
         }
         this.field_A.b(90, 32, 87);
         this.a(87, 3740, 200, en.field_a[mo.field_e], 446, 125);
-        wk.a(552, bj.a(mo.field_e, 77), IntrusiveNode.field_c, 366, ag.field_c, 31139);
+        wk.a(552, DropTargetWidgetContainer.a(mo.field_e, 77), IntrusiveNode.field_c, 366, ag.field_c, 31139);
         if (kn.field_e) {
           this.field_z.a((byte) -64);
           var2Lifetime2 = nk.field_Jb.field_i - 1;

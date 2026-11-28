@@ -267,7 +267,7 @@ final class bf extends IntrusiveNode {
           if (4 == this.field_v) {
             var5_int = 2;
           }
-          tj.field_w = this.field_f;
+          DraggableWidgetContainer.field_w = this.field_f;
           if (this.field_k > 0) {
             for (var6 = 0; var6 < 4000; var6++) {
               var7 = param1[var6];
@@ -353,7 +353,7 @@ final class bf extends IntrusiveNode {
                   mj.a(96, 12, 0, 22, 100);
                   mj.a(255, 12, 0, 44, 100);
                   this.field_f = 320;
-                  tj.field_G = 150;
+                  DraggableWidgetContainer.field_G = 150;
                   this.field_r = 0;
                   this.field_u = 580;
                   ha.field_d = 512;
@@ -1488,7 +1488,7 @@ final class bf extends IntrusiveNode {
             } else {
               if (var9Lifetime1 == 248) {
                 mi.a(param3 ^ 1048582, ll.b(param3 ^ 109));
-                UiWidget.field_r = vk.field_x;
+                UiWidget.field_r = DequeWidgetContainer.field_x;
                 ec.a((byte) 27);
                 eb.field_f = false;
                 stackIn_31_0 = var9Lifetime1;
@@ -2263,7 +2263,7 @@ final class bf extends IntrusiveNode {
                             if (var9 != 8 &&
                               var9 != 9) {
                               if (var9 == 10) {
-                                if ((af.field_w != null)) {
+                                if ((DropTargetWidgetContainer.field_w != null)) {
                                   if (3 > this.field_l) {
                                     if (this.field_l == 0) {
                                       var9 = 257;
@@ -2282,7 +2282,7 @@ final class bf extends IntrusiveNode {
                                     SoftwareRasterizer.fillCircleAlpha(var4, this.field_u, 14 + this.field_o, 160 * var11 | var10, 32);
                                     SoftwareRasterizer.fillCircleAlpha(var4, this.field_u, 12 + this.field_o, var10 | var11 * 240, 32);
                                   }
-                                  af.field_w[this.field_v * 8 + this.field_l].c(var4 - 16, -16 + this.field_u);
+                                  DropTargetWidgetContainer.field_w[this.field_v * 8 + this.field_l].c(var4 - 16, -16 + this.field_u);
                                 }
                                 break regionExit1;
                               }
@@ -2301,15 +2301,15 @@ final class bf extends IntrusiveNode {
                                     break regionExit1;
                                   }
                                   vc.field_m[2].draw(var4 - 16, -16 + this.field_u);
-                                  ie.field_A[this.field_o % 14].drawAdditive(-8 + var4, this.field_u - 16, 3 * this.field_o);
+                                  AlphaWidgetContainer.field_A[this.field_o % 14].drawAdditive(-8 + var4, this.field_u - 16, 3 * this.field_o);
                                   if (StarCannon.field_z != -1) {
                                     break regionExit1;
                                   }
                                   if (-1 != pa.field_L) {
                                     break regionExit1;
                                   }
-                                  ie.field_A[this.field_o % 14].drawAdditive(-12 + var4 + sh.b(-128, 8), this.field_u - (20 - sh.b(-2, 8)), 2 * this.field_o);
-                                  ie.field_A[this.field_o % 14].drawAdditive(-14 + (var4 + sh.b(param0 - 65437, 12)), -22 + (this.field_u + sh.b(34, 12)), this.field_o);
+                                  AlphaWidgetContainer.field_A[this.field_o % 14].drawAdditive(-12 + var4 + sh.b(-128, 8), this.field_u - (20 - sh.b(-2, 8)), 2 * this.field_o);
+                                  AlphaWidgetContainer.field_A[this.field_o % 14].drawAdditive(-14 + (var4 + sh.b(param0 - 65437, 12)), -22 + (this.field_u + sh.b(34, 12)), this.field_o);
                                   break regionExit1;
                                 case 15:
                                   if (this.field_v > 4) {
@@ -2397,14 +2397,14 @@ final class bf extends IntrusiveNode {
               var9 = jl.field_j;
               switch (var9) {
                 case 5:
-                  if (tj.field_G % 2 == 0 ||
+                  if (DraggableWidgetContainer.field_G % 2 == 0 ||
                     ti.field_d) {
                     dl.field_c[this.field_v].draw(-16 + var4, this.field_u - 16);
                   }
                   jg.field_C[var5].drawTintedGray(-4 + var4, 7 + this.field_u, 16711680);
                   break;
                 case 20:
-                  if (tj.field_G % 2 == 0 ||
+                  if (DraggableWidgetContainer.field_G % 2 == 0 ||
                     ti.field_d) {
                     dl.field_c[this.field_v].draw(var4 - 16, -16 + this.field_u);
                   }
@@ -2416,7 +2416,7 @@ final class bf extends IntrusiveNode {
                 case 15:
                   jg.field_C[var5].drawTintedGray(-var6 + 2 + var4, this.field_u + 3, 16711680);
                   jg.field_C[var5].drawTintedGray(var6 + (var4 - 10), this.field_u + 3, 16711680);
-                  if (0 == tj.field_G % 2 ||
+                  if (0 == DraggableWidgetContainer.field_G % 2 ||
                     ti.field_d) {
                     dl.field_c[this.field_v].draw(-16 + var4, -16 + this.field_u);
                   }
@@ -2425,7 +2425,7 @@ final class bf extends IntrusiveNode {
                 case 10:
                   jg.field_C[var5].drawTintedGray(-var6 + (2 + var4), 3 + this.field_u, 16711680);
                   jg.field_C[var5].drawTintedGray(var6 + (-10 + var4), 3 + this.field_u, 16711680);
-                  if (tj.field_G % 2 != 0 &&
+                  if (DraggableWidgetContainer.field_G % 2 != 0 &&
                     !ti.field_d) {
                     break;
                   }

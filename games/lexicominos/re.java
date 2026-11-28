@@ -2,12 +2,12 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 abstract class re extends ql {
-    private w field_W;
+    private UiWidget field_W;
     private int field_Y;
     private int field_bb;
     static java.math.BigInteger field_T;
     private int field_S;
-    private ia field_U;
+    private AlphaWidgetContainer field_U;
     private rb field_R;
     static String field_cb;
     private int field_V;
@@ -15,7 +15,7 @@ abstract class re extends ql {
     static BufferedSocket field_X;
     static int field_Z;
 
-    boolean f(byte param0) {
+    boolean advanceDialogAnimation(byte param0) {
         int fieldTemp$0 = 0;
         int fieldTemp$1 = 0;
         int var3;
@@ -24,7 +24,7 @@ abstract class re extends ql {
           if (param0 >= -21) {
             return false;
           }
-          return super.f((byte) -102);
+          return super.advanceDialogAnimation((byte) -102);
         }
         if (this.field_R == Bzip2State.field_k) {
           fieldTemp$0 = this.field_V + 1;
@@ -40,13 +40,13 @@ abstract class re extends ql {
           if (param0 >= -21) {
             return false;
           }
-          return super.f((byte) -102);
+          return super.advanceDialogAnimation((byte) -102);
         }
         if (this.field_R != EditableTextField.field_H) {
           if (param0 >= -21) {
             return false;
           }
-          return super.f((byte) -102);
+          return super.advanceDialogAnimation((byte) -102);
         }
         fieldTemp$1 = this.field_V + 1;
         this.field_V = this.field_V + 1;
@@ -59,7 +59,7 @@ abstract class re extends ql {
         if (param0 >= -21) {
           return false;
         }
-        return super.f((byte) -102);
+        return super.advanceDialogAnimation((byte) -102);
     }
 
     public static void clearDeclaredStaticReferences(byte param0) {
@@ -71,7 +71,7 @@ abstract class re extends ql {
         }
     }
 
-    re(eg param0, w param1, int param2, int param3, int param4) {
+    re(ModalDialogHost param0, UiWidget param1, int param2, int param3, int param4) {
         super(param0, param1.field_j + 12, param1.field_v + (param2 + 12));
         try {
           this.field_ab = param2;
@@ -84,7 +84,7 @@ abstract class re extends ql {
         }
     }
 
-    boolean a(char param0, int param1, w param2, byte param3) {
+    boolean handleKey(char param0, int param1, UiWidget param2, byte param3) {
         int var5_int = 0;
         RuntimeException var5 = null;
         RuntimeException stackIn_13_0 = null;
@@ -92,15 +92,15 @@ abstract class re extends ql {
         String stackIn_14_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (super.a(param0, param1, param2, (byte) 99)) {
+          if (super.handleKey(param0, param1, param2, (byte) 99)) {
             return true;
           }
           if (null != this.field_U) {
             if (param1 == 98) {
-              this.field_U.a((byte) 44, param2);
+              this.field_U.takeFocus((byte) 44, param2);
             }
             if (param1 == 99) {
-              this.field_U.a((byte) 44, param2);
+              this.field_U.takeFocus((byte) 44, param2);
             }
           }
           var5_int = -75 / ((-13 - param3) / 55);
@@ -119,22 +119,22 @@ abstract class re extends ql {
         }
     }
 
-    private final void a(w param0, byte param1) {
+    private final void a(UiWidget param0, byte param1) {
         try {
           if (param1 != 125) {
-            w var4 = (w) null;
-            this.a((w) null, (byte) -90);
+            UiWidget var4 = (UiWidget) null;
+            this.a((UiWidget) null, (byte) -90);
           }
           if (null != this.field_U) {
             this.field_U.unlink((byte) -118);
           }
           if (param0 == null) {
-            this.field_U = new ia();
+            this.field_U = new AlphaWidgetContainer();
           } else {
-            param0.a(param0.field_v, param0.field_j, true, this.field_ab + 6, 6);
-            this.field_U = new ia(param0);
+            param0.setBounds(param0.field_v, param0.field_j, true, this.field_ab + 6, 6);
+            this.field_U = new AlphaWidgetContainer(param0);
           }
-          this.b((byte) 57, (w) (this.field_U));
+          this.addChild((byte) 57, (UiWidget) (this.field_U));
           this.field_W = null;
         } catch (RuntimeException runtimeException) {
           throw ld.wrapClientException((Throwable) ((Object) runtimeException), "re.DA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
@@ -161,19 +161,19 @@ abstract class re extends ql {
         this.field_W = null;
     }
 
-    final boolean a(byte param0) {
+    final boolean snapDialogAnimation(byte param0) {
         if (param0 != 26) {
           return false;
         }
         this.f(true);
-        return super.a((byte) 26);
+        return super.snapDialogAnimation((byte) 26);
     }
 
     final void f(boolean param0) {
         if (param0) {
           if (this.field_R != null) {
             if (EditableTextField.field_H != this.field_R) {
-              this.b(this.field_W.field_j + 12, -119, this.field_W.field_v + (12 + this.field_ab));
+              this.setCenteredSize(this.field_W.field_j + 12, -119, this.field_W.field_v + (12 + this.field_ab));
               this.a(this.field_W, (byte) 125);
             }
             this.field_U.field_E = 256;
@@ -185,7 +185,7 @@ abstract class re extends ql {
         this.field_R = (rb) null;
         if (this.field_R != null) {
           if (EditableTextField.field_H != this.field_R) {
-            this.b(this.field_W.field_j + 12, -119, this.field_W.field_v + (12 + this.field_ab));
+            this.setCenteredSize(this.field_W.field_j + 12, -119, this.field_W.field_v + (12 + this.field_ab));
             this.a(this.field_W, (byte) 125);
           }
           this.field_U.field_E = 256;
@@ -194,7 +194,7 @@ abstract class re extends ql {
         super.f(param0);
     }
 
-    void b(int param0, w param1) {
+    void b(int param0, UiWidget param1) {
         RuntimeException var3 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;

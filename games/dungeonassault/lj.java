@@ -1479,7 +1479,7 @@ final class lj implements cl {
             break;
           }
           if (decompiledNaturalLoopExit0) {
-            stackIn_15_0 = oi.b(0, 5);
+            stackIn_15_0 = DraggableWidgetContainer.b(0, 5);
           }
           var5 = stackIn_15_0;
           if (var4 <= 0) {

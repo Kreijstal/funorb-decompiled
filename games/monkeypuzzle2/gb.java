@@ -84,8 +84,8 @@ final class gb extends IntrusiveNode {
             var4 = var6;
             var2 = var4;
             var3 = wg.a(var8, (byte) 115);
-            oa.a(this.field_l / (var3 + this.field_l) - 0.5f, var8, 107);
-            mh.a(this.field_k.field_e, (byte) -126, var8);
+            DropTargetWidgetContainer.a(this.field_l / (var3 + this.field_l) - 0.5f, var8, 107);
+            LabeledWidgetContainer.a(this.field_k.field_e, (byte) -126, var8);
             TextFieldValidator.a(this.field_e.field_e, -74, var8);
           } else {
             var9 = ac.a(this.field_k.field_e, 114, this.field_g);
@@ -93,8 +93,8 @@ final class gb extends IntrusiveNode {
             var5 = var7;
             var2 = var5;
             var3 = wg.a(var9, (byte) 120);
-            oa.a((-0.5f + this.field_l / (this.field_l + var3)) * 2.0f, var9, 126);
-            mh.a(this.field_k.field_e, (byte) -125, var9);
+            DropTargetWidgetContainer.a((-0.5f + this.field_l / (this.field_l + var3)) * 2.0f, var9, 126);
+            LabeledWidgetContainer.a(this.field_k.field_e, (byte) -125, var9);
           }
           return;
         }
@@ -105,8 +105,8 @@ final class gb extends IntrusiveNode {
           var4Lifetime1 = var6Lifetime1;
           var2Lifetime1 = var4Lifetime1;
           var3Lifetime1 = wg.a(var8Lifetime1, (byte) 115);
-          oa.a(this.field_l / (var3Lifetime1 + this.field_l) - 0.5f, var8Lifetime1, 107);
-          mh.a(this.field_k.field_e, (byte) -126, var8Lifetime1);
+          DropTargetWidgetContainer.a(this.field_l / (var3Lifetime1 + this.field_l) - 0.5f, var8Lifetime1, 107);
+          LabeledWidgetContainer.a(this.field_k.field_e, (byte) -126, var8Lifetime1);
           TextFieldValidator.a(this.field_e.field_e, -74, var8Lifetime1);
         } else {
           var9Lifetime1 = ac.a(this.field_k.field_e, 114, this.field_g);
@@ -114,8 +114,8 @@ final class gb extends IntrusiveNode {
           var5Lifetime1 = var7Lifetime1;
           var2Lifetime1 = var5Lifetime1;
           var3Lifetime1 = wg.a(var9Lifetime1, (byte) 120);
-          oa.a((-0.5f + this.field_l / (this.field_l + var3Lifetime1)) * 2.0f, var9Lifetime1, 126);
-          mh.a(this.field_k.field_e, (byte) -125, var9Lifetime1);
+          DropTargetWidgetContainer.a((-0.5f + this.field_l / (this.field_l + var3Lifetime1)) * 2.0f, var9Lifetime1, 126);
+          LabeledWidgetContainer.a(this.field_k.field_e, (byte) -125, var9Lifetime1);
         }
     }
 

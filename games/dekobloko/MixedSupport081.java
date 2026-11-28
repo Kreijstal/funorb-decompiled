@@ -224,7 +224,7 @@ final class MixedSupport081 {
           }
           if ((frameRemainderLocal104) &&
             (frameRemainderLocal105)) {
-            MixedSupport070.byteArrayState0011[integerLocal63 / 8] = (byte)UiComponentPart006.bitwiseOr((int) MixedSupport070.byteArrayState0011[integerLocal63 / 8], 1 << integerLocal63 % 8);
+            MixedSupport070.byteArrayState0011[integerLocal63 / 8] = (byte)LabeledWidgetContainer.bitwiseOr((int) MixedSupport070.byteArrayState0011[integerLocal63 / 8], 1 << integerLocal63 % 8);
           }
           if (frameRemainderLocal104) {
             stackIntegerLocal12 = (!booleanArgument2) ? 0 : -1;
@@ -383,7 +383,7 @@ final class MixedSupport081 {
                   SceneWidgetPart007.integerArrayArrayState0017[integerLocal63] != null) {
                   integerLocal74 = SceneWidgetPart007.integerArrayArrayState0017[integerLocal63][integerLocal67];
                   if (integerLocal74 > 0 &&
-                    integerLocal74 > UiComponentPart006.integerState0137) {
+                    integerLocal74 > LabeledWidgetContainer.integerState0137) {
                     integerLocal70 = 1;
                   }
                   if (integerLocal74 != 0 &&
@@ -535,7 +535,7 @@ final class MixedSupport081 {
                       }
                     }
                     if (integerLocal70 != 0) {
-                      stringLocal92 = NodeHashTableIterator.substituteIndexedPlaceholders(110, PacketBuffer.stringState0632, new String[]{Integer.toString(UiComponentPart006.integerState0137), Integer.toString(SceneWidgetPart007.integerArrayArrayState0017[integerLocal63][integerLocal67])});
+                      stringLocal92 = NodeHashTableIterator.substituteIndexedPlaceholders(110, PacketBuffer.stringState0632, new String[]{Integer.toString(LabeledWidgetContainer.integerState0137), Integer.toString(SceneWidgetPart007.integerArrayArrayState0017[integerLocal63][integerLocal67])});
                       objectLocal81 = stringLocal92;
                       objectLocal84 = objectLocal81;
                       objectLocal81 = objectLocal84;

@@ -74,7 +74,7 @@ final class ResourceArchive {
           } else {
             stackIn_32_2 = "{...}";
           }
-          throw dd.wrapClientException((Throwable) (stackIn_31_0), ((StringBuilder) (Object) stackIn_31_1).append(stackIn_32_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw DraggableWidgetContainer.wrapClientException((Throwable) (stackIn_31_0), ((StringBuilder) (Object) stackIn_31_1).append(stackIn_32_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -107,12 +107,12 @@ final class ResourceArchive {
           param0 = param0.toLowerCase();
           param1 = param1.toLowerCase();
           var6 = (CharSequence) ((Object) param0);
-          var4_int = this.field_i.field_o.a(sk.a((byte) 76, var6), -76);
+          var4_int = this.field_i.field_o.a(ModalDialogHost.a((byte) 76, var6), -76);
           if (!this.validateGroupId(var4_int, -7720)) {
             return false;
           }
           var7 = (CharSequence) ((Object) param1);
-          var5 = this.field_i.field_g[var4_int].a(sk.a((byte) 76, var7), -119);
+          var5 = this.field_i.field_g[var4_int].a(ModalDialogHost.a((byte) 76, var7), -119);
           if (param2 != -1) {
             field_h = (String) (((Object[]) (this.field_a[26]))[11]);
           }
@@ -134,7 +134,7 @@ final class ResourceArchive {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw dd.wrapClientException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param2).append(')').toString());
+          throw DraggableWidgetContainer.wrapClientException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -155,7 +155,7 @@ final class ResourceArchive {
           }
           param1 = param1.toLowerCase();
           var5 = (CharSequence) ((Object) param1);
-          var4 = this.field_i.field_o.a(sk.a((byte) 76, var5), -107);
+          var4 = this.field_i.field_o.a(ModalDialogHost.a((byte) 76, var5), -107);
           stackIn_4_0 = this.tryLoadGroup((byte) 118, var4);
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -168,7 +168,7 @@ final class ResourceArchive {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw dd.wrapClientException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
+          throw DraggableWidgetContainer.wrapClientException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
         }
     }
 
@@ -239,7 +239,7 @@ final class ResourceArchive {
           }
           param1 = param1.toLowerCase();
           var5 = (CharSequence) ((Object) param1);
-          var4 = this.field_i.field_o.a(sk.a((byte) 76, var5), -121);
+          var4 = this.field_i.field_o.a(ModalDialogHost.a((byte) 76, var5), -121);
           stackIn_5_0 = this.getGroupLoadPercent((byte) -53, var4);
           return stackIn_5_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -252,7 +252,7 @@ final class ResourceArchive {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw dd.wrapClientException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
+          throw DraggableWidgetContainer.wrapClientException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
         }
     }
 
@@ -272,7 +272,7 @@ final class ResourceArchive {
           param1 = param1.toLowerCase();
           var4 = 125 % ((param0 - 7) / 32);
           var5 = (CharSequence) ((Object) param1);
-          var3_int = this.field_i.field_o.a(sk.a((byte) 76, var5), -126);
+          var3_int = this.field_i.field_o.a(ModalDialogHost.a((byte) 76, var5), -126);
           if (var3_int >= 0) {
             return true;
           }
@@ -287,7 +287,7 @@ final class ResourceArchive {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw dd.wrapClientException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
+          throw DraggableWidgetContainer.wrapClientException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
         }
     }
 
@@ -355,12 +355,12 @@ final class ResourceArchive {
           param2 = param2.toLowerCase();
           param0 = param0.toLowerCase();
           var6 = (CharSequence) ((Object) param2);
-          var4_int = this.field_i.field_o.a(sk.a((byte) 76, var6), -80);
+          var4_int = this.field_i.field_o.a(ModalDialogHost.a((byte) 76, var6), -80);
           if (!this.validateGroupId(var4_int, param1 - 7721)) {
             return null;
           }
           var7 = (CharSequence) ((Object) param0);
-          var5 = this.field_i.field_g[var4_int].a(sk.a((byte) 76, var7), -87);
+          var5 = this.field_i.field_g[var4_int].a(ModalDialogHost.a((byte) 76, var7), -87);
           stackIn_10_0 = this.getFile(var4_int, false, var5);
           return stackIn_10_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -379,7 +379,7 @@ final class ResourceArchive {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw dd.wrapClientException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
+          throw DraggableWidgetContainer.wrapClientException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
         }
     }
 
@@ -449,7 +449,7 @@ final class ResourceArchive {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw dd.wrapClientException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw DraggableWidgetContainer.wrapClientException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 
@@ -578,7 +578,7 @@ final class ResourceArchive {
             stackIn_38_0 = var11_ref_RuntimeException;
             stackIn_38_1 = new StringBuilder();
             stackIn_39_2 = (param0 != null);
-            throw dd.wrapClientException((Throwable) ((Object) stackIn_38_0), ((StringBuilder) (Object) stackIn_38_1).append(stackIn_39_2).append(" ").append(param2).append(" ").append(var9.length).append(" ").append(eg.a(var9, 0, var9.length)).append(" ").append(eg.a(var9, 0, var9.length - 2)).append(" ").append(this.field_i.field_r[param2]).append(" ").append(this.field_i.field_p).toString());
+            throw DraggableWidgetContainer.wrapClientException((Throwable) ((Object) stackIn_38_0), ((StringBuilder) (Object) stackIn_38_1).append(stackIn_39_2).append(" ").append(param2).append(" ").append(var9.length).append(" ").append(eg.a(var9, 0, var9.length)).append(" ").append(eg.a(var9, 0, var9.length - 2)).append(" ").append(this.field_i.field_r[param2]).append(" ").append(this.field_i.field_p).toString());
           }
           if (this.field_g) {
             this.field_a[param2] = null;
@@ -704,7 +704,7 @@ final class ResourceArchive {
           } else {
             stackIn_109_2 = "{...}";
           }
-          throw dd.wrapClientException((Throwable) ((Object) stackIn_108_0), ((StringBuilder) (Object) stackIn_108_1).append(stackIn_109_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw DraggableWidgetContainer.wrapClientException((Throwable) ((Object) stackIn_108_0), ((StringBuilder) (Object) stackIn_108_1).append(stackIn_109_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -757,7 +757,7 @@ final class ResourceArchive {
           }
           param0 = param0.toLowerCase();
           var5 = (CharSequence) ((Object) param0);
-          var4_int = this.field_i.field_g[param2].a(sk.a((byte) 76, var5), -109);
+          var4_int = this.field_i.field_g[param2].a(ModalDialogHost.a((byte) 76, var5), -109);
           if (this.validateFileId(param2, true, var4_int)) {
             stackIn_10_0 = var4_int;
             return stackIn_10_0;
@@ -774,7 +774,7 @@ final class ResourceArchive {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw dd.wrapClientException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw DraggableWidgetContainer.wrapClientException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -814,7 +814,7 @@ final class ResourceArchive {
           }
           param0 = param0.toLowerCase();
           var4 = (CharSequence) ((Object) param0);
-          var3_int = this.field_i.field_o.a(sk.a((byte) 76, var4), -73);
+          var3_int = this.field_i.field_o.a(ModalDialogHost.a((byte) 76, var4), -73);
           if (!this.validateGroupId(var3_int, param1 - 7720)) {
             stackIn_6_0 = -1;
             return stackIn_6_0;
@@ -834,7 +834,7 @@ final class ResourceArchive {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw dd.wrapClientException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param1).append(')').toString());
+          throw DraggableWidgetContainer.wrapClientException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -874,7 +874,7 @@ final class ResourceArchive {
           this.field_g = param1 ? true : false;
           this.field_e = param0;
         } catch (RuntimeException runtimeException) {
-          throw dd.wrapClientException((Throwable) ((Object) runtimeException), "ki.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw DraggableWidgetContainer.wrapClientException((Throwable) ((Object) runtimeException), "ki.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 

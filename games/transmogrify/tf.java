@@ -201,7 +201,7 @@ final class tf {
             ne.field_a = new String[-1 + var3_int - var4];
             ji.a(nc.field_r, 1 + var4, ne.field_a, 0, -1 + (var3_int - var4));
             var4 = -1;
-            var3_int = vd.a(nc.field_r, AchievementNotice.field_m, ij.a(mk.field_C, new String[]{"<br><%0><br>"}, (byte) -46), GameKeyHandler.field_b, (byte) 112);
+            var3_int = vd.a(nc.field_r, AchievementNotice.field_m, ij.a(ModalDialog.field_C, new String[]{"<br><%0><br>"}, (byte) -46), GameKeyHandler.field_b, (byte) 112);
             for (var5 = 0; var3_int > var5; var5++) {
               if (!"<%0>".equals(nc.field_r[var5])) {
                 continue;
@@ -309,7 +309,7 @@ final class tf {
             if (GameKeyHandler.field_a[var4Lifetime2] >= 0) {
               stackIn_114_1 = hi.field_c;
             } else {
-              stackIn_114_1 = fi.field_x;
+              stackIn_114_1 = SingleChildWidgetContainer.field_x;
             }
             mf.field_d = stackIn_113_0 + stackIn_114_1;
           }
@@ -333,7 +333,7 @@ final class tf {
               var5Lifetime3 = var5Lifetime3 + (ee.field_D + (jl.field_o << 1) + hi.field_c);
               jj.field_c[var4Lifetime3][3] = hi.field_c + (jl.field_o << 1);
             } else {
-              var5Lifetime3 = var5Lifetime3 + fi.field_x;
+              var5Lifetime3 = var5Lifetime3 + SingleChildWidgetContainer.field_x;
             }
             var4Lifetime3++;
           }

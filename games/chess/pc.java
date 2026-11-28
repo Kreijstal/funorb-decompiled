@@ -759,7 +759,7 @@ final class pc extends ci {
                         var13_int = var18_int;
                       }
                       if (var18_int != 0 &&
-                        !lf.field_U) {
+                        !AlphaWidgetContainer.field_U) {
                         var11_int = 1;
                       }
                     }
@@ -770,7 +770,7 @@ final class pc extends ci {
                         var14_int = var18_intLifetime1;
                       }
                       if (var18_intLifetime1 != 0 &&
-                        !lf.field_U) {
+                        !AlphaWidgetContainer.field_U) {
                         var11_int = 1;
                       }
                     }
@@ -937,14 +937,14 @@ final class pc extends ci {
                 var9_ref_String = pd.field_Rb.field_Gb;
                 sc.field_f.field_db = MatchingFieldValidator.a(InteractiveWidget.field_D, new String[]{var9_ref_String}, (byte) -88).toUpperCase();
                 tn.field_j.a(0, BirthDateValidator.field_k.field_M, -2147483648, 40, BirthDateValidator.field_k.field_pb - 40);
-                tn.field_j.field_db = MatchingFieldValidator.a(kb.field_R, new String[]{var9_ref_String}, (byte) -93);
+                tn.field_j.field_db = MatchingFieldValidator.a(DraggableWidgetContainer.field_R, new String[]{var9_ref_String}, (byte) -93);
                 var8 = tn.field_j;
               }
             } else {
               var9_ref_String = pd.field_Rb.field_Gb;
               sc.field_f.field_db = MatchingFieldValidator.a(InteractiveWidget.field_D, new String[]{var9_ref_String}, (byte) -88).toUpperCase();
               tn.field_j.a(0, BirthDateValidator.field_k.field_M, -2147483648, 40, BirthDateValidator.field_k.field_pb - 40);
-              tn.field_j.field_db = MatchingFieldValidator.a(kb.field_R, new String[]{var9_ref_String}, (byte) -93);
+              tn.field_j.field_db = MatchingFieldValidator.a(DraggableWidgetContainer.field_R, new String[]{var9_ref_String}, (byte) -93);
               var8 = tn.field_j;
             }
             if (BoundedRandomAccessFile.field_e != 0L) {
@@ -957,7 +957,7 @@ final class pc extends ci {
             }
             ec.field_j.field_db = MatchingFieldValidator.a(SecondaryNodeHashTable.field_a, new String[]{Integer.toString(pd.field_Rb.field_Xb), Integer.toString(pd.field_Rb.field_hc)}, (byte) -44);
           }
-          stackIn_184_0 = fm.field_T;
+          stackIn_184_0 = ModalDialogHost.field_T;
           stackIn_185_1 = (param0) && (!param3) && (!jh.field_a);
           ((ci) (Object) stackIn_184_0).a(stackIn_185_1, (byte) 88);
           stackIn_189_0 = BirthDateValidator.field_k;

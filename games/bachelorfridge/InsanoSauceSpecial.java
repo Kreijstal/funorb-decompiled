@@ -32,7 +32,7 @@ final class InsanoSauceSpecial extends SpecialOrder {
           var3 = -49 / ((param0 + 10) / 41);
           var4 = var11.readUnsignedByte(16711935);
           if (var2 == 0) {
-            var5 = (rg) (rp.field_C.beginForward((byte) 90));
+            var5 = (rg) (ModalDialogHost.field_C.beginForward((byte) 90));
             if (var5 == null) {
               vc.a((byte) -124);
               return;

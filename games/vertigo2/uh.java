@@ -49,17 +49,17 @@ final class uh extends UiPanel {
     int field_xc;
 
     final static String a(byte param0, long param1) {
-        wq.field_K.setTime(new Date(param1));
-        int var3 = wq.field_K.get(7);
+        AlphaWidgetContainer.field_K.setTime(new Date(param1));
+        int var3 = AlphaWidgetContainer.field_K.get(7);
         if (param0 != -66) {
           uh.clearStaticReferences((byte) 22);
         }
-        int var4 = wq.field_K.get(5);
-        int var5 = wq.field_K.get(2);
-        int var6 = wq.field_K.get(1);
-        int var7 = wq.field_K.get(11);
-        int var8 = wq.field_K.get(12);
-        int var9 = wq.field_K.get(13);
+        int var4 = AlphaWidgetContainer.field_K.get(5);
+        int var5 = AlphaWidgetContainer.field_K.get(2);
+        int var6 = AlphaWidgetContainer.field_K.get(1);
+        int var7 = AlphaWidgetContainer.field_K.get(11);
+        int var8 = AlphaWidgetContainer.field_K.get(12);
+        int var9 = AlphaWidgetContainer.field_K.get(13);
         return ao.field_Q[var3 - 1] + ", " + var4 / 10 + var4 % 10 + "-" + nh.field_l[var5] + "-" + var6 + " " + var7 / 10 + var7 % 10 + ":" + var8 / 10 + var8 % 10 + ":" + var9 / 10 + var9 % 10 + " GMT";
     }
 

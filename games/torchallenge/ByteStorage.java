@@ -214,7 +214,7 @@ abstract class ByteStorage {
             SoftwareRasterizer.restoreClip(ArchiveRequest.field_w);
           }
           od.a(param0, param1 + (479 - ResourceArchive.field_o[1].fullHeight), 1, 7, 6, ResourceArchive.field_o[1]);
-          uk.field_N.drawTransparent(param0, param1);
+          DraggableWidgetContainer.field_N.drawTransparent(param0, param1);
           if (param2 < 32) {
             return;
           }

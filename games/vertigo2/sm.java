@@ -75,7 +75,7 @@ final class sm extends UiPanel {
         }
         String var1 = mb.a(0);
         eb.field_d = new LoginPanel(var1, (String) null, true, false, false);
-        AccountServiceResult.field_e.b(n.field_b, 0);
+        AccountServiceResult.field_e.showDialog(n.field_b, 0);
         if (param0 == -14284) {
           n.field_b.a(false, eb.field_d);
           n.field_b.f((byte) -23);

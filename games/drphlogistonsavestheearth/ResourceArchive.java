@@ -21,7 +21,7 @@ final class ResourceArchive {
         if (this.field_c) {
           this.field_h[param1] = this.field_e.b(param1, 60);
         } else {
-          this.field_h[param1] = jk.storeBytes(false, this.field_e.b(param1, param0 - 49), (byte) -127);
+          this.field_h[param1] = DropTargetWidgetContainer.storeBytes(false, this.field_e.b(param1, param0 - 49), (byte) -127);
         }
     }
 
@@ -320,7 +320,7 @@ final class ResourceArchive {
               if (this.field_i != 0) {
                 var7[var18Lifetime2] = var40[var17Lifetime3];
               } else {
-                var7[var18Lifetime2] = jk.storeBytes(false, var40[var17Lifetime3], (byte) -124);
+                var7[var18Lifetime2] = DropTargetWidgetContainer.storeBytes(false, var40[var17Lifetime3], (byte) -124);
               }
             }
           } else {
@@ -332,7 +332,7 @@ final class ResourceArchive {
             if (0 != this.field_i) {
               var7[var11] = var43;
             } else {
-              var7[var11] = jk.storeBytes(false, var36, (byte) -122);
+              var7[var11] = DropTargetWidgetContainer.storeBytes(false, var36, (byte) -122);
             }
           }
           return true;
@@ -699,7 +699,7 @@ final class ResourceArchive {
           return;
         }
         int var1 = 91 % ((param0 + 32) / 61);
-        jk.a((byte) 49, false, 4);
+        DropTargetWidgetContainer.a((byte) 49, false, 4);
     }
 
     final synchronized byte[] getFlatFile(int param0, int param1) {

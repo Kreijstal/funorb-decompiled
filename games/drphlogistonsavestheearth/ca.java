@@ -3,7 +3,7 @@
  */
 import java.io.*;
 
-abstract class ca extends bd {
+abstract class ca extends ModalDialog {
     private int field_cb;
     static he[] field_Y;
     private int field_U;
@@ -16,18 +16,18 @@ abstract class ca extends bd {
     static int field_db;
     static he[] field_bb;
 
-    boolean j(int param0) {
+    boolean snapDialogAnimation(int param0) {
         if (param0 != 0) {
           return false;
         }
         this.g((byte) -125);
-        return super.j(param0 ^ 0);
+        return super.snapDialogAnimation(param0 ^ 0);
     }
 
     final void a(int param0, int param1, int param2, byte param3) {
         int var5 = -87 % ((-2 - param3) / 59);
         if (param0 <= 0) {
-          this.b(param2, 1688990433, param1);
+          this.setCenteredSize(param2, 1688990433, param1);
           return;
         }
         this.field_U = this.field_w;
@@ -38,7 +38,7 @@ abstract class ca extends bd {
         this.field_Z = 0;
     }
 
-    ca(k param0, int param1, int param2) {
+    ca(ModalDialogHost param0, int param1, int param2) {
         super(param0, param1, param2);
         this.field_eb = 0;
         this.field_Z = 0;
@@ -162,7 +162,7 @@ abstract class ca extends bd {
         if (param0) {
           return (String) null;
         }
-        return dh.field_N.readString((byte) -102);
+        return LabeledWidgetContainer.field_N.readString((byte) -102);
     }
 
     public static void m(int param0) {
@@ -290,7 +290,7 @@ abstract class ca extends bd {
         }
     }
 
-    boolean k(int param0) {
+    boolean advanceDialogAnimation(int param0) {
         int var2 = 0;
         int var3 = 0;
         int fieldTemp$0 = 0;
@@ -311,12 +311,12 @@ abstract class ca extends bd {
             var2 = var4 * (-this.field_U + this.field_X) / var5 + this.field_U;
             var3 = var4 * (this.field_ab - this.field_cb) / var5 + this.field_cb;
           }
-          this.b(var2, 1688990433, var3);
+          this.setCenteredSize(var2, 1688990433, var3);
         }
         if (param0 != 2968) {
-          this.k(-35);
+          this.advanceDialogAnimation(-35);
         }
-        return super.k(2968);
+        return super.advanceDialogAnimation(2968);
     }
 
     void g(byte param0) {
@@ -326,7 +326,7 @@ abstract class ca extends bd {
         if (param0 > -111) {
           return;
         }
-        this.b(this.field_X, 1688990433, this.field_ab);
+        this.setCenteredSize(this.field_X, 1688990433, this.field_ab);
         this.field_eb = 0;
         this.l(-24626);
     }

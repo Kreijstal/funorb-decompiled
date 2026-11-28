@@ -69,7 +69,7 @@ final class rh {
             param1 = -var8;
             while (param1 < 0) {
               if (param0.field_B[var6] != 0) {
-                this.field_d.field_B[var5] = this.field_e + oi.b(0, var4 + 1) * this.field_h;
+                this.field_d.field_B[var5] = this.field_e + DraggableWidgetContainer.b(0, var4 + 1) * this.field_h;
               }
               param1++;
               var5++;
@@ -94,8 +94,8 @@ final class rh {
           var1 = 64;
         }
         for (var2 = 0; var2 < 2; var2++) {
-          this.field_d.field_B[this.field_c * this.field_f - this.field_c - (this.field_c >> 1) - 1 + var2] = this.field_e + oi.b(0, var1 + 1) * this.field_h;
-          this.field_d.field_B[this.field_c * this.field_f - (this.field_c >> 1) - 1 + var2] = this.field_e + oi.b(0, var1 + 1) * this.field_h;
+          this.field_d.field_B[this.field_c * this.field_f - this.field_c - (this.field_c >> 1) - 1 + var2] = this.field_e + DraggableWidgetContainer.b(0, var1 + 1) * this.field_h;
+          this.field_d.field_B[this.field_c * this.field_f - (this.field_c >> 1) - 1 + var2] = this.field_e + DraggableWidgetContainer.b(0, var1 + 1) * this.field_h;
         }
         this.c();
     }
@@ -156,7 +156,7 @@ final class rh {
           var1 = 64;
         }
         for (var2 = 0; var2 < 3; var2++) {
-          this.field_d.field_B[this.field_c * this.field_f - this.field_c - (this.field_c >> 1) - 1 + var2] = this.field_e + oi.b(0, var1 + 1) * this.field_h;
+          this.field_d.field_B[this.field_c * this.field_f - this.field_c - (this.field_c >> 1) - 1 + var2] = this.field_e + DraggableWidgetContainer.b(0, var1 + 1) * this.field_h;
         }
         this.c();
     }

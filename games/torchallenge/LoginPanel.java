@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class LoginPanel extends kj implements TextFieldListener, WidgetActivationListener {
+final class LoginPanel extends DequeWidgetContainer implements TextFieldListener, WidgetActivationListener {
     private boolean field_P;
     private InteractiveWidget field_R;
     private boolean field_K;
@@ -84,9 +84,9 @@ final class LoginPanel extends kj implements TextFieldListener, WidgetActivation
     }
 
     LoginPanel(String param0, String param1, boolean param2, boolean param3, boolean param4) {
-        super(0, 0, 310, 190, (j) null);
-        bg dupTemp$0 = null;
-        bg dupTemp$1 = null;
+        super(0, 0, 310, 190, (WidgetRenderer) null);
+        LabeledWidgetContainer dupTemp$0 = null;
+        LabeledWidgetContainer dupTemp$1 = null;
         boolean stackIn_4_1 = false;
         boolean stackIn_7_1 = false;
         boolean stackIn_10_1 = false;
@@ -106,8 +106,8 @@ final class LoginPanel extends kj implements TextFieldListener, WidgetActivation
         BitmapFont var7 = null;
         String var8 = null;
         hb var9 = null;
-        bg var12 = null;
-        bg var13 = null;
+        LabeledWidgetContainer var12 = null;
+        LabeledWidgetContainer var13 = null;
         try {
           this.field_U = param1;
           stackIn_4_1 = (param3);
@@ -120,10 +120,10 @@ final class LoginPanel extends kj implements TextFieldListener, WidgetActivation
             this.field_K)) {
             throw new IllegalStateException();
           }
-          this.field_T = (EditableTextField) ((Object) new ValidatedTextField(param0, (gg) (this), 100));
-          this.field_Q = (EditableTextField) ((Object) new ValidatedTextField("", (gg) (this), 20));
+          this.field_T = (EditableTextField) ((Object) new ValidatedTextField(param0, (WidgetEventListener) (this), 100));
+          this.field_Q = (EditableTextField) ((Object) new ValidatedTextField("", (WidgetEventListener) (this), 20));
           if (!this.field_P) {
-            this.field_J = new InteractiveWidget(s.field_p, (gg) null);
+            this.field_J = new InteractiveWidget(s.field_p, (WidgetEventListener) null);
             stackIn_18_1 = null;
             stackIn_18_2 = null;
             if (this.field_K) {
@@ -133,26 +133,26 @@ final class LoginPanel extends kj implements TextFieldListener, WidgetActivation
             } else {
               stackIn_19_1 = null;
               stackIn_19_2 = null;
-              stackIn_19_3 = b.field_R;
+              stackIn_19_3 = ModalDialog.field_R;
             }
-            this.field_R = new InteractiveWidget(stackIn_19_3, (gg) null);
+            this.field_R = new InteractiveWidget(stackIn_19_3, (WidgetEventListener) null);
             if (this.field_L) {
-              this.field_O = new InteractiveWidget(RandomAccessCacheFile.field_a, (gg) (this));
+              this.field_O = new InteractiveWidget(RandomAccessCacheFile.field_a, (WidgetEventListener) (this));
             }
           } else {
-            this.field_J = new InteractiveWidget(qb.field_e, (gg) null);
-            this.field_R = new InteractiveWidget(ph.field_f, (gg) null);
+            this.field_J = new InteractiveWidget(qb.field_e, (WidgetEventListener) null);
+            this.field_R = new InteractiveWidget(ph.field_f, (WidgetEventListener) null);
             this.field_T.field_F = false;
           }
-          this.field_T.field_q = (j) ((Object) new fk(10000536));
-          this.field_Q.field_q = (j) ((Object) new ij(10000536));
+          this.field_T.field_q = (WidgetRenderer) ((Object) new fk(10000536));
+          this.field_Q.field_q = (WidgetRenderer) ((Object) new ij(10000536));
           var6 = new cl();
-          this.field_J.field_q = (j) ((Object) var6);
+          this.field_J.field_q = (WidgetRenderer) ((Object) var6);
           if (null != this.field_R) {
-            this.field_R.field_q = (j) ((Object) var6);
+            this.field_R.field_q = (WidgetRenderer) ((Object) var6);
           }
           if (this.field_O != null) {
-            this.field_O.field_q = (j) ((Object) var6);
+            this.field_O.field_q = (WidgetRenderer) ((Object) var6);
           }
           this.field_T.field_r = qf.field_d;
           if (this.field_O != null) {
@@ -160,10 +160,10 @@ final class LoginPanel extends kj implements TextFieldListener, WidgetActivation
           }
           if (!this.field_P) {
             if (!this.field_K) {
-              this.field_R.field_q = (j) ((Object) new me());
+              this.field_R.field_q = (WidgetRenderer) ((Object) new me());
             } else {
               this.field_R.field_r = vk.field_c;
-              this.field_R.field_q = (j) ((Object) new me());
+              this.field_R.field_q = (WidgetRenderer) ((Object) new me());
             }
           } else {
             this.field_R.field_r = InteractiveWidget.field_J;
@@ -182,49 +182,49 @@ final class LoginPanel extends kj implements TextFieldListener, WidgetActivation
               var8 = DisplayNameSelectionPanel.field_N;
             }
           }
-          dupTemp$0 = new bg(10, this.field_i, this.field_p - 20, 25, this.field_T, false, 80, 3, var7, 16777215, var8);
+          dupTemp$0 = new LabeledWidgetContainer(10, this.field_i, this.field_p - 20, 25, this.field_T, false, 80, 3, var7, 16777215, var8);
           var12 = dupTemp$0;
-          this.a(0, dupTemp$0);
+          this.addChild(0, dupTemp$0);
           this.field_i = this.field_i + (5 + ((UiComponent) ((Object) var12)).field_l);
-          dupTemp$1 = new bg(10, this.field_i, this.field_p - 20, 25, this.field_Q, false, 80, 3, var7, 16777215, NanoFrameTimer.field_n);
+          dupTemp$1 = new LabeledWidgetContainer(10, this.field_i, this.field_p - 20, 25, this.field_Q, false, 80, 3, var7, 16777215, NanoFrameTimer.field_n);
           var13 = dupTemp$1;
-          this.a(0, dupTemp$1);
+          this.addChild(0, dupTemp$1);
           this.field_i = this.field_i + (5 + ((UiComponent) ((Object) var13)).field_l);
-          this.field_J.field_k = (gg) (this);
+          this.field_J.field_k = (WidgetEventListener) (this);
           if (null != this.field_O) {
-            this.field_O.field_k = (gg) (this);
+            this.field_O.field_k = (WidgetEventListener) (this);
           }
           if (this.field_R != null) {
-            this.field_R.field_k = (gg) (this);
+            this.field_R.field_k = (WidgetEventListener) (this);
           }
           if (this.field_O == null) {
-            this.field_J.a((byte) 126, 8, 30, -6 + this.field_p - 10, this.field_i);
+            this.field_J.setBounds((byte) 126, 8, 30, -6 + this.field_p - 10, this.field_i);
             this.field_i = this.field_i + 35;
           } else {
-            this.field_J.a((byte) 109, 85, 30, -95 + this.field_p, this.field_i);
+            this.field_J.setBounds((byte) 109, 85, 30, -95 + this.field_p, this.field_i);
             this.field_i = this.field_i + 60;
           }
           if (null != this.field_O) {
-            this.field_O.a((byte) 106, 8, 30, -16 + this.field_p, this.field_i);
+            this.field_O.setBounds((byte) 106, 8, 30, -16 + this.field_p, this.field_i);
             this.field_i = this.field_i + 35;
           }
           if (this.field_R != null) {
             if (!this.field_P &&
               !this.field_K) {
-              this.field_R.a((byte) 103, 8, 20, 40, this.field_i);
+              this.field_R.setBounds((byte) 103, 8, 20, 40, this.field_i);
               this.field_i = this.field_i + 25;
             } else {
-              this.field_R.a((byte) 116, 8, 30, -6 + this.field_p - 10, this.field_i);
+              this.field_R.setBounds((byte) 116, 8, 30, -6 + this.field_p - 10, this.field_i);
               this.field_i = this.field_i + 35;
             }
           }
-          this.a((byte) 125, 0, 3 + this.field_i, this.field_p, 0);
-          this.a(0, this.field_J);
+          this.setBounds((byte) 125, 0, 3 + this.field_i, this.field_p, 0);
+          this.addChild(0, this.field_J);
           if (null != this.field_O) {
-            this.a(0, this.field_O);
+            this.addChild(0, this.field_O);
           }
           if (null != this.field_R) {
-            this.a(0, this.field_R);
+            this.addChild(0, this.field_R);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -257,14 +257,14 @@ final class LoginPanel extends kj implements TextFieldListener, WidgetActivation
         var2 = 83 % ((46 - param0) / 56);
     }
 
-    final void a(int param0, int param1, boolean param2, int param3) {
+    final void drawWidget(int param0, int param1, boolean param2, int param3) {
         if (null != this.field_U) {
           RasterBuffer.field_g.drawParagraph(this.field_U, 20 + (param1 + this.field_m), 15 + this.field_i + param0, -40 + this.field_p, this.field_l, 16777215, -1, 1, 0, RasterBuffer.field_g.field_x);
         }
         if (this.field_O != null) {
           SoftwareRasterizer.drawHorizontalLine(10 + param1, 134 + param0, this.field_p - 20, 4210752);
         }
-        super.a(param0, param1, param2, param3);
+        super.drawWidget(param0, param1, param2, param3);
         if (param2) {
           this.field_J = (InteractiveWidget) null;
         }
@@ -288,7 +288,7 @@ final class LoginPanel extends kj implements TextFieldListener, WidgetActivation
         RuntimeException var3 = null;
         try {
           if (param0 == this.field_T) {
-            this.field_Q.a((UiComponent) (this), 0);
+            this.field_Q.takeFocus((UiComponent) (this), 0);
           }
           if (param0 == this.field_Q) {
             this.submitLogin(126);
@@ -321,7 +321,7 @@ final class LoginPanel extends kj implements TextFieldListener, WidgetActivation
         return this.field_T.field_v;
     }
 
-    final boolean a(int param0, char param1, byte param2, UiComponent param3) {
+    final boolean handleKey(int param0, char param1, byte param2, UiComponent param3) {
         RuntimeException var5 = null;
         boolean stackIn_9_0 = false;
         boolean stackIn_13_0 = false;
@@ -330,20 +330,20 @@ final class LoginPanel extends kj implements TextFieldListener, WidgetActivation
         String stackIn_17_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (super.a(param0, param1, (byte) 116, param3)) {
+          if (super.handleKey(param0, param1, (byte) 116, param3)) {
             return true;
           }
           if (param2 < 9) {
             return false;
           }
           if (param0 == 98) {
-            stackIn_9_0 = this.a(param3, (byte) -16);
+            stackIn_9_0 = this.focusPreviousChild(param3, (byte) -16);
             return stackIn_9_0;
           }
           if (param0 != 99) {
             return false;
           }
-          stackIn_13_0 = this.b(72, param3);
+          stackIn_13_0 = this.focusNextChild(72, param3);
           return stackIn_13_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

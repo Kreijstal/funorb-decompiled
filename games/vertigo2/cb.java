@@ -411,7 +411,7 @@ final class cb extends UiPanel {
             this.a(92, var23, var24, var26, var25);
             return;
           }
-          this.field_Lb = new UiPanel(0L, param8, sd.field_H);
+          this.field_Lb = new UiPanel(0L, param8, ModalDialogHost.field_H);
           this.field_Lb.field_O = 1;
           this.field_Lb.field_A = 11184810;
           this.field_Nb.b(this.field_Lb, 123);

@@ -208,7 +208,7 @@ final class SectorCacheStore {
               EditableTextField.field_U.position = 0;
               var4 = tk.field_h;
               var5 = var4;
-              lf.field_T = param1 ? -2 : -1;
+              AlphaWidgetContainer.field_T = param1 ? -2 : -1;
               wc.field_u = param1 ? -2 : -1;
               hh.field_o = param1 ? -2 : -1;
               var5.position = 0;

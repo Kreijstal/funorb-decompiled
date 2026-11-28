@@ -57,7 +57,7 @@ final class WhirlpoolDigest {
             var8 = 255 & param0[var5_int] << var6 | (param0[var5_int + 1] & 255) >>> -var6 + 8;
             if (var8 >= 0 &&
               256 > var8) {
-              this.field_g[this.field_i] = (byte)ok.a((int) this.field_g[this.field_i], var8 >>> var7);
+              this.field_g[this.field_i] = (byte)SingleChildWidgetContainer.a((int) this.field_g[this.field_i], var8 >>> var7);
               this.field_i = this.field_i + 1;
               this.field_l = this.field_l + (8 - var7);
               if (this.field_l == 512) {
@@ -77,7 +77,7 @@ final class WhirlpoolDigest {
             var8Lifetime1 = 0;
           } else {
             var8Lifetime1 = 255 & param0[var5_int] << var6;
-            this.field_g[this.field_i] = (byte)ok.a((int) this.field_g[this.field_i], var8Lifetime1 >>> var7);
+            this.field_g[this.field_i] = (byte)SingleChildWidgetContainer.a((int) this.field_g[this.field_i], var8Lifetime1 >>> var7);
           }
           if ((long)var7 + param1 >= 8L) {
             this.field_i = this.field_i + 1;
@@ -155,7 +155,7 @@ final class WhirlpoolDigest {
         int var8 = 0;
         var8 = TrackController.field_F ? 1 : 0;
         try {
-          this.field_g[this.field_i] = (byte)ok.a((int) this.field_g[this.field_i], 128 >>> RandomAccessCacheFile.a(this.field_l, 7));
+          this.field_g[this.field_i] = (byte)SingleChildWidgetContainer.a((int) this.field_g[this.field_i], 128 >>> RandomAccessCacheFile.a(this.field_l, 7));
           this.field_i = this.field_i + 1;
           if (param2 != -513) {
             return;

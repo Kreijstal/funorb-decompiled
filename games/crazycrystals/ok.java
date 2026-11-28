@@ -1,12 +1,12 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ok implements wo {
+final class ok implements WidgetRenderer {
     static fp field_b;
     private int field_d;
     static String field_i;
     private int field_f;
-    static oj field_e;
+    static DraggableWidgetContainer field_e;
     private BitmapFont field_h;
     static MouseWheelInput field_g;
     static ResourceArchive field_c;
@@ -227,7 +227,7 @@ final class ok implements wo {
         }
     }
 
-    public final void a(int param0, boolean param1, int param2, qm param3, boolean param4) {
+    public final void paintWidget(int param0, boolean param1, int param2, UiWidget param3, boolean param4) {
         int stackIn_10_0 = 0;
         RuntimeException stackIn_28_0 = null;
         StringBuilder stackIn_28_1 = null;
@@ -246,14 +246,14 @@ final class ok implements wo {
             return;
           }
           if (!param3.field_m &&
-            !param3.e(-123)) {
+            !param3.isFocused(-123)) {
             stackIn_10_0 = 2188450;
           } else {
             stackIn_10_0 = 3249872;
           }
           var6_int = stackIn_10_0;
           this.field_h.drawParagraph("<u=" + Integer.toString(var6_int, 16) + ">" + param3.field_o + "</u>", param2 + param3.field_r, param0 + param3.field_j, param3.field_g, param3.field_f, var6_int, -1, this.field_f, this.field_d, this.field_h.field_u + this.field_h.field_o);
-          if (param3.e(-125)) {
+          if (param3.isFocused(-125)) {
             var7 = this.field_h.stringWidth(param3.field_o);
             var8 = this.field_h.field_o + this.field_h.field_u;
             var9 = param2 + param3.field_r;

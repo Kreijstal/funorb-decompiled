@@ -55,7 +55,7 @@ class ma extends jf implements WidgetActivationListener {
         field_yb = null;
     }
 
-    final boolean a(int param0, char param1, vg param2, int param3) {
+    final boolean handleKey(int param0, char param1, UiWidget param2, int param3) {
         RuntimeException var5 = null;
         String var6 = null;
         boolean stackIn_6_0 = false;
@@ -72,7 +72,7 @@ class ma extends jf implements WidgetActivationListener {
             var6 = (String) null;
             this.a(-120, (String) null, 15);
           }
-          stackIn_6_0 = super.a(param0, param1, param2, 110);
+          stackIn_6_0 = super.handleKey(param0, param1, param2, 110);
           return stackIn_6_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -126,7 +126,7 @@ class ma extends jf implements WidgetActivationListener {
               }
               ((dj) (Object) stackIn_12_0).a(stackIn_12_1, stackIn_13_2, -1);
             } else {
-              var6.a(DrPhlogistonSavesTheEarth.field_E, false, (fd) (this));
+              var6.a(DrPhlogistonSavesTheEarth.field_E, false, (WidgetEventListener) (this));
             }
           }
           if (3 == param0) {
@@ -137,7 +137,7 @@ class ma extends jf implements WidgetActivationListener {
                 var6.a(false, bb.field_d, 9);
               } else {
                 if (9 == param0) {
-                  var6.a(eg.field_g, false, (fd) (this));
+                  var6.a(eg.field_g, false, (WidgetEventListener) (this));
                 }
               }
             } else {
@@ -171,7 +171,7 @@ class ma extends jf implements WidgetActivationListener {
         this.a(33, var2);
     }
 
-    ma(k param0, BitmapFont param1, String param2, boolean param3, boolean param4) {
+    ma(ModalDialogHost param0, BitmapFont param1, String param2, boolean param3, boolean param4) {
         super(param0, new dj((ma) null, param1, param2), 77, 10, 10);
         try {
           this.field_ub = param4 ? true : false;
@@ -181,7 +181,7 @@ class ma extends jf implements WidgetActivationListener {
           this.field_rb = param3 ? true : false;
           this.field_Ab = new hd(13, 50, 274, 30, 15, 2113632, 4210752);
           this.field_Ab.field_E = true;
-          this.b(this.field_Ab, (byte) 58);
+          this.addChild(this.field_Ab, (byte) 58);
         } catch (RuntimeException runtimeException) {
           throw ie.wrapClientException((Throwable) ((Object) runtimeException), "ma.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ')');
         }

@@ -8,7 +8,7 @@ final class ef extends sj {
     static int field_vb;
     static String field_wb;
 
-    final void a(fj param0, byte param1) {
+    final void a(UiWidget param0, byte param1) {
         try {
           super.a(param0, param1);
         } catch (RuntimeException runtimeException) {
@@ -16,7 +16,7 @@ final class ef extends sj {
         }
     }
 
-    ef(sh param0, fj param1) {
+    ef(ModalDialogHost param0, UiWidget param1) {
         super(param0, param1, 33, 20, 30);
     }
 

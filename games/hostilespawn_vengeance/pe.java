@@ -108,20 +108,20 @@ final class pe extends wb {
         var2.d(125, 0);
     }
 
-    pe(gg param0, String param1) {
+    pe(ModalDialogHost param0, String param1) {
         super(param0, 300, 120);
         int var3_int = 0;
         try {
           this.field_cb = param1;
           if (null != this.field_cb) {
             var3_int = field_eb.textHeight(this.field_cb, 260, field_eb.field_y);
-            this.a(300, 15767, var3_int + 150);
+            this.setCenteredSize(300, 15767, var3_int + 150);
           }
           this.field_ib = new ba(13, 50, 274, 30, 15, 2113632, 4210752);
           this.field_kb = false;
           this.field_jb = false;
           this.field_ib.field_E = true;
-          this.a(51448, this.field_ib);
+          this.addChild(51448, this.field_ib);
         } catch (RuntimeException runtimeException) {
           throw AccountCreationResultPanel.wrapClientException((Throwable) ((Object) runtimeException), "pe.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

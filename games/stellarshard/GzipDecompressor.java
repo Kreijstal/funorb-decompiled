@@ -72,8 +72,8 @@ final class GzipDecompressor {
             GzipDecompressor.a((String) null, 44, (byte) -44, (String[]) null);
           }
           var4 = var10.readInt(false);
-          if (var4 >= 0 && (0 == of.field_B ||
-            !(var4 > of.field_B))) {
+          if (var4 >= 0 && (0 == DropTargetWidgetContainer.field_B ||
+            !(var4 > DropTargetWidgetContainer.field_B))) {
             if (var3 == 0) {
               var13 = new byte[var4];
               var11 = var13;
@@ -83,8 +83,8 @@ final class GzipDecompressor {
               return stackIn_9_0;
             }
             var5 = var10.readInt(false);
-            if (var5 >= 0 && (of.field_B == 0 ||
-              !(of.field_B < var5))) {
+            if (var5 >= 0 && (DropTargetWidgetContainer.field_B == 0 ||
+              !(DropTargetWidgetContainer.field_B < var5))) {
               var14 = new byte[var5];
               var12 = var14;
               var6 = var12;
@@ -136,7 +136,7 @@ final class GzipDecompressor {
           }
           if (param1 == 255) {
             stackIn_13_0 = !(u.field_k >= 13);
-            ed.field_d = dg.createAccountSuccessResult(stackIn_13_0, 0);
+            ed.field_d = SingleChildWidgetContainer.createAccountSuccessResult(stackIn_13_0, 0);
             var6 = (String[]) null;
             mk.a((String[]) null, true);
             return;

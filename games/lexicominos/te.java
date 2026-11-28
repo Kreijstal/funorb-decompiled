@@ -4,19 +4,19 @@
 final class te extends InteractiveWidget {
     static java.awt.Color field_E;
 
-    private te(String param0, rd param1, vd param2) {
+    private te(String param0, WidgetRenderer param1, WidgetEventListener param2) {
         super(param0, param1, param2);
         try {
-          this.field_i = nb.field_z.field_b;
+          this.field_i = DequeWidgetContainer.field_z.field_b;
         } catch (RuntimeException runtimeException) {
           throw ld.wrapClientException((Throwable) ((Object) runtimeException), "te.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
-    private te(String param0, vd param1) {
-        this(param0, nb.field_z.field_f, param1);
+    private te(String param0, WidgetEventListener param1) {
+        this(param0, DequeWidgetContainer.field_z.field_f, param1);
         try {
-          this.field_i = nb.field_z.field_b;
+          this.field_i = DequeWidgetContainer.field_z.field_b;
         } catch (RuntimeException runtimeException) {
           throw ld.wrapClientException((Throwable) ((Object) runtimeException), "te.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
@@ -29,7 +29,7 @@ final class te extends InteractiveWidget {
         field_E = null;
     }
 
-    te(String param0, vd param1, boolean param2) {
+    te(String param0, WidgetEventListener param1, boolean param2) {
         this(param0, param1);
         try {
           this.field_C = param2 ? true : false;

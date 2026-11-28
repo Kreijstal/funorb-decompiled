@@ -110,8 +110,8 @@ final class AccountRegistrationPanel extends WidgetContainer implements TextHots
 
     final static void a(String param0, String param1, int param2) {
         try {
-          if (null != ei.field_G) {
-            ei.field_G.o(3);
+          if (null != ModalDialogHost.field_G) {
+            ModalDialogHost.field_G.o(3);
           }
           af.field_r = new LoginPanel(param1, param0, false, true, true);
           if (param2 <= 30) {
@@ -279,7 +279,7 @@ final class AccountRegistrationPanel extends WidgetContainer implements TextHots
         return "<u=2164A2><col=2164A2>";
     }
 
-    final boolean a(int param0, int param1, char param2, UiWidget param3) {
+    final boolean handleKey(int param0, int param1, char param2, UiWidget param3) {
         RuntimeException var5 = null;
         boolean stackIn_5_0 = false;
         boolean stackIn_9_0 = false;
@@ -288,17 +288,17 @@ final class AccountRegistrationPanel extends WidgetContainer implements TextHots
         String stackIn_13_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (super.a(param0, param1, param2, param3)) {
+          if (super.handleKey(param0, param1, param2, param3)) {
             return true;
           }
           if (param1 == 98) {
-            stackIn_5_0 = this.a(param3, -8666);
+            stackIn_5_0 = this.focusPreviousChild(param3, -8666);
             return stackIn_5_0;
           }
           if (param1 != 99) {
             return false;
           }
-          stackIn_9_0 = this.a(param3, (byte) 123);
+          stackIn_9_0 = this.focusNextChild(param3, (byte) 123);
           return stackIn_9_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -315,7 +315,7 @@ final class AccountRegistrationPanel extends WidgetContainer implements TextHots
     }
 
     private final int a(int param0, String param1, UiWidget param2, int param3, int param4) {
-        kg var6 = null;
+        LabeledWidgetContainer var6 = null;
         RuntimeException var6_ref = null;
         int stackIn_3_0 = 0;
         RuntimeException stackIn_6_0 = null;
@@ -328,8 +328,8 @@ final class AccountRegistrationPanel extends WidgetContainer implements TextHots
           if (param0 != -31909) {
             this.field_M = (RichTextWidget) null;
           }
-          var6 = new kg(20, param3, 120 + param4, 25, param2, false, 120, 3, si.field_V, 16777215, param1);
-          this.b(param0 ^ -31905, var6);
+          var6 = new LabeledWidgetContainer(20, param3, 120 + param4, 25, param2, false, 120, 3, si.field_V, 16777215, param1);
+          this.addChild(param0 ^ -31905, var6);
           stackIn_3_0 = var6.field_t;
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -355,7 +355,7 @@ final class AccountRegistrationPanel extends WidgetContainer implements TextHots
     private final int a(int param0, int param1, UiWidget param2, String param3, int param4) {
         RuntimeException var6 = null;
         ii var7 = null;
-        kg var8 = null;
+        LabeledWidgetContainer var8 = null;
         int stackIn_3_0 = 0;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -364,14 +364,14 @@ final class AccountRegistrationPanel extends WidgetContainer implements TextHots
         String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var8 = new kg(20, param1, 120 + param4, 25, param2, false, 120, 3, si.field_V, 16777215, param3);
+          var8 = new LabeledWidgetContainer(20, param1, 120 + param4, 25, param2, false, 120, 3, si.field_V, 16777215, param3);
           if (param0 != -17073) {
             this.field_O = (NameSuggestionsPanel) null;
           }
-          this.b(4, var8);
+          this.addChild(4, var8);
           var7 = new ii(((FieldValidatorProvider) ((Object) param2)).getFieldValidator((byte) 38));
-          this.b(4, var7);
-          var7.b(15, var8.field_p + var8.field_w + 3, var8.field_k + (var8.field_t - 15 >> 1), 15, 23987);
+          this.addChild(4, var7);
+          var7.setBounds(15, var8.field_p + var8.field_w + 3, var8.field_k + (var8.field_t - 15 >> 1), 15, 23987);
           stackIn_3_0 = var8.field_t;
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -395,17 +395,17 @@ final class AccountRegistrationPanel extends WidgetContainer implements TextHots
     }
 
     public AccountRegistrationPanel() {
-        super(0, 0, 496, 0, (uk) null);
-        this.field_N = new ValidatedTextField("", (lf) null, 12);
-        this.field_H = new ValidatedTextField("", (lf) null, 100);
-        this.field_K = new ValidatedTextField("", (lf) null, 100);
-        this.field_G = new ValidatedTextField("", (lf) null, 20);
-        this.field_B = new ValidatedTextField("", (lf) null, 20);
-        this.field_C = new ValidatedTextField("", (lf) null, 3);
+        super(0, 0, 496, 0, (WidgetRenderer) null);
+        this.field_N = new ValidatedTextField("", (WidgetEventListener) null, 12);
+        this.field_H = new ValidatedTextField("", (WidgetEventListener) null, 100);
+        this.field_K = new ValidatedTextField("", (WidgetEventListener) null, 100);
+        this.field_G = new ValidatedTextField("", (WidgetEventListener) null, 20);
+        this.field_B = new ValidatedTextField("", (WidgetEventListener) null, 20);
+        this.field_C = new ValidatedTextField("", (WidgetEventListener) null, 3);
         int var1 = 1;
-        this.field_D = new nd("", (lf) null, var1 != 0);
-        this.field_I = new InteractiveWidget(ta.field_k, (lf) null);
-        this.field_J = new InteractiveWidget(ProxySocketConnector.field_h, (lf) null);
+        this.field_D = new nd("", (WidgetEventListener) null, var1 != 0);
+        this.field_I = new InteractiveWidget(ta.field_k, (WidgetEventListener) null);
+        this.field_J = new InteractiveWidget(ProxySocketConnector.field_h, (WidgetEventListener) null);
         this.field_N.field_x = fc.field_d;
         this.field_H.field_x = fk.field_r;
         this.field_K.field_x = ib.field_m;
@@ -420,17 +420,17 @@ final class AccountRegistrationPanel extends WidgetContainer implements TextHots
         this.field_B.setFieldValidator((byte) -2, new MatchingFieldValidator(this.field_B, this.field_G));
         this.field_C.setFieldValidator((byte) -2, new AgeValidator(this.field_C));
         this.field_I.field_E = false;
-        this.field_I.field_u = (uk) ((Object) new b());
-        this.field_J.field_u = (uk) ((Object) new ll());
-        this.field_N.field_u = (uk) ((Object) new vg(10000536));
+        this.field_I.field_u = (WidgetRenderer) ((Object) new b());
+        this.field_J.field_u = (WidgetRenderer) ((Object) new ll());
+        this.field_N.field_u = (WidgetRenderer) ((Object) new vg(10000536));
         vg dupTemp$0 = new vg(10000536);
-        this.field_K.field_u = (uk) ((Object) dupTemp$0);
-        this.field_H.field_u = (uk) ((Object) dupTemp$0);
-        this.field_C.field_u = (uk) ((Object) new vg(10000536));
-        this.field_D.field_u = (uk) ((Object) new kf());
+        this.field_K.field_u = (WidgetRenderer) ((Object) dupTemp$0);
+        this.field_H.field_u = (WidgetRenderer) ((Object) dupTemp$0);
+        this.field_C.field_u = (WidgetRenderer) ((Object) new vg(10000536));
+        this.field_D.field_u = (WidgetRenderer) ((Object) new kf());
         il dupTemp$1 = new il(10000536);
-        this.field_B.field_u = (uk) ((Object) dupTemp$1);
-        this.field_G.field_u = (uk) ((Object) dupTemp$1);
+        this.field_B.field_u = (WidgetRenderer) ((Object) dupTemp$1);
+        this.field_G.field_u = (WidgetRenderer) ((Object) dupTemp$1);
         String var2 = h.a(hk.field_v, 0, new String[]{this.k(120), this.e((byte) 100)});
         int var3 = 20;
         var3 = var3 + this.a(-31909, t.field_b, this.field_H, var3, 170);
@@ -439,36 +439,36 @@ final class AccountRegistrationPanel extends WidgetContainer implements TextHots
         var3 = var3 + (this.a(170, this.field_B, var3, (byte) -113, u.field_l, ta.field_l) + 5);
         var3 = var3 + (5 + this.a(170, this.field_N, var3, (byte) -113, nk.field_h, si.field_I));
         var3 = var3 + this.a(-17073, var3, this.field_C, vd.field_c, 170);
-        kg var4 = new kg(46, var3, this.field_p - 90, 25, this.field_D, true, this.field_p - 120, 5, de.field_c, 11579568, nf.field_o);
-        this.b(4, var4);
+        LabeledWidgetContainer var4 = new LabeledWidgetContainer(46, var3, this.field_p - 90, 25, this.field_D, true, this.field_p - 120, 5, de.field_c, 11579568, nf.field_o);
+        this.addChild(4, var4);
         var3 = var3 + var4.field_t;
         DefaultTextWidgetRenderer var5 = new DefaultTextWidgetRenderer(si.field_V, 0, 0, 0, 0, 16777215, -1, 0, 0, si.field_V.field_N, -1, 2147483647, true);
         this.field_M = new RichTextWidget(var2, var5);
         this.field_M.field_x = "";
         this.field_M.a(ni.field_b, 0, 1);
         this.field_M.a(ni.field_b, 1, 1);
-        this.field_M.field_v = (lf) (this);
+        this.field_M.field_v = (WidgetEventListener) (this);
         this.field_M.b(this.field_p - 90, (byte) -11, 46, var3);
         var3 = var3 + (this.field_M.field_t + 15);
-        this.b(4, this.field_M);
+        this.addChild(4, this.field_M);
         int var6 = 4;
         int var7 = 200;
-        this.field_I.b(var7, -var7 + 496 >> 1, var3, 40, 23987);
-        this.field_J.b(60, 3 + var6, 15 + var3, 40, 23987);
-        this.field_J.field_v = (lf) (this);
-        this.field_I.field_v = (lf) (this);
-        this.b(4, this.field_I);
-        this.b(4, this.field_J);
+        this.field_I.setBounds(var7, -var7 + 496 >> 1, var3, 40, 23987);
+        this.field_J.setBounds(60, 3 + var6, 15 + var3, 40, 23987);
+        this.field_J.field_v = (WidgetEventListener) (this);
+        this.field_I.field_v = (WidgetEventListener) (this);
+        this.addChild(4, this.field_I);
+        this.addChild(4, this.field_J);
         this.field_O = new NameSuggestionsPanel((NameSuggestionListener) (this));
-        this.field_O.b(-60 - this.field_N.field_p - this.field_N.field_w + this.field_p, 60 + this.field_N.field_w + this.field_N.field_p, 20 + this.field_N.field_k, 150, 23987);
-        this.b(4, this.field_O);
-        this.b(496, 0, 0, var3 - (-55 - var6), 23987);
+        this.field_O.setBounds(-60 - this.field_N.field_p - this.field_N.field_w + this.field_p, 60 + this.field_N.field_w + this.field_N.field_p, 20 + this.field_N.field_k, 150, 23987);
+        this.addChild(4, this.field_O);
+        this.setBounds(496, 0, 0, var3 - (-55 - var6), 23987);
     }
 
     private final int a(String param0, int param1, String param2, UiWidget param3, int param4, int param5, int param6) {
         RuntimeException var8 = null;
         cd var9 = null;
-        kg var10 = null;
+        LabeledWidgetContainer var10 = null;
         int stackIn_3_0 = 0;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -479,14 +479,14 @@ final class AccountRegistrationPanel extends WidgetContainer implements TextHots
         String stackIn_13_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var10 = new kg(20, param1, param4 + 120, 25, param3, false, 120, 3, si.field_V, 16777215, param2);
-          this.b(param6 ^ -6, var10);
+          var10 = new LabeledWidgetContainer(20, param1, param4 + 120, 25, param3, false, 120, 3, si.field_V, 16777215, param2);
+          this.addChild(param6 ^ -6, var10);
           if (param6 != -2) {
             this.field_G = (ValidatedTextField) null;
           }
           var9 = new cd(((FieldValidatorProvider) ((Object) param3)).getFieldValidator((byte) 105), param0, 126, param1 + var10.field_t, 50 + param4, param5);
-          var9.field_v = (lf) (this);
-          this.b(param6 ^ -6, var9);
+          var9.field_v = (WidgetEventListener) (this);
+          this.addChild(param6 ^ -6, var9);
           stackIn_3_0 = var9.field_t + var10.field_t;
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -528,7 +528,7 @@ final class AccountRegistrationPanel extends WidgetContainer implements TextHots
           return wd.a(var2, this.field_D.field_z, 5, this.field_H.field_m, this.field_G.field_m, this.field_N.field_m, this);
         }
         UiWidget var4 = (UiWidget) null;
-        this.a(-3, false, -41, (UiWidget) null);
+        this.updatePointer(-3, false, -41, (UiWidget) null);
         return wd.a(var2, this.field_D.field_z, 5, this.field_H.field_m, this.field_G.field_m, this.field_N.field_m, this);
     }
 
@@ -581,9 +581,9 @@ final class AccountRegistrationPanel extends WidgetContainer implements TextHots
         }
     }
 
-    final void a(int param0, boolean param1, int param2, UiWidget param3) {
+    final void updatePointer(int param0, boolean param1, int param2, UiWidget param3) {
         try {
-          super.a(param0, param1, param2, param3);
+          super.updatePointer(param0, param1, param2, param3);
           this.field_I.field_E = this.canSubmitRegistration(40);
         } catch (RuntimeException runtimeException) {
           throw ma.a((Throwable) ((Object) runtimeException), "mj.N(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');

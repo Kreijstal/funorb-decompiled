@@ -1065,7 +1065,7 @@ final class BoardView {
             if (var12 != 0) {
               var14.flipHorizontal();
             }
-            var17 = lq.a(this.field_k.field_b[93], 8533, var14, -60 + var13, 0);
+            var17 = ArrayWidgetContainer.a(this.field_k.field_b[93], 8533, var14, -60 + var13, 0);
             var15 = bd.field_i;
             bd.field_i = var17;
             var9.a(0, 2048, 2048, (byte) 123, false, 255, var5, var4_int);
@@ -1955,7 +1955,7 @@ final class BoardView {
           var11_int = 0;
           var13 = var36.field_s.getBaseMovementRange((byte) 122);
           var14_ref_tv = (tv) (WhirlpoolDigest.field_e[this.field_i.field_Z.moveId]);
-          if (hl.a((byte) 109, this.field_i.field_Z.moveId)) {
+          if (AlphaWidgetContainer.a((byte) 109, this.field_i.field_Z.moveId)) {
             var13 = var13 << 1;
             var13 = var13 + var14_ref_tv.field_l;
           }

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class d extends lq implements WidgetActionListener {
+final class d extends ArrayWidgetContainer implements WidgetActionListener {
     private InteractiveWidget field_C;
     static String field_D;
     static UiComponent field_H;
@@ -11,13 +11,13 @@ final class d extends lq implements WidgetActionListener {
     final void h(int param0) {
         int var2 = 250;
         if (param0 == -11409) {
-          this.field_G.a(-var2 + this.width >> 1, 25, (byte) 59, 140, -25 + (this.height + 20) >> 1);
-          this.field_C.a(140 + ((this.width - var2 >> 1) + 10), 30, (byte) 59, 100, 2 + (20 + this.height - 30 >> 1));
+          this.field_G.setBounds(-var2 + this.width >> 1, 25, (byte) 59, 140, -25 + (this.height + 20) >> 1);
+          this.field_C.setBounds(140 + ((this.width - var2 >> 1) + 10), 30, (byte) 59, 100, 2 + (20 + this.height - 30 >> 1));
           return;
         }
         field_E = (String) null;
-        this.field_G.a(-var2 + this.width >> 1, 25, (byte) 59, 140, -25 + (this.height + 20) >> 1);
-        this.field_C.a(140 + ((this.width - var2 >> 1) + 10), 30, (byte) 59, 100, 2 + (20 + this.height - 30 >> 1));
+        this.field_G.setBounds(-var2 + this.width >> 1, 25, (byte) 59, 140, -25 + (this.height + 20) >> 1);
+        this.field_C.setBounds(140 + ((this.width - var2 >> 1) + 10), 30, (byte) 59, 100, 2 + (20 + this.height - 30 >> 1));
     }
 
     d(int param0, int param1, int param2, int param3) {

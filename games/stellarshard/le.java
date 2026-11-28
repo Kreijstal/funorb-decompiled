@@ -395,7 +395,7 @@ final class le extends IntrusiveNode {
           }
           var2Lifetime64 = ImageProducerRasterBuffer.a(false, "trigun");
           if (null != var2Lifetime64) {
-            ei.field_A = se.a(0, var2Lifetime64);
+            ModalDialogHost.field_A = se.a(0, var2Lifetime64);
           }
           var2Lifetime65 = ImageProducerRasterBuffer.a(false, "instruct2");
           if (null != var2Lifetime65) {

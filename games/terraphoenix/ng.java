@@ -14,12 +14,12 @@ class ng extends DefaultTextWidgetRenderer {
         super(param0, 4, 2, 2, 2, param1, -1, 0, 1, param0.field_s, -1, 2147483647, false);
     }
 
-    public final void a(int param0, UiWidget param1, int param2, int param3, boolean param4) {
+    public final void paintWidget(int param0, UiWidget param1, int param2, int param3, boolean param4) {
         try {
           if (param4) {
             ah.a(param1.height, 128, param1.width, param2 + param1.x, param1.y + param0);
           }
-          super.a(param0, param1, param2, param3, param4);
+          super.paintWidget(param0, param1, param2, param3, param4);
         } catch (RuntimeException runtimeException) {
           throw qk.wrapException((Throwable) ((Object) runtimeException), "ng.E(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }

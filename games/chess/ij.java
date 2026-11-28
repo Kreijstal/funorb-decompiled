@@ -19,7 +19,7 @@ final class ij {
             ResourceArchive var5 = (ResourceArchive) null;
             ij.a((ResourceArchive) null, false, (ResourceArchive) null, (byte) 17);
           }
-          BitPacketBuffer.field_x[0] = fm.field_Q;
+          BitPacketBuffer.field_x[0] = ModalDialogHost.field_Q;
           dm.a(v.field_k, param0, 1513239);
         } catch (RuntimeException runtimeException) {
           throw SpriteGeometry.wrapClientException((Throwable) ((Object) runtimeException), "ij.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');

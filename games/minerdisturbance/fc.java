@@ -83,9 +83,9 @@ final class fc extends DualLinkNode {
           if (0 == var1) {
             var1 = 32;
           }
-          ma.a(-96, oc.field_f - var1);
+          DraggableWidgetContainer.a(-96, oc.field_f - var1);
         } else {
-          ma.a(-102, 0);
+          DraggableWidgetContainer.a(-102, 0);
         }
     }
 

@@ -209,7 +209,7 @@ class r extends DefaultTextWidgetRenderer {
     }
 
     r(int param0) {
-        this(j.field_C, param0);
+        this(ModalDialogHost.field_C, param0);
     }
 
     final static boolean a(int param0, byte param1) {
@@ -273,12 +273,12 @@ class r extends DefaultTextWidgetRenderer {
         }
     }
 
-    public final void a(int param0, lk param1, int param2, int param3, boolean param4) {
+    public final void paintWidget(int param0, UiWidget param1, int param2, int param3, boolean param4) {
         try {
           if (param4) {
             AccountRegistrationPanel.b(param1.field_q, param3 + param1.field_i, param0 + param1.field_o, 48, param1.field_h);
           }
-          super.a(param0, param1, param2, param3, param4);
+          super.paintWidget(param0, param1, param2, param3, param4);
         } catch (RuntimeException runtimeException) {
           throw ma.wrapException((Throwable) ((Object) runtimeException), "r.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }

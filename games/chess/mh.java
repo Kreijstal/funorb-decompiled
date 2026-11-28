@@ -17,7 +17,7 @@ final class mh {
           em.field_m = null;
           NodeHashTableIterator.field_a = null;
           hj.field_l = null;
-          kb.field_S = false;
+          DraggableWidgetContainer.field_S = false;
           return;
         }
         mh.b(22);
@@ -25,7 +25,7 @@ final class mh {
         em.field_m = null;
         NodeHashTableIterator.field_a = null;
         hj.field_l = null;
-        kb.field_S = false;
+        DraggableWidgetContainer.field_S = false;
     }
 
     final static void a(int param0, int param1) {

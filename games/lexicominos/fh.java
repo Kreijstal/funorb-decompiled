@@ -7,18 +7,18 @@ final class fh {
     static long field_g;
     int field_n;
     private int field_o;
-    rd field_b;
+    WidgetRenderer field_b;
     int field_d;
     int field_l;
     private boolean field_q;
     int field_h;
     int field_e;
     int field_c;
-    rd field_a;
-    rd field_f;
-    rd field_j;
+    WidgetRenderer field_a;
+    WidgetRenderer field_f;
+    WidgetRenderer field_j;
     int field_k;
-    rd field_m;
+    WidgetRenderer field_m;
 
     final void a(BitmapFont param0, int param1) {
         DefaultTextWidgetRenderer var18 = null;
@@ -45,7 +45,7 @@ final class fh {
         lh var15Lifetime2;
         try {
           var18 = new DefaultTextWidgetRenderer(param0, 2, 2, 2236962, 1, 1, 1, 2 + (param0.field_G + param0.field_E));
-          this.field_m = (rd) ((Object) var18);
+          this.field_m = (WidgetRenderer) ((Object) var18);
           var18.field_e = 16777215;
           var4 = new lh();
           var18.a(var4, false);
@@ -72,21 +72,21 @@ final class fh {
           var5[4] = (RgbSprite) ((Object) var19);
           var4.a(false, 4).a(true, 124).a((byte) -105, var5);
           var4.a(false, 5).a((byte) -105, c.a(0, 65793, 0, 0, 84)).a(true, 116).a(-1, (byte) -116);
-          this.field_f = (rd) ((Object) var4);
+          this.field_f = (WidgetRenderer) ((Object) var4);
           var6 = new lh(var4, true);
           var6.field_p = 0;
           var7 = new lh(var4, true);
           var7.field_p = 0;
           var7.a(ConfirmedEmailAvailabilityValidator.a(8947848, 4), (byte) -112);
           var7.a(false, 1).a((byte) -119, ConfirmedEmailAvailabilityValidator.a(11184810, 4)).a(2236962, (byte) -86);
-          this.field_b = (rd) ((Object) new fb(param0, 2, 2, 16777215, -1, 5, 5, 15, 15, 4473924));
+          this.field_b = (WidgetRenderer) ((Object) new fb(param0, 2, 2, 16777215, -1, 5, 5, 15, 15, 4473924));
           discarded$0 = new ib(param0, 2, 2, 16777215, -1, 16777215, 16729156, 4473924);
           discarded$1 = new og(param0, 16777215, -1, 125269879, 4473924, 3, 268435455);
           var8 = new lh();
           var18.a(var8, false);
           var8.a(false, 0).a((byte) -114, gj.a(7829367, 15658734, false, 10066329)).a(1118481, (byte) -127).a((byte) 101, -1);
           var8.a(false, 4).a(true, 115).a((byte) -115, var5);
-          this.field_a = (rd) ((Object) var8);
+          this.field_a = (WidgetRenderer) ((Object) var8);
           int var11 = 103 % ((param1 - 10) / 32);
           var9 = new RgbSprite[9];
           var10 = new RgbSprite[9];
@@ -266,7 +266,7 @@ final class fh {
         RuntimeException var5 = null;
         try {
           if (param0 != 7829367) {
-            this.field_b = (rd) null;
+            this.field_b = (WidgetRenderer) null;
           }
           if (this.field_q) {
             this.a((byte) -37, param3, param1, param2);

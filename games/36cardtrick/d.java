@@ -253,9 +253,9 @@ final class d {
 
     final static void a(java.awt.Component param0, int param1) {
         try {
-          param0.removeMouseListener(wc.field_B);
-          param0.removeMouseMotionListener(wc.field_B);
-          param0.removeFocusListener(wc.field_B);
+          param0.removeMouseListener(DropTargetWidgetContainer.field_B);
+          param0.removeMouseMotionListener(DropTargetWidgetContainer.field_B);
+          param0.removeFocusListener(DropTargetWidgetContainer.field_B);
           GzipInflater.field_a = param1;
         } catch (RuntimeException runtimeException) {
           throw ma.wrapException((Throwable) ((Object) runtimeException), "d.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');

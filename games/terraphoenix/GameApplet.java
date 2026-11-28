@@ -585,7 +585,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
         try {
           DisplayNameSelectionPanel.field_M = ll.correctedCurrentTimeMillis(1000);
           gi.sleepMillis((byte) -113, 5000L);
-          d.field_K = null;
+          ModalDialogHost.field_K = null;
           this.shutdownApplet(true, false);
         } catch (RuntimeException runtimeException) {
           throw qk.wrapException((Throwable) ((Object) runtimeException), "eh.destroy()");
@@ -785,7 +785,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
               IndexedSpriteState.field_b = dg.a(false);
               dupTemp$0 = new PlatformTaskDispatcher(param2, param5, param0, true);
               DirectByteStorage.field_l = dupTemp$0;
-              d.field_K = dupTemp$0;
+              ModalDialogHost.field_K = dupTemp$0;
               var8 = DirectByteStorage.field_l.requestThread((Runnable) (this), (byte) -21, 1);
               while (true) {
                 if (var8.status == 0) {

@@ -9,7 +9,7 @@ final class ConfirmedEmailAvailabilityValidator extends TextFieldValidator {
 
     final static void e(int param0) {
         if (null != PcmResampler.field_c) {
-          PcmResampler.field_c.a((byte) -20);
+          PcmResampler.field_c.snapAndPruneDialogs((byte) -20);
           if (null == af.field_g) {
             if (param0 == -20480) {
               rb.a((byte) -102);

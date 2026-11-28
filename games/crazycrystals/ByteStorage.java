@@ -85,7 +85,7 @@ abstract class ByteStorage {
             uh.field_p == null &&
             !gn.d(false)) {
             if (DebouncedFieldValidator.field_a == null) {
-              if (ab.field_D instanceof LevelCompleteScene) {
+              if (ModalDialog.field_D instanceof LevelCompleteScene) {
                 var1_int -= 20;
                 if (var11 != 0) {
                   var1_int -= 40;
@@ -118,7 +118,7 @@ abstract class ByteStorage {
               if (!uh.field_n &&
                 null == uh.field_p &&
                 !gn.d(false)) {
-                if (!(ab.field_D instanceof LevelCompleteScene)) {
+                if (!(ModalDialog.field_D instanceof LevelCompleteScene)) {
                   var2 -= 40;
                   if (var11 != 0) {
                     var2 -= 20;
@@ -149,7 +149,7 @@ abstract class ByteStorage {
               if (decompiledFrameCompleted0) {
                 if (!uh.field_n &&
                   uh.field_p == null &&
-                  null == ab.field_D &&
+                  null == ModalDialog.field_D &&
                   !gn.d(false)) {
                   go.field_l.drawParagraph(fa.field_i, 484, -go.field_l.field_o + 15 + 4 + var3_int, 152, 1000, 16760896, -1, 1, 0, 20);
                   if (qh.field_o.isEmpty() &&
@@ -180,7 +180,7 @@ abstract class ByteStorage {
               if ((qh.field_o.isEmpty()) &&
                 (en.field_O == 0) &&
                 (cn.field_d == null) &&
-                (!(ab.field_D instanceof LevelCompleteScene)) &&
+                (!(ModalDialog.field_D instanceof LevelCompleteScene)) &&
                 (!go.field_i)) {
                 SoftwareRasterizer.setClip(484, 58, 636, var1_int - 4);
                 co.d((byte) -51);
@@ -258,7 +258,7 @@ abstract class ByteStorage {
                 decompiledFrameRemainder0 = (var11 != 0);
               }
               if (decompiledFrameRemainder0) {
-                if (ab.field_D instanceof LevelCompleteScene) {
+                if (ModalDialog.field_D instanceof LevelCompleteScene) {
                   if (qh.field_i >= 480 &&
                     qh.field_i < 640 &&
                     IsaacRandom.field_h >= var2 - 16 &&
@@ -388,7 +388,7 @@ abstract class ByteStorage {
           go.field_l.drawCentred(var4Lifetime1, 560, 43, 0, -1);
           go.field_l.drawCentred(var4Lifetime1, 560, 42, 12640511, -1);
           if (!vh.field_a) {
-            if (!(ab.field_D instanceof LevelCompleteScene) &&
+            if (!(ModalDialog.field_D instanceof LevelCompleteScene) &&
               !go.field_i) {
               var5_intLifetime1 = 0;
               var6Lifetime1 = 0;
@@ -2069,7 +2069,7 @@ abstract class ByteStorage {
                 }
                 var2 = ah.a("create_alert_namelength", 5236);
                 if (var2 != null) {
-                  om.field_v = fa.a((byte) -127, var2);
+                  SingleChildWidgetContainer.field_v = fa.a((byte) -127, var2);
                 }
                 var2 = ah.a("create_alert_namechars", 5236);
                 if (null != var2) {

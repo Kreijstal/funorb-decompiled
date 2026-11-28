@@ -124,7 +124,7 @@ final class dk {
             return stackIn_4_0;
           }
           if (~var2_int < param0) {
-            stackIn_7_0 = lk.field_t;
+            stackIn_7_0 = UiWidget.field_t;
             return stackIn_7_0;
           }
           for (var3 = 0; var2_int > var3; var3++) {

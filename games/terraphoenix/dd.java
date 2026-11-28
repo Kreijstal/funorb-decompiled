@@ -9,7 +9,7 @@ final class dd extends InteractiveWidget {
     private FieldValidator field_K;
     static String field_N;
 
-    final boolean a(byte param0, UiWidget param1) {
+    final boolean takeFocus(byte param0, UiWidget param1) {
         RuntimeException var3 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
@@ -111,13 +111,13 @@ final class dd extends InteractiveWidget {
         }
     }
 
-    final void a(UiWidget param0, int param1, int param2, int param3) {
+    final void updatePointer(UiWidget param0, int param1, int param2, int param3) {
         this.field_P = this.field_P + 1;
         if (param3 < 25) {
           return;
         }
         try {
-          super.a(param0, param1, param2, 26);
+          super.updatePointer(param0, param1, param2, 26);
         } catch (RuntimeException runtimeException) {
           throw qk.wrapException((Throwable) ((Object) runtimeException), "dd.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
@@ -140,7 +140,7 @@ final class dd extends InteractiveWidget {
         }
     }
 
-    final void a(int param0, int param1, int param2, int param3) {
+    final void drawWidget(int param0, int param1, int param2, int param3) {
         int var5;
         int var6;
         im var8;
@@ -164,7 +164,7 @@ final class dd extends InteractiveWidget {
         int var10Lifetime3;
         im var8Lifetime1;
         var11 = Terraphoenix.field_V;
-        super.a(param0, -114, param2, param3);
+        super.drawWidget(param0, -114, param2, param3);
         if (param2 != 0) {
           return;
         }

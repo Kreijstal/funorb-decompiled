@@ -38,7 +38,7 @@ final class gb {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw dd.wrapClientException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(')').toString());
+          throw DraggableWidgetContainer.wrapClientException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -61,7 +61,7 @@ final class gb {
           this.field_c.a(var6_ref, 21693);
           ((nf) ((Object) var6_ref)).field_h = (long)param0;
         } catch (RuntimeException runtimeException) {
-          throw dd.wrapClientException((Throwable) ((Object) runtimeException), "gb.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
+          throw DraggableWidgetContainer.wrapClientException((Throwable) ((Object) runtimeException), "gb.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -159,12 +159,12 @@ final class gb {
           stackIn_4_0 = param0;
           pc.field_db = stackIn_4_0;
           if (kg.field_m == 0) {
-            var3_int = th.a(jd.field_a, ta.field_y, li.field_c, EditableTextField.field_I, -60);
+            var3_int = th.a(jd.field_a, DequeWidgetContainer.field_y, li.field_c, EditableTextField.field_I, -60);
             var4 = var3_int + 3;
             FullscreenFocusCanvas.field_d = new String[var4];
-            dd.field_B = new int[var4];
+            DraggableWidgetContainer.field_B = new int[var4];
             for (var5 = 0; var5 < var4; var5++) {
-              dd.field_B[var5] = -1;
+              DraggableWidgetContainer.field_B[var5] = -1;
             }
             gg.field_O = new int[2];
             for (var5 = 0; var5 < var3_int; var5++) {
@@ -172,18 +172,18 @@ final class gb {
             }
             FullscreenFocusCanvas.field_d[-3 + var4] = "";
             FullscreenFocusCanvas.field_d[-2 + var4] = p.field_f;
-            dd.field_B[-2 + var4] = 0;
+            DraggableWidgetContainer.field_B[-2 + var4] = 0;
             gg.field_O[0] = 4;
             FullscreenFocusCanvas.field_d[-1 + var4] = th.field_d;
-            dd.field_B[var4 - 1] = 1;
+            DraggableWidgetContainer.field_B[var4 - 1] = 1;
             gg.field_O[1] = 5;
           } else if (kg.field_m == 1) {
-            var3_int = th.a(jd.field_a, ta.field_y, li.field_c, EditableTextField.field_I, -77);
+            var3_int = th.a(jd.field_a, DequeWidgetContainer.field_y, li.field_c, EditableTextField.field_I, -77);
             var4 = var3_int + 2;
             FullscreenFocusCanvas.field_d = new String[var4];
-            dd.field_B = new int[var4];
+            DraggableWidgetContainer.field_B = new int[var4];
             for (var5 = 0; var5 < var4; var5++) {
-              dd.field_B[var5] = -1;
+              DraggableWidgetContainer.field_B[var5] = -1;
             }
             gg.field_O = new int[1];
             for (var5 = 0; var5 < var3_int; var5++) {
@@ -191,7 +191,7 @@ final class gb {
             }
             FullscreenFocusCanvas.field_d[-2 + var4] = "";
             FullscreenFocusCanvas.field_d[var4 - 1] = th.field_d;
-            dd.field_B[-1 + var4] = 0;
+            DraggableWidgetContainer.field_B[-1 + var4] = 0;
             gg.field_O[0] = 5;
           } else if (kg.field_m != 2) {
             if (3 == kg.field_m) {
@@ -202,9 +202,9 @@ final class gb {
               }
               var4 = 2 + var3_int;
               FullscreenFocusCanvas.field_d = new String[var4];
-              dd.field_B = new int[var4];
+              DraggableWidgetContainer.field_B = new int[var4];
               for (var5 = 0; var4 > var5; var5++) {
-                dd.field_B[var5] = -1;
+                DraggableWidgetContainer.field_B[var5] = -1;
               }
               gg.field_O = new int[1];
               for (var5 = 0; var5 < var3_int; var5++) {
@@ -212,15 +212,15 @@ final class gb {
               }
               FullscreenFocusCanvas.field_d[var4 - 2] = "";
               FullscreenFocusCanvas.field_d[var4 - 1] = th.field_d;
-              dd.field_B[-1 + var4] = 0;
+              DraggableWidgetContainer.field_B[-1 + var4] = 0;
               gg.field_O[0] = 5;
             } else if (4 == kg.field_m) {
               var3_int = th.a(jd.field_a, fi.field_a, li.field_c, EditableTextField.field_I, -89);
               var4 = var3_int + 2;
               FullscreenFocusCanvas.field_d = new String[var4];
-              dd.field_B = new int[var4];
+              DraggableWidgetContainer.field_B = new int[var4];
               for (var5 = 0; var5 < var4; var5++) {
-                dd.field_B[var5] = -1;
+                DraggableWidgetContainer.field_B[var5] = -1;
               }
               gg.field_O = new int[1];
               for (var5 = 0; var5 < var3_int; var5++) {
@@ -228,7 +228,7 @@ final class gb {
               }
               FullscreenFocusCanvas.field_d[-2 + var4] = "";
               FullscreenFocusCanvas.field_d[-1 + var4] = th.field_d;
-              dd.field_B[var4 - 1] = 0;
+              DraggableWidgetContainer.field_B[var4 - 1] = 0;
               gg.field_O[0] = 5;
             } else {
               if (kg.field_m != 5) {
@@ -236,10 +236,10 @@ final class gb {
               }
               var3_int = th.a(jd.field_a, lh.field_a, li.field_c, EditableTextField.field_I, -52);
               var4 = var3_int + 3;
-              dd.field_B = new int[var4];
+              DraggableWidgetContainer.field_B = new int[var4];
               FullscreenFocusCanvas.field_d = new String[var4];
               for (var5 = 0; var5 < var4; var5++) {
-                dd.field_B[var5] = -1;
+                DraggableWidgetContainer.field_B[var5] = -1;
               }
               gg.field_O = new int[2];
               for (var5 = 0; var5 < var3_int; var5++) {
@@ -247,10 +247,10 @@ final class gb {
               }
               FullscreenFocusCanvas.field_d[var4 - 3] = "";
               FullscreenFocusCanvas.field_d[var4 - 2] = ge.field_o;
-              dd.field_B[-2 + var4] = 0;
+              DraggableWidgetContainer.field_B[-2 + var4] = 0;
               gg.field_O[0] = 3;
               FullscreenFocusCanvas.field_d[var4 - 1] = th.field_d;
-              dd.field_B[-1 + var4] = 1;
+              DraggableWidgetContainer.field_B[-1 + var4] = 1;
               gg.field_O[1] = 5;
             }
           } else {
@@ -266,8 +266,8 @@ final class gb {
             if (var4 == -1) {
               throw new IllegalStateException();
             }
-            pj.field_o = new String[var4];
-            mk.a(li.field_c, 0, pj.field_o, 0, var4);
+            UiWidget.field_o = new String[var4];
+            mk.a(li.field_c, 0, UiWidget.field_o, 0, var4);
             AccountNameAvailabilityValidator.field_t = new String[var3_int - var4 - 1];
             mk.a(li.field_c, 1 + var4, AccountNameAvailabilityValidator.field_t, 0, var3_int + (-var4 - 1));
             var4 = -1;
@@ -286,8 +286,8 @@ final class gb {
             mk.a(li.field_c, 0, fd.field_e, 0, var4);
             sj.field_u = new String[-1 + var3_int - var4];
             mk.a(li.field_c, var4 + 1, sj.field_u, 0, -1 + (-var4 + var3_int));
-            if (fd.field_e.length <= pj.field_o.length) {
-              stackIn_33_0 = pj.field_o.length;
+            if (fd.field_e.length <= UiWidget.field_o.length) {
+              stackIn_33_0 = UiWidget.field_o.length;
             } else {
               stackIn_33_0 = fd.field_e.length;
             }
@@ -299,17 +299,17 @@ final class gb {
             }
             var6 = stackIn_36_0;
             var7 = var6 + (var5 + 7);
-            dd.field_B = new int[var7];
+            DraggableWidgetContainer.field_B = new int[var7];
             FullscreenFocusCanvas.field_d = new String[var7];
             for (var8 = 0; var7 > var8; var8++) {
-              dd.field_B[var8] = -1;
+              DraggableWidgetContainer.field_B[var8] = -1;
             }
             FullscreenFocusCanvas.field_d[0] = sa.field_g;
-            dd.field_B[1] = 0;
+            DraggableWidgetContainer.field_B[1] = 0;
             FullscreenFocusCanvas.field_d[1] = lc.field_s;
             gg.field_O = new int[2];
             FullscreenFocusCanvas.field_d[3] = mj.field_k;
-            dd.field_B[3] = 1;
+            DraggableWidgetContainer.field_B[3] = 1;
             FullscreenFocusCanvas.field_d[4] = RichTextWidget.field_J;
             FullscreenFocusCanvas.field_d[2] = ii.field_a;
             gg.field_O[1] = 2;
@@ -326,7 +326,7 @@ final class gb {
               stackIn_43_0[stackIn_43_1] = stackIn_44_2;
             }
             FullscreenFocusCanvas.field_d[var5 + 6] = null;
-            dd.field_B[6 + var5] = -2;
+            DraggableWidgetContainer.field_B[6 + var5] = -2;
             for (var8Lifetime3 = 0; var8Lifetime3 < var6; var8Lifetime3++) {
               stackIn_48_0 = FullscreenFocusCanvas.field_d;
               stackIn_48_1 = 7 + var5 + var8Lifetime3;
@@ -344,14 +344,14 @@ final class gb {
           ab.field_j.field_i = gg.field_O.length;
           var3_intLifetime1 = 0;
           for (var4Lifetime1 = 0; var4Lifetime1 < FullscreenFocusCanvas.field_d.length; var4Lifetime1++) {
-            stackIn_93_0 = !(dd.field_B[var4Lifetime1] < 0);
+            stackIn_93_0 = !(DraggableWidgetContainer.field_B[var4Lifetime1] < 0);
             var5Lifetime1 = hg.a(stackIn_93_0, FullscreenFocusCanvas.field_d[var4Lifetime1], 0);
             if (var3_intLifetime1 < var5Lifetime1) {
               var3_intLifetime1 = var5Lifetime1;
             }
           }
           if (kg.field_m == 2) {
-            var10 = pj.field_o;
+            var10 = UiWidget.field_o;
             var4_ref_String__ = var10;
             for (var5Lifetime2 = 0; var5Lifetime2 < var10.length; var5Lifetime2++) {
               var11 = var10[var5Lifetime2];
@@ -374,7 +374,7 @@ final class gb {
           AccountRegistrationPanel.field_C = (gg.field_N + DualLinkDequeIterator.field_b << 1) * ab.field_j.field_i;
           for (var4Lifetime2 = 0; var4Lifetime2 < FullscreenFocusCanvas.field_d.length; var4Lifetime2++) {
             stackIn_116_0 = AccountRegistrationPanel.field_C;
-            if (dd.field_B[var4Lifetime2] >= 0) {
+            if (DraggableWidgetContainer.field_B[var4Lifetime2] >= 0) {
               stackIn_117_1 = DisplayNameSelectionPanel.field_D;
             } else {
               stackIn_117_1 = d.field_j;
@@ -386,7 +386,7 @@ final class gb {
           var4Lifetime3 = 0;
           var5Lifetime3 = sd.field_h;
           while (FullscreenFocusCanvas.field_d.length > var4Lifetime3) {
-            var6Lifetime1 = dd.field_B[var4Lifetime3];
+            var6Lifetime1 = DraggableWidgetContainer.field_B[var4Lifetime3];
             if (var6Lifetime1 < 0) {
               var5Lifetime3 = var5Lifetime3 + d.field_j;
             } else {
@@ -411,7 +411,7 @@ final class gb {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw dd.wrapClientException((Throwable) ((Object) var3), "gb.F(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw DraggableWidgetContainer.wrapClientException((Throwable) ((Object) var3), "gb.F(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -420,14 +420,14 @@ final class gb {
           this.a(0, param0, 1, param2);
           int var5_int = -24 % ((-26 - param1) / 63);
         } catch (RuntimeException runtimeException) {
-          throw dd.wrapClientException((Throwable) ((Object) runtimeException), "gb.G(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw DraggableWidgetContainer.wrapClientException((Throwable) ((Object) runtimeException), "gb.G(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 
     final static void b(int param0) {
         field_h = NetworkArchiveRequest.field_t.readString(2);
         CharSequence var2 = (CharSequence) ((Object) field_h);
-        sg.field_E = ua.a(-88, var2);
+        ModalDialog.field_E = ua.a(-88, var2);
         if (param0 > -27) {
           gb.b(-121);
         }

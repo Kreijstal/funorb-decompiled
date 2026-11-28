@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ee extends aj implements WidgetActivationListener {
+final class ee extends DequeWidgetContainer implements WidgetActivationListener {
     private String field_z;
     private InteractiveWidget[] field_F;
     private int[] field_E;
@@ -29,7 +29,7 @@ final class ee extends aj implements WidgetActivationListener {
           this.field_z = param2;
           this.field_x = param0;
           var4_int = null != this.field_z ? this.field_A.textHeight(this.field_z, 260, this.field_A.field_y) : 0;
-          this.a(-108, 0, 0, 288, var4_int + 22);
+          this.setBounds(-108, 0, 0, 288, var4_int + 22);
         } catch (RuntimeException runtimeException) {
           throw ch.wrapClientException((Throwable) ((Object) runtimeException), "ee.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
@@ -40,7 +40,7 @@ final class ee extends aj implements WidgetActivationListener {
         try {
           var4_int = this.field_w;
           this.b((byte) -114, param2 + var4_int);
-          this.field_F[var4_int] = this.a((ma) (this), 8283, param0);
+          this.field_F[var4_int] = this.a((WidgetEventListener) (this), 8283, param0);
           this.field_E[var4_int] = param1;
         } catch (RuntimeException runtimeException) {
           throw ch.wrapClientException((Throwable) ((Object) runtimeException), "ee.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
@@ -69,8 +69,8 @@ final class ee extends aj implements WidgetActivationListener {
         this.field_E = var4;
     }
 
-    final void a(int param0, int param1, int param2, byte param3) {
-        super.a(param0, param1, param2, (byte) 113);
+    final void drawWidget(int param0, int param1, int param2, byte param3) {
+        super.drawWidget(param0, param1, param2, (byte) 113);
         this.field_A.drawParagraph(this.field_z, 14 + this.field_p + param0, this.field_n + (param1 + 10), -28 + this.field_l, this.field_h, 16777215, -1, 0, 0, this.field_A.field_y);
         int var5 = -84 / ((77 - param3) / 34);
     }
@@ -174,7 +174,7 @@ final class ee extends aj implements WidgetActivationListener {
         }
     }
 
-    final InteractiveWidget a(ma param0, int param1, String param2) {
+    final InteractiveWidget a(WidgetEventListener param0, int param1, String param2) {
         InteractiveWidget var4 = null;
         RuntimeException var4_ref = null;
         int var5 = 0;
@@ -189,9 +189,9 @@ final class ee extends aj implements WidgetActivationListener {
           var4 = new InteractiveWidget(param2, param0);
           var4.field_q = (WidgetRenderer) ((Object) new qa());
           var5 = -2 + this.field_h;
-          this.a(85, 0, 0, this.field_l, 34 + this.field_h);
-          var4.a(73, var5, 7, this.field_l - 14, 30);
-          this.a((UiWidget) (var4), (byte) -83);
+          this.setBounds(85, 0, 0, this.field_l, 34 + this.field_h);
+          var4.setBounds(73, var5, 7, this.field_l - 14, 30);
+          this.addChild((UiWidget) (var4), (byte) -83);
           if (param1 != 8283) {
             this.field_A = (BitmapFont) null;
           }

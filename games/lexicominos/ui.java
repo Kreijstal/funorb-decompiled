@@ -60,7 +60,7 @@ class ui extends cf {
             param1.length() != 0) {
             var2_int = param1.indexOf('@');
             if (var2_int == -1) {
-              stackIn_8_0 = w.field_k;
+              stackIn_8_0 = UiWidget.field_k;
               return stackIn_8_0;
             }
             if (param0 != -100) {

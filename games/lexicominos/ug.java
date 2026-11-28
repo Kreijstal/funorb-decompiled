@@ -15,7 +15,7 @@ final class ug extends hf {
     private SectorCacheStore field_B;
     private DiskCacheWorker field_C;
     private ArchiveRequest field_t;
-    static eg field_A;
+    static ModalDialogHost field_A;
     private SectorCacheStore field_f;
     private na field_k;
     static java.awt.Canvas field_y;

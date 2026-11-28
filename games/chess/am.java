@@ -88,7 +88,7 @@ final class am {
         String stackIn_25_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (!kn.field_L) {
+          if (!SingleChildWidgetContainer.field_L) {
             return false;
           }
           if (param0) {

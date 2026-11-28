@@ -13,10 +13,10 @@ class RichTextWidget extends InteractiveWidget {
     static UiPanel field_N;
     static String field_H;
 
-    void a(boolean param0, int param1, int param2, int param3) {
+    void drawWidget(boolean param0, int param1, int param2, int param3) {
         int var7 = 0;
         int var8 = 0;
-        super.a(param0, param1, param2, param3);
+        super.drawWidget(param0, param1, param2, param3);
         if (param1 != 0) {
           return;
         }
@@ -32,7 +32,7 @@ class RichTextWidget extends InteractiveWidget {
         }
     }
 
-    boolean a(byte param0, UiWidget param1) {
+    boolean takeFocus(byte param0, UiWidget param1) {
         RuntimeException var3 = null;
         qn var4 = null;
         RuntimeException stackIn_6_0 = null;
@@ -67,7 +67,7 @@ class RichTextWidget extends InteractiveWidget {
     }
 
     RichTextWidget(String param0, WidgetListener param1) {
-        super(param0, (uf) null);
+        super(param0, (WidgetEventListener) null);
         this.field_I = null;
         try {
           this.listener = param1;
@@ -76,7 +76,7 @@ class RichTextWidget extends InteractiveWidget {
         }
     }
 
-    void a(byte param0, int param1, int param2, UiWidget param3) {
+    void updatePointer(byte param0, int param1, int param2, UiWidget param3) {
         int var5_int = 0;
         int var6 = 0;
         RuntimeException stackIn_8_0 = null;
@@ -85,7 +85,7 @@ class RichTextWidget extends InteractiveWidget {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var5 = null;
         try {
-          super.a((byte) 115, param1, param2, param3);
+          super.updatePointer((byte) 115, param1, param2, param3);
           this.field_I = null;
           if (param0 <= 6) {
             return;
@@ -301,7 +301,7 @@ class RichTextWidget extends InteractiveWidget {
         super.activateFromInput(param0, param1, (byte) 127, param3);
         if (param2 < 111) {
           UiWidget var8 = (UiWidget) null;
-          this.a((byte) -49, -96, 6, (UiWidget) null);
+          this.updatePointer((byte) -49, -96, 6, (UiWidget) null);
         }
         int var5 = param0 - this.x;
         int var6 = param3 - this.y;

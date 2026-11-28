@@ -14,7 +14,7 @@ class dh extends hl implements WidgetActivationListener {
     private boolean field_W;
     private boolean field_Y;
 
-    final boolean a(char param0, int param1, pj param2, int param3) {
+    final boolean handleKey(char param0, int param1, UiWidget param2, int param3) {
         RuntimeException var5 = null;
         boolean stackIn_8_0 = false;
         RuntimeException stackIn_11_0 = null;
@@ -26,7 +26,7 @@ class dh extends hl implements WidgetActivationListener {
             return true;
           }
           if (param1 != 13) {
-            stackIn_8_0 = super.a(param0, param1, param2, 0);
+            stackIn_8_0 = super.handleKey(param0, param1, param2, 0);
             return stackIn_8_0;
           }
           this.q(4210752);
@@ -41,7 +41,7 @@ class dh extends hl implements WidgetActivationListener {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw dd.wrapClientException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param3).append(')').toString());
+          throw DraggableWidgetContainer.wrapClientException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -142,7 +142,7 @@ class dh extends hl implements WidgetActivationListener {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw dd.wrapClientException((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param1).append(')').toString());
+          throw DraggableWidgetContainer.wrapClientException((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -184,7 +184,7 @@ class dh extends hl implements WidgetActivationListener {
               }
               ((ec) (Object) stackIn_12_0).a(stackIn_13_1, -1, -15858);
             } else {
-              var7.a(SpriteGeometry.field_l, -34, (ag) (this));
+              var7.a(SpriteGeometry.field_l, -34, (WidgetEventListener) (this));
             }
           }
           if (param1 != 3) {
@@ -193,7 +193,7 @@ class dh extends hl implements WidgetActivationListener {
             } else {
               if (param1 != 6) {
                 if (param1 == 9) {
-                  var7.a(fk.field_d, -34, (ag) (this));
+                  var7.a(fk.field_d, -34, (WidgetEventListener) (this));
                 }
               } else {
                 var7.a(qf.field_k, 9, -15858);
@@ -214,11 +214,11 @@ class dh extends hl implements WidgetActivationListener {
           } else {
             stackIn_28_2 = "{...}";
           }
-          throw dd.wrapClientException((Throwable) ((Object) stackIn_27_0), ((StringBuilder) (Object) stackIn_27_1).append(stackIn_28_2).append(')').toString());
+          throw DraggableWidgetContainer.wrapClientException((Throwable) ((Object) stackIn_27_0), ((StringBuilder) (Object) stackIn_27_1).append(stackIn_28_2).append(')').toString());
         }
     }
 
-    dh(sk param0, BitmapFont param1, String param2, boolean param3, boolean param4) {
+    dh(ModalDialogHost param0, BitmapFont param1, String param2, boolean param3, boolean param4) {
         super(param0, new ec((dh) null, param1, param2), 77, 10, 10);
         try {
           this.field_eb = false;
@@ -228,23 +228,23 @@ class dh extends hl implements WidgetActivationListener {
           this.field_cb = param4 ? true : false;
           this.field_ab = new dg(13, 50, 274, 30, 15, 2113632, 4210752);
           this.field_ab.field_z = true;
-          this.a(this.field_ab, (byte) 74);
+          this.addChild(this.field_ab, (byte) 74);
         } catch (RuntimeException runtimeException) {
-          throw dd.wrapClientException((Throwable) ((Object) runtimeException), "dh.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ')');
+          throw DraggableWidgetContainer.wrapClientException((Throwable) ((Object) runtimeException), "dh.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ')');
         }
     }
 
     public void onWidgetActivated(byte param0, int param1, int param2, InteractiveWidget param3, int param4) {
         try {
           if (!this.field_eb) {
-            jj.a("tochangedisplayname.ws", (byte) -93, uj.b((byte) -120));
+            AlphaWidgetContainer.a("tochangedisplayname.ws", (byte) -93, uj.b((byte) -120));
           } else {
             il.a(3, 0);
             this.q(4210752);
           }
           int var6_int = -39 % ((-3 - param0) / 62);
         } catch (RuntimeException runtimeException) {
-          throw dd.wrapClientException((Throwable) ((Object) runtimeException), "dh.M(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ')');
+          throw DraggableWidgetContainer.wrapClientException((Throwable) ((Object) runtimeException), "dh.M(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ')');
         }
     }
 

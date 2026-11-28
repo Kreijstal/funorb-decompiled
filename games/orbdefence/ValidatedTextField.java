@@ -15,7 +15,7 @@ final class ValidatedTextField extends EditableTextField implements FieldValidat
         try {
           this.field_S = param0;
         } catch (RuntimeException runtimeException) {
-          throw dd.wrapClientException((Throwable) ((Object) runtimeException), "oc.SA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw DraggableWidgetContainer.wrapClientException((Throwable) ((Object) runtimeException), "oc.SA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -97,7 +97,7 @@ final class ValidatedTextField extends EditableTextField implements FieldValidat
           } else {
             stackIn_32_2 = "{...}";
           }
-          throw dd.wrapClientException((Throwable) ((Object) stackIn_28_0), ((StringBuilder) (Object) stackIn_31_1).append(stackIn_32_2).append(')').toString());
+          throw DraggableWidgetContainer.wrapClientException((Throwable) ((Object) stackIn_28_0), ((StringBuilder) (Object) stackIn_31_1).append(stackIn_32_2).append(')').toString());
         }
     }
 
@@ -217,7 +217,7 @@ final class ValidatedTextField extends EditableTextField implements FieldValidat
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw dd.wrapClientException((Throwable) ((Object) var2_ref), "oc.KA(" + param0 + ',' + param1 + ')');
+          throw DraggableWidgetContainer.wrapClientException((Throwable) ((Object) var2_ref), "oc.KA(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -245,16 +245,16 @@ final class ValidatedTextField extends EditableTextField implements FieldValidat
         return this.field_i;
     }
 
-    final void a(byte param0, pj param1, int param2, int param3) {
+    final void updatePointer(byte param0, UiWidget param1, int param2, int param3) {
         try {
-          super.a(param0, param1, param2, param3);
+          super.updatePointer(param0, param1, param2, param3);
           this.field_T = ua.field_a - (this.field_s + param2);
         } catch (RuntimeException runtimeException) {
-          throw dd.wrapClientException((Throwable) ((Object) runtimeException), "oc.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
+          throw DraggableWidgetContainer.wrapClientException((Throwable) ((Object) runtimeException), "oc.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
         }
     }
 
-    ValidatedTextField(String param0, ag param1, int param2) {
+    ValidatedTextField(String param0, WidgetEventListener param1, int param2) {
         super(param0, param1, param2);
     }
 
@@ -399,7 +399,7 @@ final class ValidatedTextField extends EditableTextField implements FieldValidat
           } else {
             stackIn_73_2 = "{...}";
           }
-          throw dd.wrapClientException((Throwable) ((Object) stackIn_72_0), ((StringBuilder) (Object) stackIn_72_1).append(stackIn_73_2).append(')').toString());
+          throw DraggableWidgetContainer.wrapClientException((Throwable) ((Object) stackIn_72_0), ((StringBuilder) (Object) stackIn_72_1).append(stackIn_73_2).append(')').toString());
         }
     }
 

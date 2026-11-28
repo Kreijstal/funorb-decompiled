@@ -134,7 +134,7 @@ final class SpriteLoader {
         RuntimeException decompiledCaughtException = null;
         try {
           FullscreenFocusCanvas.a((java.awt.Component) ((Object) param0), 0);
-          kj.a((byte) 54, (java.awt.Component) ((Object) param0));
+          DequeWidgetContainer.a((byte) 54, (java.awt.Component) ((Object) param0));
           if (null != AccountServiceResult.field_l) {
             AccountServiceResult.field_l.attach((java.awt.Component) ((Object) param0), (byte) 112);
           }

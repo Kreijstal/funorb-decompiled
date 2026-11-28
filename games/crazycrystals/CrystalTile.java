@@ -183,7 +183,7 @@ final class CrystalTile extends pn implements Cloneable {
           gm.field_c[this.field_n] = gm.field_c[this.field_n] - 1;
           var10 = (fq) (param1);
           var11 = var10;
-          if (null == ab.field_D) {
+          if (null == ModalDialog.field_D) {
             dupTemp$0 = q.field_a[var10.field_u].field_e;
             dupTemp$0[this.field_n] = dupTemp$0[this.field_n] + 1;
             if (tm.field_e > MouseWheelInput.field_b) {

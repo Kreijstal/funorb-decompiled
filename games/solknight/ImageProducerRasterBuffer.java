@@ -46,7 +46,7 @@ final class ImageProducerRasterBuffer extends RasterBuffer implements java.awt.i
           if (param0 != 1811357826) {
             return;
           }
-          var9 = te.field_N;
+          var9 = AlphaWidgetContainer.field_N;
           var2 = var9.readUnsignedByte(255);
           var3 = var9.readUnsignedByte(255);
           if (var2 == 0) {
@@ -55,7 +55,7 @@ final class ImageProducerRasterBuffer extends RasterBuffer implements java.awt.i
               je.a(false);
               return;
             }
-            var5_int = te.field_O - var9.position;
+            var5_int = AlphaWidgetContainer.field_O - var9.position;
             var11 = var4_ref_fj.field_h;
             var10 = var11;
             var6 = var10;

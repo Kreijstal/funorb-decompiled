@@ -67,7 +67,7 @@ final class lj {
           if (param1 == null) {
             return null;
           }
-          var2 = new CoverageBitmapFont(param1, mg.field_x, rg.field_c, pb.field_h, bd.field_m, ci.field_b, BufferedRandomAccessFile.field_f);
+          var2 = new CoverageBitmapFont(param1, SingleChildWidgetContainer.field_x, rg.field_c, pb.field_h, bd.field_m, ci.field_b, BufferedRandomAccessFile.field_f);
           GzipDecompressor.a(12428);
           if (param0 == 22076) {
             stackIn_7_0 = var2;

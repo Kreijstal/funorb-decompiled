@@ -469,7 +469,7 @@ final class tl implements Runnable {
           return sa.field_w + " - " + InstructionsScreen.field_u.getGroupLoadPercentByName("commonui", -1) + "%";
         }
         if (!GameAppletShell.field_b.ensureIndexLoaded(param0 ^ 14355)) {
-          return rf.field_L;
+          return ModalDialog.field_L;
         }
         if (!GameAppletShell.field_b.tryLoadGroupByName(false, "commonui")) {
           return mp.field_c + " - " + GameAppletShell.field_b.getGroupLoadPercentByName("commonui", param0 ^ 2) + "%";

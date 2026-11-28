@@ -12,13 +12,13 @@ abstract class DebouncedFieldValidator implements FieldValidator {
     abstract String evaluateValidationMessage(int param0);
 
     final static void c(int param0) {
-        j.j(-23687);
+        ModalDialogHost.j(-23687);
         if (param0 >= -107) {
           return;
         }
         TextFieldValidator.field_f = true;
         DirectByteArrayStore.field_e = true;
-        sd.field_c.k(117);
+        sd.field_c.closeAllDialogs(117);
         ca.a(ni.field_e, false, 16777215);
     }
 
@@ -72,7 +72,7 @@ abstract class DebouncedFieldValidator implements FieldValidator {
               }
               var3 = var3 + param2;
             }
-            n.a(var3, (byte) 120);
+            AlphaWidgetContainer.a(var3, (byte) 120);
             var4 = 71 % ((param1 + 20) / 48);
             var8 = sb.a(var3, ":", "%3a", 96);
             var9 = sb.a(var8, "@", "%40", 118);

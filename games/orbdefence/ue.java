@@ -10,7 +10,7 @@ final class ue extends InteractiveWidget {
     static int[] field_H;
     static String field_J;
 
-    final boolean a(byte param0, pj param1, int param2, int param3, int param4, int param5, int param6) {
+    final boolean pointerPressed(byte param0, UiWidget param1, int param2, int param3, int param4, int param5, int param6) {
         int var12 = 0;
         RuntimeException stackIn_27_0 = null;
         StringBuilder stackIn_27_1 = null;
@@ -23,14 +23,14 @@ final class ue extends InteractiveWidget {
         int var11 = 0;
         int var13 = 0;
         int var14 = 0;
-        pj var15 = null;
+        UiWidget var15 = null;
         var14 = OrbDefence.field_D ? 1 : 0;
         try {
           if (param0 >= -115) {
-            var15 = (pj) null;
-            this.a((byte) -22, (pj) null, -98, 37, 41, 57, 122);
+            var15 = (UiWidget) null;
+            this.pointerPressed((byte) -22, (UiWidget) null, -98, 37, 41, 57, 122);
           }
-          if (!super.a((byte) -125, param1, param2, param3, param4, param5, param6)) {
+          if (!super.pointerPressed((byte) -125, param1, param2, param3, param4, param5, param6)) {
             return false;
           }
           var8_int = -this.field_I - param3 + param5;
@@ -73,7 +73,7 @@ final class ue extends InteractiveWidget {
           } else {
             stackIn_28_2 = "{...}";
           }
-          throw dd.wrapClientException((Throwable) ((Object) stackIn_27_0), ((StringBuilder) (Object) stackIn_27_1).append(stackIn_28_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(')').toString());
+          throw DraggableWidgetContainer.wrapClientException((Throwable) ((Object) stackIn_27_0), ((StringBuilder) (Object) stackIn_27_1).append(stackIn_28_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(')').toString());
         }
     }
 
@@ -237,7 +237,7 @@ final class ue extends InteractiveWidget {
           } else {
             stackIn_77_2 = "{...}";
           }
-          throw dd.wrapClientException((Throwable) ((Object) stackIn_73_0), ((StringBuilder) (Object) stackIn_76_1).append(stackIn_77_2).append(',').append(param5).append(')').toString());
+          throw DraggableWidgetContainer.wrapClientException((Throwable) ((Object) stackIn_73_0), ((StringBuilder) (Object) stackIn_76_1).append(stackIn_77_2).append(',').append(param5).append(')').toString());
         }
     }
 

@@ -34,31 +34,31 @@ final class TextLineMetrics {
     }
 
     final static void a(int param0, int param1, int param2, int param3, int param4, int param5) {
-        rg.field_d[fc.field_z] = param0;
-        PasswordValidator.field_s[fc.field_z] = fc.field_z;
-        qa.field_d[fc.field_z] = param1;
+        rg.field_d[SingleChildWidgetContainer.field_z] = param0;
+        PasswordValidator.field_s[SingleChildWidgetContainer.field_z] = SingleChildWidgetContainer.field_z;
+        qa.field_d[SingleChildWidgetContainer.field_z] = param1;
         if (!(param1 <= rf.field_c)) {
           kl.field_a = param1;
         }
         if (!(i.field_f <= param1)) {
           bh.field_e = param1;
         }
-        ta.field_mb[fc.field_z] = param5;
-        og.field_b[fc.field_z] = param3;
-        PasswordValidator.field_t[fc.field_z] = param4;
+        ta.field_mb[SingleChildWidgetContainer.field_z] = param5;
+        og.field_b[SingleChildWidgetContainer.field_z] = param3;
+        PasswordValidator.field_t[SingleChildWidgetContainer.field_z] = param4;
         int var6 = param3 + (param5 + param4);
         if (param2 <= 64) {
           field_h = false;
         }
         int var7 = var6 == 0 ? 0 : 1000 * param5 / var6;
-        TextFieldValidator.field_n[fc.field_z] = var7;
+        TextFieldValidator.field_n[SingleChildWidgetContainer.field_z] = var7;
         if (var7 < bh.field_e) {
           bh.field_e = var7;
         }
         if (kl.field_a < var7) {
           kl.field_a = var7;
         }
-        fc.field_z = fc.field_z + 1;
+        SingleChildWidgetContainer.field_z = SingleChildWidgetContainer.field_z + 1;
     }
 
     final static RgbSprite[] a(int param0, int param1, byte param2, int param3) {

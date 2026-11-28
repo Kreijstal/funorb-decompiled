@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class e extends ma implements WidgetActivationListener {
+final class e extends DequeWidgetContainer implements WidgetActivationListener {
     private int[] field_K;
     private BitmapFont field_R;
     private InteractiveWidget[] field_S;
@@ -34,8 +34,8 @@ final class e extends ma implements WidgetActivationListener {
         }
     }
 
-    final void a(int param0, int param1, int param2, int param3) {
-        super.a(param0, param1, -117, param3);
+    final void drawWidget(int param0, int param1, int param2, int param3) {
+        super.drawWidget(param0, param1, -117, param3);
         this.field_R.drawParagraph(this.field_P, 14 + (param3 + this.field_u), param0 - (-this.field_r - 10), -28 + this.field_y, this.field_C, 16777215, -1, 0, 0, this.field_R.field_C);
         if (param2 >= -80) {
           this.field_S = (InteractiveWidget[]) null;
@@ -60,7 +60,7 @@ final class e extends ma implements WidgetActivationListener {
         field_T = null;
     }
 
-    final InteractiveWidget a(byte param0, rg param1, String param2) {
+    final InteractiveWidget a(byte param0, WidgetEventListener param1, String param2) {
         InteractiveWidget var4 = null;
         RuntimeException var4_ref = null;
         int var5 = 0;
@@ -74,15 +74,15 @@ final class e extends ma implements WidgetActivationListener {
         RuntimeException decompiledCaughtException = null;
         try {
           var4 = new InteractiveWidget(param2, param1);
-          var4.field_n = (jm) ((Object) new sf());
+          var4.field_n = (WidgetRenderer) ((Object) new sf());
           if (param0 != -114) {
             stackIn_2_0 = (InteractiveWidget) null;
             return stackIn_2_0;
           }
           var5 = this.field_C - 2;
-          this.a(0, 34, 34 + this.field_C, this.field_y, 0);
-          var4.a(var5, 34, 30, -14 + this.field_y, 7);
-          this.b(var4, 95);
+          this.setBounds(0, 34, 34 + this.field_C, this.field_y, 0);
+          var4.setBounds(var5, 34, 30, -14 + this.field_y, 7);
+          this.addChild(var4, 95);
           stackIn_4_0 = var4;
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -119,7 +119,7 @@ final class e extends ma implements WidgetActivationListener {
         fe.field_h.a(0, dc.field_q.field_M, -2147483648, fe.field_g, 0);
         if (param0 <= -124) {
           var1 = fe.field_g + 2;
-          bh.field_G.a(0, dc.field_q.field_M, -2147483648, dc.field_q.field_pb - (bo.field_c ? var1 : 0), bo.field_c ? var1 : 0);
+          ArrayWidgetContainer.field_G.a(0, dc.field_q.field_M, -2147483648, dc.field_q.field_pb - (bo.field_c ? var1 : 0), bo.field_c ? var1 : 0);
           dj.g(2);
           ln.field_cc.a(0, ql.field_d.field_M, -2147483648, 40, ql.field_d.field_pb - 40);
           he.field_Hb.a(0, rb.field_c.field_M, -2147483648, 30, 0);
@@ -142,7 +142,7 @@ final class e extends ma implements WidgetActivationListener {
         }
         field_M = (ci) null;
         var1Lifetime1 = fe.field_g + 2;
-        bh.field_G.a(0, dc.field_q.field_M, -2147483648, dc.field_q.field_pb - (bo.field_c ? var1Lifetime1 : 0), bo.field_c ? var1Lifetime1 : 0);
+        ArrayWidgetContainer.field_G.a(0, dc.field_q.field_M, -2147483648, dc.field_q.field_pb - (bo.field_c ? var1Lifetime1 : 0), bo.field_c ? var1Lifetime1 : 0);
         dj.g(2);
         ln.field_cc.a(0, ql.field_d.field_M, -2147483648, 40, ql.field_d.field_pb - 40);
         he.field_Hb.a(0, rb.field_c.field_M, -2147483648, 30, 0);
@@ -171,7 +171,7 @@ final class e extends ma implements WidgetActivationListener {
           }
           var4_int = this.field_Q;
           this.a(2116, var4_int + 1);
-          this.field_S[var4_int] = this.a((byte) -114, (rg) (this), param2);
+          this.field_S[var4_int] = this.a((byte) -114, (WidgetEventListener) (this), param2);
           this.field_K[var4_int] = param0;
         } catch (RuntimeException runtimeException) {
           throw SpriteGeometry.wrapClientException((Throwable) ((Object) runtimeException), "e.F(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
@@ -179,7 +179,7 @@ final class e extends ma implements WidgetActivationListener {
     }
 
     e(vn param0, BitmapFont param1, String param2) {
-        super(0, 0, 288, 0, (jm) null);
+        super(0, 0, 288, 0, (WidgetRenderer) null);
         int var4_int = 0;
         this.field_Q = 0;
         try {
@@ -187,7 +187,7 @@ final class e extends ma implements WidgetActivationListener {
           this.field_P = param2;
           this.field_R = param1;
           var4_int = this.field_P != null ? this.field_R.textHeight(this.field_P, 260, this.field_R.field_C) : 0;
-          this.a(0, 34, 22 + var4_int, 288, 0);
+          this.setBounds(0, 34, 22 + var4_int, 288, 0);
         } catch (RuntimeException runtimeException) {
           throw SpriteGeometry.wrapClientException((Throwable) ((Object) runtimeException), "e.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
@@ -203,17 +203,17 @@ final class e extends ma implements WidgetActivationListener {
             if (rm.field_R != null &&
               rm.field_R.focusLost) {
               b.a(true);
-              ji.field_V.b(new ge(ji.field_V, NanoFrameTimer.field_k), (byte) -86);
+              DropTargetWidgetContainer.field_V.showDialog(new ge(DropTargetWidgetContainer.field_V, NanoFrameTimer.field_k), (byte) -86);
             }
             return;
           }
-          ji.field_V.a(-126, BufferedSocket.field_m, EmailFormatValidator.field_o, true);
+          DropTargetWidgetContainer.field_V.processPointerInput(-126, BufferedSocket.field_m, EmailFormatValidator.field_o, true);
           if (param0 < 109) {
             return;
           }
-          ji.field_V.f((byte) 64);
+          DropTargetWidgetContainer.field_V.advanceDialogs((byte) 64);
           while (kf.d(18954)) {
-            ji.field_V.a(d.field_Ib, -110, vg.field_a);
+            DropTargetWidgetContainer.field_V.processKeyInput(d.field_Ib, -110, vg.field_a);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

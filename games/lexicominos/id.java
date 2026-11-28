@@ -15,12 +15,12 @@ class id extends DefaultTextWidgetRenderer {
         this(ql.field_Q, param0);
     }
 
-    public final void a(int param0, int param1, boolean param2, w param3, int param4) {
+    public final void paintWidget(int param0, int param1, boolean param2, UiWidget param3, int param4) {
         try {
           if (param2) {
             ae.a(true, param3.field_j, param3.field_o + param0, param3.field_v, param1 + param3.field_t);
           }
-          super.a(param0, param1, param2, param3, param4);
+          super.paintWidget(param0, param1, param2, param3, param4);
         } catch (RuntimeException runtimeException) {
           throw ld.wrapClientException((Throwable) ((Object) runtimeException), "id.A(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ')');
         }
@@ -74,7 +74,7 @@ class id extends DefaultTextWidgetRenderer {
           ResourceArchive.field_a = param0;
           sc.field_e = true;
           if (ResourceArchive.field_a == 0) {
-            var3_int = cg.a(ug.field_r, pb.field_i, (byte) 91, EmailFormatValidator.field_m, nb.field_x);
+            var3_int = cg.a(ug.field_r, pb.field_i, (byte) 91, EmailFormatValidator.field_m, DequeWidgetContainer.field_x);
             var4 = 3 + var3_int;
             ni.field_a = new int[var4];
             MouseWheelInput.field_g = new String[var4];
@@ -86,14 +86,14 @@ class id extends DefaultTextWidgetRenderer {
               MouseWheelInput.field_g[var5] = ug.field_r[var5];
             }
             MouseWheelInput.field_g[var4 - 3] = "";
-            MouseWheelInput.field_g[-2 + var4] = l.field_E;
+            MouseWheelInput.field_g[-2 + var4] = DropTargetWidgetContainer.field_E;
             ni.field_a[-2 + var4] = 0;
             DefaultTextWidgetRenderer.field_g[0] = 4;
             MouseWheelInput.field_g[var4 - 1] = NodeHashTableIterator.field_d;
             ni.field_a[-1 + var4] = 1;
             DefaultTextWidgetRenderer.field_g[1] = 5;
           } else if (ResourceArchive.field_a == 1) {
-            var3_int = cg.a(ug.field_r, pb.field_i, (byte) 91, EmailFormatValidator.field_m, nb.field_x);
+            var3_int = cg.a(ug.field_r, pb.field_i, (byte) 91, EmailFormatValidator.field_m, DequeWidgetContainer.field_x);
             var4 = var3_int + 2;
             ni.field_a = new int[var4];
             MouseWheelInput.field_g = new String[var4];
@@ -111,9 +111,9 @@ class id extends DefaultTextWidgetRenderer {
           } else if (ResourceArchive.field_a != 2) {
             if (ResourceArchive.field_a == 3) {
               if (jh.field_a.privilegedTasksEnabled) {
-                var3_int = cg.a(ug.field_r, pb.field_i, (byte) 91, GameAppletShell.field_m, nb.field_x);
+                var3_int = cg.a(ug.field_r, pb.field_i, (byte) 91, GameAppletShell.field_m, DequeWidgetContainer.field_x);
               } else {
-                var3_int = cg.a(ug.field_r, pb.field_i, (byte) 91, lb.field_a, nb.field_x);
+                var3_int = cg.a(ug.field_r, pb.field_i, (byte) 91, lb.field_a, DequeWidgetContainer.field_x);
               }
               var4 = var3_int + 2;
               ni.field_a = new int[var4];
@@ -130,7 +130,7 @@ class id extends DefaultTextWidgetRenderer {
               ni.field_a[var4 - 1] = 0;
               DefaultTextWidgetRenderer.field_g[0] = 5;
             } else if (ResourceArchive.field_a == 4) {
-              var3_int = cg.a(ug.field_r, pb.field_i, (byte) 91, AccountRegistrationPanel.field_B, nb.field_x);
+              var3_int = cg.a(ug.field_r, pb.field_i, (byte) 91, AccountRegistrationPanel.field_B, DequeWidgetContainer.field_x);
               var4 = var3_int + 2;
               ni.field_a = new int[var4];
               MouseWheelInput.field_g = new String[var4];
@@ -149,7 +149,7 @@ class id extends DefaultTextWidgetRenderer {
               if (ResourceArchive.field_a != 5) {
                 throw new IllegalArgumentException();
               }
-              var3_int = cg.a(ug.field_r, pb.field_i, (byte) 91, qj.field_db, nb.field_x);
+              var3_int = cg.a(ug.field_r, pb.field_i, (byte) 91, qj.field_db, DequeWidgetContainer.field_x);
               var4 = 3 + var3_int;
               ni.field_a = new int[var4];
               MouseWheelInput.field_g = new String[var4];
@@ -169,7 +169,7 @@ class id extends DefaultTextWidgetRenderer {
               DefaultTextWidgetRenderer.field_g[1] = 5;
             }
           } else {
-            var3_int = cg.a(ug.field_r, pb.field_i, (byte) 91, da.a(new String[]{"<br><%0><br>"}, pl.field_a, false), nb.field_x);
+            var3_int = cg.a(ug.field_r, pb.field_i, (byte) 91, da.a(new String[]{"<br><%0><br>"}, pl.field_a, false), DequeWidgetContainer.field_x);
             var4 = -1;
             for (var5 = 0; var5 < var3_int; var5++) {
               if (!"<%0>".equals(ug.field_r[var5])) {
@@ -186,7 +186,7 @@ class id extends DefaultTextWidgetRenderer {
             qc.field_e = new String[-1 + (-var4 + var3_int)];
             o.a(ug.field_r, 1 + var4, qc.field_e, 0, -1 + var3_int - var4);
             var4 = -1;
-            var3_int = cg.a(ug.field_r, pb.field_i, (byte) 91, da.a(new String[]{"<br><%0><br>"}, mg.field_z, false), nb.field_x);
+            var3_int = cg.a(ug.field_r, pb.field_i, (byte) 91, da.a(new String[]{"<br><%0><br>"}, SingleChildWidgetContainer.field_z, false), DequeWidgetContainer.field_x);
             for (var5 = 0; var5 < var3_int; var5++) {
               if (!"<%0>".equals(ug.field_r[var5])) {
                 continue;
@@ -229,7 +229,7 @@ class id extends DefaultTextWidgetRenderer {
             DefaultTextWidgetRenderer.field_g[0] = 5;
             MouseWheelInput.field_g[4] = sb.field_b;
             ni.field_a[3] = 1;
-            MouseWheelInput.field_g[2] = eg.field_F;
+            MouseWheelInput.field_g[2] = ModalDialogHost.field_F;
             for (var8Lifetime3 = 0; var5 > var8Lifetime3; var8Lifetime3++) {
               stackIn_39_0 = MouseWheelInput.field_g;
               stackIn_39_1 = 6 + var8Lifetime3;

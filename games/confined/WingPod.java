@@ -213,7 +213,7 @@ final class WingPod extends MovingTunnelEntity {
         int var1;
         int var2;
         var2 = Confined.field_J ? 1 : 0;
-        s.field_K = false;
+        DropTargetWidgetContainer.field_K = false;
         cb.field_b = null;
         if (param0 != -31574) {
           field_R = (dd) null;

@@ -31,7 +31,7 @@ final class qh implements WidgetActionListener {
         return new gd(pb.a((byte) -47), dd.f((byte) 105));
     }
 
-    public final void a(int param0, UiWidget param1, int param2, int param3, boolean param4) {
+    public final void paintWidget(int param0, UiWidget param1, int param2, int param3, boolean param4) {
         int stackIn_8_0 = 0;
         RuntimeException stackIn_24_0 = null;
         StringBuilder stackIn_24_1 = null;
@@ -50,14 +50,14 @@ final class qh implements WidgetActionListener {
             this.field_a = -110;
           }
           if (!param1.field_s &&
-            !param1.d(-110)) {
+            !param1.isFocused(-110)) {
             stackIn_8_0 = 2188450;
           } else {
             stackIn_8_0 = 3249872;
           }
           var6_int = stackIn_8_0;
           this.field_e.drawParagraph("<u=" + Integer.toString(var6_int, 16) + ">" + param1.text + "</u>", param2 + param1.x, param1.y + param0, param1.width, param1.height, var6_int, -1, this.field_a, this.field_f, this.field_e.field_p + this.field_e.field_s);
-          if (!param1.d(param3 ^ 24395)) {
+          if (!param1.isFocused(param3 ^ 24395)) {
             return;
           }
           var7 = this.field_e.stringWidth(param1.text);

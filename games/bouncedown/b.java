@@ -45,13 +45,13 @@ final class b {
             if (ClientException.field_c == pj.field_a) {
               if (param5) {
                 var10 = (String) null;
-                bj.field_E = DebouncedFieldValidator.a(param3, (String) null, l.field_b, 107, false);
+                DraggableWidgetContainer.field_E = DebouncedFieldValidator.a(param3, (String) null, l.field_b, 107, false);
               } else {
-                bj.field_E = jl.a(param3, false, param0 + 7154, param2);
+                DraggableWidgetContainer.field_E = jl.a(param3, false, param0 + 7154, param2);
               }
               hh.field_p.position = 0;
               hh.field_p.writeByte(14, (byte) 121);
-              hh.field_p.writeByte(bj.field_E.b((byte) -101).field_a, (byte) 64);
+              hh.field_p.writeByte(DraggableWidgetContainer.field_E.b((byte) -101).field_a, (byte) 64);
               jj.a(-1, true);
               pj.field_a = IsaacRandom.field_h;
             }
@@ -71,7 +71,7 @@ final class b {
               IsaacRandom.a(8, 3)) {
               qa.field_i = jc.field_g.readLong((byte) -121);
               jc.field_g.position = 0;
-              vf.a(param1, bj.field_E, param5, param4, -93);
+              vf.a(param1, DraggableWidgetContainer.field_E, param5, param4, -93);
               pj.field_a = ae.field_g;
             }
             boolean decompiledFrameRemainder0 = true;
@@ -134,8 +134,8 @@ final class b {
               qe.field_e = ce.a(var12, 0);
               nb.field_d = jc.field_g.readUnsignedByte((byte) -94);
               pj.field_a = field_b;
-              if (bj.field_E.b((byte) -124) != BufferedRandomAccessFile.field_h) {
-                if (bj.field_E.b((byte) -113) == pg.field_b) {
+              if (DraggableWidgetContainer.field_E.b((byte) -124) != BufferedRandomAccessFile.field_h) {
+                if (DraggableWidgetContainer.field_E.b((byte) -113) == pg.field_b) {
                   w.field_g.a(1, DiskCacheWorker.b(0));
                 }
               } else {

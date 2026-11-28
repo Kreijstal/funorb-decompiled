@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 abstract class MouseWheelInput {
-    static pf field_b;
+    static ModalDialogHost field_b;
     static int field_a;
 
     final static boolean a(int param0, char param1) {

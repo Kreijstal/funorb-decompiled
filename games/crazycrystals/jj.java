@@ -118,7 +118,7 @@ final class jj {
               }
             }
             if (fm.field_y == gj.field_k &&
-              ol.f((byte) 60)) {
+              ModalDialogHost.f((byte) 60)) {
               go.field_h = ConfirmedEmailAvailabilityValidator.field_n.readLong(true);
               rb.field_h = ConfirmedEmailAvailabilityValidator.field_n.readUnsignedByte(255);
               ConfirmedEmailAvailabilityValidator.field_n.readUnsignedByte(255);
@@ -190,7 +190,7 @@ final class jj {
               return stackIn_74_0;
             }
             if (GameCanvas.field_a == gj.field_k &&
-              ol.f((byte) 60)) {
+              ModalDialogHost.f((byte) 60)) {
               jj.a(4);
               if (bf.field_b == 7 &&
                 !ec.field_g) {

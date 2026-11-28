@@ -18,7 +18,7 @@ final class ag {
           PacketBuffer.g((byte) -124);
           qi.field_b = true;
           dj.field_d = true;
-          jl.field_I.b(false);
+          AlphaWidgetContainer.field_I.closeAllDialogs(false);
           ta.a(jh.field_o, false, 10);
           return;
         }
@@ -26,7 +26,7 @@ final class ag {
         PacketBuffer.g((byte) -124);
         qi.field_b = true;
         dj.field_d = true;
-        jl.field_I.b(false);
+        AlphaWidgetContainer.field_I.closeAllDialogs(false);
         ta.a(jh.field_o, false, 10);
     }
 

@@ -60,7 +60,7 @@ final class rl extends r {
     }
 
     rl(int param0) {
-        this(j.field_C, param0);
+        this(ModalDialogHost.field_C, param0);
     }
 
     public static void c(byte param0) {
@@ -196,7 +196,7 @@ final class rl extends r {
         }
     }
 
-    final String b(int param0, lk param1) {
+    final String b(int param0, UiWidget param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         String stackIn_1_0 = null;
@@ -223,7 +223,7 @@ final class rl extends r {
     }
 
     final static void a(boolean param0) {
-        int var1 = qf.m(-32749);
+        int var1 = ModalDialog.m(-32749);
         if (param0) {
           field_u = -103;
         }

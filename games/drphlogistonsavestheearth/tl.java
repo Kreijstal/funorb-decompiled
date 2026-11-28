@@ -23,7 +23,7 @@ final class tl extends InteractiveWidget {
         return this.field_M.b(param1 - 39, param0);
     }
 
-    final boolean a(int param0, vg param1, int param2, byte param3, int param4, int param5, int param6) {
+    final boolean pointerPressed(int param0, UiWidget param1, int param2, byte param3, int param4, int param5, int param6) {
         int var12 = 0;
         RuntimeException stackIn_29_0 = null;
         StringBuilder stackIn_29_1 = null;
@@ -38,7 +38,7 @@ final class tl extends InteractiveWidget {
         int var14 = 0;
         var14 = DrPhlogistonSavesTheEarth.field_D ? 1 : 0;
         try {
-          if (!super.a(param0, param1, param2, (byte) 123, param4, param5, param6)) {
+          if (!super.pointerPressed(param0, param1, param2, (byte) 123, param4, param5, param6)) {
             if (param3 <= 113) {
               this.field_K = 36;
             }
@@ -101,8 +101,8 @@ final class tl extends InteractiveWidget {
 
     final int h(int param0) {
         if (param0 > -19) {
-          vg var3 = (vg) null;
-          this.a(-21, (vg) null, -12, (byte) -12, -64, -54, -43);
+          UiWidget var3 = (UiWidget) null;
+          this.pointerPressed(-21, (UiWidget) null, -12, (byte) -12, -64, -54, -43);
         }
         return this.field_M.a(false);
     }

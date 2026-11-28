@@ -162,7 +162,7 @@ final class ji {
             var7 = var5_int;
             var6[var7] = -1000.0;
           }
-          var5_double = (double)(db.a((byte) -115, NodeHashTableIterator.field_c, 10) + 15) / 10.0;
+          var5_double = (double)(ModalDialog.a((byte) -115, NodeHashTableIterator.field_c, 10) + 15) / 10.0;
           this.field_j = ma.a((double)param2 * 3.141592653589793 / 512.0, 70) * var5_double;
           this.field_h = nb.a(3.141592653589793 * (double)param2 / 512.0, -127) * var5_double;
         } catch (RuntimeException runtimeException) {

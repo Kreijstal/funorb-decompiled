@@ -15,7 +15,7 @@ final class pt implements WidgetRenderer {
         }
     }
 
-    public final void a(int param0, UiWidget param1, int param2, int param3, boolean param4) {
+    public final void paintWidget(int param0, UiWidget param1, int param2, int param3, boolean param4) {
         RuntimeException runtimeException = null;
         int var6_int = 0;
         int var7 = 0;

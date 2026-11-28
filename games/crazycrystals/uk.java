@@ -76,12 +76,12 @@ final class uk extends nf {
               if (param0 != -9762) {
                 uk.releaseDeclaredStaticReferences(-48);
               }
-              if (null == ol.field_z[0]) {
-                ol.field_z[0] = b.a(0, (InputStream) ((Object) new ByteArrayInputStream(ba.field_k.getFileByName(7693, "tutorial.ccl", ""))), qp.field_g);
+              if (null == ModalDialogHost.field_z[0]) {
+                ModalDialogHost.field_z[0] = b.a(0, (InputStream) ((Object) new ByteArrayInputStream(ba.field_k.getFileByName(7693, "tutorial.ccl", ""))), qp.field_g);
                 vp.a(125);
               }
               if (mo.field_l > 0) {
-                if (null == ol.field_z[2]) {
+                if (null == ModalDialogHost.field_z[2]) {
                   if (pd.field_f == null) {
                     pd.field_f = w.a(param0 + 9762, 0, 2, 5);
                   }
@@ -92,17 +92,17 @@ final class uk extends nf {
                   if (var1 == null) {
                     return;
                   }
-                  ol.field_z[1] = b.a(oe.a(param0, -9762), (InputStream) ((Object) new ByteArrayInputStream(mg.field_g.getFileByNameWithKeys(false, var7, "puzzle1p.ccl", ""))), ro.field_r);
-                  ol.field_z[2] = b.a(0, (InputStream) ((Object) new ByteArrayInputStream(mg.field_g.getFileByNameWithKeys(false, var7, "puzzle2p.ccl", ""))), GameCanvas.field_e);
-                  ol.field_z[3] = b.a(param0 + 9762, (InputStream) ((Object) new ByteArrayInputStream(mg.field_g.getFileByNameWithKeys(false, var7, "puzzle3p.ccl", ""))), qg.field_c);
-                  ol.field_z[4] = b.a(0, (InputStream) ((Object) new ByteArrayInputStream(mg.field_g.getFileByNameWithKeys(false, var7, "arcade1p.ccl", ""))), FloatingScoreLabel.field_k);
+                  ModalDialogHost.field_z[1] = b.a(oe.a(param0, -9762), (InputStream) ((Object) new ByteArrayInputStream(mg.field_g.getFileByNameWithKeys(false, var7, "puzzle1p.ccl", ""))), ro.field_r);
+                  ModalDialogHost.field_z[2] = b.a(0, (InputStream) ((Object) new ByteArrayInputStream(mg.field_g.getFileByNameWithKeys(false, var7, "puzzle2p.ccl", ""))), GameCanvas.field_e);
+                  ModalDialogHost.field_z[3] = b.a(param0 + 9762, (InputStream) ((Object) new ByteArrayInputStream(mg.field_g.getFileByNameWithKeys(false, var7, "puzzle3p.ccl", ""))), qg.field_c);
+                  ModalDialogHost.field_z[4] = b.a(0, (InputStream) ((Object) new ByteArrayInputStream(mg.field_g.getFileByNameWithKeys(false, var7, "arcade1p.ccl", ""))), FloatingScoreLabel.field_k);
                   pd.field_f = null;
                   mg.field_g = null;
                   vp.a(105);
                 }
               } else {
-                if (ol.field_z[1] == null) {
-                  ol.field_z[1] = b.a(0, (InputStream) ((Object) new ByteArrayInputStream(ba.field_k.getFileByName(7693, "puzzle1p.ccl", ""))), ro.field_r);
+                if (ModalDialogHost.field_z[1] == null) {
+                  ModalDialogHost.field_z[1] = b.a(0, (InputStream) ((Object) new ByteArrayInputStream(ba.field_k.getFileByName(7693, "puzzle1p.ccl", ""))), ro.field_r);
                   vp.a(param0 ^ -9800);
                 }
               }
@@ -127,7 +127,7 @@ final class uk extends nf {
                   if (InteractiveWidget.field_u[var2].field_g[0] > FrameTimer.field_b[var2]) {
                     var3 = InteractiveWidget.field_u[var2].field_g[0] - FrameTimer.field_b[var2];
                     MusicPatchPcmStream.field_n = MusicPatchPcmStream.field_n - var3;
-                    ei.field_F = ei.field_F - 2 * var3;
+                    LabeledWidgetContainer.field_F = LabeledWidgetContainer.field_F - 2 * var3;
                     sm.field_f = sm.field_f - var3 * 2;
                     FrameTimer.field_b[var2] = InteractiveWidget.field_u[var2].field_g[0];
                   }

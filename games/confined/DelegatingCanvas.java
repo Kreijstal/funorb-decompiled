@@ -4,7 +4,7 @@
 final class DelegatingCanvas extends java.awt.Canvas {
     private java.awt.Component delegateComponent;
     static String field_c;
-    static sh field_b;
+    static ModalDialogHost field_b;
     static boolean field_a;
 
     DelegatingCanvas(java.awt.Component param0) {

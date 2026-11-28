@@ -71,13 +71,13 @@ final class oc {
         var6 = "(" + nf.field_U + " " + MouseInputHandler.field_b + " " + FullscreenFocusCanvas.field_e + ") " + ob.field_h;
         var1 = var6;
         if (!param0) {
-          if (te.field_O <= 0) {
+          if (AlphaWidgetContainer.field_O <= 0) {
             return var1;
           }
           var1 = var6 + ":";
-          for (var2 = 0; te.field_O > var2; var2++) {
+          for (var2 = 0; AlphaWidgetContainer.field_O > var2; var2++) {
             var14 = var1 + ' ';
-            var3 = te.field_N.payload[var2] & 255;
+            var3 = AlphaWidgetContainer.field_N.payload[var2] & 255;
             var4 = var3 >> 4;
             var3 = var3 & 15;
             if (10 <= var4) {
@@ -96,13 +96,13 @@ final class oc {
           return var1;
         }
         field_a = (java.awt.Frame) null;
-        if (te.field_O <= 0) {
+        if (AlphaWidgetContainer.field_O <= 0) {
           return var1;
         }
         var1Lifetime1 = var6 + ":";
-        for (var2Lifetime1 = 0; te.field_O > var2Lifetime1; var2Lifetime1++) {
+        for (var2Lifetime1 = 0; AlphaWidgetContainer.field_O > var2Lifetime1; var2Lifetime1++) {
           var12 = var1Lifetime1 + ' ';
-          var3Lifetime1 = te.field_N.payload[var2Lifetime1] & 255;
+          var3Lifetime1 = AlphaWidgetContainer.field_N.payload[var2Lifetime1] & 255;
           var4Lifetime1 = var3Lifetime1 >> 4;
           var3Lifetime1 = var3Lifetime1 & 15;
           if (10 <= var4Lifetime1) {

@@ -46,12 +46,12 @@ abstract class rg {
             var4 = ua.a(param2 ^ -47, param1);
             if (var4 != null &&
               var4.length() >= 1) {
-              if (!sk.a(var4.charAt(0), -46) &&
-                !sk.a(var4.charAt(-1 + var4.length()), -46)) {
+              if (!ModalDialogHost.a(var4.charAt(0), -46) &&
+                !ModalDialogHost.a(var4.charAt(-1 + var4.length()), -46)) {
                 var5 = param2;
                 for (var6 = 0; var6 < param1.length(); var6++) {
                   var7 = param1.charAt(var6);
-                  if (sk.a((char) var7, -46)) {
+                  if (ModalDialogHost.a((char) var7, -46)) {
                     var5++;
                   } else {
                     var5 = 0;
@@ -86,7 +86,7 @@ abstract class rg {
           } else {
             stackIn_38_2 = "{...}";
           }
-          throw dd.wrapClientException((Throwable) ((Object) stackIn_37_0), ((StringBuilder) (Object) stackIn_37_1).append(stackIn_38_2).append(',').append(param2).append(')').toString());
+          throw DraggableWidgetContainer.wrapClientException((Throwable) ((Object) stackIn_37_0), ((StringBuilder) (Object) stackIn_37_1).append(stackIn_38_2).append(',').append(param2).append(')').toString());
         }
     }
 

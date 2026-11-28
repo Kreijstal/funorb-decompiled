@@ -19,7 +19,7 @@ final class fo extends WidgetContainer implements WidgetActivationListener {
           this.field_G = param1;
           this.field_C = param0;
           var4_int = null != this.field_B ? this.field_G.textHeight(this.field_B, 260, this.field_G.field_x) : 0;
-          this.a((byte) -10, 0, 0, 22 + var4_int, 288);
+          this.setBounds((byte) -10, 0, 0, 22 + var4_int, 288);
         } catch (RuntimeException runtimeException) {
           throw RichTextWidget.wrapThrowable((Throwable) ((Object) runtimeException), "fo.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
@@ -35,7 +35,7 @@ final class fo extends WidgetContainer implements WidgetActivationListener {
         try {
           var4_int = this.field_J;
           this.a(1 + var4_int, (byte) -119);
-          this.field_I[var4_int] = this.a(param1 - 5177, param0, (ca) (this));
+          this.field_I[var4_int] = this.a(param1 - 5177, param0, (WidgetEventListener) (this));
           this.field_H[var4_int] = param2;
           if (param1 != 5177) {
             this.field_I = (InteractiveWidget[]) null;
@@ -110,12 +110,12 @@ final class fo extends WidgetContainer implements WidgetActivationListener {
         return fo.a(param2, (byte) -71, param0 % param2);
     }
 
-    final void a(int param0, byte param1, int param2, int param3) {
-        super.a(param0, (byte) -29, param2, param3);
+    final void drawWidget(int param0, byte param1, int param2, int param3) {
+        super.drawWidget(param0, (byte) -29, param2, param3);
         this.field_G.drawParagraph(this.field_B, this.x + (param3 + 14), this.y + (param2 + 10), this.width - 28, this.height, 16777215, -1, 0, 0, this.field_G.field_x);
         if (param1 >= -7) {
-          ca var6 = (ca) null;
-          this.a(92, (String) null, (ca) null);
+          WidgetEventListener var6 = (WidgetEventListener) null;
+          this.a(92, (String) null, (WidgetEventListener) null);
         }
     }
 
@@ -160,7 +160,7 @@ final class fo extends WidgetContainer implements WidgetActivationListener {
         }
     }
 
-    final InteractiveWidget a(int param0, String param1, ca param2) {
+    final InteractiveWidget a(int param0, String param1, WidgetEventListener param2) {
         InteractiveWidget var4 = null;
         RuntimeException var4_ref = null;
         int var5 = 0;
@@ -175,9 +175,9 @@ final class fo extends WidgetContainer implements WidgetActivationListener {
           var4 = new InteractiveWidget(param1, param2);
           var4.renderer = (WidgetRenderer) ((Object) new rf());
           var5 = -2 + this.height;
-          this.a((byte) 127, param0, 0, 34 + this.height, this.width);
-          var4.a((byte) -42, 7, var5, 30, -14 + this.width);
-          this.a(var4, -6938);
+          this.setBounds((byte) 127, param0, 0, 34 + this.height, this.width);
+          var4.setBounds((byte) -42, 7, var5, 30, -14 + this.width);
+          this.addChild(var4, -6938);
           stackIn_1_0 = var4;
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

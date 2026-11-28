@@ -326,7 +326,7 @@ final class SceneWidgetPart008 extends SceneWidget {
         if (!UiComponentPart001.computeBoolean0059((byte) -126)) {
           return;
         }
-        UiComponentPart003.performAction0163(-11, 4, false);
+        ModalDialog.performAction0163(-11, 4, false);
         int integerLocal1 = -75 / ((-27 - integerArgument1) / 47);
     }
 

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class qh implements ad {
+final class qh implements WidgetRenderer {
     static String field_d;
     static int field_e;
     static int field_a;
@@ -53,7 +53,7 @@ final class qh implements ad {
         }
     }
 
-    public final void a(int param0, int param1, fe param2, int param3, boolean param4) {
+    public final void paintWidget(int param0, int param1, UiWidget param2, int param3, boolean param4) {
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
         String stackIn_13_2 = null;
@@ -74,8 +74,8 @@ final class qh implements ad {
             ((InteractiveWidget) (param2)).field_H) {
             var8.drawAdditive((-var8.field_x + param2.field_v >> 1) + 1 + var6_int, var7 - (-1 - (-var8.field_A + param2.field_q >> 1)), 256);
           }
-          if (param2.k(73)) {
-            se.c(2 + var6_int, 2, 2 + var7, param2.field_v - 4, param2.field_q - 4);
+          if (param2.isFocused(73)) {
+            DropTargetWidgetContainer.c(2 + var6_int, 2, 2 + var7, param2.field_v - 4, param2.field_q - 4);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

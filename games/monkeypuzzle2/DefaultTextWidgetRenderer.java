@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class DefaultTextWidgetRenderer implements ml, TextWidgetRenderer {
+class DefaultTextWidgetRenderer implements WidgetRenderer, TextWidgetRenderer {
     static String field_d;
     private boolean field_i;
     int field_b;
@@ -194,7 +194,7 @@ class DefaultTextWidgetRenderer implements ml, TextWidgetRenderer {
           if (param4 == param2) {
             return;
           }
-          if (param1.b((byte) 65)) {
+          if (param1.isFocused((byte) 65)) {
             var17 = this.getTextLayout(-1, param1);
             var18 = var17;
             if (param4 <= param2) {
@@ -327,7 +327,7 @@ class DefaultTextWidgetRenderer implements ml, TextWidgetRenderer {
         }
     }
 
-    public void a(boolean param0, UiWidget param1, int param2, int param3, int param4) {
+    public void paintWidget(boolean param0, UiWidget param1, int param2, int param3, int param4) {
         if (null == this.field_p) {
           return;
         }
@@ -589,7 +589,7 @@ class DefaultTextWidgetRenderer implements ml, TextWidgetRenderer {
           if (param4 != 0) {
             this.field_a = -17;
           }
-          if (!param0.b((byte) 91)) {
+          if (!param0.isFocused((byte) 91)) {
             return;
           }
           var13 = this.getTextLayout(-1, param0);

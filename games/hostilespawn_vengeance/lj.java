@@ -30,7 +30,7 @@ abstract class lj extends DualLinkNode {
         try {
           var1_int = 0;
           var2 = 0;
-          while (jn.e((byte) 73)) {
+          while (AlphaWidgetContainer.e((byte) 73)) {
             NameSuggestionsPanel.field_F.c(0);
             if (NameSuggestionsPanel.field_F.b(0)) {
               var1_int = 1;
@@ -268,7 +268,7 @@ abstract class lj extends DualLinkNode {
                       }
                     }
                   }
-                  nh.a(var43Lifetime2, -29966);
+                  LabeledWidgetContainer.a(var43Lifetime2, -29966);
                 }
               }
             }

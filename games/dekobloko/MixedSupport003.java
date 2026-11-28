@@ -197,14 +197,14 @@ final class MixedSupport003 extends DualNode {
         }
         if (this.integerArrayState0005 != null) {
           for (integerLocal2 = 0; integerLocal2 < this.integerArrayState0005.length; integerLocal2++) {
-            this.integerArrayState0005[integerLocal2] = UiComponentPart006.bitwiseOr(this.integerArrayState0005[integerLocal2], 32768);
+            this.integerArrayState0005[integerLocal2] = LabeledWidgetContainer.bitwiseOr(this.integerArrayState0005[integerLocal2], 32768);
           }
         }
         if (this.integerArrayState0004 != null) {
           integerLocal1 = 0;
           integerLocal4 = integerLocal1;
           while (integerLocal1 < this.integerArrayState0004.length) {
-            this.integerArrayState0004[integerLocal1] = UiComponentPart006.bitwiseOr(this.integerArrayState0004[integerLocal1], 32768);
+            this.integerArrayState0004[integerLocal1] = LabeledWidgetContainer.bitwiseOr(this.integerArrayState0004[integerLocal1], 32768);
             integerLocal1++;
           }
         }

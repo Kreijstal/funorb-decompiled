@@ -142,7 +142,7 @@ final class BoundedRandomAccessFile {
           int var8Lifetime1;
           var9 = HostileSpawn.field_I ? 1 : 0;
           try {
-            if (null == ag.field_t &&
+            if (null == UiWidget.field_t &&
               !me.a(param0, 107)) {
               stackIn_5_0 = -1;
               return stackIn_5_0;
@@ -156,7 +156,7 @@ final class BoundedRandomAccessFile {
                 AchievementNotification.field_i = AccountRegistrationPanel.a(false, param5, 113, param4);
               } else {
                 var11 = (String) null;
-                AchievementNotification.field_i = ul.a(false, (String) null, ib.field_d, param5, 112);
+                AchievementNotification.field_i = ModalDialog.a(false, (String) null, ib.field_d, param5, 112);
               }
               s.field_b.field_i = 0;
               s.field_b.d(94, 14);
@@ -199,7 +199,7 @@ final class BoundedRandomAccessFile {
                 }
                 else {
                   le.c((byte) 67);
-                  jn.field_C = false;
+                  AlphaWidgetContainer.field_C = false;
                   stackIn_33_0 = var6_intLifetime1;
                   return stackIn_33_0;
                 }
@@ -250,7 +250,7 @@ final class BoundedRandomAccessFile {
                   wh.field_c.a((byte) -109, BufferedRandomAccessFile.c(-1));
                 }
               }
-              jn.field_C = false;
+              AlphaWidgetContainer.field_C = false;
               if (var12 != null) {
                 ResourceArchive.writeSettingsCookie((byte) 62, BufferedRandomAccessFile.c(-1), var12);
               }
@@ -285,8 +285,8 @@ final class BoundedRandomAccessFile {
               eb.a(13372)) {
               le.c((byte) 83);
               if (ImageProducerRasterBuffer.field_k == 7 &&
-                !jn.field_C) {
-                jn.field_C = true;
+                !AlphaWidgetContainer.field_C) {
+                AlphaWidgetContainer.field_C = true;
                 stackIn_85_0 = -1;
                 return stackIn_85_0;
               }
@@ -294,25 +294,25 @@ final class BoundedRandomAccessFile {
                 ImageProducerRasterBuffer.field_k = 3;
               }
               km.field_x = sc.field_g.o(32);
-              jn.field_C = false;
+              AlphaWidgetContainer.field_C = false;
               stackIn_90_0 = ImageProducerRasterBuffer.field_k;
               return stackIn_90_0;
             }
-            if (ag.field_t == null) {
-              if (jn.field_C) {
+            if (UiWidget.field_t == null) {
+              if (AlphaWidgetContainer.field_C) {
                 if (m.a(true) <= 30000L) {
                   km.field_x = fl.field_d;
                 } else {
-                  km.field_x = od.field_H;
+                  km.field_x = DropTargetWidgetContainer.field_H;
                 }
-                jn.field_C = false;
+                AlphaWidgetContainer.field_C = false;
                 stackIn_97_0 = 3;
                 return stackIn_97_0;
               }
               var6_intLifetime2 = cb.field_c;
               cb.field_c = GzipDecompressor.field_b;
               GzipDecompressor.field_b = var6_intLifetime2;
-              jn.field_C = true;
+              AlphaWidgetContainer.field_C = true;
             }
             stackIn_100_0 = -1;
             return stackIn_100_0;

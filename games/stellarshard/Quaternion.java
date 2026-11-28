@@ -8,8 +8,8 @@ final class Quaternion {
     double w;
 
     final static void a(boolean param0) {
-        if (ei.field_G != null) {
-          ei.field_G.o(3);
+        if (ModalDialogHost.field_G != null) {
+          ModalDialogHost.field_G.o(3);
           RichTextLayout.field_e = new DisplayNameSelectionPanel();
           if (!param0) {
             sf.field_f.b(RichTextLayout.field_e, 23143);

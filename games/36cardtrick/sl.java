@@ -22,12 +22,12 @@ final class sl {
           if (!(2 >= ia.field_a)) {
             ia.field_a = 2;
           }
-          n.field_E = param1 & 3;
+          AlphaWidgetContainer.field_E = param1 & 3;
           if (!(qd.field_c <= 2)) {
             qd.field_c = 2;
           }
-          if (n.field_E > 2) {
-            n.field_E = 2;
+          if (AlphaWidgetContainer.field_E > 2) {
+            AlphaWidgetContainer.field_E = 2;
             return;
           }
           return;
@@ -36,14 +36,14 @@ final class sl {
         if (!(2 >= ia.field_a)) {
           ia.field_a = 2;
         }
-        n.field_E = param1 & 3;
+        AlphaWidgetContainer.field_E = param1 & 3;
         if (!(qd.field_c <= 2)) {
           qd.field_c = 2;
         }
-        if (n.field_E <= 2) {
+        if (AlphaWidgetContainer.field_E <= 2) {
           return;
         }
-        n.field_E = 2;
+        AlphaWidgetContainer.field_E = 2;
     }
 
     static {

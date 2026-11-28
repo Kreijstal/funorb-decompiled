@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class lc extends td implements ButtonListener {
+final class lc extends DequeWidgetContainer implements ButtonListener {
     private jj field_D;
     private int[] field_C;
     private String field_H;
@@ -77,12 +77,12 @@ final class lc extends td implements ButtonListener {
         }
     }
 
-    final void a(int param0, int param1, int param2, int param3) {
-        super.a(param0, param1, param2, param3);
+    final void drawWidget(int param0, int param1, int param2, int param3) {
+        super.drawWidget(param0, param1, param2, param3);
         this.field_F.drawParagraph(this.field_H, 14 + param1 + this.field_p, param2 + this.field_m + 10, this.field_x - 28, this.field_u, 16777215, -1, 0, 0, this.field_F.field_G);
     }
 
-    final ButtonWidget a(int param0, tg param1, String param2) {
+    final ButtonWidget a(int param0, WidgetEventListener param1, String param2) {
         ButtonWidget var4 = null;
         RuntimeException var4_ref = null;
         int var5 = 0;
@@ -95,11 +95,11 @@ final class lc extends td implements ButtonListener {
         RuntimeException decompiledCaughtException = null;
         try {
           var4 = new ButtonWidget(param2, param1);
-          var4.field_y = (t) ((Object) new dc());
+          var4.field_y = (WidgetRenderer) ((Object) new dc());
           var5 = this.field_u - 2;
-          this.a(34 + this.field_u, -3050, 0, this.field_x, 0);
-          var4.a(30, -3050, var5, param0 + this.field_x, 7);
-          this.a(false, var4);
+          this.setBounds(34 + this.field_u, -3050, 0, this.field_x, 0);
+          var4.setBounds(30, -3050, var5, param0 + this.field_x, 7);
+          this.addChild(false, var4);
           stackIn_1_0 = var4;
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -137,7 +137,7 @@ final class lc extends td implements ButtonListener {
             field_E = (String) null;
           }
           this.a(var4_int + 1, 120);
-          this.field_G[var4_int] = this.a(-14, (tg) (this), param1);
+          this.field_G[var4_int] = this.a(-14, (WidgetEventListener) (this), param1);
           this.field_C[var4_int] = param2;
         } catch (RuntimeException runtimeException) {
           throw LevelGrid.toClientException((Throwable) ((Object) runtimeException), "lc.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
@@ -145,7 +145,7 @@ final class lc extends td implements ButtonListener {
     }
 
     lc(jj param0, BitmapFont param1, String param2) {
-        super(0, 0, 288, 0, (t) null);
+        super(0, 0, 288, 0, (WidgetRenderer) null);
         int var4_int = 0;
         this.field_I = 0;
         try {
@@ -153,7 +153,7 @@ final class lc extends td implements ButtonListener {
           this.field_D = param0;
           this.field_H = param2;
           var4_int = null == this.field_H ? 0 : this.field_F.textHeight(this.field_H, 260, this.field_F.field_G);
-          this.a(22 + var4_int, -3050, 0, 288, 0);
+          this.setBounds(22 + var4_int, -3050, 0, 288, 0);
         } catch (RuntimeException runtimeException) {
           throw LevelGrid.toClientException((Throwable) ((Object) runtimeException), "lc.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }

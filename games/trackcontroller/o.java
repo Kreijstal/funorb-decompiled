@@ -9,7 +9,7 @@ final class o {
         IntrusiveDeque.field_c[15] = nh.field_d;
         IntrusiveDeque.field_c[17] = oe.field_d;
         IntrusiveDeque.field_c[2] = ConfirmedEmailAvailabilityValidator.field_r;
-        IntrusiveDeque.field_c[25] = vl.field_J;
+        IntrusiveDeque.field_c[25] = ModalDialogHost.field_J;
         IntrusiveDeque.field_c[9] = ButtonWidget.field_H;
         IntrusiveDeque.field_c[5] = q.field_j;
         IntrusiveDeque.field_c[11] = nh.field_d;
@@ -26,7 +26,7 @@ final class o {
           IntrusiveDeque.field_c[21] = AccountNameAvailabilityValidator.field_n;
           IntrusiveDeque.field_c[14] = nh.field_d;
           IntrusiveDeque.field_c[13] = ua.field_K;
-          IntrusiveDeque.field_c[4] = fj.field_R;
+          IntrusiveDeque.field_c[4] = DraggableWidgetContainer.field_R;
           IntrusiveDeque.field_c[19] = IntrusiveNode.field_a;
           IntrusiveDeque.field_c[3] = c.field_b;
           IntrusiveDeque.field_c[27] = ProxyAuthenticationRequiredException.field_a;
@@ -45,7 +45,7 @@ final class o {
         IntrusiveDeque.field_c[21] = AccountNameAvailabilityValidator.field_n;
         IntrusiveDeque.field_c[14] = nh.field_d;
         IntrusiveDeque.field_c[13] = ua.field_K;
-        IntrusiveDeque.field_c[4] = fj.field_R;
+        IntrusiveDeque.field_c[4] = DraggableWidgetContainer.field_R;
         IntrusiveDeque.field_c[19] = IntrusiveNode.field_a;
         IntrusiveDeque.field_c[3] = c.field_b;
         IntrusiveDeque.field_c[27] = ProxyAuthenticationRequiredException.field_a;

@@ -33,7 +33,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
           if (var5 != 0L &&
             var3 > var5) {
             var7_int = (int)(-var5 + var3);
-            oc.field_y = (32000 + (var7_int >> 1)) / var7_int;
+            LabeledWidgetContainer.field_y = (32000 + (var7_int >> 1)) / var7_int;
           }
           FrameTimer.field_a = 1 + FrameTimer.field_a & 31;
           var7 = this;
@@ -83,7 +83,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
         java.applet.AppletContext stackIn_12_0 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (aj.field_t != null) {
+          if (DequeWidgetContainer.field_t != null) {
             stackIn_4_0 = null;
             return (java.applet.AppletContext) (stackIn_4_0);
           }
@@ -150,7 +150,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
         java.net.URL stackIn_10_0 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (aj.field_t != null) {
+          if (DequeWidgetContainer.field_t != null) {
             stackIn_2_0 = null;
             return (java.net.URL) (stackIn_2_0);
           }
@@ -186,36 +186,36 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
             decompiledFrameRemainder0 = (var4 != 0);
           }
           if (decompiledFrameRemainder0) {
-            if (aj.field_t == null) {
+            if (DequeWidgetContainer.field_t == null) {
               if (null == i.field_f) {
                 var2 = wi.field_f;
                 if (var4 != 0) {
                   var2 = i.field_f;
-                  var2 = aj.field_t;
+                  var2 = DequeWidgetContainer.field_t;
                 }
               } else {
                 var2 = i.field_f;
                 if (var4 != 0) {
-                  var2 = aj.field_t;
+                  var2 = DequeWidgetContainer.field_t;
                 }
               }
             } else {
-              var2 = aj.field_t;
+              var2 = DequeWidgetContainer.field_t;
             }
           }
           ((java.awt.Container) (var2)).setLayout((java.awt.LayoutManager) null);
           AchievementNotice.field_k = (java.awt.Canvas) ((Object) new DelegatingCanvas((java.awt.Component) (this)));
           ((java.awt.Container) (var2)).add((java.awt.Component) ((Object) AchievementNotice.field_k));
-          AchievementNotice.field_k.setSize(fk.field_E, mk.field_x);
+          AchievementNotice.field_k.setSize(fk.field_E, ModalDialog.field_x);
           AchievementNotice.field_k.setVisible(true);
-          if (aj.field_t == var2) {
-            var3 = aj.field_t.getInsets();
-            AchievementNotice.field_k.setLocation(var3.left + gl.field_D, var3.top + uc.field_a);
+          if (DequeWidgetContainer.field_t == var2) {
+            var3 = DequeWidgetContainer.field_t.getInsets();
+            AchievementNotice.field_k.setLocation(var3.left + AlphaWidgetContainer.field_D, var3.top + uc.field_a);
             if (var4 != 0) {
-              AchievementNotice.field_k.setLocation(gl.field_D, uc.field_a);
+              AchievementNotice.field_k.setLocation(AlphaWidgetContainer.field_D, uc.field_a);
             }
           } else {
-            AchievementNotice.field_k.setLocation(gl.field_D, uc.field_a);
+            AchievementNotice.field_k.setLocation(AlphaWidgetContainer.field_D, uc.field_a);
           }
           AchievementNotice.field_k.addFocusListener((java.awt.event.FocusListener) (this));
           AchievementNotice.field_k.requestFocus();
@@ -343,7 +343,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
             GameApplet.f(-17);
           }
           this.clearAppletStatics(3);
-          if (aj.field_t != null) {
+          if (DequeWidgetContainer.field_t != null) {
             try {
               System.exit(0);
             } catch (java.lang.Throwable decompiledCaughtParameter3) {
@@ -451,17 +451,17 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
           if (50 < fieldTemp$1) {
             kb.field_l = true;
             SectorCacheStore.field_a = SectorCacheStore.field_a - 50;
-            AchievementNotice.field_k.setSize(fk.field_E, mk.field_x);
+            AchievementNotice.field_k.setSize(fk.field_E, ModalDialog.field_x);
             AchievementNotice.field_k.setVisible(true);
-            boolean decompiledSharedTail0 = (null != aj.field_t &&
+            boolean decompiledSharedTail0 = (null != DequeWidgetContainer.field_t &&
               WordLanguage.field_e == null);
             if (!decompiledSharedTail0) {
-              AchievementNotice.field_k.setLocation(gl.field_D, uc.field_a);
+              AchievementNotice.field_k.setLocation(AlphaWidgetContainer.field_D, uc.field_a);
               decompiledSharedTail0 = (Transmogrify.field_A);
             }
             if (decompiledSharedTail0) {
-              var6 = aj.field_t.getInsets();
-              AchievementNotice.field_k.setLocation(gl.field_D + var6.left, var6.top + uc.field_a);
+              var6 = DequeWidgetContainer.field_t.getInsets();
+              AchievementNotice.field_k.setLocation(AlphaWidgetContainer.field_D + var6.left, var6.top + uc.field_a);
             }
           }
           this.renderFrame(15648);
@@ -477,7 +477,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
 
     public final java.net.URL getCodeBase() {
         RuntimeException var1;
-        if (null != aj.field_t) {
+        if (null != DequeWidgetContainer.field_t) {
           return null;
         }
         if (i.field_f != null &&
@@ -630,9 +630,9 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
                 }
                 wb.a((byte) -124);
                 this.a(false);
-                DualLinkNode.field_k = wc.a(4, (java.awt.Component) ((Object) AchievementNotice.field_k), mk.field_x, fk.field_E);
+                DualLinkNode.field_k = wc.a(4, (java.awt.Component) ((Object) AchievementNotice.field_k), ModalDialog.field_x, fk.field_E);
                 this.initializeGame(-9);
-                th.field_c = oc.j(0);
+                th.field_c = LabeledWidgetContainer.j(0);
                 do {
                   boolean decompiledFrameRemainder0 = true;
                   if (lb.field_b != 0L) {
@@ -786,7 +786,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
         String stackIn_17_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (aj.field_t != null) {
+          if (DequeWidgetContainer.field_t != null) {
             stackIn_4_0 = null;
             return (String) (stackIn_4_0);
           }
@@ -835,9 +835,9 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
                 return;
               }
               wi.field_f = this;
-              gl.field_D = 0;
+              AlphaWidgetContainer.field_D = 0;
               uc.field_a = 0;
-              mk.field_x = param1;
+              ModalDialog.field_x = param1;
               uh.field_j = param1;
               fk.field_E = param6;
               ch.field_b = param6;

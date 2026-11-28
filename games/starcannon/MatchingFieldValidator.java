@@ -404,7 +404,7 @@ final class MatchingFieldValidator extends TextFieldValidator {
           }
           var2Lifetime50 = BoundedRandomAccessFile.a("livescapscolon", (byte) -124);
           if (var2Lifetime50 != null) {
-            vk.field_w = DualLinkNode.a(param1 - 30842, var2Lifetime50);
+            DequeWidgetContainer.field_w = DualLinkNode.a(param1 - 30842, var2Lifetime50);
           }
           var2Lifetime51 = BoundedRandomAccessFile.a("atgcaps", (byte) -124);
           if (null != var2Lifetime51) {
@@ -504,7 +504,7 @@ final class MatchingFieldValidator extends TextFieldValidator {
           }
           var2Lifetime75 = BoundedRandomAccessFile.a("con4", (byte) -124);
           if (null != var2Lifetime75) {
-            qd.field_y = DualLinkNode.a(param1 - 30843, var2Lifetime75);
+            ModalDialog.field_y = DualLinkNode.a(param1 - 30843, var2Lifetime75);
           }
           var2Lifetime76 = BoundedRandomAccessFile.a("con3", (byte) -124);
           if (null != var2Lifetime76) {
@@ -520,7 +520,7 @@ final class MatchingFieldValidator extends TextFieldValidator {
           }
           var2Lifetime79 = BoundedRandomAccessFile.a("controlcaps", (byte) -124);
           if (null != var2Lifetime79) {
-            tc.field_y = DualLinkNode.a(param1 ^ 30860, var2Lifetime79);
+            ModalDialogHost.field_y = DualLinkNode.a(param1 ^ 30860, var2Lifetime79);
           }
           var2Lifetime80 = BoundedRandomAccessFile.a("storytext", (byte) -124);
           if (var2Lifetime80 != null) {

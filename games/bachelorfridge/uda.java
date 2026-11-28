@@ -10,13 +10,13 @@ abstract class uda extends am {
     private int field_V;
     private int field_db;
     static ResourceArchive field_U;
-    private hl field_S;
+    private AlphaWidgetContainer field_S;
     private int field_bb;
     private kf field_Y;
     private UiWidget field_T;
     static String field_eb;
 
-    boolean a(int param0) {
+    boolean advanceDialogAnimation(int param0) {
         int fieldTemp$0 = 0;
         int fieldTemp$1 = 0;
         int var3;
@@ -25,7 +25,7 @@ abstract class uda extends am {
           if (param0 >= -32) {
             return false;
           }
-          return super.a(-118);
+          return super.advanceDialogAnimation(-118);
         }
         if (BufferedSocket.field_n == this.field_Y) {
           fieldTemp$0 = this.field_Z + 1;
@@ -41,13 +41,13 @@ abstract class uda extends am {
           if (param0 >= -32) {
             return false;
           }
-          return super.a(-118);
+          return super.advanceDialogAnimation(-118);
         }
         if (this.field_Y != dha.field_b) {
           if (param0 >= -32) {
             return false;
           }
-          return super.a(-118);
+          return super.advanceDialogAnimation(-118);
         }
         fieldTemp$1 = this.field_Z + 1;
         this.field_Z = this.field_Z + 1;
@@ -60,15 +60,15 @@ abstract class uda extends am {
         if (param0 >= -32) {
           return false;
         }
-        return super.a(-118);
+        return super.advanceDialogAnimation(-118);
     }
 
-    final boolean k(int param0) {
+    final boolean snapDialogAnimation(int param0) {
         if (param0 >= -59) {
           return true;
         }
         this.m(17310);
-        return super.k(-79);
+        return super.snapDialogAnimation(-79);
     }
 
     final static void b(boolean param0, int param1, int param2, int param3) {
@@ -148,7 +148,7 @@ abstract class uda extends am {
         this.field_T = null;
     }
 
-    uda(rp param0, UiWidget param1, int param2, int param3, int param4) {
+    uda(ModalDialogHost param0, UiWidget param1, int param2, int param3, int param4) {
         super(param0, 12 + param1.width, param1.height + (12 + param2));
         try {
           this.field_db = param4;
@@ -167,12 +167,12 @@ abstract class uda extends am {
             this.field_S.unlink(false);
           }
           if (param0 == null) {
-            this.field_S = new hl();
+            this.field_S = new AlphaWidgetContainer();
           } else {
-            param0.a(6, param0.height, (byte) 59, param0.width, 6 + this.field_bb);
-            this.field_S = new hl(param0);
+            param0.setBounds(6, param0.height, (byte) 59, param0.width, 6 + this.field_bb);
+            this.field_S = new AlphaWidgetContainer(param0);
           }
-          this.c(this.field_S, param1 + 15073);
+          this.addChild(this.field_S, param1 + 15073);
           if (param1 != -15084) {
             this.field_Z = -77;
           }
@@ -221,7 +221,7 @@ abstract class uda extends am {
     final void m(int param0) {
         if (null != this.field_Y) {
           if (this.field_Y != dha.field_b) {
-            this.b(-41, 12 + this.field_bb + this.field_T.height, 12 + this.field_T.width);
+            this.setCenteredSize(-41, 12 + this.field_bb + this.field_T.height, 12 + this.field_T.width);
             this.d(this.field_T, -15084);
           }
           this.field_S.field_F = 256;

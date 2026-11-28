@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ng extends lk {
+final class ng extends UiWidget {
     private int field_L;
     private int field_M;
     private RgbSprite[] field_K;
@@ -17,8 +17,8 @@ final class ng extends lk {
     boolean field_I;
     int field_J;
 
-    final void a(int param0, int param1, int param2, int param3, boolean param4) {
-        super.a(param0, param1, param2, param3, param4);
+    final void setBounds(int param0, int param1, int param2, int param3, boolean param4) {
+        super.setBounds(param0, param1, param2, param3, param4);
         this.b(!param4 ? true : false);
     }
 
@@ -33,7 +33,7 @@ final class ng extends lk {
         this(param0, param1, param2, param3, param4, param5, param6, (16711422 & param5) >> 1, 8355711 & param6 >> 1);
     }
 
-    final void a(int param0, int param1, int param2, int param3) {
+    final void drawWidget(int param0, int param1, int param2, int param3) {
         if (param2 != ~param3) {
           return;
         }
@@ -54,7 +54,7 @@ final class ng extends lk {
         return (param0 & -param0) == param0 ? true : false;
     }
 
-    final void a(int param0, int param1, lk param2, int param3) {
+    final void updatePointer(int param0, int param1, UiWidget param2, int param3) {
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         String stackIn_9_2 = null;
@@ -96,15 +96,15 @@ final class ng extends lk {
         int var6 = 0;
         int var7 = 0;
         int var8 = 0;
-        lk var9 = null;
+        UiWidget var9 = null;
         var8 = Main.field_T;
         try {
           var5_int = param3 + this.field_h;
           DefaultTextWidgetRenderer.a(param1, -this.field_D.field_p + var5_int, this.field_D.field_p + param3, (byte) 96, this.field_q + param1);
           var6 = -this.field_B + param3;
           if (param2) {
-            var9 = (lk) null;
-            this.a(-91, 67, (lk) null, -108);
+            var9 = (UiWidget) null;
+            this.updatePointer(-91, 67, (UiWidget) null, -108);
           }
           while (var5_int > var6) {
             param0.draw(var6, param1);
@@ -237,7 +237,7 @@ final class ng extends lk {
         this.field_M = param6;
         this.field_z = param5;
         this.field_A = param7;
-        this.a(param3, param1, param2, param0, true);
+        this.setBounds(param3, param1, param2, param0, true);
     }
 
     static {

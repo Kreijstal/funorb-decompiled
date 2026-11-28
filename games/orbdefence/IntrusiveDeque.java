@@ -74,7 +74,7 @@ final class IntrusiveDeque {
           param1.field_c.field_e = param1;
           param1.field_e.field_c = param1;
         } catch (RuntimeException runtimeException) {
-          throw dd.wrapClientException((Throwable) ((Object) runtimeException), "im.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw DraggableWidgetContainer.wrapClientException((Throwable) ((Object) runtimeException), "im.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -145,7 +145,7 @@ final class IntrusiveDeque {
           param0.field_c.field_e = param0;
           param0.field_e.field_c = param0;
         } catch (RuntimeException runtimeException) {
-          throw dd.wrapClientException((Throwable) ((Object) runtimeException), "im.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw DraggableWidgetContainer.wrapClientException((Throwable) ((Object) runtimeException), "im.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

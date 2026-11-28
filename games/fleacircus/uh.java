@@ -312,876 +312,876 @@ final class uh extends IntrusiveNode {
         var4 = fleas.field_A ? 1 : 0;
         try {
           ProxyAuthenticationRequiredException.field_c = param1;
-          var2 = tf.a(0, "waitingfor_patches");
+          var2 = AlphaWidgetContainer.a(0, "waitingfor_patches");
           if (var2 != null) {
             cf.field_b = ab.a(0, var2);
           }
-          var2Lifetime1 = tf.a(0, "loading_patches");
+          var2Lifetime1 = AlphaWidgetContainer.a(0, "loading_patches");
           if (null != var2Lifetime1) {
             kk.field_c = ab.a(0, var2Lifetime1);
           }
-          var2Lifetime2 = tf.a(0, "level_names,0,0");
+          var2Lifetime2 = AlphaWidgetContainer.a(0, "level_names,0,0");
           if (null != var2Lifetime2) {
             FrameTimer.field_c[0][0] = ab.a(0, var2Lifetime2);
           }
-          var2Lifetime3 = tf.a(0, "level_names,0,1");
+          var2Lifetime3 = AlphaWidgetContainer.a(0, "level_names,0,1");
           if (null != var2Lifetime3) {
             FrameTimer.field_c[0][1] = ab.a(0, var2Lifetime3);
           }
-          var2Lifetime4 = tf.a(0, "level_names,0,2");
+          var2Lifetime4 = AlphaWidgetContainer.a(0, "level_names,0,2");
           if (var2Lifetime4 != null) {
             FrameTimer.field_c[0][2] = ab.a(0, var2Lifetime4);
           }
-          var2Lifetime5 = tf.a(0, "level_names,0,3");
+          var2Lifetime5 = AlphaWidgetContainer.a(0, "level_names,0,3");
           if (var2Lifetime5 != null) {
             FrameTimer.field_c[0][3] = ab.a(0, var2Lifetime5);
           }
-          var2Lifetime6 = tf.a(0, "level_names,0,4");
+          var2Lifetime6 = AlphaWidgetContainer.a(0, "level_names,0,4");
           if (null != var2Lifetime6) {
             FrameTimer.field_c[0][4] = ab.a(0, var2Lifetime6);
           }
-          var2Lifetime7 = tf.a(0, "level_names,0,5");
+          var2Lifetime7 = AlphaWidgetContainer.a(0, "level_names,0,5");
           if (var2Lifetime7 != null) {
             FrameTimer.field_c[0][5] = ab.a(0, var2Lifetime7);
           }
-          var2Lifetime8 = tf.a(0, "level_names,0,6");
+          var2Lifetime8 = AlphaWidgetContainer.a(0, "level_names,0,6");
           if (var2Lifetime8 != null) {
             FrameTimer.field_c[0][6] = ab.a(0, var2Lifetime8);
           }
-          var2Lifetime9 = tf.a(0, "level_names,0,7");
+          var2Lifetime9 = AlphaWidgetContainer.a(0, "level_names,0,7");
           if (null != var2Lifetime9) {
             FrameTimer.field_c[0][7] = ab.a(0, var2Lifetime9);
           }
-          var2Lifetime10 = tf.a(0, "level_names,0,8");
+          var2Lifetime10 = AlphaWidgetContainer.a(0, "level_names,0,8");
           if (var2Lifetime10 != null) {
             FrameTimer.field_c[0][8] = ab.a(0, var2Lifetime10);
           }
-          var2Lifetime11 = tf.a(0, "level_names,0,9");
+          var2Lifetime11 = AlphaWidgetContainer.a(0, "level_names,0,9");
           if (var2Lifetime11 != null) {
             FrameTimer.field_c[0][9] = ab.a(0, var2Lifetime11);
           }
-          var2Lifetime12 = tf.a(0, "level_names,0,10");
+          var2Lifetime12 = AlphaWidgetContainer.a(0, "level_names,0,10");
           if (null != var2Lifetime12) {
             FrameTimer.field_c[0][10] = ab.a(0, var2Lifetime12);
           }
-          var2Lifetime13 = tf.a(0, "level_names,0,11");
+          var2Lifetime13 = AlphaWidgetContainer.a(0, "level_names,0,11");
           if (var2Lifetime13 != null) {
             FrameTimer.field_c[0][11] = ab.a(0, var2Lifetime13);
           }
-          var2Lifetime14 = tf.a(0, "level_names,0,12");
+          var2Lifetime14 = AlphaWidgetContainer.a(0, "level_names,0,12");
           if (var2Lifetime14 != null) {
             FrameTimer.field_c[0][12] = ab.a(0, var2Lifetime14);
           }
-          var2Lifetime15 = tf.a(0, "level_names,0,13");
+          var2Lifetime15 = AlphaWidgetContainer.a(0, "level_names,0,13");
           if (var2Lifetime15 != null) {
             FrameTimer.field_c[0][13] = ab.a(0, var2Lifetime15);
           }
-          var2Lifetime16 = tf.a(0, "level_names,0,14");
+          var2Lifetime16 = AlphaWidgetContainer.a(0, "level_names,0,14");
           if (var2Lifetime16 != null) {
             FrameTimer.field_c[0][14] = ab.a(0, var2Lifetime16);
           }
-          var2Lifetime17 = tf.a(0, "level_names,0,15");
+          var2Lifetime17 = AlphaWidgetContainer.a(0, "level_names,0,15");
           if (null != var2Lifetime17) {
             FrameTimer.field_c[0][15] = ab.a(0, var2Lifetime17);
           }
-          var2Lifetime18 = tf.a(0, "level_names,0,16");
+          var2Lifetime18 = AlphaWidgetContainer.a(0, "level_names,0,16");
           if (null != var2Lifetime18) {
             FrameTimer.field_c[0][16] = ab.a(0, var2Lifetime18);
           }
-          var2Lifetime19 = tf.a(0, "level_names,0,17");
+          var2Lifetime19 = AlphaWidgetContainer.a(0, "level_names,0,17");
           if (var2Lifetime19 != null) {
             FrameTimer.field_c[0][17] = ab.a(0, var2Lifetime19);
           }
-          var2Lifetime20 = tf.a(0, "level_names,0,18");
+          var2Lifetime20 = AlphaWidgetContainer.a(0, "level_names,0,18");
           if (var2Lifetime20 != null) {
             FrameTimer.field_c[0][18] = ab.a(0, var2Lifetime20);
           }
-          var2Lifetime21 = tf.a(0, "level_names,0,19");
+          var2Lifetime21 = AlphaWidgetContainer.a(0, "level_names,0,19");
           if (var2Lifetime21 != null) {
             FrameTimer.field_c[0][19] = ab.a(0, var2Lifetime21);
           }
-          var2Lifetime22 = tf.a(0, "level_names,0,20");
+          var2Lifetime22 = AlphaWidgetContainer.a(0, "level_names,0,20");
           if (var2Lifetime22 != null) {
             FrameTimer.field_c[0][20] = ab.a(0, var2Lifetime22);
           }
-          var2Lifetime23 = tf.a(0, "level_names,0,21");
+          var2Lifetime23 = AlphaWidgetContainer.a(0, "level_names,0,21");
           if (var2Lifetime23 != null) {
             FrameTimer.field_c[0][21] = ab.a(0, var2Lifetime23);
           }
-          var2Lifetime24 = tf.a(0, "level_names,0,22");
+          var2Lifetime24 = AlphaWidgetContainer.a(0, "level_names,0,22");
           if (null != var2Lifetime24) {
             FrameTimer.field_c[0][22] = ab.a(0, var2Lifetime24);
           }
-          var2Lifetime25 = tf.a(0, "level_names,0,23");
+          var2Lifetime25 = AlphaWidgetContainer.a(0, "level_names,0,23");
           if (null != var2Lifetime25) {
             FrameTimer.field_c[0][23] = ab.a(0, var2Lifetime25);
           }
-          var2Lifetime26 = tf.a(0, "level_names,0,24");
+          var2Lifetime26 = AlphaWidgetContainer.a(0, "level_names,0,24");
           if (var2Lifetime26 != null) {
             FrameTimer.field_c[0][24] = ab.a(0, var2Lifetime26);
           }
-          var2Lifetime27 = tf.a(0, "level_names,0,25");
+          var2Lifetime27 = AlphaWidgetContainer.a(0, "level_names,0,25");
           if (null != var2Lifetime27) {
             FrameTimer.field_c[0][25] = ab.a(0, var2Lifetime27);
           }
-          var2Lifetime28 = tf.a(0, "level_names,0,26");
+          var2Lifetime28 = AlphaWidgetContainer.a(0, "level_names,0,26");
           if (var2Lifetime28 != null) {
             FrameTimer.field_c[0][26] = ab.a(0, var2Lifetime28);
           }
-          var2Lifetime29 = tf.a(0, "level_names,0,27");
+          var2Lifetime29 = AlphaWidgetContainer.a(0, "level_names,0,27");
           if (var2Lifetime29 != null) {
             FrameTimer.field_c[0][27] = ab.a(0, var2Lifetime29);
           }
-          var2Lifetime30 = tf.a(0, "level_names,0,28");
+          var2Lifetime30 = AlphaWidgetContainer.a(0, "level_names,0,28");
           if (var2Lifetime30 != null) {
             FrameTimer.field_c[0][28] = ab.a(0, var2Lifetime30);
           }
-          var2Lifetime31 = tf.a(0, "level_names,0,29");
+          var2Lifetime31 = AlphaWidgetContainer.a(0, "level_names,0,29");
           if (var2Lifetime31 != null) {
             FrameTimer.field_c[0][29] = ab.a(0, var2Lifetime31);
           }
-          var2Lifetime32 = tf.a(0, "level_names,0,30");
+          var2Lifetime32 = AlphaWidgetContainer.a(0, "level_names,0,30");
           if (null != var2Lifetime32) {
             FrameTimer.field_c[0][30] = ab.a(0, var2Lifetime32);
           }
-          var2Lifetime33 = tf.a(0, "level_names,0,31");
+          var2Lifetime33 = AlphaWidgetContainer.a(0, "level_names,0,31");
           if (var2Lifetime33 != null) {
             FrameTimer.field_c[0][31] = ab.a(0, var2Lifetime33);
           }
-          var2Lifetime34 = tf.a(0, "level_names,0,32");
+          var2Lifetime34 = AlphaWidgetContainer.a(0, "level_names,0,32");
           if (null != var2Lifetime34) {
             FrameTimer.field_c[0][32] = ab.a(0, var2Lifetime34);
           }
-          var2Lifetime35 = tf.a(0, "level_names,0,33");
+          var2Lifetime35 = AlphaWidgetContainer.a(0, "level_names,0,33");
           if (null != var2Lifetime35) {
             FrameTimer.field_c[0][33] = ab.a(0, var2Lifetime35);
           }
-          var2Lifetime36 = tf.a(0, "level_names,0,34");
+          var2Lifetime36 = AlphaWidgetContainer.a(0, "level_names,0,34");
           if (var2Lifetime36 != null) {
             FrameTimer.field_c[0][34] = ab.a(0, var2Lifetime36);
           }
-          var2Lifetime37 = tf.a(0, "level_names,0,35");
+          var2Lifetime37 = AlphaWidgetContainer.a(0, "level_names,0,35");
           if (null != var2Lifetime37) {
             FrameTimer.field_c[0][35] = ab.a(0, var2Lifetime37);
           }
-          var2Lifetime38 = tf.a(0, "level_names,0,36");
+          var2Lifetime38 = AlphaWidgetContainer.a(0, "level_names,0,36");
           if (null != var2Lifetime38) {
             FrameTimer.field_c[0][36] = ab.a(0, var2Lifetime38);
           }
-          var2Lifetime39 = tf.a(0, "level_names,0,37");
+          var2Lifetime39 = AlphaWidgetContainer.a(0, "level_names,0,37");
           if (null != var2Lifetime39) {
             FrameTimer.field_c[0][37] = ab.a(0, var2Lifetime39);
           }
-          var2Lifetime40 = tf.a(0, "level_names,0,38");
+          var2Lifetime40 = AlphaWidgetContainer.a(0, "level_names,0,38");
           if (null != var2Lifetime40) {
             FrameTimer.field_c[0][38] = ab.a(0, var2Lifetime40);
           }
-          var2Lifetime41 = tf.a(0, "level_names,0,39");
+          var2Lifetime41 = AlphaWidgetContainer.a(0, "level_names,0,39");
           if (null != var2Lifetime41) {
             FrameTimer.field_c[0][39] = ab.a(0, var2Lifetime41);
           }
-          var2Lifetime42 = tf.a(0, "level_names,0,40");
+          var2Lifetime42 = AlphaWidgetContainer.a(0, "level_names,0,40");
           if (null != var2Lifetime42) {
             FrameTimer.field_c[0][40] = ab.a(0, var2Lifetime42);
           }
-          var2Lifetime43 = tf.a(0, "level_names,1,0");
+          var2Lifetime43 = AlphaWidgetContainer.a(0, "level_names,1,0");
           if (null != var2Lifetime43) {
             FrameTimer.field_c[1][0] = ab.a(0, var2Lifetime43);
           }
-          var2Lifetime44 = tf.a(0, "level_names,1,1");
+          var2Lifetime44 = AlphaWidgetContainer.a(0, "level_names,1,1");
           if (var2Lifetime44 != null) {
             FrameTimer.field_c[1][1] = ab.a(0, var2Lifetime44);
           }
-          var2Lifetime45 = tf.a(0, "level_names,1,2");
+          var2Lifetime45 = AlphaWidgetContainer.a(0, "level_names,1,2");
           if (var2Lifetime45 != null) {
             FrameTimer.field_c[1][2] = ab.a(0, var2Lifetime45);
           }
-          var2Lifetime46 = tf.a(0, "level_names,1,3");
+          var2Lifetime46 = AlphaWidgetContainer.a(0, "level_names,1,3");
           if (var2Lifetime46 != null) {
             FrameTimer.field_c[1][3] = ab.a(0, var2Lifetime46);
           }
-          var2Lifetime47 = tf.a(0, "level_names,1,4");
+          var2Lifetime47 = AlphaWidgetContainer.a(0, "level_names,1,4");
           if (var2Lifetime47 != null) {
             FrameTimer.field_c[1][4] = ab.a(0, var2Lifetime47);
           }
-          var2Lifetime48 = tf.a(0, "level_names,1,5");
+          var2Lifetime48 = AlphaWidgetContainer.a(0, "level_names,1,5");
           if (var2Lifetime48 != null) {
             FrameTimer.field_c[1][5] = ab.a(0, var2Lifetime48);
           }
-          var2Lifetime49 = tf.a(0, "level_names,1,6");
+          var2Lifetime49 = AlphaWidgetContainer.a(0, "level_names,1,6");
           if (null != var2Lifetime49) {
             FrameTimer.field_c[1][6] = ab.a(0, var2Lifetime49);
           }
-          var2Lifetime50 = tf.a(0, "level_names,1,7");
+          var2Lifetime50 = AlphaWidgetContainer.a(0, "level_names,1,7");
           if (null != var2Lifetime50) {
             FrameTimer.field_c[1][7] = ab.a(0, var2Lifetime50);
           }
-          var2Lifetime51 = tf.a(0, "level_names,1,8");
+          var2Lifetime51 = AlphaWidgetContainer.a(0, "level_names,1,8");
           if (null != var2Lifetime51) {
             FrameTimer.field_c[1][8] = ab.a(0, var2Lifetime51);
           }
-          var2Lifetime52 = tf.a(0, "level_names,1,9");
+          var2Lifetime52 = AlphaWidgetContainer.a(0, "level_names,1,9");
           if (var2Lifetime52 != null) {
             FrameTimer.field_c[1][9] = ab.a(0, var2Lifetime52);
           }
-          var2Lifetime53 = tf.a(0, "level_names,1,10");
+          var2Lifetime53 = AlphaWidgetContainer.a(0, "level_names,1,10");
           if (null != var2Lifetime53) {
             FrameTimer.field_c[1][10] = ab.a(0, var2Lifetime53);
           }
-          var2Lifetime54 = tf.a(0, "level_names,1,11");
+          var2Lifetime54 = AlphaWidgetContainer.a(0, "level_names,1,11");
           if (null != var2Lifetime54) {
             FrameTimer.field_c[1][11] = ab.a(0, var2Lifetime54);
           }
-          var2Lifetime55 = tf.a(0, "level_names,1,12");
+          var2Lifetime55 = AlphaWidgetContainer.a(0, "level_names,1,12");
           if (null != var2Lifetime55) {
             FrameTimer.field_c[1][12] = ab.a(0, var2Lifetime55);
           }
-          var2Lifetime56 = tf.a(0, "level_names,1,13");
+          var2Lifetime56 = AlphaWidgetContainer.a(0, "level_names,1,13");
           if (null != var2Lifetime56) {
             FrameTimer.field_c[1][13] = ab.a(0, var2Lifetime56);
           }
-          var2Lifetime57 = tf.a(0, "level_names,1,14");
+          var2Lifetime57 = AlphaWidgetContainer.a(0, "level_names,1,14");
           if (null != var2Lifetime57) {
             FrameTimer.field_c[1][14] = ab.a(0, var2Lifetime57);
           }
-          var2Lifetime58 = tf.a(0, "level_names,1,15");
+          var2Lifetime58 = AlphaWidgetContainer.a(0, "level_names,1,15");
           if (var2Lifetime58 != null) {
             FrameTimer.field_c[1][15] = ab.a(0, var2Lifetime58);
           }
-          var2Lifetime59 = tf.a(0, "level_names,1,16");
+          var2Lifetime59 = AlphaWidgetContainer.a(0, "level_names,1,16");
           if (null != var2Lifetime59) {
             FrameTimer.field_c[1][16] = ab.a(0, var2Lifetime59);
           }
-          var2Lifetime60 = tf.a(0, "level_names,1,17");
+          var2Lifetime60 = AlphaWidgetContainer.a(0, "level_names,1,17");
           if (var2Lifetime60 != null) {
             FrameTimer.field_c[1][17] = ab.a(0, var2Lifetime60);
           }
-          var2Lifetime61 = tf.a(0, "level_names,1,18");
+          var2Lifetime61 = AlphaWidgetContainer.a(0, "level_names,1,18");
           if (null != var2Lifetime61) {
             FrameTimer.field_c[1][18] = ab.a(0, var2Lifetime61);
           }
-          var2Lifetime62 = tf.a(0, "level_names,1,19");
+          var2Lifetime62 = AlphaWidgetContainer.a(0, "level_names,1,19");
           if (var2Lifetime62 != null) {
             FrameTimer.field_c[1][19] = ab.a(0, var2Lifetime62);
           }
-          var2Lifetime63 = tf.a(0, "level_names,1,20");
+          var2Lifetime63 = AlphaWidgetContainer.a(0, "level_names,1,20");
           if (var2Lifetime63 != null) {
             FrameTimer.field_c[1][20] = ab.a(0, var2Lifetime63);
           }
-          var2Lifetime64 = tf.a(0, "level_names,1,21");
+          var2Lifetime64 = AlphaWidgetContainer.a(0, "level_names,1,21");
           if (var2Lifetime64 != null) {
             FrameTimer.field_c[1][21] = ab.a(0, var2Lifetime64);
           }
-          var2Lifetime65 = tf.a(0, "level_names,1,22");
+          var2Lifetime65 = AlphaWidgetContainer.a(0, "level_names,1,22");
           if (var2Lifetime65 != null) {
             FrameTimer.field_c[1][22] = ab.a(0, var2Lifetime65);
           }
-          var2Lifetime66 = tf.a(0, "level_names,1,23");
+          var2Lifetime66 = AlphaWidgetContainer.a(0, "level_names,1,23");
           if (null != var2Lifetime66) {
             FrameTimer.field_c[1][23] = ab.a(0, var2Lifetime66);
           }
-          var2Lifetime67 = tf.a(0, "level_names,1,24");
+          var2Lifetime67 = AlphaWidgetContainer.a(0, "level_names,1,24");
           if (null != var2Lifetime67) {
             FrameTimer.field_c[1][24] = ab.a(0, var2Lifetime67);
           }
-          var2Lifetime68 = tf.a(0, "level_names,1,25");
+          var2Lifetime68 = AlphaWidgetContainer.a(0, "level_names,1,25");
           if (null != var2Lifetime68) {
             FrameTimer.field_c[1][25] = ab.a(0, var2Lifetime68);
           }
-          var2Lifetime69 = tf.a(0, "level_names,1,26");
+          var2Lifetime69 = AlphaWidgetContainer.a(0, "level_names,1,26");
           if (null != var2Lifetime69) {
             FrameTimer.field_c[1][26] = ab.a(0, var2Lifetime69);
           }
-          var2Lifetime70 = tf.a(0, "level_names,1,27");
+          var2Lifetime70 = AlphaWidgetContainer.a(0, "level_names,1,27");
           if (null != var2Lifetime70) {
             FrameTimer.field_c[1][27] = ab.a(0, var2Lifetime70);
           }
-          var2Lifetime71 = tf.a(0, "level_names,1,28");
+          var2Lifetime71 = AlphaWidgetContainer.a(0, "level_names,1,28");
           if (var2Lifetime71 != null) {
             FrameTimer.field_c[1][28] = ab.a(0, var2Lifetime71);
           }
-          var2Lifetime72 = tf.a(0, "level_names,1,29");
+          var2Lifetime72 = AlphaWidgetContainer.a(0, "level_names,1,29");
           if (var2Lifetime72 != null) {
             FrameTimer.field_c[1][29] = ab.a(0, var2Lifetime72);
           }
-          var2Lifetime73 = tf.a(0, "END_OF_FREE_GAME");
+          var2Lifetime73 = AlphaWidgetContainer.a(0, "END_OF_FREE_GAME");
           if (null != var2Lifetime73) {
             nc.field_b = ab.a(0, var2Lifetime73);
           }
-          var2Lifetime74 = tf.a(0, "achievement_names,0");
+          var2Lifetime74 = AlphaWidgetContainer.a(0, "achievement_names,0");
           if (var2Lifetime74 != null) {
             wa.field_f[0] = ab.a(0, var2Lifetime74);
           }
-          var2Lifetime75 = tf.a(0, "achievement_names,1");
+          var2Lifetime75 = AlphaWidgetContainer.a(0, "achievement_names,1");
           if (null != var2Lifetime75) {
             wa.field_f[1] = ab.a(0, var2Lifetime75);
           }
-          var2Lifetime76 = tf.a(0, "achievement_names,2");
+          var2Lifetime76 = AlphaWidgetContainer.a(0, "achievement_names,2");
           if (var2Lifetime76 != null) {
             wa.field_f[2] = ab.a(0, var2Lifetime76);
           }
-          var2Lifetime77 = tf.a(0, "achievement_names,3");
+          var2Lifetime77 = AlphaWidgetContainer.a(0, "achievement_names,3");
           if (null != var2Lifetime77) {
             wa.field_f[3] = ab.a(0, var2Lifetime77);
           }
-          var2Lifetime78 = tf.a(0, "achievement_names,4");
+          var2Lifetime78 = AlphaWidgetContainer.a(0, "achievement_names,4");
           if (null != var2Lifetime78) {
             wa.field_f[4] = ab.a(0, var2Lifetime78);
           }
-          var2Lifetime79 = tf.a(0, "achievement_names,5");
+          var2Lifetime79 = AlphaWidgetContainer.a(0, "achievement_names,5");
           if (null != var2Lifetime79) {
             wa.field_f[5] = ab.a(0, var2Lifetime79);
           }
-          var2Lifetime80 = tf.a(0, "achievement_names,6");
+          var2Lifetime80 = AlphaWidgetContainer.a(0, "achievement_names,6");
           if (var2Lifetime80 != null) {
             wa.field_f[6] = ab.a(0, var2Lifetime80);
           }
-          var2Lifetime81 = tf.a(0, "achievement_names,7");
+          var2Lifetime81 = AlphaWidgetContainer.a(0, "achievement_names,7");
           if (null != var2Lifetime81) {
             wa.field_f[7] = ab.a(0, var2Lifetime81);
           }
-          var2Lifetime82 = tf.a(0, "achievement_names,8");
+          var2Lifetime82 = AlphaWidgetContainer.a(0, "achievement_names,8");
           if (null != var2Lifetime82) {
             wa.field_f[8] = ab.a(0, var2Lifetime82);
           }
-          var2Lifetime83 = tf.a(0, "achievement_names,9");
+          var2Lifetime83 = AlphaWidgetContainer.a(0, "achievement_names,9");
           if (null != var2Lifetime83) {
             wa.field_f[9] = ab.a(0, var2Lifetime83);
           }
-          var2Lifetime84 = tf.a(0, "achievement_names,10");
+          var2Lifetime84 = AlphaWidgetContainer.a(0, "achievement_names,10");
           if (null != var2Lifetime84) {
             wa.field_f[10] = ab.a(0, var2Lifetime84);
           }
-          var2Lifetime85 = tf.a(0, "achievement_names,11");
+          var2Lifetime85 = AlphaWidgetContainer.a(0, "achievement_names,11");
           if (null != var2Lifetime85) {
             wa.field_f[11] = ab.a(0, var2Lifetime85);
           }
-          var2Lifetime86 = tf.a(0, "achievement_names,12");
+          var2Lifetime86 = AlphaWidgetContainer.a(0, "achievement_names,12");
           if (var2Lifetime86 != null) {
             wa.field_f[12] = ab.a(0, var2Lifetime86);
           }
-          var2Lifetime87 = tf.a(0, "achievement_names,13");
+          var2Lifetime87 = AlphaWidgetContainer.a(0, "achievement_names,13");
           if (var2Lifetime87 != null) {
             wa.field_f[13] = ab.a(0, var2Lifetime87);
           }
-          var2Lifetime88 = tf.a(0, "achievement_names,14");
+          var2Lifetime88 = AlphaWidgetContainer.a(0, "achievement_names,14");
           if (null != var2Lifetime88) {
             wa.field_f[14] = ab.a(0, var2Lifetime88);
           }
-          var2Lifetime89 = tf.a(0, "achievement_names,15");
+          var2Lifetime89 = AlphaWidgetContainer.a(0, "achievement_names,15");
           if (null != var2Lifetime89) {
             wa.field_f[15] = ab.a(0, var2Lifetime89);
           }
-          var2Lifetime90 = tf.a(0, "achievement_criteria,0");
+          var2Lifetime90 = AlphaWidgetContainer.a(0, "achievement_criteria,0");
           if (var2Lifetime90 != null) {
             NameSuggestionsPanel.field_J[0] = ab.a(0, var2Lifetime90);
           }
-          var2Lifetime91 = tf.a(0, "achievement_criteria,1");
+          var2Lifetime91 = AlphaWidgetContainer.a(0, "achievement_criteria,1");
           if (null != var2Lifetime91) {
             NameSuggestionsPanel.field_J[1] = ab.a(0, var2Lifetime91);
           }
-          var2Lifetime92 = tf.a(0, "achievement_criteria,2");
+          var2Lifetime92 = AlphaWidgetContainer.a(0, "achievement_criteria,2");
           if (var2Lifetime92 != null) {
             NameSuggestionsPanel.field_J[2] = ab.a(0, var2Lifetime92);
           }
-          var2Lifetime93 = tf.a(0, "achievement_criteria,3");
+          var2Lifetime93 = AlphaWidgetContainer.a(0, "achievement_criteria,3");
           if (var2Lifetime93 != null) {
             NameSuggestionsPanel.field_J[3] = ab.a(0, var2Lifetime93);
           }
-          var2Lifetime94 = tf.a(0, "achievement_criteria,4");
+          var2Lifetime94 = AlphaWidgetContainer.a(0, "achievement_criteria,4");
           if (var2Lifetime94 != null) {
             NameSuggestionsPanel.field_J[4] = ab.a(0, var2Lifetime94);
           }
-          var2Lifetime95 = tf.a(0, "achievement_criteria,5");
+          var2Lifetime95 = AlphaWidgetContainer.a(0, "achievement_criteria,5");
           if (null != var2Lifetime95) {
             NameSuggestionsPanel.field_J[5] = ab.a(0, var2Lifetime95);
           }
-          var2Lifetime96 = tf.a(0, "achievement_criteria,6");
+          var2Lifetime96 = AlphaWidgetContainer.a(0, "achievement_criteria,6");
           if (var2Lifetime96 != null) {
             NameSuggestionsPanel.field_J[6] = ab.a(0, var2Lifetime96);
           }
-          var2Lifetime97 = tf.a(0, "achievement_criteria,7");
+          var2Lifetime97 = AlphaWidgetContainer.a(0, "achievement_criteria,7");
           if (null != var2Lifetime97) {
             NameSuggestionsPanel.field_J[7] = ab.a(0, var2Lifetime97);
           }
-          var2Lifetime98 = tf.a(0, "achievement_criteria,8");
+          var2Lifetime98 = AlphaWidgetContainer.a(0, "achievement_criteria,8");
           if (var2Lifetime98 != null) {
             NameSuggestionsPanel.field_J[8] = ab.a(0, var2Lifetime98);
           }
-          var2Lifetime99 = tf.a(0, "achievement_criteria,9");
+          var2Lifetime99 = AlphaWidgetContainer.a(0, "achievement_criteria,9");
           if (var2Lifetime99 != null) {
             NameSuggestionsPanel.field_J[9] = ab.a(0, var2Lifetime99);
           }
-          var2Lifetime100 = tf.a(0, "achievement_criteria,10");
+          var2Lifetime100 = AlphaWidgetContainer.a(0, "achievement_criteria,10");
           if (null != var2Lifetime100) {
             NameSuggestionsPanel.field_J[10] = ab.a(0, var2Lifetime100);
           }
-          var2Lifetime101 = tf.a(0, "achievement_criteria,11");
+          var2Lifetime101 = AlphaWidgetContainer.a(0, "achievement_criteria,11");
           if (null != var2Lifetime101) {
             NameSuggestionsPanel.field_J[11] = ab.a(0, var2Lifetime101);
           }
-          var2Lifetime102 = tf.a(0, "achievement_criteria,12");
+          var2Lifetime102 = AlphaWidgetContainer.a(0, "achievement_criteria,12");
           if (var2Lifetime102 != null) {
             NameSuggestionsPanel.field_J[12] = ab.a(0, var2Lifetime102);
           }
-          var2Lifetime103 = tf.a(0, "achievement_criteria,13");
+          var2Lifetime103 = AlphaWidgetContainer.a(0, "achievement_criteria,13");
           if (null != var2Lifetime103) {
             NameSuggestionsPanel.field_J[13] = ab.a(0, var2Lifetime103);
           }
-          var2Lifetime104 = tf.a(0, "achievement_criteria,14");
+          var2Lifetime104 = AlphaWidgetContainer.a(0, "achievement_criteria,14");
           if (null != var2Lifetime104) {
             NameSuggestionsPanel.field_J[14] = ab.a(0, var2Lifetime104);
           }
-          var2Lifetime105 = tf.a(0, "achievement_criteria,15");
+          var2Lifetime105 = AlphaWidgetContainer.a(0, "achievement_criteria,15");
           if (null != var2Lifetime105) {
             NameSuggestionsPanel.field_J[15] = ab.a(0, var2Lifetime105);
           }
-          var2Lifetime106 = tf.a(0, "BLOCKS_IN_THE_LEVEL_INTRO");
+          var2Lifetime106 = AlphaWidgetContainer.a(0, "BLOCKS_IN_THE_LEVEL_INTRO");
           if (null != var2Lifetime106) {
-            gj.field_D = ab.a(0, var2Lifetime106);
+            DequeWidgetContainer.field_D = ab.a(0, var2Lifetime106);
           }
-          var2Lifetime107 = tf.a(0, "SHADOW_OPEN");
+          var2Lifetime107 = AlphaWidgetContainer.a(0, "SHADOW_OPEN");
           if (var2Lifetime107 != null) {
             ti.field_a = ab.a(0, var2Lifetime107);
           }
-          var2Lifetime108 = tf.a(0, "SHADOW_CLOSE");
+          var2Lifetime108 = AlphaWidgetContainer.a(0, "SHADOW_CLOSE");
           if (null != var2Lifetime108) {
             AccountCreationResultPanel.field_xb = ab.a(0, var2Lifetime108);
           }
-          var2Lifetime109 = tf.a(0, "START_LEVEL_BUTTON_CAPTION");
+          var2Lifetime109 = AlphaWidgetContainer.a(0, "START_LEVEL_BUTTON_CAPTION");
           if (null != var2Lifetime109) {
             hg.field_o = ab.a(0, var2Lifetime109);
           }
-          var2Lifetime110 = tf.a(0, "START_LEVEL_BUTTON_CAPTION_EXT");
+          var2Lifetime110 = AlphaWidgetContainer.a(0, "START_LEVEL_BUTTON_CAPTION_EXT");
           if (null != var2Lifetime110) {
             ab.a(0, var2Lifetime110);
           }
-          var2Lifetime111 = tf.a(0, "GOTO_NEXT_LEVEL_BUTTON_CAPTION");
+          var2Lifetime111 = AlphaWidgetContainer.a(0, "GOTO_NEXT_LEVEL_BUTTON_CAPTION");
           if (null != var2Lifetime111) {
             nj.field_d = ab.a(0, var2Lifetime111);
           }
-          var2Lifetime112 = tf.a(0, "ENTRANCE_TIP");
+          var2Lifetime112 = AlphaWidgetContainer.a(0, "ENTRANCE_TIP");
           if (null != var2Lifetime112) {
             jk.field_o = ab.a(0, var2Lifetime112);
           }
-          var2Lifetime113 = tf.a(0, "WALL_TIP");
+          var2Lifetime113 = AlphaWidgetContainer.a(0, "WALL_TIP");
           if (null != var2Lifetime113) {
             ak.field_g = ab.a(0, var2Lifetime113);
           }
-          var2Lifetime114 = tf.a(0, "RAMP_TIP");
+          var2Lifetime114 = AlphaWidgetContainer.a(0, "RAMP_TIP");
           if (var2Lifetime114 != null) {
             UiComponent.field_o = ab.a(0, var2Lifetime114);
           }
-          var2Lifetime115 = tf.a(0, "BALLOON_TIP");
+          var2Lifetime115 = AlphaWidgetContainer.a(0, "BALLOON_TIP");
           if (null != var2Lifetime115) {
             SpriteGeometry.field_s = ab.a(0, var2Lifetime115);
           }
-          var2Lifetime116 = tf.a(0, "TRAPDOOR_TIP");
+          var2Lifetime116 = AlphaWidgetContainer.a(0, "TRAPDOOR_TIP");
           if (null != var2Lifetime116) {
             wh.field_c = ab.a(0, var2Lifetime116);
           }
-          var2Lifetime117 = tf.a(0, "WATER_TIP");
+          var2Lifetime117 = AlphaWidgetContainer.a(0, "WATER_TIP");
           if (var2Lifetime117 != null) {
             jk.field_q = ab.a(0, var2Lifetime117);
           }
-          var2Lifetime118 = tf.a(0, "FAN_TIP");
+          var2Lifetime118 = AlphaWidgetContainer.a(0, "FAN_TIP");
           if (var2Lifetime118 != null) {
             AgeValidator.field_r = ab.a(0, var2Lifetime118);
           }
-          var2Lifetime119 = tf.a(0, "SPIDER_TIP");
+          var2Lifetime119 = AlphaWidgetContainer.a(0, "SPIDER_TIP");
           if (var2Lifetime119 != null) {
             FrameTimer.field_a = ab.a(0, var2Lifetime119);
           }
-          var2Lifetime120 = tf.a(0, "TRANSPORTER_TIP");
+          var2Lifetime120 = AlphaWidgetContainer.a(0, "TRANSPORTER_TIP");
           if (null != var2Lifetime120) {
             of.field_g = ab.a(0, var2Lifetime120);
           }
-          var2Lifetime121 = tf.a(0, "BOMB_TIP");
+          var2Lifetime121 = AlphaWidgetContainer.a(0, "BOMB_TIP");
           if (null != var2Lifetime121) {
             AccountRegistrationPanel.field_O = ab.a(0, var2Lifetime121);
           }
-          var2Lifetime122 = tf.a(0, "EXIT_TIP");
+          var2Lifetime122 = AlphaWidgetContainer.a(0, "EXIT_TIP");
           if (var2Lifetime122 != null) {
             fh.field_f = ab.a(0, var2Lifetime122);
           }
-          var2Lifetime123 = tf.a(0, "RECESSED_WALL_TIP");
+          var2Lifetime123 = AlphaWidgetContainer.a(0, "RECESSED_WALL_TIP");
           if (var2Lifetime123 != null) {
             ByteStorage.field_d = ab.a(0, var2Lifetime123);
           }
-          var2Lifetime124 = tf.a(0, "ANTI_GRAVITY_TIP");
+          var2Lifetime124 = AlphaWidgetContainer.a(0, "ANTI_GRAVITY_TIP");
           if (null != var2Lifetime124) {
-            qj.field_F = ab.a(0, var2Lifetime124);
+            DropTargetWidgetContainer.field_F = ab.a(0, var2Lifetime124);
           }
-          var2Lifetime125 = tf.a(0, "BARRIER_TIP");
+          var2Lifetime125 = AlphaWidgetContainer.a(0, "BARRIER_TIP");
           if (null != var2Lifetime125) {
             ti.field_b = ab.a(0, var2Lifetime125);
           }
-          var2Lifetime126 = tf.a(0, "ONE_TOUCH_WALL_TIP");
+          var2Lifetime126 = AlphaWidgetContainer.a(0, "ONE_TOUCH_WALL_TIP");
           if (var2Lifetime126 != null) {
             wa.field_p = ab.a(0, var2Lifetime126);
           }
-          var2Lifetime127 = tf.a(0, "WEAK_PLATFORM_TIP");
+          var2Lifetime127 = AlphaWidgetContainer.a(0, "WEAK_PLATFORM_TIP");
           if (null != var2Lifetime127) {
             gf.field_a = ab.a(0, var2Lifetime127);
           }
-          var2Lifetime128 = tf.a(0, "BLUE_SWITCH_TIP");
+          var2Lifetime128 = AlphaWidgetContainer.a(0, "BLUE_SWITCH_TIP");
           if (var2Lifetime128 != null) {
             DebouncedFieldValidator.field_d = ab.a(0, var2Lifetime128);
           }
-          var2Lifetime129 = tf.a(0, "GREEN_SWITCH_TIP");
+          var2Lifetime129 = AlphaWidgetContainer.a(0, "GREEN_SWITCH_TIP");
           if (var2Lifetime129 != null) {
             fi.field_k = ab.a(0, var2Lifetime129);
           }
-          var2Lifetime130 = tf.a(0, "SPIKES_TIP");
+          var2Lifetime130 = AlphaWidgetContainer.a(0, "SPIKES_TIP");
           if (var2Lifetime130 != null) {
             DelegatingCanvas.field_b = ab.a(0, var2Lifetime130);
           }
-          var2Lifetime131 = tf.a(0, "SPRING_TIP");
+          var2Lifetime131 = AlphaWidgetContainer.a(0, "SPRING_TIP");
           if (var2Lifetime131 != null) {
             si.field_H = ab.a(0, var2Lifetime131);
           }
-          var2Lifetime132 = tf.a(0, "TUTORIAL_TEXT,0");
+          var2Lifetime132 = AlphaWidgetContainer.a(0, "TUTORIAL_TEXT,0");
           if (var2Lifetime132 != null) {
             kl.field_a[0] = ab.a(0, var2Lifetime132);
           }
-          var2Lifetime133 = tf.a(0, "TUTORIAL_TEXT,1");
+          var2Lifetime133 = AlphaWidgetContainer.a(0, "TUTORIAL_TEXT,1");
           if (var2Lifetime133 != null) {
             kl.field_a[1] = ab.a(0, var2Lifetime133);
           }
-          var2Lifetime134 = tf.a(0, "TUTORIAL_TEXT,2");
+          var2Lifetime134 = AlphaWidgetContainer.a(0, "TUTORIAL_TEXT,2");
           if (var2Lifetime134 != null) {
             kl.field_a[2] = ab.a(0, var2Lifetime134);
           }
-          var2Lifetime135 = tf.a(0, "TUTORIAL_TEXT,3");
+          var2Lifetime135 = AlphaWidgetContainer.a(0, "TUTORIAL_TEXT,3");
           if (null != var2Lifetime135) {
             kl.field_a[3] = ab.a(0, var2Lifetime135);
           }
-          var2Lifetime136 = tf.a(0, "TUTORIAL_TEXT,4");
+          var2Lifetime136 = AlphaWidgetContainer.a(0, "TUTORIAL_TEXT,4");
           if (var2Lifetime136 != null) {
             kl.field_a[4] = ab.a(0, var2Lifetime136);
           }
-          var2Lifetime137 = tf.a(0, "TUTORIAL_TEXT,5");
+          var2Lifetime137 = AlphaWidgetContainer.a(0, "TUTORIAL_TEXT,5");
           if (var2Lifetime137 != null) {
             kl.field_a[5] = ab.a(0, var2Lifetime137);
           }
-          var2Lifetime138 = tf.a(0, "TUTORIAL_TEXT,6");
+          var2Lifetime138 = AlphaWidgetContainer.a(0, "TUTORIAL_TEXT,6");
           if (var2Lifetime138 != null) {
             kl.field_a[6] = ab.a(0, var2Lifetime138);
           }
-          var2Lifetime139 = tf.a(0, "TUTORIAL_TEXT,7");
+          var2Lifetime139 = AlphaWidgetContainer.a(0, "TUTORIAL_TEXT,7");
           if (null != var2Lifetime139) {
             kl.field_a[7] = ab.a(0, var2Lifetime139);
           }
-          var2Lifetime140 = tf.a(0, "TUTORIAL_TEXT,8");
+          var2Lifetime140 = AlphaWidgetContainer.a(0, "TUTORIAL_TEXT,8");
           if (var2Lifetime140 != null) {
             kl.field_a[8] = ab.a(0, var2Lifetime140);
           }
-          var2Lifetime141 = tf.a(0, "TUTORIAL_TEXT,9");
+          var2Lifetime141 = AlphaWidgetContainer.a(0, "TUTORIAL_TEXT,9");
           if (null != var2Lifetime141) {
             kl.field_a[9] = ab.a(0, var2Lifetime141);
           }
-          var2Lifetime142 = tf.a(0, "TUTORIAL_TEXT,10");
+          var2Lifetime142 = AlphaWidgetContainer.a(0, "TUTORIAL_TEXT,10");
           if (var2Lifetime142 != null) {
             kl.field_a[10] = ab.a(0, var2Lifetime142);
           }
-          var2Lifetime143 = tf.a(0, "TUTORIAL_TEXT,11");
+          var2Lifetime143 = AlphaWidgetContainer.a(0, "TUTORIAL_TEXT,11");
           if (var2Lifetime143 != null) {
             kl.field_a[11] = ab.a(0, var2Lifetime143);
           }
-          var2Lifetime144 = tf.a(0, "TUTORIAL_TEXT,12");
+          var2Lifetime144 = AlphaWidgetContainer.a(0, "TUTORIAL_TEXT,12");
           if (var2Lifetime144 != null) {
             kl.field_a[12] = ab.a(0, var2Lifetime144);
           }
-          var2Lifetime145 = tf.a(0, "TUTORIAL_TEXT,13");
+          var2Lifetime145 = AlphaWidgetContainer.a(0, "TUTORIAL_TEXT,13");
           if (null != var2Lifetime145) {
             kl.field_a[13] = ab.a(0, var2Lifetime145);
           }
-          var2Lifetime146 = tf.a(0, "TUTORIAL_TEXT,14");
+          var2Lifetime146 = AlphaWidgetContainer.a(0, "TUTORIAL_TEXT,14");
           if (var2Lifetime146 != null) {
             kl.field_a[14] = ab.a(0, var2Lifetime146);
           }
-          var2Lifetime147 = tf.a(0, "NEW_GAME");
+          var2Lifetime147 = AlphaWidgetContainer.a(0, "NEW_GAME");
           if (null != var2Lifetime147) {
             PcmOutputWorker.field_a = ab.a(0, var2Lifetime147);
           }
-          var2Lifetime148 = tf.a(0, "CLASSIC_GAME");
+          var2Lifetime148 = AlphaWidgetContainer.a(0, "CLASSIC_GAME");
           if (null != var2Lifetime148) {
             ib.field_e = ab.a(0, var2Lifetime148);
           }
-          var2Lifetime149 = tf.a(0, "CONTINUE");
+          var2Lifetime149 = AlphaWidgetContainer.a(0, "CONTINUE");
           if (null != var2Lifetime149) {
             TextFieldValidator.field_k = ab.a(0, var2Lifetime149);
           }
-          var2Lifetime150 = tf.a(0, "SHOW_TIPS");
+          var2Lifetime150 = AlphaWidgetContainer.a(0, "SHOW_TIPS");
           if (var2Lifetime150 != null) {
             InteractiveWidget.field_H = ab.a(0, var2Lifetime150);
           }
-          var2Lifetime151 = tf.a(0, "INSTRUCTIONS_TITLES_1");
+          var2Lifetime151 = AlphaWidgetContainer.a(0, "INSTRUCTIONS_TITLES_1");
           if (null != var2Lifetime151) {
             fj.field_a = ab.a(0, var2Lifetime151);
           }
-          var2Lifetime152 = tf.a(0, "INSTRUCTIONS_TITLES_2");
+          var2Lifetime152 = AlphaWidgetContainer.a(0, "INSTRUCTIONS_TITLES_2");
           if (null != var2Lifetime152) {
             pb.field_h = ab.a(0, var2Lifetime152);
           }
-          var2Lifetime153 = tf.a(0, "INSTRUCTIONS_TITLES_3");
+          var2Lifetime153 = AlphaWidgetContainer.a(0, "INSTRUCTIONS_TITLES_3");
           if (var2Lifetime153 != null) {
             tb.field_b = ab.a(0, var2Lifetime153);
           }
-          var2Lifetime154 = tf.a(0, "INSTRUCTIONS_TITLES_4");
+          var2Lifetime154 = AlphaWidgetContainer.a(0, "INSTRUCTIONS_TITLES_4");
           if (var2Lifetime154 != null) {
             mh.field_v = ab.a(0, var2Lifetime154);
           }
-          var2Lifetime155 = tf.a(0, "INSTRUCTIONS_TITLES_5");
+          var2Lifetime155 = AlphaWidgetContainer.a(0, "INSTRUCTIONS_TITLES_5");
           if (var2Lifetime155 != null) {
             NodeHashTableIterator.field_b = ab.a(0, var2Lifetime155);
           }
-          var2Lifetime156 = tf.a(0, "INSTRUCTIONS_TITLES_6");
+          var2Lifetime156 = AlphaWidgetContainer.a(0, "INSTRUCTIONS_TITLES_6");
           if (null != var2Lifetime156) {
             PcmOutputWorker.field_d = ab.a(0, var2Lifetime156);
           }
-          var2Lifetime157 = tf.a(0, "INSTRUCTIONS_TITLES_7");
+          var2Lifetime157 = AlphaWidgetContainer.a(0, "INSTRUCTIONS_TITLES_7");
           if (var2Lifetime157 != null) {
             vj.field_a = ab.a(0, var2Lifetime157);
           }
-          var2Lifetime158 = tf.a(0, "INSTRUCTIONS_BODIES_1_1");
+          var2Lifetime158 = AlphaWidgetContainer.a(0, "INSTRUCTIONS_BODIES_1_1");
           if (null != var2Lifetime158) {
             ProxyAuthenticationRequiredException.field_a = ab.a(0, var2Lifetime158);
           }
-          var2Lifetime159 = tf.a(0, "INSTRUCTIONS_BODIES_1_2");
+          var2Lifetime159 = AlphaWidgetContainer.a(0, "INSTRUCTIONS_BODIES_1_2");
           if (null != var2Lifetime159) {
             hf.field_f = ab.a(0, var2Lifetime159);
           }
-          var2Lifetime160 = tf.a(0, "INSTRUCTIONS_BODIES_1_3");
+          var2Lifetime160 = AlphaWidgetContainer.a(0, "INSTRUCTIONS_BODIES_1_3");
           if (null != var2Lifetime160) {
             oj.field_j = ab.a(0, var2Lifetime160);
           }
-          var2Lifetime161 = tf.a(0, "INSTRUCTIONS_BODIES_2_1");
+          var2Lifetime161 = AlphaWidgetContainer.a(0, "INSTRUCTIONS_BODIES_2_1");
           if (var2Lifetime161 != null) {
             hc.field_f = ab.a(0, var2Lifetime161);
           }
-          var2Lifetime162 = tf.a(0, "INSTRUCTIONS_BODIES_2_2");
+          var2Lifetime162 = AlphaWidgetContainer.a(0, "INSTRUCTIONS_BODIES_2_2");
           if (null != var2Lifetime162) {
             si.field_o = ab.a(0, var2Lifetime162);
           }
-          var2Lifetime163 = tf.a(0, "INSTRUCTIONS_BODIES_2_3");
+          var2Lifetime163 = AlphaWidgetContainer.a(0, "INSTRUCTIONS_BODIES_2_3");
           if (null != var2Lifetime163) {
             ia.field_o = ab.a(0, var2Lifetime163);
           }
-          var2Lifetime164 = tf.a(0, "INSTRUCTIONS_BODIES_2_4");
+          var2Lifetime164 = AlphaWidgetContainer.a(0, "INSTRUCTIONS_BODIES_2_4");
           if (var2Lifetime164 != null) {
             vg.field_v = ab.a(0, var2Lifetime164);
           }
-          var2Lifetime165 = tf.a(0, "INSTRUCTIONS_BODIES_2_5");
+          var2Lifetime165 = AlphaWidgetContainer.a(0, "INSTRUCTIONS_BODIES_2_5");
           if (null != var2Lifetime165) {
             UiComponent.field_q = ab.a(0, var2Lifetime165);
           }
-          var2Lifetime166 = tf.a(0, "INSTRUCTIONS_BODIES_2_6");
+          var2Lifetime166 = AlphaWidgetContainer.a(0, "INSTRUCTIONS_BODIES_2_6");
           if (null != var2Lifetime166) {
             ea.field_c = ab.a(0, var2Lifetime166);
           }
-          var2Lifetime167 = tf.a(0, "INSTRUCTIONS_BODIES_2_7");
+          var2Lifetime167 = AlphaWidgetContainer.a(0, "INSTRUCTIONS_BODIES_2_7");
           if (var2Lifetime167 != null) {
             cl.field_c = ab.a(0, var2Lifetime167);
           }
-          var2Lifetime168 = tf.a(0, "INSTRUCTIONS_BODIES_2_8");
+          var2Lifetime168 = AlphaWidgetContainer.a(0, "INSTRUCTIONS_BODIES_2_8");
           if (var2Lifetime168 != null) {
             wa.field_d = ab.a(0, var2Lifetime168);
           }
-          var2Lifetime169 = tf.a(0, "INSTRUCTIONS_BODIES_3_1");
+          var2Lifetime169 = AlphaWidgetContainer.a(0, "INSTRUCTIONS_BODIES_3_1");
           if (null != var2Lifetime169) {
             fl.field_d = ab.a(0, var2Lifetime169);
           }
-          var2Lifetime170 = tf.a(0, "INSTRUCTIONS_BODIES_3_2");
+          var2Lifetime170 = AlphaWidgetContainer.a(0, "INSTRUCTIONS_BODIES_3_2");
           if (null != var2Lifetime170) {
             oc.field_d = ab.a(0, var2Lifetime170);
           }
-          var2Lifetime171 = tf.a(0, "INSTRUCTIONS_BODIES_3_3");
+          var2Lifetime171 = AlphaWidgetContainer.a(0, "INSTRUCTIONS_BODIES_3_3");
           if (null != var2Lifetime171) {
             DiskCacheWorker.field_a = ab.a(0, var2Lifetime171);
           }
-          var2Lifetime172 = tf.a(0, "INSTRUCTIONS_BODIES_3_4");
+          var2Lifetime172 = AlphaWidgetContainer.a(0, "INSTRUCTIONS_BODIES_3_4");
           if (var2Lifetime172 != null) {
             ArchiveRequest.field_u = ab.a(0, var2Lifetime172);
           }
-          var2Lifetime173 = tf.a(0, "INSTRUCTIONS_BODIES_3_5");
+          var2Lifetime173 = AlphaWidgetContainer.a(0, "INSTRUCTIONS_BODIES_3_5");
           if (var2Lifetime173 != null) {
             kl.field_d = ab.a(0, var2Lifetime173);
           }
-          var2Lifetime174 = tf.a(0, "INSTRUCTIONS_BODIES_3_6");
+          var2Lifetime174 = AlphaWidgetContainer.a(0, "INSTRUCTIONS_BODIES_3_6");
           if (null != var2Lifetime174) {
             w.field_i = ab.a(0, var2Lifetime174);
           }
-          var2Lifetime175 = tf.a(0, "INSTRUCTIONS_BODIES_4_1");
+          var2Lifetime175 = AlphaWidgetContainer.a(0, "INSTRUCTIONS_BODIES_4_1");
           if (null != var2Lifetime175) {
             hc.field_c = ab.a(0, var2Lifetime175);
           }
-          var2Lifetime176 = tf.a(0, "INSTRUCTIONS_BODIES_4_2");
+          var2Lifetime176 = AlphaWidgetContainer.a(0, "INSTRUCTIONS_BODIES_4_2");
           if (var2Lifetime176 != null) {
             pl.field_i = ab.a(0, var2Lifetime176);
           }
-          var2Lifetime177 = tf.a(0, "INSTRUCTIONS_BODIES_4_3");
+          var2Lifetime177 = AlphaWidgetContainer.a(0, "INSTRUCTIONS_BODIES_4_3");
           if (var2Lifetime177 != null) {
             oe.field_b = ab.a(0, var2Lifetime177);
           }
-          var2Lifetime178 = tf.a(0, "INSTRUCTIONS_BODIES_4_4");
+          var2Lifetime178 = AlphaWidgetContainer.a(0, "INSTRUCTIONS_BODIES_4_4");
           if (null != var2Lifetime178) {
             ProxyAuthenticationRequiredException.field_h = ab.a(0, var2Lifetime178);
           }
-          var2Lifetime179 = tf.a(0, "INSTRUCTIONS_BODIES_4_5");
+          var2Lifetime179 = AlphaWidgetContainer.a(0, "INSTRUCTIONS_BODIES_4_5");
           if (null != var2Lifetime179) {
             re.field_b = ab.a(0, var2Lifetime179);
           }
-          var2Lifetime180 = tf.a(0, "INSTRUCTIONS_BODIES_4_6");
+          var2Lifetime180 = AlphaWidgetContainer.a(0, "INSTRUCTIONS_BODIES_4_6");
           if (var2Lifetime180 != null) {
             kf.field_j = ab.a(0, var2Lifetime180);
           }
-          var2Lifetime181 = tf.a(0, "INSTRUCTIONS_BODIES_4_7");
+          var2Lifetime181 = AlphaWidgetContainer.a(0, "INSTRUCTIONS_BODIES_4_7");
           if (null != var2Lifetime181) {
             lg.field_a = ab.a(0, var2Lifetime181);
           }
-          var2Lifetime182 = tf.a(0, "INSTRUCTIONS_BODIES_5_1");
+          var2Lifetime182 = AlphaWidgetContainer.a(0, "INSTRUCTIONS_BODIES_5_1");
           if (var2Lifetime182 != null) {
             MouseWheelInput.field_c = ab.a(0, var2Lifetime182);
           }
-          var2Lifetime183 = tf.a(0, "INSTRUCTIONS_BODIES_5_2");
+          var2Lifetime183 = AlphaWidgetContainer.a(0, "INSTRUCTIONS_BODIES_5_2");
           if (null != var2Lifetime183) {
             hm.field_f = ab.a(0, var2Lifetime183);
           }
-          var2Lifetime184 = tf.a(0, "INSTRUCTIONS_BODIES_5_3");
+          var2Lifetime184 = AlphaWidgetContainer.a(0, "INSTRUCTIONS_BODIES_5_3");
           if (var2Lifetime184 != null) {
             ui.field_lb = ab.a(0, var2Lifetime184);
           }
-          var2Lifetime185 = tf.a(0, "INSTRUCTIONS_BODIES_5_4");
+          var2Lifetime185 = AlphaWidgetContainer.a(0, "INSTRUCTIONS_BODIES_5_4");
           if (null != var2Lifetime185) {
             gm.field_ib = ab.a(0, var2Lifetime185);
           }
-          var2Lifetime186 = tf.a(0, "INSTRUCTIONS_BODIES_5_5");
+          var2Lifetime186 = AlphaWidgetContainer.a(0, "INSTRUCTIONS_BODIES_5_5");
           if (var2Lifetime186 != null) {
             RichTextLayout.field_l = ab.a(0, var2Lifetime186);
           }
-          var2Lifetime187 = tf.a(0, "INSTRUCTIONS_BODIES_5_6");
+          var2Lifetime187 = AlphaWidgetContainer.a(0, "INSTRUCTIONS_BODIES_5_6");
           if (null != var2Lifetime187) {
             cj.field_a = ab.a(0, var2Lifetime187);
           }
-          var2Lifetime188 = tf.a(0, "INSTRUCTIONS_BODIES_6_1");
+          var2Lifetime188 = AlphaWidgetContainer.a(0, "INSTRUCTIONS_BODIES_6_1");
           if (null != var2Lifetime188) {
             jj.field_V = ab.a(0, var2Lifetime188);
           }
-          var2Lifetime189 = tf.a(0, "INSTRUCTIONS_BODIES_6_2");
+          var2Lifetime189 = AlphaWidgetContainer.a(0, "INSTRUCTIONS_BODIES_6_2");
           if (null != var2Lifetime189) {
             g.field_t = ab.a(0, var2Lifetime189);
           }
-          var2Lifetime190 = tf.a(0, "INSTRUCTIONS_BODIES_6_3");
+          var2Lifetime190 = AlphaWidgetContainer.a(0, "INSTRUCTIONS_BODIES_6_3");
           if (null != var2Lifetime190) {
-            qj.field_E = ab.a(0, var2Lifetime190);
+            DropTargetWidgetContainer.field_E = ab.a(0, var2Lifetime190);
           }
-          var2Lifetime191 = tf.a(0, "INSTRUCTIONS_BODIES_7_1");
+          var2Lifetime191 = AlphaWidgetContainer.a(0, "INSTRUCTIONS_BODIES_7_1");
           if (null != var2Lifetime191) {
             AgeValidator.field_q = ab.a(0, var2Lifetime191);
           }
-          var2Lifetime192 = tf.a(0, "INSTRUCTIONS_BODIES_7_2");
+          var2Lifetime192 = AlphaWidgetContainer.a(0, "INSTRUCTIONS_BODIES_7_2");
           if (var2Lifetime192 != null) {
             kb.field_n = ab.a(0, var2Lifetime192);
           }
-          var2Lifetime193 = tf.a(0, "INSTRUCTIONS_BODIES_7_3");
+          var2Lifetime193 = AlphaWidgetContainer.a(0, "INSTRUCTIONS_BODIES_7_3");
           if (var2Lifetime193 != null) {
             IntrusiveDeque.field_g = ab.a(0, var2Lifetime193);
           }
-          var2Lifetime194 = tf.a(0, "INSTRUCTIONS_BODIES_7_4");
+          var2Lifetime194 = AlphaWidgetContainer.a(0, "INSTRUCTIONS_BODIES_7_4");
           if (null != var2Lifetime194) {
             EmailFormatValidator.field_o = ab.a(0, var2Lifetime194);
           }
-          var2Lifetime195 = tf.a(0, "GAME_NAME_JSTRING");
+          var2Lifetime195 = AlphaWidgetContainer.a(0, "GAME_NAME_JSTRING");
           if (null != var2Lifetime195) {
             ih.field_m = ab.a(0, var2Lifetime195);
           }
-          var2Lifetime196 = tf.a(0, "GAME_COMPLETE,0");
+          var2Lifetime196 = AlphaWidgetContainer.a(0, "GAME_COMPLETE,0");
           if (var2Lifetime196 != null) {
             bh.field_u[0] = ab.a(0, var2Lifetime196);
           }
-          var2Lifetime197 = tf.a(0, "GAME_COMPLETE,1");
+          var2Lifetime197 = AlphaWidgetContainer.a(0, "GAME_COMPLETE,1");
           if (var2Lifetime197 != null) {
             bh.field_u[1] = ab.a(0, var2Lifetime197);
           }
-          var2Lifetime198 = tf.a(0, "GAME_COMPLETE,2");
+          var2Lifetime198 = AlphaWidgetContainer.a(0, "GAME_COMPLETE,2");
           if (var2Lifetime198 != null) {
             bh.field_u[2] = ab.a(0, var2Lifetime198);
           }
-          var2Lifetime199 = tf.a(0, "LEVEL_NOT_YET_REACHED_MESSAGE");
+          var2Lifetime199 = AlphaWidgetContainer.a(0, "LEVEL_NOT_YET_REACHED_MESSAGE");
           if (var2Lifetime199 != null) {
             ik.field_C = ab.a(0, var2Lifetime199);
           }
-          var2Lifetime200 = tf.a(0, "LABEL_BUTTON_BLOCK");
+          var2Lifetime200 = AlphaWidgetContainer.a(0, "LABEL_BUTTON_BLOCK");
           if (null != var2Lifetime200) {
             ha.field_p = ab.a(0, var2Lifetime200);
           }
-          var2Lifetime201 = tf.a(0, "LABEL_BUTTON_LEFTSLOPE");
+          var2Lifetime201 = AlphaWidgetContainer.a(0, "LABEL_BUTTON_LEFTSLOPE");
           if (var2Lifetime201 != null) {
             RichTextLayout.field_h = ab.a(0, var2Lifetime201);
           }
-          var2Lifetime202 = tf.a(0, "LABEL_BUTTON_RIGHTSLOPE");
+          var2Lifetime202 = AlphaWidgetContainer.a(0, "LABEL_BUTTON_RIGHTSLOPE");
           if (null != var2Lifetime202) {
             tb.field_e = ab.a(0, var2Lifetime202);
           }
-          var2Lifetime203 = tf.a(0, "LABEL_LEVELNAME");
+          var2Lifetime203 = AlphaWidgetContainer.a(0, "LABEL_LEVELNAME");
           if (null != var2Lifetime203) {
-            pk.field_G = ab.a(0, var2Lifetime203);
+            DraggableWidgetContainer.field_G = ab.a(0, var2Lifetime203);
           }
-          var2Lifetime204 = tf.a(0, "LABEL_FLEAINFO");
+          var2Lifetime204 = AlphaWidgetContainer.a(0, "LABEL_FLEAINFO");
           var3 = -26 / ((-20 - param0) / 37);
           if (var2Lifetime204 != null) {
             fb.field_f = ab.a(0, var2Lifetime204);
           }
-          var2Lifetime205 = tf.a(0, "LABEL_FLEAINFO_LEVELSELECT");
+          var2Lifetime205 = AlphaWidgetContainer.a(0, "LABEL_FLEAINFO_LEVELSELECT");
           if (var2Lifetime205 != null) {
             kl.field_b = ab.a(0, var2Lifetime205);
           }
-          var2Lifetime206 = tf.a(0, "LABEL_MUSTSAVE");
+          var2Lifetime206 = AlphaWidgetContainer.a(0, "LABEL_MUSTSAVE");
           if (var2Lifetime206 != null) {
             fleas.field_H = ab.a(0, var2Lifetime206);
           }
-          var2Lifetime207 = tf.a(0, "LABEL_FLEASRESCUED");
+          var2Lifetime207 = AlphaWidgetContainer.a(0, "LABEL_FLEASRESCUED");
           if (var2Lifetime207 != null) {
             va.field_s = ab.a(0, var2Lifetime207);
           }
-          var2Lifetime208 = tf.a(0, "LABEL_SCORE");
+          var2Lifetime208 = AlphaWidgetContainer.a(0, "LABEL_SCORE");
           if (null != var2Lifetime208) {
             hm.field_h = ab.a(0, var2Lifetime208);
           }
-          var2Lifetime209 = tf.a(0, "LABEL_SCORE_THIS_LEVEL");
+          var2Lifetime209 = AlphaWidgetContainer.a(0, "LABEL_SCORE_THIS_LEVEL");
           if (null != var2Lifetime209) {
             pd.field_i = ab.a(0, var2Lifetime209);
           }
-          var2Lifetime210 = tf.a(0, "BONUS");
+          var2Lifetime210 = AlphaWidgetContainer.a(0, "BONUS");
           if (null != var2Lifetime210) {
             fleas.field_I = ab.a(0, var2Lifetime210);
           }
-          var2Lifetime211 = tf.a(0, "LABEL_BONUS_TIME");
+          var2Lifetime211 = AlphaWidgetContainer.a(0, "LABEL_BONUS_TIME");
           if (var2Lifetime211 != null) {
             lf.field_b = ab.a(0, var2Lifetime211);
           }
-          var2Lifetime212 = tf.a(0, "LABEL_LEVELCOMPLETE");
+          var2Lifetime212 = AlphaWidgetContainer.a(0, "LABEL_LEVELCOMPLETE");
           if (null != var2Lifetime212) {
             fi.field_l = ab.a(0, var2Lifetime212);
           }
-          var2Lifetime213 = tf.a(0, "LEVEL_FAIL_MESSAGE");
+          var2Lifetime213 = AlphaWidgetContainer.a(0, "LEVEL_FAIL_MESSAGE");
           if (var2Lifetime213 != null) {
             uj.field_d = ab.a(0, var2Lifetime213);
           }
-          var2Lifetime214 = tf.a(0, "members_benefits_captions,0");
+          var2Lifetime214 = AlphaWidgetContainer.a(0, "members_benefits_captions,0");
           if (null != var2Lifetime214) {
             jd.field_g[0] = ab.a(0, var2Lifetime214);
           }
-          var2Lifetime215 = tf.a(0, "members_benefits_captions,1");
+          var2Lifetime215 = AlphaWidgetContainer.a(0, "members_benefits_captions,1");
           if (null != var2Lifetime215) {
             jd.field_g[1] = ab.a(0, var2Lifetime215);
           }
-          var2Lifetime216 = tf.a(0, "members_benefits_captions,2");
+          var2Lifetime216 = AlphaWidgetContainer.a(0, "members_benefits_captions,2");
           if (null != var2Lifetime216) {
             jd.field_g[2] = ab.a(0, var2Lifetime216);
           }
-          var2Lifetime217 = tf.a(0, "members_benefits_captions,3");
+          var2Lifetime217 = AlphaWidgetContainer.a(0, "members_benefits_captions,3");
           if (var2Lifetime217 != null) {
             jd.field_g[3] = ab.a(0, var2Lifetime217);
           }

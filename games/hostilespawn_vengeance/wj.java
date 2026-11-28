@@ -33,7 +33,7 @@ final class wj extends InteractiveWidget {
         }
     }
 
-    final void a(int param0, int param1, byte param2, int param3) {
+    final void drawWidget(int param0, int param1, byte param2, int param3) {
         int var5;
         int var6;
         bm var8;
@@ -44,7 +44,7 @@ final class wj extends InteractiveWidget {
         RgbSprite var13;
         RgbSprite var14;
         var11 = HostileSpawn.field_I ? 1 : 0;
-        super.a(param0, param1, (byte) 69, param3);
+        super.drawWidget(param0, param1, (byte) 69, param3);
         if (param3 != 0) {
           return;
         }
@@ -93,7 +93,7 @@ final class wj extends InteractiveWidget {
         return oa.field_b;
     }
 
-    final boolean a(byte param0, ag param1) {
+    final boolean takeFocus(byte param0, UiWidget param1) {
         RuntimeException var3 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
@@ -145,10 +145,10 @@ final class wj extends InteractiveWidget {
         field_H = null;
     }
 
-    final void a(ag param0, int param1, int param2, int param3) {
+    final void updatePointer(UiWidget param0, int param1, int param2, int param3) {
         try {
           this.field_M = this.field_M + 1;
-          super.a(param0, param1, param2, param3);
+          super.updatePointer(param0, param1, param2, param3);
         } catch (RuntimeException runtimeException) {
           throw AccountCreationResultPanel.wrapClientException((Throwable) ((Object) runtimeException), "wj.W(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
@@ -292,8 +292,8 @@ final class wj extends InteractiveWidget {
             CrossfadingMidiPcmStream.field_v.b(PcmOutputWorker.moveFloatTowardTarget((byte) -73, ea.field_d, var1_floatLifetime2, 0.009999999776482582f));
           }
           var1_floatLifetime3 = CrossfadingMidiPcmStream.field_v.g();
-          if (var1_floatLifetime3 != ag.field_w) {
-            CrossfadingMidiPcmStream.field_v.e(PcmOutputWorker.moveFloatTowardTarget((byte) -46, ag.field_w, var1_floatLifetime3, 1.0f));
+          if (var1_floatLifetime3 != UiWidget.field_w) {
+            CrossfadingMidiPcmStream.field_v.e(PcmOutputWorker.moveFloatTowardTarget((byte) -46, UiWidget.field_w, var1_floatLifetime3, 1.0f));
           }
           var1_floatLifetime4 = CrossfadingMidiPcmStream.field_v.k();
           if (an.field_n != var1_floatLifetime4) {
@@ -368,11 +368,11 @@ final class wj extends InteractiveWidget {
               GameCanvas.field_a = 1.0f;
               ea.field_d = 0.6000000238418579f;
               vb.field_Jb = 0.800000011920929f;
-              ag.field_w = 10.0f;
+              UiWidget.field_w = 10.0f;
               an.field_n = 0.30000001192092896f;
             } else {
               ea.field_d = 0.5f;
-              ag.field_w = 30.0f;
+              UiWidget.field_w = 30.0f;
               vb.field_Jb = 0.8999999761581421f;
               an.field_n = 0.20000000298023224f;
               GameCanvas.field_a = 0.30000001192092896f;
@@ -381,11 +381,11 @@ final class wj extends InteractiveWidget {
           }
           var10 = var5.field_l;
           if (5 == ha.field_t) {
-            var11_int = -var7 + nh.field_E.field_e;
+            var11_int = -var7 + LabeledWidgetContainer.field_E.field_e;
             if (var11_int < 0) {
               var11_int = -var11_int;
             }
-            var12_int = nh.field_E.field_g - var8;
+            var12_int = LabeledWidgetContainer.field_E.field_g - var8;
             if (var12_int < 0) {
               var12_int = -var12_int;
             }
@@ -492,12 +492,12 @@ final class wj extends InteractiveWidget {
                 var13_ref_oc.field_e = var13_ref_oc.field_e + (int)(-25.0 + 50.0 * Math.random());
                 var13_ref_oc.field_g = var13_ref_oc.field_g + (int)(-25.0 + Math.random() * 50.0);
                 for (var14Lifetime1 = 0; 10 > var14Lifetime1; var14Lifetime1++) {
-                  jn.field_F[ib.field_c].field_c = Math.random() * 255.0;
-                  jn.field_F[ib.field_c].field_j.copyCoordinatesFrom((byte) 46, var13_ref_oc);
-                  jn.field_F[ib.field_c].field_l.a(var10, -28860);
-                  jn.field_F[ib.field_c].field_e = 0;
-                  jn.field_F[ib.field_c].field_h = 0;
-                  jn.field_F[ib.field_c].field_i = 8;
+                  AlphaWidgetContainer.field_F[ib.field_c].field_c = Math.random() * 255.0;
+                  AlphaWidgetContainer.field_F[ib.field_c].field_j.copyCoordinatesFrom((byte) 46, var13_ref_oc);
+                  AlphaWidgetContainer.field_F[ib.field_c].field_l.a(var10, -28860);
+                  AlphaWidgetContainer.field_F[ib.field_c].field_e = 0;
+                  AlphaWidgetContainer.field_F[ib.field_c].field_h = 0;
+                  AlphaWidgetContainer.field_F[ib.field_c].field_i = 8;
                   ib.field_c = ib.field_c + 1;
                 }
                 var14Lifetime1Lifetime1 = -1;
@@ -521,16 +521,16 @@ final class wj extends InteractiveWidget {
               for (var13_intLifetime1Lifetime1 = 0; var13_intLifetime1Lifetime1 < 5; var13_intLifetime1Lifetime1++) {
                 stackIn_162_0 = compareDoublesNaNResultNegative(Math.random() * 512.0, (double)le.field_D);
                 if (stackIn_162_0 > 0) {
-                  jn.field_F[ib.field_c].field_c = Math.random() * 255.0;
-                  jn.field_F[ib.field_c].field_j.copyCoordinatesFrom((byte) 46, var6);
-                  dupTemp$0 = jn.field_F[ib.field_c].field_j;
+                  AlphaWidgetContainer.field_F[ib.field_c].field_c = Math.random() * 255.0;
+                  AlphaWidgetContainer.field_F[ib.field_c].field_j.copyCoordinatesFrom((byte) 46, var6);
+                  dupTemp$0 = AlphaWidgetContainer.field_F[ib.field_c].field_j;
                   dupTemp$0.field_e = dupTemp$0.field_e + (int)(50.0 * Math.random() - 25.0);
-                  dupTemp$1 = jn.field_F[ib.field_c].field_j;
+                  dupTemp$1 = AlphaWidgetContainer.field_F[ib.field_c].field_j;
                   dupTemp$1.field_g = dupTemp$1.field_g + (int)(-25.0 + Math.random() * 50.0);
-                  jn.field_F[ib.field_c].field_l.a(var10, -28860);
-                  jn.field_F[ib.field_c].field_e = 0;
-                  jn.field_F[ib.field_c].field_h = 0;
-                  jn.field_F[ib.field_c].field_i = 8;
+                  AlphaWidgetContainer.field_F[ib.field_c].field_l.a(var10, -28860);
+                  AlphaWidgetContainer.field_F[ib.field_c].field_e = 0;
+                  AlphaWidgetContainer.field_F[ib.field_c].field_h = 0;
+                  AlphaWidgetContainer.field_F[ib.field_c].field_i = 8;
                   ib.field_c = ib.field_c + 1;
                 }
               }
@@ -551,7 +551,7 @@ final class wj extends InteractiveWidget {
           }
           var13 = var10.field_f;
           var15 = var10.field_a;
-          while (jn.e((byte) -105)) {
+          while (AlphaWidgetContainer.e((byte) -105)) {
             var17Lifetime1 = pj.field_e - 16;
             stackIn_205_0 = -1;
             stackIn_205_1 = ~var17Lifetime1;
@@ -581,7 +581,7 @@ final class wj extends InteractiveWidget {
               qh.field_m[86] &&
               !ta.p(3) &&
               wb.field_S > 0) {
-              nh.a(false, (byte) -107);
+              LabeledWidgetContainer.a(false, (byte) -107);
             }
             if (pj.field_e == 80) {
               stackIn_201_0 = -123;

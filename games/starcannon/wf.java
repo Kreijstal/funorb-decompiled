@@ -42,10 +42,10 @@ final class wf extends IntrusiveNode {
 
     final static boolean d(int param0) {
         if (param0 == -15200) {
-          return ie.field_x == jl.field_a ? true : false;
+          return AlphaWidgetContainer.field_x == jl.field_a ? true : false;
         }
         field_f = -51L;
-        return ie.field_x == jl.field_a ? true : false;
+        return AlphaWidgetContainer.field_x == jl.field_a ? true : false;
     }
 
     final static void a(int param0) {

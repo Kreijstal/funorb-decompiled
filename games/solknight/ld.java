@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class ld extends kf {
+abstract class ld extends ModalDialog {
     static int[] field_M;
     static String field_O;
     private int field_R;
@@ -11,7 +11,7 @@ abstract class ld extends kf {
     private int field_L;
     private int field_K;
 
-    ld(i param0, int param1, int param2) {
+    ld(ModalDialogHost param0, int param1, int param2) {
         super(param0, param1, param2);
         this.field_P = 0;
         this.field_L = 0;
@@ -19,7 +19,7 @@ abstract class ld extends kf {
 
     final void b(int param0, int param1, int param2, int param3) {
         if (0 >= param2) {
-          this.b(param3, -2038584927, param0);
+          this.setCenteredSize(param3, -2038584927, param0);
           return;
         }
         this.field_L = param2;
@@ -173,7 +173,7 @@ abstract class ld extends kf {
         }
     }
 
-    boolean h(int param0) {
+    boolean advanceDialogAnimation(int param0) {
         int var2 = 0;
         int var3 = 0;
         int fieldTemp$0 = 0;
@@ -197,9 +197,9 @@ abstract class ld extends kf {
             var3 = var4 * (-this.field_K + this.field_N) / var5 + this.field_K;
             var2 = this.field_Q + var4 * (-this.field_Q + this.field_R) / var5;
           }
-          this.b(var2, -2038584927, var3);
+          this.setCenteredSize(var2, -2038584927, var3);
         }
-        return super.h(param0 + 0);
+        return super.advanceDialogAnimation(param0 + 0);
     }
 
     final static void c(int param0, int param1, int param2) {
@@ -252,17 +252,17 @@ abstract class ld extends kf {
         if (this.field_L <= 0) {
           return;
         }
-        this.b(this.field_R, -2038584927, this.field_N);
+        this.setCenteredSize(this.field_R, -2038584927, this.field_N);
         this.field_L = 0;
         this.l(7107);
     }
 
-    boolean e(byte param0) {
+    boolean snapDialogAnimation(byte param0) {
         if (param0 != 124) {
-          this.e((byte) 24);
+          this.snapDialogAnimation((byte) 24);
         }
         this.e(true);
-        return super.e((byte) 124);
+        return super.snapDialogAnimation((byte) 124);
     }
 
     void l(int param0) {

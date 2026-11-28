@@ -22,7 +22,7 @@ final class AccountCreationResultPanel extends ma implements WidgetActivationLis
         field_Jb = null;
     }
 
-    AccountCreationResultPanel(k param0, AccountRegistrationPanel param1) {
+    AccountCreationResultPanel(ModalDialogHost param0, AccountRegistrationPanel param1) {
         super(param0, wi.field_e, mk.field_d, false, false);
         try {
           this.field_Ib = param1;
@@ -104,12 +104,12 @@ final class AccountCreationResultPanel extends ma implements WidgetActivationLis
             }
           }
           if (param0 != -92) {
-            this.k(33);
+            this.advanceDialogAnimation(33);
           }
           var5 = new dj((ma) (this), wi.field_e, var4);
           if (!param1.success) {
             if (this.field_Hb) {
-              var5.a(cd.field_a, false, (fd) (this));
+              var5.a(cd.field_a, false, (WidgetEventListener) (this));
             } else {
               if (5 == param1.statusCode) {
                 var5.a(false, jf.field_fb, 11);
@@ -132,7 +132,7 @@ final class AccountCreationResultPanel extends ma implements WidgetActivationLis
               this.a(33, new ih(this));
               return;
             }
-            var5.a(cd.field_a, false, (fd) (this));
+            var5.a(cd.field_a, false, (WidgetEventListener) (this));
           }
           this.a(33, var5);
           return;
@@ -163,35 +163,35 @@ final class AccountCreationResultPanel extends ma implements WidgetActivationLis
         }
     }
 
-    final boolean k(int param0) {
+    final boolean advanceDialogAnimation(int param0) {
         if (!this.field_Q) {
           if (param0 == 2968) {
-            return super.k(param0 + 0);
+            return super.advanceDialogAnimation(param0 + 0);
           }
           this.field_Ib = (AccountRegistrationPanel) null;
-          return super.k(param0 + 0);
+          return super.advanceDialogAnimation(param0 + 0);
         }
         if (this.field_Eb) {
           if (param0 == 2968) {
-            return super.k(param0 + 0);
+            return super.advanceDialogAnimation(param0 + 0);
           }
           this.field_Ib = (AccountRegistrationPanel) null;
-          return super.k(param0 + 0);
+          return super.advanceDialogAnimation(param0 + 0);
         }
         AccountServiceResult var2 = ValidatedTextField.pollAccountCreationResult(19860);
         if (var2 == null) {
           if (param0 == 2968) {
-            return super.k(param0 + 0);
+            return super.advanceDialogAnimation(param0 + 0);
           }
           this.field_Ib = (AccountRegistrationPanel) null;
-          return super.k(param0 + 0);
+          return super.advanceDialogAnimation(param0 + 0);
         }
         this.showAccountCreationResult((byte) -92, var2, false);
         if (param0 == 2968) {
-          return super.k(param0 + 0);
+          return super.advanceDialogAnimation(param0 + 0);
         }
         this.field_Ib = (AccountRegistrationPanel) null;
-        return super.k(param0 + 0);
+        return super.advanceDialogAnimation(param0 + 0);
     }
 
     static {

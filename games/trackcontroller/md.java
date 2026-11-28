@@ -63,7 +63,7 @@ final class md {
           if (null != kg.field_a) {
             LevelView.field_C.writePrefixedString(kg.field_a, 126);
           }
-          NodeHashTableIterator.a(sc.field_d, LevelView.field_C, fj.field_N, ~param3, PasswordValidator.field_p);
+          NodeHashTableIterator.a(sc.field_d, LevelView.field_C, DraggableWidgetContainer.field_N, ~param3, PasswordValidator.field_p);
           LevelView.field_C.backpatchShortLength(LevelView.field_C.position - var5_int, (byte) -96);
           MovingBlock.a(param3, -1);
           return;

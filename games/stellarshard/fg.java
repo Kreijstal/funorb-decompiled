@@ -22,7 +22,7 @@ final class fg extends InteractiveWidget {
         field_G = null;
     }
 
-    final boolean a(UiWidget param0, int param1, int param2, int param3, int param4, byte param5, int param6) {
+    final boolean pointerPressed(UiWidget param0, int param1, int param2, int param3, int param4, byte param5, int param6) {
         RuntimeException stackIn_22_0 = null;
         StringBuilder stackIn_22_1 = null;
         String stackIn_23_2 = null;
@@ -37,7 +37,7 @@ final class fg extends InteractiveWidget {
           if (param5 < 24) {
             this.field_J = -18;
           }
-          if (!super.a(param0, param1, param2, param3, param4, (byte) 67, param6)) {
+          if (!super.pointerPressed(param0, param1, param2, param3, param4, (byte) 67, param6)) {
             return false;
           }
           var8_int = param1 - (this.field_L + this.field_w + param4);

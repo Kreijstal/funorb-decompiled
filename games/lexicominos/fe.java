@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class fe implements rd {
+final class fe implements WidgetRenderer {
     final static void a(RgbSprite[] param0, int param1, int param2, int param3, int param4, int param5) {
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
@@ -48,7 +48,7 @@ final class fe implements rd {
         }
     }
 
-    public final void a(int param0, int param1, boolean param2, w param3, int param4) {
+    public final void paintWidget(int param0, int param1, boolean param2, UiWidget param3, int param4) {
         int var6_int = 0;
         RuntimeException var6 = null;
         int var7 = 0;
@@ -66,7 +66,7 @@ final class fe implements rd {
             ((InteractiveWidget) (param3)).field_C) {
             var8.drawAdditive(var6_int - (-1 - (param3.field_j - var8.field_r >> 1)), (param3.field_v - var8.field_x >> 1) + (var7 + 1), 256);
           }
-          if (param3.a(18337)) {
+          if (param3.isFocused(18337)) {
             TriangleMesh.a(param3.field_v - 4, var7 + 2, 2 + var6_int, 1, param3.field_j - 4);
           }
           return;

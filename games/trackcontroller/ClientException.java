@@ -53,7 +53,7 @@ final class ClientException extends RuntimeException {
           if (param0 > -5) {
             return;
           }
-          while (var3 < sa.field_I.length) {
+          while (var3 < LabeledWidgetContainer.field_I.length) {
             var4 = mj.field_b[var3];
             if (var4 >= 0) {
               if (GzipDecompressor.field_f.field_e == var4) {
@@ -64,7 +64,7 @@ final class ClientException extends RuntimeException {
             } else {
               var5 = db.field_db;
             }
-            var6 = sa.field_I[var3];
+            var6 = LabeledWidgetContainer.field_I[var3];
             if (TextFieldValidator.field_h == 2 &&
               1 == var2) {
               if (jf.field_i.length <= RichTextWidget.field_O.length) {

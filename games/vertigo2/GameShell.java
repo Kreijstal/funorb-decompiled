@@ -162,7 +162,7 @@ abstract class GameShell extends GameApplet {
           la.field_e = FrameTimer.a(rh.field_F, false, true, false, 1);
           kb.field_b = FrameTimer.a(AccountRegistrationPanel.field_G, false, true, false, 1);
           qc.field_A = 2;
-          ac.field_G = la.field_e;
+          DropTargetWidgetContainer.field_G = la.field_e;
           ml.field_y = HuffmanCodec.field_b;
         }
         if (qc.field_A == 2) {
@@ -187,7 +187,7 @@ abstract class GameShell extends GameApplet {
           lm.a(kb.field_b, (byte) 119)) {
           PlayerAvatarRenderer.releaseStartupFontAndImage(-1);
           vl.b(2147483647);
-          mg.field_O = false;
+          LabeledWidgetContainer.field_O = false;
           IntrusiveNode.field_h = mq.field_t;
           we.a(kb.field_b, pl.field_i, (byte) -7, HuffmanCodec.field_b, la.field_e);
           if (pb.field_f ||
@@ -199,7 +199,7 @@ abstract class GameShell extends GameApplet {
             or.a(stackIn_102_0, stackIn_103_1, stackIn_105_2, stackIn_106_3);
           }
           if (fo.field_d) {
-            wq.i(0);
+            AlphaWidgetContainer.i(0);
           }
           if (oq.field_E == null) {
             oq.field_E = rc.b(param1 + 130);
@@ -350,7 +350,7 @@ abstract class GameShell extends GameApplet {
             sf.a(LoginPanel.e((byte) -75), -63);
           }
           if (6 == var4 &&
-            mg.field_O) {
+            LabeledWidgetContainer.field_O) {
             hn.field_w = 10;
           }
           var5Lifetime3 = -70 % ((param1 + 33) / 63);
@@ -741,7 +741,7 @@ abstract class GameShell extends GameApplet {
           if (param0 != 7) {
             GameShell.clearStaticReferences(false);
           }
-          var4 = (oc) (mg.field_N.beginBackward((byte) 100));
+          var4 = (oc) (LabeledWidgetContainer.field_N.beginBackward((byte) 100));
           var1 = var4;
           if (var1 == null) {
             return false;

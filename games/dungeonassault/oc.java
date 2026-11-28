@@ -36,7 +36,7 @@ final class oc extends kl {
           oc.a(113, (byte) -124, -63, 82, 80, 14);
         }
         if (!(param5 >= ib.field_e)) {
-          da.field_B = param5;
+          SingleChildWidgetContainer.field_B = param5;
         }
         mf.field_d[lc.field_d] = param2;
         wa.field_m[lc.field_d] = param3;
@@ -44,8 +44,8 @@ final class oc extends kl {
         int var6 = param4 + param2 + param3;
         int var7 = var6 == 0 ? 0 : 1000 * param2 / var6;
         TextHotspotBounds.field_n[lc.field_d] = var7;
-        if (!(var7 >= da.field_B)) {
-          da.field_B = var7;
+        if (!(var7 >= SingleChildWidgetContainer.field_B)) {
+          SingleChildWidgetContainer.field_B = var7;
         }
         lc.field_d = lc.field_d + 1;
         if (var7 > n.field_d) {
@@ -153,7 +153,7 @@ final class oc extends kl {
         oe.field_m.j(-63 + this.field_a, 21);
         ad.field_e.i(23, this.field_i - 38);
         ad.field_e.f(-39 + this.field_a, -38 + this.field_i);
-        da.a(bb.field_q, cm.field_M, this.field_a >> 1, param0 + 1917623580, 14 + (IntrusiveNode.field_c.field_H + 36 >> 1), IntrusiveNode.field_c);
+        SingleChildWidgetContainer.a(bb.field_q, cm.field_M, this.field_a >> 1, param0 + 1917623580, 14 + (IntrusiveNode.field_c.field_H + 36 >> 1), IntrusiveNode.field_c);
         jh.b();
     }
 
@@ -192,13 +192,13 @@ final class oc extends kl {
           stackIn_4_1 = (param2);
           this.field_x = stackIn_4_1;
           this.field_C = 0;
-          this.field_r = oi.b(0, 4);
+          this.field_r = DraggableWidgetContainer.b(0, 4);
           ub.a((byte) 15, this.field_r);
-          this.field_H = oi.b(0, 4);
+          this.field_H = DraggableWidgetContainer.b(0, 4);
           ub.a((byte) 15, this.field_H);
-          stackIn_7_1 = (0 == oi.b(0, 2));
+          stackIn_7_1 = (0 == DraggableWidgetContainer.b(0, 2));
           this.field_s = stackIn_7_1;
-          stackIn_10_1 = (oi.b(0, 2) == 0);
+          stackIn_10_1 = (DraggableWidgetContainer.b(0, 2) == 0);
           this.field_u = stackIn_10_1;
           this.field_p = new SpriteAnimationPlayer(this.field_n.field_n.field_e);
           this.field_z = tn.a((this.field_a - jm.field_i.field_y >> 1) + this.field_k, this.field_i + this.field_j - jm.field_i.field_v, IntrusiveNode.field_c, jm.field_i, -75, hj.field_X);

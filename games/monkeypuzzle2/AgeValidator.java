@@ -19,7 +19,7 @@ final class AgeValidator extends TextFieldValidator {
         RuntimeException decompiledCaughtException = null;
         try {
           if (this.getValidationStatus(param1, 3917) == IsaacRandom.field_h) {
-            stackIn_3_0 = mh.field_H;
+            stackIn_3_0 = LabeledWidgetContainer.field_H;
             return stackIn_3_0;
           }
           if (param0 == 1) {

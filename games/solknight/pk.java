@@ -18,7 +18,7 @@ final class pk extends RichTextWidget {
         }
     }
 
-    final boolean a(int param0, UiWidget param1) {
+    final boolean takeFocus(int param0, UiWidget param1) {
         RuntimeException var3 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -72,7 +72,7 @@ final class pk extends RichTextWidget {
         return new int[]{0, 0, 0, var6, 0, var5, var7, var4, -var8, -var9, var3, var10};
     }
 
-    final void a(int param0, int param1, int param2, int param3) {
+    final void drawWidget(int param0, int param1, int param2, int param3) {
         qf var6;
         int var9;
         int var10;
@@ -130,7 +130,7 @@ final class pk extends RichTextWidget {
             this.field_i = var17;
             this.rebuildHotspotBounds((byte) -21);
           }
-          super.a(param0, param1, param2, param3);
+          super.drawWidget(param0, param1, param2, param3);
           var6 = this.field_U.getValidationStatus(-9362);
           var37 = (TextWidgetRenderer) ((Object) this.field_w);
           var9 = param2 + this.field_m;
@@ -180,7 +180,7 @@ final class pk extends RichTextWidget {
             this.field_i = var22;
             this.rebuildHotspotBounds((byte) -21);
           }
-          super.a(param0, param1, param2, param3);
+          super.drawWidget(param0, param1, param2, param3);
           var6 = this.field_U.getValidationStatus(-9362);
           var38 = (TextWidgetRenderer) ((Object) this.field_w);
           var9Lifetime1 = param2 + this.field_m;
@@ -230,7 +230,7 @@ final class pk extends RichTextWidget {
             this.field_i = var27;
             this.rebuildHotspotBounds((byte) -21);
           }
-          super.a(param0, param1, param2, param3);
+          super.drawWidget(param0, param1, param2, param3);
           var6Lifetime1 = this.field_U.getValidationStatus(-9362);
           var39 = (TextWidgetRenderer) ((Object) this.field_w);
           var9Lifetime2 = param2 + this.field_m;
@@ -280,7 +280,7 @@ final class pk extends RichTextWidget {
           this.field_i = var32;
           this.rebuildHotspotBounds((byte) -21);
         }
-        super.a(param0, param1, param2, param3);
+        super.drawWidget(param0, param1, param2, param3);
         var6Lifetime2 = this.field_U.getValidationStatus(-9362);
         var40 = (TextWidgetRenderer) ((Object) this.field_w);
         var9Lifetime3 = param2 + this.field_m;
@@ -377,32 +377,32 @@ final class pk extends RichTextWidget {
             }
           }
           boolean decompiledFrameCompleted0 = true;
-          if (kf.field_G != null) {
+          if (ModalDialog.field_G != null) {
             var2_int = 0;
             boolean decompiledNaturalLoopExit0 = false;
-            while (!(decompiledNaturalLoopExit0 = (kf.field_G.length <= var2_int))) {
-              if (kf.field_G[var2_int] != null) {
+            while (!(decompiledNaturalLoopExit0 = (ModalDialog.field_G.length <= var2_int))) {
+              if (ModalDialog.field_G[var2_int] != null) {
                 var2_int++;
                 continue;
               }
               break;
             }
             if (decompiledNaturalLoopExit0) {
-              var4 = kf.field_G;
+              var4 = ModalDialog.field_G;
               var2 = var4;
-              kf.field_G = new Asteroid[kf.field_G.length << 1];
-              fk.a(var2, 0, kf.field_G, 0, var4.length);
-              kf.field_G[var4.length] = param1;
+              ModalDialog.field_G = new Asteroid[ModalDialog.field_G.length << 1];
+              fk.a(var2, 0, ModalDialog.field_G, 0, var4.length);
+              ModalDialog.field_G[var4.length] = param1;
               decompiledFrameCompleted0 = false;
             }
             if (decompiledFrameCompleted0) {
-              kf.field_G[var2_int] = param1;
+              ModalDialog.field_G[var2_int] = param1;
               return;
             }
           }
           if (decompiledFrameCompleted0) {
-            kf.field_G = new Asteroid[8];
-            kf.field_G[0] = param1;
+            ModalDialog.field_G = new Asteroid[8];
+            ModalDialog.field_G[0] = param1;
           }
           if (param0 != 32) {
             pk.a((byte) 49, 75);
@@ -504,13 +504,13 @@ final class pk extends RichTextWidget {
         je.a(param0);
     }
 
-    final void a(int param0, int param1, int param2, UiWidget param3) {
+    final void updatePointer(int param0, int param1, int param2, UiWidget param3) {
         this.field_Z = this.field_Z + 1;
         if (param1 != 18874) {
           return;
         }
         try {
-          super.a(param0, param1 + 0, param2, param3);
+          super.updatePointer(param0, param1 + 0, param2, param3);
         } catch (RuntimeException runtimeException) {
           throw fc.wrapClientException((Throwable) ((Object) runtimeException), "pk.JA(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
@@ -521,7 +521,7 @@ final class pk extends RichTextWidget {
         try {
           this.field_V = param1;
           this.field_U = param0;
-          this.b(param5, param4, param2, 0, param3);
+          this.setBounds(param5, param4, param2, 0, param3);
         } catch (RuntimeException runtimeException) {
           throw fc.wrapClientException((Throwable) ((Object) runtimeException), "pk.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }

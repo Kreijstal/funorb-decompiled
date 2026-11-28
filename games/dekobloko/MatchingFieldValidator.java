@@ -236,7 +236,7 @@ final class MatchingFieldValidator extends TextFieldValidator {
         String stackStringLocal6 = null;
         RuntimeException caughtExceptionLocal7 = null;
         try {
-          if (!UiComponentPart020.computeBoolean1153(characterArgument2, -6237)) {
+          if (!ArrayWidgetContainer.computeBoolean1153(characterArgument2, -6237)) {
             return false;
           }
           if (null == charSequenceArgument3) {

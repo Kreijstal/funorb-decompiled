@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class im implements ca {
+final class im implements WidgetRenderer {
     private int field_g;
     private int field_c;
     private int field_f;
@@ -16,9 +16,9 @@ final class im implements ca {
     private int field_h;
     static RgbSprite field_e;
 
-    public final void a(byte param0, lm param1, int param2, int param3, boolean param4) {
+    public final void paintWidget(byte param0, UiWidget param1, int param2, int param3, boolean param4) {
         int var10 = 0;
-        lm stackIn_4_0 = null;
+        UiWidget stackIn_4_0 = null;
         RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;
         String stackIn_17_2 = null;
@@ -32,7 +32,7 @@ final class im implements ca {
         var11 = DungeonAssault.field_K;
         try {
           if (param1 instanceof eb) {
-            stackIn_4_0 = (lm) (param1);
+            stackIn_4_0 = (UiWidget) (param1);
           } else {
             stackIn_4_0 = null;
           }

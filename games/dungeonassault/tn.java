@@ -15,12 +15,12 @@ final class tn extends RichTextWidget {
         if (param0 >= 3) {
           return null;
         }
-        lm var3 = (lm) null;
-        this.a(25, (lm) null);
+        UiWidget var3 = (UiWidget) null;
+        this.takeFocus(25, (UiWidget) null);
         return null;
     }
 
-    final boolean a(int param0, lm param1) {
+    final boolean takeFocus(int param0, UiWidget param1) {
         RuntimeException var3 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -90,10 +90,10 @@ final class tn extends RichTextWidget {
         }
     }
 
-    final void a(int param0, int param1, lm param2, boolean param3) {
+    final void updatePointer(int param0, int param1, UiWidget param2, boolean param3) {
         try {
           this.field_X = this.field_X + 1;
-          super.a(param0, param1, param2, param3);
+          super.updatePointer(param0, param1, param2, param3);
         } catch (RuntimeException runtimeException) {
           throw AccountServiceResult.wrapClientException((Throwable) ((Object) runtimeException), "tn.B(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
@@ -203,7 +203,7 @@ final class tn extends RichTextWidget {
         try {
           this.field_Z = param1;
           this.field_T = param0;
-          this.b(0, param4, param3, param2, param5);
+          this.setBounds(0, param4, param3, param2, param5);
         } catch (RuntimeException runtimeException) {
           throw AccountServiceResult.wrapClientException((Throwable) ((Object) runtimeException), "tn.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }
@@ -220,7 +220,7 @@ final class tn extends RichTextWidget {
         field_I = null;
     }
 
-    final void a(int param0, int param1, int param2, int param3) {
+    final void drawWidget(int param0, int param1, int param2, int param3) {
         String var5;
         od var6;
         TextWidgetRenderer var8;
@@ -259,11 +259,11 @@ final class tn extends RichTextWidget {
           this.field_w = var5;
           this.rebuildHotspotBounds((byte) 112);
         }
-        super.a(param0, param1, param2, param3);
+        super.drawWidget(param0, param1, param2, param3);
         var6Lifetime1 = this.field_T.getValidationStatus((byte) -110);
         var8 = (TextWidgetRenderer) ((Object) this.field_o);
         var9 = this.field_q + param1;
-        var10 = var8.getTextOriginY((byte) 64, param3, (lm) (this)) + (var8.getTextLayout(-2, (lm) (this)).getLayoutHeight(263) >> 1);
+        var10 = var8.getTextOriginY((byte) 64, param3, (UiWidget) (this)) + (var8.getTextLayout(-2, (UiWidget) (this)).getLayoutHeight(263) >> 1);
         if (ub.field_s != var6Lifetime1 &&
           oc.field_A != var6Lifetime1) {
           if (var6Lifetime1 == pd.field_J) {
@@ -280,11 +280,11 @@ final class tn extends RichTextWidget {
           if (this.field_V != null &&
             var11 <= this.field_V.field_y &&
             var12 <= this.field_V.field_v) {
-            lm.a(this.field_V, (byte) 38);
+            UiWidget.a(this.field_V, (byte) 38);
             SoftwareRasterizer.clearRaster();
           } else {
             this.field_V = new RgbSprite(var11, var12);
-            lm.a(this.field_V, (byte) -79);
+            UiWidget.a(this.field_V, (byte) -79);
           }
           var14.drawRotatedAboutBilinear(112, 144, var14.field_E << 4, var14.field_G << 4, -this.field_X << 10, 4096);
           ti.c(true);
@@ -341,7 +341,7 @@ final class tn extends RichTextWidget {
           if (param0 <= 59) {
             return;
           }
-          rf.field_P = new byte[dk.field_d][];
+          ModalDialog.field_P = new byte[dk.field_d][];
           jc.field_f = new int[dk.field_d];
           RichTextLayout.field_g = new int[dk.field_d];
           var17.position = -7 + (param1.length - dk.field_d * 8);
@@ -380,7 +380,7 @@ final class tn extends RichTextWidget {
             var21 = new byte[var7];
             var19 = var21;
             var9 = var19;
-            rf.field_P[var4Lifetime5] = var21;
+            ModalDialog.field_P[var4Lifetime5] = var21;
             var10 = 0;
             var11 = var17.readUnsignedByte(true);
             if (0 == (1 & var11)) {

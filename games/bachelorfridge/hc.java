@@ -99,7 +99,7 @@ final class hc extends WidgetContainer implements WidgetActionListener {
           this.field_H = param1;
           this.field_C = param2;
           var4_int = this.field_C != null ? this.field_H.measureWrappedHeight(this.field_C, 260, this.field_H.field_u) : 0;
-          this.a(0, 22 + var4_int, (byte) 59, 288, 0);
+          this.setBounds(0, 22 + var4_int, (byte) 59, 288, 0);
         } catch (RuntimeException runtimeException) {
           throw pe.wrapException((Throwable) ((Object) runtimeException), "hc.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
@@ -125,9 +125,9 @@ final class hc extends WidgetContainer implements WidgetActionListener {
           var4 = new InteractiveWidget(param1, param0);
           var4.renderer = (WidgetRenderer) ((Object) new ff());
           var5 = -2 + this.height;
-          this.a(0, 34 + this.height, (byte) 59, this.width, 0);
-          var4.a(7, 30, (byte) 59, -14 + this.width, var5);
-          this.c(var4, -126);
+          this.setBounds(0, 34 + this.height, (byte) 59, this.width, 0);
+          var4.setBounds(7, 30, (byte) 59, -14 + this.width, var5);
+          this.addChild(var4, -126);
           stackIn_3_0 = var4;
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

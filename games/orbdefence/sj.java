@@ -92,7 +92,7 @@ final class sj extends DefaultTextWidgetRenderer {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw dd.wrapClientException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
+          throw DraggableWidgetContainer.wrapClientException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
         }
     }
 
@@ -149,7 +149,7 @@ final class sj extends DefaultTextWidgetRenderer {
           } else {
             stackIn_18_2 = "{...}";
           }
-          throw dd.wrapClientException((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(')').toString());
+          throw DraggableWidgetContainer.wrapClientException((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(')').toString());
         }
     }
 
@@ -197,7 +197,7 @@ final class sj extends DefaultTextWidgetRenderer {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw dd.wrapClientException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
+          throw DraggableWidgetContainer.wrapClientException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
         }
     }
 
@@ -213,7 +213,7 @@ final class sj extends DefaultTextWidgetRenderer {
           }
           this.field_v[param0].field_b = param1;
         } catch (RuntimeException runtimeException) {
-          throw dd.wrapClientException((Throwable) ((Object) runtimeException), "sj.BA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw DraggableWidgetContainer.wrapClientException((Throwable) ((Object) runtimeException), "sj.BA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
@@ -222,7 +222,7 @@ final class sj extends DefaultTextWidgetRenderer {
         try {
           param0.a(param1, -19056, this);
         } catch (RuntimeException runtimeException) {
-          throw dd.wrapClientException((Throwable) ((Object) runtimeException), "sj.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw DraggableWidgetContainer.wrapClientException((Throwable) ((Object) runtimeException), "sj.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -261,7 +261,7 @@ final class sj extends DefaultTextWidgetRenderer {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw dd.wrapClientException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
+          throw DraggableWidgetContainer.wrapClientException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
         }
     }
 
@@ -279,8 +279,8 @@ final class sj extends DefaultTextWidgetRenderer {
         int var1 = 8 % ((-5 - param0) / 61);
     }
 
-    public final void a(int param0, int param1, pj param2, int param3, boolean param4) {
-        pj stackIn_3_0 = null;
+    public final void paintWidget(int param0, int param1, UiWidget param2, int param3, boolean param4) {
+        UiWidget stackIn_3_0 = null;
         RuntimeException stackIn_32_0 = null;
         StringBuilder stackIn_32_1 = null;
         String stackIn_33_2 = null;
@@ -298,7 +298,7 @@ final class sj extends DefaultTextWidgetRenderer {
           if (!(param2 instanceof InteractiveWidget)) {
             stackIn_3_0 = null;
           } else {
-            stackIn_3_0 = (pj) (param2);
+            stackIn_3_0 = (UiWidget) (param2);
           }
           var11 = (InteractiveWidget) (stackIn_3_0);
           id.a(param2.field_s + (param1 + param2.field_m), param2.field_s + param1, param2.field_r + param0 + param2.field_n, param0 + param2.field_n, param3 ^ -5112);
@@ -332,7 +332,7 @@ final class sj extends DefaultTextWidgetRenderer {
               }
             }
           }
-          if (param2.d(param3 ^ 4473)) {
+          if (param2.isFocused(param3 ^ 4473)) {
             var14 = this.field_v[5];
             if (var14 != null) {
               var14.a(false, param0, param1, this.field_w, this, param2);
@@ -357,7 +357,7 @@ final class sj extends DefaultTextWidgetRenderer {
           } else {
             stackIn_33_2 = "{...}";
           }
-          throw dd.wrapClientException((Throwable) ((Object) stackIn_32_0), ((StringBuilder) (Object) stackIn_32_1).append(stackIn_33_2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw DraggableWidgetContainer.wrapClientException((Throwable) ((Object) stackIn_32_0), ((StringBuilder) (Object) stackIn_32_1).append(stackIn_33_2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 

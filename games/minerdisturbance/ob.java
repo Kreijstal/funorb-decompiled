@@ -135,7 +135,7 @@ abstract class ob extends GameAppletShell {
         EmailFormatValidator.f(10525);
         if (!hl.b((byte) 120) &&
           fh.field_b != 11) {
-          hm.d((byte) 22);
+          ModalDialogHost.d((byte) 22);
         }
         if (null != pf.field_e) {
           ki.field_n = pf.field_e.pollRotation((byte) -124);
@@ -149,7 +149,7 @@ abstract class ob extends GameAppletShell {
             si.a(-75);
             eb.a((byte) -96);
             da.a(true, le.field_a, 2);
-            oj.c((byte) -62);
+            AlphaWidgetContainer.c((byte) -62);
             nd.field_e = true;
             PcmOutputWorker.field_f = 15000L + sf.correctedCurrentTimeMillis((byte) -58);
           }
@@ -241,7 +241,7 @@ abstract class ob extends GameAppletShell {
             PacketBuffer.field_r = TextHotspotBounds.a(1, s.field_Q);
           }
           hj.field_i = eb.a(true, fn.field_p, false, 1, true);
-          pb.field_r = eb.a(true, se.field_N, false, 1, true);
+          pb.field_r = eb.a(true, DropTargetWidgetContainer.field_N, false, 1, true);
           oh.field_C = eb.a(true, da.field_c, false, 1, true);
           s.field_P = pb.field_r;
           af.field_u = 2;
@@ -285,7 +285,7 @@ abstract class ob extends GameAppletShell {
           }
           if (hj.field_o == null) {
             hj.field_o = da.a(param1 - 17950);
-            tm.field_I = hm.f((byte) -67);
+            tm.field_I = ModalDialogHost.f((byte) -67);
           }
           fi.a((byte) 104, oh.field_C, hj.field_o, tm.field_I);
           pb.field_r = null;
@@ -511,7 +511,7 @@ abstract class ob extends GameAppletShell {
           discarded$1 = this.a(true, false, kf.field_d != null ? true : false);
         } else {
           if (10 <= af.field_u) {
-            if (!fe.j(param0 ^ -94)) {
+            if (!UiWidget.j(param0 ^ -94)) {
               AccountServiceResult.a(127);
             } else {
               if (fh.field_b != 0) {
@@ -550,7 +550,7 @@ abstract class ob extends GameAppletShell {
         km.b((byte) 109);
         pf.field_e = oh.createMouseWheelInput((byte) 119);
         ab.a((byte) -13, ef.field_c);
-        se.field_N = param5;
+        DropTargetWidgetContainer.field_N = param5;
         da.field_c = param7;
         fn.field_p = param4;
         TextLineMetrics.field_f = param6;
@@ -582,7 +582,7 @@ abstract class ob extends GameAppletShell {
             throw new IllegalStateException();
           }
           if (var4 == 1) {
-            var5_int = ob.a((byte) 112, IsaacRandom.a(15), fe.f(0));
+            var5_int = ob.a((byte) 112, IsaacRandom.a(15), UiWidget.f(0));
             if (-1 != var5_int) {
               ImageProducerRasterBuffer.a(-21614, TextLayout.field_g, var5_int, vh.field_i);
               TextLayout.field_g = null;
@@ -590,7 +590,7 @@ abstract class ob extends GameAppletShell {
             }
             var10 = aj.a(103);
             if (var10 != null) {
-              jc.a((byte) 17, var10.booleanValue());
+              SingleChildWidgetContainer.a((byte) 17, var10.booleanValue());
             }
           }
           if (var4 == 2) {
@@ -629,7 +629,7 @@ abstract class ob extends GameAppletShell {
               SecondaryNodeDeque.field_b = true;
               fh.field_b = 10;
             } else {
-              kn.a(13569, RichTextLayout.c(-89));
+              DequeWidgetContainer.a(13569, RichTextLayout.c(-89));
             }
           }
           if (5 == var4) {
@@ -643,7 +643,7 @@ abstract class ob extends GameAppletShell {
             tg.a((byte) -114, RichTextLayout.c(-112));
           }
           if (var4 == 8) {
-            kn.a(13569, RichTextLayout.c(-112));
+            DequeWidgetContainer.a(13569, RichTextLayout.c(-112));
           }
           if (var4 == 9) {
             dk.a(RichTextLayout.c(-77), (byte) -27);
@@ -658,7 +658,7 @@ abstract class ob extends GameAppletShell {
             return 19;
           }
           if (12 == var4) {
-            jk.a(RichTextLayout.c(-86), 68, kn.a(0));
+            jk.a(RichTextLayout.c(-86), 68, DequeWidgetContainer.a(0));
           }
           if (13 == var4) {
             try {
@@ -711,7 +711,7 @@ abstract class ob extends GameAppletShell {
         id var3;
         int var4;
         var4 = MinerDisturbance.field_ab;
-        var2 = oj.field_K;
+        var2 = AlphaWidgetContainer.field_K;
         if (param0 < 21) {
           this.g(49);
         }
@@ -759,7 +759,7 @@ abstract class ob extends GameAppletShell {
                             }
                             stackIn_32_0 = (12 == var2);
                             var3 = tb.a(stackIn_32_0, -2);
-                            kn.a(var3, (byte) -51);
+                            DequeWidgetContainer.a(var3, (byte) -51);
                           }
                         } else {
                           ff.a(qa.field_a, kj.field_a, rj.field_d, true);

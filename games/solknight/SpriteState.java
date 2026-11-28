@@ -250,7 +250,7 @@ abstract class SpriteState extends DualLinkNode {
         int[] var16 = null;
         var8 = SolKnight.field_L ? 1 : 0;
         try {
-          var11 = te.field_N;
+          var11 = AlphaWidgetContainer.field_N;
           var2 = var11.readUnsignedByte(255);
           if (var2 == 0) {
             var10 = PasswordValidator.i(-1);

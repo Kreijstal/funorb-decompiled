@@ -83,7 +83,7 @@ final class rb extends ue {
               decompiledFrameRemainder0 = false;
             }
             else {
-              IntrusiveDeque.a(0, ArchiveRequest.a("main", EditableTextField.field_L, param0 + 2, "benefits"), ei.field_G);
+              IntrusiveDeque.a(0, ArchiveRequest.a("main", EditableTextField.field_L, param0 + 2, "benefits"), LabeledWidgetContainer.field_G);
               sj.a(ArchiveRequest.a("crystal", EditableTextField.field_L, 10, "benefits"), -2, 17, 10, 107, 71, 40, 2500, (byte) 113);
               var3 = new RgbSprite(ee.field_m.field_n / 3 + 6, 6 + ee.field_m.field_o / 3);
               var3.bindAsRenderTarget();

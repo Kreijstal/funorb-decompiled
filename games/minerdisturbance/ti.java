@@ -54,7 +54,7 @@ final class ti extends InteractiveWidget {
         field_I = null;
     }
 
-    ti(String param0, rm param1, boolean param2) {
+    ti(String param0, WidgetEventListener param1, boolean param2) {
         this(param0, param1);
         try {
           this.field_H = param2 ? true : false;
@@ -63,7 +63,7 @@ final class ti extends InteractiveWidget {
         }
     }
 
-    private ti(String param0, rm param1) {
+    private ti(String param0, WidgetEventListener param1) {
         this(param0, AccountRequestState.field_c.field_m, param1);
         try {
           this.field_A = AccountRequestState.field_c.field_e;
@@ -102,7 +102,7 @@ final class ti extends InteractiveWidget {
         return var4;
     }
 
-    private ti(String param0, ad param1, rm param2) {
+    private ti(String param0, WidgetRenderer param1, WidgetEventListener param2) {
         super(param0, param1, param2);
         try {
           this.field_A = AccountRequestState.field_c.field_e;

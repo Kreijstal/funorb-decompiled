@@ -8,7 +8,7 @@ final class wg extends IntrusiveNode {
     static IntrusiveDeque field_k;
     static int field_h;
     static Sprite field_g;
-    static kj field_j;
+    static ModalDialogHost field_j;
 
     final static void a(int param0) {
         int var2 = 0;

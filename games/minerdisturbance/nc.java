@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class nc implements ad {
+final class nc implements WidgetRenderer {
     private int field_d;
     static boolean field_e;
     private int field_a;
@@ -59,7 +59,7 @@ final class nc implements ad {
         field_b = null;
     }
 
-    public final void a(int param0, int param1, fe param2, int param3, boolean param4) {
+    public final void paintWidget(int param0, int param1, UiWidget param2, int param3, boolean param4) {
         int stackIn_5_0 = 0;
         RuntimeException stackIn_22_0 = null;
         StringBuilder stackIn_22_1 = null;
@@ -75,7 +75,7 @@ final class nc implements ad {
         var11 = MinerDisturbance.field_ab;
         try {
           if (!param2.field_x &&
-            !param2.k(param0 - 12174)) {
+            !param2.isFocused(param0 - 12174)) {
             stackIn_5_0 = 2188450;
           } else {
             stackIn_5_0 = 3249872;
@@ -85,7 +85,7 @@ final class nc implements ad {
             field_b = (String) null;
           }
           this.field_c.drawParagraph("<u=" + Integer.toString(var6_int, 16) + ">" + param2.field_s + "</u>", param1 + param2.field_u, param2.field_t + param3, param2.field_v, param2.field_q, var6_int, -1, this.field_a, this.field_d, this.field_c.field_I + this.field_c.field_E);
-          if (!param2.k(-105)) {
+          if (!param2.isFocused(-105)) {
             return;
           }
           var7 = this.field_c.stringWidth(param2.field_s);
@@ -106,7 +106,7 @@ final class nc implements ad {
           } else {
             var10 = var10 + (param2.field_q - var8);
           }
-          se.c(-2 + var9, 2, var10 + 2, 4 + var7, var8);
+          DropTargetWidgetContainer.c(-2 + var9, 2, var10 + 2, 4 + var7, var8);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

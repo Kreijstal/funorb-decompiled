@@ -251,10 +251,10 @@ final class BufferedSocket implements Runnable {
         RgbSprite var17 = new RgbSprite(param2.getFileByName("button.gif", 30045, ""), (java.awt.Component) ((Object) DirectByteStorage.field_h));
         jn.a("dropdown", 8221, "commonui", param3);
         rk[] var5 = qm.a(1, "commonui", "screen_options", param3);
-        mf.field_s = new rk[4];
+        UiWidget.field_s = new rk[4];
         Bzip2State.field_e = new rk[4];
         dn.field_g = new rk[4];
-        rk[][] var6 = new rk[][]{dn.field_g, mf.field_s, Bzip2State.field_e};
+        rk[][] var6 = new rk[][]{dn.field_g, UiWidget.field_s, Bzip2State.field_e};
         int[][] var19 = new int[4][];
         int[][] var16 = var19;
         int[][] var7 = var16;

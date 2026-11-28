@@ -42,7 +42,7 @@ final class uk {
             }
             var5 = MouseInputListener.a(var3, (byte) -127);
             if (var5 == null) {
-              stackIn_14_0 = sg.a(-1326, var4);
+              stackIn_14_0 = ModalDialog.a(-1326, var4);
               return stackIn_14_0;
             }
             stackIn_12_0 = var5;
@@ -60,7 +60,7 @@ final class uk {
           } else {
             stackIn_18_2 = "{...}";
           }
-          throw dd.wrapClientException((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(')').toString());
+          throw DraggableWidgetContainer.wrapClientException((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(')').toString());
         }
     }
 
@@ -238,7 +238,7 @@ final class uk {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw dd.wrapClientException((Throwable) ((Object) var1), "uk.C(" + param0 + ')');
+          throw DraggableWidgetContainer.wrapClientException((Throwable) ((Object) var1), "uk.C(" + param0 + ')');
         }
     }
 

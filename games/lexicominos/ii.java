@@ -4,7 +4,7 @@
 final class ii extends ql implements WidgetActivationListener {
     private InteractiveWidget field_R;
 
-    ii(eg param0, oc param1) {
+    ii(ModalDialogHost param0, oc param1) {
         super(param0, 200, 150);
         Object var3 = null;
         Object stackIn_12_0 = null;
@@ -13,7 +13,7 @@ final class ii extends ql implements WidgetActivationListener {
         StringBuilder stackIn_15_1 = null;
         String stackIn_16_2 = null;
         RuntimeException decompiledCaughtException = null;
-        w var4 = null;
+        UiWidget var4 = null;
         try {
           var3 = null;
           if (DebouncedFieldValidator.field_c == param1) {
@@ -33,14 +33,14 @@ final class ii extends ql implements WidgetActivationListener {
               }
             }
           }
-          var4 = new w((String) (var3), (vd) null);
+          var4 = new UiWidget((String) (var3), (WidgetEventListener) null);
           var4.field_j = this.field_j;
           var4.field_v = 80;
           var4.field_t = 0;
           var4.field_o = 50;
-          var4.field_i = (rd) ((Object) new DefaultTextWidgetRenderer(ValidatedTextField.field_T, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true));
-          this.b((byte) 104, var4);
-          this.field_R = this.a((vd) (this), true, NodeHashTableIterator.field_d);
+          var4.field_i = (WidgetRenderer) ((Object) new DefaultTextWidgetRenderer(ValidatedTextField.field_T, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true));
+          this.addChild((byte) 104, var4);
+          this.field_R = this.a((WidgetEventListener) (this), true, NodeHashTableIterator.field_d);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -122,7 +122,7 @@ final class ii extends ql implements WidgetActivationListener {
             return;
           }
           var7 = (String) null;
-          discarded$1 = this.a((vd) null, true, (String) null);
+          discarded$1 = this.a((WidgetEventListener) null, true, (String) null);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -138,7 +138,7 @@ final class ii extends ql implements WidgetActivationListener {
         }
     }
 
-    private final InteractiveWidget a(vd param0, boolean param1, String param2) {
+    private final InteractiveWidget a(WidgetEventListener param0, boolean param1, String param2) {
         InteractiveWidget var4 = null;
         RuntimeException var4_ref = null;
         int var5 = 0;
@@ -151,12 +151,12 @@ final class ii extends ql implements WidgetActivationListener {
         RuntimeException decompiledCaughtException = null;
         try {
           var4 = new InteractiveWidget(param2, param0);
-          var4.field_i = (rd) ((Object) new v());
+          var4.field_i = (WidgetRenderer) ((Object) new v());
           var5 = this.field_v - 6;
           this.field_v = this.field_v + 38;
-          var4.a(30, -30 + this.field_j, param1, var5, 15);
-          this.b((byte) 56, var4);
-          this.d(59);
+          var4.setBounds(30, -30 + this.field_j, param1, var5, 15);
+          this.addChild((byte) 56, var4);
+          this.refreshLayout(59);
           stackIn_1_0 = var4;
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -189,15 +189,15 @@ final class ii extends ql implements WidgetActivationListener {
           var4 += 2;
           if (param1) {
             var4++;
-            return jf.field_C[var4];
+            return LabeledWidgetContainer.field_C[var4];
           }
-          return jf.field_C[var4];
+          return LabeledWidgetContainer.field_C[var4];
         }
         if (!param1) {
-          return jf.field_C[var4];
+          return LabeledWidgetContainer.field_C[var4];
         }
         var4++;
-        return jf.field_C[var4];
+        return LabeledWidgetContainer.field_C[var4];
     }
 
     static {

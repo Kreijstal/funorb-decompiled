@@ -80,7 +80,7 @@ final class SecondaryNodeDequeIterator implements Iterator {
         }
         String var1 = kf.a(17241);
         un.field_k = new LoginPanel(var1, (String) null, true, false, false);
-        dc.field_a.a(hb.field_x, (byte) 82);
+        dc.field_a.showDialog(hb.field_x, (byte) 82);
         hb.field_x.c(un.field_k, 33);
         if (param0 > 22) {
           hb.field_x.j(0);

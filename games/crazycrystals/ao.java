@@ -47,7 +47,7 @@ final class ao {
                 cp.field_k[var2] = true;
               }
             }
-            ah.field_g = ei.field_A;
+            ah.field_g = LabeledWidgetContainer.field_A;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

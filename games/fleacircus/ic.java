@@ -7,7 +7,7 @@ final class ic extends jj implements WidgetActivationListener {
     static char[] field_db;
     private InteractiveWidget field_cb;
 
-    private final InteractiveWidget a(int param0, String param1, kd param2) {
+    private final InteractiveWidget a(int param0, String param1, WidgetEventListener param2) {
         InteractiveWidget var4 = null;
         RuntimeException var4_ref = null;
         int var5 = 0;
@@ -28,9 +28,9 @@ final class ic extends jj implements WidgetActivationListener {
             var6 = (InteractiveWidget) null;
             this.onWidgetActivated(-90, -88, -85, 85, (InteractiveWidget) null);
           }
-          var4.a(15, -16 + (this.field_u - 14), var5, 30, 80);
-          this.a((UiComponent) (var4), (byte) -43);
-          this.b(false);
+          var4.setBounds(15, -16 + (this.field_u - 14), var5, 30, 80);
+          this.addChild((UiComponent) (var4), (byte) -43);
+          this.refreshLayout(false);
           stackIn_3_0 = var4;
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -67,13 +67,13 @@ final class ic extends jj implements WidgetActivationListener {
         if (param0 >= -118) {
           return;
         }
-        nb.field_a.i(-72);
+        nb.field_a.closeAllDialogs(-72);
         if (ProxyAuthenticationRequiredException.field_g != null) {
-          nb.field_a.b(ProxyAuthenticationRequiredException.field_g, (byte) -35);
+          nb.field_a.showDialog(ProxyAuthenticationRequiredException.field_g, (byte) -35);
           return;
         }
         ProxyAuthenticationRequiredException.field_g = new nd(nb.field_a, ResourceArchive.field_e);
-        nb.field_a.b(ProxyAuthenticationRequiredException.field_g, (byte) -35);
+        nb.field_a.showDialog(ProxyAuthenticationRequiredException.field_g, (byte) -35);
     }
 
     public final void onWidgetActivated(int param0, int param1, int param2, int param3, InteractiveWidget param4) {
@@ -105,7 +105,7 @@ final class ic extends jj implements WidgetActivationListener {
         }
     }
 
-    ic(f param0, fc param1) {
+    ic(ModalDialogHost param0, fc param1) {
         super(param0, 200, 150);
         Object var3 = null;
         UiComponent var4 = null;
@@ -134,14 +134,14 @@ final class ic extends jj implements WidgetActivationListener {
           } else {
             var3 = sa.field_b;
           }
-          var4 = new UiComponent((String) (var3), (kd) null);
+          var4 = new UiComponent((String) (var3), (WidgetEventListener) null);
           var4.field_u = this.field_u;
           var4.field_j = 80;
           var4.field_z = 50;
           var4.field_y = 0;
           var4.field_p = (ComponentLayout) ((Object) new DefaultTextWidgetRenderer(nb.field_c, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true));
-          this.a(var4, (byte) -102);
-          this.field_cb = this.a(-28732, RichTextWidget.field_O, (kd) (this));
+          this.addChild(var4, (byte) -102);
+          this.field_cb = this.a(-28732, RichTextWidget.field_O, (WidgetEventListener) (this));
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

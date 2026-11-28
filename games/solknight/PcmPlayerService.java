@@ -234,7 +234,7 @@ class PcmPlayerService {
           if (var1 != 0) {
             field_p.field_e = true;
             while (field_p.field_f) {
-              i.sleepMillis((byte) 109, 50L);
+              ModalDialogHost.sleepMillis((byte) 109, 50L);
             }
             field_p = null;
           }

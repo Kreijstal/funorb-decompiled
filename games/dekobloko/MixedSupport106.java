@@ -32,7 +32,7 @@ final class MixedSupport106 {
         int integerLocal19;
         integerLocal19 = DekoBlokoClient.obfuscationControl ? 1 : 0;
         AccountFieldStatusIndicator.performAction1206((byte) 104);
-        if (UiComponentPart006.integerState0137 < 0) {
+        if (LabeledWidgetContainer.integerState0137 < 0) {
           DirectByteStorage.sceneWidgetState0034.stringState0598 = null;
           stackSceneWidgetLocal10 = UiComponentPart011.sceneWidgetState0035;
           stackBooleanLocal11 = false;
@@ -70,7 +70,7 @@ final class MixedSupport106 {
             }
           }
         } else {
-          DirectByteStorage.sceneWidgetState0034.stringState0598 = NodeHashTableIterator.substituteIndexedPlaceholders(94, RenderingSupport007.stringState0306, new String[]{Integer.toString(UiComponentPart006.integerState0137)});
+          DirectByteStorage.sceneWidgetState0034.stringState0598 = NodeHashTableIterator.substituteIndexedPlaceholders(94, RenderingSupport007.stringState0306, new String[]{Integer.toString(LabeledWidgetContainer.integerState0137)});
           stackSceneWidgetLocal1 = UiComponentPart011.sceneWidgetState0035;
           stackBooleanLocal2 = false;
           stackBooleanLocal3 = (booleanArgument1) && (!booleanArgument3) && (!LobbyRoomRow.booleanState0202) && (null == MixedSupport016.sceneWidgetPart013State0001) && (UiComponentPart011.sceneWidgetPart013State0002 == null);
@@ -110,7 +110,7 @@ final class MixedSupport106 {
             }
           }
         }
-        if (0 != UiComponentPart029.sceneWidgetState0109.integerState0891) {
+        if (0 != DraggableWidgetContainer.sceneWidgetState0109.integerState0891) {
           if (1 == UiComponentPart002.integerArrayState0014.length &&
             MixedSupport053.integerState0272 != UiComponentPart002.integerArrayState0014[0]) {
             MixedSupport053.integerState0272 = UiComponentPart002.integerArrayState0014[0];
@@ -145,10 +145,10 @@ final class MixedSupport106 {
         RuntimeException caughtExceptionLocal9 = null;
         integerLocal3 = DekoBlokoClient.obfuscationControl ? 1 : 0;
         try {
-          MixedSupport005.uiComponentPart016State0001.computeBoolean0217(ResourceSupport003.integerState0554, true, ComponentContainer.integerState0379, 29166);
-          MixedSupport005.uiComponentPart016State0001.performAction0837(0);
+          MixedSupport005.uiComponentPart016State0001.processPointerInput(ResourceSupport003.integerState0554, true, ComponentContainer.integerState0379, 29166);
+          MixedSupport005.uiComponentPart016State0001.advanceDialogs(0);
           while (DualNodeDeque.computeBoolean0027(-128)) {
-            MixedSupport005.uiComponentPart016State0001.computeBoolean0209(MixedSupport146.integerState0931, ArchiveRequestManager.characterState0002, (byte) 123);
+            MixedSupport005.uiComponentPart016State0001.processKeyInput(MixedSupport146.integerState0931, ArchiveRequestManager.characterState0002, (byte) 123);
           }
           if (UiComponentPart001.integerState0034 != -1) {
             integerLocal1 = UiComponentPart001.integerState0034;
@@ -160,7 +160,7 @@ final class MixedSupport106 {
             stackIntegerLocal5 = 3;
             return stackIntegerLocal5;
           }
-          if (UiComponentPart016.mixedSupport004State0001 == AccountFieldStatusIndicator.mixedSupport004State0003) {
+          if (ModalDialogHost.mixedSupport004State0001 == AccountFieldStatusIndicator.mixedSupport004State0003) {
             stackIntegerLocal6 = 1;
             return stackIntegerLocal6;
           }

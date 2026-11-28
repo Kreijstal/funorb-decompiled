@@ -302,7 +302,7 @@ final class ib {
         if (this.field_q) {
           var8_double = 6.283185307179586 * Math.random();
           this.field_b = 3.5 * ji.a(65535, var8_double);
-          this.field_p = 3.5 * pj.a(var8_double, 32768);
+          this.field_p = 3.5 * DequeWidgetContainer.a(var8_double, 32768);
         }
         if (this.field_h) {
           this.field_p = -3.0;

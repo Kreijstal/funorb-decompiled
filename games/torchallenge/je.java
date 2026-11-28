@@ -204,9 +204,9 @@ final class je {
         int var3 = 0;
         var3 = TorChallenge.field_F ? 1 : 0;
         try {
-          if (kj.field_G == -1 &&
+          if (DequeWidgetContainer.field_G == -1 &&
             sd.field_b == -1) {
-            kj.field_G = ConfirmedEmailAvailabilityValidator.field_u;
+            DequeWidgetContainer.field_G = ConfirmedEmailAvailabilityValidator.field_u;
             sd.field_b = ph.field_d;
           }
           bk.field_p = bk.field_p + 1;
@@ -251,17 +251,17 @@ final class je {
               }
             }
             ul.field_n = sd.field_b;
-            bi.field_h = kj.field_G;
+            bi.field_h = DequeWidgetContainer.field_G;
           }
           if (!sj.field_R &&
             cf.field_a > bk.field_p &&
             ek.field_P) {
-            bi.field_h = kj.field_G;
+            bi.field_h = DequeWidgetContainer.field_G;
             ul.field_n = sd.field_b;
             bk.field_p = 0;
           }
           ie.field_g = param1;
-          kj.field_G = -1;
+          DequeWidgetContainer.field_G = -1;
           sd.field_b = -1;
           if (sj.field_R) {
             if (bk.field_p != gi.field_e) {

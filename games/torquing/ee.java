@@ -786,7 +786,7 @@ final class ee extends am {
           if (param0 == null) {
             return null;
           }
-          var2 = new CoverageBitmapFont(param0, PacketBuffer.field_o, na.field_G, vo.field_b, PasswordValidator.field_o, cq.field_y, pn.field_b);
+          var2 = new CoverageBitmapFont(param0, PacketBuffer.field_o, LabeledWidgetContainer.field_G, vo.field_b, PasswordValidator.field_o, cq.field_y, pn.field_b);
           if (param1 != 7028) {
             ee.a(false);
           }

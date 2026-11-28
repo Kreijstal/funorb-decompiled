@@ -30,7 +30,7 @@ final class MixedSupport002 {
         }
         if (integerArgument1 >= -25) {
           indexedSpriteArrayState0001 = (IndexedSprite[]) null;
-          if (UiComponentPart016.mixedSupport004State0001 == AccountFieldStatusIndicator.mixedSupport004State0003) {
+          if (ModalDialogHost.mixedSupport004State0001 == AccountFieldStatusIndicator.mixedSupport004State0003) {
             return BirthDateTextFields.stringState0435;
           }
           if (!ThemeTips.mixedSupport119State0001.computeBoolean1561(92)) {
@@ -38,7 +38,7 @@ final class MixedSupport002 {
           }
           return PlayerNamePrompt.stringState0217;
         }
-        if (UiComponentPart016.mixedSupport004State0001 == AccountFieldStatusIndicator.mixedSupport004State0003) {
+        if (ModalDialogHost.mixedSupport004State0001 == AccountFieldStatusIndicator.mixedSupport004State0003) {
           return BirthDateTextFields.stringState0435;
         }
         if (!ThemeTips.mixedSupport119State0001.computeBoolean1561(92)) {

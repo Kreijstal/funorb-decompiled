@@ -229,7 +229,7 @@ final class MessageKeys {
                 }
                 var2 = bc.a("error_js5connect_full", false);
                 if (null != var2) {
-                  j.field_P = ll.a(0, var2);
+                  LabeledWidgetContainer.field_P = ll.a(0, var2);
                 }
                 var2 = bc.a("error_js5connect", false);
                 if (null != var2) {
@@ -1778,7 +1778,7 @@ final class MessageKeys {
                 }
                 var2 = bc.a("create_alert_passlength", false);
                 if (null != var2) {
-                  kh.field_M = ll.a(param0 ^ 3, var2);
+                  ModalDialog.field_M = ll.a(param0 ^ 3, var2);
                 }
                 var2 = bc.a("create_alert_passcontainsname", false);
                 if (null != var2) {
@@ -2098,7 +2098,7 @@ final class MessageKeys {
                 }
                 var2 = bc.a("quit", false);
                 if (var2 != null) {
-                  kh.field_I = ll.a(0, var2);
+                  ModalDialog.field_I = ll.a(0, var2);
                 }
                 var2 = bc.a("login_createaccount", false);
                 if (null != var2) {
@@ -2832,7 +2832,7 @@ final class MessageKeys {
                 }
                 var2 = bc.a("fs_accept_countdown_sing", false);
                 if (var2 != null) {
-                  hj.field_H = ll.a(0, var2);
+                  DropTargetWidgetContainer.field_H = ll.a(0, var2);
                 }
                 var2 = bc.a("fs_accept_countdown_pl", false);
                 if (var2 != null) {
@@ -2888,7 +2888,7 @@ final class MessageKeys {
                 }
                 var2 = bc.a("mb_full_access_1", false);
                 if (null != var2) {
-                  d.field_J = ll.a(param0 - 3, var2);
+                  ModalDialogHost.field_J = ll.a(param0 - 3, var2);
                 }
                 var2 = bc.a("mb_full_access_2", false);
                 if (null != var2) {

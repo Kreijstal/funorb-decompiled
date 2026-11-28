@@ -34,7 +34,7 @@ final class fk extends kl {
               255 == var4.field_p) && (null != qd.field_c &&
               qd.field_c[var3_int])) {
               qd.field_c[var3_int] = false;
-              sd.field_J = sd.field_J - 1;
+              AlphaWidgetContainer.field_J = AlphaWidgetContainer.field_J - 1;
             }
             if (var4 != null) {
               if (var4.field_p != 255) {
@@ -185,8 +185,8 @@ final class fk extends kl {
                 if (var3 != null &&
                   255 != var3.field_p) {
                   if (!qd.field_c[var2]) {
-                    if (sd.field_J < 4) {
-                      sd.field_J = sd.field_J + 1;
+                    if (AlphaWidgetContainer.field_J < 4) {
+                      AlphaWidgetContainer.field_J = AlphaWidgetContainer.field_J + 1;
                       qd.field_c[var2] = true;
                       if (var3.field_b.field_n == var3.field_b.field_i) {
                         var3.field_b.playOnceThenIdle(62, var3.field_n.field_u);
@@ -196,19 +196,19 @@ final class fk extends kl {
                       }
                     }
                   } else {
-                    sd.field_J = sd.field_J - 1;
+                    AlphaWidgetContainer.field_J = AlphaWidgetContainer.field_J - 1;
                     qd.field_c[var2] = false;
                     var3.field_b.playOnceThenIdle(107, var3.field_n.field_v);
                   }
                 }
               }
               stackIn_39_0 = this.field_o;
-              stackIn_40_1 = (sd.field_J > 0) && (4 >= sd.field_J);
+              stackIn_40_1 = (AlphaWidgetContainer.field_J > 0) && (4 >= AlphaWidgetContainer.field_J);
               stackIn_39_0.field_w = stackIn_40_1;
             }
           } else {
-            if (0 < sd.field_J &&
-              sd.field_J <= 4) {
+            if (0 < AlphaWidgetContainer.field_J &&
+              AlphaWidgetContainer.field_J <= 4) {
               var6 = gm.field_d.field_a;
               var2_ref_hb__ = var6;
               for (var3_int = 0; var6.length > var3_int; var3_int++) {
@@ -441,7 +441,7 @@ final class fk extends kl {
         if (param0 != 37) {
           return;
         }
-        da.a(pi.field_i, cm.field_M, this.field_a >> 1, 1917623617, (IntrusiveNode.field_c.field_H + 36 >> 1) + 7, IntrusiveNode.field_c);
+        SingleChildWidgetContainer.a(pi.field_i, cm.field_M, this.field_a >> 1, 1917623617, (IntrusiveNode.field_c.field_H + 36 >> 1) + 7, IntrusiveNode.field_c);
         this.d((byte) -123);
         SoftwareRasterizer.fillRectangle(44, 64, 141, 53, 65793);
         rp.a(4, 133, (byte) 108, 48, 45, kc.field_S, 68);
@@ -465,7 +465,7 @@ final class fk extends kl {
           this.field_u = mf.a(16711680, 72, 12, 72, (byte) -83);
           qd.field_c = new boolean[8];
           this.field_o.field_w = false;
-          sd.field_J = 0;
+          AlphaWidgetContainer.field_J = 0;
           discarded$0 = new rh(58, 394, 80, 160, 16711680, 768, 249);
           discarded$1 = new rh(580, 394, 80, 160, 16711680, 768, 249);
           qh.a(-13716, this.field_o, 24);

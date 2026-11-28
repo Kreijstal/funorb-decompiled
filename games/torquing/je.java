@@ -12,7 +12,7 @@ final class je implements WidgetRenderer {
     private BitmapFont field_h;
     static boolean field_c;
 
-    public final void a(int param0, int param1, int param2, boolean param3, UiWidget param4) {
+    public final void paintWidget(int param0, int param1, int param2, boolean param3, UiWidget param4) {
         int stackIn_7_0 = 0;
         RuntimeException stackIn_22_0 = null;
         StringBuilder stackIn_22_1 = null;
@@ -31,14 +31,14 @@ final class je implements WidgetRenderer {
             return;
           }
           if (!param4.field_s &&
-            !param4.g(2)) {
+            !param4.isFocused(2)) {
             stackIn_7_0 = 2188450;
           } else {
             stackIn_7_0 = 3249872;
           }
           var6_int = stackIn_7_0;
           this.field_h.drawParagraph("<u=" + Integer.toString(var6_int, 16) + ">" + param4.text + "</u>", param4.x + param2, param4.y + param1, param4.width, param4.height, var6_int, -1, this.field_b, this.field_d, this.field_h.field_t + this.field_h.field_x);
-          if (!param4.g(2)) {
+          if (!param4.isFocused(2)) {
             return;
           }
           var7 = this.field_h.stringWidth(param4.text);

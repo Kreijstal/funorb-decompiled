@@ -587,7 +587,7 @@ final class PlayerState {
                           if (0 == this.field_Y &&
                             !this.field_i &&
                             param3) {
-                            qg.a(param5 - 18112, 500, 26, 0);
+                            DraggableWidgetContainer.a(param5 - 18112, 500, 26, 0);
                           }
                           if (param4 == 2) {
                             return 1;
@@ -633,7 +633,7 @@ final class PlayerState {
                       if (this.field_Y == 0 &&
                         !this.field_i &&
                         param3) {
-                        qg.a(1, 500, 26, 0);
+                        DraggableWidgetContainer.a(1, 500, 26, 0);
                       }
                       if (param4 == 1) {
                         return 2;
@@ -714,7 +714,7 @@ final class PlayerState {
 
     final static void appendPlayerMatchStats(int param0, int param1, boolean param2, int param3, int param4, int param5) {
         ProxySocketConnector.field_f[BlastEffectRenderer.field_i] = param3;
-        ac.field_I[BlastEffectRenderer.field_i] = BlastEffectRenderer.field_i;
+        DropTargetWidgetContainer.field_I[BlastEffectRenderer.field_i] = BlastEffectRenderer.field_i;
         on.field_e[BlastEffectRenderer.field_i] = param0;
         if (!(param0 <= FrameTimer.field_b)) {
           id.field_d = param0;

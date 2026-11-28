@@ -108,7 +108,7 @@ final class dn {
     final static void a(int param0, byte param1) {
         try {
           try {
-            JavaScriptBridge.callWithArguments(bh.i(81), true, new Object[]{new Integer(param0)}, "resizing");
+            JavaScriptBridge.callWithArguments(ArrayWidgetContainer.i(81), true, new Object[]{new Integer(param0)}, "resizing");
           } catch (Throwable throwable) {
           }
           int var2 = -73 % ((-52 - param1) / 35);

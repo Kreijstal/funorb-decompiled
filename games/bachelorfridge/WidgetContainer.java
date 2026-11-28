@@ -3,18 +3,18 @@
  */
 import java.util.*;
 
-class WidgetContainer extends UiWidget implements e {
+class WidgetContainer extends UiWidget implements WidgetContainerMarker {
     static Random field_z;
     static String[] field_B;
     IntrusiveDeque children;
     static ResourceArchive field_y;
 
-    void a(int param0, int param1, byte param2, int param3, int param4) {
-        super.a(param0, param1, param2, param3, param4);
-        this.h(param2 ^ -104);
+    void setBounds(int param0, int param1, byte param2, int param3, int param4) {
+        super.setBounds(param0, param1, param2, param3, param4);
+        this.refreshChildLayouts(param2 ^ -104);
     }
 
-    private final void h(int param0) {
+    private final void refreshChildLayouts(int param0) {
         int var4 = BachelorFridge.field_y;
         IntrusiveDequeCursor var2 = new IntrusiveDequeCursor(this.children);
         UiWidget var5 = (UiWidget) (var2.b((byte) 86));
@@ -30,7 +30,7 @@ class WidgetContainer extends UiWidget implements e {
         int var5 = 123 / ((-20 - param0) / 54);
         if (param2 == 0 &&
           this.renderer != null) {
-          this.renderer.a(param3, (UiWidget) (this), 32679, param1, true);
+          this.renderer.paintWidget(param3, (UiWidget) (this), 32679, param1, true);
         }
         IntrusiveDequeCursor var6 = new IntrusiveDequeCursor(this.children);
         UiWidget var7 = (UiWidget) (var6.c((byte) 120));
@@ -40,7 +40,7 @@ class WidgetContainer extends UiWidget implements e {
         }
     }
 
-    private final void a(int param0, Hashtable param1, StringBuilder param2, byte param3) {
+    private final void appendChildDebugTrees(int param0, Hashtable param1, StringBuilder param2, byte param3) {
         StringBuilder discarded$2 = null;
         int var7 = 0;
         StringBuilder discarded$3 = null;
@@ -63,7 +63,7 @@ class WidgetContainer extends UiWidget implements e {
             for (var7 = 0; param0 >= var7; var7++) {
               discarded$3 = param2.append(' ');
             }
-            var6.a(param1, 1 + param0, (byte) 113, param2);
+            var6.appendDebugTree(param1, 1 + param0, (byte) 113, param2);
             var6 = (UiWidget) (var5.a((byte) 0));
           }
           if (param3 > -77) {
@@ -173,7 +173,7 @@ class WidgetContainer extends UiWidget implements e {
         }
     }
 
-    UiWidget g(int param0) {
+    UiWidget getFocusedChild(int param0) {
         IntrusiveDequeCursor var2;
         UiWidget var3;
         int var4;
@@ -231,7 +231,7 @@ class WidgetContainer extends UiWidget implements e {
         }
     }
 
-    final boolean a(int param0, UiWidget param1) {
+    final boolean focusPreviousChild(int param0, UiWidget param1) {
         RuntimeException var3 = null;
         UiWidget var4 = null;
         IntrusiveDequeCursor var5 = null;
@@ -251,7 +251,7 @@ class WidgetContainer extends UiWidget implements e {
           var9 = new IntrusiveDequeCursor(this.children);
           if (param0 >= -121) {
             var8 = (UiWidget) null;
-            this.b(-33, -39, 54, -107, -45, (UiWidget) null, -22);
+            this.pointerPressed(-33, -39, 54, -107, -45, (UiWidget) null, -22);
           }
           var4 = (UiWidget) (var9.c((byte) 121));
           while (var4 != null) {
@@ -283,7 +283,7 @@ class WidgetContainer extends UiWidget implements e {
         }
     }
 
-    final boolean b(int param0, int param1, int param2, int param3, int param4, UiWidget param5, int param6) {
+    final boolean pointerPressed(int param0, int param1, int param2, int param3, int param4, UiWidget param5, int param6) {
         RuntimeException var8 = null;
         UiWidget var9 = null;
         int var10 = 0;
@@ -296,12 +296,12 @@ class WidgetContainer extends UiWidget implements e {
         try {
           var11 = new IntrusiveDequeCursor(this.children);
           if (param1 != -7375) {
-            this.a(78, -90, (byte) 87, -47, 82);
+            this.setBounds(78, -90, (byte) 87, -47, 82);
           }
           var9 = (UiWidget) (var11.b((byte) -103));
           while (var9 != null) {
             if (var9.isLinked((byte) -106)) {
-              if (!var9.b(param0, -7375, param2 + this.x, param3, param4 + this.y, param5, param6)) {
+              if (!var9.pointerPressed(param0, -7375, param2 + this.x, param3, param4 + this.y, param5, param6)) {
                 var9 = (UiWidget) (var11.a((byte) 0));
                 continue;
               }
@@ -358,9 +358,9 @@ class WidgetContainer extends UiWidget implements e {
             return false;
           }
           if (InvincibleEvent.field_q[81]) {
-            stackIn_16_0 = this.a(-128, param3);
+            stackIn_16_0 = this.focusPreviousChild(-128, param3);
           } else {
-            stackIn_16_0 = this.b(param3, 1);
+            stackIn_16_0 = this.focusNextChild(param3, 1);
           }
           return stackIn_16_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -414,7 +414,7 @@ class WidgetContainer extends UiWidget implements e {
         }
     }
 
-    final StringBuilder a(Hashtable param0, int param1, byte param2, StringBuilder param3) {
+    final StringBuilder appendDebugTree(Hashtable param0, int param1, byte param2, StringBuilder param3) {
         RuntimeException var5 = null;
         StringBuilder stackIn_6_0 = null;
         RuntimeException stackIn_9_0 = null;
@@ -427,9 +427,9 @@ class WidgetContainer extends UiWidget implements e {
           if (param2 < 20) {
             field_z = (Random) null;
           }
-          if (this.a(param0, param1, param3, (byte) 122)) {
-            this.a(9, param0, param3, param1);
-            this.a(param1, param0, param3, (byte) -108);
+          if (this.beginDebugTreeEntry(param0, param1, param3, (byte) 122)) {
+            this.appendDebugProperties(9, param0, param3, param1);
+            this.appendChildDebugTrees(param1, param0, param3, (byte) -108);
           }
           stackIn_6_0 = (StringBuilder) (param3);
           return stackIn_6_0;
@@ -453,7 +453,7 @@ class WidgetContainer extends UiWidget implements e {
         }
     }
 
-    final boolean a(int param0, int param1, int param2, int param3, int param4, UiWidget param5, int param6) {
+    final boolean handleWheel(int param0, int param1, int param2, int param3, int param4, UiWidget param5, int param6) {
         IntrusiveDequeCursor var8 = null;
         RuntimeException var8_ref = null;
         UiWidget var9 = null;
@@ -469,7 +469,7 @@ class WidgetContainer extends UiWidget implements e {
           while (var9 != null) {
             if (var9.isLinked((byte) -106)) {
               if (var9.isFocused(1023) &&
-                var9.a(param0, 13, param2, param3, param4, param5, param6)) {
+                var9.handleWheel(param0, 13, param2, param3, param4, param5, param6)) {
                 return true;
               }
               var9 = (UiWidget) (var8.a((byte) 0));
@@ -506,7 +506,7 @@ class WidgetContainer extends UiWidget implements e {
         var2 = new IntrusiveDequeCursor(this.children);
         if (param0 != 16) {
           var6 = (StringBuilder) null;
-          this.a(-68, (Hashtable) null, (StringBuilder) null, (byte) -17);
+          this.appendChildDebugTrees(-68, (Hashtable) null, (StringBuilder) null, (byte) -17);
         }
         var3 = (UiWidget) (var2.b((byte) -122));
         while (var3 != null) {
@@ -519,7 +519,7 @@ class WidgetContainer extends UiWidget implements e {
         return null;
     }
 
-    final void c(UiWidget param0, int param1) {
+    final void addChild(UiWidget param0, int param1) {
         try {
           this.children.addLast(param0, true);
           int var3_int = 69 % ((param1 + 70) / 50);
@@ -530,9 +530,9 @@ class WidgetContainer extends UiWidget implements e {
 
     final boolean isFocused(int param0) {
         if (param0 != 1023) {
-          this.b(-75);
+          this.getMaximumRenderLayer(-75);
         }
-        return this.g(-29) != null ? true : false;
+        return this.getFocusedChild(-29) != null ? true : false;
     }
 
     WidgetContainer(int param0, int param1, int param2, int param3, WidgetRenderer param4) {
@@ -540,7 +540,7 @@ class WidgetContainer extends UiWidget implements e {
         this.children = new IntrusiveDeque();
     }
 
-    final boolean b(UiWidget param0, int param1) {
+    final boolean focusNextChild(UiWidget param0, int param1) {
         RuntimeException var3 = null;
         UiWidget var4 = null;
         IntrusiveDequeCursor var5 = null;
@@ -599,7 +599,7 @@ class WidgetContainer extends UiWidget implements e {
         field_B = null;
     }
 
-    final int b(int param0) {
+    final int getMaximumRenderLayer(int param0) {
         int var5 = 0;
         int var6 = BachelorFridge.field_y;
         int var2 = 0;
@@ -609,7 +609,7 @@ class WidgetContainer extends UiWidget implements e {
         IntrusiveDequeCursor var3 = new IntrusiveDequeCursor(this.children);
         UiWidget var4 = (UiWidget) (var3.b((byte) 36));
         while (var4 != null) {
-          var5 = var4.b(-61);
+          var5 = var4.getMaximumRenderLayer(-61);
           if (var5 > var2) {
             var2 = var5;
           }
@@ -618,7 +618,7 @@ class WidgetContainer extends UiWidget implements e {
         return var2;
     }
 
-    final void a(int param0, int param1, byte param2, UiWidget param3, int param4, int param5) {
+    final void pointerReleased(int param0, int param1, byte param2, UiWidget param3, int param4, int param5) {
         IntrusiveDequeCursor var7 = null;
         UiWidget var8 = null;
         int var9 = 0;
@@ -633,7 +633,7 @@ class WidgetContainer extends UiWidget implements e {
           var8 = (UiWidget) (var7.b((byte) -128));
           while (var8 != null) {
             if (var8.isLinked((byte) -106)) {
-              var8.a(param0 + this.x, param1, (byte) -101, param3, param4, param5 + this.y);
+              var8.pointerReleased(param0 + this.x, param1, (byte) -101, param3, param4, param5 + this.y);
               var8 = (UiWidget) (var7.a((byte) 0));
               continue;
             }

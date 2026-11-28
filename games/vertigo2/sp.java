@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class sp extends nm {
+abstract class sp extends ModalDialog {
     private int field_L;
     static String field_K;
     private int field_S;
@@ -15,7 +15,7 @@ abstract class sp extends nm {
     static boolean field_V;
     private int field_N;
 
-    boolean j(int param0) {
+    boolean advanceDialogAnimation(int param0) {
         int var2 = 0;
         int var3 = 0;
         int fieldTemp$0 = 0;
@@ -36,12 +36,12 @@ abstract class sp extends nm {
             var3 = (-this.field_N + this.field_T) * var4 / var5 + this.field_N;
             var2 = (this.field_S - this.field_M) * var4 / var5 + this.field_M;
           }
-          this.b(-1535749535, var2, var3);
+          this.setCenteredSize(-1535749535, var2, var3);
         }
         if (param0 != 17) {
           field_P = (String) null;
         }
-        return super.j(17);
+        return super.advanceDialogAnimation(17);
     }
 
     void a(byte param0) {
@@ -87,7 +87,7 @@ abstract class sp extends nm {
         if (this.field_L <= 0) {
           return;
         }
-        this.b(param0 ^ 1535749512, this.field_S, this.field_T);
+        this.setCenteredSize(param0 ^ 1535749512, this.field_S, this.field_T);
         if (param0 != -23) {
           return;
         }
@@ -212,18 +212,18 @@ abstract class sp extends nm {
         }
     }
 
-    sp(sd param0, int param1, int param2) {
+    sp(ModalDialogHost param0, int param1, int param2) {
         super(param0, param1, param2);
         this.field_R = 0;
         this.field_L = 0;
     }
 
-    boolean a(int param0) {
+    boolean snapDialogAnimation(int param0) {
         if (param0 != -1) {
           return true;
         }
         this.f((byte) -23);
-        return super.a(-1);
+        return super.snapDialogAnimation(-1);
     }
 
     public static void resetStaticState(int param0) {
@@ -263,7 +263,7 @@ abstract class sp extends nm {
 
     final void a(int param0, int param1, int param2, byte param3) {
         if (0 >= param0) {
-          this.b(-1535749535, param1, param2);
+          this.setCenteredSize(-1535749535, param1, param2);
           return;
         }
         this.field_R = 0;

@@ -23,7 +23,7 @@ final class SectorCacheStore {
         String stackIn_13_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (!nb.a(param0, param4, (byte) -4, param1)) {
+          if (!DequeWidgetContainer.a(param0, param4, (byte) -4, param1)) {
             stackIn_2_0 = null;
             return (BinaryBitmapFont) (stackIn_2_0);
           }

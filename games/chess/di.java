@@ -81,7 +81,7 @@ final class di extends ci {
               if (AccountRegistrationPanel.field_R.field_h == var4) {
                 var5 = kj.field_h;
               } else {
-                var5 = kg.field_V;
+                var5 = LabeledWidgetContainer.field_V;
               }
             } else {
               var5 = le.field_f;
@@ -123,7 +123,7 @@ final class di extends ci {
             if (var4 == -2) {
               var6 = Integer.toString(var2);
             }
-            var7Lifetime1 = kn.a(!(0 > var4), false, var6);
+            var7Lifetime1 = SingleChildWidgetContainer.a(!(0 > var4), false, var6);
             var8Lifetime1 = -(var7Lifetime1 >> 1) + ob.field_C;
             if (0 <= var4) {
               if (var4 != AccountRegistrationPanel.field_R.field_h) {
@@ -597,7 +597,7 @@ final class di extends ci {
               ArchiveProvider.field_b[var18] = ArchiveProvider.field_b[var18] + ql.field_a[var15][var18];
             }
             hb.a(false, th.field_c, (byte) -98, ArchiveProvider.field_b, false, var17, true);
-            lf.a(var8Lifetime1, var17, var14, var9Lifetime1, 29521, var12Lifetime1, var13Lifetime1, var7Lifetime1);
+            AlphaWidgetContainer.a(var8Lifetime1, var17, var14, var9Lifetime1, 29521, var12Lifetime1, var13Lifetime1, var7Lifetime1);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

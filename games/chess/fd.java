@@ -39,14 +39,14 @@ final class fd extends IntrusiveNode {
         if (param1 == 7) {
           le.field_f = param3;
           kj.field_h = param0;
-          kg.field_V = param2;
+          LabeledWidgetContainer.field_V = param2;
           return;
         }
         ResourceArchive var5 = (ResourceArchive) null;
         fd.a((byte) 74, (ResourceArchive) null);
         le.field_f = param3;
         kj.field_h = param0;
-        kg.field_V = param2;
+        LabeledWidgetContainer.field_V = param2;
     }
 
     public static void clearStaticReferences(byte param0) {

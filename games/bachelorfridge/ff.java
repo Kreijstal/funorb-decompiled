@@ -17,7 +17,7 @@ final class ff extends DefaultWidgetRenderer {
         field_u = null;
     }
 
-    public final void a(int param0, UiWidget param1, int param2, int param3, boolean param4) {
+    public final void paintWidget(int param0, UiWidget param1, int param2, int param3, boolean param4) {
         int stackIn_6_0 = 0;
         int stackIn_13_0 = 0;
         int stackIn_16_0 = 0;

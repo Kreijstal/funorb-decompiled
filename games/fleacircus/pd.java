@@ -31,7 +31,7 @@ final class pd extends IntrusiveNode {
             }
             var2_int = param1.indexOf('@');
             if (var2_int == -1) {
-              stackIn_9_0 = tf.field_H;
+              stackIn_9_0 = AlphaWidgetContainer.field_H;
               return stackIn_9_0;
             }
             var3 = param1.substring(0, var2_int);
@@ -44,7 +44,7 @@ final class pd extends IntrusiveNode {
             stackIn_12_0 = var5;
             return stackIn_12_0;
           }
-          stackIn_4_0 = tf.field_G;
+          stackIn_4_0 = AlphaWidgetContainer.field_G;
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

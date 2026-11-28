@@ -789,7 +789,7 @@ final class sf implements cl {
                   var2.unlink(false);
                 }
                 var2.field_n.setVolume(128 + oo.field_d * var2.field_l >> 8);
-                var2 = (fa) (oi.field_F.nextBackward(4));
+                var2 = (fa) (DraggableWidgetContainer.field_F.nextBackward(4));
                 return;
               }
             }
@@ -806,8 +806,8 @@ final class sf implements cl {
             }
             break;
           }
-          if (oi.field_F != null) {
-            var2Lifetime1 = (fa) (oi.field_F.beginBackward(-24172));
+          if (DraggableWidgetContainer.field_F != null) {
+            var2Lifetime1 = (fa) (DraggableWidgetContainer.field_F.beginBackward(-24172));
             while (var2Lifetime1 != null) {
               if (var4 != 0) {
                 return;
@@ -818,7 +818,7 @@ final class sf implements cl {
               } else {
                 var2Lifetime1.field_n.setVolume(128 + oo.field_d * var2Lifetime1.field_l >> 8);
               }
-              var2Lifetime1 = (fa) (oi.field_F.nextBackward(4));
+              var2Lifetime1 = (fa) (DraggableWidgetContainer.field_F.nextBackward(4));
             }
           }
           return;

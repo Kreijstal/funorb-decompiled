@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class ug extends oe {
+abstract class ug extends ModalDialog {
     private int field_Y;
     private int field_eb;
     private int field_fb;
@@ -12,7 +12,7 @@ abstract class ug extends oe {
     static String field_cb;
     private int field_gb;
 
-    boolean l(int param0) {
+    boolean advanceDialogAnimation(int param0) {
         int var2 = 0;
         int var3 = 0;
         int fieldTemp$0 = 0;
@@ -36,9 +36,9 @@ abstract class ug extends oe {
             var3 = var4 * (this.field_Y - this.field_db) / var5 + this.field_db;
             var2 = this.field_gb + (-this.field_gb + this.field_fb) * var4 / var5;
           }
-          this.a(param0 ^ 75, var3, var2);
+          this.setCenteredSize(param0 ^ 75, var3, var2);
         }
-        return super.l(-6);
+        return super.advanceDialogAnimation(-6);
     }
 
     final static byte[] copyBytes(byte[] param0, int param1) {
@@ -73,15 +73,15 @@ abstract class ug extends oe {
         }
     }
 
-    boolean j(int param0) {
+    boolean snapDialogAnimation(int param0) {
         this.m(71);
         if (param0 >= -35) {
           return true;
         }
-        return super.j(-104);
+        return super.snapDialogAnimation(-104);
     }
 
-    ug(sh param0, int param1, int param2) {
+    ug(ModalDialogHost param0, int param1, int param2) {
         super(param0, param1, param2);
         this.field_eb = 0;
         this.field_ab = 0;
@@ -91,7 +91,7 @@ abstract class ug extends oe {
         if (this.field_ab <= 0) {
           return;
         }
-        this.a(-34, this.field_Y, this.field_fb);
+        this.setCenteredSize(-34, this.field_Y, this.field_fb);
         this.field_ab = 0;
         this.g((byte) -9);
         if (param0 <= 53) {
@@ -225,7 +225,7 @@ abstract class ug extends oe {
 
     final void a(int param0, int param1, int param2, int param3) {
         if (param1 <= 0) {
-          this.a(-109, param0, param3);
+          this.setCenteredSize(-109, param0, param3);
           return;
         }
         this.field_eb = 0;

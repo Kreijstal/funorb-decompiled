@@ -32,7 +32,7 @@ final class id {
 
     final static void a(int param0) {
         if (sq.field_c) {
-          mg.field_O = true;
+          LabeledWidgetContainer.field_O = true;
           BufferedSocket.a((byte) 52, true);
           int var1 = 39 % ((param0 - 88) / 32);
           hn.field_w = 0;

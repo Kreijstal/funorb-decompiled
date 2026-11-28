@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class DisplayNameSelectionPanel extends ii implements NameSuggestionListener, WidgetActivationListener {
+final class DisplayNameSelectionPanel extends DequeWidgetContainer implements NameSuggestionListener, WidgetActivationListener {
     static String field_O;
     private InteractiveWidget field_M;
     NameSuggestionsPanel field_P;
@@ -68,16 +68,16 @@ final class DisplayNameSelectionPanel extends ii implements NameSuggestionListen
         return param1 + 1;
     }
 
-    final void a(int param0, int param1, lm param2, boolean param3) {
+    final void updatePointer(int param0, int param1, UiWidget param2, boolean param3) {
         try {
-          super.a(param0, param1, param2, param3);
+          super.updatePointer(param0, param1, param2, param3);
           this.field_M.field_B = this.canSubmitDisplayName(124);
         } catch (RuntimeException runtimeException) {
           throw AccountServiceResult.wrapClientException((Throwable) ((Object) runtimeException), "gk.B(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
     }
 
-    final boolean a(lm param0, char param1, int param2, byte param3) {
+    final boolean handleKey(UiWidget param0, char param1, int param2, byte param3) {
         RuntimeException var5 = null;
         boolean stackIn_8_0 = false;
         boolean stackIn_11_0 = false;
@@ -89,17 +89,17 @@ final class DisplayNameSelectionPanel extends ii implements NameSuggestionListen
           if (param3 < 55) {
             DisplayNameSelectionPanel.a(62, (byte) 25);
           }
-          if (super.a(param0, param1, param2, (byte) 98)) {
+          if (super.handleKey(param0, param1, param2, (byte) 98)) {
             return true;
           }
           if (98 == param2) {
-            stackIn_8_0 = this.a(param0, (byte) 71);
+            stackIn_8_0 = this.focusPreviousChild(param0, (byte) 71);
             return stackIn_8_0;
           }
           if (param2 != 99) {
             return false;
           }
-          stackIn_11_0 = this.a((byte) -5, param0);
+          stackIn_11_0 = this.focusNextChild((byte) -5, param0);
           return stackIn_11_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -146,7 +146,7 @@ final class DisplayNameSelectionPanel extends ii implements NameSuggestionListen
         }
     }
 
-    private final int a(String param0, int param1, lm param2, String param3, int param4, int param5) {
+    private final int a(String param0, int param1, UiWidget param2, String param3, int param4, int param5) {
         RuntimeException var7 = null;
         int stackIn_3_0 = 0;
         RuntimeException stackIn_6_0 = null;
@@ -264,10 +264,10 @@ final class DisplayNameSelectionPanel extends ii implements NameSuggestionListen
         field_O = null;
     }
 
-    private final int a(String param0, int param1, int param2, String param3, lm param4, int param5, int param6) {
+    private final int a(String param0, int param1, int param2, String param3, UiWidget param4, int param5, int param6) {
         RuntimeException var8 = null;
         tn var9 = null;
-        dg var10 = null;
+        LabeledWidgetContainer var10 = null;
         int stackIn_2_0 = 0;
         int stackIn_4_0 = 0;
         RuntimeException stackIn_7_0 = null;
@@ -283,11 +283,11 @@ final class DisplayNameSelectionPanel extends ii implements NameSuggestionListen
             stackIn_2_0 = -27;
             return stackIn_2_0;
           }
-          var10 = new dg(20, param6, param5 + 120, 25, param4, false, 120, 3, lp.field_C, 16777215, param3);
-          this.b((byte) -61, var10);
+          var10 = new LabeledWidgetContainer(20, param6, param5 + 120, 25, param4, false, 120, 3, lp.field_C, 16777215, param3);
+          this.addChild((byte) -61, var10);
           var9 = new tn(((FieldValidatorProvider) ((Object) param4)).getFieldValidator(-120), param0, 126, param6 + var10.field_s, 25 + param5, param1);
-          var9.field_n = (pg) (this);
-          this.b((byte) -43, var9);
+          var9.field_n = (WidgetEventListener) (this);
+          this.addChild((byte) -43, var9);
           stackIn_4_0 = var9.field_s + var10.field_s;
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -317,35 +317,35 @@ final class DisplayNameSelectionPanel extends ii implements NameSuggestionListen
     }
 
     public DisplayNameSelectionPanel() {
-        super(0, 0, 496, 0, (ca) null);
-        this.field_R = new ValidatedTextField("", (pg) null, 12);
+        super(0, 0, 496, 0, (WidgetRenderer) null);
+        this.field_R = new ValidatedTextField("", (WidgetEventListener) null, 12);
         DefaultTextWidgetRenderer var1 = new DefaultTextWidgetRenderer(ta.field_e, 0, 0, 0, 0, 16777215, -1, 3, 0, lp.field_C.field_H, -1, 2147483647, true);
-        lm var2 = new lm(PasswordValidator.field_q, var1, (pg) null);
-        this.field_M = new InteractiveWidget(DebouncedFieldValidator.field_g, (pg) null);
-        this.field_N = new InteractiveWidget(Bzip2State.field_v, (pg) null);
+        UiWidget var2 = new UiWidget(PasswordValidator.field_q, var1, (WidgetEventListener) null);
+        this.field_M = new InteractiveWidget(DebouncedFieldValidator.field_g, (WidgetEventListener) null);
+        this.field_N = new InteractiveWidget(Bzip2State.field_v, (WidgetEventListener) null);
         this.field_R.field_i = ByteStorage.field_d;
         this.field_R.setFieldValidator(new AccountNameAvailabilityValidator(this.field_R), 10508);
         this.field_M.field_B = false;
-        this.field_M.field_o = (ca) ((Object) new na());
-        this.field_N.field_o = (ca) ((Object) new oa());
-        this.field_R.field_o = (ca) ((Object) new mc(10000536));
+        this.field_M.field_o = (WidgetRenderer) ((Object) new na());
+        this.field_N.field_o = (WidgetRenderer) ((Object) new oa());
+        this.field_R.field_o = (WidgetRenderer) ((Object) new mc(10000536));
         int var3 = 20;
         int var4 = 4;
         int var5 = 200;
-        var2.b(0, 270, var3, 20, 50);
-        this.b((byte) -49, var2);
+        var2.setBounds(0, 270, var3, 20, 50);
+        this.addChild((byte) -49, var2);
         var3 += 50;
         var3 = var3 + (5 + this.a(an.field_z, 170, this.field_R, wf.field_B, 21287, var3));
-        this.field_M.b(0, var5, var3, 496 - var5 >> 1, 40);
-        this.field_N.b(0, 60, var3 + 15, 3 + var4, 40);
-        this.field_N.field_n = (pg) (this);
-        this.field_M.field_n = (pg) (this);
-        this.b((byte) -90, this.field_M);
-        this.b((byte) -115, this.field_N);
+        this.field_M.setBounds(0, var5, var3, 496 - var5 >> 1, 40);
+        this.field_N.setBounds(0, 60, var3 + 15, 3 + var4, 40);
+        this.field_N.field_n = (WidgetEventListener) (this);
+        this.field_M.field_n = (WidgetEventListener) (this);
+        this.addChild((byte) -90, this.field_M);
+        this.addChild((byte) -115, this.field_N);
         this.field_P = new NameSuggestionsPanel((NameSuggestionListener) (this));
-        this.field_P.b(0, this.field_x - this.field_R.field_q + (-this.field_R.field_x - 60), 20, 60 + this.field_R.field_x + this.field_R.field_q, 150);
-        this.b((byte) -77, this.field_P);
-        this.b(0, 496, 0, 0, 55 + (var3 + var4));
+        this.field_P.setBounds(0, this.field_x - this.field_R.field_q + (-this.field_R.field_x - 60), 20, 60 + this.field_R.field_x + this.field_R.field_q, 150);
+        this.addChild((byte) -77, this.field_P);
+        this.setBounds(0, 496, 0, 0, 55 + (var3 + var4));
     }
 
     private final void submitDisplayName(byte param0) {
@@ -360,13 +360,13 @@ final class DisplayNameSelectionPanel extends ii implements NameSuggestionListen
 
     final static void a(int param0, RaiderDefinition param1, int param2, int param3, int param4) {
         try {
-          sd.a(param0, gd.field_E, 76, param3, param1.field_m, param4);
+          AlphaWidgetContainer.a(param0, gd.field_E, 76, param3, param1.field_m, param4);
           if (param2 < 94) {
             field_L = (gn) null;
           }
-          sd.a(40 + param0, jj.field_b, 66, param3, param1.field_r, param4);
-          sd.a(param0, ProxyAuthenticationRequiredException.field_d, 87, param3, param1.field_b, param4 + 18);
-          sd.a(param0 + 40, pk.field_o, 89, param3, param1.field_o, param4 + 18);
+          AlphaWidgetContainer.a(40 + param0, jj.field_b, 66, param3, param1.field_r, param4);
+          AlphaWidgetContainer.a(param0, ProxyAuthenticationRequiredException.field_d, 87, param3, param1.field_b, param4 + 18);
+          AlphaWidgetContainer.a(param0 + 40, pk.field_o, 89, param3, param1.field_o, param4 + 18);
         } catch (RuntimeException runtimeException) {
           throw AccountServiceResult.wrapClientException((Throwable) ((Object) runtimeException), "gk.J(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
@@ -392,15 +392,15 @@ final class DisplayNameSelectionPanel extends ii implements NameSuggestionListen
 
     public final void onWidgetActivated(InteractiveWidget param0, byte param1, int param2, int param3, int param4) {
         RuntimeException var6 = null;
-        lm var7 = null;
+        UiWidget var7 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 != 98) {
-            var7 = (lm) null;
-            this.a(-18, 59, (lm) null, false);
+            var7 = (UiWidget) null;
+            this.updatePointer(-18, 59, (UiWidget) null, false);
           }
           if (param0 == this.field_N) {
             rc.b(param1 ^ 4);

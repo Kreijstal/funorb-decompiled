@@ -149,11 +149,11 @@ final class ul extends IntrusiveNode {
             }
             var21 = stackIn_38_0;
             var22 = tj.field_a[var15Lifetime1];
-            var23 = si.field_K[var15Lifetime1];
+            var23 = ModalDialogHost.field_K[var15Lifetime1];
             var24 = tj.field_a[var16];
-            var25 = si.field_K[var16];
+            var25 = ModalDialogHost.field_K[var16];
             var26 = tj.field_a[var17];
-            var27 = si.field_K[var17];
+            var27 = ModalDialogHost.field_K[var17];
             if (var19 == var18 &&
               var19 == var20) {
               var28 = var55[var18];
@@ -252,7 +252,7 @@ final class ul extends IntrusiveNode {
 
     final static void c(int param0) {
         kl.field_e = ByteStorage.b(param0 ^ 1259);
-        t.field_b = new si();
+        t.field_b = new ModalDialogHost();
         if (param0 != -1247) {
           return;
         }

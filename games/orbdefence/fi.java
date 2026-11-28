@@ -1,10 +1,10 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class fi implements td {
+final class fi implements WidgetRenderer {
     static String field_a;
 
-    public final void a(int param0, int param1, pj param2, int param3, boolean param4) {
+    public final void paintWidget(int param0, int param1, UiWidget param2, int param3, boolean param4) {
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
         String stackIn_12_2 = null;
@@ -25,7 +25,7 @@ final class fi implements td {
             ((InteractiveWidget) (param2)).field_D) {
             var8.drawAdditive((-var8.field_s + param2.field_m >> 1) + 1 + var6_int, (-var8.field_t + param2.field_r >> 1) + var7 + 1, 256);
           }
-          if (!param2.d(-81)) {
+          if (!param2.isFocused(-81)) {
             return;
           }
           wh.a(-4 + param2.field_m, false, var6_int + 2, param2.field_r - 4, var7 + 2);
@@ -40,7 +40,7 @@ final class fi implements td {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw dd.wrapClientException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw DraggableWidgetContainer.wrapClientException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -85,7 +85,7 @@ final class fi implements td {
           } else {
             stackIn_18_2 = "{...}";
           }
-          throw dd.wrapClientException((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param2).append(')').toString());
+          throw DraggableWidgetContainer.wrapClientException((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param2).append(')').toString());
         }
     }
 

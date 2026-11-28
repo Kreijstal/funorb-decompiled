@@ -8,7 +8,7 @@ final class DiskArchiveRequest extends ArchiveRequest {
     static int[] field_u;
     int field_q;
     static int[] field_v;
-    static kj field_o;
+    static ModalDialogHost field_o;
     static int field_r;
 
     final byte[] getData(int param0) {

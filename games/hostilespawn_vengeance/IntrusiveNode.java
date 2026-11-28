@@ -218,7 +218,7 @@ class IntrusiveNode {
           }
           for (var3Lifetime2 = 1; var3Lifetime2 < 5; var3Lifetime2++) {
             for (var4_intLifetime1 = 0; var4_intLifetime1 <= 256; var4_intLifetime1 += 16) {
-              var9 = jn.field_F[ib.field_c];
+              var9 = AlphaWidgetContainer.field_F[ib.field_c];
               var9.field_c = (double)var4_intLifetime1;
               var9.field_j.setCoordinates((int)(-4.0 + 6.0 * Math.random()) + param0 % var2_int, 8360, (int)(-4.0 + 6.0 * Math.random()) + param0 / var2_int);
               var9.field_l.a(0.0, 0.0, 1);

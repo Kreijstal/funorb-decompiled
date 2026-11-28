@@ -52,7 +52,7 @@ final class tk extends InteractiveWidget {
         if (var10 <= 0) {
           return;
         }
-        var11 = ic.field_E[vb.field_a[param3][param0]][param2];
+        var11 = SingleChildWidgetContainer.field_E[vb.field_a[param3][param0]][param2];
         stackIn_5_0 = ((var11 & 32) <= 0) ? 0 : 1;
         var12 = stackIn_5_0;
         var13 = 0;
@@ -63,15 +63,15 @@ final class tk extends InteractiveWidget {
           var6 -= 64;
         }
         var14 = 0;
-        var11Lifetime1 = ic.field_E[var6][param2];
+        var11Lifetime1 = SingleChildWidgetContainer.field_E[var6][param2];
         stackIn_12_0 = ((var11Lifetime1 & 32) <= 0) ? 0 : 1;
         var13Lifetime1 = stackIn_12_0;
-        var11Lifetime2 = ic.field_E[var7][param2];
+        var11Lifetime2 = SingleChildWidgetContainer.field_E[var7][param2];
         stackIn_15_0 = ((var11Lifetime2 & 32) <= 0) ? 0 : 1;
         var14Lifetime1 = stackIn_15_0;
-        if (null != kj.field_C &&
-          null != kj.field_C[0]) {
-          var15 = kj.field_C[0].fullHeight;
+        if (null != DequeWidgetContainer.field_C &&
+          null != DequeWidgetContainer.field_C[0]) {
+          var15 = DequeWidgetContainer.field_C[0].fullHeight;
           var16 = param1 + (64 - var15);
           var17 = var16;
           var18 = param1 + param4;
@@ -95,7 +95,7 @@ final class tk extends InteractiveWidget {
         return;
     }
 
-    final boolean a(UiComponent param0, int param1) {
+    final boolean takeFocus(UiComponent param0, int param1) {
         RuntimeException var3 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -103,7 +103,7 @@ final class tk extends InteractiveWidget {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 != 0) {
-            this.a(-59, 121, false, 81);
+            this.drawWidget(-59, 121, false, 81);
           }
           return false;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -141,7 +141,7 @@ final class tk extends InteractiveWidget {
           var8 = var10;
           var7 = var8;
           var1 = var7;
-          var2 = mh.a(122, ic.field_C, "font", "");
+          var2 = mh.a(122, SingleChildWidgetContainer.field_C, "font", "");
           ProxySocketConnector.field_p = id.a(var10, var2, 256);
           var3 = vh.a(var2, 2, 33, var10, 16301089, 8015912);
           tf.field_x = (BitmapFont) ((Object) var3);
@@ -174,13 +174,13 @@ final class tk extends InteractiveWidget {
         }
     }
 
-    final void a(UiComponent param0, int param1, byte param2, int param3) {
+    final void updatePointer(UiComponent param0, int param1, byte param2, int param3) {
         if (param2 > -97) {
           return;
         }
         try {
           this.field_S = this.field_S + 1;
-          super.a(param0, param1, (byte) -112, param3);
+          super.updatePointer(param0, param1, (byte) -112, param3);
         } catch (RuntimeException runtimeException) {
           throw oj.wrapException((Throwable) ((Object) runtimeException), "tk.U(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
@@ -244,7 +244,7 @@ final class tk extends InteractiveWidget {
         }
     }
 
-    final void a(int param0, int param1, boolean param2, int param3) {
+    final void drawWidget(int param0, int param1, boolean param2, int param3) {
         int var5;
         int var6;
         rj var8;
@@ -255,7 +255,7 @@ final class tk extends InteractiveWidget {
         Sprite var13;
         Sprite var14;
         var11 = TorChallenge.field_F ? 1 : 0;
-        super.a(param0, param1, param2, param3);
+        super.drawWidget(param0, param1, param2, param3);
         if (param3 != 0) {
           return;
         }

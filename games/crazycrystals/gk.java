@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class gk implements wo {
+final class gk implements WidgetRenderer {
     private int field_f;
     private int field_b;
     static e field_e;
@@ -15,7 +15,7 @@ final class gk implements wo {
     private int field_g;
     private int field_c;
 
-    public final void a(int param0, boolean param1, int param2, qm param3, boolean param4) {
+    public final void paintWidget(int param0, boolean param1, int param2, UiWidget param3, boolean param4) {
         RuntimeException var6 = null;
         int var7 = 0;
         int var8 = 0;
@@ -24,7 +24,7 @@ final class gk implements wo {
         int var12 = 0;
         int var13 = 0;
         pa var14 = null;
-        qm stackIn_3_0 = null;
+        UiWidget stackIn_3_0 = null;
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
         String stackIn_16_2 = null;
@@ -34,7 +34,7 @@ final class gk implements wo {
         int var12Lifetime1;
         try {
           if (param3 instanceof pa) {
-            stackIn_3_0 = (qm) (param3);
+            stackIn_3_0 = (UiWidget) (param3);
           } else {
             stackIn_3_0 = null;
           }

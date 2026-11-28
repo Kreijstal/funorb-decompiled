@@ -87,12 +87,12 @@ final class vj {
 
     final static void a(int param0, boolean param1) {
         if (param0 == 1) {
-          wg.field_j.a(0, 0, 112);
+          wg.field_j.drawAllLayers(0, 0, 112);
           return;
         }
         float[] var3 = (float[]) null;
         vj.a((float[]) null, (byte) 50, (float[]) null);
-        wg.field_j.a(0, 0, 112);
+        wg.field_j.drawAllLayers(0, 0, 112);
     }
 
     static {

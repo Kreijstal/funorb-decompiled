@@ -190,7 +190,7 @@ final class CreatureType {
               if (var7 != 2) {
                 return;
               }
-              if (!hl.a((byte) 104, var10.field_j)) {
+              if (!AlphaWidgetContainer.a((byte) 104, var10.field_j)) {
                 return;
               }
             }
@@ -214,7 +214,7 @@ final class CreatureType {
             if (var7 != 2) {
               return;
             }
-            if (!hl.a((byte) 104, var10.field_j)) {
+            if (!AlphaWidgetContainer.a((byte) 104, var10.field_j)) {
               return;
             }
           }
@@ -241,7 +241,7 @@ final class CreatureType {
               if (var7Lifetime1 != 2) {
                 return;
               }
-              if (!hl.a((byte) 104, var11.field_j)) {
+              if (!AlphaWidgetContainer.a((byte) 104, var11.field_j)) {
                 return;
               }
             }
@@ -263,7 +263,7 @@ final class CreatureType {
             if (var7Lifetime1 != 2) {
               return;
             }
-            if (!hl.a((byte) 104, var11.field_j)) {
+            if (!AlphaWidgetContainer.a((byte) 104, var11.field_j)) {
               return;
             }
           }
@@ -286,7 +286,7 @@ final class CreatureType {
             if (var7Lifetime1 != 2) {
               return;
             }
-            if (!hl.a((byte) 104, var11.field_j)) {
+            if (!AlphaWidgetContainer.a((byte) 104, var11.field_j)) {
               return;
             }
           }
@@ -305,7 +305,7 @@ final class CreatureType {
           if (var7Lifetime1 != 2) {
             return;
           }
-          if (!hl.a((byte) 104, var11.field_j)) {
+          if (!AlphaWidgetContainer.a((byte) 104, var11.field_j)) {
             return;
           }
           if (var8Lifetime1 >= 1) {

@@ -2186,7 +2186,7 @@ final class MenuScreen {
                 ie.field_b.restartLevelRun(1000);
                 this.field_c.transitionGameScreen(true, -1, 10, param1);
                 DisplayNameSelectionPanel.a(100, DisplayNameSelectionPanel.field_F[23]);
-                jh.a(ResourceArchive.field_k[ie.field_b.field_q], 0);
+                SingleChildWidgetContainer.a(ResourceArchive.field_k[ie.field_b.field_q], 0);
                 if (var11 == 0) {
                   break regionExit2;
                 }
@@ -2691,7 +2691,7 @@ final class MenuScreen {
           stackIn_111_0 = ~this.field_h;
         }
         if (stackIn_111_0 == -10) {
-          var2Lifetime2 = jd.a(param0 ^ 93);
+          var2Lifetime2 = DropTargetWidgetContainer.a(param0 ^ 93);
           if (~wi.field_a.length == ~nh.field_k) {
             stackIn_115_0 = 1 + wi.field_a[nh.field_k - 1];
           } else {

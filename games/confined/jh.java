@@ -19,7 +19,7 @@ final class jh extends InteractiveWidget {
         jh.clearStaticReferences(false);
     }
 
-    final boolean a(int param0, int param1, byte param2, int param3, fj param4, int param5, int param6) {
+    final boolean pointerPressed(int param0, int param1, byte param2, int param3, UiWidget param4, int param5, int param6) {
         RuntimeException stackIn_18_0 = null;
         StringBuilder stackIn_18_1 = null;
         String stackIn_19_2 = null;
@@ -31,7 +31,7 @@ final class jh extends InteractiveWidget {
         int var12 = 0;
         var12 = Confined.field_J ? 1 : 0;
         try {
-          if (!super.a(param0, param1, param2, param3, param4, param5, param6)) {
+          if (!super.pointerPressed(param0, param1, param2, param3, param4, param5, param6)) {
             return false;
           }
           var8_int = param1 - this.field_q + (-param0 - this.field_P);

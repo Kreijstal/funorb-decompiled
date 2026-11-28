@@ -14,7 +14,7 @@ class wa extends n implements WidgetActivationListener {
     private ek field_vb;
     private boolean field_tb;
 
-    final boolean a(int param0, char param1, byte param2, UiComponent param3) {
+    final boolean handleKey(int param0, char param1, byte param2, UiComponent param3) {
         RuntimeException var5 = null;
         boolean stackIn_8_0 = false;
         RuntimeException stackIn_11_0 = null;
@@ -26,7 +26,7 @@ class wa extends n implements WidgetActivationListener {
             return false;
           }
           if (param0 != 13) {
-            stackIn_8_0 = super.a(param0, param1, (byte) 80, param3);
+            stackIn_8_0 = super.handleKey(param0, param1, (byte) 80, param3);
             return stackIn_8_0;
           }
           this.o(77);
@@ -75,7 +75,7 @@ class wa extends n implements WidgetActivationListener {
     final void m(int param0) {
         this.field_vb.b(23927, 2121792, 4210752);
         sj var2 = new sj(this, this.field_yb, bk.field_n);
-        var2.a(15, param0 + 2070, kj.field_E);
+        var2.a(15, param0 + 2070, DequeWidgetContainer.field_E);
         if (param0 == 13) {
           this.c(0, var2);
           return;
@@ -165,11 +165,11 @@ class wa extends n implements WidgetActivationListener {
               if (this.field_tb) {
                 stackIn_15_3 = qb.field_e;
               } else {
-                stackIn_15_3 = b.field_R;
+                stackIn_15_3 = ModalDialog.field_R;
               }
               ((sj) (Object) stackIn_14_0).a(stackIn_14_1, stackIn_14_2, stackIn_15_3);
             } else {
-              var6.a((byte) 46, (gg) (this), qb.field_e);
+              var6.a((byte) 46, (WidgetEventListener) (this), qb.field_e);
             }
           }
           if (param2 != 3) {
@@ -178,7 +178,7 @@ class wa extends n implements WidgetActivationListener {
                 var6.a(9, 2083, qc.field_b);
               } else {
                 if (param2 == 9) {
-                  var6.a((byte) 46, (gg) (this), vj.field_e);
+                  var6.a((byte) 46, (WidgetEventListener) (this), vj.field_e);
                 }
               }
             } else {
@@ -203,7 +203,7 @@ class wa extends n implements WidgetActivationListener {
         }
     }
 
-    wa(si param0, BitmapFont param1, String param2, boolean param3, boolean param4) {
+    wa(ModalDialogHost param0, BitmapFont param1, String param2, boolean param3, boolean param4) {
         super(param0, new sj((wa) null, param1, param2), 77, 10, 10);
         try {
           this.field_tb = param3 ? true : false;
@@ -213,7 +213,7 @@ class wa extends n implements WidgetActivationListener {
           this.field_ub = false;
           this.field_vb = new ek(13, 50, 274, 30, 15, 2113632, 4210752);
           this.field_vb.field_L = true;
-          this.a(0, this.field_vb);
+          this.addChild(0, this.field_vb);
         } catch (RuntimeException runtimeException) {
           throw oj.wrapException((Throwable) ((Object) runtimeException), "wa.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ')');
         }

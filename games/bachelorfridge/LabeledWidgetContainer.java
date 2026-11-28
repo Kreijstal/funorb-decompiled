@@ -1,0 +1,177 @@
+/*
+ * Decompiled by CFR-JS 0.4.0.
+ */
+import java.io.*;
+
+final class LabeledWidgetContainer extends WidgetWrapper {
+    private BitmapFont field_G;
+    static int field_I;
+    private boolean field_M;
+    private int field_J;
+    static IndexedSprite field_K;
+    private String field_C;
+    static long field_F;
+    static boolean field_D;
+    static boolean field_L;
+    private int field_E;
+    private int field_H;
+
+    LabeledWidgetContainer(int param0, int param1, int param2, int param3, UiWidget param4, boolean param5, int param6, int param7, BitmapFont param8, int param9, String param10) {
+        super(param0, param1, param2, param3, (WidgetRenderer) null, (WidgetListener) null);
+        boolean stackIn_4_1 = false;
+        int stackIn_10_0 = 0;
+        RuntimeException stackIn_14_0 = null;
+        StringBuilder stackIn_14_1 = null;
+        String stackIn_15_2 = null;
+        StringBuilder stackIn_17_1 = null;
+        String stackIn_18_2 = null;
+        StringBuilder stackIn_20_1 = null;
+        String stackIn_21_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        int var12_int = 0;
+        RuntimeException var12 = null;
+        int var13 = 0;
+        int var14 = 0;
+        try {
+          this.field_J = param9;
+          this.field_E = param7;
+          this.field_H = param6;
+          this.field_G = param8;
+          this.child = param4;
+          stackIn_4_1 = (param5);
+          this.field_M = stackIn_4_1;
+          this.field_C = param10;
+          var12_int = -this.field_E + this.field_H;
+          var13 = this.field_G.measureWrappedHeight(param10, var12_int, this.field_G.field_u) + this.field_E * 2;
+          if (param3 >= var13) {
+            var13 = param3;
+          } else {
+            this.setBounds(param0, var13, (byte) 59, param2, param1);
+          }
+          if (this.field_M) {
+            stackIn_10_0 = 0;
+          } else {
+            stackIn_10_0 = this.field_E * 2 + this.field_H;
+          }
+          var14 = stackIn_10_0;
+          this.child.setBounds(var14, param3 - this.field_E * 2, (byte) 59, -this.field_H + param2 - this.field_E * 3, (-param3 + var13 >> 1) + this.field_E);
+          return;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var12 = decompiledCaughtException;
+          stackIn_14_0 = var12;
+          stackIn_14_1 = new StringBuilder().append("ge.<init>(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
+          if (param4 == null) {
+            stackIn_15_2 = "null";
+          } else {
+            stackIn_15_2 = "{...}";
+          }
+          stackIn_17_1 = ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(',');
+          if (param8 == null) {
+            stackIn_18_2 = "null";
+          } else {
+            stackIn_18_2 = "{...}";
+          }
+          stackIn_20_1 = ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param9).append(',');
+          if (param10 == null) {
+            stackIn_21_2 = "null";
+          } else {
+            stackIn_21_2 = "{...}";
+          }
+          throw pe.wrapException((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(')').toString());
+        }
+    }
+
+    final static boolean a(int param0, boolean param1) {
+        try {
+          long dupTemp$1 = 0L;
+          IOException var2 = null;
+          BitPacketBuffer var4 = null;
+          BitPacketBuffer var5 = null;
+          int stackIn_13_0 = 0;
+          Throwable decompiledCaughtException = null;
+          if (null == SauceOfFlameAnimation.field_x) {
+            SauceOfFlameAnimation.field_x = cc.field_e.requestDirectSocket((byte) 121, oca.field_p, CurryArenaTheme.field_h);
+          }
+          if (0 == SauceOfFlameAnimation.field_x.status) {
+            return false;
+          }
+          dupTemp$1 = f.correctedCurrentTimeMillis((byte) 73);
+          vla.field_v = dupTemp$1;
+          DebouncedFieldValidator.field_c = dupTemp$1;
+          if (param0 != -29510) {
+            field_K = (IndexedSprite) null;
+          }
+          if (SauceOfFlameAnimation.field_x.status != 1) {
+            eia.field_a = mk.field_o;
+          } else {
+            try {
+              dma.field_b = new BufferedSocket((java.net.Socket) (SauceOfFlameAnimation.field_x.result), cc.field_e);
+              var4 = ig.field_m;
+              var5 = var4;
+              sja.field_fb.position = 0;
+              stackIn_13_0 = (!param1) ? -1 : -2;
+              f.field_b = stackIn_13_0;
+              ef.field_l = stackIn_13_0;
+              bd.field_j = stackIn_13_0;
+              eia.field_a = rga.field_c;
+              var5.position = 0;
+              HazmatAnimation.a(sja.field_fb, fl.field_q, (byte) -106, GameKeyHandler.field_a, kha.field_k);
+              ConfirmedEmailAvailabilityValidator.a(-1, 117);
+            } catch (java.io.IOException decompiledCaughtParameter0) {
+              decompiledCaughtException = decompiledCaughtParameter0;
+              var2 = (IOException) (Object) decompiledCaughtException;
+              eia.field_a = mk.field_o;
+              SauceOfFlameAnimation.field_x = null;
+              return true;
+            }
+          }
+          SauceOfFlameAnimation.field_x = null;
+          return true;
+        } catch (RuntimeException | Error decompiledUncheckedException) {
+          throw decompiledUncheckedException;
+        } catch (Throwable decompiledCheckedException) {
+          throw new RuntimeException(decompiledCheckedException);
+        }
+    }
+
+    public static void clearStaticReferences(byte param0) {
+        field_K = null;
+        if (param0 >= -30) {
+          LabeledWidgetContainer.clearStaticReferences((byte) 35);
+        }
+    }
+
+    final String getTooltip(byte param0) {
+        int var2 = this.child.mouseOver ? 1 : 0;
+        this.child.mouseOver = this.mouseOver;
+        String var3 = this.child.getTooltip(param0);
+        this.child.mouseOver = var2 != 0 ? true : false;
+        return var3;
+    }
+
+    final void draw(byte param0, int param1, int param2, int param3) {
+        int var8 = 0;
+        int var5 = param3 + this.x;
+        int var6 = param1 + this.y;
+        int var7 = 44 % ((-20 - param0) / 54);
+        super.draw((byte) 123, param1, param2, param3);
+        if (0 == param2) {
+          var8 = this.field_M ? -this.field_H + this.width - this.field_E * 2 : 0;
+          this.field_G.drawParagraph(this.field_C, var5 - (-var8 - this.field_E), var6 + this.field_E, -this.field_E + this.field_H, -(this.field_E * 2) + this.height, this.field_J, -1, !this.field_M ? 2 : 0, 1, this.field_G.field_u);
+          return;
+        }
+    }
+
+    final static void a(int param0, int param1, boolean param2, BitmapFont param3, int param4, int param5, int param6, Sprite[] param7, int param8, byte param9, int param10, Sprite[] param11) {
+        try {
+          ResourceArchive.configureClientUi(param8, param3, param6, param6, param10, param7, param0, param3, param4, param5, param2, param11, param1, param8, 480);
+          int var12_int = 3 / ((param9 + 6) / 43);
+        } catch (RuntimeException runtimeException) {
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "ge.B(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + param5 + ',' + param6 + ',' + (param7 != null ? "{...}" : "null") + ',' + param8 + ',' + param9 + ',' + param10 + ',' + (param11 != null ? "{...}" : "null") + ')');
+        }
+    }
+
+    static {
+    }
+}

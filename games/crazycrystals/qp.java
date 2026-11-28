@@ -228,7 +228,7 @@ final class qp extends IntrusiveNode {
         qd.field_q = true;
         int var1 = 91 % ((-59 - param0) / 58);
         ne.field_d = true;
-        qe.field_g.g((byte) -122);
+        qe.field_g.closeAllDialogs((byte) -122);
         FrameTimer.a(gg.field_b, false, -13);
     }
 

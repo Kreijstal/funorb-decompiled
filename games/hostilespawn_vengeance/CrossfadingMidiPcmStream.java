@@ -103,7 +103,7 @@ final class CrossfadingMidiPcmStream extends PcmStream {
           if (param1 != 1) {
             field_v = (ReverbPcmStream) null;
           }
-          nh.field_E.setCoordinates(-1, 8360, -1);
+          LabeledWidgetContainer.field_E.setCoordinates(-1, 8360, -1);
           ha.field_t = param0;
           var5 = new GridPoint();
           var6 = ha.field_t;
@@ -121,7 +121,7 @@ final class CrossfadingMidiPcmStream extends PcmStream {
                 }
                 break;
               }
-              nh.field_E.copyCoordinatesFrom((byte) 46, TextHotspotBounds.field_m[var4].field_j);
+              LabeledWidgetContainer.field_E.copyCoordinatesFrom((byte) 46, TextHotspotBounds.field_m[var4].field_j);
               return;
             }
             if (var6 == 2) {
@@ -129,10 +129,10 @@ final class CrossfadingMidiPcmStream extends PcmStream {
                 if (TextHotspotBounds.field_m[var4Lifetime1].field_i != 4) {
                   continue;
                 }
-                nh.field_E.copyCoordinatesFrom((byte) 46, TextHotspotBounds.field_m[var4Lifetime1].field_j);
+                LabeledWidgetContainer.field_E.copyCoordinatesFrom((byte) 46, TextHotspotBounds.field_m[var4Lifetime1].field_j);
                 break;
               }
-              if (nh.field_E.field_e != -1) {
+              if (LabeledWidgetContainer.field_E.field_e != -1) {
                 return;
               }
               CrossfadingMidiPcmStream.a(0, param1 ^ 0);
@@ -144,13 +144,13 @@ final class CrossfadingMidiPcmStream extends PcmStream {
                 if (TextHotspotBounds.field_m[var4Lifetime2].field_i != 8) {
                   continue;
                 }
-                nh.field_E.copyCoordinatesFrom((byte) 46, TextHotspotBounds.field_m[var4Lifetime2].field_j);
+                LabeledWidgetContainer.field_E.copyCoordinatesFrom((byte) 46, TextHotspotBounds.field_m[var4Lifetime2].field_j);
                 break;
               }
               if (0 != bm.field_c) {
                 return;
               }
-              if (nh.field_E.field_e != -1) {
+              if (LabeledWidgetContainer.field_E.field_e != -1) {
                 return;
               }
               CrossfadingMidiPcmStream.a(0, param1 ^ 0);
@@ -159,7 +159,7 @@ final class CrossfadingMidiPcmStream extends PcmStream {
               return;
             }
             if (var6 == 5) {
-              nh.field_E.setCoordinates(40, 8360, 110);
+              LabeledWidgetContainer.field_E.setCoordinates(40, 8360, 110);
               return;
             }
             if (9 == var6) {
@@ -178,7 +178,7 @@ final class CrossfadingMidiPcmStream extends PcmStream {
                 }
                 break;
               }
-              nh.field_E.setCoordinates(-5 + var6_ref_oj.field_j.field_e, 8360, var6_ref_oj.field_j.field_g);
+              LabeledWidgetContainer.field_E.setCoordinates(-5 + var6_ref_oj.field_j.field_e, 8360, var6_ref_oj.field_j.field_g);
               return;
             }
             if (10 == var6) {
@@ -189,7 +189,7 @@ final class CrossfadingMidiPcmStream extends PcmStream {
                   if (var7.field_i >= 49 &&
                     var7.field_i <= 52) {
                     var6++;
-                    nh.field_E.copyCoordinatesFrom((byte) 46, var7.field_j);
+                    LabeledWidgetContainer.field_E.copyCoordinatesFrom((byte) 46, var7.field_j);
                   }
                   continue;
                 }
@@ -198,7 +198,7 @@ final class CrossfadingMidiPcmStream extends PcmStream {
               return;
             }
             if (13 == var6) {
-              nh.field_E.setCoordinates(-1, 8360, -1);
+              LabeledWidgetContainer.field_E.setCoordinates(-1, 8360, -1);
               return;
             }
             if (var6 == 14) {
@@ -207,7 +207,7 @@ final class CrossfadingMidiPcmStream extends PcmStream {
               }
               for (var4Lifetime5 = 0; var4Lifetime5 < ProxySocketFactory.field_j; var4Lifetime5++) {
                 if (TextHotspotBounds.field_m[var4Lifetime5].field_i == 127) {
-                  nh.field_E.copyCoordinatesFrom((byte) 46, TextHotspotBounds.field_m[var4Lifetime5].field_j);
+                  LabeledWidgetContainer.field_E.copyCoordinatesFrom((byte) 46, TextHotspotBounds.field_m[var4Lifetime5].field_j);
                   return;
                 }
               }
@@ -219,10 +219,10 @@ final class CrossfadingMidiPcmStream extends PcmStream {
             for (var4Lifetime6 = 0; var4Lifetime6 < ll.field_a; var4Lifetime6++) {
               if (wh.field_b[var4Lifetime6].field_i == 2 &&
                 11 == wh.field_b[var4Lifetime6].field_h) {
-                nh.field_E.copyCoordinatesFrom((byte) 46, wh.field_b[var4Lifetime6].field_j);
+                LabeledWidgetContainer.field_E.copyCoordinatesFrom((byte) 46, wh.field_b[var4Lifetime6].field_j);
               }
             }
-            if (nh.field_E.field_e != -1) {
+            if (LabeledWidgetContainer.field_E.field_e != -1) {
               return;
             }
             CrossfadingMidiPcmStream.a(0, 1);
@@ -235,10 +235,10 @@ final class CrossfadingMidiPcmStream extends PcmStream {
             while (var3 > var5.field_g) {
               var6Lifetime1 = ln.field_a.field_y[var5.getClampedTileIndex(-4)];
               if (148 == var6Lifetime1) {
-                nh.field_E.setCoordinates(-1 + var5.field_e, 8360, -1 + var5.field_g);
+                LabeledWidgetContainer.field_E.setCoordinates(-1 + var5.field_e, 8360, -1 + var5.field_g);
               }
               if (157 == var6Lifetime1) {
-                nh.field_E.setCoordinates(-2 + var5.field_e, 8360, var5.field_g - 2);
+                LabeledWidgetContainer.field_E.setCoordinates(-2 + var5.field_e, 8360, var5.field_g - 2);
               }
               var5.field_g = var5.field_g + 1;
             }
@@ -249,7 +249,7 @@ final class CrossfadingMidiPcmStream extends PcmStream {
           }
           if (0 == rl.field_c &&
             DebouncedFieldValidator.field_a) {
-            nh.field_E.setCoordinates(45, 8360, 37);
+            LabeledWidgetContainer.field_E.setCoordinates(45, 8360, 37);
           }
           if (1 != rl.field_c) {
             return;
@@ -257,7 +257,7 @@ final class CrossfadingMidiPcmStream extends PcmStream {
           if (!tg.field_a) {
             return;
           }
-          nh.field_E.setCoordinates(45, 8360, 37);
+          LabeledWidgetContainer.field_E.setCoordinates(45, 8360, 37);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

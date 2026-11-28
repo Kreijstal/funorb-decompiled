@@ -74,14 +74,14 @@ final class np extends UiPanel {
           var17.field_O = 1;
           this.field_Hb = new UiPanel(0L, param2);
           var8 = new UiPanel(0L, param3);
-          var9 = new UiPanel(0L, param3, ac.field_N);
+          var9 = new UiPanel(0L, param3, DropTargetWidgetContainer.field_N);
           var9.field_O = 1;
           var10 = 50;
           var11 = 0;
-          for (var12 = 0; sd.field_M.length > var12; var12++) {
+          for (var12 = 0; ModalDialogHost.field_M.length > var12; var12++) {
             var13 = new UiPanel(0L, param3, qr.field_k[var12]);
-            var14 = new UiPanel(0L, param3, sd.field_M[var12]);
-            var15 = param3.field_z.stringWidth(sd.field_M[var12]);
+            var14 = new UiPanel(0L, param3, ModalDialogHost.field_M[var12]);
+            var15 = param3.field_z.stringWidth(ModalDialogHost.field_M[var12]);
             var13.a(115, 65, 15, var10, 20);
             if (var11 < var15) {
               var11 = var15;

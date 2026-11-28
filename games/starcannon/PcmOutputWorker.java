@@ -123,7 +123,7 @@ final class PcmOutputWorker implements Runnable {
 
     final static int b(byte param0) {
         int var1 = -97 / ((param0 - 32) / 58);
-        return ie.field_D;
+        return AlphaWidgetContainer.field_D;
     }
 
     public static void clearStaticReferences(boolean param0) {

@@ -5,7 +5,7 @@ import java.io.*;
 
 final class qe extends ScoreModifier {
     static String field_h;
-    static ol field_g;
+    static ModalDialogHost field_g;
 
     public static void a(int param0) {
         if (param0 == 17659) {

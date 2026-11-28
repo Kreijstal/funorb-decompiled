@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ni implements de {
+final class ni implements WidgetRenderer {
     static int field_k;
     private int field_n;
     private int field_c;
@@ -17,7 +17,7 @@ final class ni implements de {
     private int field_e;
     static String[] field_f;
 
-    public final void a(int param0, boolean param1, int param2, int param3, UiWidget param4) {
+    public final void paintWidget(int param0, boolean param1, int param2, int param3, UiWidget param4) {
         UiWidget stackIn_3_0 = null;
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;

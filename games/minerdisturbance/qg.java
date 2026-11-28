@@ -3,7 +3,7 @@
  */
 import java.io.*;
 
-final class qg implements ad {
+final class qg implements WidgetRenderer {
     static int[] field_n;
     static dm field_d;
     private int field_i;
@@ -45,7 +45,7 @@ final class qg implements ad {
         }
     }
 
-    public final void a(int param0, int param1, fe param2, int param3, boolean param4) {
+    public final void paintWidget(int param0, int param1, UiWidget param2, int param3, boolean param4) {
         s var14 = null;
         int var7 = 0;
         int var8 = 0;
@@ -158,7 +158,7 @@ final class qg implements ad {
               return;
             }
             ResourceArchive.field_a = param5;
-            jc.field_E = param4;
+            SingleChildWidgetContainer.field_E = param4;
             mh.field_c = param2;
             if (mm.field_b.field_i == null) {
               return;

@@ -51,7 +51,7 @@ final class nb {
         return this;
     }
 
-    final void a(int param0, fe param1, on param2, int param3, int param4) {
+    final void a(int param0, UiWidget param1, on param2, int param3, int param4) {
         BitmapFont stackIn_19_0 = null;
         String stackIn_19_1 = null;
         int stackIn_19_2 = 0;
@@ -228,7 +228,7 @@ final class nb {
         this.field_d = null;
     }
 
-    final void a(int param0, fe param1, on param2, nb param3, int param4, int param5) {
+    final void a(int param0, UiWidget param1, on param2, nb param3, int param4, int param5) {
         RuntimeException stackIn_26_0 = null;
         StringBuilder stackIn_26_1 = null;
         String stackIn_27_2 = null;

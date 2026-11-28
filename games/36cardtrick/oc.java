@@ -71,7 +71,7 @@ final class oc {
         return this;
     }
 
-    final void a(int param0, lk param1, int param2, byte param3, nd param4) {
+    final void a(int param0, UiWidget param1, int param2, byte param3, nd param4) {
         BitmapFont stackIn_21_0 = null;
         String stackIn_21_1 = null;
         int stackIn_22_2 = 0;
@@ -220,7 +220,7 @@ final class oc {
             return false;
           }
           var8 = new AccountCreationResultPanel(sd.field_c, param1);
-          sd.field_c.b(var8, (byte) -121);
+          sd.field_c.showDialog(var8, (byte) -121);
           if (param5 != 0) {
             oc.clearStaticReferences(-71);
           }
@@ -268,7 +268,7 @@ final class oc {
         }
     }
 
-    final void a(int param0, lk param1, int param2, nd param3, oc param4, byte param5) {
+    final void a(int param0, UiWidget param1, int param2, nd param3, oc param4, byte param5) {
         RuntimeException stackIn_26_0 = null;
         StringBuilder stackIn_26_1 = null;
         String stackIn_27_2 = null;

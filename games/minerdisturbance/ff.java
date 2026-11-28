@@ -14,8 +14,8 @@ final class ff {
         int stackIn_18_1 = 0;
         int stackIn_18_2 = 0;
         int stackIn_19_3;
-        if (oj.field_J > 11) {
-          if (oj.field_J < 9) {
+        if (AlphaWidgetContainer.field_J > 11) {
+          if (AlphaWidgetContainer.field_J < 9) {
             nb.field_i[mc.field_w].b(tl.field_q, -22674, 0);
             nj.a(!param0);
           } else {
@@ -30,8 +30,8 @@ final class ff {
             nj.a(true);
           }
         }
-        if (oj.field_J >= 0) {
-          stackIn_18_0 = nb.field_i[oj.field_J];
+        if (AlphaWidgetContainer.field_J >= 0) {
+          stackIn_18_0 = nb.field_i[AlphaWidgetContainer.field_J];
           stackIn_18_1 = tl.field_q;
           stackIn_18_2 = -22674;
           if (11 < mc.field_w &&

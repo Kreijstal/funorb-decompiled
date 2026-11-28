@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class dj extends pj implements WidgetActivationListener {
+final class dj extends DequeWidgetContainer implements WidgetActivationListener {
     private int field_J;
     private InteractiveWidget[] field_Q;
     static int field_N;
@@ -12,7 +12,7 @@ final class dj extends pj implements WidgetActivationListener {
     private BitmapFont field_O;
 
     dj(ma param0, BitmapFont param1, String param2) {
-        super(0, 0, 288, 0, (cg) null);
+        super(0, 0, 288, 0, (WidgetRenderer) null);
         int var4_int = 0;
         this.field_J = 0;
         try {
@@ -20,7 +20,7 @@ final class dj extends pj implements WidgetActivationListener {
           this.field_O = param1;
           this.field_L = param2;
           var4_int = null == this.field_L ? 0 : this.field_O.textHeight(this.field_L, 260, this.field_O.field_x);
-          this.a(0, var4_int + 22, 0, 16535, 288);
+          this.setBounds(0, var4_int + 22, 0, 16535, 288);
         } catch (RuntimeException runtimeException) {
           throw ie.wrapClientException((Throwable) ((Object) runtimeException), "dj.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
@@ -47,8 +47,8 @@ final class dj extends pj implements WidgetActivationListener {
         this.field_J = param0;
     }
 
-    final void a(int param0, int param1, byte param2, int param3) {
-        super.a(param0, param1, param2, param3);
+    final void drawWidget(int param0, int param1, byte param2, int param3) {
+        super.drawWidget(param0, param1, param2, param3);
         this.field_O.drawParagraph(this.field_L, param0 - (-this.field_o - 14), this.field_m + (param3 + 10), this.field_w - 28, this.field_k, 16777215, -1, 0, 0, this.field_O.field_x);
     }
 
@@ -153,17 +153,17 @@ final class dj extends pj implements WidgetActivationListener {
         try {
           var4_int = this.field_J;
           if (param0) {
-            this.a(-94, -80, (byte) -32, 127);
+            this.drawWidget(-94, -80, (byte) -32, 127);
           }
           this.a(var4_int + 1, (byte) -38);
-          this.field_Q[var4_int] = this.a(param1, param0, (fd) (this));
+          this.field_Q[var4_int] = this.a(param1, param0, (WidgetEventListener) (this));
           this.field_M[var4_int] = param2;
         } catch (RuntimeException runtimeException) {
           throw ie.wrapClientException((Throwable) ((Object) runtimeException), "dj.E(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
-    final InteractiveWidget a(String param0, boolean param1, fd param2) {
+    final InteractiveWidget a(String param0, boolean param1, WidgetEventListener param2) {
         InteractiveWidget var4 = null;
         RuntimeException var4_ref = null;
         int var5 = 0;
@@ -177,15 +177,15 @@ final class dj extends pj implements WidgetActivationListener {
         RuntimeException decompiledCaughtException = null;
         try {
           var4 = new InteractiveWidget(param0, param2);
-          var4.field_l = (cg) ((Object) new ie());
+          var4.field_l = (WidgetRenderer) ((Object) new ie());
           if (param1) {
             stackIn_2_0 = (InteractiveWidget) null;
             return stackIn_2_0;
           }
           var5 = -2 + this.field_k;
-          this.a(0, 34 + this.field_k, 0, 16535, this.field_w);
-          var4.a(var5, 30, 7, 16535, -14 + this.field_w);
-          this.b(var4, (byte) 102);
+          this.setBounds(0, 34 + this.field_k, 0, 16535, this.field_w);
+          var4.setBounds(var5, 30, 7, 16535, -14 + this.field_w);
+          this.addChild(var4, (byte) 102);
           stackIn_4_0 = var4;
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

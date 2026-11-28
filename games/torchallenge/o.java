@@ -447,7 +447,7 @@ final class o extends IntrusiveNode {
         java.awt.Graphics var10 = null;
         try {
           try {
-            var9 = bg.field_P.getGraphics();
+            var9 = LabeledWidgetContainer.field_P.getGraphics();
             if (hh.field_a == null) {
               hh.field_a = new java.awt.Font("Helvetica", 1, 13);
             }
@@ -460,7 +460,7 @@ final class o extends IntrusiveNode {
             }
             try {
               if (null == PacketBuffer.field_i) {
-                PacketBuffer.field_i = bg.field_P.createImage(304, 34);
+                PacketBuffer.field_i = LabeledWidgetContainer.field_P.createImage(304, 34);
               }
               var10 = PacketBuffer.field_i.getGraphics();
               var10.setColor(param3);
@@ -496,7 +496,7 @@ final class o extends IntrusiveNode {
           } catch (java.lang.Exception decompiledCaughtParameter1) {
             decompiledCaughtException = decompiledCaughtParameter1;
             var5 = (Exception) (Object) decompiledCaughtException;
-            bg.field_P.repaint();
+            LabeledWidgetContainer.field_P.repaint();
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter2) {

@@ -312,7 +312,7 @@ final class AirstrikeAnimation extends EventAnimation {
                 }
                 if (var5Lifetime1 != null) {
                   String var6 = (String) null;
-                  vf.a(var4, 0, -101, (String) null, (String) (var5Lifetime1), 2);
+                  ModalDialog.a(var4, 0, -101, (String) null, (String) (var5Lifetime1), 2);
                 }
               }
             }

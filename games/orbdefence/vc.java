@@ -118,7 +118,7 @@ final class vc {
           } else {
             stackIn_42_2 = "{...}";
           }
-          throw dd.wrapClientException((Throwable) ((Object) stackIn_41_0), ((StringBuilder) (Object) stackIn_41_1).append(stackIn_42_2).append(',').append(param2).append(')').toString());
+          throw DraggableWidgetContainer.wrapClientException((Throwable) ((Object) stackIn_41_0), ((StringBuilder) (Object) stackIn_41_1).append(stackIn_42_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -272,7 +272,7 @@ final class vc {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw dd.wrapClientException((Throwable) ((Object) var1_ref), "vc.E(" + param0 + ')');
+          throw DraggableWidgetContainer.wrapClientException((Throwable) ((Object) var1_ref), "vc.E(" + param0 + ')');
         }
     }
 
@@ -310,7 +310,7 @@ final class vc {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           runtimeException = decompiledCaughtException;
-          throw dd.wrapClientException((Throwable) ((Object) runtimeException), "vc.F(" + param0 + ')');
+          throw DraggableWidgetContainer.wrapClientException((Throwable) ((Object) runtimeException), "vc.F(" + param0 + ')');
         }
     }
 
@@ -329,7 +329,7 @@ final class vc {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw dd.wrapClientException((Throwable) ((Object) var1), "vc.D(" + param0 + ')');
+          throw DraggableWidgetContainer.wrapClientException((Throwable) ((Object) var1), "vc.D(" + param0 + ')');
         }
     }
 
@@ -440,7 +440,7 @@ final class vc {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw dd.wrapClientException((Throwable) ((Object) var2), "vc.B(" + param0 + ')');
+          throw DraggableWidgetContainer.wrapClientException((Throwable) ((Object) var2), "vc.B(" + param0 + ')');
         }
     }
 
@@ -482,7 +482,7 @@ final class vc {
                 return stackIn_8_0;
               }
             }
-            if (dh.field_bb == sk.field_E) {
+            if (dh.field_bb == ModalDialogHost.field_E) {
               if (!param4) {
                 InteractiveWidget.field_A = sj.a(true, param3, false, param5);
               }
@@ -583,7 +583,7 @@ final class vc {
               }
               if (decompiledFrameCompleted0) {
                 gb.field_h = NetworkArchiveRequest.field_t.readString(2);
-                sg.field_E = ua.a(90, (CharSequence) ((Object) gb.field_h));
+                ModalDialog.field_E = ua.a(90, (CharSequence) ((Object) gb.field_h));
                 BufferedSocket.field_j = NetworkArchiveRequest.field_t.readUnsignedByte((byte) 90);
                 dh.field_bb = Bzip2State.field_r;
               }
@@ -621,7 +621,7 @@ final class vc {
                   }
                 }
                 try {
-                  JavaScriptBridge.callWithArguments(true, "zap", new Object[]{jj.a(14461, p.field_c)}, uj.b((byte) -120));
+                  JavaScriptBridge.callWithArguments(true, "zap", new Object[]{AlphaWidgetContainer.a(14461, p.field_c)}, uj.b((byte) -120));
                 } catch (java.lang.Throwable decompiledCaughtParameter1) {
                   decompiledCaughtException = decompiledCaughtParameter1;
                   var8_ref_Throwable = decompiledCaughtException;
@@ -697,7 +697,7 @@ final class vc {
             } else {
               stackIn_168_2 = "{...}";
             }
-            throw dd.wrapClientException((Throwable) ((Object) stackIn_163_0), ((StringBuilder) (Object) stackIn_167_1).append(stackIn_168_2).append(')').toString());
+            throw DraggableWidgetContainer.wrapClientException((Throwable) ((Object) stackIn_163_0), ((StringBuilder) (Object) stackIn_167_1).append(stackIn_168_2).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -780,7 +780,7 @@ final class vc {
           } else {
             stackIn_30_2 = "{...}";
           }
-          throw dd.wrapClientException((Throwable) ((Object) stackIn_29_0), ((StringBuilder) (Object) stackIn_29_1).append(stackIn_30_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw DraggableWidgetContainer.wrapClientException((Throwable) ((Object) stackIn_29_0), ((StringBuilder) (Object) stackIn_29_1).append(stackIn_30_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 

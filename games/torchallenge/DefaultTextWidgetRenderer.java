@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class DefaultTextWidgetRenderer implements j, TextWidgetRenderer {
+class DefaultTextWidgetRenderer implements WidgetRenderer, TextWidgetRenderer {
     static boolean[][][] field_h;
     int field_e;
     static boolean[] field_l;
@@ -90,7 +90,7 @@ class DefaultTextWidgetRenderer implements j, TextWidgetRenderer {
           if (param3 == param2) {
             return;
           }
-          if (param5.c(param0 + 86)) {
+          if (param5.isFocused(param0 + 86)) {
             var17 = this.getTextLayout(117, param5);
             var18 = var17;
             if (param2 < param3) {
@@ -362,7 +362,7 @@ class DefaultTextWidgetRenderer implements j, TextWidgetRenderer {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var6 = null;
         try {
-          if (param2.c(92)) {
+          if (param2.isFocused(92)) {
             var13 = this.getTextLayout(-89, param2);
             var14 = var13;
             var7 = var14.getLineIndexForTextOffset((byte) 7, param3);
@@ -628,7 +628,7 @@ class DefaultTextWidgetRenderer implements j, TextWidgetRenderer {
         }
     }
 
-    public void a(UiComponent param0, int param1, int param2, byte param3, boolean param4) {
+    public void paintWidget(UiComponent param0, int param1, int param2, byte param3, boolean param4) {
         if (this.field_g == null) {
           return;
         }

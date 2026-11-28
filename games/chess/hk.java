@@ -14,7 +14,7 @@ final class hk extends wc {
         this(rb.field_b, param0);
     }
 
-    final String a(int param0, mf param1) {
+    final String a(int param0, UiWidget param1) {
         RuntimeException var3 = null;
         String stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;

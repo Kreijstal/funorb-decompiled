@@ -51,14 +51,14 @@ final class t {
         if (!(tj.field_a < nl.field_c[fleas.field_E].length)) {
           var5 = -1 + nl.field_c[fleas.field_E].length;
         }
-        MatchingFieldValidator.field_p.drawParagraph(db.a(pk.field_G, new String[]{FrameTimer.field_c[fleas.field_E][var5]}, true), 170, var2 - 27, 300, 320, var3, var4, 1, 0, MatchingFieldValidator.field_p.field_H);
+        MatchingFieldValidator.field_p.drawParagraph(ModalDialog.a(DraggableWidgetContainer.field_G, new String[]{FrameTimer.field_c[fleas.field_E][var5]}, true), 170, var2 - 27, 300, 320, var3, var4, 1, 0, MatchingFieldValidator.field_p.field_H);
         var2 += 90;
-        MatchingFieldValidator.field_p.drawCentred(db.a(va.field_s, new String[]{Integer.toString(pl.field_f), Integer.toString((int) ia.field_m[fleas.field_E][var5].field_f)}, true), 320, var2, var3, var4);
+        MatchingFieldValidator.field_p.drawCentred(ModalDialog.a(va.field_s, new String[]{Integer.toString(pl.field_f), Integer.toString((int) ia.field_m[fleas.field_E][var5].field_f)}, true), 320, var2, var3, var4);
         var2 += 40;
-        MatchingFieldValidator.field_p.drawCentred(db.a(hm.field_h, new String[]{Integer.toString(wi.field_b)}, true), 320, var2, var3, var4);
+        MatchingFieldValidator.field_p.drawCentred(ModalDialog.a(hm.field_h, new String[]{Integer.toString(wi.field_b)}, true), 320, var2, var3, var4);
         int var7 = -113 % ((param0 - 12) / 34);
-        String var6 = db.a(fleas.field_I, new String[]{wa.a(false)}, true);
-        MatchingFieldValidator.field_p.drawCentred(db.a(var6, new String[]{"0"}, true), 320, var2 + MatchingFieldValidator.field_p.field_N, var3, var4);
+        String var6 = ModalDialog.a(fleas.field_I, new String[]{wa.a(false)}, true);
+        MatchingFieldValidator.field_p.drawCentred(ModalDialog.a(var6, new String[]{"0"}, true), 320, var2 + MatchingFieldValidator.field_p.field_N, var3, var4);
     }
 
     final void a(boolean param0, boolean param1) {
@@ -482,7 +482,7 @@ final class t {
           1 != var4) {
           if (var4 == 10) {
             if (pl.field_l[fleas.field_E] / 3 > tj.field_a) {
-              var3 = f.field_E;
+              var3 = ModalDialogHost.field_E;
             } else {
               if (tj.field_a < pl.field_l[fleas.field_E] * 2 / 3) {
                 var3 = me.field_g;
@@ -490,7 +490,7 @@ final class t {
                 var3 = tk.field_s;
               }
             }
-            var2Lifetime1 = db.field_I;
+            var2Lifetime1 = ModalDialog.field_I;
           } else if (8 == var4) {
             var2Lifetime1 = a.field_f;
           } else if (var4 == 3) {
@@ -670,9 +670,9 @@ final class t {
         var9.drawCentred(ResourceArchive.field_c.field_z[ResourceArchive.field_c.field_x], var4 + var6Lifetime1 / 2, var5, 1, -1);
         if (var2 != 0) {
           var5 = var5 + (var9.field_N + 15);
-          var9.drawCentred(db.a(kl.field_b, new String[]{Integer.toString((int) var8.field_f)}, true), var4 + var6Lifetime1 / 2, var5, 1, -1);
+          var9.drawCentred(ModalDialog.a(kl.field_b, new String[]{Integer.toString((int) var8.field_f)}, true), var4 + var6Lifetime1 / 2, var5, 1, -1);
           var5 = var5 + var9.field_N;
-          var9.drawCentred(db.a(fleas.field_H, new String[]{Integer.toString((int) var8.field_e)}, true), var4 + var6Lifetime1 / 2, var5, 1, -1);
+          var9.drawCentred(ModalDialog.a(fleas.field_H, new String[]{Integer.toString((int) var8.field_e)}, true), var4 + var6Lifetime1 / 2, var5, 1, -1);
         } else {
           var10 = ej.field_b;
           var5 += 10;
@@ -701,7 +701,7 @@ final class t {
             AccountCreationResultPanel.field_tb[1] != je.field_O[var2]) {
             return var2;
           }
-          var2 = db.a((byte) -115, fleas.field_F, je.field_O.length);
+          var2 = ModalDialog.a((byte) -115, fleas.field_F, je.field_O.length);
         }
     }
 
@@ -740,7 +740,7 @@ final class t {
         if (8 <= var7 &&
           var7 <= 10 &&
           param1 == nb.field_g) {
-          var11 = gj.field_E;
+          var11 = DequeWidgetContainer.field_E;
         }
         if (6 == this.field_i) {
           var6 = var6 + var9 / 2;
@@ -769,11 +769,11 @@ final class t {
         var15 = var18.field_H + var5 + (var14 + (var13 >> 1));
         var15 -= 3;
         if (var7 == 12) {
-          f.field_G.field_l = (-ia.field_t[this.field_i] + ia.field_l[this.field_i]) / 2 + (-20 + ia.field_t[this.field_i]);
-          f.field_G.field_a = var15 - 13;
-          f.field_G.c((byte) 72);
-          f.field_G.field_w.field_v = 6;
-          var18.drawRightAligned(var8, f.field_G.field_l, var15, var12, -1);
+          ModalDialogHost.field_G.field_l = (-ia.field_t[this.field_i] + ia.field_l[this.field_i]) / 2 + (-20 + ia.field_t[this.field_i]);
+          ModalDialogHost.field_G.field_a = var15 - 13;
+          ModalDialogHost.field_G.c((byte) 72);
+          ModalDialogHost.field_G.field_w.field_v = 6;
+          var18.drawRightAligned(var8, ModalDialogHost.field_G.field_l, var15, var12, -1);
         } else {
           if (13 == var7) {
             cb.field_w.field_l = (-ia.field_t[this.field_i] + ia.field_l[this.field_i]) / 2 + ia.field_t[this.field_i] - 20;
@@ -842,7 +842,7 @@ final class t {
                     if (!(!this.field_b.b(109))) {
                       oa.a(4, param0, 99);
                       ImageProducerRasterBuffer.field_m = this.field_i;
-                      AccountRequestState.field_e = db.a((byte) -115, fleas.field_F, je.field_O.length);
+                      AccountRequestState.field_e = ModalDialog.a((byte) -115, fleas.field_F, je.field_O.length);
                     }
                   } else {
                     if (var6 == 3) {
@@ -1093,11 +1093,11 @@ final class t {
                             ContextualRuntimeException.a(-32);
                           }
                           if (this.field_b.a(false)) {
-                            f.field_G.c(103);
-                            if (f.field_G.field_g) {
-                              ia.a(true, f.field_G.field_A);
+                            ModalDialogHost.field_G.c(103);
+                            if (ModalDialogHost.field_G.field_g) {
+                              ia.a(true, ModalDialogHost.field_G.field_A);
                             } else {
-                              if (f.field_G.field_l <= ag.field_f) {
+                              if (ModalDialogHost.field_G.field_l <= ag.field_f) {
                                 ia.a(true, 256);
                               } else {
                                 ia.a(true, 0);
@@ -1105,7 +1105,7 @@ final class t {
                             }
                           }
                           if (gf.field_d != var4) {
-                            f.field_G.field_A = gf.field_d;
+                            ModalDialogHost.field_G.field_A = gf.field_d;
                             ik.a(FrameTimer.field_b[1], (byte) -84);
                             break regionExit1;
                           }
@@ -1189,9 +1189,9 @@ final class t {
           }
         }
         if (this.field_i == 3) {
-          gj.field_A.field_t = fl.field_f;
-          gj.field_A.c(106);
-          fl.field_f = gj.field_A.field_t;
+          DequeWidgetContainer.field_A.field_t = fl.field_f;
+          DequeWidgetContainer.field_A.c(106);
+          fl.field_f = DequeWidgetContainer.field_A.field_t;
         }
         if (this.field_i == 10) {
           if (ProxyAuthenticationRequiredException.field_b <= 30) {
@@ -1377,9 +1377,9 @@ final class t {
           discarded$0 = this.a(-42, 28);
         }
         if (g.field_s == 0) {
-          gj.field_A.field_l = 265;
-          gj.field_A.field_a = 320;
-          gj.field_A.b((byte) -107);
+          DequeWidgetContainer.field_A.field_l = 265;
+          DequeWidgetContainer.field_A.field_a = 320;
+          DequeWidgetContainer.field_A.b((byte) -107);
         } else {
           boolean decompiledFrameRemainder0 = true;
           if (g.field_s == 1) {

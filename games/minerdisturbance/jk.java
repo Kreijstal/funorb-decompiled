@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 abstract class jk extends wf {
-    private fe field_hb;
+    private UiWidget field_hb;
     static int[] field_ib;
     private int field_kb;
     static boolean[] field_gb;
@@ -15,7 +15,7 @@ abstract class jk extends wf {
     private int field_mb;
     private int field_Z;
     static int field_ab;
-    private oj field_bb;
+    private AlphaWidgetContainer field_bb;
 
     final static void a(java.applet.Applet param0, int param1, String param2) {
         try {
@@ -68,7 +68,7 @@ abstract class jk extends wf {
         }
     }
 
-    void a(byte param0, fe param1) {
+    void a(byte param0, UiWidget param1) {
         RuntimeException var3 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
@@ -110,7 +110,7 @@ abstract class jk extends wf {
           return;
         }
         if (DisplayNameSelectionPanel.field_O != this.field_cb) {
-          this.a(this.field_hb.field_q + 12 + this.field_fb, this.field_hb.field_v + 12, (byte) 55);
+          this.setCenteredSize(this.field_hb.field_q + 12 + this.field_fb, this.field_hb.field_v + 12, (byte) 55);
           this.b(28199, this.field_hb);
         } else {
           this.field_bb.field_L = 256;
@@ -123,18 +123,18 @@ abstract class jk extends wf {
         super.o(param0);
     }
 
-    private final void b(int param0, fe param1) {
+    private final void b(int param0, UiWidget param1) {
         try {
           if (null != this.field_bb) {
             this.field_bb.unlink(34);
           }
           if (param1 != null) {
-            param1.a(param1.field_q, param0 ^ -28163, 6, param1.field_v, this.field_fb + 6);
-            this.field_bb = new oj(param1);
+            param1.setBounds(param1.field_q, param0 ^ -28163, 6, param1.field_v, this.field_fb + 6);
+            this.field_bb = new AlphaWidgetContainer(param1);
           } else {
-            this.field_bb = new oj();
+            this.field_bb = new AlphaWidgetContainer();
           }
-          this.a(-1, this.field_bb);
+          this.addChild(-1, this.field_bb);
           if (param0 != 28199) {
             this.field_mb = -79;
           }
@@ -224,32 +224,32 @@ abstract class jk extends wf {
         }
     }
 
-    final boolean a(boolean param0) {
+    final boolean snapDialogAnimation(boolean param0) {
         if (param0) {
           return true;
         }
         this.o(24619);
-        return super.a(param0);
+        return super.snapDialogAnimation(param0);
     }
 
-    boolean a(char param0, fe param1, byte param2, int param3) {
+    boolean handleKey(char param0, UiWidget param1, byte param2, int param3) {
         RuntimeException var5 = null;
         RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;
         String stackIn_17_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (super.a(param0, param1, param2, param3)) {
+          if (super.handleKey(param0, param1, param2, param3)) {
             return true;
           }
           if (this.field_bb == null) {
             return false;
           }
           if (98 == param3) {
-            this.field_bb.a(param1, param2 + 199);
+            this.field_bb.takeFocus(param1, param2 + 199);
           }
           if (99 == param3) {
-            this.field_bb.a(param1, param2 + 199);
+            this.field_bb.takeFocus(param1, param2 + 199);
           }
           return false;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -266,7 +266,7 @@ abstract class jk extends wf {
         }
     }
 
-    boolean n(int param0) {
+    boolean advanceDialogAnimation(int param0) {
         int fieldTemp$0 = 0;
         int fieldTemp$1 = 0;
         int fieldTemp$2 = 0;
@@ -274,21 +274,21 @@ abstract class jk extends wf {
         if (param0 != -4) {
           this.field_Z = -38;
           if (null == this.field_cb) {
-            return super.n(param0 + 0);
+            return super.advanceDialogAnimation(param0 + 0);
           }
           if (ah.field_a != this.field_cb) {
             if (this.field_cb != DisplayNameSelectionPanel.field_O) {
-              return super.n(param0 + 0);
+              return super.advanceDialogAnimation(param0 + 0);
             }
             fieldTemp$0 = this.field_kb + 1;
             this.field_kb = this.field_kb + 1;
             if (fieldTemp$0 != this.field_Z) {
               this.field_bb.field_L = (this.field_kb << 8) / this.field_Z;
-              return super.n(param0 + 0);
+              return super.advanceDialogAnimation(param0 + 0);
             }
             this.field_bb.field_L = 256;
             this.field_cb = null;
-            return super.n(param0 + 0);
+            return super.advanceDialogAnimation(param0 + 0);
           }
           fieldTemp$1 = this.field_kb + 1;
           this.field_kb = this.field_kb + 1;
@@ -297,27 +297,27 @@ abstract class jk extends wf {
             this.a(this.field_mb, true, 12 + this.field_hb.field_v, 12 - (-this.field_fb - this.field_hb.field_q));
             this.field_bb.field_L = 0;
             this.field_kb = 0;
-            return super.n(param0 + 0);
+            return super.advanceDialogAnimation(param0 + 0);
           }
           this.field_bb.field_L = -((this.field_kb << 8) / this.field_eb) + 256;
-          return super.n(param0 + 0);
+          return super.advanceDialogAnimation(param0 + 0);
         }
         if (null == this.field_cb) {
-          return super.n(param0 + 0);
+          return super.advanceDialogAnimation(param0 + 0);
         }
         if (ah.field_a != this.field_cb) {
           if (this.field_cb != DisplayNameSelectionPanel.field_O) {
-            return super.n(param0 + 0);
+            return super.advanceDialogAnimation(param0 + 0);
           }
           fieldTemp$2 = this.field_kb + 1;
           this.field_kb = this.field_kb + 1;
           if (fieldTemp$2 != this.field_Z) {
             this.field_bb.field_L = (this.field_kb << 8) / this.field_Z;
-            return super.n(param0 + 0);
+            return super.advanceDialogAnimation(param0 + 0);
           }
           this.field_bb.field_L = 256;
           this.field_cb = null;
-          return super.n(param0 + 0);
+          return super.advanceDialogAnimation(param0 + 0);
         }
         int fieldTemp$3 = this.field_kb + 1;
         this.field_kb = this.field_kb + 1;
@@ -326,13 +326,13 @@ abstract class jk extends wf {
           this.a(this.field_mb, true, 12 + this.field_hb.field_v, 12 - (-this.field_fb - this.field_hb.field_q));
           this.field_bb.field_L = 0;
           this.field_kb = 0;
-          return super.n(param0 + 0);
+          return super.advanceDialogAnimation(param0 + 0);
         }
         this.field_bb.field_L = -((this.field_kb << 8) / this.field_eb) + 256;
-        return super.n(param0 + 0);
+        return super.advanceDialogAnimation(param0 + 0);
     }
 
-    jk(hm param0, fe param1, int param2, int param3, int param4) {
+    jk(ModalDialogHost param0, UiWidget param1, int param2, int param3, int param4) {
         super(param0, 12 + param1.field_v, param1.field_q + param2 + 12);
         try {
           this.field_fb = param2;

@@ -28,10 +28,10 @@ final class sj {
     final static void a(boolean param0, byte param1, boolean param2, String param3) {
         try {
           PacketBuffer.g((byte) -124);
-          jl.field_I.b(false);
+          AlphaWidgetContainer.field_I.closeAllDialogs(false);
           mb.field_s = new LoginPanel(ol.field_Hb, (String) null, qi.field_b, param2, param0);
-          bj.field_f = new jg(jl.field_I, mb.field_s);
-          jl.field_I.a((UiWidget) (bj.field_f), (byte) -1);
+          bj.field_f = new jg(AlphaWidgetContainer.field_I, mb.field_s);
+          AlphaWidgetContainer.field_I.showDialog((UiWidget) (bj.field_f), (byte) -1);
           if (param1 != 68) {
             field_a = (lg[]) null;
           }
@@ -80,10 +80,10 @@ final class sj {
     final static void $cfr$intArgs$a$b1efba5c64a3(boolean param0, int param1, boolean param2, String param3) {
         try {
           PacketBuffer.g((byte) -124);
-          jl.field_I.b(false);
+          AlphaWidgetContainer.field_I.closeAllDialogs(false);
           mb.field_s = new LoginPanel(ol.field_Hb, (String) null, qi.field_b, param2, param0);
-          bj.field_f = new jg(jl.field_I, mb.field_s);
-          jl.field_I.a((UiWidget) (bj.field_f), (byte) -1);
+          bj.field_f = new jg(AlphaWidgetContainer.field_I, mb.field_s);
+          AlphaWidgetContainer.field_I.showDialog((UiWidget) (bj.field_f), (byte) -1);
           if (param1 != 68) {
             field_a = (lg[]) null;
           }

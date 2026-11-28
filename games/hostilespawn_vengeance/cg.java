@@ -21,7 +21,7 @@ final class cg {
         var2 = HostileSpawn.field_I ? 1 : 0;
         try {
           if (ClientLookupTables.field_h.field_d != 3) {
-            while (jn.e((byte) 121)) {
+            while (AlphaWidgetContainer.e((byte) 121)) {
               if (pj.field_e == 80 &&
                 ClientLookupTables.field_h.field_p == 0) {
                 ClientLookupTables.field_h.field_p = 256;
@@ -154,7 +154,7 @@ final class cg {
             ClientLookupTables.field_h.a(pf.field_o, rb.field_m, j.field_c, -99);
           }
           if (ri.field_o) {
-            nh.a(false, (byte) -64);
+            LabeledWidgetContainer.a(false, (byte) -64);
             ri.field_o = false;
           }
           if (param0 != -27587) {

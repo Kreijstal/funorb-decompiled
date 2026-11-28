@@ -229,7 +229,7 @@ final class ma {
           }
           var4_int = param0.getGroupIdByName(param3, (byte) -105);
           var5 = param0.getFileIdByName(param1, var4_int, -28459);
-          stackIn_4_0 = kj.a(var5, param0, 17196, var4_int);
+          stackIn_4_0 = ModalDialogHost.a(var5, param0, 17196, var4_int);
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

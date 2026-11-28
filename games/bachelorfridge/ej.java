@@ -57,7 +57,7 @@ final class ej extends BoardChange {
 
     final static void a(int param0, int param1, String param2, boolean param3, int param4, int param5) {
         try {
-          param0 = param0 - (hl.field_C.stringWidth(param2) >> 1);
+          param0 = param0 - (AlphaWidgetContainer.field_C.stringWidth(param2) >> 1);
           gb.a(param0, param4, param1, 0, param3, param2);
           int var6_int = -111 / ((4 - param5) / 59);
         } catch (RuntimeException runtimeException) {

@@ -15,9 +15,9 @@ final class ValidatedTextField extends EditableTextField implements FieldValidat
         field_V = null;
     }
 
-    final void a(int param0, int param1, lm param2, boolean param3) {
+    final void updatePointer(int param0, int param1, UiWidget param2, boolean param3) {
         try {
-          super.a(param0, param1, param2, param3);
+          super.updatePointer(param0, param1, param2, param3);
           this.field_U = -this.field_q + hj.field_S - param0;
           if (!param3) {
             FieldValidator var6 = (FieldValidator) null;
@@ -76,7 +76,7 @@ final class ValidatedTextField extends EditableTextField implements FieldValidat
         return null;
     }
 
-    ValidatedTextField(String param0, pg param1, int param2) {
+    ValidatedTextField(String param0, WidgetEventListener param1, int param2) {
         super(param0, param1, param2);
     }
 

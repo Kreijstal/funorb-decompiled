@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class fb implements rd {
+final class fb implements WidgetRenderer {
     private int field_c;
     private int field_i;
     private int field_e;
@@ -33,8 +33,8 @@ final class fb implements rd {
         }
     }
 
-    public final void a(int param0, int param1, boolean param2, w param3, int param4) {
-        w stackIn_3_0 = null;
+    public final void paintWidget(int param0, int param1, boolean param2, UiWidget param3, int param4) {
+        UiWidget stackIn_3_0 = null;
         RuntimeException stackIn_18_0 = null;
         StringBuilder stackIn_18_1 = null;
         String stackIn_19_2 = null;
@@ -49,7 +49,7 @@ final class fb implements rd {
           if (!(param3 instanceof te)) {
             stackIn_3_0 = null;
           } else {
-            stackIn_3_0 = (w) (param3);
+            stackIn_3_0 = (UiWidget) (param3);
           }
           var11 = (te) (stackIn_3_0);
           if (var11 != null) {
@@ -106,9 +106,9 @@ final class fb implements rd {
           !(we.field_g.length >= param2)) {
           we.field_g = new int[param2 * 2];
         }
-        if (l.field_D == null ||
-          !(param2 <= l.field_D.length)) {
-          l.field_D = new int[2 * param2];
+        if (DropTargetWidgetContainer.field_D == null ||
+          !(param2 <= DropTargetWidgetContainer.field_D.length)) {
+          DropTargetWidgetContainer.field_D = new int[2 * param2];
         }
         if (oc.field_a == null ||
           !(oc.field_a.length >= param2)) {
@@ -135,7 +135,7 @@ final class fb implements rd {
         }
         DisplayNameSelectionPanel.field_D = 2147483647;
         pf.field_o = 0;
-        l.field_G = -2147483648;
+        DropTargetWidgetContainer.field_G = -2147483648;
         rb.field_a = -2147483648;
         TextLayout.field_d = 2147483647;
     }

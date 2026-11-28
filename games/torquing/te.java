@@ -65,7 +65,7 @@ final class te extends am {
             var48 = var46[1];
             var49 = var46[2];
             for (var18_int = -this.field_s; var18_int <= this.field_s; var18_int++) {
-              var19_int = jh.field_A & var18_int;
+              var19_int = SingleChildWidgetContainer.field_A & var18_int;
               var12 = var12 + var47[var19_int];
               var13 = var13 + var48[var19_int];
               var14 = var14 + var49[var19_int];
@@ -78,12 +78,12 @@ final class te extends am {
               var18[var21] = var7 * var12 >> 16;
               var19[var21] = var7 * var13 >> 16;
               var20[var21] = var14 * var7 >> 16;
-              var22 = jh.field_A & var21 - this.field_s;
+              var22 = SingleChildWidgetContainer.field_A & var21 - this.field_s;
               var13 = var13 - var48[var22];
               var21++;
               var14 = var14 - var49[var22];
               var12 = var12 - var47[var22];
-              var22Lifetime1 = this.field_s + var21 & jh.field_A;
+              var22Lifetime1 = this.field_s + var21 & SingleChildWidgetContainer.field_A;
               var12 = var12 + var47[var22Lifetime1];
               var13 = var13 + var48[var22Lifetime1];
               var14 = var14 + var49[var22Lifetime1];
@@ -153,15 +153,15 @@ final class te extends am {
             var11_ref_int__ = var16;
             var12 = 0;
             for (var13 = -this.field_s; this.field_s >= var13; var13++) {
-              var12 = var12 + var10_ref_int__[jh.field_A & var13];
+              var12 = var12 + var10_ref_int__[SingleChildWidgetContainer.field_A & var13];
             }
             var15 = 0;
             var13Lifetime1 = var15;
             while (ci.field_c > var15) {
               var11_ref_int__[var15] = var7 * var12 >> 16;
-              var12 = var12 - var10_ref_int__[-this.field_s + var15 & jh.field_A];
+              var12 = var12 - var10_ref_int__[-this.field_s + var15 & SingleChildWidgetContainer.field_A];
               var15++;
-              var12 = var12 + var10_ref_int__[this.field_s + var15 & jh.field_A];
+              var12 = var12 + var10_ref_int__[this.field_s + var15 & SingleChildWidgetContainer.field_A];
             }
             var8[var9 + this.field_u - param1] = var18;
           }

@@ -1,0 +1,244 @@
+/*
+ * Decompiled by CFR-JS 0.4.0.
+ */
+final class ModalDialogHost extends SingleChildWidgetContainer {
+    static int field_H;
+    static String field_E;
+    private IntrusiveDeque field_L;
+    static String field_J;
+    static Sprite field_K;
+
+    final static boolean a(char param0, int param1) {
+        String var3;
+        boolean stackIn_13_0 = false;
+        if (param1 != 18102) {
+          var3 = (String) null;
+          ModalDialogHost.a(-21, (String) null);
+        }
+        stackIn_13_0 = ((!(param0 < 48) &&
+          !(param0 > 57)) ||
+          (!(65 > param0) &&
+          !(param0 > 90)) ||
+          (!(param0 < 97) &&
+          !(122 < param0)));
+        return stackIn_13_0;
+    }
+
+    final static void n(int param0) {
+        GameApplet.field_k = false;
+        fe.field_L = 0;
+        SpriteState.field_y = -1;
+        ha.field_z = -1;
+        if (param0 != -27145) {
+          String var2 = (String) null;
+          ModalDialogHost.a(124, (String) null);
+        }
+        kj.field_o = -1;
+    }
+
+    final void advanceDialogs(boolean param0) {
+        int var4 = TrackController.field_F ? 1 : 0;
+        if (!param0) {
+          return;
+        }
+        IntrusiveDequeCursor var2 = new IntrusiveDequeCursor(this.field_L);
+        ModalDialog var3 = (ModalDialog) (var2.d(91));
+        while (var3 != null) {
+          if (var3.advanceDialogAnimation(-27)) {
+            var3.unlink(-32);
+          }
+          var3 = (ModalDialog) (var2.e(37));
+        }
+        this.field_B = (UiWidget) ((Object) this.getTopOpenDialog(-6121));
+    }
+
+    final static void m(int param0) {
+        if (param0 != 1) {
+          field_K = (Sprite) null;
+        }
+        String var2 = (String) null;
+        oc.a("", (byte) -90, (String) null);
+    }
+
+    final void drawWidget(int param0, int param1, int param2, int param3) {
+        int var7 = TrackController.field_F ? 1 : 0;
+        if (null != this.field_y) {
+          this.field_y.paintWidget(param3 ^ -5038, (UiWidget) (this), param2, true, param1);
+        }
+        IntrusiveDequeCursor var5 = new IntrusiveDequeCursor(this.field_L);
+        if (param3 != 29221) {
+          this.field_L = (IntrusiveDeque) null;
+        }
+        UiWidget var6 = (UiWidget) (var5.a(66));
+        while (var6 != null) {
+          var6.drawWidget(param0, this.field_p + param1, param2 + this.field_m, 29221);
+          var6 = (UiWidget) (var5.c(-87));
+        }
+    }
+
+    final UiWidget getFocusedChild(int param0) {
+        IntrusiveDequeCursor var2;
+        ModalDialog var3;
+        int var4;
+        var4 = TrackController.field_F ? 1 : 0;
+        if (param0 != 199) {
+          ModalDialogHost.n(-90);
+        }
+        var2 = new IntrusiveDequeCursor(this.field_L);
+        var3 = (ModalDialog) (var2.d(param0 ^ 148));
+        while (var3 != null) {
+          if (var3.field_E) {
+            return var3.getFocusedChild((byte) -125);
+          }
+          var3 = (ModalDialog) (var2.e(param0 ^ 226));
+        }
+        return null;
+    }
+
+    public ModalDialogHost() {
+        super(0, 0, jf.field_j, kg.field_c, (WidgetRenderer) null, (WidgetEventListener) null);
+        this.field_L = new IntrusiveDeque();
+    }
+
+    final static void a(int param0, String param1) {
+        RuntimeException stackIn_17_0 = null;
+        StringBuilder stackIn_17_1 = null;
+        String stackIn_18_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        int var2_int = 0;
+        RuntimeException var2 = null;
+        int var3 = 0;
+        int var4 = 0;
+        int var5 = 0;
+        int var6 = 0;
+        int var7 = 0;
+        int var8 = 0;
+        int var9 = 0;
+        int var10 = 0;
+        try {
+          if (param0 != -21173) {
+            field_E = (String) null;
+          }
+          var2_int = SpriteState.g(1);
+          if (var2_int >= 0) {
+            var3 = 3158064;
+            var4 = 16777120;
+            var5 = GameApplet.field_c.stringWidth(param1);
+            var6 = GameApplet.field_c.field_H + GameApplet.field_c.field_u;
+            var7 = 1;
+            var8 = var6;
+            if (200 < var5) {
+              var7 = (199 + var5) / 200;
+              var5 = jh.a(GameApplet.field_c, param1, var5 / var7, false);
+              var6 = var6 * var7;
+            }
+            var9 = ha.field_z;
+            if (var5 + var9 + 6 > SoftwareRasterizer.stride) {
+              var9 = -6 - var5 + SoftwareRasterizer.stride;
+            }
+            var10 = 32 + (-GameApplet.field_c.field_H + kj.field_o);
+            if (SoftwareRasterizer.field_k < var6 + var10 + 6) {
+              var10 = kj.field_o - (var6 + 6);
+            }
+            SoftwareRasterizer.drawRectangleOutline(var9, var10, 6 + var5, var6 + 6, var3);
+            SoftwareRasterizer.fillRectangle(1 + var9, 1 + var10, var5 + 4, var6 + 4, var4);
+            if (1 < var7) {
+              GameApplet.field_c.drawParagraph(param1, var9 + 3, GameApplet.field_c.field_H + (var10 - (-3 + GameApplet.field_c.field_G)), var5, 1000, var3, -1, 0, 0, var8);
+            } else {
+              GameApplet.field_c.drawString(param1, var9 + 3, var10 + (3 + GameApplet.field_c.field_H), var3, -1);
+            }
+          }
+          return;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var2 = decompiledCaughtException;
+          stackIn_17_0 = var2;
+          stackIn_17_1 = new StringBuilder().append("vl.S(").append(param0).append(',');
+          if (param1 == null) {
+            stackIn_18_2 = "null";
+          } else {
+            stackIn_18_2 = "{...}";
+          }
+          throw LevelGrid.toClientException((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(')').toString());
+        }
+    }
+
+    final void snapAndPruneDialogs(int param0) {
+        int var4 = TrackController.field_F ? 1 : 0;
+        if (param0 > -84) {
+          field_E = (String) null;
+        }
+        IntrusiveDequeCursor var2 = new IntrusiveDequeCursor(this.field_L);
+        ModalDialog var3 = (ModalDialog) (var2.d(105));
+        while (var3 != null) {
+          if (var3.snapDialogAnimation(0)) {
+            var3.unlink(-40);
+          }
+          var3 = (ModalDialog) (var2.e(37));
+        }
+    }
+
+    final ModalDialog getTopOpenDialog(int param0) {
+        IntrusiveDequeCursor var2;
+        ModalDialog var3;
+        int var4;
+        var4 = TrackController.field_F ? 1 : 0;
+        var2 = new IntrusiveDequeCursor(this.field_L);
+        if (param0 != -6121) {
+          return (ModalDialog) null;
+        }
+        var3 = (ModalDialog) (var2.d(-97));
+        while (var3 != null) {
+          if (var3.field_E) {
+            return var3;
+          }
+          var3 = (ModalDialog) (var2.e(param0 + 6158));
+        }
+        return null;
+    }
+
+    final void showDialog(byte param0, UiWidget param1) {
+        ModalDialog var3 = null;
+        try {
+          if (!(param1 instanceof ModalDialog)) {
+            throw new IllegalArgumentException();
+          }
+          if (param0 > -55) {
+            field_K = (Sprite) null;
+          }
+          var3 = (ModalDialog) (param1);
+          this.field_L.addFirst(var3, (byte) 112);
+          var3.field_E = true;
+          var3.takeFocus((byte) -106, (UiWidget) (this));
+        } catch (RuntimeException runtimeException) {
+          throw LevelGrid.toClientException((Throwable) ((Object) runtimeException), "vl.O(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+        }
+    }
+
+    public static void clearDeclaredStaticReferences(byte param0) {
+        field_E = null;
+        int var1 = -79 / ((-66 - param0) / 52);
+        field_J = null;
+        field_K = null;
+    }
+
+    final void closeAllDialogs(int param0) {
+        int var4 = TrackController.field_F ? 1 : 0;
+        IntrusiveDequeCursor var2 = new IntrusiveDequeCursor(this.field_L);
+        ModalDialog var3 = (ModalDialog) (var2.d(75));
+        while (var3 != null) {
+          var3.field_E = false;
+          var3 = (ModalDialog) (var2.e(param0 - 24873));
+        }
+        this.field_B = null;
+        if (param0 != 24910) {
+          this.snapAndPruneDialogs(-16);
+        }
+    }
+
+    static {
+        field_H = 0;
+        field_E = "08101101101o0110110110190h1011390r02A00A00A00w02320r0007101301101b01101e0h101101101r01101690080212090090090090090080j8021200890890jj08108908e8021200h607f07607907d07680212012090090001690090080212090008o19090080801101f0280980620710110o6A000j2022022g02g082902200810620270530970160710510db01e0h90221209009000280168020220220710o101106709809202706701907101101O07602207101101c0110110110110d6000000000000000000000000000000000000000000000000pauseMenu 0/0";
+        field_J = "Best each";
+    }
+}

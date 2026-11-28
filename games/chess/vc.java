@@ -148,7 +148,7 @@ final class vc implements java.awt.event.KeyListener, java.awt.event.FocusListen
     final static bk a(int param0, int param1) {
         int var2 = -56 % ((param0 + 30) / 39);
         bk var3 = new bk();
-        bh.field_D.addFirst((IntrusiveNode) (var3), (byte) 109);
+        ArrayWidgetContainer.field_D.addFirst((IntrusiveNode) (var3), (byte) 109);
         el.a(4, param1);
         return var3;
     }
@@ -199,7 +199,7 @@ final class vc implements java.awt.event.KeyListener, java.awt.event.FocusListen
             ld.field_g != 1) {
             fg.field_d.field_Kb.field_Jb.field_db = ca.field_c;
             fg.field_d.field_tb = false;
-            fm.a(fg.field_d.field_Fb, -120);
+            ModalDialogHost.a(fg.field_d.field_Fb, -120);
             return;
           }
           fg.field_d.field_Kb.field_Jb.field_db = null;

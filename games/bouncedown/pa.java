@@ -168,17 +168,17 @@ final class pa {
             if (sj.field_f != null &&
               sj.field_f.focusLost) {
               eh.a(true);
-              MouseWheelInput.field_b.b(new nh(MouseWheelInput.field_b, FullscreenFocusCanvas.field_c), false);
+              MouseWheelInput.field_b.showDialog(new nh(MouseWheelInput.field_b, FullscreenFocusCanvas.field_c), false);
             }
             return;
           }
           if (param0 != -65) {
             pa.clearStaticReferences(110);
           }
-          MouseWheelInput.field_b.a(aj.field_f, true, true, kl.field_t);
-          MouseWheelInput.field_b.d((byte) 120);
+          MouseWheelInput.field_b.processPointerInput(aj.field_f, true, true, kl.field_t);
+          MouseWheelInput.field_b.advanceDialogs((byte) 120);
           while (DisplayNameSelectionPanel.g((byte) -15)) {
-            MouseWheelInput.field_b.a((byte) -90, lh.field_f, ResourceArchive.field_d);
+            MouseWheelInput.field_b.processKeyInput((byte) -90, lh.field_f, ResourceArchive.field_d);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

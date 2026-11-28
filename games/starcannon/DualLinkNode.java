@@ -66,7 +66,7 @@ class DualLinkNode extends IntrusiveNode {
         for (var4_int = 0; var1 > var4_int; var4_int++) {
           var3[var4_int] = of.field_g[w.a(255, (int) var2[var4_int])];
         }
-        Sprite var4 = new Sprite(BufferedRandomAccessFile.field_m, gb.field_w, fc.field_d[0], qd.field_H[0], gg.field_d[0], gh.field_C[0], var3);
+        Sprite var4 = new Sprite(BufferedRandomAccessFile.field_m, gb.field_w, fc.field_d[0], ModalDialog.field_H[0], gg.field_d[0], gh.field_C[0], var3);
         if (param0 >= 2) {
           rc.b((byte) -121);
           return var4;

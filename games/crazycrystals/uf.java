@@ -65,7 +65,7 @@ final class uf {
         } else {
           this.field_k = so.field_f;
         }
-        this.field_j = om.field_u;
+        this.field_j = SingleChildWidgetContainer.field_u;
         this.field_h = fb.field_b;
         this.field_d = na.field_kb;
         this.field_f = lj.field_b;

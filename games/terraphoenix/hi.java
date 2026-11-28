@@ -72,7 +72,7 @@ final class hi extends ei implements WidgetActivationListener {
         }
     }
 
-    private final InteractiveWidget a(boolean param0, String param1, sc param2) {
+    private final InteractiveWidget a(boolean param0, String param1, WidgetEventListener param2) {
         InteractiveWidget var4 = null;
         RuntimeException var4_ref = null;
         int var5 = 0;
@@ -91,9 +91,9 @@ final class hi extends ei implements WidgetActivationListener {
           var4.listener = (WidgetActionListener) ((Object) new ic());
           var5 = -6 + this.height;
           this.height = this.height + 38;
-          var4.a(var5, (byte) 80, -16 + (-14 + this.width), 15, 30);
-          this.b((byte) 95, var4);
-          this.c(0);
+          var4.setBounds(var5, (byte) 80, -16 + (-14 + this.width), 15, 30);
+          this.addChild((byte) 95, var4);
+          this.refreshLayout(0);
           stackIn_3_0 = var4;
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -116,7 +116,7 @@ final class hi extends ei implements WidgetActivationListener {
         }
     }
 
-    hi(d param0, qf param1) {
+    hi(ModalDialogHost param0, qf param1) {
         super(param0, 200, 150);
         Object var3 = null;
         Object stackIn_12_0 = null;
@@ -145,14 +145,14 @@ final class hi extends ei implements WidgetActivationListener {
               }
             }
           }
-          var4 = new UiWidget((String) (var3), (sc) null);
+          var4 = new UiWidget((String) (var3), (WidgetEventListener) null);
           var4.height = 80;
           var4.y = 50;
           var4.width = this.width;
           var4.x = 0;
           var4.listener = (WidgetActionListener) ((Object) new DefaultTextWidgetRenderer(ra.field_l, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true));
-          this.b((byte) 95, var4);
-          this.field_X = this.a(false, RasterBuffer.field_e, (sc) (this));
+          this.addChild((byte) 95, var4);
+          this.field_X = this.a(false, RasterBuffer.field_e, (WidgetEventListener) (this));
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

@@ -178,15 +178,15 @@ final class ProxyAuthenticationRequiredException extends IOException {
             stackRgbSpriteArrayLocal6 = (RgbSprite[]) null;
             return stackRgbSpriteArrayLocal6;
           }
-          cachedRgbSpriteLocal1 = UiComponentPart015.computeRgbSprite0704(resourceArchiveArgument3, stringArgument5, "", 8192);
+          cachedRgbSpriteLocal1 = DropTargetWidgetContainer.computeRgbSprite0704(resourceArchiveArgument3, stringArgument5, "", 8192);
           rgbSpriteArrayLocal4[8] = cachedRgbSpriteLocal1;
           rgbSpriteArrayLocal4[6] = cachedRgbSpriteLocal1;
           rgbSpriteArrayLocal4[2] = cachedRgbSpriteLocal1;
           rgbSpriteArrayLocal4[0] = cachedRgbSpriteLocal1;
-          cachedRgbSpriteLocal2 = UiComponentPart015.computeRgbSprite0704(resourceArchiveArgument3, stringArgument2, "", 8192);
+          cachedRgbSpriteLocal2 = DropTargetWidgetContainer.computeRgbSprite0704(resourceArchiveArgument3, stringArgument2, "", 8192);
           rgbSpriteArrayLocal4[7] = cachedRgbSpriteLocal2;
           rgbSpriteArrayLocal4[1] = cachedRgbSpriteLocal2;
-          cachedRgbSpriteLocal3 = UiComponentPart015.computeRgbSprite0704(resourceArchiveArgument3, stringArgument1, "", 8192);
+          cachedRgbSpriteLocal3 = DropTargetWidgetContainer.computeRgbSprite0704(resourceArchiveArgument3, stringArgument1, "", 8192);
           rgbSpriteArrayLocal4[5] = cachedRgbSpriteLocal3;
           rgbSpriteArrayLocal4[3] = cachedRgbSpriteLocal3;
           stackRgbSpriteArrayLocal7 = rgbSpriteArrayLocal4;

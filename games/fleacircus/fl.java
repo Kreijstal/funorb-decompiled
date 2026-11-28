@@ -15,10 +15,10 @@ final class fl {
           return;
         }
         try {
-          nb.field_a.i(param3 ^ 22250);
+          nb.field_a.closeAllDialogs(param3 ^ 22250);
           lg.field_b = new LoginPanel(aa.field_s, (String) null, MouseWheelInput.field_d, param1, param0);
           ak.field_a = new ui(nb.field_a, lg.field_b);
-          nb.field_a.b(ak.field_a, (byte) -35);
+          nb.field_a.showDialog(ak.field_a, (byte) -35);
         } catch (RuntimeException runtimeException) {
           throw pf.wrapClientException((Throwable) ((Object) runtimeException), "fl.C(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }

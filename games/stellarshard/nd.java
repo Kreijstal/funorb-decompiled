@@ -128,7 +128,7 @@ final class nd extends InteractiveWidget {
         }
     }
 
-    private nd(String param0, lf param1) {
+    private nd(String param0, WidgetEventListener param1) {
         this(param0, n.field_i.field_b, param1);
         try {
           this.field_u = n.field_i.field_j;
@@ -307,7 +307,7 @@ final class nd extends InteractiveWidget {
         }
     }
 
-    private nd(String param0, uk param1, lf param2) {
+    private nd(String param0, WidgetRenderer param1, WidgetEventListener param2) {
         super(param0, param1, param2);
         try {
           this.field_u = n.field_i.field_j;
@@ -316,7 +316,7 @@ final class nd extends InteractiveWidget {
         }
     }
 
-    nd(String param0, lf param1, boolean param2) {
+    nd(String param0, WidgetEventListener param1, boolean param2) {
         this(param0, param1);
         try {
           this.field_z = param2 ? true : false;

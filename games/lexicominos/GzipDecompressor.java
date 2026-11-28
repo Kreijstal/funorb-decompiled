@@ -94,7 +94,7 @@ final class GzipDecompressor {
     }
 
     final static void a(int param0) {
-        mg.field_x = null;
+        SingleChildWidgetContainer.field_x = null;
         rg.field_c = null;
         ci.field_b = null;
         BufferedRandomAccessFile.field_f = (byte[][]) null;

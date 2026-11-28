@@ -47,7 +47,7 @@ final class kh {
             return false;
           }
           var8 = new AccountCreationResultPanel(wg.field_j, param5);
-          wg.field_j.b((byte) -33, var8);
+          wg.field_j.showDialog((byte) -33, var8);
           if (!ResourceArchive.hasStatsButtonSetting(false)) {
             cg.field_a = null;
             ac.field_c = param0;
@@ -55,7 +55,7 @@ final class kh {
             v.field_c = param2;
             ClientException.field_d = param4;
             BufferedRandomAccessFile.field_d = cf.field_b;
-            mh.field_F = param3;
+            LabeledWidgetContainer.field_F = param3;
           } else {
             var8.h((byte) 114);
           }

@@ -505,7 +505,7 @@ final class aa {
         }
         var6 = ak.field_k[this.field_c] + param4;
         var7 = ak.field_q[this.field_c][param1];
-        var8 = fm.field_R[var7];
+        var8 = ModalDialogHost.field_R[var7];
         if (35 == var7) {
           return;
         }
@@ -552,7 +552,7 @@ final class aa {
           var7 == 15) {
           var11 = 75 + var6;
           if (var7 == 14) {
-            stackIn_35_0 = lf.field_S;
+            stackIn_35_0 = AlphaWidgetContainer.field_S;
           } else {
             stackIn_35_0 = bc.field_b;
           }
@@ -1124,7 +1124,7 @@ final class aa {
                       }
                       var9 = param0 ? 1 : 0;
                       ChessBoardState.a(qk.field_h, var9 != 0, 28333, 0);
-                      ma.field_D = false;
+                      DequeWidgetContainer.field_D = false;
                       if (var11 == 0) {
                         break regionExit2;
                       }
@@ -1154,7 +1154,7 @@ final class aa {
                     }
                     var9 = param0 ? 1 : 0;
                     ChessBoardState.a(qk.field_h, var9 != 0, 28333, 0);
-                    mf.field_o = true;
+                    UiWidget.field_o = true;
                     if (var11 == 0) {
                       break regionExit2;
                     }
@@ -1282,7 +1282,7 @@ final class aa {
                   (decompiledFrameRemainder7) &&
                   (decompiledFrameRemainder6) &&
                   (decompiledFrameRemainder1)) {
-                  var5 = lf.field_S;
+                  var5 = AlphaWidgetContainer.field_S;
                   if (this.field_e.a((byte) 94)) {
                     an.a(0, (byte) 81);
                   }
@@ -1314,10 +1314,10 @@ final class aa {
                   if (this.field_e.b(97)) {
                     TextFieldValidator.g(1);
                   }
-                  if (lf.field_S == var5) {
+                  if (AlphaWidgetContainer.field_S == var5) {
                     break regionExit2;
                   }
-                  MusicPatchPcmStream.field_q.field_x = lf.field_S;
+                  MusicPatchPcmStream.field_q.field_x = AlphaWidgetContainer.field_S;
                   LoginPanel.a(ResourceArchive.field_l[0], 18);
                   if (var11 == 0) {
                     break regionExit2;
@@ -1458,7 +1458,7 @@ final class aa {
                   }
                   BufferedRandomAccessFile.field_q = true;
                   qk.field_h = 0;
-                  ma.field_D = false;
+                  DequeWidgetContainer.field_D = false;
                   if (var11 == 0) {
                     break regionExit2;
                   }
@@ -1575,7 +1575,7 @@ final class aa {
                   if (rm.field_R != null) {
                     b.a(true);
                   }
-                  dh.a(bh.i(81), true);
+                  dh.a(ArrayWidgetContainer.i(81), true);
                   if (var11 == 0) {
                     break regionExit2;
                   }
@@ -1964,7 +1964,7 @@ final class aa {
             var16 = 460 + var5;
             var19.drawParagraph(ai.field_a[var13Lifetime1], var10Lifetime1, var11, -var10Lifetime1 + (-10 + var16), 480, 1, -1, 0, 0, var21.field_C);
             var11 += 7;
-            var21.drawString(pd.field_Ob + ma.field_J[var13Lifetime1], var10Lifetime1, var11 + 4 * var21.field_q, 1, -1);
+            var21.drawString(pd.field_Ob + DequeWidgetContainer.field_J[var13Lifetime1], var10Lifetime1, var11 + 4 * var21.field_q, 1, -1);
             var11 = var11 + (-(ao.field_e.field_h / 4) + 128);
             var21.drawString(SecondaryNodeDequeIterator.field_d, var10Lifetime1, var21.field_C + var11, 1, -1);
             var17 = 0;
@@ -2144,7 +2144,7 @@ final class aa {
                 var31.drawString(ao.field_j, var8, var14, var15, -1);
                 var31.drawRightAligned(tk.field_f, -220 + var9Lifetime1, var14, var15, -1);
                 var31.drawRightAligned(ChessBoardRenderer.field_y, var9Lifetime1 - 150, var14, var15, -1);
-                var31.drawCentred(fm.field_O, -115 + var9Lifetime1, var14, var15, -1);
+                var31.drawCentred(ModalDialogHost.field_O, -115 + var9Lifetime1, var14, var15, -1);
                 var31.drawCentred(mh.field_g, var9Lifetime1 - 65, var14, var15, -1);
                 var31.drawCentred(kl.field_a, var9Lifetime1 - 15, var14, var15, -1);
                 SoftwareRasterizer.drawHorizontalLineAlpha(-35 + var8, 1 + var14, 50 + var9Lifetime1 - var8, 1, 128);

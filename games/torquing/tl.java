@@ -238,7 +238,7 @@ final class tl extends eh {
             param0.completeLevelRun(param1 ^ 111);
             DisplayNameSelectionPanel.a(100, DisplayNameSelectionPanel.field_F[18]);
             ResourceArchive.field_k[11].a(false);
-            jh.a(ResourceArchive.field_k[11], 0);
+            SingleChildWidgetContainer.a(ResourceArchive.field_k[11], 0);
           } else {
             if (var9 != 1) {
               if (var9 == 2) {
@@ -308,7 +308,7 @@ final class tl extends eh {
                             param0.field_i = MouseWheelInput.field_c[this.field_r];
                             param0.field_z = param0.field_z | 1 << param0.field_d.id;
                             ResourceArchive.field_k[10].g();
-                            jh.a(ResourceArchive.field_k[10], 0);
+                            SingleChildWidgetContainer.a(ResourceArchive.field_k[10], 0);
                             return;
                           }
                           param0.field_e.addFirst((byte) 54, new sb(Integer.toString(1000), var7, var8, 2));

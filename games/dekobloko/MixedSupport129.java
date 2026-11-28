@@ -96,7 +96,7 @@ final class MixedSupport129 extends HashNode {
           integerArrayLocal57 = integerArrayLocal59;
           integerArrayLocal27 = integerArrayLocal57;
           integerArrayLocal65 = new int[mixedSupport138Argument1.shortState0002];
-          integerArrayLocal63 = UiComponentPart015.integerArrayState0100;
+          integerArrayLocal63 = DropTargetWidgetContainer.integerArrayState0100;
           integerArrayLocal62 = MixedSupport009.integerArrayState0016;
           integerArrayLocal64 = MixedSupport115.integerArrayState0205;
           for (integerLocal29 = 0; mixedSupport138Argument1.shortState0002 > integerLocal29; integerLocal29++) {
@@ -131,19 +131,19 @@ final class MixedSupport129 extends HashNode {
             integerLocal68 = mixedSupport138Argument1.shortArrayState0002[integerLocal67];
             integerLocal32 = mixedSupport138Argument1.shortArrayState0015[integerLocal67];
             integerLocal33 = mixedSupport138Argument1.shortArrayState0008[integerLocal67];
-            if (UiComponentPart015.integerArrayState0100.length > mixedSupport138Argument1.shortArrayState0005[integerLocal67]) {
+            if (DropTargetWidgetContainer.integerArrayState0100.length > mixedSupport138Argument1.shortArrayState0005[integerLocal67]) {
               stackIntegerLocal4 = mixedSupport138Argument1.shortArrayState0005[integerLocal67];
             } else {
               stackIntegerLocal4 = -1;
             }
             integerLocal34 = stackIntegerLocal4;
-            if (UiComponentPart015.integerArrayState0100.length > mixedSupport138Argument1.shortArrayState0014[integerLocal67]) {
+            if (DropTargetWidgetContainer.integerArrayState0100.length > mixedSupport138Argument1.shortArrayState0014[integerLocal67]) {
               stackIntegerLocal5 = mixedSupport138Argument1.shortArrayState0014[integerLocal67];
             } else {
               stackIntegerLocal5 = -1;
             }
             integerLocal35 = stackIntegerLocal5;
-            if (UiComponentPart015.integerArrayState0100.length <= mixedSupport138Argument1.shortArrayState0006[integerLocal67]) {
+            if (DropTargetWidgetContainer.integerArrayState0100.length <= mixedSupport138Argument1.shortArrayState0006[integerLocal67]) {
               stackIntegerLocal6 = -1;
             } else {
               stackIntegerLocal6 = mixedSupport138Argument1.shortArrayState0006[integerLocal67];

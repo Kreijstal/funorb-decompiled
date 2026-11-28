@@ -104,7 +104,7 @@ final class BufferedSocket implements Runnable {
           stringLocal2 = stringLocal6 + ":";
           for (integerLocal1 = 0; integerLocal1 < NetworkSupport012.integerState0759; integerLocal1++) {
             stringLocal7 = stringLocal2 + ' ';
-            integerLocal3 = UiComponentPart006.cipherPacketBufferState0001.payload[integerLocal1] & 255;
+            integerLocal3 = LabeledWidgetContainer.cipherPacketBufferState0001.payload[integerLocal1] & 255;
             integerLocal4 = integerLocal3 >> 4;
             if (integerLocal4 >= 10) {
               integerLocal4 += 55;

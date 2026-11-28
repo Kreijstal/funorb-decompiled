@@ -348,7 +348,7 @@ final class ld {
     }
 
     final static void a(boolean param0, boolean param1) {
-        sa.field_Q.a(param0, param1);
+        LabeledWidgetContainer.field_Q.a(param0, param1);
         if (!param1) {
           ld.a(false, true);
         }

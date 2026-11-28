@@ -22,7 +22,7 @@ final class gg extends ej implements WidgetActivationListener {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var21 = null;
         try {
-          ta.a(0, param8, param7, param13);
+          DequeWidgetContainer.a(0, param8, param7, param13);
           nc.a(-101, param3, param10, param9, param1);
           jk.b(param11, param18, 249);
           if (param16 >= -78) {
@@ -66,7 +66,7 @@ final class gg extends ej implements WidgetActivationListener {
           } else {
             stackIn_19_2 = "{...}";
           }
-          throw dd.wrapClientException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param18).append(',').append(param19).append(',').append(param20).append(')').toString());
+          throw DraggableWidgetContainer.wrapClientException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param18).append(',').append(param19).append(',').append(param20).append(')').toString());
         }
     }
 
@@ -79,11 +79,11 @@ final class gg extends ej implements WidgetActivationListener {
             field_Q = 118;
           }
         } catch (RuntimeException runtimeException) {
-          throw dd.wrapClientException((Throwable) ((Object) runtimeException), "gg.H(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw DraggableWidgetContainer.wrapClientException((Throwable) ((Object) runtimeException), "gg.H(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
-    gg(sk param0, i param1) {
+    gg(ModalDialogHost param0, i param1) {
         super(param0, 200, 150);
         Object var3 = null;
         Object stackIn_12_0 = null;
@@ -92,7 +92,7 @@ final class gg extends ej implements WidgetActivationListener {
         StringBuilder stackIn_15_1 = null;
         String stackIn_16_2 = null;
         RuntimeException decompiledCaughtException = null;
-        pj var4 = null;
+        UiWidget var4 = null;
         try {
           var3 = null;
           if (jm.field_a == param1) {
@@ -112,14 +112,14 @@ final class gg extends ej implements WidgetActivationListener {
               }
             }
           }
-          var4 = new pj((String) (var3), (ag) null);
+          var4 = new UiWidget((String) (var3), (WidgetEventListener) null);
           var4.field_n = 50;
           var4.field_m = this.field_m;
           var4.field_r = 80;
           var4.field_s = 0;
-          var4.field_j = (td) ((Object) new DefaultTextWidgetRenderer(pc.field_bb, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true));
-          this.a(var4, (byte) 74);
-          this.field_P = this.a(th.field_d, 6, (ag) (this));
+          var4.field_j = (WidgetRenderer) ((Object) new DefaultTextWidgetRenderer(pc.field_bb, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true));
+          this.addChild(var4, (byte) 74);
+          this.field_P = this.a(th.field_d, 6, (WidgetEventListener) (this));
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -137,7 +137,7 @@ final class gg extends ej implements WidgetActivationListener {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw dd.wrapClientException((Throwable) (stackIn_12_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
+          throw DraggableWidgetContainer.wrapClientException((Throwable) (stackIn_12_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
         }
     }
 
@@ -174,7 +174,7 @@ final class gg extends ej implements WidgetActivationListener {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw dd.wrapClientException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param4).append(')').toString());
+          throw DraggableWidgetContainer.wrapClientException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -186,7 +186,7 @@ final class gg extends ej implements WidgetActivationListener {
         this.field_A = false;
     }
 
-    private final InteractiveWidget a(String param0, int param1, ag param2) {
+    private final InteractiveWidget a(String param0, int param1, WidgetEventListener param2) {
         InteractiveWidget var4 = null;
         RuntimeException var4_ref = null;
         int var5 = 0;
@@ -199,12 +199,12 @@ final class gg extends ej implements WidgetActivationListener {
         RuntimeException decompiledCaughtException = null;
         try {
           var4 = new InteractiveWidget(param0, param2);
-          var4.field_j = (td) ((Object) new vk());
+          var4.field_j = (WidgetRenderer) ((Object) new vk());
           var5 = this.field_r - param1;
           this.field_r = this.field_r + 38;
-          var4.a(15, var5, 30, (byte) -90, -14 + this.field_m - 16);
-          this.a(var4, (byte) 74);
-          this.c(-26385);
+          var4.setBounds(15, var5, 30, (byte) -90, -14 + this.field_m - 16);
+          this.addChild(var4, (byte) 74);
+          this.refreshLayout(-26385);
           stackIn_1_0 = var4;
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -223,7 +223,7 @@ final class gg extends ej implements WidgetActivationListener {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw dd.wrapClientException((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
+          throw DraggableWidgetContainer.wrapClientException((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
         }
     }
 

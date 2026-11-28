@@ -9,7 +9,7 @@ class UiComponent extends IntrusiveNode {
     int field_z;
     static int field_o;
     boolean field_w;
-    j field_q;
+    WidgetRenderer field_q;
     static int field_s;
     int field_u;
     int field_i;
@@ -19,27 +19,27 @@ class UiComponent extends IntrusiveNode {
     int field_m;
     TextLayout field_t;
     int field_l;
-    gg field_k;
+    WidgetEventListener field_k;
     static hb field_x;
     static int[] field_n;
 
-    final boolean a(int param0, boolean param1, int param2, boolean param3) {
+    final boolean processPointerInput(int param0, boolean param1, int param2, boolean param3) {
         int var5;
         int var7;
-        uk var8;
-        uk var9;
-        uk var10;
-        uk var11;
-        uk var12;
-        uk var13;
-        uk var14;
+        DraggableWidgetContainer var8;
+        DraggableWidgetContainer var9;
+        DraggableWidgetContainer var10;
+        DraggableWidgetContainer var11;
+        DraggableWidgetContainer var12;
+        DraggableWidgetContainer var13;
+        DraggableWidgetContainer var14;
         var7 = TorChallenge.field_F ? 1 : 0;
-        this.a(this, param0, (byte) -127, param2);
-        var5 = this.c(94) ? 1 : 0;
+        this.updatePointer(this, param0, (byte) -127, param2);
+        var5 = this.isFocused(94) ? 1 : 0;
         if (!param3) {
           if (var5 != 0 &&
             vb.field_n != 0) {
-            this.d(6064);
+            this.blur(6064);
           }
         } else {
           if (bl.field_X != 0) {
@@ -55,24 +55,24 @@ class UiComponent extends IntrusiveNode {
                   je.a((byte) -109, this.getTooltipText(param1));
                   return param3;
                 }
-                this.a(param2, (byte) -77, this, param0, ConfirmedEmailAvailabilityValidator.field_u, ph.field_d);
+                this.pointerReleased(param2, (byte) -77, this, param0, ConfirmedEmailAvailabilityValidator.field_u, ph.field_d);
                 var8 = SocketConnector.field_b;
                 if (var8 != null) {
-                  if (var8.field_k instanceof f) {
-                    ((f) (var8.field_k)).a(var8, (wk) null, param1);
+                  if (var8.field_k instanceof WidgetDropListener) {
+                    ((WidgetDropListener) (var8.field_k)).widgetDropped(var8, (DropTargetWidgetContainer) null, param1);
                   }
                   SocketConnector.field_b = null;
                 }
                 if (var7 != 0 &&
                   var5 != 0 &&
                   vb.field_n != 0) {
-                  this.d(6064);
+                  this.blur(6064);
                 }
                 ok.field_f = wh.field_e;
                 je.a((byte) -109, this.getTooltipText(param1));
                 return param3;
               }
-              if (this.a(AgeValidator.field_m, ik.field_a, -81, param2, param0, vb.field_n, this)) {
+              if (this.pointerPressed(AgeValidator.field_m, ik.field_a, -81, param2, param0, vb.field_n, this)) {
                 param3 = false;
                 if (var7 == 0) {
                   if (0 != wh.field_e) {
@@ -85,18 +85,18 @@ class UiComponent extends IntrusiveNode {
                     je.a((byte) -109, this.getTooltipText(param1));
                     return param3;
                   }
-                  this.a(param2, (byte) -77, this, param0, ConfirmedEmailAvailabilityValidator.field_u, ph.field_d);
+                  this.pointerReleased(param2, (byte) -77, this, param0, ConfirmedEmailAvailabilityValidator.field_u, ph.field_d);
                   var9 = SocketConnector.field_b;
                   if (var9 != null) {
-                    if (var9.field_k instanceof f) {
-                      ((f) (var9.field_k)).a(var9, (wk) null, param1);
+                    if (var9.field_k instanceof WidgetDropListener) {
+                      ((WidgetDropListener) (var9.field_k)).widgetDropped(var9, (DropTargetWidgetContainer) null, param1);
                     }
                     SocketConnector.field_b = null;
                   }
                   if (var7 != 0 &&
                     var5 != 0 &&
                     vb.field_n != 0) {
-                    this.d(6064);
+                    this.blur(6064);
                   }
                   ok.field_f = wh.field_e;
                   je.a((byte) -109, this.getTooltipText(param1));
@@ -113,24 +113,24 @@ class UiComponent extends IntrusiveNode {
                 je.a((byte) -109, this.getTooltipText(param1));
                 return param3;
               }
-              this.a(param2, (byte) -77, this, param0, ConfirmedEmailAvailabilityValidator.field_u, ph.field_d);
+              this.pointerReleased(param2, (byte) -77, this, param0, ConfirmedEmailAvailabilityValidator.field_u, ph.field_d);
               var10 = SocketConnector.field_b;
               if (var10 != null) {
-                if (var10.field_k instanceof f) {
-                  ((f) (var10.field_k)).a(var10, (wk) null, param1);
+                if (var10.field_k instanceof WidgetDropListener) {
+                  ((WidgetDropListener) (var10.field_k)).widgetDropped(var10, (DropTargetWidgetContainer) null, param1);
                 }
                 SocketConnector.field_b = null;
               }
               if (var7 != 0 &&
                 var5 != 0 &&
                 vb.field_n != 0) {
-                this.d(6064);
+                this.blur(6064);
               }
               ok.field_f = wh.field_e;
               je.a((byte) -109, this.getTooltipText(param1));
               return param3;
             }
-            this.a(0, bl.field_X, param0, ConfirmedEmailAvailabilityValidator.field_u, this, ph.field_d, param2);
+            this.handleWheel(0, bl.field_X, param0, ConfirmedEmailAvailabilityValidator.field_u, this, ph.field_d, param2);
           }
           if (vb.field_n == 0) {
             if (0 != wh.field_e) {
@@ -143,24 +143,24 @@ class UiComponent extends IntrusiveNode {
               je.a((byte) -109, this.getTooltipText(param1));
               return param3;
             }
-            this.a(param2, (byte) -77, this, param0, ConfirmedEmailAvailabilityValidator.field_u, ph.field_d);
+            this.pointerReleased(param2, (byte) -77, this, param0, ConfirmedEmailAvailabilityValidator.field_u, ph.field_d);
             var11 = SocketConnector.field_b;
             if (var11 != null) {
-              if (var11.field_k instanceof f) {
-                ((f) (var11.field_k)).a(var11, (wk) null, param1);
+              if (var11.field_k instanceof WidgetDropListener) {
+                ((WidgetDropListener) (var11.field_k)).widgetDropped(var11, (DropTargetWidgetContainer) null, param1);
               }
               SocketConnector.field_b = null;
             }
             if (var7 != 0 &&
               var5 != 0 &&
               vb.field_n != 0) {
-              this.d(6064);
+              this.blur(6064);
             }
             ok.field_f = wh.field_e;
             je.a((byte) -109, this.getTooltipText(param1));
             return param3;
           }
-          if (this.a(AgeValidator.field_m, ik.field_a, -81, param2, param0, vb.field_n, this)) {
+          if (this.pointerPressed(AgeValidator.field_m, ik.field_a, -81, param2, param0, vb.field_n, this)) {
             param3 = false;
             if (var7 == 0) {
               if (0 != wh.field_e) {
@@ -173,18 +173,18 @@ class UiComponent extends IntrusiveNode {
                 je.a((byte) -109, this.getTooltipText(param1));
                 return param3;
               }
-              this.a(param2, (byte) -77, this, param0, ConfirmedEmailAvailabilityValidator.field_u, ph.field_d);
+              this.pointerReleased(param2, (byte) -77, this, param0, ConfirmedEmailAvailabilityValidator.field_u, ph.field_d);
               var12 = SocketConnector.field_b;
               if (var12 != null) {
-                if (var12.field_k instanceof f) {
-                  ((f) (var12.field_k)).a(var12, (wk) null, param1);
+                if (var12.field_k instanceof WidgetDropListener) {
+                  ((WidgetDropListener) (var12.field_k)).widgetDropped(var12, (DropTargetWidgetContainer) null, param1);
                 }
                 SocketConnector.field_b = null;
               }
               if (var7 != 0 &&
                 var5 != 0 &&
                 vb.field_n != 0) {
-                this.d(6064);
+                this.blur(6064);
               }
               ok.field_f = wh.field_e;
               je.a((byte) -109, this.getTooltipText(param1));
@@ -192,7 +192,7 @@ class UiComponent extends IntrusiveNode {
             }
           }
           if (var5 != 0) {
-            this.d(6064);
+            this.blur(6064);
             if (0 != wh.field_e) {
               ok.field_f = wh.field_e;
               je.a((byte) -109, this.getTooltipText(param1));
@@ -203,17 +203,17 @@ class UiComponent extends IntrusiveNode {
               je.a((byte) -109, this.getTooltipText(param1));
               return param3;
             }
-            this.a(param2, (byte) -77, this, param0, ConfirmedEmailAvailabilityValidator.field_u, ph.field_d);
+            this.pointerReleased(param2, (byte) -77, this, param0, ConfirmedEmailAvailabilityValidator.field_u, ph.field_d);
             var14 = SocketConnector.field_b;
             if (var14 != null) {
-              if (var14.field_k instanceof f) {
-                ((f) (var14.field_k)).a(var14, (wk) null, param1);
+              if (var14.field_k instanceof WidgetDropListener) {
+                ((WidgetDropListener) (var14.field_k)).widgetDropped(var14, (DropTargetWidgetContainer) null, param1);
               }
               SocketConnector.field_b = null;
             }
             if (var7 != 0 &&
               vb.field_n != 0) {
-              this.d(6064);
+              this.blur(6064);
             }
             ok.field_f = wh.field_e;
             je.a((byte) -109, this.getTooltipText(param1));
@@ -221,17 +221,17 @@ class UiComponent extends IntrusiveNode {
           }
           if (0 == wh.field_e &&
             ok.field_f != 0) {
-            this.a(param2, (byte) -77, this, param0, ConfirmedEmailAvailabilityValidator.field_u, ph.field_d);
+            this.pointerReleased(param2, (byte) -77, this, param0, ConfirmedEmailAvailabilityValidator.field_u, ph.field_d);
             var13 = SocketConnector.field_b;
             if (var13 != null) {
-              if (var13.field_k instanceof f) {
-                ((f) (var13.field_k)).a(var13, (wk) null, param1);
+              if (var13.field_k instanceof WidgetDropListener) {
+                ((WidgetDropListener) (var13.field_k)).widgetDropped(var13, (DropTargetWidgetContainer) null, param1);
               }
               SocketConnector.field_b = null;
               if (var7 != 0 &&
                 var5 != 0 &&
                 vb.field_n != 0) {
-                this.d(6064);
+                this.blur(6064);
               }
               ok.field_f = wh.field_e;
               je.a((byte) -109, this.getTooltipText(param1));
@@ -240,7 +240,7 @@ class UiComponent extends IntrusiveNode {
             if (var7 != 0 &&
               var5 != 0 &&
               vb.field_n != 0) {
-              this.d(6064);
+              this.blur(6064);
               ok.field_f = wh.field_e;
               je.a((byte) -109, this.getTooltipText(param1));
               return param3;
@@ -261,7 +261,7 @@ class UiComponent extends IntrusiveNode {
         field_x = null;
     }
 
-    boolean a(int param0, int param1, int param2, int param3, int param4, int param5, UiComponent param6) {
+    boolean pointerPressed(int param0, int param1, int param2, int param3, int param4, int param5, UiComponent param6) {
         RuntimeException var8 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
@@ -269,9 +269,9 @@ class UiComponent extends IntrusiveNode {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param2 != -81) {
-            this.a(-23, -24, 118, 19, -83, -121, (UiComponent) null);
+            this.pointerPressed(-23, -24, 118, 19, -83, -121, (UiComponent) null);
           }
-          if (!this.a(param0, param1, param3, -29991, param4)) {
+          if (!this.containsPointer(param0, param1, param3, -29991, param4)) {
             return false;
           }
           this.field_z = param5;
@@ -290,7 +290,7 @@ class UiComponent extends IntrusiveNode {
         }
     }
 
-    boolean a(int param0, int param1, int param2, int param3, UiComponent param4, int param5, int param6) {
+    boolean handleWheel(int param0, int param1, int param2, int param3, UiComponent param4, int param5, int param6) {
         RuntimeException var8 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -298,7 +298,7 @@ class UiComponent extends IntrusiveNode {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 != 0) {
-            this.a(-72, -73, false, 71);
+            this.drawWidget(-72, -73, false, 71);
           }
           return false;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -315,7 +315,7 @@ class UiComponent extends IntrusiveNode {
         }
     }
 
-    final boolean a(int param0, int param1, int param2, int param3, int param4) {
+    final boolean containsPointer(int param0, int param1, int param2, int param3, int param4) {
         boolean stackIn_18_0 = false;
         if (param3 != -29991) {
           this.field_z = -33;
@@ -343,7 +343,7 @@ class UiComponent extends IntrusiveNode {
         return stackIn_18_0;
     }
 
-    void a(UiComponent param0, int param1, byte param2, int param3) {
+    void updatePointer(UiComponent param0, int param1, byte param2, int param3) {
         int var5_int = 0;
         boolean stackIn_4_1 = false;
         RuntimeException stackIn_13_0 = null;
@@ -352,13 +352,13 @@ class UiComponent extends IntrusiveNode {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var5 = null;
         try {
-          var5_int = this.a(ph.field_d, ConfirmedEmailAvailabilityValidator.field_u, param3, -29991, param1) ? 1 : 0;
+          var5_int = this.containsPointer(ph.field_d, ConfirmedEmailAvailabilityValidator.field_u, param3, -29991, param1) ? 1 : 0;
           if (var5_int != (this.field_w ? 1 : 0)) {
             stackIn_4_1 = (var5_int != 0);
             this.field_w = stackIn_4_1;
             if (this.field_k != null &&
-              this.field_k instanceof ml) {
-              ((ml) (this.field_k)).a(var5_int != 0, this, 29557);
+              this.field_k instanceof WidgetHoverListener) {
+              ((WidgetHoverListener) (this.field_k)).onWidgetHoverChanged(var5_int != 0, this, 29557);
             }
           }
           if (param2 > -97) {
@@ -379,7 +379,7 @@ class UiComponent extends IntrusiveNode {
         }
     }
 
-    final boolean a(Hashtable param0, int param1, int param2, StringBuilder param3) {
+    final boolean beginDebugTreeEntry(Hashtable param0, int param1, int param2, StringBuilder param3) {
         StringBuilder discarded$1 = null;
         RuntimeException var5 = null;
         RuntimeException stackIn_9_0 = null;
@@ -418,7 +418,7 @@ class UiComponent extends IntrusiveNode {
         }
     }
 
-    boolean a(int param0, char param1, byte param2, UiComponent param3) {
+    boolean handleKey(int param0, char param1, byte param2, UiComponent param3) {
         RuntimeException var5 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -428,7 +428,7 @@ class UiComponent extends IntrusiveNode {
           if (param2 > 9) {
             return false;
           }
-          this.a(74, 31, 55, -90, (UiComponent) null, -101, -90);
+          this.handleWheel(74, 31, 55, -90, (UiComponent) null, -101, -90);
           return false;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -444,7 +444,7 @@ class UiComponent extends IntrusiveNode {
         }
     }
 
-    final void a(StringBuilder param0, int param1, Hashtable param2, int param3) {
+    final void appendDebugProperties(StringBuilder param0, int param1, Hashtable param2, int param3) {
         StringBuilder discarded$0 = null;
         StringBuilder discarded$1 = null;
         StringBuilder discarded$2 = null;
@@ -472,13 +472,13 @@ class UiComponent extends IntrusiveNode {
           if (this.field_w) {
             discarded$2 = param0.append(" mouseover");
           }
-          if (this.c(89)) {
+          if (this.isFocused(89)) {
             discarded$3 = param0.append(" focused");
           }
           if (this.field_q != null) {
             discarded$4 = param0.append(" renderer=");
             if (this.field_q instanceof UiComponent) {
-              param0 = this.a(param2, 1 + param3, param0, true);
+              param0 = this.appendDebugTree(param2, 1 + param3, param0, true);
               if (var6 != 0) {
                 discarded$5 = param0.append(this.field_q);
               }
@@ -491,10 +491,10 @@ class UiComponent extends IntrusiveNode {
             if (!(this.field_k instanceof UiComponent)) {
               discarded$7 = param0.append(this.field_k);
               if (var6 != 0) {
-                param0 = this.a(param2, param3 + 1, param0, true);
+                param0 = this.appendDebugTree(param2, param3 + 1, param0, true);
               }
             } else {
-              param0 = this.a(param2, param3 + 1, param0, true);
+              param0 = this.appendDebugTree(param2, param3 + 1, param0, true);
             }
           }
           return;
@@ -518,7 +518,7 @@ class UiComponent extends IntrusiveNode {
         }
     }
 
-    StringBuilder a(Hashtable param0, int param1, StringBuilder param2, boolean param3) {
+    StringBuilder appendDebugTree(Hashtable param0, int param1, StringBuilder param2, boolean param3) {
         RuntimeException var5 = null;
         StringBuilder stackIn_4_0 = null;
         StringBuilder stackIn_6_0 = null;
@@ -529,8 +529,8 @@ class UiComponent extends IntrusiveNode {
         String stackIn_13_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (this.a(param0, param1, -125, param2)) {
-            this.a(param2, -110, param0, param1);
+          if (this.beginDebugTreeEntry(param0, param1, -125, param2)) {
+            this.appendDebugProperties(param2, -110, param0, param1);
           }
           if (param3) {
             stackIn_6_0 = (StringBuilder) (param2);
@@ -570,16 +570,16 @@ class UiComponent extends IntrusiveNode {
         }
     }
 
-    final void a(int param0, int param1, int param2) {
+    final void drawAllLayers(int param0, int param1, int param2) {
         int var4;
         int var5_int;
         String var5;
         int var6;
         var6 = TorChallenge.field_F ? 1 : 0;
-        var4 = this.e(-15000);
+        var4 = this.getMaximumRenderLayer(-15000);
         var5_int = param0;
         while (var4 >= var5_int) {
-          this.a(param2, param1, false, var5_int);
+          this.drawWidget(param2, param1, false, var5_int);
           var5_int++;
           if (var6 == 0) {
             continue;
@@ -593,7 +593,7 @@ class UiComponent extends IntrusiveNode {
         kl.field_e.a(ul.field_n, var5, bi.field_h, -45);
     }
 
-    boolean a(UiComponent param0, int param1) {
+    boolean takeFocus(UiComponent param0, int param1) {
         RuntimeException var3 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -619,7 +619,7 @@ class UiComponent extends IntrusiveNode {
         }
     }
 
-    void a(int param0, byte param1, UiComponent param2, int param3, int param4, int param5) {
+    void pointerReleased(int param0, byte param1, UiComponent param2, int param3, int param4, int param5) {
         try {
           int var7_int = -81 % ((-29 - param1) / 39);
           this.field_z = 0;
@@ -628,7 +628,7 @@ class UiComponent extends IntrusiveNode {
         }
     }
 
-    int e(int param0) {
+    int getMaximumRenderLayer(int param0) {
         if (param0 != -15000) {
           this.field_t = (TextLayout) null;
           return 0;
@@ -708,14 +708,14 @@ class UiComponent extends IntrusiveNode {
         }
     }
 
-    boolean c(int param0) {
+    boolean isFocused(int param0) {
         if (param0 <= 76) {
           return true;
         }
         return false;
     }
 
-    void a(int param0, int param1, boolean param2, int param3) {
+    void drawWidget(int param0, int param1, boolean param2, int param3) {
         if (0 == param3) {
           if (this.field_q == null) {
             if (param2) {
@@ -724,7 +724,7 @@ class UiComponent extends IntrusiveNode {
             }
             return;
           }
-          this.field_q.a(this, param0, param1, (byte) 97, true);
+          this.field_q.paintWidget(this, param0, param1, (byte) 97, true);
         }
         if (!param2) {
           return;
@@ -732,13 +732,13 @@ class UiComponent extends IntrusiveNode {
         this.toString();
     }
 
-    void d(int param0) {
+    void blur(int param0) {
         if (param0 != 6064) {
           UiComponent.a((bk) null, 51, (byte) -94);
         }
     }
 
-    void a(byte param0, int param1, int param2, int param3, int param4) {
+    void setBounds(byte param0, int param1, int param2, int param3, int param4) {
         this.field_m = param1;
         if (param0 > 100) {
           this.field_i = param4;
@@ -746,42 +746,42 @@ class UiComponent extends IntrusiveNode {
           this.field_l = param2;
           return;
         }
-        this.a((UiComponent) null, -90);
+        this.takeFocus((UiComponent) null, -90);
         this.field_i = param4;
         this.field_p = param3;
         this.field_l = param2;
     }
 
-    UiComponent(String param0, gg param1) {
+    UiComponent(String param0, WidgetEventListener param1) {
         this(param0, kl.field_e.field_q, param1);
     }
 
-    final void b(byte param0) {
+    final void refreshLayout(byte param0) {
         if (param0 <= 52) {
           return;
         }
-        this.a((byte) 114, this.field_m, this.field_l, this.field_p, this.field_i);
+        this.setBounds((byte) 114, this.field_m, this.field_l, this.field_p, this.field_i);
     }
 
-    final boolean a(char param0, int param1, int param2) {
+    final boolean processKeyInput(char param0, int param1, int param2) {
         int var4 = 0;
         int var4Lifetime1;
         int var4Lifetime2;
         int var4Lifetime3;
-        if (this.c(121)) {
-          if (this.a(param1, param0, (byte) 126, this)) {
+        if (this.isFocused(121)) {
+          if (this.handleKey(param1, param0, (byte) 126, this)) {
             return true;
           }
           var4 = param1;
           if (var4 == 80) {
-            return this.a(this, 0);
+            return this.takeFocus(this, 0);
           }
           var4Lifetime3 = -89 / ((8 - param2) / 60);
           return false;
         }
         var4Lifetime1 = param1;
         if (var4Lifetime1 == 80) {
-          return this.a(this, 0);
+          return this.takeFocus(this, 0);
         }
         var4Lifetime2 = -89 / ((8 - param2) / 60);
         return false;
@@ -789,7 +789,7 @@ class UiComponent extends IntrusiveNode {
 
     String getTooltipText(boolean param0) {
         if (param0) {
-          this.a('4', -20, -6);
+          this.processKeyInput('4', -20, -6);
           if (this.field_w) {
             return this.field_r;
           }
@@ -802,7 +802,7 @@ class UiComponent extends IntrusiveNode {
     }
 
     public final String toString() {
-        return this.a(new Hashtable(), 0, new StringBuilder(), true).toString();
+        return this.appendDebugTree(new Hashtable(), 0, new StringBuilder(), true).toString();
     }
 
     protected UiComponent() {
@@ -810,7 +810,7 @@ class UiComponent extends IntrusiveNode {
         this.field_j = 0;
     }
 
-    UiComponent(String param0, j param1, gg param2) {
+    UiComponent(String param0, WidgetRenderer param1, WidgetEventListener param2) {
         RuntimeException runtimeException = null;
         TextWidgetRenderer var4 = null;
         RuntimeException stackIn_6_0 = null;
@@ -859,7 +859,7 @@ class UiComponent extends IntrusiveNode {
         }
     }
 
-    UiComponent(int param0, int param1, int param2, int param3, j param4, gg param5) {
+    UiComponent(int param0, int param1, int param2, int param3, WidgetRenderer param4, WidgetEventListener param5) {
         this.field_u = 0;
         this.field_j = 0;
         try {

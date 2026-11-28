@@ -42,12 +42,12 @@ final class hh extends IntrusiveNode {
             if (null != tb.field_p) {
               tb.field_p.a(param0 - 134);
             }
-            if (hb.field_F != null) {
-              hb.field_F.shutdown(-1);
+            if (LabeledWidgetContainer.field_F != null) {
+              LabeledWidgetContainer.field_F.shutdown(-1);
             }
-            if (jg.field_C != null) {
+            if (AlphaWidgetContainer.field_C != null) {
               try {
-                jg.field_C.close(-747969087);
+                AlphaWidgetContainer.field_C.close(-747969087);
               } catch (java.io.IOException decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;
                 var1 = (IOException) (Object) decompiledCaughtException;

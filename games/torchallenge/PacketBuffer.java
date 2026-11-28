@@ -291,16 +291,16 @@ class PacketBuffer extends IntrusiveNode {
                 id.field_b.readUnsignedByte(-127);
                 id.field_b.readUnsignedByte(-121);
                 id.field_b.readInt(81);
-                wk.field_G = id.field_b.readUnsignedShort(param5);
-                te.field_d = new byte[wk.field_G];
-                for (var8 = 0; wk.field_G > var8; var8++) {
+                DropTargetWidgetContainer.field_G = id.field_b.readUnsignedShort(param5);
+                te.field_d = new byte[DropTargetWidgetContainer.field_G];
+                for (var8 = 0; DropTargetWidgetContainer.field_G > var8; var8++) {
                   te.field_d[var8] = id.field_b.readByte((byte) -22);
                 }
               }
               LevelDecoder.field_a = id.field_b.readString(param5);
               var12 = (CharSequence) ((Object) LevelDecoder.field_a);
               td.field_i = EmailFormatValidator.a(var12, (byte) 21);
-              uk.field_H = id.field_b.readUnsignedByte(-89);
+              DraggableWidgetContainer.field_H = id.field_b.readUnsignedByte(-89);
               aj.field_c = qc.field_d;
               if (TextLineMetrics.field_c.a(true) == AccountCreationResultPanel.field_Db) {
                 sd.field_e.a(gi.b(12476), param5);

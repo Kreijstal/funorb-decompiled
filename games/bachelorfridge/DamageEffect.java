@@ -181,7 +181,7 @@ final class DamageEffect extends EventEffect {
             return stackIn_3_0;
           }
           if (null == dma.field_b &&
-            !ge.a(-29510, false)) {
+            !LabeledWidgetContainer.a(-29510, false)) {
             stackIn_8_0 = -1;
             return stackIn_8_0;
           }

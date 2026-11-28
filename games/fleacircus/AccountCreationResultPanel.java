@@ -67,7 +67,7 @@ final class AccountCreationResultPanel extends bd implements WidgetActivationLis
                 var5.a(vk.field_K, -23493, 17);
               }
             } else {
-              var5.a((kd) (this), true, ee.field_k);
+              var5.a((WidgetEventListener) (this), true, ee.field_k);
             }
             if (param1.statusCode == 3) {
               var5.a(bm.field_N, -23493, 7);
@@ -81,7 +81,7 @@ final class AccountCreationResultPanel extends bd implements WidgetActivationLis
               this.d(new og(this), 26034);
               return;
             }
-            var5.a((kd) (this), true, ee.field_k);
+            var5.a((WidgetEventListener) (this), true, ee.field_k);
           }
           this.d(var5, param0 + 25976);
           return;
@@ -106,20 +106,20 @@ final class AccountCreationResultPanel extends bd implements WidgetActivationLis
         this.showAccountCreationResult((byte) 58, DiskCacheWorker.createAccountErrorResult((byte) 36, 248, al.field_a), true);
     }
 
-    final boolean a(int param0) {
+    final boolean advanceDialogAnimation(int param0) {
         int var2 = -66 / ((38 - param0) / 49);
         if (!this.field_G) {
-          return super.a(100);
+          return super.advanceDialogAnimation(100);
         }
         if (this.field_wb) {
-          return super.a(100);
+          return super.advanceDialogAnimation(100);
         }
         AccountServiceResult var3 = bg.pollAccountCreationResult((byte) 56);
         if (var3 == null) {
-          return super.a(100);
+          return super.advanceDialogAnimation(100);
         }
         this.showAccountCreationResult((byte) 58, var3, false);
-        return super.a(100);
+        return super.advanceDialogAnimation(100);
     }
 
     public final void onWidgetActivated(int param0, int param1, int param2, int param3, InteractiveWidget param4) {
@@ -138,7 +138,7 @@ final class AccountCreationResultPanel extends bd implements WidgetActivationLis
         }
     }
 
-    AccountCreationResultPanel(f param0, AccountRegistrationPanel param1) {
+    AccountCreationResultPanel(ModalDialogHost param0, AccountRegistrationPanel param1) {
         super(param0, rg.field_o, pb.field_b, false, false);
         try {
           this.field_ub = param1;

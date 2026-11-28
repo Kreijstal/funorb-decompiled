@@ -15,7 +15,7 @@ final class UiComponentPart001 extends InteractiveComponent {
     static String stringState0025;
     int integerState0038;
 
-    final boolean computeBoolean0056(int integerArgument1, int integerArgument2, UiComponent uiComponentArgument3, int integerArgument4, int integerArgument5, int integerArgument6, byte byteArgument7) {
+    final boolean pointerPressed(int integerArgument1, int integerArgument2, UiComponent uiComponentArgument3, int integerArgument4, int integerArgument5, int integerArgument6, byte byteArgument7) {
         RuntimeException stackRuntimeExceptionLocal1 = null;
         StringBuilder stackStringBuilderLocal2 = null;
         String stackStringLocal3 = null;
@@ -27,7 +27,7 @@ final class UiComponentPart001 extends InteractiveComponent {
         int integerLocal9 = 0;
         integerLocal9 = DekoBlokoClient.obfuscationControl ? 1 : 0;
         try {
-          if (!super.computeBoolean0056(integerArgument1, integerArgument2, uiComponentArgument3, integerArgument4, integerArgument5, integerArgument6, byteArgument7)) {
+          if (!super.pointerPressed(integerArgument1, integerArgument2, uiComponentArgument3, integerArgument4, integerArgument5, integerArgument6, byteArgument7)) {
             return false;
           }
           integerLocal5 = -this.integerState0032 - (integerArgument6 + this.integerState0110) + integerArgument2;
@@ -198,18 +198,18 @@ final class UiComponentPart001 extends InteractiveComponent {
     final static MixedSupport020 computeMixedSupport0200055(int integerArgument1, int integerArgument2, byte byteArgument3, int integerArgument4) {
         MixedSupport020 mixedSupport020Local1 = null;
         int integerLocal2 = DekoBlokoClient.obfuscationControl ? 1 : 0;
-        MixedSupport020 mixedSupport020Local3 = (MixedSupport020) (UiComponentPart020.nodeDequeState0022.beginBackward((byte) 19));
+        MixedSupport020 mixedSupport020Local3 = (MixedSupport020) (ArrayWidgetContainer.nodeDequeState0022.beginBackward((byte) 19));
         while (mixedSupport020Local3 != null) {
           if (integerArgument4 == mixedSupport020Local3.integerState0115) {
             return mixedSupport020Local3;
           }
-          mixedSupport020Local3 = (MixedSupport020) (UiComponentPart020.nodeDequeState0022.nextBackward(true));
+          mixedSupport020Local3 = (MixedSupport020) (ArrayWidgetContainer.nodeDequeState0022.nextBackward(true));
         }
         if (byteArgument3 == -111) {
           mixedSupport020Local1 = new MixedSupport020();
           mixedSupport020Local1.integerState0116 = integerArgument2;
           mixedSupport020Local1.integerState0115 = integerArgument4;
-          UiComponentPart020.nodeDequeState0022.addFirst(mixedSupport020Local1, byteArgument3 + 2888);
+          ArrayWidgetContainer.nodeDequeState0022.addFirst(mixedSupport020Local1, byteArgument3 + 2888);
           MixedSupport039.performAction0525((byte) 8, mixedSupport020Local1, integerArgument1);
           return mixedSupport020Local1;
         }
@@ -217,7 +217,7 @@ final class UiComponentPart001 extends InteractiveComponent {
         MixedSupport020 mixedSupport020Local4 = new MixedSupport020();
         mixedSupport020Local4.integerState0116 = integerArgument2;
         mixedSupport020Local4.integerState0115 = integerArgument4;
-        UiComponentPart020.nodeDequeState0022.addFirst(mixedSupport020Local4, byteArgument3 + 2888);
+        ArrayWidgetContainer.nodeDequeState0022.addFirst(mixedSupport020Local4, byteArgument3 + 2888);
         MixedSupport039.performAction0525((byte) 8, mixedSupport020Local4, integerArgument1);
         return mixedSupport020Local4;
     }

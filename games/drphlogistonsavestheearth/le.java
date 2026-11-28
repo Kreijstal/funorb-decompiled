@@ -72,7 +72,7 @@ final class le {
           nj.field_p.writeInt(MatchingFieldValidator.field_t, (byte) 113);
           nj.field_p.writeLong(DiskCacheWorker.field_i, (byte) -25);
           var6 = 0;
-          if (bd.field_N) {
+          if (ModalDialog.field_N) {
             var6 = var6 | 1;
           }
           if (wg.field_d) {

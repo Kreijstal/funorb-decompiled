@@ -141,14 +141,14 @@ final class MixedSupport107 {
     final static void performAction1408(boolean booleanArgument1, byte byteArgument2, String stringArgument3, boolean booleanArgument4) {
         try {
           UiComponentPart033.performAction1819(-61);
-          MixedSupport005.uiComponentPart016State0001.performAction0834(true);
+          MixedSupport005.uiComponentPart016State0001.closeAllDialogs(true);
           MixedSupport025.uiComponentPart013State0001 = new LoginPanel(PlayerNamePrompt.stringState0217, (String) null, BirthDateInput.booleanState0198, booleanArgument1, booleanArgument4);
           if (byteArgument2 > -13) {
             String stringLocal1 = (String) null;
             MixedSupport107.performAction1402(false, -65, (String) null, false);
           }
-          UiComponentPart006.uiComponentPart023State0001 = new UiComponentPart023(MixedSupport005.uiComponentPart016State0001, MixedSupport025.uiComponentPart013State0001);
-          MixedSupport005.uiComponentPart016State0001.performAction0831((byte) -109, UiComponentPart006.uiComponentPart023State0001);
+          LabeledWidgetContainer.uiComponentPart023State0001 = new UiComponentPart023(MixedSupport005.uiComponentPart016State0001, MixedSupport025.uiComponentPart013State0001);
+          MixedSupport005.uiComponentPart016State0001.showDialog((byte) -109, LabeledWidgetContainer.uiComponentPart023State0001);
         } catch (RuntimeException runtimeException) {
           throw ClientException.computeDiagnosticSupport0020365((Throwable) ((Object) runtimeException), "rb.D(" + booleanArgument1 + ',' + byteArgument2 + ',' + (stringArgument3 != null ? "{...}" : "null") + ',' + booleanArgument4 + ')');
         }
@@ -325,14 +325,14 @@ final class MixedSupport107 {
     final static void performAction1402(boolean booleanArgument1, int integerArgument2, String stringArgument3, boolean booleanArgument4) {
         try {
           UiComponentPart033.performAction1819(-61);
-          MixedSupport005.uiComponentPart016State0001.performAction0834(true);
+          MixedSupport005.uiComponentPart016State0001.closeAllDialogs(true);
           MixedSupport025.uiComponentPart013State0001 = new LoginPanel(PlayerNamePrompt.stringState0217, (String) null, BirthDateInput.booleanState0198, booleanArgument1, booleanArgument4);
           if (integerArgument2 > -13) {
             String stringLocal1 = (String) null;
             MixedSupport107.performAction1402(false, -65, (String) null, false);
           }
-          UiComponentPart006.uiComponentPart023State0001 = new UiComponentPart023(MixedSupport005.uiComponentPart016State0001, MixedSupport025.uiComponentPart013State0001);
-          MixedSupport005.uiComponentPart016State0001.performAction0831((byte) -109, UiComponentPart006.uiComponentPart023State0001);
+          LabeledWidgetContainer.uiComponentPart023State0001 = new UiComponentPart023(MixedSupport005.uiComponentPart016State0001, MixedSupport025.uiComponentPart013State0001);
+          MixedSupport005.uiComponentPart016State0001.showDialog((byte) -109, LabeledWidgetContainer.uiComponentPart023State0001);
         } catch (RuntimeException runtimeException) {
           throw ClientException.computeDiagnosticSupport0020365((Throwable) ((Object) runtimeException), "rb.D(" + booleanArgument1 + ',' + integerArgument2 + ',' + (stringArgument3 != null ? "{...}" : "null") + ',' + booleanArgument4 + ')');
         }

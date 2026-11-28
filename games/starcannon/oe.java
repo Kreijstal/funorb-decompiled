@@ -177,7 +177,7 @@ abstract class oe {
             stackIn_2_0 = null;
             return (CoverageBitmapFont) (stackIn_2_0);
           }
-          var2 = new CoverageBitmapFont(param1, fc.field_d, qd.field_H, gg.field_d, gh.field_C, of.field_g, og.field_c);
+          var2 = new CoverageBitmapFont(param1, fc.field_d, ModalDialog.field_H, gg.field_d, gh.field_C, of.field_g, og.field_c);
           if (param0 != 5) {
             stackIn_5_0 = (CoverageBitmapFont) null;
             return stackIn_5_0;

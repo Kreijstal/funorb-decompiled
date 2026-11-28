@@ -12,7 +12,7 @@ final class jna extends IntrusiveNode {
         RuntimeException decompiledCaughtException = null;
         try {
           if (0 != ResetAnimation.field_w.field_R &&
-            !hl.field_I) {
+            !AlphaWidgetContainer.field_I) {
             if (sea.field_j) {
               HomingMissileEvent.d(120);
             } else {

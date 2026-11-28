@@ -154,7 +154,7 @@ final class op {
             pd.field_A = kp.field_b;
           }
           if (pd.field_A == kp.field_b &&
-            oi.a(-12929, 1)) {
+            DraggableWidgetContainer.a(-12929, 1)) {
             var9Lifetime1 = ra.field_c.readUnsignedByte(true);
             ra.field_c.position = 0;
             if (var9Lifetime1 >= 100 &&
@@ -171,22 +171,22 @@ final class op {
                 return stackIn_34_0;
               }
               if (99 == var9Lifetime1) {
-                oi.a(-12929, la.a(23940));
+                DraggableWidgetContainer.a(-12929, la.a(23940));
                 fj.field_e = new Boolean(fm.a(ra.field_c, -127));
                 ra.field_c.position = 0;
               } else {
                 nj.field_b = -1;
                 hc.field_c = var9Lifetime1;
-                pd.field_A = sd.field_G;
+                pd.field_A = AlphaWidgetContainer.field_G;
               }
             }
           }
           if (pd.field_A == jg.field_a) {
             var9Lifetime2 = 2;
-            if (oi.a(-12929, var9Lifetime2)) {
+            if (DraggableWidgetContainer.a(-12929, var9Lifetime2)) {
               var10Lifetime1 = ra.field_c.readUnsignedShort(0);
               ra.field_c.position = 0;
-              if (oi.a(-12929, var10Lifetime1)) {
+              if (DraggableWidgetContainer.a(-12929, var10Lifetime1)) {
                 var11 = mf.field_c.length;
                 for (var12 = 0; var11 > var12; var12++) {
                   mf.field_c[var12] = ra.field_c.readPrefixedString(-21030);
@@ -198,7 +198,7 @@ final class op {
               }
             }
           }
-          if (pd.field_A == sd.field_G &&
+          if (pd.field_A == AlphaWidgetContainer.field_G &&
             AccountNameAvailabilityValidator.d((byte) -75)) {
             if (hc.field_c != 255) {
               tp.field_v = ra.field_c.readString(-101);

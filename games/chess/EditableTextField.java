@@ -40,7 +40,7 @@ class EditableTextField extends InteractiveWidget {
         }
     }
 
-    final boolean a(int param0, int param1, int param2, byte param3, mf param4, int param5, int param6) {
+    final boolean pointerPressed(int param0, int param1, int param2, byte param3, UiWidget param4, int param5, int param6) {
         int stackIn_7_1 = 0;
         boolean stackIn_10_1 = false;
         RuntimeException stackIn_22_0 = null;
@@ -51,13 +51,13 @@ class EditableTextField extends InteractiveWidget {
         long var8_long = 0L;
         RuntimeException var8 = null;
         try {
-          if (!super.a(param0, param1, param2, param3, param4, param5, param6)) {
+          if (!super.pointerPressed(param0, param1, param2, param3, param4, param5, param6)) {
             return false;
           }
           if (!(this.field_n instanceof TextWidgetRenderer)) {
             return false;
           }
-          var8_int = ((TextWidgetRenderer) ((Object) this.field_n)).findTextOffsetAtScreenPosition(rf.field_b, param5, -4, param6, (mf) (this), BufferedSocket.field_k);
+          var8_int = ((TextWidgetRenderer) ((Object) this.field_n)).findTextOffsetAtScreenPosition(rf.field_b, param5, -4, param6, (UiWidget) (this), BufferedSocket.field_k);
           if (-1 != var8_int) {
             stackIn_7_1 = var8_int;
           } else {
@@ -193,7 +193,7 @@ class EditableTextField extends InteractiveWidget {
         return var2;
     }
 
-    final void a(int param0, int param1, int param2, int param3) {
+    final void drawWidget(int param0, int param1, int param2, int param3) {
         TextWidgetRenderer var8 = null;
         long var6 = 0L;
         if (param2 > -80) {
@@ -201,15 +201,15 @@ class EditableTextField extends InteractiveWidget {
         }
         if (null != this.field_n &&
           0 == param1) {
-          this.field_n.a((byte) 124, param3, param0, this.field_H, (mf) (this));
+          this.field_n.paintWidget((byte) 124, param3, param0, this.field_H, (UiWidget) (this));
           if (this.field_n instanceof TextWidgetRenderer) {
             var8 = (TextWidgetRenderer) ((Object) this.field_n);
             if (this.field_Q != this.field_X) {
-              var8.paintSelection((mf) (this), param3, this.field_Q, param0, 122, this.field_X);
+              var8.paintSelection((UiWidget) (this), param3, this.field_Q, param0, 122, this.field_X);
             }
             var6 = ud.correctedCurrentTimeMillis(2);
             if (500L > (-this.field_V + var6) % 1000L) {
-              var8.paintCaret(param3, this.field_Q, param0, (byte) -125, (mf) (this));
+              var8.paintCaret(param3, this.field_Q, param0, (byte) -125, (UiWidget) (this));
             }
           }
         }
@@ -275,7 +275,7 @@ class EditableTextField extends InteractiveWidget {
         field_P = null;
     }
 
-    EditableTextField(String param0, rg param1, int param2) {
+    EditableTextField(String param0, WidgetEventListener param1, int param2) {
         super(param0, param1);
         this.field_S = false;
         this.field_N = -1;
@@ -317,13 +317,13 @@ class EditableTextField extends InteractiveWidget {
               var4 = var4 + qd.field_r;
             } else {
               var6 = in.a(bd.field_e[var3_int], 71, true);
-              var4 = var4 + mf.field_z;
+              var4 = var4 + UiWidget.field_z;
               var7 = of.field_k - (var6 >> 1);
               if (ve.a(var4, var7 - FrameTimer.field_e, var6 + (FrameTimer.field_e << 1), param2, (fh.field_e << 1) + ug.field_a, 2, param1)) {
                 stackIn_10_0 = var5;
                 return stackIn_10_0;
               }
-              var4 = var4 + ((fh.field_e << 1) - (-mf.field_z - ug.field_a));
+              var4 = var4 + ((fh.field_e << 1) - (-UiWidget.field_z - ug.field_a));
             }
             var3_int++;
           }
@@ -372,7 +372,7 @@ class EditableTextField extends InteractiveWidget {
         }
     }
 
-    final boolean a(char param0, int param1, int param2, mf param3) {
+    final boolean handleKey(char param0, int param1, int param2, UiWidget param3) {
         int dupTemp$0 = 0;
         int stackIn_51_1 = 0;
         int stackIn_57_1 = 0;
@@ -563,9 +563,9 @@ class EditableTextField extends InteractiveWidget {
           return;
         }
         var9 = (TextWidgetRenderer) ((Object) this.field_n);
-        var3 = var9.getTextLayout((mf) (this), -23159);
+        var3 = var9.getTextLayout((UiWidget) (this), -23159);
         var4 = var3.getMaxLineRightX((byte) -24);
-        var5 = var9.getTextAreaWidth((mf) (this), 0);
+        var5 = var9.getTextAreaWidth((UiWidget) (this), 0);
         var6 = var9.getFontLineHeight((byte) 76) >> 1;
         if (var4 < -var6 + var5) {
           this.field_A = 0;
@@ -592,10 +592,10 @@ class EditableTextField extends InteractiveWidget {
         }
     }
 
-    void a(int param0, int param1, mf param2, int param3) {
+    void updatePointer(int param0, int param1, UiWidget param2, int param3) {
         TextWidgetRenderer var5 = null;
         int var6 = 0;
-        super.a(param0, -51, param2, param3);
+        super.updatePointer(param0, -51, param2, param3);
         if (param1 >= -6) {
           return;
         }
@@ -604,7 +604,7 @@ class EditableTextField extends InteractiveWidget {
           if (1 == this.field_q) {
             if (this.field_n instanceof TextWidgetRenderer) {
               var5 = (TextWidgetRenderer) ((Object) this.field_n);
-              var6 = var5.findTextOffsetAtScreenPosition(rf.field_b, param3, -4, param0, (mf) (this), BufferedSocket.field_k);
+              var6 = var5.findTextOffsetAtScreenPosition(rf.field_b, param3, -4, param0, (UiWidget) (this), BufferedSocket.field_k);
               if (var6 != -1) {
                 if (this.field_S &&
                   this.field_N > var6 &&

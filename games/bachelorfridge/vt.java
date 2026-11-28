@@ -83,7 +83,7 @@ final class vt extends tia {
           var7 = 0;
           var8 = param2;
           if (SnowAnimation.field_w != null && (null != DelegatingCanvas.field_b ||
-            null != re.field_F ||
+            null != DropTargetWidgetContainer.field_F ||
             null != gma.field_c ||
             null != wda.field_c)) {
             for (var9 = 0; var9 < ld.field_q; var9++) {
@@ -93,9 +93,9 @@ final class vt extends tia {
                 DelegatingCanvas.field_b[var9][var10_int]) {
                 var5_int = 1;
               }
-              if (re.field_F != null &&
-                null != re.field_F[var9]) {
-                var11_int = re.field_F[var9][var10_int];
+              if (DropTargetWidgetContainer.field_F != null &&
+                null != DropTargetWidgetContainer.field_F[var9]) {
+                var11_int = DropTargetWidgetContainer.field_F[var9][var10_int];
                 if (var11_int > var6) {
                   var6 = var11_int;
                 }
@@ -186,7 +186,7 @@ final class vt extends tia {
                 var20 = "<img=" + (var12.field_Kb - 1) + ">" + var33;
               }
             } else {
-              var20 = "<img=" + (re.field_E - 4 + var12.field_Kb) + ">" + var33;
+              var20 = "<img=" + (DropTargetWidgetContainer.field_E - 4 + var12.field_Kb) + ">" + var33;
             }
             var12.field_Ib.field_Z = var20;
             if (!var12.f((byte) 21)) {
@@ -233,7 +233,7 @@ final class vt extends tia {
               var25_int = 0;
               if (null != SnowAnimation.field_w &&
                 ZombiesEvent.d(-118) &&
-                ge.field_F != var12.field_Eb) {
+                LabeledWidgetContainer.field_F != var12.field_Eb) {
                 if (var12.field_Fb.field_Z != null) {
                   var26 = var12.field_Fb.e(-1) + gba.field_Bb * 2;
                   var12.field_Fb.a(rg.field_h, 31407, var26, var25_int, var19);
@@ -311,7 +311,7 @@ final class vt extends tia {
             if (var12.field_E &&
               !var12.f((byte) 21)) {
               var24Lifetime2 = null;
-              if (~ge.field_F != ~var12.field_Eb) {
+              if (~LabeledWidgetContainer.field_F != ~var12.field_Eb) {
                 if (var5_int != 0 &&
                   !var12.field_zb) {
                   var24Lifetime2 = lga.a(true, new String[]{var20}, DualLinkDeque.field_d);
@@ -391,9 +391,9 @@ final class vt extends tia {
                     !var12.field_zb) {
                     var29 = 1;
                   }
-                  if (null != re.field_F &&
-                    null != re.field_F[var27_int]) {
-                    var30_int = re.field_F[var27_int][var28];
+                  if (null != DropTargetWidgetContainer.field_F &&
+                    null != DropTargetWidgetContainer.field_F[var27_int]) {
+                    var30_int = DropTargetWidgetContainer.field_F[var27_int][var28];
                     if (var30_int != 0 &&
                       !bha.field_l &&
                       !var12.field_zb) {

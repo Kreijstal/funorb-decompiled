@@ -93,13 +93,13 @@ final class r {
     }
 
     final static void a(byte param0, int param1) {
-        lm.field_k = (param1 & 54) >> 4;
+        UiWidget.field_k = (param1 & 54) >> 4;
         mp.field_d = (12 & param1) >> 2;
         if (param0 >= -58) {
           field_a = (String) null;
         }
-        if (2 < lm.field_k) {
-          lm.field_k = 2;
+        if (2 < UiWidget.field_k) {
+          UiWidget.field_k = 2;
         }
         GzipDecompressor.field_c = param1 & 3;
         if (2 < mp.field_d) {

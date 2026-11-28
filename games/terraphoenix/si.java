@@ -51,7 +51,7 @@ class si extends al implements WidgetActivationListener {
           var4 = var6;
           if (param2 != 5) {
             if (param2 == 256) {
-              var6.a((byte) 23, (sc) (this), rb.field_c);
+              var6.a((byte) 23, (WidgetEventListener) (this), rb.field_c);
             } else {
               stackIn_15_0 = var6;
               stackIn_15_1 = -1;
@@ -72,7 +72,7 @@ class si extends al implements WidgetActivationListener {
                 var6.a(9, fc.field_b, (byte) -111);
               } else {
                 if (param2 == 9) {
-                  var6.a((byte) 23, (sc) (this), ec.field_c);
+                  var6.a((byte) 23, (WidgetEventListener) (this), ec.field_c);
                 }
               }
             } else {
@@ -127,7 +127,7 @@ class si extends al implements WidgetActivationListener {
         }
     }
 
-    final boolean a(char param0, UiWidget param1, int param2, int param3) {
+    final boolean handleKey(char param0, UiWidget param1, int param2, int param3) {
         RuntimeException var5 = null;
         boolean stackIn_6_0 = false;
         RuntimeException stackIn_9_0 = null;
@@ -142,7 +142,7 @@ class si extends al implements WidgetActivationListener {
           if (param2 != 30) {
             si.discardDeclaredStaticReferences(16);
           }
-          stackIn_6_0 = super.a(param0, param1, 30, param3);
+          stackIn_6_0 = super.handleKey(param0, param1, 30, param3);
           return stackIn_6_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -185,7 +185,7 @@ class si extends al implements WidgetActivationListener {
           if (null == cl.field_J) {
             return false;
           }
-          if (null != cl.field_J.c(true)) {
+          if (null != cl.field_J.getTopOpenDialog(true)) {
             return true;
           }
           return false;
@@ -193,13 +193,13 @@ class si extends al implements WidgetActivationListener {
         if (null == cl.field_J) {
           return false;
         }
-        if (null != cl.field_J.c(true)) {
+        if (null != cl.field_J.getTopOpenDialog(true)) {
           return true;
         }
         return false;
     }
 
-    si(d param0, BitmapFont param1, String param2, boolean param3, boolean param4) {
+    si(ModalDialogHost param0, BitmapFont param1, String param2, boolean param3, boolean param4) {
         super(param0, new oi((si) null, param1, param2), 77, 10, 10);
         try {
           this.field_qb = param3 ? true : false;
@@ -209,7 +209,7 @@ class si extends al implements WidgetActivationListener {
           this.field_rb = param1;
           this.field_kb = new hm(13, 50, 274, 30, 15, 2113632, 4210752);
           this.field_kb.field_P = true;
-          this.b((byte) 95, this.field_kb);
+          this.addChild((byte) 95, this.field_kb);
         } catch (RuntimeException runtimeException) {
           throw qk.wrapException((Throwable) ((Object) runtimeException), "si.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ')');
         }
@@ -238,7 +238,7 @@ class si extends al implements WidgetActivationListener {
             }
             return;
           }
-          jl.i((byte) -124);
+          AlphaWidgetContainer.i((byte) -124);
           if (param0 != -126) {
             this.field_jb = false;
             return;

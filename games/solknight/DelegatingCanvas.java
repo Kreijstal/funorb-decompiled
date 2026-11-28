@@ -63,9 +63,9 @@ final class DelegatingCanvas extends java.awt.Canvas {
         String[] var3 = null;
         boolean stackIn_7_0 = false;
         Throwable decompiledCaughtException = null;
-        var1_ref = i.field_J;
+        var1_ref = ModalDialogHost.field_J;
         synchronized (var1_ref) {
-          if (si.field_B == pf.field_a) {
+          if (SingleChildWidgetContainer.field_B == pf.field_a) {
             return false;
           }
           MatchingFieldValidator.field_n = lb.field_V[pf.field_a];

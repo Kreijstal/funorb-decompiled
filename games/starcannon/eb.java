@@ -67,13 +67,13 @@ final class eb {
             null != AccountRequestState.field_a &&
             AccountRequestState.field_a.ensureIndexLoaded((byte) 110) &&
             AccountRequestState.field_a.tryLoadGroupByName("benefits", -9883)) {
-            DelayedPcmStream.field_k = vk.a("benefits", 32, "headline", g.field_a);
-            ConfirmedEmailAvailabilityValidator.field_q = vk.a("benefits", 86, "blurbpane", g.field_a);
-            pc.field_a = vk.a("benefits", 106, "button", g.field_a);
-            re.field_f = vk.a("benefits", 17, "signup_text", g.field_a);
-            SpriteState.field_z = vk.a("benefits", 71, "menu_text", g.field_a);
-            KeyboardInput.field_c = vk.a("benefits", 32, "button_frame", g.field_a);
-            ge.field_b = vk.a("benefits", 123, "arrow", g.field_a);
+            DelayedPcmStream.field_k = DequeWidgetContainer.a("benefits", 32, "headline", g.field_a);
+            ConfirmedEmailAvailabilityValidator.field_q = DequeWidgetContainer.a("benefits", 86, "blurbpane", g.field_a);
+            pc.field_a = DequeWidgetContainer.a("benefits", 106, "button", g.field_a);
+            re.field_f = DequeWidgetContainer.a("benefits", 17, "signup_text", g.field_a);
+            SpriteState.field_z = DequeWidgetContainer.a("benefits", 71, "menu_text", g.field_a);
+            KeyboardInput.field_c = DequeWidgetContainer.a("benefits", 32, "button_frame", g.field_a);
+            ge.field_b = DequeWidgetContainer.a("benefits", 123, "arrow", g.field_a);
             gi.field_b = (BitmapFont) ((Object) od.a("benefits", g.field_a, "large_font", -1, AccountRequestState.field_a));
             ah.field_d = (BitmapFont) ((Object) od.a("benefits", g.field_a, "small_font", -1, AccountRequestState.field_a));
             var28 = SoftwareRasterizer.field_a;
@@ -91,7 +91,7 @@ final class eb {
             var12.bindAsRenderTarget();
             gi.field_b.drawCentred(fb.a(NetworkArchiveRequest.field_x, -103, new String[]{t.field_q}), var6, 40, 16777215, -1);
             ah.field_d.drawCentred(fb.a(ic.field_c, 118, new String[]{t.field_q}), var6, 60, 16777215, -1);
-            gi.field_b.drawCentred(fb.a(vk.field_t, 118, new String[]{ClientException.field_c}), var6, 110, 16777215, -1);
+            gi.field_b.drawCentred(fb.a(DequeWidgetContainer.field_t, 118, new String[]{ClientException.field_c}), var6, 110, 16777215, -1);
             ah.field_d.drawCentred(fb.a(vg.field_a, -15, new String[]{ClientException.field_c}), var6, 130, 16777215, -1);
             gi.field_b.drawCentred(be.field_a, var6, 180, 16777215, -1);
             ah.field_d.drawCentred(lj.field_a, var6, 200, 16777215, -1);

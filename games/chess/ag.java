@@ -24,7 +24,7 @@ final class ag {
           }
           if (null == mk.field_e) {
             mk.field_e = new ch(jh.field_e, qf.field_g);
-            jh.field_e.b(mk.field_e, (byte) -105);
+            jh.field_e.showDialog(mk.field_e, (byte) -105);
           }
           mk.field_e.a(param3, param2, param1, param0 - 11945);
           SoftwareRasterizer.clearRaster();

@@ -43,7 +43,7 @@ class nk extends hf implements WidgetActivationListener {
           var6 = new kc(this, this.field_Cb, param1);
           if (param2 != 5) {
             if (param2 == 256) {
-              var6.a(kn.field_a, (pg) (this), (byte) -80);
+              var6.a(kn.field_a, (WidgetEventListener) (this), (byte) -80);
             } else {
               stackIn_13_0 = var6;
               stackIn_13_1 = -1;
@@ -68,7 +68,7 @@ class nk extends hf implements WidgetActivationListener {
                   this.b(1, var6);
                   return;
                 }
-                var6.a(df.field_a, (pg) (this), (byte) -97);
+                var6.a(df.field_a, (WidgetEventListener) (this), (byte) -97);
               } else {
                 var6.a(9, 6824, TextFieldValidator.field_i);
               }
@@ -92,7 +92,7 @@ class nk extends hf implements WidgetActivationListener {
         }
     }
 
-    final boolean a(lm param0, char param1, int param2, byte param3) {
+    final boolean handleKey(UiWidget param0, char param1, int param2, byte param3) {
         RuntimeException var5 = null;
         boolean stackIn_8_0 = false;
         RuntimeException stackIn_11_0 = null;
@@ -105,7 +105,7 @@ class nk extends hf implements WidgetActivationListener {
             return true;
           }
           if (param3 >= 55) {
-            stackIn_8_0 = super.a(param0, param1, param2, (byte) 92);
+            stackIn_8_0 = super.handleKey(param0, param1, param2, (byte) 92);
             return stackIn_8_0;
           }
           return false;
@@ -128,8 +128,8 @@ class nk extends hf implements WidgetActivationListener {
           return;
         }
         if (param0 < 48) {
-          lm var3 = (lm) null;
-          this.a((lm) null, 'ﾷ', 86, (byte) -102);
+          UiWidget var3 = (UiWidget) null;
+          this.handleKey((UiWidget) null, 'ﾷ', 86, (byte) -102);
           this.field_T = false;
           if (this.field_Mb) {
             gg.b(0);
@@ -162,7 +162,7 @@ class nk extends hf implements WidgetActivationListener {
         }
     }
 
-    nk(ji param0, BitmapFont param1, String param2, boolean param3, boolean param4) {
+    nk(ModalDialogHost param0, BitmapFont param1, String param2, boolean param3, boolean param4) {
         super(param0, new kc((nk) null, param1, param2), 77, 10, 10);
         try {
           this.field_Mb = param3 ? true : false;
@@ -172,7 +172,7 @@ class nk extends hf implements WidgetActivationListener {
           this.field_Gb = param4 ? true : false;
           this.field_Bb = new uc(13, 50, 274, 30, 15, 2113632, 4210752);
           this.field_Bb.field_R = true;
-          this.b((byte) -63, (lm) (this.field_Bb));
+          this.addChild((byte) -63, (UiWidget) (this.field_Bb));
         } catch (RuntimeException runtimeException) {
           throw AccountServiceResult.wrapClientException((Throwable) ((Object) runtimeException), "nk.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ')');
         }

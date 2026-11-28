@@ -7,12 +7,12 @@ abstract class hl extends ej {
     private li field_R;
     static ResourceArchive field_N;
     private int field_P;
-    private pj field_V;
-    private jj field_Q;
+    private UiWidget field_V;
+    private AlphaWidgetContainer field_Q;
     private int field_U;
     private int field_O;
 
-    private final void b(int param0, pj param1) {
+    private final void b(int param0, UiWidget param1) {
         try {
           if (this.field_Q != null) {
             this.field_Q.unlink(57);
@@ -21,19 +21,19 @@ abstract class hl extends ej {
             this.field_R = (li) null;
           }
           if (param1 == null) {
-            this.field_Q = new jj();
+            this.field_Q = new AlphaWidgetContainer();
           } else {
-            param1.a(6, this.field_S + 6, param1.field_r, (byte) -90, param1.field_m);
-            this.field_Q = new jj(param1);
+            param1.setBounds(6, this.field_S + 6, param1.field_r, (byte) -90, param1.field_m);
+            this.field_Q = new AlphaWidgetContainer(param1);
           }
-          this.a(this.field_Q, (byte) 74);
+          this.addChild(this.field_Q, (byte) 74);
           this.field_V = null;
         } catch (RuntimeException runtimeException) {
-          throw dd.wrapClientException((Throwable) ((Object) runtimeException), "hl.SA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw DraggableWidgetContainer.wrapClientException((Throwable) ((Object) runtimeException), "hl.SA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
-    void a(boolean param0, pj param1) {
+    void a(boolean param0, UiWidget param1) {
         RuntimeException var3 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
@@ -65,7 +65,7 @@ abstract class hl extends ej {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw dd.wrapClientException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
+          throw DraggableWidgetContainer.wrapClientException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
         }
     }
 
@@ -76,22 +76,22 @@ abstract class hl extends ej {
         field_N = null;
     }
 
-    boolean a(char param0, int param1, pj param2, int param3) {
+    boolean handleKey(char param0, int param1, UiWidget param2, int param3) {
         RuntimeException var5 = null;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
         String stackIn_13_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (super.a(param0, param1, param2, param3)) {
+          if (super.handleKey(param0, param1, param2, param3)) {
             return true;
           }
           if (this.field_Q != null) {
             if (98 == param1) {
-              this.field_Q.a(-81, param2);
+              this.field_Q.takeFocus(-81, param2);
             }
             if (param1 == 99) {
-              this.field_Q.a(-81, param2);
+              this.field_Q.takeFocus(-81, param2);
               return false;
             }
           }
@@ -106,7 +106,7 @@ abstract class hl extends ej {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw dd.wrapClientException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param3).append(')').toString());
+          throw DraggableWidgetContainer.wrapClientException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -133,28 +133,28 @@ abstract class hl extends ej {
         this.field_Q.field_A = 0;
     }
 
-    final boolean l(int param0) {
+    final boolean snapDialogAnimation(int param0) {
         this.m(param0 ^ param0);
-        return super.l(194);
+        return super.snapDialogAnimation(194);
     }
 
-    boolean d(boolean param0) {
+    boolean advanceDialogAnimation(boolean param0) {
         int fieldTemp$0 = 0;
         int var3 = OrbDefence.field_D ? 1 : 0;
         if (null == this.field_R) {
           if (!param0) {
-            return super.d(false);
+            return super.advanceDialogAnimation(false);
           }
           hl.discardDeclaredStaticReferences(-91);
-          return super.d(false);
+          return super.advanceDialogAnimation(false);
         }
         if (this.field_R != ji.field_d) {
           if (this.field_R != qd.field_b) {
             if (!param0) {
-              return super.d(false);
+              return super.advanceDialogAnimation(false);
             }
             hl.discardDeclaredStaticReferences(-91);
-            return super.d(false);
+            return super.advanceDialogAnimation(false);
           }
           fieldTemp$0 = this.field_U + 1;
           this.field_U = this.field_U + 1;
@@ -162,37 +162,37 @@ abstract class hl extends ej {
             this.field_R = null;
             this.field_Q.field_A = 256;
             if (!param0) {
-              return super.d(false);
+              return super.advanceDialogAnimation(false);
             }
             hl.discardDeclaredStaticReferences(-91);
-            return super.d(false);
+            return super.advanceDialogAnimation(false);
           }
           this.field_Q.field_A = (this.field_U << 8) / this.field_O;
           if (!param0) {
-            return super.d(false);
+            return super.advanceDialogAnimation(false);
           }
           hl.discardDeclaredStaticReferences(-91);
-          return super.d(false);
+          return super.advanceDialogAnimation(false);
         }
         int fieldTemp$1 = this.field_U + 1;
         this.field_U = this.field_U + 1;
         if (fieldTemp$1 != this.field_T) {
           this.field_Q.field_A = -((this.field_U << 8) / this.field_T) + 256;
           if (!param0) {
-            return super.d(false);
+            return super.advanceDialogAnimation(false);
           }
           hl.discardDeclaredStaticReferences(-91);
-          return super.d(false);
+          return super.advanceDialogAnimation(false);
         }
         this.field_R = pd.field_w;
         this.a(this.field_P, 12 + this.field_V.field_m, this.field_V.field_r + (12 + this.field_S), (byte) 114);
         this.field_U = 0;
         this.field_Q.field_A = 0;
         if (!param0) {
-          return super.d(false);
+          return super.advanceDialogAnimation(false);
         }
         hl.discardDeclaredStaticReferences(-91);
-        return super.d(false);
+        return super.advanceDialogAnimation(false);
     }
 
     final static boolean a(boolean param0, int param1, int param2, int param3) {
@@ -282,7 +282,7 @@ abstract class hl extends ej {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw dd.wrapClientException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
+          throw DraggableWidgetContainer.wrapClientException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -292,7 +292,7 @@ abstract class hl extends ej {
           return;
         }
         if (qd.field_b != this.field_R) {
-          this.a(12 - (-this.field_S - this.field_V.field_r), (byte) -81, 12 + this.field_V.field_m);
+          this.setCenteredSize(12 - (-this.field_S - this.field_V.field_r), (byte) -81, 12 + this.field_V.field_m);
           this.b(-6142, this.field_V);
         } else {
           this.field_R = null;
@@ -305,7 +305,7 @@ abstract class hl extends ej {
         super.m(param0);
     }
 
-    hl(sk param0, pj param1, int param2, int param3, int param4) {
+    hl(ModalDialogHost param0, UiWidget param1, int param2, int param3, int param4) {
         super(param0, param1.field_m + 12, param2 + (12 + param1.field_r));
         try {
           this.field_S = param2;
@@ -314,7 +314,7 @@ abstract class hl extends ej {
           this.field_T = param3;
           this.b(-6142, param1);
         } catch (RuntimeException runtimeException) {
-          throw dd.wrapClientException((Throwable) ((Object) runtimeException), "hl.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw DraggableWidgetContainer.wrapClientException((Throwable) ((Object) runtimeException), "hl.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 

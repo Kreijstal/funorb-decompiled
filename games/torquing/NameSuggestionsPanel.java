@@ -39,16 +39,16 @@ final class NameSuggestionsPanel extends WidgetContainer implements WidgetActiva
               field_D = (ResourceArchive) null;
             }
             for (var5 = 0; var5 < var3_int; var5++) {
-              this.field_H[var5] = new InteractiveWidget(this.field_J[var5], (ca) (this));
+              this.field_H[var5] = new InteractiveWidget(this.field_J[var5], (WidgetEventListener) (this));
               this.field_H[var5].renderer = (WidgetRenderer) ((Object) var4);
               this.field_H[var5].field_n = ai.field_l;
-              this.field_H[var5].a((byte) 123, 0, 20 + var5 * 16, 15, 80);
-              this.a(this.field_H[var5], -6938);
+              this.field_H[var5].setBounds((byte) 123, 0, 20 + var5 * 16, 15, 80);
+              this.addChild(this.field_H[var5], -6938);
             }
-            this.field_H[var3_int] = new InteractiveWidget(jf.field_b, (ca) (this));
+            this.field_H[var3_int] = new InteractiveWidget(jf.field_b, (WidgetEventListener) (this));
             this.field_H[var3_int].renderer = (WidgetRenderer) ((Object) var4);
-            this.field_H[var3_int].a((byte) -36, 0, (var3_int + 1) * 16 + 20, 15, 100);
-            this.a(this.field_H[var3_int], -6938);
+            this.field_H[var3_int].setBounds((byte) -36, 0, (var3_int + 1) * 16 + 20, 15, 100);
+            this.addChild(this.field_H[var3_int], -6938);
             return;
           }
           this.field_J = null;
@@ -112,8 +112,8 @@ final class NameSuggestionsPanel extends WidgetContainer implements WidgetActiva
         }
     }
 
-    final void a(int param0, byte param1, int param2, int param3) {
-        super.a(param0, (byte) -114, param2, param3);
+    final void drawWidget(int param0, byte param1, int param2, int param3) {
+        super.drawWidget(param0, (byte) -114, param2, param3);
         if (param0 != 0) {
           return;
         }
@@ -156,7 +156,7 @@ final class NameSuggestionsPanel extends WidgetContainer implements WidgetActiva
         }
     }
 
-    final boolean a(int param0, UiWidget param1, char param2, int param3) {
+    final boolean handleKey(int param0, UiWidget param1, char param2, int param3) {
         int var5_int = 0;
         RuntimeException var5 = null;
         boolean stackIn_6_0 = false;
@@ -166,18 +166,18 @@ final class NameSuggestionsPanel extends WidgetContainer implements WidgetActiva
         String stackIn_15_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (super.a(param0, param1, param2, -96)) {
+          if (super.handleKey(param0, param1, param2, -96)) {
             return true;
           }
           if (param0 == 98) {
-            stackIn_6_0 = this.a((byte) 66, param1);
+            stackIn_6_0 = this.focusPreviousChild((byte) 66, param1);
             return stackIn_6_0;
           }
           var5_int = -103 % ((-33 - param3) / 57);
           if (param0 != 99) {
             return false;
           }
-          stackIn_9_0 = this.b(param1, -9928);
+          stackIn_9_0 = this.focusNextChild(param1, -9928);
           return stackIn_9_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

@@ -26,8 +26,8 @@ final class dc extends IntrusiveNode {
         if (param0 < 124) {
           dc.a(-70);
         }
-        kb.field_O = new AccountRegistrationPanel();
-        nj.field_w.c(kb.field_O, 79);
+        DraggableWidgetContainer.field_O = new AccountRegistrationPanel();
+        nj.field_w.c(DraggableWidgetContainer.field_O, 79);
     }
 
     final static void a(int param0, int param1, boolean param2, byte param3, int param4, int param5, int param6) {

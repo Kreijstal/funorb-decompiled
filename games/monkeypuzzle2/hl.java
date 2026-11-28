@@ -103,11 +103,11 @@ final class hl {
 
     final static void b(int param0) {
         int var1 = -60 / ((param0 + 76) / 35);
-        wg.field_j.k(121);
+        wg.field_j.closeAllDialogs(121);
         if (vl.field_f == null) {
           vl.field_f = new ul(wg.field_j, rc.field_i);
         }
-        wg.field_j.b((byte) -97, vl.field_f);
+        wg.field_j.showDialog((byte) -97, vl.field_f);
     }
 
     hl(boolean param0) {

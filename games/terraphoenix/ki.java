@@ -96,7 +96,7 @@ final class ki extends RichTextWidget {
             var12 = new Sprite(195, 221);
             var6 = var12.field_r / 2;
             var12.bindAsRenderTarget();
-            Archive.field_i.drawCentred(MessageKeys.a(new String[]{df.field_L}, param0 - 28419, d.field_J), var6, 40, 16777215, -1);
+            Archive.field_i.drawCentred(MessageKeys.a(new String[]{df.field_L}, param0 - 28419, ModalDialogHost.field_J), var6, 40, 16777215, -1);
             ja.field_m.drawCentred(MessageKeys.a(new String[]{df.field_L}, -1, ga.field_a), var6, 60, 16777215, -1);
             Archive.field_i.drawCentred(MessageKeys.a(new String[]{EmailFormatValidator.field_o}, -1, uj.field_b), var6, 110, 16777215, -1);
             ja.field_m.drawCentred(MessageKeys.a(new String[]{EmailFormatValidator.field_o}, param0 - 28419, bd.field_j), var6, 130, 16777215, -1);
@@ -329,13 +329,13 @@ final class ki extends RichTextWidget {
         try {
           this.field_X = param0;
           this.field_V = param1;
-          this.a(param3, (byte) 64, param4, param2, param5);
+          this.setBounds(param3, (byte) 64, param4, param2, param5);
         } catch (RuntimeException runtimeException) {
           throw qk.wrapException((Throwable) ((Object) runtimeException), "ki.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }
     }
 
-    final boolean a(byte param0, UiWidget param1) {
+    final boolean takeFocus(byte param0, UiWidget param1) {
         RuntimeException var3 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -369,10 +369,10 @@ final class ki extends RichTextWidget {
         return null;
     }
 
-    final void a(UiWidget param0, int param1, int param2, int param3) {
+    final void updatePointer(UiWidget param0, int param1, int param2, int param3) {
         try {
           this.field_W = this.field_W + 1;
-          super.a(param0, param1, param2, 95);
+          super.updatePointer(param0, param1, param2, 95);
           if (param3 < 25) {
             field_Y = (String) null;
           }
@@ -381,7 +381,7 @@ final class ki extends RichTextWidget {
         }
     }
 
-    final void a(int param0, int param1, int param2, int param3) {
+    final void drawWidget(int param0, int param1, int param2, int param3) {
         String var5;
         im var6;
         TextWidgetRenderer var8;
@@ -409,7 +409,7 @@ final class ki extends RichTextWidget {
           this.text = var5;
           this.rebuildHotspotBounds(true);
         }
-        super.a(param0, -118, param2, param3);
+        super.drawWidget(param0, -118, param2, param3);
         if (param1 >= -106) {
           field_S = (String) null;
         }

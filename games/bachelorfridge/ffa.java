@@ -199,7 +199,7 @@ final class ffa extends TileEffect {
 
     final static void a(String param0, int param1) {
         try {
-          re.field_D = param0;
+          DropTargetWidgetContainer.field_D = param0;
           ep.a(param1, 8192);
         } catch (RuntimeException runtimeException) {
           throw pe.wrapException((Throwable) ((Object) runtimeException), "ffa.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');

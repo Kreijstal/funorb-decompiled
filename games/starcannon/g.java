@@ -7,7 +7,7 @@ final class g {
 
     final static void a(int param0) {
         if (null != ti.field_b) {
-          ti.field_b.i(param0 - 21975);
+          ti.field_b.snapAndPruneDialogs(param0 - 21975);
           if (param0 != 21975) {
             g.a(99);
             if (null != ve.field_f) {

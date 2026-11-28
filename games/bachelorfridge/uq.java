@@ -313,7 +313,7 @@ final class uq extends UiComponent {
                     stackIn_8_0 = this;
                     stackIn_8_1 = null;
                     stackIn_8_2 = null;
-                    stackIn_8_5 = lq.field_z;
+                    stackIn_8_5 = ArrayWidgetContainer.field_z;
                     break regionExit1;
                   }
                 }

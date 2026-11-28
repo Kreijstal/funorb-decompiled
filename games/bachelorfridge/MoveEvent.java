@@ -108,7 +108,7 @@ final class MoveEvent extends CreatureEvent {
           var3.applyMoveCooldown(this.moveId, (byte) -104);
           var3.moveInDirection(param1, this.field_n, this.field_p);
           var3.field_s = this.field_p;
-          if (hl.a((byte) 109, this.moveId) &&
+          if (AlphaWidgetContainer.a((byte) 109, this.moveId) &&
             !var3.isCarryingFlag((byte) 85) &&
             33 != var3.statusId &&
             var3.statusId != 31) {

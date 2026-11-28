@@ -21,7 +21,7 @@ final class sa {
         return this;
     }
 
-    final void a(sj param0, int param1, int param2, pj param3, int param4) {
+    final void a(sj param0, int param1, int param2, UiWidget param3, int param4) {
         BitmapFont stackIn_21_0 = null;
         String stackIn_21_1 = null;
         int stackIn_21_2 = 0;
@@ -113,7 +113,7 @@ final class sa {
           } else {
             stackIn_36_2 = "{...}";
           }
-          throw dd.wrapClientException((Throwable) ((Object) stackIn_32_0), ((StringBuilder) (Object) stackIn_35_1).append(stackIn_36_2).append(',').append(param4).append(')').toString());
+          throw DraggableWidgetContainer.wrapClientException((Throwable) ((Object) stackIn_32_0), ((StringBuilder) (Object) stackIn_35_1).append(stackIn_36_2).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -151,7 +151,7 @@ final class sa {
           }
           SoftwareRasterizer.restoreClip(LoginPanel.field_F);
         } catch (RuntimeException runtimeException) {
-          throw dd.wrapClientException((Throwable) ((Object) runtimeException), "sa.M(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw DraggableWidgetContainer.wrapClientException((Throwable) ((Object) runtimeException), "sa.M(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
@@ -218,7 +218,7 @@ final class sa {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw dd.wrapClientException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
+          throw DraggableWidgetContainer.wrapClientException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -256,7 +256,7 @@ final class sa {
           param1.field_a = this.field_a;
           param1.field_j = this.field_j;
         } catch (RuntimeException runtimeException) {
-          throw dd.wrapClientException((Throwable) ((Object) runtimeException), "sa.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw DraggableWidgetContainer.wrapClientException((Throwable) ((Object) runtimeException), "sa.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -287,7 +287,7 @@ final class sa {
         return this;
     }
 
-    final void a(boolean param0, int param1, int param2, sa param3, sj param4, pj param5) {
+    final void a(boolean param0, int param1, int param2, sa param3, sj param4, UiWidget param5) {
         RuntimeException stackIn_25_0 = null;
         StringBuilder stackIn_25_1 = null;
         String stackIn_26_2 = null;
@@ -350,7 +350,7 @@ final class sa {
           } else {
             stackIn_32_2 = "{...}";
           }
-          throw dd.wrapClientException((Throwable) ((Object) stackIn_25_0), ((StringBuilder) (Object) stackIn_31_1).append(stackIn_32_2).append(')').toString());
+          throw DraggableWidgetContainer.wrapClientException((Throwable) ((Object) stackIn_25_0), ((StringBuilder) (Object) stackIn_31_1).append(stackIn_32_2).append(')').toString());
         }
     }
 

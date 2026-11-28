@@ -33,7 +33,7 @@ abstract class qa {
           }
           var4_int = param3.getGroupIdByName(param2, 1000);
           var5 = param3.getFileIdByName(0, param1, var4_int);
-          stackIn_4_0 = rf.a(var5, (byte) -71, param3, var4_int);
+          stackIn_4_0 = ModalDialog.a(var5, (byte) -71, param3, var4_int);
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

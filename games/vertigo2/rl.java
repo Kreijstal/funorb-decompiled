@@ -5,20 +5,20 @@ abstract class rl extends sp {
     private sq field_cb;
     private int field_eb;
     private int field_Y;
-    private wq field_bb;
+    private AlphaWidgetContainer field_bb;
     private UiWidget field_Z;
     static int field_db;
     private int field_ab;
     private int field_W;
     private int field_X;
 
-    final boolean a(int param0) {
+    final boolean snapDialogAnimation(int param0) {
         this.f((byte) -23);
         if (param0 != -1) {
           this.f((byte) -90);
-          return super.a(-1);
+          return super.snapDialogAnimation(-1);
         }
-        return super.a(-1);
+        return super.snapDialogAnimation(-1);
     }
 
     final void a(byte param0) {
@@ -98,22 +98,22 @@ abstract class rl extends sp {
         }
     }
 
-    boolean a(char param0, int param1, int param2, UiWidget param3) {
+    boolean handleKey(char param0, int param1, int param2, UiWidget param3) {
         RuntimeException var5 = null;
         RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
         String stackIn_15_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (super.a(param0, param1, param2, param3)) {
+          if (super.handleKey(param0, param1, param2, param3)) {
             return true;
           }
           if (this.field_bb != null) {
             if (param2 == 98) {
-              this.field_bb.a((byte) 116, param3);
+              this.field_bb.takeFocus((byte) 116, param3);
             }
             if (99 == param2) {
-              this.field_bb.a((byte) 116, param3);
+              this.field_bb.takeFocus((byte) 116, param3);
               return false;
             }
           }
@@ -132,7 +132,7 @@ abstract class rl extends sp {
         }
     }
 
-    boolean j(int param0) {
+    boolean advanceDialogAnimation(int param0) {
         int fieldTemp$0 = 0;
         int fieldTemp$1 = 0;
         UiWidget var4 = null;
@@ -150,9 +150,9 @@ abstract class rl extends sp {
               if (param0 != 17) {
                 var4 = (UiWidget) null;
                 this.a(true, (UiWidget) null);
-                return super.j(17);
+                return super.advanceDialogAnimation(17);
               }
-              return super.j(17);
+              return super.advanceDialogAnimation(17);
             }
             this.field_cb = NodeHashTableIterator.field_f;
             this.a(this.field_X, 12 + this.field_Z.width, this.field_W + 12 + this.field_Z.height, (byte) 118);
@@ -161,47 +161,47 @@ abstract class rl extends sp {
             if (param0 != 17) {
               var4 = (UiWidget) null;
               this.a(true, (UiWidget) null);
-              return super.j(17);
+              return super.advanceDialogAnimation(17);
             }
-            return super.j(17);
+            return super.advanceDialogAnimation(17);
           }
           if (this.field_cb != id.field_g) {
             if (param0 == 17) {
-              return super.j(17);
+              return super.advanceDialogAnimation(17);
             }
             var4Lifetime2 = (UiWidget) null;
             this.a(true, (UiWidget) null);
-            return super.j(17);
+            return super.advanceDialogAnimation(17);
           }
           fieldTemp$1 = this.field_eb + 1;
           this.field_eb = this.field_eb + 1;
           if (this.field_ab != fieldTemp$1) {
             this.field_bb.field_J = (this.field_eb << 8) / this.field_ab;
             if (param0 == 17) {
-              return super.j(17);
+              return super.advanceDialogAnimation(17);
             }
             var4Lifetime3 = (UiWidget) null;
             this.a(true, (UiWidget) null);
-            return super.j(17);
+            return super.advanceDialogAnimation(17);
           }
           this.field_cb = null;
           this.field_bb.field_J = 256;
           if (param0 == 17) {
-            return super.j(17);
+            return super.advanceDialogAnimation(17);
           }
           var4Lifetime4 = (UiWidget) null;
           this.a(true, (UiWidget) null);
-          return super.j(17);
+          return super.advanceDialogAnimation(17);
         }
         if (param0 == 17) {
-          return super.j(17);
+          return super.advanceDialogAnimation(17);
         }
         var4Lifetime1 = (UiWidget) null;
         this.a(true, (UiWidget) null);
-        return super.j(17);
+        return super.advanceDialogAnimation(17);
     }
 
-    rl(sd param0, UiWidget param1, int param2, int param3, int param4) {
+    rl(ModalDialogHost param0, UiWidget param1, int param2, int param3, int param4) {
         super(param0, 12 + param1.width, param1.height + (param2 + 12));
         try {
           this.field_X = param4;
@@ -219,12 +219,12 @@ abstract class rl extends sp {
           this.field_bb.unlink(2);
         }
         if (param1 == null) {
-          this.field_bb = new wq();
+          this.field_bb = new AlphaWidgetContainer();
         } else {
           param1.setBounds(false, 6, this.field_W + 6, param1.height, param1.width);
-          this.field_bb = new wq(param1);
+          this.field_bb = new AlphaWidgetContainer(param1);
         }
-        this.c((byte) -61, this.field_bb);
+        this.addChild((byte) -61, this.field_bb);
         if (param0 != 13693) {
           return;
         }
@@ -277,7 +277,7 @@ abstract class rl extends sp {
           return;
         }
         if (id.field_g != this.field_cb) {
-          this.b(-1535749535, this.field_Z.width + 12, 12 + this.field_W + this.field_Z.height);
+          this.setCenteredSize(-1535749535, this.field_Z.width + 12, 12 + this.field_W + this.field_Z.height);
           this.b(param0 + 13716, this.field_Z);
         } else {
           this.field_bb.field_J = 256;

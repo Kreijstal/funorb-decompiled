@@ -352,7 +352,7 @@ final class bl {
                 }
                 var2 = il.a((byte) 97, "hasfallen");
                 if (var2 != null) {
-                  d.field_O = ll.a(0, var2);
+                  ModalDialogHost.field_O = ll.a(0, var2);
                 }
                 var2 = il.a((byte) 124, "hostileseen");
                 if (null != var2) {
@@ -500,7 +500,7 @@ final class bl {
                 }
                 var2 = il.a((byte) 127, "notime");
                 if (null != var2) {
-                  hj.field_A = ll.a(0, var2);
+                  DropTargetWidgetContainer.field_A = ll.a(0, var2);
                 }
                 var2 = il.a((byte) 116, "noroute");
                 if (null != var2) {
@@ -512,7 +512,7 @@ final class bl {
                 }
                 var2 = il.a((byte) 101, "clicktocontinue");
                 if (null != var2) {
-                  jc.field_B = ll.a(0, var2);
+                  SingleChildWidgetContainer.field_B = ll.a(0, var2);
                 }
                 var2 = il.a((byte) 76, "startingturn");
                 if (null != var2) {
@@ -588,7 +588,7 @@ final class bl {
                 }
                 var2 = il.a((byte) 85, "firetq");
                 if (null != var2) {
-                  kh.field_K = ll.a(param0 - 96, var2);
+                  ModalDialog.field_K = ll.a(param0 - 96, var2);
                 }
                 var2 = il.a((byte) 119, "aimtq");
                 if (var2 != null) {
@@ -636,19 +636,19 @@ final class bl {
                 }
                 var2 = il.a((byte) 88, "armournames,0");
                 if (null != var2) {
-                  kh.field_H[0] = ll.a(param0 - 96, var2);
+                  ModalDialog.field_H[0] = ll.a(param0 - 96, var2);
                 }
                 var2 = il.a((byte) 95, "armournames,1");
                 if (null != var2) {
-                  kh.field_H[1] = ll.a(sl.a((int) param0, 96), var2);
+                  ModalDialog.field_H[1] = ll.a(sl.a((int) param0, 96), var2);
                 }
                 var2 = il.a((byte) 93, "armournames,2");
                 if (null != var2) {
-                  kh.field_H[2] = ll.a(0, var2);
+                  ModalDialog.field_H[2] = ll.a(0, var2);
                 }
                 var2 = il.a((byte) 83, "armournames,3");
                 if (var2 != null) {
-                  kh.field_H[3] = ll.a(0, var2);
+                  ModalDialog.field_H[3] = ll.a(0, var2);
                 }
                 var2 = il.a((byte) 88, "armourresearchnames,0");
                 if (var2 != null) {
@@ -1402,7 +1402,7 @@ final class bl {
                 }
                 var2 = il.a((byte) 84, "noresearchres");
                 if (null != var2) {
-                  jc.field_E = ll.a(0, var2);
+                  SingleChildWidgetContainer.field_E = ll.a(0, var2);
                 }
                 var2 = il.a((byte) 108, "corporal");
                 if (null != var2) {
@@ -1590,7 +1590,7 @@ final class bl {
                 }
                 var2 = il.a((byte) 126, "MODELNAME_PULRIF");
                 if (var2 != null) {
-                  kh.field_O = ll.a(0, var2);
+                  ModalDialog.field_O = ll.a(0, var2);
                 }
                 var2 = il.a((byte) 83, "MODELNAME_FUSPIS");
                 if (null != var2) {
@@ -1626,7 +1626,7 @@ final class bl {
                 }
                 var2 = il.a((byte) 89, "mission_no");
                 if (null != var2) {
-                  kh.field_L = ll.a(param0 ^ 96, var2);
+                  ModalDialog.field_L = ll.a(param0 ^ 96, var2);
                 }
                 var2 = il.a((byte) 90, "missionnames,0");
                 if (var2 != null) {
@@ -2444,7 +2444,7 @@ final class bl {
                 }
                 var2 = il.a((byte) 111, "equipsoldiers");
                 if (var2 != null) {
-                  j.field_I = ll.a(0, var2);
+                  LabeledWidgetContainer.field_I = ll.a(0, var2);
                 }
                 var2 = il.a((byte) 85, "startthemission");
                 if (null != var2) {
@@ -2464,7 +2464,7 @@ final class bl {
                 }
                 var2 = il.a((byte) 124, "landtroops");
                 if (var2 != null) {
-                  j.field_K = ll.a(0, var2);
+                  LabeledWidgetContainer.field_K = ll.a(0, var2);
                 }
                 var2 = il.a((byte) 113, "exitresearch");
                 if (var2 != null) {

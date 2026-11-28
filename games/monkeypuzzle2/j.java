@@ -46,7 +46,7 @@ final class j {
             if (sj.field_f.c((byte) -84)) {
               var1_int = 1;
             }
-            if (oa.field_H != 13) {
+            if (DropTargetWidgetContainer.field_H != 13) {
               continue;
             }
             var2 = 1;
@@ -80,7 +80,7 @@ final class j {
             var6 = (int)((-var4 + 10999L) / 1000L);
             if (0 >= var6) {
               var3 = 2;
-              jk.a(-125, true, 5);
+              SingleChildWidgetContainer.a(-125, true, 5);
             }
           }
           stackIn_29_0 = var3;

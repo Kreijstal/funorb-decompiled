@@ -18,7 +18,7 @@ final class nc extends sf {
     final static void a(int param0, int param1, int param2, String param3, byte param4, int param5, int param6, PlatformTaskDispatcher param7, int param8) {
         try {
           SpriteGeometry.field_m = param2;
-          ta.field_z = param5;
+          DequeWidgetContainer.field_z = param5;
           m.field_b = param6;
           hc.field_f = param1;
           lh.field_b = param7;
@@ -33,7 +33,7 @@ final class nc extends sf {
           ArchiveRequest.field_o = new DiskCacheWorker(param7);
           TextLineMetrics.field_b = new pi(kg.field_h, ArchiveRequest.field_o);
         } catch (RuntimeException runtimeException) {
-          throw dd.wrapClientException((Throwable) ((Object) runtimeException), "nc.C(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + param5 + ',' + param6 + ',' + (param7 != null ? "{...}" : "null") + ',' + param8 + ')');
+          throw DraggableWidgetContainer.wrapClientException((Throwable) ((Object) runtimeException), "nc.C(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + param5 + ',' + param6 + ',' + (param7 != null ? "{...}" : "null") + ',' + param8 + ')');
         }
     }
 

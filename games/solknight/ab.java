@@ -232,7 +232,7 @@ abstract class ab extends GameApplet {
                 td.a(-126);
                 break;
               case 8:
-                DefaultTextWidgetRenderer.a(wh.field_c, te.field_N, (byte) -110, te.field_O);
+                DefaultTextWidgetRenderer.a(wh.field_c, AlphaWidgetContainer.field_N, (byte) -110, AlphaWidgetContainer.field_O);
                 break;
               case 16:
                 WidgetContainer.a(-106);
@@ -362,10 +362,10 @@ abstract class ab extends GameApplet {
             throw new IllegalStateException();
           }
           if (var4 == 1) {
-            var5_int = si.a(NameSuggestionsPanel.h(0), ih.a(true), -120);
+            var5_int = SingleChildWidgetContainer.a(NameSuggestionsPanel.h(0), ih.a(true), -120);
             if (var5_int != -1) {
-              fb.a(12239, ke.field_O, var5_int, DiskArchiveRequest.field_v);
-              ke.field_O = null;
+              fb.a(12239, LabeledWidgetContainer.field_O, var5_int, DiskArchiveRequest.field_v);
+              LabeledWidgetContainer.field_O = null;
               DiskArchiveRequest.field_v = null;
             }
             var11 = sf.d(-123);
@@ -376,8 +376,8 @@ abstract class ab extends GameApplet {
           if (2 == var4) {
             var5_intLifetime1 = gl.a(fi.a((byte) 84), 140, rg.a(0), ta.a((byte) -23), this.field_r, RandomAccessCacheFile.b(-1), lc.b(false));
             if (-1 != var5_intLifetime1) {
-              ff.a(var5_intLifetime1, -114, ke.field_O, DiskArchiveRequest.field_v);
-              ke.field_O = null;
+              ff.a(var5_intLifetime1, -114, LabeledWidgetContainer.field_O, DiskArchiveRequest.field_v);
+              LabeledWidgetContainer.field_O = null;
               DiskArchiveRequest.field_v = null;
             }
           }
@@ -438,7 +438,7 @@ abstract class ab extends GameApplet {
             di.a(ia.g(-84), 63);
           }
           if (var4 == 12) {
-            RichTextWidget.a(ia.g(-20), 117, te.d((byte) 18));
+            RichTextWidget.a(ia.g(-20), 117, AlphaWidgetContainer.d((byte) 18));
           }
           if (var4 == 13) {
             try {
@@ -503,7 +503,7 @@ abstract class ab extends GameApplet {
         ArchiveRequest.a(-11400, this.field_C, this.field_y, wh.field_c, this.field_m, this.field_z, param5, vd.field_b, this.field_x);
         Archive.initializePunctuationKeyMappings(0);
         ah.field_d = ld.createMouseWheelInput(0);
-        th.a((byte) -63, EmailFormatValidator.field_q);
+        DropTargetWidgetContainer.a((byte) -63, EmailFormatValidator.field_q);
         if (!param4) {
           this.field_m = -97;
         }
@@ -658,7 +658,7 @@ abstract class ab extends GameApplet {
           bf.field_e == 0) {
           stackIn_23_0 = (bf.field_e != -1) ? 0 : 1;
           var3Lifetime1 = stackIn_23_0;
-          bf.field_e = ke.a((byte) 107);
+          bf.field_e = LabeledWidgetContainer.a((byte) 107);
           if (var3Lifetime1 != 0 &&
             0 == bf.field_e &&
             11 == fj.field_i &&
@@ -766,7 +766,7 @@ abstract class ab extends GameApplet {
           td.a(-3, AccountCreationResultPanel.field_ub)) {
           ProxyAuthenticationRequiredException.b(32);
           GzipDecompressor.a(-15617);
-          pe.field_m = te.field_J;
+          pe.field_m = AlphaWidgetContainer.field_J;
           kk.field_c = false;
           d.a(DelegatingCanvas.field_c, AgeValidator.field_m, (byte) -110, AccountCreationResultPanel.field_ub, MusicPatchPcmStream.field_o);
           if (bl.field_p ||
@@ -831,7 +831,7 @@ abstract class ab extends GameApplet {
           BitPacketBuffer.field_p) {
           IntrusiveDeque.a((byte) 86, EmailFormatValidator.field_q);
           this.a(true);
-          th.a((byte) -69, EmailFormatValidator.field_q);
+          DropTargetWidgetContainer.a((byte) -69, EmailFormatValidator.field_q);
         }
         if (AccountRequestState.field_c[8]) {
           ArchiveSource.b(param0 + 11);
@@ -961,15 +961,15 @@ abstract class ab extends GameApplet {
     }
 
     private final void l(int param0) {
-        int var2 = te.field_N.readUnsignedByte(255);
+        int var2 = AlphaWidgetContainer.field_N.readUnsignedByte(255);
         int var3 = 0 != (1 & var2) ? 1 : 0;
         if (param0 >= -10) {
           field_u = false;
         }
-        int var4 = te.field_O - 1;
+        int var4 = AlphaWidgetContainer.field_O - 1;
         byte[] var5 = new byte[var4];
-        te.field_N.readCipheredBytes(70, var4, 0, var5);
-        ke.a((byte) -122, ia.g(-107), Archive.decodeCp1252(true, var5), var3 != 0);
+        AlphaWidgetContainer.field_N.readCipheredBytes(70, var4, 0, var5);
+        LabeledWidgetContainer.a((byte) -122, ia.g(-107), Archive.decodeCp1252(true, var5), var3 != 0);
     }
 
     static {

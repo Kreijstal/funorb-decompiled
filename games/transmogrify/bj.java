@@ -197,7 +197,7 @@ class bj extends kb {
           if (param3 >= -100) {
             field_X = (String) null;
           }
-          gl.a((byte) -126, param1, param0, param4.payload, param2, param4.position, 0);
+          AlphaWidgetContainer.a((byte) -126, param1, param0, param4.payload, param2, param4.position, 0);
         } catch (RuntimeException runtimeException) {
           throw ch.wrapClientException((Throwable) ((Object) runtimeException), "bj.E(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ')');
         }

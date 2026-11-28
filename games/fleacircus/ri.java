@@ -16,7 +16,7 @@ final class ri extends DefaultTextWidgetRenderer {
         this(2188450, 2591221, 9543);
     }
 
-    public final void a(int param0, int param1, boolean param2, UiComponent param3, int param4) {
+    public final void paintWidget(int param0, int param1, boolean param2, UiComponent param3, int param4) {
         int stackIn_8_0 = 0;
         int stackIn_16_0 = 0;
         int stackIn_19_0 = 0;
@@ -33,7 +33,7 @@ final class ri extends DefaultTextWidgetRenderer {
             return;
           }
           if (!param3.field_x) {
-            stackIn_8_0 = (param3.e(1)) ? 1 : 0;
+            stackIn_8_0 = (param3.isFocused(1)) ? 1 : 0;
           } else {
             stackIn_8_0 = 1;
           }
@@ -51,7 +51,7 @@ final class ri extends DefaultTextWidgetRenderer {
             stackIn_16_0 = this.field_w;
           }
           var7 = stackIn_16_0;
-          ml.a(param1 + param3.field_y, 1, this.field_t, param4 + param3.field_z + (-this.field_t[0].field_r + param3.field_j >> 1), param3.field_u, var7);
+          LabeledWidgetContainer.a(param1 + param3.field_y, 1, this.field_t, param4 + param3.field_z + (-this.field_t[0].field_r + param3.field_j >> 1), param3.field_u, var7);
           stackIn_19_0 = (param2) ? 16777215 : 7105644;
           var8 = stackIn_19_0;
           this.field_j.drawParagraph(param3.field_i, param3.field_y + param1, -2 + (param4 + param3.field_z), param3.field_u, param3.field_j, var8, -1, 1, 1, this.field_j.field_H);

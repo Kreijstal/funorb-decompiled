@@ -33,7 +33,7 @@ final class ji {
         int var3_intLifetime1;
         var4 = TrackController.field_F ? 1 : 0;
         try {
-          if (10 > gl.field_I) {
+          if (10 > AlphaWidgetContainer.field_I) {
             var3_int = 0;
             if (vh.field_q) {
               vh.field_q = false;
@@ -88,7 +88,7 @@ final class ji {
         int var3_intLifetime1;
         var4 = TrackController.field_F ? 1 : 0;
         try {
-          if (10 > gl.field_I) {
+          if (10 > AlphaWidgetContainer.field_I) {
             var3_int = 0;
             if (vh.field_q) {
               vh.field_q = false;

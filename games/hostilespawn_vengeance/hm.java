@@ -108,26 +108,26 @@ final class hm extends IntrusiveNode {
               var19 = param3 * var8 / (var9 + var8) + param4;
               var18 = param3 * var8 / (var9 + var8) + param4;
             }
-            SoftwareRasterizer.saveClip(rj.field_M);
+            SoftwareRasterizer.saveClip(DraggableWidgetContainer.field_M);
             if (param1[0] != null) {
               SoftwareRasterizer.intersectClip(param5, param4, var16, var18);
               param1[0].draw(param5, param4);
-              SoftwareRasterizer.restoreClip(rj.field_M);
+              SoftwareRasterizer.restoreClip(DraggableWidgetContainer.field_M);
             }
             if (null != param1[2]) {
               SoftwareRasterizer.intersectClip(var17, param4, var10, var18);
               param1[2].draw(var13, param4);
-              SoftwareRasterizer.restoreClip(rj.field_M);
+              SoftwareRasterizer.restoreClip(DraggableWidgetContainer.field_M);
             }
             if (null != param1[6]) {
               SoftwareRasterizer.intersectClip(param5, var19, var16, var11);
               param1[6].draw(param5, var15);
-              SoftwareRasterizer.restoreClip(rj.field_M);
+              SoftwareRasterizer.restoreClip(DraggableWidgetContainer.field_M);
             }
             if (param1[8] != null) {
               SoftwareRasterizer.intersectClip(var17, var19, var10, var11);
               param1[8].draw(var13, var15);
-              SoftwareRasterizer.restoreClip(rj.field_M);
+              SoftwareRasterizer.restoreClip(DraggableWidgetContainer.field_M);
             }
             if (param1[1] != null &&
               param1[1].field_u != 0) {
@@ -135,7 +135,7 @@ final class hm extends IntrusiveNode {
               for (var20 = var12; var20 < var13; var20 = var20 + param1[1].field_u) {
                 param1[1].draw(var20, param4);
               }
-              SoftwareRasterizer.restoreClip(rj.field_M);
+              SoftwareRasterizer.restoreClip(DraggableWidgetContainer.field_M);
             }
             if (null != param1[7] &&
               param1[7].field_u != 0) {
@@ -143,7 +143,7 @@ final class hm extends IntrusiveNode {
               for (var20Lifetime1 = var12; var13 > var20Lifetime1; var20Lifetime1 = var20Lifetime1 + param1[7].field_u) {
                 param1[7].draw(var20Lifetime1, var15);
               }
-              SoftwareRasterizer.restoreClip(rj.field_M);
+              SoftwareRasterizer.restoreClip(DraggableWidgetContainer.field_M);
             }
             if (null != param1[3] &&
               0 != param1[3].field_r) {
@@ -151,7 +151,7 @@ final class hm extends IntrusiveNode {
               for (var20Lifetime2 = var14; var15 > var20Lifetime2; var20Lifetime2 = var20Lifetime2 + param1[3].field_r) {
                 param1[3].draw(param5, var20Lifetime2);
               }
-              SoftwareRasterizer.restoreClip(rj.field_M);
+              SoftwareRasterizer.restoreClip(DraggableWidgetContainer.field_M);
             }
             if (param2) {
               hm.clearStaticReferences(79);
@@ -162,7 +162,7 @@ final class hm extends IntrusiveNode {
               for (var20Lifetime3 = var14; var15 > var20Lifetime3; var20Lifetime3 = var20Lifetime3 + param1[5].field_r) {
                 param1[5].draw(var13, var20Lifetime3);
               }
-              SoftwareRasterizer.restoreClip(rj.field_M);
+              SoftwareRasterizer.restoreClip(DraggableWidgetContainer.field_M);
             }
             if (param1[4] != null &&
               param1[4].field_u != 0 &&
@@ -173,7 +173,7 @@ final class hm extends IntrusiveNode {
                   param1[4].draw(var21, var20Lifetime4);
                 }
               }
-              SoftwareRasterizer.restoreClip(rj.field_M);
+              SoftwareRasterizer.restoreClip(DraggableWidgetContainer.field_M);
               return;
             }
             return;

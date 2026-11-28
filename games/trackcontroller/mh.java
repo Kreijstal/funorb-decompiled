@@ -108,7 +108,7 @@ final class mh extends IntrusiveNode {
           if (GameKeyHandler.field_d == IntrusiveNode.field_d) {
             return false;
           }
-          kg.field_d = mc.field_K[GameKeyHandler.field_d];
+          kg.field_d = DropTargetWidgetContainer.field_K[GameKeyHandler.field_d];
           md.field_d = AsyncRequest.field_o[GameKeyHandler.field_d];
           GameKeyHandler.field_d = 1 + GameKeyHandler.field_d & param0;
           stackIn_5_0 = true;

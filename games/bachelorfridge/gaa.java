@@ -108,7 +108,7 @@ final class gaa extends lg {
             return;
           }
           lna.field_q = false;
-          if (hl.field_I) {
+          if (AlphaWidgetContainer.field_I) {
             var5 = kna.field_h;
           } else {
             if (!sea.field_j) {

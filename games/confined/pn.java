@@ -61,7 +61,7 @@ final class pn {
     final pn a(int param0, int param1) {
         if (param0 != 1918) {
           qh var4 = (qh) null;
-          this.a(6, -47, (fj) null, (byte) -120, (qh) null);
+          this.a(6, -47, (UiWidget) null, (byte) -120, (qh) null);
         }
         this.field_f = param1;
         return this;
@@ -155,7 +155,7 @@ final class pn {
         return this;
     }
 
-    final void a(int param0, int param1, fj param2, byte param3, qh param4) {
+    final void a(int param0, int param1, UiWidget param2, byte param3, qh param4) {
         BitmapFont stackIn_21_0 = null;
         String stackIn_21_1 = null;
         int stackIn_22_2 = 0;
@@ -253,7 +253,7 @@ final class pn {
         }
     }
 
-    final void a(int param0, pn param1, int param2, int param3, fj param4, qh param5) {
+    final void a(int param0, pn param1, int param2, int param3, UiWidget param4, qh param5) {
         RuntimeException stackIn_21_0 = null;
         StringBuilder stackIn_21_1 = null;
         String stackIn_22_2 = null;

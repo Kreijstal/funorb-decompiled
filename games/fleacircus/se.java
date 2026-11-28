@@ -48,7 +48,7 @@ final class se {
         try {
           if (ProxyAuthenticationRequiredException.field_g == null) {
             ProxyAuthenticationRequiredException.field_g = new nd(nb.field_a, ResourceArchive.field_e);
-            nb.field_a.b(ProxyAuthenticationRequiredException.field_g, (byte) -35);
+            nb.field_a.showDialog(ProxyAuthenticationRequiredException.field_g, (byte) -35);
           }
           ProxyAuthenticationRequiredException.field_g.a(param0, param3, param2, -122);
           SoftwareRasterizer.clearRaster();

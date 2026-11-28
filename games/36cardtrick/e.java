@@ -14,11 +14,11 @@ final class e {
 
     final static void a(byte param0) {
         if (param0 == 112) {
-          sd.field_c.k(119);
+          sd.field_c.closeAllDialogs(119);
           if (ji.field_a == null) {
             ji.field_a = new rk(sd.field_c, rk.field_ab);
           }
-          sd.field_c.b(ji.field_a, (byte) 6);
+          sd.field_c.showDialog(ji.field_a, (byte) 6);
           return;
         }
     }

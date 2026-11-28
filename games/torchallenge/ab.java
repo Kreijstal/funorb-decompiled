@@ -19,10 +19,10 @@ final class ab {
 
     final static java.awt.Canvas a(int param0) {
         if (param0 > 26) {
-          return null != gi.field_d ? (java.awt.Canvas) ((Object) gi.field_d) : bg.field_P;
+          return null != gi.field_d ? (java.awt.Canvas) ((Object) gi.field_d) : LabeledWidgetContainer.field_P;
         }
         ab.a(81);
-        return null != gi.field_d ? (java.awt.Canvas) ((Object) gi.field_d) : bg.field_P;
+        return null != gi.field_d ? (java.awt.Canvas) ((Object) gi.field_d) : LabeledWidgetContainer.field_P;
     }
 
     public static void a(boolean param0) {

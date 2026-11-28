@@ -48,7 +48,7 @@ final class wl {
             q.field_j.a(jd.field_s, (byte) 99);
             q.field_j.field_a = 2763306;
             q.field_j.field_f = 7697781;
-            q.field_j.field_i = jn.field_G;
+            q.field_j.field_i = AlphaWidgetContainer.field_G;
             q.field_j.field_l = 4;
             q.field_j.field_g = 5;
             q.field_j.field_o = 14;

@@ -50,8 +50,8 @@ class ii extends DualLinkNode {
               }
             }
           }
-          if (null != fj.field_P) {
-            stackIn_20_0 = fj.field_P.isMidiReady((byte) -64);
+          if (null != DraggableWidgetContainer.field_P) {
+            stackIn_20_0 = DraggableWidgetContainer.field_P.isMidiReady((byte) -64);
             if (stackIn_20_0) {
               return;
             }

@@ -13,7 +13,7 @@ final class jc implements WidgetListener {
         if (param0 != 10) {
           field_c = (String) null;
           if ((1 << ln.field_d.field_B & ln.field_d.field_D.field_d) != 0) {
-            RichTextLayout.field_q[10] = mg.field_T;
+            RichTextLayout.field_q[10] = LabeledWidgetContainer.field_T;
             return;
           }
           if (0 == ln.field_d.field_D.field_d) {
@@ -24,7 +24,7 @@ final class jc implements WidgetListener {
           return;
         }
         if ((1 << ln.field_d.field_B & ln.field_d.field_D.field_d) != 0) {
-          RichTextLayout.field_q[10] = mg.field_T;
+          RichTextLayout.field_q[10] = LabeledWidgetContainer.field_T;
           return;
         }
         if (0 == ln.field_d.field_D.field_d) {
@@ -34,7 +34,7 @@ final class jc implements WidgetListener {
         RichTextLayout.field_q[10] = te.field_I;
     }
 
-    public final void a(boolean param0, int param1, boolean param2, UiWidget param3, int param4) {
+    public final void paintWidget(boolean param0, int param1, boolean param2, UiWidget param3, int param4) {
         int stackIn_7_0 = 0;
         RuntimeException stackIn_23_0 = null;
         StringBuilder stackIn_23_1 = null;
@@ -53,14 +53,14 @@ final class jc implements WidgetListener {
             field_b = (int[]) null;
           }
           if (!param3.field_p &&
-            !param3.f(57)) {
+            !param3.isFocused(57)) {
             stackIn_7_0 = 2188450;
           } else {
             stackIn_7_0 = 3249872;
           }
           var6_int = stackIn_7_0;
           this.field_e.drawParagraph("<u=" + Integer.toString(var6_int, 16) + ">" + param3.text + "</u>", param3.x + param1, param4 + param3.y, param3.width, param3.height, var6_int, -1, this.field_a, this.field_d, this.field_e.field_M + this.field_e.field_z);
-          if (!param3.f(101)) {
+          if (!param3.isFocused(101)) {
             return;
           }
           var7 = this.field_e.stringWidth(param3.text);

@@ -74,7 +74,7 @@ final class sh extends IntrusiveNode {
           var1_int = jh.field_m;
           var2 = 0;
           if (2 == pe.field_e) {
-            var3_long = -hj.field_I + ll.correctedCurrentTimeMillis(1000);
+            var3_long = -DropTargetWidgetContainer.field_I + ll.correctedCurrentTimeMillis(1000);
             var2 = (int)((10999L - var3_long) / 1000L);
             if (var2 < 0) {
               var2 = 0;

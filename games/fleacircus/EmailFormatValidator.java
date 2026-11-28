@@ -25,7 +25,7 @@ final class EmailFormatValidator extends TextFieldValidator {
             stackIn_9_0 = hm.field_b;
             return stackIn_9_0;
           }
-          stackIn_7_0 = ml.field_K;
+          stackIn_7_0 = LabeledWidgetContainer.field_K;
           return stackIn_7_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -79,7 +79,7 @@ final class EmailFormatValidator extends TextFieldValidator {
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (this.getValidationStatus(160, param1) == ml.field_K) {
+          if (this.getValidationStatus(160, param1) == LabeledWidgetContainer.field_K) {
             stackIn_2_0 = bg.field_a;
             return stackIn_2_0;
           }
@@ -109,7 +109,7 @@ final class EmailFormatValidator extends TextFieldValidator {
         pd var1Lifetime1;
         var2 = fleas.field_A ? 1 : 0;
         try {
-          db.field_J.serviceOutput();
+          ModalDialog.field_J.serviceOutput();
           tg.field_i.serviceOutput();
           DebouncedFieldValidator.field_g = DebouncedFieldValidator.field_g - 1;
           if (param0 != -20846) {

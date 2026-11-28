@@ -43,14 +43,14 @@ final class ei extends ug implements WidgetActivationListener {
             if (null != dn.field_d &&
               dn.field_d.field_f) {
               qh.c(4);
-              DelegatingCanvas.field_b.c(new ei(DelegatingCanvas.field_b, wl.field_f), param0 - 15102);
+              DelegatingCanvas.field_b.showDialog(new ei(DelegatingCanvas.field_b, wl.field_f), param0 - 15102);
             }
             return;
           }
-          DelegatingCanvas.field_b.a(true, true, pe.field_m, qe.field_Q);
-          DelegatingCanvas.field_b.i((byte) 52);
+          DelegatingCanvas.field_b.processPointerInput(true, true, pe.field_m, DraggableWidgetContainer.field_Q);
+          DelegatingCanvas.field_b.advanceDialogs((byte) 52);
           while (nm.e((byte) -96)) {
-            DelegatingCanvas.field_b.a((byte) 101, ad.field_h, gk.field_r);
+            DelegatingCanvas.field_b.processKeyInput((byte) 101, ad.field_h, gk.field_r);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -71,10 +71,10 @@ final class ei extends ug implements WidgetActivationListener {
         nm.field_I = -1;
     }
 
-    private ei(sh param0, ci param1) {
+    private ei(ModalDialogHost param0, ci param1) {
         super(param0, 200, 150);
         Object var3 = null;
-        fj var4 = null;
+        UiWidget var4 = null;
         Object stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
         String stackIn_13_2 = null;
@@ -92,7 +92,7 @@ final class ei extends ug implements WidgetActivationListener {
                 this.field_z = this.field_z + 20;
               }
             } else {
-              if (fj.field_x == param1) {
+              if (UiWidget.field_x == param1) {
                 var3 = StageDirector.field_A;
                 this.field_z = this.field_z + 30;
               }
@@ -100,14 +100,14 @@ final class ei extends ug implements WidgetActivationListener {
           } else {
             var3 = IntrusiveNodeHashTable.field_d;
           }
-          var4 = new fj((String) (var3), (uk) null);
+          var4 = new UiWidget((String) (var3), (WidgetEventListener) null);
           var4.field_F = this.field_F;
           var4.field_z = 80;
           var4.field_q = 0;
           var4.field_m = 50;
-          var4.field_n = (fe) ((Object) new DefaultTextWidgetRenderer(fa.field_Q, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true));
-          this.b(var4, 10);
-          this.field_hb = this.a((uk) (this), s.field_J, -27167);
+          var4.field_n = (WidgetRenderer) ((Object) new DefaultTextWidgetRenderer(fa.field_Q, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true));
+          this.addChild(var4, 10);
+          this.field_hb = this.a((WidgetEventListener) (this), DropTargetWidgetContainer.field_J, -27167);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -129,7 +129,7 @@ final class ei extends ug implements WidgetActivationListener {
         }
     }
 
-    private final InteractiveWidget a(uk param0, String param1, int param2) {
+    private final InteractiveWidget a(WidgetEventListener param0, String param1, int param2) {
         InteractiveWidget discarded$1 = null;
         InteractiveWidget var4 = null;
         RuntimeException var4_ref = null;
@@ -144,16 +144,16 @@ final class ei extends ug implements WidgetActivationListener {
         RuntimeException decompiledCaughtException = null;
         try {
           var4 = new InteractiveWidget(param1, param0);
-          var4.field_n = (fe) ((Object) new je());
+          var4.field_n = (WidgetRenderer) ((Object) new je());
           if (param2 != -27167) {
             var6 = (String) null;
-            discarded$1 = this.a((uk) null, (String) null, 101);
+            discarded$1 = this.a((WidgetEventListener) null, (String) null, 101);
           }
           var5 = this.field_z - 6;
           this.field_z = this.field_z + 38;
-          var4.a(param2 ^ 27234, -16 + this.field_F - 14, var5, 30, 15);
-          this.b(var4, 10);
-          this.d(param2 ^ -27171);
+          var4.setBounds(param2 ^ 27234, -16 + this.field_F - 14, var5, 30, 15);
+          this.addChild(var4, 10);
+          this.refreshLayout(param2 ^ -27171);
           stackIn_3_0 = var4;
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

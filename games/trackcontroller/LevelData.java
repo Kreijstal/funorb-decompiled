@@ -59,10 +59,10 @@ final class LevelData extends LevelGrid {
             var5++;
             incrementValue$0 = var5;
             var5++;
-            var3_int = fj.b(-48, (int) param1.charAt(incrementValue$0));
+            var3_int = DraggableWidgetContainer.b(-48, (int) param1.charAt(incrementValue$0));
             incrementValue$1 = var5;
             var5++;
-            var4 = fj.b(-48, (int) param1.charAt(incrementValue$1));
+            var4 = DraggableWidgetContainer.b(-48, (int) param1.charAt(incrementValue$1));
           }
           var22 = new byte[var3_int][var4];
           var23 = new int[var3_int][var4];
@@ -70,7 +70,7 @@ final class LevelData extends LevelGrid {
             for (var9_int = 0; var4 > var9_int; var9_int += 2) {
               incrementValue$6 = var5;
               var5++;
-              var10 = fj.b(-48, (int) param1.charAt(incrementValue$6));
+              var10 = DraggableWidgetContainer.b(-48, (int) param1.charAt(incrementValue$6));
               var22[var8][var9_int] = (byte)(var10 >> 3);
               incrementValue$7 = var5;
               var5++;

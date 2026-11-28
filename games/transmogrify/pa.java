@@ -13,7 +13,7 @@ final class pa implements WidgetRenderer {
     private int field_e;
     static String field_a;
 
-    public final void a(int param0, int param1, boolean param2, byte param3, UiWidget param4) {
+    public final void paintWidget(int param0, int param1, boolean param2, byte param3, UiWidget param4) {
         RuntimeException var6 = null;
         int var7 = 0;
         int var8 = 0;
@@ -79,7 +79,7 @@ final class pa implements WidgetRenderer {
     final static boolean b(int param0) {
         if (param0 > -45) {
           field_a = (String) null;
-          if (gl.field_y < 10) {
+          if (AlphaWidgetContainer.field_y < 10) {
             return false;
           }
           if (bi.field_L >= 13) {
@@ -87,7 +87,7 @@ final class pa implements WidgetRenderer {
           }
           return false;
         }
-        if (gl.field_y < 10) {
+        if (AlphaWidgetContainer.field_y < 10) {
           return false;
         }
         if (bi.field_L >= 13) {

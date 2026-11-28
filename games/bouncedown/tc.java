@@ -68,13 +68,13 @@ class tc extends DefaultTextWidgetRenderer {
         super(param0, 4, 2, 2, 2, param1, -1, 0, 1, param0.field_s, -1, 2147483647, false);
     }
 
-    public final void a(int param0, lk param1, byte param2, boolean param3, int param4) {
+    public final void paintWidget(int param0, UiWidget param1, byte param2, boolean param3, int param4) {
         try {
           int var6_int = 105 % ((-60 - param2) / 56);
           if (param3) {
             NodeHashTableIterator.a(param1.field_i + param0, 1232050056, param1.field_k, param4 + param1.field_r, param1.field_m);
           }
-          super.a(param0, param1, (byte) -125, param3, param4);
+          super.paintWidget(param0, param1, (byte) -125, param3, param4);
         } catch (RuntimeException runtimeException) {
           throw CipherPacketBuffer.wrapClientException((Throwable) ((Object) runtimeException), "tc.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }

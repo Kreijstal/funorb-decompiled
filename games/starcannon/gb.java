@@ -24,7 +24,7 @@ final class gb extends DefaultTextWidgetRenderer {
         this(2188450, 2591221, 9543);
     }
 
-    public final void a(int param0, boolean param1, int param2, int param3, UiWidget param4) {
+    public final void paintWidget(int param0, boolean param1, int param2, int param3, UiWidget param4) {
         int stackIn_6_0 = 0;
         int stackIn_14_0 = 0;
         int stackIn_17_0 = 0;
@@ -39,7 +39,7 @@ final class gb extends DefaultTextWidgetRenderer {
         int var9 = 0;
         try {
           if (!param4.field_h) {
-            stackIn_6_0 = (param4.d(true)) ? 1 : 0;
+            stackIn_6_0 = (param4.isFocused(true)) ? 1 : 0;
           } else {
             stackIn_6_0 = 1;
           }

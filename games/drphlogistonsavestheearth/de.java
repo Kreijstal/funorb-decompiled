@@ -517,10 +517,10 @@ final class de extends wd {
     final static void e(int param0) {
         Throwable decompiledCaughtException = null;
         Object var1 = null;
-        if (pj.field_G != null) {
-          var1 = pj.field_G;
+        if (DequeWidgetContainer.field_G != null) {
+          var1 = DequeWidgetContainer.field_G;
           synchronized (var1) {
-            pj.field_G = null;
+            DequeWidgetContainer.field_G = null;
           }
         }
         if (param0 > -83) {

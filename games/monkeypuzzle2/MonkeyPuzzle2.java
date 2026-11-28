@@ -125,7 +125,7 @@ public final class MonkeyPuzzle2 extends bi {
           int var2_int = 32 % ((param0 + 60) / 56);
           fi.clearStaticReferences(-128);
           ld.clearStaticReferences(-82);
-          kj.clearDeclaredStaticReferences((byte) 121);
+          ModalDialogHost.clearDeclaredStaticReferences((byte) 121);
           AccountCreationResultPanel.releaseDeclaredStaticReferences(-249);
           ul.releaseDeclaredStaticReferences(-105);
           ra.clearStaticReferences((byte) -96);
@@ -201,7 +201,7 @@ public final class MonkeyPuzzle2 extends bi {
           TextLayout.resetStaticState(-1);
           UiWidget.resetStaticState(0);
           ButtonWidget.j(-64);
-          jk.clearStaticReferences((byte) 77);
+          SingleChildWidgetContainer.clearStaticReferences((byte) 77);
           nf.o(-4110);
           WidgetContainer.clearDeclaredStaticReferences(0);
           DequeCursor.clearStaticReferences(110);
@@ -230,7 +230,7 @@ public final class MonkeyPuzzle2 extends bi {
           PcmOutputWorker.clearStaticReferences((byte) -7);
           il.clearStaticReferences(false);
           ci.clearStaticReferences((byte) -128);
-          mh.clearDeclaredStaticReferences((byte) 99);
+          LabeledWidgetContainer.clearDeclaredStaticReferences((byte) 99);
           ValidatedTextField.releaseDeclaredStaticReferences(125);
           EditableTextField.clearDeclaredStaticReferences(0);
           pc.resetStaticState(true);
@@ -249,7 +249,7 @@ public final class MonkeyPuzzle2 extends bi {
           bb.clearStaticReferences(true);
           RichTextLayout.clearStaticReferences(12817);
           oi.a((byte) -90);
-          oa.clearStaticReferences(false);
+          DropTargetWidgetContainer.clearStaticReferences(false);
           te.clearStaticReferences((byte) -88);
           IterableNodeHashTable.b(24);
           SecondaryNodeDeque.clearStaticReferences((byte) 101);
@@ -267,7 +267,7 @@ public final class MonkeyPuzzle2 extends bi {
           mg.clearStaticReferences(-1);
           ve.clearStaticReferences((byte) 15);
           wi.a(256);
-          ue.clearDeclaredStaticReferences(8443);
+          AlphaWidgetContainer.clearDeclaredStaticReferences(8443);
           rb.resetStaticState(-121);
           m.clearDeclaredStaticReferences(49);
           rk.clearStaticReferences(10);
@@ -557,7 +557,7 @@ public final class MonkeyPuzzle2 extends bi {
                         qh.field_b = dh.field_c;
                         uh.a((byte) -101, qh.field_b);
                         if (ResourceArchive.isMessageDialogActive(false)) {
-                          ue.a((byte) 122, false);
+                          AlphaWidgetContainer.a((byte) 122, false);
                         }
                       }
                       sc.field_e = 3;
@@ -594,7 +594,7 @@ public final class MonkeyPuzzle2 extends bi {
               rb.h(3591);
             } else {
               if (var2_intLifetime1 == 3) {
-                ue.a((byte) 122, true);
+                AlphaWidgetContainer.a((byte) 122, true);
               } else {
                 if (var2_intLifetime1 == 4) {
                   gj.a(0, 0, 0);
@@ -631,7 +631,7 @@ public final class MonkeyPuzzle2 extends bi {
         RuntimeException var2 = null;
         try {
           if (null != BufferedRandomAccessFile.field_j) {
-            rh.a(-9585, BufferedRandomAccessFile.field_j);
+            ModalDialog.a(-9585, BufferedRandomAccessFile.field_j);
             BufferedRandomAccessFile.field_j = null;
             oe.a((byte) 103);
           }

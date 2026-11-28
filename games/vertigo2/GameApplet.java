@@ -57,7 +57,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
               var8 = gi.field_s.startThread(1, (Runnable) (this), 0);
               while (true) {
                 if (0 == var8.status) {
-                  um.sleepMillis(true, 10L);
+                  ArrayWidgetContainer.sleepMillis(true, 10L);
                   if (var9 == 0) {
                     continue;
                   }
@@ -162,7 +162,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
           if (qe.field_T == this &&
             !NodeHashTableIterator.field_g) {
             lf.field_B = gk.correctedCurrentTimeMillis(52);
-            um.sleepMillis(true, 5000L);
+            ArrayWidgetContainer.sleepMillis(true, 5000L);
             mr.field_b = null;
             this.shutdownApplet((byte) -53, false);
             return;

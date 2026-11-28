@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class nb {
-    static f field_a;
+    static ModalDialogHost field_a;
     static BitmapFont field_c;
     static PcmSample field_f;
     static int field_g;

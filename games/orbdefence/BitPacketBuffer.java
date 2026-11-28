@@ -20,14 +20,14 @@ final class BitPacketBuffer extends PacketBuffer {
         while (param0 > var4) {
           incrementValue$0 = var3;
           var3++;
-          var5 = var5 + ((sk.field_I[var4] & this.payload[incrementValue$0]) << -var4 + param0);
+          var5 = var5 + ((ModalDialogHost.field_I[var4] & this.payload[incrementValue$0]) << -var4 + param0);
           param0 = param0 - var4;
           var4 = 8;
         }
         if (param0 != var4) {
-          var5 = var5 + (this.payload[var3] >> -param0 + var4 & sk.field_I[param0]);
+          var5 = var5 + (this.payload[var3] >> -param0 + var4 & ModalDialogHost.field_I[param0]);
         } else {
-          var5 = var5 + (sk.field_I[var4] & this.payload[var3]);
+          var5 = var5 + (ModalDialogHost.field_I[var4] & this.payload[var3]);
         }
         return var5;
     }
@@ -74,7 +74,7 @@ final class BitPacketBuffer extends PacketBuffer {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw dd.wrapClientException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param3).append(')').toString());
+          throw DraggableWidgetContainer.wrapClientException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -107,7 +107,7 @@ final class BitPacketBuffer extends PacketBuffer {
           var3.writeByte(param0.field_m, -4);
           var3.writeByte(param0.field_n, -79);
         } catch (RuntimeException runtimeException) {
-          throw dd.wrapClientException((Throwable) ((Object) runtimeException), "se.CB(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw DraggableWidgetContainer.wrapClientException((Throwable) ((Object) runtimeException), "se.CB(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -177,7 +177,7 @@ final class BitPacketBuffer extends PacketBuffer {
           } else {
             stackIn_28_2 = "{...}";
           }
-          throw dd.wrapClientException((Throwable) ((Object) stackIn_27_0), ((StringBuilder) (Object) stackIn_27_1).append(stackIn_28_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw DraggableWidgetContainer.wrapClientException((Throwable) ((Object) stackIn_27_0), ((StringBuilder) (Object) stackIn_27_1).append(stackIn_28_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -192,7 +192,7 @@ final class BitPacketBuffer extends PacketBuffer {
             this.field_o = (IsaacRandom) null;
           }
         } catch (RuntimeException runtimeException) {
-          throw dd.wrapClientException((Throwable) ((Object) runtimeException), "se.BB(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw DraggableWidgetContainer.wrapClientException((Throwable) ((Object) runtimeException), "se.BB(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

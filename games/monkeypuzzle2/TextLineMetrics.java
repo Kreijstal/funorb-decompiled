@@ -95,14 +95,14 @@ final class TextLineMetrics {
           for (var9 = 0; 4 > var9; var9++) {
             var8[var9] = pb.field_b.nextInt();
           }
-          if (jk.field_z == null ||
-            !(var7_int <= jk.field_z.payload.length)) {
-            jk.field_z = new PacketBuffer(var7_int);
+          if (SingleChildWidgetContainer.field_z == null ||
+            !(var7_int <= SingleChildWidgetContainer.field_z.payload.length)) {
+            SingleChildWidgetContainer.field_z = new PacketBuffer(var7_int);
           }
-          jk.field_z.position = 0;
-          jk.field_z.writeBytes(param6, param4, -2, param3);
-          jk.field_z.padZerosTo(true, var7_int);
-          jk.field_z.encryptXtea(30350, var14);
+          SingleChildWidgetContainer.field_z.position = 0;
+          SingleChildWidgetContainer.field_z.writeBytes(param6, param4, -2, param3);
+          SingleChildWidgetContainer.field_z.padZerosTo(true, var7_int);
+          SingleChildWidgetContainer.field_z.encryptXtea(30350, var14);
           if (null == MonkeyPuzzle2.field_A ||
             !(MonkeyPuzzle2.field_A.payload.length >= 100)) {
             MonkeyPuzzle2.field_A = new PacketBuffer(100);
@@ -122,7 +122,7 @@ final class TextLineMetrics {
           MonkeyPuzzle2.field_A.writeShort(param4, 83);
           MonkeyPuzzle2.field_A.applyRsa((byte) -127, param1, param5);
           param0.writeBytes(MonkeyPuzzle2.field_A.payload, MonkeyPuzzle2.field_A.position, -2, 0);
-          param0.writeBytes(jk.field_z.payload, jk.field_z.position, -2, 0);
+          param0.writeBytes(SingleChildWidgetContainer.field_z.payload, SingleChildWidgetContainer.field_z.position, -2, 0);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

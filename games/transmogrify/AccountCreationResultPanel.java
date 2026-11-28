@@ -63,7 +63,7 @@ final class AccountCreationResultPanel extends ik implements WidgetActivationLis
               this.b(param0 + 109, new ge(this));
               return;
             }
-            var5.a((ma) (this), 8283, qe.field_I);
+            var5.a((WidgetEventListener) (this), 8283, qe.field_I);
           } else {
             if (!this.field_nb) {
               if (param2.statusCode != 5) {
@@ -73,7 +73,7 @@ final class AccountCreationResultPanel extends ik implements WidgetActivationLis
                 var5.a(ta.field_b, 17, 1);
               }
             } else {
-              var5.a((ma) (this), 8283, qe.field_I);
+              var5.a((WidgetEventListener) (this), 8283, qe.field_I);
             }
             if (3 != param2.statusCode) {
               if (6 == param2.statusCode) {
@@ -149,47 +149,47 @@ final class AccountCreationResultPanel extends ik implements WidgetActivationLis
     }
 
     final void u(int param0) {
-        this.showAccountCreationResult(0, true, mk.createAccountErrorResult(242763393, wd.field_l, 248));
+        this.showAccountCreationResult(0, true, ModalDialog.createAccountErrorResult(242763393, wd.field_l, 248));
         int var2 = -109 % ((param0 - 32) / 36);
     }
 
-    final boolean m(int param0) {
+    final boolean advanceDialogAnimation(int param0) {
         InteractiveWidget var3 = null;
         InteractiveWidget var3Lifetime1;
         InteractiveWidget var3Lifetime2;
         InteractiveWidget var3Lifetime3;
         if (!this.field_A) {
           if (param0 == 0) {
-            return super.m(0);
+            return super.advanceDialogAnimation(0);
           }
           var3 = (InteractiveWidget) null;
           this.onWidgetActivated((InteractiveWidget) null, -59, -50, 24, 58);
-          return super.m(0);
+          return super.advanceDialogAnimation(0);
         }
         if (this.field_lb) {
           if (param0 == 0) {
-            return super.m(0);
+            return super.advanceDialogAnimation(0);
           }
           var3Lifetime1 = (InteractiveWidget) null;
           this.onWidgetActivated((InteractiveWidget) null, -59, -50, 24, 58);
-          return super.m(0);
+          return super.advanceDialogAnimation(0);
         }
         AccountServiceResult var2 = CrossfadingMidiPcmStream.pollAccountCreationResult((byte) 32);
         if (var2 != null) {
           this.showAccountCreationResult(param0 + 0, false, var2);
           if (param0 == 0) {
-            return super.m(0);
+            return super.advanceDialogAnimation(0);
           }
           var3Lifetime2 = (InteractiveWidget) null;
           this.onWidgetActivated((InteractiveWidget) null, -59, -50, 24, 58);
-          return super.m(0);
+          return super.advanceDialogAnimation(0);
         }
         if (param0 == 0) {
-          return super.m(0);
+          return super.advanceDialogAnimation(0);
         }
         var3Lifetime3 = (InteractiveWidget) null;
         this.onWidgetActivated((InteractiveWidget) null, -59, -50, 24, 58);
-        return super.m(0);
+        return super.advanceDialogAnimation(0);
     }
 
     public static void clearStaticReferences(boolean param0) {
@@ -201,7 +201,7 @@ final class AccountCreationResultPanel extends ik implements WidgetActivationLis
         field_kb = null;
     }
 
-    AccountCreationResultPanel(da param0, AccountRegistrationPanel param1) {
+    AccountCreationResultPanel(ModalDialogHost param0, AccountRegistrationPanel param1) {
         super(param0, ArchiveRequest.field_q, IterableNodeHashTable.field_i, false, false);
         try {
           this.field_mb = param1;

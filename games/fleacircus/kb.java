@@ -107,7 +107,7 @@ final class kb extends IntrusiveNode {
     }
 
     final static void a(int param0, boolean param1) {
-        nb.field_a.a(param0 ^ 0, param0, 0);
+        nb.field_a.drawAllLayers(param0 ^ 0, param0, 0);
     }
 
     final static AwtRasterBuffer a(java.awt.Component param0, int param1, int param2, int param3) {

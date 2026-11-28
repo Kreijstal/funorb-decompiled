@@ -29,15 +29,15 @@ final class il {
           SoftwareRasterizer.drawRectangleOutline(243, 197, 369, 143, 16777215);
           SoftwareRasterizer.fillRectangle(244, param0, 367, 141, 0);
           if (null == wa.field_k) {
-            if (qj.field_H != null) {
-              qj.field_H.drawParagraph(MouseWheelInput.field_a, 245, 199, 365, 139, 16777215, -1, 1, 1, 0);
+            if (DropTargetWidgetContainer.field_H != null) {
+              DropTargetWidgetContainer.field_H.drawParagraph(MouseWheelInput.field_a, 245, 199, 365, 139, 16777215, -1, 1, 1, 0);
             }
             return;
           }
           var6 = wa.field_k[ql.field_o];
           if (var6 == null) {
-            if (qj.field_H != null) {
-              qj.field_H.drawParagraph(MouseWheelInput.field_a, 245, 199, 365, 139, 16777215, -1, 1, 1, 0);
+            if (DropTargetWidgetContainer.field_H != null) {
+              DropTargetWidgetContainer.field_H.drawParagraph(MouseWheelInput.field_a, 245, 199, 365, 139, 16777215, -1, 1, 1, 0);
             }
           } else {
             var6.draw(245, 199);
@@ -54,7 +54,7 @@ final class il {
               }
             }
           }
-          if (null != qj.field_H) {
+          if (null != DropTargetWidgetContainer.field_H) {
             var2 = null;
             var5 = 0;
             var3Lifetime1 = var5;
@@ -73,7 +73,7 @@ final class il {
             if (var2 == null) {
               return;
             }
-            qj.field_H.drawParagraph("Screenshot(s) " + (String) (var2) + " is/are the wrong size! Should be " + 365 + "<times>" + 139, 245, 199, 365, 139, 16737843, 0, 1, 1, 0);
+            DropTargetWidgetContainer.field_H.drawParagraph("Screenshot(s) " + (String) (var2) + " is/are the wrong size! Should be " + 365 + "<times>" + 139, 245, 199, 365, 139, 16737843, 0, 1, 1, 0);
             return;
           }
           return;

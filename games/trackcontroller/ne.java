@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ne implements t {
+final class ne implements WidgetRenderer {
     static IntrusiveDeque field_b;
     private BitmapFont field_e;
     private int field_c;
@@ -18,7 +18,7 @@ final class ne implements t {
         }
     }
 
-    public final void a(int param0, UiWidget param1, int param2, boolean param3, int param4) {
+    public final void paintWidget(int param0, UiWidget param1, int param2, boolean param3, int param4) {
         int stackIn_7_0 = 0;
         RuntimeException stackIn_21_0 = null;
         StringBuilder stackIn_21_1 = null;
@@ -37,14 +37,14 @@ final class ne implements t {
             return;
           }
           if (!param1.field_q &&
-            !param1.h(-84)) {
+            !param1.isFocused(-84)) {
             stackIn_7_0 = 2188450;
           } else {
             stackIn_7_0 = 3249872;
           }
           var6_int = stackIn_7_0;
           this.field_e.drawParagraph("<u=" + Integer.toString(var6_int, 16) + ">" + param1.field_s + "</u>", param4 + param1.field_p, param1.field_m + param2, param1.field_x, param1.field_u, var6_int, -1, this.field_c, this.field_f, this.field_e.field_u + this.field_e.field_G);
-          if (param1.h(-95)) {
+          if (param1.isFocused(-95)) {
             var7 = this.field_e.stringWidth(param1.field_s);
             var8 = this.field_e.field_u + this.field_e.field_G;
             var9 = param4 + param1.field_p;

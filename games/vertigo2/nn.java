@@ -37,9 +37,9 @@ final class nn extends IntrusiveNode {
           dj.field_d.a(115, -param1 + bp.field_C.field_Fb - ui.field_b.field_Fb, param2, 0, param1);
           var7 = var7 - (2 + param2);
           ui.field_b.a(82, ui.field_b.field_Fb, param2, 0, param1 + dj.field_d.field_Fb);
-          mg.field_R.a(5, 2, param3, var7 - 5, 5, param1 + 485 + (2 + param3), param0 ^ 3125);
+          LabeledWidgetContainer.field_R.a(5, 2, param3, var7 - 5, 5, param1 + 485 + (2 + param3), param0 ^ 3125);
           if (null != TextLineMetrics.field_a) {
-            TextLineMetrics.field_a.setBounds(false, mg.field_R.field_wb, mg.field_R.field_N, mg.field_R.field_db, mg.field_R.field_Fb);
+            TextLineMetrics.field_a.setBounds(false, LabeledWidgetContainer.field_R.field_wb, LabeledWidgetContainer.field_R.field_N, LabeledWidgetContainer.field_R.field_db, LabeledWidgetContainer.field_R.field_Fb);
           }
           var8 = -param1 + (td.field_c.field_Fb - var6_int);
           var9 = var8 / 2;
@@ -52,16 +52,16 @@ final class nn extends IntrusiveNode {
           while (var12 < 6) {
             if (var12 >= 5 ||
               hl.field_q[var12] != null) {
-              var13 = var11 * (td.field_c.field_db - 6 + 2) / (1 + sd.field_L) + 3;
+              var13 = var11 * (td.field_c.field_db - 6 + 2) / (1 + ModalDialogHost.field_L) + 3;
               var11++;
-              var7Lifetime1 = -var13 + (var11 * (td.field_c.field_db - 6 + 2) / (1 + sd.field_L) + 3) - 2;
+              var7Lifetime1 = -var13 + (var11 * (td.field_c.field_db - 6 + 2) / (1 + ModalDialogHost.field_L) + 3) - 2;
               if (var12 >= 5) {
                 ea.field_c.a(param0 + 95, var8, var7Lifetime1, var13, var6_int);
               } else {
                 hl.field_q[var12].a(112, var8, var7Lifetime1, var13, var6_int);
                 gh.field_d[var12].a(126, -param1 + var9, var7Lifetime1, 0, param1);
                 w.field_C[var12].a(78, param4, -param5 + var7Lifetime1 - param5, param5, var9);
-                mg.field_M[var12].a(param0 ^ 91, -param1 + (var8 - var10), -param5 - param5 + var7Lifetime1, param5, var10);
+                LabeledWidgetContainer.field_M[var12].a(param0 ^ 91, -param1 + (var8 - var10), -param5 - param5 + var7Lifetime1, param5, var10);
               }
             }
             var12++;

@@ -7,7 +7,7 @@ final class s extends RichTextWidget {
     private FieldValidator field_H;
     private RgbSprite field_K;
 
-    final void a(int param0, int param1, int param2, int param3) {
+    final void drawWidget(int param0, int param1, int param2, int param3) {
         String var5;
         vf var6;
         TextWidgetRenderer var8;
@@ -46,14 +46,14 @@ final class s extends RichTextWidget {
           this.field_h = var5;
           this.rebuildHotspotBounds(0);
         }
-        super.a(param0, param1, 111, param3);
+        super.drawWidget(param0, param1, 111, param3);
         var6Lifetime1 = this.field_H.getValidationStatus((byte) 124);
         var8 = (TextWidgetRenderer) ((Object) this.field_j);
         var9 = param3 + this.field_r;
         if (param2 <= 33) {
-          this.a(-109, -117, 123, 87);
+          this.drawWidget(-109, -117, 123, 87);
         }
-        var10 = var8.getTextOriginY(param1, (lk) (this), (byte) 51) + (var8.getTextLayout((lk) (this), 0).getLayoutHeight((byte) 14) >> 1);
+        var10 = var8.getTextOriginY(param1, (UiWidget) (this), (byte) 51) + (var8.getTextLayout((UiWidget) (this), 0).getLayoutHeight((byte) 14) >> 1);
         if (var6Lifetime1 != TextHotspotBounds.field_o &&
           var6Lifetime1 != mi.field_c) {
           if (a.field_e == var6Lifetime1) {
@@ -112,7 +112,7 @@ final class s extends RichTextWidget {
               for (var5_int = 0; pe.field_d > var5_int; var5_int++) {
                 jc.field_g.payload[var5_int] = var4_ref_j.field_i[var5_int];
               }
-              ak.field_z = i.field_f;
+              SingleChildWidgetContainer.field_z = i.field_f;
               i.field_f = DebouncedFieldValidator.field_b;
               DebouncedFieldValidator.field_b = wa.field_d;
               wa.field_d = var4_ref_j.field_g;
@@ -136,7 +136,7 @@ final class s extends RichTextWidget {
               return false;
             }
             if (DiskCacheWorker.field_c == 0) {
-              ak.field_z = i.field_f;
+              SingleChildWidgetContainer.field_z = i.field_f;
               i.field_f = DebouncedFieldValidator.field_b;
               DebouncedFieldValidator.field_b = wa.field_d;
               wa.field_d = TextLineMetrics.field_c;
@@ -171,7 +171,7 @@ final class s extends RichTextWidget {
         }
     }
 
-    final boolean a(lk param0, boolean param1) {
+    final boolean takeFocus(UiWidget param0, boolean param1) {
         RuntimeException var3 = null;
         int[] var4 = null;
         RuntimeException stackIn_6_0 = null;
@@ -204,7 +204,7 @@ final class s extends RichTextWidget {
         try {
           this.field_H = param0;
           this.field_I = param1;
-          this.b(param5, 80, param4, param2, param3);
+          this.setBounds(param5, 80, param4, param2, param3);
         } catch (RuntimeException runtimeException) {
           throw CipherPacketBuffer.wrapClientException((Throwable) ((Object) runtimeException), "s.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }
@@ -267,10 +267,10 @@ final class s extends RichTextWidget {
         }
     }
 
-    final void a(int param0, int param1, int param2, lk param3) {
+    final void updatePointer(int param0, int param1, int param2, UiWidget param3) {
         try {
           this.field_L = this.field_L + 1;
-          super.a(param0, param1, param2, param3);
+          super.updatePointer(param0, param1, param2, param3);
         } catch (RuntimeException runtimeException) {
           throw CipherPacketBuffer.wrapClientException((Throwable) ((Object) runtimeException), "s.P(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }

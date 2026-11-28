@@ -11,7 +11,7 @@ final class UiComponentPart011 extends InteractiveComponent {
     static LobbyRoomRow sceneWidgetPart013State0002;
     static int integerState0240;
 
-    final void performAction0162(int integerArgument1, int integerArgument2, int integerArgument3, int integerArgument4) {
+    final void drawWidget(int integerArgument1, int integerArgument2, int integerArgument3, int integerArgument4) {
         int integerLocal1;
         int integerLocal2;
         ValidationStatus validationStatusLocal3;
@@ -32,7 +32,7 @@ final class UiComponentPart011 extends InteractiveComponent {
         int integerLocal18;
         ValidationStatus validationStatusLocal19;
         integerLocal6 = DekoBlokoClient.obfuscationControl ? 1 : 0;
-        super.performAction0162(integerArgument1, -105, integerArgument3, integerArgument4);
+        super.drawWidget(integerArgument1, -105, integerArgument3, integerArgument4);
         if (integerArgument3 != 0) {
           return;
         }
@@ -138,13 +138,13 @@ final class UiComponentPart011 extends InteractiveComponent {
         MixedSupport071.rgbSpriteState0027.drawAdditive(integerLocal1 - rgbSpriteLocal14.integerState0254, -rgbSpriteLocal14.integerState0260 + integerLocal2, 256);
     }
 
-    final void performAction0218(UiComponent uiComponentArgument1, int integerArgument2, int integerArgument3, int integerArgument4) {
+    final void updatePointer(UiComponent uiComponentArgument1, int integerArgument2, int integerArgument3, int integerArgument4) {
         try {
           if (integerArgument2 <= 38) {
             UiComponentPart011.clearStaticReferences(100);
           }
           this.integerState0239 = this.integerState0239 + 1;
-          super.performAction0218(uiComponentArgument1, 89, integerArgument3, integerArgument4);
+          super.updatePointer(uiComponentArgument1, 89, integerArgument3, integerArgument4);
         } catch (RuntimeException runtimeException) {
           throw ClientException.computeDiagnosticSupport0020365((Throwable) ((Object) runtimeException), "g.A(" + (uiComponentArgument1 != null ? "{...}" : "null") + ',' + integerArgument2 + ',' + integerArgument3 + ',' + integerArgument4 + ')');
         }
@@ -214,7 +214,7 @@ final class UiComponentPart011 extends InteractiveComponent {
         return (String) null;
     }
 
-    final boolean computeBoolean0221(boolean booleanArgument1, UiComponent uiComponentArgument2) {
+    final boolean takeFocus(boolean booleanArgument1, UiComponent uiComponentArgument2) {
         RuntimeException runtimeExceptionLocal1 = null;
         RuntimeException stackRuntimeExceptionLocal2 = null;
         StringBuilder stackStringBuilderLocal3 = null;

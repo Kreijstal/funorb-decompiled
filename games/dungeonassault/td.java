@@ -47,7 +47,7 @@ final class td {
             td.clearStaticReferences(91);
           }
           var8 = new AccountCreationResultPanel(lg.field_w, param4);
-          lg.field_w.a(var8, -1);
+          lg.field_w.showDialog(var8, -1);
           if (AccountRegistrationPanel.i((byte) -125)) {
             var8.r(102);
             return true;

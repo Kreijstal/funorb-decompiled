@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class wi implements ml {
+final class wi implements WidgetRenderer {
     static ResourceArchive field_d;
     static long field_f;
     static Sprite field_e;
@@ -47,7 +47,7 @@ final class wi implements ml {
         field_d = null;
     }
 
-    public final void a(boolean param0, UiWidget param1, int param2, int param3, int param4) {
+    public final void paintWidget(boolean param0, UiWidget param1, int param2, int param3, int param4) {
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         String stackIn_11_2 = null;
@@ -68,7 +68,7 @@ final class wi implements ml {
             ((ButtonWidget) (param1)).field_u) {
             var8.drawAdditive((-var8.field_m + param1.field_l >> 1) + var6_int + 1, (param1.field_p - var8.field_n >> 1) + (1 + var7), 256);
           }
-          if (!param1.b((byte) 64)) {
+          if (!param1.isFocused((byte) 64)) {
             return;
           }
           hk.a(2 + var6_int, var7 + 2, 2, param1.field_l - 4, param1.field_p - 4);

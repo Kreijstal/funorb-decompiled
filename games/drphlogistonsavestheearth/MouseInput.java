@@ -17,7 +17,7 @@ final class MouseInput implements java.awt.event.MouseListener, java.awt.event.M
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         try {
-          if (pj.field_G != null) {
+          if (DequeWidgetContainer.field_G != null) {
             th.field_e = 0;
             tf.field_mb = 0;
             lk.field_j = true;
@@ -135,7 +135,7 @@ final class MouseInput implements java.awt.event.MouseListener, java.awt.event.M
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         try {
-          if (null != pj.field_G) {
+          if (null != DequeWidgetContainer.field_G) {
             th.field_e = 0;
             ConfirmedEmailAvailabilityValidator.field_q = param0.getX();
             mj.field_u = param0.getY();
@@ -163,7 +163,7 @@ final class MouseInput implements java.awt.event.MouseListener, java.awt.event.M
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         try {
-          if (pj.field_G != null) {
+          if (DequeWidgetContainer.field_G != null) {
             th.field_e = 0;
             ConfirmedEmailAvailabilityValidator.field_q = param0.getX();
             mj.field_u = param0.getY();
@@ -186,7 +186,7 @@ final class MouseInput implements java.awt.event.MouseListener, java.awt.event.M
 
     public final synchronized void mouseEntered(java.awt.event.MouseEvent param0) {
         try {
-          if (pj.field_G != null) {
+          if (DequeWidgetContainer.field_G != null) {
             th.field_e = 0;
             ConfirmedEmailAvailabilityValidator.field_q = param0.getX();
             mj.field_u = param0.getY();
@@ -224,7 +224,7 @@ final class MouseInput implements java.awt.event.MouseListener, java.awt.event.M
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         try {
-          if (pj.field_G != null) {
+          if (DequeWidgetContainer.field_G != null) {
             tf.field_mb = 0;
           }
           return;
@@ -254,7 +254,7 @@ final class MouseInput implements java.awt.event.MouseListener, java.awt.event.M
 
     public final synchronized void mouseExited(java.awt.event.MouseEvent param0) {
         try {
-          if (null != pj.field_G) {
+          if (null != DequeWidgetContainer.field_G) {
             th.field_e = 0;
             ConfirmedEmailAvailabilityValidator.field_q = -1;
             mj.field_u = -1;
@@ -276,7 +276,7 @@ final class MouseInput implements java.awt.event.MouseListener, java.awt.event.M
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         try {
-          if (null != pj.field_G) {
+          if (null != DequeWidgetContainer.field_G) {
             th.field_e = 0;
             ee.field_d = param0.getX();
             fj.field_j = param0.getY();

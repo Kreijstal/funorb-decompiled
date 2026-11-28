@@ -324,7 +324,7 @@ final class kg {
         }
     }
 
-    final void a(int param0, qi param1, lk param2, int param3, int param4) {
+    final void a(int param0, qi param1, UiWidget param2, int param3, int param4) {
         BitmapFont stackIn_17_0 = null;
         String stackIn_17_1 = null;
         int stackIn_18_2 = 0;
@@ -472,7 +472,7 @@ final class kg {
         field_b = null;
     }
 
-    final void a(kg param0, int param1, int param2, qi param3, boolean param4, lk param5) {
+    final void a(kg param0, int param1, int param2, qi param3, boolean param4, UiWidget param5) {
         RuntimeException stackIn_25_0 = null;
         StringBuilder stackIn_25_1 = null;
         String stackIn_26_2 = null;

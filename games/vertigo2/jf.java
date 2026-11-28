@@ -68,7 +68,7 @@ final class jf extends InteractiveWidget {
         throw new Error();
     }
 
-    final boolean a(int param0, int param1, int param2, UiWidget param3, int param4, byte param5, int param6) {
+    final boolean pointerPressed(int param0, int param1, int param2, UiWidget param3, int param4, byte param5, int param6) {
         int var12 = 0;
         RuntimeException stackIn_29_0 = null;
         StringBuilder stackIn_29_1 = null;
@@ -83,7 +83,7 @@ final class jf extends InteractiveWidget {
         int var14 = 0;
         var14 = Vertigo2.field_L ? 1 : 0;
         try {
-          if (!super.a(param0, param1, param2, param3, param4, (byte) -115, param6)) {
+          if (!super.pointerPressed(param0, param1, param2, param3, param4, (byte) -115, param6)) {
             if (param5 >= -107) {
               field_N = (int[]) null;
             }

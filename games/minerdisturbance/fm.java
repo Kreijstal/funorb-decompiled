@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class fm extends kn implements WidgetActivationListener {
+final class fm extends DequeWidgetContainer implements WidgetActivationListener {
     private int[] field_P;
     static int[] field_N;
     private int field_R;
@@ -26,7 +26,7 @@ final class fm extends kn implements WidgetActivationListener {
                 this.field_J.s(2121792);
                 break;
               }
-              oj.a(this.field_P[var6_int], 3);
+              AlphaWidgetContainer.a(this.field_P[var6_int], 3);
               break;
             }
           }
@@ -38,7 +38,7 @@ final class fm extends kn implements WidgetActivationListener {
         }
     }
 
-    final InteractiveWidget a(String param0, int param1, rm param2) {
+    final InteractiveWidget a(String param0, int param1, WidgetEventListener param2) {
         InteractiveWidget var4 = null;
         RuntimeException var4_ref = null;
         int var5 = 0;
@@ -54,11 +54,11 @@ final class fm extends kn implements WidgetActivationListener {
           if (param1 <= 28) {
             this.field_P = (int[]) null;
           }
-          var4.field_A = (ad) ((Object) new wi());
+          var4.field_A = (WidgetRenderer) ((Object) new wi());
           var5 = -2 + this.field_q;
-          this.a(this.field_q + 34, -88, 0, this.field_v, 0);
-          var4.a(30, -89, 7, -14 + this.field_v, var5);
-          this.a(-1, var4);
+          this.setBounds(this.field_q + 34, -88, 0, this.field_v, 0);
+          var4.setBounds(30, -89, 7, -14 + this.field_v, var5);
+          this.addChild(-1, var4);
           stackIn_3_0 = var4;
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -83,11 +83,11 @@ final class fm extends kn implements WidgetActivationListener {
 
     final static boolean a(byte param0) {
         int var1 = 99 / ((-61 - param0) / 56);
-        return am.c((byte) 111) == 35 ? true : false;
+        return LabeledWidgetContainer.c((byte) 111) == 35 ? true : false;
     }
 
-    final void a(byte param0, int param1, int param2, int param3) {
-        super.a(param0, param1, param2, param3);
+    final void drawWidget(byte param0, int param1, int param2, int param3) {
+        super.drawWidget(param0, param1, param2, param3);
         this.field_Q.drawParagraph(this.field_L, this.field_u + param1 + 14, param2 + this.field_t + 10, this.field_v - 28, this.field_q, 16777215, -1, 0, 0, this.field_Q.field_I);
     }
 
@@ -102,7 +102,7 @@ final class fm extends kn implements WidgetActivationListener {
     }
 
     fm(rg param0, BitmapFont param1, String param2) {
-        super(0, 0, 288, 0, (ad) null);
+        super(0, 0, 288, 0, (WidgetRenderer) null);
         int var4_int = 0;
         this.field_R = 0;
         try {
@@ -110,7 +110,7 @@ final class fm extends kn implements WidgetActivationListener {
           this.field_Q = param1;
           this.field_J = param0;
           var4_int = this.field_L == null ? 0 : this.field_Q.textHeight(this.field_L, 260, this.field_Q.field_I);
-          this.a(var4_int + 22, -93, 0, 288, 0);
+          this.setBounds(var4_int + 22, -93, 0, 288, 0);
         } catch (RuntimeException runtimeException) {
           throw lj.wrapClientException((Throwable) ((Object) runtimeException), "fm.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
@@ -142,7 +142,7 @@ final class fm extends kn implements WidgetActivationListener {
         try {
           var4_int = this.field_R;
           this.a(-32164, var4_int + 1);
-          this.field_M[var4_int] = this.a(param1, 35, (rm) (this));
+          this.field_M[var4_int] = this.a(param1, 35, (WidgetEventListener) (this));
           if (param2 > -55) {
             field_I = (String) null;
           }

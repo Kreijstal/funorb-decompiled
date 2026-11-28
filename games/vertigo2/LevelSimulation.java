@@ -911,7 +911,7 @@ final class LevelSimulation {
                         this.field_e = 7;
                         if (!this.field_C &&
                           param4) {
-                          qg.a(1, 250, 28, 0);
+                          DraggableWidgetContainer.a(1, 250, 28, 0);
                         }
                       }
                     } else {
@@ -961,7 +961,7 @@ final class LevelSimulation {
                     this.field_e = 7;
                     if (!this.field_C &&
                       param4) {
-                      qg.a(1, 250, 28, 0);
+                      DraggableWidgetContainer.a(1, 250, 28, 0);
                     }
                     this.field_n = 0;
                   }
@@ -2469,7 +2469,7 @@ final class LevelSimulation {
             this.field_f[var5Lifetime3].resetPlayerPhase((byte) -82);
           }
           if (!this.field_C) {
-            qg.a(1, 250, 28, 0);
+            DraggableWidgetContainer.a(1, 250, 28, 0);
             MidiPcmStream.a(false, 12, (byte) 56, kc.field_b, false, 12);
           }
           return -2;

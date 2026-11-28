@@ -28,7 +28,7 @@ abstract class TextLayout {
     }
 
     final static String a(int param0) {
-        if (!(g.field_A >= 2)) {
+        if (!(DequeWidgetContainer.field_A >= 2)) {
           return ti.field_c;
         }
         if (param0 != -1) {

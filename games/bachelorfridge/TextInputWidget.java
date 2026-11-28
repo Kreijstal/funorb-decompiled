@@ -185,7 +185,7 @@ class TextInputWidget extends InteractiveWidget {
         this.deleteSelection(115);
     }
 
-    final boolean b(int param0, int param1, int param2, int param3, int param4, UiWidget param5, int param6) {
+    final boolean pointerPressed(int param0, int param1, int param2, int param3, int param4, UiWidget param5, int param6) {
         boolean stackIn_5_1 = false;
         int stackIn_6_2 = 0;
         boolean stackIn_9_1 = false;
@@ -197,7 +197,7 @@ class TextInputWidget extends InteractiveWidget {
         long var8_long = 0L;
         RuntimeException var8 = null;
         try {
-          if (!super.b(param0, param1, param2, param3, param4, param5, param6)) {
+          if (!super.pointerPressed(param0, param1, param2, param3, param4, param5, param6)) {
             return false;
           }
           if (!(this.renderer instanceof WidgetMetrics)) {
@@ -607,7 +607,7 @@ class TextInputWidget extends InteractiveWidget {
               return false;
             }
             var6 = (UiWidget) null;
-            this.b(-24, 51, -40, -52, -18, (UiWidget) null, -94);
+            this.pointerPressed(-24, 51, -40, -52, -18, (UiWidget) null, -94);
             return false;
           }
           return false;
@@ -657,7 +657,7 @@ class TextInputWidget extends InteractiveWidget {
           var5Lifetime1 = -91 / ((-20 - param0) / 54);
           return;
         }
-        this.renderer.a(param3, (UiWidget) (this), 32679, param1, this.field_z);
+        this.renderer.paintWidget(param3, (UiWidget) (this), 32679, param1, this.field_z);
         if (!(this.renderer instanceof WidgetMetrics)) {
           var5Lifetime2 = -91 / ((-20 - param0) / 54);
           return;

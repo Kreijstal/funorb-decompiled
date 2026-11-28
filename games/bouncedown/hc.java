@@ -161,7 +161,7 @@ final class hc {
             field_e = (String[]) null;
           }
           if (param0 != null &&
-            param0.length() >= lc.field_y &&
+            param0.length() >= DequeWidgetContainer.field_y &&
             param0.length() <= RichTextLayout.field_e) {
             return false;
           }

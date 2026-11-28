@@ -3,17 +3,17 @@
  */
 import java.util.*;
 
-class WidgetContainer extends UiWidget implements f {
+class WidgetContainer extends UiWidget implements WidgetContainerMarker {
     static li field_z;
     IntrusiveDeque field_y;
     static li field_A;
 
-    WidgetContainer(int param0, int param1, int param2, int param3, uk param4) {
-        super(param0, param1, param2, param3, param4, (lf) null);
+    WidgetContainer(int param0, int param1, int param2, int param3, WidgetRenderer param4) {
+        super(param0, param1, param2, param3, param4, (WidgetEventListener) null);
         this.field_y = new IntrusiveDeque();
     }
 
-    void a(int param0, byte param1, int param2, int param3) {
+    void drawWidget(int param0, byte param1, int param2, int param3) {
         IntrusiveDequeCursor var5 = null;
         UiWidget var6 = null;
         int var7 = 0;
@@ -23,19 +23,19 @@ class WidgetContainer extends UiWidget implements f {
         try {
           if (param0 == 0 &&
             this.field_u != null) {
-            this.field_u.a(true, param3, param2, (UiWidget) (this), 4549);
+            this.field_u.paintWidget(true, param3, param2, (UiWidget) (this), 4549);
           }
           var5 = new IntrusiveDequeCursor(this.field_y);
           var6 = (UiWidget) (var5.a((byte) -83));
           while (var6 != null) {
-            var6.a(param0, (byte) -57, param2 + this.field_k, param3 + this.field_w);
+            var6.drawWidget(param0, (byte) -57, param2 + this.field_k, param3 + this.field_w);
             var6 = (UiWidget) (var5.a(-49));
             if (var7 != 0) {
               return;
             }
           }
           if (param1 != -57) {
-            this.a(106, 53, (UiWidget) null, -90, -41, -21);
+            this.pointerReleased(106, 53, (UiWidget) null, -90, -41, -21);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -45,15 +45,15 @@ class WidgetContainer extends UiWidget implements f {
         }
     }
 
-    final boolean e(int param0) {
+    final boolean isFocused(int param0) {
         RuntimeException var2 = null;
         boolean stackIn_7_0 = false;
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 != 0) {
-            this.a(-54, 114, (UiWidget) null, 10, -60, -113, 115);
+            this.handleWheel(-54, 114, (UiWidget) null, 10, -60, -113, 115);
           }
-          stackIn_7_0 = (null != this.a((byte) -45));
+          stackIn_7_0 = (null != this.getFocusedChild((byte) -45));
           return stackIn_7_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -62,7 +62,7 @@ class WidgetContainer extends UiWidget implements f {
         }
     }
 
-    final void a(int param0, int param1, UiWidget param2, int param3, int param4, int param5) {
+    final void pointerReleased(int param0, int param1, UiWidget param2, int param3, int param4, int param5) {
         RuntimeException runtimeException = null;
         IntrusiveDequeCursor var7 = null;
         int var8 = 0;
@@ -79,7 +79,7 @@ class WidgetContainer extends UiWidget implements f {
           var9 = (UiWidget) (var7.b((byte) 122));
           while (var9 != null) {
             if (var9.isLinked(48)) {
-              var9.a(param0, 97, param2, this.field_w + param3, param4 + this.field_k, param5);
+              var9.pointerReleased(param0, 97, param2, this.field_w + param3, param4 + this.field_k, param5);
               var9 = (UiWidget) (var7.a(true));
               if (var10 == 0) {
                 continue;
@@ -102,7 +102,7 @@ class WidgetContainer extends UiWidget implements f {
         }
     }
 
-    final boolean a(int param0, UiWidget param1) {
+    final boolean takeFocus(int param0, UiWidget param1) {
         IntrusiveDequeCursor var3 = null;
         UiWidget var4 = null;
         int var5 = 0;
@@ -123,7 +123,7 @@ class WidgetContainer extends UiWidget implements f {
           var4 = (UiWidget) (var3.b((byte) 120));
           boolean decompiledNaturalLoopExit0 = false;
           while (!(decompiledNaturalLoopExit0 = (null == var4))) {
-            stackOut_6_0 = var4.a(-2147483648, param1);
+            stackOut_6_0 = var4.takeFocus(-2147483648, param1);
             stackIn_15_0 = stackOut_6_0;
             stackIn_7_0 = stackOut_6_0;
             if (var5 == 0) {
@@ -153,7 +153,7 @@ class WidgetContainer extends UiWidget implements f {
         }
     }
 
-    void a(int param0, boolean param1, int param2, UiWidget param3) {
+    void updatePointer(int param0, boolean param1, int param2, UiWidget param3) {
         IntrusiveDequeCursor var5 = null;
         UiWidget var6 = null;
         int var7 = 0;
@@ -164,15 +164,15 @@ class WidgetContainer extends UiWidget implements f {
         RuntimeException var5_ref = null;
         var7 = stellarshard.field_B;
         try {
-          super.a(param0, param1, param2, param3);
+          super.updatePointer(param0, param1, param2, param3);
           if (param1) {
-            this.g(111);
+            this.refreshChildLayouts(111);
           }
           var5 = new IntrusiveDequeCursor(this.field_y);
           var6 = (UiWidget) (var5.b((byte) 126));
           while (null != var6) {
             if (var6.isLinked(48)) {
-              var6.a(this.field_k + param0, false, param2 + this.field_w, param3);
+              var6.updatePointer(this.field_k + param0, false, param2 + this.field_w, param3);
               var6 = (UiWidget) (var5.a(true));
               if (var7 == 0) {
                 continue;
@@ -195,7 +195,7 @@ class WidgetContainer extends UiWidget implements f {
         }
     }
 
-    UiWidget a(byte param0) {
+    UiWidget getFocusedChild(byte param0) {
         IntrusiveDequeCursor var2 = null;
         RuntimeException var2_ref = null;
         UiWidget var3 = null;
@@ -208,10 +208,10 @@ class WidgetContainer extends UiWidget implements f {
           var2 = new IntrusiveDequeCursor(this.field_y);
           var3 = (UiWidget) (var2.b((byte) 123));
           if (param0 != -45) {
-            this.a((UiWidget) null, (byte) 114);
+            this.focusNextChild((UiWidget) null, (byte) 114);
           }
           while (var3 != null) {
-            if (var3.e(0)) {
+            if (var3.isFocused(0)) {
               stackIn_7_0 = var3;
               return stackIn_7_0;
             }
@@ -230,7 +230,7 @@ class WidgetContainer extends UiWidget implements f {
         }
     }
 
-    final boolean a(int param0, int param1, UiWidget param2, int param3, int param4, int param5, int param6) {
+    final boolean handleWheel(int param0, int param1, UiWidget param2, int param3, int param4, int param5, int param6) {
         IntrusiveDequeCursor var8 = null;
         RuntimeException var8_ref = null;
         UiWidget var9 = null;
@@ -255,8 +255,8 @@ class WidgetContainer extends UiWidget implements f {
                 break scanLoop1;
               }
               if (stackIn_4_0) {
-                if (var9.e(0) &&
-                  var9.a(param0, param1, param2, param3, 90, param5, param6)) {
+                if (var9.isFocused(0) &&
+                  var9.handleWheel(param0, param1, param2, param3, 90, param5, param6)) {
                   return true;
                 }
                 var9 = (UiWidget) (var8.a(true));
@@ -284,7 +284,7 @@ class WidgetContainer extends UiWidget implements f {
         }
     }
 
-    final StringBuilder a(int param0, boolean param1, StringBuilder param2, Hashtable param3) {
+    final StringBuilder appendDebugTree(int param0, boolean param1, StringBuilder param2, Hashtable param3) {
         RuntimeException var5 = null;
         StringBuilder stackIn_7_0 = null;
         RuntimeException stackIn_11_0 = null;
@@ -294,9 +294,9 @@ class WidgetContainer extends UiWidget implements f {
         String stackIn_16_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (this.a((byte) 111, param3, param2, param0)) {
-            this.a((byte) 92, param0, param2, param3);
-            this.a(param0, (byte) 126, param2, param3);
+          if (this.beginDebugTreeEntry((byte) 111, param3, param2, param0)) {
+            this.appendDebugProperties((byte) 92, param0, param2, param3);
+            this.appendChildDebugTrees(param0, (byte) 126, param2, param3);
           }
           if (param1) {
             field_A = (li) null;
@@ -323,7 +323,7 @@ class WidgetContainer extends UiWidget implements f {
         }
     }
 
-    boolean a(int param0, int param1, char param2, UiWidget param3) {
+    boolean handleKey(int param0, int param1, char param2, UiWidget param3) {
         IntrusiveDequeCursor var5 = null;
         RuntimeException var5_ref = null;
         UiWidget var6_ref_rj = null;
@@ -341,7 +341,7 @@ class WidgetContainer extends UiWidget implements f {
         try {
           var5 = new IntrusiveDequeCursor(this.field_y);
           if (param0 != 29657) {
-            this.a(true);
+            this.getMaximumRenderLayer(true);
           }
           var6_ref_rj = (UiWidget) (var5.b((byte) 119));
           scanLoop1: while (true) {
@@ -353,8 +353,8 @@ class WidgetContainer extends UiWidget implements f {
                 break scanLoop1;
               }
               if (stackIn_7_0) {
-                if (var6_ref_rj.e(0) &&
-                  var6_ref_rj.a(29657, param1, param2, param3)) {
+                if (var6_ref_rj.isFocused(0) &&
+                  var6_ref_rj.handleKey(29657, param1, param2, param3)) {
                   return true;
                 }
                 var6_ref_rj = (UiWidget) (var5.a(true));
@@ -369,9 +369,9 @@ class WidgetContainer extends UiWidget implements f {
             return false;
           }
           if (!si.field_jb[81]) {
-            stackIn_29_0 = this.a(param3, (byte) 88);
+            stackIn_29_0 = this.focusNextChild(param3, (byte) 88);
           } else {
-            stackIn_29_0 = this.a(param3, -8666);
+            stackIn_29_0 = this.focusPreviousChild(param3, -8666);
           }
           return stackIn_29_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -388,7 +388,7 @@ class WidgetContainer extends UiWidget implements f {
         }
     }
 
-    final boolean a(UiWidget param0, int param1, int param2, int param3, int param4, byte param5, int param6) {
+    final boolean pointerPressed(UiWidget param0, int param1, int param2, int param3, int param4, byte param5, int param6) {
         IntrusiveDequeCursor var8 = null;
         RuntimeException var8_ref = null;
         UiWidget var9 = null;
@@ -416,7 +416,7 @@ class WidgetContainer extends UiWidget implements f {
                 break scanLoop1;
               }
               if (stackIn_7_0) {
-                if (var9.a(param0, param1, param2, param3, this.field_w + param4, (byte) 59, param6 + this.field_k)) {
+                if (var9.pointerPressed(param0, param1, param2, param3, this.field_w + param4, (byte) 59, param6 + this.field_k)) {
                   return true;
                 }
                 var9 = (UiWidget) (var8.a(true));
@@ -441,7 +441,7 @@ class WidgetContainer extends UiWidget implements f {
         }
     }
 
-    private final void g(int param0) {
+    private final void refreshChildLayouts(int param0) {
         RuntimeException runtimeException = null;
         IntrusiveDequeCursor var2 = null;
         UiWidget var3 = null;
@@ -452,7 +452,7 @@ class WidgetContainer extends UiWidget implements f {
           var2 = new IntrusiveDequeCursor(this.field_y);
           var3 = (UiWidget) (var2.b((byte) 115));
           while (null != var3) {
-            var3.f(0);
+            var3.refreshLayout(0);
             var3 = (UiWidget) (var2.a(true));
             if (var4 != 0) {
               return;
@@ -469,7 +469,7 @@ class WidgetContainer extends UiWidget implements f {
         }
     }
 
-    final boolean a(UiWidget param0, byte param1) {
+    final boolean focusNextChild(UiWidget param0, byte param1) {
         IntrusiveDequeCursor var3 = null;
         RuntimeException var3_ref = null;
         int var4 = 0;
@@ -496,7 +496,7 @@ class WidgetContainer extends UiWidget implements f {
           var5 = (UiWidget) (var3.b((byte) 125));
           boolean decompiledNaturalLoopExit0 = false;
           while (!(decompiledNaturalLoopExit0 = (var5 == null))) {
-            stackOut_8_0 = var5.e(0);
+            stackOut_8_0 = var5.isFocused(0);
             stackIn_23_0 = stackOut_8_0;
             stackIn_9_0 = stackOut_8_0;
             if (var8 == 0) {
@@ -505,7 +505,7 @@ class WidgetContainer extends UiWidget implements f {
                 var6.b(4993, var5);
                 var7 = (UiWidget) (var6.a(true));
                 while (var7 != null) {
-                  stackOut_14_0 = var7.a(-2147483648, param0);
+                  stackOut_14_0 = var7.takeFocus(-2147483648, param0);
                   stackIn_23_0 = stackOut_14_0;
                   stackIn_15_0 = stackOut_14_0;
                   if (stackIn_15_0) {
@@ -590,7 +590,7 @@ class WidgetContainer extends UiWidget implements f {
                 }
                 var2 = ca.a(103, "error_js5connect");
                 if (null != var2) {
-                  ui.field_B = se.a(0, var2);
+                  ModalDialog.field_B = se.a(0, var2);
                 }
                 var2 = ca.a(85, "login_gameupdated");
                 if (var2 != null) {
@@ -1639,7 +1639,7 @@ class WidgetContainer extends UiWidget implements f {
                 }
                 var2 = ca.a(param1 + 99, "connectionlost_withreason");
                 if (null != var2) {
-                  oa.field_F = se.a(param1 - 1, var2);
+                  AlphaWidgetContainer.field_F = se.a(param1 - 1, var2);
                 }
                 var2 = ca.a(96, "passwordverificationrequired");
                 if (var2 != null) {
@@ -1759,7 +1759,7 @@ class WidgetContainer extends UiWidget implements f {
                 }
                 var2 = ca.a(112, "checking");
                 if (null != var2) {
-                  ui.field_D = se.a(0, var2);
+                  ModalDialog.field_D = se.a(0, var2);
                 }
                 var2 = ca.a(param1 ^ 95, "create_namealreadytaken");
                 if (null != var2) {
@@ -2419,7 +2419,7 @@ class WidgetContainer extends UiWidget implements f {
                 }
                 var2 = ca.a(113, "music_colon");
                 if (var2 != null) {
-                  of.field_D = se.a(param1 - 1, var2);
+                  DropTargetWidgetContainer.field_D = se.a(param1 - 1, var2);
                 }
                 var2 = ca.a(101, "fullscreen");
                 if (var2 != null) {
@@ -3169,7 +3169,7 @@ class WidgetContainer extends UiWidget implements f {
                 }
                 var2 = ca.a(127, "fs_accept_beforeaccept");
                 if (var2 != null) {
-                  oa.field_B = se.a(param1 - 1, var2);
+                  AlphaWidgetContainer.field_B = se.a(param1 - 1, var2);
                 }
                 var2 = ca.a(98, "fs_button_accept");
                 if (var2 != null) {
@@ -3193,7 +3193,7 @@ class WidgetContainer extends UiWidget implements f {
                 }
                 var2 = ca.a(104, "fs_accept_countdown_pl");
                 if (var2 != null) {
-                  dl.field_K = se.a(0, var2);
+                  DraggableWidgetContainer.field_K = se.a(0, var2);
                 }
                 var2 = ca.a(112, "fs_nonmember");
                 if (null != var2) {
@@ -3209,7 +3209,7 @@ class WidgetContainer extends UiWidget implements f {
                 }
                 var2 = ca.a(param1 + 109, "fs_unavailable");
                 if (null != var2) {
-                  ei.field_E = se.a(param1 ^ 1, var2);
+                  ModalDialogHost.field_E = se.a(param1 ^ 1, var2);
                 }
                 var2 = ca.a(92, "fs_unavailable_try_signed_applet");
                 if (var2 != null) {
@@ -3221,7 +3221,7 @@ class WidgetContainer extends UiWidget implements f {
                 }
                 var2 = ca.a(111, "fs_focus_or_resolution");
                 if (null != var2) {
-                  dl.field_B = se.a(0, var2);
+                  DraggableWidgetContainer.field_B = se.a(0, var2);
                 }
                 var2 = ca.a(118, "fs_timeout");
                 if (var2 != null) {
@@ -3572,19 +3572,19 @@ class WidgetContainer extends UiWidget implements f {
         decompiledBody.run();
     }
 
-    final void b(int param0, int param1, int param2, int param3, int param4) {
-        super.b(param0, param1, param2, param3, param4 ^ 0);
+    final void setBounds(int param0, int param1, int param2, int param3, int param4) {
+        super.setBounds(param0, param1, param2, param3, param4 ^ 0);
         if (param4 != 23987) {
           return;
         }
         try {
-          this.g(param4 ^ -24025);
+          this.refreshChildLayouts(param4 ^ -24025);
         } catch (RuntimeException runtimeException) {
           throw ma.a((Throwable) ((Object) runtimeException), "g.CA(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
-    private final void a(int param0, byte param1, StringBuilder param2, Hashtable param3) {
+    private final void appendChildDebugTrees(int param0, byte param1, StringBuilder param2, Hashtable param3) {
         StringBuilder discarded$2 = null;
         StringBuilder discarded$3 = null;
         RuntimeException runtimeException = null;
@@ -3615,7 +3615,7 @@ class WidgetContainer extends UiWidget implements f {
                 discarded$3 = param2.append(' ');
                 var7++;
               }
-              var6.a(param0 + 1, false, param2, param3);
+              var6.appendDebugTree(param0 + 1, false, param2, param3);
               var6 = (UiWidget) (var5.a(true));
               continue scanLoop1;
             }
@@ -3623,7 +3623,7 @@ class WidgetContainer extends UiWidget implements f {
             break;
           }
           if (stackIn_13_0 <= 111) {
-            this.a(62, 110, (UiWidget) null, -48, -92, -28);
+            this.pointerReleased(62, 110, (UiWidget) null, -48, -92, -28);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -3646,7 +3646,7 @@ class WidgetContainer extends UiWidget implements f {
         }
     }
 
-    final void c(boolean param0) {
+    final void blur(boolean param0) {
         RuntimeException runtimeException = null;
         IntrusiveDequeCursor var2 = null;
         UiWidget var3 = null;
@@ -3656,11 +3656,11 @@ class WidgetContainer extends UiWidget implements f {
         try {
           var2 = new IntrusiveDequeCursor(this.field_y);
           if (!param0) {
-            this.a(-114, -125, (UiWidget) null, -28, 57, -83, 71);
+            this.handleWheel(-114, -125, (UiWidget) null, -28, 57, -83, 71);
           }
           var3 = (UiWidget) (var2.b((byte) 120));
           while (var3 != null) {
-            var3.c(true);
+            var3.blur(true);
             var3 = (UiWidget) (var2.a(true));
             if (var4 != 0) {
               return;
@@ -3715,7 +3715,7 @@ class WidgetContainer extends UiWidget implements f {
         }
     }
 
-    final void b(int param0, UiWidget param1) {
+    final void addChild(int param0, UiWidget param1) {
         RuntimeException runtimeException = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -3741,7 +3741,7 @@ class WidgetContainer extends UiWidget implements f {
         }
     }
 
-    final boolean a(UiWidget param0, int param1) {
+    final boolean focusPreviousChild(UiWidget param0, int param1) {
         IntrusiveDequeCursor var3 = null;
         UiWidget var4 = null;
         IntrusiveDequeCursor var5 = null;
@@ -3760,7 +3760,7 @@ class WidgetContainer extends UiWidget implements f {
         var7 = stellarshard.field_B;
         try {
           if (param1 != -8666) {
-            this.a((byte) -111);
+            this.getFocusedChild((byte) -111);
           }
           if (this.field_y.isEmpty(0)) {
             return false;
@@ -3769,7 +3769,7 @@ class WidgetContainer extends UiWidget implements f {
           var4 = (UiWidget) (var3.a((byte) -120));
           boolean decompiledNaturalLoopExit0 = false;
           while (!(decompiledNaturalLoopExit0 = (var4 == null))) {
-            stackOut_9_0 = var4.e(0);
+            stackOut_9_0 = var4.isFocused(0);
             stackIn_28_0 = stackOut_9_0;
             stackIn_10_0 = stackOut_9_0;
             if (var7 == 0) {
@@ -3778,7 +3778,7 @@ class WidgetContainer extends UiWidget implements f {
                 var5.a(-25888, var4);
                 var6 = (UiWidget) (var5.a(69));
                 while (var6 != null) {
-                  stackOut_18_0 = var6.a(-2147483648, param0);
+                  stackOut_18_0 = var6.takeFocus(-2147483648, param0);
                   stackIn_28_0 = stackOut_18_0;
                   stackIn_19_0 = stackOut_18_0;
                   if (stackIn_19_0) {
@@ -3827,7 +3827,7 @@ class WidgetContainer extends UiWidget implements f {
         }
     }
 
-    final int a(boolean param0) {
+    final int getMaximumRenderLayer(boolean param0) {
         int var2_int = 0;
         RuntimeException var2 = null;
         IntrusiveDequeCursor var3 = null;
@@ -3850,7 +3850,7 @@ class WidgetContainer extends UiWidget implements f {
           var4 = (UiWidget) (var3.b((byte) 116));
           boolean decompiledNaturalLoopExit0 = false;
           while (!(decompiledNaturalLoopExit0 = (var4 == null))) {
-            var5 = var4.a(false);
+            var5 = var4.getMaximumRenderLayer(false);
             stackIn_17_0 = ~var2_int;
             if (var6 == 0) {
               if (stackIn_17_0 > ~var5) {

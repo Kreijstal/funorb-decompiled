@@ -110,33 +110,33 @@ abstract class FunOrbClient extends GameApplet {
                 MixedSupport134.booleanState0194 = true;
                 MixedSupport052.integerState0269 = 10;
               } else {
-                DualNode.performAction0131(UiComponentPart029.computeApplet1485(25144), (byte) -57);
+                DualNode.performAction0131(DraggableWidgetContainer.computeApplet1485(25144), (byte) -57);
               }
             }
             if (integerLocal7 == 5) {
-              TextHotspotBounds.performAction1252((byte) -17, UiComponentPart029.computeApplet1485(25144));
+              TextHotspotBounds.performAction1252((byte) -17, DraggableWidgetContainer.computeApplet1485(25144));
             }
             if (integerLocal7 == 6 &&
               RichTextWidget.booleanState0152) {
               MixedSupport052.integerState0269 = 10;
             }
             if (integerLocal7 == 7) {
-              NetworkSupport005.performAction0906((byte) 96, UiComponentPart029.computeApplet1485(25144));
+              NetworkSupport005.performAction0906((byte) 96, DraggableWidgetContainer.computeApplet1485(25144));
             }
             if (8 == integerLocal7) {
-              DualNode.performAction0131(UiComponentPart029.computeApplet1485(25144), (byte) -57);
+              DualNode.performAction0131(DraggableWidgetContainer.computeApplet1485(25144), (byte) -57);
             }
             if (9 == integerLocal7) {
-              HashNode.performAction0146(-114, UiComponentPart029.computeApplet1485(25144));
+              HashNode.performAction0146(-114, DraggableWidgetContainer.computeApplet1485(25144));
             }
             if (10 == integerLocal7) {
               SocketFactory.cipherPacketBufferState0002.performAction1641(17, -4);
             }
             if (integerLocal7 == 11) {
-              SceneWidgetPart014.performAction1782(UiComponentPart029.computeApplet1485(25144), 30307);
+              SceneWidgetPart014.performAction1782(DraggableWidgetContainer.computeApplet1485(25144), 30307);
             }
             if (integerLocal7 == 12) {
-              NetworkSupport001.performAction0062(ReturnedShapeUpdate.computeString1760(-30185), -88, UiComponentPart029.computeApplet1485(25144));
+              NetworkSupport001.performAction0062(ReturnedShapeUpdate.computeString1760(-30185), -88, DraggableWidgetContainer.computeApplet1485(25144));
             }
             if (13 == integerLocal7) {
               try {
@@ -194,7 +194,7 @@ abstract class FunOrbClient extends GameApplet {
         RuntimeException runtimeExceptionLocal3 = null;
         try {
           stringLocal1 = MusicTrack.computeString1662(integerArgument1 ^ -12040);
-          MixedSupport089.performAction1139(UiComponentPart029.computeApplet1485(25144), -1, stringLocal1);
+          MixedSupport089.performAction1139(DraggableWidgetContainer.computeApplet1485(25144), -1, stringLocal1);
           if (integerArgument1 != 0) {
             this.performAction0117((byte) 100);
           }
@@ -420,7 +420,7 @@ abstract class FunOrbClient extends GameApplet {
             SceneWidgetPart008.performAction1132((byte) 112);
             RichTextWidget.booleanState0152 = false;
             LoginPanel.stringState0227 = SoftwareFramebuffer.stringState0616;
-            UiComponentPart029.performAction1483(MixedSupport116.resourceArchiveState0021, UiComponentPart023.resourceArchiveState0016, (byte) 76, UiComponent.booleanState0017, PcmPlayerService.resourceArchiveState0020);
+            DraggableWidgetContainer.performAction1483(MixedSupport116.resourceArchiveState0021, UiComponentPart023.resourceArchiveState0016, (byte) 76, UiComponent.booleanState0017, PcmPlayerService.resourceArchiveState0020);
             if (RenderingSupport003.booleanState0054 ||
               null != MixedSupport136.stringState0584) {
               stackIntegerLocal2 = (RenderingSupport003.booleanState0054) ? 0 : 1;
@@ -549,7 +549,7 @@ abstract class FunOrbClient extends GameApplet {
                       if (integerLocal4 != 6) {
                         if (7 != integerLocal4) {
                           if (integerLocal4 == 8) {
-                            UiComponentPart026.performAction1389(NetworkSupport012.integerState0759, GzipDecompressor.platformServiceState0003, 4210752, UiComponentPart006.cipherPacketBufferState0001);
+                            UiComponentPart026.performAction1389(NetworkSupport012.integerState0759, GzipDecompressor.platformServiceState0003, 4210752, LabeledWidgetContainer.cipherPacketBufferState0001);
                           } else {
                             if (integerLocal4 == 16) {
                               TextFieldValidator.performAction1828(140);
@@ -557,7 +557,7 @@ abstract class FunOrbClient extends GameApplet {
                               if (integerLocal4 != 11 &&
                                 integerLocal4 != 12) {
                                 if (13 == integerLocal4) {
-                                  UiComponentPart020.performAction1163(false);
+                                  ArrayWidgetContainer.performAction1163(false);
                                   return;
                                 }
                                 if (17 == integerLocal4) {
@@ -911,13 +911,13 @@ abstract class FunOrbClient extends GameApplet {
         byte[] byteArrayLocal8 = null;
         try {
           integerLocal2 = 105 / ((integerArgument1 - 27) / 38);
-          integerLocal1 = UiComponentPart006.cipherPacketBufferState0001.readUnsignedByte((byte) -124);
+          integerLocal1 = LabeledWidgetContainer.cipherPacketBufferState0001.readUnsignedByte((byte) -124);
           stackIntegerLocal3 = ((integerLocal1 & 1) == 0) ? 0 : 1;
           integerLocal6 = stackIntegerLocal3;
           integerLocal7 = NetworkSupport012.integerState0759 - 1;
           byteArrayLocal8 = new byte[integerLocal7];
-          UiComponentPart006.cipherPacketBufferState0001.performAction1639(-67, byteArrayLocal8, integerLocal7, 0);
-          NetworkSupport002.performAction0175((byte) 84, MixedSupport105.computeString1370(byteArrayLocal8, 2), integerLocal6 != 0, UiComponentPart029.computeApplet1485(25144));
+          LabeledWidgetContainer.cipherPacketBufferState0001.performAction1639(-67, byteArrayLocal8, integerLocal7, 0);
+          NetworkSupport002.performAction0175((byte) 84, MixedSupport105.computeString1370(byteArrayLocal8, 2), integerLocal6 != 0, DraggableWidgetContainer.computeApplet1485(25144));
           return;
         } catch (java.lang.RuntimeException caughtParameterLocal9) {
           caughtExceptionLocal4 = caughtParameterLocal9;

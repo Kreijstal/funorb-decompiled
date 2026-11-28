@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class mc implements j {
+final class mc implements WidgetRenderer {
     private int field_h;
     private BitmapFont field_b;
     static IntrusiveDeque field_k;
@@ -35,7 +35,7 @@ final class mc implements j {
         if (eb.field_m) {
           IntrusiveNode.field_c.m(13);
         } else {
-          var1 = uk.field_H;
+          var1 = DraggableWidgetContainer.field_H;
           if (0 < var1) {
             if (var1 == 1) {
               jh.field_a = cl.field_A;
@@ -99,7 +99,7 @@ final class mc implements j {
         }
     }
 
-    public final void a(UiComponent param0, int param1, int param2, byte param3, boolean param4) {
+    public final void paintWidget(UiComponent param0, int param1, int param2, byte param3, boolean param4) {
         UiComponent stackIn_3_0 = null;
         RuntimeException stackIn_18_0 = null;
         StringBuilder stackIn_18_1 = null;

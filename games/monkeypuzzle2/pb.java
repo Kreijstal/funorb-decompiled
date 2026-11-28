@@ -3,7 +3,7 @@
  */
 import java.util.*;
 
-final class pb implements ml {
+final class pb implements WidgetRenderer {
     private int field_o;
     private int field_k;
     static java.security.SecureRandom field_b;
@@ -39,7 +39,7 @@ final class pb implements ml {
         field_b = null;
     }
 
-    public final void a(boolean param0, UiWidget param1, int param2, int param3, int param4) {
+    public final void paintWidget(boolean param0, UiWidget param1, int param2, int param3, int param4) {
         RuntimeException var6 = null;
         int var7 = 0;
         int var8 = 0;

@@ -17,7 +17,7 @@ final class UiComponentPart008 extends ComponentContainer implements WidgetActiv
     static String stringState0122;
 
     UiComponentPart008(UiComponentPart012 uiComponentPart012Argument1, BitmapFont bitmapFontArgument2, String stringArgument3) {
-        super(0, 0, 288, 0, (CallbackContract004) null);
+        super(0, 0, 288, 0, (WidgetRenderer) null);
         int integerLocal1 = 0;
         this.integerState0143 = 0;
         try {
@@ -25,7 +25,7 @@ final class UiComponentPart008 extends ComponentContainer implements WidgetActiv
           this.stringState0120 = stringArgument3;
           this.uiComponentPart012State0002 = uiComponentPart012Argument1;
           integerLocal1 = null == this.stringState0120 ? 0 : this.bitmapFontState0010.textHeight(this.stringState0120, 260, this.bitmapFontState0010.integerState0518);
-          this.performAction0222(integerLocal1 + 22, 288, 0, 0, -16555);
+          this.setBounds(integerLocal1 + 22, 288, 0, 0, -16555);
         } catch (RuntimeException runtimeException) {
           throw ClientException.computeDiagnosticSupport0020365((Throwable) ((Object) runtimeException), "dj.<init>(" + (uiComponentPart012Argument1 != null ? "{...}" : "null") + ',' + (bitmapFontArgument2 != null ? "{...}" : "null") + ',' + (stringArgument3 != null ? "{...}" : "null") + ')');
         }
@@ -50,11 +50,11 @@ final class UiComponentPart008 extends ComponentContainer implements WidgetActiv
         bufferedFileState0001 = null;
     }
 
-    final void performAction0162(int integerArgument1, int integerArgument2, int integerArgument3, int integerArgument4) {
-        super.performAction0162(integerArgument1, -104, integerArgument3, integerArgument4);
+    final void drawWidget(int integerArgument1, int integerArgument2, int integerArgument3, int integerArgument4) {
+        super.drawWidget(integerArgument1, -104, integerArgument3, integerArgument4);
         this.bitmapFontState0010.drawParagraph(this.stringState0120, integerArgument1 - (-this.integerState0110 - 14), this.integerState0104 + (integerArgument4 + 10), this.integerState0107 - 28, this.integerState0108, 16777215, -1, 0, 0, this.bitmapFontState0010.integerState0518);
         if (integerArgument2 > -103) {
-          this.performAction0162(67, 1, 70, -22);
+          this.drawWidget(67, 1, 70, -22);
         }
     }
 
@@ -78,7 +78,7 @@ final class UiComponentPart008 extends ComponentContainer implements WidgetActiv
         this.interactiveComponentArrayState0002 = interactiveComponentArrayLocal5;
     }
 
-    final InteractiveComponent computeInteractiveComponent0370(int integerArgument1, String stringArgument2, CallbackContract006 callbackContract006Argument3) {
+    final InteractiveComponent computeInteractiveComponent0370(int integerArgument1, String stringArgument2, WidgetEventListener callbackContract006Argument3) {
         InteractiveComponent interactiveComponentLocal1 = null;
         RuntimeException runtimeExceptionLocal2 = null;
         int integerLocal3 = 0;
@@ -92,15 +92,15 @@ final class UiComponentPart008 extends ComponentContainer implements WidgetActiv
         RuntimeException caughtExceptionLocal11 = null;
         try {
           interactiveComponentLocal1 = new InteractiveComponent(stringArgument2, callbackContract006Argument3);
-          interactiveComponentLocal1.callbackContract004State0006 = (CallbackContract004) ((Object) new MixedSupport041());
+          interactiveComponentLocal1.callbackContract004State0006 = (WidgetRenderer) ((Object) new MixedSupport041());
           integerLocal3 = -2 + this.integerState0108;
           if (integerArgument1 <= 95) {
             stackInteractiveComponentLocal4 = (InteractiveComponent) null;
             return stackInteractiveComponentLocal4;
           }
-          this.performAction0222(this.integerState0108 + 34, this.integerState0107, 0, 0, -16555);
-          interactiveComponentLocal1.performAction0222(30, -14 + this.integerState0107, 7, integerLocal3, -16555);
-          this.performAction0895(interactiveComponentLocal1, (byte) -55);
+          this.setBounds(this.integerState0108 + 34, this.integerState0107, 0, 0, -16555);
+          interactiveComponentLocal1.setBounds(30, -14 + this.integerState0107, 7, integerLocal3, -16555);
+          this.addChild(interactiveComponentLocal1, (byte) -55);
           stackInteractiveComponentLocal5 = interactiveComponentLocal1;
           return stackInteractiveComponentLocal5;
         } catch (java.lang.RuntimeException caughtParameterLocal12) {
@@ -131,7 +131,7 @@ final class UiComponentPart008 extends ComponentContainer implements WidgetActiv
           }
           integerLocal1 = this.integerState0143;
           this.performAction0373(1 + integerLocal1, -104);
-          this.interactiveComponentArrayState0002[integerLocal1] = this.computeInteractiveComponent0370(103, stringArgument1, (CallbackContract006) (this));
+          this.interactiveComponentArrayState0002[integerLocal1] = this.computeInteractiveComponent0370(103, stringArgument1, (WidgetEventListener) (this));
           this.integerArrayState0033[integerLocal1] = integerArgument2;
         } catch (RuntimeException runtimeException) {
           throw ClientException.computeDiagnosticSupport0020365((Throwable) ((Object) runtimeException), "dj.E(" + (stringArgument1 != null ? "{...}" : "null") + ',' + integerArgument2 + ',' + integerArgument3 + ')');

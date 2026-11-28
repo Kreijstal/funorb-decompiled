@@ -90,7 +90,7 @@ final class Slime {
           Platform.field_a[param0].b(50, 0, -741572379, (int)this.field_o, 50);
           wj.field_d[param0].b((int)(-(1.3 * this.field_c) + (50.0 + this.field_e / 20.0)), 0, -741572379, (int)this.field_o, (int)(50.0 + this.field_e / 4.0 - 0.5 * this.field_q));
           if (this.field_d > 0.0) {
-            se.field_A.b((int)(0.8 * this.field_c + 50.0), 0, -741572379, (int)this.field_o + 10, (int)(-(1.0 * this.field_e / 4.0) + 50.0 + this.field_q * 0.6));
+            DropTargetWidgetContainer.field_A.b((int)(0.8 * this.field_c + 50.0), 0, -741572379, (int)this.field_o + 10, (int)(-(1.0 * this.field_e / 4.0) + 50.0 + this.field_q * 0.6));
           }
           if (2 == param0) {
             var16 = new RgbSprite(100, 100);

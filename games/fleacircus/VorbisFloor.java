@@ -319,7 +319,7 @@ final class VorbisFloor {
         var2 = this.field_g.length;
         System.arraycopy(this.field_g, 0, field_j, 0, var2);
         var3 = field_i[this.field_a - 1];
-        var4 = dk.bitLength(var3 - 1, (byte) -57);
+        var4 = SingleChildWidgetContainer.bitLength(var3 - 1, (byte) -57);
         field_k[0] = hk.readBits(var4);
         field_k[1] = hk.readBits(var4);
         var5 = 2;

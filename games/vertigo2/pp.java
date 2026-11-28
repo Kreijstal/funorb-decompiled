@@ -260,7 +260,7 @@ final class pp extends IntrusiveNode {
           if (var3 != -2) {
             if (-1 != var3) {
               var4 = up.field_z.k(22719) ? 1 : 0;
-              qg.a(param2, var3, 0, var4 != 0, up.field_z.l(4), up.field_z.field_Kb);
+              DraggableWidgetContainer.a(param2, var3, 0, var4 != 0, up.field_z.l(4), up.field_z.field_Kb);
             }
             up.field_z = null;
             ql.i(30);

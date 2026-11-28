@@ -5,7 +5,7 @@ final class sh extends mh {
     static byte[] field_j;
     static String field_f;
     static ff field_k;
-    static qi field_i;
+    static DraggableWidgetContainer field_i;
     static int[] field_l;
     static PcmStreamMixer field_e;
     static ResourceArchive field_g;

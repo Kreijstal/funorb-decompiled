@@ -51,7 +51,7 @@ final class of {
         this.field_j = 0;
         if (th.field_d != 0) {
           this.field_e = true;
-          this.field_d = ji.field_R;
+          this.field_d = DropTargetWidgetContainer.field_R;
           this.field_l = th.field_d;
           this.field_a = th.field_d;
           this.field_h = param0;
@@ -70,7 +70,7 @@ final class of {
           this.field_c = 0;
         }
         if (this.field_c == 0 && (this.field_e ||
-          lf.field_O)) {
+          AlphaWidgetContainer.field_O)) {
           if (param2 < 0) {
             if (this.field_e) {
               this.field_h = -1;
@@ -295,7 +295,7 @@ final class of {
           return;
         }
         vn.field_Db = -1;
-        fm.field_S = -1;
+        ModalDialogHost.field_S = -1;
     }
 
     final boolean b(boolean param0) {

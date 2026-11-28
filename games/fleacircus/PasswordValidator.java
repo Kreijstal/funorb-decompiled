@@ -27,7 +27,7 @@ final class PasswordValidator extends TextFieldValidator {
             return false;
           }
           var8 = new AccountCreationResultPanel(nb.field_a, param4);
-          nb.field_a.b(var8, (byte) -35);
+          nb.field_a.showDialog(var8, (byte) -35);
           if (ti.b(10618)) {
             var8.h((byte) -114);
             return true;
@@ -291,20 +291,20 @@ final class PasswordValidator extends TextFieldValidator {
           var3 = this.field_n.field_i.toLowerCase();
           var4 = param1.toLowerCase();
           if (var4.length() == 0) {
-            stackIn_2_0 = ml.field_K;
+            stackIn_2_0 = LabeledWidgetContainer.field_K;
             return stackIn_2_0;
           }
           if (param0 != 160) {
             this.field_n = (EditableTextField) null;
           }
           if (!IntrusiveNode.a(var4, var3, -1)) {
-            stackIn_7_0 = ml.field_K;
+            stackIn_7_0 = LabeledWidgetContainer.field_K;
             return stackIn_7_0;
           }
           if (!this.b(0, param1)) {
             return hm.field_b;
           }
-          stackIn_11_0 = ml.field_K;
+          stackIn_11_0 = LabeledWidgetContainer.field_K;
           return stackIn_11_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

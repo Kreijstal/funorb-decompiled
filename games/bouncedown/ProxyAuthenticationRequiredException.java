@@ -33,32 +33,32 @@ final class ProxyAuthenticationRequiredException extends IOException {
         if (param0 == -822) {
           if (4096 > param1) {
             if (param1 >= 2048) {
-              stackIn_19_0 = -lc.field_x[-2048 + param1];
+              stackIn_19_0 = -DequeWidgetContainer.field_x[-2048 + param1];
             } else {
-              stackIn_19_0 = lc.field_x[-param1 + 2048];
+              stackIn_19_0 = DequeWidgetContainer.field_x[-param1 + 2048];
             }
             return stackIn_19_0;
           }
           if (param1 >= 6144) {
-            stackIn_15_0 = lc.field_x[-6144 + param1];
+            stackIn_15_0 = DequeWidgetContainer.field_x[-6144 + param1];
           } else {
-            stackIn_15_0 = -lc.field_x[-param1 + 6144];
+            stackIn_15_0 = -DequeWidgetContainer.field_x[-param1 + 6144];
           }
           return stackIn_15_0;
         }
         field_a = true;
         if (4096 > param1) {
           if (param1 >= 2048) {
-            stackIn_9_0 = -lc.field_x[-2048 + param1];
+            stackIn_9_0 = -DequeWidgetContainer.field_x[-2048 + param1];
           } else {
-            stackIn_9_0 = lc.field_x[-param1 + 2048];
+            stackIn_9_0 = DequeWidgetContainer.field_x[-param1 + 2048];
           }
           return stackIn_9_0;
         }
         if (param1 >= 6144) {
-          stackIn_5_0 = lc.field_x[-6144 + param1];
+          stackIn_5_0 = DequeWidgetContainer.field_x[-6144 + param1];
         } else {
-          stackIn_5_0 = -lc.field_x[-param1 + 6144];
+          stackIn_5_0 = -DequeWidgetContainer.field_x[-param1 + 6144];
         }
         return stackIn_5_0;
     }
@@ -123,7 +123,7 @@ final class ProxyAuthenticationRequiredException extends IOException {
 
     final static void a(int param0) {
         SpriteGeometry.field_m = GzipDecompressor.a((byte) 67);
-        DisplayNameSelectionPanel.field_N = new pf();
+        DisplayNameSelectionPanel.field_N = new ModalDialogHost();
         l.a(true, true, 43);
         if (param0 < 72) {
           field_b = (hc) null;

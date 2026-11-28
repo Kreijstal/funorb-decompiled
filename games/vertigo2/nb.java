@@ -172,7 +172,7 @@ final class nb extends TextureOperator {
         }
         if (!param0) {
           tj.field_a = hh.a((byte) -123, 80, var8);
-          sd.field_P = null;
+          ModalDialogHost.field_P = null;
         } else {
           var5 = var8.readUnsignedShort((byte) -11);
           try {
@@ -183,12 +183,12 @@ final class nb extends TextureOperator {
             } else {
               stackIn_24_0 = var9.field_w;
             }
-            sd.field_P = stackIn_24_0;
+            ModalDialogHost.field_P = stackIn_24_0;
           } catch (java.lang.Exception decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
             var6 = (Exception) (Object) decompiledCaughtException;
             HuffmanCodec.a((Throwable) ((Object) var6), "CC1", 0);
-            sd.field_P = null;
+            ModalDialogHost.field_P = null;
             tj.field_a = null;
           }
         }

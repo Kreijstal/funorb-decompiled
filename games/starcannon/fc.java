@@ -54,7 +54,7 @@ final class fc {
         try {
           DelayedPcmStream.field_o = SecondaryNodeDequeIterator.a("frame_top", 112, "commonui", param3);
           ti.field_e = SecondaryNodeDequeIterator.a("frame_bottom", 122, "commonui", param3);
-          jk.field_g = vk.a("commonui", 63, "jagex_logo_grey", param3);
+          jk.field_g = DequeWidgetContainer.a("commonui", 63, "jagex_logo_grey", param3);
           t.field_r = SecondaryNodeDequeIterator.a("button", 94, "commonui", param3);
           FrameTimer.field_g = hb.a(-990, "commonui", param3, "validation");
           nb.field_b = (BitmapFont) ((Object) ai.a(param3, "commonui", true, "arezzo12", param1));

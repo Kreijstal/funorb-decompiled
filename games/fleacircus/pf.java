@@ -250,7 +250,7 @@ final class pf {
               ProxyAuthenticationRequiredException.field_e[1] = 5;
             }
           } else {
-            var3_int = nb.a(db.a(wa.field_q, new String[]{"<br><%0><br>"}, true), vh.field_l, pb.field_e, sc.field_d, 1);
+            var3_int = nb.a(ModalDialog.a(wa.field_q, new String[]{"<br><%0><br>"}, true), vh.field_l, pb.field_e, sc.field_d, 1);
             var4 = -1;
             for (var5 = 0; var5 < var3_int; var5++) {
               if (!"<%0>".equals(sc.field_d[var5])) {
@@ -267,7 +267,7 @@ final class pf {
             oe.field_c = new String[var3_int - (var4 + 1)];
             dm.a(sc.field_d, var4 + 1, oe.field_c, 0, -var4 + (var3_int - 1));
             var4 = -1;
-            var3_int = nb.a(db.a(GameAppletShell.field_g, new String[]{"<br><%0><br>"}, true), vh.field_l, pb.field_e, sc.field_d, 1);
+            var3_int = nb.a(ModalDialog.a(GameAppletShell.field_g, new String[]{"<br><%0><br>"}, true), vh.field_l, pb.field_e, sc.field_d, 1);
             for (var5 = 0; var5 < var3_int; var5++) {
               if (!"<%0>".equals(sc.field_d[var5])) {
                 continue;

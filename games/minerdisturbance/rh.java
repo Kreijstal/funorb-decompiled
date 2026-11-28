@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class rh extends jk {
-    final void a(byte param0, fe param1) {
+    final void a(byte param0, UiWidget param1) {
         if (param0 > -30) {
           return;
         }
@@ -13,7 +13,7 @@ final class rh extends jk {
         }
     }
 
-    rh(hm param0, fe param1) {
+    rh(ModalDialogHost param0, UiWidget param1) {
         super(param0, param1, 33, 20, 30);
     }
 

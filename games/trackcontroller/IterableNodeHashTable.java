@@ -27,7 +27,7 @@ final class IterableNodeHashTable implements Iterable {
 
     final static boolean a(int param0) {
         int var1 = 3 % ((param0 + 50) / 53);
-        if (gl.field_I < 20) {
+        if (AlphaWidgetContainer.field_I < 20) {
           return true;
         }
         if (!DefaultTextWidgetRenderer.a(1)) {

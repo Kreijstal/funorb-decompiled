@@ -66,7 +66,7 @@ class np extends rj {
         }
         try {
           var4 = -1L;
-          lm.a(false, var2, var4, param1, var3);
+          UiWidget.a(false, var2, var4, param1, var3);
         } catch (RuntimeException runtimeException) {
           throw AccountServiceResult.wrapClientException((Throwable) ((Object) runtimeException), "np.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

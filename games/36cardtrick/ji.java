@@ -6,7 +6,7 @@ final class ji {
     static String field_b;
 
     final static void a(boolean param0) {
-        eh var1 = (eh) (lk.field_g.removeLast(-48));
+        eh var1 = (eh) (UiWidget.field_g.removeLast(-48));
         if (var1 == null) {
           var1 = new eh();
         }
@@ -88,7 +88,7 @@ final class ji {
           db.field_p = var19.a((short) var8, (short) var15, (short) var18);
           AccountRequestState.field_a = var19.a((short) var13, (short) var16, (short) var5);
           ng.field_H = var19.a((short) var14, (short) var17, (short) var10);
-          qf.field_F = var19.a(var3, var5, var7, (byte) 1, cf.field_d, (short) 0, (short) 0);
+          ModalDialog.field_F = var19.a(var3, var5, var7, (byte) 1, cf.field_d, (short) 0, (short) 0);
           if (param0 >= -87) {
             ji.a(-42);
           }

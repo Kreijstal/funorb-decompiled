@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class pj implements fc {
+final class pj implements WidgetRenderer {
     static uf field_a;
     static int field_b;
     static PlatformTaskDispatcher field_c;
@@ -31,7 +31,7 @@ final class pj implements fc {
     }
 
     final static void a(boolean param0, int param1) {
-        DisplayNameSelectionPanel.field_N.a(0, 0, -56);
+        DisplayNameSelectionPanel.field_N.drawAllLayers(0, 0, -56);
         if (param1 != 1) {
           CharSequence var3 = (CharSequence) null;
           pj.a(true, 'ﾺ', (CharSequence) null);
@@ -46,7 +46,7 @@ final class pj implements fc {
         field_a = null;
     }
 
-    public final void a(int param0, lk param1, byte param2, boolean param3, int param4) {
+    public final void paintWidget(int param0, UiWidget param1, byte param2, boolean param3, int param4) {
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         String stackIn_11_2 = null;
@@ -65,7 +65,7 @@ final class pj implements fc {
             ((InteractiveWidget) (param1)).field_z) {
             var8.drawAdditive((-var8.field_t + param1.field_k >> 1) + (1 + var6_int), var7 + 1 + (param1.field_m - var8.field_o >> 1), 256);
           }
-          if (param1.e(1)) {
+          if (param1.isFocused(1)) {
             DebouncedFieldValidator.a(2 + var6_int, param1.field_m - 4, -4 + param1.field_k, 2 + var7, 14677);
           }
           var9 = 51 % ((param2 + 60) / 56);

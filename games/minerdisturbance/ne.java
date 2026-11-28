@@ -105,7 +105,7 @@ final class ne extends InteractiveWidget {
         return this.field_I.b(5717);
     }
 
-    final boolean a(int param0, int param1, int param2, int param3, int param4, fe param5, int param6) {
+    final boolean pointerPressed(int param0, int param1, int param2, int param3, int param4, UiWidget param5, int param6) {
         int stackIn_19_0 = 0;
         int stackIn_19_1 = 0;
         RuntimeException stackIn_30_0 = null;
@@ -122,7 +122,7 @@ final class ne extends InteractiveWidget {
         int var14 = 0;
         var14 = MinerDisturbance.field_ab;
         try {
-          if (!super.a(param0, param1, param2 + param2, param3, param4, param5, param6)) {
+          if (!super.pointerPressed(param0, param1, param2 + param2, param3, param4, param5, param6)) {
             return false;
           }
           var8_int = -this.field_J + param0 - param6;

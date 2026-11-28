@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class te extends vd implements TextHotspotListener, WidgetActivationListener {
+final class te extends DequeWidgetContainer implements TextHotspotListener, WidgetActivationListener {
     static GameAppletShell field_E;
     static RgbSprite[] field_G;
     private AccountCreationResultPanel field_H;
@@ -53,7 +53,7 @@ final class te extends vd implements TextHotspotListener, WidgetActivationListen
           if (this.field_I != param3) {
             return;
           }
-          ul.e((byte) -25);
+          ModalDialog.e((byte) -25);
           this.field_H.g((byte) -120);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -84,7 +84,7 @@ final class te extends vd implements TextHotspotListener, WidgetActivationListen
         field_J = null;
     }
 
-    final boolean a(int param0, ag param1, int param2, char param3) {
+    final boolean handleKey(int param0, UiWidget param1, int param2, char param3) {
         RuntimeException var5 = null;
         boolean stackIn_7_0 = false;
         boolean stackIn_11_0 = false;
@@ -93,17 +93,17 @@ final class te extends vd implements TextHotspotListener, WidgetActivationListen
         String stackIn_15_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (super.a(param0, param1, param2, param3)) {
+          if (super.handleKey(param0, param1, param2, param3)) {
             return true;
           }
           if (param2 == 98) {
-            stackIn_7_0 = this.a(param1, (byte) -74);
+            stackIn_7_0 = this.focusPreviousChild(param1, (byte) -74);
             return stackIn_7_0;
           }
           if (99 != param2) {
             return false;
           }
-          stackIn_11_0 = this.b((byte) -78, param1);
+          stackIn_11_0 = this.focusNextChild((byte) -78, param1);
           return stackIn_11_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -159,7 +159,7 @@ final class te extends vd implements TextHotspotListener, WidgetActivationListen
     }
 
     te(AccountCreationResultPanel param0) {
-        super(0, 0, 288, 0, (nn) null);
+        super(0, 0, 288, 0, (WidgetRenderer) null);
         String var7 = null;
         int var3 = 0;
         DefaultTextWidgetRenderer var4 = null;
@@ -167,8 +167,8 @@ final class te extends vd implements TextHotspotListener, WidgetActivationListen
         int var6 = 0;
         try {
           this.field_H = param0;
-          this.field_I = new InteractiveWidget(jf.field_e, (mh) null);
-          this.field_I.field_h = (nn) ((Object) new ke());
+          this.field_I = new InteractiveWidget(jf.field_e, (WidgetEventListener) null);
+          this.field_I.field_h = (WidgetRenderer) ((Object) new ke());
           var7 = vg.a(new String[]{this.e((byte) -61), this.k(4897)}, 89, s.field_a);
           var3 = 20;
           var4 = new DefaultTextWidgetRenderer(jd.field_s, 0, 0, 0, 0, 16777215, -1, 3, 0, jd.field_s.field_y, -1, 2147483647, true);
@@ -176,17 +176,17 @@ final class te extends vd implements TextHotspotListener, WidgetActivationListen
           this.field_L.field_i = "";
           this.field_L.a(-1, KeyboardInput.field_e, 0);
           this.field_L.a(-1, KeyboardInput.field_e, 1);
-          this.field_L.field_p = (mh) (this);
+          this.field_L.field_p = (WidgetEventListener) (this);
           this.field_L.field_s = this.field_s - 40;
           this.field_L.a(true, this.field_s - 40, 26, var3);
           var3 = var3 + (15 + this.field_L.field_x);
-          this.a(51448, this.field_L);
+          this.addChild(51448, this.field_L);
           var5 = 4;
           var6 = 200;
-          this.field_I.a(var6, var3, 0, -var6 + 300 >> 1, 40);
-          this.field_I.field_p = (mh) (this);
-          this.a(51448, this.field_I);
-          this.a(300, 0, 0, 0, var3 - (-55 - var5));
+          this.field_I.setBounds(var6, var3, 0, -var6 + 300 >> 1, 40);
+          this.field_I.field_p = (WidgetEventListener) (this);
+          this.addChild(51448, this.field_I);
+          this.setBounds(300, 0, 0, 0, var3 - (-55 - var5));
         } catch (RuntimeException runtimeException) {
           throw AccountCreationResultPanel.wrapClientException((Throwable) ((Object) runtimeException), "te.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }

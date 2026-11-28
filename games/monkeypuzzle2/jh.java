@@ -28,12 +28,12 @@ final class jh extends UiWidget {
         }
     }
 
-    final void a(int param0, int param1, int param2, int param3, int param4) {
-        super.a(param0, param1, param2, param3, param4);
+    final void setBounds(int param0, int param1, int param2, int param3, int param4) {
+        super.setBounds(param0, param1, param2, param3, param4);
         this.j(0);
     }
 
-    final void a(int param0, int param1, int param2, int param3) {
+    final void drawWidget(int param0, int param1, int param2, int param3) {
         if (param1 != 0) {
           return;
         }
@@ -173,7 +173,7 @@ final class jh extends UiWidget {
         }
     }
 
-    final void a(UiWidget param0, int param1, int param2, byte param3) {
+    final void updatePointer(UiWidget param0, int param1, int param2, byte param3) {
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         String stackIn_9_2 = null;
@@ -246,7 +246,7 @@ final class jh extends UiWidget {
         this.field_x = param6;
         this.field_v = param4;
         this.field_H = param7;
-        this.a(param3, 13361, param0, param2, param1);
+        this.setBounds(param3, 13361, param0, param2, param1);
     }
 
     static {

@@ -515,11 +515,11 @@ final class IntrusiveDeque {
           if (param1 != 31645) {
             field_b = (kc) null;
           }
-          jk.field_B = jk.field_B + 1;
+          SingleChildWidgetContainer.field_B = SingleChildWidgetContainer.field_B + 1;
           if (kc.field_d != 0) {
             var2_int = -116 + qg.field_c;
             var3 = DirectByteStorage.field_e - 90;
-            var4 = ee.field_F;
+            var4 = DraggableWidgetContainer.field_F;
             var5 = 0;
             if (!param0) {
               stackIn_8_0 = kg.field_c;
@@ -542,7 +542,7 @@ final class IntrusiveDeque {
                 if ((!param0 ||
                   (1 << var9 & var6) != 0) &&
                   lf.a(-19864, var2_int, var3, 40, 40, var8Lifetime1, 10)) {
-                  ee.field_F = var9;
+                  DraggableWidgetContainer.field_F = var9;
                   var5 = 1;
                 } else {
                   if (!param0 ||
@@ -556,11 +556,11 @@ final class IntrusiveDeque {
               if (var5 == 0) {
                 break;
               }
-              if (ee.field_F != var4) {
+              if (DraggableWidgetContainer.field_F != var4) {
                 break;
               }
-              jk.field_B = 0;
-              ee.field_F = -1;
+              SingleChildWidgetContainer.field_B = 0;
+              DraggableWidgetContainer.field_F = -1;
               break;
             }
           }
@@ -581,7 +581,7 @@ final class IntrusiveDeque {
             if (var11 == null) {
               return;
             }
-            mh.a(var11, param1 - 31645, 4);
+            LabeledWidgetContainer.a(var11, param1 - 31645, 4);
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

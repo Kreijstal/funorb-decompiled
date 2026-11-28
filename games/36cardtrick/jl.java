@@ -93,7 +93,7 @@ final class jl extends ff {
                   }
                   if (2 <= var5 &&
                     !param2) {
-                    stackIn_30_0 = g.field_B;
+                    stackIn_30_0 = DequeWidgetContainer.field_B;
                     return stackIn_30_0;
                   }
                 }

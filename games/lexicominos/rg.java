@@ -108,7 +108,7 @@ final class rg {
           var6Lifetime1 = mc.field_k << 4;
           var7Lifetime1 = 0;
           var8Lifetime1 = m.a(var6Lifetime1, (byte) 30) >> 8;
-          var9Lifetime1 = nb.a(-95, var6Lifetime1) >> 8;
+          var9Lifetime1 = DequeWidgetContainer.a(-95, var6Lifetime1) >> 8;
           if (-1 != bk.field_b &&
             ResourceArchive.field_e != -1) {
             var8Lifetime1 = -ResourceArchive.field_e + 240;

@@ -137,7 +137,7 @@ class ci extends gf implements WidgetActivationListener {
         if (param0 <= 118) {
           this.field_nb = (BitmapFont) null;
         }
-        var2.a(15, kf.field_F, 1);
+        var2.a(15, ModalDialog.field_F, 1);
         this.c(-3399, var2);
     }
 
@@ -168,7 +168,7 @@ class ci extends gf implements WidgetActivationListener {
         }
     }
 
-    ci(i param0, BitmapFont param1, String param2, boolean param3, boolean param4) {
+    ci(ModalDialogHost param0, BitmapFont param1, String param2, boolean param3, boolean param4) {
         super(param0, new lj((ci) null, param1, param2), 77, 10, 10);
         try {
           this.field_lb = false;
@@ -178,7 +178,7 @@ class ci extends gf implements WidgetActivationListener {
           this.field_rb = param4 ? true : false;
           this.field_kb = new c(13, 50, 274, 30, 15, 2113632, 4210752);
           this.field_kb.field_B = true;
-          this.a(this.field_kb, 5411);
+          this.addChild(this.field_kb, 5411);
         } catch (RuntimeException runtimeException) {
           throw fc.wrapClientException((Throwable) ((Object) runtimeException), "ci.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ')');
         }
@@ -349,12 +349,12 @@ class ci extends gf implements WidgetActivationListener {
           stackIn_3_0 = (Archive) (param0);
           stackIn_3_1 = "commonui";
           stackIn_4_2 = !(param1);
-          jh.field_g = (BitmapFont) ((Object) si.a(stackIn_3_0, stackIn_3_1, stackIn_4_2, "arezzo12", param3));
+          jh.field_g = (BitmapFont) ((Object) SingleChildWidgetContainer.a(stackIn_3_0, stackIn_3_1, stackIn_4_2, "arezzo12", param3));
           stackIn_6_0 = (Archive) (param0);
           stackIn_6_1 = "commonui";
           stackIn_7_2 = !(param1);
-          NameSuggestionsPanel.field_G = (BitmapFont) ((Object) si.a(stackIn_6_0, stackIn_6_1, stackIn_7_2, "arezzo14", param3));
-          uc.field_g = (BitmapFont) ((Object) si.a(param0, "commonui", true, "arezzo14bold", param3));
+          NameSuggestionsPanel.field_G = (BitmapFont) ((Object) SingleChildWidgetContainer.a(stackIn_6_0, stackIn_6_1, stackIn_7_2, "arezzo14", param3));
+          uc.field_g = (BitmapFont) ((Object) SingleChildWidgetContainer.a(param0, "commonui", true, "arezzo14bold", param3));
           var18 = new Sprite(param2.getFileByName(4, "button.gif", ""), (java.awt.Component) ((Object) EmailFormatValidator.field_q));
           ClientException.a(param3, -97, "dropdown", "commonui");
           var5 = dj.a(8108, "screen_options", param3, "commonui");
@@ -427,7 +427,7 @@ class ci extends gf implements WidgetActivationListener {
         }
     }
 
-    final boolean a(char param0, byte param1, int param2, UiWidget param3) {
+    final boolean handleKey(char param0, byte param1, int param2, UiWidget param3) {
         int var5_int = 0;
         RuntimeException var5 = null;
         boolean stackIn_4_0 = false;
@@ -438,7 +438,7 @@ class ci extends gf implements WidgetActivationListener {
         try {
           var5_int = 60 % ((31 - param1) / 56);
           if (param2 != 13) {
-            stackIn_4_0 = super.a(param0, (byte) 90, param2, param3);
+            stackIn_4_0 = super.handleKey(param0, (byte) 90, param2, param3);
             return stackIn_4_0;
           }
           this.f(true);
@@ -473,10 +473,10 @@ class ci extends gf implements WidgetActivationListener {
             EditableTextField.a(param1, var4, 118);
             var4 = (ob) (he.field_d.nextBackward(-84));
           }
-          var2 = bc.field_J.beginBackward((byte) 51);
+          var2 = DraggableWidgetContainer.field_J.beginBackward((byte) 51);
           while (var2 != null) {
             wi.c(1, param1);
-            var2 = bc.field_J.nextBackward(-104);
+            var2 = DraggableWidgetContainer.field_J.nextBackward(-104);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -527,9 +527,9 @@ class ci extends gf implements WidgetActivationListener {
         try {
           ed.field_a[0] = ib.field_i.nextInt();
           ed.field_a[1] = ib.field_i.nextInt();
-          ed.field_a[2] = (int)(i.field_H >> 32);
+          ed.field_a[2] = (int)(ModalDialogHost.field_H >> 32);
           NetworkArchiveRequest.field_z.position = 0;
-          ed.field_a[3] = (int)i.field_H;
+          ed.field_a[3] = (int)ModalDialogHost.field_H;
           NetworkArchiveRequest.field_z.writeInt(ed.field_a[0], false);
           NetworkArchiveRequest.field_z.writeInt(ed.field_a[1], false);
           NetworkArchiveRequest.field_z.writeInt(ed.field_a[2], false);
@@ -622,7 +622,7 @@ class ci extends gf implements WidgetActivationListener {
             var6.a(17, ph.field_e, 1);
           } else {
             if (param1 == 256) {
-              var6.a(0, IntrusiveNode.field_c, (dg) (this));
+              var6.a(0, IntrusiveNode.field_c, (WidgetEventListener) (this));
             } else {
               stackIn_13_0 = var6;
               stackIn_13_1 = -1;
@@ -640,7 +640,7 @@ class ci extends gf implements WidgetActivationListener {
             } else {
               if (param1 != 6) {
                 if (param1 == 9) {
-                  var6.a(0, gh.field_r, (dg) (this));
+                  var6.a(0, gh.field_r, (WidgetEventListener) (this));
                 }
               } else {
                 var6.a(9, SecondaryNodeDeque.field_d, 1);

@@ -55,7 +55,7 @@ final class wc implements uj {
         var4 = MinerDisturbance.field_ab;
         try {
           if (af.field_u >= 10) {
-            if (fe.j(-63)) {
+            if (UiWidget.j(-63)) {
               if (fh.field_b != 0) {
                 IsaacRandom.a(-752960408, param1);
               } else {

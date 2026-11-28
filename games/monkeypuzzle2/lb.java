@@ -13,7 +13,7 @@ final class lb extends WidgetContainer implements WidgetActivationListener {
     static pd field_C;
     static int[] field_D;
 
-    final boolean a(UiWidget param0, char param1, int param2, int param3) {
+    final boolean handleKey(UiWidget param0, char param1, int param2, int param3) {
         int var5_int = 0;
         RuntimeException var5 = null;
         boolean stackIn_6_0 = false;
@@ -23,18 +23,18 @@ final class lb extends WidgetContainer implements WidgetActivationListener {
         String stackIn_15_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (super.a(param0, param1, param2, 103)) {
+          if (super.handleKey(param0, param1, param2, 103)) {
             return true;
           }
           if (param2 == 98) {
-            stackIn_6_0 = this.a((byte) 114, param0);
+            stackIn_6_0 = this.focusPreviousChild((byte) 114, param0);
             return stackIn_6_0;
           }
           var5_int = -36 / ((37 - param3) / 50);
           if (99 != param2) {
             return false;
           }
-          stackIn_9_0 = this.b(param0, false);
+          stackIn_9_0 = this.focusNextChild(param0, false);
           return stackIn_9_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -52,7 +52,7 @@ final class lb extends WidgetContainer implements WidgetActivationListener {
 
     final static String d(byte param0) {
         if (BufferedRandomAccessFile.field_d == cf.field_b) {
-          return mh.field_F;
+          return LabeledWidgetContainer.field_F;
         }
         if (param0 != -56) {
           return (String) null;
@@ -89,7 +89,7 @@ final class lb extends WidgetContainer implements WidgetActivationListener {
           }
           if (param3 != 7) {
             var8 = (UiWidget) null;
-            this.a((UiWidget) null, '￙', -4, -125);
+            this.handleKey((UiWidget) null, '￙', -4, -125);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -106,40 +106,40 @@ final class lb extends WidgetContainer implements WidgetActivationListener {
         }
     }
 
-    final void a(int param0, int param1, int param2, int param3) {
+    final void drawWidget(int param0, int param1, int param2, int param3) {
         int var6 = 0;
         int var5 = param3 + this.field_r;
         if (param0 == 30) {
           var6 = this.field_e + param2;
           ButtonWidget.field_z.drawParagraph(p.field_b, var5 + 20, 20 + var6, -40 + this.field_l, this.field_p - 50, 16777215, -1, 1, 0, ButtonWidget.field_z.field_C);
-          super.a(param0 + 0, param1, param2, param3);
+          super.drawWidget(param0 + 0, param1, param2, param3);
           return;
         }
     }
 
     public lb() {
-        super(0, 0, 476, 225, (ml) null);
-        this.field_G = new ButtonWidget(oi.field_g, (of) null);
-        this.field_F = new ButtonWidget(aj.field_d, (of) null);
-        this.field_B = new ButtonWidget(oi.field_d, (of) null);
+        super(0, 0, 476, 225, (WidgetRenderer) null);
+        this.field_G = new ButtonWidget(oi.field_g, (WidgetEventListener) null);
+        this.field_F = new ButtonWidget(aj.field_d, (WidgetEventListener) null);
+        this.field_B = new ButtonWidget(oi.field_d, (WidgetEventListener) null);
         hd var1 = new hd();
-        this.field_G.field_h = (ml) ((Object) var1);
-        this.field_F.field_h = (ml) ((Object) var1);
-        this.field_B.field_h = (ml) ((Object) var1);
+        this.field_G.field_h = (WidgetRenderer) ((Object) var1);
+        this.field_F.field_h = (WidgetRenderer) ((Object) var1);
+        this.field_B.field_h = (WidgetRenderer) ((Object) var1);
         int var2 = 4;
         int var3 = 326;
         int var4 = var3 - var2 >> 1;
-        this.field_F.a(30, 13361, -var3 + this.field_l >> 1, var4, -var2 + (this.field_p - 48));
-        this.field_B.a(30, 13361, (-var3 + this.field_l >> 1) + var4 + var2, var4, -var2 + this.field_p - 48);
-        this.field_G.a(30, 13361, this.field_l - var3 >> 1, var3, this.field_p - (78 + 2 * var2));
-        this.field_F.field_o = (of) (this);
-        this.field_G.field_o = (of) (this);
+        this.field_F.setBounds(30, 13361, -var3 + this.field_l >> 1, var4, -var2 + (this.field_p - 48));
+        this.field_B.setBounds(30, 13361, (-var3 + this.field_l >> 1) + var4 + var2, var4, -var2 + this.field_p - 48);
+        this.field_G.setBounds(30, 13361, this.field_l - var3 >> 1, var3, this.field_p - (78 + 2 * var2));
+        this.field_F.field_o = (WidgetEventListener) (this);
+        this.field_G.field_o = (WidgetEventListener) (this);
         this.field_G.field_m = wd.field_s;
-        this.field_B.field_o = (of) (this);
+        this.field_B.field_o = (WidgetEventListener) (this);
         this.field_B.field_m = ca.field_n;
-        this.b((byte) -20, this.field_F);
-        this.b((byte) -119, this.field_G);
-        this.b((byte) -42, this.field_B);
+        this.addChild((byte) -20, this.field_F);
+        this.addChild((byte) -119, this.field_G);
+        this.addChild((byte) -42, this.field_B);
     }
 
     public static void clearStaticReferences(byte param0) {

@@ -28,10 +28,10 @@ final class wh {
               if (~NetworkGameClient.field_t == ~param1.field_m) {
                 var2_intLifetime1 = TextFieldValidator.field_i[param1.field_k];
               } else {
-                var2_intLifetime1 = kg.field_P[param1.field_k];
+                var2_intLifetime1 = LabeledWidgetContainer.field_P[param1.field_k];
               }
             } else {
-              var2_intLifetime1 = kg.field_P[param1.field_k];
+              var2_intLifetime1 = LabeledWidgetContainer.field_P[param1.field_k];
             }
           } else {
             if (!param1.field_d) {
@@ -39,7 +39,7 @@ final class wh {
                 param1.field_q == 0) {
                 var2_intLifetime1 = TextFieldValidator.field_i[param1.field_k];
               } else {
-                var2_intLifetime1 = kg.field_P[param1.field_k];
+                var2_intLifetime1 = LabeledWidgetContainer.field_P[param1.field_k];
               }
             } else {
               var2_intLifetime1 = AccountNameAvailabilityValidator.field_l;

@@ -99,7 +99,7 @@ final class ga extends DefaultTextWidgetRenderer {
         }
     }
 
-    public final void a(UiComponent param0, int param1, int param2, byte param3, boolean param4) {
+    public final void paintWidget(UiComponent param0, int param1, int param2, byte param3, boolean param4) {
         UiComponent stackIn_5_0 = null;
         RuntimeException stackIn_32_0 = null;
         StringBuilder stackIn_32_1 = null;
@@ -152,7 +152,7 @@ final class ga extends DefaultTextWidgetRenderer {
               }
             }
           }
-          if (param0.c(118)) {
+          if (param0.isFocused(118)) {
             var14 = this.field_v[5];
             if (var14 != null) {
               var14.a(param2, this.field_t, this, -1, param1, param0);

@@ -88,11 +88,11 @@ final class NodeHashTableIterator implements Iterator {
     }
 
     final static AccountServiceResult pollAccountCreationResult(int param0) {
-        if (DelegatingCanvas.field_a == ji.field_T) {
+        if (DelegatingCanvas.field_a == DropTargetWidgetContainer.field_T) {
           throw new IllegalStateException();
         }
-        if (kn.field_D == DelegatingCanvas.field_a) {
-          DelegatingCanvas.field_a = ji.field_T;
+        if (SingleChildWidgetContainer.field_D == DelegatingCanvas.field_a) {
+          DelegatingCanvas.field_a = DropTargetWidgetContainer.field_T;
           return lg.field_a;
         }
         if (param0 != 6792) {

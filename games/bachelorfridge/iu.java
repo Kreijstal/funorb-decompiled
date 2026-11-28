@@ -54,7 +54,7 @@ final class iu extends AnimationNode {
         for (var7 = -1 + qs.field_n; 0 <= var7; var7--) {
           var8_ref_gs = kw.field_k[var7];
           var9 = 0;
-          if (!hl.field_I &&
+          if (!AlphaWidgetContainer.field_I &&
             on.field_t > var5) {
             var10_int = AccountRequestState.a(var8_ref_gs.field_p, 26291);
             if (var10_int <= var8_ref_gs.a((byte) 122) && (var8_ref_gs.field_i ||

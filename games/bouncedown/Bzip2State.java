@@ -79,11 +79,11 @@ final class Bzip2State {
               decompiledCaughtException = decompiledCaughtParameter0;
               var2 = decompiledCaughtException;
             }
-            if (jg.field_B == null) {
+            if (AlphaWidgetContainer.field_B == null) {
               stackIn_17_0 = param1.getParameter("settings");
               return stackIn_17_0;
             }
-            stackIn_15_0 = jg.field_B;
+            stackIn_15_0 = AlphaWidgetContainer.field_B;
             return stackIn_15_0;
           } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
             decompiledCaughtException = decompiledCaughtParameter1;

@@ -47,7 +47,7 @@ final class ce {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw dd.wrapClientException((Throwable) ((Object) var2_ref), "ce.B(" + param0 + ',' + param1 + ')');
+          throw DraggableWidgetContainer.wrapClientException((Throwable) ((Object) var2_ref), "ce.B(" + param0 + ',' + param1 + ')');
         }
     }
 

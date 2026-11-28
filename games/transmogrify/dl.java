@@ -250,7 +250,7 @@ abstract class dl extends DualLinkNode {
           }
           var2Lifetime34 = GzipDecompressor.a(10, "submit");
           if (null != var2Lifetime34) {
-            da.field_z = eg.a(94, var2Lifetime34);
+            ModalDialogHost.field_z = eg.a(94, var2Lifetime34);
           }
           var2Lifetime35 = GzipDecompressor.a(10, "shuffle");
           if (var2Lifetime35 != null) {
@@ -447,7 +447,7 @@ abstract class dl extends DualLinkNode {
         field_q[0] = 0L;
         for (var0 = 1; 10 >= var0; var0++) {
           var1 = (-1 + var0) * 8;
-          field_q[var0] = aj.a(MusicPatchPcmStream.a(255L, field_n[7][7 + var1]), aj.a(MusicPatchPcmStream.a(field_n[6][var1 + 6], 65280L), aj.a(MusicPatchPcmStream.a(16711680L, field_n[5][5 + var1]), aj.a(aj.a(MusicPatchPcmStream.a(1095216660480L, field_n[3][var1 + 3]), aj.a(aj.a(MusicPatchPcmStream.a(field_n[1][1 + var1], 71776119061217280L), MusicPatchPcmStream.a(-72057594037927936L, field_n[0][var1])), MusicPatchPcmStream.a(field_n[2][var1 + 2], 280375465082880L))), MusicPatchPcmStream.a(field_n[4][var1 + 4], 4278190080L)))));
+          field_q[var0] = DequeWidgetContainer.a(MusicPatchPcmStream.a(255L, field_n[7][7 + var1]), DequeWidgetContainer.a(MusicPatchPcmStream.a(field_n[6][var1 + 6], 65280L), DequeWidgetContainer.a(MusicPatchPcmStream.a(16711680L, field_n[5][5 + var1]), DequeWidgetContainer.a(DequeWidgetContainer.a(MusicPatchPcmStream.a(1095216660480L, field_n[3][var1 + 3]), DequeWidgetContainer.a(DequeWidgetContainer.a(MusicPatchPcmStream.a(field_n[1][1 + var1], 71776119061217280L), MusicPatchPcmStream.a(-72057594037927936L, field_n[0][var1])), MusicPatchPcmStream.a(field_n[2][var1 + 2], 280375465082880L))), MusicPatchPcmStream.a(field_n[4][var1 + 4], 4278190080L)))));
         }
         field_p = new byte[50][];
         field_m = "Highscores";

@@ -76,7 +76,7 @@ final class ed {
             df.field_b = kl.a(252, ub.field_b, "benefits", "button_frame");
             MouseWheelInput.field_f = kl.a(252, ub.field_b, "benefits", "arrow");
             ql.field_k = (BitmapFont) ((Object) ub.a("benefits", ub.field_b, "large_font", SecondaryNodeDeque.field_b, 32));
-            qj.field_H = (BitmapFont) ((Object) ub.a("benefits", ub.field_b, "small_font", SecondaryNodeDeque.field_b, 32));
+            DropTargetWidgetContainer.field_H = (BitmapFont) ((Object) ub.a("benefits", ub.field_b, "small_font", SecondaryNodeDeque.field_b, 32));
             var27 = SoftwareRasterizer.field_a;
             var2 = SoftwareRasterizer.field_d;
             var3 = SoftwareRasterizer.field_k;
@@ -90,18 +90,18 @@ final class ed {
             var12 = new RgbSprite(195, 221);
             var6 = var12.field_w / 2;
             var12.bindAsRenderTarget();
-            ql.field_k.drawCentred(db.a(IterableNodeHashTable.field_b, new String[]{TextLineMetrics.field_e}, true), var6, 40, 16777215, -1);
-            qj.field_H.drawCentred(db.a(jj.field_Y, new String[]{TextLineMetrics.field_e}, true), var6, 60, 16777215, -1);
-            ql.field_k.drawCentred(db.a(NetworkGameClient.field_w, new String[]{id.field_i}, true), var6, 110, 16777215, -1);
-            qj.field_H.drawCentred(db.a(lj.field_i, new String[]{id.field_i}, true), var6, 130, 16777215, -1);
+            ql.field_k.drawCentred(ModalDialog.a(IterableNodeHashTable.field_b, new String[]{TextLineMetrics.field_e}, true), var6, 40, 16777215, -1);
+            DropTargetWidgetContainer.field_H.drawCentred(ModalDialog.a(jj.field_Y, new String[]{TextLineMetrics.field_e}, true), var6, 60, 16777215, -1);
+            ql.field_k.drawCentred(ModalDialog.a(NetworkGameClient.field_w, new String[]{id.field_i}, true), var6, 110, 16777215, -1);
+            DropTargetWidgetContainer.field_H.drawCentred(ModalDialog.a(lj.field_i, new String[]{id.field_i}, true), var6, 130, 16777215, -1);
             ql.field_k.drawCentred(MidiPcmStream.field_N, var6, 180, 16777215, -1);
-            qj.field_H.drawCentred(pg.field_b, var6, 200, 16777215, -1);
+            DropTargetWidgetContainer.field_H.drawCentred(pg.field_b, var6, 200, 16777215, -1);
             rg.a(0, var12, var12.field_w, var12.field_t, 1, -68, 3, 0);
             wh.field_b.bindAsRenderTarget();
             var12.draw(-wh.field_b.field_q + 18, 241 - wh.field_b.field_v);
             for (var7 = 0; var7 < vg.field_u.length; var7++) {
               of.field_h[var7].bindAsRenderTarget();
-              qj.field_H.drawParagraph(vg.field_u[var7], 3, 3, -6 + of.field_h[var7].field_w, -6 + of.field_h[var7].field_t, SecondaryNodeDequeIterator.field_e, -1, 1, 1, qj.field_H.field_H + qj.field_H.field_K);
+              DropTargetWidgetContainer.field_H.drawParagraph(vg.field_u[var7], 3, 3, -6 + of.field_h[var7].field_w, -6 + of.field_h[var7].field_t, SecondaryNodeDequeIterator.field_e, -1, 1, 1, DropTargetWidgetContainer.field_H.field_H + DropTargetWidgetContainer.field_H.field_K);
               rg.a(0, of.field_h[var7], of.field_h[var7].field_w, of.field_h[var7].field_t, 1, -121, 3, 0);
             }
             vg.field_u = null;
@@ -125,7 +125,7 @@ final class ed {
             var2Lifetime1 = SoftwareRasterizer.field_d;
             var3Lifetime1 = SoftwareRasterizer.field_k;
             SoftwareRasterizer.saveClip(ab.field_c);
-            var14 = db.a(hb.field_q, new String[]{ng.field_g[di.field_d]}, true);
+            var14 = ModalDialog.a(hb.field_q, new String[]{ng.field_g[di.field_d]}, true);
             var5 = ql.field_k.maxLineWidth(var14, wa.field_m);
             var6Lifetime1 = ql.field_k.textHeight(var14, wa.field_m, ql.field_k.field_K + ql.field_k.field_H);
             var7Lifetime1 = MidiPcmStream.field_V + (wa.field_m - var5) / 2;
@@ -186,16 +186,16 @@ final class ed {
             SoftwareRasterizer.restoreClip(ab.field_c);
           }
           if (DualLinkNode.field_k != null &&
-            qj.field_H != null) {
+            DropTargetWidgetContainer.field_H != null) {
             var29 = SoftwareRasterizer.field_a;
             var2Lifetime2 = SoftwareRasterizer.field_d;
             var3Lifetime2 = SoftwareRasterizer.field_k;
             SoftwareRasterizer.saveClip(ab.field_c);
             var16 = new RgbSprite(412, 43);
-            var5_ref_String = db.a(NetworkArchiveRequest.field_B, new String[]{DualLinkNode.field_k}, true);
+            var5_ref_String = ModalDialog.a(NetworkArchiveRequest.field_B, new String[]{DualLinkNode.field_k}, true);
             DualLinkNode.field_k = null;
             var16.bindAsRenderTarget();
-            qj.field_H.drawParagraph(var5_ref_String, 3, 3, var16.field_w - 6, var16.field_t - 6, 16777215, -1, 0, 1, qj.field_H.field_H + qj.field_H.field_K);
+            DropTargetWidgetContainer.field_H.drawParagraph(var5_ref_String, 3, 3, var16.field_w - 6, var16.field_t - 6, 16777215, -1, 0, 1, DropTargetWidgetContainer.field_H.field_H + DropTargetWidgetContainer.field_H.field_K);
             rg.a(0, var16, var16.field_w, var16.field_t, 1, -27, 3, 0);
             GameAppletShell.field_b.bindAsRenderTarget();
             var16.draw(199 - GameAppletShell.field_b.field_q, 83 - GameAppletShell.field_b.field_v);
@@ -203,19 +203,19 @@ final class ed {
             SoftwareRasterizer.restoreClip(ab.field_c);
           }
           if (ArchiveRequest.field_s != null &&
-            qj.field_H != null) {
+            DropTargetWidgetContainer.field_H != null) {
             var30 = SoftwareRasterizer.field_a;
             var2Lifetime3 = SoftwareRasterizer.field_d;
             var3Lifetime3 = SoftwareRasterizer.field_k;
             SoftwareRasterizer.saveClip(ab.field_c);
-            var4 = qj.field_H.maxLineWidth(ContextualRuntimeException.field_d, 640) + 6;
+            var4 = DropTargetWidgetContainer.field_H.maxLineWidth(ContextualRuntimeException.field_d, 640) + 6;
             var5Lifetime1 = var4 + ArchiveRequest.field_s.field_x + 20;
             var6Lifetime2 = -(var5Lifetime1 / 2) + 427;
             var7Lifetime2 = 20 + (ArchiveRequest.field_s.field_x + var6Lifetime2);
             GameAppletShell.field_b.bindAsRenderTarget();
-            qj.field_H.drawString(ContextualRuntimeException.field_d, -GameAppletShell.field_b.field_q + var7Lifetime2, qj.field_H.field_K + qj.field_H.field_H + (-GameAppletShell.field_b.field_v + 155), 16777215, -1);
+            DropTargetWidgetContainer.field_H.drawString(ContextualRuntimeException.field_d, -GameAppletShell.field_b.field_q + var7Lifetime2, DropTargetWidgetContainer.field_H.field_K + DropTargetWidgetContainer.field_H.field_H + (-GameAppletShell.field_b.field_v + 155), 16777215, -1);
             rg.a(-GameAppletShell.field_b.field_q + (var7Lifetime2 - 4), GameAppletShell.field_b, var4, 50, 1, -90, 3, 155 - GameAppletShell.field_b.field_v);
-            var8Lifetime1 = -((-qj.field_H.field_K + (-qj.field_H.field_H - 3) + ArchiveRequest.field_s.field_r) / 2) + 155 - GameAppletShell.field_b.field_v;
+            var8Lifetime1 = -((-DropTargetWidgetContainer.field_H.field_K + (-DropTargetWidgetContainer.field_H.field_H - 3) + ArchiveRequest.field_s.field_r) / 2) + 155 - GameAppletShell.field_b.field_v;
             ArchiveRequest.field_s.draw(var6Lifetime2 - GameAppletShell.field_b.field_q, var8Lifetime1);
             SoftwareRasterizer.setRasterBuffer(var30, var2Lifetime3, var3Lifetime3);
             SoftwareRasterizer.restoreClip(ab.field_c);

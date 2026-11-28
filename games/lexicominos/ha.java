@@ -78,7 +78,7 @@ final class ha {
             var6 = var14[2 * var15];
             var7 = this.field_a.a((byte) -123) + (149 + 24 * var6);
             var8 = -this.field_g.a((byte) -123) + 78 - 24 * var5;
-            eb.a(param1 - 13543, this.field_e.field_m, 0, ia.field_H, this.field_h[var15], var8, var7);
+            eb.a(param1 - 13543, this.field_e.field_m, 0, AlphaWidgetContainer.field_H, this.field_h[var15], var8, var7);
             var15++;
           }
         } else {
@@ -93,7 +93,7 @@ final class ha {
           }
           var5_ref_int__ = qc.field_f[this.field_i][var3_int];
           var6_ref_db = qc.field_d[var4];
-          var7 = (-var6_ref_db.field_p + ia.field_H.field_p) / 2;
+          var7 = (-var6_ref_db.field_p + AlphaWidgetContainer.field_H.field_p) / 2;
           for (var8 = 0; var8 < 4; var8++) {
             var9 = this.field_a.field_a * 24 + var5_ref_int__[var8 * 2];
             var10 = this.field_g.field_a * 24 + var5_ref_int__[1 + 2 * var8];

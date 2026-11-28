@@ -335,7 +335,7 @@ final class q {
           }
           var2Lifetime58 = vh.a((byte) 119, "MENU_TEXT_QUEEN");
           if (var2Lifetime58 != null) {
-            ma.field_H = ad.a(param0 ^ -29413, var2Lifetime58);
+            DequeWidgetContainer.field_H = ad.a(param0 ^ -29413, var2Lifetime58);
           }
           var2Lifetime59 = vh.a((byte) 52, "MENU_TEXT_KING");
           if (null != var2Lifetime59) {
@@ -398,7 +398,7 @@ final class q {
           }
           var2Lifetime73 = vh.a((byte) 79, "RATING_PER_WON");
           if (null != var2Lifetime73) {
-            fm.field_O = ad.a(-29410, var2Lifetime73);
+            ModalDialogHost.field_O = ad.a(-29410, var2Lifetime73);
           }
           var2Lifetime74 = vh.a((byte) 75, "RATING_PER_LOST");
           if (var2Lifetime74 != null) {
@@ -589,7 +589,7 @@ final class q {
           var2 = (ac) (vn.field_vb.beginBackward(-18110));
           do {
             if (null == var2) {
-              var2 = bh.field_D.beginBackward(-18110);
+              var2 = ArrayWidgetContainer.field_D.beginBackward(-18110);
               break;
             }
             GameAppletShell.a((ac) (var2), 15079, param0);
@@ -600,7 +600,7 @@ final class q {
           }
           while (null != var2) {
             el.a(4, param0);
-            var2 = bh.field_D.nextBackward((byte) -117);
+            var2 = ArrayWidgetContainer.field_D.nextBackward((byte) -117);
             if (var3 != 0) {
               return;
             }
@@ -644,7 +644,7 @@ final class q {
               decompiledSharedTail0 = (var7 != 0);
             }
             if (decompiledSharedTail0) {
-              AccountRegistrationPanel.field_O.a(param0 + 6725, AccountNameAvailabilityValidator.field_m.field_wb, AccountNameAvailabilityValidator.field_m.field_U, param2);
+              AccountRegistrationPanel.field_O.processPointerInput(param0 + 6725, AccountNameAvailabilityValidator.field_m.field_wb, AccountNameAvailabilityValidator.field_m.field_U, param2);
             }
           }
           if (param0 != -6844) {
@@ -662,7 +662,7 @@ final class q {
                 }
                 var6 = lg.a(99, var4_int);
                 ig.field_i[var4_int].field_jb = el.field_z[var6];
-                mf.field_l[var4_int].field_db = BitPacketBuffer.field_x[var6];
+                UiWidget.field_l[var4_int].field_db = BitPacketBuffer.field_x[var6];
               }
               var4_int++;
               continue;

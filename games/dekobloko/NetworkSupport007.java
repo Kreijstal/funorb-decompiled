@@ -83,7 +83,7 @@ final class NetworkSupport007 extends DualNode {
         }
         if (this.integerArrayState0154 != null) {
           for (integerLocal1 = 0; integerLocal1 < this.integerArrayState0154.length; integerLocal1++) {
-            this.integerArrayState0154[integerLocal1] = UiComponentPart006.bitwiseOr(this.integerArrayState0154[integerLocal1], 32768);
+            this.integerArrayState0154[integerLocal1] = LabeledWidgetContainer.bitwiseOr(this.integerArrayState0154[integerLocal1], 32768);
           }
         }
     }

@@ -45,7 +45,7 @@ final class vj {
           GameApplet.field_f = (BitmapFont) ((Object) TextLineMetrics.a(param0, "commonui", param3, "arezzo12", 0));
           RasterBuffer.field_g = (BitmapFont) ((Object) TextLineMetrics.a(param0, "commonui", param3, "arezzo14", param2 ^ param2));
           dl.field_H = (BitmapFont) ((Object) TextLineMetrics.a(param0, "commonui", param3, "arezzo14bold", param2 - 23081));
-          var17 = new Sprite(param1.getFileByName(-2, "", "button.gif"), (java.awt.Component) ((Object) bg.field_P));
+          var17 = new Sprite(param1.getFileByName(-2, "", "button.gif"), (java.awt.Component) ((Object) LabeledWidgetContainer.field_P));
           DiskCacheWorker.a(param3, "commonui", (byte) -114, "dropdown");
           var5 = mh.a(32, param3, "screen_options", "commonui");
           c.field_d = new ge[4];

@@ -125,7 +125,7 @@ final class ip {
           if (param1 >= -105) {
             field_a = (k) null;
           }
-          stackIn_3_0 = fq.a(param0, -25960, var5, var4_int);
+          stackIn_3_0 = AlphaWidgetContainer.a(param0, -25960, var5, var4_int);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

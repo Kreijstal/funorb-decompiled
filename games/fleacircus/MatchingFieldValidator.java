@@ -78,14 +78,14 @@ final class MatchingFieldValidator extends TextFieldValidator {
             var3 = ((FieldValidatorProvider) ((Object) this.field_n)).getFieldValidator((byte) 85);
             if (var3 != null &&
               var3.getValidationStatus(false) != hm.field_b) {
-              stackIn_8_0 = ml.field_K;
+              stackIn_8_0 = LabeledWidgetContainer.field_K;
               return stackIn_8_0;
             }
           }
           if (param1.equals(this.field_n.field_i)) {
             stackIn_12_0 = hm.field_b;
           } else {
-            stackIn_12_0 = ml.field_K;
+            stackIn_12_0 = LabeledWidgetContainer.field_K;
           }
           return stackIn_12_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

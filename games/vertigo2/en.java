@@ -9,10 +9,10 @@ final class en {
     final static void a(boolean param0) {
         if (!param0) {
           field_b = (String) null;
-          mg.field_N = new IntrusiveDeque();
+          LabeledWidgetContainer.field_N = new IntrusiveDeque();
           return;
         }
-        mg.field_N = new IntrusiveDeque();
+        LabeledWidgetContainer.field_N = new IntrusiveDeque();
     }
 
     final static String a(boolean param0, String param1, Archive param2, int param3, String param4) {

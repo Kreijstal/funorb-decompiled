@@ -76,25 +76,25 @@ final class DelegatingCanvas extends java.awt.Canvas {
           RuntimeException var15 = null;
           IOException var16 = null;
           try {
-            dh.field_N = new BitPacketBuffer(param7);
+            LabeledWidgetContainer.field_N = new BitPacketBuffer(param7);
             nj.field_p = new BitPacketBuffer(param4);
             ci.field_W = param13;
             TextFieldValidator.field_o = param3;
             ArchiveRequest.field_v = param1;
             ia.field_c = param10;
             var15_int = 42 % ((param2 + 70) / 44);
-            bd.field_N = param0;
+            ModalDialog.field_N = param0;
             wg.field_d = param11;
             ml.field_n = param8;
             DiskCacheWorker.field_i = param12;
             MatchingFieldValidator.field_t = param9;
             DebouncedFieldValidator.field_e = param6;
-            pi.field_I = param5;
-            if (null == pi.field_I.field_m) {
+            DraggableWidgetContainer.field_I = param5;
+            if (null == DraggableWidgetContainer.field_I.field_m) {
               return;
             }
             try {
-              TextLineMetrics.field_f = new BufferedRandomAccessFile(pi.field_I.field_m, 64, 0);
+              TextLineMetrics.field_f = new BufferedRandomAccessFile(DraggableWidgetContainer.field_I.field_m, 64, 0);
               return;
             } catch (java.io.IOException decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;

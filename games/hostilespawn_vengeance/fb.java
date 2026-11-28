@@ -95,7 +95,7 @@ final class fb extends ql {
             var5 < 0) {
             this.field_s = true;
             this.field_i.field_n = true;
-            nh.field_E.setCoordinates(-1, 8360, -1);
+            LabeledWidgetContainer.field_E.setCoordinates(-1, 8360, -1);
             this.field_k.field_g = this.field_k.field_g + 1;
             var6 = this.field_k.getClampedTileIndex(-4);
             ln.field_a.field_c[var6] = 4;
@@ -107,7 +107,7 @@ final class fb extends ql {
             tb.field_N = 150;
             tk.a(1, jc.field_c, 31, true);
           } else {
-            nh.field_E.copyCoordinatesFrom((byte) 46, this.field_i.field_j);
+            LabeledWidgetContainer.field_E.copyCoordinatesFrom((byte) 46, this.field_i.field_j);
           }
         }
         if (this.field_s) {
@@ -132,10 +132,10 @@ final class fb extends ql {
             ln.field_a.field_c[1 + var4Lifetime1Lifetime1] = 0;
             if (0 < ImageProducerRasterBuffer.field_p) {
               CrossfadingMidiPcmStream.a(16, 1);
-              nh.field_E.copyCoordinatesFrom((byte) 46, this.field_p);
+              LabeledWidgetContainer.field_E.copyCoordinatesFrom((byte) 46, this.field_p);
             } else {
               CrossfadingMidiPcmStream.a(17, param0 + 2);
-              nh.field_E.copyCoordinatesFrom((byte) 46, this.field_r);
+              LabeledWidgetContainer.field_E.copyCoordinatesFrom((byte) 46, this.field_r);
             }
             le.field_D = 9000;
             this.field_h = 500;
@@ -179,7 +179,7 @@ final class fb extends ql {
           this.field_g = 1000;
           this.field_o = null;
           CrossfadingMidiPcmStream.a(17, param0 + 2);
-          nh.field_E.setCoordinates(-1, 8360, -1);
+          LabeledWidgetContainer.field_E.setCoordinates(-1, 8360, -1);
         }
         if (0 <= this.field_g) {
           this.field_g = this.field_g - 1;
@@ -188,7 +188,7 @@ final class fb extends ql {
             this.field_n.field_u = null;
             this.field_n.field_i = -1;
             CrossfadingMidiPcmStream.a(14, 1);
-            nh.field_E.copyCoordinatesFrom((byte) 46, this.field_q);
+            LabeledWidgetContainer.field_E.copyCoordinatesFrom((byte) 46, this.field_q);
             var4Lifetime3 = this.field_p.getClampedTileIndex(-4);
             ln.field_a.field_c[var4Lifetime3] = 0;
             ln.field_a.field_c[var4Lifetime3 + 1] = 0;
@@ -200,7 +200,7 @@ final class fb extends ql {
             }
             for (var5Lifetime2 = 1; var5Lifetime2 < 5; var5Lifetime2++) {
               for (var6Lifetime1 = 0; 256 >= var6Lifetime1; var6Lifetime1 += 16) {
-                var12 = jn.field_F[ib.field_c];
+                var12 = AlphaWidgetContainer.field_F[ib.field_c];
                 var12.field_c = (double)var6Lifetime1;
                 var12.field_j.copyCoordinatesFrom((byte) 46, this.field_n.field_j);
                 var12.field_l.a(0.0, 0.0, 1);
@@ -227,7 +227,7 @@ final class fb extends ql {
           if (!MusicPatchPcmStream.field_l &&
             var3.field_g <= 5 + this.field_r.field_g) {
             MusicPatchPcmStream.field_l = true;
-            nh.field_E.setCoordinates(-1, param0 ^ -8361, -1);
+            LabeledWidgetContainer.field_E.setCoordinates(-1, param0 ^ -8361, -1);
             this.field_e = 300;
           }
           if (-10 + this.field_r.field_g > var3.field_g) {

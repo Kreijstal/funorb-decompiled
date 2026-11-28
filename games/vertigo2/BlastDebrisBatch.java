@@ -17,7 +17,7 @@ final class BlastDebrisBatch {
         if (!sq.field_c) {
           throw new IllegalStateException();
         }
-        mg.field_O = true;
+        LabeledWidgetContainer.field_O = true;
         int var1 = 47 / ((3 - param0) / 46);
         BufferedSocket.a((byte) 52, false);
         hn.field_w = 0;
@@ -36,7 +36,7 @@ final class BlastDebrisBatch {
           var5_ref_String = nf.field_o;
           var4.field_n.a(var5_ref_String, 5, param0 ^ 24285);
           var4Lifetime1 = un.field_Lb;
-          var5 = sd.field_N;
+          var5 = ModalDialogHost.field_N;
           var6 = no.field_e;
           var4Lifetime1.field_n.c(0, var6, -1220, var5, 0);
         }
@@ -88,7 +88,7 @@ final class BlastDebrisBatch {
         var13 = Vertigo2.field_L ? 1 : 0;
         try {
           om.field_D = SoftwareRasterizer.field_j;
-          qg.field_G = SoftwareRasterizer.field_e;
+          DraggableWidgetContainer.field_G = SoftwareRasterizer.field_e;
           if (param1) {
             stackIn_4_0 = ko.field_P;
           } else {
@@ -138,10 +138,10 @@ final class BlastDebrisBatch {
                 var7 = dupTemp$0;
                 IterableNodeHashTable.field_h[var6].field_db = 0;
                 var14.field_Fb = 0;
-                for (var8 = 0; mg.field_S[var6].length > var8; var8++) {
-                  if (mg.field_S[var6][var8] != null) {
-                    var9 = mg.field_S[var6][var8];
-                    mg.field_S[var6][var8].field_db = 0;
+                for (var8 = 0; LabeledWidgetContainer.field_S[var6].length > var8; var8++) {
+                  if (LabeledWidgetContainer.field_S[var6][var8] != null) {
+                    var9 = LabeledWidgetContainer.field_S[var6][var8];
+                    LabeledWidgetContainer.field_S[var6][var8].field_db = 0;
                     var9.field_Fb = 0;
                   }
                 }
@@ -150,10 +150,10 @@ final class BlastDebrisBatch {
                 var7 = IterableNodeHashTable.field_h[var6];
                 IterableNodeHashTable.field_h[var6].field_db = 0;
                 var7.field_Fb = 0;
-                for (var8 = 0; var8 < mg.field_S[var6].length; var8++) {
-                  if (mg.field_S[var6][var8] != null) {
-                    var9 = mg.field_S[var6][var8];
-                    mg.field_S[var6][var8].field_db = 0;
+                for (var8 = 0; var8 < LabeledWidgetContainer.field_S[var6].length; var8++) {
+                  if (LabeledWidgetContainer.field_S[var6][var8] != null) {
+                    var9 = LabeledWidgetContainer.field_S[var6][var8];
+                    LabeledWidgetContainer.field_S[var6][var8].field_db = 0;
                     var9.field_Fb = 0;
                   }
                 }
@@ -176,10 +176,10 @@ final class BlastDebrisBatch {
                   var8_ref_cr = IterableNodeHashTable.field_h[var6];
                   IterableNodeHashTable.field_h[var6].field_db = 0;
                   var8_ref_cr.field_Fb = 0;
-                  for (var9_int = 0; var9_int < mg.field_S[var6].length; var9_int++) {
-                    if (null != mg.field_S[var6][var9_int]) {
-                      var10_ref_nk = mg.field_S[var6][var9_int];
-                      mg.field_S[var6][var9_int].field_db = 0;
+                  for (var9_int = 0; var9_int < LabeledWidgetContainer.field_S[var6].length; var9_int++) {
+                    if (null != LabeledWidgetContainer.field_S[var6][var9_int]) {
+                      var10_ref_nk = LabeledWidgetContainer.field_S[var6][var9_int];
+                      LabeledWidgetContainer.field_S[var6][var9_int].field_db = 0;
                       var10_ref_nk.field_Fb = 0;
                     }
                   }
@@ -187,20 +187,20 @@ final class BlastDebrisBatch {
                   IterableNodeHashTable.field_h[var6].a(param0 ^ 123, 103, var3, var5, 5);
                   var8 = 110;
                   if (param1) {
-                    mg.field_S[var6][0].a(var5, 38, Archive.field_j, var3, 2, param0 + 1, var8);
+                    LabeledWidgetContainer.field_S[var6][0].a(var5, 38, Archive.field_j, var3, 2, param0 + 1, var8);
                     var8 += 40;
                   } else {
-                    if (mg.field_S[var6][0] != null) {
-                      var9 = mg.field_S[var6][0];
-                      mg.field_S[var6][0].field_db = 0;
+                    if (LabeledWidgetContainer.field_S[var6][0] != null) {
+                      var9 = LabeledWidgetContainer.field_S[var6][0];
+                      LabeledWidgetContainer.field_S[var6][0].field_db = 0;
                       var9.field_Fb = 0;
                     }
                   }
                   var9_int = lb.field_c.field_Fb - 5 - (var8 - 2);
-                  var10 = -1 + mg.field_S[var6].length;
+                  var10 = -1 + LabeledWidgetContainer.field_S[var6].length;
                   for (var11 = 0; var10 > var11; var11++) {
                     var12 = var11 * var9_int / var10;
-                    mg.field_S[var6][1 + var11].a(var5, -var12 + ((var11 + 1) * var9_int / var10 - 2), Archive.field_j, var3, 2, param0 ^ 1, var12 + var8);
+                    LabeledWidgetContainer.field_S[var6][1 + var11].a(var5, -var12 + ((var11 + 1) * var9_int / var10 - 2), Archive.field_j, var3, 2, param0 ^ 1, var12 + var8);
                   }
                   var5 = var5 + (2 + var3);
                 }

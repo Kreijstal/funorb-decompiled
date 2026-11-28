@@ -109,7 +109,7 @@ final class vh {
             }
           }
           if (1 == param2.field_w) {
-            var3_doubleLifetime1 = nh.a(-12149, param2, param0);
+            var3_doubleLifetime1 = LabeledWidgetContainer.a(-12149, param2, param0);
             param2.a(param1 ^ 228, var3_doubleLifetime1, 3);
             MatchingFieldValidator.field_r = param2.a(ln.field_a, 128, param2.field_o);
             var5 = param2.field_j.getClampedTileIndex(param1 - 9);

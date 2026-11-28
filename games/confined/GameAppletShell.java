@@ -39,7 +39,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
                 if (kn.field_c > var2.width) {
                   return;
                 }
-                if (var2.height < la.field_R) {
+                if (var2.height < LabeledWidgetContainer.field_R) {
                   return;
                 }
               }
@@ -726,7 +726,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
               rj.field_e = this;
               ei.field_kb = 0;
               im.field_b = param0;
-              la.field_R = param0;
+              LabeledWidgetContainer.field_R = param0;
               if (param3 < 42) {
                 field_d = (String) null;
               }

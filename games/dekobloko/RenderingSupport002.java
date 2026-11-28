@@ -59,21 +59,21 @@ final class RenderingSupport002 {
           MixedSupport117.performAction1526((String) null, (int[]) null, 90, (SceneWidgetPart008) null, sceneWidgetArgument2, (String) null, 0L, integerArgument3, -1);
           if (0 == integerArgument3) {
             mixedSupport099Local1 = SceneWidget.mixedSupport099State0001;
-            rgbSpriteLocal2 = UiComponentPart010.rgbSpriteArrayState0010[0];
+            rgbSpriteLocal2 = AlphaWidgetContainer.rgbSpriteArrayState0010[0];
             rgbSpriteLocal31 = rgbSpriteLocal2;
             rgbSpriteLocal32 = rgbSpriteLocal31;
             rgbSpriteLocal36 = rgbSpriteLocal2;
             stringLocal3 = BufferedFile.stringState0366;
             mixedSupport099Local1.sceneWidgetPart002State0002.performAction0556(4193, 11, rgbSpriteLocal2, stringLocal3);
             mixedSupport099Local4 = SceneWidget.mixedSupport099State0001;
-            rgbSpriteLocal5 = UiComponentPart010.rgbSpriteArrayState0010[1];
+            rgbSpriteLocal5 = AlphaWidgetContainer.rgbSpriteArrayState0010[1];
             rgbSpriteLocal37 = rgbSpriteLocal5;
             rgbSpriteLocal41 = rgbSpriteLocal37;
             rgbSpriteLocal38 = rgbSpriteLocal5;
             stringLocal6 = UiComponentPart008.stringState0122;
             mixedSupport099Local4.sceneWidgetPart002State0002.performAction0556(4193, 12, rgbSpriteLocal5, stringLocal6);
             mixedSupport099Local7 = SceneWidget.mixedSupport099State0001;
-            rgbSpriteLocal8 = UiComponentPart010.rgbSpriteArrayState0010[2];
+            rgbSpriteLocal8 = AlphaWidgetContainer.rgbSpriteArrayState0010[2];
             rgbSpriteLocal39 = rgbSpriteLocal8;
             rgbSpriteLocal42 = rgbSpriteLocal39;
             rgbSpriteLocal40 = rgbSpriteLocal8;
@@ -82,19 +82,19 @@ final class RenderingSupport002 {
           }
           if (integerArgument1 == integerArgument3) {
             mixedSupport099Local10 = SceneWidget.mixedSupport099State0001;
-            rgbSpriteLocal33 = UiComponentPart010.rgbSpriteArrayState0010[0];
+            rgbSpriteLocal33 = AlphaWidgetContainer.rgbSpriteArrayState0010[0];
             rgbSpriteLocal34 = rgbSpriteLocal33;
             rgbSpriteLocal43 = rgbSpriteLocal33;
             stringLocal11 = UiComponentPart008.stringState0121;
             mixedSupport099Local10.sceneWidgetPart002State0002.performAction0556(4193, 11, rgbSpriteLocal33, stringLocal11);
             mixedSupport099Local12 = SceneWidget.mixedSupport099State0001;
-            rgbSpriteLocal13 = UiComponentPart010.rgbSpriteArrayState0010[1];
+            rgbSpriteLocal13 = AlphaWidgetContainer.rgbSpriteArrayState0010[1];
             rgbSpriteLocal44 = rgbSpriteLocal13;
             rgbSpriteLocal45 = rgbSpriteLocal13;
             stringLocal14 = ReturnedShape.stringState0473;
             mixedSupport099Local12.sceneWidgetPart002State0002.performAction0556(integerArgument1 ^ 4192, 12, rgbSpriteLocal13, stringLocal14);
             mixedSupport099Local15 = SceneWidget.mixedSupport099State0001;
-            rgbSpriteLocal16 = UiComponentPart010.rgbSpriteArrayState0010[2];
+            rgbSpriteLocal16 = AlphaWidgetContainer.rgbSpriteArrayState0010[2];
             rgbSpriteLocal46 = rgbSpriteLocal16;
             rgbSpriteLocal47 = rgbSpriteLocal16;
             stringLocal17 = DelegatingCanvas.stringState0125;
@@ -102,15 +102,15 @@ final class RenderingSupport002 {
           }
           if (integerArgument3 == 2) {
             mixedSupport099Local18 = SceneWidget.mixedSupport099State0001;
-            rgbSpriteLocal35 = UiComponentPart010.rgbSpriteArrayState0010[0];
+            rgbSpriteLocal35 = AlphaWidgetContainer.rgbSpriteArrayState0010[0];
             stringLocal19 = DekoBlokoClient.stringState0096;
             mixedSupport099Local18.sceneWidgetPart002State0002.performAction0556(4193, 11, rgbSpriteLocal35, stringLocal19);
             mixedSupport099Local20 = SceneWidget.mixedSupport099State0001;
-            rgbSpriteLocal21 = UiComponentPart010.rgbSpriteArrayState0010[1];
+            rgbSpriteLocal21 = AlphaWidgetContainer.rgbSpriteArrayState0010[1];
             stringLocal22 = MixedSupport093.stringState0392;
             mixedSupport099Local20.sceneWidgetPart002State0002.performAction0556(integerArgument1 ^ 4192, 12, rgbSpriteLocal21, stringLocal22);
             mixedSupport099Local23 = SceneWidget.mixedSupport099State0001;
-            rgbSpriteLocal24 = UiComponentPart010.rgbSpriteArrayState0010[2];
+            rgbSpriteLocal24 = AlphaWidgetContainer.rgbSpriteArrayState0010[2];
             stringLocal25 = MixedSupport018.stringState0088;
             mixedSupport099Local23.sceneWidgetPart002State0002.performAction0556(4193, 13, rgbSpriteLocal24, stringLocal25);
           }
@@ -319,7 +319,7 @@ final class RenderingSupport002 {
         if (integerArgument2 < 89) {
           floatState0002 = 0.6883823275566101f;
         }
-        MixedSupport005.uiComponentPart016State0001.performAction0210(0, 0, (byte) -72);
+        MixedSupport005.uiComponentPart016State0001.drawAllLayers(0, 0, (byte) -72);
     }
 
     final static RgbSprite computeRgbSprite0242(int integerArgument1, int integerArgument2, int integerArgument3) {

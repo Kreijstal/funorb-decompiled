@@ -11,17 +11,17 @@ final class li extends RichTextWidget {
     private RgbSprite field_Q;
     static String field_P;
 
-    final boolean a(byte param0, w param1) {
+    final boolean takeFocus(byte param0, UiWidget param1) {
         RuntimeException var3 = null;
-        w var4 = null;
+        UiWidget var4 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 != 44) {
-            var4 = (w) null;
-            this.a((byte) -87, (w) null, 66, 22);
+            var4 = (UiWidget) null;
+            this.updatePointer((byte) -87, (UiWidget) null, 66, 22);
           }
           return false;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -67,10 +67,10 @@ final class li extends RichTextWidget {
         vc.field_K[91] = 42;
     }
 
-    final void a(byte param0, w param1, int param2, int param3) {
+    final void updatePointer(byte param0, UiWidget param1, int param2, int param3) {
         try {
           this.field_M = this.field_M + 1;
-          super.a(param0, param1, param2, param3);
+          super.updatePointer(param0, param1, param2, param3);
         } catch (RuntimeException runtimeException) {
           throw ld.wrapClientException((Throwable) ((Object) runtimeException), "li.FA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
         }
@@ -81,7 +81,7 @@ final class li extends RichTextWidget {
         try {
           this.field_O = param1;
           this.field_N = param0;
-          this.a(param5, param4, true, param3, param2);
+          this.setBounds(param5, param4, true, param3, param2);
         } catch (RuntimeException runtimeException) {
           throw ld.wrapClientException((Throwable) ((Object) runtimeException), "li.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }
@@ -103,7 +103,7 @@ final class li extends RichTextWidget {
         }
     }
 
-    final void a(byte param0, int param1, int param2, int param3) {
+    final void drawWidget(byte param0, int param1, int param2, int param3) {
         String var5;
         sc var6;
         int var13;
@@ -134,11 +134,11 @@ final class li extends RichTextWidget {
           this.field_u = var5;
           this.rebuildHotspotBounds(true);
         }
-        super.a(param0, param1, param2, param3);
+        super.drawWidget(param0, param1, param2, param3);
         var6Lifetime1 = this.field_N.getValidationStatus((byte) 119);
         var8 = (TextWidgetRenderer) ((Object) this.field_i);
         var9 = param2 + this.field_t;
-        var10 = var8.getTextOriginY((w) (this), param0 ^ -20231, param1) + (var8.getTextLayout((w) (this), (byte) 101).getLayoutHeight(0) >> 1);
+        var10 = var8.getTextOriginY((UiWidget) (this), param0 ^ -20231, param1) + (var8.getTextLayout((UiWidget) (this), (byte) 101).getLayoutHeight(0) >> 1);
         if (var6Lifetime1 == jj.field_e) {
           var18 = BufferedRandomAccessFile.field_b[0];
           var11 = var18.field_r << 1;

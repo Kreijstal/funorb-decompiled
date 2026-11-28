@@ -94,7 +94,7 @@ final class ok extends InteractiveWidget {
         field_D = null;
     }
 
-    private ok(String param0, WidgetRenderer param1, ca param2) {
+    private ok(String param0, WidgetRenderer param1, WidgetEventListener param2) {
         super(param0, param1, param2);
         try {
           this.renderer = ah.field_c.field_i;
@@ -124,7 +124,7 @@ final class ok extends InteractiveWidget {
         }
     }
 
-    ok(String param0, ca param1, boolean param2) {
+    ok(String param0, WidgetEventListener param1, boolean param2) {
         this(param0, param1);
         try {
           this.field_A = param2 ? true : false;
@@ -138,7 +138,7 @@ final class ok extends InteractiveWidget {
         super.activateFromInput(param0, param1, param2, param3);
     }
 
-    private ok(String param0, ca param1) {
+    private ok(String param0, WidgetEventListener param1) {
         this(param0, ah.field_c.field_k, param1);
         try {
           this.renderer = ah.field_c.field_i;

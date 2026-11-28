@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class vf implements jm {
+final class vf implements WidgetRenderer {
     static tk field_a;
     static String[] field_b;
     static String field_c;
@@ -46,7 +46,7 @@ final class vf implements jm {
         }
     }
 
-    public final void a(byte param0, int param1, int param2, boolean param3, mf param4) {
+    public final void paintWidget(byte param0, int param1, int param2, boolean param3, UiWidget param4) {
         int var6_int = 0;
         RuntimeException var6 = null;
         int var7 = 0;
@@ -67,7 +67,7 @@ final class vf implements jm {
             ((InteractiveWidget) (param4)).field_I) {
             var8.drawAdditive((param4.field_y - var8.field_v >> 1) + (var6_int + 1), (-var8.field_u + param4.field_C >> 1) + 1 + var7, 256);
           }
-          if (!param4.d((byte) -67)) {
+          if (!param4.isFocused((byte) -67)) {
             return;
           }
           rc.a(param4.field_C - 4, false, var6_int + 2, param4.field_y - 4, 2 + var7);

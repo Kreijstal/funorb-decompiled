@@ -86,15 +86,15 @@ final class MixedSupport039 {
           if (!MixedSupport098.computeBoolean1219(25973, 1)) {
             return false;
           }
-          NetworkSupport012.integerState0759 = UiComponentPart006.cipherPacketBufferState0001.readUnsignedByte((byte) -64);
-          UiComponentPart006.cipherPacketBufferState0001.position = 0;
+          NetworkSupport012.integerState0759 = LabeledWidgetContainer.cipherPacketBufferState0001.readUnsignedByte((byte) -64);
+          LabeledWidgetContainer.cipherPacketBufferState0001.position = 0;
         }
         if (NetworkSupport012.integerState0759 == -2) {
           if (!MixedSupport098.computeBoolean1219(25973, 2)) {
             return false;
           }
-          NetworkSupport012.integerState0759 = UiComponentPart006.cipherPacketBufferState0001.readUnsignedShort(3);
-          UiComponentPart006.cipherPacketBufferState0001.position = 0;
+          NetworkSupport012.integerState0759 = LabeledWidgetContainer.cipherPacketBufferState0001.readUnsignedShort(3);
+          LabeledWidgetContainer.cipherPacketBufferState0001.position = 0;
         }
         return MixedSupport098.computeBoolean1219(25973, NetworkSupport012.integerState0759);
     }
@@ -122,15 +122,15 @@ final class MixedSupport039 {
             if (MixedSupport020.fullscreenCanvasState0001 != null &&
               MixedSupport020.fullscreenCanvasState0001.booleanState0156) {
               MixedSupport118.performAction1548(false);
-              MixedSupport124.uiComponentPart016State0003.performAction0831((byte) -105, new UiComponentPart014(MixedSupport124.uiComponentPart016State0003, MixedSupport071.mixedSupport080State0002));
+              MixedSupport124.uiComponentPart016State0003.showDialog((byte) -105, new UiComponentPart014(MixedSupport124.uiComponentPart016State0003, MixedSupport071.mixedSupport080State0002));
             }
             return;
           }
           integerLocal1 = -26 % ((integerArgument1 - 37) / 58);
-          MixedSupport124.uiComponentPart016State0003.computeBoolean0217(SceneWidgetPart006.integerState0343, true, DualNodeDeque.integerState0016, 29166);
-          MixedSupport124.uiComponentPart016State0003.performAction0837(0);
+          MixedSupport124.uiComponentPart016State0003.processPointerInput(SceneWidgetPart006.integerState0343, true, DualNodeDeque.integerState0016, 29166);
+          MixedSupport124.uiComponentPart016State0003.advanceDialogs(0);
           while (DualNodeDeque.computeBoolean0027(50)) {
-            MixedSupport124.uiComponentPart016State0003.computeBoolean0209(MixedSupport146.integerState0931, ArchiveRequestManager.characterState0002, (byte) 121);
+            MixedSupport124.uiComponentPart016State0003.processKeyInput(MixedSupport146.integerState0931, ArchiveRequestManager.characterState0002, (byte) 121);
           }
           return;
         } catch (java.lang.RuntimeException caughtParameterLocal5) {

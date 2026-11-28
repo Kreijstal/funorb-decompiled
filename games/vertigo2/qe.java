@@ -30,7 +30,7 @@ final class qe extends RichTextWidget {
         int var1 = 118 / ((11 - param0) / 39);
     }
 
-    final void a(boolean param0, int param1, int param2, int param3) {
+    final void drawWidget(boolean param0, int param1, int param2, int param3) {
         String var5;
         ba var6;
         int var9;
@@ -84,7 +84,7 @@ final class qe extends RichTextWidget {
             this.text = var17;
             this.rebuildHotspotBounds((byte) -118);
           }
-          super.a(param0, param1, param2, param3);
+          super.drawWidget(param0, param1, param2, param3);
           var6 = this.field_J.getValidationStatus(-23996);
           var34 = (TextWidgetRenderer) ((Object) this.listener);
           var9 = this.x + param2;
@@ -151,7 +151,7 @@ final class qe extends RichTextWidget {
             this.text = var23;
             this.rebuildHotspotBounds((byte) -118);
           }
-          super.a(param0, param1, param2, param3);
+          super.drawWidget(param0, param1, param2, param3);
           var6 = this.field_J.getValidationStatus(-23996);
           var35 = (TextWidgetRenderer) ((Object) this.listener);
           var9Lifetime1 = this.x + param2;
@@ -220,7 +220,7 @@ final class qe extends RichTextWidget {
           this.text = var5;
           this.rebuildHotspotBounds((byte) -118);
         }
-        super.a(param0, param1, param2, param3);
+        super.drawWidget(param0, param1, param2, param3);
         var6Lifetime1 = this.field_J.getValidationStatus(-23996);
         var36 = (TextWidgetRenderer) ((Object) this.listener);
         var9Lifetime2 = this.x + param2;
@@ -281,13 +281,13 @@ final class qe extends RichTextWidget {
         this.field_bb.drawAdditive(-(var30.field_x >> 1) + var9Lifetime2, -var30.field_B + var10Lifetime2, 256);
     }
 
-    final void a(byte param0, int param1, int param2, UiWidget param3) {
+    final void updatePointer(byte param0, int param1, int param2, UiWidget param3) {
         try {
           this.field_Y = this.field_Y + 1;
           if (param0 < 6) {
             this.field_bb = (Sprite) null;
           }
-          super.a((byte) 25, param1, param2, param3);
+          super.updatePointer((byte) 25, param1, param2, param3);
         } catch (RuntimeException runtimeException) {
           throw wn.wrapClientException((Throwable) ((Object) runtimeException), "qe.E(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
@@ -304,7 +304,7 @@ final class qe extends RichTextWidget {
         }
     }
 
-    final boolean a(byte param0, UiWidget param1) {
+    final boolean takeFocus(byte param0, UiWidget param1) {
         RuntimeException var3 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -340,22 +340,22 @@ final class qe extends RichTextWidget {
         String stackIn_15_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (bf.field_b == um.field_F) {
+          if (bf.field_b == ArrayWidgetContainer.field_F) {
             stackIn_2_0 = null;
             return (AccountServiceResult) (stackIn_2_0);
           }
           if (param1 < 42) {
             field_Z = 3;
           }
-          if (AccountCreationResultPanel.field_qb == um.field_F &&
+          if (AccountCreationResultPanel.field_qb == ArrayWidgetContainer.field_F &&
             param0.equals(uk.field_u)) {
-            um.field_F = l.field_a;
+            ArrayWidgetContainer.field_F = l.field_a;
             stackIn_11_0 = MatchingFieldValidator.field_p;
             return stackIn_11_0;
           }
           uk.field_u = param0;
           MatchingFieldValidator.field_p = null;
-          um.field_F = bf.field_b;
+          ArrayWidgetContainer.field_F = bf.field_b;
           stackIn_9_0 = null;
           return (AccountServiceResult) (stackIn_9_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

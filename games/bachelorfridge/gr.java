@@ -51,7 +51,7 @@ final class gr {
               var2 = lga.a(true, new String[]{bd.field_k}, uma.field_O);
             }
             if (MoveOrder.field_k) {
-              vf.a((String) null, 0, param0 + 115, (String) null, (String) (var2), 2);
+              ModalDialog.a((String) null, 0, param0 + 115, (String) null, (String) (var2), 2);
               BoardChangeBatch.b(-1);
             }
           }
@@ -102,7 +102,7 @@ final class gr {
               }
               var8 = stackIn_58_0;
               var4 = var4 + var3 + var8;
-              if (!hl.field_I) {
+              if (!AlphaWidgetContainer.field_I) {
                 if (sea.field_j) {
                   var5 = "";
                   var4 = "<col=999999>" + var4 + qca.field_m + "</col>";
@@ -119,7 +119,7 @@ final class gr {
               if (!SnowEvent.e(param0 - 1377)) {
                 if (HailAnimation.field_A.field_T &&
                   -HailAnimation.field_A.field_D + mk.field_p < var9) {
-                  if (hl.field_I) {
+                  if (AlphaWidgetContainer.field_I) {
                     var1 = "Broken!";
                   } else {
                     var1 = qca.field_m;
@@ -127,7 +127,7 @@ final class gr {
                 }
                 if (0 != HailAnimation.field_A.field_R &&
                   var9 > HailAnimation.field_A.field_nb &&
-                  !hl.field_I) {
+                  !AlphaWidgetContainer.field_I) {
                   HomingMissileEvent.d(param0 ^ 127);
                 }
               }

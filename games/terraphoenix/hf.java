@@ -13,7 +13,7 @@ final class hf extends DefaultTextWidgetRenderer {
     static Sprite[] field_w;
     static boolean field_t;
 
-    public final void a(int param0, UiWidget param1, int param2, int param3, boolean param4) {
+    public final void paintWidget(int param0, UiWidget param1, int param2, int param3, boolean param4) {
         UiWidget stackIn_5_0 = null;
         RuntimeException stackIn_32_0 = null;
         StringBuilder stackIn_32_1 = null;
@@ -64,7 +64,7 @@ final class hf extends DefaultTextWidgetRenderer {
               }
             }
           }
-          if (param1.d(-111)) {
+          if (param1.isFocused(-111)) {
             var13 = this.field_A[5];
             if (var13 != null) {
               var13.a(param1, this.field_v, this, param0, (byte) -127, param2);

@@ -557,7 +557,7 @@ final class cd extends ea implements Cloneable {
         int var8 = 0;
         var8 = CrazyCrystals.field_B;
         try {
-          if (ab.field_D == null) {
+          if (ModalDialog.field_D == null) {
             BoundedRandomAccessFile.field_e = BoundedRandomAccessFile.field_e - 1;
             if (param2 != null) {
               var6_int = param2.getAttributedPlayerMask(false);

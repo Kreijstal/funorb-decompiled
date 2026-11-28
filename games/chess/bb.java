@@ -128,8 +128,8 @@ final class bb {
           var11 = var10;
           var10.field_cb = 1;
           var11.field_fb = 1;
-          ma.field_G = new ci(0L, var8);
-          ma.field_G.field_Ab = rh.a(ao.a(param0, "heading", 2993, "lobby"), param3 ^ 9527);
+          DequeWidgetContainer.field_G = new ci(0L, var8);
+          DequeWidgetContainer.field_G.field_Ab = rh.a(ao.a(param0, "heading", 2993, "lobby"), param3 ^ 9527);
           bj.field_eb = new ci(0L, (ci) null);
           bj.field_eb.field_Ab = il.a(param3 + 105, 4210752, 120, false, false, 8421504);
           ChessMatchState.field_o = new ci(0L, (ci) null);

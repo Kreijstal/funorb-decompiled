@@ -89,12 +89,12 @@ final class m {
           } else {
             stackIn_42_2 = "{...}";
           }
-          throw dd.wrapClientException((Throwable) ((Object) stackIn_41_0), ((StringBuilder) (Object) stackIn_41_1).append(stackIn_42_2).append(')').toString());
+          throw DraggableWidgetContainer.wrapClientException((Throwable) ((Object) stackIn_41_0), ((StringBuilder) (Object) stackIn_41_1).append(stackIn_42_2).append(')').toString());
         }
     }
 
     final static void a(boolean param0, int param1) {
-        bm.field_d.a((byte) 82, param1, 0);
+        bm.field_d.drawAllLayers((byte) 82, param1, 0);
     }
 
     static {

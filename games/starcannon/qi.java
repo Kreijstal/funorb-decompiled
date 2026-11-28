@@ -98,7 +98,7 @@ final class qi {
     }
 
     final static id a(int param0) {
-        id var1 = new id(BufferedRandomAccessFile.field_m, gb.field_w, fc.field_d[0], qd.field_H[0], gg.field_d[0], gh.field_C[0], og.field_c[0], of.field_g);
+        id var1 = new id(BufferedRandomAccessFile.field_m, gb.field_w, fc.field_d[0], ModalDialog.field_H[0], gg.field_d[0], gh.field_C[0], og.field_c[0], of.field_g);
         rc.b((byte) 64);
         if (param0 == 14609) {
           return var1;

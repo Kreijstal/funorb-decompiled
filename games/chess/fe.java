@@ -112,7 +112,7 @@ final class fe {
           while (var3_int < ka.field_g.length) {
             var5 = cb.field_k[var3_int];
             if (var5 >= 0) {
-              var6 = kn.a(true, false, ka.field_g[var3_int]);
+              var6 = SingleChildWidgetContainer.a(true, false, ka.field_g[var3_int]);
               var4 = var4 + MouseWheelInput.field_b;
               var7 = ob.field_C - (var6 >> 1);
               if (ve.a(var4, -m.field_d + var7, var6 + (m.field_d << 1), param2, (kl.field_i << 1) + vh.field_c, param1 ^ 3, param0)) {

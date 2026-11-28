@@ -49,7 +49,7 @@ final class KeyboardInput implements java.awt.event.KeyListener, java.awt.event.
         RuntimeException var2 = null;
         try {
           if (null != hj.field_c) {
-            ie.field_D = 0;
+            AlphaWidgetContainer.field_D = 0;
             var2_int = param0.getKeyCode();
             if (0 <= var2_int &&
               cg.field_j.length > var2_int) {
@@ -93,7 +93,7 @@ final class KeyboardInput implements java.awt.event.KeyListener, java.awt.event.
         int var3Lifetime1;
         try {
           if (hj.field_c != null) {
-            ie.field_D = 0;
+            AlphaWidgetContainer.field_D = 0;
             var2_int = param0.getKeyCode();
             if (var2_int >= 0 &&
               var2_int < cg.field_j.length) {
@@ -191,7 +191,7 @@ final class KeyboardInput implements java.awt.event.KeyListener, java.awt.event.
           var1_int = AccountNameAvailabilityValidator.field_m;
           var2 = 0;
           if (SecondaryNodeDeque.field_a == 2) {
-            var3_long = dd.correctedCurrentTimeMillis(57) - af.field_x;
+            var3_long = dd.correctedCurrentTimeMillis(57) - DropTargetWidgetContainer.field_x;
             var2 = (int)((-var3_long + 10999L) / 1000L);
             if (var2 < 0) {
               var2 = 0;
@@ -252,7 +252,7 @@ final class KeyboardInput implements java.awt.event.KeyListener, java.awt.event.
             var8Lifetime1 = -(var7Lifetime1 >> 1) + ee.field_b;
             if (var4 >= 0) {
               if (var4 == ja.field_c.field_k) {
-                stackIn_45_0 = ie.field_y;
+                stackIn_45_0 = AlphaWidgetContainer.field_y;
               } else {
                 stackIn_45_0 = wj.field_d;
               }
@@ -267,7 +267,7 @@ final class KeyboardInput implements java.awt.event.KeyListener, java.awt.event.
               ai.field_h.drawString(var6, var8Lifetime1, var1_int + LoginPanel.field_D, var5, -1);
               var1_int = var1_int + (pk.field_c + (kc.field_S + mc.field_h));
             } else {
-              rh.field_h.drawString(var6, var8Lifetime1, kf.field_v + var1_int, var5, -1);
+              rh.field_h.drawString(var6, var8Lifetime1, SingleChildWidgetContainer.field_v + var1_int, var5, -1);
               var1_int = var1_int + sg.field_e;
             }
           }

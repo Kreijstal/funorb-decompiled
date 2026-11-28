@@ -98,7 +98,7 @@ final class fc {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3_ref = null;
         try {
-          var3 = vl.b(-1, param2);
+          var3 = DraggableWidgetContainer.b(-1, param2);
           if (param0 != 19) {
             field_d = 73;
           }

@@ -6,7 +6,7 @@ abstract class ArchiveRequest extends DualLinkNode {
     static IndexedSprite[] field_u;
     static int field_s;
     static String field_q;
-    static hh field_t;
+    static DraggableWidgetContainer field_t;
     volatile boolean field_v;
     boolean field_r;
 
@@ -60,7 +60,7 @@ abstract class ArchiveRequest extends DualLinkNode {
 
     final static void e(byte param0) {
         if (param0 < 5) {
-          field_t = (hh) null;
+          field_t = (DraggableWidgetContainer) null;
         }
         kb.field_b.field_p = 0;
         kb.field_b.field_j = 0;
@@ -79,7 +79,7 @@ abstract class ArchiveRequest extends DualLinkNode {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 < 111) {
-            field_t = (hh) null;
+            field_t = (DraggableWidgetContainer) null;
           }
           stackIn_3_0 = LoginPanel.a(10, param1, 113, true);
           return stackIn_3_0;

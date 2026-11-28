@@ -32,7 +32,7 @@ final class hm {
         if (param0 != 22812) {
           return (String) null;
         }
-        return pi.field_J;
+        return DraggableWidgetContainer.field_J;
     }
 
     final static void a(int param0, int param1, gk param2, int param3, int param4, BitmapFont param5, int param6, int param7, int param8, gk param9, int param10, gk param11, BitmapFont param12, int param13, boolean param14, int param15, int param16, int param17, int param18, int param19, int param20) {

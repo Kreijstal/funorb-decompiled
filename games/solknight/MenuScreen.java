@@ -106,7 +106,7 @@ final class MenuScreen {
                           FullscreenFocusCanvas.field_b = 10;
                           MidiPcmStream.field_A = 0;
                           ib.field_h = 0;
-                          kf.field_G = new Asteroid[10];
+                          ModalDialog.field_G = new Asteroid[10];
                           fg.field_a = 0;
                           pg.field_e = false;
                           lk.field_f = 0;
@@ -374,7 +374,7 @@ final class MenuScreen {
               ia.field_hb = 0;
               lk.field_f = 0;
               ud.field_k = 0;
-              kf.field_G = null;
+              ModalDialog.field_G = null;
               pk.a((byte) -96, 1, true);
               PacketBuffer.a(param0, -1, param1 ^ -2601);
               stackIn_40_0 = (ob.field_l > 0) ? 0 : 9;
@@ -447,7 +447,7 @@ final class MenuScreen {
         }
         if (!IntrusiveNode.field_f[this.field_d]) {
           var3 = ab.field_s[this.field_d][param0];
-          var4 = te.field_I[var3];
+          var4 = AlphaWidgetContainer.field_I[var3];
           if (var4 == null) {
             return jb.field_a[this.field_d];
           }
@@ -488,7 +488,7 @@ final class MenuScreen {
         var4 = this.b(123, param2);
         var5 = this.a(param2, -3);
         var6 = ab.field_s[this.field_d][param2];
-        var7 = te.field_I[var6];
+        var7 = AlphaWidgetContainer.field_I[var6];
         if (param0) {
           return;
         }
@@ -559,7 +559,7 @@ final class MenuScreen {
           return;
         }
         if (9 == this.field_d) {
-          var2 = ke.updateMembershipSlides(true, true);
+          var2 = LabeledWidgetContainer.updateMembershipSlides(true, true);
           if (var2 == 3) {
             fh.openSubscriptionPage(62, ia.g(param0 ^ -89));
           }
@@ -608,10 +608,10 @@ final class MenuScreen {
           if (3 > param1) {
             return ah.field_i[this.field_d];
           }
-          return ah.field_i[this.field_d] + si.field_F[this.field_d];
+          return ah.field_i[this.field_d] + SingleChildWidgetContainer.field_F[this.field_d];
         }
         int var3 = 121 % ((45 - param0) / 60);
-        return ah.field_i[this.field_d] + si.field_F[this.field_d] * param1;
+        return ah.field_i[this.field_d] + SingleChildWidgetContainer.field_F[this.field_d] * param1;
     }
 
     private final boolean b(byte param0, int param1) {
@@ -635,7 +635,7 @@ final class MenuScreen {
         }
         if (!IntrusiveNode.field_f[this.field_d]) {
           var3 = ab.field_s[this.field_d][param0];
-          var4 = te.field_I[var3];
+          var4 = AlphaWidgetContainer.field_I[var3];
           if (var4 == null) {
             return jb.field_a[this.field_d];
           }
@@ -690,7 +690,7 @@ final class MenuScreen {
           stackIn_12_2 = (SecondaryNodeDequeIterator.field_d == 0) ? false : true;
           stackIn_15_3 = (lk.field_e == 0) ? false : true;
           var4Lifetime2 = stackIn_11_0 + ((BinaryBitmapFont) (Object) stackIn_11_1).lineCount(GameKeyHandler.a(stackIn_12_2, stackIn_15_3, false, (byte) 8), 600) * var3;
-          si.field_F[this.field_d] = var4Lifetime2 + 2 - ah.field_i[this.field_d];
+          SingleChildWidgetContainer.field_F[this.field_d] = var4Lifetime2 + 2 - ah.field_i[this.field_d];
           var4Lifetime2 += 41;
           stackIn_17_0 = var4Lifetime2;
           stackIn_17_1 = BufferedSocket.field_b;
@@ -827,7 +827,7 @@ final class MenuScreen {
         var2Lifetime1 = 224;
         var3Lifetime1 = 416;
         var4 = ah.field_i[this.field_d];
-        var5 = si.field_F[this.field_d] * this.field_f.field_g + var4;
+        var5 = SingleChildWidgetContainer.field_F[this.field_d] * this.field_f.field_g + var4;
         if (this.field_d == 5) {
           var2Lifetime1 = 100;
           var4 = 40;
@@ -1267,7 +1267,7 @@ final class MenuScreen {
         var0 = var15;
         while (var15 <= 10) {
             var1 = 8 * (-1 + var15);
-            field_g[var15] = ke.a(ke.a(tk.a(field_c[6][6 + var1], 65280L), ke.a(ke.a(ke.a(tk.a(1095216660480L, field_c[3][3 + var1]), ke.a(ke.a(tk.a(-72057594037927936L, field_c[0][var1]), tk.a(71776119061217280L, field_c[1][1 + var1])), tk.a(280375465082880L, field_c[2][var1 + 2]))), tk.a(field_c[4][4 + var1], 4278190080L)), tk.a(field_c[5][5 + var1], 16711680L))), tk.a(255L, field_c[7][var1 + 7]));
+            field_g[var15] = LabeledWidgetContainer.a(LabeledWidgetContainer.a(tk.a(field_c[6][6 + var1], 65280L), LabeledWidgetContainer.a(LabeledWidgetContainer.a(LabeledWidgetContainer.a(tk.a(1095216660480L, field_c[3][3 + var1]), LabeledWidgetContainer.a(LabeledWidgetContainer.a(tk.a(-72057594037927936L, field_c[0][var1]), tk.a(71776119061217280L, field_c[1][1 + var1])), tk.a(280375465082880L, field_c[2][var1 + 2]))), tk.a(field_c[4][4 + var1], 4278190080L)), tk.a(field_c[5][5 + var1], 16711680L))), tk.a(255L, field_c[7][var1 + 7]));
             var15++;
         }
     }

@@ -31,7 +31,7 @@ class RichTextWidget extends InteractiveComponent {
 
     final void performAction1364(int integerArgument1, int integerArgument2, int integerArgument3, int integerArgument4) {
         int integerLocal1 = -125 % ((-61 - integerArgument1) / 43);
-        this.performAction0222(((TextWidgetRenderer) ((Object) this.callbackContract004State0006)).getPreferredHeight((UiComponent) (this), -125), integerArgument4, integerArgument2, integerArgument3, -16555);
+        this.setBounds(((TextWidgetRenderer) ((Object) this.callbackContract004State0006)).getPreferredHeight((UiComponent) (this), -125), integerArgument4, integerArgument2, integerArgument3, -16555);
     }
 
     final static void performAction1363(boolean booleanArgument1, byte byteArgument2) {
@@ -64,7 +64,7 @@ class RichTextWidget extends InteractiveComponent {
         }
     }
 
-    void performAction0218(UiComponent uiComponentArgument1, int integerArgument2, int integerArgument3, int integerArgument4) {
+    void updatePointer(UiComponent uiComponentArgument1, int integerArgument2, int integerArgument3, int integerArgument4) {
         int integerLocal1 = 0;
         int integerLocal2 = 0;
         RuntimeException stackRuntimeExceptionLocal3 = null;
@@ -73,7 +73,7 @@ class RichTextWidget extends InteractiveComponent {
         RuntimeException caughtExceptionLocal6 = null;
         RuntimeException runtimeExceptionLocal7 = null;
         try {
-          super.performAction0218(uiComponentArgument1, 48, integerArgument3, integerArgument4);
+          super.updatePointer(uiComponentArgument1, 48, integerArgument3, integerArgument4);
           this.networkSupport010State0002 = null;
           if (this.booleanState0018) {
             integerLocal1 = -this.integerState0110 + (HashNode.integerState0069 - integerArgument4);
@@ -142,10 +142,10 @@ class RichTextWidget extends InteractiveComponent {
         }
     }
 
-    void performAction0162(int integerArgument1, int integerArgument2, int integerArgument3, int integerArgument4) {
+    void drawWidget(int integerArgument1, int integerArgument2, int integerArgument3, int integerArgument4) {
         int integerLocal1 = 0;
         int integerLocal2 = 0;
-        super.performAction0162(integerArgument1, -128, integerArgument3, integerArgument4);
+        super.drawWidget(integerArgument1, -128, integerArgument3, integerArgument4);
         if (integerArgument2 >= -103) {
           this.rebuildHotspotBounds(112);
         }
@@ -189,7 +189,7 @@ class RichTextWidget extends InteractiveComponent {
         networkSupport010Local1 = (TextHotspotBounds) (this.nodeDequeState0025.beginBackward((byte) 49));
         if (integerArgument1 != 1) {
           uiComponentLocal4 = (UiComponent) null;
-          this.performAction0218((UiComponent) null, 8, -16, -10);
+          this.updatePointer((UiComponent) null, 8, -16, -10);
         }
         while (networkSupport010Local1 != null) {
           networkSupport010Local2 = networkSupport010Local1;
@@ -217,7 +217,7 @@ class RichTextWidget extends InteractiveComponent {
         nodeDequeState0026 = null;
     }
 
-    boolean computeBoolean0221(boolean booleanArgument1, UiComponent uiComponentArgument2) {
+    boolean takeFocus(boolean booleanArgument1, UiComponent uiComponentArgument2) {
         RuntimeException runtimeExceptionLocal1 = null;
         RuntimeException stackRuntimeExceptionLocal2 = null;
         StringBuilder stackStringBuilderLocal3 = null;
@@ -260,8 +260,8 @@ class RichTextWidget extends InteractiveComponent {
         }
     }
 
-    final void performAction0222(int integerArgument1, int integerArgument2, int integerArgument3, int integerArgument4, int integerArgument5) {
-        super.performAction0222(integerArgument1, integerArgument2, integerArgument3, integerArgument4, integerArgument5);
+    final void setBounds(int integerArgument1, int integerArgument2, int integerArgument3, int integerArgument4, int integerArgument5) {
+        super.setBounds(integerArgument1, integerArgument2, integerArgument3, integerArgument4, integerArgument5);
         this.rebuildHotspotBounds(2874);
     }
 
@@ -332,8 +332,8 @@ class RichTextWidget extends InteractiveComponent {
         }
     }
 
-    RichTextWidget(String stringArgument1, CallbackContract004 callbackContract004Argument2) {
-        super(stringArgument1, (CallbackContract006) null);
+    RichTextWidget(String stringArgument1, WidgetRenderer callbackContract004Argument2) {
+        super(stringArgument1, (WidgetEventListener) null);
         this.networkSupport010State0002 = null;
         try {
           this.callbackContract004State0006 = callbackContract004Argument2;

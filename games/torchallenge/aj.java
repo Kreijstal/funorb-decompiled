@@ -174,9 +174,9 @@ final class aj {
             var9 = 0;
             var10 = 0;
             while (var8 > var9) {
-              var11 = hi.field_G[var9];
+              var11 = AlphaWidgetContainer.field_G[var9];
               var6[0][var10] = LevelDecoder.field_b[var11];
-              var19[0][4 * var10] = bg.field_Q[var11];
+              var19[0][4 * var10] = LabeledWidgetContainer.field_Q[var11];
               var19[0][var10 * 4 + 1] = BufferedCacheFile.field_p[var11];
               var19[0][var10 * 4 + 2] = ea.field_a[var11];
               var19[0][3 + var10 * 4] = cb.field_e[var11];
@@ -192,9 +192,9 @@ final class aj {
             var14 = 0;
             var10Lifetime1 = var14;
             while (var8 > var9Lifetime1) {
-              var11Lifetime1 = hi.field_G[var9Lifetime1 + var5];
+              var11Lifetime1 = AlphaWidgetContainer.field_G[var9Lifetime1 + var5];
               var6[1][var14] = LevelDecoder.field_b[var11Lifetime1];
-              var19[1][var14 * 4] = bg.field_Q[var11Lifetime1];
+              var19[1][var14 * 4] = LabeledWidgetContainer.field_Q[var11Lifetime1];
               var19[1][1 + 4 * var14] = BufferedCacheFile.field_p[var11Lifetime1];
               var19[1][2 + var14 * 4] = ea.field_a[var11Lifetime1];
               var19[1][3 + 4 * var14] = cb.field_e[var11Lifetime1];

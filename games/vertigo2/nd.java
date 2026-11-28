@@ -82,7 +82,7 @@ final class nd extends c {
           un.field_Lb.c(-24634);
           un.field_Lb.a(true, param0);
           var13 = un.field_Lb;
-          var3 = sd.field_N;
+          var3 = ModalDialogHost.field_N;
           var4 = no.field_e;
           var13.field_n.c(0, var4, -1220, var3, 0);
           return;

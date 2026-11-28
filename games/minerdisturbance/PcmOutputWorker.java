@@ -9,7 +9,7 @@ final class PcmOutputWorker implements Runnable {
     static String field_e;
     volatile boolean field_b;
     static String field_a;
-    static ma field_d;
+    static DraggableWidgetContainer field_d;
     volatile boolean field_i;
 
     final static int a(int param0, int param1, boolean param2, int param3, pf param4, String param5, pf param6) {
@@ -136,7 +136,7 @@ final class PcmOutputWorker implements Runnable {
               }
               if (var9Lifetime1 != 99) {
                 rj.field_d = -1;
-                oj.field_K = var9Lifetime1;
+                AlphaWidgetContainer.field_K = var9Lifetime1;
                 qd.field_Q = aa.field_l;
               } else {
                 IntrusiveDeque.a(0, hl.a(-92));
@@ -164,7 +164,7 @@ final class PcmOutputWorker implements Runnable {
           }
           if (qd.field_Q == aa.field_l &&
             kj.b(-9319)) {
-            if (oj.field_K != 255) {
+            if (AlphaWidgetContainer.field_K != 255) {
               TextLayout.field_g = kj.field_a.readString(false);
             } else {
               var9_ref_String = kj.field_a.readNullableString(81);
@@ -174,7 +174,7 @@ final class PcmOutputWorker implements Runnable {
             }
             si.a(-82);
             FrameTimer.field_c = false;
-            stackIn_53_0 = oj.field_K;
+            stackIn_53_0 = AlphaWidgetContainer.field_K;
             return stackIn_53_0;
           }
           if (AwtRasterBuffer.field_i == null) {
@@ -188,8 +188,8 @@ final class PcmOutputWorker implements Runnable {
               stackIn_61_0 = 249;
               return stackIn_61_0;
             }
-            var9Lifetime3 = jc.field_E;
-            jc.field_E = ic.field_h;
+            var9Lifetime3 = SingleChildWidgetContainer.field_E;
+            SingleChildWidgetContainer.field_E = ic.field_h;
             FrameTimer.field_c = true;
             ic.field_h = var9Lifetime3;
           }

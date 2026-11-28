@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class tb implements ci {
+final class tb implements WidgetRenderer {
     private int field_f;
     static sg field_b;
     static int[] field_h;
@@ -15,9 +15,9 @@ final class tb implements ci {
     private int field_l;
     private int field_k;
 
-    public final void a(int param0, lk param1, int param2, int param3, boolean param4) {
+    public final void paintWidget(int param0, UiWidget param1, int param2, int param3, boolean param4) {
         int var10 = 0;
-        lk stackIn_4_0 = null;
+        UiWidget stackIn_4_0 = null;
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
         String stackIn_16_2 = null;
@@ -31,7 +31,7 @@ final class tb implements ci {
         var11 = Main.field_T;
         try {
           if (param1 instanceof h) {
-            stackIn_4_0 = (lk) (param1);
+            stackIn_4_0 = (UiWidget) (param1);
           } else {
             stackIn_4_0 = null;
           }

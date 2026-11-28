@@ -34,21 +34,21 @@ final class cf {
             if (PacketBuffer.field_k != null &&
               PacketBuffer.field_k.field_e) {
               lb.a(true);
-              ConfirmedEmailAvailabilityValidator.field_n.b((byte) 74, (pj) (new gg(ConfirmedEmailAvailabilityValidator.field_n, hh.field_d)));
+              ConfirmedEmailAvailabilityValidator.field_n.showDialog((byte) 74, (UiWidget) (new gg(ConfirmedEmailAvailabilityValidator.field_n, hh.field_d)));
             }
             return;
           }
-          ConfirmedEmailAvailabilityValidator.field_n.a(PasswordValidator.field_q, false, true, lc.field_t);
-          ConfirmedEmailAvailabilityValidator.field_n.o(117);
+          ConfirmedEmailAvailabilityValidator.field_n.processPointerInput(PasswordValidator.field_q, false, true, lc.field_t);
+          ConfirmedEmailAvailabilityValidator.field_n.advanceDialogs(117);
           var1_int = 17 % ((param0 - 53) / 47);
           while (nf.e(32722)) {
-            ConfirmedEmailAvailabilityValidator.field_n.a(od.field_k, true, ob.field_K);
+            ConfirmedEmailAvailabilityValidator.field_n.processKeyInput(od.field_k, true, ob.field_K);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw dd.wrapClientException((Throwable) ((Object) var1), "cf.B(" + param0 + ')');
+          throw DraggableWidgetContainer.wrapClientException((Throwable) ((Object) var1), "cf.B(" + param0 + ')');
         }
     }
 
@@ -258,7 +258,7 @@ final class cf {
           } else {
             stackIn_75_2 = "{...}";
           }
-          throw dd.wrapClientException((Throwable) ((Object) stackIn_71_0), ((StringBuilder) (Object) stackIn_74_1).append(stackIn_75_2).append(',').append(param5).append(')').toString());
+          throw DraggableWidgetContainer.wrapClientException((Throwable) ((Object) stackIn_71_0), ((StringBuilder) (Object) stackIn_74_1).append(stackIn_75_2).append(',').append(param5).append(')').toString());
         }
     }
 

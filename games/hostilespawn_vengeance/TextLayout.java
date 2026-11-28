@@ -73,7 +73,7 @@ abstract class TextLayout {
           if (param0.field_i != 0 ||
             param0.field_e != 0) {
             for (var2_int = 0; var2_int < qb.field_i; var2_int++) {
-              var3 = rj.field_J[var2_int];
+              var3 = DraggableWidgetContainer.field_J[var2_int];
               if (2 == var3.field_f &&
                 param0.field_i == var3.field_i &&
                 param0.field_e == var3.field_e) {

@@ -13,8 +13,8 @@ final class jn {
 
     final static void a(int param0, lda param1, int param2, boolean param3) {
         try {
-          ge.field_I = param0;
-          raa.field_I = param1;
+          LabeledWidgetContainer.field_I = param0;
+          DraggableWidgetContainer.field_I = param1;
           wo.field_j = param2;
           if (param3) {
             field_a = (String) null;

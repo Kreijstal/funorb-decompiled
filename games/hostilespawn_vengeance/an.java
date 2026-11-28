@@ -120,7 +120,7 @@ final class an extends ql {
                 ln.field_a.field_c[-ln.field_a.field_d + var6] = 4;
                 ln.field_a.field_c[var6] = 4;
                 CrossfadingMidiPcmStream.a(0, 1);
-                nh.field_E.copyCoordinatesFrom((byte) 46, this.field_g);
+                LabeledWidgetContainer.field_E.copyCoordinatesFrom((byte) 46, this.field_g);
                 this.field_i[var3Lifetime1].field_l = 24 * var12.field_j.field_e - 100;
                 this.field_i[var3Lifetime1].field_d = var12.field_j.field_g * 24 - 98;
                 if (var3Lifetime1 == 0) {
@@ -231,7 +231,7 @@ final class an extends ql {
           this.field_i[var2Lifetime1] = new v(ra.field_f, 0, 0, 200, false);
         }
         CrossfadingMidiPcmStream.a(9, 1);
-        nh.field_E.setCoordinates(-1, 8360, -1);
+        LabeledWidgetContainer.field_E.setCoordinates(-1, 8360, -1);
         this.field_o = false;
     }
 

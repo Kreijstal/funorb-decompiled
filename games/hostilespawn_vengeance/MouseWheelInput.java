@@ -70,7 +70,7 @@ abstract class MouseWheelInput {
 
     final static void b(byte param0) {
         if (im.field_e != null) {
-          im.field_e.l(-115);
+          im.field_e.snapAndPruneDialogs(-115);
           if (null != hj.field_t) {
             hj.field_t.f((byte) -79);
           }

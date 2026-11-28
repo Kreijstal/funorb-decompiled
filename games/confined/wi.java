@@ -34,7 +34,7 @@ final class wi {
 
     final static String c(int param0) {
         int var1 = -102 % ((-82 - param0) / 41);
-        if (oe.field_Q == ValidatedTextField.field_fb) {
+        if (ModalDialog.field_Q == ValidatedTextField.field_fb) {
           return kc.field_n;
         }
         return LightningArc.field_gb;

@@ -109,7 +109,7 @@ final class ti {
         try {
           if (null == ji.field_a) {
             ji.field_a = new rk(sd.field_c, rk.field_ab);
-            sd.field_c.b(ji.field_a, (byte) 117);
+            sd.field_c.showDialog(ji.field_a, (byte) 117);
           }
           ji.field_a.a(param2, param3, param0, (byte) -63);
           SoftwareRasterizer.clearRaster();

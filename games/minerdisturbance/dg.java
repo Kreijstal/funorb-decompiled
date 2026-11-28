@@ -10,12 +10,12 @@ final class dg {
         wi.field_C = true;
         MusicPatchPcmStream.field_B = true;
         if (param0 == 117) {
-          mb.field_b.n(21974);
+          mb.field_b.closeAllDialogs(21974);
           DirectByteStorage.a(false, ArchiveProvider.field_a, param0 ^ 117);
           return;
         }
         field_b = false;
-        mb.field_b.n(21974);
+        mb.field_b.closeAllDialogs(21974);
         DirectByteStorage.a(false, ArchiveProvider.field_a, param0 ^ 117);
     }
 
@@ -47,7 +47,7 @@ final class dg {
             var4 = param0.substring(1 + var2_int);
             var5 = ha.a(92, var3);
             if (var5 == null) {
-              return hm.a(var4, true);
+              return ModalDialogHost.a(var4, true);
             }
             stackIn_14_0 = var5;
             return stackIn_14_0;

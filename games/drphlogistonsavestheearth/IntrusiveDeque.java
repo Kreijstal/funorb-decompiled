@@ -123,7 +123,7 @@ final class IntrusiveDeque {
     }
 
     final static void a(int param0, int param1, boolean param2, int param3) {
-        pj.field_E = param1;
+        DequeWidgetContainer.field_E = param1;
         if (param2) {
           field_a = (String) null;
         }
@@ -186,14 +186,14 @@ final class IntrusiveDeque {
         byte[] var21;
         int[] var22;
         var8 = DrPhlogistonSavesTheEarth.field_D ? 1 : 0;
-        var1 = new RgbSprite[bd.field_M];
+        var1 = new RgbSprite[ModalDialog.field_M];
         if (param0 != -22) {
           field_g = (he[]) null;
         }
-        for (var2 = 0; bd.field_M > var2; var2++) {
+        for (var2 = 0; ModalDialog.field_M > var2; var2++) {
           var3 = RichTextWidget.field_J[var2] * gf.field_o[var2];
           var21 = a.field_e[var2];
-          if (!bd.field_O[var2]) {
+          if (!ModalDialog.field_O[var2]) {
             var10 = new int[var3];
             var22 = var10;
             for (var6 = 0; var6 < var3; var6++) {

@@ -12,7 +12,7 @@ final class gq {
         km.a(117);
         ff.field_a = true;
         cf.field_f = true;
-        dc.field_a.h(21);
+        dc.field_a.closeAllDialogs(21);
         jk.a(MenuLayer.field_a, (byte) -79, false);
     }
 

@@ -142,7 +142,7 @@ abstract class NetworkGameClient extends GameAppletShell {
             throw new IllegalStateException();
           }
           if (var4 == 1) {
-            var5_int = qm.a(gh.h(26500), param1 + 194, rh.b(param1 + 459));
+            var5_int = UiWidget.a(gh.h(26500), param1 + 194, rh.b(param1 + 459));
             if (-1 != var5_int) {
               PuzzleTile.setAccountResponseMessage((byte) 125, gj.field_o, re.field_j, var5_int);
               gj.field_o = null;
@@ -162,9 +162,9 @@ abstract class NetworkGameClient extends GameAppletShell {
             }
           }
           if (3 == var4) {
-            if (-1 != ei.field_E &&
-              ei.field_E != 0) {
-              ei.field_E = -1;
+            if (-1 != LabeledWidgetContainer.field_E &&
+              LabeledWidgetContainer.field_E != 0) {
+              LabeledWidgetContainer.field_E = -1;
               cd.e((byte) -70);
             }
             if (param0) {
@@ -275,11 +275,11 @@ abstract class NetworkGameClient extends GameAppletShell {
         var11.dispose();
         this.setBackground(java.awt.Color.black);
         ul.field_g = this.field_o;
-        th.a(ul.field_g, -127);
+        AlphaWidgetContainer.a(ul.field_g, -127);
         qe.a((byte) -106, param3, this.field_A, ResultScene.field_a, 5000, param7, 5000, this.field_n, this.field_v, ul.field_g, this.field_u, this.field_r, this.field_z, this.field_s);
         pb.a(this.field_A, ResultScene.field_a, param7, this.field_s, 1843275042, this.field_v, this.field_u, this.field_z, ul.field_g);
         o.b(-25281);
-        ok.field_g = qm.createMouseWheelInput(1);
+        ok.field_g = UiWidget.createMouseWheelInput(1);
         mm.a(jd.field_D, true);
         sl.field_q = param1;
         tp.field_b = param5;
@@ -414,7 +414,7 @@ abstract class NetworkGameClient extends GameAppletShell {
         if (var2 == 0 ||
           1 == var2) {
           if (hp.field_s == 11 &&
-            ei.field_E == 0) {
+            LabeledWidgetContainer.field_E == 0) {
             MouseInputHandler.a((byte) 63);
           }
           return var2;
@@ -499,35 +499,35 @@ abstract class NetworkGameClient extends GameAppletShell {
             ee.field_e = 15000L + lo.correctedCurrentTimeMillis((byte) 107);
           }
         }
-        if (-1 == ei.field_E ||
-          ei.field_E == 0) {
-          stackIn_25_0 = (ei.field_E != -1) ? 0 : 1;
+        if (-1 == LabeledWidgetContainer.field_E ||
+          LabeledWidgetContainer.field_E == 0) {
+          stackIn_25_0 = (LabeledWidgetContainer.field_E != -1) ? 0 : 1;
           var3Lifetime1 = stackIn_25_0;
-          ei.field_E = sc.a((byte) -98);
+          LabeledWidgetContainer.field_E = sc.a((byte) -98);
           if (var3Lifetime1 != 0 &&
-            ei.field_E == 0 &&
+            LabeledWidgetContainer.field_E == 0 &&
             hp.field_s == 11 &&
             !BoundedRandomAccessFile.c(-11)) {
             MouseInputHandler.a((byte) 63);
           }
-          if (ei.field_E != -1 &&
-            ei.field_E != 0) {
+          if (LabeledWidgetContainer.field_E != -1 &&
+            LabeledWidgetContainer.field_E != 0) {
             ee.field_e = lo.correctedCurrentTimeMillis((byte) -65) + 15000L;
           }
         }
-        if (-1 != ei.field_E &&
-          0 != ei.field_E) {
+        if (-1 != LabeledWidgetContainer.field_E &&
+          0 != LabeledWidgetContainer.field_E) {
           if (eq.field_j < 10) {
-            if (ei.field_E == 3) {
+            if (LabeledWidgetContainer.field_E == 3) {
               this.a(0, "js5crc");
             } else {
-              if (ei.field_E == 4) {
+              if (LabeledWidgetContainer.field_E == 4) {
                 this.a(param1 ^ 15000, "js5io");
               } else {
-                if (ei.field_E == 2) {
+                if (LabeledWidgetContainer.field_E == 2) {
                   this.a(param1 - 15000, "js5connect_full");
                 } else {
-                  if (ei.field_E != 5) {
+                  if (LabeledWidgetContainer.field_E != 5) {
                     this.a(0, "js5connect");
                   } else {
                     this.a(0, "outofdate");
@@ -538,12 +538,12 @@ abstract class NetworkGameClient extends GameAppletShell {
           } else {
             if (hp.field_s >= 10) {
               tn.e((byte) -127);
-              if (ei.field_E == 3) {
+              if (LabeledWidgetContainer.field_E == 3) {
                 rg.a(gm.field_a, 256, -257);
               } else {
-                if (ei.field_E != 4) {
-                  if (ei.field_E != 2) {
-                    if (ei.field_E == 5) {
+                if (LabeledWidgetContainer.field_E != 4) {
+                  if (LabeledWidgetContainer.field_E != 2) {
+                    if (LabeledWidgetContainer.field_E == 5) {
                       rg.a(fm.field_o, 5, param1 - 15257);
                     } else {
                       rg.a(AgeValidator.field_j, 256, -257);
@@ -559,18 +559,18 @@ abstract class NetworkGameClient extends GameAppletShell {
             }
           }
         }
-        if ((ei.field_E != -1 &&
-          ei.field_E != 0 ||
+        if ((LabeledWidgetContainer.field_E != -1 &&
+          LabeledWidgetContainer.field_E != 0 ||
           BoundedRandomAccessFile.c(-11)) &&
           ee.field_e <= lo.correctedCurrentTimeMillis((byte) -86)) {
           an.field_r = false;
-          if (ei.field_E != -1 &&
-            ei.field_E != 0) {
-            ei.field_E = -1;
+          if (LabeledWidgetContainer.field_E != -1 &&
+            LabeledWidgetContainer.field_E != 0) {
+            LabeledWidgetContainer.field_E = -1;
             cd.e((byte) -60);
           }
         }
-        if (ei.field_E == 0 &&
+        if (LabeledWidgetContainer.field_E == 0 &&
           !BoundedRandomAccessFile.c(param1 - 15011)) {
           nf.field_f = false;
         }

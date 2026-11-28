@@ -71,10 +71,10 @@ abstract class ArchiveProvider {
 
     final static RgbSprite[] a(int param0, int param1, byte param2, int param3, int param4) {
         if (param2 >= 126) {
-          return od.a(3, 105, 1, param0, 1, param4, param3, 1, param1);
+          return DropTargetWidgetContainer.a(3, 105, 1, param0, 1, param4, param3, 1, param1);
         }
         ArchiveProvider.a(-106);
-        return od.a(3, 105, 1, param0, 1, param4, param3, 1, param1);
+        return DropTargetWidgetContainer.a(3, 105, 1, param0, 1, param4, param3, 1, param1);
     }
 
     final static boolean a(int[] param0, int param1) {

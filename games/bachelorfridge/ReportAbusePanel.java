@@ -31,17 +31,17 @@ final class ReportAbusePanel extends WidgetContainer implements WidgetActionList
         int var2 = 4;
         int var3 = 326;
         int var4 = -var2 + var3 >> 1;
-        this.field_C.a(this.width - var3 >> 1, 30, (byte) 59, var4, -var2 + (-48 + this.height));
-        this.field_F.a((this.width - var3 >> 1) + var4 + var2, 30, (byte) 59, var4, -var2 + this.height - 48);
-        this.field_E.a(this.width - var3 >> 1, 30, (byte) 59, var3, -(2 * var2) + this.height - 78);
+        this.field_C.setBounds(this.width - var3 >> 1, 30, (byte) 59, var4, -var2 + (-48 + this.height));
+        this.field_F.setBounds((this.width - var3 >> 1) + var4 + var2, 30, (byte) 59, var4, -var2 + this.height - 48);
+        this.field_E.setBounds(this.width - var3 >> 1, 30, (byte) 59, var3, -(2 * var2) + this.height - 78);
         this.field_C.listener = (WidgetListener) (this);
         this.field_E.listener = (WidgetListener) (this);
         this.field_F.listener = (WidgetListener) (this);
         this.field_E.tooltip = qha.field_h;
         this.field_F.tooltip = lna.field_h;
-        this.c(this.field_C, -121);
-        this.c(this.field_E, 122);
-        this.c(this.field_F, 33);
+        this.addChild(this.field_C, -121);
+        this.addChild(this.field_E, 122);
+        this.addChild(this.field_F, 33);
     }
 
     public final void onWidgetActivated(int param0, InteractiveWidget param1, int param2, byte param3, int param4) {
@@ -109,13 +109,13 @@ final class ReportAbusePanel extends WidgetContainer implements WidgetActionList
             return true;
           }
           if (param1 == 98) {
-            stackIn_8_0 = this.a(-123, param3);
+            stackIn_8_0 = this.focusPreviousChild(-123, param3);
             return stackIn_8_0;
           }
           if (param1 != 99) {
             return false;
           }
-          stackIn_11_0 = this.b(param3, 1);
+          stackIn_11_0 = this.focusNextChild(param3, 1);
           return stackIn_11_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

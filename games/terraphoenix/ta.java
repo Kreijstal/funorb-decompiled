@@ -9,12 +9,12 @@ final class ta {
         try {
           DefaultTextWidgetRenderer.field_k = true;
           ok.field_h = param1 ? true : false;
-          nb.field_b = new si(jl.field_I, be.field_x, param0, qi.field_b, ok.field_h);
+          nb.field_b = new si(AlphaWidgetContainer.field_I, be.field_x, param0, qi.field_b, ok.field_h);
           if (param2 != 10) {
             CharSequence var4 = (CharSequence) null;
             ta.a((CharSequence) null, 126);
           }
-          jl.field_I.a((UiWidget) (nb.field_b), (byte) -1);
+          AlphaWidgetContainer.field_I.showDialog((UiWidget) (nb.field_b), (byte) -1);
         } catch (RuntimeException runtimeException) {
           throw qk.wrapException((Throwable) ((Object) runtimeException), "ta.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }

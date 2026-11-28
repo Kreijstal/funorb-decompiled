@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ti implements nn {
+final class ti implements WidgetRenderer {
     private int field_g;
     static GridPoint field_f;
     static String field_d;
@@ -72,7 +72,7 @@ final class ti implements nn {
         IntrusiveDeque.field_c.addLast(new hm(param2, param0, q.field_n, FrameTimer.field_b, NanoFrameTimer.field_m, fa.field_a), 89);
     }
 
-    public final void a(int param0, int param1, int param2, ag param3, boolean param4) {
+    public final void paintWidget(int param0, int param1, int param2, UiWidget param3, boolean param4) {
         int stackIn_5_0 = 0;
         RuntimeException stackIn_21_0 = null;
         StringBuilder stackIn_21_1 = null;
@@ -88,7 +88,7 @@ final class ti implements nn {
         var11 = HostileSpawn.field_I ? 1 : 0;
         try {
           if (!param3.field_u &&
-            !param3.g(-9015)) {
+            !param3.isFocused(-9015)) {
             stackIn_5_0 = 2188450;
           } else {
             stackIn_5_0 = 3249872;
@@ -98,7 +98,7 @@ final class ti implements nn {
             return;
           }
           this.field_h.drawParagraph("<u=" + Integer.toString(var6_int, 16) + ">" + param3.field_n + "</u>", param1 + param3.field_v, param0 + param3.field_m, param3.field_s, param3.field_x, var6_int, -1, this.field_e, this.field_g, this.field_h.field_y + this.field_h.field_F);
-          if (param3.g(param2 - 24445)) {
+          if (param3.isFocused(param2 - 24445)) {
             var7 = this.field_h.stringWidth(param3.field_n);
             var8 = this.field_h.field_y + this.field_h.field_F;
             var9 = param1 + param3.field_v;

@@ -4,21 +4,21 @@
 final class aj {
     int field_e;
     int field_f;
-    ci field_i;
+    WidgetRenderer field_i;
     int field_j;
     int field_c;
-    ci field_n;
+    WidgetRenderer field_n;
     int field_g;
     static IntrusiveDeque field_s;
-    ci field_r;
+    WidgetRenderer field_r;
     int field_d;
     private int field_k;
     static aj field_a;
-    ci field_h;
+    WidgetRenderer field_h;
     int field_l;
     private boolean field_b;
     BitmapFont field_o;
-    ci field_m;
+    WidgetRenderer field_m;
     static java.awt.Color field_p;
     static td field_q;
 
@@ -178,7 +178,7 @@ final class aj {
         nd var14Lifetime2;
         try {
           var17 = new DefaultTextWidgetRenderer(param1, 2, 2, 2236962, 1, 1, 1, param1.field_x + param1.field_s + 2);
-          this.field_h = (ci) ((Object) var17);
+          this.field_h = (WidgetRenderer) ((Object) var17);
           var17.field_h = 16777215;
           var4 = new nd();
           var17.a(var4, (byte) 113);
@@ -205,21 +205,21 @@ final class aj {
           var5[4] = (RgbSprite) ((Object) var18);
           var4.a((byte) -1, 4).a(true, (byte) -74).a(var5, true);
           var4.a((byte) -1, 5).a(wf.a(0, 1, 0, 0, 65793), true).a(true, (byte) -104).c(-1, (byte) 73);
-          this.field_i = (ci) ((Object) var4);
+          this.field_i = (WidgetRenderer) ((Object) var4);
           var6 = new nd(var4, true);
           var6.field_i = 0;
           var7 = new nd(var4, true);
           var7.field_i = 0;
           var7.a(we.a(102, 8947848), -120);
           var7.a((byte) -1, 1).a(we.a(param0 + 48, 11184810), true).c(2236962, (byte) 48);
-          this.field_m = (ci) ((Object) new db(param1, 2, 2, 16777215, -1, 5, 5, 15, 15, 4473924));
+          this.field_m = (WidgetRenderer) ((Object) new db(param1, 2, 2, 16777215, -1, 5, 5, 15, 15, 4473924));
           discarded$0 = new ug(param1, 2, 2, 16777215, -1, 16777215, 16729156, 4473924);
           discarded$1 = new tb(param1, 16777215, param0, 125269879, 4473924, 3, 268435455);
           var8 = new nd();
           var17.a(var8, (byte) -101);
           var8.a((byte) -1, 0).a(fb.a(18457, 15658734, 7829367, 10066329), true).c(1118481, (byte) 68).a(-1, (byte) -118);
           var8.a((byte) -1, 4).a(true, (byte) -93).a(var5, true);
-          this.field_r = (ci) ((Object) var8);
+          this.field_r = (WidgetRenderer) ((Object) var8);
           var9 = new RgbSprite[9];
           var9[4] = new RgbSprite(2, 1);
           var10 = new RgbSprite[9];

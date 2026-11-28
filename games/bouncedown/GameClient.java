@@ -78,7 +78,7 @@ abstract class GameClient extends AppletShell {
                             RichTextWidget.a(param0 ^ 1, var3);
                           }
                         } else {
-                          bj.a(jc.field_g, (byte) -125, pe.field_d, DebouncedFieldValidator.field_e);
+                          DraggableWidgetContainer.a(jc.field_g, (byte) -125, pe.field_d, DebouncedFieldValidator.field_e);
                         }
                       } else {
                         this.h((byte) 101);
@@ -93,7 +93,7 @@ abstract class GameClient extends AppletShell {
                   ConfirmedEmailAvailabilityValidator.b(false);
                 }
               } else {
-                hb.j(1790);
+                LabeledWidgetContainer.j(1790);
               }
             }
           } else {
@@ -309,7 +309,7 @@ abstract class GameClient extends AppletShell {
             PcmResampler.a((byte) -10);
           }
           if (kg.field_k == null) {
-            kg.field_k = lc.h(-126);
+            kg.field_k = DequeWidgetContainer.h(-126);
             qc.field_c = pb.c(0);
           }
           pj.a(ea.field_e, qc.field_c, false, kg.field_k);
@@ -335,11 +335,11 @@ abstract class GameClient extends AppletShell {
           }
           else {
             sa.field_k = 12;
-            ri.field_z = true;
+            ModalDialog.field_z = true;
           }
         }
         if (12 == sa.field_k &&
-          !ri.field_z) {
+          !ModalDialog.field_z) {
           sa.field_k = 13;
         }
         if (sa.field_k == 13) {
@@ -566,7 +566,7 @@ abstract class GameClient extends AppletShell {
             fl.a(8192, DiskCacheWorker.b(0));
           }
           if (var4 == 9) {
-            hb.a((byte) -117, DiskCacheWorker.b(0));
+            LabeledWidgetContainer.a((byte) -117, DiskCacheWorker.b(0));
           }
           if (var4 == 10) {
             hh.field_p.a(true, 17);

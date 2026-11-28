@@ -718,7 +718,7 @@ final class ChessMatchSession {
           if (!wn.field_f) {
             if (DisplayNameSelectionPanel.field_O <= 1) {
               if (DisplayNameSelectionPanel.field_O == 1) {
-                qh.field_b.field_q = fm.field_U;
+                qh.field_b.field_q = ModalDialogHost.field_U;
               } else {
                 qh.field_b.field_q = be.field_c;
               }
@@ -1199,7 +1199,7 @@ final class ChessMatchSession {
           EmailFormatValidator.field_n = new ta(554, 62, ng.field_b, me.field_d, (RgbSprite) null, false, true);
           hd.field_g = new ta(606, 62, tb.field_c, vn.field_rb, (RgbSprite) null, false, true);
           rf.field_d = new ta(580, 37, be.field_d, df.field_e, (RgbSprite) null, false, true);
-          b.field_b = new ta(580, 89, kn.field_G, vn.field_xb, (RgbSprite) null, false, true);
+          b.field_b = new ta(580, 89, SingleChildWidgetContainer.field_G, vn.field_xb, (RgbSprite) null, false, true);
           nb.field_Fb = new wg(100, 100, 108, bj.field_bb[0], wh.field_c, bj.field_bb[1], dj.field_t, (RgbSprite) null);
           this.field_a = param3;
           this.field_C = param4;

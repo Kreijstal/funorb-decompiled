@@ -49,20 +49,20 @@ final class IntroSequenceScreen extends DungeonAssaultScreen {
     }
 
     IntroSequenceScreen() {
-        String var1 = ii.field_E.toUpperCase();
+        String var1 = DequeWidgetContainer.field_E.toUpperCase();
         BinaryBitmapFont var2 = IntrusiveNode.field_c;
-        rf.field_O = new ob(0L, (ok) null, (ok) null, (ok) null, jm.field_i, "");
-        rf.field_O.field_D = 10;
-        rf.field_O.field_gb = 630 - rf.field_O.field_Tb.field_L.field_y;
-        rf.field_O.field_ic.field_fb = 16777215;
-        rf.field_O.field_ic.field_y = (BitmapFont) ((Object) var2);
-        rf.field_O.field_ic.field_lb = 1;
-        rf.field_O.field_ic.field_B = rf.field_O.field_Tb.field_L.field_v;
-        rf.field_O.field_Tb.field_B = rf.field_O.field_Tb.field_L.field_v;
-        rf.field_O.field_B = rf.field_O.field_Tb.field_L.field_v;
-        rf.field_O.field_ic.field_ob = rf.field_O.field_Tb.field_L.field_y;
-        rf.field_O.field_Tb.field_ob = rf.field_O.field_Tb.field_L.field_y;
-        rf.field_O.field_ob = rf.field_O.field_Tb.field_L.field_y;
+        ModalDialog.field_O = new ob(0L, (ok) null, (ok) null, (ok) null, jm.field_i, "");
+        ModalDialog.field_O.field_D = 10;
+        ModalDialog.field_O.field_gb = 630 - ModalDialog.field_O.field_Tb.field_L.field_y;
+        ModalDialog.field_O.field_ic.field_fb = 16777215;
+        ModalDialog.field_O.field_ic.field_y = (BitmapFont) ((Object) var2);
+        ModalDialog.field_O.field_ic.field_lb = 1;
+        ModalDialog.field_O.field_ic.field_B = ModalDialog.field_O.field_Tb.field_L.field_v;
+        ModalDialog.field_O.field_Tb.field_B = ModalDialog.field_O.field_Tb.field_L.field_v;
+        ModalDialog.field_O.field_B = ModalDialog.field_O.field_Tb.field_L.field_v;
+        ModalDialog.field_O.field_ic.field_ob = ModalDialog.field_O.field_Tb.field_L.field_y;
+        ModalDialog.field_O.field_Tb.field_ob = ModalDialog.field_O.field_Tb.field_L.field_y;
+        ModalDialog.field_O.field_ob = ModalDialog.field_O.field_Tb.field_L.field_y;
         ub.field_i = new tf(IntrusiveNode.field_c, var1, ag.field_c);
         ok.field_Y = new tf(IntrusiveNode.field_c, var1, ml.field_b);
         ro.field_B = false;
@@ -152,12 +152,12 @@ final class IntroSequenceScreen extends DungeonAssaultScreen {
             if (sf.field_g != 0) {
               SoftwareRasterizer.fillRectangleAlpha(0, 0, 640, 480, 0, sf.field_g);
             }
-            rf.field_O.b(false, 84);
-            (rf.field_O.field_hb ? ok.field_Y : ub.field_i).b(rf.field_O.field_D, 32, rf.field_O.field_gb + rf.field_O.field_ob / 2 - ok.field_Y.field_i / 2);
+            ModalDialog.field_O.b(false, 84);
+            (ModalDialog.field_O.field_hb ? ok.field_Y : ub.field_i).b(ModalDialog.field_O.field_D, 32, ModalDialog.field_O.field_gb + ModalDialog.field_O.field_ob / 2 - ok.field_Y.field_i / 2);
           } else {
             ia.field_K.a(-101);
-            rf.field_O.b(false, 125);
-            (!rf.field_O.field_hb ? ub.field_i : ok.field_Y).b(rf.field_O.field_D, 32, -(ok.field_Y.field_i / 2) + (rf.field_O.field_ob / 2 + rf.field_O.field_gb));
+            ModalDialog.field_O.b(false, 125);
+            (!ModalDialog.field_O.field_hb ? ub.field_i : ok.field_Y).b(ModalDialog.field_O.field_D, 32, -(ok.field_Y.field_i / 2) + (ModalDialog.field_O.field_ob / 2 + ModalDialog.field_O.field_gb));
           }
         }
     }
@@ -170,8 +170,8 @@ final class IntroSequenceScreen extends DungeonAssaultScreen {
         if (!param0) {
           return;
         }
-        rf.field_O.a(-2, true);
-        if (rf.field_O.field_G != 0) {
+        ModalDialog.field_O.a(-2, true);
+        if (ModalDialog.field_O.field_G != 0) {
           this.finishIntroSequence(true, 4096);
           return;
         }

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class fm implements cg {
+final class fm implements WidgetRenderer {
     private int field_g;
     private int field_m;
     private int field_f;
@@ -16,9 +16,9 @@ final class fm implements cg {
     static long field_j;
     private int field_a;
 
-    public final void a(boolean param0, int param1, vg param2, int param3, int param4) {
+    public final void paintWidget(boolean param0, int param1, UiWidget param2, int param3, int param4) {
         int var10 = 0;
-        vg stackIn_6_0 = null;
+        UiWidget stackIn_6_0 = null;
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
         String stackIn_16_2 = null;
@@ -35,7 +35,7 @@ final class fm implements cg {
             field_c = (String) null;
           }
           if (param2 instanceof tl) {
-            stackIn_6_0 = (vg) (param2);
+            stackIn_6_0 = (UiWidget) (param2);
           } else {
             stackIn_6_0 = null;
           }
@@ -92,7 +92,7 @@ final class fm implements cg {
         int var5Lifetime1;
         var12 = DrPhlogistonSavesTheEarth.field_D ? 1 : 0;
         try {
-          var14 = dh.field_N;
+          var14 = LabeledWidgetContainer.field_N;
           var2 = var14.readUnsignedByte(31760);
           var3 = (b) (u.field_f.beginForward(-11151));
           while (var3 != null) {

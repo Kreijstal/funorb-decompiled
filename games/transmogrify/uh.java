@@ -62,7 +62,7 @@ abstract class uh {
 
     final static void a(java.awt.Component param0, int param1, int param2, PlatformTaskDispatcher param3, MidiPcmStream param4, boolean param5) {
         try {
-          aj.a(param0, param1, 22290, param4, param5, param1, param3, 1024);
+          DequeWidgetContainer.a(param0, param1, 22290, param4, param5, param1, param3, 1024);
           if (param2 != -21) {
             field_q = 117;
           }

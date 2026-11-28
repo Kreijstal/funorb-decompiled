@@ -215,7 +215,7 @@ final class na {
                 var3 = Runtime.getRuntime();
                 var5 = (Object[]) null;
                 var4 = (Long) (var2.invoke((Object) (var3), (Object[]) null));
-                ia.field_C = (int)(var4.longValue() / 1048576L) + 1;
+                AlphaWidgetContainer.field_C = (int)(var4.longValue() / 1048576L) + 1;
                 decompiledRegionSelector0 = 0;
               } catch (java.lang.Throwable decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;

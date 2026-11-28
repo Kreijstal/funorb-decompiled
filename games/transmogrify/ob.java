@@ -11,10 +11,10 @@ final class ob extends RichTextWidget {
     private Sprite field_H;
     static String field_F;
 
-    final void a(int param0, byte param1, UiWidget param2, int param3) {
+    final void updatePointer(int param0, byte param1, UiWidget param2, int param3) {
         try {
           this.field_K = this.field_K + 1;
-          super.a(param0, param1, param2, param3);
+          super.updatePointer(param0, param1, param2, param3);
         } catch (RuntimeException runtimeException) {
           throw ch.wrapClientException((Throwable) ((Object) runtimeException), "ob.B(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
@@ -27,7 +27,7 @@ final class ob extends RichTextWidget {
         return (String) null;
     }
 
-    final void a(int param0, int param1, int param2, byte param3) {
+    final void drawWidget(int param0, int param1, int param2, byte param3) {
         String var5;
         rc var6;
         int var7;
@@ -47,7 +47,7 @@ final class ob extends RichTextWidget {
               var14 = Transmogrify.field_A ? 1 : 0;
               var6 = this.field_L.getValidationStatus(27835);
               if (var6 != ek.field_a &&
-                fi.field_u != var6) {
+                SingleChildWidgetContainer.field_u != var6) {
                 var5 = this.field_L.getValidationMessage(30523);
                 if (var5 == null) {
                   var5 = this.field_J;
@@ -68,13 +68,13 @@ final class ob extends RichTextWidget {
           this.rebuildHotspotBounds(-108);
         }
         var7 = 97 % ((77 - param3) / 34);
-        super.a(param0, param1, param2, (byte) 111);
+        super.drawWidget(param0, param1, param2, (byte) 111);
         var6Lifetime1 = this.field_L.getValidationStatus(27835);
         var9 = (TextWidgetRenderer) ((Object) this.field_q);
         var10 = param0 + this.field_p;
         var11 = var9.getTextOriginY((UiWidget) (this), 68, param1) + (var9.getTextLayout((UiWidget) (this), -2).getLayoutHeight(126) >> 1);
         if (ek.field_a != var6Lifetime1 &&
-          fi.field_u != var6Lifetime1) {
+          SingleChildWidgetContainer.field_u != var6Lifetime1) {
           if (SocketConnector.field_d == var6Lifetime1) {
             var16 = ai.field_b[2];
             var16.drawAdditive(var10, var11 - (var16.field_m >> 1), 256);
@@ -96,7 +96,7 @@ final class ob extends RichTextWidget {
             CrossfadingMidiPcmStream.a(this.field_H, 256);
           }
           var15.drawRotatedAbout(112, 144, var15.field_r << 4, var15.field_s << 4, -this.field_K << 10, 4096);
-          fi.c(true);
+          SingleChildWidgetContainer.c(true);
           this.field_H.drawAdditive(var10 - (var15.field_r >> 1), var11 - var15.field_s, 256);
         }
     }
@@ -106,7 +106,7 @@ final class ob extends RichTextWidget {
         try {
           this.field_J = param1;
           this.field_L = param0;
-          this.a(62, param3, param2, param4, param5);
+          this.setBounds(62, param3, param2, param4, param5);
         } catch (RuntimeException runtimeException) {
           throw ch.wrapClientException((Throwable) ((Object) runtimeException), "ob.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }
@@ -177,7 +177,7 @@ final class ob extends RichTextWidget {
         }
     }
 
-    final boolean a(UiWidget param0, int param1) {
+    final boolean takeFocus(UiWidget param0, int param1) {
         RuntimeException var3 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;

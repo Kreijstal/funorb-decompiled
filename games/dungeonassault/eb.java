@@ -12,7 +12,7 @@ final class eb extends InteractiveWidget {
     private int field_Q;
     static String field_I;
 
-    final boolean a(lm param0, int param1, int param2, int param3, int param4, byte param5, int param6) {
+    final boolean pointerPressed(UiWidget param0, int param1, int param2, int param3, int param4, byte param5, int param6) {
         int var12 = 0;
         RuntimeException stackIn_26_0 = null;
         StringBuilder stackIn_26_1 = null;
@@ -28,7 +28,7 @@ final class eb extends InteractiveWidget {
         int var8_intLifetime1;
         var14 = DungeonAssault.field_K;
         try {
-          if (!super.a(param0, param1, param2, param3, param4, (byte) 83, param6)) {
+          if (!super.pointerPressed(param0, param1, param2, param3, param4, (byte) 83, param6)) {
             var8_int = -119 / ((param5 + 80) / 35);
             return false;
           }

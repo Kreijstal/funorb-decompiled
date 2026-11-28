@@ -8,7 +8,7 @@ final class gja extends tia {
     static boolean field_n;
     static char field_l;
     static volatile boolean field_j;
-    static rp field_m;
+    static ModalDialogHost field_m;
 
     final boolean a(int param0) {
         int fieldTemp$0 = this.field_g - 2;

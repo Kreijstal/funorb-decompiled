@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ug implements ci {
+final class ug implements WidgetRenderer {
     private BitmapFont field_c;
     static int field_h;
     private int field_b;
@@ -19,7 +19,7 @@ final class ug implements ci {
             ug.a(-0.46710100769996643f, 7, (String) null);
           }
           DualLinkNode.field_g = param0;
-          ck.field_G = param2;
+          LabeledWidgetContainer.field_G = param2;
         } catch (RuntimeException runtimeException) {
           throw ma.wrapException((Throwable) ((Object) runtimeException), "ug.B(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
@@ -69,7 +69,7 @@ final class ug implements ci {
         }
     }
 
-    public final void a(int param0, lk param1, int param2, int param3, boolean param4) {
+    public final void paintWidget(int param0, UiWidget param1, int param2, int param3, boolean param4) {
         RuntimeException var6 = null;
         int var7 = 0;
         int var8 = 0;
@@ -78,7 +78,7 @@ final class ug implements ci {
         int var12 = 0;
         int var13 = 0;
         se var14 = null;
-        lk stackIn_3_0 = null;
+        UiWidget stackIn_3_0 = null;
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
         String stackIn_16_2 = null;
@@ -90,7 +90,7 @@ final class ug implements ci {
           if (!(param1 instanceof se)) {
             stackIn_3_0 = null;
           } else {
-            stackIn_3_0 = (lk) (param1);
+            stackIn_3_0 = (UiWidget) (param1);
           }
           var14 = (se) (stackIn_3_0);
           if (var14 != null) {

@@ -12,7 +12,7 @@ final class re {
         }
         MouseWheelInput.field_d = true;
         NetworkArchiveRequest.field_D = true;
-        nb.field_a.i(-106);
+        nb.field_a.closeAllDialogs(-106);
         SecondaryNodeDeque.a(dh.field_c, false, false);
     }
 

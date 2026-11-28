@@ -99,7 +99,7 @@ final class sj extends InteractiveWidget {
         return this.field_F.a(true);
     }
 
-    final boolean a(UiWidget param0, int param1, int param2, int param3, byte param4, int param5, int param6) {
+    final boolean pointerPressed(UiWidget param0, int param1, int param2, int param3, byte param4, int param5, int param6) {
         int var12 = 0;
         RuntimeException stackIn_26_0 = null;
         StringBuilder stackIn_26_1 = null;
@@ -114,7 +114,7 @@ final class sj extends InteractiveWidget {
         int var14 = 0;
         var14 = StarCannon.field_A;
         try {
-          if (!super.a(param0, param1, param2, param3, param4, param5, param6)) {
+          if (!super.pointerPressed(param0, param1, param2, param3, param4, param5, param6)) {
             return false;
           }
           var8_int = param5 - param2 - this.field_G;

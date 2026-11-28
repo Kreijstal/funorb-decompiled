@@ -331,7 +331,7 @@ final class MusicPatchPcmStream extends PcmStream {
         SectorCacheStore.field_d = -2147483648;
         n.field_d = -2147483648;
         ib.field_e = 2147483647;
-        da.field_B = 2147483647;
+        SingleChildWidgetContainer.field_B = 2147483647;
         if (param0 != 31751) {
           MusicPatchPcmStream.a(59, -22, 8);
         }

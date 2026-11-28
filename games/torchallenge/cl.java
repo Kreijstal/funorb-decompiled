@@ -74,7 +74,7 @@ final class cl extends DefaultTextWidgetRenderer {
         }
     }
 
-    public final void a(UiComponent param0, int param1, int param2, byte param3, boolean param4) {
+    public final void paintWidget(UiComponent param0, int param1, int param2, byte param3, boolean param4) {
         int stackIn_6_0 = 0;
         int stackIn_14_0 = 0;
         int stackIn_19_0 = 0;
@@ -88,7 +88,7 @@ final class cl extends DefaultTextWidgetRenderer {
         int var8 = 0;
         try {
           if (!param0.field_w) {
-            stackIn_6_0 = (param0.c(param3 ^ 1)) ? 1 : 0;
+            stackIn_6_0 = (param0.isFocused(param3 ^ 1)) ? 1 : 0;
           } else {
             stackIn_6_0 = 1;
           }
@@ -106,7 +106,7 @@ final class cl extends DefaultTextWidgetRenderer {
             }
           }
           var7 = stackIn_14_0;
-          uk.a(var7, param3 ^ 96, param0.field_m + param2, (param0.field_l - this.field_t[0].fullHeight >> 1) + param0.field_i + param1, param0.field_p, this.field_t);
+          DraggableWidgetContainer.a(var7, param3 ^ 96, param0.field_m + param2, (param0.field_l - this.field_t[0].fullHeight >> 1) + param0.field_i + param1, param0.field_p, this.field_t);
           if (param3 != 97) {
             cl.clearStaticReferences((byte) 98);
           }

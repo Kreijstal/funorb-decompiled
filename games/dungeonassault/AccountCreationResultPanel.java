@@ -13,7 +13,7 @@ final class AccountCreationResultPanel extends nk implements WidgetActivationLis
     private boolean field_Wb;
     static String field_Ub;
 
-    AccountCreationResultPanel(ji param0, AccountRegistrationPanel param1) {
+    AccountCreationResultPanel(ModalDialogHost param0, AccountRegistrationPanel param1) {
         super(param0, hc.field_f, qd.field_a, false, false);
         try {
           this.field_Ob = param1;
@@ -36,31 +36,31 @@ final class AccountCreationResultPanel extends nk implements WidgetActivationLis
         cp.field_Q = null;
     }
 
-    final boolean f(byte param0) {
+    final boolean advanceDialogAnimation(byte param0) {
         AccountServiceResult var2;
         if (!this.field_T) {
           if (param0 == -90) {
-            return super.f((byte) -90);
+            return super.advanceDialogAnimation((byte) -90);
           }
           field_Qb = (ResourceArchive) null;
-          return super.f((byte) -90);
+          return super.advanceDialogAnimation((byte) -90);
         }
         if (this.field_Rb) {
           if (param0 == -90) {
-            return super.f((byte) -90);
+            return super.advanceDialogAnimation((byte) -90);
           }
           field_Qb = (ResourceArchive) null;
-          return super.f((byte) -90);
+          return super.advanceDialogAnimation((byte) -90);
         }
         var2 = pi.pollAccountCreationResult((byte) 80);
         if (var2 != null) {
           this.showAccountCreationResult(var2, true, false);
         }
         if (param0 == -90) {
-          return super.f((byte) -90);
+          return super.advanceDialogAnimation((byte) -90);
         }
         field_Qb = (ResourceArchive) null;
-        return super.f((byte) -90);
+        return super.advanceDialogAnimation((byte) -90);
     }
 
     public static void discardDeclaredStaticReferences(int param0) {
@@ -123,7 +123,7 @@ final class AccountCreationResultPanel extends nk implements WidgetActivationLis
               decompiledCaughtException = decompiledCaughtParameter0;
               var3 = decompiledCaughtException;
             }
-            lm.a((byte) -106, param2);
+            UiWidget.a((byte) -106, param2);
             return;
           } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
             decompiledCaughtException = decompiledCaughtParameter1;
@@ -202,7 +202,7 @@ final class AccountCreationResultPanel extends nk implements WidgetActivationLis
           var5 = new kc((nk) (this), hc.field_f, var4);
           if (!param0.success) {
             if (this.field_Wb) {
-              var5.a(gl.field_Jb, (pg) (this), (byte) -83);
+              var5.a(gl.field_Jb, (WidgetEventListener) (this), (byte) -83);
             } else {
               if (param0.statusCode != 5) {
                 var5.a(-1, 6824, DisplayNameSelectionPanel.field_O);
@@ -223,7 +223,7 @@ final class AccountCreationResultPanel extends nk implements WidgetActivationLis
               this.b(1, new cm(this));
               return;
             }
-            var5.a(gl.field_Jb, (pg) (this), (byte) -91);
+            var5.a(gl.field_Jb, (WidgetEventListener) (this), (byte) -91);
           }
           this.b(1, var5);
           return;
@@ -248,7 +248,7 @@ final class AccountCreationResultPanel extends nk implements WidgetActivationLis
 
     final static void k(byte param0) {
         if (lg.field_w != null) {
-          lg.field_w.j(-33);
+          lg.field_w.snapAndPruneDialogs(-33);
         }
         if (param0 < -69) {
           if (null != MusicPatchPcmStream.field_r) {
@@ -315,10 +315,10 @@ final class AccountCreationResultPanel extends nk implements WidgetActivationLis
           return null;
         }
         if (param1 == 15) {
-          return lm.field_z;
+          return UiWidget.field_z;
         }
         if (param1 == 16) {
-          return ii.field_H;
+          return DequeWidgetContainer.field_H;
         }
         if (param1 == 17) {
           return sp.field_d;

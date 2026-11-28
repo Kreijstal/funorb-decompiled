@@ -16,7 +16,7 @@ final class ba extends ScoreModifier {
 
     final static void b(byte param0) {
         int var1 = 4 / ((84 - param0) / 42);
-        ab.f((byte) -49);
+        ModalDialog.f((byte) -49);
     }
 
     final static String a(int param0, CharSequence param1) {
@@ -90,7 +90,7 @@ final class ba extends ScoreModifier {
     }
 
     final static void c(byte param0) {
-        MouseWheelInput.field_d.a((qm) (new ae()), (byte) -50);
+        MouseWheelInput.field_d.a((UiWidget) (new ae()), (byte) -50);
         if (param0 == 93) {
           return;
         }

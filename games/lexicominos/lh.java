@@ -7,8 +7,8 @@ final class lh extends DefaultTextWidgetRenderer {
     static boolean field_w;
     private n field_t;
 
-    public final void a(int param0, int param1, boolean param2, w param3, int param4) {
-        w stackIn_3_0 = null;
+    public final void paintWidget(int param0, int param1, boolean param2, UiWidget param3, int param4) {
+        UiWidget stackIn_3_0 = null;
         RuntimeException stackIn_33_0 = null;
         StringBuilder stackIn_33_1 = null;
         String stackIn_34_2 = null;
@@ -25,7 +25,7 @@ final class lh extends DefaultTextWidgetRenderer {
           if (!(param3 instanceof InteractiveWidget)) {
             stackIn_3_0 = null;
           } else {
-            stackIn_3_0 = (w) (param3);
+            stackIn_3_0 = (UiWidget) (param3);
           }
           var10 = (InteractiveWidget) (stackIn_3_0);
           DualLinkNode.a(param3.field_t + (param1 + param3.field_j), param3.field_o + param0, param3.field_t + param1, param3.field_v + (param3.field_o + param0), false);
@@ -55,7 +55,7 @@ final class lh extends DefaultTextWidgetRenderer {
               }
             }
           }
-          if (param3.a(18337)) {
+          if (param3.isFocused(18337)) {
             var13 = this.field_v[5];
             if (var13 != null) {
               var13.a(param1, this.field_t, (byte) 76, param0, this, param3);
@@ -273,15 +273,15 @@ final class lh extends DefaultTextWidgetRenderer {
           sg.field_a = 1835008 & var2_int << 18;
           sg.field_a = sg.field_a + (param0.readUnsignedShort(-1698573656) << 2);
           var2_intLifetime1 = param0.readUnsignedByte(true);
-          hh.field_I = (63 & var2_intLifetime1) << 15;
+          DraggableWidgetContainer.field_I = (63 & var2_intLifetime1) << 15;
           sg.field_a = sg.field_a + (var2_intLifetime1 >> 6);
-          hh.field_I = hh.field_I + (param0.readUnsignedByte(true) << 7);
+          DraggableWidgetContainer.field_I = DraggableWidgetContainer.field_I + (param0.readUnsignedByte(true) << 7);
           if (param1 != -95) {
             PacketBuffer var3 = (PacketBuffer) null;
             lh.a((PacketBuffer) null, 6);
           }
           var2_intLifetime2 = param0.readUnsignedByte(true);
-          hh.field_I = hh.field_I + (var2_intLifetime2 >> 1);
+          DraggableWidgetContainer.field_I = DraggableWidgetContainer.field_I + (var2_intLifetime2 >> 1);
           BitPacketBuffer.field_s = var2_intLifetime2 << 16 & 65536;
           BitPacketBuffer.field_s = BitPacketBuffer.field_s + param0.readUnsignedShort(-1698573656);
         } catch (RuntimeException runtimeException) {

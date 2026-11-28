@@ -220,7 +220,7 @@ final class FullscreenFocusCanvas extends java.awt.Canvas implements java.awt.ev
             if (r.field_c == dd.field_b &&
               Bzip2State.a(false)) {
               BoundedRandomAccessFile.field_a = RichTextLayout.field_p.readLong((byte) 5);
-              ad.field_y = RichTextLayout.field_p.readUnsignedByte(7909);
+              LabeledWidgetContainer.field_y = RichTextLayout.field_p.readUnsignedByte(7909);
               RichTextLayout.field_p.readUnsignedByte(7909);
               u.field_d = RichTextLayout.field_p.readUnsignedShort(param4 ^ 1174051991);
               var6 = RichTextLayout.field_p.readNullableString((byte) 108);

@@ -378,21 +378,21 @@ final class hf {
     final static void a(boolean param0, int param1, boolean param2, String param3) {
         try {
           k.a((byte) -35);
-          u.field_b.j(param1 ^ 17073);
+          u.field_b.closeAllDialogs(param1 ^ 17073);
           ClientException.field_a = new LoginPanel(me.field_h, (String) null, k.field_b, param0, param2);
           if (param1 != 17072) {
             String var5 = (String) null;
             hf.a(false, -42, false, (String) null);
           }
           gf.field_cb = new s(u.field_b, ClientException.field_a);
-          u.field_b.b(gf.field_cb, param1 ^ 17105);
+          u.field_b.showDialog(gf.field_cb, param1 ^ 17105);
         } catch (RuntimeException runtimeException) {
           throw fc.wrapClientException((Throwable) ((Object) runtimeException), "hf.D(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 
     hf(boolean param0) {
-        this.field_d = th.field_I;
+        this.field_d = DropTargetWidgetContainer.field_I;
         this.field_a = ah.field_c;
         this.field_j = hc.field_b;
         this.field_k = ml.field_e;

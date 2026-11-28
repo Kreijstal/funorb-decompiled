@@ -321,9 +321,9 @@ abstract class DebouncedFieldValidator implements FieldValidator {
           !(MixedSupport017.integerArrayState0022.length >= integerArgument2 + integerArgument3)) {
           MixedSupport017.integerArrayState0022 = new int[(integerArgument3 + integerArgument2) * 2];
         }
-        if (null == UiComponentPart020.booleanArrayState0007 ||
-          !(UiComponentPart020.booleanArrayState0007.length >= integerArgument2)) {
-          UiComponentPart020.booleanArrayState0007 = new boolean[2 * integerArgument2];
+        if (null == ArrayWidgetContainer.booleanArrayState0007 ||
+          !(ArrayWidgetContainer.booleanArrayState0007.length >= integerArgument2)) {
+          ArrayWidgetContainer.booleanArrayState0007 = new boolean[2 * integerArgument2];
         }
         RenderingSupport003.integerState0252 = 2147483647;
         MixedSupport010.integerState0066 = -2147483648;

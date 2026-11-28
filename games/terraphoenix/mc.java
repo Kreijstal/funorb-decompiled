@@ -32,12 +32,12 @@ final class mc {
           var3[var4_int] = ProxyAuthenticationRequiredException.field_a[dg.a(255, (int) var2[var4_int])];
         }
         if (param0 > 92) {
-          var4 = new Sprite(ah.field_A, sb.field_j, ConfirmedEmailAvailabilityValidator.field_s[0], hj.field_K[0], sb.field_m[0], ArchiveRequest.field_p[0], var3);
+          var4 = new Sprite(ah.field_A, sb.field_j, ConfirmedEmailAvailabilityValidator.field_s[0], DropTargetWidgetContainer.field_K[0], sb.field_m[0], ArchiveRequest.field_p[0], var3);
           SocketConnector.a((byte) 69);
           return var4;
         }
         mc.b((byte) -126);
-        var4Lifetime1 = new Sprite(ah.field_A, sb.field_j, ConfirmedEmailAvailabilityValidator.field_s[0], hj.field_K[0], sb.field_m[0], ArchiveRequest.field_p[0], var3);
+        var4Lifetime1 = new Sprite(ah.field_A, sb.field_j, ConfirmedEmailAvailabilityValidator.field_s[0], DropTargetWidgetContainer.field_K[0], sb.field_m[0], ArchiveRequest.field_p[0], var3);
         SocketConnector.a((byte) 69);
         return var4Lifetime1;
     }

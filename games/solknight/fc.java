@@ -67,35 +67,35 @@ final class fc extends IntrusiveNode {
             }
             if (AccountRequestState.field_e == gl.field_s &&
               bf.c(81, 1)) {
-              var6_int = te.field_N.readUnsignedByte(255);
-              te.field_N.position = 0;
+              var6_int = AlphaWidgetContainer.field_N.readUnsignedByte(255);
+              AlphaWidgetContainer.field_N.position = 0;
               if (0 != var6_int) {
                 AccountRequestState.field_e = SecondaryNodeDeque.field_e;
                 ob.field_h = var6_int;
-                te.field_O = -1;
+                AlphaWidgetContainer.field_O = -1;
               } else {
                 AccountRequestState.field_e = pl.field_b;
               }
             }
             if (AccountRequestState.field_e == pl.field_b &&
               bf.c(54, 8)) {
-              i.field_H = te.field_N.readLong(10526);
-              te.field_N.position = 0;
+              ModalDialogHost.field_H = AlphaWidgetContainer.field_N.readLong(10526);
+              AlphaWidgetContainer.field_N.position = 0;
               ci.a(-25776, param2, param1, MouseWheelInput.field_a, param3);
               AccountRequestState.field_e = UiWidget.field_o;
             }
             boolean decompiledFrameRemainder0 = true;
             if (AccountRequestState.field_e == UiWidget.field_o &&
               bf.c(53, 1)) {
-              var6_intLifetime1 = te.field_N.readUnsignedByte(255);
+              var6_intLifetime1 = AlphaWidgetContainer.field_N.readUnsignedByte(255);
               ob.field_h = var6_intLifetime1;
-              te.field_N.position = 0;
+              AlphaWidgetContainer.field_N.position = 0;
               ri.field_a = null;
               if (0 != var6_intLifetime1 &&
                 var6_intLifetime1 != 1) {
                 if (var6_intLifetime1 != 8) {
                   AccountRequestState.field_e = SecondaryNodeDeque.field_e;
-                  te.field_O = -1;
+                  AlphaWidgetContainer.field_O = -1;
                   decompiledFrameRemainder0 = false;
                 }
                 else {
@@ -107,17 +107,17 @@ final class fc extends IntrusiveNode {
               }
               if (decompiledFrameRemainder0) {
                 AccountRequestState.field_e = NanoFrameTimer.field_h;
-                te.field_O = -1;
+                AlphaWidgetContainer.field_O = -1;
               }
             }
             if (NanoFrameTimer.field_h == AccountRequestState.field_e &&
               qd.b((byte) 127)) {
-              kc.field_P = te.field_N.readLong(10526);
-              MusicPatchPcmStream.field_s = te.field_N.readUnsignedByte(255);
-              te.field_N.readUnsignedByte(param5 + 255);
-              ob.field_l = te.field_N.readUnsignedShort(param5 - 103);
-              var12 = te.field_N.readNullableString(87);
-              var7 = te.field_N.readUnsignedByte(255);
+              kc.field_P = AlphaWidgetContainer.field_N.readLong(10526);
+              MusicPatchPcmStream.field_s = AlphaWidgetContainer.field_N.readUnsignedByte(255);
+              AlphaWidgetContainer.field_N.readUnsignedByte(param5 + 255);
+              ob.field_l = AlphaWidgetContainer.field_N.readUnsignedShort(param5 - 103);
+              var12 = AlphaWidgetContainer.field_N.readNullableString(87);
+              var7 = AlphaWidgetContainer.field_N.readUnsignedByte(255);
               if (0 != (var7 & 1)) {
                 uf.d(31911);
               }
@@ -130,19 +130,19 @@ final class fc extends IntrusiveNode {
                 }
               }
               if (b.field_b) {
-                te.field_N.readUnsignedByte(255);
-                te.field_N.readUnsignedByte(255);
-                te.field_N.readInt(true);
-                me.field_d = te.field_N.readUnsignedShort(param5 - 105);
+                AlphaWidgetContainer.field_N.readUnsignedByte(255);
+                AlphaWidgetContainer.field_N.readUnsignedByte(255);
+                AlphaWidgetContainer.field_N.readInt(true);
+                me.field_d = AlphaWidgetContainer.field_N.readUnsignedShort(param5 - 105);
                 NanoFrameTimer.field_l = new byte[me.field_d];
                 for (var8 = 0; var8 < me.field_d; var8++) {
-                  NanoFrameTimer.field_l[var8] = te.field_N.readByte((byte) -14);
+                  NanoFrameTimer.field_l[var8] = AlphaWidgetContainer.field_N.readByte((byte) -14);
                 }
               }
-              ne.field_g = te.field_N.readString(16);
+              ne.field_g = AlphaWidgetContainer.field_N.readString(16);
               var13 = (CharSequence) ((Object) ne.field_g);
-              kf.field_D = FullscreenFocusCanvas.a(var13, -2);
-              c.field_H = te.field_N.readUnsignedByte(255);
+              ModalDialog.field_D = FullscreenFocusCanvas.a(var13, -2);
+              c.field_H = AlphaWidgetContainer.field_N.readUnsignedByte(255);
               AccountRequestState.field_e = jj.field_Y;
               if (MouseWheelInput.field_a.a(123) != EmailFormatValidator.field_k) {
                 if (MouseWheelInput.field_a.a(param5 + 70) == ValidatedTextField.field_L) {
@@ -178,7 +178,7 @@ final class fc extends IntrusiveNode {
               for (var8Lifetime1 = 0; var8Lifetime1 < 4; var8Lifetime1++) {
                 ed.field_a[var8Lifetime1] = ed.field_a[var8Lifetime1] + 50;
               }
-              te.field_N.setCipherSeed(-1, ed.field_a);
+              AlphaWidgetContainer.field_N.setCipherSeed(-1, ed.field_a);
               stackIn_74_0 = ob.field_h;
               return stackIn_74_0;
             }
@@ -194,7 +194,7 @@ final class fc extends IntrusiveNode {
               if (ob.field_h == 7) {
                 ob.field_h = 3;
               }
-              DiskArchiveRequest.field_v = te.field_N.readString(param5 + 121);
+              DiskArchiveRequest.field_v = AlphaWidgetContainer.field_N.readString(param5 + 121);
               je.field_c = false;
               stackIn_85_0 = ob.field_h;
               return stackIn_85_0;
@@ -751,7 +751,7 @@ final class fc extends IntrusiveNode {
               var31 = var15[1 + var29Lifetime3Lifetime1];
               var32 = (var30 - var27Lifetime6Lifetime1) * var28_int + (-var27Lifetime6Lifetime1 + var30) / 2;
               for (var33 = var27Lifetime6Lifetime1; var33 < var30; var33++) {
-                var34 = ke.b(var32, -1697860097, var30 - var27Lifetime6Lifetime1);
+                var34 = LabeledWidgetContainer.b(var32, -1697860097, var30 - var27Lifetime6Lifetime1);
                 var32 = var32 + (var31 - var28_int);
                 this.field_p[var33] = (byte)(32 + var34 * this.field_p[var33] >> 6);
               }
@@ -791,7 +791,7 @@ final class fc extends IntrusiveNode {
               var37 = var27Lifetime7Lifetime1;
               var33Lifetime1 = var37;
               while (var30Lifetime1Lifetime1 > var37) {
-                var34Lifetime1 = ke.b(var32Lifetime1, -1697860097, -var27Lifetime7Lifetime1 + var30Lifetime1Lifetime1);
+                var34Lifetime1 = LabeledWidgetContainer.b(var32Lifetime1, -1697860097, -var27Lifetime7Lifetime1 + var30Lifetime1Lifetime1);
                 var35 = var34Lifetime1 + (255 & this.field_r[var37]);
                 if (var35 < 0) {
                   var35 = 0;

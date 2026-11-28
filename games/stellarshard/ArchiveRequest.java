@@ -19,7 +19,7 @@ abstract class ArchiveRequest extends DualLinkNode {
         jf.d(-1);
         gk.field_a = true;
         SpriteState.field_r = true;
-        IsaacRandom.field_d.e((byte) 67);
+        IsaacRandom.field_d.closeAllDialogs((byte) 67);
         if (param0 >= 57) {
           we.a(false, 12757, ak.field_b);
           return;

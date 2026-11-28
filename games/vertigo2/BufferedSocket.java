@@ -143,7 +143,7 @@ final class BufferedSocket implements Runnable {
           }
           if (this.field_e != null) {
             while (this.field_e.status == 0) {
-              um.sleepMillis(true, 1L);
+              ArrayWidgetContainer.sleepMillis(true, 1L);
             }
             if (this.field_e.status == 1) {
               try {

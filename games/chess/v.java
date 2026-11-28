@@ -172,7 +172,7 @@ final class v {
         RuntimeException decompiledCaughtException = null;
         var5 = Chess.field_G;
         try {
-          MidiPcmStream.field_A = kn.field_D;
+          MidiPcmStream.field_A = SingleChildWidgetContainer.field_D;
           if (param0 != 31689) {
             field_e = (FrameTimer) null;
           }

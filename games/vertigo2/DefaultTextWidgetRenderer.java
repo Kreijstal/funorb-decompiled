@@ -41,7 +41,7 @@ class DefaultTextWidgetRenderer implements WidgetListener, TextWidgetRenderer {
         int var13 = 0;
         var13 = Vertigo2.field_L ? 1 : 0;
         try {
-          if (!wq.field_H) {
+          if (!AlphaWidgetContainer.field_H) {
             return;
           }
           SoftwareRasterizer.fillRectangleAlpha(40, 40, 560, 400, 1, 164);
@@ -270,7 +270,7 @@ class DefaultTextWidgetRenderer implements WidgetListener, TextWidgetRenderer {
         }
     }
 
-    public void a(boolean param0, int param1, boolean param2, UiWidget param3, int param4) {
+    public void paintWidget(boolean param0, int param1, boolean param2, UiWidget param3, int param4) {
         if (!param2) {
           this.field_k = 26;
         }
@@ -478,7 +478,7 @@ class DefaultTextWidgetRenderer implements WidgetListener, TextWidgetRenderer {
           return;
         }
         try {
-          if (param3.f(48)) {
+          if (param3.isFocused(48)) {
             var13 = this.getTextLayout(param3, 80);
             var14 = var13;
             var7 = var14.getLineIndexForTextOffset(param1, 22413);
@@ -692,7 +692,7 @@ class DefaultTextWidgetRenderer implements WidgetListener, TextWidgetRenderer {
           if (param1 == param3) {
             return;
           }
-          if (param0.f(24)) {
+          if (param0.isFocused(24)) {
             var17 = this.getTextLayout(param0, 122);
             var18 = var17;
             if (param3 < param1) {

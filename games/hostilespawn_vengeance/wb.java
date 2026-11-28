@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class wb extends ul {
+abstract class wb extends ModalDialog {
     private int field_U;
     private int field_Q;
     static RgbSprite field_W;
@@ -20,12 +20,12 @@ abstract class wb extends ul {
         if (this.field_U <= 0) {
           return;
         }
-        this.a(this.field_Q, 15767, this.field_Y);
+        this.setCenteredSize(this.field_Q, 15767, this.field_Y);
         this.field_U = 0;
         this.o(20);
     }
 
-    boolean l(int param0) {
+    boolean advanceDialogAnimation(int param0) {
         int var2 = 0;
         int var3 = 0;
         int fieldTemp$0 = 0;
@@ -49,9 +49,9 @@ abstract class wb extends ul {
             this.field_U = 0;
             this.o(param0 - 65373);
           }
-          this.a(var2, 15767, var3);
+          this.setCenteredSize(var2, 15767, var3);
         }
-        return super.l(65393);
+        return super.advanceDialogAnimation(65393);
     }
 
     void b(int param0, int param1, int param2) {
@@ -201,7 +201,7 @@ abstract class wb extends ul {
 
     final void a(int param0, int param1, int param2, int param3) {
         if (param0 <= 0) {
-          this.a(param1, 15767, param3);
+          this.setCenteredSize(param1, 15767, param3);
           return;
         }
         this.field_Q = param1;
@@ -269,15 +269,15 @@ abstract class wb extends ul {
         }
     }
 
-    boolean j(int param0) {
+    boolean snapDialogAnimation(int param0) {
         if (param0 != -15953) {
           return false;
         }
         this.m(param0 + 15877);
-        return super.j(-15953);
+        return super.snapDialogAnimation(-15953);
     }
 
-    wb(gg param0, int param1, int param2) {
+    wb(ModalDialogHost param0, int param1, int param2) {
         super(param0, param1, param2);
         this.field_U = 0;
         this.field_T = 0;

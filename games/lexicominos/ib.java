@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ib implements rd {
+final class ib implements WidgetRenderer {
     static IndexedSprite[] field_a;
     static String field_i;
     private int field_k;
@@ -15,7 +15,7 @@ final class ib implements rd {
     static int[] field_g;
     private int field_d;
 
-    public final void a(int param0, int param1, boolean param2, w param3, int param4) {
+    public final void paintWidget(int param0, int param1, boolean param2, UiWidget param3, int param4) {
         int var7 = 0;
         int var8 = 0;
         int var13 = 0;

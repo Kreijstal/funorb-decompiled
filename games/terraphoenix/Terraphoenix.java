@@ -140,7 +140,7 @@ public final class Terraphoenix extends GameShell {
             } else {
               stackIn_27_1 = 0;
             }
-            cb.a(stackIn_26_0, stackIn_27_1);
+            DraggableWidgetContainer.a(stackIn_26_0, stackIn_27_1);
           }
           var2_int = 87 % ((param0 + 26) / 41);
           if (null != this.field_Cb) {
@@ -708,7 +708,7 @@ public final class Terraphoenix extends GameShell {
               qd.$cfr$intArgs$a$e9dea5688aa5(92, 33);
               ProxyAuthenticationRequiredException.field_g = 20;
               ja.field_i = 5;
-              cb.a(false, this.field_X.field_i);
+              DraggableWidgetContainer.a(false, this.field_X.field_i);
               var3Lifetime1Lifetime2 = 0;
               while (var3Lifetime1Lifetime2 < 12) {
                 if (var8 != 0) {
@@ -760,7 +760,7 @@ public final class Terraphoenix extends GameShell {
             qd.$cfr$intArgs$a$e9dea5688aa5(63, 33);
             ja.field_i = 5;
             ProxyAuthenticationRequiredException.field_g = 20;
-            cb.a(false, this.field_X.field_i);
+            DraggableWidgetContainer.a(false, this.field_X.field_i);
             if (var8 == 0) {
               return;
             }
@@ -913,12 +913,12 @@ public final class Terraphoenix extends GameShell {
             ProxyAuthenticationRequiredException.field_f < PcmPlayerPump.field_h) {
             qg.field_a = 0;
             var3_ref_g = new g(0L, (g) null);
-            var3_ref_g.field_X = jc.field_G;
+            var3_ref_g.field_X = SingleChildWidgetContainer.field_G;
             var4_ref_g = new g(0L, (g) null);
             var4_ref_g.field_X = sl.field_b;
             var5 = new g(0L, (g) null);
             var5.field_V = sj.field_e;
-            var5.field_X = jc.field_G;
+            var5.field_X = SingleChildWidgetContainer.field_G;
             var5.field_eb = sj.field_e;
             var6 = sl.field_b[4];
             var7 = sj.field_e[4];
@@ -1592,7 +1592,7 @@ public final class Terraphoenix extends GameShell {
             SoftwareRasterizer.fillRectangleAlpha(592 + (-FrameTimer.field_f.stringWidth(RandomAccessCacheFile.field_g[var2.field_n]) - 2), var3 - 2, 44 + FrameTimer.field_f.stringWidth(RandomAccessCacheFile.field_g[var2.field_n]), 40, 0, 64);
             hf.field_w[var2.field_n].drawScaled(600, var3, 32, 32);
             FrameTimer.field_f.drawRightAligned(RandomAccessCacheFile.field_g[var2.field_n], 592, FrameTimer.field_f.field_s + var3, 16776960, -1);
-            jl.a(jc.field_G, 43, -5 + var3, 40 + FrameTimer.field_f.stringWidth(RandomAccessCacheFile.field_g[var2.field_n]) + 7, (byte) -101, 592 - FrameTimer.field_f.stringWidth(RandomAccessCacheFile.field_g[var2.field_n]) - 5);
+            AlphaWidgetContainer.a(SingleChildWidgetContainer.field_G, 43, -5 + var3, 40 + FrameTimer.field_f.stringWidth(RandomAccessCacheFile.field_g[var2.field_n]) + 7, (byte) -101, 592 - FrameTimer.field_f.stringWidth(RandomAccessCacheFile.field_g[var2.field_n]) - 5);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -1730,7 +1730,7 @@ public final class Terraphoenix extends GameShell {
                 k.field_f.a(param1 ^ -107);
                 ja.field_i = 8;
                 fh.a(62, 50);
-                cb.a(false, 7);
+                DraggableWidgetContainer.a(false, 7);
                 break;
               }
               SoftwareRasterizer.drawHorizontalLine(0, var3_int, 64, 16 - var3_int / 2);
@@ -2164,9 +2164,9 @@ public final class Terraphoenix extends GameShell {
             var3++;
           }
           PcmPlayerService.configureAudio(22050, true, 10);
-          d.field_I = PcmPlayerService.createOutput(DirectByteStorage.field_l, (java.awt.Component) ((Object) DisplayNameSelectionPanel.field_G), 0, 4096);
+          ModalDialogHost.field_I = PcmPlayerService.createOutput(DirectByteStorage.field_l, (java.awt.Component) ((Object) DisplayNameSelectionPanel.field_G), 0, 4096);
           WidgetContainer.field_E = new PcmStreamMixer();
-          d.field_I.setRootStream(WidgetContainer.field_E);
+          ModalDialogHost.field_I.setRootStream(WidgetContainer.field_E);
           uk.field_b = new MidiPcmStream();
           uk.field_b.a(9, 128, -51);
           WidgetContainer.field_E.addChildStream(uk.field_b);
@@ -2517,7 +2517,7 @@ public final class Terraphoenix extends GameShell {
               if (~var8Lifetime8 == ~var12) {
                 this.field_xb = var11;
               }
-              this.a(kh.field_I, 320, var8Lifetime8, var9, param0 + 103);
+              this.a(ModalDialog.field_I, 320, var8Lifetime8, var9, param0 + 103);
               var11++;
               var9 = var9 + var10;
             }
@@ -2755,8 +2755,8 @@ public final class Terraphoenix extends GameShell {
           if (a.field_b != null) {
             ga.b((byte) 125);
           }
-          if (d.field_I != null) {
-            d.field_I.dispose();
+          if (ModalDialogHost.field_I != null) {
+            ModalDialogHost.field_I.dispose();
           }
           var2_int = 117 / ((-52 - param0) / 56);
           AgeValidator.b(true);
@@ -4153,7 +4153,7 @@ public final class Terraphoenix extends GameShell {
                       } else {
                         hf.field_w[var12].draw(120, var5Lifetime1);
                       }
-                      var5Lifetime1 = var5Lifetime1 + (AccountRequestState.field_f.field_w + AccountRequestState.field_f.field_w * AccountRequestState.field_f.drawParagraph(InteractiveWidget.field_J[var12].toUpperCase() + "<br>" + "<br>" + i.field_e + d.field_L[var12] + "<br>" + RichTextWidget.field_L + ImageProducerRasterBuffer.field_m[var12], 268, var5Lifetime1, 252, 480, 16777215, -1, 0, 0, AccountRequestState.field_f.field_w));
+                      var5Lifetime1 = var5Lifetime1 + (AccountRequestState.field_f.field_w + AccountRequestState.field_f.field_w * AccountRequestState.field_f.drawParagraph(InteractiveWidget.field_J[var12].toUpperCase() + "<br>" + "<br>" + i.field_e + ModalDialogHost.field_L[var12] + "<br>" + RichTextWidget.field_L + ImageProducerRasterBuffer.field_m[var12], 268, var5Lifetime1, 252, 480, 16777215, -1, 0, 0, AccountRequestState.field_f.field_w));
                       var13 = 0;
                       while (!(ImageProducerRasterBuffer.field_m[var12] <= var13)) {
                         IsaacCipher.field_k.drawQuarterSize(460 + var13 * -8, 250);
@@ -4333,7 +4333,7 @@ public final class Terraphoenix extends GameShell {
           li.a(-394132240);
           sj.clearStaticReferences(0);
           rb.clearStaticReferences(-61);
-          d.clearStaticReferences((byte) -57);
+          ModalDialogHost.clearStaticReferences((byte) -57);
           AccountCreationResultPanel.p(38);
           na.resetDeclaredStaticState(true);
           jg.clearDeclaredStaticReferences(true);
@@ -4412,8 +4412,8 @@ public final class Terraphoenix extends GameShell {
           TextLayout.a((byte) -115);
           UiWidget.resetStaticState(true);
           InteractiveWidget.clearStaticReferences((byte) -82);
-          jc.clearDeclaredStaticReferences((byte) 47);
-          kh.clearStaticReferences(-195);
+          SingleChildWidgetContainer.clearDeclaredStaticReferences((byte) 47);
+          ModalDialog.clearStaticReferences(-195);
           WidgetContainer.clearStaticReferences(false);
           k.clearStaticReferences(false);
           va.clearStaticReferences(-65);
@@ -4430,7 +4430,7 @@ public final class Terraphoenix extends GameShell {
           ImageProducerRasterBuffer.clearStaticReferences(77);
           ve.clearStaticReferences(0);
           ef.clearStaticReferences(31955);
-          j.resetStaticState(-5981);
+          LabeledWidgetContainer.resetStaticState(-5981);
           ValidatedTextField.b(false);
           EditableTextField.m(14653);
           al.releaseDeclaredStaticReferences(-22);
@@ -4450,8 +4450,8 @@ public final class Terraphoenix extends GameShell {
           DirectByteStorage.clearStaticReferences(0);
           RichTextLayout.clearStaticReferences(125);
           fc.clearStaticReferences((byte) -114);
-          cb.clearStaticReferences(true);
-          hj.clearStaticReferences((byte) -120);
+          DraggableWidgetContainer.clearStaticReferences(true);
+          DropTargetWidgetContainer.clearStaticReferences((byte) -120);
           rh.clearStaticReferences(33);
           IterableNodeHashTable.a(-1);
           SecondaryNodeDeque.clearStaticReferences(-112);
@@ -4468,7 +4468,7 @@ public final class Terraphoenix extends GameShell {
           ng.clearStaticReferences(48);
           ah.a(false);
           kj.clearStaticReferences(-122);
-          jl.clearStaticReferences((byte) -128);
+          AlphaWidgetContainer.clearStaticReferences((byte) -128);
           q.resetDeclaredStaticState(0);
           ja.clearStaticReferences(3);
           bb.a(-1);
@@ -4844,7 +4844,7 @@ public final class Terraphoenix extends GameShell {
             if (8 == ja.field_i &&
               ConfirmedEmailAvailabilityValidator.field_q != 4 &&
               ConfirmedEmailAvailabilityValidator.field_q >= 0) {
-              cb.a(false, 0);
+              DraggableWidgetContainer.a(false, 0);
             }
             if ((8 != ja.field_i ||
               !(me.field_o <= 0)) && var4 != 0) {
@@ -5022,7 +5022,7 @@ public final class Terraphoenix extends GameShell {
                 MouseWheelInput.field_b < 413) {
                 this.field_X.field_N = 0;
                 this.field_Eb = new String[1];
-                this.field_Eb[0] = j.field_K;
+                this.field_Eb[0] = LabeledWidgetContainer.field_K;
                 if (1 == DiskArchiveRequest.field_I) {
                   this.field_X.field_u = true;
                   this.field_X.c((byte) -76);
@@ -5232,7 +5232,7 @@ public final class Terraphoenix extends GameShell {
             MouseWheelInput.field_b >= var3 &&
             var3 + var6 > MouseWheelInput.field_b) {
             this.field_Eb = new String[1];
-            this.field_Eb[0] = j.field_I;
+            this.field_Eb[0] = LabeledWidgetContainer.field_I;
             if (1 == DiskArchiveRequest.field_I) {
               this.field_hb = 0;
               this.field_N = new vl();
@@ -7026,7 +7026,7 @@ public final class Terraphoenix extends GameShell {
             regionExit1: {
               if (this.field_db) {
                 var8 = new int[]{4, 5};
-                var3 = kh.field_L + var9 + p.field_f[14];
+                var3 = ModalDialog.field_L + var9 + p.field_f[14];
                 var7 = new int[]{2};
                 if (this.field_X.field_n == null) {
                   this.field_X.a(1, ic.field_x[5], -104);
@@ -7038,7 +7038,7 @@ public final class Terraphoenix extends GameShell {
                   var15 != 0) {
                   if (var10 == 1) {
                     var8 = new int[]{13, 14, 9};
-                    var3 = kh.field_L + var9 + p.field_f[1];
+                    var3 = ModalDialog.field_L + var9 + p.field_f[1];
                     var7 = new int[]{11, 12};
                     if (null == this.field_X.field_n) {
                       this.field_X.a(0, ic.field_x[15], -51);
@@ -7052,7 +7052,7 @@ public final class Terraphoenix extends GameShell {
                     var15 == 0) {
                     var8 = new int[]{20, 21};
                     var7 = new int[]{17, 18, 19};
-                    var3 = kh.field_L + var9 + p.field_f[2];
+                    var3 = ModalDialog.field_L + var9 + p.field_f[2];
                     if (null == this.field_X.field_n) {
                       this.field_X.a(0, ic.field_x[22], -36);
                       this.field_X.a(2, ic.field_x[10], -48);
@@ -7062,7 +7062,7 @@ public final class Terraphoenix extends GameShell {
                     break regionExit1;
                   }
                   if (var10 == 3) {
-                    var3 = kh.field_L + var9 + p.field_f[3];
+                    var3 = ModalDialog.field_L + var9 + p.field_f[3];
                     if (this.field_ub != 1) {
                       var7 = new int[]{28, 29, 30};
                       if (this.field_X.field_n == null) {
@@ -7086,7 +7086,7 @@ public final class Terraphoenix extends GameShell {
                   }
                   if (var10 == 4) {
                     var7 = new int[]{32, 33, 34, 35};
-                    var3 = kh.field_L + var9 + p.field_f[4];
+                    var3 = ModalDialog.field_L + var9 + p.field_f[4];
                     var8 = new int[]{36, 37};
                     if (1 == this.field_ub) {
                       ((int[]) (var7))[0] = 31;
@@ -7102,7 +7102,7 @@ public final class Terraphoenix extends GameShell {
                   if (var10 == 5 &&
                     var15 == 0) {
                     var8 = new int[]{43};
-                    var3 = kh.field_L + var9 + p.field_f[5];
+                    var3 = ModalDialog.field_L + var9 + p.field_f[5];
                     var7 = new int[]{41, 42};
                     if (1 == this.field_ub) {
                       ((int[]) (var7))[0] = 40;
@@ -7118,7 +7118,7 @@ public final class Terraphoenix extends GameShell {
                     var15 == 0) {
                     var7 = new int[]{45, 46, 47};
                     var8 = new int[]{36, 37};
-                    var3 = kh.field_L + var9 + p.field_f[6];
+                    var3 = ModalDialog.field_L + var9 + p.field_f[6];
                     if (this.field_X.field_n == null) {
                       this.field_X.a(0, ic.field_x[38], -4);
                       this.field_X.a(8, ic.field_x[39], -114);
@@ -7129,7 +7129,7 @@ public final class Terraphoenix extends GameShell {
                   }
                   switch (var10) {
                     case 7:
-                      var3 = kh.field_L + var9 + p.field_f[7];
+                      var3 = ModalDialog.field_L + var9 + p.field_f[7];
                       var8 = new int[]{43};
                       var7 = new int[]{48, 49};
                       if (null == this.field_X.field_n) {
@@ -7141,7 +7141,7 @@ public final class Terraphoenix extends GameShell {
                     case 8:
                       if (this.field_vb == 1) {
                         var8 = new int[]{53, 54};
-                        var3 = kh.field_L + var9 + p.field_f[8];
+                        var3 = ModalDialog.field_L + var9 + p.field_f[8];
                         var7 = new int[]{50, 51, 52};
                         if (null == this.field_X.field_n) {
                           this.field_X.a(3, ic.field_x[55], -77);
@@ -7154,7 +7154,7 @@ public final class Terraphoenix extends GameShell {
                       }
                       var7 = new int[]{56, 57, 58};
                       var8 = new int[]{36, 59, 60, 61};
-                      var3 = kh.field_L + var9 + p.field_f[9];
+                      var3 = ModalDialog.field_L + var9 + p.field_f[9];
                       if (null == this.field_X.field_n) {
                         this.field_X.a(3, ic.field_x[62], -100);
                         this.field_X.a(8, ic.field_x[39], -23);
@@ -7164,7 +7164,7 @@ public final class Terraphoenix extends GameShell {
                       break regionExit1;
                     case 9:
                       var7 = new int[]{63, 64};
-                      var3 = kh.field_L + var9 + p.field_f[10];
+                      var3 = ModalDialog.field_L + var9 + p.field_f[10];
                       var8 = new int[]{65};
                       if (null == this.field_X.field_n) {
                         this.field_X.a(1, ic.field_x[44], -76);
@@ -7175,7 +7175,7 @@ public final class Terraphoenix extends GameShell {
                     case 10:
                       if (this.field_vb == 2) {
                         var7 = new int[]{66, 51, 52};
-                        var3 = kh.field_L + var9 + p.field_f[8];
+                        var3 = ModalDialog.field_L + var9 + p.field_f[8];
                         var8 = new int[]{53, 54};
                         if (null == this.field_X.field_n) {
                           this.field_X.a(3, ic.field_x[55], -105);
@@ -7188,7 +7188,7 @@ public final class Terraphoenix extends GameShell {
                       }
                       var8 = new int[]{36, 59, 50};
                       var7 = new int[]{67, 57, 58};
-                      var3 = kh.field_L + var9 + p.field_f[9];
+                      var3 = ModalDialog.field_L + var9 + p.field_f[9];
                       if (this.field_X.field_n == null) {
                         this.field_X.a(3, ic.field_x[51], -38);
                         this.field_X.a(8, ic.field_x[39], -95);
@@ -7198,7 +7198,7 @@ public final class Terraphoenix extends GameShell {
                       break regionExit1;
                     case 11:
                       var7 = new int[]{68, 69, 70};
-                      var3 = kh.field_L + var9 + p.field_f[11];
+                      var3 = ModalDialog.field_L + var9 + p.field_f[11];
                       var8 = new int[]{71, 72};
                       if (null == this.field_X.field_n) {
                         this.field_X.a(5, ic.field_x[73], -4);
@@ -7209,7 +7209,7 @@ public final class Terraphoenix extends GameShell {
                       break regionExit1;
                     case 12:
                       var7 = new int[]{75};
-                      var3 = kh.field_L + var9 + p.field_f[12];
+                      var3 = ModalDialog.field_L + var9 + p.field_f[12];
                       var8 = new int[]{76};
                       if (null == this.field_X.field_n) {
                         this.field_X.a(6, ic.field_x[77], -125);
@@ -7222,7 +7222,7 @@ public final class Terraphoenix extends GameShell {
                     case 13:
                       if (var15 == 0) {
                         var8 = new int[]{80, 81};
-                        var3 = kh.field_L + var9 + p.field_f[13];
+                        var3 = ModalDialog.field_L + var9 + p.field_f[13];
                         var7 = new int[]{78};
                         if (this.field_X.field_n == null) {
                           this.field_X.a(7, ic.field_x[79], -37);
@@ -7234,7 +7234,7 @@ public final class Terraphoenix extends GameShell {
                       break;
                   }
                 }
-                var3 = kh.field_L + var9 + p.field_f[0];
+                var3 = ModalDialog.field_L + var9 + p.field_f[0];
                 var8 = new int[]{8, 9};
                 var7 = new int[]{6, 7};
                 if (this.field_X.field_n == null) {
@@ -7312,12 +7312,12 @@ public final class Terraphoenix extends GameShell {
             if (decompiledFrameRemainder1) {
               gi.field_h = 0;
               var10_ref_g = new g(0L, (g) null);
-              var10_ref_g.field_X = jc.field_G;
+              var10_ref_g.field_X = SingleChildWidgetContainer.field_G;
               var11 = new g(0L, (g) null);
               var11.field_X = sl.field_b;
               var12 = new g(0L, (g) null);
               var12.field_eb = sj.field_e;
-              var12.field_X = jc.field_G;
+              var12.field_X = SingleChildWidgetContainer.field_G;
               var12.field_V = sj.field_e;
               var13 = sl.field_b[4];
               var14 = sj.field_e[4];
@@ -7826,7 +7826,7 @@ public final class Terraphoenix extends GameShell {
                 ja.field_i = 11;
               }
               this.b(false, ge.field_e);
-              cb.a(false, 0);
+              DraggableWidgetContainer.a(false, 0);
               this.field_wb = null;
               this.field_zb = null;
               this.field_N = null;
@@ -8766,14 +8766,14 @@ public final class Terraphoenix extends GameShell {
           qc.field_f = ig.a(ab.field_a, 0, "equipbuttons", "menu_graphics");
           hb.field_p = ig.a(ab.field_a, 0, "selectors", "");
           tg.field_e = il.a("equipbar", "menu_graphics", ab.field_a, -1);
-          jc.field_G = ig.a(ab.field_a, 0, "frame", "");
+          SingleChildWidgetContainer.field_G = ig.a(ab.field_a, 0, "frame", "");
           sl.field_b = ig.a(ab.field_a, 0, "framedark", "");
           sj.field_e = ig.a(ab.field_a, param0 ^ -2020, "framelight", "");
           wa.field_r = lf.a(true, "", "armour0", ab.field_a);
           f.field_i = lf.a(true, "", "armour1", ab.field_a);
           pc.field_c = lf.a(true, "", "armour2", ab.field_a);
           DualLinkNode.field_k = lf.a(true, "", "aimdir", ab.field_a);
-          d.field_N = lf.a(true, "", "menaimdir", ab.field_a);
+          ModalDialogHost.field_N = lf.a(true, "", "menaimdir", ab.field_a);
           me.field_l = lf.a(true, "", "weaponsdir", ab.field_a);
           fc.field_i = lf.a(true, "", "weaponsdiralien", ab.field_a);
           TextFieldValidator.field_f = lf.a(true, "", "aimshield", ab.field_a);
@@ -8813,7 +8813,7 @@ public final class Terraphoenix extends GameShell {
           ic.field_t = il.a("combatview", "", ab.field_a, -1);
           ab.field_a = null;
           aj.field_b = null;
-          MatchingFieldValidator.a(12, 12, jc.field_G, 12, 240, 88, 16777215, 12, 16711680, jc.field_G, 16744576, 6, FrameTimer.field_f, 320, jc.field_G);
+          MatchingFieldValidator.a(12, 12, SingleChildWidgetContainer.field_G, 12, 240, 88, 16777215, 12, 16711680, SingleChildWidgetContainer.field_G, 16744576, 6, FrameTimer.field_f, 320, SingleChildWidgetContainer.field_G);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -8834,7 +8834,7 @@ public final class Terraphoenix extends GameShell {
         int var3 = 0;
         var3 = field_V;
         try {
-          d.field_I.serviceOutput();
+          ModalDialogHost.field_I.serviceOutput();
           stackIn_4_1 = -107;
           stackIn_5_2 = (null != a.field_b);
           this.a(stackIn_4_1, stackIn_5_2);
@@ -9089,38 +9089,38 @@ public final class Terraphoenix extends GameShell {
                   if ((this.field_Bb != 9) &&
                     (decompiledFrameRemainder1 = (this.field_Bb == 10))) {
                     if (this.field_vb != 2) {
-                      var3 = kh.field_L + var10 + p.field_f[9];
+                      var3 = ModalDialog.field_L + var10 + p.field_f[9];
                       decompiledFrameRemainder1 = (var16 != 0);
                     }
                     if (decompiledFrameRemainder1) {
-                      var3 = kh.field_L + var10 + p.field_f[8];
+                      var3 = ModalDialog.field_L + var10 + p.field_f[8];
                       decompiledFrameRemainder1 = (var16 != 0);
                     }
                   }
                   if (decompiledFrameRemainder1) {
-                    var3 = kh.field_L + var10 + p.field_f[10];
+                    var3 = ModalDialog.field_L + var10 + p.field_f[10];
                     decompiledFrameRemainder1 = (var16 != 0);
                   }
                 }
                 if (decompiledFrameRemainder1) {
                   if (this.field_vb == 1) {
-                    var3 = kh.field_L + var10 + p.field_f[8];
+                    var3 = ModalDialog.field_L + var10 + p.field_f[8];
                     if (var16 != 0) {
-                      var3 = kh.field_L + var10 + p.field_f[9];
-                      var3 = kh.field_L + var10 + p.field_f[this.field_Bb];
+                      var3 = ModalDialog.field_L + var10 + p.field_f[9];
+                      var3 = ModalDialog.field_L + var10 + p.field_f[this.field_Bb];
                     }
                   } else {
-                    var3 = kh.field_L + var10 + p.field_f[9];
+                    var3 = ModalDialog.field_L + var10 + p.field_f[9];
                     if (var16 != 0) {
-                      var3 = kh.field_L + var10 + p.field_f[this.field_Bb];
+                      var3 = ModalDialog.field_L + var10 + p.field_f[this.field_Bb];
                     }
                   }
                 }
               } else {
-                var3 = kh.field_L + var10 + p.field_f[this.field_Bb];
+                var3 = ModalDialog.field_L + var10 + p.field_f[this.field_Bb];
               }
               if (this.field_db) {
-                var3 = kh.field_L + var10 + p.field_f[14];
+                var3 = ModalDialog.field_L + var10 + p.field_f[14];
               }
             }
             var11 = 105;

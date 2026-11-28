@@ -42,7 +42,7 @@ final class ve extends InteractiveWidget {
     final String getTooltipText(int param0) {
         if (param0 != 4) {
           UiWidget var3 = (UiWidget) null;
-          this.a((UiWidget) null, 58);
+          this.takeFocus((UiWidget) null, 58);
           if (this.field_g) {
             return this.field_A.getValidationMessage(param0 + 30519);
           }
@@ -54,7 +54,7 @@ final class ve extends InteractiveWidget {
         return null;
     }
 
-    final void a(int param0, int param1, int param2, byte param3) {
+    final void drawWidget(int param0, int param1, int param2, byte param3) {
         Sprite var16 = null;
         Sprite var17 = null;
         Sprite var14 = null;
@@ -64,7 +64,7 @@ final class ve extends InteractiveWidget {
         int var12 = Transmogrify.field_A ? 1 : 0;
         int var10Lifetime1;
         int var11Lifetime1;
-        super.a(param0, param1, param2, (byte) 111);
+        super.drawWidget(param0, param1, param2, (byte) 111);
         if (param2 != 0) {
           return;
         }
@@ -80,7 +80,7 @@ final class ve extends InteractiveWidget {
             EmailFormatValidator.field_l = new Sprite(var10, var11);
             CrossfadingMidiPcmStream.a(EmailFormatValidator.field_l, 256);
             var16.drawRotatedAbout(112, 144, var16.field_r << 4, var16.field_s << 4, -this.field_C << 10, 4096);
-            fi.c(true);
+            SingleChildWidgetContainer.c(true);
             EmailFormatValidator.field_l.drawAdditive(-var16.field_r + var5, var6 - var16.field_s, 256);
             return;
           }
@@ -88,7 +88,7 @@ final class ve extends InteractiveWidget {
             EmailFormatValidator.field_l = new Sprite(var10, var11);
             CrossfadingMidiPcmStream.a(EmailFormatValidator.field_l, 256);
             var16.drawRotatedAbout(112, 144, var16.field_r << 4, var16.field_s << 4, -this.field_C << 10, 4096);
-            fi.c(true);
+            SingleChildWidgetContainer.c(true);
             EmailFormatValidator.field_l.drawAdditive(-var16.field_r + var5, var6 - var16.field_s, 256);
             return;
           }
@@ -96,18 +96,18 @@ final class ve extends InteractiveWidget {
             EmailFormatValidator.field_l = new Sprite(var10, var11);
             CrossfadingMidiPcmStream.a(EmailFormatValidator.field_l, 256);
             var16.drawRotatedAbout(112, 144, var16.field_r << 4, var16.field_s << 4, -this.field_C << 10, 4096);
-            fi.c(true);
+            SingleChildWidgetContainer.c(true);
             EmailFormatValidator.field_l.drawAdditive(-var16.field_r + var5, var6 - var16.field_s, 256);
             return;
           }
           CrossfadingMidiPcmStream.a(EmailFormatValidator.field_l, 256);
           SoftwareRasterizer.clearRaster();
           var16.drawRotatedAbout(112, 144, var16.field_r << 4, var16.field_s << 4, -this.field_C << 10, 4096);
-          fi.c(true);
+          SingleChildWidgetContainer.c(true);
           EmailFormatValidator.field_l.drawAdditive(-var16.field_r + var5, var6 - var16.field_s, 256);
           return;
         }
-        if (var8 == fi.field_u) {
+        if (var8 == SingleChildWidgetContainer.field_u) {
           var17 = ai.field_b[0];
           var10Lifetime1 = var17.field_r << 1;
           var11Lifetime1 = var17.field_s << 1;
@@ -115,7 +115,7 @@ final class ve extends InteractiveWidget {
             EmailFormatValidator.field_l = new Sprite(var10Lifetime1, var11Lifetime1);
             CrossfadingMidiPcmStream.a(EmailFormatValidator.field_l, 256);
             var17.drawRotatedAbout(112, 144, var17.field_r << 4, var17.field_s << 4, -this.field_C << 10, 4096);
-            fi.c(true);
+            SingleChildWidgetContainer.c(true);
             EmailFormatValidator.field_l.drawAdditive(-var17.field_r + var5, var6 - var17.field_s, 256);
             return;
           }
@@ -123,7 +123,7 @@ final class ve extends InteractiveWidget {
             EmailFormatValidator.field_l = new Sprite(var10Lifetime1, var11Lifetime1);
             CrossfadingMidiPcmStream.a(EmailFormatValidator.field_l, 256);
             var17.drawRotatedAbout(112, 144, var17.field_r << 4, var17.field_s << 4, -this.field_C << 10, 4096);
-            fi.c(true);
+            SingleChildWidgetContainer.c(true);
             EmailFormatValidator.field_l.drawAdditive(-var17.field_r + var5, var6 - var17.field_s, 256);
             return;
           }
@@ -131,14 +131,14 @@ final class ve extends InteractiveWidget {
             EmailFormatValidator.field_l = new Sprite(var10Lifetime1, var11Lifetime1);
             CrossfadingMidiPcmStream.a(EmailFormatValidator.field_l, 256);
             var17.drawRotatedAbout(112, 144, var17.field_r << 4, var17.field_s << 4, -this.field_C << 10, 4096);
-            fi.c(true);
+            SingleChildWidgetContainer.c(true);
             EmailFormatValidator.field_l.drawAdditive(-var17.field_r + var5, var6 - var17.field_s, 256);
             return;
           }
           CrossfadingMidiPcmStream.a(EmailFormatValidator.field_l, 256);
           SoftwareRasterizer.clearRaster();
           var17.drawRotatedAbout(112, 144, var17.field_r << 4, var17.field_s << 4, -this.field_C << 10, 4096);
-          fi.c(true);
+          SingleChildWidgetContainer.c(true);
           EmailFormatValidator.field_l.drawAdditive(-var17.field_r + var5, var6 - var17.field_s, 256);
           return;
         }
@@ -192,7 +192,7 @@ final class ve extends InteractiveWidget {
         }
     }
 
-    final boolean a(UiWidget param0, int param1) {
+    final boolean takeFocus(UiWidget param0, int param1) {
         RuntimeException var3 = null;
         String[] var4 = null;
         RuntimeException stackIn_6_0 = null;
@@ -228,10 +228,10 @@ final class ve extends InteractiveWidget {
         }
     }
 
-    final void a(int param0, byte param1, UiWidget param2, int param3) {
+    final void updatePointer(int param0, byte param1, UiWidget param2, int param3) {
         try {
           this.field_C = this.field_C + 1;
-          super.a(param0, param1, param2, param3);
+          super.updatePointer(param0, param1, param2, param3);
         } catch (RuntimeException runtimeException) {
           throw ch.wrapClientException((Throwable) ((Object) runtimeException), "ve.B(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }

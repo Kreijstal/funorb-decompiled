@@ -174,10 +174,10 @@ final class KeyboardInput implements java.awt.event.KeyListener, java.awt.event.
         int var1_intLifetime1;
         var2 = HostileSpawn.field_I ? 1 : 0;
         try {
-          im.field_e.a(ri.field_n, 8799, true, mf.field_b);
-          im.field_e.e((byte) 114);
-          while (jn.e((byte) -79)) {
-            im.field_e.a(pj.field_e, SpriteBase.field_e, 80);
+          im.field_e.processPointerInput(ri.field_n, 8799, true, mf.field_b);
+          im.field_e.advanceDialogs((byte) 114);
+          while (AlphaWidgetContainer.e((byte) -79)) {
+            im.field_e.processKeyInput(pj.field_e, SpriteBase.field_e, 80);
           }
           if (dn.field_a != -1) {
             var1_int = dn.field_a;
@@ -198,7 +198,7 @@ final class KeyboardInput implements java.awt.event.KeyListener, java.awt.event.
             stackIn_16_0 = 1;
             return stackIn_16_0;
           }
-          if (ti.field_b != od.field_I) {
+          if (ti.field_b != DropTargetWidgetContainer.field_I) {
             stackIn_21_0 = -1;
             return stackIn_21_0;
           }

@@ -68,7 +68,7 @@ final class AttackOrder extends CreatureOrder {
           cea.field_d = new byte[ok.field_vb][];
           uf.field_b = new boolean[ok.field_vb];
           fl.field_j = new int[ok.field_vb];
-          lq.field_A = new int[ok.field_vb];
+          ArrayWidgetContainer.field_A = new int[ok.field_vb];
           var18.position = -(8 * ok.field_vb) + param1.length - 7;
           ok.field_Bb = var18.readUnsignedShort((byte) 101);
           MassPoisonEvent.field_r = var18.readUnsignedShort((byte) 60);
@@ -80,7 +80,7 @@ final class AttackOrder extends CreatureOrder {
             AirstrikeAnimation.field_D[var4Lifetime1] = var18.readUnsignedShort((byte) 99);
           }
           for (var4Lifetime2 = 0; var4Lifetime2 < ok.field_vb; var4Lifetime2++) {
-            lq.field_A[var4Lifetime2] = var18.readUnsignedShort((byte) 67);
+            ArrayWidgetContainer.field_A[var4Lifetime2] = var18.readUnsignedShort((byte) 67);
           }
           var4Lifetime3 = 7 % ((param0 - 60) / 48);
           for (var5 = 0; var5 < ok.field_vb; var5++) {
@@ -96,7 +96,7 @@ final class AttackOrder extends CreatureOrder {
           }
           var18.position = 0;
           for (var5Lifetime2 = 0; ok.field_vb > var5Lifetime2; var5Lifetime2++) {
-            var6 = lq.field_A[var5Lifetime2];
+            var6 = ArrayWidgetContainer.field_A[var5Lifetime2];
             var7 = InsanoSauceSpecial.field_s[var5Lifetime2];
             var8 = var6 * var7;
             var21 = new byte[var8];

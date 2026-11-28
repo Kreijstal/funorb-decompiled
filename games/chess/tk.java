@@ -43,8 +43,8 @@ final class tk {
           if (null != mh.field_d) {
             mh.field_d.dispose();
           }
-          if (null != kn.field_F) {
-            kn.field_F.dispose();
+          if (null != SingleChildWidgetContainer.field_F) {
+            SingleChildWidgetContainer.field_F.dispose();
           }
           return;
         }
@@ -52,8 +52,8 @@ final class tk {
         if (null != mh.field_d) {
           mh.field_d.dispose();
         }
-        if (null != kn.field_F) {
-          kn.field_F.dispose();
+        if (null != SingleChildWidgetContainer.field_F) {
+          SingleChildWidgetContainer.field_F.dispose();
         }
     }
 

@@ -68,7 +68,7 @@ final class lk extends UiComponent {
         }
     }
 
-    final void a(int param0, int param1, UiComponent param2, byte param3) {
+    final void updatePointer(int param0, int param1, UiComponent param2, byte param3) {
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         String stackIn_10_2 = null;
@@ -147,7 +147,7 @@ final class lk extends UiComponent {
         }
     }
 
-    final void b(int param0, int param1, boolean param2, int param3) {
+    final void drawWidget(int param0, int param1, boolean param2, int param3) {
         if (0 != param3) {
           return;
         }
@@ -260,8 +260,8 @@ final class lk extends UiComponent {
         this(param0, param1, param2, param3, param4, param5, param6, 8355711 & param5 >> 1, (16711422 & param6) >> 1);
     }
 
-    final void a(int param0, int param1, int param2, int param3, int param4) {
-        super.a(param0, param1, param2, param3, param4);
+    final void setBounds(int param0, int param1, int param2, int param3, int param4) {
+        super.setBounds(param0, param1, param2, param3, param4);
         this.j(124);
     }
 
@@ -383,7 +383,7 @@ final class lk extends UiComponent {
         this.field_G = param6;
         this.field_K = param7;
         this.field_N = param4;
-        this.a(param0, param2, param1, param3, 80);
+        this.setBounds(param0, param2, param1, param3, 80);
     }
 
     static {

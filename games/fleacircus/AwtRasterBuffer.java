@@ -36,7 +36,7 @@ abstract class AwtRasterBuffer {
         int var2 = 0;
         int var3 = fleas.field_A ? 1 : 0;
         try {
-          ml.field_O = ia.field_m[fleas.field_E][tj.field_a].field_f;
+          LabeledWidgetContainer.field_O = ia.field_m[fleas.field_E][tj.field_a].field_f;
           if (param0 != 84) {
             field_d = (RgbSprite) null;
           }

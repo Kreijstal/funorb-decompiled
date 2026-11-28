@@ -105,7 +105,7 @@ final class SecondaryNodeDequeIterator implements Iterator {
         if (integerArgument1 >= -34) {
           return false;
         }
-        return MixedSupport109.computeBoolean1436(UiComponentPart029.computeApplet1485(25144), (byte) -78);
+        return MixedSupport109.computeBoolean1436(DraggableWidgetContainer.computeApplet1485(25144), (byte) -78);
     }
 
     SecondaryNodeDequeIterator(IterableNodeCollection iterableNodeCollectionArgument1) {

@@ -63,9 +63,9 @@ final class SecondaryNodeDeque implements Iterable {
 
     final static void a(byte param0, java.awt.Component param1) {
         try {
-          param1.addMouseListener(pj.field_G);
-          param1.addMouseMotionListener(pj.field_G);
-          param1.addFocusListener(pj.field_G);
+          param1.addMouseListener(DequeWidgetContainer.field_G);
+          param1.addMouseMotionListener(DequeWidgetContainer.field_G);
+          param1.addFocusListener(DequeWidgetContainer.field_G);
           if (param0 != 50) {
             field_d = -106;
           }

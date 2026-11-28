@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ba extends ag {
+final class ba extends UiWidget {
     boolean field_E;
     private int field_z;
     private RgbSprite[] field_C;
@@ -22,7 +22,7 @@ final class ba extends ag {
         return 4 + AccountNameAvailabilityValidator.field_s << 4;
     }
 
-    final void a(ag param0, int param1, int param2, int param3) {
+    final void updatePointer(UiWidget param0, int param1, int param2, int param3) {
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         String stackIn_9_2 = null;
@@ -185,7 +185,7 @@ final class ba extends ag {
         this(param0, param1, param2, param3, param4, param5, param6, (param5 & 16711422) >> 1, (param6 & 16711422) >> 1);
     }
 
-    final void a(int param0, int param1, byte param2, int param3) {
+    final void drawWidget(int param0, int param1, byte param2, int param3) {
         RgbSprite discarded$0 = null;
         if (param3 != 0) {
           return;
@@ -214,8 +214,8 @@ final class ba extends ag {
         this.h(4008);
     }
 
-    final void a(int param0, int param1, int param2, int param3, int param4) {
-        super.a(param0, param1, param2 ^ param2, param3, param4);
+    final void setBounds(int param0, int param1, int param2, int param3, int param4) {
+        super.setBounds(param0, param1, param2 ^ param2, param3, param4);
         this.h(param2 ^ 4008);
     }
 
@@ -225,7 +225,7 @@ final class ba extends ag {
         this.field_A = param7;
         this.field_L = param6;
         this.field_K = param5;
-        this.a(param2, param1, 0, param0, param3);
+        this.setBounds(param2, param1, 0, param0, param3);
     }
 
     private final RgbSprite i(int param0) {

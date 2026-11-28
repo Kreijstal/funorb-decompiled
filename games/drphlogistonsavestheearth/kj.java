@@ -139,7 +139,7 @@ final class kj {
         return this;
     }
 
-    final void a(int param0, ch param1, boolean param2, int param3, vg param4, kj param5) {
+    final void a(int param0, ch param1, boolean param2, int param3, UiWidget param4, kj param5) {
         RuntimeException stackIn_23_0 = null;
         StringBuilder stackIn_23_1 = null;
         String stackIn_24_2 = null;
@@ -257,7 +257,7 @@ final class kj {
         return this;
     }
 
-    final void a(ch param0, vg param1, boolean param2, int param3, int param4) {
+    final void a(ch param0, UiWidget param1, boolean param2, int param3, int param4) {
         BitmapFont stackIn_20_0;
         String stackIn_20_1;
         int stackIn_20_2;

@@ -84,7 +84,7 @@ final class qf extends wb {
 
     final static void f(int param0) {
         if (ug.field_A != null) {
-          ug.field_A.g(false);
+          ug.field_A.snapAndPruneDialogs(false);
         }
         if (param0 != -28390) {
           qf.g(-118);

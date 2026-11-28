@@ -37,7 +37,7 @@ final class fl extends IntrusiveNode {
             fl.clearStaticReferences(true);
           }
           rf.field_b = cb.field_b;
-          lf.field_O = rc.field_d;
+          AlphaWidgetContainer.field_O = rc.field_d;
           rc.field_d = false;
           th.field_d = IterableNodeHashTable.field_g;
           TextHotspotBounds.field_m = TextLayout.field_b;

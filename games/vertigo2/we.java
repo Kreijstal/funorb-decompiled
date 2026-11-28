@@ -160,7 +160,7 @@ final class we extends UiWidget {
           we.a(param4, param3, param0, (byte) -57);
           tq.b((byte) 44);
           un.field_Hb = l.field_a;
-          um.field_F = l.field_a;
+          ArrayWidgetContainer.field_F = l.field_a;
         } catch (RuntimeException runtimeException) {
           throw wn.wrapClientException((Throwable) ((Object) runtimeException), "we.H(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + (param4 != null ? "{...}" : "null") + ')');
         }
@@ -208,7 +208,7 @@ final class we extends UiWidget {
         this(param0, param1, param2, param3, param4, param5, param6, param5 >> 1 & 8355711, (16711422 & param6) >> 1);
     }
 
-    final void a(byte param0, int param1, int param2, UiWidget param3) {
+    final void updatePointer(byte param0, int param1, int param2, UiWidget param3) {
         Sprite discarded$1 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
@@ -283,7 +283,7 @@ final class we extends UiWidget {
         this.a(-58);
     }
 
-    final void a(boolean param0, int param1, int param2, int param3) {
+    final void drawWidget(boolean param0, int param1, int param2, int param3) {
         if (0 != param1) {
           return;
         }

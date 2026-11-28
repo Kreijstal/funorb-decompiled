@@ -46,7 +46,7 @@ final class NodeHashTableIterator implements Iterator {
             decompiledFrameRemainder0 = (wb.field_t == null);
           }
           if (decompiledFrameRemainder0) {
-            if (!jd.field_E) {
+            if (!DropTargetWidgetContainer.field_E) {
               if (lp.field_b >= MatchingFieldValidator.field_l) {
                 stackIn_16_0 = (lp.field_b < TooltipPanel.field_g + MatchingFieldValidator.field_l) ? 1 : 0;
               } else {
@@ -59,7 +59,7 @@ final class NodeHashTableIterator implements Iterator {
             if (param0 == null) {
               lp.field_b = 0;
             } else {
-              if (jd.field_E) {
+              if (DropTargetWidgetContainer.field_E) {
                 lp.field_b = MatchingFieldValidator.field_l;
               } else {
                 if (var2_int != 0) {
@@ -73,23 +73,23 @@ final class NodeHashTableIterator implements Iterator {
             ll.field_i = ConfirmedEmailAvailabilityValidator.field_n;
             if (param0 == null) {
               if (var2_int != 0) {
-                jd.field_E = true;
+                DropTargetWidgetContainer.field_E = true;
               }
             } else {
-              jd.field_E = false;
+              DropTargetWidgetContainer.field_E = false;
             }
           }
           wb.field_t = param0;
-          if (!jd.field_E &&
+          if (!DropTargetWidgetContainer.field_E &&
             MatchingFieldValidator.field_l > lp.field_b &&
             he.field_a) {
             ll.field_i = ConfirmedEmailAvailabilityValidator.field_n;
             lp.field_b = 0;
             FrameTimer.field_a = nd.field_a;
           }
-          if (jd.field_E &&
+          if (DropTargetWidgetContainer.field_E &&
             PacketBuffer.field_m == lp.field_b) {
-            jd.field_E = false;
+            DropTargetWidgetContainer.field_E = false;
             lp.field_b = 0;
           }
           nd.field_a = param1;

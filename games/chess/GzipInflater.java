@@ -83,17 +83,17 @@ final class GzipInflater {
           if (param0) {
             var6 = var6 | 8;
           }
-          if (lf.field_N != null) {
+          if (AlphaWidgetContainer.field_N != null) {
             var6 = var6 | 16;
           }
           EditableTextField.field_U.writeByte(var6, (byte) 52);
-          var7 = m.a(bh.i(81), (byte) 87);
+          var7 = m.a(ArrayWidgetContainer.i(81), (byte) 87);
           if (var7 == null) {
             var7 = "";
           }
           EditableTextField.field_U.writeString(param1 ^ 27325, var7);
-          if (null != lf.field_N) {
-            EditableTextField.field_U.writePrefixedString(true, lf.field_N);
+          if (null != AlphaWidgetContainer.field_N) {
+            EditableTextField.field_U.writePrefixedString(true, AlphaWidgetContainer.field_N);
           }
           lk.a(SecondaryNodeHashTable.field_k, mn.field_h, EditableTextField.field_U, 91, RichTextWidget.field_M);
           EditableTextField.field_U.backpatchShortLength(EditableTextField.field_U.position - var5_int, 111);

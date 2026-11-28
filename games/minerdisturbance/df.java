@@ -12,12 +12,12 @@ final class df {
         mc.field_w = param2;
         if (param1 == 5494) {
           q.field_c = param0;
-          oj.field_J = param0;
+          AlphaWidgetContainer.field_J = param0;
           return;
         }
         df.clearStaticReferences((byte) -76);
         q.field_c = param0;
-        oj.field_J = param0;
+        AlphaWidgetContainer.field_J = param0;
     }
 
     public static void clearStaticReferences(byte param0) {

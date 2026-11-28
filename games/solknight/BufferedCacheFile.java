@@ -280,9 +280,9 @@ final class BufferedCacheFile {
             ImageProducerRasterBuffer.field_m = RichTextLayout.field_p;
           }
           var1_intLifetime2 = 0;
-          if (kf.field_G != null) {
-            for (var2 = 0; kf.field_G.length > var2; var2++) {
-              var3_ref_rb = kf.field_G[var2];
+          if (ModalDialog.field_G != null) {
+            for (var2 = 0; ModalDialog.field_G.length > var2; var2++) {
+              var3_ref_rb = ModalDialog.field_G[var2];
               if (var3_ref_rb != null &&
                 var3_ref_rb.field_j >= 25 &&
                 var3_ref_rb.field_j <= 30) {
@@ -436,8 +436,8 @@ final class BufferedCacheFile {
                 }
                 stackIn_142_0 = (ob.field_l <= 0) ? 9 : 0;
                 fb.field_c = stackIn_142_0;
-                for (var2Lifetime1 = 0; var2Lifetime1 < kf.field_G.length; var2Lifetime1++) {
-                  kf.field_G[var2Lifetime1] = null;
+                for (var2Lifetime1 = 0; var2Lifetime1 < ModalDialog.field_G.length; var2Lifetime1++) {
+                  ModalDialog.field_G[var2Lifetime1] = null;
                 }
                 ClientException.field_b = 240;
                 pk.a((byte) -96, 4, false);
@@ -567,7 +567,7 @@ final class BufferedCacheFile {
           }
           if (pg.field_e ||
             -1 != kd.currentScreenIndex) {
-            si.field_E = (si.field_E * 9 + 240) / 10;
+            SingleChildWidgetContainer.field_E = (SingleChildWidgetContainer.field_E * 9 + 240) / 10;
             ArchiveSource.field_c = 9 * ArchiveSource.field_c / 10;
           }
           if (!pg.field_e &&
@@ -589,7 +589,7 @@ final class BufferedCacheFile {
             }
             if (kd.currentScreenIndex == -1 && (!(PacketBuffer.field_j <= -1) ||
               0 != wb.field_c)) {
-              si.field_E = (var3Lifetime1 / 2 + 9 * si.field_E) / 10;
+              SingleChildWidgetContainer.field_E = (var3Lifetime1 / 2 + 9 * SingleChildWidgetContainer.field_E) / 10;
               ArchiveSource.field_c = (9 * ArchiveSource.field_c + (var2Lifetime3 - 320)) / 10;
             }
             be.c(false);

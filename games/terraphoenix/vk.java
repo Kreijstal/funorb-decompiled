@@ -17,17 +17,17 @@ final class vk {
             if (null != a.field_b &&
               a.field_b.field_d) {
               ga.b((byte) 82);
-              cl.field_J.a((UiWidget) (new hi(cl.field_J, ProxySocketConnector.field_e)), (byte) -1);
+              cl.field_J.showDialog((UiWidget) (new hi(cl.field_J, ProxySocketConnector.field_e)), (byte) -1);
             }
             return;
           }
-          cl.field_J.a(true, q.field_Hb, dm.field_g, 120);
+          cl.field_J.processPointerInput(true, q.field_Hb, dm.field_g, 120);
           if (param0 != -8177) {
             vk.a(87);
           }
-          cl.field_J.i((byte) 126);
+          cl.field_J.advanceDialogs((byte) 126);
           while (DefaultTextWidgetRenderer.d(1)) {
-            cl.field_J.a(lf.field_c, SectorCacheStore.field_g, (byte) -116);
+            cl.field_J.processKeyInput(lf.field_c, SectorCacheStore.field_g, (byte) -116);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

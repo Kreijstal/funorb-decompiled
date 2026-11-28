@@ -228,13 +228,13 @@ final class MixedSupport138 {
               integerLocal36 = MixedSupport121.sceneWidgetState0117.bitmapFontState0020.stringWidth(stringLocal32) + 3 * MixedSupport121.sceneWidgetState0117.bitmapFontState0020.charWidth('.');
               MixedSupport121.sceneWidgetState0117.integerState0916 = 0;
               MixedSupport121.sceneWidgetState0117.integerState0893 = (-integerLocal36 + MixedSupport121.sceneWidgetState0117.integerState0896) / 2;
-              if ((48 & UiComponentPart020.integerState0552) == 16) {
+              if ((48 & ArrayWidgetContainer.integerState0552) == 16) {
                 objectLocal24 = stringLocal32 + ".";
               }
-              if ((UiComponentPart020.integerState0552 & 48) == 32) {
+              if ((ArrayWidgetContainer.integerState0552 & 48) == 32) {
                 objectLocal24 = (String) (objectLocal24) + "..";
               }
-              if ((48 & UiComponentPart020.integerState0552) == 48) {
+              if ((48 & ArrayWidgetContainer.integerState0552) == 48) {
                 objectLocal24 = (String) (objectLocal24) + "...";
               }
               MixedSupport121.sceneWidgetState0117.stringState0598 = (String) (objectLocal24);

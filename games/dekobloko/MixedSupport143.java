@@ -112,10 +112,10 @@ final class MixedSupport143 {
           if (integerArgument1 != 3) {
             return;
           }
-          mixedSupport113Local3 = (MixedSupport113) (UiComponentPart010.nodeDequeState0008.beginBackward((byte) 80));
+          mixedSupport113Local3 = (MixedSupport113) (AlphaWidgetContainer.nodeDequeState0008.beginBackward((byte) 80));
           while (mixedSupport113Local3 != null) {
             ReturnedShapeCache.performAction1177(integerArgument1 ^ -87, integerArgument2, mixedSupport113Local3);
-            mixedSupport113Local3 = (MixedSupport113) (UiComponentPart010.nodeDequeState0008.nextBackward(true));
+            mixedSupport113Local3 = (MixedSupport113) (AlphaWidgetContainer.nodeDequeState0008.nextBackward(true));
           }
           return;
         } catch (java.lang.RuntimeException caughtParameterLocal6) {

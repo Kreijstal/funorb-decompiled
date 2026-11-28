@@ -25,7 +25,7 @@ final class sc {
               if (DualLinkNode.field_k) {
                 param2 = fk.field_j;
               } else {
-                param2 = l.field_C;
+                param2 = DropTargetWidgetContainer.field_C;
               }
               eb.field_b.a(3, AwtRasterBuffer.field_d);
             }

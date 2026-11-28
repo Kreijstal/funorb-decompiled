@@ -4,7 +4,7 @@
 abstract class ti {
     static String field_g;
     static boolean field_d;
-    static tc field_b;
+    static ModalDialogHost field_b;
     static IntrusiveDeque field_a;
     static Sprite[] field_e;
     static PcmStreamMixer field_f;

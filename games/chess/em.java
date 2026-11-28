@@ -148,12 +148,12 @@ final class em {
         }
         if (jh.field_a &&
           pd.field_Rb.field_hc <= pd.field_Rb.field_Xb) {
-          bh.field_G.field_tb = false;
+          ArrayWidgetContainer.field_G.field_tb = false;
           ib.field_c.field_Jb.field_db = oj.field_b;
-          fm.a(ib.field_c.field_Kb, -128);
+          ModalDialogHost.a(ib.field_c.field_Kb, -128);
         } else {
           ib.field_c.field_Jb.field_db = null;
-          bh.field_G.field_tb = true;
+          ArrayWidgetContainer.field_G.field_tb = true;
           DisplayNameSelectionPanel.a(21487, ib.field_c, param9, param7, param3);
         }
         mk.a(param7, param4, param9, (byte) -68, param0, param3, param8);

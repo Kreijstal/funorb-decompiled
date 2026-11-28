@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 abstract class qj extends kc {
-    private ie field_Y;
+    private AlphaWidgetContainer field_Y;
     static MouseWheelSource field_eb;
     private int field_ab;
     private int field_W;
@@ -49,34 +49,34 @@ abstract class qj extends kc {
         }
     }
 
-    final boolean i(int param0) {
+    final boolean snapDialogAnimation(int param0) {
         if (param0 < -121) {
           this.j(-128);
-          return super.i(-125);
+          return super.snapDialogAnimation(-125);
         }
-        this.i(-95);
+        this.snapDialogAnimation(-95);
         this.j(-128);
-        return super.i(-125);
+        return super.snapDialogAnimation(-125);
     }
 
-    boolean a(UiWidget param0, char param1, byte param2, int param3) {
+    boolean handleKey(UiWidget param0, char param1, byte param2, int param3) {
         RuntimeException var5 = null;
         RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
         String stackIn_15_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (super.a(param0, param1, param2, param3)) {
+          if (super.handleKey(param0, param1, param2, param3)) {
             return true;
           }
           if (null == this.field_Y) {
             return false;
           }
           if (param3 == 98) {
-            this.field_Y.a(0, param0);
+            this.field_Y.takeFocus(0, param0);
           }
           if (param3 == 99) {
-            this.field_Y.a(0, param0);
+            this.field_Y.takeFocus(0, param0);
           }
           return false;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -93,7 +93,7 @@ abstract class qj extends kc {
         }
     }
 
-    qj(tc param0, UiWidget param1, int param2, int param3, int param4) {
+    qj(ModalDialogHost param0, UiWidget param1, int param2, int param3, int param4) {
         super(param0, 12 + param1.field_i, param2 + (12 + param1.field_f));
         try {
           this.field_db = param2;
@@ -130,31 +130,31 @@ abstract class qj extends kc {
             this.field_Y.unlink(4);
           }
           if (param1 == null) {
-            this.field_Y = new ie();
+            this.field_Y = new AlphaWidgetContainer();
           } else {
-            param1.a(6, param1.field_i, (byte) 125, param1.field_f, this.field_db + 6);
-            this.field_Y = new ie(param1);
+            param1.setBounds(6, param1.field_i, (byte) 125, param1.field_f, this.field_db + 6);
+            this.field_Y = new AlphaWidgetContainer(param1);
           }
           if (param0 != 6) {
             this.j(-25);
           }
-          this.a(true, this.field_Y);
+          this.addChild(true, this.field_Y);
           this.field_X = null;
         } catch (RuntimeException runtimeException) {
           throw sd.wrapClientException((Throwable) ((Object) runtimeException), "qj.FA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
-    boolean g(byte param0) {
+    boolean advanceDialogAnimation(byte param0) {
         int fieldTemp$0 = 0;
         int fieldTemp$1 = 0;
         int var3 = StarCannon.field_A;
         if (null == this.field_Z) {
           if (param0 == -124) {
-            return super.g((byte) -124);
+            return super.advanceDialogAnimation((byte) -124);
           }
           qj.clearStaticReferences(-17);
-          return super.g((byte) -124);
+          return super.advanceDialogAnimation((byte) -124);
         }
         if (na.field_e == this.field_Z) {
           fieldTemp$0 = this.field_ab + 1;
@@ -163,19 +163,19 @@ abstract class qj extends kc {
             this.field_Y.field_w = -((this.field_ab << 8) / this.field_W) + 256;
             if (param0 != -124) {
               qj.clearStaticReferences(-17);
-              return super.g((byte) -124);
+              return super.advanceDialogAnimation((byte) -124);
             }
-            return super.g((byte) -124);
+            return super.advanceDialogAnimation((byte) -124);
           }
           this.field_Z = sk.field_c;
           this.b(this.field_X.field_i + 12, this.field_X.field_f + this.field_db + 12, (byte) 120, this.field_cb);
           this.field_Y.field_w = 0;
           this.field_ab = 0;
           if (param0 == -124) {
-            return super.g((byte) -124);
+            return super.advanceDialogAnimation((byte) -124);
           }
           qj.clearStaticReferences(-17);
-          return super.g((byte) -124);
+          return super.advanceDialogAnimation((byte) -124);
         }
         if (this.field_Z == w.field_w) {
           fieldTemp$1 = this.field_ab + 1;
@@ -183,44 +183,44 @@ abstract class qj extends kc {
           if (fieldTemp$1 != this.field_bb) {
             this.field_Y.field_w = (this.field_ab << 8) / this.field_bb;
             if (param0 == -124) {
-              return super.g((byte) -124);
+              return super.advanceDialogAnimation((byte) -124);
             }
             qj.clearStaticReferences(-17);
-            return super.g((byte) -124);
+            return super.advanceDialogAnimation((byte) -124);
           }
           this.field_Z = null;
           this.field_Y.field_w = 256;
           if (param0 == -124) {
-            return super.g((byte) -124);
+            return super.advanceDialogAnimation((byte) -124);
           }
           qj.clearStaticReferences(-17);
-          return super.g((byte) -124);
+          return super.advanceDialogAnimation((byte) -124);
         }
         if (param0 == -124) {
-          return super.g((byte) -124);
+          return super.advanceDialogAnimation((byte) -124);
         }
         qj.clearStaticReferences(-17);
-        return super.g((byte) -124);
+        return super.advanceDialogAnimation((byte) -124);
     }
 
     final void j(int param0) {
         if (null == this.field_Z) {
           super.j(-119);
           if (param0 > -104) {
-            this.i(123);
+            this.snapDialogAnimation(123);
             return;
           }
           return;
         }
         if (w.field_w != this.field_Z) {
-          this.b(12 + this.field_X.field_i, (byte) 57, this.field_X.field_f + (this.field_db + 12));
+          this.setCenteredSize(12 + this.field_X.field_i, (byte) 57, this.field_X.field_f + (this.field_db + 12));
           this.d(6, this.field_X);
         } else {
           this.field_Y.field_w = 256;
           this.field_Z = null;
           super.j(-119);
           if (param0 > -104) {
-            this.i(123);
+            this.snapDialogAnimation(123);
             return;
           }
           return;
@@ -231,7 +231,7 @@ abstract class qj extends kc {
         if (param0 <= -104) {
           return;
         }
-        this.i(123);
+        this.snapDialogAnimation(123);
     }
 
     public static void clearStaticReferences(int param0) {

@@ -106,7 +106,7 @@ final class el extends InteractiveWidget {
         return oj.a(-1, param0, 1, param2, param3);
     }
 
-    final boolean a(UiWidget param0, int param1, int param2, int param3, byte param4, int param5, int param6) {
+    final boolean pointerPressed(UiWidget param0, int param1, int param2, int param3, byte param4, int param5, int param6) {
         RuntimeException stackIn_20_0 = null;
         StringBuilder stackIn_20_1 = null;
         String stackIn_21_2 = null;
@@ -118,7 +118,7 @@ final class el extends InteractiveWidget {
         int var12 = 0;
         var12 = StarCannon.field_A;
         try {
-          if (!super.a(param0, param1, param2, param3, param4, param5, param6)) {
+          if (!super.pointerPressed(param0, param1, param2, param3, param4, param5, param6)) {
             return false;
           }
           var8_int = -param2 + (-this.field_s - this.field_K) + param5;
@@ -126,7 +126,7 @@ final class el extends InteractiveWidget {
           if (var9 * var9 + var8_int * var8_int >= this.field_I * this.field_I) {
             return true;
           }
-          var10 = Math.atan2((double)var9, (double)var8_int) - qd.field_z;
+          var10 = Math.atan2((double)var9, (double)var8_int) - ModalDialog.field_z;
           if (!(0.0 > var10)) {
             if (0.0 < var10) {
               var10 = var10 + 3.141592653589793 / (double)this.field_B;

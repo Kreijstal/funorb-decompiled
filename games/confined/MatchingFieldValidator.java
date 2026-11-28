@@ -172,7 +172,7 @@ final class MatchingFieldValidator extends TextFieldValidator {
             if (param0 != -84) {
               field_i = (PcmSample) null;
             }
-            lh.field_b = oe.field_W;
+            lh.field_b = ModalDialog.field_W;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

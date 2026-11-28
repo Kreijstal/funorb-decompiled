@@ -163,13 +163,13 @@ final class DungeonRaidScreen extends DungeonAssaultScreen {
               }
               var1 = (fa) (IntroSequenceScreen.field_v.nextBackward(param0 ^ 10));
             }
-            if (oi.field_F != null) {
-              var1Lifetime1 = (fa) (oi.field_F.beginBackward(-24172));
+            if (DraggableWidgetContainer.field_F != null) {
+              var1Lifetime1 = (fa) (DraggableWidgetContainer.field_F.beginBackward(-24172));
               while (var1Lifetime1 != null) {
                 if (!var1Lifetime1.field_o.isLinked(-67)) {
                   var1Lifetime1.unlink(false);
                 }
-                var1Lifetime1 = (fa) (oi.field_F.nextBackward(4));
+                var1Lifetime1 = (fa) (DraggableWidgetContainer.field_F.nextBackward(4));
               }
             }
           }
@@ -484,7 +484,7 @@ final class DungeonRaidScreen extends DungeonAssaultScreen {
         try {
           stackIn_2_0 = param2.field_b;
           if (!param1) {
-            stackIn_3_1 = rf.field_M;
+            stackIn_3_1 = ModalDialog.field_M;
           } else {
             stackIn_3_1 = li.field_h;
           }
@@ -613,7 +613,7 @@ final class DungeonRaidScreen extends DungeonAssaultScreen {
           if (var9 != -1) {
             var8Lifetime2 = "<col=" + Integer.toString(var9, 16) + ">" + var13 + "</col>";
           }
-          rf.field_K.a(var8Lifetime2, -114, "lastroom");
+          ModalDialog.field_K.a(var8Lifetime2, -114, "lastroom");
           this.field_R.a(2985);
           if (var7.field_h.field_g == 2) {
             qh.a(param0 ^ 13822, this.field_N, 6);
@@ -1150,7 +1150,7 @@ final class DungeonRaidScreen extends DungeonAssaultScreen {
               if (var5 == ob.field_Mb) {
                 var6 = param1.position;
                 var16 = this.field_Y.field_A[param1.readUnsignedByte(true)];
-                var16.field_b.startAnimation(rf.field_M, var16.field_n.field_t, -10872);
+                var16.field_b.startAnimation(ModalDialog.field_M, var16.field_n.field_t, -10872);
                 param1.position = var6;
               } else if (var5 == ob.field_lc ||
                 var5 == ob.field_Gb) {
@@ -1165,7 +1165,7 @@ final class DungeonRaidScreen extends DungeonAssaultScreen {
               if (null != var17.field_n.field_g) {
                 gd.a(64, var17.field_n.field_g);
               }
-              var4.field_b = new SpriteAnimationPlayer(var15.field_n.field_e, var15.field_n.field_t, rf.field_M);
+              var4.field_b = new SpriteAnimationPlayer(var15.field_n.field_e, var15.field_n.field_t, ModalDialog.field_M);
             }
           } else {
             var6 = param1.position;
@@ -1212,7 +1212,7 @@ final class DungeonRaidScreen extends DungeonAssaultScreen {
         int var3 = DungeonAssault.field_K;
         this.field_U = new int[32];
         for (var2 = 0; 32 > var2; var2++) {
-          this.field_U[var2] = oi.b(0, 4);
+          this.field_U[var2] = DraggableWidgetContainer.b(0, 4);
         }
         this.field_P = new int[4];
         if (param0 != 7872) {
@@ -2171,7 +2171,7 @@ final class DungeonRaidScreen extends DungeonAssaultScreen {
             var12++;
           }
           if (this.field_P[2] > 0 &&
-            0 == oi.b(0, 100)) {
+            0 == DraggableWidgetContainer.b(0, 100)) {
             this.field_B.addFirst(je.a(0, sa.field_v), false);
           }
         } else if (this.field_Y.field_q != -1) {
@@ -2196,17 +2196,17 @@ final class DungeonRaidScreen extends DungeonAssaultScreen {
             }
           }
           if (this.field_P[2] > 0 &&
-            0 == oi.b(0, 100)) {
+            0 == DraggableWidgetContainer.b(0, 100)) {
             this.field_B.addFirst(je.a(0, sa.field_v), false);
           }
         } else {
           if (this.field_P[2] > 0 &&
-            0 == oi.b(0, 100)) {
+            0 == DraggableWidgetContainer.b(0, 100)) {
             this.field_B.addFirst(je.a(0, sa.field_v), false);
           }
         }
         if (this.field_P[3] > 0 &&
-          oi.b(0, 100) == 0) {
+          DraggableWidgetContainer.b(0, 100) == 0) {
           this.field_T.addFirst(je.a(param1 - 251569954, hp.field_c), false);
         }
         this.field_D.setScaledVolume(oo.field_d * (om.field_b.field_a * this.field_P[0]) / 96 >> 8);
@@ -2822,7 +2822,7 @@ final class DungeonRaidScreen extends DungeonAssaultScreen {
                     var14 = -1;
                     if (0 != (var5_int & 1024) &&
                       var7.field_n.hasAbility(ob.field_mc, 89)) {
-                      var14 = ji.a(-1 + var13, false, 1);
+                      var14 = ModalDialogHost.a(-1 + var13, false, 1);
                     }
                     var15 = -1;
                     if ((512 & var5_int) != 0) {
@@ -2831,7 +2831,7 @@ final class DungeonRaidScreen extends DungeonAssaultScreen {
                         if (var12 == 0) {
                           var16 = 0;
                         }
-                        var15 = ji.a(-1 + var13, false, var16);
+                        var15 = ModalDialogHost.a(-1 + var13, false, var16);
                         var13--;
                       } else {
                         var13--;
@@ -2956,7 +2956,7 @@ final class DungeonRaidScreen extends DungeonAssaultScreen {
             }
           }
         } else {
-          this.setRaidMessage(bj.field_I, param0 - 36952);
+          this.setRaidMessage(DropTargetWidgetContainer.field_I, param0 - 36952);
         }
     }
 
@@ -2994,7 +2994,7 @@ final class DungeonRaidScreen extends DungeonAssaultScreen {
         this.field_v = true;
         this.field_y = null;
         this.field_Q = true;
-        this.field_W = bj.field_I;
+        this.field_W = DropTargetWidgetContainer.field_I;
         this.field_X = 0;
         try {
           stackIn_4_1 = (param0);

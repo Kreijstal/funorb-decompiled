@@ -586,7 +586,7 @@ final class MidiPlayer extends PcmStream {
           if (var6Lifetime3 < 64) {
             this.field_I[var4Lifetime4] = RandomAccessCacheFile.a(this.field_I[var4Lifetime4], -2);
           } else {
-            this.field_I[var4Lifetime4] = ok.a(this.field_I[var4Lifetime4], 1);
+            this.field_I[var4Lifetime4] = SingleChildWidgetContainer.a(this.field_I[var4Lifetime4], 1);
           }
         }
         if (var5Lifetime4 == 65) {
@@ -594,7 +594,7 @@ final class MidiPlayer extends PcmStream {
             this.releaseUnmappedVoices(-22803, var4Lifetime4);
             this.field_I[var4Lifetime4] = RandomAccessCacheFile.a(this.field_I[var4Lifetime4], -3);
           } else {
-            this.field_I[var4Lifetime4] = ok.a(this.field_I[var4Lifetime4], 2);
+            this.field_I[var4Lifetime4] = SingleChildWidgetContainer.a(this.field_I[var4Lifetime4], 2);
           }
         }
         if (var5Lifetime4 == 99) {
@@ -641,7 +641,7 @@ final class MidiPlayer extends PcmStream {
             this.resetChannelVoicePhases(var4Lifetime4, 0);
             this.field_I[var4Lifetime4] = RandomAccessCacheFile.a(this.field_I[var4Lifetime4], -5);
           } else {
-            this.field_I[var4Lifetime4] = ok.a(this.field_I[var4Lifetime4], 4);
+            this.field_I[var4Lifetime4] = SingleChildWidgetContainer.a(this.field_I[var4Lifetime4], 4);
           }
         }
         if (var5Lifetime4 == 17) {
@@ -1026,11 +1026,11 @@ final class MidiPlayer extends PcmStream {
         try {
           gh.field_k = true;
           ArchiveIndex.field_h = param1 ? true : false;
-          kb.field_a = new jj(gl.field_E, p.field_a, param0, vg.field_o, ArchiveIndex.field_h);
+          kb.field_a = new jj(AlphaWidgetContainer.field_E, p.field_a, param0, vg.field_o, ArchiveIndex.field_h);
           if (param2 != -16257) {
             field_s = (int[]) null;
           }
-          gl.field_E.d((byte) -94, kb.field_a);
+          AlphaWidgetContainer.field_E.showDialog((byte) -94, kb.field_a);
         } catch (RuntimeException runtimeException) {
           throw LevelGrid.toClientException((Throwable) ((Object) runtimeException), "nb.V(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }

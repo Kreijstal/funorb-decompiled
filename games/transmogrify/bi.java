@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class bi extends mk {
+abstract class bi extends ModalDialog {
     static volatile boolean field_M;
     private int field_N;
     private int field_F;
@@ -17,7 +17,7 @@ abstract class bi extends mk {
         if (this.field_G <= 0) {
           return;
         }
-        this.a(this.field_H, this.field_N, false);
+        this.setCenteredSize(this.field_H, this.field_N, false);
         this.field_G = 0;
         if (param0 != 27830) {
           return;
@@ -25,7 +25,7 @@ abstract class bi extends mk {
         this.d((byte) -2);
     }
 
-    boolean m(int param0) {
+    boolean advanceDialogAnimation(int param0) {
         int var2 = 0;
         int var3 = 0;
         int fieldTemp$0 = 0;
@@ -46,14 +46,14 @@ abstract class bi extends mk {
             var3 = this.field_I + (this.field_N - this.field_I) * var4 / var5;
             var2 = var4 * (this.field_H - this.field_K) / var5 + this.field_K;
           }
-          this.a(var2, var3, false);
+          this.setCenteredSize(var2, var3, false);
         }
-        return super.m(0);
+        return super.advanceDialogAnimation(0);
     }
 
     final void a(int param0, int param1, int param2, int param3) {
         if (param3 <= param0) {
-          this.a(param1, param2, false);
+          this.setCenteredSize(param1, param2, false);
           return;
         }
         this.field_I = this.field_h;
@@ -179,7 +179,7 @@ abstract class bi extends mk {
         }
     }
 
-    bi(da param0, int param1, int param2) {
+    bi(ModalDialogHost param0, int param1, int param2) {
         super(param0, param1, param2);
         this.field_F = 0;
         this.field_G = 0;
@@ -191,12 +191,12 @@ abstract class bi extends mk {
         }
     }
 
-    boolean a(byte param0) {
+    boolean snapDialogAnimation(byte param0) {
         this.p(27830);
         if (param0 != -97) {
           this.field_G = 107;
         }
-        return super.a((byte) -97);
+        return super.snapDialogAnimation((byte) -97);
     }
 
     public static void clearDeclaredStaticReferences(int param0) {

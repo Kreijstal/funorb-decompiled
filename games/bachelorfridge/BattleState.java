@@ -1278,7 +1278,7 @@ final class BattleState {
           while (var4Lifetime1 != null) {
             var5 = al.a(120, var4Lifetime1.moveId);
             if (2 == var5.kind &&
-              hl.a((byte) 121, var5.field_j) &&
+              AlphaWidgetContainer.a((byte) 121, var5.field_j) &&
               var5.field_l == var3Lifetime1) {
               this.field_P.addLast(var4Lifetime1, true);
             }

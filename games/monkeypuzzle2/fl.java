@@ -22,7 +22,7 @@ final class fl {
           }
           var1_intLifetime1 = -38 / ((param0 - 78) / 46);
           TextHotspotBounds.field_f = 640;
-          mh.field_D = 640;
+          LabeledWidgetContainer.field_D = 640;
         } catch (RuntimeException runtimeException) {
           throw la.a((Throwable) ((Object) runtimeException), "fl.C(" + param0 + ')');
         }

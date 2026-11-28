@@ -171,8 +171,8 @@ final class ej implements Runnable {
         w.field_V = null;
         rf.field_c = 0;
         var2 = IterableNodeHashTable.field_e;
-        IterableNodeHashTable.field_e = fj.field_T;
-        fj.field_T = var2;
+        IterableNodeHashTable.field_e = DraggableWidgetContainer.field_T;
+        DraggableWidgetContainer.field_T = var2;
         if (param0 > 8) {
           SecondaryNodeDeque.field_d.field_e = SecondaryNodeDeque.field_d.field_e + 1;
           if (param1 == 51) {

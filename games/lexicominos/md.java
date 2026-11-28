@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class md extends w {
+final class md extends UiWidget {
     private int field_x;
     static RgbSprite[] field_A;
     private int field_E;
@@ -92,8 +92,8 @@ final class md extends w {
         }
         pd.a(-22949);
         if (param0) {
-          w var10 = (w) null;
-          this.a((byte) 4, (w) null, -98, 94);
+          UiWidget var10 = (UiWidget) null;
+          this.updatePointer((byte) 4, (UiWidget) null, -98, 94);
         }
         return var3;
     }
@@ -108,7 +108,7 @@ final class md extends w {
         field_A = null;
     }
 
-    final void a(byte param0, w param1, int param2, int param3) {
+    final void updatePointer(byte param0, UiWidget param1, int param2, int param3) {
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         String stackIn_10_2 = null;
@@ -168,7 +168,7 @@ final class md extends w {
         }
     }
 
-    final void a(byte param0, int param1, int param2, int param3) {
+    final void drawWidget(byte param0, int param1, int param2, int param3) {
         if (param3 != 0) {
           return;
         }
@@ -196,8 +196,8 @@ final class md extends w {
         this.field_D = new RgbSprite(this.field_v >> 1, this.field_v);
     }
 
-    final void a(int param0, int param1, boolean param2, int param3, int param4) {
-        super.a(param0, param1, param2, param3, param4);
+    final void setBounds(int param0, int param1, boolean param2, int param3, int param4) {
+        super.setBounds(param0, param1, param2, param3, param4);
         this.f(-72);
     }
 
@@ -261,7 +261,7 @@ final class md extends w {
         this.field_C = param8;
         this.field_I = param4;
         this.field_M = param7;
-        this.a(param3, param2, true, param1, param0);
+        this.setBounds(param3, param2, true, param1, param0);
     }
 
     static {

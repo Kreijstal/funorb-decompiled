@@ -7,7 +7,7 @@ final class kd implements WidgetRenderer {
     static int field_a;
     static long[] field_b;
 
-    public final void a(int param0, int param1, boolean param2, byte param3, UiWidget param4) {
+    public final void paintWidget(int param0, int param1, boolean param2, byte param3, UiWidget param4) {
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         String stackIn_10_2 = null;
@@ -27,7 +27,7 @@ final class kd implements WidgetRenderer {
             var8.drawAdditive((param4.field_l - var8.field_r >> 1) + 1 + var6_int, 1 + (var7 + (param4.field_h - var8.field_s >> 1)), 256);
           }
           var9 = -113 / ((param3 - 51) / 47);
-          if (param4.b((byte) -109)) {
+          if (param4.isFocused((byte) -109)) {
             DualLinkNode.a(param4.field_l - 4, var6_int + 2, var7 + 2, (byte) -86, param4.field_h - 4);
           }
           return;
@@ -145,7 +145,7 @@ final class kd implements WidgetRenderer {
             if (var5_ref != null) {
               var6 = 4 + (hk.field_a.field_t + hk.field_a.field_y);
               var7 = hk.field_a.lineCount((String) (var5_ref), 160) * var6;
-              dk.a(var4_int + 10 + var7, mk.field_B, -28018, 451, o.field_i + 237 + param1, 180);
+              dk.a(var4_int + 10 + var7, ModalDialog.field_B, -28018, 451, o.field_i + 237 + param1, 180);
               hk.field_a.drawParagraph((String) (var5_ref), 461, o.field_i + 247 + param1, 160, var7, 0, -1, 1, 0, var6);
             }
           } else {
@@ -192,7 +192,7 @@ final class kd implements WidgetRenderer {
               }
               pa.a(param1 + 376, tj.field_z + var7Lifetime1, 39935, 16776867, 164, 16710412, 264, -10, 39935);
             } else {
-              pa.a(param1 + 376, da.field_z, 39935, 8421504, 164, 8421504, 264, -10, 39935);
+              pa.a(param1 + 376, ModalDialogHost.field_z, 39935, 8421504, 164, 8421504, 264, -10, 39935);
             }
             decompiledFrameRemainder0 = false;
           }
@@ -268,7 +268,7 @@ final class kd implements WidgetRenderer {
               var10Lifetime1 = -var9Lifetime1 + var8_intLifetime1 >> 3;
               var11 = (ImageProducerRasterBuffer.field_i[var9Lifetime1] + 10 * (eg.field_b / 58)) % 187;
               var12 = var11 + 442;
-              var13 = (n.submittedWordCount - 1) * 12 + vl.field_G[var9Lifetime1];
+              var13 = (n.submittedWordCount - 1) * 12 + DraggableWidgetContainer.field_G[var9Lifetime1];
               if (var10Lifetime1 >= 0 &&
                 var10Lifetime1 < 5) {
                 DirectByteStorage.field_d[cc.field_f[var9Lifetime1] * 5 + var10Lifetime1].draw(var12, var13 + param1);
@@ -289,7 +289,7 @@ final class kd implements WidgetRenderer {
           hk.field_a.drawString(ve.field_D, 464, 197 + param1, 16711680, -1);
           hk.field_a.drawRightAligned(Integer.toString(eh.totalScore), 627, 197 + param1, 16711680, -1);
           if (WordDictionary.field_e) {
-            dk.a(136, mk.field_B, -28018, 180, param1 + 88, 280);
+            dk.a(136, ModalDialog.field_B, -28018, 180, param1 + 88, 280);
             IntrusiveNode.field_d.drawParagraph(he.skipRoundPrompt, 190, param1 + 93, 260, 80, 0, -1, 1, 0, IntrusiveNode.field_d.field_y + 3);
             stackIn_103_0 = 65280;
             stackIn_103_1 = 80;
@@ -308,12 +308,12 @@ final class kd implements WidgetRenderer {
           }
           if (ll.field_S) {
             IntrusiveNode.field_d.drawRightAligned("FPS: " + ub.field_a, 630, 30, 65535, -1);
-            IntrusiveNode.field_d.drawRightAligned("LPS: " + oc.field_y, 630, 60, 65535, -1);
+            IntrusiveNode.field_d.drawRightAligned("LPS: " + LabeledWidgetContainer.field_y, 630, 60, 65535, -1);
           }
           var15 = (AchievementUnlockEvent) (CrossfadingMidiPcmStream.field_u.beginForward((byte) -95));
           var8Lifetime2 = var15;
           if (var8Lifetime2 != null) {
-            var10Lifetime2 = da.field_C;
+            var10Lifetime2 = ModalDialogHost.field_C;
             if (var10Lifetime2 < 80) {
               var9Lifetime2 = -32 + var10Lifetime2 / 2;
             } else {

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class vb implements fc {
+final class vb implements WidgetRenderer {
     private int field_c;
     static String field_o;
     private int field_l;
@@ -84,7 +84,7 @@ final class vb implements fc {
             return stackIn_4_0;
           }
           if (ClientException.field_c == pj.field_a) {
-            lk.field_p = null;
+            UiWidget.field_p = null;
             hh.field_p.position = 0;
             if (param1 == null) {
               lb.field_g.position = 0;
@@ -161,7 +161,7 @@ final class vb implements fc {
                 wa.field_d = var9Lifetime1;
               } else {
                 IsaacRandom.a(BufferedRandomAccessFile.b(false), 3);
-                lk.field_p = new Boolean(pb.a(jc.field_g, (byte) 87));
+                UiWidget.field_p = new Boolean(pb.a(jc.field_g, (byte) 87));
                 jc.field_g.position = 0;
               }
             }
@@ -243,8 +243,8 @@ final class vb implements fc {
         }
     }
 
-    public final void a(int param0, lk param1, byte param2, boolean param3, int param4) {
-        lk stackIn_3_0 = null;
+    public final void paintWidget(int param0, UiWidget param1, byte param2, boolean param3, int param4) {
+        UiWidget stackIn_3_0 = null;
         RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;
         String stackIn_17_2 = null;
@@ -260,7 +260,7 @@ final class vb implements fc {
           if (!(param1 instanceof ff)) {
             stackIn_3_0 = null;
           } else {
-            stackIn_3_0 = (lk) (param1);
+            stackIn_3_0 = (UiWidget) (param1);
           }
           var12 = (ff) (stackIn_3_0);
           var8 = -100 / ((-60 - param2) / 56);

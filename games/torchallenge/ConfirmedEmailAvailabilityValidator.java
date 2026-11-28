@@ -1204,7 +1204,7 @@ final class ConfirmedEmailAvailabilityValidator extends TextFieldValidator {
             return stackIn_2_0;
           }
           if (!param1.equals(this.field_q)) {
-            var3 = si.a(param1, param0 + 89);
+            var3 = ModalDialogHost.a(param1, param0 + 89);
             if (!var3.b(0)) {
               stackIn_6_0 = jh.field_c;
               return stackIn_6_0;

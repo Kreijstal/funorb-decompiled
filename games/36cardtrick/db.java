@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class db implements ci {
+final class db implements WidgetRenderer {
     static AccountRegistrationPanel field_a;
     private BitmapFont field_n;
     private int field_k;
@@ -23,8 +23,8 @@ final class db implements ci {
     private int field_s;
     static int[] field_l;
 
-    public final void a(int param0, lk param1, int param2, int param3, boolean param4) {
-        lk stackIn_3_0 = null;
+    public final void paintWidget(int param0, UiWidget param1, int param2, int param3, boolean param4) {
+        UiWidget stackIn_3_0 = null;
         RuntimeException stackIn_17_0 = null;
         StringBuilder stackIn_17_1 = null;
         String stackIn_18_2 = null;
@@ -37,7 +37,7 @@ final class db implements ci {
         ua var11 = null;
         try {
           if (param1 instanceof ua) {
-            stackIn_3_0 = (lk) (param1);
+            stackIn_3_0 = (UiWidget) (param1);
           } else {
             stackIn_3_0 = null;
           }

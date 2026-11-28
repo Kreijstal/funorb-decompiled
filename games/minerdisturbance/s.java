@@ -33,14 +33,14 @@ final class s extends InteractiveWidget {
             stackIn_3_0 = 65;
             return stackIn_3_0;
           }
-          mb.field_b.a(true, da.field_d, TextLineMetrics.field_a, 0);
-          mb.field_b.o(param0 + 27655);
+          mb.field_b.processPointerInput(true, da.field_d, TextLineMetrics.field_a, 0);
+          mb.field_b.advanceDialogs(param0 + 27655);
           while (mm.b((byte) 76)) {
-            mb.field_b.a((byte) -65, lj.field_t, ud.field_c);
+            mb.field_b.processKeyInput((byte) -65, lj.field_t, ud.field_c);
           }
           if (dm.field_j != -1) {
             var1_int = dm.field_j;
-            oj.a(-1, 3);
+            AlphaWidgetContainer.a(-1, 3);
             stackIn_10_0 = var1_int;
             return stackIn_10_0;
           }
@@ -69,7 +69,7 @@ final class s extends InteractiveWidget {
         }
     }
 
-    final boolean a(int param0, int param1, int param2, int param3, int param4, fe param5, int param6) {
+    final boolean pointerPressed(int param0, int param1, int param2, int param3, int param4, UiWidget param5, int param6) {
         RuntimeException stackIn_20_0 = null;
         StringBuilder stackIn_20_1 = null;
         String stackIn_21_2 = null;
@@ -81,7 +81,7 @@ final class s extends InteractiveWidget {
         int var12 = 0;
         var12 = MinerDisturbance.field_ab;
         try {
-          if (!super.a(param0, param1, param2, param3, param4, param5, param6)) {
+          if (!super.pointerPressed(param0, param1, param2, param3, param4, param5, param6)) {
             return false;
           }
           var8_int = param0 - this.field_M - this.field_u - param6;

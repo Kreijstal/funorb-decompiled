@@ -19,7 +19,7 @@ final class we {
         if (param0 != -65) {
           return;
         }
-        ug.field_A.a(26, 0, 0);
+        ug.field_A.drawAllLayers(26, 0, 0);
     }
 
     public static void clearStaticReferences(byte param0) {

@@ -59,7 +59,7 @@ final class ef {
                 ac.field_b = true;
               }
             }
-            oa.field_G = PacketBuffer.field_e;
+            DropTargetWidgetContainer.field_G = PacketBuffer.field_e;
             nj.field_a = oi.field_f;
           }
           if (!ac.field_b &&
@@ -67,7 +67,7 @@ final class ef {
             oe.field_d) {
             ByteStorage.field_a = 0;
             nj.field_a = oi.field_f;
-            oa.field_G = PacketBuffer.field_e;
+            DropTargetWidgetContainer.field_G = PacketBuffer.field_e;
           }
           pf.field_b = param1;
           if (param0 <= 8) {

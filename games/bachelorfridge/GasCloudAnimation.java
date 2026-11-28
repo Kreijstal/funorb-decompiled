@@ -810,15 +810,15 @@ final class GasCloudAnimation extends EventAnimation {
         try {
           var21 = RageSpecial.a(29611, "lobby", "crowns", param2);
           var5 = var21;
-          re.field_E = var21.length;
+          DropTargetWidgetContainer.field_E = var21.length;
           if (param1 != null) {
-            var6 = new IndexedSprite[re.field_E + param1.length];
-            for (var7_int = 0; re.field_E > var7_int; var7_int++) {
+            var6 = new IndexedSprite[DropTargetWidgetContainer.field_E + param1.length];
+            for (var7_int = 0; DropTargetWidgetContainer.field_E > var7_int; var7_int++) {
               var6[var7_int] = var21[var7_int];
             }
             var5 = var6;
             for (var7_intLifetime3 = 0; var7_intLifetime3 < param1.length; var7_intLifetime3++) {
-              var6[var7_intLifetime3 + re.field_E] = param1[var7_intLifetime3];
+              var6[var7_intLifetime3 + DropTargetWidgetContainer.field_E] = param1[var7_intLifetime3];
             }
           }
           var24 = new int[var5.length];
@@ -827,17 +827,17 @@ final class GasCloudAnimation extends EventAnimation {
           var25 = var20;
           var23 = var25;
           var6_array = var23;
-          for (var7_intLifetime1 = 0; var7_intLifetime1 < re.field_E; var7_intLifetime1++) {
+          for (var7_intLifetime1 = 0; var7_intLifetime1 < DropTargetWidgetContainer.field_E; var7_intLifetime1++) {
             var24[var7_intLifetime1] = 10;
           }
           if (param1 != null) {
             if (param4 != null) {
               for (var7_intLifetime2 = 0; param1.length > var7_intLifetime2; var7_intLifetime2++) {
-                var6_array[var7_intLifetime2 + re.field_E] = param4[var7_intLifetime2];
+                var6_array[var7_intLifetime2 + DropTargetWidgetContainer.field_E] = param4[var7_intLifetime2];
               }
             } else {
               for (var7_intLifetime2 = 0; param1.length > var7_intLifetime2; var7_intLifetime2++) {
-                var6_array[re.field_E + var7_intLifetime2] = param1[var7_intLifetime2].field_b;
+                var6_array[DropTargetWidgetContainer.field_E + var7_intLifetime2] = param1[var7_intLifetime2].field_b;
               }
             }
           }
@@ -848,10 +848,10 @@ final class GasCloudAnimation extends EventAnimation {
           MoveEvent.field_r = 11;
           var7 = ClamsSpecial.a("largefont", param2, 76, "lobby", param3);
           ds.field_l = ClamsSpecial.a("generalfont", param2, -15, "lobby", param3);
-          hl.field_H = ClamsSpecial.a("chatfont", param2, -62, "lobby", param3);
+          AlphaWidgetContainer.field_H = ClamsSpecial.a("chatfont", param2, -62, "lobby", param3);
           var7.setInlineSprites(var5, var25);
           ds.field_l.setInlineSprites(var5, var25);
-          hl.field_H.setInlineSprites(var5, var25);
+          AlphaWidgetContainer.field_H.setInlineSprites(var5, var25);
           var8 = new UiComponent(0L, (UiComponent) null);
           var8.field_gb = 16777215;
           var8.field_B = rg.field_h;

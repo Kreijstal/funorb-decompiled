@@ -4,7 +4,7 @@
 final class ed extends ButtonWidget {
     static Archive field_I;
 
-    private ed(String param0, tg param1) {
+    private ed(String param0, WidgetEventListener param1) {
         this(param0, EditableTextField.field_O.field_h, param1);
         try {
           this.field_y = EditableTextField.field_O.field_j;
@@ -13,7 +13,7 @@ final class ed extends ButtonWidget {
         }
     }
 
-    private ed(String param0, t param1, tg param2) {
+    private ed(String param0, WidgetRenderer param1, WidgetEventListener param2) {
         super(param0, param1, param2);
         try {
           this.field_y = EditableTextField.field_O.field_j;
@@ -101,7 +101,7 @@ final class ed extends ButtonWidget {
         super.activate(param0, param1, param2, param3);
     }
 
-    ed(String param0, tg param1, boolean param2) {
+    ed(String param0, WidgetEventListener param1, boolean param2) {
         this(param0, param1);
         try {
           this.field_G = param2 ? true : false;

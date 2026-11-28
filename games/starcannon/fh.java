@@ -87,7 +87,7 @@ class fh extends DefaultTextWidgetRenderer {
             fh.a((String) null, (java.applet.Applet) null, (byte) -52);
           }
           while (var6 != null) {
-            tj.a((byte) 69, var6, param0);
+            DraggableWidgetContainer.a((byte) 69, var6, param0);
             var6 = (dg) (MatchingFieldValidator.field_k.nextForward(param1 - 25013));
           }
           var5 = (we) (ma.field_h.beginForward(-3905));
@@ -109,13 +109,13 @@ class fh extends DefaultTextWidgetRenderer {
         field_r = null;
     }
 
-    public final void a(int param0, boolean param1, int param2, int param3, UiWidget param4) {
+    public final void paintWidget(int param0, boolean param1, int param2, int param3, UiWidget param4) {
         try {
           if (param1) {
             sk.a(param0 + param4.field_s, param4.field_i, param4.field_f, true, param4.field_j + param3);
           }
           int var6_int = -54 / ((param2 - 2) / 54);
-          super.a(param0, param1, 66, param3, param4);
+          super.paintWidget(param0, param1, 66, param3, param4);
         } catch (RuntimeException runtimeException) {
           throw sd.wrapClientException((Throwable) ((Object) runtimeException), "fh.L(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ')');
         }

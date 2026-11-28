@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class oa implements ca {
+final class oa implements WidgetRenderer {
     private int field_f;
     static String[] field_g;
     private BitmapFont field_b;
@@ -12,7 +12,7 @@ final class oa implements ca {
     static String field_h;
     static String[] field_c;
 
-    public final void a(byte param0, lm param1, int param2, int param3, boolean param4) {
+    public final void paintWidget(byte param0, UiWidget param1, int param2, int param3, boolean param4) {
         int stackIn_6_0 = 0;
         RuntimeException stackIn_21_0 = null;
         StringBuilder stackIn_21_1 = null;
@@ -28,7 +28,7 @@ final class oa implements ca {
         var11 = DungeonAssault.field_K;
         try {
           if (!param1.field_u &&
-            !param1.a((byte) 127)) {
+            !param1.isFocused((byte) 127)) {
             stackIn_6_0 = 2188450;
           } else {
             stackIn_6_0 = 3249872;
@@ -38,7 +38,7 @@ final class oa implements ca {
             oa.clearStaticReferences((byte) -52);
           }
           this.field_b.drawParagraph("<u=" + Integer.toString(var6_int, 16) + ">" + param1.field_w + "</u>", param1.field_q + param2, param1.field_v + param3, param1.field_x, param1.field_s, var6_int, -1, this.field_a, this.field_f, this.field_b.field_H + this.field_b.field_E);
-          if (param1.a((byte) 20)) {
+          if (param1.isFocused((byte) 20)) {
             var7 = this.field_b.stringWidth(param1.field_w);
             var8 = this.field_b.field_E + this.field_b.field_H;
             var9 = param2 + param1.field_q;

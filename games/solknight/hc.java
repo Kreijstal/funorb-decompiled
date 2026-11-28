@@ -78,10 +78,10 @@ final class hc {
         int var7Lifetime1Lifetime1;
         var9 = SolKnight.field_L ? 1 : 0;
         try {
-          te.field_M = param2;
+          AlphaWidgetContainer.field_M = param2;
           FullscreenFocusCanvas.field_d = true;
-          if (te.field_M == 0) {
-            var3_int = bk.a((byte) 3, ff.field_e, ke.field_H, si.field_A, w.field_c);
+          if (AlphaWidgetContainer.field_M == 0) {
+            var3_int = bk.a((byte) 3, ff.field_e, LabeledWidgetContainer.field_H, SingleChildWidgetContainer.field_A, w.field_c);
             var4 = var3_int + 3;
             ImageProducerRasterBuffer.field_l = new int[var4];
             vc.field_d = new String[var4];
@@ -99,8 +99,8 @@ final class hc {
             vc.field_d[var4 - 1] = TextLineMetrics.field_a;
             ImageProducerRasterBuffer.field_l[-1 + var4] = 1;
             fl.field_b[1] = 5;
-          } else if (te.field_M == 1) {
-            var3_int = bk.a((byte) 3, ff.field_e, ke.field_H, si.field_A, w.field_c);
+          } else if (AlphaWidgetContainer.field_M == 1) {
+            var3_int = bk.a((byte) 3, ff.field_e, LabeledWidgetContainer.field_H, SingleChildWidgetContainer.field_A, w.field_c);
             var4 = 2 + var3_int;
             ImageProducerRasterBuffer.field_l = new int[var4];
             vc.field_d = new String[var4];
@@ -115,12 +115,12 @@ final class hc {
             vc.field_d[var4 - 1] = TextLineMetrics.field_a;
             ImageProducerRasterBuffer.field_l[-1 + var4] = 0;
             fl.field_b[0] = 5;
-          } else if (te.field_M != 2) {
-            if (3 == te.field_M) {
+          } else if (AlphaWidgetContainer.field_M != 2) {
+            if (3 == AlphaWidgetContainer.field_M) {
               if (!wh.field_c.privilegedTasksEnabled) {
-                var3_int = bk.a((byte) 3, NetworkArchiveRequest.field_x, ke.field_H, si.field_A, w.field_c);
+                var3_int = bk.a((byte) 3, NetworkArchiveRequest.field_x, LabeledWidgetContainer.field_H, SingleChildWidgetContainer.field_A, w.field_c);
               } else {
-                var3_int = bk.a((byte) 3, tg.field_K, ke.field_H, si.field_A, w.field_c);
+                var3_int = bk.a((byte) 3, tg.field_K, LabeledWidgetContainer.field_H, SingleChildWidgetContainer.field_A, w.field_c);
               }
               var4 = 2 + var3_int;
               vc.field_d = new String[var4];
@@ -136,8 +136,8 @@ final class hc {
               vc.field_d[var4 - 1] = TextLineMetrics.field_a;
               ImageProducerRasterBuffer.field_l[-1 + var4] = 0;
               fl.field_b[0] = 5;
-            } else if (4 == te.field_M) {
-              var3_int = bk.a((byte) 3, ak.field_c, ke.field_H, si.field_A, w.field_c);
+            } else if (4 == AlphaWidgetContainer.field_M) {
+              var3_int = bk.a((byte) 3, ak.field_c, LabeledWidgetContainer.field_H, SingleChildWidgetContainer.field_A, w.field_c);
               var4 = 2 + var3_int;
               ImageProducerRasterBuffer.field_l = new int[var4];
               vc.field_d = new String[var4];
@@ -153,10 +153,10 @@ final class hc {
               ImageProducerRasterBuffer.field_l[var4 - 1] = 0;
               fl.field_b[0] = 5;
             } else {
-              if (5 != te.field_M) {
+              if (5 != AlphaWidgetContainer.field_M) {
                 throw new IllegalArgumentException();
               }
-              var3_int = bk.a((byte) 3, vh.field_b, ke.field_H, si.field_A, w.field_c);
+              var3_int = bk.a((byte) 3, vh.field_b, LabeledWidgetContainer.field_H, SingleChildWidgetContainer.field_A, w.field_c);
               var4 = 3 + var3_int;
               ImageProducerRasterBuffer.field_l = new int[var4];
               vc.field_d = new String[var4];
@@ -176,7 +176,7 @@ final class hc {
               fl.field_b[1] = 5;
             }
           } else {
-            var3_int = bk.a((byte) 3, LoginPanel.a(AccountRequestState.field_f, new String[]{"<br><%0><br>"}, -63), ke.field_H, si.field_A, w.field_c);
+            var3_int = bk.a((byte) 3, LoginPanel.a(AccountRequestState.field_f, new String[]{"<br><%0><br>"}, -63), LabeledWidgetContainer.field_H, SingleChildWidgetContainer.field_A, w.field_c);
             var4 = -1;
             for (var5 = 0; var3_int > var5; var5++) {
               if (!"<%0>".equals(w.field_c[var5])) {
@@ -192,7 +192,7 @@ final class hc {
             fk.a(w.field_c, 0, ak.field_b, 0, var4);
             qc.field_h = new String[-1 + (var3_int - var4)];
             fk.a(w.field_c, var4 + 1, qc.field_h, 0, -var4 + (var3_int - 1));
-            var3_int = bk.a((byte) 3, LoginPanel.a(ff.field_f, new String[]{"<br><%0><br>"}, -63), ke.field_H, si.field_A, w.field_c);
+            var3_int = bk.a((byte) 3, LoginPanel.a(ff.field_f, new String[]{"<br><%0><br>"}, -63), LabeledWidgetContainer.field_H, SingleChildWidgetContainer.field_A, w.field_c);
             var4 = -1;
             for (var5 = 0; var5 < var3_int; var5++) {
               if (!"<%0>".equals(w.field_c[var5])) {
@@ -204,14 +204,14 @@ final class hc {
             if (var4 == -1) {
               throw new IllegalStateException();
             }
-            i.field_I = new String[var4];
-            fk.a(w.field_c, 0, i.field_I, 0, var4);
+            ModalDialogHost.field_I = new String[var4];
+            fk.a(w.field_c, 0, ModalDialogHost.field_I, 0, var4);
             ConfirmedEmailAvailabilityValidator.field_o = new String[-1 - var4 + var3_int];
             fk.a(w.field_c, var4 + 1, ConfirmedEmailAvailabilityValidator.field_o, 0, var3_int - var4 - 1);
-            if (i.field_I.length <= ak.field_b.length) {
+            if (ModalDialogHost.field_I.length <= ak.field_b.length) {
               stackIn_64_0 = ak.field_b.length;
             } else {
-              stackIn_64_0 = i.field_I.length;
+              stackIn_64_0 = ModalDialogHost.field_I.length;
             }
             var5 = stackIn_64_0;
             if (ConfirmedEmailAvailabilityValidator.field_o.length > qc.field_h.length) {
@@ -227,7 +227,7 @@ final class hc {
               ImageProducerRasterBuffer.field_l[var8] = -1;
             }
             ImageProducerRasterBuffer.field_l[1] = 0;
-            vc.field_d[0] = si.field_D;
+            vc.field_d[0] = SingleChildWidgetContainer.field_D;
             fl.field_b = new int[2];
             vc.field_d[1] = cj.field_b;
             fl.field_b[0] = 5;
@@ -240,8 +240,8 @@ final class hc {
             for (var8Lifetime2 = 0; var5 > var8Lifetime2; var8Lifetime2++) {
               stackIn_74_0 = vc.field_d;
               stackIn_74_1 = 6 + var8Lifetime2;
-              if (i.field_I.length + var8Lifetime2 - var5 >= 0) {
-                stackIn_75_2 = i.field_I[var8Lifetime2 + i.field_I.length - var5];
+              if (ModalDialogHost.field_I.length + var8Lifetime2 - var5 >= 0) {
+                stackIn_75_2 = ModalDialogHost.field_I[var8Lifetime2 + ModalDialogHost.field_I.length - var5];
               } else {
                 stackIn_75_2 = "";
               }
@@ -261,7 +261,7 @@ final class hc {
             }
             fg.field_f = je.correctedCurrentTimeMillis(1);
           }
-          bc.field_K.field_g = fl.field_b.length;
+          DraggableWidgetContainer.field_K.field_g = fl.field_b.length;
           var3_intLifetime1 = 0;
           for (var4Lifetime1 = 0; var4Lifetime1 < vc.field_d.length; var4Lifetime1++) {
             stackIn_87_0 = vc.field_d[var4Lifetime1];
@@ -271,7 +271,7 @@ final class hc {
               var3_intLifetime1 = var5Lifetime1;
             }
           }
-          if (te.field_M == 2) {
+          if (AlphaWidgetContainer.field_M == 2) {
             var10 = ak.field_b;
             var4_ref_String__ = var10;
             for (var5Lifetime2 = 0; var10.length > var5Lifetime2; var5Lifetime2++) {
@@ -292,7 +292,7 @@ final class hc {
           }
           pk.field_ab = PcmOutputWorker.field_d - (var3_intLifetime1 >> 1);
           GameApplet.field_h = PcmOutputWorker.field_d + var3_intLifetime1 - (var3_intLifetime1 >> 1);
-          v.field_d = (g.field_l + EditableTextField.field_N << 1) * bc.field_K.field_g;
+          v.field_d = (g.field_l + EditableTextField.field_N << 1) * DraggableWidgetContainer.field_K.field_g;
           for (var4Lifetime2 = 0; vc.field_d.length > var4Lifetime2; var4Lifetime2++) {
             stackIn_110_0 = v.field_d;
             if (ImageProducerRasterBuffer.field_l[var4Lifetime2] < 0) {
@@ -302,13 +302,13 @@ final class hc {
             }
             v.field_d = stackIn_110_0 + stackIn_111_1;
           }
-          th.field_J = -(v.field_d >> 1) + RichTextLayout.field_m;
+          DropTargetWidgetContainer.field_J = -(v.field_d >> 1) + RichTextLayout.field_m;
           og.field_j = new int[vc.field_d.length][];
           var4Lifetime3 = 0;
           if (!param1) {
             field_c = (BufferedCacheFile) null;
           }
-          var5Lifetime3 = th.field_J;
+          var5Lifetime3 = DropTargetWidgetContainer.field_J;
           while (var4Lifetime3 < vc.field_d.length) {
             var6Lifetime1 = ImageProducerRasterBuffer.field_l[var4Lifetime3];
             if (var6Lifetime1 < 0) {
@@ -326,10 +326,10 @@ final class hc {
             }
             var4Lifetime3++;
           }
-          if (te.field_M == 2) {
-            bc.field_K.a(param0, -1, -1, 125);
+          if (AlphaWidgetContainer.field_M == 2) {
+            DraggableWidgetContainer.field_K.a(param0, -1, -1, 125);
           } else {
-            bc.field_K.a(param0, 0, uc.a(PacketBuffer.field_j, 1691746689, BufferedSocket.field_m), 122);
+            DraggableWidgetContainer.field_K.a(param0, 0, uc.a(PacketBuffer.field_j, 1691746689, BufferedSocket.field_m), 122);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

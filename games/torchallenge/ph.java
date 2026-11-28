@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ph implements j {
+final class ph implements WidgetRenderer {
     private int field_n;
     private int field_c;
     static vk[] field_b;
@@ -25,7 +25,7 @@ final class ph implements j {
         return gi.field_d != null ? true : m.field_d;
     }
 
-    public final void a(UiComponent param0, int param1, int param2, byte param3, boolean param4) {
+    public final void paintWidget(UiComponent param0, int param1, int param2, byte param3, boolean param4) {
         int var10 = 0;
         UiComponent stackIn_6_0 = null;
         RuntimeException stackIn_16_0 = null;
@@ -43,7 +43,7 @@ final class ph implements j {
         try {
           if (param3 != 97) {
             var12 = (UiComponent) null;
-            this.a((UiComponent) null, 19, 73, (byte) 52, true);
+            this.paintWidget((UiComponent) null, 19, 73, (byte) 52, true);
           }
           if (param0 instanceof bl) {
             stackIn_6_0 = (UiComponent) (param0);

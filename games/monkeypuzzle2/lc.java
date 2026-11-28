@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class lc implements ml {
+final class lc implements WidgetRenderer {
     static int field_e;
     static boolean field_f;
     private int field_c;
@@ -11,7 +11,7 @@ final class lc implements ml {
     static int[] field_b;
     private BitmapFont field_g;
 
-    public final void a(boolean param0, UiWidget param1, int param2, int param3, int param4) {
+    public final void paintWidget(boolean param0, UiWidget param1, int param2, int param3, int param4) {
         int stackIn_7_0 = 0;
         RuntimeException stackIn_21_0 = null;
         StringBuilder stackIn_21_1 = null;
@@ -32,14 +32,14 @@ final class lc implements ml {
             lc.a((java.applet.Applet) null, (byte) 96);
           }
           if (!param1.field_g &&
-            !param1.b((byte) 127)) {
+            !param1.isFocused((byte) 127)) {
             stackIn_7_0 = 2188450;
           } else {
             stackIn_7_0 = 3249872;
           }
           var6_int = stackIn_7_0;
           this.field_g.drawParagraph("<u=" + Integer.toString(var6_int, 16) + ">" + param1.field_s + "</u>", param3 + param1.field_r, param1.field_e + param2, param1.field_l, param1.field_p, var6_int, -1, this.field_a, this.field_c, this.field_g.field_C + this.field_g.field_D);
-          if (param1.b((byte) 75)) {
+          if (param1.isFocused((byte) 75)) {
             var7 = this.field_g.stringWidth(param1.field_s);
             var8 = this.field_g.field_C + this.field_g.field_D;
             var9 = param3 + param1.field_r;

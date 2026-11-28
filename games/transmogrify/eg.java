@@ -50,7 +50,7 @@ final class eg {
 
     final static void a(int param0) {
         IterableNodeHashTable.field_e = wh.a((byte) -122);
-        ResourceArchive.field_f = new da();
+        ResourceArchive.field_f = new ModalDialogHost();
         AccountRegistrationPanel.a(true, true, 170);
         if (param0 >= 54) {
           return;
@@ -75,7 +75,7 @@ final class eg {
             rd.field_f = PacketBuffer.field_j;
           }
           boolean decompiledFrameRemainder0 = true;
-          da.field_y = da.field_y + 1;
+          ModalDialogHost.field_y = ModalDialogHost.field_y + 1;
           if (param0 != null) {
             decompiledFrameRemainder0 = !(param0.equals(tj.field_v));
           } else {
@@ -83,8 +83,8 @@ final class eg {
           }
           if (decompiledFrameRemainder0) {
             if (!lk.field_c) {
-              if (da.field_y >= bk.field_d) {
-                stackIn_16_0 = (bk.field_d + ek.field_g > da.field_y) ? 1 : 0;
+              if (ModalDialogHost.field_y >= bk.field_d) {
+                stackIn_16_0 = (bk.field_d + ek.field_g > ModalDialogHost.field_y) ? 1 : 0;
               } else {
                 stackIn_16_0 = 0;
               }
@@ -93,15 +93,15 @@ final class eg {
             }
             var2_int = stackIn_16_0;
             if (param0 == null) {
-              da.field_y = 0;
+              ModalDialogHost.field_y = 0;
             } else {
               if (lk.field_c) {
-                da.field_y = bk.field_d;
+                ModalDialogHost.field_y = bk.field_d;
               } else {
                 if (var2_int != 0) {
-                  da.field_y = bk.field_d;
+                  ModalDialogHost.field_y = bk.field_d;
                 } else {
-                  da.field_y = 0;
+                  ModalDialogHost.field_y = 0;
                 }
               }
             }
@@ -120,16 +120,16 @@ final class eg {
             field_b = -62;
           }
           if (!lk.field_c &&
-            da.field_y < bk.field_d &&
+            ModalDialogHost.field_y < bk.field_d &&
             tl.field_a) {
             og.field_e = el.field_d;
             MouseInputHandler.field_d = rd.field_f;
-            da.field_y = 0;
+            ModalDialogHost.field_y = 0;
           }
           rd.field_f = -1;
           if (lk.field_c &&
-            AchievementUnlockEvent.field_j == da.field_y) {
-            da.field_y = 0;
+            AchievementUnlockEvent.field_j == ModalDialogHost.field_y) {
+            ModalDialogHost.field_y = 0;
             lk.field_c = false;
           }
           el.field_d = -1;

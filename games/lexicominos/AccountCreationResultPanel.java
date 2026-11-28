@@ -138,35 +138,35 @@ final class AccountCreationResultPanel extends uc implements WidgetActivationLis
         oj.field_l = ad.a(false, var4Lifetime1 * var2, var2 * var5Lifetime1);
     }
 
-    final boolean f(byte param0) {
+    final boolean advanceDialogAnimation(byte param0) {
         if (!this.field_D) {
           if (param0 <= -21) {
-            return super.f((byte) -45);
+            return super.advanceDialogAnimation((byte) -45);
           }
           AccountCreationResultPanel.l((byte) -108);
-          return super.f((byte) -45);
+          return super.advanceDialogAnimation((byte) -45);
         }
         if (this.field_ub) {
           if (param0 > -21) {
             AccountCreationResultPanel.l((byte) -108);
-            return super.f((byte) -45);
+            return super.advanceDialogAnimation((byte) -45);
           }
-          return super.f((byte) -45);
+          return super.advanceDialogAnimation((byte) -45);
         }
         AccountServiceResult var2 = ConfirmedEmailAvailabilityValidator.pollAccountCreationResult(false);
         if (var2 != null) {
           this.showAccountCreationResult(false, (byte) 33, var2);
           if (param0 <= -21) {
-            return super.f((byte) -45);
+            return super.advanceDialogAnimation((byte) -45);
           }
           AccountCreationResultPanel.l((byte) -108);
-          return super.f((byte) -45);
+          return super.advanceDialogAnimation((byte) -45);
         }
         if (param0 <= -21) {
-          return super.f((byte) -45);
+          return super.advanceDialogAnimation((byte) -45);
         }
         AccountCreationResultPanel.l((byte) -108);
-        return super.f((byte) -45);
+        return super.advanceDialogAnimation((byte) -45);
     }
 
     public static void j(byte param0) {
@@ -220,10 +220,10 @@ final class AccountCreationResultPanel extends uc implements WidgetActivationLis
               this.b(127, new kg(this));
               return;
             }
-            var5.a(-1, n.field_h, (vd) (this));
+            var5.a(-1, n.field_h, (WidgetEventListener) (this));
           } else {
             if (this.field_qb) {
-              var5.a(-1, n.field_h, (vd) (this));
+              var5.a(-1, n.field_h, (WidgetEventListener) (this));
             } else {
               if (param2.statusCode == 5) {
                 var5.a(md.field_B, 11, 120);
@@ -267,7 +267,7 @@ final class AccountCreationResultPanel extends uc implements WidgetActivationLis
         }
         String var1 = ni.a(param0);
         eb.field_b = new LoginPanel(var1, (String) null, true, false, false);
-        ug.field_A.a(-14579, di.field_x);
+        ug.field_A.showDialog(-14579, di.field_x);
         di.field_x.b(126, eb.field_b);
         di.field_x.f(!param0 ? true : false);
     }
@@ -347,7 +347,7 @@ final class AccountCreationResultPanel extends uc implements WidgetActivationLis
         this.showAccountCreationResult(true, (byte) -120, wi.createAccountErrorResult(248, (byte) -113, he.field_b));
     }
 
-    AccountCreationResultPanel(eg param0, AccountRegistrationPanel param1) {
+    AccountCreationResultPanel(ModalDialogHost param0, AccountRegistrationPanel param1) {
         super(param0, FullscreenFocusCanvas.field_c, m.field_b, false, false);
         try {
           this.field_rb = param1;

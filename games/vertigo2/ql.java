@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ql extends um implements WidgetActivationListener {
+final class ql extends ArrayWidgetContainer implements WidgetActivationListener {
     static UiPanel field_L;
     private ko field_I;
     static String field_K;
@@ -14,7 +14,7 @@ final class ql extends um implements WidgetActivationListener {
           un.field_Lb.field_l.field_V = false;
         }
         un.field_Lb = null;
-        wq.field_M = null;
+        AlphaWidgetContainer.field_M = null;
         int var1 = -53 / ((param0 + 14) / 39);
     }
 
@@ -39,12 +39,12 @@ final class ql extends um implements WidgetActivationListener {
         }
     }
 
-    final void a(boolean param0, int param1, int param2, int param3) {
+    final void drawWidget(boolean param0, int param1, int param2, int param3) {
         if (param0) {
           UiWidget var6 = (UiWidget) null;
-          this.a((byte) 54, -43, -84, (UiWidget) null);
+          this.updatePointer((byte) 54, -43, -84, (UiWidget) null);
         }
-        super.a(param0, param1, param2, param3);
+        super.drawWidget(param0, param1, param2, param3);
         bl.field_N.drawString(jq.field_d, param2 - (-this.x - 4), bl.field_N.field_z + (this.y + param3 + 4), 16777215, -1);
     }
 
@@ -60,10 +60,10 @@ final class ql extends um implements WidgetActivationListener {
         super(param0, param1, param2, param3, (WidgetListener) null);
         this.field_I = new ko(new ml(10000536), lo.field_i, 0, 0, 140, 25);
         this.field_I.a(-11808, new BirthDateValidator());
-        this.field_J = new InteractiveWidget(vi.field_x, (uf) (this));
+        this.field_J = new InteractiveWidget(vi.field_x, (WidgetEventListener) (this));
         this.field_G = new UiWidget[]{(UiWidget) ((Object) this.field_I), (UiWidget) ((Object) this.field_J)};
         this.field_J.listener = (WidgetListener) ((Object) new vo());
-        this.g(-128);
+        this.refreshLayout(-128);
     }
 
     final static void a(boolean param0, int param1, int param2) {
@@ -98,7 +98,7 @@ final class ql extends um implements WidgetActivationListener {
           stackIn_3_1 = 3 * (Archive.field_f + 2) * param2;
           stackIn_3_2 = 2;
           stackIn_3_3 = param0;
-          stackIn_4_4 = (ao.field_O.field_Lb == wq.field_M);
+          stackIn_4_4 = (ao.field_O.field_Lb == AlphaWidgetContainer.field_M);
           var3_int = ((od) (Object) stackIn_3_0).a(stackIn_3_1, stackIn_3_2, stackIn_3_3, stackIn_4_4, -83, Archive.field_f + 2) ? 1 : 0;
           if (param1 >= -126) {
             return;
@@ -172,7 +172,7 @@ final class ql extends um implements WidgetActivationListener {
               var13_ref_String = eq.field_B;
               var16.field_n.a(var13_ref_String, 7, 0);
               var17 = un.field_Lb;
-              var13 = sd.field_N;
+              var13 = ModalDialogHost.field_N;
               var14 = no.field_e;
               var17.field_n.c(0, var14, -1220, var13, 0);
             }
@@ -196,7 +196,7 @@ final class ql extends um implements WidgetActivationListener {
         }
     }
 
-    final void a(byte param0, int param1, int param2, UiWidget param3) {
+    final void updatePointer(byte param0, int param1, int param2, UiWidget param3) {
         InteractiveWidget stackIn_2_0 = null;
         boolean stackIn_3_1 = false;
         RuntimeException stackIn_8_0 = null;
@@ -205,7 +205,7 @@ final class ql extends um implements WidgetActivationListener {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var5 = null;
         try {
-          super.a((byte) 102, param1, param2, param3);
+          super.updatePointer((byte) 102, param1, param2, param3);
           stackIn_2_0 = this.field_J;
           stackIn_3_1 = (this.field_I.getFieldValidator((byte) -5).getValidationStatus(-23996) == qm.field_G);
           stackIn_2_0.field_F = stackIn_3_1;

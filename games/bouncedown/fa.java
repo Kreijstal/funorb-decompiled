@@ -26,12 +26,12 @@ final class fa {
         Boolean var1Lifetime1;
         if (param0 != 1) {
           fa.correctedCurrentTimeMillis(-89);
-          var1 = lk.field_p;
-          lk.field_p = null;
+          var1 = UiWidget.field_p;
+          UiWidget.field_p = null;
           return var1;
         }
-        var1Lifetime1 = lk.field_p;
-        lk.field_p = null;
+        var1Lifetime1 = UiWidget.field_p;
+        UiWidget.field_p = null;
         return var1Lifetime1;
     }
 

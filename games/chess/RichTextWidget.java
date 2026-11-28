@@ -16,7 +16,7 @@ class RichTextWidget extends InteractiveWidget {
     static byte[][][] field_Y;
     private IntrusiveDeque field_O;
 
-    void a(int param0, int param1, mf param2, int param3) {
+    void updatePointer(int param0, int param1, UiWidget param2, int param3) {
         int var5_int = 0;
         int var6 = 0;
         try {
@@ -24,7 +24,7 @@ class RichTextWidget extends InteractiveWidget {
             int[] var7 = (int[]) null;
             RichTextWidget.a(39, (int[]) null, -35, (byte) 95, 6, 9, 86);
           }
-          super.a(param0, -8, param2, param3);
+          super.updatePointer(param0, -8, param2, param3);
           this.field_R = null;
           if (this.field_w) {
             var5_int = BufferedSocket.field_k - param0 - this.field_u;
@@ -36,8 +36,8 @@ class RichTextWidget extends InteractiveWidget {
         }
     }
 
-    final void a(int param0, int param1, int param2, int param3, int param4) {
-        super.a(param0, (int) (char)param1, param2, param3, param4);
+    final void setBounds(int param0, int param1, int param2, int param3, int param4) {
+        super.setBounds(param0, (int) (char)param1, param2, param3, param4);
         this.rebuildHotspotBounds((byte) 49);
     }
 
@@ -165,7 +165,7 @@ class RichTextWidget extends InteractiveWidget {
           return;
         }
         var3 = (TextWidgetRenderer) ((Object) this.field_n);
-        var4 = var3.getTextLayout((mf) (this), -23159);
+        var4 = var3.getTextLayout((UiWidget) (this), -23159);
         while (true) {
           var5 = this.field_v.indexOf("<hotspot=", var2);
           if (var5 == -1) {
@@ -250,10 +250,10 @@ class RichTextWidget extends InteractiveWidget {
         }
     }
 
-    void a(int param0, int param1, int param2, int param3) {
+    void drawWidget(int param0, int param1, int param2, int param3) {
         int var7 = 0;
         int var8 = 0;
-        super.a(param0, param1, -97, param3);
+        super.drawWidget(param0, param1, -97, param3);
         if (param1 != 0) {
           return;
         }
@@ -261,8 +261,8 @@ class RichTextWidget extends InteractiveWidget {
         TextHotspotBounds var6 = this.field_R;
         if (var6 == null) {
         } else {
-          var7 = var9.getTextOriginX((mf) (this), param3, -1581179903);
-          var8 = var9.getTextOriginY(0, param0, (mf) (this));
+          var7 = var9.getTextOriginX((UiWidget) (this), param3, -1581179903);
+          var8 = var9.getTextOriginY(0, param0, (UiWidget) (this));
           do {
             rc.a(var6.field_k + 2, false, -2 + (var7 + var6.field_o), 2 + var6.field_l, var6.field_s + var8 - 2);
             var6 = var6.field_q;
@@ -352,8 +352,8 @@ class RichTextWidget extends InteractiveWidget {
         }
     }
 
-    RichTextWidget(String param0, jm param1) {
-        super(param0, (rg) null);
+    RichTextWidget(String param0, WidgetRenderer param1) {
+        super(param0, (WidgetEventListener) null);
         this.field_R = null;
         try {
           this.field_n = param1;
@@ -366,20 +366,20 @@ class RichTextWidget extends InteractiveWidget {
         if (param2 != 1) {
           RichTextWidget.resetStaticState((byte) 29);
         }
-        this.a(param1, 34, ((TextWidgetRenderer) ((Object) this.field_n)).getPreferredHeight(true, (mf) (this)), param3, param0);
+        this.setBounds(param1, 34, ((TextWidgetRenderer) ((Object) this.field_n)).getPreferredHeight(true, (UiWidget) (this)), param3, param0);
     }
 
-    boolean a(int param0, mf param1) {
+    boolean takeFocus(int param0, UiWidget param1) {
         RuntimeException var3 = null;
-        mf var4 = null;
+        UiWidget var4 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 != 0) {
-            var4 = (mf) null;
-            this.a(-27, 56, (mf) null, 111);
+            var4 = (UiWidget) null;
+            this.updatePointer(-27, 56, (UiWidget) null, 111);
           }
           return false;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

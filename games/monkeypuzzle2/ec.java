@@ -24,10 +24,10 @@ final class ec {
         RuntimeException decompiledCaughtException = null;
         var2 = MonkeyPuzzle2.field_F ? 1 : 0;
         try {
-          wg.field_j.a(v.field_a, rc.field_g, true, true);
-          wg.field_j.l(126);
+          wg.field_j.processPointerInput(v.field_a, rc.field_g, true, true);
+          wg.field_j.advanceDialogs(126);
           while (AwtRasterBuffer.a(param0 - 2)) {
-            wg.field_j.a(oa.field_H, 109, MatchingFieldValidator.field_p);
+            wg.field_j.processKeyInput(DropTargetWidgetContainer.field_H, 109, MatchingFieldValidator.field_p);
           }
           if (-1 != gb.field_f) {
             var1_int = gb.field_f;

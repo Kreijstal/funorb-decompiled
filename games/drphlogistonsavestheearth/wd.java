@@ -63,7 +63,7 @@ abstract class wd {
             }
           }
           if (la.field_b < rd.field_F) {
-            var7 = ClientException.field_e[bd.field_L];
+            var7 = ClientException.field_e[ModalDialog.field_L];
             if (var7 != null) {
               var2_int = la.field_b * (60 + var7.field_z) / rd.field_F;
               var3 = var2_int - 30;

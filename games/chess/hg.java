@@ -69,7 +69,7 @@ final class hg {
           bb.field_d = param2.field_I;
           bb.field_d.clear(-31023);
           d.field_Mb = new SecondaryNodeHashTable(param5);
-          fm.field_W = -1;
+          ModalDialogHost.field_W = -1;
           jf.field_b = -1;
           SecondaryNodeDeque.field_g = 0;
           cb.field_f = 0;

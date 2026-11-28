@@ -49,7 +49,7 @@ final class ln extends ci {
 
     final static hg[] l(int param0) {
         if (param0 == 2) {
-          return new hg[]{ej.field_c, ig.field_d, RichTextLayout.field_g, ka.field_j, an.field_b, ql.field_g, wg.field_r, me.field_b, ob.field_v, mf.field_m, ag.field_g, nj.field_v, ArchiveProvider.field_a, dm.field_c};
+          return new hg[]{ej.field_c, ig.field_d, RichTextLayout.field_g, ka.field_j, an.field_b, ql.field_g, wg.field_r, me.field_b, ob.field_v, UiWidget.field_m, ag.field_g, nj.field_v, ArchiveProvider.field_a, dm.field_c};
         }
         return (hg[]) null;
     }
@@ -186,10 +186,10 @@ final class ln extends ci {
     final static void f(byte param0) {
         if (param0 != -74) {
           ln.clearDeclaredStaticReferences(-24);
-          bo.a(bh.i(81), (byte) -12);
+          bo.a(ArrayWidgetContainer.i(81), (byte) -12);
           return;
         }
-        bo.a(bh.i(81), (byte) -12);
+        bo.a(ArrayWidgetContainer.i(81), (byte) -12);
     }
 
     final boolean m(int param0) {

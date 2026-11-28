@@ -12,7 +12,7 @@ final class AccountServiceResult {
     boolean success;
     static Model[] field_d;
     static String field_f;
-    static sd field_e;
+    static ModalDialogHost field_e;
 
     public static void clearStaticReferences(int param0) {
         field_g = null;

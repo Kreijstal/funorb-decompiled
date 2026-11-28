@@ -3,7 +3,7 @@
  */
 import java.util.*;
 
-class WidgetContainer extends UiWidget implements sf {
+class WidgetContainer extends UiWidget implements WidgetContainerMarker {
     IntrusiveDeque field_C;
     static o field_B;
     static String field_A;
@@ -11,14 +11,14 @@ class WidgetContainer extends UiWidget implements sf {
     static PcmStreamMixer field_E;
     static String field_D;
 
-    final boolean d(int param0) {
+    final boolean isFocused(int param0) {
         if (param0 > -103) {
           return true;
         }
-        return null != this.e((byte) -116) ? true : false;
+        return null != this.getFocusedChild((byte) -116) ? true : false;
     }
 
-    private final void a(Hashtable param0, int param1, StringBuilder param2, int param3) {
+    private final void appendChildDebugTrees(Hashtable param0, int param1, StringBuilder param2, int param3) {
         StringBuilder discarded$3 = null;
         int var7 = 0;
         StringBuilder discarded$4 = null;
@@ -39,14 +39,14 @@ class WidgetContainer extends UiWidget implements sf {
           var6 = (UiWidget) (var10.a((byte) -13));
           if (param1 != 81) {
             var9 = (UiWidget) null;
-            this.a((byte) 44, (UiWidget) null);
+            this.takeFocus((byte) 44, (UiWidget) null);
           }
           while (var6 != null) {
             discarded$3 = param2.append('\n');
             for (var7 = 0; param3 >= var7; var7++) {
               discarded$4 = param2.append(' ');
             }
-            var6.a(34, param2, param3 + 1, param0);
+            var6.appendDebugTree(34, param2, param3 + 1, param0);
             var6 = (UiWidget) (var10.c(30));
           }
           return;
@@ -70,7 +70,7 @@ class WidgetContainer extends UiWidget implements sf {
         }
     }
 
-    final boolean a(byte param0, UiWidget param1) {
+    final boolean takeFocus(byte param0, UiWidget param1) {
         k var3 = null;
         RuntimeException var3_ref = null;
         UiWidget var4 = null;
@@ -91,7 +91,7 @@ class WidgetContainer extends UiWidget implements sf {
               field_A = (String) null;
               return false;
             }
-            if (!var4.a((byte) 90, param1)) {
+            if (!var4.takeFocus((byte) 90, param1)) {
               var4 = (UiWidget) (var3.c(81));
               continue;
             }
@@ -112,7 +112,7 @@ class WidgetContainer extends UiWidget implements sf {
         }
     }
 
-    final void b(byte param0, UiWidget param1) {
+    final void addChild(byte param0, UiWidget param1) {
         try {
           this.field_C.addFirst(param1, -16611);
           if (param0 != 95) {
@@ -151,7 +151,7 @@ class WidgetContainer extends UiWidget implements sf {
         }
     }
 
-    final int d(byte param0) {
+    final int getMaximumRenderLayer(byte param0) {
         int var2;
         k var3;
         UiWidget var4;
@@ -162,7 +162,7 @@ class WidgetContainer extends UiWidget implements sf {
         var3 = new k(this.field_C);
         var4 = (UiWidget) (var3.a((byte) -13));
         while (var4 != null) {
-          var5 = var4.d((byte) 107);
+          var5 = var4.getMaximumRenderLayer((byte) 107);
           if (var5 > var2) {
             var2 = var5;
           }
@@ -174,7 +174,7 @@ class WidgetContainer extends UiWidget implements sf {
         return var2;
     }
 
-    final boolean a(boolean param0, int param1, int param2, int param3, int param4, UiWidget param5, int param6) {
+    final boolean pointerPressed(boolean param0, int param1, int param2, int param3, int param4, UiWidget param5, int param6) {
         RuntimeException var8 = null;
         UiWidget var9 = null;
         int var10 = 0;
@@ -189,7 +189,7 @@ class WidgetContainer extends UiWidget implements sf {
           var9 = (UiWidget) (var11.a((byte) -13));
           while (var9 != null) {
             if (var9.isLinked((byte) -109)) {
-              if (var9.a(false, param1, param2 + this.y, param3 + this.x, param4, param5, param6)) {
+              if (var9.pointerPressed(false, param1, param2 + this.y, param3 + this.x, param4, param5, param6)) {
                 return true;
               }
               var9 = (UiWidget) (var11.c(102));
@@ -216,7 +216,7 @@ class WidgetContainer extends UiWidget implements sf {
         }
     }
 
-    final void a(int param0, int param1, int param2, int param3, int param4, UiWidget param5) {
+    final void pointerReleased(int param0, int param1, int param2, int param3, int param4, UiWidget param5) {
         RuntimeException runtimeException = null;
         k var7 = null;
         UiWidget var8 = null;
@@ -229,12 +229,12 @@ class WidgetContainer extends UiWidget implements sf {
         try {
           var7 = new k(this.field_C);
           if (param0 < 36) {
-            this.e((byte) -50);
+            this.getFocusedChild((byte) -50);
           }
           var8 = (UiWidget) (var7.a((byte) -13));
           while (var8 != null) {
             if (var8.isLinked((byte) -111)) {
-              var8.a(97, param1, this.y + param2, this.x + param3, param4, param5);
+              var8.pointerReleased(97, param1, this.y + param2, this.x + param3, param4, param5);
               var8 = (UiWidget) (var7.c(45));
               continue;
             }
@@ -255,7 +255,7 @@ class WidgetContainer extends UiWidget implements sf {
         }
     }
 
-    void a(UiWidget param0, int param1, int param2, int param3) {
+    void updatePointer(UiWidget param0, int param1, int param2, int param3) {
         RuntimeException runtimeException = null;
         k var5 = null;
         UiWidget var6 = null;
@@ -269,12 +269,12 @@ class WidgetContainer extends UiWidget implements sf {
           if (param3 <= 25) {
             field_z = (vb) null;
           }
-          super.a(param0, param1, param2, 101);
+          super.updatePointer(param0, param1, param2, 101);
           var5 = new k(this.field_C);
           var6 = (UiWidget) (var5.a((byte) -13));
           while (var6 != null) {
             if (var6.isLinked((byte) -117)) {
-              var6.a(param0, this.y + param1, this.x + param2, 73);
+              var6.updatePointer(param0, this.y + param1, this.x + param2, 73);
               var6 = (UiWidget) (var5.c(66));
               continue;
             }
@@ -295,7 +295,7 @@ class WidgetContainer extends UiWidget implements sf {
         }
     }
 
-    final StringBuilder a(int param0, StringBuilder param1, int param2, Hashtable param3) {
+    final StringBuilder appendDebugTree(int param0, StringBuilder param1, int param2, Hashtable param3) {
         RuntimeException var5 = null;
         UiWidget var6 = null;
         StringBuilder stackIn_6_0 = null;
@@ -306,13 +306,13 @@ class WidgetContainer extends UiWidget implements sf {
         String stackIn_13_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (this.a(param1, param3, param0 ^ -20, param2)) {
-            this.a(param3, param2, (byte) 27, param1);
-            this.a(param3, param0 + 47, param1, param2);
+          if (this.beginDebugTreeEntry(param1, param3, param0 ^ -20, param2)) {
+            this.appendDebugProperties(param3, param2, (byte) 27, param1);
+            this.appendChildDebugTrees(param3, param0 + 47, param1, param2);
           }
           if (param0 != 34) {
             var6 = (UiWidget) null;
-            this.a('J', (UiWidget) null, -124, 44);
+            this.handleKey('J', (UiWidget) null, -124, 44);
           }
           stackIn_6_0 = (StringBuilder) (param1);
           return stackIn_6_0;
@@ -354,7 +354,7 @@ class WidgetContainer extends UiWidget implements sf {
         return stackIn_6_0;
     }
 
-    private final void c(boolean param0) {
+    private final void refreshChildLayouts(boolean param0) {
         int var4 = Terraphoenix.field_V;
         if (param0) {
           field_D = (String) null;
@@ -362,7 +362,7 @@ class WidgetContainer extends UiWidget implements sf {
         k var2 = new k(this.field_C);
         UiWidget var3 = (UiWidget) (var2.a((byte) -13));
         while (var3 != null) {
-          var3.c(0);
+          var3.refreshLayout(0);
           var3 = (UiWidget) (var2.c(85));
         }
     }
@@ -376,12 +376,12 @@ class WidgetContainer extends UiWidget implements sf {
         }
     }
 
-    final void a(int param0, byte param1, int param2, int param3, int param4) {
+    final void setBounds(int param0, byte param1, int param2, int param3, int param4) {
         if (param1 < 45) {
-          this.c(false);
+          this.refreshChildLayouts(false);
         }
-        super.a(param0, (byte) 122, param2, param3, param4);
-        this.c(false);
+        super.setBounds(param0, (byte) 122, param2, param3, param4);
+        this.refreshChildLayouts(false);
     }
 
     public static void clearStaticReferences(boolean param0) {
@@ -395,20 +395,20 @@ class WidgetContainer extends UiWidget implements sf {
         field_D = null;
     }
 
-    final void e(int param0) {
+    final void blur(int param0) {
         int var4 = Terraphoenix.field_V;
         k var2 = new k(this.field_C);
         UiWidget var3 = (UiWidget) (var2.a((byte) -13));
         while (var3 != null) {
-          var3.e(-59);
+          var3.blur(-59);
           var3 = (UiWidget) (var2.c(101));
         }
         if (param0 >= 0) {
-          this.d((byte) 24);
+          this.getMaximumRenderLayer((byte) 24);
         }
     }
 
-    final boolean a(UiWidget param0, int param1, int param2, int param3, int param4, int param5, byte param6) {
+    final boolean handleWheel(UiWidget param0, int param1, int param2, int param3, int param4, int param5, byte param6) {
         k var8 = null;
         RuntimeException var8_ref = null;
         UiWidget var9 = null;
@@ -426,8 +426,8 @@ class WidgetContainer extends UiWidget implements sf {
           var9 = (UiWidget) (var8.a((byte) -13));
           while (var9 != null) {
             if (var9.isLinked((byte) -59)) {
-              if (var9.d(-105) &&
-                var9.a(param0, param1, param2, param3, param4, param5, (byte) 9)) {
+              if (var9.isFocused(-105) &&
+                var9.handleWheel(param0, param1, param2, param3, param4, param5, (byte) 9)) {
                 return true;
               }
               var9 = (UiWidget) (var8.c(92));
@@ -450,7 +450,7 @@ class WidgetContainer extends UiWidget implements sf {
         }
     }
 
-    final boolean a(UiWidget param0, byte param1) {
+    final boolean focusNextChild(UiWidget param0, byte param1) {
         RuntimeException var3 = null;
         UiWidget var4 = null;
         k var5 = null;
@@ -470,12 +470,12 @@ class WidgetContainer extends UiWidget implements sf {
           var9 = new k(this.field_C);
           var4 = (UiWidget) (var9.a((byte) -13));
           while (var4 != null) {
-            if (var4.d(-126)) {
+            if (var4.isFocused(-126)) {
               var5 = new k(this.field_C);
               var5.a((byte) -113, (IntrusiveNode) (var4));
               var6 = (UiWidget) (var5.c(23));
               while (var6 != null) {
-                if (!var6.a((byte) 52, param0)) {
+                if (!var6.takeFocus((byte) 52, param0)) {
                   var6 = (UiWidget) (var5.c(15));
                   continue;
                 }
@@ -503,11 +503,11 @@ class WidgetContainer extends UiWidget implements sf {
         }
     }
 
-    void a(int param0, int param1, int param2, int param3) {
+    void drawWidget(int param0, int param1, int param2, int param3) {
         int var7 = Terraphoenix.field_V;
         if (param2 == 0 &&
           this.listener != null) {
-          this.listener.a(param3, (UiWidget) (this), param0, -24381, true);
+          this.listener.paintWidget(param3, (UiWidget) (this), param0, -24381, true);
         }
         k var5 = new k(this.field_C);
         if (param1 >= -106) {
@@ -515,17 +515,17 @@ class WidgetContainer extends UiWidget implements sf {
         }
         UiWidget var6 = (UiWidget) (var5.b(59));
         while (var6 != null) {
-          var6.a(param0 + this.x, -128, param2, param3 + this.y);
+          var6.drawWidget(param0 + this.x, -128, param2, param3 + this.y);
           var6 = (UiWidget) (var5.d(-119));
         }
     }
 
     WidgetContainer(int param0, int param1, int param2, int param3, WidgetActionListener param4) {
-        super(param0, param1, param2, param3, param4, (sc) null);
+        super(param0, param1, param2, param3, param4, (WidgetEventListener) null);
         this.field_C = new IntrusiveDeque();
     }
 
-    final boolean a(int param0, UiWidget param1) {
+    final boolean focusPreviousChild(int param0, UiWidget param1) {
         RuntimeException var3 = null;
         UiWidget var4 = null;
         k var5 = null;
@@ -539,7 +539,7 @@ class WidgetContainer extends UiWidget implements sf {
         var7 = Terraphoenix.field_V;
         try {
           if (param0 != 48) {
-            this.d(115);
+            this.isFocused(115);
           }
           if (this.field_C.isEmpty((byte) -75)) {
             return false;
@@ -547,12 +547,12 @@ class WidgetContainer extends UiWidget implements sf {
           var8 = new k(this.field_C);
           var4 = (UiWidget) (var8.b(81));
           while (var4 != null) {
-            if (var4.d(-109)) {
+            if (var4.isFocused(-109)) {
               var5 = new k(this.field_C);
               var5.a(98, var4);
               var6 = (UiWidget) (var5.d(-81));
               while (var6 != null) {
-                if (!var6.a((byte) 35, param1)) {
+                if (!var6.takeFocus((byte) 35, param1)) {
                   var6 = (UiWidget) (var5.d(-114));
                   continue;
                 }
@@ -576,7 +576,7 @@ class WidgetContainer extends UiWidget implements sf {
         }
     }
 
-    boolean a(char param0, UiWidget param1, int param2, int param3) {
+    boolean handleKey(char param0, UiWidget param1, int param2, int param3) {
         RuntimeException var5 = null;
         UiWidget var6_ref_gl = null;
         int var6 = 0;
@@ -596,8 +596,8 @@ class WidgetContainer extends UiWidget implements sf {
           }
           while (var6_ref_gl != null) {
             if (var6_ref_gl.isLinked((byte) -61)) {
-              if (var6_ref_gl.d(-120) &&
-                var6_ref_gl.a(param0, param1, param2 ^ 0, param3)) {
+              if (var6_ref_gl.isFocused(-120) &&
+                var6_ref_gl.handleKey(param0, param1, param2 ^ 0, param3)) {
                 return true;
               }
               var6_ref_gl = (UiWidget) (var8.c(108));
@@ -610,9 +610,9 @@ class WidgetContainer extends UiWidget implements sf {
             return false;
           }
           if (bh.field_e[81]) {
-            stackIn_16_0 = this.a(48, param1);
+            stackIn_16_0 = this.focusPreviousChild(48, param1);
           } else {
-            stackIn_16_0 = this.a(param1, (byte) 88);
+            stackIn_16_0 = this.focusNextChild(param1, (byte) 88);
           }
           return stackIn_16_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -637,7 +637,7 @@ class WidgetContainer extends UiWidget implements sf {
         var5 = Terraphoenix.field_V;
         var2 = new k(this.field_C);
         if (param0 < 70) {
-          this.d(-26);
+          this.isFocused(-26);
         }
         var3 = (UiWidget) (var2.a((byte) -13));
         while (var3 != null) {
@@ -650,12 +650,12 @@ class WidgetContainer extends UiWidget implements sf {
         return null;
     }
 
-    UiWidget e(byte param0) {
+    UiWidget getFocusedChild(byte param0) {
         int var4 = Terraphoenix.field_V;
         k var2 = new k(this.field_C);
         UiWidget var3 = (UiWidget) (var2.a((byte) -13));
         while (var3 != null) {
-          if (var3.d(-108)) {
+          if (var3.isFocused(-108)) {
             return var3;
           }
           var3 = (UiWidget) (var2.c(param0 ^ -10));

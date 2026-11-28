@@ -25,7 +25,7 @@ final class MixedSupport041 extends DefaultTextWidgetRenderer {
         this(2188450, 2591221, 9543);
     }
 
-    public final void performAction0017(boolean booleanArgument1, int integerArgument2, int integerArgument3, byte byteArgument4, UiComponent uiComponentArgument5) {
+    public final void paintWidget(boolean booleanArgument1, int integerArgument2, int integerArgument3, byte byteArgument4, UiComponent uiComponentArgument5) {
         int stackIntegerLocal1 = 0;
         int stackIntegerLocal2 = 0;
         int stackIntegerLocal3 = 0;
@@ -42,7 +42,7 @@ final class MixedSupport041 extends DefaultTextWidgetRenderer {
             MixedSupport041.clearDeclaredStaticReferences(-101);
           }
           if (!uiComponentArgument5.booleanState0018) {
-            stackIntegerLocal1 = (uiComponentArgument5.computeBoolean0220(true)) ? 1 : 0;
+            stackIntegerLocal1 = (uiComponentArgument5.isFocused(true)) ? 1 : 0;
           } else {
             stackIntegerLocal1 = 1;
           }

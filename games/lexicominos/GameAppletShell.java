@@ -381,8 +381,8 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
             ug.field_y.getParent().remove((java.awt.Component) ((Object) ug.field_y));
           }
           boolean decompiledFrameRemainder0 = true;
-          if (null != hh.field_G) {
-            var2 = hh.field_G;
+          if (null != DraggableWidgetContainer.field_G) {
+            var2 = DraggableWidgetContainer.field_G;
             decompiledFrameRemainder0 = (var4 != 0);
           }
           if (decompiledFrameRemainder0) {
@@ -787,7 +787,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
             ug.field_y.setSize(AccountCreationResultPanel.field_sb, bk.field_d);
             ug.field_y.setVisible(true);
             boolean decompiledSharedTail0 = (null != ProxyAuthenticationRequiredException.field_d &&
-              hh.field_G == null);
+              DraggableWidgetContainer.field_G == null);
             if (!decompiledSharedTail0) {
               ug.field_y.setLocation(ef.field_e, ga.field_c);
               decompiledSharedTail0 = (Lexicominos.field_L);

@@ -39,7 +39,7 @@ final class mp extends DualLinkNode {
             return false;
           }
           var8 = new AccountCreationResultPanel(qe.field_g, param2);
-          qe.field_g.b(-3264, var8);
+          qe.field_g.showDialog(-3264, var8);
           if (!il.b(-120)) {
             ro.field_n = param6;
             qc.field_i = null;

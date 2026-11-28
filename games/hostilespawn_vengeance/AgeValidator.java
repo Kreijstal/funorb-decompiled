@@ -196,7 +196,7 @@ final class AgeValidator extends TextFieldValidator {
             }
           }
           if (0 == param1) {
-            nh.field_M = th.field_Fb[0];
+            LabeledWidgetContainer.field_M = th.field_Fb[0];
             dn.field_j = dn.field_j + 1;
           }
           if (uj.field_l == 1) {
@@ -246,12 +246,12 @@ final class AgeValidator extends TextFieldValidator {
                 }
               } else {
                 eh.field_c.playSample(TextInputField.field_V[jm.field_e + 0], var5_int, var6);
-                ag.field_k = ag.field_k + 1;
+                UiWidget.field_k = UiWidget.field_k + 1;
               }
             }
           }
           hf.field_i = param1;
-          var10 = jn.field_F[ib.field_c];
+          var10 = AlphaWidgetContainer.field_F[ib.field_c];
           var12 = var10;
           var13 = var12;
           var12Lifetime1 = var10;
@@ -263,7 +263,7 @@ final class AgeValidator extends TextFieldValidator {
                 dupTemp$0 = an.field_r[param1];
                 VolumeRampingMidiPcmStream.field_ib[dupTemp$0] = VolumeRampingMidiPcmStream.field_ib[dupTemp$0] - 9;
                 for (var6Lifetime1 = -17; 17 >= var6Lifetime1; var6Lifetime1 += 4) {
-                  var13Lifetime1 = jn.field_F[ib.field_c];
+                  var13Lifetime1 = AlphaWidgetContainer.field_F[ib.field_c];
                   r.a(var6Lifetime1, param1, var13Lifetime1, -5, var11);
                   ib.field_c = ib.field_c + 1;
                 }
@@ -271,7 +271,7 @@ final class AgeValidator extends TextFieldValidator {
               } else {
                 if (var6Lifetime1 == 3) {
                   for (var6Lifetime1 = -1; var6Lifetime1 <= 1; var6Lifetime1++) {
-                    var14 = jn.field_F[ib.field_c];
+                    var14 = AlphaWidgetContainer.field_F[ib.field_c];
                     var5 = var14;
                     r.a(var6Lifetime1, param1, var14, -5, var11);
                     ib.field_c = ib.field_c + 1;
@@ -313,7 +313,7 @@ final class AgeValidator extends TextFieldValidator {
             } else {
               r.a(0, param1, var10, -5, var11);
               ib.field_c = ib.field_c + 1;
-              var12Lifetime2 = jn.field_F[ib.field_c];
+              var12Lifetime2 = AlphaWidgetContainer.field_F[ib.field_c];
               var13Lifetime1 = var12Lifetime2;
               var13Lifetime1 = var12Lifetime2;
               r.a(0, param1, var12Lifetime2, -5, var11);

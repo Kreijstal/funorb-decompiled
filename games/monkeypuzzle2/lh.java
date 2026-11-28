@@ -39,9 +39,9 @@ final class lh {
           PasswordValidator.a("commonui", param1, (byte) 118, "dropdown");
           var5 = DiskCacheWorker.a("commonui", "screen_options", param1, false);
           vj.field_d = new ai[4];
-          oa.field_D = new ai[4];
+          DropTargetWidgetContainer.field_D = new ai[4];
           tf.field_a = new ai[4];
-          var6 = new ai[][]{vj.field_d, tf.field_a, oa.field_D};
+          var6 = new ai[][]{vj.field_d, tf.field_a, DropTargetWidgetContainer.field_D};
           var20 = new int[4][];
           var17 = var20;
           var7 = var17;

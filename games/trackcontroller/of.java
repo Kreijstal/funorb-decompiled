@@ -29,9 +29,9 @@ final class of extends ec {
             var4 = var3;
             var4 = var3;
           }
-          if (null != sa.field_P &&
-            !sa.field_P.equals(param0.getParameter("session"))) {
-            var4 = sa.field_P;
+          if (null != LabeledWidgetContainer.field_P &&
+            !LabeledWidgetContainer.field_P.equals(param0.getParameter("session"))) {
+            var4 = LabeledWidgetContainer.field_P;
           }
           stackIn_10_0 = IntrusiveDequeCursor.a(param1, 56, (String) (var3), -1, (String) (var4));
           return stackIn_10_0;
@@ -72,7 +72,7 @@ final class of extends ec {
           GameScreen.mouseMoved = ConfirmedEmailAvailabilityValidator.inputPending;
           ConfirmedEmailAvailabilityValidator.inputPending = false;
           uk.clickButton = wf.pendingClick;
-          db.clickX = sa.pressX;
+          db.clickX = LabeledWidgetContainer.pressX;
           wg.clickY = GameShell.pressY;
           wf.pendingClick = 0;
         }

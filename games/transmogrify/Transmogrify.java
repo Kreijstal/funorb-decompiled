@@ -14,7 +14,7 @@ public final class Transmogrify extends SessionGameApplet {
           if (param0 != 0) {
             field_E = (String) null;
           }
-          gl.j(param0 + 31107);
+          AlphaWidgetContainer.j(param0 + 31107);
           if (ub.field_c != null) {
             GzipDecompressor.b(5);
           }
@@ -132,7 +132,7 @@ public final class Transmogrify extends SessionGameApplet {
                       if (null != ub.field_c) {
                         GzipDecompressor.b(5);
                       }
-                      vl.a((byte) 120, ha.b(85));
+                      DraggableWidgetContainer.a((byte) 120, ha.b(85));
                       break;
                     case 2364824:
                       ProxyAuthenticationRequiredException.a((byte) -77);
@@ -300,7 +300,7 @@ public final class Transmogrify extends SessionGameApplet {
                   kb.field_n = l.a((byte) 12, 4);
                   IsaacRandom.b(true);
                   sh.field_c = NetworkArchiveRequest.a(29, (byte) 114, 3, 10, 1);
-                  be.field_q = vl.field_y;
+                  be.field_q = DraggableWidgetContainer.field_y;
                 }
                 if (be.field_q == -2) {
                   be.field_q = 0;
@@ -331,7 +331,7 @@ public final class Transmogrify extends SessionGameApplet {
                 ia.d(80);
                 if (qf.field_d == 1) {
                   oh.field_j = oh.field_j + 1;
-                  g.field_z = 0;
+                  DropTargetWidgetContainer.field_z = 0;
                 }
               } else {
                 MusicPatchPcmStream.field_l[be.field_q].c((byte) 122);
@@ -386,7 +386,7 @@ public final class Transmogrify extends SessionGameApplet {
                       stackIn_44_4 = stackIn_40_4;
                       stackIn_44_6 = true;
                     }
-                    var2_intLifetime1 = stackIn_44_0 + stackIn_44_1 * ((BinaryBitmapFont) (Object) stackIn_44_2).lineCount(aj.a(stackIn_44_3 != 0, stackIn_44_4 != 0, stackIn_43_5, stackIn_44_6), 341);
+                    var2_intLifetime1 = stackIn_44_0 + stackIn_44_1 * ((BinaryBitmapFont) (Object) stackIn_44_2).lineCount(DequeWidgetContainer.a(stackIn_44_3 != 0, stackIn_44_4 != 0, stackIn_43_5, stackIn_44_6), 341);
                     fd.field_a[5] = var2_intLifetime1 + 10;
                     stackIn_47_0 = fd.field_b;
                     stackIn_47_1 = 5;
@@ -504,7 +504,7 @@ public final class Transmogrify extends SessionGameApplet {
             } else {
               stackIn_12_0 = MouseWheelInput.field_b;
             }
-            da.a(stackIn_12_0, (byte) 119, (java.awt.Canvas) (var11));
+            ModalDialogHost.a(stackIn_12_0, (byte) 119, (java.awt.Canvas) (var11));
             return;
           }
           if (!IterableNodeHashTable.field_h) {
@@ -754,7 +754,7 @@ public final class Transmogrify extends SessionGameApplet {
                 vf.a((byte) -10, 2.0f, ee.a(i.field_d, (byte) 74, kh.field_e, BoundedRandomAccessFile.field_h, ""));
                 return false;
               }
-              vf.a((byte) 90, 1.0f, ee.a(oc.field_H, (byte) 71, IndexedSpriteState.field_e, pc.field_a, ""));
+              vf.a((byte) 90, 1.0f, ee.a(LabeledWidgetContainer.field_H, (byte) 71, IndexedSpriteState.field_e, pc.field_a, ""));
               return false;
             }
             vf.a((byte) -121, 0.0f, ee.a(vg.field_a, (byte) 100, aa.field_f, AccountNameAvailabilityValidator.field_k, "basic"));
@@ -836,7 +836,7 @@ public final class Transmogrify extends SessionGameApplet {
             DualLinkNode.field_k.a(115);
             NameSuggestionsPanel.field_B = pc.a("", "background", oi.field_g, param0 - 28);
             qe.field_F = ContextualRuntimeException.a(oi.field_g, (byte) 127, "", "hostanims_uniq");
-            mk.field_B = ContextualRuntimeException.a(oi.field_g, (byte) 125, "", "dialog_frame");
+            ModalDialog.field_B = ContextualRuntimeException.a(oi.field_g, (byte) 125, "", "dialog_frame");
             SecondaryNodeDeque.field_h = ContextualRuntimeException.a(oi.field_g, (byte) 125, "", "button_frame");
             eh.field_c = ContextualRuntimeException.a(oi.field_g, (byte) 121, "", "button_frame_hi");
             jk.field_x = new mg(MusicPatchPcmStream.a((byte) -43, oi.field_g, "var_button", ""));
@@ -855,7 +855,7 @@ public final class Transmogrify extends SessionGameApplet {
             for (var8_int = 0; var8_int < 3; var8_int++) {
               tb.field_b[var8_int] = new Sprite(var5_int, var7_int);
               tb.field_b[var8_int].bindAsRenderTarget();
-              dk.a(var7_int, mk.field_B, -28018, 0, 0, var5_int);
+              dk.a(var7_int, ModalDialog.field_B, -28018, 0, 0, var5_int);
               for (var9_int = 0; SoftwareRasterizer.field_h.length > var9_int; var9_int++) {
                 if (SoftwareRasterizer.field_h[var9_int] != 0 &&
                   7500402 > SoftwareRasterizer.field_h[var9_int]) {
@@ -873,7 +873,7 @@ public final class Transmogrify extends SessionGameApplet {
           }
           if (null == rk.field_r[4]) {
             a.field_R = pc.a("", "logo_highscores", oi.field_g, param0 ^ 118);
-            mk.field_y = pc.a("", "logo_achievements", oi.field_g, 58);
+            ModalDialog.field_y = pc.a("", "logo_achievements", oi.field_g, 58);
             SpriteState.field_t = pc.a("", "logo_instructions", oi.field_g, -33);
             AccountServiceResult.field_e = cf.a((byte) -122);
             kk.field_d = ContextualRuntimeException.a(oi.field_g, (byte) 121, "", "frame_trans");
@@ -883,7 +883,7 @@ public final class Transmogrify extends SessionGameApplet {
             var12 = new Sprite(640, 480);
             var12.bindAsRenderTarget();
             dk.a(377, DisplayNameSelectionPanel.field_C, -28018, 258, 72, 361);
-            mk.field_y.drawSilhouette(337, 14, 0);
+            ModalDialog.field_y.drawSilhouette(337, 14, 0);
             for (var4Lifetime2 = 0; var4Lifetime2 < SoftwareRasterizer.field_h.length; var4Lifetime2++) {
               if (SoftwareRasterizer.field_h[var4Lifetime2] != 0) {
                 SoftwareRasterizer.field_h[var4Lifetime2] = 16777215;
@@ -898,7 +898,7 @@ public final class Transmogrify extends SessionGameApplet {
             }
             var12.drawWithOpacity(0, 0, 166);
             IntrusiveNode.a(kk.field_d, 377, 7, 258, 2363394, 361, 72);
-            mk.field_y.draw(337, 14);
+            ModalDialog.field_y.draw(337, 14);
             rk.field_r[6] = rk.field_r[4];
             rk.field_r[1] = new Sprite(640, 480);
             rk.field_r[1].bindAsRenderTarget();
@@ -970,7 +970,7 @@ public final class Transmogrify extends SessionGameApplet {
             }
             hk.a(IntrusiveNode.field_d, param0 + 98, 400, IntrusiveNode.field_d);
             MusicPatchPcmStream.a(16, (byte) 108, 8, 2, new pg(SecondaryNodeDeque.field_h), new pg(eh.field_c));
-            vf.a(new pg(mk.field_B), 10, 10, param0 + 211);
+            vf.a(new pg(ModalDialog.field_B), 10, 10, param0 + 211);
             el.b(-6491);
             return false;
           }
@@ -1197,7 +1197,7 @@ public final class Transmogrify extends SessionGameApplet {
           WordDictionary.resetStaticState(1);
           lb.clearStaticReferences((byte) 103);
           il.clearStaticReferences((byte) -24);
-          da.clearStaticReferences(param0 ^ param0);
+          ModalDialogHost.clearStaticReferences(param0 ^ param0);
           AccountCreationResultPanel.clearStaticReferences(true);
           sd.clearStaticReferences((byte) 4);
           rf.releaseDeclaredStaticReferences(param0 - 2394);
@@ -1274,10 +1274,10 @@ public final class Transmogrify extends SessionGameApplet {
           ij.clearStaticReferences(2);
           TextLayout.resetStaticState((byte) 18);
           InteractiveWidget.resetDeclaredStaticState(true);
-          fi.clearDeclaredStaticReferences(param0 ^ 30382);
+          SingleChildWidgetContainer.clearDeclaredStaticReferences(param0 ^ 30382);
           bi.clearDeclaredStaticReferences(-31);
-          mk.clearStaticReferences(param0 - 116);
-          aj.h(32);
+          ModalDialog.clearStaticReferences(param0 - 116);
+          DequeWidgetContainer.h(32);
           rd.clearStaticReferences(param0 ^ 31);
           cc.clearStaticReferences(true);
           rk.clearStaticReferences(false);
@@ -1295,7 +1295,7 @@ public final class Transmogrify extends SessionGameApplet {
           wd.resetStaticState((byte) 126);
           si.clearStaticReferences((byte) 106);
           nh.clearStaticReferences(-33);
-          oc.clearStaticReferences(124);
+          LabeledWidgetContainer.clearStaticReferences(124);
           ValidatedTextField.clearStaticReferences(93);
           EditableTextField.clearStaticReferences((byte) -43);
           a.clearStaticReferences((byte) -13);
@@ -1317,8 +1317,8 @@ public final class Transmogrify extends SessionGameApplet {
           DirectByteStorage.clearStaticReferences((byte) 118);
           RichTextLayout.clearStaticReferences(-1);
           te.clearStaticReferences((byte) 41);
-          vl.resetStaticState(2147483647);
-          g.resetStaticState(19224);
+          DraggableWidgetContainer.resetStaticState(2147483647);
+          DropTargetWidgetContainer.resetStaticState(19224);
           IterableNodeHashTable.clearStaticReferences(param0 + 62);
           SecondaryNodeDeque.clearStaticReferences(17205);
           dl.b(false);
@@ -1334,7 +1334,7 @@ public final class Transmogrify extends SessionGameApplet {
           ni.clearStaticReferences(param0 + 252);
           nc.clearDeclaredStaticReferences(94);
           kd.clearStaticReferences(-73);
-          gl.i(param0 ^ 2480);
+          AlphaWidgetContainer.i(param0 ^ 2480);
           ng.clearStaticReferences((byte) 122);
           qk.clearStaticReferences((byte) -86);
           oh.clearStaticReferences((byte) 104);

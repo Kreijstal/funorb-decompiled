@@ -3,7 +3,7 @@
  */
 final class jh {
     static int field_f;
-    static fm field_e;
+    static ModalDialogHost field_e;
     static boolean field_a;
     static String field_c;
     static RgbSprite field_b;

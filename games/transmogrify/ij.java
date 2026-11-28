@@ -13,7 +13,7 @@ final class ij implements WidgetRenderer {
     private BitmapFont field_i;
     private int field_f;
 
-    public final void a(int param0, int param1, boolean param2, byte param3, UiWidget param4) {
+    public final void paintWidget(int param0, int param1, boolean param2, byte param3, UiWidget param4) {
         int var10 = 0;
         UiWidget stackIn_4_0 = null;
         RuntimeException stackIn_13_0 = null;

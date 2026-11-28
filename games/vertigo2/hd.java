@@ -216,7 +216,7 @@ final class hd {
     }
 
     final static void a(byte param0) {
-        nm.field_J = false;
+        ModalDialog.field_J = false;
         rp.field_e = null;
         bl.field_z = null;
         jo.field_g = null;

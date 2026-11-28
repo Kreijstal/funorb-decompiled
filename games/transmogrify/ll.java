@@ -14,15 +14,15 @@ final class ll extends bi implements WidgetActivationListener {
     public final void onWidgetActivated(InteractiveWidget param0, int param1, int param2, int param3, int param4) {
         InteractiveWidget discarded$1 = null;
         RuntimeException var6 = null;
-        ma var7 = null;
+        WidgetEventListener var7 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 != 17) {
-            var7 = (ma) null;
-            discarded$1 = this.a((String) null, (ma) null, 33);
+            var7 = (WidgetEventListener) null;
+            discarded$1 = this.a((String) null, (WidgetEventListener) null, 33);
           }
           if (param0 != this.field_P) {
             return;
@@ -129,7 +129,7 @@ final class ll extends bi implements WidgetActivationListener {
         this.field_A = false;
     }
 
-    ll(da param0, sh param1) {
+    ll(ModalDialogHost param0, sh param1) {
         super(param0, 200, 150);
         Object var3 = null;
         UiWidget var4 = null;
@@ -142,7 +142,7 @@ final class ll extends bi implements WidgetActivationListener {
         try {
           var3 = null;
           if (param1 != ni.field_o) {
-            if (fi.field_w == param1) {
+            if (SingleChildWidgetContainer.field_w == param1) {
               this.field_h = this.field_h + 10;
               var3 = n.field_b;
               if (hi.b(-106)) {
@@ -158,14 +158,14 @@ final class ll extends bi implements WidgetActivationListener {
           } else {
             var3 = nh.field_m;
           }
-          var4 = new UiWidget((String) (var3), (ma) null);
+          var4 = new UiWidget((String) (var3), (WidgetEventListener) null);
           var4.field_l = this.field_l;
           var4.field_p = 0;
           var4.field_h = 80;
           var4.field_n = 50;
           var4.field_q = (WidgetRenderer) ((Object) new DefaultTextWidgetRenderer(al.field_i, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true));
-          this.a(var4, (byte) -82);
-          this.field_P = this.a(oe.field_a, (ma) (this), -3);
+          this.addChild(var4, (byte) -82);
+          this.field_P = this.a(oe.field_a, (WidgetEventListener) (this), -3);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -187,12 +187,12 @@ final class ll extends bi implements WidgetActivationListener {
         }
     }
 
-    private final InteractiveWidget a(String param0, ma param1, int param2) {
+    private final InteractiveWidget a(String param0, WidgetEventListener param1, int param2) {
         InteractiveWidget discarded$1 = null;
         InteractiveWidget var4 = null;
         RuntimeException var4_ref = null;
         int var5 = 0;
-        ma var6 = null;
+        WidgetEventListener var6 = null;
         InteractiveWidget stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -205,13 +205,13 @@ final class ll extends bi implements WidgetActivationListener {
           var4.field_q = (WidgetRenderer) ((Object) new qa());
           var5 = -6 + this.field_h;
           this.field_h = this.field_h + 38;
-          var4.a(-91, var5, 15, -14 + (this.field_l - 16), 30);
-          this.a((UiWidget) (var4), (byte) -114);
+          var4.setBounds(-91, var5, 15, -14 + (this.field_l - 16), 30);
+          this.addChild((UiWidget) (var4), (byte) -114);
           if (param2 != -3) {
-            var6 = (ma) null;
-            discarded$1 = this.a((String) null, (ma) null, 24);
+            var6 = (WidgetEventListener) null;
+            discarded$1 = this.a((String) null, (WidgetEventListener) null, 24);
           }
-          this.c((byte) 69);
+          this.refreshLayout((byte) 69);
           stackIn_3_0 = var4;
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

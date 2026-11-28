@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class DefaultTextWidgetRenderer implements j, TextWidgetRenderer {
+class DefaultTextWidgetRenderer implements WidgetRenderer, TextWidgetRenderer {
     int field_j;
     int field_n;
     int field_f;
@@ -97,7 +97,7 @@ class DefaultTextWidgetRenderer implements j, TextWidgetRenderer {
           return;
         }
         try {
-          if (param3.b(true)) {
+          if (param3.isFocused(true)) {
             var13 = this.getTextLayout(-21480, param3);
             var14 = var13;
             var7 = var14.getLineIndexForTextOffset((byte) -94, param0);
@@ -106,7 +106,7 @@ class DefaultTextWidgetRenderer implements j, TextWidgetRenderer {
             var10 = this.a(param3, param4, var9, (byte) 78);
             var11 = this.getTextOriginY(param3, false, param1) + Math.max(0, var8.field_g);
             var12 = this.getTextOriginY(param3, false, param1) + Math.min(this.c(param2 ^ 2, param3), Math.min(var8.field_e, var14.field_c.length <= 1 + var7 ? var8.field_e : var13.field_c[var7 + 1].field_g));
-            kf.a((byte) 97, param4 + param3.field_m, param3.field_j + param1, param3.field_t + param3.field_m + param4, param3.field_x + param1 + param3.field_j);
+            ModalDialog.a((byte) 97, param4 + param3.field_m, param3.field_j + param1, param3.field_t + param3.field_m + param4, param3.field_x + param1 + param3.field_j);
             ph.field_f.a((byte) -67, var11, var12, var10, this.field_m, var10);
             MidiPcmStream.e(param2 + 4095);
           }
@@ -149,7 +149,7 @@ class DefaultTextWidgetRenderer implements j, TextWidgetRenderer {
         if (param0 != -3) {
           return false;
         }
-        stackIn_6_0 = (EditableTextField.field_J != null) && (EditableTextField.field_J.d((byte) 125) != null);
+        stackIn_6_0 = (EditableTextField.field_J != null) && (EditableTextField.field_J.getTopOpenDialog((byte) 125) != null);
         return stackIn_6_0;
     }
 
@@ -173,7 +173,7 @@ class DefaultTextWidgetRenderer implements j, TextWidgetRenderer {
         int var12Lifetime1;
         var13 = SolKnight.field_L ? 1 : 0;
         try {
-          kf.a((byte) 97, param6.field_m + param0, param1 + param6.field_j, param6.field_m + (param0 + param6.field_t), param6.field_j + param1 + param6.field_x);
+          ModalDialog.a((byte) 97, param6.field_m + param0, param1 + param6.field_j, param6.field_m + (param0 + param6.field_t), param6.field_j + param1 + param6.field_x);
           var9_int = this.getTextAreaWidth(param2 ^ -268, param6);
           if (param2 != -3) {
             var14 = (UiWidget) null;
@@ -254,7 +254,7 @@ class DefaultTextWidgetRenderer implements j, TextWidgetRenderer {
           if (param0 == param2) {
             return;
           }
-          if (param1.b(true)) {
+          if (param1.isFocused(true)) {
             var17 = this.getTextLayout(-21480, param1);
             var18 = var17;
             if (param0 < param2) {
@@ -266,7 +266,7 @@ class DefaultTextWidgetRenderer implements j, TextWidgetRenderer {
             }
             var10 = var18.getLineIndexForTextOffset((byte) -106, var8);
             var11 = var18.getLineIndexForTextOffset((byte) -121, var9);
-            kf.a((byte) 97, param5 + param1.field_m, param4 + param1.field_j, param1.field_m + param5 + param1.field_t, param1.field_x + (param1.field_j + param4));
+            ModalDialog.a((byte) 97, param5 + param1.field_m, param4 + param1.field_j, param1.field_m + param5 + param1.field_t, param1.field_x + (param1.field_j + param4));
             for (var12 = var10; var12 <= var11; var12++) {
               var13 = var17.field_c[var12];
               if (~var12 == ~var10) {
@@ -386,7 +386,7 @@ class DefaultTextWidgetRenderer implements j, TextWidgetRenderer {
         }
     }
 
-    public void a(byte param0, int param1, boolean param2, int param3, UiWidget param4) {
+    public void paintWidget(byte param0, int param1, boolean param2, int param3, UiWidget param4) {
         if (null == this.field_l) {
           return;
         }
@@ -643,7 +643,7 @@ class DefaultTextWidgetRenderer implements j, TextWidgetRenderer {
         try {
           if (param1 != 0) {
             var4 = (UiWidget) null;
-            this.a((byte) -115, 127, false, 29, (UiWidget) null);
+            this.paintWidget((byte) -115, 127, false, 29, (UiWidget) null);
           }
           stackIn_3_0 = param0.field_i;
           return stackIn_3_0;

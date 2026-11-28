@@ -22,17 +22,17 @@ final class ce {
             if (n.field_a != null &&
               n.field_a.focusLost) {
               re.a(0);
-              DelayedPcmStream.field_q.a((byte) 85, (UiWidget) (new vj(DelayedPcmStream.field_q, BoundedRandomAccessFile.field_d)));
+              DelayedPcmStream.field_q.showDialog((byte) 85, (UiWidget) (new vj(DelayedPcmStream.field_q, BoundedRandomAccessFile.field_d)));
             }
             return;
           }
           if (param0 >= -92) {
             field_a = (o) null;
           }
-          DelayedPcmStream.field_q.a((byte) -127, true, KeyboardInput.field_e, ie.field_z);
-          DelayedPcmStream.field_q.h(-10597);
-          while (ad.e((byte) -123)) {
-            DelayedPcmStream.field_q.a(lb.field_B, -125, StarCannon.field_E);
+          DelayedPcmStream.field_q.processPointerInput((byte) -127, true, KeyboardInput.field_e, AlphaWidgetContainer.field_z);
+          DelayedPcmStream.field_q.advanceDialogs(-10597);
+          while (LabeledWidgetContainer.e((byte) -123)) {
+            DelayedPcmStream.field_q.processKeyInput(lb.field_B, -125, StarCannon.field_E);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

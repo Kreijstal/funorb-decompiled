@@ -19,7 +19,7 @@ final class FullscreenFocusCanvas extends java.awt.Canvas implements java.awt.ev
 
     final static void c(int param0) {
         tj.field_v = null;
-        da.field_y = 0;
+        ModalDialogHost.field_y = 0;
         MouseInputHandler.field_d = -1;
         og.field_e = param0;
         lk.field_c = false;
@@ -43,23 +43,23 @@ final class FullscreenFocusCanvas extends java.awt.Canvas implements java.awt.ev
     }
 
     final static void b(int param0) {
-        ResourceArchive.field_f.k(31410);
+        ResourceArchive.field_f.closeAllDialogs(31410);
         if (null == gh.field_m) {
           gh.field_m = new sd(ResourceArchive.field_f, tg.field_c);
           if (param0 >= -9) {
             FullscreenFocusCanvas.a(54);
-            ResourceArchive.field_f.b((UiWidget) (gh.field_m), (byte) -71);
+            ResourceArchive.field_f.showDialog((UiWidget) (gh.field_m), (byte) -71);
             return;
           }
-          ResourceArchive.field_f.b((UiWidget) (gh.field_m), (byte) -71);
+          ResourceArchive.field_f.showDialog((UiWidget) (gh.field_m), (byte) -71);
           return;
         }
         if (param0 < -9) {
-          ResourceArchive.field_f.b((UiWidget) (gh.field_m), (byte) -71);
+          ResourceArchive.field_f.showDialog((UiWidget) (gh.field_m), (byte) -71);
           return;
         }
         FullscreenFocusCanvas.a(54);
-        ResourceArchive.field_f.b((UiWidget) (gh.field_m), (byte) -71);
+        ResourceArchive.field_f.showDialog((UiWidget) (gh.field_m), (byte) -71);
     }
 
     public final void paint(java.awt.Graphics param0) {

@@ -77,7 +77,7 @@ final class tf {
           if (0 == (param3 & 1 << param1)) {
             stackIn_12_1 = an.field_m;
           } else {
-            stackIn_12_1 = fj.field_r;
+            stackIn_12_1 = UiWidget.field_r;
           }
           ((BinaryBitmapFont) (Object) stackIn_11_0).drawString(stackIn_12_1, 80, 10 * var5 + 118 + param2, 16777215, -1);
           pn.field_a.drawRightAligned(hh.field_a, 500, 103 + param2, 4243584, -1);

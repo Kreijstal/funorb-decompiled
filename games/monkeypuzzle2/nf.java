@@ -3,7 +3,7 @@
  */
 import java.io.*;
 
-abstract class nf extends rh {
+abstract class nf extends ModalDialog {
     static int field_M;
     private int field_J;
     static AccountRegistrationPanel field_F;
@@ -229,7 +229,7 @@ abstract class nf extends rh {
         }
     }
 
-    nf(kj param0, int param1, int param2) {
+    nf(ModalDialogHost param0, int param1, int param2) {
         super(param0, param1, param2);
         this.field_K = 0;
         this.field_L = 0;
@@ -237,7 +237,7 @@ abstract class nf extends rh {
 
     final void b(int param0, int param1, int param2, int param3) {
         if (param3 <= 0) {
-          this.a(param0, (byte) 124, param2);
+          this.setCenteredSize(param0, (byte) 124, param2);
           return;
         }
         this.field_G = this.field_l;
@@ -361,7 +361,7 @@ abstract class nf extends rh {
         if (this.field_K <= 0) {
           return;
         }
-        this.a(this.field_I, (byte) -109, this.field_J);
+        this.setCenteredSize(this.field_I, (byte) -109, this.field_J);
         this.field_K = 0;
         this.e((byte) 10);
     }
@@ -482,12 +482,12 @@ abstract class nf extends rh {
         return;
     }
 
-    boolean b(boolean param0) {
+    boolean snapDialogAnimation(boolean param0) {
         if (param0) {
-          this.k(-110);
+          this.advanceDialogAnimation(-110);
         }
         this.p(-21);
-        return super.b(false);
+        return super.snapDialogAnimation(false);
     }
 
     public static void o(int param0) {
@@ -498,7 +498,7 @@ abstract class nf extends rh {
         field_E = null;
     }
 
-    boolean k(int param0) {
+    boolean advanceDialogAnimation(int param0) {
         int var2 = 0;
         int var3 = 0;
         int fieldTemp$0 = 0;
@@ -522,9 +522,9 @@ abstract class nf extends rh {
             var3 = var4 * (-this.field_H + this.field_I) / var5 + this.field_H;
             var2 = this.field_G + var4 * (-this.field_G + this.field_J) / var5;
           }
-          this.a(var3, (byte) 115, var2);
+          this.setCenteredSize(var3, (byte) 115, var2);
         }
-        return super.k(-23913);
+        return super.advanceDialogAnimation(-23913);
     }
 
     static {

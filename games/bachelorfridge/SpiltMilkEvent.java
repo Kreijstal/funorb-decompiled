@@ -160,7 +160,7 @@ final class SpiltMilkEvent extends SpecialEvent {
             if (kga.field_c != null &&
               kga.field_c.field_f) {
               lga.c((byte) 112);
-              pja.field_e.a((UiWidget) (new em(pja.field_e, r.field_m)), (byte) 93);
+              pja.field_e.showDialog((UiWidget) (new em(pja.field_e, r.field_m)), (byte) 93);
             }
             return;
           }
@@ -168,9 +168,9 @@ final class SpiltMilkEvent extends SpecialEvent {
           if (param0 != -1) {
             return;
           }
-          pja.field_e.i(0);
+          pja.field_e.advanceDialogs(0);
           while (kaa.b(127)) {
-            pja.field_e.a(dla.field_j, (byte) 7, gf.field_k);
+            pja.field_e.processKeyInput(dla.field_j, (byte) 7, gf.field_k);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

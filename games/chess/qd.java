@@ -48,11 +48,11 @@ final class qd extends IntrusiveNode {
 
     final static int d(int param0) {
         if (param0 == -31137) {
-          return (int)(1000000000L / ji.field_U);
+          return (int)(1000000000L / DropTargetWidgetContainer.field_U);
         }
         String var2 = (String) null;
         qd.a((byte) 82, (String) null);
-        return (int)(1000000000L / ji.field_U);
+        return (int)(1000000000L / DropTargetWidgetContainer.field_U);
     }
 
     final static boolean a(byte param0, String param1) {
@@ -116,7 +116,7 @@ final class qd extends IntrusiveNode {
         try {
           cf.field_Nb = true;
           ArchiveProvider.field_d = new vn(jh.field_e, tk.field_a, param1, SecondaryNodeHashTable.field_g, ag.field_e);
-          jh.field_e.b(ArchiveProvider.field_d, (byte) -27);
+          jh.field_e.showDialog(ArchiveProvider.field_d, (byte) -27);
         } catch (RuntimeException runtimeException) {
           throw SpriteGeometry.wrapClientException((Throwable) ((Object) runtimeException), "qd.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }

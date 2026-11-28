@@ -42,13 +42,13 @@ final class AccountNameAvailabilityValidator extends TextFieldValidator {
             this.invalidateCheckedName(7);
           }
           var5 = (CharSequence) ((Object) param1);
-          var3 = da.a(true, var5);
+          var3 = ModalDialogHost.a(true, var5);
           if (var3 != null) {
             stackIn_4_0 = var3;
             return stackIn_4_0;
           }
           if (!param1.equals(this.checkedName)) {
-            var4 = vl.pollAccountNameCheck(42, param1);
+            var4 = DraggableWidgetContainer.pollAccountNameCheck(42, param1);
             if (var4 == null) {
               return null;
             }
@@ -138,13 +138,13 @@ final class AccountNameAvailabilityValidator extends TextFieldValidator {
             field_k = (ResourceArchive) null;
           }
           if (!param1.equals(this.checkedName)) {
-            var3 = vl.pollAccountNameCheck(param0 - 53, param1);
+            var3 = DraggableWidgetContainer.pollAccountNameCheck(param0 - 53, param1);
             if (var3 != null &&
               var3.message == null) {
               this.nameAvailable = var3.success;
               this.checkedName = param1;
             } else {
-              stackIn_11_0 = fi.field_u;
+              stackIn_11_0 = SingleChildWidgetContainer.field_u;
               return stackIn_11_0;
             }
           }

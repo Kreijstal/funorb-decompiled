@@ -9,7 +9,7 @@ final class tj {
     static int[] field_b;
 
     final static void b(int param0) {
-        jf var1 = (jf) (oa.field_J.removeFirst((byte) -66));
+        jf var1 = (jf) (DropTargetWidgetContainer.field_J.removeFirst((byte) -66));
         if (var1 == null) {
           throw new IllegalStateException();
         }

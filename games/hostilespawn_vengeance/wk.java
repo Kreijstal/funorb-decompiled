@@ -123,7 +123,7 @@ final class wk {
         try {
           var2 = TextHotspotBounds.field_m[0];
           for (var3 = -10; var3 <= 10; var3 += 10) {
-            var5 = jn.field_F[ib.field_c];
+            var5 = AlphaWidgetContainer.field_F[ib.field_c];
             var5.field_i = 16;
             var5.field_c = var2.field_c + (double)var3;
             var5.field_j.copyCoordinatesFrom((byte) 46, var2.field_j);

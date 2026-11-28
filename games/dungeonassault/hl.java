@@ -99,19 +99,19 @@ abstract class hl {
     abstract fd b(int param0);
 
     final static void a(boolean param0) {
-        lg.field_w.h(1);
+        lg.field_w.closeAllDialogs(1);
         if (param0) {
           if (MusicPatchPcmStream.field_r == null) {
             MusicPatchPcmStream.field_r = new wi(lg.field_w, ub.field_o);
           }
-          lg.field_w.a(MusicPatchPcmStream.field_r, -1);
+          lg.field_w.showDialog(MusicPatchPcmStream.field_r, -1);
           return;
         }
         field_a = (lh) null;
         if (MusicPatchPcmStream.field_r == null) {
           MusicPatchPcmStream.field_r = new wi(lg.field_w, ub.field_o);
         }
-        lg.field_w.a(MusicPatchPcmStream.field_r, -1);
+        lg.field_w.showDialog(MusicPatchPcmStream.field_r, -1);
     }
 
     static {

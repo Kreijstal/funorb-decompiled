@@ -95,14 +95,14 @@ final class nja {
         byte[] var16;
         byte[] var17;
         var7 = BachelorFridge.field_y;
-        var1 = InsanoSauceSpecial.field_s[0] * lq.field_A[0];
+        var1 = InsanoSauceSpecial.field_s[0] * ArrayWidgetContainer.field_A[0];
         var16 = BananarangAnimation.field_P[0];
         if (!uf.field_b[0]) {
           var8 = new int[var1];
           for (var5_int = 0; var1 > var5_int; var5_int++) {
             var8[var5_int] = hk.field_f[dda.a((int) var16[var5_int], 255)];
           }
-          var3 = new Sprite(ok.field_Bb, MassPoisonEvent.field_r, fl.field_j[0], AirstrikeAnimation.field_D[0], lq.field_A[0], InsanoSauceSpecial.field_s[0], var8);
+          var3 = new Sprite(ok.field_Bb, MassPoisonEvent.field_r, fl.field_j[0], AirstrikeAnimation.field_D[0], ArrayWidgetContainer.field_A[0], InsanoSauceSpecial.field_s[0], var8);
         } else {
           var17 = cea.field_d[0];
           var13 = new int[var1];
@@ -111,7 +111,7 @@ final class nja {
           for (var6 = 0; var6 < var1; var6++) {
             var5[var6] = MassPoisonSpecial.a(dda.a(255, (int) var17[var6]) << 24, hk.field_f[dda.a(255, (int) var16[var6])]);
           }
-          var3 = new ArgbSprite(ok.field_Bb, MassPoisonEvent.field_r, fl.field_j[0], AirstrikeAnimation.field_D[0], lq.field_A[0], InsanoSauceSpecial.field_s[0], var13);
+          var3 = new ArgbSprite(ok.field_Bb, MassPoisonEvent.field_r, fl.field_j[0], AirstrikeAnimation.field_D[0], ArrayWidgetContainer.field_A[0], InsanoSauceSpecial.field_s[0], var13);
         }
         al.releaseStatics(-18073);
         if (!param0) {
@@ -124,7 +124,7 @@ final class nja {
         if (param0 < 70) {
           return;
         }
-        hl.field_I = false;
+        AlphaWidgetContainer.field_I = false;
         sea.field_j = ig.field_m.readUnsignedByte(16711935) == 0 ? true : false;
     }
 

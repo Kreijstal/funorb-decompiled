@@ -19,12 +19,12 @@ abstract class MouseWheelInput {
         try {
           var1_int = 0;
           var2 = param0 ? 1 : 0;
-          while (kj.e((byte) 118)) {
+          while (DequeWidgetContainer.e((byte) 118)) {
             DebouncedFieldValidator.field_c.b(15275);
             if (DebouncedFieldValidator.field_c.c((byte) 40)) {
               var1_int = 1;
             }
-            if (b.field_J != 13) {
+            if (ModalDialog.field_J != 13) {
               continue;
             }
             var2 = 1;

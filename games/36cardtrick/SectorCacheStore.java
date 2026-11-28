@@ -45,10 +45,10 @@ final class SectorCacheStore {
           IntrusiveDeque.field_c[11] = Main.field_y;
           IntrusiveDeque.field_c[8] = pg.field_b;
           IntrusiveDeque.field_c[7] = id.field_f;
-          IntrusiveDeque.field_c[6] = n.field_D;
+          IntrusiveDeque.field_c[6] = AlphaWidgetContainer.field_D;
           IntrusiveDeque.field_c[20] = jk.field_d[2];
           IntrusiveDeque.field_c[19] = jk.field_d[1];
-          IntrusiveDeque.field_c[21] = n.field_D;
+          IntrusiveDeque.field_c[21] = AlphaWidgetContainer.field_D;
           IntrusiveDeque.field_c[18] = jk.field_d[0];
           for (var1_int = 0; IntrusiveDeque.field_c.length > var1_int; var1_int++) {
             IntrusiveDeque.field_c[var1_int] = IntrusiveDeque.field_c[var1_int].toUpperCase();

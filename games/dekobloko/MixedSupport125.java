@@ -85,7 +85,7 @@ final class MixedSupport125 extends MixedSupport140 {
     final static void performAction1619(int integerArgument1, ResourceArchive resourceArchiveArgument2, boolean booleanArgument3, ResourceArchive resourceArchiveArgument4) {
         try {
           MatchingFieldValidator.performAction1426(MixedSupport036.sceneWidgetState0028, NameSuggestionsPanel.sceneWidgetState0019, sceneWidgetState0125, MixedSupport108.sceneWidgetState0104, InputAdapter003.sceneWidgetState0110, booleanArgument3, MixedSupport143.sceneWidgetState0146, ProxyAuthenticationRequiredException.sceneWidgetState0017, TextLineMetrics.renderingSupport009State0004, NetworkSupport008.sceneWidgetState0094, (byte) 103, MixedSupport123.sceneWidgetPart006State0002);
-          UiComponentPart010.rgbSpriteArrayState0010 = MixedSupport011.computeRgbSpriteArray0154(112, resourceArchiveArgument2, "lobby", "chatfilter");
+          AlphaWidgetContainer.rgbSpriteArrayState0010 = MixedSupport011.computeRgbSpriteArray0154(112, resourceArchiveArgument2, "lobby", "chatfilter");
           InputAdapter003.stringArrayState0044[2] = MixedSupport081.stringState0341;
           InputAdapter003.stringArrayState0044[0] = MixedSupport105.stringState0452;
           InputAdapter003.stringArrayState0044[1] = InputAdapter001.stringState0033;
@@ -128,7 +128,7 @@ final class MixedSupport125 extends MixedSupport140 {
           NodeHashTable.performAction1498(66);
           return;
         }
-        CipherPacketBuffer cipherPacketBufferLocal3 = UiComponentPart006.cipherPacketBufferState0001;
+        CipherPacketBuffer cipherPacketBufferLocal3 = LabeledWidgetContainer.cipherPacketBufferState0001;
         cipherPacketBufferLocal3.readInt(7553);
         cipherPacketBufferLocal3.readInt(7553);
         cipherPacketBufferLocal3.readInt(7553);

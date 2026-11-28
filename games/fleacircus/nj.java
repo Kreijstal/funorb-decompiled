@@ -242,13 +242,13 @@ final class nj {
     nj(int param0, int param1, int param2, int param3, int[] param4) {
         int var6_int = 0;
         try {
-          this.field_c = param0 + db.a((byte) -115, NodeHashTableIterator.field_c, param2);
-          this.field_f = param1 + db.a((byte) -115, NodeHashTableIterator.field_c, param3);
-          this.field_e = new ji[50 + db.a((byte) -115, NodeHashTableIterator.field_c, 5)];
+          this.field_c = param0 + ModalDialog.a((byte) -115, NodeHashTableIterator.field_c, param2);
+          this.field_f = param1 + ModalDialog.a((byte) -115, NodeHashTableIterator.field_c, param3);
+          this.field_e = new ji[50 + ModalDialog.a((byte) -115, NodeHashTableIterator.field_c, 5)];
           for (var6_int = this.field_e.length - 1; var6_int >= 0; var6_int--) {
-            this.field_e[var6_int] = new ji(this.field_c, this.field_f, db.a((byte) -115, NodeHashTableIterator.field_c, 1024), param4);
+            this.field_e[var6_int] = new ji(this.field_c, this.field_f, ModalDialog.a((byte) -115, NodeHashTableIterator.field_c, 1024), param4);
           }
-          this.field_g = db.a((byte) -115, NodeHashTableIterator.field_c, 3) + 2;
+          this.field_g = ModalDialog.a((byte) -115, NodeHashTableIterator.field_c, 3) + 2;
         } catch (RuntimeException runtimeException) {
           throw pf.wrapClientException((Throwable) ((Object) runtimeException), "nj.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ')');
         }

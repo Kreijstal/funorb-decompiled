@@ -13,8 +13,8 @@ abstract class FrameTimer {
         try {
           kb.field_d = param1;
           gi.field_r = param3;
-          fj.field_T = param8;
-          sa.field_T = param6;
+          DraggableWidgetContainer.field_T = param8;
+          LabeledWidgetContainer.field_T = param6;
           kf.field_a = param5;
           int var9_int = 41 % ((-36 - param7) / 32);
           IntrusiveNode.field_g = param4;

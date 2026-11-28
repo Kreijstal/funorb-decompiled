@@ -12,7 +12,7 @@ final class ua extends InteractiveWidget {
         field_F = null;
     }
 
-    private ua(String param0, pl param1) {
+    private ua(String param0, WidgetEventListener param1) {
         this(param0, pj.field_a.field_i, param1);
         try {
           this.field_v = pj.field_a.field_m;
@@ -26,7 +26,7 @@ final class ua extends InteractiveWidget {
         super.activateFromInput(param0, param1, param2, param3);
     }
 
-    private ua(String param0, ci param1, pl param2) {
+    private ua(String param0, WidgetRenderer param1, WidgetEventListener param2) {
         super(param0, param1, param2);
         try {
           this.field_v = pj.field_a.field_m;
@@ -35,7 +35,7 @@ final class ua extends InteractiveWidget {
         }
     }
 
-    ua(String param0, pl param1, boolean param2) {
+    ua(String param0, WidgetEventListener param1, boolean param2) {
         this(param0, param1);
         try {
           this.field_D = param2 ? true : false;

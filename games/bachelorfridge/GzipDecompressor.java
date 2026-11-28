@@ -110,8 +110,8 @@ final class GzipDecompressor {
               if (mw.a(var4_ref_String, -1)) {
                 var13 = (String) null;
                 var12 = (String) null;
-                vf.a((String) null, 0, 125, (String) null, qo.field_b, 2);
-                vf.a((String) null, 0, param1 + 124, (String) null, mi.field_n, 2);
+                ModalDialog.a((String) null, 0, 125, (String) null, qo.field_b, 2);
+                ModalDialog.a((String) null, 0, param1 + 124, (String) null, mi.field_n, 2);
                 if (var11 != 0) {
                   var5 = gk.field_d;
                   if (var5 == 0 &&

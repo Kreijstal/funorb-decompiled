@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ll implements uk {
+final class ll implements WidgetRenderer {
     private int field_f;
     private int field_e;
     private BitmapFont field_a;
@@ -30,7 +30,7 @@ final class ll implements uk {
         }
     }
 
-    public final void a(boolean param0, int param1, int param2, UiWidget param3, int param4) {
+    public final void paintWidget(boolean param0, int param1, int param2, UiWidget param3, int param4) {
         int stackIn_8_0 = 0;
         RuntimeException stackIn_23_0 = null;
         StringBuilder stackIn_23_1 = null;
@@ -49,14 +49,14 @@ final class ll implements uk {
             return;
           }
           if (!param3.field_q &&
-            !param3.e(0)) {
+            !param3.isFocused(0)) {
             stackIn_8_0 = 2188450;
           } else {
             stackIn_8_0 = 3249872;
           }
           var6_int = stackIn_8_0;
           this.field_a.drawParagraph("<u=" + Integer.toString(var6_int, 16) + ">" + param3.field_m + "</u>", param3.field_w + param1, param3.field_k + param2, param3.field_p, param3.field_t, var6_int, -1, this.field_e, this.field_f, this.field_a.field_N + this.field_a.field_r);
-          if (!param3.e(0)) {
+          if (!param3.isFocused(0)) {
             return;
           }
           var7 = this.field_a.stringWidth(param3.field_m);

@@ -38,7 +38,7 @@ final class jo implements WidgetListener {
         field_h = null;
     }
 
-    public final void a(boolean param0, int param1, boolean param2, UiWidget param3, int param4) {
+    public final void paintWidget(boolean param0, int param1, boolean param2, UiWidget param3, int param4) {
         int var10 = 0;
         UiWidget stackIn_4_0 = null;
         RuntimeException stackIn_15_0 = null;

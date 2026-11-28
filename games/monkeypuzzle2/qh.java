@@ -276,7 +276,7 @@ final class qh implements java.awt.event.MouseListener, java.awt.event.MouseMoti
           if (IsaacRandom.field_g == null) {
             if (DequeCursor.field_e) {
               if (wf.a(114) > 30000L) {
-                ImageProducerRasterBuffer.field_n = kj.field_E;
+                ImageProducerRasterBuffer.field_n = ModalDialogHost.field_E;
               } else {
                 ImageProducerRasterBuffer.field_n = AccountNameAvailabilityValidator.field_p;
               }

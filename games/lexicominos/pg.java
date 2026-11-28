@@ -155,7 +155,7 @@ final class pg {
     }
 
     final static void a(byte param0) {
-        al.field_C = new IntrusiveDeque();
+        ModalDialog.field_C = new IntrusiveDeque();
         if (param0 < 75) {
           pg.resetStaticState(-8);
         }

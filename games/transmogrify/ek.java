@@ -175,7 +175,7 @@ final class ek implements WidgetRenderer {
         }
     }
 
-    public final void a(int param0, int param1, boolean param2, byte param3, UiWidget param4) {
+    public final void paintWidget(int param0, int param1, boolean param2, byte param3, UiWidget param4) {
         int stackIn_5_0 = 0;
         RuntimeException stackIn_20_0 = null;
         StringBuilder stackIn_20_1 = null;
@@ -192,7 +192,7 @@ final class ek implements WidgetRenderer {
         var12 = Transmogrify.field_A ? 1 : 0;
         try {
           if (!param4.field_g &&
-            !param4.b((byte) -119)) {
+            !param4.isFocused((byte) -119)) {
             stackIn_5_0 = 2188450;
           } else {
             stackIn_5_0 = 3249872;
@@ -200,7 +200,7 @@ final class ek implements WidgetRenderer {
           var6_int = stackIn_5_0;
           var7 = -107 / ((51 - param3) / 47);
           this.field_f.drawParagraph("<u=" + Integer.toString(var6_int, 16) + ">" + param4.field_k + "</u>", param0 + param4.field_p, param4.field_n + param1, param4.field_l, param4.field_h, var6_int, -1, this.field_b, this.field_d, this.field_f.field_y + this.field_f.field_t);
-          if (param4.b((byte) 50)) {
+          if (param4.isFocused((byte) 50)) {
             var8 = this.field_f.stringWidth(param4.field_k);
             var9 = this.field_f.field_t + this.field_f.field_y;
             var10 = param0 + param4.field_p;

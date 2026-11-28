@@ -312,7 +312,7 @@ final class s {
                   var20 = param5.field_B[var18];
                   var21Lifetime2 = param5.field_E[var18];
                   NameSuggestionsPanel.field_L[var18] = var15 * var21Lifetime2 + var12 * var20 + var19 * var9 >> 16;
-                  k.field_I[var18] = var13 * var20 + (var19 * var10 + var21Lifetime2 * var16) >> 16;
+                  ModalDialogHost.field_I[var18] = var13 * var20 + (var19 * var10 + var21Lifetime2 * var16) >> 16;
                   dd.field_k[var18] = var14 * var20 + (var11 * var19 + var17 * var21Lifetime2) >> 16;
                   var18++;
                 }
@@ -385,7 +385,7 @@ final class s {
         hg.field_ob[9] = rh.field_k;
         hg.field_ob[14] = ih.field_P;
         hg.field_ob[5] = rk.field_c;
-        hg.field_ob[12] = pi.field_W;
+        hg.field_ob[12] = DraggableWidgetContainer.field_W;
         if (param0 < 69) {
           return;
         }

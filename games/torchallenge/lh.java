@@ -30,10 +30,10 @@ final class lh extends DualLinkNode {
         RuntimeException decompiledCaughtException = null;
         var2 = TorChallenge.field_F ? 1 : 0;
         try {
-          t.field_b.a(SpriteLoader.field_g, false, RandomAccessCacheFile.field_g, true);
-          t.field_b.j(-91);
-          while (kj.e((byte) -39)) {
-            t.field_b.a(di.field_m, b.field_J, 104);
+          t.field_b.processPointerInput(SpriteLoader.field_g, false, RandomAccessCacheFile.field_g, true);
+          t.field_b.advanceDialogs(-91);
+          while (DequeWidgetContainer.e((byte) -39)) {
+            t.field_b.processKeyInput(di.field_m, ModalDialog.field_J, 104);
           }
           if (-1 != ri.field_i) {
             var1_int = ri.field_i;

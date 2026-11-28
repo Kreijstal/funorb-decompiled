@@ -15,7 +15,7 @@ final class ValidatedTextField extends EditableTextField implements FieldValidat
         field_W = null;
     }
 
-    ValidatedTextField(String param0, fd param1, int param2) {
+    ValidatedTextField(String param0, WidgetEventListener param1, int param2) {
         super(param0, param1, param2);
     }
 
@@ -86,7 +86,7 @@ final class ValidatedTextField extends EditableTextField implements FieldValidat
             var6 = (int)((-var4 + 10999L) / 1000L);
             if (0 >= var6) {
               var3 = 2;
-              jk.a((byte) 49, true, 5);
+              DropTargetWidgetContainer.a((byte) 49, true, 5);
             }
           }
           stackIn_28_0 = var3;
@@ -210,7 +210,7 @@ final class ValidatedTextField extends EditableTextField implements FieldValidat
     }
 
     final static AccountServiceResult pollAccountCreationResult(int param0) {
-        if (TextHotspotBounds.field_q == pj.field_D) {
+        if (TextHotspotBounds.field_q == DequeWidgetContainer.field_D) {
           throw new IllegalStateException();
         }
         if (param0 != 19860) {
@@ -219,7 +219,7 @@ final class ValidatedTextField extends EditableTextField implements FieldValidat
         if (TextHotspotBounds.field_q != wg.field_u) {
           return null;
         }
-        TextHotspotBounds.field_q = pj.field_D;
+        TextHotspotBounds.field_q = DequeWidgetContainer.field_D;
         return jj.field_d;
     }
 
@@ -249,9 +249,9 @@ final class ValidatedTextField extends EditableTextField implements FieldValidat
         }
     }
 
-    final void a(vg param0, int param1, int param2, byte param3) {
+    final void updatePointer(UiWidget param0, int param1, int param2, byte param3) {
         try {
-          super.a(param0, param1, param2, (byte) -128);
+          super.updatePointer(param0, param1, param2, (byte) -128);
           this.field_I = -param1 - this.field_o + ck.field_c;
           if (param3 > -127) {
             FieldValidator var6 = (FieldValidator) null;
@@ -357,7 +357,7 @@ final class ValidatedTextField extends EditableTextField implements FieldValidat
           }
           if (param1.charAt(0) == 34) {
             if (param1.charAt(var2_int - 1) != 34) {
-              stackIn_16_0 = dh.field_H;
+              stackIn_16_0 = LabeledWidgetContainer.field_H;
               return stackIn_16_0;
             }
             var3 = 0;
@@ -366,7 +366,7 @@ final class ValidatedTextField extends EditableTextField implements FieldValidat
               if (var5 != 92) {
                 if (var5 == 34 &&
                   var3 == 0) {
-                  stackIn_29_0 = dh.field_H;
+                  stackIn_29_0 = LabeledWidgetContainer.field_H;
                   return stackIn_29_0;
                 }
                 var3 = 0;
@@ -389,13 +389,13 @@ final class ValidatedTextField extends EditableTextField implements FieldValidat
                 decompiledFrameRemainder0 = false;
               }
               else {
-                stackIn_42_0 = dh.field_H;
+                stackIn_42_0 = LabeledWidgetContainer.field_H;
                 return stackIn_42_0;
               }
             }
             if (decompiledFrameRemainder0) {
               if (FrameTimer.field_b.indexOf(var5Lifetime1) == -1) {
-                stackIn_47_0 = dh.field_H;
+                stackIn_47_0 = LabeledWidgetContainer.field_H;
                 return stackIn_47_0;
               }
               var3Lifetime1 = 0;

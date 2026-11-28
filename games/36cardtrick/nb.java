@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class nb implements ci {
+final class nb implements WidgetRenderer {
     static wb[] field_d;
     private int field_c;
     private BitmapFont field_b;
@@ -13,7 +13,7 @@ final class nb implements ci {
         int var1 = -115 / ((param0 + 38) / 55);
     }
 
-    public final void a(int param0, lk param1, int param2, int param3, boolean param4) {
+    public final void paintWidget(int param0, UiWidget param1, int param2, int param3, boolean param4) {
         int stackIn_6_0 = 0;
         RuntimeException stackIn_22_0 = null;
         StringBuilder stackIn_22_1 = null;
@@ -29,7 +29,7 @@ final class nb implements ci {
         var11 = Main.field_T;
         try {
           if (!param1.field_j &&
-            !param1.d(92)) {
+            !param1.isFocused(92)) {
             stackIn_6_0 = 2188450;
           } else {
             stackIn_6_0 = 3249872;
@@ -39,7 +39,7 @@ final class nb implements ci {
             this.field_c = 116;
           }
           this.field_b.drawParagraph("<u=" + Integer.toString(var6_int, 16) + ">" + param1.field_r + "</u>", param1.field_o + param0, param1.field_i + param3, param1.field_h, param1.field_q, var6_int, -1, this.field_c, this.field_a, this.field_b.field_x + this.field_b.field_s);
-          if (param1.d(114)) {
+          if (param1.isFocused(114)) {
             var7 = this.field_b.stringWidth(param1.field_r);
             var8 = this.field_b.field_x + this.field_b.field_s;
             var9 = param0 + param1.field_o;
@@ -150,7 +150,7 @@ final class nb implements ci {
 
     public nb() {
         this.field_c = 1;
-        this.field_b = j.field_C;
+        this.field_b = ModalDialogHost.field_C;
         this.field_a = 1;
     }
 

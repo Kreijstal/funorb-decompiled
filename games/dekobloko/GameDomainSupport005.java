@@ -37,17 +37,17 @@ final class GameDomainSupport005 {
         if (!booleanArgument1) {
           GameDomainSupport005.performAction1211(true);
         }
-        if (UiComponentPart015.integerState0319 == 0) {
+        if (DropTargetWidgetContainer.integerState0319 == 0) {
           stringLocal2 = stringArrayState0028[0];
         } else {
-          if (UiComponentPart015.integerState0319 >= 3) {
-            if (UiComponentPart015.integerState0319 < 7) {
-              stringLocal2 = NodeHashTableIterator.substituteIndexedPlaceholders(83, stringArrayState0028[2], new String[]{Integer.toString(UiComponentPart015.integerState0319 + 1), Integer.toString(8)});
+          if (DropTargetWidgetContainer.integerState0319 >= 3) {
+            if (DropTargetWidgetContainer.integerState0319 < 7) {
+              stringLocal2 = NodeHashTableIterator.substituteIndexedPlaceholders(83, stringArrayState0028[2], new String[]{Integer.toString(DropTargetWidgetContainer.integerState0319 + 1), Integer.toString(8)});
             } else {
               stringLocal2 = stringArrayState0028[3];
             }
           } else {
-            stringLocal2 = NodeHashTableIterator.substituteIndexedPlaceholders(85, stringArrayState0028[1], new String[]{Integer.toString(UiComponentPart015.integerState0319 + 1), Integer.toString(8)});
+            stringLocal2 = NodeHashTableIterator.substituteIndexedPlaceholders(85, stringArrayState0028[1], new String[]{Integer.toString(DropTargetWidgetContainer.integerState0319 + 1), Integer.toString(8)});
           }
         }
         MixedSupport042.performAction0537(integerLocal1 + 454, 256, 16777215, stringLocal2, -(1023 & GameDomainSupport001.integerState0053) - 382, SceneWidget.renderingSupport009State0007);
@@ -111,13 +111,13 @@ final class GameDomainSupport005 {
             MixedSupport028.resourceArchiveState0004 != null &&
             MixedSupport028.resourceArchiveState0004.ensureIndexLoaded((byte) 121) &&
             MixedSupport028.resourceArchiveState0004.tryLoadGroupByName("benefits", (byte) 102)) {
-            UiComponentPart008.rgbSpriteState0012 = UiComponentPart015.computeRgbSprite0704(MixedSupport076.resourceArchiveState0011, "headline", "benefits", integerArgument1 + 7802);
-            MixedSupport054.rgbSpriteState0019 = UiComponentPart015.computeRgbSprite0704(MixedSupport076.resourceArchiveState0011, "blurbpane", "benefits", 8192);
-            RichTextLayout.rgbSpriteState0015 = UiComponentPart015.computeRgbSprite0704(MixedSupport076.resourceArchiveState0011, "button", "benefits", 8192);
-            ResourceSupport004.rgbSpriteState0043 = UiComponentPart015.computeRgbSprite0704(MixedSupport076.resourceArchiveState0011, "signup_text", "benefits", 8192);
-            GzipDecompressor.rgbSpriteState0031 = UiComponentPart015.computeRgbSprite0704(MixedSupport076.resourceArchiveState0011, "menu_text", "benefits", 8192);
-            NetworkSupport002.rgbSpriteState0008 = UiComponentPart015.computeRgbSprite0704(MixedSupport076.resourceArchiveState0011, "button_frame", "benefits", integerArgument1 ^ 8582);
-            RenderingSupport003.rgbSpriteState0017 = UiComponentPart015.computeRgbSprite0704(MixedSupport076.resourceArchiveState0011, "arrow", "benefits", 8192);
+            UiComponentPart008.rgbSpriteState0012 = DropTargetWidgetContainer.computeRgbSprite0704(MixedSupport076.resourceArchiveState0011, "headline", "benefits", integerArgument1 + 7802);
+            MixedSupport054.rgbSpriteState0019 = DropTargetWidgetContainer.computeRgbSprite0704(MixedSupport076.resourceArchiveState0011, "blurbpane", "benefits", 8192);
+            RichTextLayout.rgbSpriteState0015 = DropTargetWidgetContainer.computeRgbSprite0704(MixedSupport076.resourceArchiveState0011, "button", "benefits", 8192);
+            ResourceSupport004.rgbSpriteState0043 = DropTargetWidgetContainer.computeRgbSprite0704(MixedSupport076.resourceArchiveState0011, "signup_text", "benefits", 8192);
+            GzipDecompressor.rgbSpriteState0031 = DropTargetWidgetContainer.computeRgbSprite0704(MixedSupport076.resourceArchiveState0011, "menu_text", "benefits", 8192);
+            NetworkSupport002.rgbSpriteState0008 = DropTargetWidgetContainer.computeRgbSprite0704(MixedSupport076.resourceArchiveState0011, "button_frame", "benefits", integerArgument1 ^ 8582);
+            RenderingSupport003.rgbSpriteState0017 = DropTargetWidgetContainer.computeRgbSprite0704(MixedSupport076.resourceArchiveState0011, "arrow", "benefits", 8192);
             NetworkSupport001.bitmapFontState0002 = (BitmapFont) ((Object) MixedSupport016.computeRenderingSupport0090204("large_font", MixedSupport028.resourceArchiveState0004, MixedSupport076.resourceArchiveState0011, (byte) 114, "benefits"));
             MixedSupport013.bitmapFontState0007 = (BitmapFont) ((Object) MixedSupport016.computeRenderingSupport0090204("small_font", MixedSupport028.resourceArchiveState0004, MixedSupport076.resourceArchiveState0011, (byte) 112, "benefits"));
             integerArrayLocal28 = SoftwareRaster.integerArrayState0063;
@@ -251,12 +251,12 @@ final class GameDomainSupport005 {
             integerLocal34 = SoftwareRaster.integerState0285;
             integerLocal39 = SoftwareRaster.integerState0284;
             SoftwareRaster.saveClip(LoginPanel.integerArrayState0055);
-            integerLocal15 = 6 + MixedSupport013.bitmapFontState0007.maxLineWidth(UiComponentPart016.stringState0297, 640);
+            integerLocal15 = 6 + MixedSupport013.bitmapFontState0007.maxLineWidth(ModalDialogHost.stringState0297, 640);
             integerLocal40 = 20 + (integerLocal15 + MixedSupport098.rgbSpriteState0040.integerState0254);
             integerLocal42 = -(integerLocal40 / 2) + 427;
             integerLocal44 = 20 + (integerLocal42 + MixedSupport098.rgbSpriteState0040.integerState0254);
             PlayerBoardUpdateQueue.rgbSpriteState0030.bindAsRenderTarget();
-            MixedSupport013.bitmapFontState0007.drawString(UiComponentPart016.stringState0297, integerLocal44 - PlayerBoardUpdateQueue.rgbSpriteState0030.integerState0259, MixedSupport013.bitmapFontState0007.integerState0523 + (MixedSupport013.bitmapFontState0007.integerState0518 + (-PlayerBoardUpdateQueue.rgbSpriteState0030.integerState0256 + 155)), 16777215, -1);
+            MixedSupport013.bitmapFontState0007.drawString(ModalDialogHost.stringState0297, integerLocal44 - PlayerBoardUpdateQueue.rgbSpriteState0030.integerState0259, MixedSupport013.bitmapFontState0007.integerState0523 + (MixedSupport013.bitmapFontState0007.integerState0518 + (-PlayerBoardUpdateQueue.rgbSpriteState0030.integerState0256 + 155)), 16777215, -1);
             MatchingFieldValidator.performAction1425(3, 1, -PlayerBoardUpdateQueue.rgbSpriteState0030.integerState0259 + (integerLocal44 - 4), integerArgument1 ^ 388, PlayerBoardUpdateQueue.rgbSpriteState0030, -PlayerBoardUpdateQueue.rgbSpriteState0030.integerState0256 + 155, integerLocal15, 50);
             integerLocal45 = -PlayerBoardUpdateQueue.rgbSpriteState0030.integerState0256 + 155 - (-MixedSupport013.bitmapFontState0007.integerState0518 - 3 + MixedSupport098.rgbSpriteState0040.integerState0260 - MixedSupport013.bitmapFontState0007.integerState0523) / 2;
             MixedSupport098.rgbSpriteState0040.draw(integerLocal42 - PlayerBoardUpdateQueue.rgbSpriteState0030.integerState0259, integerLocal45);

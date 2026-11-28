@@ -205,18 +205,18 @@ final class MixedSupport068 extends HashNode {
             }
             objectLocal1 = null;
             objectLocal2 = null;
-            if (UiComponentPart003.platformServiceState0001.boundedRandomAccessFileState0001 != null) {
-              ByteStorage.bufferedFileState0004 = new BufferedFile(UiComponentPart003.platformServiceState0001.boundedRandomAccessFileState0001, 5200, 0);
-              UiComponentPart003.platformServiceState0001.boundedRandomAccessFileState0001 = null;
-              objectLocal1 = new MixedSupport069(255, ByteStorage.bufferedFileState0004, new BufferedFile(UiComponentPart003.platformServiceState0001.boundedRandomAccessFileState0003, 12000, 0), 2097152);
+            if (ModalDialog.platformServiceState0001.boundedRandomAccessFileState0001 != null) {
+              ByteStorage.bufferedFileState0004 = new BufferedFile(ModalDialog.platformServiceState0001.boundedRandomAccessFileState0001, 5200, 0);
+              ModalDialog.platformServiceState0001.boundedRandomAccessFileState0001 = null;
+              objectLocal1 = new MixedSupport069(255, ByteStorage.bufferedFileState0004, new BufferedFile(ModalDialog.platformServiceState0001.boundedRandomAccessFileState0003, 12000, 0), 2097152);
             }
             if (ByteStorage.bufferedFileState0004 != null) {
               if (SceneWidgetPart005.bufferedFileArrayState0001 == null) {
-                SceneWidgetPart005.bufferedFileArrayState0001 = new BufferedFile[UiComponentPart003.platformServiceState0001.boundedRandomAccessFileArrayState0001.length];
+                SceneWidgetPart005.bufferedFileArrayState0001 = new BufferedFile[ModalDialog.platformServiceState0001.boundedRandomAccessFileArrayState0001.length];
               }
               if (SceneWidgetPart005.bufferedFileArrayState0001[integerArgument3] == null) {
-                SceneWidgetPart005.bufferedFileArrayState0001[integerArgument3] = new BufferedFile(UiComponentPart003.platformServiceState0001.boundedRandomAccessFileArrayState0001[integerArgument3], 12000, 0);
-                UiComponentPart003.platformServiceState0001.boundedRandomAccessFileArrayState0001[integerArgument3] = null;
+                SceneWidgetPart005.bufferedFileArrayState0001[integerArgument3] = new BufferedFile(ModalDialog.platformServiceState0001.boundedRandomAccessFileArrayState0001[integerArgument3], 12000, 0);
+                ModalDialog.platformServiceState0001.boundedRandomAccessFileArrayState0001[integerArgument3] = null;
               }
               objectLocal2 = new MixedSupport069(integerArgument3, ByteStorage.bufferedFileState0004, SceneWidgetPart005.bufferedFileArrayState0001[integerArgument3], 2097152);
             }

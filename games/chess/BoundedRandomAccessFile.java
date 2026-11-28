@@ -41,7 +41,7 @@ final class BoundedRandomAccessFile {
 
     final static void a(int param0, int param1, int param2, le param3, le param4, int param5) {
         ig.field_b = param3;
-        mf.field_z = param1;
+        UiWidget.field_z = param1;
         uc.field_g = param4;
         fh.field_e = param2;
         if (param5 != 4) {

@@ -52,7 +52,7 @@ class bd extends oh implements WidgetActivationListener {
           var7 = new bm(this, this.field_qb, param2);
           if (param1 != 5) {
             if (param1 == 256) {
-              var7.a((kd) (this), true, uh.field_o);
+              var7.a((WidgetEventListener) (this), true, uh.field_o);
             } else {
               stackIn_12_0 = var7;
               if (this.field_pb) {
@@ -74,7 +74,7 @@ class bd extends oh implements WidgetActivationListener {
                 var7.a(cb.field_s, -23493, 9);
               } else {
                 if (9 == param1) {
-                  var7.a((kd) (this), true, fc.field_d);
+                  var7.a((WidgetEventListener) (this), true, fc.field_d);
                 }
               }
             }
@@ -109,7 +109,7 @@ class bd extends oh implements WidgetActivationListener {
         field_kb = null;
     }
 
-    bd(f param0, BitmapFont param1, String param2, boolean param3, boolean param4) {
+    bd(ModalDialogHost param0, BitmapFont param1, String param2, boolean param3, boolean param4) {
         super(param0, new bm((bd) null, param1, param2), 77, 10, 10);
         try {
           this.field_qb = param1;
@@ -119,7 +119,7 @@ class bd extends oh implements WidgetActivationListener {
           this.field_rb = false;
           this.field_lb = new lk(13, 50, 274, 30, 15, 2113632, 4210752);
           this.field_lb.field_H = true;
-          this.a((UiComponent) (this.field_lb), (byte) -97);
+          this.addChild((UiComponent) (this.field_lb), (byte) -97);
         } catch (RuntimeException runtimeException) {
           throw pf.wrapClientException((Throwable) ((Object) runtimeException), "bd.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ')');
         }
@@ -337,7 +337,7 @@ class bd extends oh implements WidgetActivationListener {
         }
     }
 
-    final boolean a(int param0, int param1, UiComponent param2, char param3) {
+    final boolean handleKey(int param0, int param1, UiComponent param2, char param3) {
         RuntimeException var5 = null;
         boolean stackIn_6_0 = false;
         RuntimeException stackIn_9_0 = null;
@@ -352,7 +352,7 @@ class bd extends oh implements WidgetActivationListener {
           if (param0 != -2) {
             field_kb = (java.awt.Image) null;
           }
-          stackIn_6_0 = super.a(-2, param1, param2, param3);
+          stackIn_6_0 = super.handleKey(-2, param1, param2, param3);
           return stackIn_6_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

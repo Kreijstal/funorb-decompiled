@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class g implements j {
+final class g implements WidgetRenderer {
     private int field_h;
     private int field_b;
     private int field_e;
@@ -92,7 +92,7 @@ final class g implements j {
         return true;
     }
 
-    public final void a(UiComponent param0, int param1, int param2, byte param3, boolean param4) {
+    public final void paintWidget(UiComponent param0, int param1, int param2, byte param3, boolean param4) {
         uc var14 = null;
         int var7 = 0;
         int var8 = 0;

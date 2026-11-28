@@ -130,7 +130,7 @@ final class ji {
             return stackIn_2_0;
           }
           if (qb.a((byte) 126, param3, param2, param1)) {
-            return tj.h(126);
+            return DraggableWidgetContainer.h(126);
           }
           return null;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

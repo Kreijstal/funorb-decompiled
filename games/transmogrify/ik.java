@@ -50,7 +50,7 @@ class ik extends a implements WidgetActivationListener {
         return var1;
     }
 
-    final boolean a(int param0, UiWidget param1, byte param2, char param3) {
+    final boolean handleKey(int param0, UiWidget param1, byte param2, char param3) {
         int var5_int = 0;
         RuntimeException var5 = null;
         boolean stackIn_5_0 = false;
@@ -61,7 +61,7 @@ class ik extends a implements WidgetActivationListener {
         try {
           var5_int = -121 % ((param2 - 65) / 55);
           if (param0 != 13) {
-            stackIn_5_0 = super.a(param0, param1, (byte) 123, param3);
+            stackIn_5_0 = super.handleKey(param0, param1, (byte) 123, param3);
             return stackIn_5_0;
           }
           this.r(77);
@@ -110,7 +110,7 @@ class ik extends a implements WidgetActivationListener {
           var6 = new ee(this, this.field_hb, param0);
           if (5 != param1) {
             if (param1 == 256) {
-              var6.a((ma) (this), 8283, rc.field_b);
+              var6.a((WidgetEventListener) (this), 8283, rc.field_b);
             } else {
               stackIn_12_0 = var6;
               if (!this.field_eb) {
@@ -130,7 +130,7 @@ class ik extends a implements WidgetActivationListener {
             if (param1 != 4) {
               if (6 != param1) {
                 if (param1 == 9) {
-                  var6.a((ma) (this), param2 + 8287, of.field_b);
+                  var6.a((WidgetEventListener) (this), param2 + 8287, of.field_b);
                 }
               } else {
                 var6.a(ee.field_C, 9, param2 ^ -3);
@@ -155,7 +155,7 @@ class ik extends a implements WidgetActivationListener {
         }
     }
 
-    ik(da param0, BitmapFont param1, String param2, boolean param3, boolean param4) {
+    ik(ModalDialogHost param0, BitmapFont param1, String param2, boolean param3, boolean param4) {
         super(param0, new ee((ik) null, param1, param2), 77, 10, 10);
         try {
           this.field_eb = param3 ? true : false;
@@ -165,7 +165,7 @@ class ik extends a implements WidgetActivationListener {
           this.field_hb = param1;
           this.field_fb = new qe(13, 50, 274, 30, 15, 2113632, 4210752);
           this.field_fb.field_w = true;
-          this.a((UiWidget) (this.field_fb), (byte) -88);
+          this.addChild((UiWidget) (this.field_fb), (byte) -88);
         } catch (RuntimeException runtimeException) {
           throw ch.wrapClientException((Throwable) ((Object) runtimeException), "ik.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ')');
         }

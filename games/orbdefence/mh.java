@@ -25,7 +25,7 @@ final class mh {
           param2.field_e.field_c = param2;
           param2.field_d = param0;
         } catch (RuntimeException runtimeException) {
-          throw dd.wrapClientException((Throwable) ((Object) runtimeException), "mh.D(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw DraggableWidgetContainer.wrapClientException((Throwable) ((Object) runtimeException), "mh.D(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -102,7 +102,7 @@ final class mh {
     }
 
     final static void b(byte param0) {
-        pc.a(-1, sk.field_G, of.field_H, true);
+        pc.a(-1, ModalDialogHost.field_G, of.field_H, true);
         DefaultTextWidgetRenderer.field_j = true;
         if (param0 == -57) {
           return;

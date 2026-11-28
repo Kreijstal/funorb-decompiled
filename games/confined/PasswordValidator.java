@@ -152,7 +152,7 @@ final class PasswordValidator extends TextFieldValidator {
             return stackIn_6_0;
           }
           if (TunnelMesh.containsNonAsciiAlphanumeric(param1, var5)) {
-            stackIn_10_0 = oe.field_T;
+            stackIn_10_0 = ModalDialog.field_T;
             return stackIn_10_0;
           }
           if (wc.a(var5, -81)) {

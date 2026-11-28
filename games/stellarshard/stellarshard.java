@@ -94,7 +94,7 @@ public final class stellarshard extends rb implements cf {
           if (0 == te.field_c &&
             0 == ProxyAuthenticationRequiredException.field_a &&
             tf.field_a.isEmpty(0)) {
-            oa.field_D = true;
+            AlphaWidgetContainer.field_D = true;
           }
           boolean decompiledSharedTail0 = !(!DualLinkNode.a(-1));
           if (!decompiledSharedTail0) {
@@ -105,7 +105,7 @@ public final class stellarshard extends rb implements cf {
               oc.field_d = true;
             }
             stackIn_20_0 = !(mk.field_k <= 0);
-            oa.field_D = stackIn_20_0;
+            AlphaWidgetContainer.field_D = stackIn_20_0;
             te.field_c = 0;
             decompiledSharedTail0 = (field_B != 0);
           }
@@ -382,8 +382,8 @@ public final class stellarshard extends rb implements cf {
               (decompiledFrameCompleted0)) {
               if ((null != IntrusiveNode.field_f) &&
                 (decompiledFrameRemainder0 = !(!IntrusiveNode.field_f.field_m))) {
-                if (of.field_A < IntrusiveNode.field_f.field_s[0]) {
-                  of.field_A = IntrusiveNode.field_f.field_s[0];
+                if (DropTargetWidgetContainer.field_A < IntrusiveNode.field_f.field_s[0]) {
+                  DropTargetWidgetContainer.field_A = IntrusiveNode.field_f.field_s[0];
                 }
                 IntrusiveNode.field_f = null;
                 decompiledFrameRemainder0 = (var3 != 0);
@@ -393,7 +393,7 @@ public final class stellarshard extends rb implements cf {
                   if (wk.a(113)) {
                     stackIn_81_1 = 0;
                     stackIn_82_2 = (null != DualLinkDequeIterator.field_e);
-                    var2_int = oa.a((rb) (this), stackIn_81_1, stackIn_82_2);
+                    var2_int = AlphaWidgetContainer.a((rb) (this), stackIn_81_1, stackIn_82_2);
                     switch (var2_int) {
                       case 1:
                         if (null == DualLinkDequeIterator.field_e) {
@@ -568,7 +568,7 @@ public final class stellarshard extends rb implements cf {
           do {
             if (!(var6_float <= 40.0f)) {
               RichTextLayout.field_h.a((byte) -107);
-              ei.field_D = new Sprite[12];
+              ModalDialogHost.field_D = new Sprite[12];
               fk.field_k = new int[48];
               break;
             }
@@ -583,8 +583,8 @@ public final class stellarshard extends rb implements cf {
               fk.field_k[var5 * 4 + 1] = (int)(Math.random() * 480.0) << 4;
               fk.field_k[2 + var5 * 4] = (int)(33.0 * Math.random() - 16.0);
               fk.field_k[3 + 4 * var5] = (int)(33.0 * Math.random() - 16.0);
-              ei.field_D[var5] = new Sprite(256, 256);
-              ei.field_D[var5].bindAsRenderTarget();
+              ModalDialogHost.field_D[var5] = new Sprite(256, 256);
+              ModalDialogHost.field_D[var5].bindAsRenderTarget();
               stackIn_33_0 = 0;
               if (var12 != 0) {
                 break scanLoop1;
@@ -662,7 +662,7 @@ public final class stellarshard extends rb implements cf {
             DualLinkDequeIterator.field_i = false;
             wh.field_c = 0;
             ke.field_a = 16777215;
-            kg.field_D = 255;
+            LabeledWidgetContainer.field_D = 255;
             al.field_c = 0;
             AccountCreationResultPanel.field_pb = 512;
             ll.a(16);
@@ -1235,9 +1235,9 @@ public final class stellarshard extends rb implements cf {
             }
           }
           if (~al.field_c != ~ke.field_a) {
-            kg.field_D = kg.field_D - 1;
-            if (kg.field_D <= 0) {
-              kg.field_D = 255;
+            LabeledWidgetContainer.field_D = LabeledWidgetContainer.field_D - 1;
+            if (LabeledWidgetContainer.field_D <= 0) {
+              LabeledWidgetContainer.field_D = 255;
               ke.field_a = al.field_c;
             }
           }
@@ -2906,7 +2906,7 @@ public final class stellarshard extends rb implements cf {
           eh.clearStaticReferences((byte) 5);
           k.clearStaticReferences((byte) 98);
           h.resetStaticState((byte) 45);
-          ei.clearStaticReferences((byte) 77);
+          ModalDialogHost.clearStaticReferences((byte) 77);
           AccountCreationResultPanel.clearStaticReferences(true);
           pg.clearDeclaredStaticReferences(7694);
           ck.m(-121);
@@ -2984,8 +2984,8 @@ public final class stellarshard extends rb implements cf {
           TextLayout.clearDeclaredStaticReferences((byte) 112);
           UiWidget.b(true);
           InteractiveWidget.clearDeclaredStaticReferences(-8278);
-          dg.clearStaticReferences(32);
-          ui.clearStaticReferences((byte) -29);
+          SingleChildWidgetContainer.clearStaticReferences(32);
+          ModalDialog.clearStaticReferences((byte) -29);
           WidgetContainer.d((byte) 109);
           IntrusiveDequeCursor.clearStaticReferences(param0 ^ -72);
           q.a((byte) 84);
@@ -3024,8 +3024,8 @@ public final class stellarshard extends rb implements cf {
           RichTextLayout.clearStaticReferences((byte) 117);
           DirectByteStorage.c(-17002);
           ol.resetStaticState(true);
-          dl.clearDeclaredStaticReferences(80);
-          of.clearStaticReferences((byte) -120);
+          DraggableWidgetContainer.clearDeclaredStaticReferences(80);
+          DropTargetWidgetContainer.clearStaticReferences((byte) -120);
           li.clearStaticReferences((byte) 89);
           IterableNodeHashTable.resetStaticState(-1);
           DualLinkDeque.clearStaticReferences((byte) -117);
@@ -3041,7 +3041,7 @@ public final class stellarshard extends rb implements cf {
           vg.clearDeclaredStaticReferences(-7392);
           il.resetStaticState(param0 ^ 5634);
           kf.clearStaticReferences((byte) 63);
-          oa.clearDeclaredStaticReferences(-80);
+          AlphaWidgetContainer.clearDeclaredStaticReferences(-80);
           hk.clearStaticReferences(false);
           nf.a(65535);
           uf.clearStaticReferences((byte) 43);
@@ -3740,21 +3740,21 @@ public final class stellarshard extends rb implements cf {
             field_U[0] = 5;
           }
           if (qi.level > (-1 + Bzip2State.field_t)) {
-            var2_int = of.field_A;
-            of.field_A = Math.max(qi.level, of.field_A);
-            if (of.field_A > 50) {
-              of.field_A = 50;
+            var2_int = DropTargetWidgetContainer.field_A;
+            DropTargetWidgetContainer.field_A = Math.max(qi.level, DropTargetWidgetContainer.field_A);
+            if (DropTargetWidgetContainer.field_A > 50) {
+              DropTargetWidgetContainer.field_A = 50;
             }
             var3_ref_fk = new fk(0, -1 + qi.level, 0, 0, 0, 0);
             if (!DualLinkNode.a(-1)) {
               hf.a(var3_ref_fk, 89, 5);
               if (var5 != 0) {
                 tf.field_a.addLast(-113, var3_ref_fk);
-                of.field_A = var2_int;
+                DropTargetWidgetContainer.field_A = var2_int;
               }
             } else {
               tf.field_a.addLast(-113, var3_ref_fk);
-              of.field_A = var2_int;
+              DropTargetWidgetContainer.field_A = var2_int;
             }
           }
           if (10 <= qi.level &&
@@ -4134,7 +4134,7 @@ public final class stellarshard extends rb implements cf {
               var3 = 0;
               break;
             }
-            ei.field_D[var4].drawAdditive((fk.field_k[var3] >> 4) - 128, (fk.field_k[var3 + 1] >> 4) - 128, 128 - DiskArchiveRequest.field_I * 2);
+            ModalDialogHost.field_D[var4].drawAdditive((fk.field_k[var3] >> 4) - 128, (fk.field_k[var3 + 1] >> 4) - 128, 128 - DiskArchiveRequest.field_I * 2);
             var3 += 8;
             var4 += 2;
           } while (var20 == 0);
@@ -4288,7 +4288,7 @@ public final class stellarshard extends rb implements cf {
             var6_intLifetime1 = 1;
             while (true) {
               if (var6_intLifetime1 < 12) {
-                ei.field_D[var6_intLifetime1].drawAdditive(-128 + (fk.field_k[var5_int] >> 4), -128 + (fk.field_k[1 + var5_int] >> 4), -(DiskArchiveRequest.field_I * 2) + 128);
+                ModalDialogHost.field_D[var6_intLifetime1].drawAdditive(-128 + (fk.field_k[var5_int] >> 4), -128 + (fk.field_k[1 + var5_int] >> 4), -(DiskArchiveRequest.field_I * 2) + 128);
                 var5_int += 8;
                 var6_intLifetime1 += 2;
                 if (var20 == 0) {
@@ -4452,7 +4452,7 @@ public final class stellarshard extends rb implements cf {
               var7_ref = null;
               var8Lifetime3 = e.field_e;
               if (0 == e.field_e) {
-                var7_ref = ei.field_A;
+                var7_ref = ModalDialogHost.field_A;
               }
               if (e.field_e == 1) {
                 var7_ref = gf.field_a;

@@ -343,7 +343,7 @@ final class RaiderRecruitmentScreen extends DungeonAssaultScreen {
                   this.a((byte) -112, -1);
                   if (null == this.field_F ||
                     var18.field_t != this.field_F.field_n) {
-                    this.field_F = new SpriteAnimationPlayer(var18.field_e, var18.field_t, rf.field_M);
+                    this.field_F = new SpriteAnimationPlayer(var18.field_e, var18.field_t, ModalDialog.field_M);
                     if (null == var18.field_p) {
                       break regionExit1;
                     }
@@ -542,7 +542,7 @@ final class RaiderRecruitmentScreen extends DungeonAssaultScreen {
         cd.field_d.field_n = (en) ((Object) new e(jk.a(new String[]{pm.field_n}, ib.field_c, 30496)));
         am.field_f.field_n = (en) ((Object) new e(jk.a(new String[]{nf.field_x}, ib.field_c, 30496)));
         MouseWheelInput.field_a.field_n = (en) ((Object) new e((String) null, pm.field_o, nk.field_Lb));
-        sn.field_b.field_n = (en) ((Object) new e((String) null, IntroSequenceScreen.field_u, oi.field_M));
+        sn.field_b.field_n = (en) ((Object) new e((String) null, IntroSequenceScreen.field_u, DraggableWidgetContainer.field_M));
         this.a((byte) -112, -1);
     }
 

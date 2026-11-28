@@ -151,7 +151,7 @@ final class db {
         ck.field_db = false;
         var1 = -66 % ((74 - param0) / 34);
         if (gk.field_a) {
-          ei.field_G.h((byte) 52);
+          ModalDialogHost.field_G.h((byte) 52);
         } else {
           var2 = ag.field_c;
           if (0 < var2) {
@@ -160,9 +160,9 @@ final class db {
             } else {
               ii.field_F = h.a(MouseHandler.field_e, 0, new String[]{Integer.toString(var2)});
             }
-            ii.field_F = ei.a(new CharSequence[]{(CharSequence) ((Object) ii.field_F), (CharSequence) ((Object) "<br>"), (CharSequence) ((Object) SocketConnector.field_a)}, (byte) 127);
+            ii.field_F = ModalDialogHost.a(new CharSequence[]{(CharSequence) ((Object) ii.field_F), (CharSequence) ((Object) "<br>"), (CharSequence) ((Object) SocketConnector.field_a)}, (byte) 127);
           }
-          ei.field_G.o(3);
+          ModalDialogHost.field_G.o(3);
           PcmResampler.b(-21923);
         }
     }

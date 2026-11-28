@@ -168,7 +168,7 @@ final class vo extends DefaultTextWidgetRenderer {
         }
     }
 
-    public final void a(boolean param0, int param1, boolean param2, UiWidget param3, int param4) {
+    public final void paintWidget(boolean param0, int param1, boolean param2, UiWidget param3, int param4) {
         int stackIn_8_0 = 0;
         int stackIn_16_0 = 0;
         int stackIn_19_0 = 0;
@@ -185,7 +185,7 @@ final class vo extends DefaultTextWidgetRenderer {
             return;
           }
           if (!param3.field_p) {
-            stackIn_8_0 = (param3.f(110)) ? 1 : 0;
+            stackIn_8_0 = (param3.isFocused(110)) ? 1 : 0;
           } else {
             stackIn_8_0 = 1;
           }

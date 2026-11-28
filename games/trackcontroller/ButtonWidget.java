@@ -12,7 +12,7 @@ class ButtonWidget extends UiWidget {
     static String field_E;
     static String field_H;
 
-    final boolean h(int param0) {
+    final boolean isFocused(int param0) {
         if (param0 > -83) {
           this.field_C = true;
           return this.field_D;
@@ -20,7 +20,7 @@ class ButtonWidget extends UiWidget {
         return this.field_D;
     }
 
-    boolean a(byte param0, char param1, UiWidget param2, int param3) {
+    boolean handleKey(byte param0, char param1, UiWidget param2, int param3) {
         int var5_int = 0;
         RuntimeException var5 = null;
         RuntimeException stackIn_10_0 = null;
@@ -28,7 +28,7 @@ class ButtonWidget extends UiWidget {
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (this.h(-87) && (84 == param3 ||
+          if (this.isFocused(-87) && (84 == param3 ||
             param3 == 83)) {
             this.activate(-1, -1, 0, 1);
             return true;
@@ -69,14 +69,14 @@ class ButtonWidget extends UiWidget {
         }
     }
 
-    ButtonWidget(String param0, t param1, tg param2) {
+    ButtonWidget(String param0, WidgetRenderer param1, WidgetEventListener param2) {
         super(param0, param1, param2);
         this.field_D = false;
         this.field_C = true;
         this.field_B = true;
     }
 
-    boolean a(byte param0, UiWidget param1) {
+    boolean takeFocus(byte param0, UiWidget param1) {
         RuntimeException var3 = null;
         UiWidget var4 = null;
         RuntimeException stackIn_15_0 = null;
@@ -86,17 +86,17 @@ class ButtonWidget extends UiWidget {
         try {
           if (this.field_B &&
             this.field_C) {
-            param1.f(-24174);
+            param1.blur(-24174);
             this.field_D = true;
             if (param0 > -104) {
               var4 = (UiWidget) null;
-              this.a((UiWidget) null, 111, -49, 100, -115, 115, 9);
+              this.pointerPressed((UiWidget) null, 111, -49, 100, -115, 115, 9);
             }
             if (this.field_l != null) {
-              if (!(this.field_l instanceof ah)) {
+              if (!(this.field_l instanceof WidgetFocusListener)) {
                 return true;
               }
-              ((ah) (this.field_l)).a(11477, (UiWidget) (this), this.field_D);
+              ((WidgetFocusListener) (this.field_l)).onWidgetFocusChanged(11477, (UiWidget) (this), this.field_D);
             }
             return true;
           }
@@ -198,7 +198,7 @@ class ButtonWidget extends UiWidget {
         }
     }
 
-    boolean a(UiWidget param0, int param1, int param2, int param3, int param4, int param5, int param6) {
+    boolean pointerPressed(UiWidget param0, int param1, int param2, int param3, int param4, int param5, int param6) {
         RuntimeException var8 = null;
         RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;
@@ -211,14 +211,14 @@ class ButtonWidget extends UiWidget {
           if (!this.field_B) {
             return false;
           }
-          if (!this.a(param5, param6, param2, false, param1)) {
+          if (!this.containsPointer(param5, param6, param2, false, param1)) {
             return false;
           }
-          this.a((byte) -118, param0);
+          this.takeFocus((byte) -118, param0);
           this.field_r = param3;
           if (this.field_l != null &&
-            this.field_l instanceof gg) {
-            ((gg) (this.field_l)).a(param2, param6, param5, param1, param3, -2278, this);
+            this.field_l instanceof WidgetPointerListener) {
+            ((WidgetPointerListener) (this.field_l)).onWidgetPointerPressed(param2, param6, param5, param1, param3, -2278, this);
           }
           return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -235,7 +235,7 @@ class ButtonWidget extends UiWidget {
         }
     }
 
-    final void f(int param0) {
+    final void blur(int param0) {
         if (!this.field_D) {
           if (param0 == -24174) {
             return;
@@ -251,39 +251,39 @@ class ButtonWidget extends UiWidget {
           this.field_D = false;
           return;
         }
-        if (!(this.field_l instanceof ah)) {
+        if (!(this.field_l instanceof WidgetFocusListener)) {
           if (param0 == -24174) {
             return;
           }
           this.field_D = false;
           return;
         }
-        ((ah) (this.field_l)).a(11477, (UiWidget) (this), this.field_D);
+        ((WidgetFocusListener) (this.field_l)).onWidgetFocusChanged(11477, (UiWidget) (this), this.field_D);
         if (param0 == -24174) {
           return;
         }
         this.field_D = false;
     }
 
-    void a(int param0, int param1, byte param2, UiWidget param3) {
+    void updatePointer(int param0, int param1, byte param2, UiWidget param3) {
         try {
-          super.a(param0, param1, param2, param3);
+          super.updatePointer(param0, param1, param2, param3);
           if (this.field_r != 0) {
             if (this.field_r == SecondaryNodeDeque.mouseButton) {
               return;
             }
-            if (this.a(param1, param0, kf.mouseX, false, fg.mouseY) &&
+            if (this.containsPointer(param1, param0, kf.mouseX, false, fg.mouseY) &&
               0 == SecondaryNodeDeque.mouseButton) {
               this.activate(-param0 + fg.mouseY, -param1 + kf.mouseX, 0, this.field_r);
             }
-            this.a(param3, false, fg.mouseY, param0, kf.mouseX, param1);
+            this.pointerReleased(param3, false, fg.mouseY, param0, kf.mouseX, param1);
           }
         } catch (RuntimeException runtimeException) {
           throw LevelGrid.toClientException((Throwable) ((Object) runtimeException), "rh.EA(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 
-    final StringBuilder a(boolean param0, Hashtable param1, StringBuilder param2, int param3) {
+    final StringBuilder appendDebugTree(boolean param0, Hashtable param1, StringBuilder param2, int param3) {
         StringBuilder discarded$2 = null;
         StringBuilder discarded$3 = null;
         RuntimeException var5 = null;
@@ -298,8 +298,8 @@ class ButtonWidget extends UiWidget {
           if (param0) {
             this.field_G = true;
           }
-          if (this.a((byte) 116, param3, param2, param1)) {
-            this.a(34, param2, param3, param1);
+          if (this.beginDebugTreeEntry((byte) 116, param3, param2, param1)) {
+            this.appendDebugProperties(34, param2, param3, param1);
             if (this.field_G) {
               discarded$2 = param2.append(" active");
             }
@@ -329,18 +329,18 @@ class ButtonWidget extends UiWidget {
         }
     }
 
-    ButtonWidget(String param0, tg param1) {
+    ButtonWidget(String param0, WidgetEventListener param1) {
         this(param0, EditableTextField.field_O.field_h, param1);
     }
 
-    final void a(UiWidget param0, boolean param1, int param2, int param3, int param4, int param5) {
+    final void pointerReleased(UiWidget param0, boolean param1, int param2, int param3, int param4, int param5) {
         if (param1) {
           return;
         }
         try {
           if (this.field_l != null &&
-            this.field_l instanceof gg) {
-            ((gg) (this.field_l)).a(param3, param2, param5, this, param4, param1);
+            this.field_l instanceof WidgetPointerListener) {
+            ((WidgetPointerListener) (this.field_l)).onWidgetPointerReleased(param3, param2, param5, this, param4, param1);
           }
           this.field_r = 0;
         } catch (RuntimeException runtimeException) {

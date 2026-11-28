@@ -48,7 +48,7 @@ class UiComponentPart012 extends UiComponentPart004 implements WidgetActivationL
         return 29;
     }
 
-    UiComponentPart012(UiComponentPart016 uiComponentPart016Argument1, BitmapFont bitmapFontArgument2, String stringArgument3, boolean booleanArgument4, boolean booleanArgument5) {
+    UiComponentPart012(ModalDialogHost uiComponentPart016Argument1, BitmapFont bitmapFontArgument2, String stringArgument3, boolean booleanArgument4, boolean booleanArgument5) {
         super(uiComponentPart016Argument1, new UiComponentPart008((UiComponentPart012) null, bitmapFontArgument2, stringArgument3), 77, 10, 10);
         try {
           this.bitmapFontState0014 = bitmapFontArgument2;
@@ -58,7 +58,7 @@ class UiComponentPart012 extends UiComponentPart004 implements WidgetActivationL
           this.booleanState0062 = booleanArgument5 ? true : false;
           this.uiComponentPart027State0001 = new UiComponentPart027(13, 50, 274, 30, 15, 2113632, 4210752);
           this.uiComponentPart027State0001.booleanState0159 = true;
-          this.performAction0895(this.uiComponentPart027State0001, (byte) -55);
+          this.addChild(this.uiComponentPart027State0001, (byte) -55);
         } catch (RuntimeException runtimeException) {
           throw ClientException.computeDiagnosticSupport0020365((Throwable) ((Object) runtimeException), "gk.<init>(" + (uiComponentPart016Argument1 != null ? "{...}" : "null") + ',' + (bitmapFontArgument2 != null ? "{...}" : "null") + ',' + (stringArgument3 != null ? "{...}" : "null") + ',' + booleanArgument4 + ',' + booleanArgument5 + ')');
         }
@@ -119,13 +119,13 @@ class UiComponentPart012 extends UiComponentPart004 implements WidgetActivationL
             if (integerArgument3 != 256) {
               stackUiComponentPart008Local2 = uiComponentPart008Local10;
               if (!this.booleanState0061) {
-                stackStringLocal3 = UiComponentPart003.stringState0060;
+                stackStringLocal3 = ModalDialog.stringState0060;
               } else {
                 stackStringLocal3 = GameAssets.stringState0504;
               }
               ((UiComponentPart008) (Object) stackUiComponentPart008Local2).performAction0371(stackStringLocal3, -1, 14);
             } else {
-              uiComponentPart008Local10.computeInteractiveComponent0370(116, GameAssets.stringState0504, (CallbackContract006) (this));
+              uiComponentPart008Local10.computeInteractiveComponent0370(116, GameAssets.stringState0504, (WidgetEventListener) (this));
             }
           } else {
             uiComponentPart008Local10.performAction0371(GameDomainSupport005.stringState0406, 11, 14);
@@ -135,7 +135,7 @@ class UiComponentPart012 extends UiComponentPart004 implements WidgetActivationL
             if (integerArgument3 != 4) {
               if (6 != integerArgument3) {
                 if (integerArgument3 == 9) {
-                  uiComponentPart008Local10.computeInteractiveComponent0370(127, MixedSupport096.stringState0410, (CallbackContract006) (this));
+                  uiComponentPart008Local10.computeInteractiveComponent0370(127, MixedSupport096.stringState0410, (WidgetEventListener) (this));
                 }
               } else {
                 uiComponentPart008Local10.performAction0371(BirthDateInput.stringState0580, 9, 14);
@@ -170,7 +170,7 @@ class UiComponentPart012 extends UiComponentPart004 implements WidgetActivationL
         }
     }
 
-    final boolean computeBoolean0182(int integerArgument1, int integerArgument2, UiComponent uiComponentArgument3, char characterArgument4) {
+    final boolean handleKey(int integerArgument1, int integerArgument2, UiComponent uiComponentArgument3, char characterArgument4) {
         int integerLocal1 = 0;
         RuntimeException runtimeExceptionLocal2 = null;
         boolean stackBooleanLocal3 = false;
@@ -184,7 +184,7 @@ class UiComponentPart012 extends UiComponentPart004 implements WidgetActivationL
             return true;
           }
           integerLocal1 = -15 / ((integerArgument1 + 22) / 49);
-          stackBooleanLocal3 = super.computeBoolean0182(123, integerArgument2, uiComponentArgument3, characterArgument4);
+          stackBooleanLocal3 = super.handleKey(123, integerArgument2, uiComponentArgument3, characterArgument4);
           return stackBooleanLocal3;
         } catch (java.lang.RuntimeException caughtParameterLocal8) {
           caughtExceptionLocal7 = caughtParameterLocal8;
@@ -211,7 +211,7 @@ class UiComponentPart012 extends UiComponentPart004 implements WidgetActivationL
             this.booleanState0062 = true;
           }
           if (!this.booleanState0063) {
-            NetworkSupport001.performAction0062("tochangedisplayname.ws", byteArgument1 ^ -79, UiComponentPart029.computeApplet1485(byteArgument1 ^ 25211));
+            NetworkSupport001.performAction0062("tochangedisplayname.ws", byteArgument1 ^ -79, DraggableWidgetContainer.computeApplet1485(byteArgument1 ^ 25211));
             return;
           }
           MouseWheelInput.performAction0670(3, (byte) -124);

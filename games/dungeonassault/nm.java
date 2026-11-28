@@ -45,7 +45,7 @@ final class nm extends sj implements WidgetActivationListener {
         this.field_T = false;
     }
 
-    private final InteractiveWidget a(int param0, pg param1, String param2) {
+    private final InteractiveWidget a(int param0, WidgetEventListener param1, String param2) {
         InteractiveWidget var4 = null;
         RuntimeException var4_ref = null;
         int var5 = 0;
@@ -58,15 +58,15 @@ final class nm extends sj implements WidgetActivationListener {
         RuntimeException decompiledCaughtException = null;
         try {
           var4 = new InteractiveWidget(param2, param1);
-          var4.field_o = (ca) ((Object) new na());
+          var4.field_o = (WidgetRenderer) ((Object) new na());
           var5 = this.field_s - 6;
           if (param0 != 26414) {
             this.field_kb = (InteractiveWidget) null;
           }
           this.field_s = this.field_s + 38;
-          var4.b(0, -16 + (this.field_x - 14), var5, 15, 30);
-          this.b((byte) -127, var4);
-          this.f(12591);
+          var4.setBounds(0, -16 + (this.field_x - 14), var5, 15, 30);
+          this.addChild((byte) -127, var4);
+          this.refreshLayout(12591);
           stackIn_3_0 = var4;
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -89,7 +89,7 @@ final class nm extends sj implements WidgetActivationListener {
         }
     }
 
-    nm(ji param0, r param1) {
+    nm(ModalDialogHost param0, r param1) {
         super(param0, 200, 150);
         Object var3 = null;
         Object stackIn_12_0 = null;
@@ -98,7 +98,7 @@ final class nm extends sj implements WidgetActivationListener {
         StringBuilder stackIn_15_1 = null;
         String stackIn_16_2 = null;
         RuntimeException decompiledCaughtException = null;
-        lm var4 = null;
+        UiWidget var4 = null;
         try {
           var3 = null;
           if (param1 == gl.field_Gb) {
@@ -118,14 +118,14 @@ final class nm extends sj implements WidgetActivationListener {
               }
             }
           }
-          var4 = new lm((String) (var3), (pg) null);
+          var4 = new UiWidget((String) (var3), (WidgetEventListener) null);
           var4.field_s = 80;
           var4.field_x = this.field_x;
           var4.field_v = 50;
           var4.field_q = 0;
-          var4.field_o = (ca) ((Object) new DefaultTextWidgetRenderer(ta.field_e, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true));
-          this.b((byte) -66, var4);
-          this.field_kb = this.a(26414, (pg) (this), sp.field_b);
+          var4.field_o = (WidgetRenderer) ((Object) new DefaultTextWidgetRenderer(ta.field_e, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true));
+          this.addChild((byte) -66, var4);
+          this.field_kb = this.a(26414, (WidgetEventListener) (this), sp.field_b);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

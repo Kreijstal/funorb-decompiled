@@ -61,8 +61,8 @@ final class mi extends am {
             var7 = 255 & var25[var6] >> 4;
             var8 = var26[var6] * this.field_t >> 12;
             var9 = de.field_d[var7] * var8 >> 12;
-            var10 = var8 * jh.field_x[var7] >> 12;
-            var11 = var6 + (var9 >> 12) & jh.field_A;
+            var10 = var8 * SingleChildWidgetContainer.field_x[var7] >> 12;
+            var11 = var6 + (var9 >> 12) & SingleChildWidgetContainer.field_A;
             var12 = NameSuggestionsPanel.field_I & (var10 >> 12) + param1;
             var27 = this.b(0, 0, var12);
             var15[var6] = var27[var11];
@@ -153,8 +153,8 @@ final class mi extends am {
             var10 = (1048214 & var30[var9] * 255) >> 12;
             var11 = var31[var9] * this.field_t >> 12;
             var12 = de.field_d[var10] * var11 >> 12;
-            var13 = jh.field_x[var10] * var11 >> 12;
-            var14 = jh.field_A & (var12 >> 12) + var9;
+            var13 = SingleChildWidgetContainer.field_x[var10] * var11 >> 12;
+            var14 = SingleChildWidgetContainer.field_A & (var12 >> 12) + var9;
             var15 = NameSuggestionsPanel.field_I & param1 + (var13 >> 12);
             var32 = this.c(24066, var15, 0);
             var6[var9] = var32[0][var14];

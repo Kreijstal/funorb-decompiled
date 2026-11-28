@@ -35,7 +35,7 @@ final class fb {
               return;
             }
             var4 = param1;
-            kf.a(1, var4);
+            ModalDialog.a(1, var4);
             TextFieldValidator.field_h = DelegatingCanvas.createAccountSuggestionsResult((byte) 17, param1);
             return;
           }
@@ -43,7 +43,7 @@ final class fb {
           stackIn_13_1 = !(13 <= uh.field_d);
           TextFieldValidator.field_h = di.createAccountSuccessResult(stackIn_12_0, stackIn_13_1);
           var6 = (String[]) null;
-          kf.a(1, (String[]) null);
+          ModalDialog.a(1, (String[]) null);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -78,7 +78,7 @@ final class fb {
     final static void a(int param0) {
         if (param0 == 255) {
           if (null != u.field_b) {
-            u.field_b.d(true);
+            u.field_b.snapAndPruneDialogs(true);
           }
           if (null != pc.field_b) {
             pc.field_b.f((byte) -85);
@@ -88,7 +88,7 @@ final class fb {
         }
         fb.a(true);
         if (null != u.field_b) {
-          u.field_b.d(true);
+          u.field_b.snapAndPruneDialogs(true);
         }
         if (null != pc.field_b) {
           pc.field_b.f((byte) -85);

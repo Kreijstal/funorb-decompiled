@@ -193,7 +193,7 @@ final class BoundedRandomAccessFile {
               var5 = var4;
               hh.field_p.position = 0;
               stackIn_13_0 = (!param0) ? -1 : -2;
-              ak.field_z = stackIn_13_0;
+              SingleChildWidgetContainer.field_z = stackIn_13_0;
               i.field_f = stackIn_13_0;
               DebouncedFieldValidator.field_b = stackIn_13_0;
               pj.field_a = ClientException.field_c;
@@ -203,7 +203,7 @@ final class BoundedRandomAccessFile {
             } catch (java.io.IOException decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var2 = (IOException) (Object) decompiledCaughtException;
-              pj.field_a = ri.field_C;
+              pj.field_a = ModalDialog.field_C;
               ec.field_P = null;
               if (param1 > 117) {
                 return true;
@@ -217,7 +217,7 @@ final class BoundedRandomAccessFile {
             }
             return true;
           }
-          pj.field_a = ri.field_C;
+          pj.field_a = ModalDialog.field_C;
           ec.field_P = null;
           if (param1 > 117) {
             return true;

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class k extends eh {
+abstract class k extends ModalDialog {
     private int field_W;
     static String field_V;
     private int field_S;
@@ -14,7 +14,7 @@ abstract class k extends eh {
 
     final void b(int param0, int param1, int param2, int param3) {
         if (0 >= param0) {
-          this.a(param3, (byte) 101, param1);
+          this.setCenteredSize(param3, (byte) 101, param1);
           return;
         }
         this.field_Z = param0;
@@ -28,7 +28,7 @@ abstract class k extends eh {
         this.field_Y = this.field_C;
     }
 
-    k(fm param0, int param1, int param2) {
+    k(ModalDialogHost param0, int param1, int param2) {
         super(param0, param1, param2);
         this.field_S = 0;
         this.field_Z = 0;
@@ -171,12 +171,12 @@ abstract class k extends eh {
         }
     }
 
-    boolean a(int param0) {
+    boolean snapDialogAnimation(int param0) {
         this.i((byte) -109);
         if (param0 <= 46) {
           field_ab = (String) null;
         }
-        return super.a(116);
+        return super.snapDialogAnimation(116);
     }
 
     void i(byte param0) {
@@ -186,12 +186,12 @@ abstract class k extends eh {
         if (param0 > -84) {
           return;
         }
-        this.a(this.field_X, (byte) 118, this.field_U);
+        this.setCenteredSize(this.field_X, (byte) 118, this.field_U);
         this.field_Z = 0;
         this.j(194);
     }
 
-    boolean g(byte param0) {
+    boolean advanceDialogAnimation(byte param0) {
         int var2 = 0;
         int var3 = 0;
         int fieldTemp$0 = 0;
@@ -215,9 +215,9 @@ abstract class k extends eh {
             var2 = this.field_W + var4 * (this.field_X - this.field_W) / var5;
             var3 = (this.field_U - this.field_Y) * var4 / var5 + this.field_Y;
           }
-          this.a(var2, (byte) 108, var3);
+          this.setCenteredSize(var2, (byte) 108, var3);
         }
-        return super.g((byte) -67);
+        return super.advanceDialogAnimation((byte) -67);
     }
 
     static {

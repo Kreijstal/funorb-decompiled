@@ -265,7 +265,7 @@ final class ob extends ok {
             field_hc = -92;
           }
           for (var5_int = 0; var5_int < param3; var5_int++) {
-            te.a(param0, var5_int + param1, param4, ji.field_F);
+            te.a(param0, var5_int + param1, param4, ModalDialogHost.field_F);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

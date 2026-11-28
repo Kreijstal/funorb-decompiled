@@ -173,7 +173,7 @@ final class d {
               if (var6 != 12) {
                 if (var6 == 14) {
                   this.field_p = this.field_p + 1;
-                  this.field_d = this.field_a + tj.field_w;
+                  this.field_d = this.field_a + DraggableWidgetContainer.field_w;
                   if (this.field_p <= 3) {
                     return this;
                   }
@@ -188,7 +188,7 @@ final class d {
                 }
                 return null;
               }
-              this.field_d = tj.field_w + this.field_a;
+              this.field_d = DraggableWidgetContainer.field_w + this.field_a;
               this.field_g = this.field_g + Math.abs(this.field_e);
               while (this.field_g > 32) {
                 if (0 > this.field_e) {
@@ -406,7 +406,7 @@ final class d {
                       case 5:
                         var4 = (param0 >> 4) + this.field_d;
                         if (14 > this.field_o) {
-                          ie.field_B[this.field_o].drawAdditive(var4 - 16, -16 + this.field_q, 64);
+                          AlphaWidgetContainer.field_B[this.field_o].drawAdditive(var4 - 16, -16 + this.field_q, 64);
                         }
                         return;
                       case 6:
@@ -414,7 +414,7 @@ final class d {
                         if (this.field_o >= 14) {
                           break regionExit1;
                         }
-                        ad.field_z[this.field_o].drawAdditive(var4 - 16, this.field_q - 16, 64);
+                        LabeledWidgetContainer.field_z[this.field_o].drawAdditive(var4 - 16, this.field_q - 16, 64);
                         break regionExit1;
                       case 7:
                         var4 = (param0 >> 4) + this.field_d;
@@ -444,14 +444,14 @@ final class d {
                   if (this.field_o != 65280) {
                     if (this.field_i > 2) {
                       if (3 == this.field_i) {
-                        ie.field_B[0].drawAdditive(var4 - 8, this.field_q - 8, 192);
-                        ie.field_B[2].drawAdditive(-8 + var4, -8 + (this.field_q + 4), 64);
-                        ie.field_B[4].drawAdditive(-8 + var4, 8 + (-8 + this.field_q), 64);
-                        ie.field_B[6].drawAdditive(var4 - 8, -8 + this.field_q + 12, 64);
-                        ie.field_B[8].drawAdditive(-8 + var4, 8 + this.field_q, 64);
-                        ie.field_B[10].drawAdditive(-8 + var4, -8 + this.field_q + 20, 64);
-                        ie.field_B[12].drawAdditive(var4 - 8, 24 + (-8 + this.field_q), 64);
-                        ie.field_B[14].drawAdditive(var4 - 8, 20 + this.field_q, 64);
+                        AlphaWidgetContainer.field_B[0].drawAdditive(var4 - 8, this.field_q - 8, 192);
+                        AlphaWidgetContainer.field_B[2].drawAdditive(-8 + var4, -8 + (this.field_q + 4), 64);
+                        AlphaWidgetContainer.field_B[4].drawAdditive(-8 + var4, 8 + (-8 + this.field_q), 64);
+                        AlphaWidgetContainer.field_B[6].drawAdditive(var4 - 8, -8 + this.field_q + 12, 64);
+                        AlphaWidgetContainer.field_B[8].drawAdditive(-8 + var4, 8 + this.field_q, 64);
+                        AlphaWidgetContainer.field_B[10].drawAdditive(-8 + var4, -8 + this.field_q + 20, 64);
+                        AlphaWidgetContainer.field_B[12].drawAdditive(var4 - 8, 24 + (-8 + this.field_q), 64);
+                        AlphaWidgetContainer.field_B[14].drawAdditive(var4 - 8, 20 + this.field_q, 64);
                       } else {
                         if (4 != this.field_i) {
                           jg.field_C[9].drawTintedGray(6 + var4, this.field_q - 3, this.field_o);
@@ -465,7 +465,7 @@ final class d {
                       jg.field_C[5 * (-1 + this.field_i) + 4].drawTintedGray(-3 + var4, this.field_q - 3, this.field_o);
                     }
                   } else {
-                    ie.field_A[this.field_f].drawAdditive(var4 - 8, -8 + this.field_q, 128);
+                    AlphaWidgetContainer.field_A[this.field_f].drawAdditive(var4 - 8, -8 + this.field_q, 128);
                   }
                 }
               }

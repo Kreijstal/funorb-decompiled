@@ -82,21 +82,21 @@ final class wd {
           }
           if (var2_int != -1) {
             boolean decompiledFrameRemainder0 = true;
-            if (h.field_A < og.field_o) {
-              h.field_A = h.field_A + 1;
-              if (h.field_A > og.field_b && (null == TextLayout.field_b ||
+            if (LabeledWidgetContainer.field_A < og.field_o) {
+              LabeledWidgetContainer.field_A = LabeledWidgetContainer.field_A + 1;
+              if (LabeledWidgetContainer.field_A > og.field_b && (null == TextLayout.field_b ||
                 TextLayout.field_b[kb.field_m] == null)) {
-                h.field_A = h.field_A - 1;
+                LabeledWidgetContainer.field_A = LabeledWidgetContainer.field_A - 1;
                 decompiledFrameRemainder0 = false;
               }
               else {
-                if (og.field_o <= h.field_A &&
+                if (og.field_o <= LabeledWidgetContainer.field_A &&
                   null == TextLayout.field_b[(1 + kb.field_m) % var2_int]) {
-                  h.field_A = h.field_A - 1;
+                  LabeledWidgetContainer.field_A = LabeledWidgetContainer.field_A - 1;
                 }
               }
             }
-            if (h.field_A >= og.field_o) {
+            if (LabeledWidgetContainer.field_A >= og.field_o) {
               MidiPcmStream.field_u = kb.field_m;
               if (!bh.field_b) {
                 kb.field_m = kb.field_m - 1;
@@ -109,9 +109,9 @@ final class wd {
                   kb.field_m = kb.field_m - var2_int;
                 }
               }
-              h.field_A = h.field_A - og.field_o;
+              LabeledWidgetContainer.field_A = LabeledWidgetContainer.field_A - og.field_o;
             }
-            if (og.field_b < h.field_A) {
+            if (og.field_b < LabeledWidgetContainer.field_A) {
               bh.field_b = true;
             }
           }
@@ -123,28 +123,28 @@ final class wd {
               bg.field_c < fm.field_b.field_k + var3) {
               if (269 - fm.field_b.field_o < AccountCreationResultPanel.field_fb &&
                 AccountCreationResultPanel.field_fb < 269) {
-                h.field_A = og.field_o;
+                LabeledWidgetContainer.field_A = og.field_o;
                 bh.field_b = false;
                 var4 = 1;
               }
               if (AccountCreationResultPanel.field_fb > 586 &&
                 fm.field_b.field_o + 586 > AccountCreationResultPanel.field_fb) {
-                h.field_A = og.field_o;
+                LabeledWidgetContainer.field_A = og.field_o;
                 bh.field_b = true;
                 var4 = 1;
               }
             }
             if (var4 == 0 &&
-              h.field_A > og.field_b &&
+              LabeledWidgetContainer.field_A > og.field_b &&
               DiskCacheWorker.field_d > var3 &&
               fm.field_b.field_k + var3 > DiskCacheWorker.field_d) {
               if (ua.field_a > 269 - fm.field_b.field_o &&
                 ua.field_a < 269) {
-                h.field_A = og.field_b;
+                LabeledWidgetContainer.field_A = og.field_b;
               }
               if (ua.field_a > 586 &&
                 fm.field_b.field_o + 586 > ua.field_a) {
-                h.field_A = og.field_b;
+                LabeledWidgetContainer.field_A = og.field_b;
               }
             }
           }
@@ -184,7 +184,7 @@ final class wd {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw dd.wrapClientException((Throwable) ((Object) var2), "wd.E(" + param0 + ',' + param1 + ')');
+          throw DraggableWidgetContainer.wrapClientException((Throwable) ((Object) var2), "wd.E(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -234,7 +234,7 @@ final class wd {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw dd.wrapClientException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param5).append(')').toString());
+          throw DraggableWidgetContainer.wrapClientException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param5).append(')').toString());
         }
     }
 

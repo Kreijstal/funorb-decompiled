@@ -13,7 +13,7 @@ class mg extends DefaultTextWidgetRenderer {
         super(param0, 4, 2, 2, 2, param1, -1, 0, 1, param0.field_C, -1, 2147483647, false);
     }
 
-    public final void a(boolean param0, UiWidget param1, int param2, int param3, int param4) {
+    public final void paintWidget(boolean param0, UiWidget param1, int param2, int param3, int param4) {
         try {
           if (param0) {
             DisplayNameSelectionPanel.b(param3 + param1.field_r, 0, param1.field_p, param1.field_l, param2 + param1.field_e);
@@ -21,7 +21,7 @@ class mg extends DefaultTextWidgetRenderer {
           if (param4 < 19) {
             mg.clearStaticReferences(88);
           }
-          super.a(param0, param1, param2, param3, 49);
+          super.paintWidget(param0, param1, param2, param3, 49);
         } catch (RuntimeException runtimeException) {
           throw la.a((Throwable) ((Object) runtimeException), "mg.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }

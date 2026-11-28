@@ -74,7 +74,7 @@ final class rc {
           oh.field_j = 0;
           CrossfadingMidiPcmStream.field_u.clear(-1);
           hc.field_u = 0;
-          da.field_C = 0;
+          ModalDialogHost.field_C = 0;
           EmailFormatValidator.field_n = EmailFormatValidator.field_n + (eh.totalScore << 6);
           eh.totalScore = 0;
           if (null != MouseInputHandler.field_c) {

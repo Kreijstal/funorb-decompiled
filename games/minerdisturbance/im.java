@@ -58,8 +58,8 @@ final class im {
               }
               lc.field_s = rd.field_a;
               rd.field_a = ud.field_a;
-              ud.field_a = oj.field_K;
-              oj.field_K = var4_ref_jn.field_q;
+              ud.field_a = AlphaWidgetContainer.field_K;
+              AlphaWidgetContainer.field_K = var4_ref_jn.field_q;
               return true;
             }
           }
@@ -79,8 +79,8 @@ final class im {
             if (0 == SecondaryNodeDeque.field_f) {
               lc.field_s = rd.field_a;
               rd.field_a = ud.field_a;
-              ud.field_a = oj.field_K;
-              oj.field_K = qh.field_a;
+              ud.field_a = AlphaWidgetContainer.field_K;
+              AlphaWidgetContainer.field_K = qh.field_a;
               qh.field_a = -1;
               return true;
             }
@@ -117,7 +117,7 @@ final class im {
         if (param0 != 79) {
           return;
         }
-        mb.field_b = new hm();
+        mb.field_b = new ModalDialogHost();
         ie.a(true, true, -57);
     }
 

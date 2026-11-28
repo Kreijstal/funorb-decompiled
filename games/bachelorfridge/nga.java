@@ -65,7 +65,7 @@ final class nga extends vo {
         if (param0 != 113) {
           return;
         }
-        gja.field_m = new rp();
+        gja.field_m = new ModalDialogHost();
         FlySpecial.a(true, true, (byte) -107);
     }
 

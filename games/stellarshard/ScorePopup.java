@@ -142,7 +142,7 @@ final class ScorePopup {
         var2 = (int)(this.x + 320.0);
         var3 = (int)(this.y + 240.0);
         if (this.value <= 0) {
-          var4 = ei.field_A;
+          var4 = ModalDialogHost.field_A;
           if (this.value == -1) {
             var4 = gf.field_a;
           }

@@ -33,7 +33,7 @@ final class dk {
         int var1 = -84 / ((15 - param0) / 63);
         vh.field_j = true;
         IntrusiveNode.field_b = true;
-        bm.field_d.n(7920);
+        bm.field_d.closeAllDialogs(7920);
         vd.a(false, -536866817, TextFieldValidator.field_f);
     }
 
@@ -245,7 +245,7 @@ final class dk {
             } else {
               stackIn_70_2 = "{...}";
             }
-            throw dd.wrapClientException((Throwable) ((Object) stackIn_69_0), ((StringBuilder) (Object) stackIn_69_1).append(stackIn_70_2).append(')').toString());
+            throw DraggableWidgetContainer.wrapClientException((Throwable) ((Object) stackIn_69_0), ((StringBuilder) (Object) stackIn_69_1).append(stackIn_70_2).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -277,7 +277,7 @@ final class dk {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw dd.wrapClientException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
+          throw DraggableWidgetContainer.wrapClientException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -332,7 +332,7 @@ final class dk {
           } else {
             stackIn_28_2 = "{...}";
           }
-          throw dd.wrapClientException((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_27_1).append(stackIn_28_2).append(')').toString());
+          throw DraggableWidgetContainer.wrapClientException((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_27_1).append(stackIn_28_2).append(')').toString());
         }
     }
 

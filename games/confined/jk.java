@@ -92,7 +92,7 @@ final class jk {
             var5 = 1;
             var6 = 1;
           }
-          gd.field_m = fj.a(var3 * var5, (byte) 122, var3 * var6);
+          gd.field_m = UiWidget.a(var3 * var5, (byte) 122, var3 * var6);
           return;
         }
         if (var4 < 105) {
@@ -145,7 +145,7 @@ final class jk {
             var5Lifetime1 = 1;
             var6Lifetime1 = 1;
           }
-          gd.field_m = fj.a(var3 * var5Lifetime1, (byte) 122, var3 * var6Lifetime1);
+          gd.field_m = UiWidget.a(var3 * var5Lifetime1, (byte) 122, var3 * var6Lifetime1);
           return;
         }
         if (var4 >= 120) {
@@ -197,7 +197,7 @@ final class jk {
             var5Lifetime2 = 1;
             var6Lifetime2 = 1;
           }
-          gd.field_m = fj.a(var3 * var5Lifetime2, (byte) 122, var3 * var6Lifetime2);
+          gd.field_m = UiWidget.a(var3 * var5Lifetime2, (byte) 122, var3 * var6Lifetime2);
           return;
         }
         var4 = -var4 + 120;
@@ -250,7 +250,7 @@ final class jk {
           var5Lifetime3 = 1;
           var6Lifetime3 = 1;
         }
-        gd.field_m = fj.a(var3Lifetime1 * var5Lifetime3, (byte) 122, var3Lifetime1 * var6Lifetime3);
+        gd.field_m = UiWidget.a(var3Lifetime1 * var5Lifetime3, (byte) 122, var3Lifetime1 * var6Lifetime3);
         return;
     }
 
@@ -278,7 +278,7 @@ final class jk {
 
     final static void a(byte param0) {
         KeyboardInput.field_d = tl.a(4314);
-        TunnelCamera.field_Z = new sh();
+        TunnelCamera.field_Z = new ModalDialogHost();
         if (param0 <= -29) {
           wl.a(-106, true, true);
           return;

@@ -51,8 +51,8 @@ final class af {
           hb.a(-5, df.field_l);
           df.field_l.exitFullscreen(sb.field_d, true);
           df.field_l = null;
-          if (null != pi.field_V) {
-            pi.field_V.b((byte) -7);
+          if (null != DraggableWidgetContainer.field_V) {
+            DraggableWidgetContainer.field_V.b((byte) -7);
           }
           DiskCacheWorker.field_g.requestFocus();
           return;
@@ -63,8 +63,8 @@ final class af {
         hb.a(-5, df.field_l);
         df.field_l.exitFullscreen(sb.field_d, true);
         df.field_l = null;
-        if (null != pi.field_V) {
-          pi.field_V.b((byte) -7);
+        if (null != DraggableWidgetContainer.field_V) {
+          DraggableWidgetContainer.field_V.b((byte) -7);
         }
         DiskCacheWorker.field_g.requestFocus();
     }
@@ -90,7 +90,7 @@ final class af {
           eg.a((byte) 126);
           return;
         }
-        BitPacketBuffer var2 = dh.field_N;
+        BitPacketBuffer var2 = LabeledWidgetContainer.field_N;
         var2.readInt(23);
         var2.readInt(97);
         var2.readInt(-104);

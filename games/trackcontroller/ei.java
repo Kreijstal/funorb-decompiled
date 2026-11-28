@@ -75,7 +75,7 @@ final class ei extends IntrusiveNode {
     }
 
     final static String a(byte param0) {
-        if (!(gl.field_I >= 2)) {
+        if (!(AlphaWidgetContainer.field_I >= 2)) {
           return NodeHashTableIterator.field_f;
         }
         if (null != ff.field_b) {
@@ -85,7 +85,7 @@ final class ei extends IntrusiveNode {
           return jb.field_c;
         }
         if (!field_i.ensureIndexLoaded(-97)) {
-          return sa.field_K;
+          return LabeledWidgetContainer.field_K;
         }
         if (!field_i.tryLoadGroupByName("commonui", (byte) -3)) {
           return gj.field_e + " - " + field_i.getGroupLoadPercentByName("commonui", 0) + "%";
@@ -96,14 +96,14 @@ final class ei extends IntrusiveNode {
         if (!ha.field_x.tryLoadGroupByName("commonui", (byte) -3)) {
           return DebouncedFieldValidator.field_c + " - " + ha.field_x.getGroupLoadPercentByName("commonui", 0) + "%";
         }
-        if (!ok.field_G.ensureIndexLoaded(117)) {
+        if (!SingleChildWidgetContainer.field_G.ensureIndexLoaded(117)) {
           return LevelView.field_w;
         }
         if (param0 <= 96) {
           return (String) null;
         }
-        if (!ok.field_G.tryLoadAllGroups((byte) 48)) {
-          return ug.field_t + " - " + ok.field_G.getArchiveLoadPercent(true) + "%";
+        if (!SingleChildWidgetContainer.field_G.tryLoadAllGroups((byte) 48)) {
+          return ug.field_t + " - " + SingleChildWidgetContainer.field_G.getArchiveLoadPercent(true) + "%";
         }
         return f.field_d;
     }

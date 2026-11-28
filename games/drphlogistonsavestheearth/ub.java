@@ -75,7 +75,7 @@ final class ub {
     }
 
     final static void a(int param0) {
-        ae.field_hb = new RgbSprite[]{hb.field_a, PasswordValidator.field_t, MouseWheelInput.field_d, cl.field_p, GameAppletShell.field_i, al.field_b, kc.field_p, rk.field_e, hj.field_e, cl.field_s, kc.field_q, RichTextWidget.field_M, nd.field_L, sa.field_c, mh.field_c, DrPhlogistonSavesTheEarth.field_J, jj.field_c, MusicPatchPcmStream.field_o, SectorCacheStore.field_b, bd.field_P, nc.field_K, null, BitPacketBuffer.field_p, f.field_i[param0], le.field_d, qf.field_b, cj.field_d, kc.field_p, db.field_e, BitPacketBuffer.field_p};
+        ae.field_hb = new RgbSprite[]{hb.field_a, PasswordValidator.field_t, MouseWheelInput.field_d, cl.field_p, GameAppletShell.field_i, al.field_b, kc.field_p, rk.field_e, hj.field_e, cl.field_s, kc.field_q, RichTextWidget.field_M, nd.field_L, sa.field_c, mh.field_c, DrPhlogistonSavesTheEarth.field_J, jj.field_c, MusicPatchPcmStream.field_o, SectorCacheStore.field_b, ModalDialog.field_P, nc.field_K, null, BitPacketBuffer.field_p, f.field_i[param0], le.field_d, qf.field_b, cj.field_d, kc.field_p, db.field_e, BitPacketBuffer.field_p};
     }
 
     static {

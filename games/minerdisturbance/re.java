@@ -167,7 +167,7 @@ final class re implements uj {
               if (var6_int == 0) {
                 qd.field_Q = ka.field_d;
               } else {
-                oj.field_K = var6_int;
+                AlphaWidgetContainer.field_K = var6_int;
                 qd.field_Q = bh.field_bb;
                 rj.field_d = -1;
               }
@@ -184,7 +184,7 @@ final class re implements uj {
               IntrusiveDeque.a(0, 1)) {
               var6_intLifetime1 = kj.field_a.readUnsignedByte((byte) -54);
               ag.field_d = null;
-              oj.field_K = var6_intLifetime1;
+              AlphaWidgetContainer.field_K = var6_intLifetime1;
               kj.field_a.position = 0;
               if (0 != var6_intLifetime1 &&
                 var6_intLifetime1 != 1) {
@@ -274,7 +274,7 @@ final class re implements uj {
                 v.field_b[var8Lifetime1] = v.field_b[var8Lifetime1] + 50;
               }
               kj.field_a.b(v.field_b, 107);
-              stackIn_72_0 = oj.field_K;
+              stackIn_72_0 = AlphaWidgetContainer.field_K;
               return stackIn_72_0;
             }
             if (param1) {
@@ -284,18 +284,18 @@ final class re implements uj {
             if (bh.field_bb == qd.field_Q &&
               kj.b(-9319)) {
               si.a(-110);
-              if (7 == oj.field_K &&
+              if (7 == AlphaWidgetContainer.field_K &&
                 !FrameTimer.field_c) {
                 FrameTimer.field_c = true;
                 stackIn_81_0 = -1;
                 return stackIn_81_0;
               }
-              if (7 == oj.field_K) {
-                oj.field_K = 3;
+              if (7 == AlphaWidgetContainer.field_K) {
+                AlphaWidgetContainer.field_K = 3;
               }
               TextLayout.field_g = kj.field_a.readString(false);
               FrameTimer.field_c = false;
-              stackIn_86_0 = oj.field_K;
+              stackIn_86_0 = AlphaWidgetContainer.field_K;
               return stackIn_86_0;
             }
             if (null == AwtRasterBuffer.field_i) {
@@ -309,8 +309,8 @@ final class re implements uj {
                 stackIn_94_0 = 3;
                 return stackIn_94_0;
               }
-              var6_intLifetime2 = jc.field_E;
-              jc.field_E = ic.field_h;
+              var6_intLifetime2 = SingleChildWidgetContainer.field_E;
+              SingleChildWidgetContainer.field_E = ic.field_h;
               FrameTimer.field_c = true;
               ic.field_h = var6_intLifetime2;
             }

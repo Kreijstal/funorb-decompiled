@@ -25,7 +25,7 @@ class MixedSupport024 extends DefaultTextWidgetRenderer {
         stringState0118 = null;
     }
 
-    public final void performAction0017(boolean booleanArgument1, int integerArgument2, int integerArgument3, byte byteArgument4, UiComponent uiComponentArgument5) {
+    public final void paintWidget(boolean booleanArgument1, int integerArgument2, int integerArgument3, byte byteArgument4, UiComponent uiComponentArgument5) {
         if (booleanArgument1) {
           RenderingSupport007.performAction0848(uiComponentArgument5.integerState0110 + integerArgument2, integerArgument3 + uiComponentArgument5.integerState0104, uiComponentArgument5.integerState0107, uiComponentArgument5.integerState0108, (byte) 112);
         }
@@ -33,7 +33,7 @@ class MixedSupport024 extends DefaultTextWidgetRenderer {
           return;
         }
         try {
-          super.performAction0017(booleanArgument1, integerArgument2, integerArgument3, (byte) -120, uiComponentArgument5);
+          super.paintWidget(booleanArgument1, integerArgument2, integerArgument3, (byte) -120, uiComponentArgument5);
         } catch (RuntimeException runtimeException) {
           throw ClientException.computeDiagnosticSupport0020365((Throwable) ((Object) runtimeException), "di.B(" + booleanArgument1 + ',' + integerArgument2 + ',' + integerArgument3 + ',' + byteArgument4 + ',' + (uiComponentArgument5 != null ? "{...}" : "null") + ')');
         }

@@ -75,7 +75,7 @@ final class im {
         RuntimeException decompiledCaughtException = null;
         var5 = Terraphoenix.field_V;
         try {
-          var3 = jl.a(param0, 121, param2);
+          var3 = AlphaWidgetContainer.a(param0, 121, param2);
           if (var3 != null) {
             stackIn_3_0 = var3;
             return stackIn_3_0;

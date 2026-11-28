@@ -18,7 +18,7 @@ final class vf {
           var1 = new jf();
         }
         var1.a(SoftwareRasterizer.field_h, SoftwareRasterizer.field_k, 117, SoftwareRasterizer.field_g, SoftwareRasterizer.field_f, SoftwareRasterizer.field_j, SoftwareRasterizer.field_a, SoftwareRasterizer.field_i);
-        oa.field_J.addFirst(-8212, var1);
+        DropTargetWidgetContainer.field_J.addFirst(-8212, var1);
         if (param0 >= 31) {
           return;
         }

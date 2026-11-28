@@ -69,20 +69,20 @@ final class ql extends tb {
         }
     }
 
-    ql(ei param0, String param1) {
+    ql(ModalDialogHost param0, String param1) {
         super(param0, 300, 120);
         int var3_int = 0;
         try {
           this.field_R = param1;
           if (this.field_R != null) {
             var3_int = DualLinkDequeIterator.field_c.textHeight(this.field_R, 260, DualLinkDequeIterator.field_c.field_N);
-            this.a(300, (byte) -107, var3_int + 150);
+            this.setCenteredSize(300, (byte) -107, var3_int + 150);
           }
           this.field_T = new nc(13, 50, 274, 30, 15, 2113632, 4210752);
           this.field_Q = false;
           this.field_S = false;
           this.field_T.field_B = true;
-          this.b(4, this.field_T);
+          this.addChild(4, this.field_T);
         } catch (RuntimeException runtimeException) {
           throw ma.a((Throwable) ((Object) runtimeException), "ql.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

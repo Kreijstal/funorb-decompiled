@@ -106,7 +106,7 @@ final class m {
           }
           var4 = (dc) (GameAppletShell.field_j.beginBackward(param1 - 18110));
           while (var4 != null) {
-            bh.a(var4, (byte) 46, param0);
+            ArrayWidgetContainer.a(var4, (byte) 46, param0);
             var4 = (dc) (GameAppletShell.field_j.nextBackward((byte) -92));
           }
           var5 = (pa) (ve.field_Nb.beginBackward(param1 ^ -18110));

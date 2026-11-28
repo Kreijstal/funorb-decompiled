@@ -13,7 +13,7 @@ class EditableTextField extends ButtonWidget {
     private int field_Q;
     private int field_J;
 
-    final boolean a(byte param0, char param1, UiWidget param2, int param3) {
+    final boolean handleKey(byte param0, char param1, UiWidget param2, int param3) {
         int dupTemp$0 = 0;
         int stackIn_21_1 = 0;
         int stackIn_22_2 = 0;
@@ -189,7 +189,7 @@ class EditableTextField extends ButtonWidget {
         }
     }
 
-    final boolean a(UiWidget param0, int param1, int param2, int param3, int param4, int param5, int param6) {
+    final boolean pointerPressed(UiWidget param0, int param1, int param2, int param3, int param4, int param5, int param6) {
         int stackIn_6_1 = 0;
         int stackIn_7_2 = 0;
         boolean stackIn_10_1 = false;
@@ -201,7 +201,7 @@ class EditableTextField extends ButtonWidget {
         long var8_long = 0L;
         RuntimeException var8 = null;
         try {
-          if (!super.a(param0, param1, param2, param3, param4 + param4, param5, param6)) {
+          if (!super.pointerPressed(param0, param1, param2, param3, param4 + param4, param5, param6)) {
             return false;
           }
           if (!(this.field_y instanceof TextWidgetRenderer)) {
@@ -243,7 +243,7 @@ class EditableTextField extends ButtonWidget {
         }
     }
 
-    final void a(int param0, int param1, int param2, int param3) {
+    final void drawWidget(int param0, int param1, int param2, int param3) {
         TextWidgetRenderer var8 = null;
         long var6 = 0L;
         if (param3 != 29221) {
@@ -251,7 +251,7 @@ class EditableTextField extends ButtonWidget {
         }
         if (this.field_y != null &&
           param0 == 0) {
-          this.field_y.a(-24969, (UiWidget) (this), param2, this.field_B, param1);
+          this.field_y.paintWidget(-24969, (UiWidget) (this), param2, this.field_B, param1);
           if (this.field_y instanceof TextWidgetRenderer) {
             var8 = (TextWidgetRenderer) ((Object) this.field_y);
             if (this.field_Q != this.field_N) {
@@ -465,7 +465,7 @@ class EditableTextField extends ButtonWidget {
         }
         if (param0 <= 115) {
           UiWidget var3 = (UiWidget) null;
-          this.a(-33, -113, (byte) 101, (UiWidget) null);
+          this.updatePointer(-33, -113, (byte) 101, (UiWidget) null);
         }
     }
 
@@ -548,7 +548,7 @@ class EditableTextField extends ButtonWidget {
         }
     }
 
-    void a(int param0, int param1, byte param2, UiWidget param3) {
+    void updatePointer(int param0, int param1, byte param2, UiWidget param3) {
         int var6 = 0;
         TextWidgetRenderer var7 = null;
         RuntimeException stackIn_16_0 = null;
@@ -557,7 +557,7 @@ class EditableTextField extends ButtonWidget {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var5 = null;
         try {
-          super.a(param0, param1, param2, param3);
+          super.updatePointer(param0, param1, param2, param3);
           this.scrollCaretIntoView(param2 ^ 92);
           if (this.field_r == 1) {
             if (this.field_y instanceof TextWidgetRenderer) {
@@ -594,11 +594,11 @@ class EditableTextField extends ButtonWidget {
           ((TextFieldListener) (this.field_l)).onTextChanged(-12230, this);
         }
         if (!param0) {
-          this.a(69, -108, 109, -105);
+          this.drawWidget(69, -108, 109, -105);
         }
     }
 
-    EditableTextField(String param0, tg param1, int param2) {
+    EditableTextField(String param0, WidgetEventListener param1, int param2) {
         super(param0, param1);
         this.field_L = -1;
         this.field_K = false;
@@ -615,8 +615,8 @@ class EditableTextField extends ButtonWidget {
     }
 
     final static void o(int param0) {
-        mc.field_H = new AccountRegistrationPanel();
-        GameApplet.field_g.b(mc.field_H, -103);
+        DropTargetWidgetContainer.field_H = new AccountRegistrationPanel();
+        GameApplet.field_g.b(DropTargetWidgetContainer.field_H, -103);
         if (param0 > -78) {
           CharSequence var2 = (CharSequence) null;
           EditableTextField.a((CharSequence) null, false, -68);

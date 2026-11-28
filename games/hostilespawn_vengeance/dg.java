@@ -71,7 +71,7 @@ class dg extends me implements WidgetActivationListener {
         }
     }
 
-    dg(gg param0, BitmapFont param1, String param2, boolean param3, boolean param4) {
+    dg(ModalDialogHost param0, BitmapFont param1, String param2, boolean param3, boolean param4) {
         super(param0, new qi((dg) null, param1, param2), 77, 10, 10);
         try {
           this.field_mb = false;
@@ -81,7 +81,7 @@ class dg extends me implements WidgetActivationListener {
           this.field_lb = param1;
           this.field_ob = new ba(13, 50, 274, 30, 15, 2113632, 4210752);
           this.field_ob.field_E = true;
-          this.a(51448, this.field_ob);
+          this.addChild(51448, this.field_ob);
         } catch (RuntimeException runtimeException) {
           throw AccountCreationResultPanel.wrapClientException((Throwable) ((Object) runtimeException), "dg.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ')');
         }
@@ -101,7 +101,7 @@ class dg extends me implements WidgetActivationListener {
         this.b(var2, (byte) 110);
     }
 
-    final boolean a(int param0, ag param1, int param2, char param3) {
+    final boolean handleKey(int param0, UiWidget param1, int param2, char param3) {
         RuntimeException var5 = null;
         boolean stackIn_6_0 = false;
         RuntimeException stackIn_9_0 = null;
@@ -113,7 +113,7 @@ class dg extends me implements WidgetActivationListener {
             this.g((byte) 92);
           }
           if (param2 != 13) {
-            stackIn_6_0 = super.a(274, param1, param2, param3);
+            stackIn_6_0 = super.handleKey(274, param1, param2, param3);
             return stackIn_6_0;
           }
           this.g((byte) -116);
@@ -160,7 +160,7 @@ class dg extends me implements WidgetActivationListener {
           var6 = new qi(this, this.field_lb, param2);
           if (param0 != 5) {
             if (param0 == 256) {
-              var6.a((mh) (this), hf.field_f, 30);
+              var6.a((WidgetEventListener) (this), hf.field_f, 30);
             } else {
               stackIn_14_0 = var6;
               stackIn_14_1 = param1 + 22753;
@@ -185,7 +185,7 @@ class dg extends me implements WidgetActivationListener {
                   this.b(var6, (byte) 110);
                   return;
                 }
-                var6.a((mh) (this), DirectByteStorage.field_j, 30);
+                var6.a((WidgetEventListener) (this), DirectByteStorage.field_j, 30);
               }
             } else {
               var6.a(param1 + 22753, 8, pe.field_gb);

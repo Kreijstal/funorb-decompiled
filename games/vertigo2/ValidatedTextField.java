@@ -28,10 +28,10 @@ final class ValidatedTextField extends EditableTextField implements FieldValidat
           while (true) {
             var3 = param1.requestExitFullscreen(false, param0);
             while (var3.status == 0) {
-              um.sleepMillis(true, 10L);
+              ArrayWidgetContainer.sleepMillis(true, 10L);
             }
             if (var3.status != 1) {
-              um.sleepMillis(true, 100L);
+              ArrayWidgetContainer.sleepMillis(true, 100L);
               continue;
             }
             break;
@@ -77,7 +77,7 @@ final class ValidatedTextField extends EditableTextField implements FieldValidat
           this.field_Z = param1;
           if (!param0) {
             UiWidget var4 = (UiWidget) null;
-            this.a((byte) 118, -53, -31, (UiWidget) null);
+            this.updatePointer((byte) 118, -53, -31, (UiWidget) null);
           }
         } catch (RuntimeException runtimeException) {
           throw wn.wrapClientException((Throwable) ((Object) runtimeException), "br.U(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
@@ -157,9 +157,9 @@ final class ValidatedTextField extends EditableTextField implements FieldValidat
         }
     }
 
-    final void a(byte param0, int param1, int param2, UiWidget param3) {
+    final void updatePointer(byte param0, int param1, int param2, UiWidget param3) {
         try {
-          super.a((byte) 45, param1, param2, param3);
+          super.updatePointer((byte) 45, param1, param2, param3);
           if (param0 < 6) {
             PlatformTaskDispatcher var6 = (PlatformTaskDispatcher) null;
             ValidatedTextField.a((java.awt.Frame) null, (PlatformTaskDispatcher) null, -16);
@@ -203,7 +203,7 @@ final class ValidatedTextField extends EditableTextField implements FieldValidat
         return this.field_Z;
     }
 
-    ValidatedTextField(String param0, uf param1, int param2) {
+    ValidatedTextField(String param0, WidgetEventListener param1, int param2) {
         super(param0, param1, param2);
     }
 

@@ -85,7 +85,7 @@ final class ConfirmedEmailAvailabilityValidator extends TextFieldValidator {
                 param0 = BufferedRandomAccessFile.a(ta.field_b, new String[]{param0}, (byte) -126);
               }
               if (va.field_f) {
-                param0 = pf.field_B;
+                param0 = ModalDialogHost.field_B;
               }
               nk.field_a.a(param0, 4210752, param2);
             }
@@ -142,7 +142,7 @@ final class ConfirmedEmailAvailabilityValidator extends TextFieldValidator {
           if (this.getValidationStatus(param0, (byte) 54) != a.field_e) {
             return ha.field_g;
           }
-          stackIn_8_0 = hb.field_C;
+          stackIn_8_0 = LabeledWidgetContainer.field_C;
           return stackIn_8_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

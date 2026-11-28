@@ -211,7 +211,7 @@ abstract class FrameTimer {
                 }
                 var2 = cd.a("mu_chat_on", -98);
                 if (var2 != null) {
-                  fm.field_Q = ad.a(-29410, var2);
+                  ModalDialogHost.field_Q = ad.a(-29410, var2);
                 }
                 var2 = cd.a("mu_chat_friends", -105);
                 if (var2 != null) {
@@ -303,11 +303,11 @@ abstract class FrameTimer {
                 }
                 var2 = cd.a("mu_you_declined_invite", -75);
                 if (var2 != null) {
-                  lf.field_P = ad.a(-29410, var2);
+                  AlphaWidgetContainer.field_P = ad.a(-29410, var2);
                 }
                 var2 = cd.a("mu_invite_withdrawn", -122);
                 if (null != var2) {
-                  ma.field_F = ad.a(-29410, var2);
+                  DequeWidgetContainer.field_F = ad.a(-29410, var2);
                 }
                 var2 = cd.a("mu_request_declined", -115);
                 if (null != var2) {
@@ -627,7 +627,7 @@ abstract class FrameTimer {
                 }
                 var2 = cd.a("waiting_for_x_to_start_game", -99);
                 if (var2 != null) {
-                  kb.field_R = ad.a(-29410, var2);
+                  DraggableWidgetContainer.field_R = ad.a(-29410, var2);
                 }
                 var2 = cd.a("game_options_changed", -112);
                 if (null != var2) {
@@ -867,7 +867,7 @@ abstract class FrameTimer {
                 }
                 var2 = cd.a("gameopt_membersonly", -114);
                 if (var2 != null) {
-                  lf.field_Q = ad.a(-29410, var2);
+                  AlphaWidgetContainer.field_Q = ad.a(-29410, var2);
                 }
                 var2 = cd.a("gameopt_1moreratedgame", -79);
                 if (var2 != null) {
@@ -1027,7 +1027,7 @@ abstract class FrameTimer {
                 }
                 var2 = cd.a("rule_0_0", -97);
                 if (null != var2) {
-                  kn.field_E = ad.a(-29410, var2);
+                  SingleChildWidgetContainer.field_E = ad.a(-29410, var2);
                 }
                 var2 = cd.a("rule_0_1", -118);
                 if (var2 != null) {
@@ -1065,11 +1065,11 @@ abstract class FrameTimer {
                 }
                 var2 = cd.a("rule_1_2", -113);
                 if (var2 != null) {
-                  kn.field_J = ad.a(-29410, var2);
+                  SingleChildWidgetContainer.field_J = ad.a(-29410, var2);
                 }
                 var2 = cd.a("rule_1_3", -98);
                 if (var2 != null) {
-                  kn.field_K = ad.a(-29410, var2);
+                  SingleChildWidgetContainer.field_K = ad.a(-29410, var2);
                 }
                 var2 = cd.a("rule_1_4", -124);
                 if (null != var2) {
@@ -1637,7 +1637,7 @@ abstract class FrameTimer {
                 }
                 var2 = cd.a("create_age_tooltip", -119);
                 if (var2 != null) {
-                  fm.field_P = ad.a(-29410, var2);
+                  ModalDialogHost.field_P = ad.a(-29410, var2);
                 }
                 var2 = cd.a("create_optin_news_tooltip", -121);
                 if (var2 != null) {
@@ -1689,7 +1689,7 @@ abstract class FrameTimer {
                 }
                 var2 = cd.a("create_alert_doublespace", -82);
                 if (var2 != null) {
-                  ji.field_Q = ad.a(-29410, var2);
+                  DropTargetWidgetContainer.field_Q = ad.a(-29410, var2);
                 }
                 var2 = cd.a("create_alert_passchars", -96);
                 if (var2 != null) {
@@ -1701,7 +1701,7 @@ abstract class FrameTimer {
                 }
                 var2 = cd.a("create_alert_passlength", -83);
                 if (var2 != null) {
-                  kg.field_T = ad.a(-29410, var2);
+                  LabeledWidgetContainer.field_T = ad.a(-29410, var2);
                 }
                 var2 = cd.a("create_alert_passcontainsname", -106);
                 if (null != var2) {
@@ -1809,7 +1809,7 @@ abstract class FrameTimer {
                 }
                 var2 = cd.a("removefriendfirst", -95);
                 if (var2 != null) {
-                  mf.field_B = ad.a(-29410, var2);
+                  UiWidget.field_B = ad.a(-29410, var2);
                 }
                 var2 = cd.a("enterfriend_add", -93);
                 if (null != var2) {
@@ -2174,7 +2174,7 @@ abstract class FrameTimer {
                 }
                 var2 = cd.a("acceptdraw", -83);
                 if (null != var2) {
-                  mf.field_x = ad.a(-29410, var2);
+                  UiWidget.field_x = ad.a(-29410, var2);
                 }
                 var2 = cd.a("resign", -105);
                 if (null != var2) {
@@ -2542,7 +2542,7 @@ abstract class FrameTimer {
                 }
                 var2 = cd.a("mp_showchat_unread1", -111);
                 if (null != var2) {
-                  fm.field_U = ad.a(-29410, var2);
+                  ModalDialogHost.field_U = ad.a(-29410, var2);
                 }
                 var2 = cd.a("mp_showchat_unread2", -107);
                 if (null != var2) {

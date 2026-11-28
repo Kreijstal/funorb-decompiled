@@ -366,7 +366,7 @@ class jla {
 
     private final void h(int param0) {
         SoftwareRasterizer.fillVerticalGradient(0, 0, 640, 480, 65280, 4227136);
-        LinkTextWidget.field_D.drawCentred(hl.field_E, 320, 240, 16777215, -1);
+        LinkTextWidget.field_D.drawCentred(AlphaWidgetContainer.field_E, 320, 240, 16777215, -1);
         if (param0 >= -120) {
           this.field_e = (jd) null;
         }

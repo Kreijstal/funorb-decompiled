@@ -59,8 +59,8 @@ final class DelegatingCanvas extends java.awt.Canvas {
     }
 
     final static java.awt.Container b(int param0) {
-        if (aj.field_t != null) {
-          return (java.awt.Container) ((Object) aj.field_t);
+        if (DequeWidgetContainer.field_t != null) {
+          return (java.awt.Container) ((Object) DequeWidgetContainer.field_t);
         }
         if (param0 != -18253) {
           return (java.awt.Container) null;

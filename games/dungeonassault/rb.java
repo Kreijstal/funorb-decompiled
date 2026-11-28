@@ -10,7 +10,7 @@ final class rb extends InteractiveWidget {
     static String field_K;
     static String field_I;
 
-    rb(String param0, pg param1, boolean param2) {
+    rb(String param0, WidgetEventListener param1, boolean param2) {
         this(param0, param1);
         try {
           this.field_E = param2 ? true : false;
@@ -114,7 +114,7 @@ final class rb extends InteractiveWidget {
         }
     }
 
-    private rb(String param0, pg param1) {
+    private rb(String param0, WidgetEventListener param1) {
         this(param0, hl.field_a.field_o, param1);
         try {
           this.field_o = hl.field_a.field_q;
@@ -123,7 +123,7 @@ final class rb extends InteractiveWidget {
         }
     }
 
-    private rb(String param0, ca param1, pg param2) {
+    private rb(String param0, WidgetRenderer param1, WidgetEventListener param2) {
         super(param0, param1, param2);
         try {
           this.field_o = hl.field_a.field_q;

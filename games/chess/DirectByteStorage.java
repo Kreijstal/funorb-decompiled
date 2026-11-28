@@ -292,7 +292,7 @@ final class DirectByteStorage extends ByteStorage {
         RuntimeException decompiledCaughtException = null;
         var6 = Chess.field_G;
         try {
-          var2 = kb.a(-2147483648, param1, "jagex-last-login-method");
+          var2 = DraggableWidgetContainer.a(-2147483648, param1, "jagex-last-login-method");
           if (var2 == null) {
             stackIn_3_0 = dn.field_f;
             return stackIn_3_0;

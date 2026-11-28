@@ -326,7 +326,7 @@ final class NanoFrameTimer extends FrameTimer {
                     return;
                   }
                   if (var2 == 22) {
-                    fm.field_W = ((PacketBuffer) ((Object) var1)).readUnsignedShort(674914976);
+                    ModalDialogHost.field_W = ((PacketBuffer) ((Object) var1)).readUnsignedShort(674914976);
                     jf.field_b = ((PacketBuffer) ((Object) var1)).readVarInt((byte) 75);
                     return;
                   }

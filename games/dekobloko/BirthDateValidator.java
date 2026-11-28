@@ -123,7 +123,7 @@ final class BirthDateValidator extends DebouncedFieldValidator implements TextFi
             stringState0445 = (String) null;
           }
           MixedSupport025.uiComponentPart013State0001 = new LoginPanel(stringArgument1, stringArgument3, false, true, true);
-          UiComponentPart006.uiComponentPart023State0001.performAction0185(MixedSupport025.uiComponentPart013State0001, (byte) 91);
+          LabeledWidgetContainer.uiComponentPart023State0001.performAction0185(MixedSupport025.uiComponentPart013State0001, (byte) 91);
         } catch (RuntimeException runtimeException) {
           throw ClientException.computeDiagnosticSupport0020365((Throwable) ((Object) runtimeException), "qf.I(" + (stringArgument1 != null ? "{...}" : "null") + ',' + integerArgument2 + ',' + (stringArgument3 != null ? "{...}" : "null") + ')');
         }
@@ -214,9 +214,9 @@ final class BirthDateValidator extends DebouncedFieldValidator implements TextFi
           }
           stringLocal1 = RenderingSupport012.computeString1341((byte) 103);
           MixedSupport025.uiComponentPart013State0001 = new LoginPanel(stringLocal1, (String) null, booleanArgument1, false, false);
-          MixedSupport005.uiComponentPart016State0001.performAction0831((byte) -107, UiComponentPart006.uiComponentPart023State0001);
-          UiComponentPart006.uiComponentPart023State0001.performAction0185(MixedSupport025.uiComponentPart013State0001, (byte) 101);
-          UiComponentPart006.uiComponentPart023State0001.performAction0187(100);
+          MixedSupport005.uiComponentPart016State0001.showDialog((byte) -107, LabeledWidgetContainer.uiComponentPart023State0001);
+          LabeledWidgetContainer.uiComponentPart023State0001.performAction0185(MixedSupport025.uiComponentPart013State0001, (byte) 101);
+          LabeledWidgetContainer.uiComponentPart023State0001.performAction0187(100);
           return;
         }
         throw new IllegalStateException();
@@ -254,7 +254,7 @@ final class BirthDateValidator extends DebouncedFieldValidator implements TextFi
         RuntimeException caughtExceptionLocal12 = null;
         integerLocal3 = DekoBlokoClient.obfuscationControl ? 1 : 0;
         try {
-          UiComponentPart016.mixedSupport004State0001 = MixedSupport071.mixedSupport004State0002;
+          ModalDialogHost.mixedSupport004State0001 = MixedSupport071.mixedSupport004State0002;
           if (integerArgument4 != -677) {
             BirthDateValidator.performAction1355(false);
           }

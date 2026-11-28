@@ -168,9 +168,9 @@ final class iia extends BoardChange {
         int var2_int = 0;
         int var3 = 0;
         try {
-          hl.field_C = param0;
+          AlphaWidgetContainer.field_C = param0;
           var2_int = 1000;
-          var3 = 6 + (hl.field_C.field_F + hl.field_C.field_B);
+          var3 = 6 + (AlphaWidgetContainer.field_C.field_F + AlphaWidgetContainer.field_C.field_B);
           if ((1 & var3) == param1) {
             var3++;
           }

@@ -652,7 +652,7 @@ final class MapTile {
             null == this.map.state.field_K) {
             this.field_p = this.field_p - 4;
           }
-          if (d.field_H &&
+          if (ModalDialogHost.field_H &&
             this.field_r == tg.field_l) {
             var9 = null;
             if (param5 &&

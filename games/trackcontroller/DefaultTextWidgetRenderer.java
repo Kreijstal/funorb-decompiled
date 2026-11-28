@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class DefaultTextWidgetRenderer implements t, TextWidgetRenderer {
+class DefaultTextWidgetRenderer implements WidgetRenderer, TextWidgetRenderer {
     int field_d;
     private boolean field_a;
     int field_f;
@@ -94,7 +94,7 @@ class DefaultTextWidgetRenderer implements t, TextWidgetRenderer {
         if (param0 != 1) {
           return false;
         }
-        stackIn_6_0 = (LoginPanel.field_N >= 10) && (13 <= gl.field_I);
+        stackIn_6_0 = (LoginPanel.field_N >= 10) && (13 <= AlphaWidgetContainer.field_I);
         return stackIn_6_0;
     }
 
@@ -352,7 +352,7 @@ class DefaultTextWidgetRenderer implements t, TextWidgetRenderer {
         }
     }
 
-    public void a(int param0, UiWidget param1, int param2, boolean param3, int param4) {
+    public void paintWidget(int param0, UiWidget param1, int param2, boolean param3, int param4) {
         if (param0 != -24969) {
           this.field_e = 120;
         }
@@ -421,7 +421,7 @@ class DefaultTextWidgetRenderer implements t, TextWidgetRenderer {
           if (param2 == param4) {
             return;
           }
-          if (param5.h(-123)) {
+          if (param5.isFocused(-123)) {
             var17 = this.getTextLayout((byte) -106, param5);
             var18 = var17;
             if (param2 <= param4) {
@@ -619,7 +619,7 @@ class DefaultTextWidgetRenderer implements t, TextWidgetRenderer {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var6 = null;
         try {
-          if (param1.h(-125)) {
+          if (param1.isFocused(-125)) {
             var14 = this.getTextLayout((byte) 82, param1);
             var15 = var14;
             var7 = var15.getLineIndexForTextOffset(param0, (byte) -36);

@@ -33,14 +33,14 @@ final class ba {
         if (TextLayout.field_d[param0][18] < 0) {
           return;
         }
-        var5 = ic.field_B[param0][0];
+        var5 = SingleChildWidgetContainer.field_B[param0][0];
         if (0 > var5) {
           return;
         }
-        var6 = ic.field_B[param0][2];
-        var7 = ic.field_B[param0][3];
-        var8 = ic.field_B[param0][4];
-        var9 = ic.field_B[param0][5];
+        var6 = SingleChildWidgetContainer.field_B[param0][2];
+        var7 = SingleChildWidgetContainer.field_B[param0][3];
+        var8 = SingleChildWidgetContainer.field_B[param0][4];
+        var9 = SingleChildWidgetContainer.field_B[param0][5];
         var10 = -1 - var9;
         if (param2 < 0 &&
           param1 <= 0) {
@@ -66,9 +66,9 @@ final class ba {
         var11 = DebouncedFieldValidator.field_i;
         GzipDecoder.drawNineSlice(var11, var9, var8, (byte) 102, var7, var6);
         var12 = ph.field_o[var5];
-        var7Lifetime1 = ic.field_B[param0][7];
-        var6Lifetime1 = ic.field_B[param0][6];
-        var10 = -ic.field_B[param0][3] + var10 + var7Lifetime1;
+        var7Lifetime1 = SingleChildWidgetContainer.field_B[param0][7];
+        var6Lifetime1 = SingleChildWidgetContainer.field_B[param0][6];
+        var10 = -SingleChildWidgetContainer.field_B[param0][3] + var10 + var7Lifetime1;
         if ((param2 < 0 ||
           param2 > 0) && (param1 > 0 &&
           param4 > param1)) {
@@ -80,11 +80,11 @@ final class ba {
         }
         var12.drawTransparent(var6Lifetime1, var7Lifetime1);
         if (0 == param0) {
-          var6Lifetime2 = ic.field_B[0][8];
-          var7Lifetime2 = ic.field_B[0][9];
+          var6Lifetime2 = SingleChildWidgetContainer.field_B[0][8];
+          var7Lifetime2 = SingleChildWidgetContainer.field_B[0][9];
           ri.field_j.drawTransparent(var6Lifetime2, var7Lifetime2);
-          var7Lifetime2Lifetime1 = ic.field_B[0][11];
-          var6Lifetime2Lifetime1 = ic.field_B[0][10];
+          var7Lifetime2Lifetime1 = SingleChildWidgetContainer.field_B[0][11];
+          var6Lifetime2Lifetime1 = SingleChildWidgetContainer.field_B[0][10];
           ri.field_j.drawTransparent(var6Lifetime2Lifetime1, var7Lifetime2Lifetime1);
         }
         return;
@@ -269,11 +269,11 @@ final class ba {
     }
 
     final static void c(byte param0) {
-        t.field_b.i(param0 + 8389890);
+        t.field_b.closeAllDialogs(param0 + 8389890);
         if (oa.field_k == null) {
           oa.field_k = new pe(t.field_b, jh.field_a);
         }
-        t.field_b.a((byte) 53, (UiComponent) (oa.field_k));
+        t.field_b.showDialog((byte) 53, (UiComponent) (oa.field_k));
         if (param0 != 15) {
           ba.a(-4, 102, 101, -116, -9);
         }

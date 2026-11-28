@@ -91,7 +91,7 @@ final class hi {
             stackIn_13_1 = null;
             stackIn_13_2 = null;
             stackIn_13_3 = SecondaryNodeDeque.field_c.getCodeBase();
-            stackIn_13_4 = new StringBuilder().append("clienterror.ws?c=").append(ke.field_J).append("&u=");
+            stackIn_13_4 = new StringBuilder().append("clienterror.ws?c=").append(LabeledWidgetContainer.field_J).append("&u=");
             if (lb.field_W != null) {
               stackIn_14_1 = null;
               stackIn_14_2 = null;
@@ -103,7 +103,7 @@ final class hi {
             }
             var4 = ((PlatformTaskDispatcher) (Object) stackIn_13_0).requestUrlStream(new java.net.URL(stackIn_13_3, ((StringBuilder) (Object) stackIn_13_4).append(stackIn_14_5).append("&v1=").append(PlatformTaskDispatcher.field_a).append("&v2=").append(PlatformTaskDispatcher.field_x).append("&e=").append(var10).toString()), (byte) 68);
             while (var4.status == 0) {
-              i.sleepMillis((byte) 27, 1L);
+              ModalDialogHost.sleepMillis((byte) 27, 1L);
             }
             if (var4.status == param2) {
               var5 = (DataInputStream) (var4.result);

@@ -63,7 +63,7 @@ final class BananarangAnimation extends EventAnimation {
           fba.field_a = null;
           RichTextLayout.field_g = null;
           ZombiesAnimation.field_y = null;
-          hl.field_D = null;
+          AlphaWidgetContainer.field_D = null;
           rj.field_l = null;
           InvincibleSpecial.field_p = null;
           TeleportAnimation.field_v = null;
@@ -96,7 +96,7 @@ final class BananarangAnimation extends EventAnimation {
         fba.field_a = null;
         RichTextLayout.field_g = null;
         ZombiesAnimation.field_y = null;
-        hl.field_D = null;
+        AlphaWidgetContainer.field_D = null;
         rj.field_l = null;
         InvincibleSpecial.field_p = null;
         TeleportAnimation.field_v = null;

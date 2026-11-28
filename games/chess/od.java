@@ -66,7 +66,7 @@ final class od extends InteractiveWidget {
         }
     }
 
-    final boolean a(int param0, int param1, int param2, byte param3, mf param4, int param5, int param6) {
+    final boolean pointerPressed(int param0, int param1, int param2, byte param3, UiWidget param4, int param5, int param6) {
         RuntimeException stackIn_19_0 = null;
         StringBuilder stackIn_19_1 = null;
         String stackIn_20_2 = null;
@@ -78,7 +78,7 @@ final class od extends InteractiveWidget {
         int var12 = 0;
         var12 = Chess.field_G;
         try {
-          if (!super.a(param0, param1, param2, param3, param4, param5, param6)) {
+          if (!super.pointerPressed(param0, param1, param2, param3, param4, param5, param6)) {
             return false;
           }
           var8_int = -this.field_Q + (-param6 + (-this.field_u + param1));

@@ -56,10 +56,10 @@ final class ie {
         if (param0 < 38) {
           field_a = (String) null;
         }
-        if (gl.field_I < 2) {
+        if (AlphaWidgetContainer.field_I < 2) {
           return 0;
         }
-        if (hl.field_F == 0) {
+        if (ModalDialog.field_F == 0) {
           if (!ei.field_i.ensureIndexLoaded(-81)) {
             return 20;
           }
@@ -72,10 +72,10 @@ final class ie {
           if (!ha.field_x.tryLoadGroupByName("commonui", (byte) -3)) {
             return 60;
           }
-          if (!ok.field_G.ensureIndexLoaded(88)) {
+          if (!SingleChildWidgetContainer.field_G.ensureIndexLoaded(88)) {
             return 70;
           }
-          if (ok.field_G.tryLoadAllGroups((byte) 48)) {
+          if (SingleChildWidgetContainer.field_G.tryLoadAllGroups((byte) 48)) {
             return 100;
           }
           return 80;
@@ -103,10 +103,10 @@ final class ie {
         if (!ha.field_x.tryLoadGroupByName("commonui", (byte) -3)) {
           return 80;
         }
-        if (!ok.field_G.ensureIndexLoaded(94)) {
+        if (!SingleChildWidgetContainer.field_G.ensureIndexLoaded(94)) {
           return 82;
         }
-        if (!ok.field_G.tryLoadAllGroups((byte) 48)) {
+        if (!SingleChildWidgetContainer.field_G.tryLoadAllGroups((byte) 48)) {
           return 86;
         }
         return 100;

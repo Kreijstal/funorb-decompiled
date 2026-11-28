@@ -1421,7 +1421,7 @@ final class LevelEntity {
             var3_int -= 64;
           }
           var4 = var3_int;
-          stackIn_10_0 = ic.field_E[var3_int];
+          stackIn_10_0 = SingleChildWidgetContainer.field_E[var3_int];
           stackIn_10_1 = this.y;
           if (param1) {
             stackIn_11_2 = 31;
@@ -1433,7 +1433,7 @@ final class LevelEntity {
           if (var3_int >= 64) {
             var3_int -= 64;
           }
-          stackIn_18_0 = ic.field_E[var3_int];
+          stackIn_18_0 = SingleChildWidgetContainer.field_E[var3_int];
           stackIn_18_1 = this.y;
           if (param1) {
             stackIn_19_2 = 31;
@@ -2290,7 +2290,7 @@ final class LevelEntity {
                   this.field_L = 10;
                   ti.field_d = 10;
                   this.field_D = 0;
-                  wk.field_F = 0;
+                  DropTargetWidgetContainer.field_F = 0;
                   decompiledFrameRemainder10 = (var5 != 0);
                 }
                 if ((decompiledFrameRemainder10) &&
@@ -2343,7 +2343,7 @@ final class LevelEntity {
                 (decompiledFrameRemainder10 = !(!ch.field_a[vj.field_c][pl.field_e[10]]))) {
                 ti.field_d = 10;
                 this.field_L = 10;
-                wk.field_F = 0;
+                DropTargetWidgetContainer.field_F = 0;
                 if (cl.field_s[vj.field_c] > this.field_D) {
                   this.field_h = this.field_h - 7;
                   this.field_Q = this.field_Q + 20 * this.field_a;
@@ -3694,11 +3694,11 @@ final class LevelEntity {
                             if ((this.field_l > 0 ||
                               !(0 < SocketConnector.field_k)) && DefaultTextWidgetRenderer.field_o != 3) {
                               if (var11 > 320 &&
-                                si.field_L[0] >= var11) {
+                                ModalDialogHost.field_L[0] >= var11) {
                                 var18 = 0;
                               }
                               if (var12Lifetime1 < 320 &&
-                                si.field_L[1] <= var12Lifetime1) {
+                                ModalDialogHost.field_L[1] <= var12Lifetime1) {
                                 var18 = 0;
                               }
                             }
@@ -3707,8 +3707,8 @@ final class LevelEntity {
                             }
                             if (this.field_l > 0 ||
                               !(SocketConnector.field_k > 0)) {
-                              si.field_L[0] = var11;
-                              si.field_L[1] = var12Lifetime1;
+                              ModalDialogHost.field_L[0] = var11;
+                              ModalDialogHost.field_L[1] = var12Lifetime1;
                             }
                             if (var17 != 0) {
                               od.a(param4 + param6, param1, 0, var16, 0, ByteStorage.field_b);
@@ -3727,11 +3727,11 @@ final class LevelEntity {
                             if ((this.field_l > 0 ||
                               !(SocketConnector.field_k > 0)) && DefaultTextWidgetRenderer.field_o != 3) {
                               if (var11 > 320 &&
-                                si.field_L[0] >= var11) {
+                                ModalDialogHost.field_L[0] >= var11) {
                                 var18 = 0;
                               }
                               if (var12Lifetime1 < 320 &&
-                                var12Lifetime1 >= si.field_L[1]) {
+                                var12Lifetime1 >= ModalDialogHost.field_L[1]) {
                                 var18 = 0;
                               }
                             }
@@ -3740,8 +3740,8 @@ final class LevelEntity {
                             }
                             if (0 < this.field_l ||
                               !(SocketConnector.field_k > 0)) {
-                              si.field_L[1] = var12Lifetime1;
-                              si.field_L[0] = var11;
+                              ModalDialogHost.field_L[1] = var12Lifetime1;
+                              ModalDialogHost.field_L[0] = var11;
                             }
                             if (var17 != 0) {
                               od.a(param4 + param6, param1, 0, var16, 0, PacketBuffer.field_o[var14][var9_int][var15]);
@@ -3842,11 +3842,11 @@ final class LevelEntity {
                     !(SocketConnector.field_k > 0)) && (this.field_l > 0 ||
                     !(SocketConnector.field_k > 0))) {
                     if (var11 > 320 &&
-                      si.field_L[0] >= var11) {
+                      ModalDialogHost.field_L[0] >= var11) {
                       var18 = 0;
                     }
                     if (var12Lifetime1Lifetime1 < 320 &&
-                      si.field_L[1] <= var12Lifetime1Lifetime1) {
+                      ModalDialogHost.field_L[1] <= var12Lifetime1Lifetime1) {
                       var18 = 0;
                     }
                   }
@@ -3855,8 +3855,8 @@ final class LevelEntity {
                   }
                   if (this.field_l > 0 ||
                     !(SocketConnector.field_k > 0)) {
-                    si.field_L[1] = var12Lifetime1Lifetime1;
-                    si.field_L[0] = var11;
+                    ModalDialogHost.field_L[1] = var12Lifetime1Lifetime1;
+                    ModalDialogHost.field_L[0] = var11;
                   }
                   if (var27 == 0) {
                     return;
@@ -6513,7 +6513,7 @@ final class LevelEntity {
                 var16 = stackIn_42_0;
                 while (var11 >= var16) {
                   stackIn_22_0 = -1;
-                  stackIn_22_1 = ~(ic.field_E[var15][var16] & 32);
+                  stackIn_22_1 = ~(SingleChildWidgetContainer.field_E[var15][var16] & 32);
                   if (stackIn_22_0 > stackIn_22_1) {
                     if (param1) {
                       this.field_B = 0;
@@ -6553,7 +6553,7 @@ final class LevelEntity {
                 var16Lifetime1 = stackIn_63_0;
                 while (var11 >= var16Lifetime1) {
                   stackIn_45_0Lifetime1 = 0;
-                  stackIn_45_1Lifetime1 = ic.field_E[var15][var16Lifetime1] & 32;
+                  stackIn_45_1Lifetime1 = SingleChildWidgetContainer.field_E[var15][var16Lifetime1] & 32;
                   if (stackIn_45_0Lifetime1 < stackIn_45_1Lifetime1) {
                     if (param1) {
                       this.field_B = 0;
@@ -7363,19 +7363,19 @@ final class LevelEntity {
         try {
           if (this.x < 64 &&
             ol.field_g.field_a > this.y) {
-            if (0 < (8 & ic.field_E[this.x][this.y])) {
+            if (0 < (8 & SingleChildWidgetContainer.field_E[this.x][this.y])) {
               this.field_u = 192;
             }
-            if ((ic.field_E[this.x][this.y] & 4) > 0) {
+            if ((SingleChildWidgetContainer.field_E[this.x][this.y] & 4) > 0) {
               this.field_u = 128;
             }
-            if ((ic.field_E[this.x][this.y] & 2) > 0) {
+            if ((SingleChildWidgetContainer.field_E[this.x][this.y] & 2) > 0) {
               this.field_u = 64;
             }
             if (!param0) {
               this.field_r = 12;
             }
-            if ((ic.field_E[this.x][this.y] & 1) > 0) {
+            if ((SingleChildWidgetContainer.field_E[this.x][this.y] & 1) > 0) {
               this.field_u = 0;
             }
             return;
@@ -9210,9 +9210,9 @@ final class LevelEntity {
           if (this.field_L == 10 ||
             6 == this.field_L ||
             this.field_L == 7 ||
-            wk.field_F != 6 &&
-            wk.field_F != 7) {
-            wk.field_F = a.field_d[var2_int][var3][this.field_kb][0];
+            DropTargetWidgetContainer.field_F != 6 &&
+            DropTargetWidgetContainer.field_F != 7) {
+            DropTargetWidgetContainer.field_F = a.field_d[var2_int][var3][this.field_kb][0];
             var4 = a.field_d[var2_int][var3][this.field_kb][1];
           }
           if (10 == this.field_L ||
@@ -9235,36 +9235,36 @@ final class LevelEntity {
                   (!this.field_ib) &&
                   (ah.field_i)) {
                   var4 = 0;
-                  wk.field_F = 1;
+                  DropTargetWidgetContainer.field_F = 1;
                   if (var15 != 0) {
-                    wk.field_F = 10;
+                    DropTargetWidgetContainer.field_F = 10;
                     var4 = 0;
-                    wk.field_F = 7;
+                    DropTargetWidgetContainer.field_F = 7;
                     var4 = 0;
-                    wk.field_F = 6;
+                    DropTargetWidgetContainer.field_F = 6;
                     var4 = 0;
                   }
                 }
               } else {
-                wk.field_F = 10;
+                DropTargetWidgetContainer.field_F = 10;
                 var4 = 0;
                 if (var15 != 0) {
-                  wk.field_F = 7;
+                  DropTargetWidgetContainer.field_F = 7;
                   var4 = 0;
-                  wk.field_F = 6;
+                  DropTargetWidgetContainer.field_F = 6;
                   var4 = 0;
                 }
               }
             } else {
-              wk.field_F = 7;
+              DropTargetWidgetContainer.field_F = 7;
               var4 = 0;
               if (var15 != 0) {
-                wk.field_F = 6;
+                DropTargetWidgetContainer.field_F = 6;
                 var4 = 0;
               }
             }
           } else {
-            wk.field_F = 6;
+            DropTargetWidgetContainer.field_F = 6;
             var4 = 0;
           }
           boolean decompiledFrameRemainder1 = true;
@@ -9297,11 +9297,11 @@ final class LevelEntity {
                 if (!this.field_ib ||
                   var12 == 0 ||
                   var13 == 0 ||
-                  wk.field_F == 17 ||
+                  DropTargetWidgetContainer.field_F == 17 ||
                   9 == this.field_L) {
                   if (var12 != 0 &&
                     var13 != 0 &&
-                    wk.field_F != 17) {
+                    DropTargetWidgetContainer.field_F != 17) {
                     if (this.field_L == 9 &&
                       !this.field_ab) {
                       this.field_D = 0;
@@ -9316,7 +9316,7 @@ final class LevelEntity {
                       }
                     }
                     if (decompiledFrameRemainder1) {
-                      if (wk.field_F != 1) {
+                      if (DropTargetWidgetContainer.field_F != 1) {
                         this.field_L = 0;
                         kl.field_a = false;
                         this.H(9);
@@ -9334,7 +9334,7 @@ final class LevelEntity {
                   if (decompiledFrameRemainder1) {
                     if (var12 != 0 &&
                       var13 != 0 &&
-                      wk.field_F == 17) {
+                      DropTargetWidgetContainer.field_F == 17) {
                       if (10 == this.field_L) {
                         this.field_L = 10;
                         decompiledFrameRemainder1 = (var15 != 0);
@@ -9374,14 +9374,14 @@ final class LevelEntity {
                 if (decompiledFrameRemainder1) {
                   if (this.field_L != 6) {
                     if (this.field_L != 10 && (1 != var2_int ||
-                      this.field_L != 7) && wk.field_F == 10) {
+                      this.field_L != 7) && DropTargetWidgetContainer.field_F == 10) {
                       this.field_h = -this.field_M;
                       if ((var15 != 0) &&
                         (ch.field_a[var2_int][pl.field_e[9]] &&
                         !this.field_ab &&
                         this.field_n &&
                         var9 != 0)) {
-                        wk.field_F = 9;
+                        DropTargetWidgetContainer.field_F = 9;
                         var4 = 0;
                         this.field_a = -this.field_a;
                       }
@@ -9390,7 +9390,7 @@ final class LevelEntity {
                         !this.field_ab &&
                         this.field_n &&
                         var9 != 0) {
-                        wk.field_F = 9;
+                        DropTargetWidgetContainer.field_F = 9;
                         var4 = 0;
                         if (var15 != 0) {
                           this.field_a = -this.field_a;
@@ -9401,7 +9401,7 @@ final class LevelEntity {
                     this.field_a = -this.field_a;
                   }
                   kl.field_a = false;
-                  this.field_L = wk.field_F;
+                  this.field_L = DropTargetWidgetContainer.field_F;
                   this.H(param0 ^ 11);
                   this.field_kb = var4;
                 }
@@ -10067,7 +10067,7 @@ final class LevelEntity {
             stackIn_21_0 = 1;
           }
           var3 = stackIn_21_0;
-          if (wk.field_F == 17 &&
+          if (DropTargetWidgetContainer.field_F == 17 &&
             ti.field_d == 9 &&
             this.field_j) {
             tk.field_P = true;
@@ -10325,15 +10325,15 @@ final class LevelEntity {
                 SoftwareRasterizer.saveClip(bf.field_l);
                 gj.field_b.bindAsRenderTarget();
                 SoftwareRasterizer.clearRaster();
-                si.field_I[fh.field_e][var9][oa.field_g].drawFlippedHorizontal(0, 0);
+                ModalDialogHost.field_I[fh.field_e][var9][oa.field_g].drawFlippedHorizontal(0, 0);
                 SectorCacheStore.field_f.bindAsTarget(-67);
                 SoftwareRasterizer.restoreClip(bf.field_l);
                 gj.field_b.drawScaledAdditive(param0 + param4, param1, var8, var7, var11Lifetime2);
                 if (var17 != 0) {
-                  si.field_I[fh.field_e][var9][oa.field_g].drawScaledAdditive(param4 + param0, param1, var8, var7, var11Lifetime2);
+                  ModalDialogHost.field_I[fh.field_e][var9][oa.field_g].drawScaledAdditive(param4 + param0, param1, var8, var7, var11Lifetime2);
                 }
               } else {
-                si.field_I[fh.field_e][var9][oa.field_g].drawScaledAdditive(param4 + param0, param1, var8, var7, var11Lifetime2);
+                ModalDialogHost.field_I[fh.field_e][var9][oa.field_g].drawScaledAdditive(param4 + param0, param1, var8, var7, var11Lifetime2);
               }
             }
           }

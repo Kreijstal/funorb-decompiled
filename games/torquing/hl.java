@@ -66,7 +66,7 @@ final class hl {
             ap.a(mf.field_z, param0, hf.field_b, var21);
             break;
           }
-          aj.a((byte) -56, param2, param9, param7);
+          DraggableWidgetContainer.a((byte) -56, param2, param9, param7);
           IsaacPacketBuffer.a(3, var21);
           stackIn_12_0 = var16;
           return stackIn_12_0;

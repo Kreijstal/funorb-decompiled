@@ -64,12 +64,12 @@ final class dq extends InteractiveWidget {
     }
 
     final static void a(int param0) {
-        oj.a(true, tm.field_d, 480, 480, bq.field_i[1], 0, bq.field_i[2], 0, (byte) -32, bq.field_i[0]);
+        DraggableWidgetContainer.a(true, tm.field_d, 480, 480, bq.field_i[1], 0, bq.field_i[2], 0, (byte) -32, bq.field_i[0]);
         if (param0 != -26477) {
           byte[] var2 = (byte[]) null;
           dq.a(44, (byte[]) null);
-          if (ab.field_D != null) {
-            ab.field_D.drawResultScene(-1771219320);
+          if (ModalDialog.field_D != null) {
+            ModalDialog.field_D.drawResultScene(-1771219320);
             return;
           }
           if (go.field_i) {
@@ -78,8 +78,8 @@ final class dq extends InteractiveWidget {
           }
           return;
         }
-        if (ab.field_D != null) {
-          ab.field_D.drawResultScene(-1771219320);
+        if (ModalDialog.field_D != null) {
+          ModalDialog.field_D.drawResultScene(-1771219320);
           return;
         }
         if (!go.field_i) {
@@ -179,7 +179,7 @@ final class dq extends InteractiveWidget {
         return -1;
     }
 
-    final boolean a(int param0, int param1, qm param2, boolean param3, int param4, int param5, int param6) {
+    final boolean pointerPressed(int param0, int param1, UiWidget param2, boolean param3, int param4, int param5, int param6) {
         ch stackIn_13_0 = null;
         boolean stackIn_14_1 = false;
         RuntimeException stackIn_31_0 = null;
@@ -197,7 +197,7 @@ final class dq extends InteractiveWidget {
         byte[] var15 = null;
         var14 = CrazyCrystals.field_B;
         try {
-          if (!super.a(param0, param1, param2, param3, param4, param5, param6)) {
+          if (!super.pointerPressed(param0, param1, param2, param3, param4, param5, param6)) {
             if (param3) {
               var15 = (byte[]) null;
               dq.a(116, (byte[]) null);

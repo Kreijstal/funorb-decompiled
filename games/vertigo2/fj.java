@@ -43,7 +43,7 @@ class fj extends rl implements WidgetActivationListener {
             var9 = param4;
             var10 = param3;
             for (var11 = param5; var11 < param0; var11++) {
-              var12 = ac.field_I[var11];
+              var12 = DropTargetWidgetContainer.field_I[var11];
               if (param6) {
                 stackIn_24_0 = on.field_e[var12];
               } else {
@@ -51,10 +51,10 @@ class fj extends rl implements WidgetActivationListener {
               }
               var13 = stackIn_24_0;
               if (var7_int < var13) {
-                ac.field_I[var11] = ac.field_I[var8];
+                DropTargetWidgetContainer.field_I[var11] = DropTargetWidgetContainer.field_I[var8];
                 incrementValue$0 = var8;
                 var8++;
-                ac.field_I[incrementValue$0] = var12;
+                DropTargetWidgetContainer.field_I[incrementValue$0] = var12;
                 if (var9 > var13) {
                   var9 = var13;
                 }
@@ -70,11 +70,11 @@ class fj extends rl implements WidgetActivationListener {
           }
           for (var7_intLifetime1 = param0 - 1; param5 < var7_intLifetime1; var7_intLifetime1--) {
             for (var8Lifetime1 = param5; var8Lifetime1 < var7_intLifetime1; var8Lifetime1++) {
-              var9Lifetime1 = ac.field_I[var8Lifetime1];
-              var10Lifetime1 = ac.field_I[1 + var8Lifetime1];
+              var9Lifetime1 = DropTargetWidgetContainer.field_I[var8Lifetime1];
+              var10Lifetime1 = DropTargetWidgetContainer.field_I[1 + var8Lifetime1];
               if (eg.a(param6, var9Lifetime1, (byte) 98, var10Lifetime1)) {
-                ac.field_I[var8Lifetime1] = var10Lifetime1;
-                ac.field_I[1 + var8Lifetime1] = var9Lifetime1;
+                DropTargetWidgetContainer.field_I[var8Lifetime1] = var10Lifetime1;
+                DropTargetWidgetContainer.field_I[1 + var8Lifetime1] = var9Lifetime1;
               }
             }
           }
@@ -86,7 +86,7 @@ class fj extends rl implements WidgetActivationListener {
         }
     }
 
-    fj(sd param0, BitmapFont param1, String param2, boolean param3, boolean param4) {
+    fj(ModalDialogHost param0, BitmapFont param1, String param2, boolean param3, boolean param4) {
         super(param0, new rh((fj) null, param1, param2), 77, 10, 10);
         try {
           this.field_kb = false;
@@ -96,13 +96,13 @@ class fj extends rl implements WidgetActivationListener {
           this.field_ib = param3 ? true : false;
           this.field_fb = new we(13, 50, 274, 30, 15, 2113632, 4210752);
           this.field_fb.field_F = true;
-          this.c((byte) -14, this.field_fb);
+          this.addChild((byte) -14, this.field_fb);
         } catch (RuntimeException runtimeException) {
           throw wn.wrapClientException((Throwable) ((Object) runtimeException), "fj.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ')');
         }
     }
 
-    final boolean a(char param0, int param1, int param2, UiWidget param3) {
+    final boolean handleKey(char param0, int param1, int param2, UiWidget param3) {
         RuntimeException var5 = null;
         boolean stackIn_4_0 = false;
         RuntimeException stackIn_7_0 = null;
@@ -111,7 +111,7 @@ class fj extends rl implements WidgetActivationListener {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param2 != param1) {
-            stackIn_4_0 = super.a(param0, 13, param2, param3);
+            stackIn_4_0 = super.handleKey(param0, 13, param2, param3);
             return stackIn_4_0;
           }
           this.h((byte) 85);
@@ -351,7 +351,7 @@ class fj extends rl implements WidgetActivationListener {
               }
               ((rh) (Object) stackIn_15_0).a(stackIn_16_1, -1, -60);
             } else {
-              var6.a(bk.field_d, (uf) (this), -109);
+              var6.a(bk.field_d, (WidgetEventListener) (this), -109);
             }
           } else {
             var6.a(jb.field_A, 11, -66);
@@ -363,7 +363,7 @@ class fj extends rl implements WidgetActivationListener {
                 var6.a(hm.field_H, 9, -90);
               } else {
                 if (param0 == 9) {
-                  var6.a(s.field_v, (uf) (this), -126);
+                  var6.a(s.field_v, (WidgetEventListener) (this), -126);
                 }
               }
             } else {

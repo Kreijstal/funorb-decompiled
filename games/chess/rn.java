@@ -29,15 +29,15 @@ final class rn {
         var14 = Chess.field_G;
         try {
           var6_int = param0 + 493 + param3 + 2 + 8;
-          ji.field_N.a(3, -6 + var6_int, -2147483648, -6 + AccountNameAvailabilityValidator.field_m.field_pb, 3);
-          var7 = -5 + ji.field_N.field_pb;
+          DropTargetWidgetContainer.field_N.a(3, -6 + var6_int, -2147483648, -6 + AccountNameAvailabilityValidator.field_m.field_pb, 3);
+          var7 = -5 + DropTargetWidgetContainer.field_N.field_pb;
           qj.field_e.a(5, 487 + (param3 + param0), -2147483648, param5, -param5 + var7);
           BoundedRandomAccessFile.field_f.a(param3, -uc.field_c.field_M + (-param3 + qj.field_e.field_M), -2147483648, param5, 0);
           uc.field_c.a(param3 + BoundedRandomAccessFile.field_f.field_M, uc.field_c.field_M, -2147483648, param5, 0);
           var7 = var7 - (param5 + 2);
           ac.field_j.a(2, -5 + var7, 5, -3, param0, 5, 2 + (param3 + 485) + param0);
           if (AccountRegistrationPanel.field_O != null) {
-            AccountRegistrationPanel.field_O.a(ac.field_j.field_V, 34, ac.field_j.field_pb, ac.field_j.field_M, ac.field_j.field_mb);
+            AccountRegistrationPanel.field_O.setBounds(ac.field_j.field_V, 34, ac.field_j.field_pb, ac.field_j.field_M, ac.field_j.field_mb);
           }
           var8 = -param3 + AccountNameAvailabilityValidator.field_m.field_M - var6_int;
           var9 = var8 / 2;
@@ -56,7 +56,7 @@ final class rn {
                 DelegatingCanvas.field_d[var12].a(var6_int, var8, -2147483648, var7Lifetime1, var13);
                 NameSuggestionsPanel.field_K[var12].a(param3, var9 - param3, -2147483648, var7Lifetime1, 0);
                 ig.field_i[var12].a(var9, param2, -2147483648, -param4 + var7Lifetime1 - param4, param4);
-                mf.field_l[var12].a(var10, -var10 + var8 - param3, -2147483648, -param4 + var7Lifetime1 - param4, param4);
+                UiWidget.field_l[var12].a(var10, -var10 + var8 - param3, -2147483648, -param4 + var7Lifetime1 - param4, param4);
               } else {
                 bj.field_jb.a(var6_int, var8, -2147483648, var7Lifetime1, var13);
               }

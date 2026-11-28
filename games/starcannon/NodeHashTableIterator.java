@@ -14,14 +14,14 @@ final class NodeHashTableIterator implements Iterator {
         qb.b(-1);
         ic.field_a = true;
         if (param0 > 63) {
-          tc.field_x = true;
-          ti.field_b.l(26756);
+          ModalDialogHost.field_x = true;
+          ti.field_b.closeAllDialogs(26756);
           sc.a(false, (byte) 118, SpriteState.field_n);
           return;
         }
         NodeHashTableIterator.a(false);
-        tc.field_x = true;
-        ti.field_b.l(26756);
+        ModalDialogHost.field_x = true;
+        ti.field_b.closeAllDialogs(26756);
         sc.a(false, (byte) 118, SpriteState.field_n);
     }
 
@@ -88,9 +88,9 @@ final class NodeHashTableIterator implements Iterator {
             var4 = var3;
             var4 = var3;
           }
-          if (null != vk.field_v &&
-            !vk.field_v.equals(param2.getParameter("session"))) {
-            var4 = vk.field_v;
+          if (null != DequeWidgetContainer.field_v &&
+            !DequeWidgetContainer.field_v.equals(param2.getParameter("session"))) {
+            var4 = DequeWidgetContainer.field_v;
           }
           stackIn_11_0 = AccountServiceResult.a((String) (var3), -1, (String) (var4), param1, 1);
           return stackIn_11_0;

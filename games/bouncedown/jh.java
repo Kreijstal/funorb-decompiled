@@ -10,7 +10,7 @@ final class jh extends DefaultTextWidgetRenderer {
     static byte[][] field_r;
     private int field_v;
 
-    public final void a(int param0, lk param1, byte param2, boolean param3, int param4) {
+    public final void paintWidget(int param0, UiWidget param1, byte param2, boolean param3, int param4) {
         int stackIn_6_0 = 0;
         int stackIn_13_0 = 0;
         int stackIn_16_0 = 0;
@@ -25,7 +25,7 @@ final class jh extends DefaultTextWidgetRenderer {
         int var9 = 0;
         try {
           if (!param1.field_g) {
-            stackIn_6_0 = (param1.e(1)) ? 1 : 0;
+            stackIn_6_0 = (param1.isFocused(1)) ? 1 : 0;
           } else {
             stackIn_6_0 = 1;
           }

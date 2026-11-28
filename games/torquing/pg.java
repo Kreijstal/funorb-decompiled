@@ -5,23 +5,23 @@ final class pg {
     static String field_a;
 
     final static void a(byte param0) {
-        if (jh.field_z == -pf.field_A + 0) {
-          jh.field_z = jh.field_z + 1;
+        if (SingleChildWidgetContainer.field_z == -pf.field_A + 0) {
+          SingleChildWidgetContainer.field_z = SingleChildWidgetContainer.field_z + 1;
           if (param0 == -3) {
             return;
           }
           field_a = (String) null;
           return;
         }
-        if (jh.field_z == 250 - pf.field_A) {
-          jh.field_z = jh.field_z + 1;
+        if (SingleChildWidgetContainer.field_z == 250 - pf.field_A) {
+          SingleChildWidgetContainer.field_z = SingleChildWidgetContainer.field_z + 1;
           if (param0 == -3) {
             return;
           }
           field_a = (String) null;
           return;
         }
-        jh.field_z = jh.field_z + 1;
+        SingleChildWidgetContainer.field_z = SingleChildWidgetContainer.field_z + 1;
         if (param0 == -3) {
           return;
         }

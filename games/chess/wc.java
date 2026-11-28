@@ -38,7 +38,7 @@ class wc extends DefaultTextWidgetRenderer {
         super(param0, 4, 2, 2, 2, param1, -1, 0, 1, param0.field_C, -1, 2147483647, false);
     }
 
-    public final void a(byte param0, int param1, int param2, boolean param3, mf param4) {
+    public final void paintWidget(byte param0, int param1, int param2, boolean param3, UiWidget param4) {
         try {
           if (param0 <= 58) {
             wc.b(false);
@@ -46,7 +46,7 @@ class wc extends DefaultTextWidgetRenderer {
           if (param3) {
             AwtRasterBuffer.a(param4.field_r + param2, param4.field_C, param4.field_y, (byte) 120, param4.field_u + param1);
           }
-          super.a((byte) 127, param1, param2, param3, param4);
+          super.paintWidget((byte) 127, param1, param2, param3, param4);
         } catch (RuntimeException runtimeException) {
           throw SpriteGeometry.wrapClientException((Throwable) ((Object) runtimeException), "wc.C(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ')');
         }

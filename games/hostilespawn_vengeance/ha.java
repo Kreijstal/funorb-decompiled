@@ -240,7 +240,7 @@ final class ha extends DefaultTextWidgetRenderer {
         int var4 = 0;
         gm var5 = null;
         int var6 = 0;
-        ag var7 = null;
+        UiWidget var7 = null;
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
         String stackIn_12_2 = null;
@@ -251,8 +251,8 @@ final class ha extends DefaultTextWidgetRenderer {
           var3 = this.field_s;
           var4 = 0;
           if (param0) {
-            var7 = (ag) null;
-            this.a(-43, -76, 69, (ag) null, true);
+            var7 = (UiWidget) null;
+            this.paintWidget(-43, -76, 69, (UiWidget) null, true);
           }
           while (var4 < var3.length) {
             var5 = var3[var4];
@@ -321,8 +321,8 @@ final class ha extends DefaultTextWidgetRenderer {
         field_x = null;
     }
 
-    public final void a(int param0, int param1, int param2, ag param3, boolean param4) {
-        ag stackIn_3_0 = null;
+    public final void paintWidget(int param0, int param1, int param2, UiWidget param3, boolean param4) {
+        UiWidget stackIn_3_0 = null;
         RuntimeException stackIn_30_0 = null;
         StringBuilder stackIn_30_1 = null;
         String stackIn_31_2 = null;
@@ -340,7 +340,7 @@ final class ha extends DefaultTextWidgetRenderer {
           if (!(param3 instanceof InteractiveWidget)) {
             stackIn_3_0 = null;
           } else {
-            stackIn_3_0 = (ag) (param3);
+            stackIn_3_0 = (UiWidget) (param3);
           }
           var11 = (InteractiveWidget) (stackIn_3_0);
           TextInputField.pushAndIntersectClip(param1 + param3.field_v + param3.field_s, param3.field_m + param0, param3.field_x + param0 + param3.field_m, param1 + param3.field_v, true);
@@ -370,7 +370,7 @@ final class ha extends DefaultTextWidgetRenderer {
               }
             }
           }
-          if (param3.g(param2 ^ -8049)) {
+          if (param3.isFocused(param2 ^ -8049)) {
             var14 = this.field_s[5];
             if (var14 != null) {
               var14.a(param3, this.field_u, (byte) 81, this, param0, param1);

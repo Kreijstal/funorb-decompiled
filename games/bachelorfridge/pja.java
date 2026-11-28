@@ -6,7 +6,7 @@ final class pja {
     static Sprite[] field_b;
     static int[] field_g;
     static PcmSample[][] field_a;
-    static rp field_e;
+    static ModalDialogHost field_e;
     static Sprite[] field_d;
     static String field_f;
 
@@ -29,7 +29,7 @@ final class pja {
     }
 
     final static void a(byte param0, boolean param1) {
-        gja.field_m.a(0, 0, 20077);
+        gja.field_m.drawAllLayers(0, 0, 20077);
         if (param0 < 49) {
           pja.a((byte) 94, true);
         }

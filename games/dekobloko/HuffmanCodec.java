@@ -35,7 +35,7 @@ final class HuffmanCodec {
         }
         if (MixedSupport077.displayModeControllerState0001 == null &&
           MixedSupport061.booleanState0078) {
-          UiComponentPart003.performAction0163(integerArgument1 - 73, integerLocal1, booleanArgument2);
+          ModalDialog.performAction0163(integerArgument1 - 73, integerLocal1, booleanArgument2);
         }
     }
 
@@ -294,7 +294,7 @@ final class HuffmanCodec {
             integerLocal9 = integerLocal9 & -integerLocal16 >> 31;
             integerLocal17 = integerLocal15 + (integerLocal16 + (integerLocal14 - 1) >> 3);
             integerLocal16 += 24;
-            cachedIntegerLocal1 = UiComponentPart006.bitwiseOr(integerLocal9, integerLocal13 >>> integerLocal16);
+            cachedIntegerLocal1 = LabeledWidgetContainer.bitwiseOr(integerLocal9, integerLocal13 >>> integerLocal16);
             integerLocal9 = cachedIntegerLocal1;
             byteArrayArgument1[integerLocal15] = (byte)cachedIntegerLocal1;
             if (integerLocal17 > integerLocal15) {
@@ -402,7 +402,7 @@ final class HuffmanCodec {
                     frameCompletedLocal27 = false;
                     break;
                   }
-                  integerArrayLocal9[integerLocal15] = UiComponentPart006.bitwiseOr(integerLocal16, integerLocal17);
+                  integerArrayLocal9[integerLocal15] = LabeledWidgetContainer.bitwiseOr(integerLocal16, integerLocal17);
                   integerLocal15--;
                 }
                 if (frameCompletedLocal26) {

@@ -55,10 +55,10 @@ final class fg {
               var3 = var3 + param2;
             }
             AccountRegistrationPanel.a(var3, 26613);
-            var7 = kb.a(var3, 0, "%3a", ":");
-            var8 = kb.a(var7, param1 + 77, "%40", "@");
-            var9 = kb.a(var8, 0, "%26", "&");
-            var10 = kb.a(var9, param1 ^ -77, "%23", "#");
+            var7 = DraggableWidgetContainer.a(var3, 0, "%3a", ":");
+            var8 = DraggableWidgetContainer.a(var7, param1 + 77, "%40", "@");
+            var9 = DraggableWidgetContainer.a(var8, 0, "%26", "&");
+            var10 = DraggableWidgetContainer.a(var9, param1 ^ -77, "%23", "#");
             if (null == ba.field_L) {
               return;
             }

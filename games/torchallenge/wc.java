@@ -44,18 +44,18 @@ final class wc {
             var9 = param2;
             var10 = param4;
             for (var11 = param3; var11 < param6; var11++) {
-              var12 = hi.field_G[var11];
+              var12 = AlphaWidgetContainer.field_G[var11];
               if (param0) {
-                stackIn_24_0 = bg.field_Q[var12];
+                stackIn_24_0 = LabeledWidgetContainer.field_Q[var12];
               } else {
                 stackIn_24_0 = ProxyAuthenticationRequiredException.field_b[var12];
               }
               var13 = stackIn_24_0;
               if (var7_int < var13) {
-                hi.field_G[var11] = hi.field_G[var8];
+                AlphaWidgetContainer.field_G[var11] = AlphaWidgetContainer.field_G[var8];
                 incrementValue$0 = var8;
                 var8++;
-                hi.field_G[incrementValue$0] = var12;
+                AlphaWidgetContainer.field_G[incrementValue$0] = var12;
                 if (var13 < var9) {
                   var9 = var13;
                 }
@@ -71,11 +71,11 @@ final class wc {
           }
           for (var7_intLifetime1 = param6 - 1; var7_intLifetime1 > param3; var7_intLifetime1--) {
             for (var8Lifetime1 = param3; var8Lifetime1 < var7_intLifetime1; var8Lifetime1++) {
-              var9Lifetime1 = hi.field_G[var8Lifetime1];
-              var10Lifetime1 = hi.field_G[1 + var8Lifetime1];
+              var9Lifetime1 = AlphaWidgetContainer.field_G[var8Lifetime1];
+              var10Lifetime1 = AlphaWidgetContainer.field_G[1 + var8Lifetime1];
               if (nh.a(param0, 0, var9Lifetime1, var10Lifetime1)) {
-                hi.field_G[var8Lifetime1] = var10Lifetime1;
-                hi.field_G[1 + var8Lifetime1] = var9Lifetime1;
+                AlphaWidgetContainer.field_G[var8Lifetime1] = var10Lifetime1;
+                AlphaWidgetContainer.field_G[1 + var8Lifetime1] = var9Lifetime1;
               }
             }
           }

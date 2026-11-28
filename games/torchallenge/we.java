@@ -204,7 +204,7 @@ final class we implements Runnable {
           if (TorChallenge.field_H == null) {
             return false;
           }
-          if (TorChallenge.field_H.f((byte) 123) != null) {
+          if (TorChallenge.field_H.getTopOpenDialog((byte) 123) != null) {
             return true;
           }
           return false;
@@ -212,7 +212,7 @@ final class we implements Runnable {
         if (TorChallenge.field_H == null) {
           return false;
         }
-        if (TorChallenge.field_H.f((byte) 123) != null) {
+        if (TorChallenge.field_H.getTopOpenDialog((byte) 123) != null) {
           return true;
         }
         return false;

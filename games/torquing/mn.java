@@ -137,7 +137,7 @@ class mn extends aa implements WidgetActivationListener {
           var4 = var6;
           if (param0 != 5) {
             if (param0 == 256) {
-              var6.a(0, qm.field_b, (ca) (this));
+              var6.a(0, qm.field_b, (WidgetEventListener) (this));
             } else {
               stackIn_13_0 = var6;
               if (this.field_eb) {
@@ -162,7 +162,7 @@ class mn extends aa implements WidgetActivationListener {
                   this.c(var6, 33);
                   return;
                 }
-                var6.a(0, GameKeyHandler.field_c, (ca) (this));
+                var6.a(0, GameKeyHandler.field_c, (WidgetEventListener) (this));
               }
             } else {
               var6.a(cd.field_a, 5177, 8);
@@ -303,7 +303,7 @@ class mn extends aa implements WidgetActivationListener {
         field_Z = null;
     }
 
-    mn(ln param0, BitmapFont param1, String param2, boolean param3, boolean param4) {
+    mn(ModalDialogHost param0, BitmapFont param1, String param2, boolean param3, boolean param4) {
         super(param0, new fo((mn) null, param1, param2), 77, 10, 10);
         try {
           this.field_cb = param1;
@@ -313,7 +313,7 @@ class mn extends aa implements WidgetActivationListener {
           this.field_ab = param4 ? true : false;
           this.field_db = new kf(13, 50, 274, 30, 15, 2113632, 4210752);
           this.field_db.field_M = true;
-          this.a(this.field_db, -6938);
+          this.addChild(this.field_db, -6938);
         } catch (RuntimeException runtimeException) {
           throw RichTextWidget.wrapThrowable((Throwable) ((Object) runtimeException), "mn.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ')');
         }
@@ -337,7 +337,7 @@ class mn extends aa implements WidgetActivationListener {
             return;
           }
           var7 = (UiWidget) null;
-          this.a(-44, (UiWidget) null, 'Z', 47);
+          this.handleKey(-44, (UiWidget) null, 'Z', 47);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -353,7 +353,7 @@ class mn extends aa implements WidgetActivationListener {
         }
     }
 
-    final boolean a(int param0, UiWidget param1, char param2, int param3) {
+    final boolean handleKey(int param0, UiWidget param1, char param2, int param3) {
         int var5_int = 0;
         RuntimeException var5 = null;
         boolean stackIn_5_0 = false;
@@ -367,7 +367,7 @@ class mn extends aa implements WidgetActivationListener {
             return true;
           }
           var5_int = -42 % ((param3 + 33) / 57);
-          stackIn_5_0 = super.a(param0, param1, param2, 55);
+          stackIn_5_0 = super.handleKey(param0, param1, param2, 55);
           return stackIn_5_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

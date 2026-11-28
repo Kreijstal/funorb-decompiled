@@ -128,12 +128,12 @@ final class bi implements java.awt.event.KeyListener, java.awt.event.FocusListen
 
     final static void a(byte param0, java.awt.Component param1) {
         try {
-          param1.addMouseListener(hh.field_M);
+          param1.addMouseListener(DraggableWidgetContainer.field_M);
           if (param0 != 104) {
             field_a = (BinaryBitmapFont) null;
           }
-          param1.addMouseMotionListener(hh.field_M);
-          param1.addFocusListener(hh.field_M);
+          param1.addMouseMotionListener(DraggableWidgetContainer.field_M);
+          param1.addFocusListener(DraggableWidgetContainer.field_M);
         } catch (RuntimeException runtimeException) {
           throw ld.wrapClientException((Throwable) ((Object) runtimeException), "bi.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

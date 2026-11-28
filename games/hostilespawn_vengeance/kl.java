@@ -9,7 +9,7 @@ final class kl {
     final static boolean b(int param0) {
         if (param0 != 50) {
           kl.b(-84);
-          if (ag.field_t == null) {
+          if (UiWidget.field_t == null) {
             return false;
           }
           if (MouseInput.field_d == rc.field_a) {
@@ -17,7 +17,7 @@ final class kl {
           }
           return false;
         }
-        if (ag.field_t == null) {
+        if (UiWidget.field_t == null) {
           return false;
         }
         if (MouseInput.field_d == rc.field_a) {

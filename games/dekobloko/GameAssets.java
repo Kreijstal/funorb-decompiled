@@ -676,7 +676,7 @@ final class GameAssets {
           }
           byteArrayLocal64 = MixedSupport067.computeByteArray0840(-125, "number_colon_name");
           if (null != byteArrayLocal64) {
-            UiComponentPart015.stringState0252 = MixedSupport105.computeString1370(byteArrayLocal64, 2);
+            DropTargetWidgetContainer.stringState0252 = MixedSupport105.computeString1370(byteArrayLocal64, 2);
           }
           byteArrayLocal65 = MixedSupport067.computeByteArray0840(-61, "number_colon");
           if (byteArrayLocal65 != null) {
@@ -1416,7 +1416,7 @@ final class GameAssets {
           }
           byteArrayLocal249 = MixedSupport067.computeByteArray0840(-72, "challenge");
           if (null != byteArrayLocal249) {
-            UiComponentPart016.stringState0296 = MixedSupport105.computeString1370(byteArrayLocal249, 2);
+            ModalDialogHost.stringState0296 = MixedSupport105.computeString1370(byteArrayLocal249, 2);
           }
           byteArrayLocal250 = MixedSupport067.computeByteArray0840(-89, "new_theme_unlocked");
           if (null != byteArrayLocal250) {

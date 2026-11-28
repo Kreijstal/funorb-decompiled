@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ci implements td {
+final class ci implements WidgetRenderer {
     static String field_p;
     private int field_g;
     private int field_c;
@@ -33,8 +33,8 @@ final class ci implements td {
         field_b = null;
     }
 
-    public final void a(int param0, int param1, pj param2, int param3, boolean param4) {
-        pj stackIn_3_0 = null;
+    public final void paintWidget(int param0, int param1, UiWidget param2, int param3, boolean param4) {
+        UiWidget stackIn_3_0 = null;
         RuntimeException stackIn_18_0 = null;
         StringBuilder stackIn_18_1 = null;
         String stackIn_19_2 = null;
@@ -44,11 +44,11 @@ final class ci implements td {
         int var8 = 0;
         int var9 = 0;
         int var10 = 0;
-        pj var11 = null;
+        UiWidget var11 = null;
         of var12 = null;
         try {
           if (param2 instanceof of) {
-            stackIn_3_0 = (pj) (param2);
+            stackIn_3_0 = (UiWidget) (param2);
           } else {
             stackIn_3_0 = null;
           }
@@ -59,8 +59,8 @@ final class ci implements td {
           var7 = 5592405;
           SoftwareRasterizer.fillRectangle(param2.field_s + param1, param0 + param2.field_n, param2.field_m, param2.field_r, this.field_i);
           if (param3 != -4394) {
-            var11 = (pj) null;
-            this.a(118, -50, (pj) null, 88, false);
+            var11 = (UiWidget) null;
+            this.paintWidget(118, -50, (UiWidget) null, 88, false);
           }
           if (param4) {
             var7 = 16777215;
@@ -89,7 +89,7 @@ final class ci implements td {
           } else {
             stackIn_19_2 = "{...}";
           }
-          throw dd.wrapClientException((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw DraggableWidgetContainer.wrapClientException((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -120,7 +120,7 @@ final class ci implements td {
           this.field_c = param2;
           this.field_j = param8;
         } catch (RuntimeException runtimeException) {
-          throw dd.wrapClientException((Throwable) ((Object) runtimeException), "ci.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ',' + param9 + ')');
+          throw DraggableWidgetContainer.wrapClientException((Throwable) ((Object) runtimeException), "ci.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ',' + param9 + ')');
         }
     }
 

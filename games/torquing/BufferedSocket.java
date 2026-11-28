@@ -215,8 +215,8 @@ final class BufferedSocket implements Runnable {
           return;
         }
         ra.field_e = VertexMesh.field_l.field_r;
-        fq.field_F.field_d = fq.field_F.field_d - VertexMesh.field_l.field_r;
-        fq.field_F.field_c = fq.field_F.field_c - VertexMesh.field_l.field_v;
+        AlphaWidgetContainer.field_F.field_d = AlphaWidgetContainer.field_F.field_d - VertexMesh.field_l.field_r;
+        AlphaWidgetContainer.field_F.field_c = AlphaWidgetContainer.field_F.field_c - VertexMesh.field_l.field_v;
         hb.field_s = VertexMesh.field_l.field_v;
         VertexMesh.field_l.field_r = 0;
         Sprite var4 = VertexMesh.field_l;

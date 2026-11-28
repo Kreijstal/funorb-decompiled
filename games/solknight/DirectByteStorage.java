@@ -9,12 +9,12 @@ final class DirectByteStorage extends ByteStorage {
     final static void a(int param0, java.awt.Component param1) {
         try {
           param1.setFocusTraversalKeysEnabled(false);
-          param1.addKeyListener(i.field_J);
+          param1.addKeyListener(ModalDialogHost.field_J);
           if (param0 != 0) {
             java.awt.Component var3 = (java.awt.Component) null;
             DirectByteStorage.a(24, (java.awt.Component) null);
           }
-          param1.addFocusListener(i.field_J);
+          param1.addFocusListener(ModalDialogHost.field_J);
         } catch (RuntimeException runtimeException) {
           throw fc.wrapClientException((Throwable) ((Object) runtimeException), "f.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

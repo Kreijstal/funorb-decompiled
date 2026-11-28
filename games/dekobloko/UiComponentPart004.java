@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 abstract class UiComponentPart004 extends UiComponentPart030 {
-    private UiComponentPart010 uiComponentPart010State0001;
+    private AlphaWidgetContainer uiComponentPart010State0001;
     private int integerState0089;
     private int integerState0090;
     static int integerState0091;
@@ -41,14 +41,14 @@ abstract class UiComponentPart004 extends UiComponentPart030 {
           }
           boolean sharedTailLocal7 = (uiComponentArgument1 != null);
           if (!sharedTailLocal7) {
-            this.uiComponentPart010State0001 = new UiComponentPart010();
+            this.uiComponentPart010State0001 = new AlphaWidgetContainer();
             sharedTailLocal7 = (DekoBlokoClient.obfuscationControl);
           }
           if (sharedTailLocal7) {
-            uiComponentArgument1.performAction0222(uiComponentArgument1.integerState0108, uiComponentArgument1.integerState0107, 6, this.integerState0089 + 6, -16555);
-            this.uiComponentPart010State0001 = new UiComponentPart010(uiComponentArgument1);
+            uiComponentArgument1.setBounds(uiComponentArgument1.integerState0108, uiComponentArgument1.integerState0107, 6, this.integerState0089 + 6, -16555);
+            this.uiComponentPart010State0001 = new AlphaWidgetContainer(uiComponentArgument1);
           }
-          this.performAction0895(this.uiComponentPart010State0001, (byte) -55);
+          this.addChild(this.uiComponentPart010State0001, (byte) -55);
           this.uiComponentState0001 = null;
           if (integerArgument2 != -29870) {
             uiComponentLocal1 = (UiComponent) null;
@@ -303,7 +303,7 @@ abstract class UiComponentPart004 extends UiComponentPart030 {
               integerArrayLocal8 = integerArrayLocal12;
               integerLocal9 = 0;
               while (integerLocal6 > integerLocal9) {
-                integerArrayLocal8[integerLocal9] = UiComponentPart006.bitwiseOr(PlayerBoardUpdateQueue.bitwiseAnd((int) byteArrayLocal15[integerLocal9], 255) << 24, NetworkSupport006.integerArrayState0152[PlayerBoardUpdateQueue.bitwiseAnd((int) byteArrayLocal14[integerLocal9], 255)]);
+                integerArrayLocal8[integerLocal9] = LabeledWidgetContainer.bitwiseOr(PlayerBoardUpdateQueue.bitwiseAnd((int) byteArrayLocal15[integerLocal9], 255) << 24, NetworkSupport006.integerArrayState0152[PlayerBoardUpdateQueue.bitwiseAnd((int) byteArrayLocal14[integerLocal9], 255)]);
                 integerLocal9++;
               }
               rgbSpriteArrayLocal4[integerLocal5] = (RgbSprite) ((Object) new ArgbSprite(MixedSupport029.integerState0181, MixedSupport057.integerState0297, InputAdapter003.integerArrayState0206[integerLocal5], MixedSupport039.integerArrayState0047[integerLocal5], MixedSupport123.integerArrayState0208[integerLocal5], MixedSupport052.integerArrayState0054[integerLocal5], integerArrayLocal13));
@@ -329,7 +329,7 @@ abstract class UiComponentPart004 extends UiComponentPart030 {
         rgbSpriteState0009 = null;
     }
 
-    boolean computeBoolean0182(int integerArgument1, int integerArgument2, UiComponent uiComponentArgument3, char characterArgument4) {
+    boolean handleKey(int integerArgument1, int integerArgument2, UiComponent uiComponentArgument3, char characterArgument4) {
         int integerLocal1 = 0;
         RuntimeException runtimeExceptionLocal2 = null;
         RuntimeException stackRuntimeExceptionLocal3 = null;
@@ -337,18 +337,18 @@ abstract class UiComponentPart004 extends UiComponentPart030 {
         String stackStringLocal5 = null;
         RuntimeException caughtExceptionLocal6 = null;
         try {
-          if (super.computeBoolean0182(82, integerArgument2, uiComponentArgument3, characterArgument4)) {
+          if (super.handleKey(82, integerArgument2, uiComponentArgument3, characterArgument4)) {
             return true;
           }
           integerLocal1 = 54 % ((integerArgument1 + 22) / 49);
           if (this.uiComponentPart010State0001 != null) {
             if (98 == integerArgument2) {
-              this.uiComponentPart010State0001.computeBoolean0221(false, uiComponentArgument3);
+              this.uiComponentPart010State0001.takeFocus(false, uiComponentArgument3);
             }
             if (integerArgument2 != 99) {
               return false;
             }
-            this.uiComponentPart010State0001.computeBoolean0221(false, uiComponentArgument3);
+            this.uiComponentPart010State0001.takeFocus(false, uiComponentArgument3);
           }
           return false;
         } catch (java.lang.RuntimeException caughtParameterLocal7) {
@@ -368,7 +368,7 @@ abstract class UiComponentPart004 extends UiComponentPart030 {
     final void performAction0187(int integerArgument1) {
         if (null != this.mixedSupport057State0001) {
           if (this.mixedSupport057State0001 != MixedSupport107.mixedSupport057State0004) {
-            this.performAction0161(108, this.uiComponentState0001.integerState0107 + 12, this.integerState0089 + 12 + this.uiComponentState0001.integerState0108);
+            this.setCenteredSize(108, this.uiComponentState0001.integerState0107 + 12, this.integerState0089 + 12 + this.uiComponentState0001.integerState0108);
             this.performAction0183(this.uiComponentState0001, -29870);
           }
           this.uiComponentPart010State0001.integerState0187 = 256;
@@ -378,7 +378,7 @@ abstract class UiComponentPart004 extends UiComponentPart030 {
         int integerLocal1 = 11 % ((-15 - integerArgument1) / 49);
     }
 
-    boolean computeBoolean0169(byte byteArgument1) {
+    boolean advanceDialogAnimation(byte byteArgument1) {
         int integerLocal1 = 0;
         int integerLocal2 = 0;
         int integerLocal3;
@@ -421,10 +421,10 @@ abstract class UiComponentPart004 extends UiComponentPart030 {
             }
           }
         }
-        return super.computeBoolean0169((byte) 47);
+        return super.advanceDialogAnimation((byte) 47);
     }
 
-    UiComponentPart004(UiComponentPart016 uiComponentPart016Argument1, UiComponent uiComponentArgument2, int integerArgument3, int integerArgument4, int integerArgument5) {
+    UiComponentPart004(ModalDialogHost uiComponentPart016Argument1, UiComponent uiComponentArgument2, int integerArgument3, int integerArgument4, int integerArgument5) {
         super(uiComponentPart016Argument1, uiComponentArgument2.integerState0107 + 12, 12 + (integerArgument3 + uiComponentArgument2.integerState0108));
         try {
           this.integerState0094 = integerArgument4;
@@ -437,12 +437,12 @@ abstract class UiComponentPart004 extends UiComponentPart030 {
         }
     }
 
-    final boolean computeBoolean0167(byte byteArgument1) {
+    final boolean snapDialogAnimation(byte byteArgument1) {
         if (byteArgument1 <= 77) {
           this.mixedSupport057State0001 = (MixedSupport057) null;
         }
         this.performAction0187(-109);
-        return super.computeBoolean0167((byte) 116);
+        return super.snapDialogAnimation((byte) 116);
     }
 
     static {

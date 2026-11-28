@@ -43,7 +43,7 @@ final class AccountCreationResultPanel extends si implements WidgetActivationLis
         }
     }
 
-    AccountCreationResultPanel(d param0, AccountRegistrationPanel param1) {
+    AccountCreationResultPanel(ModalDialogHost param0, AccountRegistrationPanel param1) {
         super(param0, be.field_x, mm.field_d, false, false);
         try {
           this.field_tb = param1;
@@ -113,7 +113,7 @@ final class AccountCreationResultPanel extends si implements WidgetActivationLis
               this.a(new cl(this), -86);
               return;
             }
-            var5.a((byte) 23, (sc) (this), rj.field_e);
+            var5.a((byte) 23, (WidgetEventListener) (this), rj.field_e);
           } else {
             if (!this.field_xb) {
               if (param0.statusCode == 5) {
@@ -123,7 +123,7 @@ final class AccountCreationResultPanel extends si implements WidgetActivationLis
                 var5.a(-1, gd.field_b, (byte) -120);
               }
             } else {
-              var5.a((byte) 23, (sc) (this), rj.field_e);
+              var5.a((byte) 23, (WidgetEventListener) (this), rj.field_e);
             }
             if (3 == param0.statusCode) {
               var5.a(7, mi.field_i, (byte) 118);
@@ -163,31 +163,31 @@ final class AccountCreationResultPanel extends si implements WidgetActivationLis
         }
     }
 
-    final boolean f(byte param0) {
+    final boolean advanceDialogAnimation(byte param0) {
         AccountServiceResult var2 = null;
         if (this.field_J) {
           if (this.field_vb) {
             if (param0 != -121) {
               field_sb = 5;
-              return super.f((byte) -121);
+              return super.advanceDialogAnimation((byte) -121);
             }
-            return super.f((byte) -121);
+            return super.advanceDialogAnimation((byte) -121);
           }
           var2 = AccountServiceResult.pollAccountCreationResult(-352);
           if (var2 == null) {
             if (param0 != -121) {
               field_sb = 5;
-              return super.f((byte) -121);
+              return super.advanceDialogAnimation((byte) -121);
             }
-            return super.f((byte) -121);
+            return super.advanceDialogAnimation((byte) -121);
           }
           this.showAccountCreationResult(var2, (byte) -110, false);
         }
         if (param0 == -121) {
-          return super.f((byte) -121);
+          return super.advanceDialogAnimation((byte) -121);
         }
         field_sb = 5;
-        return super.f((byte) -121);
+        return super.advanceDialogAnimation((byte) -121);
     }
 
     static {

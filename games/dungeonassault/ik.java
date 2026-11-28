@@ -14,7 +14,7 @@ final class ik {
           return;
         }
         try {
-          fm.field_a = dg.field_H;
+          fm.field_a = LabeledWidgetContainer.field_H;
         } catch (RuntimeException runtimeException) {
           throw AccountServiceResult.wrapClientException((Throwable) ((Object) runtimeException), "ik.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }

@@ -50,7 +50,7 @@ final class ie extends DefaultTextWidgetRenderer {
         var16Lifetime3 = 116 / ((53 - param4) / 62);
     }
 
-    public final void a(boolean param0, int param1, vg param2, int param3, int param4) {
+    public final void paintWidget(boolean param0, int param1, UiWidget param2, int param3, int param4) {
         int stackIn_8_0 = 0;
         int stackIn_15_0 = 0;
         int stackIn_18_0 = 0;
@@ -67,7 +67,7 @@ final class ie extends DefaultTextWidgetRenderer {
             this.field_t = (RgbSprite[]) null;
           }
           if (!param2.field_n) {
-            stackIn_8_0 = (param2.a(true)) ? 1 : 0;
+            stackIn_8_0 = (param2.isFocused(true)) ? 1 : 0;
           } else {
             stackIn_8_0 = 1;
           }
@@ -110,10 +110,10 @@ final class ie extends DefaultTextWidgetRenderer {
 
     final static int a(boolean param0) {
         if (!param0) {
-          return -si.field_B + GameAppletShell.field_k;
+          return -SingleChildWidgetContainer.field_B + GameAppletShell.field_k;
         }
         ie.a(9, -41, 98, 108, (byte) 5, 25, 90, -7, -48, -35, 72, 76, -77, -54, -7, 93);
-        return -si.field_B + GameAppletShell.field_k;
+        return -SingleChildWidgetContainer.field_B + GameAppletShell.field_k;
     }
 
     public static void c(int param0) {

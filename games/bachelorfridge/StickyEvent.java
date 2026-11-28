@@ -1027,7 +1027,7 @@ final class StickyEvent extends SpecialEvent {
                 }
                 var2 = qba.a(17602, "ra_suggestmute");
                 if (null != var2) {
-                  lq.field_z = ChangeCreatureStatOrHealthEffect.a(var2, false);
+                  ArrayWidgetContainer.field_z = ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "ra_intro");
                 if (var2 != null) {

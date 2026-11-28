@@ -17,11 +17,11 @@ final class KeyboardInputHandler implements java.awt.event.KeyListener, java.awt
             if (var2_int != 0 &&
               65535 != var2_int &&
               pn.isSupportedCp1252KeyCharacter(true, (char) var2_int)) {
-              var3 = 127 & ei.field_A + 1;
+              var3 = 127 & LabeledWidgetContainer.field_A + 1;
               if (var3 != td.field_d) {
-                re.field_o[ei.field_A] = -1;
-                tp.field_i[ei.field_A] = (char)var2_int;
-                ei.field_A = var3;
+                re.field_o[LabeledWidgetContainer.field_A] = -1;
+                tp.field_i[LabeledWidgetContainer.field_A] = (char)var2_int;
+                LabeledWidgetContainer.field_A = var3;
               }
             }
           }
@@ -131,11 +131,11 @@ final class KeyboardInputHandler implements java.awt.event.KeyListener, java.awt
             }
           }
           if (var2_int >= 0) {
-            var3 = ei.field_A + 1 & 127;
+            var3 = LabeledWidgetContainer.field_A + 1 & 127;
             if (var3 != td.field_d) {
-              re.field_o[ei.field_A] = var2_int;
-              tp.field_i[ei.field_A] = (char)0;
-              ei.field_A = var3;
+              re.field_o[LabeledWidgetContainer.field_A] = var2_int;
+              tp.field_i[LabeledWidgetContainer.field_A] = (char)0;
+              LabeledWidgetContainer.field_A = var3;
             }
           }
           var3Lifetime1 = param0.getModifiers();

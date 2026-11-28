@@ -7,7 +7,7 @@ final class vb {
 
     final static void a(int param0, int param1, byte param2) {
         lb.field_i = 1;
-        vl.field_y = param1;
+        DraggableWidgetContainer.field_y = param1;
         if (param2 < 81) {
           return;
         }

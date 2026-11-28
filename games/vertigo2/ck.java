@@ -17,7 +17,7 @@ final class ck extends InteractiveWidget {
         super.activateFromInput(param0, param1, (byte) 126, param3);
     }
 
-    private ck(String param0, WidgetListener param1, uf param2) {
+    private ck(String param0, WidgetListener param1, WidgetEventListener param2) {
         super(param0, param1, param2);
         try {
           this.listener = eb.field_c.field_g;
@@ -26,7 +26,7 @@ final class ck extends InteractiveWidget {
         }
     }
 
-    ck(String param0, uf param1, boolean param2) {
+    ck(String param0, WidgetEventListener param1, boolean param2) {
         this(param0, param1);
         try {
           this.field_G = param2 ? true : false;
@@ -44,7 +44,7 @@ final class ck extends InteractiveWidget {
         field_I = null;
     }
 
-    private ck(String param0, uf param1) {
+    private ck(String param0, WidgetEventListener param1) {
         this(param0, eb.field_c.field_p, param1);
         try {
           this.listener = eb.field_c.field_g;

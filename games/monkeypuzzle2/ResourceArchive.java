@@ -600,7 +600,7 @@ final class ResourceArchive {
         if (param0) {
           field_g = (int[]) null;
         }
-        return oa.a((byte) -127, ii.a(false));
+        return DropTargetWidgetContainer.a((byte) -127, ii.a(false));
     }
 
     final byte[] getFile(int param0, int param1, int param2) {
@@ -907,10 +907,10 @@ final class ResourceArchive {
               }
               if (!param3) {
                 stackIn_43_0 = ((8 & var7) != 0);
-                rh.field_B = stackIn_43_0;
+                ModalDialog.field_B = stackIn_43_0;
                 stackIn_46_0 = (0 != (var7 & 4));
                 fj.field_J = stackIn_46_0;
-                if (rh.field_B) {
+                if (ModalDialog.field_B) {
                 }
               }
               if (me.field_e) {
@@ -926,7 +926,7 @@ final class ResourceArchive {
               cl.field_e = MonkeyPuzzle2.field_D.readString(-1);
               var12 = (CharSequence) ((Object) cl.field_e);
               DiskCacheWorker.field_f = BoundedRandomAccessFile.a((byte) 109, var12);
-              ue.field_G = MonkeyPuzzle2.field_D.readUnsignedByte((byte) 114);
+              AlphaWidgetContainer.field_G = MonkeyPuzzle2.field_D.readUnsignedByte((byte) 114);
               dk.field_h = wh.field_b;
               if (IntrusiveDeque.field_b.a(false) != te.field_a) {
                 if (IntrusiveDeque.field_b.a(false) == sj.field_g) {
@@ -992,7 +992,7 @@ final class ResourceArchive {
                 if (30000L >= wf.a(84)) {
                   ImageProducerRasterBuffer.field_n = AccountNameAvailabilityValidator.field_p;
                 } else {
-                  ImageProducerRasterBuffer.field_n = kj.field_E;
+                  ImageProducerRasterBuffer.field_n = ModalDialogHost.field_E;
                 }
                 DequeCursor.field_e = false;
                 stackIn_96_0 = 3;

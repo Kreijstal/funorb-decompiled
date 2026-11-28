@@ -283,9 +283,9 @@ final class lj {
                 var10 = var10 ^ 285L;
             }
             var12 = var10 ^ var2;
-            field_e[0][var0] = ie.a(ie.a(var4 << 8, ie.a(var8 << 16, ie.a(var10 << 24, ie.a(var2 << 32, ie.a(ie.a(var2 << 48, var2 << 56), var6 << 40))))), var12);
+            field_e[0][var0] = AlphaWidgetContainer.a(AlphaWidgetContainer.a(var4 << 8, AlphaWidgetContainer.a(var8 << 16, AlphaWidgetContainer.a(var10 << 24, AlphaWidgetContainer.a(var2 << 32, AlphaWidgetContainer.a(AlphaWidgetContainer.a(var2 << 48, var2 << 56), var6 << 40))))), var12);
             for (var14 = 1; var14 < 8; var14++) {
-                field_e[var14][var0] = ie.a(field_e[-1 + var14][var0] << 56, field_e[-1 + var14][var0] >>> 8);
+                field_e[var14][var0] = AlphaWidgetContainer.a(field_e[-1 + var14][var0] << 56, field_e[-1 + var14][var0] >>> 8);
             }
             var0++;
         }

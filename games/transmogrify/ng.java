@@ -25,13 +25,13 @@ final class ng extends IntrusiveNode {
 
     final static void a(boolean param0, java.awt.Canvas param1) {
         try {
-          if (gl.field_y == 11) {
+          if (AlphaWidgetContainer.field_y == 11) {
             sd.releaseDeclaredStaticReferences(274);
           }
           if (param0) {
             ng.clearStaticReferences((byte) 43);
           }
-          ch.a(58, ea.field_n, g.field_A, DelegatingCanvas.field_a);
+          ch.a(58, ea.field_n, DropTargetWidgetContainer.field_A, DelegatingCanvas.field_a);
           DelegatingCanvas.a(0, 0, (byte) 90, param1);
         } catch (RuntimeException runtimeException) {
           throw ch.wrapClientException((Throwable) ((Object) runtimeException), "ng.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');

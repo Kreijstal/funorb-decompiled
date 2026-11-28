@@ -77,9 +77,9 @@ final class ci {
             if (null != gh.field_a) {
               gh.field_a.shutdown((byte) -95);
             }
-            if (null != jd.field_F) {
+            if (null != DropTargetWidgetContainer.field_F) {
               try {
-                jd.field_F.close(false);
+                DropTargetWidgetContainer.field_F.close(false);
               } catch (java.io.IOException decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;
                 iOException = (IOException) (Object) decompiledCaughtException;

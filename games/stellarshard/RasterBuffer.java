@@ -267,7 +267,7 @@ abstract class RasterBuffer {
             field_a = 90;
           }
           if (null != IsaacRandom.field_d) {
-            IsaacRandom.field_d.i(-21535);
+            IsaacRandom.field_d.snapAndPruneDialogs(-21535);
           }
           if (null != PcmOutputWorker.field_d) {
             PcmOutputWorker.field_d.k(29960);

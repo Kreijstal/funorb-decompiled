@@ -136,13 +136,13 @@ final class le {
                 }
                 if (pd.field_Rb != null) {
                   if (!qj.field_d ||
-                    kb.field_P == null) {
+                    DraggableWidgetContainer.field_P == null) {
                     var4 = "[" + MatchingFieldValidator.a(InteractiveWidget.field_D, new String[]{pd.field_Rb.field_Gb}, (byte) -112) + "] ";
                     if (var10 != 0) {
-                      var4 = "[" + kb.field_P + "] ";
+                      var4 = "[" + DraggableWidgetContainer.field_P + "] ";
                     }
                   } else {
-                    var4 = "[" + kb.field_P + "] ";
+                    var4 = "[" + DraggableWidgetContainer.field_P + "] ";
                   }
                   var6 = 1;
                 }
@@ -185,7 +185,7 @@ final class le {
               }
             }
             TextLineMetrics.a(var4 + BitmapFont.escapeMarkup(sg.field_c.toString()), var7, -1, var5, TextFieldValidator.field_i[var6]);
-            if (!kn.field_L) {
+            if (!SingleChildWidgetContainer.field_L) {
               uc.field_c.field_F = false;
             }
             if (uc.field_c.field_F) {
@@ -294,7 +294,7 @@ final class le {
                   stackIn_24_0 = uc.field_g;
                 }
                 var9 = stackIn_24_0;
-                var2 = var2 + mf.field_z;
+                var2 = var2 + UiWidget.field_z;
                 if (var9 != null) {
                   var9.a(-FrameTimer.field_e + var8, var7 + (FrameTimer.field_e << 1), (fh.field_e << 1) + ug.field_a, true, var2);
                 }
@@ -302,7 +302,7 @@ final class le {
               }
               if (var4 >= 0) {
                 MidiPcmStream.field_M.drawString(var6, var8, var2 + th.field_a, var5, -1);
-                var2 = var2 + (ug.field_a + (mf.field_z + fh.field_e));
+                var2 = var2 + (ug.field_a + (UiWidget.field_z + fh.field_e));
               } else {
                 sj.field_d.drawString(var6, var8, var2 + DebouncedFieldValidator.field_f, var5, -1);
                 var2 = var2 + qd.field_r;

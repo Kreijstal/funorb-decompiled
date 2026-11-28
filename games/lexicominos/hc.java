@@ -189,8 +189,8 @@ final class hc extends ui {
               return stackIn_65_0;
             }
             var9Lifetime3 = nj.field_a;
-            nj.field_a = mg.field_y;
-            mg.field_y = var9Lifetime3;
+            nj.field_a = SingleChildWidgetContainer.field_y;
+            SingleChildWidgetContainer.field_y = var9Lifetime3;
             fb.field_p = true;
           }
           stackIn_68_0 = -1;
@@ -232,7 +232,7 @@ final class hc extends ui {
         String stackIn_13_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (!nb.a(param4, param3, (byte) 124, param1)) {
+          if (!DequeWidgetContainer.a(param4, param3, (byte) 124, param1)) {
             stackIn_2_0 = null;
             return (PalettedBitmapFont) (stackIn_2_0);
           }
@@ -281,10 +281,10 @@ final class hc extends ui {
     final static void h(int param0) {
         Throwable decompiledCaughtException = null;
         Object var1 = null;
-        if (hh.field_M != null) {
-          var1 = hh.field_M;
+        if (DraggableWidgetContainer.field_M != null) {
+          var1 = DraggableWidgetContainer.field_M;
           synchronized (var1) {
-            hh.field_M = null;
+            DraggableWidgetContainer.field_M = null;
           }
         }
         if (param0 != 249) {

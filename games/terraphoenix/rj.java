@@ -89,7 +89,7 @@ final class rj {
             }
             var4 = GameApplet.field_d;
             if (tb.field_u != 0.0) {
-              var4 = (int)((double)var4 + j.field_H.nextGaussian() * tb.field_u);
+              var4 = (int)((double)var4 + LabeledWidgetContainer.field_H.nextGaussian() * tb.field_u);
               if (var4 < 0) {
                 var4 = 0;
               }

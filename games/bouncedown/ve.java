@@ -200,7 +200,7 @@ final class ve {
           mi.field_j = ConfirmedEmailAvailabilityValidator.field_o;
           ConfirmedEmailAvailabilityValidator.field_o = false;
           SectorCacheStore.field_e = ta.field_a;
-          og.field_a = hb.field_B;
+          og.field_a = LabeledWidgetContainer.field_B;
           rk.field_a = nc.field_b;
           if (param0 != -91) {
             ve.a(108);

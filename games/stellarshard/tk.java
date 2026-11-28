@@ -9,12 +9,12 @@ final class tk {
     final static void a(int param0) {
         String var1 = null;
         if (gk.field_a) {
-          if (ei.field_G != null) {
-            ei.field_G.o(3);
+          if (ModalDialogHost.field_G != null) {
+            ModalDialogHost.field_G.o(3);
           }
           var1 = kl.a((byte) 124);
           af.field_r = new LoginPanel(var1, (String) null, true, false, false);
-          IsaacRandom.field_d.a((byte) 107, (UiWidget) (sf.field_f));
+          IsaacRandom.field_d.showDialog((byte) 107, (UiWidget) (sf.field_f));
           sf.field_f.b(af.field_r, 23143);
           sf.field_f.i(3642);
           int var2 = -85 / ((61 - param0) / 57);
@@ -28,22 +28,22 @@ final class tk {
         if (param3 > -101) {
           return;
         }
-        ui.field_F.draw(param1, param2);
+        ModalDialog.field_F.draw(param1, param2);
         if (!param0) {
           return;
         }
-        var4 = 2 * (gj.field_v % ui.field_F.field_v);
-        if (ui.field_F.field_v <= var4) {
-          var4 = -var4 + ui.field_F.field_v + ui.field_F.field_v;
+        var4 = 2 * (gj.field_v % ModalDialog.field_F.field_v);
+        if (ModalDialog.field_F.field_v <= var4) {
+          var4 = -var4 + ModalDialog.field_F.field_v + ModalDialog.field_F.field_v;
         }
         if (var4 < 10) {
           var4 = 10;
         } else {
-          if (-40 + ui.field_F.field_v < var4) {
-            var4 = -40 + ui.field_F.field_v;
+          if (-40 + ModalDialog.field_F.field_v < var4) {
+            var4 = -40 + ModalDialog.field_F.field_v;
           }
         }
-        te.a(30, param2, param1, var4, 80, 0, ui.field_F, 0, (byte) -102);
+        te.a(30, param2, param1, var4, 80, 0, ModalDialog.field_F, 0, (byte) -102);
     }
 
     final static long b(int param0) {

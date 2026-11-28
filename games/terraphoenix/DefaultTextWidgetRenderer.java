@@ -29,7 +29,7 @@ class DefaultTextWidgetRenderer implements WidgetActionListener, TextWidgetRende
         Throwable decompiledCaughtException = null;
         var1_ref = th.field_g;
         synchronized (var1_ref) {
-          if (d.field_M == BattleUnit.field_V) {
+          if (ModalDialogHost.field_M == BattleUnit.field_V) {
             return false;
           }
           lf.field_c = ll.field_b[BattleUnit.field_V];
@@ -169,7 +169,7 @@ class DefaultTextWidgetRenderer implements WidgetActionListener, TextWidgetRende
           if (param0 != 0) {
             this.field_b = 4;
           }
-          if (!param3.d(param0 ^ -111)) {
+          if (!param3.isFocused(param0 ^ -111)) {
             return;
           }
           var17 = this.getTextLayout(param3, -19302);
@@ -275,7 +275,7 @@ class DefaultTextWidgetRenderer implements WidgetActionListener, TextWidgetRende
         String stackIn_12_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (param2.d(-123)) {
+          if (param2.isFocused(-123)) {
             var13 = this.getTextLayout(param2, -19302);
             var14 = var13;
             var7 = var14.getLineIndexForTextOffset(param0, param4 ^ -32135);
@@ -702,7 +702,7 @@ class DefaultTextWidgetRenderer implements WidgetActionListener, TextWidgetRende
         }
     }
 
-    public void a(int param0, UiWidget param1, int param2, int param3, boolean param4) {
+    public void paintWidget(int param0, UiWidget param1, int param2, int param3, boolean param4) {
         if (param3 != -24381) {
           return;
         }

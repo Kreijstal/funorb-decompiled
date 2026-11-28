@@ -3,7 +3,7 @@
  */
 import java.util.*;
 
-class WidgetContainer extends UiWidget implements cj {
+class WidgetContainer extends UiWidget implements WidgetContainerMarker {
     static int field_z;
     static String field_A;
     IntrusiveDeque children;
@@ -19,7 +19,7 @@ class WidgetContainer extends UiWidget implements cj {
         }
     }
 
-    private final void a(StringBuilder param0, int param1, Hashtable param2, byte param3) {
+    private final void appendChildDebugTrees(StringBuilder param0, int param1, Hashtable param2, byte param3) {
         StringBuilder discarded$3 = null;
         int var7 = 0;
         StringBuilder discarded$4 = null;
@@ -38,7 +38,7 @@ class WidgetContainer extends UiWidget implements cj {
         try {
           if (param3 <= 55) {
             var9 = (UiWidget) null;
-            this.a(-19, false, 4, -101, (UiWidget) null, 68, 32);
+            this.handleWheel(-19, false, 4, -101, (UiWidget) null, 68, 32);
           }
           var10 = new re(this.children);
           var6 = (UiWidget) (var10.a((byte) 106));
@@ -47,7 +47,7 @@ class WidgetContainer extends UiWidget implements cj {
             for (var7 = 0; var7 <= param1; var7++) {
               discarded$4 = param0.append(' ');
             }
-            var6.a(param0, (byte) 117, param2, 1 + param1);
+            var6.appendDebugTree(param0, (byte) 117, param2, 1 + param1);
             var6 = (UiWidget) (var10.b(true));
           }
           return;
@@ -71,7 +71,7 @@ class WidgetContainer extends UiWidget implements cj {
         }
     }
 
-    final boolean a(int param0, boolean param1, int param2, int param3, UiWidget param4, int param5, int param6) {
+    final boolean handleWheel(int param0, boolean param1, int param2, int param3, UiWidget param4, int param5, int param6) {
         re var8 = null;
         RuntimeException var8_ref = null;
         UiWidget var9 = null;
@@ -89,8 +89,8 @@ class WidgetContainer extends UiWidget implements cj {
           var9 = (UiWidget) (var8.a((byte) 124));
           while (var9 != null) {
             if (var9.isLinked(17)) {
-              if (var9.g(2) &&
-                var9.a(param0, false, param2, param3, param4, param5, param6)) {
+              if (var9.isFocused(2) &&
+                var9.handleWheel(param0, false, param2, param3, param4, param5, param6)) {
                 return true;
               }
               var9 = (UiWidget) (var8.b(true));
@@ -113,35 +113,35 @@ class WidgetContainer extends UiWidget implements cj {
         }
     }
 
-    void a(int param0, byte param1, int param2, int param3) {
+    void drawWidget(int param0, byte param1, int param2, int param3) {
         int var7 = Torquing.field_u;
         if (param1 > -7) {
           field_z = -92;
         }
         if (0 == param0 &&
           this.renderer != null) {
-          this.renderer.a(127, param2, param3, true, (UiWidget) (this));
+          this.renderer.paintWidget(127, param2, param3, true, (UiWidget) (this));
         }
         re var5 = new re(this.children);
         UiWidget var6 = (UiWidget) (var5.a(17514));
         while (var6 != null) {
-          var6.a(param0, (byte) -107, this.y + param2, param3 + this.x);
+          var6.drawWidget(param0, (byte) -107, this.y + param2, param3 + this.x);
           var6 = (UiWidget) (var5.a(true));
         }
     }
 
-    final void a(UiWidget param0, int param1) {
+    final void addChild(UiWidget param0, int param1) {
         try {
           this.children.addFirst((byte) 54, param0);
           if (param1 != -6938) {
-            this.a(69, (byte) -75, 83, -7);
+            this.drawWidget(69, (byte) -75, 83, -7);
           }
         } catch (RuntimeException runtimeException) {
           throw RichTextWidget.wrapThrowable((Throwable) ((Object) runtimeException), "hn.JB(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
-    private final void a(boolean param0) {
+    private final void refreshChildLayouts(boolean param0) {
         int var4 = Torquing.field_u;
         re var2 = new re(this.children);
         if (!param0) {
@@ -149,12 +149,12 @@ class WidgetContainer extends UiWidget implements cj {
         }
         UiWidget var3 = (UiWidget) (var2.a((byte) 66));
         while (var3 != null) {
-          var3.e((byte) 88);
+          var3.refreshLayout((byte) 88);
           var3 = (UiWidget) (var2.b(true));
         }
     }
 
-    final void a(int param0, int param1, int param2, byte param3, UiWidget param4, int param5) {
+    final void pointerReleased(int param0, int param1, int param2, byte param3, UiWidget param4, int param5) {
         RuntimeException runtimeException = null;
         re var7 = null;
         UiWidget var8 = null;
@@ -172,7 +172,7 @@ class WidgetContainer extends UiWidget implements cj {
           var8 = (UiWidget) (var7.a((byte) 110));
           while (var8 != null) {
             if (var8.isLinked(17)) {
-              var8.a(this.y + param0, this.x + param1, param2, (byte) 116, param4, param5);
+              var8.pointerReleased(this.y + param0, this.x + param1, param2, (byte) 116, param4, param5);
               var8 = (UiWidget) (var7.b(true));
               continue;
             }
@@ -193,7 +193,7 @@ class WidgetContainer extends UiWidget implements cj {
         }
     }
 
-    final StringBuilder a(StringBuilder param0, byte param1, Hashtable param2, int param3) {
+    final StringBuilder appendDebugTree(StringBuilder param0, byte param1, Hashtable param2, int param3) {
         RuntimeException var5 = null;
         UiWidget var6 = null;
         StringBuilder stackIn_6_0 = null;
@@ -206,11 +206,11 @@ class WidgetContainer extends UiWidget implements cj {
         try {
           if (param1 != 117) {
             var6 = (UiWidget) null;
-            this.a(-99, -92, -99, -25, -38, (UiWidget) null, (byte) 51);
+            this.pointerPressed(-99, -92, -99, -25, -38, (UiWidget) null, (byte) 51);
           }
-          if (this.a(-31866, param0, param2, param3)) {
-            this.a(param0, param3, true, param2);
-            this.a(param0, param3, param2, (byte) 114);
+          if (this.beginDebugTreeEntry(-31866, param0, param2, param3)) {
+            this.appendDebugProperties(param0, param3, true, param2);
+            this.appendChildDebugTrees(param0, param3, param2, (byte) 114);
           }
           stackIn_6_0 = (StringBuilder) (param0);
           return stackIn_6_0;
@@ -234,7 +234,7 @@ class WidgetContainer extends UiWidget implements cj {
         }
     }
 
-    final boolean b(UiWidget param0, int param1) {
+    final boolean focusNextChild(UiWidget param0, int param1) {
         RuntimeException var3 = null;
         UiWidget var4 = null;
         re var5 = null;
@@ -256,12 +256,12 @@ class WidgetContainer extends UiWidget implements cj {
             field_z = 67;
           }
           while (var4 != null) {
-            if (var4.g(2)) {
+            if (var4.isFocused(2)) {
               var5 = new re(this.children);
               var5.a(param1 + 23699, var4);
               var6 = (UiWidget) (var5.b(true));
               while (var6 != null) {
-                if (var6.a(param0, false)) {
+                if (var6.takeFocus(param0, false)) {
                   return true;
                 }
                 var6 = (UiWidget) (var5.b(true));
@@ -305,7 +305,7 @@ class WidgetContainer extends UiWidget implements cj {
         return null;
     }
 
-    final boolean a(byte param0, UiWidget param1) {
+    final boolean focusPreviousChild(byte param0, UiWidget param1) {
         RuntimeException var3 = null;
         UiWidget var4 = null;
         int var5 = 0;
@@ -326,12 +326,12 @@ class WidgetContainer extends UiWidget implements cj {
           var5 = -124 / ((param0 + 40) / 51);
           var4 = (UiWidget) (var9.a(17514));
           while (var4 != null) {
-            if (var4.g(2)) {
+            if (var4.isFocused(2)) {
               var6 = new re(this.children);
               var6.a(var4, -27392);
               var7 = (UiWidget) (var6.a(true));
               while (var7 != null) {
-                if (!var7.a(param1, false)) {
+                if (!var7.takeFocus(param1, false)) {
                   var7 = (UiWidget) (var6.a(true));
                   continue;
                 }
@@ -355,7 +355,7 @@ class WidgetContainer extends UiWidget implements cj {
         }
     }
 
-    final int d(byte param0) {
+    final int getMaximumRenderLayer(byte param0) {
         int var5 = 0;
         int var6 = Torquing.field_u;
         int var2 = 0;
@@ -365,7 +365,7 @@ class WidgetContainer extends UiWidget implements cj {
         }
         UiWidget var4 = (UiWidget) (var3.a((byte) 126));
         while (var4 != null) {
-          var5 = var4.d((byte) 28);
+          var5 = var4.getMaximumRenderLayer((byte) 28);
           if (var5 > var2) {
             var2 = var5;
           }
@@ -374,7 +374,7 @@ class WidgetContainer extends UiWidget implements cj {
         return var2;
     }
 
-    void a(int param0, UiWidget param1, int param2, int param3) {
+    void updatePointer(int param0, UiWidget param1, int param2, int param3) {
         RuntimeException runtimeException = null;
         re var5 = null;
         int var6 = 0;
@@ -386,13 +386,13 @@ class WidgetContainer extends UiWidget implements cj {
         RuntimeException decompiledCaughtException = null;
         var8 = Torquing.field_u;
         try {
-          super.a(-123, param1, param2, param3);
+          super.updatePointer(-123, param1, param2, param3);
           var6 = -74 % ((param0 + 28) / 43);
           var5 = new re(this.children);
           var7 = (UiWidget) (var5.a((byte) 29));
           while (var7 != null) {
             if (var7.isLinked(17)) {
-              var7.a(113, param1, this.y + param2, this.x + param3);
+              var7.updatePointer(113, param1, this.y + param2, this.x + param3);
               var7 = (UiWidget) (var5.b(true));
               continue;
             }
@@ -413,7 +413,7 @@ class WidgetContainer extends UiWidget implements cj {
         }
     }
 
-    final void c(byte param0) {
+    final void blur(byte param0) {
         int var4 = Torquing.field_u;
         re var2 = new re(this.children);
         if (param0 < 89) {
@@ -421,35 +421,35 @@ class WidgetContainer extends UiWidget implements cj {
         }
         UiWidget var3 = (UiWidget) (var2.a((byte) 84));
         while (var3 != null) {
-          var3.c((byte) 92);
+          var3.blur((byte) 92);
           var3 = (UiWidget) (var2.b(true));
         }
     }
 
-    final boolean g(int param0) {
+    final boolean isFocused(int param0) {
         if (param0 != 2) {
           this.getTooltipText(57);
         }
-        return this.a(0) != null ? true : false;
+        return this.getFocusedChild(0) != null ? true : false;
     }
 
-    final void a(byte param0, int param1, int param2, int param3, int param4) {
-        super.a((byte) 6, param1, param2, param3, param4);
+    final void setBounds(byte param0, int param1, int param2, int param3, int param4) {
+        super.setBounds((byte) 6, param1, param2, param3, param4);
         int var6 = -94 % ((param0 - 66) / 57);
-        this.a(true);
+        this.refreshChildLayouts(true);
     }
 
     WidgetContainer(int param0, int param1, int param2, int param3, WidgetRenderer param4) {
-        super(param0, param1, param2, param3, param4, (ca) null);
+        super(param0, param1, param2, param3, param4, (WidgetEventListener) null);
         this.children = new IntrusiveDeque();
     }
 
-    UiWidget a(int param0) {
+    UiWidget getFocusedChild(int param0) {
         int var4 = Torquing.field_u;
         re var2 = new re(this.children);
         UiWidget var3 = (UiWidget) (var2.a((byte) 49));
         while (var3 != null) {
-          if (var3.g(2)) {
+          if (var3.isFocused(2)) {
             return var3;
           }
           var3 = (UiWidget) (var2.b(true));
@@ -461,7 +461,7 @@ class WidgetContainer extends UiWidget implements cj {
         return null;
     }
 
-    final boolean a(int param0, int param1, int param2, int param3, int param4, UiWidget param5, byte param6) {
+    final boolean pointerPressed(int param0, int param1, int param2, int param3, int param4, UiWidget param5, byte param6) {
         re var8 = null;
         RuntimeException var8_ref = null;
         UiWidget var9 = null;
@@ -479,7 +479,7 @@ class WidgetContainer extends UiWidget implements cj {
           var9 = (UiWidget) (var8.a((byte) 122));
           while (var9 != null) {
             if (var9.isLinked(17)) {
-              if (var9.a(param0, param1 + this.x, this.y + param2, param3, param4, param5, (byte) 58)) {
+              if (var9.pointerPressed(param0, param1 + this.x, this.y + param2, param3, param4, param5, (byte) 58)) {
                 return true;
               }
               var9 = (UiWidget) (var8.b(true));
@@ -502,7 +502,7 @@ class WidgetContainer extends UiWidget implements cj {
         }
     }
 
-    final boolean a(UiWidget param0, boolean param1) {
+    final boolean takeFocus(UiWidget param0, boolean param1) {
         re var3 = null;
         RuntimeException var3_ref = null;
         UiWidget var4 = null;
@@ -522,7 +522,7 @@ class WidgetContainer extends UiWidget implements cj {
             if (var4 == null) {
               return false;
             }
-            if (!var4.a(param0, false)) {
+            if (!var4.takeFocus(param0, false)) {
               var4 = (UiWidget) (var3.b(true));
               continue;
             }
@@ -551,7 +551,7 @@ class WidgetContainer extends UiWidget implements cj {
         field_A = null;
     }
 
-    boolean a(int param0, UiWidget param1, char param2, int param3) {
+    boolean handleKey(int param0, UiWidget param1, char param2, int param3) {
         int var5_int = 0;
         RuntimeException var5 = null;
         re var6 = null;
@@ -570,8 +570,8 @@ class WidgetContainer extends UiWidget implements cj {
           var9 = (UiWidget) (var6.a((byte) 125));
           while (var9 != null) {
             if (var9.isLinked(17)) {
-              if (var9.g(2) &&
-                var9.a(param0, param1, param2, 41)) {
+              if (var9.isFocused(2) &&
+                var9.handleKey(param0, param1, param2, 41)) {
                 return true;
               }
               var9 = (UiWidget) (var6.b(true));
@@ -584,9 +584,9 @@ class WidgetContainer extends UiWidget implements cj {
             return false;
           }
           if (i.field_P[81]) {
-            stackIn_13_0 = this.a((byte) -125, param1);
+            stackIn_13_0 = this.focusPreviousChild((byte) -125, param1);
           } else {
-            stackIn_13_0 = this.b(param1, -9928);
+            stackIn_13_0 = this.focusNextChild(param1, -9928);
           }
           return stackIn_13_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

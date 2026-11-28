@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class NameSuggestionsPanel extends td implements ButtonListener {
+final class NameSuggestionsPanel extends DequeWidgetContainer implements ButtonListener {
     private ButtonWidget[] field_K;
     private NameSuggestionListener field_J;
     private String[] field_D;
@@ -58,11 +58,11 @@ final class NameSuggestionsPanel extends td implements ButtonListener {
         }
     }
 
-    final void a(int param0, int param1, int param2, int param3) {
+    final void drawWidget(int param0, int param1, int param2, int param3) {
         if (param3 != 29221) {
           NameSuggestionsPanel.b(false);
         }
-        super.a(param0, param1, param2, param3 ^ 0);
+        super.drawWidget(param0, param1, param2, param3 ^ 0);
         if (param0 != 0) {
           return;
         }
@@ -206,16 +206,16 @@ final class NameSuggestionsPanel extends td implements ButtonListener {
               NameSuggestionsPanel.a(59, (PacketBuffer) null, -116);
             }
             for (var5 = 0; var3_int > var5; var5++) {
-              this.field_K[var5] = new ButtonWidget(this.field_D[var5], (tg) (this));
-              this.field_K[var5].field_y = (t) ((Object) var4);
+              this.field_K[var5] = new ButtonWidget(this.field_D[var5], (WidgetEventListener) (this));
+              this.field_K[var5].field_y = (WidgetRenderer) ((Object) var4);
               this.field_K[var5].field_n = ke.field_b;
-              this.field_K[var5].a(15, -3050, 16 * var5 + 20, 80, 0);
-              this.a(false, this.field_K[var5]);
+              this.field_K[var5].setBounds(15, -3050, 16 * var5 + 20, 80, 0);
+              this.addChild(false, this.field_K[var5]);
             }
-            this.field_K[var3_int] = new ButtonWidget(j.field_d, (tg) (this));
-            this.field_K[var3_int].field_y = (t) ((Object) var4);
-            this.field_K[var3_int].a(15, -3050, (var3_int + 1) * 16 + 20, 100, 0);
-            this.a(false, this.field_K[var3_int]);
+            this.field_K[var3_int] = new ButtonWidget(j.field_d, (WidgetEventListener) (this));
+            this.field_K[var3_int].field_y = (WidgetRenderer) ((Object) var4);
+            this.field_K[var3_int].setBounds(15, -3050, (var3_int + 1) * 16 + 20, 100, 0);
+            this.addChild(false, this.field_K[var3_int]);
             return;
           }
           this.field_D = null;
@@ -271,7 +271,7 @@ final class NameSuggestionsPanel extends td implements ButtonListener {
     }
 
     NameSuggestionsPanel(NameSuggestionListener param0) {
-        super(0, 0, 0, 0, (t) null);
+        super(0, 0, 0, 0, (WidgetRenderer) null);
         try {
           this.field_J = param0;
         } catch (RuntimeException runtimeException) {
@@ -279,7 +279,7 @@ final class NameSuggestionsPanel extends td implements ButtonListener {
         }
     }
 
-    final boolean a(byte param0, char param1, UiWidget param2, int param3) {
+    final boolean handleKey(byte param0, char param1, UiWidget param2, int param3) {
         int var5_int = 0;
         RuntimeException var5 = null;
         boolean stackIn_7_0 = false;
@@ -289,15 +289,15 @@ final class NameSuggestionsPanel extends td implements ButtonListener {
         String stackIn_17_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (super.a((byte) -84, param1, param2, param3)) {
+          if (super.handleKey((byte) -84, param1, param2, param3)) {
             return true;
           }
           if (param3 == 98) {
-            stackIn_7_0 = this.a(param2, -52);
+            stackIn_7_0 = this.focusPreviousChild(param2, -52);
             return stackIn_7_0;
           }
           if (param3 == 99) {
-            stackIn_11_0 = this.a(param2, true);
+            stackIn_11_0 = this.focusNextChild(param2, true);
             return stackIn_11_0;
           }
           var5_int = 68 / ((17 - param0) / 51);

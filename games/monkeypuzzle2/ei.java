@@ -73,7 +73,7 @@ final class ei {
             field_a = 33;
           }
           var1 = SectorCacheStore.field_c;
-          while (kj.m(0)) {
+          while (ModalDialogHost.m(0)) {
             var1.b(true, 8);
             fieldTemp$0 = var1.position + 1;
             var1.position = var1.position + 1;

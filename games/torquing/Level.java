@@ -1059,12 +1059,12 @@ final class Level {
             }
             var6 = null;
             if (hq.field_a.field_t != null) {
-              jd.field_F = new BufferedRandomAccessFile(hq.field_a.field_t, 5200, 0);
+              DropTargetWidgetContainer.field_F = new BufferedRandomAccessFile(hq.field_a.field_t, 5200, 0);
               hq.field_a.field_t = null;
-              var6 = new SectorCacheStore(255, jd.field_F, new BufferedRandomAccessFile(hq.field_a.field_n, 12000, 0), 2097152);
+              var6 = new SectorCacheStore(255, DropTargetWidgetContainer.field_F, new BufferedRandomAccessFile(hq.field_a.field_n, 12000, 0), 2097152);
             }
             var7 = null;
-            if (jd.field_F != null) {
+            if (DropTargetWidgetContainer.field_F != null) {
               if (TextLayout.field_b == null) {
                 TextLayout.field_b = new BufferedRandomAccessFile[hq.field_a.field_w.length];
               }
@@ -1072,7 +1072,7 @@ final class Level {
                 TextLayout.field_b[param2] = new BufferedRandomAccessFile(hq.field_a.field_w[param2], 12000, 0);
                 hq.field_a.field_w[param2] = null;
               }
-              var7 = new SectorCacheStore(param2, jd.field_F, TextLayout.field_b[param2], 2097152);
+              var7 = new SectorCacheStore(param2, DropTargetWidgetContainer.field_F, TextLayout.field_b[param2], 2097152);
             }
             var8 = BufferedSocket.field_n.a((SectorCacheStore) (var7), (byte) 101, param2, (SectorCacheStore) (var6), param0);
             if (param4) {

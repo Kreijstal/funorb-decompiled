@@ -2,27 +2,27 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class aj {
-    j field_h;
+    WidgetRenderer field_h;
     BitmapFont field_k;
     static int[] field_o;
     int field_e;
     static byte[] field_t;
     int field_b;
     int field_q;
-    j field_i;
+    WidgetRenderer field_i;
     static int[] field_m;
-    j field_r;
+    WidgetRenderer field_r;
     static String[] field_s;
     private boolean field_c;
     private int field_l;
-    j field_a;
+    WidgetRenderer field_a;
     int field_d;
     static int field_p;
     int field_f;
     static int field_u;
     int field_j;
     int field_n;
-    j field_g;
+    WidgetRenderer field_g;
 
     final void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {
         if (param4 != 1) {
@@ -214,7 +214,7 @@ final class aj {
         ql var14Lifetime2;
         try {
           var18 = new DefaultTextWidgetRenderer(param1, 2, 2, 2236962, 1, 1, 1, param1.field_s + param1.field_F + 2);
-          this.field_a = (j) ((Object) var18);
+          this.field_a = (WidgetRenderer) ((Object) var18);
           var18.field_o = 16777215;
           var4 = new ql();
           var18.a(var4, 6935);
@@ -245,21 +245,21 @@ final class aj {
           var5[4] = (Sprite) ((Object) var19);
           var4.a((byte) -85, 4).a(0, true).a(var5, (byte) 119);
           var4.a((byte) -38, 5).a(je.a(0, (byte) -124, 65793, 0, 0), (byte) 119).a(0, true).d(-123, -1);
-          this.field_i = (j) ((Object) var4);
+          this.field_i = (WidgetRenderer) ((Object) var4);
           var6 = new ql(var4, true);
           var6.field_g = 0;
           var7 = new ql(var4, true);
           var7.field_g = 0;
           var7.a((byte) -94, ArchiveIndex.a(8947848, 118));
           var7.a((byte) -80, 1).a(ArchiveIndex.a(11184810, -96), (byte) 119).d(-128, 2236962);
-          this.field_r = (j) ((Object) new td(param1, 2, 2, 16777215, -1, 5, 5, 15, 15, 4473924));
+          this.field_r = (WidgetRenderer) ((Object) new td(param1, 2, 2, 16777215, -1, 5, 5, 15, 15, 4473924));
           discarded$0 = new we(param1, 2, 2, 16777215, -1, 16777215, 16729156, 4473924);
           discarded$1 = new sj(param1, 16777215, -1, 125269879, 4473924, 3, 268435455);
           var8 = new ql();
           var18.a(var8, 6935);
           var8.a((byte) -56, 0).a(mb.a(15658734, 7829367, 126, 10066329), (byte) 119).d(-120, 1118481).a(-1, 256);
           var8.a((byte) -85, 4).a(0, true).a(var5, (byte) 119);
-          this.field_h = (j) ((Object) var8);
+          this.field_h = (WidgetRenderer) ((Object) var8);
           var9 = new Sprite[9];
           var9[4] = new Sprite(2, 1);
           var10 = new Sprite[9];

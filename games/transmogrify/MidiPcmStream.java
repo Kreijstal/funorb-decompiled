@@ -456,7 +456,7 @@ final class MidiPcmStream extends PcmStream {
             for (var7 = 0; var6 > var7; var7++) {
               var9[var7] = ((PacketBuffer) ((Object) var5)).readInt((byte) -124);
             }
-            var14 = (oh) (oc.field_G.beginForward((byte) -95));
+            var14 = (oh) (LabeledWidgetContainer.field_G.beginForward((byte) -95));
             if (var14 == null) {
               pc.a(1);
               return;
@@ -476,7 +476,7 @@ final class MidiPcmStream extends PcmStream {
             var11.unlink(5);
           } else {
             if (var2 == 2) {
-              var15 = (oh) (oc.field_G.beginForward((byte) -95));
+              var15 = (oh) (LabeledWidgetContainer.field_G.beginForward((byte) -95));
               if (var15 == null) {
                 pc.a(1);
                 return;

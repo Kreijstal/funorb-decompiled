@@ -39,8 +39,8 @@ final class gn {
     final void a(byte param0) {
         int var3 = 0;
         int var3Lifetime1;
-        this.field_b = rf.field_K.a(this.field_e, (byte) -48);
-        this.field_f = rf.field_K.a(this.field_j, (byte) -48);
+        this.field_b = ModalDialog.field_K.a(this.field_e, (byte) -48);
+        this.field_f = ModalDialog.field_K.a(this.field_j, (byte) -48);
         int var2 = oj.a(this.field_f, -1, new int[]{194}, la.field_b);
         this.field_a = 10 + la.field_b.field_H * var2;
         if (param0 > -68) {

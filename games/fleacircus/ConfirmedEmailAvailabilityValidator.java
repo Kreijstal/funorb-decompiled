@@ -20,12 +20,12 @@ final class ConfirmedEmailAvailabilityValidator extends TextFieldValidator {
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (this.field_n.getValidationStatus(160, param1) == ml.field_K) {
+          if (this.field_n.getValidationStatus(160, param1) == LabeledWidgetContainer.field_K) {
             stackIn_2_0 = this.field_n.getValidationMessage((byte) -27, param1);
             return stackIn_2_0;
           }
           var3_int = 21 % ((param0 - 24) / 46);
-          if (this.getValidationStatus(160, param1) != ml.field_K) {
+          if (this.getValidationStatus(160, param1) != LabeledWidgetContainer.field_K) {
             stackIn_7_0 = ha.field_j;
             return stackIn_7_0;
           }
@@ -75,8 +75,8 @@ final class ConfirmedEmailAvailabilityValidator extends TextFieldValidator {
         String stackIn_16_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (this.field_n.getValidationStatus((int) (char)param0, param1) == ml.field_K) {
-            stackIn_2_0 = ml.field_K;
+          if (this.field_n.getValidationStatus((int) (char)param0, param1) == LabeledWidgetContainer.field_K) {
+            stackIn_2_0 = LabeledWidgetContainer.field_K;
             return stackIn_2_0;
           }
           if (!param1.equals(this.field_s)) {
@@ -91,7 +91,7 @@ final class ConfirmedEmailAvailabilityValidator extends TextFieldValidator {
           if (this.field_r) {
             stackIn_12_0 = hm.field_b;
           } else {
-            stackIn_12_0 = ml.field_K;
+            stackIn_12_0 = LabeledWidgetContainer.field_K;
           }
           return stackIn_12_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

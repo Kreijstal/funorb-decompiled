@@ -43,11 +43,11 @@ final class op {
               }
               incrementValue$1 = var6;
               var6++;
-              param0 = ac.field_K[incrementValue$1];
+              param0 = DropTargetWidgetContainer.field_K[incrementValue$1];
               dupTemp$2 = param3[param0];
               dupTemp$3 = param1[dupTemp$2];
               param1[dupTemp$2] = dupTemp$3 + 1;
-              ac.field_K[dupTemp$3] = param0;
+              DropTargetWidgetContainer.field_K[dupTemp$3] = param0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

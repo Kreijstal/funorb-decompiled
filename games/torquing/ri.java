@@ -21,7 +21,7 @@ final class ri extends InteractiveWidget {
         return -1;
     }
 
-    final boolean a(int param0, int param1, int param2, int param3, int param4, UiWidget param5, byte param6) {
+    final boolean pointerPressed(int param0, int param1, int param2, int param3, int param4, UiWidget param5, byte param6) {
         int var12 = 0;
         RuntimeException stackIn_32_0 = null;
         StringBuilder stackIn_32_1 = null;
@@ -39,7 +39,7 @@ final class ri extends InteractiveWidget {
           if (param6 <= 5) {
             return false;
           }
-          if (!super.a(param0, param1, param2, param3, param4, param5, (byte) 89)) {
+          if (!super.pointerPressed(param0, param1, param2, param3, param4, param5, (byte) 89)) {
             return false;
           }
           var8_int = -param1 + (param4 - this.field_F);

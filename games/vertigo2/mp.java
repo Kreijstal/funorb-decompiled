@@ -59,17 +59,17 @@ final class mp {
             if (!ff.field_m) {
               return false;
             }
-            if (nm.field_E == 2 &&
+            if (ModalDialog.field_E == 2 &&
               !rm.a((byte) -126, ba.field_a, FullscreenFocusCanvas.field_b)) {
               return false;
             }
-            if (nm.field_E != 2) {
+            if (ModalDialog.field_E != 2) {
               if (var3 != 0) {
                 return false;
               }
               if (mf.b(-6390)) {
                 var4 = (String) null;
-                tf.a(nm.field_E, FullscreenFocusCanvas.field_b, -84, (String) null, param0, ap.field_c);
+                tf.a(ModalDialog.field_E, FullscreenFocusCanvas.field_b, -84, (String) null, param0, ap.field_c);
                 return true;
               }
               return true;
@@ -78,7 +78,7 @@ final class mp {
               return true;
             }
             var4Lifetime2 = (String) null;
-            tf.a(nm.field_E, FullscreenFocusCanvas.field_b, -84, (String) null, param0, ap.field_c);
+            tf.a(ModalDialog.field_E, FullscreenFocusCanvas.field_b, -84, (String) null, param0, ap.field_c);
             return true;
           }
           if (jo.field_b != 2) {
@@ -98,15 +98,15 @@ final class mp {
         }
         if (DebouncedFieldValidator.field_f == 11 &&
           ff.field_m) {
-          if (nm.field_E == 2 &&
+          if (ModalDialog.field_E == 2 &&
             !rm.a((byte) -126, ba.field_a, FullscreenFocusCanvas.field_b)) {
             return false;
           }
-          if (nm.field_E != 2) {
+          if (ModalDialog.field_E != 2) {
             if (var3 == 0) {
               if (mf.b(-6390)) {
                 var4Lifetime1 = (String) null;
-                tf.a(nm.field_E, FullscreenFocusCanvas.field_b, -84, (String) null, param0, ap.field_c);
+                tf.a(ModalDialog.field_E, FullscreenFocusCanvas.field_b, -84, (String) null, param0, ap.field_c);
               }
               return true;
             }
@@ -114,7 +114,7 @@ final class mp {
           }
           if (mf.b(-6390)) {
             var4Lifetime1Lifetime1 = (String) null;
-            tf.a(nm.field_E, FullscreenFocusCanvas.field_b, -84, (String) null, param0, ap.field_c);
+            tf.a(ModalDialog.field_E, FullscreenFocusCanvas.field_b, -84, (String) null, param0, ap.field_c);
           }
           return true;
         }

@@ -96,7 +96,7 @@ final class va extends InteractiveWidget {
         }
     }
 
-    final boolean a(int param0, int param1, int param2, int param3, int param4, UiWidget param5, byte param6) {
+    final boolean pointerPressed(int param0, int param1, int param2, int param3, int param4, UiWidget param5, byte param6) {
         RuntimeException stackIn_21_0 = null;
         StringBuilder stackIn_21_1 = null;
         String stackIn_22_2 = null;
@@ -109,7 +109,7 @@ final class va extends InteractiveWidget {
         CharSequence var13 = null;
         var12 = Torquing.field_u;
         try {
-          if (!super.a(param0, param1, param2, param3, param4, param5, (byte) 73)) {
+          if (!super.pointerPressed(param0, param1, param2, param3, param4, param5, (byte) 73)) {
             if (param6 > 5) {
               return false;
             }

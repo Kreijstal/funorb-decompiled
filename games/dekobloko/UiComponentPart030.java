@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class UiComponentPart030 extends UiComponentPart003 {
+abstract class UiComponentPart030 extends ModalDialog {
     private int integerState0765;
     private int integerState0766;
     private int integerState0767;
@@ -12,7 +12,7 @@ abstract class UiComponentPart030 extends UiComponentPart003 {
     private int integerState0769;
     private int integerState0770;
 
-    boolean computeBoolean0169(byte byteArgument1) {
+    boolean advanceDialogAnimation(byte byteArgument1) {
         int integerLocal1 = 0;
         int integerLocal2 = 0;
         int integerLocal3 = 0;
@@ -32,12 +32,12 @@ abstract class UiComponentPart030 extends UiComponentPart003 {
             integerLocal1 = integerLocal4 * (this.integerState0768 - this.integerState0765) / integerLocal5 + this.integerState0765;
             integerLocal2 = this.integerState0770 + integerLocal4 * (-this.integerState0770 + this.integerState0766) / integerLocal5;
           }
-          this.performAction0161(110, integerLocal1, integerLocal2);
+          this.setCenteredSize(110, integerLocal1, integerLocal2);
         }
         if (byteArgument1 < 15) {
           return true;
         }
-        return super.computeBoolean0169((byte) 90);
+        return super.advanceDialogAnimation((byte) 90);
     }
 
     final void performAction1555(int integerArgument1, int integerArgument2, int integerArgument3, int integerArgument4) {
@@ -45,7 +45,7 @@ abstract class UiComponentPart030 extends UiComponentPart003 {
           this.performAction1555(35, 121, -128, 19);
         }
         if (integerArgument2 <= 0) {
-          this.performAction0161(121, integerArgument1, integerArgument3);
+          this.setCenteredSize(121, integerArgument1, integerArgument3);
           return;
         }
         this.integerState0769 = integerArgument2;
@@ -60,14 +60,14 @@ abstract class UiComponentPart030 extends UiComponentPart003 {
         if (byteArgument1 != -73) {
           return;
         }
-        UiComponentPart006.uiComponentPart023State0001.performAction0185(new UiComponentPart017(), (byte) 121);
+        LabeledWidgetContainer.uiComponentPart023State0001.performAction0185(new UiComponentPart017(), (byte) 121);
     }
 
     void performAction0187(int integerArgument1) {
         if (this.integerState0769 <= 0) {
           return;
         }
-        this.performAction0161(112, this.integerState0768, this.integerState0766);
+        this.setCenteredSize(112, this.integerState0768, this.integerState0766);
         this.integerState0769 = 0;
         this.performAction0186((byte) -32);
         int integerLocal1 = 40 % ((integerArgument1 + 15) / 49);
@@ -82,18 +82,18 @@ abstract class UiComponentPart030 extends UiComponentPart003 {
         return stackBooleanLocal1;
     }
 
-    UiComponentPart030(UiComponentPart016 uiComponentPart016Argument1, int integerArgument2, int integerArgument3) {
+    UiComponentPart030(ModalDialogHost uiComponentPart016Argument1, int integerArgument2, int integerArgument3) {
         super(uiComponentPart016Argument1, integerArgument2, integerArgument3);
         this.integerState0767 = 0;
         this.integerState0769 = 0;
     }
 
-    boolean computeBoolean0167(byte byteArgument1) {
+    boolean snapDialogAnimation(byte byteArgument1) {
         this.performAction0187(38);
         if (byteArgument1 < 77) {
           stringState0519 = (String) null;
         }
-        return super.computeBoolean0167((byte) 125);
+        return super.snapDialogAnimation((byte) 125);
     }
 
     void performAction0186(byte byteArgument1) {

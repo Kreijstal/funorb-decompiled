@@ -136,20 +136,20 @@ final class nd extends jj {
         this.field_ab.field_H = false;
     }
 
-    nd(f param0, String param1) {
+    nd(ModalDialogHost param0, String param1) {
         super(param0, 300, 120);
         int var3_int = 0;
         try {
           this.field_bb = param1;
           if (null != this.field_bb) {
             var3_int = rg.field_o.textHeight(this.field_bb, 260, rg.field_o.field_H);
-            this.a(150 + var3_int, (byte) -128, 300);
+            this.setCenteredSize(150 + var3_int, (byte) -128, 300);
           }
           this.field_ab = new lk(13, 50, 274, 30, 15, 2113632, 4210752);
           this.field_cb = false;
           this.field_db = false;
           this.field_ab.field_H = true;
-          this.a((UiComponent) (this.field_ab), (byte) -63);
+          this.addChild((UiComponent) (this.field_ab), (byte) -63);
         } catch (RuntimeException runtimeException) {
           throw pf.wrapClientException((Throwable) ((Object) runtimeException), "nd.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

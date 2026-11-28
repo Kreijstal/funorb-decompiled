@@ -205,7 +205,7 @@ final class ne {
 
     final static void a(boolean param0) {
         if (null != wg.field_j) {
-          wg.field_j.a(true);
+          wg.field_j.snapAndPruneDialogs(true);
         }
         if (!param0) {
           ne.a((byte) -120);

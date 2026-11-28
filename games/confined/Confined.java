@@ -201,12 +201,12 @@ public final class Confined extends i {
           li.clearStaticReferences(1);
           rc.a(param0 ^ -30147);
           TextLayout.clearStaticReferences(-30048);
-          fj.clearStaticReferences(296);
+          UiWidget.clearStaticReferences(296);
           InteractiveWidget.clearStaticReferences((byte) 17);
-          am.clearStaticReferences(true);
+          SingleChildWidgetContainer.clearStaticReferences(true);
           ug.clearDeclaredStaticReferences((byte) -117);
-          oe.releaseDeclaredStaticReferences(-1);
-          ga.clearDeclaredStaticReferences(52);
+          ModalDialog.releaseDeclaredStaticReferences(-1);
+          DequeWidgetContainer.clearDeclaredStaticReferences(52);
           se.clearStaticReferences((byte) -122);
           rn.clearStaticReferences((byte) 123);
           lb.clearDeclaredStaticReferences(122);
@@ -228,7 +228,7 @@ public final class Confined extends i {
           r.clearStaticReferences(107);
           lk.clearStaticReferences(false);
           fd.clearStaticReferences((byte) -122);
-          la.clearDeclaredStaticReferences(param0 ^ 179);
+          LabeledWidgetContainer.clearDeclaredStaticReferences(param0 ^ 179);
           ValidatedTextField.clearDeclaredStaticReferences(-9466);
           EditableTextField.clearStaticReferences(false);
           sj.releaseDeclaredStaticReferences((byte) 70);
@@ -248,8 +248,8 @@ public final class Confined extends i {
           DirectByteStorage.clearDeclaredStaticReferences(-6348);
           RichTextLayout.a((byte) 87);
           wl.clearStaticReferences(false);
-          qe.clearDeclaredStaticReferences(44);
-          s.clearStaticReferences((byte) 92);
+          DraggableWidgetContainer.clearDeclaredStaticReferences(44);
+          DropTargetWidgetContainer.clearStaticReferences((byte) 92);
           e.clearStaticReferences(64);
           IntrusiveNodeHashTable.clearStaticReferences(param0 - 245);
           IntrusiveDeque.clearStaticReferences((byte) 108);
@@ -267,7 +267,7 @@ public final class Confined extends i {
           db.clearStaticReferences((byte) 118);
           qm.clearStaticReferences(87);
           cj.clearStaticReferences((byte) -107);
-          me.clearStaticReferences((byte) -86);
+          AlphaWidgetContainer.clearStaticReferences((byte) -86);
           fg.clearStaticReferences(param0 ^ 11084);
           cc.b(true);
           wa.a((byte) -114);
@@ -366,7 +366,7 @@ public final class Confined extends i {
             DiskCacheWorker.field_d = false;
           }
           boolean decompiledFrameRemainder0 = true;
-          if (ga.g(15214)) {
+          if (DequeWidgetContainer.g(15214)) {
             this.c((byte) -109);
             decompiledFrameRemainder0 = (var3 != 0);
           }
@@ -488,7 +488,7 @@ public final class Confined extends i {
             stackIn_9_0 = on.field_e ? 1 : 0;
           }
           var3 = stackIn_9_0;
-          if (ga.g(15214)) {
+          if (DequeWidgetContainer.g(15214)) {
             wf.a(-78, (java.awt.Canvas) (var2), var3 != 0);
             return;
           }
@@ -660,7 +660,7 @@ public final class Confined extends i {
               PrimaryNodeDeque.a(ic.field_d, 8, (byte) -30, 384, 14, qn.field_v.field_B.field_ub);
             }
             if (qn.field_v.field_B.field_tb > 0) {
-              PrimaryNodeDeque.a(s.field_L, 48, (byte) -30, 384, 15, qn.field_v.field_B.field_tb);
+              PrimaryNodeDeque.a(DropTargetWidgetContainer.field_L, 48, (byte) -30, 384, 15, qn.field_v.field_B.field_tb);
             }
             if (qn.field_v.field_B.field_zb > 0) {
               PrimaryNodeDeque.a(qn.field_x, 88, (byte) -30, 384, 16, qn.field_v.field_B.field_zb);
@@ -847,7 +847,7 @@ public final class Confined extends i {
             this.renderClientFrame(param0 ^ -51295);
             IsaacRandom.field_d = od.a(ka.field_N, "", "player/ship");
             var2_double = 0.3 / (double)IsaacRandom.field_d.b(153);
-            jb.a((byte) -100, var2_double, me.field_J);
+            jb.a((byte) -100, var2_double, AlphaWidgetContainer.field_J);
             jb.a((byte) -92, var2_double, ac.field_c);
             jb.a((byte) -86, var2_double, FrameTimer.field_b);
             di.field_d = od.a(ka.field_N, "", "player/wingpod");
@@ -866,7 +866,7 @@ public final class Confined extends i {
               }
             }
             nd.e((byte) 18);
-            am.g(param0 ^ 4351);
+            SingleChildWidgetContainer.g(param0 ^ 4351);
             return;
           }
           if (null == e.field_a) {
@@ -957,7 +957,7 @@ public final class Confined extends i {
               }
             }
             ka.field_N = null;
-            am.g(-4258);
+            SingleChildWidgetContainer.g(-4258);
             return;
           }
           if (li.field_m == null) {
@@ -1008,7 +1008,7 @@ public final class Confined extends i {
               stackIn_64_0 = -4258;
               break;
             }
-            am.g(stackIn_64_0);
+            SingleChildWidgetContainer.g(stackIn_64_0);
             return;
           }
           if (pn.field_a == null) {
@@ -1034,8 +1034,8 @@ public final class Confined extends i {
             dl.field_d = f.a(8364, pn.field_l, 96);
             jc.a(wl.field_a, 10265, 66.0f);
             this.renderClientFrame(51200);
-            s.field_M = nm.a(ih.field_d, "shields_invincible_flash_small", 1, "");
-            ue.field_u = f.a(8364, s.field_M, 96);
+            DropTargetWidgetContainer.field_M = nm.a(ih.field_d, "shields_invincible_flash_small", 1, "");
+            ue.field_u = f.a(8364, DropTargetWidgetContainer.field_M, 96);
             qd.field_c = nm.a(ih.field_d, "shields_invincible_flash_large", 1, "");
             jc.a(wl.field_a, 10265, 70.0f);
             this.renderClientFrame(51200);
@@ -1049,7 +1049,7 @@ public final class Confined extends i {
               if (14 <= var3) {
                 aa.field_b = nm.a(ih.field_d, "player_shot", 1, "");
                 rm.field_K = dh.a(false, "power_shot", "", ih.field_d);
-                qe.field_O = nm.a(ih.field_d, "enemy_shot", 1, "");
+                DraggableWidgetContainer.field_O = nm.a(ih.field_d, "enemy_shot", 1, "");
                 jc.a(wl.field_a, 10265, 76.0f);
                 this.renderClientFrame(51200);
                 ImageProducerRasterBuffer.field_o = nm.a(ih.field_d, "charge_cannon_blast", 1, "");
@@ -1062,7 +1062,7 @@ public final class Confined extends i {
                 AcceleratingProjectile.field_T = va.a(123, nm.a(ih.field_d, "menu_button_frame", 1, ""));
                 lh.field_c = va.a(param0 ^ -44, nm.a(ih.field_d, "menu_button_frame_raised", 1, ""));
                 ui.field_a = dh.a(false, "normal_key", "", ih.field_d);
-                qe.field_J = dh.a(false, "wide_key", "", ih.field_d);
+                DraggableWidgetContainer.field_J = dh.a(false, "wide_key", "", ih.field_d);
                 MatchingFieldValidator.field_j = dh.a(false, "arrow_keys", "", ih.field_d);
                 fa.field_U = dh.a(false, "mouse", "", ih.field_d);
                 jc.a(wl.field_a, 10265, 80.0f);
@@ -1085,7 +1085,7 @@ public final class Confined extends i {
             ih.field_d = null;
             oj.field_C = null;
             ti.a(PowerUpPickup.field_W);
-            am.g(-4258);
+            SingleChildWidgetContainer.g(-4258);
             return;
           }
           if (di.field_a == null) {
@@ -1132,7 +1132,7 @@ public final class Confined extends i {
             ProjectileRay.field_fb = fk.a(jd.field_b, "", "enemy-shot-ambient").a();
             FrameTimer.field_e = fk.a(jd.field_b, "", "enemy-shot-hit").a();
             we.field_b = fk.a(jd.field_b, "", "enemy-laser-ambient").a();
-            am.g(-4258);
+            SingleChildWidgetContainer.g(-4258);
             return;
           }
           if (null == rd.field_Hb) {
@@ -1163,7 +1163,7 @@ public final class Confined extends i {
             pe.field_o = fk.a(jd.field_b, "", "cluster-missile-fire").a();
             MatchingFieldValidator.field_i = fk.a(jd.field_b, "", "nuclear-missile-fire").a();
             AccountRegistrationPanel.field_cb = fk.a(jd.field_b, "", "concussion-missile-ambient").a();
-            fj.field_G = fk.a(jd.field_b, "", "homing-missile-ambient").a();
+            UiWidget.field_G = fk.a(jd.field_b, "", "homing-missile-ambient").a();
             un.field_h = fk.a(jd.field_b, "", "cluster-missile-ambient").a();
             TunnelEntity.field_x = fk.a(jd.field_b, "", "nuclear-missile-ambient").a();
             SpriteGeometry.field_y = fk.a(jd.field_b, "", "cluster-shell-ambient").a();
@@ -1174,7 +1174,7 @@ public final class Confined extends i {
             jn.field_U = fk.a(jd.field_b, "", "rock-explode").a();
             aj.field_a = fk.a(jd.field_b, "", "shield-lost-siren").a();
             rj.field_b = fk.a(jd.field_b, "", "interface-ambient").a();
-            am.g(-4258);
+            SingleChildWidgetContainer.g(-4258);
             return;
           }
           if (ol.field_c == null) {
@@ -1200,7 +1200,7 @@ public final class Confined extends i {
             TextLayout.field_h[0] = ph.a(AccountCreationResultPanel.field_Bb, "", "boss-sphere-armed-ambient").b();
             ol.field_c = fk.a(jd.field_b, "", "boss-bird-flap").a();
             gk.field_q = fk.a(jd.field_b, "", "boss-bird-antiflap").a();
-            am.g(param0 - 4163);
+            SingleChildWidgetContainer.g(param0 - 4163);
             return;
           }
           if (GameAppletShell.field_c == null) {
@@ -1214,7 +1214,7 @@ public final class Confined extends i {
             WingPod.field_R = new dd(GameAppletShell.field_c);
             WingPod.field_R.b(64 * hd.field_f >> 7);
             WingPod.field_R.b(DirectByteStorage.field_j[0], 32);
-            am.g(-4258);
+            SingleChildWidgetContainer.g(-4258);
             return;
           }
           qn.a(param0 + 183, 50);

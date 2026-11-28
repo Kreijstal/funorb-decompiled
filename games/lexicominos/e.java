@@ -59,7 +59,7 @@ final class e {
         try {
           var2_int = param0.length();
           if (0 == var2_int) {
-            stackIn_4_0 = w.field_k;
+            stackIn_4_0 = UiWidget.field_k;
             return stackIn_4_0;
           }
           if (var2_int > 255) {
@@ -72,7 +72,7 @@ final class e {
           }
           var3 = NetworkArchiveRequest.a(param0, '.', (byte) -125);
           if (2 > var3.length) {
-            stackIn_14_0 = w.field_k;
+            stackIn_14_0 = UiWidget.field_k;
             return stackIn_14_0;
           }
           var4 = var3;

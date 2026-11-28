@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class NameSuggestionsPanel extends vd implements WidgetActivationListener {
+final class NameSuggestionsPanel extends DequeWidgetContainer implements WidgetActivationListener {
     private String[] field_H;
     private InteractiveWidget[] field_M;
     private NameSuggestionListener field_K;
@@ -11,8 +11,8 @@ final class NameSuggestionsPanel extends vd implements WidgetActivationListener 
     static String field_L;
     static int[] field_E;
 
-    final void a(int param0, int param1, byte param2, int param3) {
-        super.a(param0, param1, (byte) 126, param3);
+    final void drawWidget(int param0, int param1, byte param2, int param3) {
+        super.drawWidget(param0, param1, (byte) 126, param3);
         if (param3 != 0) {
           return;
         }
@@ -26,7 +26,7 @@ final class NameSuggestionsPanel extends vd implements WidgetActivationListener 
         }
     }
 
-    final boolean a(int param0, ag param1, int param2, char param3) {
+    final boolean handleKey(int param0, UiWidget param1, int param2, char param3) {
         RuntimeException var5 = null;
         boolean stackIn_7_0 = false;
         boolean stackIn_10_0 = false;
@@ -35,17 +35,17 @@ final class NameSuggestionsPanel extends vd implements WidgetActivationListener 
         String stackIn_16_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (super.a(param0, param1, param2, param3)) {
+          if (super.handleKey(param0, param1, param2, param3)) {
             return true;
           }
           if (param2 == 98) {
-            stackIn_7_0 = this.a(param1, (byte) -120);
+            stackIn_7_0 = this.focusPreviousChild(param1, (byte) -120);
             return stackIn_7_0;
           }
           if (param2 != 99) {
             return false;
           }
-          stackIn_10_0 = this.b((byte) -26, param1);
+          stackIn_10_0 = this.focusNextChild((byte) -26, param1);
           return stackIn_10_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -90,17 +90,17 @@ final class NameSuggestionsPanel extends vd implements WidgetActivationListener 
             var7 = 0;
             var5Lifetime1 = var7;
             while (var7 < var3_int) {
-              this.field_M[var7] = new InteractiveWidget(this.field_H[var7], (mh) (this));
-              this.field_M[var7].field_h = (nn) ((Object) var4);
+              this.field_M[var7] = new InteractiveWidget(this.field_H[var7], (WidgetEventListener) (this));
+              this.field_M[var7].field_h = (WidgetRenderer) ((Object) var4);
               this.field_M[var7].field_i = ArchiveProvider.field_b;
-              this.field_M[var7].a(80, 20 + 16 * var7, 0, 0, 15);
-              this.a(51448, this.field_M[var7]);
+              this.field_M[var7].setBounds(80, 20 + 16 * var7, 0, 0, 15);
+              this.addChild(51448, this.field_M[var7]);
               var7++;
             }
-            this.field_M[var3_int] = new InteractiveWidget(oa.field_h, (mh) (this));
-            this.field_M[var3_int].field_h = (nn) ((Object) var4);
-            this.field_M[var3_int].a(100, 20 + 16 * var3_int + 16, 0, 0, 15);
-            this.a(51448, this.field_M[var3_int]);
+            this.field_M[var3_int] = new InteractiveWidget(oa.field_h, (WidgetEventListener) (this));
+            this.field_M[var3_int].field_h = (WidgetRenderer) ((Object) var4);
+            this.field_M[var3_int].setBounds(100, 20 + 16 * var3_int + 16, 0, 0, 15);
+            this.addChild(51448, this.field_M[var3_int]);
             return;
           }
           this.field_H = null;
@@ -130,7 +130,7 @@ final class NameSuggestionsPanel extends vd implements WidgetActivationListener 
     }
 
     NameSuggestionsPanel(NameSuggestionListener param0) {
-        super(0, 0, 0, 0, (nn) null);
+        super(0, 0, 0, 0, (WidgetRenderer) null);
         try {
           this.field_K = param0;
         } catch (RuntimeException runtimeException) {

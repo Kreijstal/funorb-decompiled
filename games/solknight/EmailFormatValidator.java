@@ -99,7 +99,7 @@ final class EmailFormatValidator extends TextFieldValidator {
           }
           var8 = param1.requestDisplayModes(7721);
           while (0 == var8.status) {
-            i.sleepMillis((byte) 82, 10L);
+            ModalDialogHost.sleepMillis((byte) 82, 10L);
           }
           if (var8.status == 2) {
             stackIn_11_0 = new uj[]{};

@@ -68,7 +68,7 @@ final class AccountRequestState {
               me.field_a[var5] = ij.field_a[var5];
             }
             me.field_a[-3 + var4] = "";
-            me.field_a[-2 + var4] = ck.field_I;
+            me.field_a[-2 + var4] = LabeledWidgetContainer.field_I;
             wd.field_d[var4 - 2] = 0;
             dd.field_j[0] = 4;
             me.field_a[-1 + var4] = gh.field_i;

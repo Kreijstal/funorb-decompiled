@@ -16,7 +16,7 @@ final class mk extends ai {
         try {
           if (ui.field_c == null) {
             ui.field_c = new jj(TunnelCamera.field_Z, cb.field_b);
-            TunnelCamera.field_Z.c(ui.field_c, 0);
+            TunnelCamera.field_Z.showDialog(ui.field_c, 0);
           }
           ui.field_c.a(-67, param1, param2, param0);
           SoftwareRasterizer.clearRaster();

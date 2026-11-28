@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class b implements fe {
+final class b implements WidgetRenderer {
     private int field_c;
     private int field_m;
     private BitmapFont field_g;
@@ -19,8 +19,8 @@ final class b implements fe {
     static String field_k;
     static String field_j;
 
-    public final void a(byte param0, int param1, boolean param2, fj param3, int param4) {
-        fj stackIn_3_0 = null;
+    public final void paintWidget(byte param0, int param1, boolean param2, UiWidget param3, int param4) {
+        UiWidget stackIn_3_0 = null;
         RuntimeException stackIn_17_0 = null;
         StringBuilder stackIn_17_1 = null;
         String stackIn_18_2 = null;
@@ -30,11 +30,11 @@ final class b implements fe {
         int var8 = 0;
         int var9 = 0;
         int var10 = 0;
-        fj var11 = null;
+        UiWidget var11 = null;
         fa var12 = null;
         try {
           if (param3 instanceof fa) {
-            stackIn_3_0 = (fj) (param3);
+            stackIn_3_0 = (UiWidget) (param3);
           } else {
             stackIn_3_0 = null;
           }
@@ -49,8 +49,8 @@ final class b implements fe {
           SoftwareRasterizer.fillRectangle(param1 + param3.field_q, param3.field_m + param4, param3.field_F, param3.field_z, this.field_c);
           var8 = param3.field_q + (param1 + this.field_h);
           if (param0 >= -97) {
-            var11 = (fj) null;
-            this.a((byte) 21, -47, false, (fj) null, -45);
+            var11 = (UiWidget) null;
+            this.paintWidget((byte) 21, -47, false, (UiWidget) null, -45);
           }
           var9 = param3.field_m + (param4 + this.field_m);
           SoftwareRasterizer.drawRectangleShadow(var8, var9, this.field_i, this.field_d, 5592405);

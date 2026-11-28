@@ -44,20 +44,20 @@ final class DisplayNameSelectionPanel extends WidgetContainer implements NameSug
         int var3 = 20;
         int var4 = 4;
         int var5 = 200;
-        var2.a(20, 50, (byte) 59, 270, var3);
+        var2.setBounds(20, 50, (byte) 59, 270, var3);
         var3 += 50;
-        this.c(var2, -123);
+        this.addChild(var2, -123);
         var3 = var3 + (5 + this.a(var3, this.field_G, DreamsAnimation.field_v, 170, saa.field_u, false));
-        this.field_F.a(-var5 + 496 >> 1, 40, (byte) 59, var5, var3);
-        this.field_C.a(var4 + 3, 40, (byte) 59, 60, var3 + 15);
+        this.field_F.setBounds(-var5 + 496 >> 1, 40, (byte) 59, var5, var3);
+        this.field_C.setBounds(var4 + 3, 40, (byte) 59, 60, var3 + 15);
         this.field_C.listener = (WidgetListener) (this);
         this.field_F.listener = (WidgetListener) (this);
-        this.c(this.field_F, 91);
-        this.c(this.field_C, 27);
+        this.addChild(this.field_F, 91);
+        this.addChild(this.field_C, 27);
         this.field_E = new NameSuggestionsPanel((NameSuggestionListener) (this));
-        this.field_E.a(60 + this.field_G.width + this.field_G.x, 150, (byte) 59, -this.field_G.width - this.field_G.x + this.width - 60, 20);
-        this.c(this.field_E, 74);
-        this.a(0, 55 + var3 + var4, (byte) 59, 496, 0);
+        this.field_E.setBounds(60 + this.field_G.width + this.field_G.x, 150, (byte) 59, -this.field_G.width - this.field_G.x + this.width - 60, 20);
+        this.addChild(this.field_E, 74);
+        this.setBounds(0, 55 + var3 + var4, (byte) 59, 496, 0);
     }
 
     public final void onNameSuggestionsRefreshRequested(int param0) {
@@ -173,13 +173,13 @@ final class DisplayNameSelectionPanel extends WidgetContainer implements NameSug
             return true;
           }
           if (98 == param1) {
-            stackIn_5_0 = this.a(-123, param3);
+            stackIn_5_0 = this.focusPreviousChild(-123, param3);
             return stackIn_5_0;
           }
           if (param1 != 99) {
             return false;
           }
-          stackIn_8_0 = this.b(param3, param0 ^ 11);
+          stackIn_8_0 = this.focusNextChild(param3, param0 ^ 11);
           return stackIn_8_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -199,7 +199,7 @@ final class DisplayNameSelectionPanel extends WidgetContainer implements NameSug
         RuntimeException var8 = null;
         int var9 = 0;
         nf var10 = null;
-        ge var11 = null;
+        LabeledWidgetContainer var11 = null;
         int stackIn_1_0 = 0;
         RuntimeException stackIn_4_0 = null;
         StringBuilder stackIn_4_1 = null;
@@ -210,12 +210,12 @@ final class DisplayNameSelectionPanel extends WidgetContainer implements NameSug
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var11 = new ge(20, param5, param2 + 120, 25, param4, false, 120, 3, jca.field_a, 16777215, param0);
-          this.c(var11, 111);
+          var11 = new LabeledWidgetContainer(20, param5, param2 + 120, 25, param4, false, 120, 3, jca.field_a, 16777215, param0);
+          this.addChild(var11, 111);
           var9 = -90 / ((param3 - 25) / 34);
           var10 = new nf(((FieldValidatorProvider) ((Object) param4)).getFieldValidator(16728128), param1, 126, param5 + var11.height, 25 + param2, param6);
           var10.listener = (WidgetListener) (this);
-          this.c(var10, 30);
+          this.addChild(var10, 30);
           stackIn_1_0 = var10.height + var11.height;
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

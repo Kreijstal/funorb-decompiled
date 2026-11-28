@@ -55,13 +55,13 @@ final class RageSpecial extends SpecialOrder {
     }
 
     final static void a(int param0, Sprite[] param1, byte param2, int param3) {
-        raa.field_I = new lda(param1);
+        DraggableWidgetContainer.field_I = new lda(param1);
         wo.field_j = param0;
         if (param2 != 15) {
           return;
         }
         try {
-          ge.field_I = param3;
+          LabeledWidgetContainer.field_I = param3;
           EmailFormatValidator.e((byte) 122);
         } catch (RuntimeException runtimeException) {
           throw pe.wrapException((Throwable) ((Object) runtimeException), "bla.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');

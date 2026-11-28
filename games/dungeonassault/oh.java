@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class oh implements ca {
+final class oh implements WidgetRenderer {
     static String field_a;
     static IntrusiveDeque field_j;
     private BitmapFont field_m;
@@ -142,8 +142,8 @@ final class oh implements ca {
         }
     }
 
-    public final void a(byte param0, lm param1, int param2, int param3, boolean param4) {
-        lm stackIn_3_0 = null;
+    public final void paintWidget(byte param0, UiWidget param1, int param2, int param3, boolean param4) {
+        UiWidget stackIn_3_0 = null;
         RuntimeException stackIn_19_0 = null;
         StringBuilder stackIn_19_1 = null;
         String stackIn_20_2 = null;
@@ -156,7 +156,7 @@ final class oh implements ca {
         rb var11 = null;
         try {
           if (param1 instanceof rb) {
-            stackIn_3_0 = (lm) (param1);
+            stackIn_3_0 = (UiWidget) (param1);
           } else {
             stackIn_3_0 = null;
           }

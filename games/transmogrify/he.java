@@ -41,10 +41,10 @@ final class he extends IntrusiveNode {
             ByteStorage.a(false, (String[]) null);
           } else {
             if (param3 < 100) {
-              de.field_a = mk.createAccountErrorResult(242763393, param2, param3);
+              de.field_a = ModalDialog.createAccountErrorResult(242763393, param2, param3);
             } else {
               if (param3 > 105) {
-                de.field_a = mk.createAccountErrorResult(242763393, param2, param3);
+                de.field_a = ModalDialog.createAccountErrorResult(242763393, param2, param3);
               } else {
                 var4 = args;
                 ByteStorage.a(false, var4);

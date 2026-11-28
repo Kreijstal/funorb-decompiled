@@ -15,7 +15,7 @@ abstract class MenuLayer {
           GzipDecompressor.a((byte) -121, var1);
           be.a();
           SoftwareRasterizer.clearRaster();
-          jh.field_z = 0;
+          SingleChildWidgetContainer.field_z = 0;
           so.b(119);
           var2 = var1.copy();
           for (var3 = 0; var3 < 15; var3++) {

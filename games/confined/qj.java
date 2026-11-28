@@ -78,7 +78,7 @@ final class qj {
     }
 
     final static String a(int param0) {
-        if (oe.field_Q == ValidatedTextField.field_fb) {
+        if (ModalDialog.field_Q == ValidatedTextField.field_fb) {
           return rd.field_Jb;
         }
         if (!fb.field_a.c(param0 + 17236)) {

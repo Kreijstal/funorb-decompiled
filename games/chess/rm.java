@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class rm extends mf {
+final class rm extends UiWidget {
     static dd field_H;
     static tk field_J;
     static int field_S;
@@ -25,7 +25,7 @@ final class rm extends mf {
 
     final static void a(byte param0, String param1) {
         try {
-          lf.field_N = param1;
+          AlphaWidgetContainer.field_N = param1;
           if (param0 >= -41) {
             field_U = 107;
           }
@@ -46,8 +46,8 @@ final class rm extends mf {
         this(param0, param1, param2, param3, param4, param5, param6, (16711422 & param5) >> 1, 8355711 & param6 >> 1);
     }
 
-    final void a(int param0, int param1, int param2, int param3, int param4) {
-        super.a(param0, (int) (char)param1, param2, param3, param4);
+    final void setBounds(int param0, int param1, int param2, int param3, int param4) {
+        super.setBounds(param0, (int) (char)param1, param2, param3, param4);
         this.e((byte) 53);
     }
 
@@ -105,7 +105,7 @@ final class rm extends mf {
         }
     }
 
-    final void a(int param0, int param1, int param2, int param3) {
+    final void drawWidget(int param0, int param1, int param2, int param3) {
         if (param1 != 0) {
           return;
         }
@@ -134,7 +134,7 @@ final class rm extends mf {
         }
     }
 
-    final void a(int param0, int param1, mf param2, int param3) {
+    final void updatePointer(int param0, int param1, UiWidget param2, int param3) {
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         String stackIn_9_2 = null;
@@ -305,7 +305,7 @@ final class rm extends mf {
         this.field_X = param8;
         this.field_K = param6;
         this.field_T = param4;
-        this.a(param1, 34, param3, param2, param0);
+        this.setBounds(param1, 34, param3, param2, param0);
     }
 
     static {

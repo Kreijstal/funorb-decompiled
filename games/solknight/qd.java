@@ -134,25 +134,25 @@ final class qd {
     }
 
     final static boolean b(byte param0) {
-        if (te.field_O == -1) {
+        if (AlphaWidgetContainer.field_O == -1) {
           if (!bf.c(79, 1)) {
             return false;
           }
-          te.field_O = te.field_N.readUnsignedByte(255);
-          te.field_N.position = 0;
+          AlphaWidgetContainer.field_O = AlphaWidgetContainer.field_N.readUnsignedByte(255);
+          AlphaWidgetContainer.field_N.position = 0;
         }
-        if (te.field_O == -2) {
+        if (AlphaWidgetContainer.field_O == -2) {
           if (!bf.c(36, 2)) {
             return false;
           }
-          te.field_O = te.field_N.readUnsignedShort(-22);
-          te.field_N.position = 0;
+          AlphaWidgetContainer.field_O = AlphaWidgetContainer.field_N.readUnsignedShort(-22);
+          AlphaWidgetContainer.field_N.position = 0;
         }
         if (param0 <= 124) {
           qd.clearStaticReferences(-104);
-          return bf.c(100, te.field_O);
+          return bf.c(100, AlphaWidgetContainer.field_O);
         }
-        return bf.c(100, te.field_O);
+        return bf.c(100, AlphaWidgetContainer.field_O);
     }
 
     qd(int param0) {

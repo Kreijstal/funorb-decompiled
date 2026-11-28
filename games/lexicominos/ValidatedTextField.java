@@ -10,7 +10,7 @@ final class ValidatedTextField extends EditableTextField implements FieldValidat
     private FieldValidator field_V;
     static he field_P;
 
-    ValidatedTextField(String param0, vd param1, int param2) {
+    ValidatedTextField(String param0, WidgetEventListener param1, int param2) {
         super(param0, param1, param2);
     }
 
@@ -164,8 +164,8 @@ final class ValidatedTextField extends EditableTextField implements FieldValidat
 
     final String getTooltipText(int param0) {
         if (param0 <= 121) {
-          w var3 = (w) null;
-          this.a((byte) 68, (w) null, 113, 107);
+          UiWidget var3 = (UiWidget) null;
+          this.updatePointer((byte) 68, (UiWidget) null, 113, 107);
         }
         if (!this.field_m) {
           return null;
@@ -339,9 +339,9 @@ final class ValidatedTextField extends EditableTextField implements FieldValidat
         }
     }
 
-    final void a(byte param0, w param1, int param2, int param3) {
+    final void updatePointer(byte param0, UiWidget param1, int param2, int param3) {
         try {
-          super.a(param0, param1, param2, param3);
+          super.updatePointer(param0, param1, param2, param3);
           this.field_R = -this.field_t + (bk.field_b - param3);
         } catch (RuntimeException runtimeException) {
           throw ld.wrapClientException((Throwable) ((Object) runtimeException), "cl.FA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');

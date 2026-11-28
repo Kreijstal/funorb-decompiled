@@ -44,14 +44,14 @@ final class MixedSupport032 {
         RuntimeException caughtExceptionLocal1 = null;
         RuntimeException runtimeExceptionLocal2 = null;
         try {
-          MixedSupport005.uiComponentPart016State0001.performAction0834(true);
+          MixedSupport005.uiComponentPart016State0001.closeAllDialogs(true);
           if (TextHotspotBounds.uiComponentPart026State0001 == null) {
             TextHotspotBounds.uiComponentPart026State0001 = new UiComponentPart026(MixedSupport005.uiComponentPart016State0001, MixedSupport029.stringState0148);
           }
           if (integerArgument1 != -1199770620) {
             stringState0157 = (String) null;
           }
-          MixedSupport005.uiComponentPart016State0001.performAction0831((byte) -119, TextHotspotBounds.uiComponentPart026State0001);
+          MixedSupport005.uiComponentPart016State0001.showDialog((byte) -119, TextHotspotBounds.uiComponentPart026State0001);
           return;
         } catch (java.lang.RuntimeException caughtParameterLocal3) {
           caughtExceptionLocal1 = caughtParameterLocal3;

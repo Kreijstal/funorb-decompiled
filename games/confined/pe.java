@@ -127,7 +127,7 @@ final class pe extends IntrusiveNode {
     final static void a(java.applet.Applet param0, byte param1) {
         try {
           ci.a(param0, "", -81);
-          me.a((byte) 74, param0);
+          AlphaWidgetContainer.a((byte) 74, param0);
           if (param1 != 11) {
             field_o = (PcmSample) null;
           }

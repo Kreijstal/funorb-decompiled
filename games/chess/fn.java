@@ -15,13 +15,13 @@ final class fn {
           param1 = false;
         }
         if (param0 == -119) {
-          lf.a(-1, param1);
-          kb.f((byte) 100);
+          AlphaWidgetContainer.a(-1, param1);
+          DraggableWidgetContainer.f((byte) 100);
           return;
         }
         fn.resetStaticState(108);
-        lf.a(-1, param1);
-        kb.f((byte) 100);
+        AlphaWidgetContainer.a(-1, param1);
+        DraggableWidgetContainer.f((byte) 100);
     }
 
     final static FullscreenFocusCanvas createFullscreenCanvas(int param0, int param1, int param2, int param3, int param4, PlatformTaskDispatcher param5) {
@@ -110,7 +110,7 @@ final class fn {
 
     final static boolean a(int param0, int param1, int param2, int param3) {
         if (qf.field_b) {
-          return AccountRegistrationPanel.field_O.a(d.field_Ib, 73, vg.field_a);
+          return AccountRegistrationPanel.field_O.processKeyInput(d.field_Ib, 73, vg.field_a);
         }
         if (an.field_c) {
           return vh.a(83, param3, param2);

@@ -87,7 +87,7 @@ final class ReturnedShape {
         try {
           if (null == TextHotspotBounds.uiComponentPart026State0001) {
             TextHotspotBounds.uiComponentPart026State0001 = new UiComponentPart026(MixedSupport005.uiComponentPart016State0001, MixedSupport029.stringState0148);
-            MixedSupport005.uiComponentPart016State0001.performAction0831((byte) -107, TextHotspotBounds.uiComponentPart026State0001);
+            MixedSupport005.uiComponentPart016State0001.showDialog((byte) -107, TextHotspotBounds.uiComponentPart026State0001);
           }
           TextHotspotBounds.uiComponentPart026State0001.performAction1391(booleanArgument2, floatArgument3, 4210752, stringArgument4);
           SoftwareRaster.clearRaster();

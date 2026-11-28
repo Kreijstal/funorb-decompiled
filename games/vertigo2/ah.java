@@ -193,7 +193,7 @@ class ah extends mo {
                 }
                 var2 = en.a((byte) -50, "INSTRUCTIONS_P1");
                 if (var2 != null) {
-                  sd.field_K = in.a(0, var2);
+                  ModalDialogHost.field_K = in.a(0, var2);
                 }
                 var2 = en.a((byte) -121, "INSTRUCTIONS_CONTROLS");
                 if (null != var2) {
@@ -1400,7 +1400,7 @@ class ah extends mo {
                 }
                 var2 = en.a((byte) -89, "TIMEATTACK_YOURTIME");
                 if (var2 != null) {
-                  wq.field_L = in.a(0, var2);
+                  AlphaWidgetContainer.field_L = in.a(0, var2);
                 }
                 var2 = en.a((byte) -31, "TIMEATTACK_YOURBESTTIME");
                 if (var2 != null) {

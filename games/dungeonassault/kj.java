@@ -63,11 +63,11 @@ final class kj extends IntrusiveNode {
         RuntimeException var2 = null;
         var3 = DungeonAssault.field_K;
         try {
-          ii.a(SectorCacheStore.field_d, (byte) 93, ib.field_e, param1, param0, lc.field_d, true);
+          DequeWidgetContainer.a(SectorCacheStore.field_d, (byte) 93, ib.field_e, param1, param0, lc.field_d, true);
           for (var2_int = 0; var2_int < lc.field_d; var2_int++) {
             ol.field_k[param0 + var2_int] = var2_int;
           }
-          ii.a(n.field_d, (byte) -65, da.field_B, param0, param0 + param0, lc.field_d + param0, false);
+          DequeWidgetContainer.a(n.field_d, (byte) -65, SingleChildWidgetContainer.field_B, param0, param0 + param0, lc.field_d + param0, false);
           if (param0 < lc.field_d) {
             lc.field_d = param0;
           }
@@ -83,7 +83,7 @@ final class kj extends IntrusiveNode {
         try {
           if (null == MusicPatchPcmStream.field_r) {
             MusicPatchPcmStream.field_r = new wi(lg.field_w, ub.field_o);
-            lg.field_w.a(MusicPatchPcmStream.field_r, -1);
+            lg.field_w.showDialog(MusicPatchPcmStream.field_r, -1);
           }
           MusicPatchPcmStream.field_r.a(param1, param0, param3, (byte) 45);
           if (param2 != -2958) {

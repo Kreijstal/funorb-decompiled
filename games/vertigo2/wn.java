@@ -552,7 +552,7 @@ final class wn {
           }
           if (null == lo.field_k) {
             if (gn.field_d) {
-              if (qg.b(false) <= 30000L) {
+              if (DraggableWidgetContainer.b(false) <= 30000L) {
                 nk.field_Kb = ba.field_c;
               } else {
                 nk.field_Kb = tf.field_m;

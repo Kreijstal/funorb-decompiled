@@ -101,7 +101,7 @@ class IntrusiveNode {
           }
           var19 = var15;
           var20 = var16;
-          SoftwareRasterizer.saveClip(fi.field_t);
+          SoftwareRasterizer.saveClip(SingleChildWidgetContainer.field_t);
           if (var19 > var20) {
             var20 = param6 + param1 * var9 / (var10 + var9);
             var19 = param6 + param1 * var9 / (var10 + var9);
@@ -109,22 +109,22 @@ class IntrusiveNode {
           if (null != param0[0]) {
             SoftwareRasterizer.intersectClip(param3, param6, var17, var19);
             he.a(param0[0], param4, param3, (byte) 67, param6);
-            SoftwareRasterizer.restoreClip(fi.field_t);
+            SoftwareRasterizer.restoreClip(SingleChildWidgetContainer.field_t);
           }
           if (null != param0[2]) {
             SoftwareRasterizer.intersectClip(var18, param6, var11, var19);
             he.a(param0[2], param4, var14, (byte) 108, param6);
-            SoftwareRasterizer.restoreClip(fi.field_t);
+            SoftwareRasterizer.restoreClip(SingleChildWidgetContainer.field_t);
           }
           if (null != param0[6]) {
             SoftwareRasterizer.intersectClip(param3, var20, var17, var12);
             he.a(param0[6], param4, param3, (byte) 56, var16);
-            SoftwareRasterizer.restoreClip(fi.field_t);
+            SoftwareRasterizer.restoreClip(SingleChildWidgetContainer.field_t);
           }
           if (param0[8] != null) {
             SoftwareRasterizer.intersectClip(var18, var20, var11, var12);
             he.a(param0[8], param4, var14, (byte) 110, var16);
-            SoftwareRasterizer.restoreClip(fi.field_t);
+            SoftwareRasterizer.restoreClip(SingleChildWidgetContainer.field_t);
           }
           if (null != param0[1] &&
             0 != param0[1].field_r) {
@@ -132,7 +132,7 @@ class IntrusiveNode {
             for (var21 = var13; var14 > var21; var21 = var21 + param0[1].field_r) {
               he.a(param0[1], param4, var21, (byte) 84, param6);
             }
-            SoftwareRasterizer.restoreClip(fi.field_t);
+            SoftwareRasterizer.restoreClip(SingleChildWidgetContainer.field_t);
           }
           if (null != param0[7] &&
             param0[7].field_r != 0) {
@@ -140,7 +140,7 @@ class IntrusiveNode {
             for (var21Lifetime1 = var13; var14 > var21Lifetime1; var21Lifetime1 = var21Lifetime1 + param0[7].field_r) {
               he.a(param0[7], param4, var21Lifetime1, (byte) 109, var16);
             }
-            SoftwareRasterizer.restoreClip(fi.field_t);
+            SoftwareRasterizer.restoreClip(SingleChildWidgetContainer.field_t);
           }
           if (null != param0[3] &&
             param0[3].field_s != 0) {
@@ -148,7 +148,7 @@ class IntrusiveNode {
             for (var21Lifetime2 = var15; var21Lifetime2 < var16; var21Lifetime2 = var21Lifetime2 + param0[3].field_s) {
               he.a(param0[3], param4, param3, (byte) 77, var21Lifetime2);
             }
-            SoftwareRasterizer.restoreClip(fi.field_t);
+            SoftwareRasterizer.restoreClip(SingleChildWidgetContainer.field_t);
           }
           if (null != param0[5] &&
             param0[5].field_s != 0) {
@@ -156,7 +156,7 @@ class IntrusiveNode {
             for (var21Lifetime3 = var15; var21Lifetime3 < var16; var21Lifetime3 = var21Lifetime3 + param0[5].field_s) {
               he.a(param0[5], param4, var14, (byte) 82, var21Lifetime3);
             }
-            SoftwareRasterizer.restoreClip(fi.field_t);
+            SoftwareRasterizer.restoreClip(SingleChildWidgetContainer.field_t);
           }
           if (null != param0[4] &&
             param0[4].field_r != 0) {
@@ -169,7 +169,7 @@ class IntrusiveNode {
                 he.a(param0[4], param4, var22, (byte) 92, var21Lifetime4);
               }
             }
-            SoftwareRasterizer.restoreClip(fi.field_t);
+            SoftwareRasterizer.restoreClip(SingleChildWidgetContainer.field_t);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -199,13 +199,13 @@ class IntrusiveNode {
         RuntimeException decompiledCaughtException = null;
         var2 = Transmogrify.field_A ? 1 : 0;
         try {
-          ResourceArchive.field_f.a(be.field_x, MidiPcmStream.field_R, true, 4);
+          ResourceArchive.field_f.processPointerInput(be.field_x, MidiPcmStream.field_R, true, 4);
           if (param0 != -1) {
             field_d = (BinaryBitmapFont) null;
           }
-          ResourceArchive.field_f.l(0);
+          ResourceArchive.field_f.advanceDialogs(0);
           while (pc.b(param0 ^ -97)) {
-            ResourceArchive.field_f.a(param0 - 80, sg.field_n, ch.field_d);
+            ResourceArchive.field_f.processKeyInput(param0 - 80, sg.field_n, ch.field_d);
           }
           if (sg.field_e != -1) {
             var1_int = sg.field_e;

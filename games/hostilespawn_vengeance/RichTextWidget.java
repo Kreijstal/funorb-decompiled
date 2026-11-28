@@ -95,10 +95,10 @@ class RichTextWidget extends InteractiveWidget {
         }
     }
 
-    void a(int param0, int param1, byte param2, int param3) {
+    void drawWidget(int param0, int param1, byte param2, int param3) {
         int var7 = 0;
         int var8 = 0;
-        super.a(param0, param1, (byte) 72, param3);
+        super.drawWidget(param0, param1, (byte) 72, param3);
         if (param3 != 0) {
           return;
         }
@@ -109,8 +109,8 @@ class RichTextWidget extends InteractiveWidget {
         TextHotspotBounds var6 = this.field_J;
         if (var6 == null) {
         } else {
-          var7 = var9.getTextOriginX(param1, -1, (ag) (this));
-          var8 = var9.getTextOriginY(-1, (ag) (this), param0);
+          var7 = var9.getTextOriginX(param1, -1, (UiWidget) (this));
+          var8 = var9.getTextOriginY(-1, (UiWidget) (this), param0);
           do {
             bh.a(2 + var6.field_i, -2 + var6.field_p + var8, (byte) 65, -2 + (var7 + var6.field_l), 2 + var6.field_o);
             var6 = var6.field_j;
@@ -171,8 +171,8 @@ class RichTextWidget extends InteractiveWidget {
         }
     }
 
-    final void a(int param0, int param1, int param2, int param3, int param4) {
-        super.a(param0, param1, param2, param3, param4);
+    final void setBounds(int param0, int param1, int param2, int param3, int param4) {
+        super.setBounds(param0, param1, param2, param3, param4);
         this.rebuildHotspotBounds(-25638);
     }
 
@@ -228,13 +228,13 @@ class RichTextWidget extends InteractiveWidget {
     }
 
     final void a(boolean param0, int param1, int param2, int param3) {
-        this.a(param1, param3, 0, param2, ((TextWidgetRenderer) ((Object) this.field_h)).getPreferredHeight((ag) (this), (byte) -83));
+        this.setBounds(param1, param3, 0, param2, ((TextWidgetRenderer) ((Object) this.field_h)).getPreferredHeight((UiWidget) (this), (byte) -83));
         if (!param0) {
           RichTextWidget.a(89, false);
         }
     }
 
-    void a(ag param0, int param1, int param2, int param3) {
+    void updatePointer(UiWidget param0, int param1, int param2, int param3) {
         int var5_int = 0;
         int var6 = 0;
         RuntimeException stackIn_6_0 = null;
@@ -243,7 +243,7 @@ class RichTextWidget extends InteractiveWidget {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var5 = null;
         try {
-          super.a(param0, param1, param2, param3);
+          super.updatePointer(param0, param1, param2, param3);
           this.field_J = null;
           if (this.field_u) {
             var5_int = -this.field_v - param3 + j.field_c;
@@ -301,7 +301,7 @@ class RichTextWidget extends InteractiveWidget {
         }
         var2 = 0;
         var3 = (TextWidgetRenderer) ((Object) this.field_h);
-        var4 = var3.getTextLayout((ag) (this), 1);
+        var4 = var3.getTextLayout((UiWidget) (this), 1);
         while (true) {
           var5 = this.field_n.indexOf("<hotspot=", var2);
           if (var5 == -1) {
@@ -376,7 +376,7 @@ class RichTextWidget extends InteractiveWidget {
         c.field_a.a(25957, param1);
     }
 
-    boolean a(byte param0, ag param1) {
+    boolean takeFocus(byte param0, UiWidget param1) {
         RuntimeException var3 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
@@ -401,8 +401,8 @@ class RichTextWidget extends InteractiveWidget {
         }
     }
 
-    RichTextWidget(String param0, nn param1) {
-        super(param0, (mh) null);
+    RichTextWidget(String param0, WidgetRenderer param1) {
+        super(param0, (WidgetEventListener) null);
         this.field_J = null;
         try {
           this.field_h = param1;

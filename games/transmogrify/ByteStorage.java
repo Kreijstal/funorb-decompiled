@@ -266,7 +266,7 @@ abstract class ByteStorage {
         AccountRequestState.field_b = true;
         if (param0 == -1) {
           qf.field_b = lk.correctedCurrentTimeMillis(param0 + 1) + 15000L;
-          return 11 == gl.field_y ? true : false;
+          return 11 == AlphaWidgetContainer.field_y ? true : false;
         }
         return false;
     }

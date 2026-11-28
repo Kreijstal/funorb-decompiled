@@ -234,7 +234,7 @@ class DefaultTextWidgetRenderer implements ComponentLayout, TextWidgetRenderer {
             UiComponent var13 = (UiComponent) null;
             this.getPreferredWidth(67, (UiComponent) null);
           }
-          if (param2.e(1)) {
+          if (param2.isFocused(1)) {
             var14 = this.getTextLayout(param2, (byte) -35);
             var15 = var14;
             var7 = var15.getLineIndexForTextOffset(param3, -1);
@@ -288,7 +288,7 @@ class DefaultTextWidgetRenderer implements ComponentLayout, TextWidgetRenderer {
           if (param1 == param3) {
             return;
           }
-          if (!param0.e(1)) {
+          if (!param0.isFocused(1)) {
             return;
           }
           var17 = this.getTextLayout(param0, (byte) -35);
@@ -489,7 +489,7 @@ class DefaultTextWidgetRenderer implements ComponentLayout, TextWidgetRenderer {
         }
     }
 
-    public void a(int param0, int param1, boolean param2, UiComponent param3, int param4) {
+    public void paintWidget(int param0, int param1, boolean param2, UiComponent param3, int param4) {
         if (param0 > -36) {
           this.field_c = 31;
         }

@@ -20,7 +20,7 @@ class ie extends DualLinkNode {
             return false;
           }
           var8 = new AccountCreationResultPanel(bm.field_d, param4);
-          bm.field_d.b((byte) 74, (pj) (var8));
+          bm.field_d.showDialog((byte) 74, (UiWidget) (var8));
           if (param1 != -10031) {
             return false;
           }
@@ -33,7 +33,7 @@ class ie extends DualLinkNode {
           tl.field_g = null;
           of.field_H = param6;
           qc.field_g = PacketBuffer.field_m;
-          sk.field_G = param3;
+          ModalDialogHost.field_G = param3;
           mb.field_c = param5;
           return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -64,7 +64,7 @@ class ie extends DualLinkNode {
           } else {
             stackIn_27_2 = "{...}";
           }
-          throw dd.wrapClientException((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(')').toString());
+          throw DraggableWidgetContainer.wrapClientException((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(')').toString());
         }
     }
 
@@ -136,7 +136,7 @@ class ie extends DualLinkNode {
           } else {
             stackIn_33_2 = "{...}";
           }
-          throw dd.wrapClientException((Throwable) ((Object) stackIn_32_0), ((StringBuilder) (Object) stackIn_32_1).append(stackIn_33_2).append(',').append(param1).append(')').toString());
+          throw DraggableWidgetContainer.wrapClientException((Throwable) ((Object) stackIn_32_0), ((StringBuilder) (Object) stackIn_32_1).append(stackIn_33_2).append(',').append(param1).append(')').toString());
         }
     }
 

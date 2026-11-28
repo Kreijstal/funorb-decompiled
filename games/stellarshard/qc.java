@@ -36,8 +36,8 @@ final class qc {
           if (null != ed.field_a) {
             var2_int = ed.field_a.length;
           } else {
-            if (null != dl.field_C) {
-              var2_int = dl.field_C.length;
+            if (null != DraggableWidgetContainer.field_C) {
+              var2_int = DraggableWidgetContainer.field_C.length;
             }
           }
           if (var2_int != -1) {
@@ -239,7 +239,7 @@ final class qc {
           } else if (rb.field_s != 2) {
             if (rb.field_s == 3) {
               if (DebouncedFieldValidator.field_d.privilegedTasksEnabled) {
-                var3_int = nj.a(IntrusiveNode.field_d, pe.field_c, hc.field_m, (byte) -128, ei.field_E);
+                var3_int = nj.a(IntrusiveNode.field_d, pe.field_c, hc.field_m, (byte) -128, ModalDialogHost.field_E);
               } else {
                 var3_int = nj.a(IntrusiveNode.field_d, pe.field_c, hc.field_m, (byte) -128, ld.field_D);
               }
@@ -313,7 +313,7 @@ final class qc {
             ri.a(hc.field_m, 0, RichTextLayout.field_g, 0, var4);
             fb.field_e = new String[-var4 + (var3_int - 1)];
             ri.a(hc.field_m, var4 + 1, fb.field_e, 0, var3_int + (-var4 - 1));
-            var3_int = nj.a(IntrusiveNode.field_d, pe.field_c, hc.field_m, (byte) -128, h.a(dl.field_K, 0, new String[]{"<br><%0><br>"}));
+            var3_int = nj.a(IntrusiveNode.field_d, pe.field_c, hc.field_m, (byte) -128, h.a(DraggableWidgetContainer.field_K, 0, new String[]{"<br><%0><br>"}));
             var4 = -1;
             for (var5 = 0; var3_int > var5; var5++) {
               if (!"<%0>".equals(hc.field_m[var5])) {
@@ -350,7 +350,7 @@ final class qc {
             sj.field_J[1] = 0;
             stellarshard.field_L[1] = am.field_b;
             pk.field_j = new int[2];
-            stellarshard.field_L[0] = oa.field_B;
+            stellarshard.field_L[0] = AlphaWidgetContainer.field_B;
             pk.field_j[0] = 5;
             pk.field_j[1] = 2;
             sj.field_J[3] = 1;

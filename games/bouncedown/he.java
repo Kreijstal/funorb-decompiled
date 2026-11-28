@@ -92,7 +92,7 @@ final class he extends IntrusiveNode {
                 ij.a(DirectByteStorage.field_b, var6_intLifetime1, qe.field_i, param0 ^ 1, TextLayout.field_b, MouseWheelInput.field_a);
               }
             }
-            bj.a((byte) -125, var5);
+            DraggableWidgetContainer.a((byte) -125, var5);
             var6 = new String[2][var5];
             var18 = new int[2][4 * var5];
             var8 = DisplayNameSelectionPanel.field_M;

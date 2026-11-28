@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class uc extends lc implements WidgetActivationListener {
+final class uc extends DequeWidgetContainer implements WidgetActivationListener {
     private BitmapFont field_F;
     private InteractiveWidget[] field_H;
     private int field_B;
@@ -14,7 +14,7 @@ final class uc extends lc implements WidgetActivationListener {
     static int field_C;
 
     uc(sh param0, BitmapFont param1, String param2) {
-        super(0, 0, 288, 0, (fc) null);
+        super(0, 0, 288, 0, (WidgetRenderer) null);
         int var4_int = 0;
         this.field_B = 0;
         try {
@@ -22,13 +22,13 @@ final class uc extends lc implements WidgetActivationListener {
           this.field_F = param1;
           this.field_z = param2;
           var4_int = null != this.field_z ? this.field_F.textHeight(this.field_z, 260, this.field_F.field_s) : 0;
-          this.b(var4_int + 22, 80, 288, 0, 0);
+          this.setBounds(var4_int + 22, 80, 288, 0, 0);
         } catch (RuntimeException runtimeException) {
           throw CipherPacketBuffer.wrapClientException((Throwable) ((Object) runtimeException), "uc.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
-    final InteractiveWidget a(String param0, sk param1, int param2) {
+    final InteractiveWidget a(String param0, WidgetEventListener param1, int param2) {
         InteractiveWidget var4 = null;
         RuntimeException var4_ref = null;
         int var5 = 0;
@@ -41,11 +41,11 @@ final class uc extends lc implements WidgetActivationListener {
         RuntimeException decompiledCaughtException = null;
         try {
           var4 = new InteractiveWidget(param0, param1);
-          var4.field_j = (fc) ((Object) new jh());
+          var4.field_j = (WidgetRenderer) ((Object) new jh());
           var5 = -2 + this.field_m;
-          this.b(this.field_m + 34, 80, this.field_k, 0, 0);
-          var4.b(30, param2 + 84, -14 + this.field_k, 7, var5);
-          this.b(var4, true);
+          this.setBounds(this.field_m + 34, 80, this.field_k, 0, 0);
+          var4.setBounds(30, param2 + 84, -14 + this.field_k, 7, var5);
+          this.addChild(var4, true);
           if (param2 != -4) {
             uc.a(-89, 'ﾁ');
           }
@@ -71,14 +71,14 @@ final class uc extends lc implements WidgetActivationListener {
         }
     }
 
-    final void a(int param0, int param1, int param2, int param3) {
+    final void drawWidget(int param0, int param1, int param2, int param3) {
         if (param2 > 33) {
-          super.a(param0, param1, 50, param3);
+          super.drawWidget(param0, param1, 50, param3);
           this.field_F.drawParagraph(this.field_z, 14 + (param3 + this.field_r), this.field_i + (param1 + 10), -28 + this.field_k, this.field_m, 16777215, -1, 0, 0, this.field_F.field_s);
           return;
         }
         this.a(78, 87);
-        super.a(param0, param1, 50, param3);
+        super.drawWidget(param0, param1, 50, param3);
         this.field_F.drawParagraph(this.field_z, 14 + (param3 + this.field_r), this.field_i + (param1 + 10), -28 + this.field_k, this.field_m, 16777215, -1, 0, 0, this.field_F.field_s);
     }
 
@@ -90,7 +90,7 @@ final class uc extends lc implements WidgetActivationListener {
           if (param2 <= 58) {
             this.field_I = (sh) null;
           }
-          this.field_H[var4_int] = this.a(param0, (sk) (this), -4);
+          this.field_H[var4_int] = this.a(param0, (WidgetEventListener) (this), -4);
           this.field_J[var4_int] = param1;
         } catch (RuntimeException runtimeException) {
           throw CipherPacketBuffer.wrapClientException((Throwable) ((Object) runtimeException), "uc.F(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
@@ -216,7 +216,7 @@ final class uc extends lc implements WidgetActivationListener {
           DirectByteStorage.field_d = SectorCacheStore.a(param0, "commonui", (byte) 114, "frame_bottom");
           fd.field_m = nc.a("jagex_logo_grey", param0, "commonui", 0);
           ih.field_T = SectorCacheStore.a(param0, "commonui", (byte) 111, "button");
-          la.field_E = ri.a("commonui", param0, false, "validation");
+          la.field_E = ModalDialog.a("commonui", param0, false, "validation");
           GzipDecompressor.field_d = (BitmapFont) ((Object) eg.a(param2, "arezzo12", 127, param0, "commonui"));
           FrameTimer.field_a = (BitmapFont) ((Object) eg.a(param2, "arezzo14", 122, param0, "commonui"));
           ne.field_v = (BitmapFont) ((Object) eg.a(param2, "arezzo14bold", 117, param0, "commonui"));

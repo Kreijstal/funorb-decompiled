@@ -145,7 +145,7 @@ final class ek {
           ok.field_x.n(param0 ^ 22641);
           var1 = PacketBuffer.d(true);
           lg.field_b = new LoginPanel(var1, (String) null, true, false, false);
-          nb.field_a.b(ak.field_a, (byte) -35);
+          nb.field_a.showDialog(ak.field_a, (byte) -35);
           if (param0 != -6) {
             ek.a((byte) 6);
             ak.field_a.d(lg.field_b, 26034);
@@ -158,7 +158,7 @@ final class ek {
         }
         var1Lifetime1 = PacketBuffer.d(true);
         lg.field_b = new LoginPanel(var1Lifetime1, (String) null, true, false, false);
-        nb.field_a.b(ak.field_a, (byte) -35);
+        nb.field_a.showDialog(ak.field_a, (byte) -35);
         if (param0 == -6) {
           ak.field_a.d(lg.field_b, 26034);
           ak.field_a.l(param0 ^ 5);

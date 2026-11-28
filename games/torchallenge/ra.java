@@ -49,16 +49,16 @@ final class ra {
           }
           SoftwareRasterizer.saveClip(ae.field_y);
           SoftwareRasterizer.intersectClip(var9, param1, var10, param4);
-          if ((1 & ic.field_E[vb.field_a[param0][param2]][param5]) > 0) {
+          if ((1 & SingleChildWidgetContainer.field_E[vb.field_a[param0][param2]][param5]) > 0) {
             sf.field_d[param6][param2][var11].drawOpaque(var9, param1);
           }
-          if ((2 & ic.field_E[vb.field_a[param0][param2]][param5]) > 0) {
+          if ((2 & SingleChildWidgetContainer.field_E[vb.field_a[param0][param2]][param5]) > 0) {
             sf.field_d[param6][param2][var11].drawOpaque(var9, param1 + 16);
           }
-          if ((ic.field_E[vb.field_a[param0][param2]][param5] & 4) > 0) {
+          if ((SingleChildWidgetContainer.field_E[vb.field_a[param0][param2]][param5] & 4) > 0) {
             sf.field_d[param6][param2][var11].drawOpaque(var9, 32 + param1);
           }
-          if ((8 & ic.field_E[vb.field_a[param0][param2]][param5]) > 0) {
+          if ((8 & SingleChildWidgetContainer.field_E[vb.field_a[param0][param2]][param5]) > 0) {
             sf.field_d[param6][param2][var11].drawOpaque(var9, 48 + param1);
           }
           SoftwareRasterizer.restoreClip(ae.field_y);
@@ -161,19 +161,19 @@ final class ra {
           }
           for (var12 = var7; var12 < var9; var12++) {
             if (0 == (var12 & 3) &&
-              (ic.field_E[var10][var12 >> 2] & 1) > 0) {
+              (SingleChildWidgetContainer.field_E[var10][var12 >> 2] & 1) > 0) {
               return true;
             }
             if ((3 & var12) == 1 &&
-              (2 & ic.field_E[var10][var12 >> 2]) > 0) {
+              (2 & SingleChildWidgetContainer.field_E[var10][var12 >> 2]) > 0) {
               return true;
             }
             if (2 == (3 & var12) &&
-              (4 & ic.field_E[var10][var12 >> 2]) > 0) {
+              (4 & SingleChildWidgetContainer.field_E[var10][var12 >> 2]) > 0) {
               return true;
             }
             if ((3 & var12) == 3 &&
-              (8 & ic.field_E[var10][var12 >> 2]) > 0) {
+              (8 & SingleChildWidgetContainer.field_E[var10][var12 >> 2]) > 0) {
               return true;
             }
           }
@@ -315,7 +315,7 @@ final class ra {
                     this.field_o[var20][1][1] = SocketConnector.field_l[var19][var20][1][1];
                   }
                   var15 = vb.field_a[var19][var20] & 1;
-                  si.a(var18, this.field_e[vb.field_a[var19][var20]], var20, this.field_o, var15, 1);
+                  ModalDialogHost.a(var18, this.field_e[vb.field_a[var19][var20]], var20, this.field_o, var15, 1);
                   if (param3 != null) {
                     param3.bindAsRenderTarget();
                   }
@@ -340,7 +340,7 @@ final class ra {
                         if (param4 == 3 &&
                           param2) {
                           tk.b(var21, var12Lifetime1, var20, var19, param1 + 46);
-                          hi.b(var21, 5446, var12Lifetime1, var19, var20);
+                          AlphaWidgetContainer.b(var21, 5446, var12Lifetime1, var19, var20);
                         }
                       } else {
                         if (-16 > var18) {
@@ -361,9 +361,9 @@ final class ra {
                         var14 = SocketConnector.field_l[var19][var21][1][1] - SocketConnector.field_l[var19][var21][1][0];
                         if (param4 == 3 &&
                           var14 > 0) {
-                          if ((64 & ic.field_E[vb.field_a[var19][var21]][var20]) <= 0) {
+                          if ((64 & SingleChildWidgetContainer.field_E[vb.field_a[var19][var21]][var20]) <= 0) {
                             var22 = this.field_u[vb.field_a[var19][var21] >> 1][var20];
-                            b.a((byte) 114, var22, var21, var18, 64 + var12Lifetime1, var19, var12Lifetime1);
+                            ModalDialog.a((byte) 114, var22, var21, var18, 64 + var12Lifetime1, var19, var12Lifetime1);
                           } else {
                             var15 = vb.field_a[var19][var21] & 1;
                             TorChallenge.a(var18, var12Lifetime1, var20, false, var12Lifetime1 + 64, var19, var21, var15);
@@ -372,18 +372,18 @@ final class ra {
                         if (param4 == 3 &&
                           param2) {
                           tk.b(var21, var12Lifetime1, var20, var19, param1 + 46);
-                          hi.b(var21, param1 ^ 5460, var12Lifetime1, var19, var20);
+                          AlphaWidgetContainer.b(var21, param1 ^ 5460, var12Lifetime1, var19, var20);
                         }
                         if (6 == param4 &&
                           param0) {
                           SoftwareRasterizer.saveClip(ae.field_y);
-                          var17 = hi.a(param6, vb.field_a[var19][var21], param5, 0, 101, var20);
+                          var17 = AlphaWidgetContainer.a(param6, vb.field_a[var19][var21], param5, 0, 101, var20);
                           SoftwareRasterizer.restoreClip(ae.field_y);
-                          var16 = hi.a(param6, vb.field_a[var19][var21], param5, 1, 115, var20);
+                          var16 = AlphaWidgetContainer.a(param6, vb.field_a[var19][var21], param5, 1, 115, var20);
                           SoftwareRasterizer.restoreClip(ae.field_y);
                         }
                         if (param4 == 6 &&
-                          0 == (16 & ic.field_E[vb.field_a[var19][var21]][var20])) {
+                          0 == (16 & SingleChildWidgetContainer.field_E[vb.field_a[var19][var21]][var20])) {
                           SoftwareRasterizer.saveClip(ae.field_y);
                           var22 = this.field_r[vb.field_a[var19][var21]][var20];
                           this.a(var19, var12Lifetime1, var21, var18, var12Lifetime1 + 64, var20, var22, -10440);
@@ -392,7 +392,7 @@ final class ra {
                         if (param4 == 2 &&
                           param0) {
                           SoftwareRasterizer.saveClip(ae.field_y);
-                          var16 = hi.a(param6, vb.field_a[var19][var21], param5, 2, 113, var20);
+                          var16 = AlphaWidgetContainer.a(param6, vb.field_a[var19][var21], param5, 2, 113, var20);
                           SoftwareRasterizer.restoreClip(ae.field_y);
                         }
                         if (6 == param4) {
@@ -432,7 +432,7 @@ final class ra {
                       if (param4 == 3 &&
                         param2) {
                         tk.b(var21, var12Lifetime1, var20, var19, param1 + 46);
-                        hi.b(var21, 5446, var12Lifetime1, var19, var20);
+                        AlphaWidgetContainer.b(var21, 5446, var12Lifetime1, var19, var20);
                       }
                       while (true) {
                         var21++;
@@ -466,9 +466,9 @@ final class ra {
                         var14 = SocketConnector.field_l[var19][var21][1][1] - SocketConnector.field_l[var19][var21][1][0];
                         if (param4 == 3 &&
                           var14 > 0) {
-                          if ((64 & ic.field_E[vb.field_a[var19][var21]][var20]) <= 0) {
+                          if ((64 & SingleChildWidgetContainer.field_E[vb.field_a[var19][var21]][var20]) <= 0) {
                             var22Lifetime2 = this.field_u[vb.field_a[var19][var21] >> 1][var20];
-                            b.a((byte) 114, var22Lifetime2, var21, var18, 64 + var12Lifetime1, var19, var12Lifetime1);
+                            ModalDialog.a((byte) 114, var22Lifetime2, var21, var18, 64 + var12Lifetime1, var19, var12Lifetime1);
                           } else {
                             var15 = vb.field_a[var19][var21] & 1;
                             TorChallenge.a(var18, var12Lifetime1, var20, false, var12Lifetime1 + 64, var19, var21, var15);
@@ -477,18 +477,18 @@ final class ra {
                         if (param4 == 3 &&
                           param2) {
                           tk.b(var21, var12Lifetime1, var20, var19, param1 + 46);
-                          hi.b(var21, param1 ^ 5460, var12Lifetime1, var19, var20);
+                          AlphaWidgetContainer.b(var21, param1 ^ 5460, var12Lifetime1, var19, var20);
                         }
                         if (6 == param4 &&
                           param0) {
                           SoftwareRasterizer.saveClip(ae.field_y);
-                          var17 = hi.a(param6, vb.field_a[var19][var21], param5, 0, 101, var20);
+                          var17 = AlphaWidgetContainer.a(param6, vb.field_a[var19][var21], param5, 0, 101, var20);
                           SoftwareRasterizer.restoreClip(ae.field_y);
-                          var16 = hi.a(param6, vb.field_a[var19][var21], param5, 1, 115, var20);
+                          var16 = AlphaWidgetContainer.a(param6, vb.field_a[var19][var21], param5, 1, 115, var20);
                           SoftwareRasterizer.restoreClip(ae.field_y);
                         }
                         if (param4 == 6 &&
-                          0 == (16 & ic.field_E[vb.field_a[var19][var21]][var20])) {
+                          0 == (16 & SingleChildWidgetContainer.field_E[vb.field_a[var19][var21]][var20])) {
                           SoftwareRasterizer.saveClip(ae.field_y);
                           var22Lifetime2 = this.field_r[vb.field_a[var19][var21]][var20];
                           this.a(var19, var12Lifetime1, var21, var18, var12Lifetime1 + 64, var20, var22Lifetime2, -10440);
@@ -497,7 +497,7 @@ final class ra {
                         if (param4 == 2 &&
                           param0) {
                           SoftwareRasterizer.saveClip(ae.field_y);
-                          var16 = hi.a(param6, vb.field_a[var19][var21], param5, 2, 113, var20);
+                          var16 = AlphaWidgetContainer.a(param6, vb.field_a[var19][var21], param5, 2, 113, var20);
                           SoftwareRasterizer.restoreClip(ae.field_y);
                         }
                         if (6 != param4) {
@@ -557,9 +557,9 @@ final class ra {
                     var14 = SocketConnector.field_l[var19][var21][1][1] - SocketConnector.field_l[var19][var21][1][0];
                     if (param4 == 3 &&
                       var14 > 0) {
-                      if ((64 & ic.field_E[vb.field_a[var19][var21]][var20]) <= 0) {
+                      if ((64 & SingleChildWidgetContainer.field_E[vb.field_a[var19][var21]][var20]) <= 0) {
                         var22Lifetime2 = this.field_u[vb.field_a[var19][var21] >> 1][var20];
-                        b.a((byte) 114, var22Lifetime2, var21, var18, 64 + var12Lifetime1, var19, var12Lifetime1);
+                        ModalDialog.a((byte) 114, var22Lifetime2, var21, var18, 64 + var12Lifetime1, var19, var12Lifetime1);
                       } else {
                         var15 = vb.field_a[var19][var21] & 1;
                         TorChallenge.a(var18, var12Lifetime1, var20, false, var12Lifetime1 + 64, var19, var21, var15);
@@ -568,18 +568,18 @@ final class ra {
                     if (param4 == 3 &&
                       param2) {
                       tk.b(var21, var12Lifetime1, var20, var19, param1 + 46);
-                      hi.b(var21, param1 ^ 5460, var12Lifetime1, var19, var20);
+                      AlphaWidgetContainer.b(var21, param1 ^ 5460, var12Lifetime1, var19, var20);
                     }
                     if (6 == param4 &&
                       param0) {
                       SoftwareRasterizer.saveClip(ae.field_y);
-                      var17 = hi.a(param6, vb.field_a[var19][var21], param5, 0, 101, var20);
+                      var17 = AlphaWidgetContainer.a(param6, vb.field_a[var19][var21], param5, 0, 101, var20);
                       SoftwareRasterizer.restoreClip(ae.field_y);
-                      var16 = hi.a(param6, vb.field_a[var19][var21], param5, 1, 115, var20);
+                      var16 = AlphaWidgetContainer.a(param6, vb.field_a[var19][var21], param5, 1, 115, var20);
                       SoftwareRasterizer.restoreClip(ae.field_y);
                     }
                     if (param4 == 6 &&
-                      0 == (16 & ic.field_E[vb.field_a[var19][var21]][var20])) {
+                      0 == (16 & SingleChildWidgetContainer.field_E[vb.field_a[var19][var21]][var20])) {
                       SoftwareRasterizer.saveClip(ae.field_y);
                       var22Lifetime2 = this.field_r[vb.field_a[var19][var21]][var20];
                       this.a(var19, var12Lifetime1, var21, var18, var12Lifetime1 + 64, var20, var22Lifetime2, -10440);
@@ -588,7 +588,7 @@ final class ra {
                     if (param4 == 2 &&
                       param0) {
                       SoftwareRasterizer.saveClip(ae.field_y);
-                      var16 = hi.a(param6, vb.field_a[var19][var21], param5, 2, 113, var20);
+                      var16 = AlphaWidgetContainer.a(param6, vb.field_a[var19][var21], param5, 2, 113, var20);
                       SoftwareRasterizer.restoreClip(ae.field_y);
                     }
                     if (6 == param4) {
@@ -640,7 +640,7 @@ final class ra {
                         continue;
                       }
                       tk.b(var21, var12Lifetime1, var20, var19, param1 + 46);
-                      hi.b(var21, 5446, var12Lifetime1, var19, var20);
+                      AlphaWidgetContainer.b(var21, 5446, var12Lifetime1, var19, var20);
                     }
                   }
                 }
@@ -653,7 +653,7 @@ final class ra {
                       if (param4 == 3 &&
                         param2) {
                         tk.b(var21Lifetime1, var12Lifetime1, var20Lifetime2, var19, param1 + 46);
-                        hi.b(var21Lifetime1, 5446, var12Lifetime1, var19, var20Lifetime2);
+                        AlphaWidgetContainer.b(var21Lifetime1, 5446, var12Lifetime1, var19, var20Lifetime2);
                       }
                     } else {
                       if (-16 > var18) {
@@ -674,9 +674,9 @@ final class ra {
                       var14Lifetime1 = SocketConnector.field_l[var19][var21Lifetime1][1][1] - SocketConnector.field_l[var19][var21Lifetime1][1][0];
                       if (param4 == 3 &&
                         var14Lifetime1 > 0) {
-                        if ((64 & ic.field_E[vb.field_a[var19][var21Lifetime1]][var20Lifetime2]) <= 0) {
+                        if ((64 & SingleChildWidgetContainer.field_E[vb.field_a[var19][var21Lifetime1]][var20Lifetime2]) <= 0) {
                           var22Lifetime1 = this.field_u[vb.field_a[var19][var21Lifetime1] >> 1][var20Lifetime2];
-                          b.a((byte) 114, var22Lifetime1, var21Lifetime1, var18, 64 + var12Lifetime1, var19, var12Lifetime1);
+                          ModalDialog.a((byte) 114, var22Lifetime1, var21Lifetime1, var18, 64 + var12Lifetime1, var19, var12Lifetime1);
                         } else {
                           var15Lifetime1 = vb.field_a[var19][var21Lifetime1] & 1;
                           TorChallenge.a(var18, var12Lifetime1, var20Lifetime2, false, var12Lifetime1 + 64, var19, var21Lifetime1, var15Lifetime1);
@@ -685,18 +685,18 @@ final class ra {
                       if (param4 == 3 &&
                         param2) {
                         tk.b(var21Lifetime1, var12Lifetime1, var20Lifetime2, var19, param1 + 46);
-                        hi.b(var21Lifetime1, param1 ^ 5460, var12Lifetime1, var19, var20Lifetime2);
+                        AlphaWidgetContainer.b(var21Lifetime1, param1 ^ 5460, var12Lifetime1, var19, var20Lifetime2);
                       }
                       if (6 == param4 &&
                         param0) {
                         SoftwareRasterizer.saveClip(ae.field_y);
-                        var17 = hi.a(param6, vb.field_a[var19][var21Lifetime1], param5, 0, 101, var20Lifetime2);
+                        var17 = AlphaWidgetContainer.a(param6, vb.field_a[var19][var21Lifetime1], param5, 0, 101, var20Lifetime2);
                         SoftwareRasterizer.restoreClip(ae.field_y);
-                        var16 = hi.a(param6, vb.field_a[var19][var21Lifetime1], param5, 1, 115, var20Lifetime2);
+                        var16 = AlphaWidgetContainer.a(param6, vb.field_a[var19][var21Lifetime1], param5, 1, 115, var20Lifetime2);
                         SoftwareRasterizer.restoreClip(ae.field_y);
                       }
                       if (param4 == 6 &&
-                        0 == (16 & ic.field_E[vb.field_a[var19][var21Lifetime1]][var20Lifetime2])) {
+                        0 == (16 & SingleChildWidgetContainer.field_E[vb.field_a[var19][var21Lifetime1]][var20Lifetime2])) {
                         SoftwareRasterizer.saveClip(ae.field_y);
                         var22Lifetime1Lifetime1 = this.field_r[vb.field_a[var19][var21Lifetime1]][var20Lifetime2];
                         this.a(var19, var12Lifetime1, var21Lifetime1, var18, var12Lifetime1 + 64, var20Lifetime2, var22Lifetime1Lifetime1, -10440);
@@ -705,7 +705,7 @@ final class ra {
                       if (param4 == 2 &&
                         param0) {
                         SoftwareRasterizer.saveClip(ae.field_y);
-                        var16 = hi.a(param6, vb.field_a[var19][var21Lifetime1], param5, 2, 113, var20Lifetime2);
+                        var16 = AlphaWidgetContainer.a(param6, vb.field_a[var19][var21Lifetime1], param5, 2, 113, var20Lifetime2);
                         SoftwareRasterizer.restoreClip(ae.field_y);
                       }
                       if (6 == param4) {
@@ -1101,10 +1101,10 @@ final class ra {
         this.field_e = new int[64][2][2];
         this.field_a = param0;
         ol.field_g = this;
-        ic.field_E = new int[64][this.field_a];
+        SingleChildWidgetContainer.field_E = new int[64][this.field_a];
         for (var3_int = 0; var3_int < 3; var3_int++) {
           for (var4 = 0; var4 <= 1; var4++) {
-            ub.field_c[var3_int][var4] = ic.field_D[var4 + (param1 * 12 + 2 * var3_int)];
+            ub.field_c[var3_int][var4] = SingleChildWidgetContainer.field_D[var4 + (param1 * 12 + 2 * var3_int)];
             SectorCacheStore.field_f.bindAsTarget(-73);
           }
         }

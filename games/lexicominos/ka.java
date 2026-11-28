@@ -42,10 +42,10 @@ final class ka {
         RuntimeException decompiledCaughtException = null;
         var2 = Lexicominos.field_L ? 1 : 0;
         try {
-          ug.field_A.a(NanoFrameTimer.field_g, true, mk.field_m, (byte) 124);
-          ug.field_A.f(true);
+          ug.field_A.processPointerInput(NanoFrameTimer.field_g, true, mk.field_m, (byte) 124);
+          ug.field_A.advanceDialogs(true);
           while (IterableNodeHashTable.a((byte) -72)) {
-            ug.field_A.a((byte) 86, IsaacRandom.field_b, da.field_b);
+            ug.field_A.processKeyInput((byte) 86, IsaacRandom.field_b, da.field_b);
           }
           if (param0 != 2) {
             field_a = (String) null;

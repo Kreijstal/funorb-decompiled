@@ -8,7 +8,7 @@ final class el extends jf {
     static long field_rb;
     static int field_tb;
 
-    final void a(int param0, vg param1) {
+    final void a(int param0, UiWidget param1) {
         try {
           if (param0 != 33) {
             field_tb = -12;
@@ -19,7 +19,7 @@ final class el extends jf {
         }
     }
 
-    el(k param0, vg param1) {
+    el(ModalDialogHost param0, UiWidget param1) {
         super(param0, param1, 33, 20, 30);
     }
 

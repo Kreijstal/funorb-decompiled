@@ -155,7 +155,7 @@ final class AccountServiceResult {
               else {
                 if (var3 == 0 &&
                   pe.field_e == 2) {
-                  var4 = ll.correctedCurrentTimeMillis(1000) - hj.field_I;
+                  var4 = ll.correctedCurrentTimeMillis(1000) - DropTargetWidgetContainer.field_I;
                   var6 = (int)((-var4 + 10999L) / 1000L);
                   if (var6 <= 0) {
                     var3 = 2;
@@ -172,7 +172,7 @@ final class AccountServiceResult {
           }
           if (var3 == 0 &&
             pe.field_e == 2) {
-            var4Lifetime1 = ll.correctedCurrentTimeMillis(1000) - hj.field_I;
+            var4Lifetime1 = ll.correctedCurrentTimeMillis(1000) - DropTargetWidgetContainer.field_I;
             var6Lifetime1 = (int)((-var4Lifetime1 + 10999L) / 1000L);
             if (var6Lifetime1 <= 0) {
               var3 = 2;

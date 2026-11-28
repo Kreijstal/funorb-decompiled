@@ -642,7 +642,7 @@ final class sk extends wj {
                 this.a(on.field_a + ti.field_k, bj.field_q + ti.field_f, field_J[var9], field_J[var10], field_J[var11], var12, var13, var14_int)) {
                 fieldTemp$13 = tk.field_g;
                 tk.field_g = tk.field_g + 1;
-                la.field_S[fieldTemp$13] = param2;
+                LabeledWidgetContainer.field_S[fieldTemp$13] = param2;
                 param1 = false;
               }
               if ((var12 - var13) * (field_J[var11] - field_J[var10]) - (field_J[var9] - field_J[var10]) * (var14_int - var13) > 0) {

@@ -43,17 +43,17 @@ final class BirthDateValidator extends DebouncedFieldValidator implements TextFi
     }
 
     final static void g(int param0) {
-        jh.field_e.i(0);
+        jh.field_e.closeAllDialogs(0);
         if (mk.field_e == null) {
           mk.field_e = new ch(jh.field_e, qf.field_g);
-          jh.field_e.b(mk.field_e, (byte) -65);
+          jh.field_e.showDialog(mk.field_e, (byte) -65);
           if (param0 <= 119) {
             field_h = (String) null;
             return;
           }
           return;
         }
-        jh.field_e.b(mk.field_e, (byte) -65);
+        jh.field_e.showDialog(mk.field_e, (byte) -65);
         if (param0 > 119) {
           return;
         }

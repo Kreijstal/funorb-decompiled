@@ -24,7 +24,7 @@ final class vl {
         eb.field_m = true;
         ga.field_y = true;
         int var1 = 45 / ((-48 - param0) / 48);
-        t.field_b.i(8389905);
+        t.field_b.closeAllDialogs(8389905);
         gh.a((byte) -116, ub.field_g, false);
     }
 

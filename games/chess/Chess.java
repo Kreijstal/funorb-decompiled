@@ -276,14 +276,14 @@ public final class Chess extends NetworkGameClient {
           }
         }
         if (AgeValidator.field_l) {
-          if (bh.e((byte) 55)) {
+          if (ArrayWidgetContainer.e((byte) 55)) {
             if (!ga.a(true)) {
               if (!d.a(true)) {
                 if (!ug.a(true)) {
                   this.updateScreensAndMatchInput(false, 83);
                 } else {
                   if (n.field_e == n.field_f) {
-                    var2 = kg.b(true);
+                    var2 = LabeledWidgetContainer.b(true);
                     if (var2 == 1) {
                       Bzip2State.field_l = true;
                       hj.a(0, -2, false);
@@ -303,7 +303,7 @@ public final class Chess extends NetworkGameClient {
                     b.a(true);
                   }
                   if (var2 == 2) {
-                    dh.a(bh.i(81), true);
+                    dh.a(ArrayWidgetContainer.i(81), true);
                   }
                 }
                 this.updateScreensAndMatchInput(true, -114);
@@ -367,8 +367,8 @@ public final class Chess extends NetworkGameClient {
                 if (var2Lifetime1 != 1) {
                   if (pk.field_j) {
                     BufferedRandomAccessFile.field_q = true;
-                    ma.field_D = false;
-                    ji.field_P = true;
+                    DequeWidgetContainer.field_D = false;
+                    DropTargetWidgetContainer.field_P = true;
                     if (hj.field_i) {
                       ad.field_d = id.field_b;
                       ChessBoardState.a(qk.field_h, false, 28333, 8);
@@ -417,7 +417,7 @@ public final class Chess extends NetworkGameClient {
             wn.field_f = true;
             qk.field_h = -2;
             DisplayNameSelectionPanel.field_O = 0;
-            ma.field_D = false;
+            DequeWidgetContainer.field_D = false;
             pk.field_j = true;
             r.field_bc = false;
             continue;
@@ -428,9 +428,9 @@ public final class Chess extends NetworkGameClient {
               TextLineMetrics.a(0);
               em.b(false);
               pk.field_j = false;
-              ma.field_D = false;
+              DequeWidgetContainer.field_D = false;
               BufferedRandomAccessFile.field_q = true;
-              ji.field_P = true;
+              DropTargetWidgetContainer.field_P = true;
               DefaultTextWidgetRenderer.field_h = false;
               hj.field_i = false;
               qk.field_h = 0;
@@ -461,7 +461,7 @@ public final class Chess extends NetworkGameClient {
                 if (hj.field_i) {
                   MatchingFieldValidator.field_p.a(71, false);
                 }
-                ma.field_D = false;
+                DequeWidgetContainer.field_D = false;
                 BufferedRandomAccessFile.field_q = true;
                 DisplayNameSelectionPanel.field_O = 0;
                 qk.field_h = -2;
@@ -587,7 +587,7 @@ public final class Chess extends NetworkGameClient {
             ConfirmedEmailAvailabilityValidator.i(-39);
             ph.a(-7125);
             qk.field_h = -1;
-            ma.field_D = true;
+            DequeWidgetContainer.field_D = true;
           } else {
             pd.field_Lb = var8;
             MatchingFieldValidator.field_p = null;
@@ -603,7 +603,7 @@ public final class Chess extends NetworkGameClient {
             }
           }
           fi.field_a = false;
-          ma.field_D = true;
+          DequeWidgetContainer.field_D = true;
         }
     }
 
@@ -680,7 +680,7 @@ public final class Chess extends NetworkGameClient {
           cg.a(-12, (java.awt.Canvas) (var6));
           return;
         }
-        if (!bh.e((byte) 55)) {
+        if (!ArrayWidgetContainer.e((byte) 55)) {
           nj.a(-20, wn.field_g, 100.0f);
           cg.a(-12, (java.awt.Canvas) (var6));
           return;
@@ -692,11 +692,11 @@ public final class Chess extends NetworkGameClient {
           if (nc.field_T < 16) {
             DualLinkNode.a(wn.field_e, IntrusiveDeque.field_f, (byte) -86, false);
           } else {
-            DualLinkNode.a(ma.field_D, qk.field_h, (byte) -86, false);
+            DualLinkNode.a(DequeWidgetContainer.field_D, qk.field_h, (byte) -86, false);
           }
         }
         if (!wn.field_e ||
-          !ma.field_D) {
+          !DequeWidgetContainer.field_D) {
           DebouncedFieldValidator.a(-7093, ak.a(true));
         }
         if (ga.a(param0)) {
@@ -719,7 +719,7 @@ public final class Chess extends NetworkGameClient {
           }
         }
         if (n.field_f != n.field_e) {
-          var3_int = ji.field_S * 256 / 16;
+          var3_int = DropTargetWidgetContainer.field_S * 256 / 16;
           if (var3_int > 0) {
             SoftwareRasterizer.fillRectangleAlpha(0, 0, SoftwareRasterizer.field_h, SoftwareRasterizer.field_c, 0, var3_int);
           }
@@ -803,7 +803,7 @@ public final class Chess extends NetworkGameClient {
                 var9 = var12;
                 var4_ref_short__ = var9;
                 for (var5 = var13.length - 1; var5 >= 0; var5--) {
-                  var4_ref_short__[var5] = (short)(16296 - eh.a(28207, sk.field_n, 16));
+                  var4_ref_short__[var5] = (short)(16296 - ModalDialog.a(28207, sk.field_n, 16));
                 }
               }
               ChessBoardRenderer.field_u[var3] = (dd) (tf.field_l[var3].a(96, 1365, 5, -10, 5));
@@ -977,7 +977,7 @@ public final class Chess extends NetworkGameClient {
         me.field_d = var3.copyMirroredHorizontally();
         var6.rotateClockwise();
         var3.rotateClockwise();
-        kn.field_G = var6.copy();
+        SingleChildWidgetContainer.field_G = var6.copy();
         int var5 = -41 / ((19 - param0) / 56);
         vn.field_xb = var3.copy();
         ValidatedTextField.field_Z = new RgbSprite(77, 20);
@@ -1204,7 +1204,7 @@ public final class Chess extends NetworkGameClient {
             stackIn_18_9 = var3;
             stackIn_18_10 = true;
             stackIn_20_11 = (hj.field_i) || (DefaultTextWidgetRenderer.field_h);
-            bh.a(stackIn_14_0, stackIn_14_1, stackIn_14_2, stackIn_14_3, stackIn_14_4 != 0, stackIn_14_5, stackIn_14_6, stackIn_14_7, stackIn_15_8, stackIn_18_9 != 0, stackIn_18_10, stackIn_20_11);
+            ArrayWidgetContainer.a(stackIn_14_0, stackIn_14_1, stackIn_14_2, stackIn_14_3, stackIn_14_4 != 0, stackIn_14_5, stackIn_14_6, stackIn_14_7, stackIn_15_8, stackIn_18_9 != 0, stackIn_18_10, stackIn_20_11);
           }
           while (kf.d(18954)) {
             if (wn.field_f) {
@@ -1292,7 +1292,7 @@ public final class Chess extends NetworkGameClient {
         ni.field_d = 1;
         le.field_f = 16777215;
         cm.field_w = 255;
-        kg.field_V = 1;
+        LabeledWidgetContainer.field_V = 1;
         qb.field_b = 16777215;
         if (param0 != 2) {
           field_E = -100;
@@ -1349,14 +1349,14 @@ public final class Chess extends NetworkGameClient {
               n.field_e = GzipInflater.field_d;
               nc.field_T = 31;
             } else {
-              ji.field_S = ji.field_S - 1;
-              if (ji.field_S == 0) {
+              DropTargetWidgetContainer.field_S = DropTargetWidgetContainer.field_S - 1;
+              if (DropTargetWidgetContainer.field_S == 0) {
                 n.field_e = n.field_f;
               }
             }
           } else {
-            ji.field_S = ji.field_S + 1;
-            if (ji.field_S == 16) {
+            DropTargetWidgetContainer.field_S = DropTargetWidgetContainer.field_S + 1;
+            if (DropTargetWidgetContainer.field_S == 16) {
               if (ga.a(true)) {
                 AccountNameAvailabilityValidator.j(-3750);
               } else {
@@ -1470,7 +1470,7 @@ public final class Chess extends NetworkGameClient {
           var9 = new String[]{vg.field_b, mm.field_c};
           MatchingFieldValidator.field_p = new ChessMatchSession(false, 0, var9, 0, 0, false);
           qk.field_h = -1;
-          ma.field_D = true;
+          DequeWidgetContainer.field_D = true;
         }
         if (-4 == qk.field_h) {
           EditableTextField.field_U.writeCipheredByte(9, -87);
@@ -1631,7 +1631,7 @@ public final class Chess extends NetworkGameClient {
         ArchiveProvider.clearStaticReferences(1007);
         rd.clearStaticReferences(32286);
         ie.resetStaticState(-1962602524);
-        fm.clearDeclaredStaticReferences(-9);
+        ModalDialogHost.clearDeclaredStaticReferences(-9);
         AccountCreationResultPanel.discardDeclaredStaticReferences((byte) -106);
         ch.releaseDeclaredStaticReferences(30);
         vn.releaseDeclaredStaticReferences((byte) 5);
@@ -1717,12 +1717,12 @@ public final class Chess extends NetworkGameClient {
         ka.clearStaticReferences((byte) -122);
         sj.clearStaticReferences(true);
         TextLayout.clearDeclaredStaticReferences((byte) 80);
-        mf.clearStaticReferences(0);
+        UiWidget.clearStaticReferences(0);
         InteractiveWidget.clearDeclaredStaticReferences(-1);
-        kn.e((byte) 127);
+        SingleChildWidgetContainer.e((byte) 127);
         k.clearDeclaredStaticReferences((byte) -24);
-        eh.clearDeclaredStaticReferences(888706465);
-        ma.clearStaticReferences((byte) -96);
+        ModalDialog.clearDeclaredStaticReferences(888706465);
+        DequeWidgetContainer.clearStaticReferences((byte) -96);
         qj.clearStaticReferences(124);
         m.clearStaticReferences(false);
         VorbisFloor.clearStaticReferences();
@@ -1752,7 +1752,7 @@ public final class Chess extends NetworkGameClient {
         d.clearDeclaredStaticReferences(-110);
         kd.clearDeclaredStaticReferences(-4403);
         qa.clearStaticReferences(-1);
-        kg.c(false);
+        LabeledWidgetContainer.c(false);
         ValidatedTextField.discardDeclaredStaticReferences(2491);
         EditableTextField.releaseDeclaredStaticReferences(-14);
         bj.releaseDeclaredStaticReferences(45);
@@ -1771,13 +1771,13 @@ public final class Chess extends NetworkGameClient {
         fc.clearStaticReferences(-29306);
         BirthDateValidator.h(1);
         ih.clearDeclaredStaticReferences((byte) 48);
-        bh.j(0);
+        ArrayWidgetContainer.j(0);
         bf.clearStaticReferences(false);
         RichTextLayout.clearStaticReferences((byte) 83);
         DirectByteStorage.a((byte) -115);
         ml.clearStaticReferences((byte) -122);
-        kb.clearDeclaredStaticReferences(-15237);
-        ji.i(5849);
+        DraggableWidgetContainer.clearDeclaredStaticReferences(-15237);
+        DropTargetWidgetContainer.i(5849);
         IterableNodeHashTable.clearStaticReferences(0);
         SecondaryNodeDeque.clearStaticReferences(7043);
         cm.clearStaticReferences(false);
@@ -1798,7 +1798,7 @@ public final class Chess extends NetworkGameClient {
         wc.b(true);
         hk.clearStaticReferences((byte) -42);
         vf.clearStaticReferences(false);
-        lf.j(1839839976);
+        AlphaWidgetContainer.j(1839839976);
         ve.clearDeclaredStaticReferences(103);
         bk.resetStaticState(true);
         ac.clearStaticReferences((byte) -119);
@@ -1952,7 +1952,7 @@ public final class Chess extends NetworkGameClient {
                     wg.field_q.tryLoadAllGroups((byte) -40)) {
                     if (!lg.field_b.ensureIndexLoaded((byte) 122) ||
                       !lg.field_b.tryLoadAllGroups((byte) -40)) {
-                      nj.a(-20, ji.a(ve.field_Qb, "", hh.field_j, lg.field_b, (byte) 36), 56.0f);
+                      nj.a(-20, DropTargetWidgetContainer.a(ve.field_Qb, "", hh.field_j, lg.field_b, (byte) 36), 56.0f);
                     }
                     if (bo.field_d.ensureIndexLoaded((byte) 127) &&
                       bo.field_d.tryLoadAllGroups((byte) -40)) {
@@ -1986,46 +1986,46 @@ public final class Chess extends NetworkGameClient {
                                     nj.a(-20, da.a(ld.field_a, wn.field_g, ca.field_b, -62), 80.0f);
                                     return false;
                                   }
-                                  nj.a(param0 ^ -19745, ji.a(HuffmanCodec.field_d, "lobby", nc.field_P, ByteStorage.field_b, (byte) 126), 17.0f);
+                                  nj.a(param0 ^ -19745, DropTargetWidgetContainer.a(HuffmanCodec.field_d, "lobby", nc.field_P, ByteStorage.field_b, (byte) 126), 17.0f);
                                   return false;
                                 }
-                                nj.a(-20, ji.a(NetworkGameClient.field_o, "lobby", k.field_V, hm.field_e, (byte) 30), 13.0f);
+                                nj.a(-20, DropTargetWidgetContainer.a(NetworkGameClient.field_o, "lobby", k.field_V, hm.field_e, (byte) 30), 13.0f);
                                 return false;
                               }
-                              nj.a(-20, ji.a(HuffmanCodec.field_d, "kartika13", nc.field_P, ByteStorage.field_b, (byte) 95), 17.0f);
+                              nj.a(-20, DropTargetWidgetContainer.a(HuffmanCodec.field_d, "kartika13", nc.field_P, ByteStorage.field_b, (byte) 95), 17.0f);
                               return false;
                             }
-                            nj.a(-20, ji.a(NetworkGameClient.field_o, "kartika13", k.field_V, hm.field_e, (byte) 78), 11.0f);
+                            nj.a(-20, DropTargetWidgetContainer.a(NetworkGameClient.field_o, "kartika13", k.field_V, hm.field_e, (byte) 78), 11.0f);
                             return false;
                           }
-                          nj.a(-20, ji.a(HuffmanCodec.field_d, "roman12", nc.field_P, ByteStorage.field_b, (byte) 86), 17.0f);
+                          nj.a(-20, DropTargetWidgetContainer.a(HuffmanCodec.field_d, "roman12", nc.field_P, ByteStorage.field_b, (byte) 86), 17.0f);
                           return false;
                         }
-                        nj.a(-20, ji.a(NetworkGameClient.field_o, "roman12", k.field_V, hm.field_e, (byte) 118), 11.0f);
+                        nj.a(-20, DropTargetWidgetContainer.a(NetworkGameClient.field_o, "roman12", k.field_V, hm.field_e, (byte) 118), 11.0f);
                         return false;
                       }
-                      nj.a(-20, ji.a(NetworkGameClient.field_o, "basic", k.field_V, hm.field_e, (byte) 120), 65.0f);
+                      nj.a(-20, DropTargetWidgetContainer.a(NetworkGameClient.field_o, "basic", k.field_V, hm.field_e, (byte) 120), 65.0f);
                       return false;
                     }
-                    nj.a(param0 - 19783, ji.a(HuffmanCodec.field_d, "", nc.field_P, bo.field_d, (byte) 49), 63.0f);
+                    nj.a(param0 - 19783, DropTargetWidgetContainer.a(HuffmanCodec.field_d, "", nc.field_P, bo.field_d, (byte) 49), 63.0f);
                     return false;
                   }
-                  nj.a(-20, ji.a(ld.field_a, "", wn.field_g, wg.field_q, (byte) 31), 55.0f);
+                  nj.a(-20, DropTargetWidgetContainer.a(ld.field_a, "", wn.field_g, wg.field_q, (byte) 31), 55.0f);
                   return false;
                 }
-                nj.a(-20, ji.a(NetworkGameClient.field_o, "", k.field_V, mm.field_d, (byte) 113), 35.0f);
+                nj.a(-20, DropTargetWidgetContainer.a(NetworkGameClient.field_o, "", k.field_V, mm.field_d, (byte) 113), 35.0f);
                 return false;
               }
-              nj.a(-20, ji.a(vk.field_c, "", hh.field_k, li.field_g, (byte) 68), 30.0f);
+              nj.a(-20, DropTargetWidgetContainer.a(vk.field_c, "", hh.field_k, li.field_g, (byte) 68), 30.0f);
               return false;
             }
             nj.a(-20, sc.a(ej.field_d, pg.field_o, 0, sk.field_u, (byte) -47), 20.0f);
             return false;
           }
-          nj.a(-20, ji.a(sc.field_g, "", AccountRegistrationPanel.field_X, tk.field_g, (byte) 90), 10.0f);
+          nj.a(-20, DropTargetWidgetContainer.a(sc.field_g, "", AccountRegistrationPanel.field_X, tk.field_g, (byte) 90), 10.0f);
           return false;
         }
-        nj.a(-20, ji.a(sc.field_g, "", AccountRegistrationPanel.field_X, BufferedRandomAccessFile.field_m, (byte) 116), 5.0f);
+        nj.a(-20, DropTargetWidgetContainer.a(sc.field_g, "", AccountRegistrationPanel.field_X, BufferedRandomAccessFile.field_m, (byte) 116), 5.0f);
         return false;
     }
 

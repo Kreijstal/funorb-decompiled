@@ -8,7 +8,7 @@ final class hg extends hc {
     int field_tb;
     static AccountRequestState field_ub;
     static int field_pb;
-    static k field_S;
+    static ModalDialogHost field_S;
     static String[] field_ob;
     static int field_rb;
 
@@ -30,12 +30,12 @@ final class hg extends hc {
           if (param3 != -38) {
             field_pb = -128;
           }
-          if (TextHotspotBounds.field_q != pj.field_D) {
+          if (TextHotspotBounds.field_q != DequeWidgetContainer.field_D) {
             return false;
           }
           var8 = new AccountCreationResultPanel(PcmResampler.field_c, param6);
           var7 = var8;
-          PcmResampler.field_c.a((byte) -109, (vg) (var8));
+          PcmResampler.field_c.showDialog((byte) -109, (UiWidget) (var8));
           if (wh.a(false)) {
             var8.p(248);
             return true;

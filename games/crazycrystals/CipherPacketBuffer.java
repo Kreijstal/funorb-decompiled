@@ -25,7 +25,7 @@ final class CipherPacketBuffer extends PacketBuffer {
         if (null == kf.field_h) {
           return false;
         }
-        if (null == kf.field_h.j(0)) {
+        if (null == kf.field_h.getTopOpenDialog(0)) {
           return false;
         }
         return true;

@@ -8,14 +8,14 @@ final class mb {
 
     final static void a(String param0, int param1, boolean param2, boolean param3) {
         try {
-          j.j(-23687);
+          ModalDialogHost.j(-23687);
           if (param1 != 1024) {
             mb.clearStaticReferences(-72);
           }
-          sd.field_c.k(126);
+          sd.field_c.closeAllDialogs(126);
           i.field_a = new LoginPanel(ng.field_y, (String) null, DirectByteArrayStore.field_e, param2, param3);
           vb.field_h = new ej(sd.field_c, i.field_a);
-          sd.field_c.b(vb.field_h, (byte) -34);
+          sd.field_c.showDialog(vb.field_h, (byte) -34);
         } catch (RuntimeException runtimeException) {
           throw ma.wrapException((Throwable) ((Object) runtimeException), "mb.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }

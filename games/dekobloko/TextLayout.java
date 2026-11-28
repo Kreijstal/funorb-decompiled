@@ -154,7 +154,7 @@ abstract class TextLayout {
 
     final static String computeString0231(int integerArgument1) {
         if (!(UiComponentPart004.integerState0091 >= 2)) {
-          return UiComponentPart010.stringState0150;
+          return AlphaWidgetContainer.stringState0150;
         }
         if (null != NodeDeque.resourceArchiveState0025) {
           if (!NodeDeque.resourceArchiveState0025.ensureIndexLoaded((byte) 121)) {

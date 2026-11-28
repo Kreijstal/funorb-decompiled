@@ -63,7 +63,7 @@ final class ProxyAuthenticationRequiredException extends IOException {
           for (var6 = var2_int; var3 > var6; var6++) {
             var7 = param0.charAt(var6);
             if (vb.a((byte) -106, (char) var7)) {
-              var8 = hh.a(125, (char) var7);
+              var8 = DraggableWidgetContainer.a(125, (char) var7);
               if (var8 != 0) {
                 discarded$0 = var5.append((char) var8);
               }

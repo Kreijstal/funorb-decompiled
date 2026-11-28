@@ -6,7 +6,7 @@ final class MixedSupport005 {
     static SceneWidget sceneWidgetState0002;
     static boolean[] booleanArrayState0001;
     static ResourceArchive resourceArchiveState0001;
-    static UiComponentPart016 uiComponentPart016State0001;
+    static ModalDialogHost uiComponentPart016State0001;
     static ResourceArchive resourceArchiveState0002;
     static String stringState0018;
     static String stringState0019;

@@ -123,7 +123,7 @@ final class MatchingFieldValidator extends TextFieldValidator {
             if (var3 != null) {
               if (var3.getValidationStatus(param0 ^ -27836) == hi.field_b &&
                 !param1.equals(this.field_j.field_k)) {
-                stackIn_6_0 = gl.field_C;
+                stackIn_6_0 = AlphaWidgetContainer.field_C;
                 return stackIn_6_0;
               }
               stackIn_8_0 = var3.getValidationMessage(param0 + 30524);
@@ -137,7 +137,7 @@ final class MatchingFieldValidator extends TextFieldValidator {
           if (param1.equals(this.field_j.field_k)) {
             return null;
           }
-          stackIn_15_0 = gl.field_C;
+          stackIn_15_0 = AlphaWidgetContainer.field_C;
           return stackIn_15_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

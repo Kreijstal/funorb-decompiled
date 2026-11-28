@@ -260,7 +260,7 @@ final class CrossfadingMidiPcmStream extends PcmStream {
         if (param3 != 1) {
           CrossfadingMidiPcmStream.clearStaticReferences(52);
         }
-        return gl.b(param2, 1, param1, 104, param0);
+        return AlphaWidgetContainer.b(param2, 1, param1, 104, param0);
     }
 
     public static void clearStaticReferences(int param0) {

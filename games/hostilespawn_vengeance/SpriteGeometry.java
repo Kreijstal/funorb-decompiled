@@ -17,7 +17,7 @@ abstract class SpriteGeometry extends DualLinkNode {
     static RgbSprite field_q;
 
     final static String d(int param0) {
-        if (od.field_I == ti.field_b) {
+        if (DropTargetWidgetContainer.field_I == ti.field_b) {
           return cg.field_e;
         }
         if (ti.field_b == ki.field_f) {

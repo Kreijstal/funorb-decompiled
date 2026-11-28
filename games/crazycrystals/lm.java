@@ -25,10 +25,10 @@ final class lm {
           IsaacRandom.field_h = tn.field_s;
           DualLinkNode.field_h = ArchiveRequest.field_m;
           ArchiveRequest.field_m = false;
-          WallTile.field_v = th.field_y;
+          WallTile.field_v = AlphaWidgetContainer.field_y;
           to.field_a = FloatingScoreLabel.field_g;
           ProfileDataRequest.field_h = sb.field_I;
-          th.field_y = 0;
+          AlphaWidgetContainer.field_y = 0;
           var2 = 33 % ((-53 - param0) / 49);
         }
     }

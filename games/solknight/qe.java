@@ -78,7 +78,7 @@ final class qe extends WidgetContainer implements TextHotspotListener, WidgetAct
     }
 
     qe(AccountCreationResultPanel param0) {
-        super(0, 0, 288, 0, (j) null);
+        super(0, 0, 288, 0, (WidgetRenderer) null);
         String var7 = null;
         int var3 = 0;
         DefaultTextWidgetRenderer var4 = null;
@@ -86,8 +86,8 @@ final class qe extends WidgetContainer implements TextHotspotListener, WidgetAct
         int var6 = 0;
         try {
           this.field_D = param0;
-          this.field_H = new InteractiveWidget(dd.field_a, (dg) null);
-          this.field_H.field_w = (j) ((Object) new gh());
+          this.field_H = new InteractiveWidget(dd.field_a, (WidgetEventListener) null);
+          this.field_H.field_w = (WidgetRenderer) ((Object) new gh());
           var7 = LoginPanel.a(AccountRegistrationPanel.field_F, new String[]{this.e(true), this.h(-18655)}, -63);
           var3 = 20;
           var4 = new DefaultTextWidgetRenderer(NameSuggestionsPanel.field_G, 0, 0, 0, 0, 16777215, -1, 3, 0, NameSuggestionsPanel.field_G.field_F, -1, 2147483647, true);
@@ -95,23 +95,23 @@ final class qe extends WidgetContainer implements TextHotspotListener, WidgetAct
           this.field_E.field_z = "";
           this.field_E.a(0, mj.field_a, 1);
           this.field_E.a(1, mj.field_a, 1);
-          this.field_E.field_n = (dg) (this);
+          this.field_E.field_n = (WidgetEventListener) (this);
           this.field_E.field_t = -40 + this.field_t;
           this.field_E.b(26, var3, 1, this.field_t - 40);
           var3 = var3 + (this.field_E.field_x + 15);
-          this.a(this.field_E, 5411);
+          this.addChild(this.field_E, 5411);
           var5 = 4;
           var6 = 200;
-          this.field_H.b(40, var6, -var6 + 300 >> 1, 0, var3);
-          this.field_H.field_n = (dg) (this);
-          this.a(this.field_H, 5411);
-          this.b(var5 + (55 + var3), 300, 0, 0, 0);
+          this.field_H.setBounds(40, var6, -var6 + 300 >> 1, 0, var3);
+          this.field_H.field_n = (WidgetEventListener) (this);
+          this.addChild(this.field_H, 5411);
+          this.setBounds(var5 + (55 + var3), 300, 0, 0, 0);
         } catch (RuntimeException runtimeException) {
           throw fc.wrapClientException((Throwable) ((Object) runtimeException), "qe.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
-    final boolean a(char param0, byte param1, int param2, UiWidget param3) {
+    final boolean handleKey(char param0, byte param1, int param2, UiWidget param3) {
         int var5_int = 0;
         RuntimeException var5 = null;
         boolean stackIn_7_0 = false;
@@ -121,15 +121,15 @@ final class qe extends WidgetContainer implements TextHotspotListener, WidgetAct
         String stackIn_17_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (super.a(param0, (byte) -127, param2, param3)) {
+          if (super.handleKey(param0, (byte) -127, param2, param3)) {
             return true;
           }
           if (param2 == 98) {
-            stackIn_7_0 = this.a((byte) -125, param3);
+            stackIn_7_0 = this.focusPreviousChild((byte) -125, param3);
             return stackIn_7_0;
           }
           if (param2 == 99) {
-            stackIn_11_0 = this.b(120, param3);
+            stackIn_11_0 = this.focusNextChild(120, param3);
             return stackIn_11_0;
           }
           var5_int = 68 / ((param1 - 31) / 56);
@@ -178,7 +178,7 @@ final class qe extends WidgetContainer implements TextHotspotListener, WidgetAct
     private final String e(boolean param0) {
         if (!param0) {
           UiWidget var3 = (UiWidget) null;
-          this.a('￘', (byte) -57, -43, (UiWidget) null);
+          this.handleKey('￘', (byte) -57, -43, (UiWidget) null);
           return "<u=2164A2><col=2164A2>";
         }
         return "<u=2164A2><col=2164A2>";

@@ -85,7 +85,7 @@ abstract class TextFieldValidator extends DebouncedFieldValidator implements Tex
         RuntimeException var3_ref = null;
         try {
           param0 = hd.a('_', (byte) -81, "", param0);
-          var3 = vl.b(-1, param0);
+          var3 = DraggableWidgetContainer.b(-1, param0);
           if (param1 < 85) {
             field_i = (int[]) null;
           }

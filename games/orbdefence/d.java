@@ -14,7 +14,7 @@ final class d extends IntrusiveNode {
     final static void b(byte param0) {
         if (param0 <= -31) {
           if (bm.field_d != null) {
-            bm.field_d.l(-113);
+            bm.field_d.snapAndPruneDialogs(-113);
           }
           if (na.field_c != null) {
             na.field_c.p(1);
@@ -49,7 +49,7 @@ final class d extends IntrusiveNode {
           }
           try {
             if (mc.field_j == 0) {
-              cf.field_a = lh.field_b.requestDirectSocket(ta.field_z, 0, fm.field_c);
+              cf.field_a = lh.field_b.requestDirectSocket(DequeWidgetContainer.field_z, 0, fm.field_c);
               mc.field_j = mc.field_j + 1;
             }
             if (mc.field_j == 1) {
@@ -62,18 +62,18 @@ final class d extends IntrusiveNode {
               }
             }
             if (2 == mc.field_j) {
-              dd.field_A = new BufferedSocket((java.net.Socket) (cf.field_a.result), lh.field_b);
+              DraggableWidgetContainer.field_A = new BufferedSocket((java.net.Socket) (cf.field_a.result), lh.field_b);
               var2 = new PacketBuffer(13);
               nl.a(20994, hc.field_f, SpriteGeometry.field_m, var2, InteractiveWidget.field_x);
               var2.writeByte(15, -49);
               var2.writeInt(m.field_b, -1);
-              dd.field_A.queueWrite((byte) 30, var2.payload, 0, 13);
+              DraggableWidgetContainer.field_A.queueWrite((byte) 30, var2.payload, 0, 13);
               mc.field_j = mc.field_j + 1;
               n.field_b = 30000L + ji.correctedCurrentTimeMillis(-75);
             }
             if (mc.field_j == 3) {
-              if (dd.field_A.availableBytes((byte) 101) > 0) {
-                var1_int = dd.field_A.readSingleByte(true);
+              if (DraggableWidgetContainer.field_A.availableBytes((byte) 101) > 0) {
+                var1_int = DraggableWidgetContainer.field_A.readSingleByte(true);
                 if (var1_int != 0) {
                   stackIn_30_0 = kk.a(-30179, var1_int);
                   return stackIn_30_0;
@@ -90,8 +90,8 @@ final class d extends IntrusiveNode {
               stackIn_36_0 = -1;
               return stackIn_36_0;
             }
-            kg.field_h.a(dd.field_A, 20, il.field_a);
-            dd.field_A = null;
+            kg.field_h.a(DraggableWidgetContainer.field_A, 20, il.field_a);
+            DraggableWidgetContainer.field_A = null;
             cf.field_a = null;
             mc.field_j = 0;
             stackIn_34_0 = 0;

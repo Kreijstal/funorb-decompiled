@@ -246,8 +246,8 @@ final class fk extends DefaultTextWidgetRenderer {
         return dupTemp$0;
     }
 
-    public final void a(int param0, boolean param1, int param2, qm param3, boolean param4) {
-        qm stackIn_5_0 = null;
+    public final void paintWidget(int param0, boolean param1, int param2, UiWidget param3, boolean param4) {
+        UiWidget stackIn_5_0 = null;
         RuntimeException stackIn_35_0 = null;
         StringBuilder stackIn_35_1 = null;
         String stackIn_36_2 = null;
@@ -267,7 +267,7 @@ final class fk extends DefaultTextWidgetRenderer {
           if (!(param3 instanceof InteractiveWidget)) {
             stackIn_5_0 = null;
           } else {
-            stackIn_5_0 = (qm) (param3);
+            stackIn_5_0 = (UiWidget) (param3);
           }
           var10 = (InteractiveWidget) (stackIn_5_0);
           qp.a(param2 + param3.field_r, param0 - (-param3.field_j - param3.field_f), param3.field_r + param2 + param3.field_g, (byte) 73, param0 + param3.field_j);
@@ -297,7 +297,7 @@ final class fk extends DefaultTextWidgetRenderer {
               }
             }
           }
-          if (param3.e(-122)) {
+          if (param3.isFocused(-122)) {
             var13 = this.field_r[5];
             if (var13 != null) {
               var13.a(this, param0, -106, param3, param2, this.field_w);

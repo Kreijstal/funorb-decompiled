@@ -108,7 +108,7 @@ final class ImageProducerRasterBuffer extends RasterBuffer implements java.awt.i
         if (param0 != 91) {
           return;
         }
-        gl.field_y = 0;
+        AlphaWidgetContainer.field_y = 0;
     }
 
     private final synchronized void c(byte param0) {
@@ -611,10 +611,10 @@ final class ImageProducerRasterBuffer extends RasterBuffer implements java.awt.i
             ne.a((byte) 7, var4, param1);
             var4 = (AchievementNotice) (ArchiveRequest.field_r.nextForward(true));
           }
-          var2 = oc.field_G.beginForward((byte) -95);
+          var2 = LabeledWidgetContainer.field_G.beginForward((byte) -95);
           while (var2 != null) {
             Bzip2State.a(2, param1);
-            var2 = oc.field_G.nextForward(true);
+            var2 = LabeledWidgetContainer.field_G.nextForward(true);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

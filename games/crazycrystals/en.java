@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class en extends ab {
+abstract class en extends ModalDialog {
     private int field_L;
     private int field_J;
     private int field_N;
@@ -14,19 +14,19 @@ abstract class en extends ab {
     private int field_P;
     static RgbSprite[] field_K;
 
-    boolean e(byte param0) {
+    boolean snapDialogAnimation(byte param0) {
         this.j(param0 ^ -80);
         if (param0 != 79) {
-          this.g((byte) 101);
+          this.advanceDialogAnimation((byte) 101);
         }
-        return super.e((byte) 79);
+        return super.snapDialogAnimation((byte) 79);
     }
 
     void j(int param0) {
         if (param0 <= ~this.field_P) {
           return;
         }
-        this.a(this.field_G, (byte) -50, this.field_H);
+        this.setCenteredSize(this.field_G, (byte) -50, this.field_H);
         this.field_P = 0;
         this.k(42);
     }
@@ -39,7 +39,7 @@ abstract class en extends ab {
 
     final void a(int param0, int param1, byte param2, int param3) {
         if (param0 <= 0) {
-          this.a(param1, (byte) 127, param3);
+          this.setCenteredSize(param1, (byte) 127, param3);
           return;
         }
         this.field_L = this.field_g;
@@ -212,7 +212,7 @@ abstract class en extends ab {
         }
     }
 
-    boolean g(byte param0) {
+    boolean advanceDialogAnimation(byte param0) {
         int var2 = 0;
         int var3 = 0;
         int fieldTemp$0 = 0;
@@ -236,12 +236,12 @@ abstract class en extends ab {
             var2 = var4 * (-this.field_L + this.field_H) / var5 + this.field_L;
             var3 = (-this.field_N + this.field_G) * var4 / var5 + this.field_N;
           }
-          this.a(var3, (byte) 24, var2);
+          this.setCenteredSize(var3, (byte) 24, var2);
         }
-        return super.g((byte) 8);
+        return super.advanceDialogAnimation((byte) 8);
     }
 
-    en(ol param0, int param1, int param2) {
+    en(ModalDialogHost param0, int param1, int param2) {
         super(param0, param1, param2);
         this.field_P = 0;
         this.field_J = 0;

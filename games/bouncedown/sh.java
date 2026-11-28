@@ -39,7 +39,7 @@ class sh extends mh implements WidgetActivationListener {
             var6.a(i.field_g, 17, (byte) 123);
           } else {
             if (param2 == 256) {
-              var6.a(mh.field_W, (sk) (this), -4);
+              var6.a(mh.field_W, (WidgetEventListener) (this), -4);
             } else {
               stackIn_10_0 = var6;
               if (this.field_eb) {
@@ -59,7 +59,7 @@ class sh extends mh implements WidgetActivationListener {
                   this.a(10768, var6);
                   return;
                 }
-                var6.a(AppletShell.field_d, (sk) (this), -4);
+                var6.a(AppletShell.field_d, (WidgetEventListener) (this), -4);
               }
             } else {
               var6.a(DebouncedFieldValidator.field_f, 8, (byte) 97);
@@ -83,7 +83,7 @@ class sh extends mh implements WidgetActivationListener {
         }
     }
 
-    sh(pf param0, BitmapFont param1, String param2, boolean param3, boolean param4) {
+    sh(ModalDialogHost param0, BitmapFont param1, String param2, boolean param3, boolean param4) {
         super(param0, new uc((sh) null, param1, param2), 77, 10, 10);
         try {
           this.field_ib = false;
@@ -93,7 +93,7 @@ class sh extends mh implements WidgetActivationListener {
           this.field_fb = false;
           this.field_db = new ll(13, 50, 274, 30, 15, 2113632, 4210752);
           this.field_db.field_C = true;
-          this.b(this.field_db, true);
+          this.addChild(this.field_db, true);
         } catch (RuntimeException runtimeException) {
           throw CipherPacketBuffer.wrapClientException((Throwable) ((Object) runtimeException), "sh.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ')');
         }
@@ -147,7 +147,7 @@ class sh extends mh implements WidgetActivationListener {
         }
     }
 
-    final boolean a(lk param0, char param1, int param2, int param3) {
+    final boolean handleKey(UiWidget param0, char param1, int param2, int param3) {
         RuntimeException var5 = null;
         String var6 = null;
         boolean stackIn_7_0 = false;
@@ -164,7 +164,7 @@ class sh extends mh implements WidgetActivationListener {
             var6 = (String) null;
             this.a((String) null, -33, 29);
           }
-          stackIn_7_0 = super.a(param0, param1, param2, -14565);
+          stackIn_7_0 = super.handleKey(param0, param1, param2, -14565);
           return stackIn_7_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

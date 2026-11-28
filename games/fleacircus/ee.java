@@ -14,7 +14,7 @@ final class ee implements ComponentLayout {
     private int field_j;
     private int field_g;
 
-    public final void a(int param0, int param1, boolean param2, UiComponent param3, int param4) {
+    public final void paintWidget(int param0, int param1, boolean param2, UiComponent param3, int param4) {
         RuntimeException var6 = null;
         int var7 = 0;
         int var8 = 0;

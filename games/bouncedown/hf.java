@@ -155,7 +155,7 @@ final class hf {
         int var1_int = 0;
         RuntimeException var1 = null;
         int var2 = 0;
-        pf stackIn_3_0 = null;
+        ModalDialogHost stackIn_3_0 = null;
         int stackIn_3_1 = 0;
         boolean stackIn_4_2 = false;
         int stackIn_9_0 = 0;
@@ -170,10 +170,10 @@ final class hf {
           stackIn_3_0 = DisplayNameSelectionPanel.field_N;
           stackIn_3_1 = dk.field_c;
           stackIn_4_2 = !(param0);
-          ((pf) (Object) stackIn_3_0).a(stackIn_3_1, stackIn_4_2, true, ee.field_b);
-          DisplayNameSelectionPanel.field_N.d((byte) 111);
+          ((ModalDialogHost) (Object) stackIn_3_0).processPointerInput(stackIn_3_1, stackIn_4_2, true, ee.field_b);
+          DisplayNameSelectionPanel.field_N.advanceDialogs((byte) 111);
           while (DisplayNameSelectionPanel.g((byte) -15)) {
-            DisplayNameSelectionPanel.field_N.a((byte) -109, lh.field_f, ResourceArchive.field_d);
+            DisplayNameSelectionPanel.field_N.processKeyInput((byte) -109, lh.field_f, ResourceArchive.field_d);
           }
           if (IterableNodeHashTable.field_g != -1) {
             var1_int = IterableNodeHashTable.field_g;

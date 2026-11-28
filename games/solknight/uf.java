@@ -11,16 +11,16 @@ class uf extends DefaultTextWidgetRenderer {
         super(param0, 4, 2, 2, 2, param1, -1, 0, 1, param0.field_F, -1, 2147483647, false);
     }
 
-    public final void a(byte param0, int param1, boolean param2, int param3, UiWidget param4) {
+    public final void paintWidget(byte param0, int param1, boolean param2, int param3, UiWidget param4) {
         try {
           if (param0 < 113) {
             UiWidget var7 = (UiWidget) null;
-            this.a((byte) 62, -71, true, -109, (UiWidget) null);
+            this.paintWidget((byte) 62, -71, true, -109, (UiWidget) null);
           }
           if (param2) {
             pl.a(true, param4.field_x, param4.field_t, param4.field_j + param1, param3 + param4.field_m);
           }
-          super.a((byte) 117, param1, param2, param3, param4);
+          super.paintWidget((byte) 117, param1, param2, param3, param4);
         } catch (RuntimeException runtimeException) {
           throw fc.wrapClientException((Throwable) ((Object) runtimeException), "uf.T(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ')');
         }
@@ -185,23 +185,23 @@ class uf extends DefaultTextWidgetRenderer {
           if (null != InteractiveWidget.field_D) {
             try {
               InteractiveWidget.field_D.seek(0L, (byte) 45);
-              InteractiveWidget.field_D.write(te.field_N.payload, -20291, 24, te.field_N.position);
+              InteractiveWidget.field_D.write(AlphaWidgetContainer.field_N.payload, -20291, 24, AlphaWidgetContainer.field_N.position);
             } catch (java.lang.Exception decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var1 = (Exception) (Object) decompiledCaughtException;
               if (param0 == 31911) {
-                te.field_N.position = te.field_N.position + 24;
+                AlphaWidgetContainer.field_N.position = AlphaWidgetContainer.field_N.position + 24;
                 return;
               }
               field_q = -95;
-              te.field_N.position = te.field_N.position + 24;
+              AlphaWidgetContainer.field_N.position = AlphaWidgetContainer.field_N.position + 24;
               return;
             }
           }
           if (param0 != 31911) {
             field_q = -95;
           }
-          te.field_N.position = te.field_N.position + 24;
+          AlphaWidgetContainer.field_N.position = AlphaWidgetContainer.field_N.position + 24;
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {
@@ -213,7 +213,7 @@ class uf extends DefaultTextWidgetRenderer {
         if (param0) {
           return;
         }
-        u.field_b.a(19550, 0, 0);
+        u.field_b.drawAllLayers(19550, 0, 0);
     }
 
     static {

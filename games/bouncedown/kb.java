@@ -16,19 +16,19 @@ final class kb {
 
     final static void b(int param0) {
         if (param0 == 808) {
-          DisplayNameSelectionPanel.field_N.k(-20281);
+          DisplayNameSelectionPanel.field_N.closeAllDialogs(-20281);
           if (DisplayNameSelectionPanel.field_A == null) {
             DisplayNameSelectionPanel.field_A = new db(DisplayNameSelectionPanel.field_N, ej.field_c);
           }
-          DisplayNameSelectionPanel.field_N.b(DisplayNameSelectionPanel.field_A, false);
+          DisplayNameSelectionPanel.field_N.showDialog(DisplayNameSelectionPanel.field_A, false);
           return;
         }
         kb.a(-78);
-        DisplayNameSelectionPanel.field_N.k(-20281);
+        DisplayNameSelectionPanel.field_N.closeAllDialogs(-20281);
         if (DisplayNameSelectionPanel.field_A == null) {
           DisplayNameSelectionPanel.field_A = new db(DisplayNameSelectionPanel.field_N, ej.field_c);
         }
-        DisplayNameSelectionPanel.field_N.b(DisplayNameSelectionPanel.field_A, false);
+        DisplayNameSelectionPanel.field_N.showDialog(DisplayNameSelectionPanel.field_A, false);
     }
 
     static {

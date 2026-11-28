@@ -140,12 +140,12 @@ final class TextLineMetrics {
               var10 = mn.a((byte) -30, var8_ref_ld);
               var11 = var10 + BitmapFont.escapeMarkup(var8_ref_ld.field_n);
               var12 = wh.a(param3 ^ -9, var8_ref_ld);
-              var8_ref_ld.field_f = new ci(0L, eh.field_M, var11);
+              var8_ref_ld.field_f = new ci(0L, ModalDialog.field_M, var11);
               var8_ref_ld.field_f.field_ib = var12;
               var8_ref_ld.field_f.field_xb = sc.field_a;
               var6 = var6 + param2;
-              var8_ref_ld.field_f.field_P = -(8355711 & var12 >> 1) + var12 + ((eh.field_M.field_P & 16711423) >> 1);
-              var8_ref_ld.field_f.field_O = var12 - ((16711423 & var12) >> 1) + ((16711422 & eh.field_M.field_O) >> 1);
+              var8_ref_ld.field_f.field_P = -(8355711 & var12 >> 1) + var12 + ((ModalDialog.field_M.field_P & 16711423) >> 1);
+              var8_ref_ld.field_f.field_O = var12 - ((16711423 & var12) >> 1) + ((16711422 & ModalDialog.field_M.field_O) >> 1);
             }
           } else {
             var8_ref_ld.field_f = null;
@@ -176,7 +176,7 @@ final class TextLineMetrics {
           fl.field_j = true;
           ac.field_j.field_Kb.field_vb = 0;
         }
-        if (kn.field_L &&
+        if (SingleChildWidgetContainer.field_L &&
           ac.field_l != null) {
           fl.field_j = true;
         }

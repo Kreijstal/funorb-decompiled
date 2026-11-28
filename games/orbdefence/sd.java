@@ -41,7 +41,7 @@ final class sd {
 
     final static void a(int param0) {
         mb.field_a = gd.a(0);
-        bm.field_d = new sk();
+        bm.field_d = new ModalDialogHost();
         int var1 = 113 / ((param0 - 25) / 55);
         ArchiveRequest.a(-118, true, true);
     }
@@ -80,7 +80,7 @@ final class sd {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw dd.wrapClientException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw DraggableWidgetContainer.wrapClientException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 

@@ -28,20 +28,20 @@ final class UiComponentPart026 extends UiComponentPart030 {
         return nodeDequeLocal1;
     }
 
-    UiComponentPart026(UiComponentPart016 uiComponentPart016Argument1, String stringArgument2) {
+    UiComponentPart026(ModalDialogHost uiComponentPart016Argument1, String stringArgument2) {
         super(uiComponentPart016Argument1, 300, 120);
         int integerLocal1 = 0;
         try {
           this.stringState0458 = stringArgument2;
           if (this.stringState0458 != null) {
             integerLocal1 = GameDomainSupport002.bitmapFontState0012.textHeight(this.stringState0458, 260, GameDomainSupport002.bitmapFontState0012.integerState0518);
-            this.performAction0161(112, 300, integerLocal1 + 150);
+            this.setCenteredSize(112, 300, integerLocal1 + 150);
           }
           this.uiComponentPart027State0002 = new UiComponentPart027(13, 50, 274, 30, 15, 2113632, 4210752);
           this.booleanState0158 = false;
           this.uiComponentPart027State0002.booleanState0159 = true;
           this.booleanState0157 = false;
-          this.performAction0895(this.uiComponentPart027State0002, (byte) -55);
+          this.addChild(this.uiComponentPart027State0002, (byte) -55);
         } catch (RuntimeException runtimeException) {
           throw ClientException.computeDiagnosticSupport0020365((Throwable) ((Object) runtimeException), "qn.<init>(" + (uiComponentPart016Argument1 != null ? "{...}" : "null") + ',' + (stringArgument2 != null ? "{...}" : "null") + ')');
         }

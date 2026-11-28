@@ -29,10 +29,10 @@ final class cj {
         var3 = SolKnight.field_L ? 1 : 0;
         try {
           var1_int = 75 / ((param0 - 8) / 49);
-          u.field_b.a(-1, th.field_K, true, ee.field_l);
-          u.field_b.c(false);
+          u.field_b.processPointerInput(-1, DropTargetWidgetContainer.field_K, true, ee.field_l);
+          u.field_b.advanceDialogs(false);
           while (DelegatingCanvas.a((byte) -56)) {
-            u.field_b.a(MatchingFieldValidator.field_n, ta.field_d, (byte) -48);
+            u.field_b.processKeyInput(MatchingFieldValidator.field_n, ta.field_d, (byte) -48);
           }
           if (he.field_b != -1) {
             var2 = he.field_b;

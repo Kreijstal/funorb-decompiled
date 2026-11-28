@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ba extends ma implements TextHotspotListener, WidgetActivationListener {
+final class ba extends DequeWidgetContainer implements TextHotspotListener, WidgetActivationListener {
     static String field_M;
     private RichTextWidget field_S;
     static java.applet.Applet field_L;
@@ -186,7 +186,7 @@ final class ba extends ma implements TextHotspotListener, WidgetActivationListen
                 if (!qj.field_d) {
                   var8 = "[" + MatchingFieldValidator.a(InteractiveWidget.field_D, new String[]{pd.field_Rb.field_Gb}, (byte) -125) + "] ";
                 } else {
-                  if (null == kb.field_P) {
+                  if (null == DraggableWidgetContainer.field_P) {
                     var24 = "[" + MatchingFieldValidator.a(InteractiveWidget.field_D, new String[]{pd.field_Rb.field_Gb}, (byte) -125) + "] ";
                     var25 = var24 + var19 + ": ";
                     var6Lifetime1 = var6Lifetime1 - sc.field_a.stringWidth(var25);
@@ -195,7 +195,7 @@ final class ba extends ma implements TextHotspotListener, WidgetActivationListen
                     }
                     return true;
                   }
-                  var8 = "[" + kb.field_P + "] ";
+                  var8 = "[" + DraggableWidgetContainer.field_P + "] ";
                 }
                 var26 = var8 + var19 + ": ";
                 var6Lifetime1 = var6Lifetime1 - sc.field_a.stringWidth(var26);
@@ -218,7 +218,7 @@ final class ba extends ma implements TextHotspotListener, WidgetActivationListen
                 rb.a(' ', sg.field_c, -1 + sg.field_c.length(), (byte) 116);
                 return true;
               }
-              if (null == kb.field_P) {
+              if (null == DraggableWidgetContainer.field_P) {
                 var27 = "[" + MatchingFieldValidator.a(InteractiveWidget.field_D, new String[]{pd.field_Rb.field_Gb}, (byte) -125) + "] ";
                 var28 = var27 + var19 + ": ";
                 var6Lifetime1 = var6Lifetime1 - sc.field_a.stringWidth(var28);
@@ -228,7 +228,7 @@ final class ba extends ma implements TextHotspotListener, WidgetActivationListen
                 rb.a(' ', sg.field_c, -1 + sg.field_c.length(), (byte) 116);
                 return true;
               }
-              var8 = "[" + kb.field_P + "] ";
+              var8 = "[" + DraggableWidgetContainer.field_P + "] ";
             }
             var31 = var8 + var19 + ": ";
             var6Lifetime1 = var6Lifetime1 - sc.field_a.stringWidth(var31);
@@ -249,7 +249,7 @@ final class ba extends ma implements TextHotspotListener, WidgetActivationListen
     }
 
     ba(AccountCreationResultPanel param0) {
-        super(0, 0, 288, 0, (jm) null);
+        super(0, 0, 288, 0, (WidgetRenderer) null);
         String var7 = null;
         int var3 = 0;
         DefaultTextWidgetRenderer var4 = null;
@@ -257,8 +257,8 @@ final class ba extends ma implements TextHotspotListener, WidgetActivationListen
         int var6 = 0;
         try {
           this.field_K = param0;
-          this.field_T = new InteractiveWidget(sg.field_e, (rg) null);
-          this.field_T.field_n = (jm) ((Object) new sf());
+          this.field_T = new InteractiveWidget(sg.field_e, (WidgetEventListener) null);
+          this.field_T.field_n = (WidgetRenderer) ((Object) new sf());
           var7 = MatchingFieldValidator.a(kl.field_g, new String[]{this.a(29917), this.g((byte) -11)}, (byte) -114);
           var3 = 20;
           var4 = new DefaultTextWidgetRenderer(rb.field_b, 0, 0, 0, 0, 16777215, -1, 3, 0, rb.field_b.field_C, -1, 2147483647, true);
@@ -266,17 +266,17 @@ final class ba extends ma implements TextHotspotListener, WidgetActivationListen
           this.field_S.field_j = "";
           this.field_S.a(-23750, 0, ok.field_Gb);
           this.field_S.a(-23750, 1, ok.field_Gb);
-          this.field_S.field_p = (rg) (this);
+          this.field_S.field_p = (WidgetEventListener) (this);
           this.field_S.field_y = -40 + this.field_y;
           this.field_S.b(26, var3, 1, -40 + this.field_y);
           var3 = var3 + (15 + this.field_S.field_C);
-          this.b(this.field_S, 95);
+          this.addChild(this.field_S, 95);
           var5 = 4;
           var6 = 200;
-          this.field_T.a(var3, 34, 40, var6, 300 - var6 >> 1);
-          this.field_T.field_p = (rg) (this);
-          this.b(this.field_T, 95);
-          this.a(0, 34, var5 + 55 + var3, 300, 0);
+          this.field_T.setBounds(var3, 34, 40, var6, 300 - var6 >> 1);
+          this.field_T.field_p = (WidgetEventListener) (this);
+          this.addChild(this.field_T, 95);
+          this.setBounds(0, 34, var5 + 55 + var3, 300, 0);
         } catch (RuntimeException runtimeException) {
           throw SpriteGeometry.wrapClientException((Throwable) ((Object) runtimeException), "ba.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
@@ -301,7 +301,7 @@ final class ba extends ma implements TextHotspotListener, WidgetActivationListen
         return "</col></u>";
     }
 
-    final boolean a(char param0, int param1, int param2, mf param3) {
+    final boolean handleKey(char param0, int param1, int param2, UiWidget param3) {
         RuntimeException var5 = null;
         boolean stackIn_7_0 = false;
         boolean stackIn_10_0 = false;
@@ -310,17 +310,17 @@ final class ba extends ma implements TextHotspotListener, WidgetActivationListen
         String stackIn_16_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (super.a(param0, param1, param2, param3)) {
+          if (super.handleKey(param0, param1, param2, param3)) {
             return true;
           }
           if (param1 == 98) {
-            stackIn_7_0 = this.a(param3, 27964);
+            stackIn_7_0 = this.focusPreviousChild(param3, 27964);
             return stackIn_7_0;
           }
           if (param1 != 99) {
             return false;
           }
-          stackIn_10_0 = this.a(param3, (byte) -73);
+          stackIn_10_0 = this.focusNextChild(param3, (byte) -73);
           return stackIn_10_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

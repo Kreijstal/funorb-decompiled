@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class jk extends aj implements WidgetActivationListener {
+final class jk extends DequeWidgetContainer implements WidgetActivationListener {
     private InteractiveWidget field_z;
     static int field_B;
     static hi field_y;
@@ -66,9 +66,9 @@ final class jk extends aj implements WidgetActivationListener {
 
     public jk() {
         super(0, 0, 476, 225, (WidgetRenderer) null);
-        this.field_w = new InteractiveWidget(je.field_c, (ma) null);
-        this.field_z = new InteractiveWidget(el.field_a, (ma) null);
-        this.field_C = new InteractiveWidget(gl.field_z, (ma) null);
+        this.field_w = new InteractiveWidget(je.field_c, (WidgetEventListener) null);
+        this.field_z = new InteractiveWidget(el.field_a, (WidgetEventListener) null);
+        this.field_C = new InteractiveWidget(AlphaWidgetContainer.field_z, (WidgetEventListener) null);
         qa var1 = new qa();
         this.field_w.field_q = (WidgetRenderer) ((Object) var1);
         this.field_z.field_q = (WidgetRenderer) ((Object) var1);
@@ -76,17 +76,17 @@ final class jk extends aj implements WidgetActivationListener {
         int var2 = 4;
         int var3 = 326;
         int var4 = var3 - var2 >> 1;
-        this.field_z.a(-105, -48 + (this.field_h - var2), this.field_l - var3 >> 1, var4, 30);
-        this.field_C.a(62, -var2 + (this.field_h - 48), var4 + (-var3 + this.field_l >> 1) + var2, var4, 30);
-        this.field_w.a(96, -(var2 * 2) - 78 + this.field_h, this.field_l - var3 >> 1, var3, 30);
-        this.field_z.field_m = (ma) (this);
-        this.field_w.field_m = (ma) (this);
+        this.field_z.setBounds(-105, -48 + (this.field_h - var2), this.field_l - var3 >> 1, var4, 30);
+        this.field_C.setBounds(62, -var2 + (this.field_h - 48), var4 + (-var3 + this.field_l >> 1) + var2, var4, 30);
+        this.field_w.setBounds(96, -(var2 * 2) - 78 + this.field_h, this.field_l - var3 >> 1, var3, 30);
+        this.field_z.field_m = (WidgetEventListener) (this);
+        this.field_w.field_m = (WidgetEventListener) (this);
         this.field_w.field_j = uf.field_b;
-        this.field_C.field_m = (ma) (this);
+        this.field_C.field_m = (WidgetEventListener) (this);
         this.field_C.field_j = pa.field_a;
-        this.a((UiWidget) (this.field_z), (byte) -81);
-        this.a((UiWidget) (this.field_w), (byte) -92);
-        this.a((UiWidget) (this.field_C), (byte) -125);
+        this.addChild((UiWidget) (this.field_z), (byte) -81);
+        this.addChild((UiWidget) (this.field_w), (byte) -92);
+        this.addChild((UiWidget) (this.field_C), (byte) -125);
     }
 
     final static int l(int param0) {
@@ -98,11 +98,11 @@ final class jk extends aj implements WidgetActivationListener {
         return -ic.field_b + ProxyAuthenticationRequiredException.field_a;
     }
 
-    final void a(int param0, int param1, int param2, byte param3) {
+    final void drawWidget(int param0, int param1, int param2, byte param3) {
         int var5 = param0 + this.field_p;
         int var6 = this.field_n + param1;
         vd.field_h.drawParagraph(wb.field_d, var5 + 20, 20 + var6, this.field_l - 40, -50 + this.field_h, 16777215, -1, 1, 0, vd.field_h.field_y);
-        super.a(param0, param1, param2, (byte) 123);
+        super.drawWidget(param0, param1, param2, (byte) 123);
         int var7 = -112 / ((param3 - 77) / 34);
     }
 
@@ -360,7 +360,7 @@ final class jk extends aj implements WidgetActivationListener {
             }
             if (param4) {
               var10.setColor(java.awt.Color.black);
-              var10.fillRect(0, 0, fk.field_E, mk.field_x);
+              var10.fillRect(0, 0, fk.field_E, ModalDialog.field_x);
             }
             if (param0 == null) {
               param0 = new java.awt.Color(140, 17, 17);
@@ -379,12 +379,12 @@ final class jk extends aj implements WidgetActivationListener {
               var11.setFont(ha.field_a);
               var11.setColor(java.awt.Color.white);
               var11.drawString(param3, (-(6 * param3.length()) + 304) / 2, 22);
-              var10.drawImage(hk.field_c, -152 + fk.field_E / 2, mk.field_x / 2 - 18, (java.awt.image.ImageObserver) null);
+              var10.drawImage(hk.field_c, -152 + fk.field_E / 2, ModalDialog.field_x / 2 - 18, (java.awt.image.ImageObserver) null);
             } catch (java.lang.Exception decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var6 = (Exception) (Object) decompiledCaughtException;
               var7 = -152 + fk.field_E / 2;
-              var8 = -18 + mk.field_x / 2;
+              var8 = -18 + ModalDialog.field_x / 2;
               var10.setColor(param0);
               var10.drawRect(var7, var8, 303, 33);
               var10.fillRect(2 + var7, var8 + 2, param2 * 3, 30);
@@ -398,7 +398,7 @@ final class jk extends aj implements WidgetActivationListener {
             if (LetterTile.field_r != null) {
               var10.setFont(ha.field_a);
               var10.setColor(java.awt.Color.white);
-              var10.drawString(LetterTile.field_r, fk.field_E / 2 - LetterTile.field_r.length() * 6 / 2, mk.field_x / 2 - 26);
+              var10.drawString(LetterTile.field_r, fk.field_E / 2 - LetterTile.field_r.length() * 6 / 2, ModalDialog.field_x / 2 - 26);
             }
           } catch (java.lang.Exception decompiledCaughtParameter1) {
             decompiledCaughtException = decompiledCaughtParameter1;
@@ -426,7 +426,7 @@ final class jk extends aj implements WidgetActivationListener {
         }
     }
 
-    final boolean a(int param0, UiWidget param1, byte param2, char param3) {
+    final boolean handleKey(int param0, UiWidget param1, byte param2, char param3) {
         int var5_int = 0;
         RuntimeException var5 = null;
         boolean stackIn_6_0 = false;
@@ -436,18 +436,18 @@ final class jk extends aj implements WidgetActivationListener {
         String stackIn_14_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (super.a(param0, param1, (byte) -61, param3)) {
+          if (super.handleKey(param0, param1, (byte) -61, param3)) {
             return true;
           }
           var5_int = 42 % ((param2 - 65) / 55);
           if (98 == param0) {
-            stackIn_6_0 = this.a(2, param1);
+            stackIn_6_0 = this.focusPreviousChild(2, param1);
             return stackIn_6_0;
           }
           if (param0 != 99) {
             return false;
           }
-          stackIn_10_0 = this.b(param1, 91);
+          stackIn_10_0 = this.focusNextChild(param1, 91);
           return stackIn_10_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

@@ -116,8 +116,8 @@ final class la {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var16 = null;
         try {
-          hm.a(param3, param10, cb.field_a, a.field_i, param11, param14, pj.field_E, 480, param5, new gk(param9), di.field_d, new gk(param7), param0, df.field_h, false, param15, param12, param13, param6, b.field_h, param1);
-          jk.a((byte) 49, param2, param8);
+          hm.a(param3, param10, cb.field_a, a.field_i, param11, param14, DequeWidgetContainer.field_E, 480, param5, new gk(param9), di.field_d, new gk(param7), param0, df.field_h, false, param15, param12, param13, param6, b.field_h, param1);
+          DropTargetWidgetContainer.a((byte) 49, param2, param8);
           if (param4 >= -36) {
             la.a(-76);
           }
@@ -203,11 +203,11 @@ final class la {
         String var4_ref_StringLifetime1;
         var8 = DrPhlogistonSavesTheEarth.field_D ? 1 : 0;
         try {
-          var1 = dh.field_N;
+          var1 = LabeledWidgetContainer.field_N;
           var2 = var1.readUnsignedByte(31760);
           if (var2 == 0) {
-            if (vg.field_j == null) {
-              vg.field_j = new hm(128);
+            if (UiWidget.field_j == null) {
+              UiWidget.field_j = new hm(128);
               fg.field_j = 0;
             }
             stackIn_12_0 = (var1.readUnsignedByte(31760) != 1) ? 0 : 1;
@@ -225,12 +225,12 @@ final class la {
             if (null == var5) {
               var5 = PasswordValidator.a(var6, param0 - 115);
               if (var5 != null) {
-                vg.field_j.a((long)var7.hashCode(), param0 ^ -13, var5);
+                UiWidget.field_j.a((long)var7.hashCode(), param0 ^ -13, var5);
               }
             }
             if (var5 == null) {
               var5 = new hg();
-              vg.field_j.a((long)var7.hashCode(), -25, var5);
+              UiWidget.field_j.a((long)var7.hashCode(), -25, var5);
               fieldTemp$0 = fg.field_j;
               fg.field_j = fg.field_j + 1;
               var5.field_tb = fieldTemp$0;
@@ -261,7 +261,7 @@ final class la {
             var3 = var1.readString((byte) -101);
             rc.field_e = ((String) (var3)).intern();
             var4 = var1.readUnsignedByte(31760);
-            dh.a(var4, 57);
+            LabeledWidgetContainer.a(var4, 57);
             return;
           }
           if (gf.field_r == null) {

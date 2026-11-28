@@ -121,7 +121,7 @@ final class SpiltMilkSpecial extends SpecialOrder {
           }
           var9 = new AccountCreationResultPanel(gja.field_m, param2);
           var8 = -49 / ((-8 - param3) / 56);
-          gja.field_m.a((UiWidget) (var9), (byte) 86);
+          gja.field_m.showDialog((UiWidget) (var9), (byte) 86);
           if (AttackUpAllEvent.d((byte) 77)) {
             var9.r(-7);
             return true;

@@ -85,12 +85,12 @@ class sd extends DefaultTextWidgetRenderer {
         this(jd.field_s, param0);
     }
 
-    public final void a(int param0, int param1, int param2, ag param3, boolean param4) {
+    public final void paintWidget(int param0, int param1, int param2, UiWidget param3, boolean param4) {
         try {
           if (param4) {
             DisplayNameSelectionPanel.a(param3.field_x, param3.field_s, param3.field_m + param0, param3.field_v + param1, false);
           }
-          super.a(param0, param1, param2, param3, param4);
+          super.paintWidget(param0, param1, param2, param3, param4);
         } catch (RuntimeException runtimeException) {
           throw AccountCreationResultPanel.wrapClientException((Throwable) ((Object) runtimeException), "sd.B(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ')');
         }

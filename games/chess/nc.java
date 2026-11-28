@@ -41,7 +41,7 @@ final class nc extends InteractiveWidget {
         return this.field_R;
     }
 
-    final boolean a(int param0, int param1, int param2, byte param3, mf param4, int param5, int param6) {
+    final boolean pointerPressed(int param0, int param1, int param2, byte param3, UiWidget param4, int param5, int param6) {
         int var12 = 0;
         RuntimeException stackIn_27_0 = null;
         StringBuilder stackIn_27_1 = null;
@@ -56,7 +56,7 @@ final class nc extends InteractiveWidget {
         int var14 = 0;
         var14 = Chess.field_G;
         try {
-          if (!super.a(param0, param1, param2, param3, param4, param5, param6)) {
+          if (!super.pointerPressed(param0, param1, param2, param3, param4, param5, param6)) {
             return false;
           }
           var8_int = -param6 + (param1 - this.field_U);

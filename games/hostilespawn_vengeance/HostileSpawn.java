@@ -41,7 +41,7 @@ public final class HostileSpawn extends NetworkGameClient {
           wk.field_b[3] = qm.field_P;
           wk.field_b[2] = sc.field_a;
           wk.field_b[1] = FullscreenFocusCanvas.field_f;
-          wk.field_b[4] = fg.a("", "key", vd.field_C, false);
+          wk.field_b[4] = fg.a("", "key", DequeWidgetContainer.field_C, false);
           wk.field_b[11] = KeyboardInput.field_f;
           VolumeRampingMidiPcmStream.field_bb = new int[101];
           wk.field_b[10] = aa.field_b;
@@ -53,7 +53,7 @@ public final class HostileSpawn extends NetworkGameClient {
           var2_int = 0;
           do {
             if (101 <= var2_int) {
-              BoundedRandomAccessFile.field_d = jd.a((byte) 33, "", vd.field_C, "crosshair");
+              BoundedRandomAccessFile.field_d = jd.a((byte) 33, "", DequeWidgetContainer.field_C, "crosshair");
               break;
             }
             VolumeRampingMidiPcmStream.field_bb[var2_int] = var2_int * 131586;
@@ -91,54 +91,54 @@ public final class HostileSpawn extends NetworkGameClient {
             var4_array[var5_int] = var3;
             var5_int++;
           } while (var7 == 0);
-          var2_array = sg.a(true, "", vd.field_C, "wall_hammerhead");
+          var2_array = sg.a(true, "", DequeWidgetContainer.field_C, "wall_hammerhead");
           kf.a(var2_array, 0, ak.field_b, 0, 256);
           kf.a(var4_array, 0, ak.field_b, 256, 256);
-          var2_arrayLifetime1 = sg.a(true, "", vd.field_C, "wall_normal_kerrus");
+          var2_arrayLifetime1 = sg.a(true, "", DequeWidgetContainer.field_C, "wall_normal_kerrus");
           kf.a(var2_arrayLifetime1, 0, ak.field_b, 512, 256);
-          var2_arrayLifetime2 = sg.a(true, "", vd.field_C, "wall_station");
+          var2_arrayLifetime2 = sg.a(true, "", DequeWidgetContainer.field_C, "wall_station");
           kf.a(var2_arrayLifetime2, 0, ak.field_b, 768, 256);
-          var2_arrayLifetime3 = sg.a(true, "", vd.field_C, "wall_hive");
+          var2_arrayLifetime3 = sg.a(true, "", DequeWidgetContainer.field_C, "wall_hive");
           kf.a(var2_arrayLifetime3, 0, ak.field_b, 1024, 256);
           kf.a(var4_array, 0, ak.field_b, 1280, 256);
           kf.a(var4_array, 0, ak.field_b, 1536, 256);
-          var2_arrayLifetime4 = sg.a(true, "", vd.field_C, "wall_office");
+          var2_arrayLifetime4 = sg.a(true, "", DequeWidgetContainer.field_C, "wall_office");
           kf.a(var2_arrayLifetime4, 0, ak.field_b, 1792, 256);
           var4_array = null;
-          al.field_Z = th.a(vd.field_C, -124, "digitalserial_10", te.field_J, "");
-          wh.field_d = th.a(vd.field_C, param0 + 201, "digitalserial_16", te.field_J, "");
-          AccountRegistrationPanel.field_L = th.a(vd.field_C, 49, "digitalserial_20", te.field_J, "");
-          id.field_A = th.a(vd.field_C, -127, "digitalserial_12", te.field_J, "");
+          al.field_Z = th.a(DequeWidgetContainer.field_C, -124, "digitalserial_10", te.field_J, "");
+          wh.field_d = th.a(DequeWidgetContainer.field_C, param0 + 201, "digitalserial_16", te.field_J, "");
+          AccountRegistrationPanel.field_L = th.a(DequeWidgetContainer.field_C, 49, "digitalserial_20", te.field_J, "");
+          id.field_A = th.a(DequeWidgetContainer.field_C, -127, "digitalserial_12", te.field_J, "");
           ArchiveIndex.a("basicfont12", ResourceArchive.field_a, 83, wd.field_a, "");
-          ClientLookupTables.field_e = th.a(vd.field_C, -111, "micro_numbers", te.field_J, "");
-          NetworkArchiveRequest.field_y = fg.a("", "splat_guard", vd.field_C, false);
-          NetworkGameClient.field_s = fg.a("", "splat_dormant", vd.field_C, false);
-          BoundedRandomAccessFile.field_g = fg.a("", "splat_praetorian", vd.field_C, false);
-          AccountRequestState.field_c = fg.a("", "splat_queen", vd.field_C, false);
-          DiskArchiveRequest.field_x = fg.a("", "splat_runner", vd.field_C, false);
-          tb.field_I = fg.a("", "splat_spitter", vd.field_C, false);
-          ta.field_jb = fg.a("", "splat_egg", vd.field_C, false);
-          pe.field_fb = jd.a((byte) 33, "", vd.field_C, "muzzle");
-          ln.field_m = DelayedPacket.loadNamedRgbSprites(vd.field_C, 105, "", "newexplosion");
+          ClientLookupTables.field_e = th.a(DequeWidgetContainer.field_C, -111, "micro_numbers", te.field_J, "");
+          NetworkArchiveRequest.field_y = fg.a("", "splat_guard", DequeWidgetContainer.field_C, false);
+          NetworkGameClient.field_s = fg.a("", "splat_dormant", DequeWidgetContainer.field_C, false);
+          BoundedRandomAccessFile.field_g = fg.a("", "splat_praetorian", DequeWidgetContainer.field_C, false);
+          AccountRequestState.field_c = fg.a("", "splat_queen", DequeWidgetContainer.field_C, false);
+          DiskArchiveRequest.field_x = fg.a("", "splat_runner", DequeWidgetContainer.field_C, false);
+          tb.field_I = fg.a("", "splat_spitter", DequeWidgetContainer.field_C, false);
+          ta.field_jb = fg.a("", "splat_egg", DequeWidgetContainer.field_C, false);
+          pe.field_fb = jd.a((byte) 33, "", DequeWidgetContainer.field_C, "muzzle");
+          ln.field_m = DelayedPacket.loadNamedRgbSprites(DequeWidgetContainer.field_C, 105, "", "newexplosion");
           me.field_ib = ln.field_m;
           if (!ib.a((byte) -72)) {
-            var5 = sg.a(true, "", vd.field_C, "member_benefits");
+            var5 = sg.a(true, "", DequeWidgetContainer.field_C, "member_benefits");
             DiskCacheWorker.field_a = new e(ni.field_g, SpriteBase.field_g, var5, MouseInput.field_i);
           }
-          var5 = sg.a(true, "", vd.field_C, "keys");
+          var5 = sg.a(true, "", DequeWidgetContainer.field_C, "keys");
           var6 = 0;
           do {
             if (var5.length <= var6) {
               al.field_Z.setInlineSprites(var5, (int[]) null);
               id.field_A.setInlineSprites(var5, (int[]) null);
-              il.field_c = jd.a((byte) 33, "", vd.field_C, "infoscreen");
-              qi.field_H = MouseInput.a("", 27, "numkeys", vd.field_C);
-              pl.field_f = MouseInput.a("", 114, "secweaponkeys", vd.field_C);
-              fj.field_Kb = jd.a((byte) 33, "", vd.field_C, "achievements_lrg");
-              SpriteGeometry.field_v = qm.a("", 0, "hs_unachieved", vd.field_C);
+              il.field_c = jd.a((byte) 33, "", DequeWidgetContainer.field_C, "infoscreen");
+              qi.field_H = MouseInput.a("", 27, "numkeys", DequeWidgetContainer.field_C);
+              pl.field_f = MouseInput.a("", 114, "secweaponkeys", DequeWidgetContainer.field_C);
+              fj.field_Kb = jd.a((byte) 33, "", DequeWidgetContainer.field_C, "achievements_lrg");
+              SpriteGeometry.field_v = qm.a("", 0, "hs_unachieved", DequeWidgetContainer.field_C);
               de.field_i = MouseInput.a("basic", param0 + 222, "locked", wd.field_a);
-              ob.field_B = sg.a(true, "", vd.field_C, "hs_coins");
-              PcmResampler.field_f = MouseInput.a("", -100, "sliderbutton", vd.field_C);
+              ob.field_B = sg.a(true, "", DequeWidgetContainer.field_C, "hs_coins");
+              PcmResampler.field_f = MouseInput.a("", -100, "sliderbutton", DequeWidgetContainer.field_C);
               oa.field_m = new RgbSprite[9];
               oa.field_m[0] = new RgbSprite(4, 4);
               oa.field_m[1] = new RgbSprite(4, 4);
@@ -158,77 +158,77 @@ public final class HostileSpawn extends NetworkGameClient {
               oa.field_m[3] = oa.field_m[0];
               oa.field_m[5] = oa.field_m[0];
               oa.field_m[7] = oa.field_m[1];
-              SpriteGeometry.field_x = jd.a((byte) 33, "", vd.field_C, "level_select_mouseover_frame");
-              fm.field_a = jd.a((byte) 33, "", vd.field_C, "level_select_selected_frame");
-              ul.field_J = jd.a((byte) 33, "", vd.field_C, "menu_frame");
-              ul.field_J[4] = null;
+              SpriteGeometry.field_x = jd.a((byte) 33, "", DequeWidgetContainer.field_C, "level_select_mouseover_frame");
+              fm.field_a = jd.a((byte) 33, "", DequeWidgetContainer.field_C, "level_select_selected_frame");
+              ModalDialog.field_J = jd.a((byte) 33, "", DequeWidgetContainer.field_C, "menu_frame");
+              ModalDialog.field_J[4] = null;
               o.field_n.setAsRasterTarget((byte) -36);
-              cf.field_q = DelayedPacket.loadNamedRgbSprites(vd.field_C, param0 + 218, "", "marine_run");
+              cf.field_q = DelayedPacket.loadNamedRgbSprites(DequeWidgetContainer.field_C, param0 + 218, "", "marine_run");
               ng.field_p = new RgbSprite[5][];
-              ng.field_p[2] = DelayedPacket.loadNamedRgbSprites(vd.field_C, param0 + 228, "", "marine_legs_left");
-              ng.field_p[3] = DelayedPacket.loadNamedRgbSprites(vd.field_C, 97, "", "marine_legs_right");
-              ng.field_p[1] = DelayedPacket.loadNamedRgbSprites(vd.field_C, bm.a((int) param0, -10), "", "marine_legs_forward");
-              ng.field_p[4] = DelayedPacket.loadNamedRgbSprites(vd.field_C, 116, "", "marine_legs_back");
+              ng.field_p[2] = DelayedPacket.loadNamedRgbSprites(DequeWidgetContainer.field_C, param0 + 228, "", "marine_legs_left");
+              ng.field_p[3] = DelayedPacket.loadNamedRgbSprites(DequeWidgetContainer.field_C, 97, "", "marine_legs_right");
+              ng.field_p[1] = DelayedPacket.loadNamedRgbSprites(DequeWidgetContainer.field_C, bm.a((int) param0, -10), "", "marine_legs_forward");
+              ng.field_p[4] = DelayedPacket.loadNamedRgbSprites(DequeWidgetContainer.field_C, 116, "", "marine_legs_back");
               ng.field_p[4] = jh.a(ng.field_p[4], 150, 27);
               ng.field_p[0] = null;
-              km.field_A = DelayedPacket.loadNamedRgbSprites(vd.field_C, 96, "", "marine_idle");
+              km.field_A = DelayedPacket.loadNamedRgbSprites(DequeWidgetContainer.field_C, 96, "", "marine_idle");
               vj.field_e = km.field_A;
-              dn.field_i = DelayedPacket.loadNamedRgbSprites(vd.field_C, 104, "", "marine_interact");
-              od.field_G = DelayedPacket.loadNamedRgbSprites(vd.field_C, 100, "", "marine_firing");
-              od.field_G = jh.a(od.field_G, 150, 25);
-              aa.field_d = DelayedPacket.loadNamedRgbSprites(vd.field_C, param0 ^ -7, "", "marine_death");
+              dn.field_i = DelayedPacket.loadNamedRgbSprites(DequeWidgetContainer.field_C, 104, "", "marine_interact");
+              DropTargetWidgetContainer.field_G = DelayedPacket.loadNamedRgbSprites(DequeWidgetContainer.field_C, 100, "", "marine_firing");
+              DropTargetWidgetContainer.field_G = jh.a(DropTargetWidgetContainer.field_G, 150, 25);
+              aa.field_d = DelayedPacket.loadNamedRgbSprites(DequeWidgetContainer.field_C, param0 ^ -7, "", "marine_death");
               gj.a(param0 ^ -101, EditableTextField.field_H, 84.0f);
               this.renderFrame((byte) -106);
-              GridPoint.field_c = fg.a("", "hud_gun_big", vd.field_C, false);
-              KeyboardInput.field_d = fg.a("", "hud_bottom", vd.field_C, false);
-              gj.field_d = fg.a("", "hud_progress_bar", vd.field_C, false);
-              ti.field_j = fg.a("", "hud_gun_box", vd.field_C, false);
+              GridPoint.field_c = fg.a("", "hud_gun_big", DequeWidgetContainer.field_C, false);
+              KeyboardInput.field_d = fg.a("", "hud_bottom", DequeWidgetContainer.field_C, false);
+              gj.field_d = fg.a("", "hud_progress_bar", DequeWidgetContainer.field_C, false);
+              ti.field_j = fg.a("", "hud_gun_box", DequeWidgetContainer.field_C, false);
               field_J = new RgbSprite[3];
-              field_J[0] = fg.a("", "hud_health_base", vd.field_C, false);
-              field_J[1] = fg.a("", "hud_health_slice", vd.field_C, false);
-              field_J[2] = fg.a("", "hud_health_top", vd.field_C, false);
-              vg.field_c = qm.a("", 0, "marine_face", vd.field_C);
+              field_J[0] = fg.a("", "hud_health_base", DequeWidgetContainer.field_C, false);
+              field_J[1] = fg.a("", "hud_health_slice", DequeWidgetContainer.field_C, false);
+              field_J[2] = fg.a("", "hud_health_top", DequeWidgetContainer.field_C, false);
+              vg.field_c = qm.a("", 0, "marine_face", DequeWidgetContainer.field_C);
               ByteStorage.field_d = new IndexedSprite[2][10];
-              ByteStorage.field_d[0][0] = qm.a("", 0, "kerrus_1_preview", vd.field_C);
-              ByteStorage.field_d[0][1] = qm.a("", 0, "kerrus_2_preview", vd.field_C);
-              ByteStorage.field_d[0][2] = qm.a("", 0, "kerrus_3_preview", vd.field_C);
-              ByteStorage.field_d[0][3] = qm.a("", 0, "kerrus_4_preview", vd.field_C);
-              ByteStorage.field_d[0][4] = qm.a("", param0 + 113, "kerrus_5_preview", vd.field_C);
-              ByteStorage.field_d[0][5] = qm.a("", 0, "kerrus_6_preview", vd.field_C);
-              ByteStorage.field_d[0][6] = qm.a("", param0 + 113, "kerrus_7_preview", vd.field_C);
-              ByteStorage.field_d[0][7] = qm.a("", bm.a((int) param0, -113), "kerrus_8_preview", vd.field_C);
-              ByteStorage.field_d[0][8] = qm.a("", 0, "kerrus_9_preview", vd.field_C);
-              ByteStorage.field_d[0][9] = qm.a("", 0, "kerrus_10_preview", vd.field_C);
-              ByteStorage.field_d[1][0] = qm.a("", bm.a((int) param0, -113), "vengeance_1_preview", vd.field_C);
-              ByteStorage.field_d[1][1] = qm.a("", 0, "vengeance_2_preview", vd.field_C);
-              ByteStorage.field_d[1][2] = qm.a("", 0, "vengeance_3_preview", vd.field_C);
-              ByteStorage.field_d[1][3] = qm.a("", 0, "vengeance_4_preview", vd.field_C);
-              ByteStorage.field_d[1][4] = qm.a("", 0, "vengeance_5_preview", vd.field_C);
-              ByteStorage.field_d[1][5] = qm.a("", 0, "vengeance_6_preview", vd.field_C);
-              ByteStorage.field_d[1][6] = qm.a("", param0 + 113, "vengeance_7_preview", vd.field_C);
-              ByteStorage.field_d[1][7] = qm.a("", 0, "vengeance_8_preview", vd.field_C);
-              ByteStorage.field_d[1][8] = qm.a("", 0, "vengeance_9_preview", vd.field_C);
-              ByteStorage.field_d[1][9] = qm.a("", 0, "vengeance_10_preview", vd.field_C);
+              ByteStorage.field_d[0][0] = qm.a("", 0, "kerrus_1_preview", DequeWidgetContainer.field_C);
+              ByteStorage.field_d[0][1] = qm.a("", 0, "kerrus_2_preview", DequeWidgetContainer.field_C);
+              ByteStorage.field_d[0][2] = qm.a("", 0, "kerrus_3_preview", DequeWidgetContainer.field_C);
+              ByteStorage.field_d[0][3] = qm.a("", 0, "kerrus_4_preview", DequeWidgetContainer.field_C);
+              ByteStorage.field_d[0][4] = qm.a("", param0 + 113, "kerrus_5_preview", DequeWidgetContainer.field_C);
+              ByteStorage.field_d[0][5] = qm.a("", 0, "kerrus_6_preview", DequeWidgetContainer.field_C);
+              ByteStorage.field_d[0][6] = qm.a("", param0 + 113, "kerrus_7_preview", DequeWidgetContainer.field_C);
+              ByteStorage.field_d[0][7] = qm.a("", bm.a((int) param0, -113), "kerrus_8_preview", DequeWidgetContainer.field_C);
+              ByteStorage.field_d[0][8] = qm.a("", 0, "kerrus_9_preview", DequeWidgetContainer.field_C);
+              ByteStorage.field_d[0][9] = qm.a("", 0, "kerrus_10_preview", DequeWidgetContainer.field_C);
+              ByteStorage.field_d[1][0] = qm.a("", bm.a((int) param0, -113), "vengeance_1_preview", DequeWidgetContainer.field_C);
+              ByteStorage.field_d[1][1] = qm.a("", 0, "vengeance_2_preview", DequeWidgetContainer.field_C);
+              ByteStorage.field_d[1][2] = qm.a("", 0, "vengeance_3_preview", DequeWidgetContainer.field_C);
+              ByteStorage.field_d[1][3] = qm.a("", 0, "vengeance_4_preview", DequeWidgetContainer.field_C);
+              ByteStorage.field_d[1][4] = qm.a("", 0, "vengeance_5_preview", DequeWidgetContainer.field_C);
+              ByteStorage.field_d[1][5] = qm.a("", 0, "vengeance_6_preview", DequeWidgetContainer.field_C);
+              ByteStorage.field_d[1][6] = qm.a("", param0 + 113, "vengeance_7_preview", DequeWidgetContainer.field_C);
+              ByteStorage.field_d[1][7] = qm.a("", 0, "vengeance_8_preview", DequeWidgetContainer.field_C);
+              ByteStorage.field_d[1][8] = qm.a("", 0, "vengeance_9_preview", DequeWidgetContainer.field_C);
+              ByteStorage.field_d[1][9] = qm.a("", 0, "vengeance_10_preview", DequeWidgetContainer.field_C);
               this.loadEnemyAnimationSprites(param0 + 152);
-              ia.field_l[10] = fg.a("", "spawn20", vd.field_C, false);
-              ia.field_l[12] = fg.a("", "gunturret", vd.field_C, false);
-              MouseInput.field_b = fg.a("", "cragturret", vd.field_C, false);
-              ia.field_l[13] = fg.a("", "barrel", vd.field_C, false);
-              jd.a((byte) 33, "", vd.field_C, "spawneyes0");
-              ia.field_l[23] = MouseInput.a("", -32, "doorgfx", vd.field_C);
-              AccountCreationResultPanel.field_zb = fg.a("", "hatching", vd.field_C, false);
+              ia.field_l[10] = fg.a("", "spawn20", DequeWidgetContainer.field_C, false);
+              ia.field_l[12] = fg.a("", "gunturret", DequeWidgetContainer.field_C, false);
+              MouseInput.field_b = fg.a("", "cragturret", DequeWidgetContainer.field_C, false);
+              ia.field_l[13] = fg.a("", "barrel", DequeWidgetContainer.field_C, false);
+              jd.a((byte) 33, "", DequeWidgetContainer.field_C, "spawneyes0");
+              ia.field_l[23] = MouseInput.a("", -32, "doorgfx", DequeWidgetContainer.field_C);
+              AccountCreationResultPanel.field_zb = fg.a("", "hatching", DequeWidgetContainer.field_C, false);
               gj.a(param0 + 133, EditableTextField.field_H, 91.0f);
               this.renderFrame((byte) -51);
-              qa.field_g = DelayedPacket.loadNamedRgbSprites(vd.field_C, 101, "", "guns");
-              di.field_b = jd.a((byte) 33, "", vd.field_C, "gun_silhouettes");
-              AccountServiceResult.field_j = DelayedPacket.loadNamedRgbSprites(vd.field_C, 125, "", "bullet_acid");
-              sj.field_e = fg.a("", "bullet_plasma", vd.field_C, false);
-              FullscreenFocusCanvas.field_c = MouseInput.a("", -36, "bullet_rocket", vd.field_C);
-              df.field_g = DelayedPacket.loadNamedRgbSprites(vd.field_C, 125, "", "muzzleflash");
-              id.field_p = DelayedPacket.loadNamedRgbSprites(vd.field_C, 89, "", "impact_gun");
-              fg.a("", "impact_rail", vd.field_C, false);
-              MouseInput.a("", 116, "scorchmark_alpha", vd.field_C);
-              NanoFrameTimer.field_k = fg.a("", "spatter_spawn", vd.field_C, false);
+              qa.field_g = DelayedPacket.loadNamedRgbSprites(DequeWidgetContainer.field_C, 101, "", "guns");
+              di.field_b = jd.a((byte) 33, "", DequeWidgetContainer.field_C, "gun_silhouettes");
+              AccountServiceResult.field_j = DelayedPacket.loadNamedRgbSprites(DequeWidgetContainer.field_C, 125, "", "bullet_acid");
+              sj.field_e = fg.a("", "bullet_plasma", DequeWidgetContainer.field_C, false);
+              FullscreenFocusCanvas.field_c = MouseInput.a("", -36, "bullet_rocket", DequeWidgetContainer.field_C);
+              df.field_g = DelayedPacket.loadNamedRgbSprites(DequeWidgetContainer.field_C, 125, "", "muzzleflash");
+              id.field_p = DelayedPacket.loadNamedRgbSprites(DequeWidgetContainer.field_C, 89, "", "impact_gun");
+              fg.a("", "impact_rail", DequeWidgetContainer.field_C, false);
+              MouseInput.a("", 116, "scorchmark_alpha", DequeWidgetContainer.field_C);
+              NanoFrameTimer.field_k = fg.a("", "spatter_spawn", DequeWidgetContainer.field_C, false);
               break;
             }
             oa.field_m[1].field_D[var6] = 14342656;
@@ -237,29 +237,29 @@ public final class HostileSpawn extends NetworkGameClient {
           if (param0 != -113) {
             return;
           }
-          om.field_d = fg.a("", "bullet_pistol", vd.field_C, false);
-          te.field_G = DelayedPacket.loadNamedRgbSprites(vd.field_C, 109, "", "grenade_roll");
-          sc.field_l = fg.a("", "acid_drop", vd.field_C, false);
-          v.field_j = fg.a("", "battle_damaged_cragturret", vd.field_C, false);
-          rl.field_d = fg.a("", "battle_damaged_gunturret", vd.field_C, false);
+          om.field_d = fg.a("", "bullet_pistol", DequeWidgetContainer.field_C, false);
+          te.field_G = DelayedPacket.loadNamedRgbSprites(DequeWidgetContainer.field_C, 109, "", "grenade_roll");
+          sc.field_l = fg.a("", "acid_drop", DequeWidgetContainer.field_C, false);
+          v.field_j = fg.a("", "battle_damaged_cragturret", DequeWidgetContainer.field_C, false);
+          rl.field_d = fg.a("", "battle_damaged_gunturret", DequeWidgetContainer.field_C, false);
           this.populateScenerySpriteTable((byte) 114);
-          fa.field_d = jd.a((byte) 33, "", vd.field_C, "lights");
+          fa.field_d = jd.a((byte) 33, "", DequeWidgetContainer.field_C, "lights");
           gj.a(20, EditableTextField.field_H, 99.0f);
           this.renderFrame((byte) -69);
-          pi.field_a[0] = MouseInput.a("", 116, "shadow0", vd.field_C);
-          pi.field_a[1] = MouseInput.a("", 110, "shadow1", vd.field_C);
-          pi.field_a[2] = MouseInput.a("", param0 + 232, "shadow2", vd.field_C);
-          hh.field_a = DelayedPacket.loadNamedRgbSprites(vd.field_C, 97, "", "ammo");
-          fg.a("", "pointer", vd.field_C, false);
-          MatchingFieldValidator.field_t = fg.a("", "compass", vd.field_C, false);
-          pi.field_b = MouseInput.a("", param0 + 225, "health", vd.field_C);
-          eg.field_v = fg.a("", "dragged_egg", vd.field_C, false);
-          qg.field_q = fg.a("", "dragged_slime", vd.field_C, false);
+          pi.field_a[0] = MouseInput.a("", 116, "shadow0", DequeWidgetContainer.field_C);
+          pi.field_a[1] = MouseInput.a("", 110, "shadow1", DequeWidgetContainer.field_C);
+          pi.field_a[2] = MouseInput.a("", param0 + 232, "shadow2", DequeWidgetContainer.field_C);
+          hh.field_a = DelayedPacket.loadNamedRgbSprites(DequeWidgetContainer.field_C, 97, "", "ammo");
+          fg.a("", "pointer", DequeWidgetContainer.field_C, false);
+          MatchingFieldValidator.field_t = fg.a("", "compass", DequeWidgetContainer.field_C, false);
+          pi.field_b = MouseInput.a("", param0 + 225, "health", DequeWidgetContainer.field_C);
+          eg.field_v = fg.a("", "dragged_egg", DequeWidgetContainer.field_C, false);
+          qg.field_q = fg.a("", "dragged_slime", DequeWidgetContainer.field_C, false);
           uf.field_g = new IndexedSprite[3];
-          uf.field_g[0] = qm.a("", 0, "win_kerrus", vd.field_C);
-          uf.field_g[1] = qm.a("", bm.a((int) param0, -113), "win_vengeance", vd.field_C);
-          uf.field_g[2] = qm.a("", 0, "win_vengeance_alt", vd.field_C);
-          vd.field_C = null;
+          uf.field_g[0] = qm.a("", 0, "win_kerrus", DequeWidgetContainer.field_C);
+          uf.field_g[1] = qm.a("", bm.a((int) param0, -113), "win_vengeance", DequeWidgetContainer.field_C);
+          uf.field_g[2] = qm.a("", 0, "win_vengeance_alt", DequeWidgetContainer.field_C);
+          DequeWidgetContainer.field_C = null;
           ResourceArchive.field_a = null;
           var6 = 0;
           while (ia.field_l.length > var6) {
@@ -325,14 +325,14 @@ public final class HostileSpawn extends NetworkGameClient {
           ia.field_l[138] = DiskArchiveRequest.field_z;
           ia.field_l[149] = hf.field_e;
           ia.field_l[217] = IntrusiveNodeHashTable.field_a;
-          ia.field_l[114] = rj.field_N;
+          ia.field_l[114] = DraggableWidgetContainer.field_N;
           ia.field_l[208] = DualLinkDeque.field_c;
           ia.field_l[176] = TextInputField.field_T;
           ia.field_l[79] = oa.field_e;
           ia.field_l[136] = le.field_xb;
-          ia.field_l[171] = ul.field_G;
+          ia.field_l[171] = ModalDialog.field_G;
           ia.field_l[163] = oh.field_a;
-          ia.field_l[75] = nh.field_C;
+          ia.field_l[75] = LabeledWidgetContainer.field_C;
           ia.field_l[159] = MouseInput.field_j;
           ia.field_l[170] = bh.field_h;
           ia.field_l[219] = AchievementNotification.field_l;
@@ -374,7 +374,7 @@ public final class HostileSpawn extends NetworkGameClient {
           ia.field_l[133] = ImageProducerRasterBuffer.field_n;
           ia.field_l[221] = s.field_d;
           ia.field_l[152] = ni.field_b;
-          ia.field_l[158] = jn.field_B;
+          ia.field_l[158] = AlphaWidgetContainer.field_B;
           ia.field_l[63] = FullscreenFocusCanvas.field_h;
           ia.field_l[113] = AgeValidator.field_p;
           ia.field_l[48] = hf.field_b;
@@ -650,9 +650,9 @@ public final class HostileSpawn extends NetworkGameClient {
                   }
                   else {
                     if (12 != var9_intLifetime1) {
-                      if (!(nh.field_E.field_e < 0)) {
-                        var4Lifetime2 = 1 + param1 * nh.field_E.field_g;
-                        var3_intLifetime2 = 1 + nh.field_E.field_e * param1;
+                      if (!(LabeledWidgetContainer.field_E.field_e < 0)) {
+                        var4Lifetime2 = 1 + param1 * LabeledWidgetContainer.field_E.field_g;
+                        var3_intLifetime2 = 1 + LabeledWidgetContainer.field_E.field_e * param1;
                         SoftwareRasterizer.fillCircleAlpha(var3_intLifetime2, var4Lifetime2, 2 + param1, 16711680, 32);
                         SoftwareRasterizer.drawCircleOutline(var3_intLifetime2, var4Lifetime2, param1 + 4, 16711680);
                       }
@@ -778,30 +778,30 @@ public final class HostileSpawn extends NetworkGameClient {
         try {
           gj.a(20, ac.field_e, 56.0f);
           this.renderFrame((byte) -80);
-          nd.field_e = new rd(ul.field_P, InteractiveWidget.field_F);
+          nd.field_e = new rd(ModalDialog.field_P, InteractiveWidget.field_F);
           var2 = new PcmResampler(22050, AudioOutput.field_g);
-          em.field_a[10] = va.a(ul.field_P, "", "flamethrower_all").a().resample(var2);
-          em.field_a[11] = va.a(ul.field_P, "", "footstep1").a().resample(var2);
-          em.field_a[12] = va.a(ul.field_P, "", "footstep2").a().resample(var2);
-          em.field_a[19] = va.a(ul.field_P, "", "slidingdoor_close").a().resample(var2);
-          em.field_a[20] = va.a(ul.field_P, "", "slidingdoor_open").a().resample(var2);
-          em.field_a[22] = va.a(ul.field_P, "", "spawn_kill").a().resample(var2);
-          em.field_a[23] = va.a(ul.field_P, "", "spawnhurt_splat").a().resample(var2);
-          NetworkArchiveRequest.field_A[1] = va.a(ul.field_P, "", "acid_spit").a().resample(var2);
-          NetworkArchiveRequest.field_A[3] = va.a(ul.field_P, "", "menu_beep").a().resample(var2);
-          NetworkArchiveRequest.field_A[4] = va.a(ul.field_P, "", "menu_click").a().resample(var2);
-          NetworkArchiveRequest.field_A[5] = va.a(ul.field_P, "", "burning_fire_loop").a().resample(var2);
-          NetworkArchiveRequest.field_A[6] = va.a(ul.field_P, "", "queen_spawn").a().resample(var2);
-          NetworkArchiveRequest.field_A[7] = va.a(ul.field_P, "", "fast_spawn").a().resample(var2);
-          NetworkArchiveRequest.field_A[8] = va.a(ul.field_P, "", "final_explosion").a().resample(var2);
-          NetworkArchiveRequest.field_A[9] = va.a(ul.field_P, "", "baby_spawn").a().resample(var2);
-          NetworkArchiveRequest.field_A[14] = va.a(ul.field_P, "", "crate_explode").a().resample(var2);
+          em.field_a[10] = va.a(ModalDialog.field_P, "", "flamethrower_all").a().resample(var2);
+          em.field_a[11] = va.a(ModalDialog.field_P, "", "footstep1").a().resample(var2);
+          em.field_a[12] = va.a(ModalDialog.field_P, "", "footstep2").a().resample(var2);
+          em.field_a[19] = va.a(ModalDialog.field_P, "", "slidingdoor_close").a().resample(var2);
+          em.field_a[20] = va.a(ModalDialog.field_P, "", "slidingdoor_open").a().resample(var2);
+          em.field_a[22] = va.a(ModalDialog.field_P, "", "spawn_kill").a().resample(var2);
+          em.field_a[23] = va.a(ModalDialog.field_P, "", "spawnhurt_splat").a().resample(var2);
+          NetworkArchiveRequest.field_A[1] = va.a(ModalDialog.field_P, "", "acid_spit").a().resample(var2);
+          NetworkArchiveRequest.field_A[3] = va.a(ModalDialog.field_P, "", "menu_beep").a().resample(var2);
+          NetworkArchiveRequest.field_A[4] = va.a(ModalDialog.field_P, "", "menu_click").a().resample(var2);
+          NetworkArchiveRequest.field_A[5] = va.a(ModalDialog.field_P, "", "burning_fire_loop").a().resample(var2);
+          NetworkArchiveRequest.field_A[6] = va.a(ModalDialog.field_P, "", "queen_spawn").a().resample(var2);
+          NetworkArchiveRequest.field_A[7] = va.a(ModalDialog.field_P, "", "fast_spawn").a().resample(var2);
+          NetworkArchiveRequest.field_A[8] = va.a(ModalDialog.field_P, "", "final_explosion").a().resample(var2);
+          NetworkArchiveRequest.field_A[9] = va.a(ModalDialog.field_P, "", "baby_spawn").a().resample(var2);
+          NetworkArchiveRequest.field_A[14] = va.a(ModalDialog.field_P, "", "crate_explode").a().resample(var2);
           NetworkArchiveRequest.field_A[13] = em.field_a[14];
-          NetworkArchiveRequest.field_A[17] = va.a(ul.field_P, "", "explode").a().resample(var2);
-          NetworkArchiveRequest.field_A[20] = va.a(ul.field_P, "", "normal_alien_attack").a().resample(var2);
-          NetworkArchiveRequest.field_A[21] = va.a(ul.field_P, "", "lift_up").a().resample(var2);
-          NetworkArchiveRequest.field_A[22] = va.a(ul.field_P, "", "lift_down").a().resample(var2);
-          NetworkArchiveRequest.field_A[23] = va.a(ul.field_P, "", "trigger_reactor").a().resample(var2);
+          NetworkArchiveRequest.field_A[17] = va.a(ModalDialog.field_P, "", "explode").a().resample(var2);
+          NetworkArchiveRequest.field_A[20] = va.a(ModalDialog.field_P, "", "normal_alien_attack").a().resample(var2);
+          NetworkArchiveRequest.field_A[21] = va.a(ModalDialog.field_P, "", "lift_up").a().resample(var2);
+          NetworkArchiveRequest.field_A[22] = va.a(ModalDialog.field_P, "", "lift_down").a().resample(var2);
+          NetworkArchiveRequest.field_A[23] = va.a(ModalDialog.field_P, "", "trigger_reactor").a().resample(var2);
           PcmOutputWorker.field_c = new PcmSample[]{NetworkArchiveRequest.field_A[24], NetworkArchiveRequest.field_A[5]};
           var3 = 0;
           do {
@@ -809,8 +809,8 @@ public final class HostileSpawn extends NetworkGameClient {
               var3 = 0;
               break;
             }
-            TextInputField.field_V[var3 + 5] = va.a(ul.field_P, "", "HS_machine_gun_0" + (var3 + 1) + "_tail").a().resample(var2);
-            TextInputField.field_V[0 + var3] = va.a(ul.field_P, "", "HS_machine_gun_0" + (var3 + 1) + "_no_tail").a().resample(var2);
+            TextInputField.field_V[var3 + 5] = va.a(ModalDialog.field_P, "", "HS_machine_gun_0" + (var3 + 1) + "_tail").a().resample(var2);
+            TextInputField.field_V[0 + var3] = va.a(ModalDialog.field_P, "", "HS_machine_gun_0" + (var3 + 1) + "_no_tail").a().resample(var2);
             var3++;
           } while (var4 == 0);
           do {
@@ -818,22 +818,22 @@ public final class HostileSpawn extends NetworkGameClient {
               var3 = 0;
               break;
             }
-            TextInputField.field_V[var3 + 10] = va.a(ul.field_P, "", "HS_machine_gun_cartridge_drop_0" + (1 + var3)).a().resample(var2);
+            TextInputField.field_V[var3 + 10] = va.a(ModalDialog.field_P, "", "HS_machine_gun_cartridge_drop_0" + (1 + var3)).a().resample(var2);
             var3++;
           } while (var4 == 0);
           do {
             if (var3 >= 3) {
-              TextInputField.field_V[15] = va.a(ul.field_P, "", "HS_pistol_equip_01").a().resample(var2);
-              TextInputField.field_V[16] = va.a(ul.field_P, "", "HS_machine_gun_equip_01").a().resample(var2);
-              TextInputField.field_V[17] = va.a(ul.field_P, "", "HS_shotgun_equip_01").a().resample(var2);
-              TextInputField.field_V[18] = va.a(ul.field_P, "", "HS_flamethrower_equip").a().resample(var2);
-              TextInputField.field_V[19] = va.a(ul.field_P, "", "HS_railgun_equip").a().resample(var2);
-              TextInputField.field_V[20] = va.a(ul.field_P, "", "HS_rocket_equip").a().resample(var2);
-              TextInputField.field_V[21] = va.a(ul.field_P, "", "HS_plasma_equip_01").a().resample(var2);
-              TextInputField.field_V[22] = va.a(ul.field_P, "", "HS_grenade_equip").a().resample(var2);
+              TextInputField.field_V[15] = va.a(ModalDialog.field_P, "", "HS_pistol_equip_01").a().resample(var2);
+              TextInputField.field_V[16] = va.a(ModalDialog.field_P, "", "HS_machine_gun_equip_01").a().resample(var2);
+              TextInputField.field_V[17] = va.a(ModalDialog.field_P, "", "HS_shotgun_equip_01").a().resample(var2);
+              TextInputField.field_V[18] = va.a(ModalDialog.field_P, "", "HS_flamethrower_equip").a().resample(var2);
+              TextInputField.field_V[19] = va.a(ModalDialog.field_P, "", "HS_railgun_equip").a().resample(var2);
+              TextInputField.field_V[20] = va.a(ModalDialog.field_P, "", "HS_rocket_equip").a().resample(var2);
+              TextInputField.field_V[21] = va.a(ModalDialog.field_P, "", "HS_plasma_equip_01").a().resample(var2);
+              TextInputField.field_V[22] = va.a(ModalDialog.field_P, "", "HS_grenade_equip").a().resample(var2);
               break;
             }
-            TextInputField.field_V[var3 + 12] = va.a(ul.field_P, "", "HS_pistol_0" + (1 + var3)).a().resample(var2);
+            TextInputField.field_V[var3 + 12] = va.a(ModalDialog.field_P, "", "HS_pistol_0" + (1 + var3)).a().resample(var2);
             var3++;
           } while (var4 == 0);
           var3 = 0;
@@ -842,7 +842,7 @@ public final class HostileSpawn extends NetworkGameClient {
               var3 = 0;
               break;
             }
-            TextInputField.field_V[23 + var3] = va.a(ul.field_P, "", "HS_shotgun_0" + (1 + var3)).a().resample(var2);
+            TextInputField.field_V[23 + var3] = va.a(ModalDialog.field_P, "", "HS_shotgun_0" + (1 + var3)).a().resample(var2);
             var3++;
           } while (var4 == 0);
           do {
@@ -850,22 +850,22 @@ public final class HostileSpawn extends NetworkGameClient {
               var3 = 0;
               break;
             }
-            TextInputField.field_V[var3 + 28] = va.a(ul.field_P, "", "HS_plasma_0" + (1 + var3)).a().resample(var2);
+            TextInputField.field_V[var3 + 28] = va.a(ModalDialog.field_P, "", "HS_plasma_0" + (1 + var3)).a().resample(var2);
             var3++;
           } while (var4 == 0);
           do {
             if (4 <= var3) {
-              TextInputField.field_V[35] = va.a(ul.field_P, "", "HS_flamethrower_all").a().resample(var2);
-              TextInputField.field_V[36] = va.a(ul.field_P, "", "HS_flamethrower_end").a().resample(var2);
-              TextInputField.field_V[37] = va.a(ul.field_P, "", "HS_rocket_fire_02").a().resample(var2);
-              TextInputField.field_V[38] = va.a(ul.field_P, "", "HS_plasma_impact_01").a().resample(var2);
-              TextInputField.field_V[39] = va.a(ul.field_P, "", "HS_grenade_fire_01").a().resample(var2);
-              fg.field_b[23] = va.a(ul.field_P, "", "HS_collect_charge_01").a().resample(var2);
-              fg.field_b[25] = va.a(ul.field_P, "", "HS_force_field_01").a().resample(var2);
-              fg.field_b[26] = va.a(ul.field_P, "", "HS_rumble_bgsound").a().resample(var2);
+              TextInputField.field_V[35] = va.a(ModalDialog.field_P, "", "HS_flamethrower_all").a().resample(var2);
+              TextInputField.field_V[36] = va.a(ModalDialog.field_P, "", "HS_flamethrower_end").a().resample(var2);
+              TextInputField.field_V[37] = va.a(ModalDialog.field_P, "", "HS_rocket_fire_02").a().resample(var2);
+              TextInputField.field_V[38] = va.a(ModalDialog.field_P, "", "HS_plasma_impact_01").a().resample(var2);
+              TextInputField.field_V[39] = va.a(ModalDialog.field_P, "", "HS_grenade_fire_01").a().resample(var2);
+              fg.field_b[23] = va.a(ModalDialog.field_P, "", "HS_collect_charge_01").a().resample(var2);
+              fg.field_b[25] = va.a(ModalDialog.field_P, "", "HS_force_field_01").a().resample(var2);
+              fg.field_b[26] = va.a(ModalDialog.field_P, "", "HS_rumble_bgsound").a().resample(var2);
               break;
             }
-            TextInputField.field_V[var3 + 31] = va.a(ul.field_P, "", "HS_railgun_0" + (var3 + 1)).a().resample(var2);
+            TextInputField.field_V[var3 + 31] = va.a(ModalDialog.field_P, "", "HS_railgun_0" + (var3 + 1)).a().resample(var2);
             var3++;
           } while (var4 == 0);
           var3 = 0;
@@ -876,8 +876,8 @@ public final class HostileSpawn extends NetworkGameClient {
               }
               break;
             }
-            TextInputField.field_V[var3 + 41] = va.a(ul.field_P, "", "HS_crag_turret_0" + (var3 + 1)).a().resample(var2);
-            TextInputField.field_V[46 + var3] = va.a(ul.field_P, "", "HS_turret_0" + (1 + var3)).a().resample(var2);
+            TextInputField.field_V[var3 + 41] = va.a(ModalDialog.field_P, "", "HS_crag_turret_0" + (var3 + 1)).a().resample(var2);
+            TextInputField.field_V[46 + var3] = va.a(ModalDialog.field_P, "", "HS_turret_0" + (1 + var3)).a().resample(var2);
             var3++;
           } while (var4 == 0);
           stackIn_57_0 = var2;
@@ -891,7 +891,7 @@ public final class HostileSpawn extends NetworkGameClient {
 
     private final void configureInterfaceThemeAndCursor(int param0) {
         try {
-          LoginPanel.a(4, 16776960, 4, AccountRegistrationPanel.field_L, 24, 320, 65280, 16777215, 24, id.field_A.field_y + al.field_Z.field_F, ul.field_J, (RgbSprite[]) null, (RgbSprite[]) null, 4, 24, 7662, 240, 40, 40, param0, id.field_A);
+          LoginPanel.a(4, 16776960, 4, AccountRegistrationPanel.field_L, 24, 320, 65280, 16777215, 24, id.field_A.field_y + al.field_Z.field_F, ModalDialog.field_J, (RgbSprite[]) null, (RgbSprite[]) null, 4, 24, 7662, 240, 40, 40, param0, id.field_A);
           this.initializeCustomCursorSupport((byte) -91);
         } catch (RuntimeException runtimeException) {
           throw AccountCreationResultPanel.wrapClientException((Throwable) ((Object) runtimeException), "HostileSpawn.EA(" + param0 + ')');
@@ -1053,7 +1053,7 @@ public final class HostileSpawn extends NetworkGameClient {
           CipherPacketBuffer.field_u = ji.a(tk.field_a, "", "hostilespawnloop_vengeance");
           PcmOutputWorker.field_f = ji.a(tk.field_a, "", "hostilespawnthreat_vengeance");
           InteractiveWidget.field_F = null;
-          ul.field_P = null;
+          ModalDialog.field_P = null;
           tk.field_a = null;
           ha.field_w.field_F.a(0, vg.field_h, ej.field_h, nd.field_e, false);
           ha.field_w.field_F.a(0, rb.field_s, ej.field_h, nd.field_e, false);
@@ -1177,7 +1177,7 @@ public final class HostileSpawn extends NetworkGameClient {
           be.clearStaticReferences(param0 ^ 28);
           pc.b(1);
           bb.clearStaticReferences((byte) -85);
-          gg.clearStaticReferences(false);
+          ModalDialogHost.clearStaticReferences(false);
           AccountCreationResultPanel.resetStaticState(true);
           pe.releaseDeclaredStaticReferences(8421504);
           ta.g((byte) 24);
@@ -1256,12 +1256,12 @@ public final class HostileSpawn extends NetworkGameClient {
           ra.clearStaticReferences(11129);
           h.clearStaticReferences((byte) 76);
           TextLayout.clearStaticReferences(param0 + 6909);
-          ag.d(5956);
+          UiWidget.d(5956);
           InteractiveWidget.clearStaticReferences(84);
-          fc.resetStaticState(1);
+          SingleChildWidgetContainer.resetStaticState(1);
           wb.clearDeclaredStaticReferences(420);
-          ul.clearStaticReferences(param0 ^ -1847325763);
-          vd.a((byte) 75);
+          ModalDialog.clearStaticReferences(param0 ^ -1847325763);
+          DequeWidgetContainer.a((byte) 75);
           fl.clearStaticReferences((byte) -52);
           dc.clearStaticReferences(256);
           hh.clearStaticReferences(-1);
@@ -1285,7 +1285,7 @@ public final class HostileSpawn extends NetworkGameClient {
           nf.c(118);
           pl.clearStaticReferences(true);
           j.clearStaticReferences((byte) -120);
-          nh.clearStaticReferences(0);
+          LabeledWidgetContainer.clearStaticReferences(0);
           TextInputField.clearTextInputFieldGlobals(10);
           EditableTextField.resetStaticState(25);
           me.clearDeclaredStaticReferences((byte) -56);
@@ -1304,8 +1304,8 @@ public final class HostileSpawn extends NetworkGameClient {
           RichTextLayout.c(param0 + 99);
           DirectByteStorage.c((byte) 70);
           df.clearStaticReferences(49);
-          rj.clearDeclaredStaticReferences((byte) -122);
-          od.clearDeclaredStaticReferences((byte) -55);
+          DraggableWidgetContainer.clearDeclaredStaticReferences((byte) -122);
+          DropTargetWidgetContainer.clearDeclaredStaticReferences((byte) -55);
           nd.clearStaticReferences(30401);
           IntrusiveNodeHashTable.clearStaticReferences(-1);
           DualLinkDeque.a(-1667734544);
@@ -1323,7 +1323,7 @@ public final class HostileSpawn extends NetworkGameClient {
           sd.b(param0 - 822203963);
           km.clearDeclaredStaticReferences(param0 + 93);
           f.clearStaticReferences((byte) -90);
-          jn.k(608);
+          AlphaWidgetContainer.k(608);
           ic.c(128);
           jd.resetStaticState(0);
           wi.clearStaticReferences(24074);
@@ -1375,7 +1375,7 @@ public final class HostileSpawn extends NetworkGameClient {
           try {
             VolumeRampingMidiPcmStream.field_eb = var2.getMethod("createCustomCursor", new Class[]{java.awt.Image.class, java.awt.Point.class, String.class});
             var3 = Class.forName("java.awt.image.BufferedImage");
-            od.field_F = var3.getConstructor(new Class[]{Integer.TYPE, Integer.TYPE, Integer.TYPE});
+            DropTargetWidgetContainer.field_F = var3.getConstructor(new Class[]{Integer.TYPE, Integer.TYPE, Integer.TYPE});
             le.field_eb = var3.getField("TYPE_INT_ARGB").getInt((Object) null);
             aa.field_e = var3.getMethod("setRGB", new Class[]{Integer.TYPE, Integer.TYPE, Integer.TYPE, Integer.TYPE, int[].class, Integer.TYPE, Integer.TYPE});
           } catch (IllegalAccessException illegalAccessException) {
@@ -1419,7 +1419,7 @@ public final class HostileSpawn extends NetworkGameClient {
         int var6 = 0;
         var6 = field_I ? 1 : 0;
         try {
-          vd.field_y = new RgbSprite[7][];
+          DequeWidgetContainer.field_y = new RgbSprite[7][];
           re.field_D = new RgbSprite[7][];
           ClientLookupTables.field_c = new RgbSprite[7][];
           cb.field_g = new RgbSprite[7][];
@@ -1430,35 +1430,35 @@ public final class HostileSpawn extends NetworkGameClient {
           bf.field_f = new RgbSprite[7][];
           kl.field_b = new RgbSprite[7][];
           jh.field_eb = new RgbSprite[7][];
-          pa.field_i[4] = DelayedPacket.loadNamedRgbSprites(vd.field_C, bm.a(param0, 76), "", "spawn_guard_attack");
-          pa.field_i[5] = DelayedPacket.loadNamedRgbSprites(vd.field_C, 92, "", "spawn_guard_death");
-          pa.field_i[0] = DelayedPacket.loadNamedRgbSprites(vd.field_C, 122, "", "spawn_guard_idle");
+          pa.field_i[4] = DelayedPacket.loadNamedRgbSprites(DequeWidgetContainer.field_C, bm.a(param0, 76), "", "spawn_guard_attack");
+          pa.field_i[5] = DelayedPacket.loadNamedRgbSprites(DequeWidgetContainer.field_C, 92, "", "spawn_guard_death");
+          pa.field_i[0] = DelayedPacket.loadNamedRgbSprites(DequeWidgetContainer.field_C, 122, "", "spawn_guard_idle");
           if (param0 != 39) {
             return;
           }
-          pa.field_i[1] = DelayedPacket.loadNamedRgbSprites(vd.field_C, param0 + 86, "", "spawn_guard_walk");
-          bf.field_f[5] = DelayedPacket.loadNamedRgbSprites(vd.field_C, 115, "", "spawn_dormant_death");
-          bf.field_f[1] = DelayedPacket.loadNamedRgbSprites(vd.field_C, 124, "", "spawn_dormant_walk");
+          pa.field_i[1] = DelayedPacket.loadNamedRgbSprites(DequeWidgetContainer.field_C, param0 + 86, "", "spawn_guard_walk");
+          bf.field_f[5] = DelayedPacket.loadNamedRgbSprites(DequeWidgetContainer.field_C, 115, "", "spawn_dormant_death");
+          bf.field_f[1] = DelayedPacket.loadNamedRgbSprites(DequeWidgetContainer.field_C, 124, "", "spawn_dormant_walk");
           bf.field_f[5] = bf.field_f[1];
           bf.field_f[0] = bf.field_f[1];
           bf.field_f[4] = bf.field_f[1];
-          re.field_D[4] = DelayedPacket.loadNamedRgbSprites(vd.field_C, 102, "", "spawn_queen_attack");
-          re.field_D[5] = DelayedPacket.loadNamedRgbSprites(vd.field_C, bm.a(param0, 87), "", "spawn_queen_death");
-          re.field_D[0] = DelayedPacket.loadNamedRgbSprites(vd.field_C, 91, "", "spawn_queen_idle");
-          re.field_D[1] = DelayedPacket.loadNamedRgbSprites(vd.field_C, bm.a(param0, 67), "", "spawn_queen_walk");
-          kl.field_b[4] = DelayedPacket.loadNamedRgbSprites(vd.field_C, 102, "", "spawn_runner_attack");
-          kl.field_b[5] = DelayedPacket.loadNamedRgbSprites(vd.field_C, 102, "", "spawn_runner_death");
-          kl.field_b[0] = DelayedPacket.loadNamedRgbSprites(vd.field_C, param0 + 69, "", "spawn_runner_idle");
-          kl.field_b[1] = DelayedPacket.loadNamedRgbSprites(vd.field_C, 125, "", "spawn_runner_walk");
-          lb.field_a[4] = DelayedPacket.loadNamedRgbSprites(vd.field_C, bm.a(param0, 74), "", "spawn_spitter_attack");
-          lb.field_a[5] = DelayedPacket.loadNamedRgbSprites(vd.field_C, 93, "", "spawn_spitter_death");
-          lb.field_a[0] = DelayedPacket.loadNamedRgbSprites(vd.field_C, 117, "", "spawn_spitter_idle");
-          lb.field_a[1] = DelayedPacket.loadNamedRgbSprites(vd.field_C, 126, "", "spawn_spitter_walk");
-          ArchiveIndex.field_f[4] = DelayedPacket.loadNamedRgbSprites(vd.field_C, 119, "", "spawn_praetorian_attack");
-          ArchiveIndex.field_f[5] = DelayedPacket.loadNamedRgbSprites(vd.field_C, param0 + 74, "", "spawn_praetorian_death");
-          ArchiveIndex.field_f[0] = DelayedPacket.loadNamedRgbSprites(vd.field_C, bm.a(param0, 70), "", "spawn_praetorian_idle");
-          ArchiveIndex.field_f[1] = DelayedPacket.loadNamedRgbSprites(vd.field_C, 93, "", "spawn_praetorian_walk");
-          var2 = new RgbSprite[][][]{ClientLookupTables.field_c, pa.field_i, bf.field_f, re.field_D, kl.field_b, lb.field_a, cb.field_g, vd.field_y, ArchiveIndex.field_f};
+          re.field_D[4] = DelayedPacket.loadNamedRgbSprites(DequeWidgetContainer.field_C, 102, "", "spawn_queen_attack");
+          re.field_D[5] = DelayedPacket.loadNamedRgbSprites(DequeWidgetContainer.field_C, bm.a(param0, 87), "", "spawn_queen_death");
+          re.field_D[0] = DelayedPacket.loadNamedRgbSprites(DequeWidgetContainer.field_C, 91, "", "spawn_queen_idle");
+          re.field_D[1] = DelayedPacket.loadNamedRgbSprites(DequeWidgetContainer.field_C, bm.a(param0, 67), "", "spawn_queen_walk");
+          kl.field_b[4] = DelayedPacket.loadNamedRgbSprites(DequeWidgetContainer.field_C, 102, "", "spawn_runner_attack");
+          kl.field_b[5] = DelayedPacket.loadNamedRgbSprites(DequeWidgetContainer.field_C, 102, "", "spawn_runner_death");
+          kl.field_b[0] = DelayedPacket.loadNamedRgbSprites(DequeWidgetContainer.field_C, param0 + 69, "", "spawn_runner_idle");
+          kl.field_b[1] = DelayedPacket.loadNamedRgbSprites(DequeWidgetContainer.field_C, 125, "", "spawn_runner_walk");
+          lb.field_a[4] = DelayedPacket.loadNamedRgbSprites(DequeWidgetContainer.field_C, bm.a(param0, 74), "", "spawn_spitter_attack");
+          lb.field_a[5] = DelayedPacket.loadNamedRgbSprites(DequeWidgetContainer.field_C, 93, "", "spawn_spitter_death");
+          lb.field_a[0] = DelayedPacket.loadNamedRgbSprites(DequeWidgetContainer.field_C, 117, "", "spawn_spitter_idle");
+          lb.field_a[1] = DelayedPacket.loadNamedRgbSprites(DequeWidgetContainer.field_C, 126, "", "spawn_spitter_walk");
+          ArchiveIndex.field_f[4] = DelayedPacket.loadNamedRgbSprites(DequeWidgetContainer.field_C, 119, "", "spawn_praetorian_attack");
+          ArchiveIndex.field_f[5] = DelayedPacket.loadNamedRgbSprites(DequeWidgetContainer.field_C, param0 + 74, "", "spawn_praetorian_death");
+          ArchiveIndex.field_f[0] = DelayedPacket.loadNamedRgbSprites(DequeWidgetContainer.field_C, bm.a(param0, 70), "", "spawn_praetorian_idle");
+          ArchiveIndex.field_f[1] = DelayedPacket.loadNamedRgbSprites(DequeWidgetContainer.field_C, 93, "", "spawn_praetorian_walk");
+          var2 = new RgbSprite[][][]{ClientLookupTables.field_c, pa.field_i, bf.field_f, re.field_D, kl.field_b, lb.field_a, cb.field_g, DequeWidgetContainer.field_y, ArchiveIndex.field_f};
           var3 = var2;
           var4 = 0;
           boolean decompiledNaturalLoopExit0 = false;
@@ -1577,7 +1577,7 @@ public final class HostileSpawn extends NetworkGameClient {
           if (!cm.b((byte) -97)) {
             boolean decompiledFrameRemainder0 = true;
             boolean decompiledFrameCompleted2 = true;
-            if (!ul.field_N) {
+            if (!ModalDialog.field_N) {
               discarded$0 = this.advanceGameAssetLoading(4);
               decompiledFrameRemainder0 = (var4 != 0);
             }
@@ -1625,9 +1625,9 @@ public final class HostileSpawn extends NetworkGameClient {
                 }
                 if (decompiledFrameRemainder0) {
                   if (ProxySocketFactory.field_h[1] == null) {
-                    if (nh.field_L != null) {
-                      if (nh.field_L.field_j) {
-                        nh.field_L = null;
+                    if (LabeledWidgetContainer.field_L != null) {
+                      if (LabeledWidgetContainer.field_L.field_j) {
+                        LabeledWidgetContainer.field_L = null;
                         if (var4 != 0) {
                           this.updateGameOverlays((byte) 76);
                           this.consumeScoreLookupResult((byte) 113, 1);
@@ -1802,11 +1802,11 @@ public final class HostileSpawn extends NetworkGameClient {
             }
           }
           if ((decompiledFrameCompleted2) &&
-            (null == jn.field_F)) {
-            jn.field_F = new p[8000];
+            (null == AlphaWidgetContainer.field_F)) {
+            AlphaWidgetContainer.field_F = new p[8000];
             var2_intLifetime2 = 0;
             while (var2_intLifetime2 < 8000) {
-              jn.field_F[var2_intLifetime2] = new p();
+              AlphaWidgetContainer.field_F[var2_intLifetime2] = new p();
               var2_intLifetime2++;
               if (var3 != 0) {
                 decompiledFrameCompleted1 = false;
@@ -1831,8 +1831,8 @@ public final class HostileSpawn extends NetworkGameClient {
             (param0 != 4)) {
             return false;
           }
-          if (null == ul.field_P) {
-            if (vd.field_C != null) {
+          if (null == ModalDialog.field_P) {
+            if (DequeWidgetContainer.field_C != null) {
               this.loadGameplaySprites((byte) -113);
               return false;
             }
@@ -1858,20 +1858,20 @@ public final class HostileSpawn extends NetworkGameClient {
               sg.field_j = wk.a(4, -2178);
               ClientLookupTables.field_h.f(-121);
             }
-            ul.field_N = true;
+            ModalDialog.field_N = true;
             ql.f(8036);
             return true;
           }
-          if (ul.field_P.ensureIndexLoaded(-15879) &&
-            ul.field_P.tryLoadAllGroups(param0 ^ 4)) {
+          if (ModalDialog.field_P.ensureIndexLoaded(-15879) &&
+            ModalDialog.field_P.tryLoadAllGroups(param0 ^ 4)) {
             if (InteractiveWidget.field_F.ensureIndexLoaded(param0 - 15883) &&
               InteractiveWidget.field_F.tryLoadAllGroups(0)) {
               if (ej.field_h.ensureIndexLoaded(-15879) &&
                 ej.field_h.tryLoadAllGroups(0)) {
                 if (tk.field_a.ensureIndexLoaded(param0 ^ -15875) &&
                   tk.field_a.tryLoadAllGroups(0)) {
-                  if (vd.field_C.ensureIndexLoaded(-15879) &&
-                    vd.field_C.tryLoadAllGroups(param0 ^ 4)) {
+                  if (DequeWidgetContainer.field_C.ensureIndexLoaded(-15879) &&
+                    DequeWidgetContainer.field_C.tryLoadAllGroups(param0 ^ 4)) {
                     if (bi.field_h.ensureIndexLoaded(param0 ^ -15875) &&
                       bi.field_h.tryLoadAllGroups(param0 ^ 4)) {
                       if (IsaacGenerator.field_h.ensureIndexLoaded(-15879) &&
@@ -1926,7 +1926,7 @@ public final class HostileSpawn extends NetworkGameClient {
                     gj.a(param0 ^ 16, DirectByteStorage.a(MouseInput.field_f, bi.field_h, dg.field_rb, (byte) 68), 30.0f);
                     return false;
                   }
-                  gj.a(20, DirectByteStorage.a(lj.field_r, vd.field_C, cl.field_h, (byte) -88), 25.0f);
+                  gj.a(20, DirectByteStorage.a(lj.field_r, DequeWidgetContainer.field_C, cl.field_h, (byte) -88), 25.0f);
                   return false;
                 }
                 gj.a(param0 ^ 16, DirectByteStorage.a(GzipDecompressor.field_i, tk.field_a, rd.field_g, (byte) 79), 20.0f);
@@ -1938,7 +1938,7 @@ public final class HostileSpawn extends NetworkGameClient {
             gj.a(param0 ^ 16, DirectByteStorage.a(sd.field_v, InteractiveWidget.field_F, hn.field_c, (byte) 84), 10.0f);
             return false;
           }
-          gj.a(20, DirectByteStorage.a(sd.field_v, ul.field_P, hn.field_c, (byte) -112), 5.0f);
+          gj.a(20, DirectByteStorage.a(sd.field_v, ModalDialog.field_P, hn.field_c, (byte) -112), 5.0f);
           return false;
         } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
           decompiledCaughtException = decompiledCaughtParameter1;
@@ -2037,7 +2037,7 @@ public final class HostileSpawn extends NetworkGameClient {
             ResourceArchive.drawLoadingFrame(stackIn_12_0, (java.awt.Canvas) (stackIn_12_1), stackIn_15_2);
             return;
           }
-          if (!ul.field_N) {
+          if (!ModalDialog.field_N) {
             ad.a((java.awt.Canvas) (var2), false);
             return;
           }
@@ -2197,11 +2197,11 @@ public final class HostileSpawn extends NetworkGameClient {
               GameAppletShell.field_h.requestFocus();
             }
             if (var2_int == 3) {
-              nh.a(true, (byte) -90);
+              LabeledWidgetContainer.a(true, (byte) -90);
             }
             if (var2_int == 4) {
               m.field_l = true;
-              od.k(0);
+              DropTargetWidgetContainer.k(0);
             }
             return;
           }
@@ -2407,250 +2407,250 @@ public final class HostileSpawn extends NetworkGameClient {
         RuntimeException decompiledCaughtException = null;
         var3 = field_I ? 1 : 0;
         try {
-          CrossfadingMidiPcmStream.field_y = MouseInput.a("", 127, "Scenery_1", vd.field_C);
-          c.field_f = DelayedPacket.loadNamedRgbSprites(vd.field_C, 97, "", "Scenery_2");
-          jd.field_h = fg.a("", "Scenery_3", vd.field_C, false);
-          om.field_c = fg.a("", "Scenery_4", vd.field_C, false);
-          ih.field_v = fg.a("", "Scenery_5", vd.field_C, false);
-          wj.field_L = fg.a("", "Scenery_6", vd.field_C, false);
-          GridPoint.field_d = fg.a("", "Scenery_7", vd.field_C, false);
-          hg.field_a = fg.a("", "Scenery_8", vd.field_C, false);
-          f.field_b = MouseInput.a("", -76, "Scenery_9", vd.field_C);
-          og.field_d = fg.a("", "Scenery_10", vd.field_C, false);
-          r.field_e = fg.a("", "Scenery_11", vd.field_C, false);
-          r.field_b = fg.a("", "Scenery_12", vd.field_C, false);
-          NodeHashTableIterator.field_g = MouseInput.a("", -74, "Scenery_13", vd.field_C);
-          rd.field_a = fg.a("", "Scenery_14", vd.field_C, false);
-          ng.field_v = fg.a("", "Scenery_15", vd.field_C, false);
-          re.field_q = fg.a("", "Scenery_16", vd.field_C, false);
-          hf.field_b = fg.a("", "Scenery_17", vd.field_C, false);
-          qj.field_l = fg.a("", "Scenery_18", vd.field_C, false);
-          DebouncedFieldValidator.field_j = fg.a("", "Scenery_19", vd.field_C, false);
-          eh.field_b = fg.a("", "Scenery_20", vd.field_C, false);
-          lc.field_a = fg.a("", "computer_console1_e_tga", vd.field_C, false);
-          bi.field_b = fg.a("", "computer_console1_n_tga", vd.field_C, false);
-          cl.field_j = fg.a("", "computer_console1_s_tga", vd.field_C, false);
-          de.field_o = fg.a("", "computer_console1_w_tga", vd.field_C, false);
-          an.field_j = fg.a("", "computer_console2_e_tga", vd.field_C, false);
-          IsaacGenerator.field_f = fg.a("", "computer_console2_n_tga", vd.field_C, false);
-          an.field_l = fg.a("", "computer_console2_s_tga", vd.field_C, false);
-          PacketBuffer.field_j = fg.a("", "computer_console2_w_tga", vd.field_C, false);
-          MouseInput.field_k = fg.a("", "Scenery_21", vd.field_C, false);
-          lc.field_b = fg.a("", "Scenery_22", vd.field_C, false);
-          rb.field_y = fg.a("", "Scenery_23", vd.field_C, false);
-          FullscreenFocusCanvas.field_h = fg.a("", "Scenery_24", vd.field_C, false);
-          KeyboardInput.field_j = fg.a("", "Scenery_25", vd.field_C, false);
-          ImageProducerRasterBuffer.field_o = fg.a("", "Scenery_26", vd.field_C, false);
-          AwtRasterBuffer.field_h = fg.a("", "Scenery_27", vd.field_C, false);
-          pl.field_j = fg.a("", "Scenery_28", vd.field_C, false);
-          pe.field_hb = fg.a("", "Scenery_29", vd.field_C, false);
-          CipherPacketBuffer.field_w = fg.a("", "Scenery_30", vd.field_C, false);
-          e.field_d = fg.a("", "Scenery_31", vd.field_C, false);
-          EditableTextField.field_S = fg.a("", "Scenery_32", vd.field_C, false);
-          f.field_d = fg.a("", "Scenery_33", vd.field_C, false);
-          GameCanvas.field_h = fg.a("", "Scenery_34", vd.field_C, false);
-          ki.field_b = fg.a("", "Scenery_35", vd.field_C, false);
-          nh.field_C = fg.a("", "Scenery_36", vd.field_C, false);
-          wb.field_W = fg.a("", "explosive_crate_e_tga", vd.field_C, false);
-          IsaacGenerator.field_c = fg.a("", "explosive_crate_n_tga", vd.field_C, false);
-          ProxySocketFactory.field_f = fg.a("", "explosive_crate_s_tga", vd.field_C, false);
-          oa.field_e = fg.a("", "explosive_crate_w_tga", vd.field_C, false);
-          FullscreenFocusCanvas.field_f = fg.a("", "health_big_tga", vd.field_C, false);
-          ia.field_e = fg.a("", "health_sm_tga", vd.field_C, false);
-          SecondaryNodeDequeIterator.field_f = fg.a("", "Scenery_37", vd.field_C, false);
-          gf.field_a = fg.a("", "Scenery_38", vd.field_C, false);
-          bl.field_c = fg.a("", "Scenery_39", vd.field_C, false);
-          u.field_h = fg.a("", "Scenery_40", vd.field_C, false);
-          vj.field_p = fg.a("", "Scenery_41", vd.field_C, false);
-          ea.field_e = fg.a("", "Scenery_42", vd.field_C, false);
-          tc.field_b = fg.a("", "Scenery_43", vd.field_C, false);
-          NodeHashTableIterator.field_d = fg.a("", "Scenery_44", vd.field_C, false);
-          km.field_z = fg.a("", "Scenery_45", vd.field_C, false);
-          ProxyAuthenticationRequiredException.field_a = fg.a("", "Scenery_46", vd.field_C, false);
-          GameCanvas.field_k = fg.a("", "Scenery_47", vd.field_C, false);
-          jc.field_a = fg.a("", "Scenery_48", vd.field_C, false);
-          hm.field_l = fg.a("", "Scenery_49", vd.field_C, false);
-          q.field_c = fg.a("", "Scenery_50", vd.field_C, false);
-          df.field_a = fg.a("", "Scenery_51", vd.field_C, false);
-          sj.field_g = fg.a("", "Scenery_52", vd.field_C, false);
-          vf.field_H = fg.a("", "Scenery_53", vd.field_C, false);
-          nd.field_a = fg.a("", "Scenery_54", vd.field_C, false);
-          ProxySocketFactory.field_l = fg.a("", "Scenery_55", vd.field_C, false);
-          lh.field_e = fg.a("", "Scenery_56", vd.field_C, false);
-          vg.field_d = fg.a("", "Scenery_57", vd.field_C, false);
-          DualLinkDeque.field_b = fg.a("", "Scenery_58", vd.field_C, false);
-          EditableTextField.field_R = fg.a("", "Scenery_59", vd.field_C, false);
-          ic.field_k = fg.a("", "Scenery_60", vd.field_C, false);
-          eb.field_b = fg.a("", "Scenery_61", vd.field_C, false);
-          DefaultTextWidgetRenderer.field_h = fg.a("", "Scenery_62", vd.field_C, false);
-          jh.field_cb = fg.a("", "Scenery_63", vd.field_C, false);
-          SocketFactory.field_c = fg.a("", "Scenery_64", vd.field_C, false);
-          qg.field_m = fg.a("", "Scenery_65", vd.field_C, false);
-          SpriteGeometry.field_B = fg.a("", "Scenery_66", vd.field_C, false);
-          AgeValidator.field_p = fg.a("", "Scenery_67", vd.field_C, false);
-          rj.field_N = fg.a("", "Scenery_68", vd.field_C, false);
-          BufferedSocket.field_f = fg.a("", "Scenery_69", vd.field_C, false);
-          dd.field_j = fg.a("", "Scenery_70", vd.field_C, false);
-          Bzip2State.field_C = fg.a("", "Scenery_71", vd.field_C, false);
-          tb.field_L = fg.a("", "Scenery_72", vd.field_C, false);
-          wd.field_b = fg.a("", "Scenery_73", vd.field_C, false);
-          ub.field_c = fg.a("", "Scenery_74", vd.field_C, false);
-          fa.field_e = fg.a("", "Scenery_75", vd.field_C, false);
-          ej.field_d = fg.a("", "Scenery_76", vd.field_C, false);
-          MouseInput.field_l = fg.a("", "Scenery_77", vd.field_C, false);
-          ng.field_i = fg.a("", "Scenery_78", vd.field_C, false);
-          mn.field_b = fg.a("", "Scenery_79", vd.field_C, false);
-          ln.field_c = fg.a("", "Scenery_80", vd.field_C, false);
-          hh.field_b = fg.a("", "Scenery_81", vd.field_C, false);
-          bm.field_f = fg.a("", "reactor_tga", vd.field_C, false);
-          ca.field_b = fg.a("", "reactor_damaged_tga", vd.field_C, false);
-          PacketBuffer.field_k = fg.a("", "shuttle_tga", vd.field_C, false);
-          sc.field_a = MouseInput.a("", param0 ^ 13124, "shield_module", vd.field_C);
-          qm.field_P = fg.a("", "explosive_charge", vd.field_C, false);
-          MouseInput.a("", -21, "cloak_module", vd.field_C);
-          e.field_r = MouseInput.a("", -78, "invulnerability_module", vd.field_C);
-          KeyboardInput.field_h = MouseInput.a("", param0 ^ 13130, "explosive_shells", vd.field_C);
-          qh.field_l = MouseInput.a("", 120, "fusion_power", vd.field_C);
-          mg.field_b = MouseInput.a("", -67, "incendiary_rockets", vd.field_C);
-          BufferedRandomAccessFile.field_l = MouseInput.a("", 111, "plasma_fire", vd.field_C);
+          CrossfadingMidiPcmStream.field_y = MouseInput.a("", 127, "Scenery_1", DequeWidgetContainer.field_C);
+          c.field_f = DelayedPacket.loadNamedRgbSprites(DequeWidgetContainer.field_C, 97, "", "Scenery_2");
+          jd.field_h = fg.a("", "Scenery_3", DequeWidgetContainer.field_C, false);
+          om.field_c = fg.a("", "Scenery_4", DequeWidgetContainer.field_C, false);
+          ih.field_v = fg.a("", "Scenery_5", DequeWidgetContainer.field_C, false);
+          wj.field_L = fg.a("", "Scenery_6", DequeWidgetContainer.field_C, false);
+          GridPoint.field_d = fg.a("", "Scenery_7", DequeWidgetContainer.field_C, false);
+          hg.field_a = fg.a("", "Scenery_8", DequeWidgetContainer.field_C, false);
+          f.field_b = MouseInput.a("", -76, "Scenery_9", DequeWidgetContainer.field_C);
+          og.field_d = fg.a("", "Scenery_10", DequeWidgetContainer.field_C, false);
+          r.field_e = fg.a("", "Scenery_11", DequeWidgetContainer.field_C, false);
+          r.field_b = fg.a("", "Scenery_12", DequeWidgetContainer.field_C, false);
+          NodeHashTableIterator.field_g = MouseInput.a("", -74, "Scenery_13", DequeWidgetContainer.field_C);
+          rd.field_a = fg.a("", "Scenery_14", DequeWidgetContainer.field_C, false);
+          ng.field_v = fg.a("", "Scenery_15", DequeWidgetContainer.field_C, false);
+          re.field_q = fg.a("", "Scenery_16", DequeWidgetContainer.field_C, false);
+          hf.field_b = fg.a("", "Scenery_17", DequeWidgetContainer.field_C, false);
+          qj.field_l = fg.a("", "Scenery_18", DequeWidgetContainer.field_C, false);
+          DebouncedFieldValidator.field_j = fg.a("", "Scenery_19", DequeWidgetContainer.field_C, false);
+          eh.field_b = fg.a("", "Scenery_20", DequeWidgetContainer.field_C, false);
+          lc.field_a = fg.a("", "computer_console1_e_tga", DequeWidgetContainer.field_C, false);
+          bi.field_b = fg.a("", "computer_console1_n_tga", DequeWidgetContainer.field_C, false);
+          cl.field_j = fg.a("", "computer_console1_s_tga", DequeWidgetContainer.field_C, false);
+          de.field_o = fg.a("", "computer_console1_w_tga", DequeWidgetContainer.field_C, false);
+          an.field_j = fg.a("", "computer_console2_e_tga", DequeWidgetContainer.field_C, false);
+          IsaacGenerator.field_f = fg.a("", "computer_console2_n_tga", DequeWidgetContainer.field_C, false);
+          an.field_l = fg.a("", "computer_console2_s_tga", DequeWidgetContainer.field_C, false);
+          PacketBuffer.field_j = fg.a("", "computer_console2_w_tga", DequeWidgetContainer.field_C, false);
+          MouseInput.field_k = fg.a("", "Scenery_21", DequeWidgetContainer.field_C, false);
+          lc.field_b = fg.a("", "Scenery_22", DequeWidgetContainer.field_C, false);
+          rb.field_y = fg.a("", "Scenery_23", DequeWidgetContainer.field_C, false);
+          FullscreenFocusCanvas.field_h = fg.a("", "Scenery_24", DequeWidgetContainer.field_C, false);
+          KeyboardInput.field_j = fg.a("", "Scenery_25", DequeWidgetContainer.field_C, false);
+          ImageProducerRasterBuffer.field_o = fg.a("", "Scenery_26", DequeWidgetContainer.field_C, false);
+          AwtRasterBuffer.field_h = fg.a("", "Scenery_27", DequeWidgetContainer.field_C, false);
+          pl.field_j = fg.a("", "Scenery_28", DequeWidgetContainer.field_C, false);
+          pe.field_hb = fg.a("", "Scenery_29", DequeWidgetContainer.field_C, false);
+          CipherPacketBuffer.field_w = fg.a("", "Scenery_30", DequeWidgetContainer.field_C, false);
+          e.field_d = fg.a("", "Scenery_31", DequeWidgetContainer.field_C, false);
+          EditableTextField.field_S = fg.a("", "Scenery_32", DequeWidgetContainer.field_C, false);
+          f.field_d = fg.a("", "Scenery_33", DequeWidgetContainer.field_C, false);
+          GameCanvas.field_h = fg.a("", "Scenery_34", DequeWidgetContainer.field_C, false);
+          ki.field_b = fg.a("", "Scenery_35", DequeWidgetContainer.field_C, false);
+          LabeledWidgetContainer.field_C = fg.a("", "Scenery_36", DequeWidgetContainer.field_C, false);
+          wb.field_W = fg.a("", "explosive_crate_e_tga", DequeWidgetContainer.field_C, false);
+          IsaacGenerator.field_c = fg.a("", "explosive_crate_n_tga", DequeWidgetContainer.field_C, false);
+          ProxySocketFactory.field_f = fg.a("", "explosive_crate_s_tga", DequeWidgetContainer.field_C, false);
+          oa.field_e = fg.a("", "explosive_crate_w_tga", DequeWidgetContainer.field_C, false);
+          FullscreenFocusCanvas.field_f = fg.a("", "health_big_tga", DequeWidgetContainer.field_C, false);
+          ia.field_e = fg.a("", "health_sm_tga", DequeWidgetContainer.field_C, false);
+          SecondaryNodeDequeIterator.field_f = fg.a("", "Scenery_37", DequeWidgetContainer.field_C, false);
+          gf.field_a = fg.a("", "Scenery_38", DequeWidgetContainer.field_C, false);
+          bl.field_c = fg.a("", "Scenery_39", DequeWidgetContainer.field_C, false);
+          u.field_h = fg.a("", "Scenery_40", DequeWidgetContainer.field_C, false);
+          vj.field_p = fg.a("", "Scenery_41", DequeWidgetContainer.field_C, false);
+          ea.field_e = fg.a("", "Scenery_42", DequeWidgetContainer.field_C, false);
+          tc.field_b = fg.a("", "Scenery_43", DequeWidgetContainer.field_C, false);
+          NodeHashTableIterator.field_d = fg.a("", "Scenery_44", DequeWidgetContainer.field_C, false);
+          km.field_z = fg.a("", "Scenery_45", DequeWidgetContainer.field_C, false);
+          ProxyAuthenticationRequiredException.field_a = fg.a("", "Scenery_46", DequeWidgetContainer.field_C, false);
+          GameCanvas.field_k = fg.a("", "Scenery_47", DequeWidgetContainer.field_C, false);
+          jc.field_a = fg.a("", "Scenery_48", DequeWidgetContainer.field_C, false);
+          hm.field_l = fg.a("", "Scenery_49", DequeWidgetContainer.field_C, false);
+          q.field_c = fg.a("", "Scenery_50", DequeWidgetContainer.field_C, false);
+          df.field_a = fg.a("", "Scenery_51", DequeWidgetContainer.field_C, false);
+          sj.field_g = fg.a("", "Scenery_52", DequeWidgetContainer.field_C, false);
+          vf.field_H = fg.a("", "Scenery_53", DequeWidgetContainer.field_C, false);
+          nd.field_a = fg.a("", "Scenery_54", DequeWidgetContainer.field_C, false);
+          ProxySocketFactory.field_l = fg.a("", "Scenery_55", DequeWidgetContainer.field_C, false);
+          lh.field_e = fg.a("", "Scenery_56", DequeWidgetContainer.field_C, false);
+          vg.field_d = fg.a("", "Scenery_57", DequeWidgetContainer.field_C, false);
+          DualLinkDeque.field_b = fg.a("", "Scenery_58", DequeWidgetContainer.field_C, false);
+          EditableTextField.field_R = fg.a("", "Scenery_59", DequeWidgetContainer.field_C, false);
+          ic.field_k = fg.a("", "Scenery_60", DequeWidgetContainer.field_C, false);
+          eb.field_b = fg.a("", "Scenery_61", DequeWidgetContainer.field_C, false);
+          DefaultTextWidgetRenderer.field_h = fg.a("", "Scenery_62", DequeWidgetContainer.field_C, false);
+          jh.field_cb = fg.a("", "Scenery_63", DequeWidgetContainer.field_C, false);
+          SocketFactory.field_c = fg.a("", "Scenery_64", DequeWidgetContainer.field_C, false);
+          qg.field_m = fg.a("", "Scenery_65", DequeWidgetContainer.field_C, false);
+          SpriteGeometry.field_B = fg.a("", "Scenery_66", DequeWidgetContainer.field_C, false);
+          AgeValidator.field_p = fg.a("", "Scenery_67", DequeWidgetContainer.field_C, false);
+          DraggableWidgetContainer.field_N = fg.a("", "Scenery_68", DequeWidgetContainer.field_C, false);
+          BufferedSocket.field_f = fg.a("", "Scenery_69", DequeWidgetContainer.field_C, false);
+          dd.field_j = fg.a("", "Scenery_70", DequeWidgetContainer.field_C, false);
+          Bzip2State.field_C = fg.a("", "Scenery_71", DequeWidgetContainer.field_C, false);
+          tb.field_L = fg.a("", "Scenery_72", DequeWidgetContainer.field_C, false);
+          wd.field_b = fg.a("", "Scenery_73", DequeWidgetContainer.field_C, false);
+          ub.field_c = fg.a("", "Scenery_74", DequeWidgetContainer.field_C, false);
+          fa.field_e = fg.a("", "Scenery_75", DequeWidgetContainer.field_C, false);
+          ej.field_d = fg.a("", "Scenery_76", DequeWidgetContainer.field_C, false);
+          MouseInput.field_l = fg.a("", "Scenery_77", DequeWidgetContainer.field_C, false);
+          ng.field_i = fg.a("", "Scenery_78", DequeWidgetContainer.field_C, false);
+          mn.field_b = fg.a("", "Scenery_79", DequeWidgetContainer.field_C, false);
+          ln.field_c = fg.a("", "Scenery_80", DequeWidgetContainer.field_C, false);
+          hh.field_b = fg.a("", "Scenery_81", DequeWidgetContainer.field_C, false);
+          bm.field_f = fg.a("", "reactor_tga", DequeWidgetContainer.field_C, false);
+          ca.field_b = fg.a("", "reactor_damaged_tga", DequeWidgetContainer.field_C, false);
+          PacketBuffer.field_k = fg.a("", "shuttle_tga", DequeWidgetContainer.field_C, false);
+          sc.field_a = MouseInput.a("", param0 ^ 13124, "shield_module", DequeWidgetContainer.field_C);
+          qm.field_P = fg.a("", "explosive_charge", DequeWidgetContainer.field_C, false);
+          MouseInput.a("", -21, "cloak_module", DequeWidgetContainer.field_C);
+          e.field_r = MouseInput.a("", -78, "invulnerability_module", DequeWidgetContainer.field_C);
+          KeyboardInput.field_h = MouseInput.a("", param0 ^ 13130, "explosive_shells", DequeWidgetContainer.field_C);
+          qh.field_l = MouseInput.a("", 120, "fusion_power", DequeWidgetContainer.field_C);
+          mg.field_b = MouseInput.a("", -67, "incendiary_rockets", DequeWidgetContainer.field_C);
+          BufferedRandomAccessFile.field_l = MouseInput.a("", 111, "plasma_fire", DequeWidgetContainer.field_C);
           if (param0 != 13119) {
             return;
           }
-          aa.field_b = MouseInput.a("", -48, "powered_boots", vd.field_C);
-          KeyboardInput.field_f = fg.a("", "security_pass", vd.field_C, false);
-          im.field_a = jd.a((byte) 33, "", vd.field_C, "doors_hammerhead");
-          ak.field_a = MouseInput.a("", -116, "door_twiddles_hammerhead_h", vd.field_C);
-          an.field_d = MouseInput.a("", 125, "door_twiddles_hammerhead_v", vd.field_C);
-          jd.field_o = jd.a((byte) 33, "", vd.field_C, "doors_planet");
-          TextLayout.field_a = MouseInput.a("", 118, "door_twiddles_planet_h", vd.field_C);
-          r.field_c = MouseInput.a("", 125, "door_twiddles_planet_v", vd.field_C);
-          th.field_Hb = jd.a((byte) 33, "", vd.field_C, "doors_station");
-          qa.field_c = MouseInput.a("", param0 - 13003, "door_twiddles_station_h", vd.field_C);
-          IsaacGenerator.field_d = MouseInput.a("", -86, "door_twiddles_station_v", vd.field_C);
-          ri.field_k = fg.a("", "Scenery_82", vd.field_C, false);
-          MouseInput.field_g = fg.a("", "Scenery_83", vd.field_C, false);
-          ImageProducerRasterBuffer.field_n = fg.a("", "Scenery_84", vd.field_C, false);
-          mj.field_a = fg.a("", "Scenery_85", vd.field_C, false);
-          mg.field_f = fg.a("", "Scenery_86", vd.field_C, false);
-          le.field_xb = fg.a("", "Scenery_87", vd.field_C, false);
-          DiskArchiveRequest.field_C = fg.a("", "Scenery_88", vd.field_C, false);
-          DiskArchiveRequest.field_z = fg.a("", "Scenery_89", vd.field_C, false);
-          FrameTimer.field_d = fg.a("", "Scenery_90", vd.field_C, false);
-          IsaacGenerator.field_j = MouseInput.a("", param0 ^ -13180, "Scenery_91", vd.field_C);
-          ln.field_g = MouseInput.a("", -91, "Scenery_92", vd.field_C);
-          MatchingFieldValidator.field_y = fg.a("", "Scenery_93", vd.field_C, false);
-          kc.field_d = fg.a("", "Scenery_94", vd.field_C, false);
-          sj.field_b = fg.a("", "Scenery_95", vd.field_C, false);
-          AccountNameAvailabilityValidator.field_q = fg.a("", "Scenery_96", vd.field_C, false);
-          ml.field_a = fg.a("", "Scenery_97", vd.field_C, false);
-          p.field_d = MouseInput.a("", -33, "Scenery_98", vd.field_C);
-          wk.field_a = fg.a("", "Scenery_99", vd.field_C, false);
-          hf.field_e = fg.a("", "Scenery_100", vd.field_C, false);
-          ResourceArchive.field_l = MouseInput.a("", 110, "Scenery_101", vd.field_C);
-          wh.field_e = MouseInput.a("", 120, "bend_a_1", vd.field_C);
-          wi.field_e = MouseInput.a("", param0 ^ 13138, "bend_b_2", vd.field_C);
-          MusicPatchPcmStream.field_r = MouseInput.a("", 123, "corner_c_1", vd.field_C);
-          id.field_w = MouseInput.a("", param0 ^ 13121, "corner_c_2", vd.field_C);
-          AgeValidator.field_o = MouseInput.a("", param0 ^ -13139, "corner_c_3", vd.field_C);
-          la.field_e = MouseInput.a("", 24, "corner_d_4", vd.field_C);
-          bb.field_a = MouseInput.a("", param0 - 13007, "diagonal_d_1", vd.field_C);
-          qg.field_i = MouseInput.a("", param0 - 13121, "diagonal_d_2", vd.field_C);
-          oa.field_i = MouseInput.a("", -46, "diagonal_d_3", vd.field_C);
-          hf.field_j = MouseInput.a("", -112, "Scenery_103", vd.field_C);
-          sd.field_t = fg.a("", "Scenery_107", vd.field_C, false);
-          vb.field_Lb = fg.a("", "Scenery_108", vd.field_C, false);
-          uh.field_f = fg.a("", "Scenery_109", vd.field_C, false);
-          qh.field_g = fg.a("", "Scenery_110", vd.field_C, false);
-          DelayedPacket.field_m = fg.a("", "Scenery_111", vd.field_C, false);
-          j.field_a = fg.a("", "Scenery_112", vd.field_C, false);
-          vk.field_p = fg.a("", "Scenery_113", vd.field_C, false);
-          ArchiveIndex.field_e = fg.a("", "Scenery_114", vd.field_C, false);
-          DualLinkDeque.field_c = MouseInput.a("", 1, "Scenery_115", vd.field_C);
-          dn.field_h = fg.a("", "Scenery_116", vd.field_C, false);
-          hj.field_r = fg.a("", "Scenery_117", vd.field_C, false);
-          pj.field_l = fg.a("", "Scenery_118", vd.field_C, false);
-          SpriteGeometry.field_q = fg.a("", "Scenery_119", vd.field_C, false);
-          field_C = fg.a("", "Scenery_120", vd.field_C, false);
-          rg.field_a = fg.a("", "Scenery_121", vd.field_C, false);
-          la.field_h = fg.a("", "Scenery_122", vd.field_C, false);
-          gf.field_d = fg.a("", "Scenery_123", vd.field_C, false);
-          IntrusiveNodeHashTable.field_a = fg.a("", "Scenery_124", vd.field_C, false);
-          nb.field_J = fg.a("", "Scenery_125", vd.field_C, false);
-          AchievementNotification.field_l = fg.a("", "Scenery_126", vd.field_C, false);
-          uc.field_a = fg.a("", "Scenery_127", vd.field_C, false);
-          s.field_d = fg.a("", "Scenery_128", vd.field_C, false);
+          aa.field_b = MouseInput.a("", -48, "powered_boots", DequeWidgetContainer.field_C);
+          KeyboardInput.field_f = fg.a("", "security_pass", DequeWidgetContainer.field_C, false);
+          im.field_a = jd.a((byte) 33, "", DequeWidgetContainer.field_C, "doors_hammerhead");
+          ak.field_a = MouseInput.a("", -116, "door_twiddles_hammerhead_h", DequeWidgetContainer.field_C);
+          an.field_d = MouseInput.a("", 125, "door_twiddles_hammerhead_v", DequeWidgetContainer.field_C);
+          jd.field_o = jd.a((byte) 33, "", DequeWidgetContainer.field_C, "doors_planet");
+          TextLayout.field_a = MouseInput.a("", 118, "door_twiddles_planet_h", DequeWidgetContainer.field_C);
+          r.field_c = MouseInput.a("", 125, "door_twiddles_planet_v", DequeWidgetContainer.field_C);
+          th.field_Hb = jd.a((byte) 33, "", DequeWidgetContainer.field_C, "doors_station");
+          qa.field_c = MouseInput.a("", param0 - 13003, "door_twiddles_station_h", DequeWidgetContainer.field_C);
+          IsaacGenerator.field_d = MouseInput.a("", -86, "door_twiddles_station_v", DequeWidgetContainer.field_C);
+          ri.field_k = fg.a("", "Scenery_82", DequeWidgetContainer.field_C, false);
+          MouseInput.field_g = fg.a("", "Scenery_83", DequeWidgetContainer.field_C, false);
+          ImageProducerRasterBuffer.field_n = fg.a("", "Scenery_84", DequeWidgetContainer.field_C, false);
+          mj.field_a = fg.a("", "Scenery_85", DequeWidgetContainer.field_C, false);
+          mg.field_f = fg.a("", "Scenery_86", DequeWidgetContainer.field_C, false);
+          le.field_xb = fg.a("", "Scenery_87", DequeWidgetContainer.field_C, false);
+          DiskArchiveRequest.field_C = fg.a("", "Scenery_88", DequeWidgetContainer.field_C, false);
+          DiskArchiveRequest.field_z = fg.a("", "Scenery_89", DequeWidgetContainer.field_C, false);
+          FrameTimer.field_d = fg.a("", "Scenery_90", DequeWidgetContainer.field_C, false);
+          IsaacGenerator.field_j = MouseInput.a("", param0 ^ -13180, "Scenery_91", DequeWidgetContainer.field_C);
+          ln.field_g = MouseInput.a("", -91, "Scenery_92", DequeWidgetContainer.field_C);
+          MatchingFieldValidator.field_y = fg.a("", "Scenery_93", DequeWidgetContainer.field_C, false);
+          kc.field_d = fg.a("", "Scenery_94", DequeWidgetContainer.field_C, false);
+          sj.field_b = fg.a("", "Scenery_95", DequeWidgetContainer.field_C, false);
+          AccountNameAvailabilityValidator.field_q = fg.a("", "Scenery_96", DequeWidgetContainer.field_C, false);
+          ml.field_a = fg.a("", "Scenery_97", DequeWidgetContainer.field_C, false);
+          p.field_d = MouseInput.a("", -33, "Scenery_98", DequeWidgetContainer.field_C);
+          wk.field_a = fg.a("", "Scenery_99", DequeWidgetContainer.field_C, false);
+          hf.field_e = fg.a("", "Scenery_100", DequeWidgetContainer.field_C, false);
+          ResourceArchive.field_l = MouseInput.a("", 110, "Scenery_101", DequeWidgetContainer.field_C);
+          wh.field_e = MouseInput.a("", 120, "bend_a_1", DequeWidgetContainer.field_C);
+          wi.field_e = MouseInput.a("", param0 ^ 13138, "bend_b_2", DequeWidgetContainer.field_C);
+          MusicPatchPcmStream.field_r = MouseInput.a("", 123, "corner_c_1", DequeWidgetContainer.field_C);
+          id.field_w = MouseInput.a("", param0 ^ 13121, "corner_c_2", DequeWidgetContainer.field_C);
+          AgeValidator.field_o = MouseInput.a("", param0 ^ -13139, "corner_c_3", DequeWidgetContainer.field_C);
+          la.field_e = MouseInput.a("", 24, "corner_d_4", DequeWidgetContainer.field_C);
+          bb.field_a = MouseInput.a("", param0 - 13007, "diagonal_d_1", DequeWidgetContainer.field_C);
+          qg.field_i = MouseInput.a("", param0 - 13121, "diagonal_d_2", DequeWidgetContainer.field_C);
+          oa.field_i = MouseInput.a("", -46, "diagonal_d_3", DequeWidgetContainer.field_C);
+          hf.field_j = MouseInput.a("", -112, "Scenery_103", DequeWidgetContainer.field_C);
+          sd.field_t = fg.a("", "Scenery_107", DequeWidgetContainer.field_C, false);
+          vb.field_Lb = fg.a("", "Scenery_108", DequeWidgetContainer.field_C, false);
+          uh.field_f = fg.a("", "Scenery_109", DequeWidgetContainer.field_C, false);
+          qh.field_g = fg.a("", "Scenery_110", DequeWidgetContainer.field_C, false);
+          DelayedPacket.field_m = fg.a("", "Scenery_111", DequeWidgetContainer.field_C, false);
+          j.field_a = fg.a("", "Scenery_112", DequeWidgetContainer.field_C, false);
+          vk.field_p = fg.a("", "Scenery_113", DequeWidgetContainer.field_C, false);
+          ArchiveIndex.field_e = fg.a("", "Scenery_114", DequeWidgetContainer.field_C, false);
+          DualLinkDeque.field_c = MouseInput.a("", 1, "Scenery_115", DequeWidgetContainer.field_C);
+          dn.field_h = fg.a("", "Scenery_116", DequeWidgetContainer.field_C, false);
+          hj.field_r = fg.a("", "Scenery_117", DequeWidgetContainer.field_C, false);
+          pj.field_l = fg.a("", "Scenery_118", DequeWidgetContainer.field_C, false);
+          SpriteGeometry.field_q = fg.a("", "Scenery_119", DequeWidgetContainer.field_C, false);
+          field_C = fg.a("", "Scenery_120", DequeWidgetContainer.field_C, false);
+          rg.field_a = fg.a("", "Scenery_121", DequeWidgetContainer.field_C, false);
+          la.field_h = fg.a("", "Scenery_122", DequeWidgetContainer.field_C, false);
+          gf.field_d = fg.a("", "Scenery_123", DequeWidgetContainer.field_C, false);
+          IntrusiveNodeHashTable.field_a = fg.a("", "Scenery_124", DequeWidgetContainer.field_C, false);
+          nb.field_J = fg.a("", "Scenery_125", DequeWidgetContainer.field_C, false);
+          AchievementNotification.field_l = fg.a("", "Scenery_126", DequeWidgetContainer.field_C, false);
+          uc.field_a = fg.a("", "Scenery_127", DequeWidgetContainer.field_C, false);
+          s.field_d = fg.a("", "Scenery_128", DequeWidgetContainer.field_C, false);
           qg.field_g = new RgbSprite[106];
           vb.field_Kb = new RgbSprite[qg.field_g.length];
           var2_int = 0;
           do {
             if (var2_int >= 43) {
-              ie.field_b = jd.a((byte) 33, "", vd.field_C, "spinning_fans");
-              qg.field_g[43] = fg.a("", "tentacles_corner2", vd.field_C, false);
-              qg.field_g[44] = fg.a("", "tentacles_straight2", vd.field_C, false);
-              qg.field_g[45] = fg.a("", "tentacles_straight4", vd.field_C, false);
-              qg.field_g[46] = fg.a("", "tentacles_straight6", vd.field_C, false);
-              qg.field_g[47] = fg.a("", "tentacles_straight8", vd.field_C, false);
-              qg.field_g[48] = fg.a("", "tentacles_t_junction2", vd.field_C, false);
-              qg.field_g[49] = fg.a("", "tentacles_x_junction2", vd.field_C, false);
-              qg.field_g[50] = fg.a("", "floor_tentacles_fadeleft", vd.field_C, false);
-              qg.field_g[51] = fg.a("", "floor_tentacles_faderight", vd.field_C, false);
-              qg.field_g[52] = fg.a("", "floor_tentacles_innercorner3a", vd.field_C, false);
-              qg.field_g[53] = fg.a("", "floor_tentacles_innercorner5a", vd.field_C, false);
-              qg.field_g[54] = fg.a("", "floor_tentacles_innerstraight3_2a", vd.field_C, false);
-              qg.field_g[55] = fg.a("", "floor_tentacles_innerstraight3_3a", vd.field_C, false);
-              qg.field_g[56] = fg.a("", "floor_tentacles_innerstraight5_3a", vd.field_C, false);
-              qg.field_g[57] = fg.a("", "floor_tentacles_innerstraight5_4a", vd.field_C, false);
-              qg.field_g[58] = fg.a("", "floor_tentacles_outercorner3a", vd.field_C, false);
-              qg.field_g[59] = fg.a("", "floor_tentacles_outercorner5a", vd.field_C, false);
-              qg.field_g[60] = fg.a("", "floor_tentacles_outerstraight3_2a", vd.field_C, false);
-              qg.field_g[61] = fg.a("", "floor_tentacles_outerstraight3_3a", vd.field_C, false);
-              qg.field_g[62] = fg.a("", "floor_tentacles_outerstraight5_3a", vd.field_C, false);
-              qg.field_g[63] = fg.a("", "floor_tentacles_outerstraight5_4a", vd.field_C, false);
-              qg.field_g[64] = fg.a("", "floor_tentacles_patch_straight1", vd.field_C, false);
-              qg.field_g[65] = fg.a("", "floor_tentacles_patch_straight2", vd.field_C, false);
-              qg.field_g[66] = fg.a("", "floor_tentacles_patch_straight3", vd.field_C, false);
-              qg.field_g[67] = fg.a("", "floor_tentacles_patch_outercorner1", vd.field_C, false);
-              qg.field_g[68] = fg.a("", "floor_tentacles_patch_outercorner2", vd.field_C, false);
-              qg.field_g[69] = fg.a("", "floor_tentacles_patch_innercorner1", vd.field_C, false);
-              qg.field_g[70] = fg.a("", "floor_tentacles_patch_innercorner2", vd.field_C, false);
-              qg.field_g[71] = fg.a("", "floor_tentacles_patch_small1", vd.field_C, false);
-              qg.field_g[72] = fg.a("", "floor_tentacles_patch_small2", vd.field_C, false);
-              qg.field_g[73] = fg.a("", "floor_tentacles_patch_small3", vd.field_C, false);
-              qg.field_g[74] = fg.a("", "floor_tentacles_patch_small4", vd.field_C, false);
-              qg.field_g[75] = fg.a("", "extra_scenery_f5", vd.field_C, false);
-              qg.field_g[76] = fg.a("", "extra_scenery_f6", vd.field_C, false);
-              qg.field_g[77] = fg.a("", "scenery_e4", vd.field_C, false);
-              qg.field_g[78] = fg.a("", "scenery_e5", vd.field_C, false);
-              qg.field_g[79] = fg.a("", "scenery_e6", vd.field_C, false);
-              qg.field_g[80] = fg.a("", "scenery_e7", vd.field_C, false);
-              qg.field_g[81] = fg.a("", "scenery_e8", vd.field_C, false);
-              qg.field_g[82] = fg.a("", "scenery_e9", vd.field_C, false);
-              qg.field_g[83] = fg.a("", "scenery_e10", vd.field_C, false);
-              qg.field_g[84] = fg.a("", "bookshelf1", vd.field_C, false);
-              qg.field_g[85] = fg.a("", "bookshelf2", vd.field_C, false);
-              qg.field_g[86] = fg.a("", "bookshelf3", vd.field_C, false);
-              qg.field_g[87] = fg.a("", "bookshelf4", vd.field_C, false);
-              qg.field_g[88] = fg.a("", "bookshelf5", vd.field_C, false);
-              qg.field_g[89] = fg.a("", "bookshelf6", vd.field_C, false);
-              qg.field_g[90] = fg.a("", "allthatwasleft", vd.field_C, false);
-              qg.field_g[91] = fg.a("", "bigradialscorch", vd.field_C, false);
-              qg.field_g[92] = fg.a("", "bloodsplat_green", vd.field_C, false);
-              qg.field_g[93] = fg.a("", "bloodsplat_red", vd.field_C, false);
-              qg.field_g[94] = fg.a("", "oilslick1", vd.field_C, false);
-              qg.field_g[95] = fg.a("", "oilslick2", vd.field_C, false);
-              qg.field_g[96] = fg.a("", "scorchmark1", vd.field_C, false);
-              qg.field_g[97] = fg.a("", "skid", vd.field_C, false);
-              qg.field_g[98] = fg.a("", "smallradialscorch", vd.field_C, false);
-              qg.field_g[99] = fg.a("", "flightcontrolpanel1", vd.field_C, false);
-              qg.field_g[100] = fg.a("", "flightcontrolpanel2", vd.field_C, false);
-              qg.field_g[101] = fg.a("", "flightcontrolpanel3", vd.field_C, false);
-              qg.field_g[102] = fg.a("", "onebigrock", vd.field_C, false);
-              qg.field_g[103] = fg.a("", "tinyrocks", vd.field_C, false);
-              qg.field_g[104] = fg.a("", "tinyrocks2", vd.field_C, false);
-              qg.field_g[105] = fg.a("", "tinyrocks3", vd.field_C, false);
+              ie.field_b = jd.a((byte) 33, "", DequeWidgetContainer.field_C, "spinning_fans");
+              qg.field_g[43] = fg.a("", "tentacles_corner2", DequeWidgetContainer.field_C, false);
+              qg.field_g[44] = fg.a("", "tentacles_straight2", DequeWidgetContainer.field_C, false);
+              qg.field_g[45] = fg.a("", "tentacles_straight4", DequeWidgetContainer.field_C, false);
+              qg.field_g[46] = fg.a("", "tentacles_straight6", DequeWidgetContainer.field_C, false);
+              qg.field_g[47] = fg.a("", "tentacles_straight8", DequeWidgetContainer.field_C, false);
+              qg.field_g[48] = fg.a("", "tentacles_t_junction2", DequeWidgetContainer.field_C, false);
+              qg.field_g[49] = fg.a("", "tentacles_x_junction2", DequeWidgetContainer.field_C, false);
+              qg.field_g[50] = fg.a("", "floor_tentacles_fadeleft", DequeWidgetContainer.field_C, false);
+              qg.field_g[51] = fg.a("", "floor_tentacles_faderight", DequeWidgetContainer.field_C, false);
+              qg.field_g[52] = fg.a("", "floor_tentacles_innercorner3a", DequeWidgetContainer.field_C, false);
+              qg.field_g[53] = fg.a("", "floor_tentacles_innercorner5a", DequeWidgetContainer.field_C, false);
+              qg.field_g[54] = fg.a("", "floor_tentacles_innerstraight3_2a", DequeWidgetContainer.field_C, false);
+              qg.field_g[55] = fg.a("", "floor_tentacles_innerstraight3_3a", DequeWidgetContainer.field_C, false);
+              qg.field_g[56] = fg.a("", "floor_tentacles_innerstraight5_3a", DequeWidgetContainer.field_C, false);
+              qg.field_g[57] = fg.a("", "floor_tentacles_innerstraight5_4a", DequeWidgetContainer.field_C, false);
+              qg.field_g[58] = fg.a("", "floor_tentacles_outercorner3a", DequeWidgetContainer.field_C, false);
+              qg.field_g[59] = fg.a("", "floor_tentacles_outercorner5a", DequeWidgetContainer.field_C, false);
+              qg.field_g[60] = fg.a("", "floor_tentacles_outerstraight3_2a", DequeWidgetContainer.field_C, false);
+              qg.field_g[61] = fg.a("", "floor_tentacles_outerstraight3_3a", DequeWidgetContainer.field_C, false);
+              qg.field_g[62] = fg.a("", "floor_tentacles_outerstraight5_3a", DequeWidgetContainer.field_C, false);
+              qg.field_g[63] = fg.a("", "floor_tentacles_outerstraight5_4a", DequeWidgetContainer.field_C, false);
+              qg.field_g[64] = fg.a("", "floor_tentacles_patch_straight1", DequeWidgetContainer.field_C, false);
+              qg.field_g[65] = fg.a("", "floor_tentacles_patch_straight2", DequeWidgetContainer.field_C, false);
+              qg.field_g[66] = fg.a("", "floor_tentacles_patch_straight3", DequeWidgetContainer.field_C, false);
+              qg.field_g[67] = fg.a("", "floor_tentacles_patch_outercorner1", DequeWidgetContainer.field_C, false);
+              qg.field_g[68] = fg.a("", "floor_tentacles_patch_outercorner2", DequeWidgetContainer.field_C, false);
+              qg.field_g[69] = fg.a("", "floor_tentacles_patch_innercorner1", DequeWidgetContainer.field_C, false);
+              qg.field_g[70] = fg.a("", "floor_tentacles_patch_innercorner2", DequeWidgetContainer.field_C, false);
+              qg.field_g[71] = fg.a("", "floor_tentacles_patch_small1", DequeWidgetContainer.field_C, false);
+              qg.field_g[72] = fg.a("", "floor_tentacles_patch_small2", DequeWidgetContainer.field_C, false);
+              qg.field_g[73] = fg.a("", "floor_tentacles_patch_small3", DequeWidgetContainer.field_C, false);
+              qg.field_g[74] = fg.a("", "floor_tentacles_patch_small4", DequeWidgetContainer.field_C, false);
+              qg.field_g[75] = fg.a("", "extra_scenery_f5", DequeWidgetContainer.field_C, false);
+              qg.field_g[76] = fg.a("", "extra_scenery_f6", DequeWidgetContainer.field_C, false);
+              qg.field_g[77] = fg.a("", "scenery_e4", DequeWidgetContainer.field_C, false);
+              qg.field_g[78] = fg.a("", "scenery_e5", DequeWidgetContainer.field_C, false);
+              qg.field_g[79] = fg.a("", "scenery_e6", DequeWidgetContainer.field_C, false);
+              qg.field_g[80] = fg.a("", "scenery_e7", DequeWidgetContainer.field_C, false);
+              qg.field_g[81] = fg.a("", "scenery_e8", DequeWidgetContainer.field_C, false);
+              qg.field_g[82] = fg.a("", "scenery_e9", DequeWidgetContainer.field_C, false);
+              qg.field_g[83] = fg.a("", "scenery_e10", DequeWidgetContainer.field_C, false);
+              qg.field_g[84] = fg.a("", "bookshelf1", DequeWidgetContainer.field_C, false);
+              qg.field_g[85] = fg.a("", "bookshelf2", DequeWidgetContainer.field_C, false);
+              qg.field_g[86] = fg.a("", "bookshelf3", DequeWidgetContainer.field_C, false);
+              qg.field_g[87] = fg.a("", "bookshelf4", DequeWidgetContainer.field_C, false);
+              qg.field_g[88] = fg.a("", "bookshelf5", DequeWidgetContainer.field_C, false);
+              qg.field_g[89] = fg.a("", "bookshelf6", DequeWidgetContainer.field_C, false);
+              qg.field_g[90] = fg.a("", "allthatwasleft", DequeWidgetContainer.field_C, false);
+              qg.field_g[91] = fg.a("", "bigradialscorch", DequeWidgetContainer.field_C, false);
+              qg.field_g[92] = fg.a("", "bloodsplat_green", DequeWidgetContainer.field_C, false);
+              qg.field_g[93] = fg.a("", "bloodsplat_red", DequeWidgetContainer.field_C, false);
+              qg.field_g[94] = fg.a("", "oilslick1", DequeWidgetContainer.field_C, false);
+              qg.field_g[95] = fg.a("", "oilslick2", DequeWidgetContainer.field_C, false);
+              qg.field_g[96] = fg.a("", "scorchmark1", DequeWidgetContainer.field_C, false);
+              qg.field_g[97] = fg.a("", "skid", DequeWidgetContainer.field_C, false);
+              qg.field_g[98] = fg.a("", "smallradialscorch", DequeWidgetContainer.field_C, false);
+              qg.field_g[99] = fg.a("", "flightcontrolpanel1", DequeWidgetContainer.field_C, false);
+              qg.field_g[100] = fg.a("", "flightcontrolpanel2", DequeWidgetContainer.field_C, false);
+              qg.field_g[101] = fg.a("", "flightcontrolpanel3", DequeWidgetContainer.field_C, false);
+              qg.field_g[102] = fg.a("", "onebigrock", DequeWidgetContainer.field_C, false);
+              qg.field_g[103] = fg.a("", "tinyrocks", DequeWidgetContainer.field_C, false);
+              qg.field_g[104] = fg.a("", "tinyrocks2", DequeWidgetContainer.field_C, false);
+              qg.field_g[105] = fg.a("", "tinyrocks3", DequeWidgetContainer.field_C, false);
               break;
             }
-            qg.field_g[var2_int] = fg.a("", "extra_scenery_" + var2_int, vd.field_C, false);
+            qg.field_g[var2_int] = fg.a("", "extra_scenery_" + var2_int, DequeWidgetContainer.field_C, false);
             var2_int++;
           } while (var3 == 0);
           var2_int = 0;

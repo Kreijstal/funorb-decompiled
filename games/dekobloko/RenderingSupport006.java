@@ -392,9 +392,9 @@ final class RenderingSupport006 extends HashNode {
                   }
                   integerLocal36 = -integerLocal13 + (integerLocal20 + integerLocal21 + 1);
                   integerLocal37 = 1 + integerLocal23 + integerLocal22 - integerLocal15;
-                  integerLocal38 = 150 + UiComponentPart016.computeInteger0830((byte) 116, 51, AccountRegistrationPanel.randomState0003);
+                  integerLocal38 = 150 + ModalDialogHost.computeInteger0830((byte) 116, 51, AccountRegistrationPanel.randomState0003);
                   integerLocal39 = integerLocal38;
-                  integerLocal30 = -8 + UiComponentPart016.computeInteger0830((byte) 50, 17, AccountRegistrationPanel.randomState0003);
+                  integerLocal30 = -8 + ModalDialogHost.computeInteger0830((byte) 50, 17, AccountRegistrationPanel.randomState0003);
                   integerLocal31 = (integerLocal30 << 24) + (integerLocal39 << 16) + ((integerLocal37 << 8 & 65280) + (255 & integerLocal36));
                   for (integerLocal7 = 0; integerLocal7 < integerLocal25; integerLocal7++) {
                     integerLocal32 = integerArrayLocal34[integerLocal7];

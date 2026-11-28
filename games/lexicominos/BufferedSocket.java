@@ -124,9 +124,9 @@ final class BufferedSocket implements Runnable {
             for (var6_intLifetime1 = 0; var6_intLifetime1 < var4; var6_intLifetime1++) {
               lh.a(var15, -95);
               if (var6_intLifetime1 == 0) {
-                FullscreenFocusCanvas.a(sg.field_a, 0, BitPacketBuffer.field_s, hh.field_I, var6_intLifetime1, AccountRequestState.field_g);
+                FullscreenFocusCanvas.a(sg.field_a, 0, BitPacketBuffer.field_s, DraggableWidgetContainer.field_I, var6_intLifetime1, AccountRequestState.field_g);
               } else {
-                FullscreenFocusCanvas.a(sg.field_a, 0, BitPacketBuffer.field_s, hh.field_I, var6_intLifetime1, AccountRequestState.field_g);
+                FullscreenFocusCanvas.a(sg.field_a, 0, BitPacketBuffer.field_s, DraggableWidgetContainer.field_I, var6_intLifetime1, AccountRequestState.field_g);
               }
             }
             DirectByteStorage.b((byte) 83, var5);
@@ -139,11 +139,11 @@ final class BufferedSocket implements Runnable {
               var11 = ff.field_a[var9];
               var6[0][var10] = ph.field_a[var11];
               var19[0][4 * var10] = we.field_g[var11];
-              var19[0][1 + 4 * var10] = l.field_D[var11];
+              var19[0][1 + 4 * var10] = DropTargetWidgetContainer.field_D[var11];
               var19[0][2 + var10 * 4] = oc.field_a[var11];
               var19[0][var10 * 4 + 3] = MidiPcmStream.field_N[var11];
               if (md.a(ph.field_a[var11], -113) &&
-                oc.field_a[var11] + (l.field_D[var11] + MidiPcmStream.field_N[var11]) == 0) {
+                oc.field_a[var11] + (DropTargetWidgetContainer.field_D[var11] + MidiPcmStream.field_N[var11]) == 0) {
                 var6[0][var10] = null;
                 var10--;
               }
@@ -157,11 +157,11 @@ final class BufferedSocket implements Runnable {
               var11Lifetime1 = ff.field_a[var5 + var9Lifetime1];
               var6[1][var14] = ph.field_a[var11Lifetime1];
               var19[1][var14 * 4] = we.field_g[var11Lifetime1];
-              var19[1][1 + 4 * var14] = l.field_D[var11Lifetime1];
+              var19[1][1 + 4 * var14] = DropTargetWidgetContainer.field_D[var11Lifetime1];
               var19[1][2 + 4 * var14] = oc.field_a[var11Lifetime1];
               var19[1][var14 * 4 + 3] = MidiPcmStream.field_N[var11Lifetime1];
               if (md.a(ph.field_a[var11Lifetime1], -101) &&
-                0 == MidiPcmStream.field_N[var11Lifetime1] + oc.field_a[var11Lifetime1] + l.field_D[var11Lifetime1]) {
+                0 == MidiPcmStream.field_N[var11Lifetime1] + oc.field_a[var11Lifetime1] + DropTargetWidgetContainer.field_D[var11Lifetime1]) {
                 var6[1][var14] = null;
                 var14--;
               }
@@ -301,7 +301,7 @@ final class BufferedSocket implements Runnable {
                 var18.field_n[var5] = -5;
               }
             }
-            al.field_C.addLast(124, var18);
+            ModalDialog.field_C.addLast(124, var18);
             return;
           } catch (java.lang.RuntimeException decompiledCaughtParameter5) {
             decompiledCaughtException = decompiledCaughtParameter5;

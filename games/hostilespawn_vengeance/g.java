@@ -44,7 +44,7 @@ final class g extends InteractiveWidget {
         int var2 = -94 / ((-70 - param0) / 46);
     }
 
-    final boolean a(int param0, int param1, int param2, int param3, byte param4, ag param5, int param6) {
+    final boolean pointerPressed(int param0, int param1, int param2, int param3, byte param4, UiWidget param5, int param6) {
         RuntimeException stackIn_18_0 = null;
         StringBuilder stackIn_18_1 = null;
         String stackIn_19_2 = null;
@@ -56,7 +56,7 @@ final class g extends InteractiveWidget {
         int var12 = 0;
         var12 = HostileSpawn.field_I ? 1 : 0;
         try {
-          if (!super.a(param0, param1, param2, param3, param4, param5, param6)) {
+          if (!super.pointerPressed(param0, param1, param2, param3, param4, param5, param6)) {
             return false;
           }
           var8_int = -this.field_v - param1 + (-this.field_P + param0);

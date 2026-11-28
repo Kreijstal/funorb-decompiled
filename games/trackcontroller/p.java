@@ -7,7 +7,7 @@ final class p {
     final static void a(byte param0) {
         if (param0 != 25) {
           field_a = (BitmapFont) null;
-          if (null == gl.field_E) {
+          if (null == AlphaWidgetContainer.field_E) {
             if (null == ib.field_e) {
               rf.a(true);
               return;
@@ -16,7 +16,7 @@ final class p {
             rf.a(true);
             return;
           }
-          gl.field_E.k(-113);
+          AlphaWidgetContainer.field_E.snapAndPruneDialogs(-113);
           if (null != ib.field_e) {
             ib.field_e.e((byte) 50);
             rf.a(true);
@@ -25,8 +25,8 @@ final class p {
           rf.a(true);
           return;
         }
-        if (null != gl.field_E) {
-          gl.field_E.k(-113);
+        if (null != AlphaWidgetContainer.field_E) {
+          AlphaWidgetContainer.field_E.snapAndPruneDialogs(-113);
           if (null == ib.field_e) {
             rf.a(true);
             return;

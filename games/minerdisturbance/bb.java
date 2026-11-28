@@ -110,13 +110,13 @@ final class bb {
     final static void a(int param0, boolean param1, String param2, boolean param3) {
         try {
           DiskArchiveRequest.h(param0 ^ -19932);
-          mb.field_b.n(21974);
+          mb.field_b.closeAllDialogs(21974);
           if (param0 != 19931) {
             field_a = (IntrusiveDeque) null;
           }
           MidiPcmStream.field_D = new LoginPanel(pl.field_a, (String) null, MusicPatchPcmStream.field_B, param1, param3);
           de.field_a = new rh(mb.field_b, MidiPcmStream.field_D);
-          mb.field_b.b(1, de.field_a);
+          mb.field_b.showDialog(1, de.field_a);
         } catch (RuntimeException runtimeException) {
           throw lj.wrapClientException((Throwable) ((Object) runtimeException), "bb.B(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }

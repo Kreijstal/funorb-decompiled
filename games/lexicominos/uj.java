@@ -3,7 +3,7 @@
  */
 import java.io.*;
 
-final class uj implements rd {
+final class uj implements WidgetRenderer {
     static IndexedSprite[] field_a;
     private int field_b;
     static int[][] field_f;
@@ -114,7 +114,7 @@ final class uj implements rd {
         }
     }
 
-    public final void a(int param0, int param1, boolean param2, w param3, int param4) {
+    public final void paintWidget(int param0, int param1, boolean param2, UiWidget param3, int param4) {
         int stackIn_5_0 = 0;
         RuntimeException stackIn_23_0 = null;
         StringBuilder stackIn_23_1 = null;
@@ -130,7 +130,7 @@ final class uj implements rd {
         var11 = Lexicominos.field_L ? 1 : 0;
         try {
           if (!param3.field_m &&
-            !param3.a(18337)) {
+            !param3.isFocused(18337)) {
             stackIn_5_0 = 2188450;
           } else {
             stackIn_5_0 = 3249872;
@@ -140,7 +140,7 @@ final class uj implements rd {
           if (param4 != -3284) {
             return;
           }
-          if (!param3.a(18337)) {
+          if (!param3.isFocused(18337)) {
             return;
           }
           var7 = this.field_d.stringWidth(param3.field_u);

@@ -827,7 +827,7 @@ final class LevelRun {
           if (!this.field_t) {
             var5 = new AchievementProgressUpdate(param0, param2, this.field_N, this.field_S, this.field_F, this.field_G);
             if (je.a((byte) 61)) {
-              jh.field_y.addFirst((byte) 54, var5);
+              SingleChildWidgetContainer.field_y.addFirst((byte) 54, var5);
             } else {
               wc.a(var5, (byte) 99, 4);
             }
@@ -1612,7 +1612,7 @@ final class LevelRun {
           DebouncedFieldValidator.field_b = param1;
           this.field_A.transitionGameScreen(true, 5, 2, false);
           ResourceArchive.field_k[param0].a(false);
-          jh.a(ResourceArchive.field_k[12], param0 ^ 12);
+          SingleChildWidgetContainer.a(ResourceArchive.field_k[12], param0 ^ 12);
         } catch (RuntimeException runtimeException) {
           throw RichTextWidget.wrapThrowable((Throwable) ((Object) runtimeException), "bi.W(" + param0 + ',' + param1 + ')');
         }

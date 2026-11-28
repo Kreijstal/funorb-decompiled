@@ -1518,7 +1518,7 @@ final class gf {
                         var8Lifetime1 = 0;
                         q.field_b[var5Lifetime2][var6Lifetime2].field_b = false;
                         if (q.field_b[var5Lifetime2][var6Lifetime2].field_U != -1) {
-                          jc.field_H = jc.field_H + 1;
+                          SingleChildWidgetContainer.field_H = SingleChildWidgetContainer.field_H + 1;
                         }
                       }
                       if (!q.field_b[var5Lifetime2][var6Lifetime2].field_E &&
@@ -1540,7 +1540,7 @@ final class gf {
                       if (q.field_b[var5Lifetime2][var6Lifetime2].field_b) {
                         q.field_b[var5Lifetime2][var6Lifetime2].field_b = false;
                         if (q.field_b[var5Lifetime2][var6Lifetime2].field_U != -1) {
-                          jc.field_H = jc.field_H + 1;
+                          SingleChildWidgetContainer.field_H = SingleChildWidgetContainer.field_H + 1;
                         }
                       }
                     }

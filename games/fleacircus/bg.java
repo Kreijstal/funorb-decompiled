@@ -61,7 +61,7 @@ final class bg {
           if (11 == bh.field_t) {
             pl.clearStaticReferences(64);
           }
-          se.a(qj.field_I, (byte) 121, rj.field_m, wa.field_l);
+          se.a(DropTargetWidgetContainer.field_I, (byte) 121, rj.field_m, wa.field_l);
           be.a(0, param1, (byte) -68, 0);
           if (param0 >= -12) {
             var3 = (hi) null;

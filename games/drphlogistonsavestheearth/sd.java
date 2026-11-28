@@ -11,7 +11,7 @@ final class sd {
 
     final void a(java.applet.Applet param0, byte param1) {
         try {
-          jk.a(0, this.field_f, 31536000L, param0, "jagex-last-login-method");
+          DropTargetWidgetContainer.a(0, this.field_f, 31536000L, param0, "jagex-last-login-method");
           if (param1 != -50) {
             sd.resetStaticState(88);
           }
@@ -66,17 +66,17 @@ final class sd {
     }
 
     final static void a(byte param0) {
-        PcmResampler.field_c.j(300);
+        PcmResampler.field_c.closeAllDialogs(300);
         if (null == af.field_g) {
           af.field_g = new tf(PcmResampler.field_c, SpriteGeometry.field_u);
-          PcmResampler.field_c.a((byte) -95, (vg) (af.field_g));
+          PcmResampler.field_c.showDialog((byte) -95, (UiWidget) (af.field_g));
           if (param0 != -124) {
             field_e = 33;
             return;
           }
           return;
         }
-        PcmResampler.field_c.a((byte) -95, (vg) (af.field_g));
+        PcmResampler.field_c.showDialog((byte) -95, (UiWidget) (af.field_g));
         if (param0 == -124) {
           return;
         }

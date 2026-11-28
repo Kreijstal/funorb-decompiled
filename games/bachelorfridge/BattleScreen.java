@@ -2287,7 +2287,7 @@ final class BattleScreen extends dfa {
             !this.field_h.tiles[var3.field_s.tileX][var3.field_s.tileY].field_i) {
             var4 = var4 >> 1;
           }
-          if (hl.a((byte) 100, var10.moveId)) {
+          if (AlphaWidgetContainer.a((byte) 100, var10.moveId)) {
             var4 = var4 << 1;
             var4 = var4 + var5.field_l;
           }

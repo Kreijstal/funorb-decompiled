@@ -23,11 +23,11 @@ final class j extends IntrusiveNode {
             }
             var7 = null;
             if (null != RichTextWidget.field_G.field_j) {
-              jg.field_C = new BufferedRandomAccessFile(RichTextWidget.field_G.field_j, 5200, 0);
+              AlphaWidgetContainer.field_C = new BufferedRandomAccessFile(RichTextWidget.field_G.field_j, 5200, 0);
               RichTextWidget.field_G.field_j = null;
-              var6 = new SectorCacheStore(255, jg.field_C, new BufferedRandomAccessFile(RichTextWidget.field_G.field_m, 12000, 0), 2097152);
+              var6 = new SectorCacheStore(255, AlphaWidgetContainer.field_C, new BufferedRandomAccessFile(RichTextWidget.field_G.field_m, 12000, 0), 2097152);
             }
-            if (null != jg.field_C) {
+            if (null != AlphaWidgetContainer.field_C) {
               if (pd.field_a == null) {
                 pd.field_a = new BufferedRandomAccessFile[RichTextWidget.field_G.field_u.length];
               }
@@ -35,7 +35,7 @@ final class j extends IntrusiveNode {
                 pd.field_a[param3] = new BufferedRandomAccessFile(RichTextWidget.field_G.field_u[param3], 12000, 0);
                 RichTextWidget.field_G.field_u[param3] = null;
               }
-              var7 = new SectorCacheStore(param3, jg.field_C, pd.field_a[param3], 2097152);
+              var7 = new SectorCacheStore(param3, AlphaWidgetContainer.field_C, pd.field_a[param3], 2097152);
             }
             var8 = ih.field_Q.a(param2, (SectorCacheStore) (var7), (SectorCacheStore) (var6), param3, -18023);
             if (param0) {
@@ -111,7 +111,7 @@ final class j extends IntrusiveNode {
         fe.field_g = true;
         int var1 = -119 % ((param0 + 35) / 46);
         ee.field_c = true;
-        DisplayNameSelectionPanel.field_N.k(-20281);
+        DisplayNameSelectionPanel.field_N.closeAllDialogs(-20281);
         AppletShell.a(false, vb.field_o, -1);
     }
 

@@ -23,7 +23,7 @@ final class MixedSupport095 {
     final static void performAction1204(int integerArgument1, byte byteArgument2) {
         try {
           try {
-            JavaScriptBridge.callWithArguments("resizing", byteArgument2 - 14511, UiComponentPart029.computeApplet1485(byteArgument2 ^ -25126), new Object[]{new Integer(integerArgument1)});
+            JavaScriptBridge.callWithArguments("resizing", byteArgument2 - 14511, DraggableWidgetContainer.computeApplet1485(byteArgument2 ^ -25126), new Object[]{new Integer(integerArgument1)});
           } catch (Throwable throwable) {
           }
           if (byteArgument2 == -30) {

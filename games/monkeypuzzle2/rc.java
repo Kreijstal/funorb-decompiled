@@ -139,17 +139,17 @@ final class rc extends kc {
         float[] var3Lifetime1;
         if (0 >= param1) {
           TextHotspotBounds.field_f = -1;
-          mh.field_D = -1;
+          LabeledWidgetContainer.field_D = -1;
           return;
         }
         if (param1 >= 17) {
           TextHotspotBounds.field_f = -1;
-          mh.field_D = -1;
+          LabeledWidgetContainer.field_D = -1;
           return;
         }
         if (param1 == 16) {
           TextHotspotBounds.field_f = (int)pe.field_d[param1].field_e[0];
-          mh.field_D = (int)pe.field_d[param1].field_e[1];
+          LabeledWidgetContainer.field_D = (int)pe.field_d[param1].field_e[1];
           return;
         }
         if (param2 == -111) {
@@ -157,10 +157,10 @@ final class rc extends kc {
           var5 = var6;
           var4 = var5;
           var3 = var4;
-          oa.a(param0, var6, 122);
+          DropTargetWidgetContainer.a(param0, var6, 122);
           TextFieldValidator.a(var6, -92, pe.field_d[param1 - 1].field_e);
           TextHotspotBounds.field_f = (int)var6[0];
-          mh.field_D = (int)var6[1];
+          LabeledWidgetContainer.field_D = (int)var6[1];
           return;
         }
         field_f = -35;
@@ -168,10 +168,10 @@ final class rc extends kc {
         var5Lifetime1 = var6Lifetime1;
         var4Lifetime1 = var5Lifetime1;
         var3Lifetime1 = var4Lifetime1;
-        oa.a(param0, var6Lifetime1, 122);
+        DropTargetWidgetContainer.a(param0, var6Lifetime1, 122);
         TextFieldValidator.a(var6Lifetime1, -92, pe.field_d[param1 - 1].field_e);
         TextHotspotBounds.field_f = (int)var6Lifetime1[0];
-        mh.field_D = (int)var6Lifetime1[1];
+        LabeledWidgetContainer.field_D = (int)var6Lifetime1[1];
     }
 
     final void a(int param0, PacketBuffer param1) {

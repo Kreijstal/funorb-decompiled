@@ -573,7 +573,7 @@ final class DungeonBuilderScreen extends DungeonAssaultScreen {
           di.field_l = kn.a(param3, "commonui", "frame_bottom", -91);
           bl.field_e = oh.a(param3, "commonui", 11091, "jagex_logo_grey");
           na.field_C = kn.a(param3, "commonui", "button", -94);
-          sl.field_c = da.a("commonui", "validation", 0, param3);
+          sl.field_c = SingleChildWidgetContainer.a("commonui", "validation", 0, param3);
           ta.field_e = (BitmapFont) ((Object) kk.a(param2, param3, "arezzo12", 0, "commonui"));
           lp.field_C = (BitmapFont) ((Object) kk.a(param2, param3, "arezzo14", 0, "commonui"));
           hc.field_f = (BitmapFont) ((Object) kk.a(param2, param3, "arezzo14bold", 0, "commonui"));
@@ -816,7 +816,7 @@ final class DungeonBuilderScreen extends DungeonAssaultScreen {
                                 qh.a(param0 ^ 1380875597, this.field_Q, 19);
                                 if (var3.field_u != qj.field_c[var2].field_c.field_n) {
                                   if (null != var3.field_u) {
-                                    qj.field_c[var2].field_c.startAnimation(rf.field_M, var3.field_u, -10872);
+                                    qj.field_c[var2].field_c.startAnimation(ModalDialog.field_M, var3.field_u, -10872);
                                   }
                                   if (var3.field_a != null) {
                                     gd.a(64, var3.field_a);
@@ -833,7 +833,7 @@ final class DungeonBuilderScreen extends DungeonAssaultScreen {
                           var5 = ((cp) (DefaultTextWidgetRenderer.field_s)).field_S;
                           this.field_H = new SpriteAnimationPlayer(var5.field_d);
                           if (null != var5.field_u) {
-                            this.field_H.startAnimation(rf.field_M, var5.field_u, -10872);
+                            this.field_H.startAnimation(ModalDialog.field_M, var5.field_u, -10872);
                           }
                           decompiledFrameRemainder1 = (var4 != 0);
                         }
@@ -1319,7 +1319,7 @@ final class DungeonBuilderScreen extends DungeonAssaultScreen {
         this.field_P.field_n = (en) ((Object) new e(jk.a(new String[]{BufferedSocket.field_a}, tp.field_w, 30496)));
         this.field_y.field_n = (en) ((Object) new e(jk.a(new String[]{eg.field_f}, tp.field_w, 30496)));
         this.field_O.field_n = (en) ((Object) new e((String) null, pm.field_o, nk.field_Lb));
-        this.field_Q.field_n = (en) ((Object) new e((String) null, IntroSequenceScreen.field_u, oi.field_M));
+        this.field_Q.field_n = (en) ((Object) new e((String) null, IntroSequenceScreen.field_u, DraggableWidgetContainer.field_M));
         this.b((byte) 26);
         this.field_z = 0;
         this.field_s = false;

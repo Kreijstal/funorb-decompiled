@@ -33,7 +33,7 @@ final class nc extends IntrusiveNode {
         try {
           var2_int = param1.length();
           if (var2_int == 0) {
-            stackIn_4_0 = w.field_k;
+            stackIn_4_0 = UiWidget.field_k;
             return stackIn_4_0;
           }
           if (param0 < var2_int) {

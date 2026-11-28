@@ -103,7 +103,7 @@ final class km extends sd {
         try {
           if (null == hj.field_t) {
             hj.field_t = new pe(im.field_e, GameAppletShell.field_g);
-            im.field_e.c(hj.field_t, 98);
+            im.field_e.showDialog(hj.field_t, 98);
           }
           hj.field_t.a(param2, param1, 127, param0);
           SoftwareRasterizer.clearRaster();
@@ -121,7 +121,7 @@ final class km extends sd {
         this(jd.field_s, param0);
     }
 
-    final String c(ag param0, int param1) {
+    final String c(UiWidget param0, int param1) {
         RuntimeException var3 = null;
         RgbSprite[] var4 = null;
         String stackIn_3_0 = null;

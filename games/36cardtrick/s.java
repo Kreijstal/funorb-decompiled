@@ -5,7 +5,7 @@ final class s {
     static String field_b;
     static String field_a;
     static int field_c;
-    static j field_d;
+    static ModalDialogHost field_d;
 
     final static void a(BitmapFont param0, byte param1, int param2, TextLineMetrics param3, String param4) {
         int var7 = 0;

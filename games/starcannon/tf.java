@@ -1,10 +1,10 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class tf implements de {
+final class tf implements WidgetRenderer {
     static ResourceArchive field_a;
 
-    public final void a(int param0, boolean param1, int param2, int param3, UiWidget param4) {
+    public final void paintWidget(int param0, boolean param1, int param2, int param3, UiWidget param4) {
         int var6_int = 0;
         RuntimeException var6 = null;
         int var7 = 0;
@@ -24,7 +24,7 @@ final class tf implements de {
             ((InteractiveWidget) (param4)).field_z) {
             var9.drawAdditive((-var9.field_x + param4.field_i >> 1) + (var6_int + 1), (param4.field_f - var9.field_q >> 1) + 1 + var8, 256);
           }
-          if (!param4.d(true)) {
+          if (!param4.isFocused(true)) {
             return;
           }
           ji.a(-4 + param4.field_i, -4 + param4.field_f, -140110815, 2 + var8, 2 + var6_int);

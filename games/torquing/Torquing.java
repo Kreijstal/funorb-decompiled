@@ -183,7 +183,7 @@ public final class Torquing extends NetworkGameClient {
           bc.a((byte) -120);
           IsaacPacketBuffer.clearStaticReferences(3);
           nn.b(-93);
-          ln.h((byte) 111);
+          ModalDialogHost.h((byte) 111);
           sp.clearDeclaredStaticReferences(-7361);
           qc.resetStaticState(1269);
           mn.clearStaticReferences((byte) 77);
@@ -258,7 +258,7 @@ public final class Torquing extends NetworkGameClient {
           TextLayout.clearStaticReferences((byte) -54);
           UiWidget.d(13509);
           InteractiveWidget.clearStaticReferences(52);
-          jh.clearDeclaredStaticReferences((byte) 69);
+          SingleChildWidgetContainer.clearDeclaredStaticReferences((byte) 69);
           im.clearStaticReferences(-126);
           WidgetContainer.f((byte) 2);
           re.clearStaticReferences(21007);
@@ -282,7 +282,7 @@ public final class Torquing extends NetworkGameClient {
           nf.clearStaticReferences();
           ej.clearStaticReferences();
           ug.clearStaticReferences(false);
-          na.clearStaticReferences(0);
+          LabeledWidgetContainer.clearStaticReferences(0);
           ValidatedTextField.resetStaticState((byte) 121);
           aa.clearDeclaredStaticReferences(0);
           kf.a(false);
@@ -338,7 +338,7 @@ public final class Torquing extends NetworkGameClient {
           RichTextLayout.clearStaticReferences(31003);
           DirectByteStorage.clearDeclaredStaticReferences(-101);
           hq.clearStaticReferences(-1);
-          jd.resetStaticState(-97);
+          DropTargetWidgetContainer.resetStaticState(-97);
           k.clearStaticReferences(param0 + 98);
           IterableNodeHashTable.clearStaticReferences((byte) 93);
           SecondaryNodeDeque.clearStaticReferences(-83);
@@ -363,7 +363,7 @@ public final class Torquing extends NetworkGameClient {
           ig.clearDeclaredStaticReferences(-117);
           io.a((byte) -113);
           kb.clearStaticReferences(param0 ^ 6);
-          fq.clearStaticReferences((byte) -118);
+          AlphaWidgetContainer.clearStaticReferences((byte) -118);
           ae.clearStaticReferences((byte) 112);
           og.a((byte) 125);
           rp.clearStaticReferences(-28607);
@@ -429,10 +429,10 @@ public final class Torquing extends NetworkGameClient {
           if (!param0) {
             return;
           }
-          var4 = (AchievementProgressUpdate) (jh.field_y.beginBackward(0));
+          var4 = (AchievementProgressUpdate) (SingleChildWidgetContainer.field_y.beginBackward(0));
           while (var4 != null) {
             wc.a(var4, (byte) 99, 4);
-            var4 = (AchievementProgressUpdate) (jh.field_y.nextBackward(-24059));
+            var4 = (AchievementProgressUpdate) (SingleChildWidgetContainer.field_y.nextBackward(-24059));
           }
           var5 = (LevelCompletionUpdate) (bo.field_l.beginBackward(0));
           while (var5 != null) {
@@ -909,10 +909,10 @@ public final class Torquing extends NetworkGameClient {
             }
             hj.field_c = var43;
             VertexMesh.field_l = var35[2].toRgbSprite();
-            fq.field_F = new TranslucentSpriteLayer(var42[2], 0, 0, 76);
+            AlphaWidgetContainer.field_F = new TranslucentSpriteLayer(var42[2], 0, 0, 76);
             cq.field_w = var35[4].toRgbSprite();
             ResourceArchive.field_j = var35[0].toRgbSprite();
-            jh.field_B = new TranslucentSpriteLayer(var42[0], 0, 0, 76);
+            SingleChildWidgetContainer.field_B = new TranslucentSpriteLayer(var42[0], 0, 0, 76);
             jb.field_b = var8_ref_ia;
             nh.field_l = var7_ref_sm;
             bd.field_w = mn.a(rg.field_v, "", "dashboard", 106);
@@ -931,7 +931,7 @@ public final class Torquing extends NetworkGameClient {
             bl.field_d = 7;
             qo.field_t = 2;
             for (var10Lifetime3 = 0; var10Lifetime3 < 8; var10Lifetime3++) {
-              ln.a((byte) 120, var10Lifetime3 * 640 >> 3);
+              ModalDialogHost.a((byte) 120, var10Lifetime3 * 640 >> 3);
             }
             nn.field_a = new MenuLayer[12][];
             var10_ref = LevelRun.createIndexedSpriteLayer(var43, 81);
@@ -1381,7 +1381,7 @@ public final class Torquing extends NetworkGameClient {
                               if (var11 == 5) {
                                 if (GzipDecompressor.field_b <= oo.field_b / 2) {
                                   SpriteBase.field_h = -1;
-                                  jh.a(ResourceArchive.field_k[ie.field_b.field_q], 0);
+                                  SingleChildWidgetContainer.a(ResourceArchive.field_k[ie.field_b.field_q], 0);
                                 }
                               } else {
                                 if (var11 == 8) {
@@ -1469,7 +1469,7 @@ public final class Torquing extends NetworkGameClient {
                           } else {
                             if (GzipDecompressor.field_b <= oo.field_b / 2) {
                               SpriteBase.field_h = -1;
-                              jh.a(ResourceArchive.field_k[ie.field_b.field_q], 0);
+                              SingleChildWidgetContainer.a(ResourceArchive.field_k[ie.field_b.field_q], 0);
                             }
                           }
                         } else {
@@ -1547,7 +1547,7 @@ public final class Torquing extends NetworkGameClient {
                   if (11 == GzipDecompressor.field_c &&
                     je.a((byte) 76)) {
                     ie.field_b = null;
-                    jh.field_y.clear(0);
+                    SingleChildWidgetContainer.field_y.clear(0);
                     nh.field_k = 0;
                     fa.field_b = 0;
                     SocketConnector.field_f = 0;
@@ -1594,7 +1594,7 @@ public final class Torquing extends NetworkGameClient {
             }
             if (param1 == 0 ||
               2 == param1) {
-              jh.a(ResourceArchive.field_k[0], 0);
+              SingleChildWidgetContainer.a(ResourceArchive.field_k[0], 0);
             }
             vo.field_f[param1].initializeMenuScreen((byte) 94, param3);
           }
@@ -1627,7 +1627,7 @@ public final class Torquing extends NetworkGameClient {
           oi.a(50, (byte) 80);
           TextHotspotBounds.a(50, -128);
           BufferedSocket.c(-101);
-          jh.a(ResourceArchive.field_k[0], 0);
+          SingleChildWidgetContainer.a(ResourceArchive.field_k[0], 0);
           var2_int = GzipDecompressor.field_b;
           MouseInputHandler.field_b = new int[var2_int];
           for (var3 = 1; var3 < var2_int; var3++) {
@@ -2000,7 +2000,7 @@ public final class Torquing extends NetworkGameClient {
           while (kg.a(ArchiveRequest.field_s, (byte) 21)) {
             this.e((byte) -117);
           }
-          jd.a((byte) -115, 0);
+          DropTargetWidgetContainer.a((byte) -115, 0);
           if (mk.a((byte) 38)) {
             var3Lifetime2 = this.g(118);
             if (var3Lifetime2 == 2 && (SpriteBase.field_h != -1 ||

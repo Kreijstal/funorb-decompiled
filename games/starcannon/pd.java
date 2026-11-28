@@ -22,7 +22,7 @@ final class pd {
             var3_int = 1;
             if (8 == param1) {
               param1 = 2;
-              if (!tc.field_x) {
+              if (!ModalDialogHost.field_x) {
                 param0 = ag.field_k;
               } else {
                 param0 = pk.field_b;
@@ -46,7 +46,7 @@ final class pd {
               if (param1 == 10) {
                 return;
               }
-              if (!tc.field_x) {
+              if (!ModalDialogHost.field_x) {
                 wi.field_c.a(false);
                 return;
               }

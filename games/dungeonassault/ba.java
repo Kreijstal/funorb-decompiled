@@ -43,7 +43,7 @@ final class ba {
             rj var4 = (rj) null;
             ba.a((rj) null, (byte) 20, -83);
           }
-          lm.a(false, "jagex-last-login-method", 31536000L, param1, this.field_g);
+          UiWidget.a(false, "jagex-last-login-method", 31536000L, param1, this.field_g);
         } catch (RuntimeException runtimeException) {
           throw AccountServiceResult.wrapClientException((Throwable) ((Object) runtimeException), "ba.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

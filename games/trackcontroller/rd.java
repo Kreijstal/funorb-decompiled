@@ -3,17 +3,17 @@
  */
 final class rd {
     static int[] field_f;
-    t field_k;
+    WidgetRenderer field_k;
     int field_t;
     int field_u;
-    t field_j;
-    t field_h;
-    t field_e;
+    WidgetRenderer field_j;
+    WidgetRenderer field_h;
+    WidgetRenderer field_e;
     private int field_n;
     int field_q;
     static MouseWheelInput field_l;
     int field_p;
-    t field_g;
+    WidgetRenderer field_g;
     static bl field_o;
     int field_a;
     private boolean field_r;
@@ -69,7 +69,7 @@ final class rd {
           var8 = SoftwareRasterizer.stride >> 2;
           var9 = this.field_c.stringWidth(param0);
           if (!param1) {
-            this.field_g = (t) null;
+            this.field_g = (WidgetRenderer) null;
           }
           var10 = this.field_c.field_u + this.field_c.field_G;
           var11 = 1;
@@ -318,7 +318,7 @@ final class rd {
         try {
           var17 = new DefaultTextWidgetRenderer(param1, 2, 2, 2236962, 1, 1, 1, 2 + (param1.field_G + param1.field_u));
           var17.field_i = 16777215;
-          this.field_k = (t) ((Object) var17);
+          this.field_k = (WidgetRenderer) ((Object) var17);
           var4 = new gi();
           var17.a(-19397, var4);
           var4.field_j = 11711154;
@@ -344,21 +344,21 @@ final class rd {
           var5[4] = (Sprite) ((Object) var18);
           var4.a((byte) 118, 4).a(true, 19749).a(param0 ^ 13421758, var5);
           var4.a((byte) 118, 5).a(113, qi.a(65793, 0, (byte) 116, 0, 0)).a(true, 19749).a(-1, false);
-          this.field_h = (t) ((Object) var4);
+          this.field_h = (WidgetRenderer) ((Object) var4);
           var6 = new gi(var4, true);
           var6.field_f = 0;
           var7 = new gi(var4, true);
           var7.field_f = 0;
           var7.a(-75, GameApplet.a((byte) 125, 8947848));
           var7.a((byte) 118, 1).a(124, GameApplet.a((byte) 121, 11184810)).a(2236962, false);
-          this.field_j = (t) ((Object) new ij(param1, 2, 2, 16777215, -1, 5, 5, 15, 15, 4473924));
+          this.field_j = (WidgetRenderer) ((Object) new ij(param1, 2, 2, 16777215, -1, 5, 5, 15, 15, 4473924));
           discarded$0 = new gh(param1, 2, 2, 16777215, -1, 16777215, 16729156, 4473924);
           discarded$1 = new jd(param1, 16777215, -1, 125269879, 4473924, 3, 268435455);
           var8 = new gi();
           var17.a(param0 - 13441169, var8);
           var8.a((byte) 118, 0).a(112, CrossfadingMidiPcmStream.a(15658734, 10066329, 7829367, 1)).a(1118481, false).b(-1, 113);
           var8.a((byte) 118, 4).a(true, 19749).a(110, var5);
-          this.field_e = (t) ((Object) var8);
+          this.field_e = (WidgetRenderer) ((Object) var8);
           var9 = new Sprite[9];
           var10 = new Sprite[9];
           var9[4] = new Sprite(2, 1);

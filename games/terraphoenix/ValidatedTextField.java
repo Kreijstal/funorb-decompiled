@@ -49,16 +49,16 @@ final class ValidatedTextField extends EditableTextField implements FieldValidat
         }
     }
 
-    ValidatedTextField(String param0, sc param1, int param2) {
+    ValidatedTextField(String param0, WidgetEventListener param1, int param2) {
         super(param0, param1, param2);
     }
 
-    final void a(UiWidget param0, int param1, int param2, int param3) {
+    final void updatePointer(UiWidget param0, int param1, int param2, int param3) {
         try {
           if (param3 < 25) {
             this.getTooltipText(-56);
           }
-          super.a(param0, param1, param2, 77);
+          super.updatePointer(param0, param1, param2, 77);
           this.field_Z = -param2 - this.x + ef.field_j;
         } catch (RuntimeException runtimeException) {
           throw qk.wrapException((Throwable) ((Object) runtimeException), "ib.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');

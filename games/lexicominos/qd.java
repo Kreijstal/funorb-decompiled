@@ -54,7 +54,7 @@ final class qd {
         tf.field_a = stackIn_3_0;
         kb.field_a = var3 & 127;
         EditableTextField.field_E = var8.readUnsignedByte(true);
-        jf.field_P = var8.readLong((byte) 8);
+        LabeledWidgetContainer.field_P = var8.readLong((byte) 8);
         if (2 != kb.field_a) {
           kc.field_c = 0;
           PcmOutputWorker.field_g = 0;

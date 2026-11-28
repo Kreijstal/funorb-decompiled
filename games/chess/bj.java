@@ -7,7 +7,7 @@ abstract class bj extends k {
     private int field_hb;
     static ci field_jb;
     private int field_qb;
-    private mf field_ib;
+    private UiWidget field_ib;
     private ag field_lb;
     static String[] field_pb;
     private int field_nb;
@@ -16,7 +16,7 @@ abstract class bj extends k {
     static rk[] field_bb;
     private int field_mb;
     static int field_gb;
-    private lf field_kb;
+    private AlphaWidgetContainer field_kb;
     static ci field_eb;
 
     final void i(byte param0) {
@@ -27,7 +27,7 @@ abstract class bj extends k {
             return;
           }
           if (this.field_lb != cf.field_Tb) {
-            this.a(this.field_ib.field_y + 12, (byte) 71, this.field_ib.field_C + (12 + this.field_qb));
+            this.setCenteredSize(this.field_ib.field_y + 12, (byte) 71, this.field_ib.field_C + (12 + this.field_qb));
             this.b(this.field_ib, (byte) -94);
           } else {
             this.field_lb = null;
@@ -45,7 +45,7 @@ abstract class bj extends k {
           return;
         }
         if (this.field_lb != cf.field_Tb) {
-          this.a(this.field_ib.field_y + 12, (byte) 71, this.field_ib.field_C + (12 + this.field_qb));
+          this.setCenteredSize(this.field_ib.field_y + 12, (byte) 71, this.field_ib.field_C + (12 + this.field_qb));
           this.b(this.field_ib, (byte) -94);
         } else {
           this.field_lb = null;
@@ -58,16 +58,16 @@ abstract class bj extends k {
         super.i((byte) -123);
     }
 
-    boolean g(byte param0) {
+    boolean advanceDialogAnimation(byte param0) {
         int fieldTemp$0 = 0;
         int fieldTemp$1 = 0;
         int var3 = Chess.field_G;
         if (this.field_lb == null) {
           if (param0 < -4) {
-            return super.g((byte) -52);
+            return super.advanceDialogAnimation((byte) -52);
           }
           field_bb = (rk[]) null;
-          return super.g((byte) -52);
+          return super.advanceDialogAnimation((byte) -52);
         }
         if (sg.field_f == this.field_lb) {
           fieldTemp$0 = this.field_fb + 1;
@@ -79,16 +79,16 @@ abstract class bj extends k {
             this.field_fb = 0;
             if (param0 >= -4) {
               field_bb = (rk[]) null;
-              return super.g((byte) -52);
+              return super.advanceDialogAnimation((byte) -52);
             }
-            return super.g((byte) -52);
+            return super.advanceDialogAnimation((byte) -52);
           }
           this.field_kb.field_R = 256 - (this.field_fb << 8) / this.field_hb;
           if (param0 < -4) {
-            return super.g((byte) -52);
+            return super.advanceDialogAnimation((byte) -52);
           }
           field_bb = (rk[]) null;
-          return super.g((byte) -52);
+          return super.advanceDialogAnimation((byte) -52);
         }
         if (cf.field_Tb == this.field_lb) {
           fieldTemp$1 = this.field_fb + 1;
@@ -97,26 +97,26 @@ abstract class bj extends k {
             this.field_kb.field_R = 256;
             this.field_lb = null;
             if (param0 < -4) {
-              return super.g((byte) -52);
+              return super.advanceDialogAnimation((byte) -52);
             }
             field_bb = (rk[]) null;
-            return super.g((byte) -52);
+            return super.advanceDialogAnimation((byte) -52);
           }
           this.field_kb.field_R = (this.field_fb << 8) / this.field_mb;
           if (param0 < -4) {
-            return super.g((byte) -52);
+            return super.advanceDialogAnimation((byte) -52);
           }
           field_bb = (rk[]) null;
-          return super.g((byte) -52);
+          return super.advanceDialogAnimation((byte) -52);
         }
         if (param0 < -4) {
-          return super.g((byte) -52);
+          return super.advanceDialogAnimation((byte) -52);
         }
         field_bb = (rk[]) null;
-        return super.g((byte) -52);
+        return super.advanceDialogAnimation((byte) -52);
     }
 
-    bj(fm param0, mf param1, int param2, int param3, int param4) {
+    bj(ModalDialogHost param0, UiWidget param1, int param2, int param3, int param4) {
         super(param0, param1.field_y + 12, param1.field_C + (param2 + 12));
         try {
           this.field_qb = param2;
@@ -129,26 +129,26 @@ abstract class bj extends k {
         }
     }
 
-    final boolean a(int param0) {
+    final boolean snapDialogAnimation(int param0) {
         this.i((byte) -106);
         if (param0 < 46) {
           return true;
         }
-        return super.a(119);
+        return super.snapDialogAnimation(119);
     }
 
-    private final void b(mf param0, byte param1) {
+    private final void b(UiWidget param0, byte param1) {
         try {
           if (null != this.field_kb) {
             this.field_kb.unlink(-2193);
           }
           if (param0 != null) {
-            param0.a(this.field_qb + 6, 34, param0.field_C, param0.field_y, 6);
-            this.field_kb = new lf(param0);
+            param0.setBounds(this.field_qb + 6, 34, param0.field_C, param0.field_y, 6);
+            this.field_kb = new AlphaWidgetContainer(param0);
           } else {
-            this.field_kb = new lf();
+            this.field_kb = new AlphaWidgetContainer();
           }
-          this.b(this.field_kb, 95);
+          this.addChild(this.field_kb, 95);
           if (param1 > -18) {
             this.i((byte) -62);
           }
@@ -172,24 +172,24 @@ abstract class bj extends k {
         this.field_ib = null;
     }
 
-    boolean a(char param0, int param1, int param2, mf param3) {
+    boolean handleKey(char param0, int param1, int param2, UiWidget param3) {
         RuntimeException var5 = null;
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
         String stackIn_14_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (super.a(param0, param1, param2, param3)) {
+          if (super.handleKey(param0, param1, param2, param3)) {
             return true;
           }
           if (this.field_kb == null) {
             return false;
           }
           if (param1 == 98) {
-            this.field_kb.a(~param2, param3);
+            this.field_kb.takeFocus(~param2, param3);
           }
           if (param1 == 99) {
-            this.field_kb.a(0, param3);
+            this.field_kb.takeFocus(0, param3);
           }
           return false;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -264,7 +264,7 @@ abstract class bj extends k {
         }
     }
 
-    void c(mf param0, int param1) {
+    void c(UiWidget param0, int param1) {
         RuntimeException var3 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;

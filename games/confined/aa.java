@@ -6,10 +6,10 @@ final class aa {
     static String field_a;
 
     final static void a(boolean param0) {
-        if (null != fj.field_u) {
-          RichTextLayout.a(!param0 ? true : false, fj.field_u);
-          fj.field_u = null;
-          am.g(-4258);
+        if (null != UiWidget.field_u) {
+          RichTextLayout.a(!param0 ? true : false, UiWidget.field_u);
+          UiWidget.field_u = null;
+          SingleChildWidgetContainer.g(-4258);
         }
         ka.field_N = cc.a(1, -14245);
         GameCanvas.field_a = cc.a(2, -14245);

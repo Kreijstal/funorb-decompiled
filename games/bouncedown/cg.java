@@ -1032,7 +1032,7 @@ final class cg {
                 }
                 var2 = AgeValidator.a((byte) 109, "pleasetryagain");
                 if (var2 != null) {
-                  pf.field_B = c.a(0, var2);
+                  ModalDialogHost.field_B = c.a(0, var2);
                 }
                 var2 = AgeValidator.a((byte) 100, "pleasereenterpass");
             }
@@ -1642,7 +1642,7 @@ final class cg {
                 }
                 var2 = AgeValidator.a((byte) 112, "create_alert_email_unavailable");
                 if (var2 != null) {
-                  hb.field_C = c.a(0, var2);
+                  LabeledWidgetContainer.field_C = c.a(0, var2);
                 }
                 var2 = AgeValidator.a((byte) 102, "create_alert_invaliddate");
                 if (null != var2) {
@@ -1662,7 +1662,7 @@ final class cg {
                 }
                 var2 = AgeValidator.a((byte) 113, "create_passwordvalid");
                 if (null != var2) {
-                  lk.field_s = c.a(0, var2);
+                  UiWidget.field_s = c.a(0, var2);
                 }
                 var2 = AgeValidator.a((byte) 104, "create_emailvalid");
                 if (null != var2) {
@@ -1794,7 +1794,7 @@ final class cg {
                 }
                 var2 = AgeValidator.a((byte) 86, "waitingfor_extradata");
                 if (var2 != null) {
-                  se.field_F = c.a(param0 ^ -99, var2);
+                  DropTargetWidgetContainer.field_F = c.a(param0 ^ -99, var2);
                 }
                 var2 = AgeValidator.a((byte) 98, "waitingfor_languages");
                 if (null != var2) {
@@ -2676,7 +2676,7 @@ final class cg {
                 }
                 var2 = AgeValidator.a((byte) 110, "fs_accept_countdown_pl");
                 if (null != var2) {
-                  se.field_B = c.a(param0 ^ -99, var2);
+                  DropTargetWidgetContainer.field_B = c.a(param0 ^ -99, var2);
                 }
                 var2 = AgeValidator.a((byte) 94, "fs_nonmember");
                 if (var2 != null) {
@@ -2784,11 +2784,11 @@ final class cg {
                 }
                 var2 = AgeValidator.a((byte) 109, "rating_mode_long_name,0");
                 if (var2 != null) {
-                  pf.field_D[0] = c.a(param0 + 99, var2);
+                  ModalDialogHost.field_D[0] = c.a(param0 + 99, var2);
                 }
                 var2 = AgeValidator.a((byte) 85, "rating_mode_long_name,1");
                 if (null != var2) {
-                  pf.field_D[1] = c.a(0, var2);
+                  ModalDialogHost.field_D[1] = c.a(0, var2);
                 }
                 var2 = AgeValidator.a((byte) 120, "graphics_config_fixed_size");
                 if (null != var2) {

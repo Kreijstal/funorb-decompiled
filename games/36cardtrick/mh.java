@@ -21,8 +21,8 @@ class mh {
         int var3;
         var3 = Main.field_T;
         if (d.field_c > param0) {
-          if (wc.field_A != null) {
-            DiskCacheWorker.field_a = wc.field_A.c(-1);
+          if (DropTargetWidgetContainer.field_A != null) {
+            DiskCacheWorker.field_a = DropTargetWidgetContainer.field_A.c(-1);
             vd.a(2, -1);
           } else {
             DiskCacheWorker.field_a = qa.createFullscreenCanvas(0, 480, 0, 17651, jk.field_a, 640);
@@ -36,7 +36,7 @@ class mh {
         } else {
           var2 = (!dl.d(0)) ? 1 : 0;
         }
-        if (null == wc.field_A &&
+        if (null == DropTargetWidgetContainer.field_A &&
           SecondaryNodeDequeIterator.field_a) {
           AccountRequestState.a(var2, (byte) 116, param1);
         }

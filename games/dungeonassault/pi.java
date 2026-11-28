@@ -14,7 +14,7 @@ final class pi {
     RgbSprite[] field_e;
     private int field_f;
 
-    final void a(int param0, lm param1, int param2, int param3, an param4) {
+    final void a(int param0, UiWidget param1, int param2, int param3, an param4) {
         BitmapFont stackIn_18_0;
         String stackIn_18_1;
         int stackIn_18_2;
@@ -124,7 +124,7 @@ final class pi {
     final pi a(int param0, int param1) {
         if (param0 != -7695) {
           an var4 = (an) null;
-          this.a((lm) null, (byte) 80, (pi) null, -58, (an) null, -78);
+          this.a((UiWidget) null, (byte) 80, (pi) null, -58, (an) null, -78);
         }
         this.field_f = param1;
         return this;
@@ -347,28 +347,28 @@ final class pi {
           if (var15 == null) {
             return null;
           }
-          oi.field_J.position = 0;
-          oi.field_J.writeByte(6, 255);
-          oi.field_J.writeByte(param1 ^ 6, 216);
-          oi.field_J.writeByte(6, 255);
-          oi.field_J.writeByte(6, 224);
-          oi.field_J.writeShort(16, -121);
+          DraggableWidgetContainer.field_J.position = 0;
+          DraggableWidgetContainer.field_J.writeByte(6, 255);
+          DraggableWidgetContainer.field_J.writeByte(param1 ^ 6, 216);
+          DraggableWidgetContainer.field_J.writeByte(6, 255);
+          DraggableWidgetContainer.field_J.writeByte(6, 224);
+          DraggableWidgetContainer.field_J.writeShort(16, -121);
           var22 = AgeValidator.field_o;
           var16 = var22;
           var14 = var16;
           var8 = var14;
           for (var9 = 0; var9 < var22.length; var9++) {
             var10_int = var22[var9];
-            oi.field_J.writeByte(6, var10_int);
+            DraggableWidgetContainer.field_J.writeByte(6, var10_int);
           }
-          oi.field_J.writeShort(258, param1 ^ -91);
-          oi.field_J.writeByte(6, 0);
-          oi.field_J.writeShort(1, -110);
-          oi.field_J.writeShort(1, -109);
-          oi.field_J.writeByte(6, 0);
-          oi.field_J.writeByte(6, 0);
-          oi.field_J.writeByte(6, 255);
-          oi.field_J.writeByte(6, 219);
+          DraggableWidgetContainer.field_J.writeShort(258, param1 ^ -91);
+          DraggableWidgetContainer.field_J.writeByte(6, 0);
+          DraggableWidgetContainer.field_J.writeShort(1, -110);
+          DraggableWidgetContainer.field_J.writeShort(1, -109);
+          DraggableWidgetContainer.field_J.writeByte(6, 0);
+          DraggableWidgetContainer.field_J.writeByte(6, 0);
+          DraggableWidgetContainer.field_J.writeByte(6, 255);
+          DraggableWidgetContainer.field_J.writeByte(6, 219);
           var23 = new byte[4][];
           var18 = var23;
           var8_array = var18;
@@ -380,30 +380,30 @@ final class pi {
               var9Lifetime1 = var9Lifetime1 + var23[var10_intLifetime1].length;
             }
           }
-          oi.field_J.writeShort(var9Lifetime1, param1 - 108);
+          DraggableWidgetContainer.field_J.writeShort(var9Lifetime1, param1 - 108);
           for (var10_intLifetime2 = 0; var10_intLifetime2 < 4; var10_intLifetime2++) {
             if (var23[var10_intLifetime2] != null) {
-              oi.field_J.writeBytes(var23[var10_intLifetime2], 1, var23[var10_intLifetime2].length, 0);
+              DraggableWidgetContainer.field_J.writeBytes(var23[var10_intLifetime2], 1, var23[var10_intLifetime2].length, 0);
             }
           }
-          oi.field_J.writeByte(6, 255);
-          oi.field_J.writeByte(6, 192);
-          oi.field_J.writeShort(17, -88);
-          oi.field_J.writeByte(6, 8);
-          oi.field_J.writeShort(param4, param1 ^ -113);
-          oi.field_J.writeShort(param5, -99);
-          oi.field_J.writeByte(6, 3);
-          oi.field_J.writeByte(6, 1);
-          oi.field_J.writeByte(6, 34);
-          oi.field_J.writeByte(param1 ^ 6, 0);
-          oi.field_J.writeByte(6, 2);
-          oi.field_J.writeByte(6, 17);
-          oi.field_J.writeByte(6, 1);
-          oi.field_J.writeByte(param1 ^ 6, 3);
-          oi.field_J.writeByte(6, 17);
-          oi.field_J.writeByte(6, 1);
-          oi.field_J.writeByte(param1 + 6, 255);
-          oi.field_J.writeByte(6, 196);
+          DraggableWidgetContainer.field_J.writeByte(6, 255);
+          DraggableWidgetContainer.field_J.writeByte(6, 192);
+          DraggableWidgetContainer.field_J.writeShort(17, -88);
+          DraggableWidgetContainer.field_J.writeByte(6, 8);
+          DraggableWidgetContainer.field_J.writeShort(param4, param1 ^ -113);
+          DraggableWidgetContainer.field_J.writeShort(param5, -99);
+          DraggableWidgetContainer.field_J.writeByte(6, 3);
+          DraggableWidgetContainer.field_J.writeByte(6, 1);
+          DraggableWidgetContainer.field_J.writeByte(6, 34);
+          DraggableWidgetContainer.field_J.writeByte(param1 ^ 6, 0);
+          DraggableWidgetContainer.field_J.writeByte(6, 2);
+          DraggableWidgetContainer.field_J.writeByte(6, 17);
+          DraggableWidgetContainer.field_J.writeByte(6, 1);
+          DraggableWidgetContainer.field_J.writeByte(param1 ^ 6, 3);
+          DraggableWidgetContainer.field_J.writeByte(6, 17);
+          DraggableWidgetContainer.field_J.writeByte(6, 1);
+          DraggableWidgetContainer.field_J.writeByte(param1 + 6, 255);
+          DraggableWidgetContainer.field_J.writeByte(6, 196);
           var24 = new byte[32][];
           var19 = var24;
           var10 = var19;
@@ -415,38 +415,38 @@ final class pi {
               var9Lifetime2 = var9Lifetime2 + var24[var11_int].length;
             }
           }
-          oi.field_J.writeShort(var9Lifetime2, -100);
+          DraggableWidgetContainer.field_J.writeShort(var9Lifetime2, -100);
           for (var11_intLifetime1 = 0; var11_intLifetime1 < 32; var11_intLifetime1++) {
             if (var24[var11_intLifetime1] != null) {
-              oi.field_J.writeBytes(var24[var11_intLifetime1], param1 ^ 1, var24[var11_intLifetime1].length, 0);
+              DraggableWidgetContainer.field_J.writeBytes(var24[var11_intLifetime1], param1 ^ 1, var24[var11_intLifetime1].length, 0);
             }
           }
-          oi.field_J.writeByte(6, 255);
-          oi.field_J.writeByte(6, 218);
-          oi.field_J.writeShort(12, -128);
-          oi.field_J.writeByte(6, 3);
-          oi.field_J.writeByte(6, 1);
-          oi.field_J.writeByte(6, 0);
-          oi.field_J.writeByte(6, 2);
-          oi.field_J.writeByte(6, 17);
-          oi.field_J.writeByte(6, 3);
-          oi.field_J.writeByte(6, 17);
-          oi.field_J.writeByte(6, 0);
-          oi.field_J.writeByte(param1 ^ 6, 63);
-          oi.field_J.writeByte(param1 + 6, 0);
+          DraggableWidgetContainer.field_J.writeByte(6, 255);
+          DraggableWidgetContainer.field_J.writeByte(6, 218);
+          DraggableWidgetContainer.field_J.writeShort(12, -128);
+          DraggableWidgetContainer.field_J.writeByte(6, 3);
+          DraggableWidgetContainer.field_J.writeByte(6, 1);
+          DraggableWidgetContainer.field_J.writeByte(6, 0);
+          DraggableWidgetContainer.field_J.writeByte(6, 2);
+          DraggableWidgetContainer.field_J.writeByte(6, 17);
+          DraggableWidgetContainer.field_J.writeByte(6, 3);
+          DraggableWidgetContainer.field_J.writeByte(6, 17);
+          DraggableWidgetContainer.field_J.writeByte(6, 0);
+          DraggableWidgetContainer.field_J.writeByte(param1 ^ 6, 63);
+          DraggableWidgetContainer.field_J.writeByte(param1 + 6, 0);
           for (var11_intLifetime2 = param1; var11_intLifetime2 < var28.length; var11_intLifetime2++) {
             var12 = var28[var11_intLifetime2];
-            oi.field_J.writeByte(6, var12);
+            DraggableWidgetContainer.field_J.writeByte(6, var12);
             if (255 == (255 & var12)) {
-              oi.field_J.writeByte(6, 0);
+              DraggableWidgetContainer.field_J.writeByte(6, 0);
             }
           }
-          oi.field_J.writeByte(6, 255);
-          oi.field_J.writeByte(6, 217);
-          var26 = new byte[oi.field_J.position];
+          DraggableWidgetContainer.field_J.writeByte(6, 255);
+          DraggableWidgetContainer.field_J.writeByte(6, 217);
+          var26 = new byte[DraggableWidgetContainer.field_J.position];
           var21 = var26;
           var11 = var21;
-          cj.copyByteRange(oi.field_J.payload, 0, var26, 0, oi.field_J.position);
+          cj.copyByteRange(DraggableWidgetContainer.field_J.payload, 0, var26, 0, DraggableWidgetContainer.field_J.position);
           stackIn_40_0 = var11;
           return stackIn_40_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -481,7 +481,7 @@ final class pi {
         }
     }
 
-    final void a(lm param0, byte param1, pi param2, int param3, an param4, int param5) {
+    final void a(UiWidget param0, byte param1, pi param2, int param3, an param4, int param5) {
         RuntimeException stackIn_25_0 = null;
         StringBuilder stackIn_25_1 = null;
         String stackIn_26_2 = null;

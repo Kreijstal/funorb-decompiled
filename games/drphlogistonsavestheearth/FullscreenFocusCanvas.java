@@ -580,63 +580,63 @@ final class FullscreenFocusCanvas extends java.awt.Canvas implements java.awt.ev
           }
           var2Lifetime97 = NodeHashTableIterator.a("achievement_criteria,0", param1 - 131);
           if (var2Lifetime97 != null) {
-            jk.field_K[0] = mj.a((byte) -124, var2Lifetime97);
+            DropTargetWidgetContainer.field_K[0] = mj.a((byte) -124, var2Lifetime97);
           }
           var2Lifetime98 = NodeHashTableIterator.a("achievement_criteria,1", 123);
           if (null != var2Lifetime98) {
-            jk.field_K[1] = mj.a((byte) -110, var2Lifetime98);
+            DropTargetWidgetContainer.field_K[1] = mj.a((byte) -110, var2Lifetime98);
           }
           var2Lifetime99 = NodeHashTableIterator.a("achievement_criteria,2", 123);
           if (null != var2Lifetime99) {
-            jk.field_K[2] = mj.a((byte) -116, var2Lifetime99);
+            DropTargetWidgetContainer.field_K[2] = mj.a((byte) -116, var2Lifetime99);
           }
           var2Lifetime100 = NodeHashTableIterator.a("achievement_criteria,3", 126);
           if (var2Lifetime100 != null) {
-            jk.field_K[3] = mj.a((byte) -95, var2Lifetime100);
+            DropTargetWidgetContainer.field_K[3] = mj.a((byte) -95, var2Lifetime100);
           }
           var2Lifetime101 = NodeHashTableIterator.a("achievement_criteria,4", 124);
           if (null != var2Lifetime101) {
-            jk.field_K[4] = mj.a((byte) -113, var2Lifetime101);
+            DropTargetWidgetContainer.field_K[4] = mj.a((byte) -113, var2Lifetime101);
           }
           var2Lifetime102 = NodeHashTableIterator.a("achievement_criteria,5", 127);
           if (null != var2Lifetime102) {
-            jk.field_K[5] = mj.a((byte) -116, var2Lifetime102);
+            DropTargetWidgetContainer.field_K[5] = mj.a((byte) -116, var2Lifetime102);
           }
           var2Lifetime103 = NodeHashTableIterator.a("achievement_criteria,6", 123);
           if (null != var2Lifetime103) {
-            jk.field_K[6] = mj.a((byte) 115, var2Lifetime103);
+            DropTargetWidgetContainer.field_K[6] = mj.a((byte) 115, var2Lifetime103);
           }
           var2Lifetime104 = NodeHashTableIterator.a("achievement_criteria,7", 126);
           if (null != var2Lifetime104) {
-            jk.field_K[7] = mj.a((byte) -9, var2Lifetime104);
+            DropTargetWidgetContainer.field_K[7] = mj.a((byte) -9, var2Lifetime104);
           }
           var2Lifetime105 = NodeHashTableIterator.a("achievement_criteria,8", param1 ^ 131);
           if (var2Lifetime105 != null) {
-            jk.field_K[8] = mj.a((byte) -109, var2Lifetime105);
+            DropTargetWidgetContainer.field_K[8] = mj.a((byte) -109, var2Lifetime105);
           }
           var2Lifetime106 = NodeHashTableIterator.a("achievement_criteria,9", param1 ^ 130);
           if (var2Lifetime106 != null) {
-            jk.field_K[9] = mj.a((byte) -3, var2Lifetime106);
+            DropTargetWidgetContainer.field_K[9] = mj.a((byte) -3, var2Lifetime106);
           }
           var2Lifetime107 = NodeHashTableIterator.a("achievement_criteria,10", 124);
           if (null != var2Lifetime107) {
-            jk.field_K[10] = mj.a((byte) -118, var2Lifetime107);
+            DropTargetWidgetContainer.field_K[10] = mj.a((byte) -118, var2Lifetime107);
           }
           var2Lifetime108 = NodeHashTableIterator.a("achievement_criteria,11", 125);
           if (var2Lifetime108 != null) {
-            jk.field_K[11] = mj.a((byte) 32, var2Lifetime108);
+            DropTargetWidgetContainer.field_K[11] = mj.a((byte) 32, var2Lifetime108);
           }
           var2Lifetime109 = NodeHashTableIterator.a("achievement_criteria,12", param1 - 129);
           if (null != var2Lifetime109) {
-            jk.field_K[12] = mj.a((byte) -8, var2Lifetime109);
+            DropTargetWidgetContainer.field_K[12] = mj.a((byte) -8, var2Lifetime109);
           }
           var2Lifetime110 = NodeHashTableIterator.a("achievement_criteria,13", 124);
           if (var2Lifetime110 != null) {
-            jk.field_K[13] = mj.a((byte) 69, var2Lifetime110);
+            DropTargetWidgetContainer.field_K[13] = mj.a((byte) 69, var2Lifetime110);
           }
           var2Lifetime111 = NodeHashTableIterator.a("achievement_criteria,14", 124);
           if (var2Lifetime111 != null) {
-            jk.field_K[14] = mj.a((byte) -107, var2Lifetime111);
+            DropTargetWidgetContainer.field_K[14] = mj.a((byte) -107, var2Lifetime111);
           }
           var2Lifetime112 = NodeHashTableIterator.a("GAME_NAME_JSTRING", 125);
           if (null != var2Lifetime112) {

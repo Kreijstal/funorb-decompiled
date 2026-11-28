@@ -264,7 +264,7 @@ final class ee {
           if (0 == var2) {
             if (null == ai.field_f) {
               ai.field_f = new vb(128);
-              cb.field_I = 0;
+              DraggableWidgetContainer.field_I = 0;
             }
             stackIn_12_0 = (var1.readUnsignedByte(-16384) != 1) ? 0 : 1;
             var3_int = stackIn_12_0;
@@ -287,8 +287,8 @@ final class ee {
             if (var5_ref == null) {
               var5_ref = new q();
               ai.field_f.a(false, var5_ref, (long)var7_ref.hashCode());
-              fieldTemp$1 = cb.field_I;
-              cb.field_I = cb.field_I + 1;
+              fieldTemp$1 = DraggableWidgetContainer.field_I;
+              DraggableWidgetContainer.field_I = DraggableWidgetContainer.field_I + 1;
               var5_ref.field_Mb = fieldTemp$1;
               BattleUnit.field_j.addFirst(var5_ref, -16611);
             }

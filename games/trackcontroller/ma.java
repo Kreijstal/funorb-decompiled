@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ma implements t {
+final class ma implements WidgetRenderer {
     static long field_b;
     static int field_c;
     static String field_a;
@@ -163,7 +163,7 @@ final class ma implements t {
         }
     }
 
-    public final void a(int param0, UiWidget param1, int param2, boolean param3, int param4) {
+    public final void paintWidget(int param0, UiWidget param1, int param2, boolean param3, int param4) {
         int var6_int = 0;
         int var7 = 0;
         Sprite var8 = null;
@@ -184,7 +184,7 @@ final class ma implements t {
             ((ButtonWidget) (param1)).field_G) {
             var8.drawAdditiveWithIntensity((param1.field_x - var8.field_s >> 1) + (1 + var6_int), var7 + 1 + (param1.field_u - var8.field_v >> 1), 256);
           }
-          if (param1.h(-111)) {
+          if (param1.isFocused(-111)) {
             BufferedSocket.a(param1.field_u - 4, -28846, param1.field_x - 4, var7 + 2, var6_int + 2);
           }
           return;

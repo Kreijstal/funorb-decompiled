@@ -9,7 +9,7 @@ final class MixedSupport110 {
     final static boolean computeBoolean1458(int integerArgument1, int integerArgument2, byte byteArgument3, int integerArgument4) {
         int integerLocal1 = -27 % ((-37 - byteArgument3) / 37);
         if (MixedSupport144.booleanState0221) {
-          return MixedSupport009.uiComponentPart019State0001.computeBoolean0209(MixedSupport146.integerState0931, ArchiveRequestManager.characterState0002, (byte) 126);
+          return MixedSupport009.uiComponentPart019State0001.processKeyInput(MixedSupport146.integerState0931, ArchiveRequestManager.characterState0002, (byte) 126);
         }
         if (GameDomainSupport004.booleanState0087) {
           return ConfirmedEmailAvailabilityValidator.computeBoolean1614(integerArgument1, 102, integerArgument4);

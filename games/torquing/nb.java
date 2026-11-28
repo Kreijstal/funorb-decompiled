@@ -60,7 +60,7 @@ final class nb extends am {
             dk.a(var4, 0, var7, 0, ci.field_c);
           } else {
             for (var5 = 0; var5 < ci.field_c; var5++) {
-              var3[var5] = var4[jh.field_A - var5];
+              var3[var5] = var4[SingleChildWidgetContainer.field_A - var5];
             }
           }
         }
@@ -120,9 +120,9 @@ final class nb extends am {
           var10 = var21[2];
           if (this.field_s) {
             for (var11 = 0; var11 < ci.field_c; var11++) {
-              var8[var11] = var5[jh.field_A - var11];
-              var9[var11] = var6[-var11 + jh.field_A];
-              var10[var11] = var7[-var11 + jh.field_A];
+              var8[var11] = var5[SingleChildWidgetContainer.field_A - var11];
+              var9[var11] = var6[-var11 + SingleChildWidgetContainer.field_A];
+              var10[var11] = var7[-var11 + SingleChildWidgetContainer.field_A];
             }
           } else {
             var14 = 0;
@@ -161,7 +161,7 @@ final class nb extends am {
         ci.a(0);
         if (pf.a((byte) -34)) {
           wa.field_d.f(121, 1);
-          jd.a((byte) -81, 0);
+          DropTargetWidgetContainer.a((byte) -81, 0);
         }
         ih.b(true);
     }

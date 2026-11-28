@@ -298,7 +298,7 @@ final class RandomAccessCacheFile {
           kf.field_b = var18.readUnsignedShort(-25578);
           ug.field_c = new byte[kf.field_b][];
           sb.field_m = new int[kf.field_b];
-          hj.field_K = new int[kf.field_b];
+          DropTargetWidgetContainer.field_K = new int[kf.field_b];
           ConfirmedEmailAvailabilityValidator.field_s = new int[kf.field_b];
           aa.field_k = new boolean[kf.field_b];
           qc.field_b = new byte[kf.field_b][];
@@ -315,7 +315,7 @@ final class RandomAccessCacheFile {
             ConfirmedEmailAvailabilityValidator.field_s[var4] = var17.readUnsignedShort(-25578);
           }
           for (var4Lifetime1 = 0; kf.field_b > var4Lifetime1; var4Lifetime1++) {
-            hj.field_K[var4Lifetime1] = var18.readUnsignedShort(-25578);
+            DropTargetWidgetContainer.field_K[var4Lifetime1] = var18.readUnsignedShort(-25578);
           }
           for (var4Lifetime2 = 0; kf.field_b > var4Lifetime2; var4Lifetime2++) {
             sb.field_m[var4Lifetime2] = var18.readUnsignedShort(-25578);

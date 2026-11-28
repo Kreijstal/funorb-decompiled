@@ -76,13 +76,13 @@ class ni extends DefaultTextWidgetRenderer {
         }
     }
 
-    public final void a(int param0, int param1, boolean param2, byte param3, UiWidget param4) {
+    public final void paintWidget(int param0, int param1, boolean param2, byte param3, UiWidget param4) {
         try {
           int var6_int = -104 / ((param3 - 51) / 47);
           if (param2) {
             jl.a(param0 + param4.field_p, param4.field_n + param1, 13612, param4.field_l, param4.field_h);
           }
-          super.a(param0, param1, param2, (byte) 107, param4);
+          super.paintWidget(param0, param1, param2, (byte) 107, param4);
         } catch (RuntimeException runtimeException) {
           throw ch.wrapClientException((Throwable) ((Object) runtimeException), "ni.C(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ')');
         }

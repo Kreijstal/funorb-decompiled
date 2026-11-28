@@ -556,9 +556,9 @@ final class TutorialController {
             SoftwareRasterizer.fillRectangleAlpha(3, var2 + 3, 6 + var4, var3 - 6, 0, 192);
           }
           if (this.field_p == 0) {
-            jl.a(jc.field_G, var3, var2, 12 + var4, (byte) -121, 0);
+            AlphaWidgetContainer.a(SingleChildWidgetContainer.field_G, var3, var2, 12 + var4, (byte) -121, 0);
           } else {
-            jl.a(jc.field_G, var3, var2, 12 + var4, (byte) -127, -var4 + 640 - 12);
+            AlphaWidgetContainer.a(SingleChildWidgetContainer.field_G, var3, var2, 12 + var4, (byte) -127, -var4 + 640 - 12);
           }
           if (this.field_p == 0) {
             AccountRequestState.field_f.drawString(this.field_o, 32, var2 + 16, 16777215, -1);

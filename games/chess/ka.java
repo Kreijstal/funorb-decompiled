@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ka implements jm {
+final class ka implements WidgetRenderer {
     private int field_d;
     static String field_b;
     private int field_m;
@@ -19,7 +19,7 @@ final class ka implements jm {
     static String field_e;
     static float field_o;
 
-    public final void a(byte param0, int param1, int param2, boolean param3, mf param4) {
+    public final void paintWidget(byte param0, int param1, int param2, boolean param3, UiWidget param4) {
         RuntimeException var6 = null;
         int var7 = 0;
         int var8 = 0;
@@ -28,7 +28,7 @@ final class ka implements jm {
         int var12 = 0;
         int var13 = 0;
         od var14 = null;
-        mf stackIn_3_0 = null;
+        UiWidget stackIn_3_0 = null;
         RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
         String stackIn_15_2 = null;
@@ -38,7 +38,7 @@ final class ka implements jm {
         int var12Lifetime1;
         try {
           if (param4 instanceof od) {
-            stackIn_3_0 = (mf) (param4);
+            stackIn_3_0 = (UiWidget) (param4);
           } else {
             stackIn_3_0 = null;
           }

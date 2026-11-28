@@ -138,8 +138,8 @@ final class ml {
                                       if (this.field_o.a((byte) 15)) {
                                         tk.field_a = true;
                                         if (0 == mc.field_w &&
-                                          oj.field_J != 2 &&
-                                          oj.field_J != 5) {
+                                          AlphaWidgetContainer.field_J != 2 &&
+                                          AlphaWidgetContainer.field_J != 5) {
                                           var4 = 0;
                                         } else {
                                           var4 = 4;
@@ -227,10 +227,10 @@ final class ml {
                                                       } else {
                                                         if ((var5 == 5)) {
                                                           if (this.field_o.b(-94)) {
-                                                            ma.a(-124, 0);
+                                                            DraggableWidgetContainer.a(-124, 0);
                                                           }
                                                           if (this.field_o.c(-64)) {
-                                                            ma.a(-107, 256);
+                                                            DraggableWidgetContainer.a(-107, 256);
                                                           }
                                                           if (this.field_o.d((byte) 77)) {
                                                             var5 = 8;
@@ -499,7 +499,7 @@ final class ml {
         var25 = MinerDisturbance.field_ab;
         try {
           array$0 = new ql[je.field_N[0]];
-          kn.field_H[0] = array$0;
+          DequeWidgetContainer.field_H[0] = array$0;
           var29 = array$0;
           var3 = var29;
           var28 = fg.a(65, param2);
@@ -589,7 +589,7 @@ final class ml {
             var26++;
           }
           array$1 = new ql[je.field_N[1]];
-          kn.field_H[1] = array$1;
+          DequeWidgetContainer.field_H[1] = array$1;
           var17 = array$1;
           var8Lifetime1 = -1;
           var12Lifetime1 = -1;
@@ -829,7 +829,7 @@ final class ml {
                       if (var5 != 4) {
                         if ((var5 == 9)) {
                           var4 = 640 + param2 - 640;
-                          jc.field_G.draw(320 + var4 - (jc.field_G.field_x >> 1), 15);
+                          SingleChildWidgetContainer.field_G.draw(320 + var4 - (SingleChildWidgetContainer.field_G.field_x >> 1), 15);
                         }
                       } else {
                         GameAppletShell.field_m.draw(param2, 0);
@@ -1827,7 +1827,7 @@ final class ml {
         }
         AccountRequestState.a(stackIn_46_0, var9 + var8 / 2, param3 - 121, 109);
         this.a(param3 ^ 110, var5, var8, sn.field_b[var5], var9, param2);
-        ce.field_d.drawParagraph(am.field_N, 0 - param0 + 130 + var6Lifetime1, 310, 380, 30, 1, -1, 1, 1, 0);
+        ce.field_d.drawParagraph(LabeledWidgetContainer.field_N, 0 - param0 + 130 + var6Lifetime1, 310, 380, 30, 1, -1, 1, 1, 0);
         return;
     }
 

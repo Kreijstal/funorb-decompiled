@@ -24,14 +24,14 @@ final class an {
         RuntimeException decompiledCaughtException = null;
         var3 = Chess.field_G;
         try {
-          lf.field_S = param0;
-          ka.field_a.setMasterVolume(lf.field_S * 64 / 80, (byte) -100);
+          AlphaWidgetContainer.field_S = param0;
+          ka.field_a.setMasterVolume(AlphaWidgetContainer.field_S * 64 / 80, (byte) -100);
           var2 = (tn) (AchievementNotification.field_n.beginBackward(-18110));
           while (var2 != null) {
             if (!var2.field_n.isLinked(20478)) {
               var2.unlink(-2193);
             } else {
-              var2.field_k.setVolume(lf.field_S * var2.field_o / 80);
+              var2.field_k.setVolume(AlphaWidgetContainer.field_S * var2.field_o / 80);
             }
             var2 = (tn) (AchievementNotification.field_n.nextBackward((byte) -119));
           }

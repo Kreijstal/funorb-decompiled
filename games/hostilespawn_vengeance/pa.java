@@ -217,7 +217,7 @@ final class pa extends ql {
               }
               if (var20 == null) {
                 var55 = (oj) null;
-                nh.a((oj) null, -29966);
+                LabeledWidgetContainer.a((oj) null, -29966);
                 break;
               }
               stackIn_81_0 = (((oj) (var20)).field_I <= 0) ? 0 : 1;
@@ -250,7 +250,7 @@ final class pa extends ql {
                 if (((oj) (var20)).field_b) {
                   fieldTemp$0 = ib.field_c;
                   ib.field_c = ib.field_c + 1;
-                  var57 = jn.field_F[fieldTemp$0];
+                  var57 = AlphaWidgetContainer.field_F[fieldTemp$0];
                   var36 = var57;
                   var36.field_i = 36;
                   var57.field_j.copyCoordinatesFrom((byte) 46, ((oj) (var20)).field_j);
@@ -303,7 +303,7 @@ final class pa extends ql {
                 }
                 param0.field_i = 3;
               }
-              nh.a((oj) (var20), -29966);
+              LabeledWidgetContainer.a((oj) (var20), -29966);
               if (((oj) (var20)).field_i != 5 &&
                 !((oj) (var20)).b(6) &&
                 ((oj) (var20)).field_i != 22) {
@@ -396,7 +396,7 @@ final class pa extends ql {
           for (var6 = 0; var6 < var3; var6++) {
             var5[var6] = bf.field_d[PcmOutputWorker.bitwiseAnd((int) var4[var6], 255)];
           }
-          var1[var2] = new RgbSprite(ra.field_a, GameCanvas.field_e, th.field_Jb[var2], nh.field_O[var2], TextInputField.field_X[var2], ConfirmedEmailAvailabilityValidator.field_r[var2], var5);
+          var1[var2] = new RgbSprite(ra.field_a, GameCanvas.field_e, th.field_Jb[var2], LabeledWidgetContainer.field_O[var2], TextInputField.field_X[var2], ConfirmedEmailAvailabilityValidator.field_r[var2], var5);
         }
         if (param0 != 14) {
           field_d = true;
@@ -428,7 +428,7 @@ final class pa extends ql {
         var3 = 0;
         this.field_g = new v[this.field_m.length];
         for (var4 = 0; ProxySocketFactory.field_j > var4; var4++) {
-          if (od.a(TextHotspotBounds.field_m[var4].field_i, 1)) {
+          if (DropTargetWidgetContainer.a(TextHotspotBounds.field_m[var4].field_i, 1)) {
             var5 = var9;
             var6 = 0;
             while (var6 < var5.length) {
@@ -459,7 +459,7 @@ final class pa extends ql {
           var10++;
         }
         CrossfadingMidiPcmStream.a(10, param0 ^ 1);
-        nh.field_E.setCoordinates(-1, 8360, -1);
+        LabeledWidgetContainer.field_E.setCoordinates(-1, 8360, -1);
         this.field_j = new v(re.field_B, 0, 0, 200, false);
         this.field_j.field_l = 0;
         this.field_k = new v(AccountServiceResult.field_h, 0, 0, 200, false);
@@ -523,7 +523,7 @@ final class pa extends ql {
           var13 = TextHotspotBounds.field_m[0];
           var3 = var13.field_j;
           if (ha.field_t == 10) {
-            nh.field_E.setCoordinates(-1, 8360, -1);
+            LabeledWidgetContainer.field_E.setCoordinates(-1, 8360, -1);
             var5 = 0;
             var6 = -1;
             for (var7_int = 1; var7_int <= 5; var7_int++) {
@@ -596,7 +596,7 @@ final class pa extends ql {
             }
             if (ClientLookupTables.field_d != dn.field_i) {
               CrossfadingMidiPcmStream.a(0, 1);
-              nh.field_E.copyCoordinatesFrom((byte) 46, ih.field_y[0]);
+              LabeledWidgetContainer.field_E.copyCoordinatesFrom((byte) 46, ih.field_y[0]);
               this.field_k.field_d = -this.field_k.field_h + var3.field_g * 24 - 60;
               this.field_k.field_l = 24 * var3.field_e - 100;
             } else {

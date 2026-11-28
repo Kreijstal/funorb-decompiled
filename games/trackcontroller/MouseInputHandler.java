@@ -223,7 +223,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
         try {
           if (null != ConfirmedEmailAvailabilityValidator.mouseHandler) {
             pa.idleTicks = 0;
-            sa.pressX = param0.getX();
+            LabeledWidgetContainer.pressX = param0.getX();
             GameShell.pressY = param0.getY();
             qg.correctedCurrentTimeMillis(false);
             if (javax.swing.SwingUtilities.isRightMouseButton(param0)) {
@@ -328,10 +328,10 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
           } else {
             if (var3 == 1) {
               var4 = var10.readInt((byte) 113);
-              var5_ref_ei = (ei) (fj.field_H.first(2));
+              var5_ref_ei = (ei) (DraggableWidgetContainer.field_H.first(2));
               while (var5_ref_ei != null) {
                 if (var4 != var5_ref_ei.field_n) {
-                  var5_ref_ei = (ei) (fj.field_H.next(10));
+                  var5_ref_ei = (ei) (DraggableWidgetContainer.field_H.next(10));
                   continue;
                 }
                 break;

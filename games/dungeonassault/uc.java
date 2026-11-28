@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class uc extends lm {
+final class uc extends UiWidget {
     static String field_L;
     private int field_O;
     boolean field_R;
@@ -29,7 +29,7 @@ final class uc extends lm {
         int var9 = DungeonAssault.field_K;
         int var2 = this.field_s >> 1;
         RgbSprite var3 = new RgbSprite(var2, this.field_s);
-        lm.a(var3, (byte) 66);
+        UiWidget.a(var3, (byte) 66);
         for (var4 = 0; var4 < this.field_s; var4++) {
           for (var5 = 0; var5 < var2; var5++) {
             var6 = (double)var5 * (double)var5 / (double)((this.field_s - var4) * var4);
@@ -59,7 +59,7 @@ final class uc extends lm {
         int var9Lifetime1;
         int var12Lifetime1;
         int var6Lifetime1;
-        lm.a(var14, (byte) -94);
+        UiWidget.a(var14, (byte) -94);
         int var5 = this.field_s >> 1;
         for (var6 = 0; var6 < this.field_s; var6++) {
           var7 = (var6 >> 1) * (this.field_B * 2 - 1) % (this.field_B * 2);
@@ -104,7 +104,7 @@ final class uc extends lm {
           }
           ti.c(true);
           if (SoftwareRasterizer.field_j <= param2 + this.field_D.field_y) {
-            lm.a(this.field_P, (byte) -107);
+            UiWidget.a(this.field_P, (byte) -107);
             param3.draw(-this.field_O, 0);
             param3.draw(-this.field_O + 2 * this.field_B, 0);
             this.field_T.drawMultiply(0, 0);
@@ -112,7 +112,7 @@ final class uc extends lm {
             this.field_P.draw(param2, param1);
           }
           if (SoftwareRasterizer.field_h >= var5_int - this.field_D.field_y) {
-            lm.a(this.field_P, (byte) -94);
+            UiWidget.a(this.field_P, (byte) -94);
             for (var7Lifetime1 = this.field_x + (-this.field_D.field_y + this.field_O); var7Lifetime1 > this.field_B * 2; var7Lifetime1 = var7Lifetime1 - this.field_B * 2) {
             }
             param3.draw(-var7Lifetime1, 0);
@@ -142,8 +142,8 @@ final class uc extends lm {
         return so.field_b != null ? true : false;
     }
 
-    final void b(int param0, int param1, int param2, int param3, int param4) {
-        super.b(param0 ^ param0, param1, param2, param3, param4);
+    final void setBounds(int param0, int param1, int param2, int param3, int param4) {
+        super.setBounds(param0 ^ param0, param1, param2, param3, param4);
         this.a(param0 ^ -370091864);
     }
 
@@ -250,7 +250,7 @@ final class uc extends lm {
         field_L = null;
     }
 
-    final void a(int param0, int param1, lm param2, boolean param3) {
+    final void updatePointer(int param0, int param1, UiWidget param2, boolean param3) {
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         String stackIn_10_2 = null;
@@ -282,7 +282,7 @@ final class uc extends lm {
         }
     }
 
-    final void a(int param0, int param1, int param2, int param3) {
+    final void drawWidget(int param0, int param1, int param2, int param3) {
         if (param0 != 0) {
           return;
         }
@@ -329,7 +329,7 @@ final class uc extends lm {
         this.field_B = param4;
         this.field_F = param5;
         this.field_J = param7;
-        this.b(0, param2, param1, param0, param3);
+        this.setBounds(0, param2, param1, param0, param3);
     }
 
     private final void a(int param0) {

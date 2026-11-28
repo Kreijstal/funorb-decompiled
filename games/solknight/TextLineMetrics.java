@@ -113,7 +113,7 @@ final class TextLineMetrics {
           je.a(false);
           return;
         }
-        BitPacketBuffer var2 = te.field_N;
+        BitPacketBuffer var2 = AlphaWidgetContainer.field_N;
         var2.readInt(true);
         var2.readInt(true);
         var2.readInt(true);

@@ -76,8 +76,8 @@ final class c extends UiWidget {
         this(param0, param1, param2, param3, param4, param5, param6, param5 >> 1 & 8355711, param6 >> 1 & 8355711);
     }
 
-    final void b(int param0, int param1, int param2, int param3, int param4) {
-        super.b(param0, param1, param2, param3, param4);
+    final void setBounds(int param0, int param1, int param2, int param3, int param4) {
+        super.setBounds(param0, param1, param2, param3, param4);
         this.a(-277997311);
     }
 
@@ -91,7 +91,7 @@ final class c extends UiWidget {
         this.field_G = new Sprite(this.field_x >> 1, this.field_x);
     }
 
-    final void a(int param0, int param1, int param2, UiWidget param3) {
+    final void updatePointer(int param0, int param1, int param2, UiWidget param3) {
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         String stackIn_9_2 = null;
@@ -123,7 +123,7 @@ final class c extends UiWidget {
         }
     }
 
-    final void a(int param0, int param1, int param2, int param3) {
+    final void drawWidget(int param0, int param1, int param2, int param3) {
         if (0 != param1) {
           return;
         }
@@ -131,7 +131,7 @@ final class c extends UiWidget {
         int var6 = param0 + this.field_j;
         this.a(param3, var6, this.field_S[0], var5);
         if (this.field_R < 65536) {
-          kf.a((byte) 97, var5 + (this.field_t * this.field_R >> 16), var6, var5 + this.field_t, this.field_x + var6);
+          ModalDialog.a((byte) 97, var5 + (this.field_t * this.field_R >> 16), var6, var5 + this.field_t, this.field_x + var6);
           this.a(0, var6, this.field_S[1], var5);
           MidiPcmStream.e(4096);
         }
@@ -151,7 +151,7 @@ final class c extends UiWidget {
         var8 = SolKnight.field_L ? 1 : 0;
         try {
           var5_int = this.field_t + param3;
-          kf.a((byte) 97, param3 + this.field_P.field_p, param1, -this.field_P.field_p + var5_int, this.field_x + param1);
+          ModalDialog.a((byte) 97, param3 + this.field_P.field_p, param1, -this.field_P.field_p + var5_int, this.field_x + param1);
           for (var6 = -this.field_D + param3; var5_int > var6; var6 = var6 + param2.field_p) {
             param2.draw(var6, param1);
           }
@@ -257,7 +257,7 @@ final class c extends UiWidget {
         this.field_F = param8;
         this.field_O = param5;
         this.field_N = param4;
-        this.b(param3, param2, param0, 0, param1);
+        this.setBounds(param3, param2, param0, 0, param1);
     }
 
     private final Sprite a(byte param0) {

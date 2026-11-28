@@ -1,13 +1,13 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class wa implements de {
+final class wa implements WidgetRenderer {
     private BitmapFont field_b;
     private int field_d;
     static long field_a;
     private int field_c;
 
-    public final void a(int param0, boolean param1, int param2, int param3, UiWidget param4) {
+    public final void paintWidget(int param0, boolean param1, int param2, int param3, UiWidget param4) {
         int stackIn_6_0 = 0;
         RuntimeException stackIn_21_0 = null;
         StringBuilder stackIn_21_1 = null;
@@ -25,14 +25,14 @@ final class wa implements de {
         try {
           var7 = -40 / ((2 - param2) / 54);
           if (!param4.field_h &&
-            !param4.d(true)) {
+            !param4.isFocused(true)) {
             stackIn_6_0 = 2188450;
           } else {
             stackIn_6_0 = 3249872;
           }
           var6_int = stackIn_6_0;
           this.field_b.drawParagraph("<u=" + Integer.toString(var6_int, 16) + ">" + param4.field_k + "</u>", param0 + param4.field_s, param4.field_j + param3, param4.field_i, param4.field_f, var6_int, -1, this.field_d, this.field_c, this.field_b.field_p + this.field_b.field_q);
-          if (param4.d(true)) {
+          if (param4.isFocused(true)) {
             var8 = this.field_b.stringWidth(param4.field_k);
             var9 = this.field_b.field_q + this.field_b.field_p;
             var10 = param0 + param4.field_s;
@@ -79,7 +79,7 @@ final class wa implements de {
         if (!param0) {
           return;
         }
-        ti.field_b.a(0, (byte) -98, 0);
+        ti.field_b.drawAllLayers(0, (byte) -98, 0);
     }
 
     final static void a(int param0, int param1, int param2, int param3, String[] param4, java.applet.Applet param5) {

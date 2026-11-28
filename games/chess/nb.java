@@ -236,7 +236,7 @@ final class nb extends ci {
             for (var7 = 0; var6 > var7; var7++) {
               var9[var7] = ((PacketBuffer) ((Object) var5)).readInt((byte) -99);
             }
-            var15 = (bk) (bh.field_D.beginBackward(-18110));
+            var15 = (bk) (ArrayWidgetContainer.field_D.beginBackward(-18110));
             if (var15 == null) {
               ImageProducerRasterBuffer.d(65280);
               return;
@@ -249,7 +249,7 @@ final class nb extends ci {
           }
           if (var2 != 1) {
             if (var2 == 2) {
-              var13 = (bk) (bh.field_D.beginBackward(-18110));
+              var13 = (bk) (ArrayWidgetContainer.field_D.beginBackward(-18110));
               if (var13 == null) {
                 ImageProducerRasterBuffer.d(65280);
                 return;

@@ -118,7 +118,7 @@ final class lc {
           if (param3 != 12789) {
             return;
           }
-          od.field_I = e.field_q;
+          DropTargetWidgetContainer.field_I = e.field_q;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

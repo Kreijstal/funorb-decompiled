@@ -471,12 +471,12 @@ final class MidiPcmStream extends PcmStream {
         RuntimeException var1_ref = null;
         var4 = SolKnight.field_L ? 1 : 0;
         try {
-          var1 = i.field_J;
+          var1 = ModalDialogHost.field_J;
           synchronized (var1) {
             if (param0 != -11214) {
               return;
             }
-            pf.field_a = si.field_B;
+            pf.field_a = SingleChildWidgetContainer.field_B;
             MouseWheelInput.field_c = MouseWheelInput.field_c + 1;
             if (0 > fg.field_b) {
               for (var2 = 0; var2 < 112; var2++) {
@@ -494,7 +494,7 @@ final class MidiPcmStream extends PcmStream {
                 fh.field_d[var2] = true;
               }
             }
-            si.field_B = rh.field_e;
+            SingleChildWidgetContainer.field_B = rh.field_e;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

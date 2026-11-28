@@ -47,11 +47,11 @@ final class od {
         var3 = DungeonAssault.field_K;
         if (null != DisplayNameSelectionPanel.field_L) {
           if (la.field_g == 0) {
-            ii.field_G = -1;
+            DequeWidgetContainer.field_G = -1;
             a.field_i = -1;
           } else {
-            if (ii.field_G != -1) {
-              var1 = -ii.field_G + hj.field_S;
+            if (DequeWidgetContainer.field_G != -1) {
+              var1 = -DequeWidgetContainer.field_G + hj.field_S;
               var2 = eh.field_h - a.field_i;
               DefaultTextWidgetRenderer.field_p = DefaultTextWidgetRenderer.field_p + var1;
               ed.field_P = ed.field_P + var2;
@@ -64,13 +64,13 @@ final class od {
               if (ed.field_P < 0) {
                 ed.field_P = 0;
               }
-              ii.field_G = hj.field_S;
+              DequeWidgetContainer.field_G = hj.field_S;
               if (480 < ed.field_P) {
                 ed.field_P = 480;
               }
               a.field_i = eh.field_h;
             } else {
-              ii.field_G = -1;
+              DequeWidgetContainer.field_G = -1;
               a.field_i = -1;
             }
           }
@@ -78,8 +78,8 @@ final class od {
             return false;
           }
           if (no.field_d != 0 &&
-            -1 == ii.field_G) {
-            ii.field_G = lc.field_c;
+            -1 == DequeWidgetContainer.field_G) {
+            DequeWidgetContainer.field_G = lc.field_c;
             a.field_i = AchievementIconEntry.field_k;
             if (param0 > -50) {
               field_b = (String[]) null;
@@ -165,11 +165,11 @@ final class od {
         }
         if (null != jn.field_l) {
           if (la.field_g == 0) {
-            ii.field_G = -1;
+            DequeWidgetContainer.field_G = -1;
             a.field_i = -1;
           } else {
-            if (ii.field_G != -1) {
-              var1Lifetime1 = -ii.field_G + hj.field_S;
+            if (DequeWidgetContainer.field_G != -1) {
+              var1Lifetime1 = -DequeWidgetContainer.field_G + hj.field_S;
               var2Lifetime1 = eh.field_h - a.field_i;
               DefaultTextWidgetRenderer.field_p = DefaultTextWidgetRenderer.field_p + var1Lifetime1;
               ed.field_P = ed.field_P + var2Lifetime1;
@@ -182,13 +182,13 @@ final class od {
               if (ed.field_P < 0) {
                 ed.field_P = 0;
               }
-              ii.field_G = hj.field_S;
+              DequeWidgetContainer.field_G = hj.field_S;
               if (480 < ed.field_P) {
                 ed.field_P = 480;
               }
               a.field_i = eh.field_h;
             } else {
-              ii.field_G = -1;
+              DequeWidgetContainer.field_G = -1;
               a.field_i = -1;
             }
           }
@@ -196,8 +196,8 @@ final class od {
             return false;
           }
           if (no.field_d != 0 &&
-            -1 == ii.field_G) {
-            ii.field_G = lc.field_c;
+            -1 == DequeWidgetContainer.field_G) {
+            DequeWidgetContainer.field_G = lc.field_c;
             a.field_i = AchievementIconEntry.field_k;
             if (param0 > -50) {
               field_b = (String[]) null;
@@ -288,11 +288,11 @@ final class od {
           return true;
         }
         if (la.field_g == 0) {
-          ii.field_G = -1;
+          DequeWidgetContainer.field_G = -1;
           a.field_i = -1;
         } else {
-          if (ii.field_G != -1) {
-            var1Lifetime2 = -ii.field_G + hj.field_S;
+          if (DequeWidgetContainer.field_G != -1) {
+            var1Lifetime2 = -DequeWidgetContainer.field_G + hj.field_S;
             var2Lifetime2 = eh.field_h - a.field_i;
             DefaultTextWidgetRenderer.field_p = DefaultTextWidgetRenderer.field_p + var1Lifetime2;
             ed.field_P = ed.field_P + var2Lifetime2;
@@ -305,13 +305,13 @@ final class od {
             if (ed.field_P < 0) {
               ed.field_P = 0;
             }
-            ii.field_G = hj.field_S;
+            DequeWidgetContainer.field_G = hj.field_S;
             if (480 < ed.field_P) {
               ed.field_P = 480;
             }
             a.field_i = eh.field_h;
           } else {
-            ii.field_G = -1;
+            DequeWidgetContainer.field_G = -1;
             a.field_i = -1;
           }
         }
@@ -319,8 +319,8 @@ final class od {
           return false;
         }
         if (no.field_d != 0 &&
-          -1 == ii.field_G) {
-          ii.field_G = lc.field_c;
+          -1 == DequeWidgetContainer.field_G) {
+          DequeWidgetContainer.field_G = lc.field_c;
           a.field_i = AchievementIconEntry.field_k;
           if (param0 > -50) {
             field_b = (String[]) null;

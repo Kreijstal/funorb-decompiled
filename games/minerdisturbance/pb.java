@@ -65,7 +65,7 @@ final class pb {
         if (!fh.field_d &&
           CipherPacketBuffer.field_w <= hk.field_e &&
           qn.field_K + CipherPacketBuffer.field_w > hk.field_e) {
-          return se.field_K;
+          return DropTargetWidgetContainer.field_K;
         }
         if (param0) {
           field_A = (String) null;
@@ -177,12 +177,12 @@ final class pb {
     }
 
     final static void a(int param0) {
-        mb.field_b.n(21974);
+        mb.field_b.closeAllDialogs(21974);
         if (AccountRequestState.field_e == null) {
           AccountRequestState.field_e = new jl(mb.field_b, ic.field_i);
         }
         int var1 = 67 / ((-18 - param0) / 56);
-        mb.field_b.b(1, AccountRequestState.field_e);
+        mb.field_b.showDialog(1, AccountRequestState.field_e);
     }
 
     public static void clearStaticReferences(int param0) {

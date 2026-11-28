@@ -14,7 +14,7 @@ final class nf implements java.awt.event.KeyListener, java.awt.event.FocusListen
         RuntimeException var2 = null;
         try {
           if (GzipDecompressor.field_c != null) {
-            ak.field_y = 0;
+            SingleChildWidgetContainer.field_y = 0;
             var2_int = param0.getKeyCode();
             if (var2_int >= 0 &&
               RichTextLayout.field_o.length > var2_int) {
@@ -60,7 +60,7 @@ final class nf implements java.awt.event.KeyListener, java.awt.event.FocusListen
               vf.isSupportedCp1252KeyCharacter(-13891, (char) var2_int)) {
               var3 = Bounce.field_F + 1 & 127;
               if (oh.field_a != var3) {
-                pf.field_A[Bounce.field_F] = -1;
+                ModalDialogHost.field_A[Bounce.field_F] = -1;
                 fk.field_b[Bounce.field_F] = (char)var2_int;
                 Bounce.field_F = var3;
               }
@@ -85,7 +85,7 @@ final class nf implements java.awt.event.KeyListener, java.awt.event.FocusListen
           if (GzipDecompressor.field_c == null) {
             return;
           }
-          ak.field_y = 0;
+          SingleChildWidgetContainer.field_y = 0;
           var2_int = param0.getKeyCode();
           if (0 <= var2_int &&
             RichTextLayout.field_o.length > var2_int) {
@@ -107,7 +107,7 @@ final class nf implements java.awt.event.KeyListener, java.awt.event.FocusListen
           if (0 <= var2_int) {
             var3 = Bounce.field_F + 1 & 127;
             if (var3 != oh.field_a) {
-              pf.field_A[Bounce.field_F] = var2_int;
+              ModalDialogHost.field_A[Bounce.field_F] = var2_int;
               fk.field_b[Bounce.field_F] = (char)0;
               Bounce.field_F = var3;
             }

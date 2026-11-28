@@ -82,7 +82,7 @@ final class mb {
 
     final void a(int param0, java.applet.Applet param1) {
         try {
-          ab.a(param1, 31536000L, "jagex-last-login-method", param0 - 53, this.field_e);
+          ModalDialog.a(param1, 31536000L, "jagex-last-login-method", param0 - 53, this.field_e);
           if (param0 != 1) {
             this.field_e = (String) null;
           }

@@ -197,7 +197,7 @@ final class MusicPatchPcmStream extends PcmStream {
     }
 
     final static void c(int param0) {
-        lq.g(param0 - 20756);
+        ArrayWidgetContainer.g(param0 - 20756);
         if (param0 != 20757) {
           MusicPatchPcmStream.b(81);
         }

@@ -62,7 +62,7 @@ final class MixedSupport123 {
             integerLocal8 = (int)((10999L - longLocal7) / 1000L);
             if (0 >= integerLocal8) {
               integerLocal6 = 2;
-              UiComponentPart003.performAction0163(-79, 5, true);
+              ModalDialog.performAction0163(-79, 5, true);
             }
           }
           stackIntegerLocal1 = integerLocal6;

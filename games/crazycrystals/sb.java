@@ -63,17 +63,17 @@ final class sb extends InteractiveWidget {
         }
     }
 
-    final void a(qm param0, int param1, int param2, int param3) {
+    final void updatePointer(UiWidget param0, int param1, int param2, int param3) {
         try {
           this.field_D = this.field_D + 1;
           int var5_int = -82 % ((param1 + 50) / 59);
-          super.a(param0, -121, param2, param3);
+          super.updatePointer(param0, -121, param2, param3);
         } catch (RuntimeException runtimeException) {
           throw dn.wrapClientException((Throwable) ((Object) runtimeException), "sb.N(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
-    final boolean a(boolean param0, qm param1) {
+    final boolean takeFocus(boolean param0, UiWidget param1) {
         RuntimeException var3 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -132,7 +132,7 @@ final class sb extends InteractiveWidget {
         }
     }
 
-    final void a(int param0, byte param1, int param2, int param3) {
+    final void drawWidget(int param0, byte param1, int param2, int param3) {
         int var5;
         int var6;
         oi var8;
@@ -153,7 +153,7 @@ final class sb extends InteractiveWidget {
         int var10Lifetime2;
         oi var8Lifetime1;
         var11 = CrazyCrystals.field_B;
-        super.a(param0, (byte) -110, param2, param3);
+        super.drawWidget(param0, (byte) -110, param2, param3);
         if (param3 != 0) {
           return;
         }

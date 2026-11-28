@@ -3,12 +3,12 @@
  */
 import java.util.*;
 
-class WidgetContainer extends UiWidget implements oh {
+class WidgetContainer extends UiWidget implements WidgetContainerMarker {
     static int field_C;
     static String field_A;
     IntrusiveDeque field_B;
 
-    private final void c(boolean param0) {
+    private final void refreshChildLayouts(boolean param0) {
         int var4 = SolKnight.field_L ? 1 : 0;
         ck var2 = new ck(this.field_B);
         if (!param0) {
@@ -16,12 +16,12 @@ class WidgetContainer extends UiWidget implements oh {
         }
         UiWidget var3 = (UiWidget) (var2.a((byte) 114));
         while (var3 != null) {
-          var3.d(1);
+          var3.refreshLayout(1);
           var3 = (UiWidget) (var2.c(124));
         }
     }
 
-    final int f(int param0) {
+    final int getMaximumRenderLayer(int param0) {
         int var6 = 0;
         int var7 = SolKnight.field_L ? 1 : 0;
         int var2 = 0;
@@ -29,7 +29,7 @@ class WidgetContainer extends UiWidget implements oh {
         UiWidget var4 = (UiWidget) (var3.a((byte) -59));
         int var5 = 21 / ((param0 - 17) / 43);
         while (var4 != null) {
-          var6 = var4.f(74);
+          var6 = var4.getMaximumRenderLayer(74);
           if (var2 < var6) {
             var2 = var6;
           }
@@ -38,16 +38,16 @@ class WidgetContainer extends UiWidget implements oh {
         return var2;
     }
 
-    WidgetContainer(int param0, int param1, int param2, int param3, j param4) {
-        super(param0, param1, param2, param3, param4, (dg) null);
+    WidgetContainer(int param0, int param1, int param2, int param3, WidgetRenderer param4) {
+        super(param0, param1, param2, param3, param4, (WidgetEventListener) null);
         this.field_B = new IntrusiveDeque();
     }
 
-    final void a(UiWidget param0, int param1) {
+    final void addChild(UiWidget param0, int param1) {
         try {
           if (param1 != 5411) {
             Hashtable var4 = (Hashtable) null;
-            this.a(24, 112, (StringBuilder) null, (Hashtable) null);
+            this.appendChildDebugTrees(24, 112, (StringBuilder) null, (Hashtable) null);
           }
           this.field_B.addFirst(param0, -7044);
         } catch (RuntimeException runtimeException) {
@@ -106,7 +106,7 @@ class WidgetContainer extends UiWidget implements oh {
         }
     }
 
-    private final void a(int param0, int param1, StringBuilder param2, Hashtable param3) {
+    private final void appendChildDebugTrees(int param0, int param1, StringBuilder param2, Hashtable param3) {
         StringBuilder discarded$3 = null;
         int var8 = 0;
         StringBuilder discarded$4 = null;
@@ -131,7 +131,7 @@ class WidgetContainer extends UiWidget implements oh {
             for (var8 = 0; var8 <= param0; var8++) {
               discarded$4 = param2.append(' ');
             }
-            var7.a(-81, param3, param2, param0 + 1);
+            var7.appendDebugTree(-81, param3, param2, param0 + 1);
             var7 = (UiWidget) (var5.c(115));
           }
           return;
@@ -155,11 +155,11 @@ class WidgetContainer extends UiWidget implements oh {
         }
     }
 
-    void a(int param0, int param1, int param2, int param3) {
+    void drawWidget(int param0, int param1, int param2, int param3) {
         int var7 = SolKnight.field_L ? 1 : 0;
         if (param1 == 0 &&
           this.field_w != null) {
-          this.field_w.a((byte) 116, param0, true, param2, (UiWidget) (this));
+          this.field_w.paintWidget((byte) 116, param0, true, param2, (UiWidget) (this));
         }
         if (param3 != 0) {
           return;
@@ -167,12 +167,12 @@ class WidgetContainer extends UiWidget implements oh {
         ck var5 = new ck(this.field_B);
         UiWidget var6 = (UiWidget) (var5.a(-25119));
         while (var6 != null) {
-          var6.a(this.field_j + param0, param1, param2 + this.field_m, 0);
+          var6.drawWidget(this.field_j + param0, param1, param2 + this.field_m, 0);
           var6 = (UiWidget) (var5.b(640));
         }
     }
 
-    final boolean a(int param0, int param1, boolean param2, int param3, int param4, int param5, UiWidget param6) {
+    final boolean pointerPressed(int param0, int param1, boolean param2, int param3, int param4, int param5, UiWidget param6) {
         RuntimeException var8 = null;
         UiWidget var9 = null;
         int var10 = 0;
@@ -187,7 +187,7 @@ class WidgetContainer extends UiWidget implements oh {
           var9 = (UiWidget) (var11.a((byte) 125));
           while (var9 != null) {
             if (var9.isLinked(false)) {
-              if (!var9.a(param0, param1 + this.field_m, false, param3, param4, param5 + this.field_j, param6)) {
+              if (!var9.pointerPressed(param0, param1 + this.field_m, false, param3, param4, param5 + this.field_j, param6)) {
                 var9 = (UiWidget) (var11.c(122));
                 continue;
               }
@@ -198,7 +198,7 @@ class WidgetContainer extends UiWidget implements oh {
           if (!param2) {
             return false;
           }
-          this.d((byte) 97);
+          this.getFocusedChild((byte) 97);
           return false;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -214,11 +214,11 @@ class WidgetContainer extends UiWidget implements oh {
         }
     }
 
-    final boolean b(boolean param0) {
+    final boolean isFocused(boolean param0) {
         if (!param0) {
           return true;
         }
-        return null != this.d((byte) -48) ? true : false;
+        return null != this.getFocusedChild((byte) -48) ? true : false;
     }
 
     public static void resetStaticState(boolean param0) {
@@ -228,7 +228,7 @@ class WidgetContainer extends UiWidget implements oh {
         }
     }
 
-    final boolean b(int param0, UiWidget param1) {
+    final boolean focusNextChild(int param0, UiWidget param1) {
         RuntimeException var3 = null;
         UiWidget var4 = null;
         ck var5 = null;
@@ -250,12 +250,12 @@ class WidgetContainer extends UiWidget implements oh {
           var8 = new ck(this.field_B);
           var4 = (UiWidget) (var8.a((byte) 112));
           while (var4 != null) {
-            if (var4.b(true)) {
+            if (var4.isFocused(true)) {
               var5 = new ck(this.field_B);
               var5.a(26229, var4);
               var6 = (UiWidget) (var5.c(121));
               while (var6 != null) {
-                if (!var6.a(-1463, param1)) {
+                if (!var6.takeFocus(-1463, param1)) {
                   var6 = (UiWidget) (var5.c(125));
                   continue;
                 }
@@ -279,7 +279,7 @@ class WidgetContainer extends UiWidget implements oh {
         }
     }
 
-    boolean a(char param0, byte param1, int param2, UiWidget param3) {
+    boolean handleKey(char param0, byte param1, int param2, UiWidget param3) {
         RuntimeException var5 = null;
         int var6 = 0;
         int var7 = 0;
@@ -296,8 +296,8 @@ class WidgetContainer extends UiWidget implements oh {
           var8 = (UiWidget) (var9.a((byte) 77));
           while (var8 != null) {
             if (var8.isLinked(false)) {
-              if (var8.b(true) &&
-                var8.a(param0, (byte) 88, param2, param3)) {
+              if (var8.isFocused(true) &&
+                var8.handleKey(param0, (byte) 88, param2, param3)) {
                 return true;
               }
               var8 = (UiWidget) (var9.c(115));
@@ -311,9 +311,9 @@ class WidgetContainer extends UiWidget implements oh {
             return false;
           }
           if (fh.field_d[81]) {
-            stackIn_15_0 = this.a((byte) -105, param3);
+            stackIn_15_0 = this.focusPreviousChild((byte) -105, param3);
           } else {
-            stackIn_15_0 = this.b(112, param3);
+            stackIn_15_0 = this.focusNextChild(112, param3);
           }
           return stackIn_15_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -330,7 +330,7 @@ class WidgetContainer extends UiWidget implements oh {
         }
     }
 
-    final StringBuilder a(int param0, Hashtable param1, StringBuilder param2, int param3) {
+    final StringBuilder appendDebugTree(int param0, Hashtable param1, StringBuilder param2, int param3) {
         RuntimeException var5 = null;
         UiWidget var6 = null;
         StringBuilder stackIn_6_0 = null;
@@ -341,13 +341,13 @@ class WidgetContainer extends UiWidget implements oh {
         String stackIn_13_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (this.a(param2, -1, param1, param3)) {
-            this.b(param2, -111, param1, param3);
-            this.a(param3, -31, param2, param1);
+          if (this.beginDebugTreeEntry(param2, -1, param1, param3)) {
+            this.appendDebugProperties(param2, -111, param1, param3);
+            this.appendChildDebugTrees(param3, -31, param2, param1);
           }
           if (param0 > -41) {
             var6 = (UiWidget) null;
-            this.a('￯', (byte) 103, -3, (UiWidget) null);
+            this.handleKey('￯', (byte) 103, -3, (UiWidget) null);
           }
           stackIn_6_0 = (StringBuilder) (param2);
           return stackIn_6_0;
@@ -371,7 +371,7 @@ class WidgetContainer extends UiWidget implements oh {
         }
     }
 
-    final void a(int param0, int param1, UiWidget param2, int param3, int param4, int param5) {
+    final void pointerReleased(int param0, int param1, UiWidget param2, int param3, int param4, int param5) {
         RuntimeException runtimeException = null;
         ck var7 = null;
         UiWidget var8 = null;
@@ -389,7 +389,7 @@ class WidgetContainer extends UiWidget implements oh {
           var8 = (UiWidget) (var7.a((byte) 93));
           while (var8 != null) {
             if (var8.isLinked(false)) {
-              var8.a(param0, param1 + 0, param2, this.field_j + param3, param4, this.field_m + param5);
+              var8.pointerReleased(param0, param1 + 0, param2, this.field_j + param3, param4, this.field_m + param5);
               var8 = (UiWidget) (var7.c(param1 ^ 127));
               continue;
             }
@@ -410,7 +410,7 @@ class WidgetContainer extends UiWidget implements oh {
         }
     }
 
-    final boolean a(int param0, UiWidget param1, int param2, int param3, int param4, int param5, byte param6) {
+    final boolean handleWheel(int param0, UiWidget param1, int param2, int param3, int param4, int param5, byte param6) {
         ck var8 = null;
         RuntimeException var8_ref = null;
         UiWidget var9 = null;
@@ -425,8 +425,8 @@ class WidgetContainer extends UiWidget implements oh {
           var9 = (UiWidget) (var8.a((byte) 98));
           while (var9 != null) {
             if (var9.isLinked(false)) {
-              if (var9.b(true) &&
-                var9.a(param0, param1, param2, param3, param4, param5, (byte) 50)) {
+              if (var9.isFocused(true) &&
+                var9.handleWheel(param0, param1, param2, param3, param4, param5, (byte) 50)) {
                 return true;
               }
               var9 = (UiWidget) (var8.c(118));
@@ -473,21 +473,21 @@ class WidgetContainer extends UiWidget implements oh {
         return null;
     }
 
-    final void g(int param0) {
+    final void blur(int param0) {
         int var4 = SolKnight.field_L ? 1 : 0;
         if (param0 != 0) {
           UiWidget var5 = (UiWidget) null;
-          this.a((byte) 3, (UiWidget) null);
+          this.focusPreviousChild((byte) 3, (UiWidget) null);
         }
         ck var2 = new ck(this.field_B);
         UiWidget var3 = (UiWidget) (var2.a((byte) 81));
         while (var3 != null) {
-          var3.g(0);
+          var3.blur(0);
           var3 = (UiWidget) (var2.c(115));
         }
     }
 
-    final boolean a(int param0, UiWidget param1) {
+    final boolean takeFocus(int param0, UiWidget param1) {
         ck var3 = null;
         RuntimeException var3_ref = null;
         UiWidget var4 = null;
@@ -508,7 +508,7 @@ class WidgetContainer extends UiWidget implements oh {
               this.field_B = (IntrusiveDeque) null;
               return false;
             }
-            if (!var4.a(-1463, param1)) {
+            if (!var4.takeFocus(-1463, param1)) {
               var4 = (UiWidget) (var3.c(121));
               continue;
             }
@@ -568,15 +568,15 @@ class WidgetContainer extends UiWidget implements oh {
     }
 
     final static void a(int param0) {
-        ne.field_g = te.field_N.readString(92);
+        ne.field_g = AlphaWidgetContainer.field_N.readString(92);
         if (param0 > -100) {
           return;
         }
         CharSequence var2 = (CharSequence) ((Object) ne.field_g);
-        kf.field_D = FullscreenFocusCanvas.a(var2, -2);
+        ModalDialog.field_D = FullscreenFocusCanvas.a(var2, -2);
     }
 
-    void a(int param0, int param1, int param2, UiWidget param3) {
+    void updatePointer(int param0, int param1, int param2, UiWidget param3) {
         RuntimeException runtimeException = null;
         ck var5 = null;
         UiWidget var6 = null;
@@ -587,12 +587,12 @@ class WidgetContainer extends UiWidget implements oh {
         RuntimeException decompiledCaughtException = null;
         var7 = SolKnight.field_L ? 1 : 0;
         try {
-          super.a(param0, param1, param2, param3);
+          super.updatePointer(param0, param1, param2, param3);
           var5 = new ck(this.field_B);
           var6 = (UiWidget) (var5.a((byte) 117));
           while (var6 != null) {
             if (var6.isLinked(false)) {
-              var6.a(param0 + this.field_m, 18874, param2 + this.field_j, param3);
+              var6.updatePointer(param0 + this.field_m, 18874, param2 + this.field_j, param3);
               var6 = (UiWidget) (var5.c(param1 ^ 18880));
               continue;
             }
@@ -613,7 +613,7 @@ class WidgetContainer extends UiWidget implements oh {
         }
     }
 
-    final boolean a(byte param0, UiWidget param1) {
+    final boolean focusPreviousChild(byte param0, UiWidget param1) {
         ck var3 = null;
         RuntimeException var3_ref = null;
         UiWidget var4 = null;
@@ -635,12 +635,12 @@ class WidgetContainer extends UiWidget implements oh {
           }
           var4 = (UiWidget) (var3.a(-25119));
           while (var4 != null) {
-            if (var4.b(true)) {
+            if (var4.isFocused(true)) {
               var5 = new ck(this.field_B);
               var5.a(var4, 118);
               var6 = (UiWidget) (var5.b(640));
               while (var6 != null) {
-                if (var6.a(-1463, param1)) {
+                if (var6.takeFocus(-1463, param1)) {
                   return true;
                 }
                 var6 = (UiWidget) (var5.b(640));
@@ -663,12 +663,12 @@ class WidgetContainer extends UiWidget implements oh {
         }
     }
 
-    final void b(int param0, int param1, int param2, int param3, int param4) {
-        super.b(param0, param1, param2, param3, param4);
-        this.c(true);
+    final void setBounds(int param0, int param1, int param2, int param3, int param4) {
+        super.setBounds(param0, param1, param2, param3, param4);
+        this.refreshChildLayouts(true);
     }
 
-    UiWidget d(byte param0) {
+    UiWidget getFocusedChild(byte param0) {
         ck var2;
         UiWidget var3;
         int var4;
@@ -679,7 +679,7 @@ class WidgetContainer extends UiWidget implements oh {
         var2 = new ck(this.field_B);
         var3 = (UiWidget) (var2.a((byte) -119));
         while (var3 != null) {
-          if (var3.b(true)) {
+          if (var3.isFocused(true)) {
             return var3;
           }
           var3 = (UiWidget) (var2.c(121));

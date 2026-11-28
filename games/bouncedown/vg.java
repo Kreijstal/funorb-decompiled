@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class vg implements fc {
+final class vg implements WidgetRenderer {
     private int field_b;
     private BitmapFont field_d;
     static String field_f;
@@ -65,14 +65,14 @@ final class vg implements fc {
           }
         }
         if (!param0) {
-          jg.field_D = AccountRequestState.a(80, -2808, var8);
+          AlphaWidgetContainer.field_D = AccountRequestState.a(80, -2808, var8);
           uf.field_c = null;
           return new bl(param0);
         }
         var5 = var8.readUnsignedShort(-1640531527);
         try {
           var9 = ag.field_a.a(var5, (byte) -127);
-          jg.field_D = var9.e(99);
+          AlphaWidgetContainer.field_D = var9.e(99);
           if (!g.field_i.equals(ja.field_b)) {
             stackIn_25_0 = var9.field_s;
           } else {
@@ -83,7 +83,7 @@ final class vg implements fc {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6 = (Exception) (Object) decompiledCaughtException;
           ValidatedTextField.a((Throwable) ((Object) var6), (byte) 100, "CC1");
-          jg.field_D = null;
+          AlphaWidgetContainer.field_D = null;
           uf.field_c = null;
           return new bl(param0);
         }
@@ -119,7 +119,7 @@ final class vg implements fc {
         }
     }
 
-    public final void a(int param0, lk param1, byte param2, boolean param3, int param4) {
+    public final void paintWidget(int param0, UiWidget param1, byte param2, boolean param3, int param4) {
         int var11 = 0;
         RuntimeException var6 = null;
         int var7 = 0;
@@ -128,7 +128,7 @@ final class vg implements fc {
         int var10 = 0;
         int var12 = 0;
         d var13 = null;
-        lk stackIn_4_0 = null;
+        UiWidget stackIn_4_0 = null;
         RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
         String stackIn_15_2 = null;
@@ -138,7 +138,7 @@ final class vg implements fc {
           if (!(param1 instanceof d)) {
             stackIn_4_0 = null;
           } else {
-            stackIn_4_0 = (lk) (param1);
+            stackIn_4_0 = (UiWidget) (param1);
           }
           var13 = (d) (stackIn_4_0);
           SoftwareRasterizer.fillRectangle(param1.field_r + param4, param1.field_i + param0, param1.field_k, param1.field_m, this.field_b);

@@ -52,7 +52,7 @@ final class SecondaryNodeDeque implements Iterable {
           var1 = th.field_g;
           synchronized (var1) {
             InteractiveWidget.field_F = InteractiveWidget.field_F + 1;
-            BattleUnit.field_V = d.field_M;
+            BattleUnit.field_V = ModalDialogHost.field_M;
             if (0 > dj.field_e) {
               for (var2 = 0; var2 < 112; var2++) {
                 bh.field_e[var2] = false;
@@ -69,7 +69,7 @@ final class SecondaryNodeDeque implements Iterable {
                 bh.field_e[~var2] = false;
               }
             }
-            d.field_M = u.field_g;
+            ModalDialogHost.field_M = u.field_g;
           }
           if (param0 != 1) {
             SecondaryNodeDeque.clearStaticReferences(122);

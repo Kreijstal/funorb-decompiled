@@ -1,0 +1,204 @@
+/*
+ * Decompiled by CFR-JS 0.4.0.
+ */
+abstract class ModalDialog extends WidgetContainer {
+    private ModalDialogHost field_C;
+    boolean field_D;
+    private int field_B;
+
+    abstract void b(int param0, int param1, byte param2);
+
+    ModalDialog(ModalDialogHost param0, int param1, int param2) {
+        super(qj.field_f - param1 >> 1, -param2 + RasterBuffer.field_h >> 1, param1, param2, (WidgetRenderer) null);
+        try {
+          this.field_C = param0;
+          this.field_D = false;
+          this.field_B = 0;
+        } catch (RuntimeException runtimeException) {
+          throw RichTextWidget.wrapThrowable((Throwable) ((Object) runtimeException), "bb.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+        }
+    }
+
+    final void setCenteredSize(int param0, byte param1, int param2) {
+        if (param1 == -25) {
+          this.setBounds((byte) 127, qj.field_f - param0 >> 1, -param2 + RasterBuffer.field_h >> 1, param2, param0);
+          return;
+        }
+    }
+
+    boolean snapDialogAnimation(byte param0) {
+        this.field_B = this.getTargetAlpha(256);
+        if (param0 <= 114) {
+          this.field_D = false;
+          if (0 != this.field_B) {
+            return false;
+          }
+          if (!this.field_D) {
+            return true;
+          }
+          return false;
+        }
+        if (0 != this.field_B) {
+          return false;
+        }
+        if (!this.field_D) {
+          return true;
+        }
+        return false;
+    }
+
+    final UiWidget getFocusedChild(int param0) {
+        UiWidget var2 = super.getFocusedChild(param0 ^ param0);
+        if (var2 != null) {
+          return var2;
+        }
+        return (UiWidget) (this);
+    }
+
+    private final int getTargetAlpha(int param0) {
+        if (param0 == 256) {
+          return !this.field_D ? 0 : this.field_C.getTopOpenDialog(0) == this ? 256 : 0;
+        }
+        this.field_C = (ModalDialogHost) null;
+        return !this.field_D ? 0 : this.field_C.getTopOpenDialog(0) == this ? 256 : 0;
+    }
+
+    boolean advanceDialogAnimation(int param0) {
+        boolean stackIn_11_0 = false;
+        boolean stackIn_20_0 = false;
+        boolean stackIn_32_0 = false;
+        boolean stackIn_38_0 = false;
+        int var2;
+        int var3;
+        var2 = this.getTargetAlpha(256);
+        var3 = var2 - this.field_B;
+        if (var3 > 0) {
+          this.field_B = this.field_B + (7 + var3) / 8;
+          if (0 > var3) {
+            this.field_B = this.field_B + (-16 + (var3 + 1)) / 16;
+          }
+          if (param0 == -7) {
+            if (this.field_B != 0) {
+              return false;
+            }
+            if (var2 != 0) {
+              return false;
+            }
+            stackIn_11_0 = !(this.field_D);
+            return stackIn_11_0;
+          }
+          this.field_B = 80;
+          if (this.field_B != 0) {
+            return false;
+          }
+          if (var2 != 0) {
+            return false;
+          }
+          stackIn_20_0 = !(this.field_D);
+          return stackIn_20_0;
+        }
+        if (0 > var3) {
+          this.field_B = this.field_B + (-16 + (var3 + 1)) / 16;
+        }
+        if (param0 == -7) {
+          stackIn_32_0 = (this.field_B == 0) && (var2 == 0) && (!this.field_D);
+          return stackIn_32_0;
+        }
+        this.field_B = 80;
+        stackIn_38_0 = (this.field_B == 0) && (var2 == 0) && (!this.field_D);
+        return stackIn_38_0;
+    }
+
+    final void drawWidget(int param0, byte param1, int param2, int param3) {
+        if (this.field_B == 0) {
+          return;
+        }
+        if (this.field_B >= 256) {
+          if (param0 == 0) {
+            this.b(this.y + param2, param3 + this.x, (byte) -117);
+            super.drawWidget(param0, (byte) -19, param2, param3);
+            return;
+          }
+          return;
+        }
+        if (null == RandomAccessCacheFile.field_b) {
+          RandomAccessCacheFile.field_b = new Sprite(this.width, this.height);
+          if (param1 <= -7) {
+            GzipDecompressor.a((byte) -109, RandomAccessCacheFile.field_b);
+            SoftwareRasterizer.clearRaster();
+            this.b(0, 0, (byte) -127);
+            super.drawWidget(param0, (byte) -64, -param2 - this.y, -this.x - param3);
+            r.a(126);
+            RandomAccessCacheFile.field_b.drawWithOpacity(param3 + this.x, this.y + param2, this.field_B);
+            return;
+          }
+          this.snapDialogAnimation((byte) -26);
+          GzipDecompressor.a((byte) -109, RandomAccessCacheFile.field_b);
+          SoftwareRasterizer.clearRaster();
+          this.b(0, 0, (byte) -127);
+          super.drawWidget(param0, (byte) -64, -param2 - this.y, -this.x - param3);
+          r.a(126);
+          RandomAccessCacheFile.field_b.drawWithOpacity(param3 + this.x, this.y + param2, this.field_B);
+          return;
+        }
+        if (this.width > RandomAccessCacheFile.field_b.field_s) {
+          RandomAccessCacheFile.field_b = new Sprite(this.width, this.height);
+          if (param1 <= -7) {
+            GzipDecompressor.a((byte) -109, RandomAccessCacheFile.field_b);
+            SoftwareRasterizer.clearRaster();
+            this.b(0, 0, (byte) -127);
+            super.drawWidget(param0, (byte) -64, -param2 - this.y, -this.x - param3);
+            r.a(126);
+            RandomAccessCacheFile.field_b.drawWithOpacity(param3 + this.x, this.y + param2, this.field_B);
+            return;
+          }
+          this.snapDialogAnimation((byte) -26);
+          GzipDecompressor.a((byte) -109, RandomAccessCacheFile.field_b);
+          SoftwareRasterizer.clearRaster();
+          this.b(0, 0, (byte) -127);
+          super.drawWidget(param0, (byte) -64, -param2 - this.y, -this.x - param3);
+          r.a(126);
+          RandomAccessCacheFile.field_b.drawWithOpacity(param3 + this.x, this.y + param2, this.field_B);
+          return;
+        }
+        if (this.height > RandomAccessCacheFile.field_b.field_t) {
+          RandomAccessCacheFile.field_b = new Sprite(this.width, this.height);
+          if (param1 <= -7) {
+            GzipDecompressor.a((byte) -109, RandomAccessCacheFile.field_b);
+            SoftwareRasterizer.clearRaster();
+            this.b(0, 0, (byte) -127);
+            super.drawWidget(param0, (byte) -64, -param2 - this.y, -this.x - param3);
+            r.a(126);
+            RandomAccessCacheFile.field_b.drawWithOpacity(param3 + this.x, this.y + param2, this.field_B);
+            return;
+          }
+          this.snapDialogAnimation((byte) -26);
+          GzipDecompressor.a((byte) -109, RandomAccessCacheFile.field_b);
+          SoftwareRasterizer.clearRaster();
+          this.b(0, 0, (byte) -127);
+          super.drawWidget(param0, (byte) -64, -param2 - this.y, -this.x - param3);
+          r.a(126);
+          RandomAccessCacheFile.field_b.drawWithOpacity(param3 + this.x, this.y + param2, this.field_B);
+          return;
+        }
+        if (param1 <= -7) {
+          GzipDecompressor.a((byte) -109, RandomAccessCacheFile.field_b);
+          SoftwareRasterizer.clearRaster();
+          this.b(0, 0, (byte) -127);
+          super.drawWidget(param0, (byte) -64, -param2 - this.y, -this.x - param3);
+          r.a(126);
+          RandomAccessCacheFile.field_b.drawWithOpacity(param3 + this.x, this.y + param2, this.field_B);
+          return;
+        }
+        this.snapDialogAnimation((byte) -26);
+        GzipDecompressor.a((byte) -109, RandomAccessCacheFile.field_b);
+        SoftwareRasterizer.clearRaster();
+        this.b(0, 0, (byte) -127);
+        super.drawWidget(param0, (byte) -64, -param2 - this.y, -this.x - param3);
+        r.a(126);
+        RandomAccessCacheFile.field_b.drawWithOpacity(param3 + this.x, this.y + param2, this.field_B);
+    }
+
+    static {
+    }
+}

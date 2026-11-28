@@ -110,7 +110,7 @@ class DualLinkNode extends IntrusiveNode {
               if (0 > param1) {
                 if (param1 == 3) {
                   if (hj.field_i) {
-                    stackIn_77_0 = (!kn.field_L) ? 0 : 1;
+                    stackIn_77_0 = (!SingleChildWidgetContainer.field_L) ? 0 : 1;
                   } else {
                     stackIn_77_0 = 0;
                   }
@@ -123,7 +123,7 @@ class DualLinkNode extends IntrusiveNode {
                 if (ae.field_e.length <= param1) {
                   if (param1 == 3) {
                     if (hj.field_i) {
-                      stackIn_95_0 = (!kn.field_L) ? 0 : 1;
+                      stackIn_95_0 = (!SingleChildWidgetContainer.field_L) ? 0 : 1;
                     } else {
                       stackIn_95_0 = 0;
                     }
@@ -136,7 +136,7 @@ class DualLinkNode extends IntrusiveNode {
                   ae.field_e[param1].d((byte) 59);
                   if (param1 == 3) {
                     if (hj.field_i) {
-                      stackIn_112_0 = (!kn.field_L) ? 0 : 1;
+                      stackIn_112_0 = (!SingleChildWidgetContainer.field_L) ? 0 : 1;
                     } else {
                       stackIn_112_0 = 0;
                     }
@@ -158,7 +158,7 @@ class DualLinkNode extends IntrusiveNode {
                     stackIn_15_1 = (param3) && (ak.a(true)) && (var4 == 0);
                     DebouncedFieldValidator.a(stackIn_14_0, stackIn_15_1);
                   } else {
-                    stackIn_22_0 = (!kn.field_L) ? 0 : 1;
+                    stackIn_22_0 = (!SingleChildWidgetContainer.field_L) ? 0 : 1;
                     var4 = stackIn_22_0;
                     stackIn_26_0 = -7093;
                     stackIn_27_1 = (param3) && (ak.a(true)) && (var4 == 0);
@@ -175,7 +175,7 @@ class DualLinkNode extends IntrusiveNode {
                     return;
                   }
                   if (hj.field_i) {
-                    stackIn_39_0 = (kn.field_L) ? 1 : 0;
+                    stackIn_39_0 = (SingleChildWidgetContainer.field_L) ? 1 : 0;
                   } else {
                     stackIn_39_0 = 0;
                   }
@@ -191,7 +191,7 @@ class DualLinkNode extends IntrusiveNode {
                 ae.field_e[param1].d((byte) 59);
                 if (param1 == 3) {
                   if (hj.field_i) {
-                    stackIn_58_0 = (!kn.field_L) ? 0 : 1;
+                    stackIn_58_0 = (!SingleChildWidgetContainer.field_L) ? 0 : 1;
                   } else {
                     stackIn_58_0 = 0;
                   }

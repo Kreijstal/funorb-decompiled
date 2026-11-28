@@ -533,8 +533,8 @@ final class RichTextLayout extends TextLayout {
                 }
               }
             }
-            rh.field_C = 2147483647;
-            kj.field_G = -2147483648;
+            ModalDialog.field_C = 2147483647;
+            ModalDialogHost.field_G = -2147483648;
             fe.field_g = -2147483648;
             ah.field_j = 2147483647;
             ConfirmedEmailAvailabilityValidator.field_n = 0;
@@ -666,8 +666,8 @@ final class RichTextLayout extends TextLayout {
             }
           }
         }
-        rh.field_C = 2147483647;
-        kj.field_G = -2147483648;
+        ModalDialog.field_C = 2147483647;
+        ModalDialogHost.field_G = -2147483648;
         fe.field_g = -2147483648;
         ah.field_j = 2147483647;
         ConfirmedEmailAvailabilityValidator.field_n = 0;

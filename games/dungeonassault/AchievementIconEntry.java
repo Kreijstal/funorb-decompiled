@@ -193,7 +193,7 @@ final class AchievementIconEntry extends IntrusiveNode {
             sa var3 = (sa) null;
             AchievementIconEntry.a((sa) null, 35);
           }
-          bj.field_G = true;
+          DropTargetWidgetContainer.field_G = true;
         } catch (RuntimeException runtimeException) {
           throw AccountServiceResult.wrapClientException((Throwable) ((Object) runtimeException), "hm.A(" + param0 + ')');
         }

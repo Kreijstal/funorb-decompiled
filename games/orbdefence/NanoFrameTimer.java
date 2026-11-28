@@ -70,7 +70,7 @@ final class NanoFrameTimer extends FrameTimer {
           if (param1 != -119) {
             NanoFrameTimer.clearDeclaredStaticReferences((byte) 111);
           }
-          var2 = jj.a(param1 + 14580, ProxyAuthenticationRequiredException.a(124, param0));
+          var2 = AlphaWidgetContainer.a(param1 + 14580, ProxyAuthenticationRequiredException.a(124, param0));
           if (var2 == null) {
             var2 = "";
           }
@@ -86,7 +86,7 @@ final class NanoFrameTimer extends FrameTimer {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw dd.wrapClientException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(')').toString());
+          throw DraggableWidgetContainer.wrapClientException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -136,7 +136,7 @@ final class NanoFrameTimer extends FrameTimer {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw dd.wrapClientException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
+          throw DraggableWidgetContainer.wrapClientException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
         }
     }
 
@@ -204,7 +204,7 @@ final class NanoFrameTimer extends FrameTimer {
             } else {
               stackIn_9_2 = "{...}";
             }
-            throw dd.wrapClientException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
+            throw DraggableWidgetContainer.wrapClientException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;

@@ -119,7 +119,7 @@ final class rd implements java.awt.event.MouseListener, java.awt.event.MouseMoti
         try {
           if (EmailFormatValidator.field_o != null) {
             SecondaryNodeDeque.field_d = 0;
-            hb.field_B = param0.getX();
+            LabeledWidgetContainer.field_B = param0.getX();
             nc.field_b = param0.getY();
             fa.correctedCurrentTimeMillis(-49);
             if (!javax.swing.SwingUtilities.isRightMouseButton(param0)) {

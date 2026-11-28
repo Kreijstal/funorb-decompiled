@@ -227,7 +227,7 @@ final class uv extends k {
             field_k = (String) null;
           }
           oq.field_b = new mf(gja.field_m, qia.field_a, param1, gfa.field_i, UiComponent.field_s);
-          gja.field_m.a((UiWidget) (oq.field_b), (byte) 73);
+          gja.field_m.showDialog((UiWidget) (oq.field_b), (byte) 73);
         } catch (RuntimeException runtimeException) {
           throw pe.wrapException((Throwable) ((Object) runtimeException), "uv.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }

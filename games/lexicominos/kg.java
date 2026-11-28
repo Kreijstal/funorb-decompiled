@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class kg extends nb implements TextHotspotListener, WidgetActivationListener {
+final class kg extends DequeWidgetContainer implements TextHotspotListener, WidgetActivationListener {
     private AccountCreationResultPanel field_F;
     private RichTextWidget field_B;
     static PcmStreamMixer field_G;
@@ -40,7 +40,7 @@ final class kg extends nb implements TextHotspotListener, WidgetActivationListen
     }
 
     kg(AccountCreationResultPanel param0) {
-        super(0, 0, 288, 0, (rd) null);
+        super(0, 0, 288, 0, (WidgetRenderer) null);
         String var7 = null;
         int var3 = 0;
         DefaultTextWidgetRenderer var4 = null;
@@ -48,8 +48,8 @@ final class kg extends nb implements TextHotspotListener, WidgetActivationListen
         int var6 = 0;
         try {
           this.field_F = param0;
-          this.field_E = new InteractiveWidget(n.field_h, (vd) null);
-          this.field_E.field_i = (rd) ((Object) new v());
+          this.field_E = new InteractiveWidget(n.field_h, (WidgetEventListener) null);
+          this.field_E.field_i = (WidgetRenderer) ((Object) new v());
           var7 = da.a(new String[]{this.e(true), this.h(-6724)}, AccountNameAvailabilityValidator.field_p, false);
           var3 = 20;
           var4 = new DefaultTextWidgetRenderer(ql.field_Q, 0, 0, 0, 0, 16777215, -1, 3, 0, ql.field_Q.field_E, -1, 2147483647, true);
@@ -58,16 +58,16 @@ final class kg extends nb implements TextHotspotListener, WidgetActivationListen
           this.field_B.a(wc.field_b, 0, -27371);
           this.field_B.a(wc.field_b, 1, -27371);
           this.field_B.field_j = -40 + this.field_j;
-          this.field_B.field_r = (vd) (this);
+          this.field_B.field_r = (WidgetEventListener) (this);
           this.field_B.b(26, var3, -2, this.field_j - 40);
           var3 = var3 + (this.field_B.field_v + 15);
-          this.b((byte) 87, this.field_B);
+          this.addChild((byte) 87, this.field_B);
           var5 = 4;
           var6 = 200;
-          this.field_E.a(40, var6, true, var3, 300 - var6 >> 1);
-          this.field_E.field_r = (vd) (this);
-          this.b((byte) -127, this.field_E);
-          this.a(var5 + (55 + var3), 300, true, 0, 0);
+          this.field_E.setBounds(40, var6, true, var3, 300 - var6 >> 1);
+          this.field_E.field_r = (WidgetEventListener) (this);
+          this.addChild((byte) -127, this.field_E);
+          this.setBounds(var5 + (55 + var3), 300, true, 0, 0);
         } catch (RuntimeException runtimeException) {
           throw ld.wrapClientException((Throwable) ((Object) runtimeException), "kg.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
@@ -140,7 +140,7 @@ final class kg extends nb implements TextHotspotListener, WidgetActivationListen
         return "<u=2164A2><col=2164A2>";
     }
 
-    final boolean a(char param0, int param1, w param2, byte param3) {
+    final boolean handleKey(char param0, int param1, UiWidget param2, byte param3) {
         int var5_int = 0;
         RuntimeException var5 = null;
         boolean stackIn_7_0 = false;
@@ -150,18 +150,18 @@ final class kg extends nb implements TextHotspotListener, WidgetActivationListen
         String stackIn_16_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (super.a(param0, param1, param2, (byte) -87)) {
+          if (super.handleKey(param0, param1, param2, (byte) -87)) {
             return true;
           }
           var5_int = -81 % ((-13 - param3) / 55);
           if (param1 == 98) {
-            stackIn_7_0 = this.a(0, param2);
+            stackIn_7_0 = this.focusPreviousChild(0, param2);
             return stackIn_7_0;
           }
           if (99 != param1) {
             return false;
           }
-          stackIn_10_0 = this.c((byte) 119, param2);
+          stackIn_10_0 = this.focusNextChild((byte) 119, param2);
           return stackIn_10_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

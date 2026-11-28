@@ -20,7 +20,7 @@ final class pg extends wl {
         }
     }
 
-    pg(ei param0, UiWidget param1) {
+    pg(ModalDialogHost param0, UiWidget param1) {
         super(param0, param1, 33, 20, 30);
     }
 

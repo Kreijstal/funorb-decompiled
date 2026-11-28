@@ -48,7 +48,7 @@ final class fh extends InteractiveWidget {
         }
     }
 
-    final boolean a(int param0, lk param1, int param2, int param3, int param4, int param5, int param6) {
+    final boolean pointerPressed(int param0, UiWidget param1, int param2, int param3, int param4, int param5, int param6) {
         RuntimeException stackIn_18_0 = null;
         StringBuilder stackIn_18_1 = null;
         String stackIn_19_2 = null;
@@ -60,7 +60,7 @@ final class fh extends InteractiveWidget {
         int var12 = 0;
         var12 = Bounce.field_N;
         try {
-          if (!super.a(param0, param1, param2, param3, param4, param5, param6)) {
+          if (!super.pointerPressed(param0, param1, param2, param3, param4, param5, param6)) {
             return false;
           }
           var8_int = param3 - (this.field_H + param2 + this.field_r);

@@ -265,19 +265,19 @@ final class de {
           BufferedRandomAccessFile.field_q = false;
         }
         nc.field_T = 0;
-        wn.field_e = ma.field_D;
-        if (mf.field_o) {
+        wn.field_e = DequeWidgetContainer.field_D;
+        if (UiWidget.field_o) {
           cb.field_e = null;
           tg.field_e = new IntrusiveDeque();
           wc.field_w = 0;
-          mf.field_o = false;
+          UiWidget.field_o = false;
           vk.field_b = 0;
         }
-        if (ji.field_P) {
+        if (DropTargetWidgetContainer.field_P) {
           TextLineMetrics.a(param0 + 31645);
           vf.a(true);
           pd.field_Lb = null;
-          ji.field_P = false;
+          DropTargetWidgetContainer.field_P = false;
         }
     }
 

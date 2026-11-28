@@ -1551,7 +1551,7 @@ final class BattleUnit {
           var6 = this.field_U;
           if (!this.field_S) {
             if (this.field_U == 0) {
-              stackIn_28_0 = d.field_N;
+              stackIn_28_0 = ModalDialogHost.field_N;
               if (this.field_B == 1 &&
                 this.f((byte) 67)) {
                 stackIn_30_1 = 15;
@@ -1561,7 +1561,7 @@ final class BattleUnit {
               ((IndexedSprite) (Object) stackIn_28_0[stackIn_30_1 + (1 + var3)]).drawFlippedHorizontal(0, 0);
             }
             if (this.field_U == 1) {
-              stackIn_36_0 = d.field_N;
+              stackIn_36_0 = ModalDialogHost.field_N;
               stackIn_36_1 = 0 + var3;
               if (this.field_B == 1 &&
                 this.f((byte) 89)) {
@@ -1572,7 +1572,7 @@ final class BattleUnit {
               ((IndexedSprite) (Object) stackIn_36_0[stackIn_36_1 + stackIn_38_2]).drawOpaque(0, 0);
             }
             if (this.field_U == 2) {
-              stackIn_43_0 = d.field_N;
+              stackIn_43_0 = ModalDialogHost.field_N;
               stackIn_43_1 = var3;
               stackIn_43_2 = 1;
               if (1 == this.field_B &&
@@ -1584,7 +1584,7 @@ final class BattleUnit {
               ((IndexedSprite) (Object) stackIn_43_0[stackIn_43_1 + (stackIn_43_2 + stackIn_45_3)]).drawOpaque(0, 0);
             }
             if (this.field_U == 3) {
-              stackIn_51_0 = d.field_N;
+              stackIn_51_0 = ModalDialogHost.field_N;
               if (this.field_B == 1 &&
                 this.f((byte) 76)) {
                 stackIn_52_1 = 15;
@@ -1594,7 +1594,7 @@ final class BattleUnit {
               ((IndexedSprite) (Object) stackIn_51_0[stackIn_52_1 + (2 + var3)]).drawOpaque(0, 0);
             }
             if (this.field_U == 4) {
-              stackIn_58_0 = d.field_N;
+              stackIn_58_0 = ModalDialogHost.field_N;
               stackIn_58_1 = var3;
               stackIn_58_2 = 3;
               if (1 == this.field_B &&
@@ -1606,7 +1606,7 @@ final class BattleUnit {
               ((IndexedSprite) (Object) stackIn_58_0[stackIn_58_1 + (stackIn_58_2 + stackIn_60_3)]).drawOpaque(0, 0);
             }
             if (this.field_U == 5) {
-              stackIn_66_0 = d.field_N;
+              stackIn_66_0 = ModalDialogHost.field_N;
               if (this.field_B == 1 &&
                 this.f((byte) -120)) {
                 stackIn_68_1 = 15;
@@ -1616,7 +1616,7 @@ final class BattleUnit {
               ((IndexedSprite) (Object) stackIn_66_0[stackIn_68_1 + 4 + var3]).drawOpaque(0, 0);
             }
             if (6 == this.field_U) {
-              stackIn_73_0 = d.field_N;
+              stackIn_73_0 = ModalDialogHost.field_N;
               stackIn_73_1 = var3;
               stackIn_73_2 = 3;
               if (1 == this.field_B &&
@@ -1630,7 +1630,7 @@ final class BattleUnit {
             if (this.field_U != 7) {
               break regionExit1;
             }
-            stackIn_81_0 = d.field_N;
+            stackIn_81_0 = ModalDialogHost.field_N;
             stackIn_81_1 = var3 + 2;
             if (this.field_B == 1 &&
               this.f((byte) 111)) {
@@ -1647,7 +1647,7 @@ final class BattleUnit {
             if (this.field_d != 0) {
               if (this.field_d != 5) {
                 if (0 == this.field_U) {
-                  stackIn_92_0 = d.field_N;
+                  stackIn_92_0 = ModalDialogHost.field_N;
                   stackIn_92_1 = var3 + 1;
                   if (this.field_B == 1 &&
                     this.f((byte) -64)) {
@@ -1658,7 +1658,7 @@ final class BattleUnit {
                   ((IndexedSprite) (Object) stackIn_92_0[stackIn_92_1 + stackIn_94_2]).drawFlippedHorizontal(0, 0);
                 }
                 if (1 == this.field_U) {
-                  stackIn_99_0 = d.field_N;
+                  stackIn_99_0 = ModalDialogHost.field_N;
                   stackIn_99_1 = var3 + 0;
                   if (this.field_B == 1 &&
                     this.f((byte) -115)) {
@@ -1669,7 +1669,7 @@ final class BattleUnit {
                   ((IndexedSprite) (Object) stackIn_99_0[stackIn_99_1 + stackIn_100_2]).drawOpaque(0, 0);
                 }
                 if (this.field_U == 2) {
-                  stackIn_105_0 = d.field_N;
+                  stackIn_105_0 = ModalDialogHost.field_N;
                   stackIn_105_1 = 1 + var3;
                   if (this.field_B == 1 &&
                     this.f((byte) -72)) {
@@ -1680,7 +1680,7 @@ final class BattleUnit {
                   ((IndexedSprite) (Object) stackIn_105_0[stackIn_105_1 + stackIn_106_2]).drawOpaque(0, 0);
                 }
                 if (this.field_U == 3) {
-                  stackIn_111_0 = d.field_N;
+                  stackIn_111_0 = ModalDialogHost.field_N;
                   stackIn_111_1 = var3 + 2;
                   if (this.field_B == 1 &&
                     this.f((byte) -114)) {
@@ -1691,7 +1691,7 @@ final class BattleUnit {
                   ((IndexedSprite) (Object) stackIn_111_0[stackIn_111_1 + stackIn_113_2]).drawOpaque(0, 0);
                 }
                 if (this.field_U == 4) {
-                  stackIn_119_0 = d.field_N;
+                  stackIn_119_0 = ModalDialogHost.field_N;
                   stackIn_119_1 = 3;
                   stackIn_119_2 = -var3;
                   if (1 == this.field_B &&
@@ -1703,7 +1703,7 @@ final class BattleUnit {
                   ((IndexedSprite) (Object) stackIn_119_0[stackIn_119_1 - (stackIn_119_2 - stackIn_120_3)]).drawOpaque(0, 0);
                 }
                 if (this.field_U == 5) {
-                  stackIn_125_0 = d.field_N;
+                  stackIn_125_0 = ModalDialogHost.field_N;
                   stackIn_125_1 = 4;
                   stackIn_125_2 = -var3;
                   if (1 == this.field_B &&
@@ -1715,7 +1715,7 @@ final class BattleUnit {
                   ((IndexedSprite) (Object) stackIn_125_0[stackIn_125_1 - (stackIn_125_2 - stackIn_127_3)]).drawOpaque(0, 0);
                 }
                 if (6 == this.field_U) {
-                  stackIn_133_0 = d.field_N;
+                  stackIn_133_0 = ModalDialogHost.field_N;
                   stackIn_133_1 = 3;
                   stackIn_133_2 = var3;
                   if (this.field_B == 1 &&
@@ -1729,7 +1729,7 @@ final class BattleUnit {
                 if (this.field_U != 7) {
                   break regionExit1;
                 }
-                stackIn_141_0 = d.field_N;
+                stackIn_141_0 = ModalDialogHost.field_N;
                 stackIn_141_1 = var3;
                 stackIn_141_2 = 2;
                 if (1 == this.field_B &&
@@ -1980,11 +1980,11 @@ final class BattleUnit {
             GameShell.field_p.bindAsRenderTarget();
             SoftwareRasterizer.fillRectangle(0, 0, GameShell.field_p.field_r, GameShell.field_p.field_t, 0);
             if (var10 != 0) {
-              GameShell.field_p = new Sprite(d.field_N[0].field_f, d.field_N[0].field_i);
+              GameShell.field_p = new Sprite(ModalDialogHost.field_N[0].field_f, ModalDialogHost.field_N[0].field_i);
               GameShell.field_p.bindAsRenderTarget();
             }
           } else {
-            GameShell.field_p = new Sprite(d.field_N[0].field_f, d.field_N[0].field_i);
+            GameShell.field_p = new Sprite(ModalDialogHost.field_N[0].field_f, ModalDialogHost.field_N[0].field_i);
             GameShell.field_p.bindAsRenderTarget();
           }
           if (this.field_t == 0) {

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class ql extends al {
+abstract class ql extends ModalDialog {
     static BitmapFont field_Q;
     private int field_L;
     private int field_J;
@@ -19,7 +19,7 @@ abstract class ql extends al {
         if (!param0) {
           ql.resetStaticState((byte) -79);
         }
-        this.b(this.field_M, -120, this.field_N);
+        this.setCenteredSize(this.field_M, -120, this.field_N);
         this.field_J = 0;
         this.h((byte) 38);
     }
@@ -144,7 +144,7 @@ abstract class ql extends al {
         }
     }
 
-    boolean f(byte param0) {
+    boolean advanceDialogAnimation(byte param0) {
         int var2 = 0;
         int var3 = 0;
         int fieldTemp$0 = 0;
@@ -167,14 +167,14 @@ abstract class ql extends al {
             var3 = this.field_L + var4 * (-this.field_L + this.field_N) / var5;
             var2 = var4 * (-this.field_P + this.field_M) / var5 + this.field_P;
           }
-          this.b(var2, -111, var3);
+          this.setCenteredSize(var2, -111, var3);
         }
-        return super.f((byte) -65);
+        return super.advanceDialogAnimation((byte) -65);
     }
 
     final void a(int param0, byte param1, int param2, int param3) {
         if (param2 <= 0) {
-          this.b(param0, -95, param3);
+          this.setCenteredSize(param0, -95, param3);
           return;
         }
         this.field_J = param2;
@@ -197,20 +197,20 @@ abstract class ql extends al {
         if (param0) {
           return (IndexedSprite) null;
         }
-        IndexedSprite var1 = new IndexedSprite(uc.field_fb, eh.field_b, mg.field_x[0], rg.field_c[0], pb.field_h[0], bd.field_m[0], BufferedRandomAccessFile.field_f[0], ci.field_b);
+        IndexedSprite var1 = new IndexedSprite(uc.field_fb, eh.field_b, SingleChildWidgetContainer.field_x[0], rg.field_c[0], pb.field_h[0], bd.field_m[0], BufferedRandomAccessFile.field_f[0], ci.field_b);
         GzipDecompressor.a(12428);
         return var1;
     }
 
-    boolean a(byte param0) {
+    boolean snapDialogAnimation(byte param0) {
         if (param0 != 26) {
           this.field_M = 112;
         }
         this.f(true);
-        return super.a((byte) 26);
+        return super.snapDialogAnimation((byte) 26);
     }
 
-    ql(eg param0, int param1, int param2) {
+    ql(ModalDialogHost param0, int param1, int param2) {
         super(param0, param1, param2);
         this.field_J = 0;
         this.field_I = 0;

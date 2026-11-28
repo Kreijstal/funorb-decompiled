@@ -642,7 +642,7 @@ final class hj {
           var3 = 0;
           while (AwtRasterBuffer.a(-1)) {
             if (!DebouncedFieldValidator.field_f.field_o) {
-              var4 = (oa.field_H ^ DebouncedFieldValidator.field_f.field_d) % 8;
+              var4 = (DropTargetWidgetContainer.field_H ^ DebouncedFieldValidator.field_f.field_d) % 8;
               if (0 != var4) {
                 if (var4 == 1) {
                   rk.field_d = rk.field_d - 1;
@@ -682,7 +682,7 @@ final class hj {
                 cl.field_d = cl.field_d + rk.field_d;
                 h.field_a = h.field_a - 1;
               }
-              var4Lifetime4 = (DebouncedFieldValidator.field_f.field_d ^ oa.field_H + DebouncedFieldValidator.field_f.field_A) % 5;
+              var4Lifetime4 = (DebouncedFieldValidator.field_f.field_d ^ DropTargetWidgetContainer.field_H + DebouncedFieldValidator.field_f.field_A) % 5;
               if (0 == var4Lifetime4) {
                 bh.field_g = bh.field_g | jc.field_e + b.field_m << 17;
               } else {
@@ -707,7 +707,7 @@ final class hj {
                 }
               }
             }
-            if (oa.field_H == 13) {
+            if (DropTargetWidgetContainer.field_H == 13) {
               if (13 != this.field_jb) {
                 Bzip2State.field_f = 1;
               } else {
@@ -719,7 +719,7 @@ final class hj {
               return;
             }
             if (ec.field_d >= 2) {
-              if (oa.field_H == 99) {
+              if (DropTargetWidgetContainer.field_H == 99) {
                 this.field_o = true;
                 if (!dl.field_c[82]) {
                   this.field_O = this.field_O + 1;
@@ -727,7 +727,7 @@ final class hj {
                   this.field_ib = this.field_ib - 1;
                 }
               }
-              if (98 == oa.field_H) {
+              if (98 == DropTargetWidgetContainer.field_H) {
                 if (dl.field_c[82]) {
                   this.field_ib = this.field_ib + 1;
                 } else {
@@ -737,8 +737,8 @@ final class hj {
               }
             }
             if ((this.field_u == 0 ||
-              this.field_u == 6) && (oa.field_H == 83 ||
-              oa.field_H == 82) && (RichTextWidget.b(true) &&
+              this.field_u == 6) && (DropTargetWidgetContainer.field_H == 83 ||
+              DropTargetWidgetContainer.field_H == 82) && (RichTextWidget.b(true) &&
               this.field_jb == 0) && (!qb.field_b ||
               !(DequeCursor.field_b >= 0))) {
               this.field_u = 1;
@@ -747,7 +747,7 @@ final class hj {
               AccountServiceResult.a((byte) -18, ke.field_h[1]);
             }
             if (ec.field_d >= 2) {
-              if (oa.field_H == 26 &&
+              if (DropTargetWidgetContainer.field_H == 26 &&
                 IterableNodeHashTable.field_c > 0) {
                 this.field_M = 320;
                 this.field_k = 480;
@@ -757,17 +757,17 @@ final class hj {
                 rb.a(IterableNodeHashTable.field_c, (byte) -58);
                 this.field_o = true;
               }
-              if (oa.field_H == 36) {
+              if (DropTargetWidgetContainer.field_H == 36) {
                 this.field_jb = 1;
                 this.field_o = true;
                 this.field_d = 0;
                 AccountServiceResult.a((byte) 124, ke.field_h[31]);
               }
-              if (oa.field_H == 39) {
+              if (DropTargetWidgetContainer.field_H == 39) {
                 stackIn_124_0 = !(ok.field_e);
                 ok.field_e = stackIn_124_0;
               }
-              if (oa.field_H == 27) {
+              if (DropTargetWidgetContainer.field_H == 27) {
                 this.field_M = 320;
                 this.field_k = 480;
                 this.field_O = -14 + this.field_k;
@@ -776,28 +776,28 @@ final class hj {
                 rb.a(IterableNodeHashTable.field_c, (byte) -58);
                 this.field_o = true;
               }
-              if (oa.field_H == 33) {
+              if (DropTargetWidgetContainer.field_H == 33) {
                 stackIn_134_1 = !(this.field_S);
                 this.field_S = stackIn_134_1;
               }
-              if (oa.field_H == 9) {
+              if (DropTargetWidgetContainer.field_H == 9) {
                 this.field_o = true;
                 el.a(true, 0);
               }
-              if (oa.field_H == 10) {
+              if (DropTargetWidgetContainer.field_H == 10) {
                 this.field_o = true;
                 el.a(true, 1);
               }
-              if (oa.field_H == 11) {
+              if (DropTargetWidgetContainer.field_H == 11) {
                 this.field_o = true;
                 el.a(true, 2);
               }
-              if (oa.field_H == 12) {
+              if (DropTargetWidgetContainer.field_H == 12) {
                 this.field_o = true;
                 el.a(true, 3);
               }
             }
-            if (oa.field_H != 84) {
+            if (DropTargetWidgetContainer.field_H != 84) {
               continue;
             }
             var3 = 1;
@@ -863,7 +863,7 @@ final class hj {
               this.field_X = 172 + pf.a((byte) -115, 232);
               this.field_h = pf.a((byte) 76, 64);
             }
-            kj.a(var3 != 0, -1);
+            ModalDialogHost.a(var3 != 0, -1);
             if (qb.field_b &&
               DequeCursor.field_b >= 0) {
               this.field_d = this.field_d + 2;
@@ -1155,7 +1155,7 @@ final class hj {
                       AccountServiceResult.a((byte) -116, ke.field_h[19]);
                     }
                     rc.a(this.field_mb, this.field_s, (byte) -111);
-                    if (0 > mh.field_D &&
+                    if (0 > LabeledWidgetContainer.field_D &&
                       this.field_u == 2) {
                       if (vj.a(IterableNodeHashTable.field_c, 1) == TextLayout.field_a) {
                         ie.a(TextLayout.field_a, 119);
@@ -1738,7 +1738,7 @@ final class hj {
             } else {
               var11Lifetime3 = -var11Lifetime3 + 65535;
             }
-            var10_ref_leLifetime1.drawRotatedAboutBilinear(var24.field_m << 3, 160, TextHotspotBounds.field_f << 4, mh.field_D << 4, var11Lifetime3, 4096);
+            var10_ref_leLifetime1.drawRotatedAboutBilinear(var24.field_m << 3, 160, TextHotspotBounds.field_f << 4, LabeledWidgetContainer.field_D << 4, var11Lifetime3, 4096);
             decompiledFrameRemainder0 = false;
           }
           else {

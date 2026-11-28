@@ -140,7 +140,7 @@ final class qg extends am {
               }
               if (0.0 == param0 &&
                 var8 > 150) {
-                fq.a(false, 100, DisplayNameSelectionPanel.field_F[14], var7_int);
+                AlphaWidgetContainer.a(false, 100, DisplayNameSelectionPanel.field_F[14], var7_int);
               }
             }
           } else {
@@ -213,7 +213,7 @@ final class qg extends am {
           for (var14 = 0; var14 < ci.field_c; var14++) {
             gq.field_b = 2147483647;
             ValidatedTextField.field_K = 2147483647;
-            ln.field_F = 2147483647;
+            ModalDialogHost.field_F = 2147483647;
             hl.field_a = 2147483647;
             var15 = IntrusiveNode.field_b[var14] * this.field_D + 2048;
             var16 = var15 >> 12;
@@ -304,14 +304,14 @@ final class qg extends am {
                 }
                 if (var11 < hl.field_a) {
                   ValidatedTextField.field_K = gq.field_b;
-                  gq.field_b = ln.field_F;
-                  ln.field_F = hl.field_a;
+                  gq.field_b = ModalDialogHost.field_F;
+                  ModalDialogHost.field_F = hl.field_a;
                   hl.field_a = var11;
                 } else {
-                  if (var11 < ln.field_F) {
+                  if (var11 < ModalDialogHost.field_F) {
                     ValidatedTextField.field_K = gq.field_b;
-                    gq.field_b = ln.field_F;
-                    ln.field_F = var11;
+                    gq.field_b = ModalDialogHost.field_F;
+                    ModalDialogHost.field_F = var11;
                   } else {
                     if (var11 >= gq.field_b) {
                       if (var11 < ValidatedTextField.field_K) {
@@ -328,14 +328,14 @@ final class qg extends am {
             var18Lifetime1 = this.field_t;
             if (var18Lifetime1 != 0) {
               if (var18Lifetime1 == 1) {
-                var3[var14] = ln.field_F;
+                var3[var14] = ModalDialogHost.field_F;
               } else {
                 if (var18Lifetime1 != 3) {
                   if (var18Lifetime1 == 4) {
                     var3[var14] = ValidatedTextField.field_K;
                   } else {
                     if (var18Lifetime1 == 2) {
-                      var3[var14] = ln.field_F - hl.field_a;
+                      var3[var14] = ModalDialogHost.field_F - hl.field_a;
                     }
                   }
                 } else {

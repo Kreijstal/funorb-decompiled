@@ -39,10 +39,10 @@ final class sf {
         if (param0) {
           return true;
         }
-        if (dg.field_z == null) {
+        if (SingleChildWidgetContainer.field_z == null) {
           return false;
         }
-        if (null == dg.field_z.d((byte) -92)) {
+        if (null == SingleChildWidgetContainer.field_z.getTopOpenDialog((byte) -92)) {
           return false;
         }
         return true;

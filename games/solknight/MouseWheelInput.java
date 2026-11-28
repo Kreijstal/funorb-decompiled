@@ -40,10 +40,10 @@ abstract class MouseWheelInput {
             if (var4_ref_sa != null &&
               var2_long > var4_ref_sa.field_h) {
               var4_ref_sa.unlink(10);
-              te.field_O = var4_ref_sa.field_k.length;
-              te.field_N.position = 0;
-              for (var5_int = 0; var5_int < te.field_O; var5_int++) {
-                te.field_N.payload[var5_int] = var4_ref_sa.field_k[var5_int];
+              AlphaWidgetContainer.field_O = var4_ref_sa.field_k.length;
+              AlphaWidgetContainer.field_N.position = 0;
+              for (var5_int = 0; var5_int < AlphaWidgetContainer.field_O; var5_int++) {
+                AlphaWidgetContainer.field_N.payload[var5_int] = var4_ref_sa.field_k[var5_int];
               }
               nf.field_U = MouseInputHandler.field_b;
               MouseInputHandler.field_b = FullscreenFocusCanvas.field_e;
@@ -68,13 +68,13 @@ abstract class MouseWheelInput {
         try {
           while (true) {
             if (stackIn_21_0 < 0) {
-              te.field_N.position = 0;
+              AlphaWidgetContainer.field_N.position = 0;
               if (!bf.c(114, 1)) {
                 return false;
               }
-              qg.field_a = te.field_N.readCipheredByte(27310);
-              te.field_N.position = 0;
-              te.field_O = param0[qg.field_a];
+              qg.field_a = AlphaWidgetContainer.field_N.readCipheredByte(27310);
+              AlphaWidgetContainer.field_N.position = 0;
+              AlphaWidgetContainer.field_O = param0[qg.field_a];
             }
             if (!qd.b((byte) 127)) {
               return false;
@@ -94,9 +94,9 @@ abstract class MouseWheelInput {
                 var4 = 0;
               }
             }
-            var5 = new sa(var2_long + (long)var4, qg.field_a, new byte[te.field_O]);
-            for (var6 = 0; var6 < te.field_O; var6++) {
-              var5.field_k[var6] = te.field_N.payload[var6];
+            var5 = new sa(var2_long + (long)var4, qg.field_a, new byte[AlphaWidgetContainer.field_O]);
+            for (var6 = 0; var6 < AlphaWidgetContainer.field_O; var6++) {
+              var5.field_k[var6] = AlphaWidgetContainer.field_N.payload[var6];
             }
             SecondaryNodeDequeIterator.field_h.addFirst(var5, -7044);
             qg.field_a = -1;

@@ -27,12 +27,12 @@ final class BufferedRandomAccessFile {
     }
 
     final static int[] a(int param0, boolean param1, int param2) {
-        int var3 = jg.a(param0, true);
+        int var3 = AlphaWidgetContainer.a(param0, true);
         int var4 = ProxyAuthenticationRequiredException.a(-822, param0);
         if (param1) {
           field_g = (String) null;
         }
-        int var5 = jg.a(param2, true);
+        int var5 = AlphaWidgetContainer.a(param2, true);
         int var6 = ProxyAuthenticationRequiredException.a(-822, param2);
         int var7 = (int)((long)var5 * (long)var3 >> 16);
         int var8 = (int)((long)var3 * (long)var6 >> 16);
@@ -664,7 +664,7 @@ final class BufferedRandomAccessFile {
           var5Lifetime1 = qh.field_g[11] >> 8;
           var6Lifetime1 = oa.field_a << 4;
           var7Lifetime1 = 0;
-          var8Lifetime1 = jg.a(var6Lifetime1, true) >> 8;
+          var8Lifetime1 = AlphaWidgetContainer.a(var6Lifetime1, true) >> 8;
           var9Lifetime1 = ProxyAuthenticationRequiredException.a(-822, var6Lifetime1) >> 8;
           if (uc.field_C != -1 &&
             ll.field_y != -1) {

@@ -65,7 +65,7 @@ final class qh {
         int var7Lifetime1Lifetime1;
         var9 = Chess.field_G;
         try {
-          kb.field_S = true;
+          DraggableWidgetContainer.field_S = true;
           FrameTimer.field_f = param2;
           if (FrameTimer.field_f == 0) {
             var3_int = TextFieldValidator.a(AgeValidator.field_m, -9224, AwtRasterBuffer.field_d, n.field_d, mk.field_a);
@@ -257,7 +257,7 @@ final class qh {
           var3_intLifetime1 = 0;
           for (var4Lifetime1 = 0; ka.field_g.length > var4Lifetime1; var4Lifetime1++) {
             stackIn_93_0 = !(cb.field_k[var4Lifetime1] < 0);
-            var5Lifetime1 = kn.a(stackIn_93_0, false, ka.field_g[var4Lifetime1]);
+            var5Lifetime1 = SingleChildWidgetContainer.a(stackIn_93_0, false, ka.field_g[var4Lifetime1]);
             if (var5Lifetime1 > var3_intLifetime1) {
               var3_intLifetime1 = var5Lifetime1;
             }
@@ -267,7 +267,7 @@ final class qh {
             var4_ref_String__ = var10;
             for (var5Lifetime2 = 0; var5Lifetime2 < var10.length; var5Lifetime2++) {
               var11 = var10[var5Lifetime2];
-              var7Lifetime1 = kn.a(false, false, var11);
+              var7Lifetime1 = SingleChildWidgetContainer.a(false, false, var11);
               if (var3_intLifetime1 < var7Lifetime1) {
                 var3_intLifetime1 = var7Lifetime1;
               }
@@ -275,7 +275,7 @@ final class qh {
             var4_ref_String__Lifetime1 = EmailFormatValidator.field_p;
             for (var5Lifetime2Lifetime1 = 0; var5Lifetime2Lifetime1 < var4_ref_String__Lifetime1.length; var5Lifetime2Lifetime1++) {
               var12 = var4_ref_String__Lifetime1[var5Lifetime2Lifetime1];
-              var7Lifetime1Lifetime1 = kn.a(false, param0, var12);
+              var7Lifetime1Lifetime1 = SingleChildWidgetContainer.a(false, param0, var12);
               if (var7Lifetime1Lifetime1 > var3_intLifetime1) {
                 var3_intLifetime1 = var7Lifetime1Lifetime1;
               }
@@ -300,7 +300,7 @@ final class qh {
           while (var4Lifetime3 < ka.field_g.length) {
             var6Lifetime1 = cb.field_k[var4Lifetime3];
             if (var6Lifetime1 >= 0) {
-              var7Lifetime2 = kn.a(true, param0, ka.field_g[var4Lifetime3]);
+              var7Lifetime2 = SingleChildWidgetContainer.a(true, param0, ka.field_g[var4Lifetime3]);
               var5Lifetime3 = var5Lifetime3 + MouseWheelInput.field_b;
               var8Lifetime1 = ob.field_C - (var7Lifetime2 >> 1);
               cb.field_h[var4Lifetime3] = new int[4];

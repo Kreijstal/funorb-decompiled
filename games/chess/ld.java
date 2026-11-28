@@ -61,7 +61,7 @@ final class ld {
 
     ld(boolean param0) {
         this.field_i = oh.field_e;
-        this.field_b = bh.field_H;
+        this.field_b = ArrayWidgetContainer.field_H;
         this.field_e = va.field_a;
         this.field_o = an.field_a;
         this.field_m = sa.field_e;

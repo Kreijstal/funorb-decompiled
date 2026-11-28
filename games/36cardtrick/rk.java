@@ -119,20 +119,20 @@ final class rk extends jc {
         this.field_Y.field_I = false;
     }
 
-    rk(j param0, String param1) {
+    rk(ModalDialogHost param0, String param1) {
         super(param0, 300, 120);
         int var3_int = 0;
         try {
           this.field_db = param1;
           if (null != this.field_db) {
             var3_int = vd.field_p.textHeight(this.field_db, 260, vd.field_p.field_s);
-            this.a(var3_int + 150, 300, -1);
+            this.setCenteredSize(var3_int + 150, 300, -1);
           }
           this.field_Y = new ng(13, 50, 274, 30, 15, 2113632, 4210752);
           this.field_W = false;
           this.field_Y.field_I = true;
           this.field_cb = false;
-          this.b(this.field_Y, (byte) 118);
+          this.addChild(this.field_Y, (byte) 118);
         } catch (RuntimeException runtimeException) {
           throw ma.wrapException((Throwable) ((Object) runtimeException), "rk.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

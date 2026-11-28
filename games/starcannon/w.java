@@ -26,7 +26,7 @@ final class w extends DefaultTextWidgetRenderer {
         }
     }
 
-    public final void a(int param0, boolean param1, int param2, int param3, UiWidget param4) {
+    public final void paintWidget(int param0, boolean param1, int param2, int param3, UiWidget param4) {
         UiWidget stackIn_3_0 = null;
         RuntimeException stackIn_29_0 = null;
         StringBuilder stackIn_29_1 = null;
@@ -76,7 +76,7 @@ final class w extends DefaultTextWidgetRenderer {
               }
             }
           }
-          if (param4.d(true)) {
+          if (param4.isFocused(true)) {
             var14 = this.field_s[5];
             if (var14 != null) {
               var14.a(this.field_t, param0, param3, param4, -1, this);
@@ -197,7 +197,7 @@ final class w extends DefaultTextWidgetRenderer {
         }
         s.field_c = false;
         sg.field_n = null;
-        if (!tc.field_x) {
+        if (!ModalDialogHost.field_x) {
           var1 = jj.field_F;
           if (var1 > 0) {
             if (var1 == 1) {
@@ -230,7 +230,7 @@ final class w extends DefaultTextWidgetRenderer {
         try {
           if (ve.field_f == null) {
             ve.field_f = new lf(ti.field_b, sg.field_n);
-            ti.field_b.a((byte) 93, (UiWidget) (ve.field_f));
+            ti.field_b.showDialog((byte) 93, (UiWidget) (ve.field_f));
           }
           ve.field_f.a(param0, param2, param3, true);
           SoftwareRasterizer.clearRaster();

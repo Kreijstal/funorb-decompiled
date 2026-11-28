@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class DisplayNameSelectionPanel extends ta implements NameSuggestionListener, WidgetActivationListener {
+final class DisplayNameSelectionPanel extends DequeWidgetContainer implements NameSuggestionListener, WidgetActivationListener {
     private InteractiveWidget field_H;
     static int[] field_A;
     private InteractiveWidget field_J;
@@ -30,10 +30,10 @@ final class DisplayNameSelectionPanel extends ta implements NameSuggestionListen
         qk.a(this.field_C.field_l, (byte) 111);
     }
 
-    private final int a(int param0, pj param1, String param2, int param3, int param4, String param5, int param6) {
+    private final int a(int param0, UiWidget param1, String param2, int param3, int param4, String param5, int param6) {
         RuntimeException var8 = null;
         kk var9 = null;
-        h var10 = null;
+        LabeledWidgetContainer var10 = null;
         int stackIn_2_0 = 0;
         int stackIn_4_0 = 0;
         RuntimeException stackIn_7_0 = null;
@@ -49,11 +49,11 @@ final class DisplayNameSelectionPanel extends ta implements NameSuggestionListen
             stackIn_2_0 = 63;
             return stackIn_2_0;
           }
-          var10 = new h(20, param4, param3 + 120, 25, param1, false, 120, 3, lm.field_f, 16777215, param2);
-          this.a(var10, (byte) 74);
+          var10 = new LabeledWidgetContainer(20, param4, param3 + 120, 25, param1, false, 120, 3, lm.field_f, 16777215, param2);
+          this.addChild(var10, (byte) 74);
           var9 = new kk(((FieldValidatorProvider) ((Object) param1)).getFieldValidator((byte) -118), param5, 126, var10.field_r + param4, 25 + param3, param6);
-          var9.field_h = (ag) (this);
-          this.a(var9, (byte) 74);
+          var9.field_h = (WidgetEventListener) (this);
+          this.addChild(var9, (byte) 74);
           stackIn_4_0 = var10.field_r + var9.field_r;
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -78,7 +78,7 @@ final class DisplayNameSelectionPanel extends ta implements NameSuggestionListen
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw dd.wrapClientException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param6).append(')').toString());
+          throw DraggableWidgetContainer.wrapClientException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param6).append(')').toString());
         }
     }
 
@@ -89,7 +89,7 @@ final class DisplayNameSelectionPanel extends ta implements NameSuggestionListen
         }
     }
 
-    final boolean a(char param0, int param1, pj param2, int param3) {
+    final boolean handleKey(char param0, int param1, UiWidget param2, int param3) {
         RuntimeException var5 = null;
         boolean stackIn_6_0 = false;
         boolean stackIn_10_0 = false;
@@ -98,17 +98,17 @@ final class DisplayNameSelectionPanel extends ta implements NameSuggestionListen
         String stackIn_14_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (super.a(param0, param1, param2, param3)) {
+          if (super.handleKey(param0, param1, param2, param3)) {
             return true;
           }
           if (98 == param1) {
-            stackIn_6_0 = this.a(param2, false);
+            stackIn_6_0 = this.focusPreviousChild(param2, false);
             return stackIn_6_0;
           }
           if (param1 != 99) {
             return false;
           }
-          stackIn_10_0 = this.b(param2, false);
+          stackIn_10_0 = this.focusNextChild(param2, false);
           return stackIn_10_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -120,7 +120,7 @@ final class DisplayNameSelectionPanel extends ta implements NameSuggestionListen
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw dd.wrapClientException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param3).append(')').toString());
+          throw DraggableWidgetContainer.wrapClientException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -145,7 +145,7 @@ final class DisplayNameSelectionPanel extends ta implements NameSuggestionListen
         RuntimeException decompiledCaughtException = null;
         try {
           if (param3 == this.field_H) {
-            sg.k(-16);
+            ModalDialog.k(-16);
           } else {
             if (param3 == this.field_J) {
               this.submitDisplayName(-126);
@@ -163,43 +163,43 @@ final class DisplayNameSelectionPanel extends ta implements NameSuggestionListen
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw dd.wrapClientException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param4).append(')').toString());
+          throw DraggableWidgetContainer.wrapClientException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param4).append(')').toString());
         }
     }
 
     public DisplayNameSelectionPanel() {
-        super(0, 0, 496, 0, (td) null);
-        this.field_C = new ValidatedTextField("", (ag) null, 12);
+        super(0, 0, 496, 0, (WidgetRenderer) null);
+        this.field_C = new ValidatedTextField("", (WidgetEventListener) null, 12);
         DefaultTextWidgetRenderer var1 = new DefaultTextWidgetRenderer(pc.field_bb, 0, 0, 0, 0, 16777215, -1, 3, 0, lm.field_f.field_H, -1, 2147483647, true);
-        pj var2 = new pj(AccountRegistrationPanel.field_A, var1, (ag) null);
-        this.field_J = new InteractiveWidget(qk.field_b, (ag) null);
-        this.field_H = new InteractiveWidget(ob.field_D, (ag) null);
+        UiWidget var2 = new UiWidget(AccountRegistrationPanel.field_A, var1, (WidgetEventListener) null);
+        this.field_J = new InteractiveWidget(qk.field_b, (WidgetEventListener) null);
+        this.field_H = new InteractiveWidget(ob.field_D, (WidgetEventListener) null);
         this.field_C.field_i = bg.field_b;
         this.field_C.setFieldValidator(new AccountNameAvailabilityValidator(this.field_C), 22);
         this.field_J.field_F = false;
-        this.field_J.field_j = (td) ((Object) new vk());
-        this.field_H.field_j = (td) ((Object) new qc());
-        this.field_C.field_j = (td) ((Object) new fg(10000536));
+        this.field_J.field_j = (WidgetRenderer) ((Object) new vk());
+        this.field_H.field_j = (WidgetRenderer) ((Object) new qc());
+        this.field_C.field_j = (WidgetRenderer) ((Object) new fg(10000536));
         int var3 = 20;
         int var4 = 4;
-        var2.a(20, var3, 50, (byte) -90, 270);
+        var2.setBounds(20, var3, 50, (byte) -90, 270);
         int var5 = 200;
         var3 += 50;
-        this.a(var2, (byte) 74);
+        this.addChild(var2, (byte) 74);
         var3 = var3 + (5 + this.a(ja.field_b, this.field_C, var3, -53, 170, bh.field_a));
-        this.field_J.a(-var5 + 496 >> 1, var3, 40, (byte) -90, var5);
-        this.field_H.a(3 + var4, 15 + var3, 40, (byte) -90, 60);
-        this.field_H.field_h = (ag) (this);
-        this.field_J.field_h = (ag) (this);
-        this.a(this.field_J, (byte) 74);
-        this.a(this.field_H, (byte) 74);
+        this.field_J.setBounds(-var5 + 496 >> 1, var3, 40, (byte) -90, var5);
+        this.field_H.setBounds(3 + var4, 15 + var3, 40, (byte) -90, 60);
+        this.field_H.field_h = (WidgetEventListener) (this);
+        this.field_J.field_h = (WidgetEventListener) (this);
+        this.addChild(this.field_J, (byte) 74);
+        this.addChild(this.field_H, (byte) 74);
         this.field_I = new NameSuggestionsPanel((NameSuggestionListener) (this));
-        this.field_I.a(60 + this.field_C.field_m + this.field_C.field_s, 20, 150, (byte) -90, -this.field_C.field_m + this.field_m + (-this.field_C.field_s - 60));
-        this.a(this.field_I, (byte) 74);
-        this.a(0, 0, var3 + 55 + var4, (byte) -90, 496);
+        this.field_I.setBounds(60 + this.field_C.field_m + this.field_C.field_s, 20, 150, (byte) -90, -this.field_C.field_m + this.field_m + (-this.field_C.field_s - 60));
+        this.addChild(this.field_I, (byte) 74);
+        this.setBounds(0, 0, var3 + 55 + var4, (byte) -90, 496);
     }
 
-    private final int a(String param0, pj param1, int param2, int param3, int param4, String param5) {
+    private final int a(String param0, UiWidget param1, int param2, int param3, int param4, String param5) {
         int var7_int = 0;
         RuntimeException var7 = null;
         int stackIn_1_0 = 0;
@@ -237,7 +237,7 @@ final class DisplayNameSelectionPanel extends ta implements NameSuggestionListen
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw dd.wrapClientException((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
+          throw DraggableWidgetContainer.wrapClientException((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
         }
     }
 
@@ -268,7 +268,7 @@ final class DisplayNameSelectionPanel extends ta implements NameSuggestionListen
           } else {
             stackIn_6_2 = "{...}";
           }
-          throw dd.wrapClientException((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_5_1).append(stackIn_6_2).append(')').toString());
+          throw DraggableWidgetContainer.wrapClientException((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_5_1).append(stackIn_6_2).append(')').toString());
         }
     }
 
@@ -302,16 +302,16 @@ final class DisplayNameSelectionPanel extends ta implements NameSuggestionListen
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw dd.wrapClientException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
+          throw DraggableWidgetContainer.wrapClientException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
         }
     }
 
-    final void a(byte param0, pj param1, int param2, int param3) {
+    final void updatePointer(byte param0, UiWidget param1, int param2, int param3) {
         try {
-          super.a(param0, param1, param2, param3);
+          super.updatePointer(param0, param1, param2, param3);
           this.field_J.field_F = this.canSubmitDisplayName(30765);
         } catch (RuntimeException runtimeException) {
-          throw dd.wrapClientException((Throwable) ((Object) runtimeException), "el.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
+          throw DraggableWidgetContainer.wrapClientException((Throwable) ((Object) runtimeException), "el.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
         }
     }
 

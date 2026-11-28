@@ -143,7 +143,7 @@ final class jh extends wb implements WidgetActivationListener {
             var16 = (ResourceArchive) null;
             jh.a(-126, (ResourceArchive) null);
           }
-          nh.field_O = new int[sc.field_c];
+          LabeledWidgetContainer.field_O = new int[sc.field_c];
           qj.field_k = new boolean[sc.field_c];
           var18.field_i = -(sc.field_c * 8) + (-7 + param1.length);
           ra.field_a = var18.readUnsignedShort(param0 + 26877);
@@ -153,7 +153,7 @@ final class jh extends wb implements WidgetActivationListener {
             th.field_Jb[var4] = var17.readUnsignedShort(bm.a(param0, -26877));
           }
           for (var4Lifetime1 = 0; var4Lifetime1 < sc.field_c; var4Lifetime1++) {
-            nh.field_O[var4Lifetime1] = var18.readUnsignedShort(8);
+            LabeledWidgetContainer.field_O[var4Lifetime1] = var18.readUnsignedShort(8);
           }
           for (var4Lifetime2 = 0; var4Lifetime2 < sc.field_c; var4Lifetime2++) {
             TextInputField.field_X[var4Lifetime2] = var18.readUnsignedShort(bm.a(param0, -26877));
@@ -288,7 +288,7 @@ final class jh extends wb implements WidgetActivationListener {
         }
     }
 
-    private final InteractiveWidget a(mh param0, String param1, byte param2) {
+    private final InteractiveWidget a(WidgetEventListener param0, String param1, byte param2) {
         InteractiveWidget var4 = null;
         RuntimeException var4_ref = null;
         int var5 = 0;
@@ -302,16 +302,16 @@ final class jh extends wb implements WidgetActivationListener {
         RuntimeException decompiledCaughtException = null;
         try {
           var4 = new InteractiveWidget(param1, param0);
-          var4.field_h = (nn) ((Object) new ke());
+          var4.field_h = (WidgetRenderer) ((Object) new ke());
           var5 = this.field_x - 6;
           this.field_x = this.field_x + 38;
-          var4.a(-30 + this.field_s, var5, 0, 15, 30);
+          var4.setBounds(-30 + this.field_s, var5, 0, 15, 30);
           if (param2 != 50) {
             var6 = (PcmSample[]) null;
             jh.a(113, (byte) 58, 125, (PcmSample[]) null, 37);
           }
-          this.a(param2 + 51398, var4);
-          this.c(0);
+          this.addChild(param2 + 51398, var4);
+          this.refreshLayout(0);
           stackIn_3_0 = var4;
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -334,7 +334,7 @@ final class jh extends wb implements WidgetActivationListener {
         }
     }
 
-    jh(gg param0, jf param1) {
+    jh(ModalDialogHost param0, jf param1) {
         super(param0, 200, 150);
         Object var3 = null;
         Object stackIn_12_0 = null;
@@ -343,7 +343,7 @@ final class jh extends wb implements WidgetActivationListener {
         StringBuilder stackIn_15_1 = null;
         String stackIn_16_2 = null;
         RuntimeException decompiledCaughtException = null;
-        ag var4 = null;
+        UiWidget var4 = null;
         try {
           var3 = null;
           if (param1 == id.field_s) {
@@ -363,14 +363,14 @@ final class jh extends wb implements WidgetActivationListener {
               }
             }
           }
-          var4 = new ag((String) (var3), (mh) null);
+          var4 = new UiWidget((String) (var3), (WidgetEventListener) null);
           var4.field_s = this.field_s;
           var4.field_x = 80;
           var4.field_v = 0;
           var4.field_m = 50;
-          var4.field_h = (nn) ((Object) new DefaultTextWidgetRenderer(jn.field_G, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true));
-          this.a(51448, var4);
-          this.field_gb = this.a((mh) (this), IsaacGenerator.field_n, (byte) 50);
+          var4.field_h = (WidgetRenderer) ((Object) new DefaultTextWidgetRenderer(AlphaWidgetContainer.field_G, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true));
+          this.addChild(51448, var4);
+          this.field_gb = this.a((WidgetEventListener) (this), IsaacGenerator.field_n, (byte) 50);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

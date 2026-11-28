@@ -3,7 +3,7 @@
  */
 final class od extends f {
     static String field_o;
-    static ee field_n;
+    static DraggableWidgetContainer field_n;
     static byte[] field_m;
     static long field_l;
 

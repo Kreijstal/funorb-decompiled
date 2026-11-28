@@ -237,7 +237,7 @@ final class fh {
 
     final static void a(int param0, byte param1, String param2) {
         int var3_int = 0;
-        s.field_K = false;
+        DropTargetWidgetContainer.field_K = false;
         if (param1 != -1) {
           return;
         }

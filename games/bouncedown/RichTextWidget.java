@@ -9,8 +9,8 @@ class RichTextWidget extends InteractiveWidget {
     private IntrusiveDeque field_C;
     private String[] field_D;
 
-    final void b(int param0, int param1, int param2, int param3, int param4) {
-        super.b(param0, param1, param2, param3, param4);
+    final void setBounds(int param0, int param1, int param2, int param3, int param4) {
+        super.setBounds(param0, param1, param2, param3, param4);
         this.rebuildHotspotBounds(0);
     }
 
@@ -37,7 +37,7 @@ class RichTextWidget extends InteractiveWidget {
         this.field_C = new IntrusiveDeque();
         var2 = 0;
         var3 = (TextWidgetRenderer) ((Object) this.field_j);
-        var4 = var3.getTextLayout((lk) (this), param0);
+        var4 = var3.getTextLayout((UiWidget) (this), param0);
         while (true) {
           var5 = this.field_h.indexOf("<hotspot=", var2);
           if (-1 == var5) {
@@ -143,10 +143,10 @@ class RichTextWidget extends InteractiveWidget {
         }
     }
 
-    void a(int param0, int param1, int param2, int param3) {
+    void drawWidget(int param0, int param1, int param2, int param3) {
         int var7 = 0;
         int var8 = 0;
-        super.a(param0, param1, 116, param3);
+        super.drawWidget(param0, param1, 116, param3);
         if (param0 != 0) {
           return;
         }
@@ -157,8 +157,8 @@ class RichTextWidget extends InteractiveWidget {
         TextWidgetRenderer var10 = (TextWidgetRenderer) ((Object) this.field_j);
         TextHotspotBounds var6 = this.field_E;
         if (var6 != null) {
-          var7 = var10.getTextOriginX(param3, -116, (lk) (this));
-          var8 = var10.getTextOriginY(param1, (lk) (this), (byte) 51);
+          var7 = var10.getTextOriginX(param3, -116, (UiWidget) (this));
+          var8 = var10.getTextOriginY(param1, (UiWidget) (this), (byte) 51);
           do {
             DebouncedFieldValidator.a(-2 + var6.field_h + var7, 2 + var6.field_r, var6.field_i + 2, var8 + var6.field_l - 2, 14677);
             var6 = var6.field_n;
@@ -208,7 +208,7 @@ class RichTextWidget extends InteractiveWidget {
     }
 
     final void a(int param0, byte param1, int param2, int param3) {
-        this.b(((TextWidgetRenderer) ((Object) this.field_j)).getPreferredHeight((lk) (this), 1), 80, param3, param2, param0);
+        this.setBounds(((TextWidgetRenderer) ((Object) this.field_j)).getPreferredHeight((UiWidget) (this), 1), 80, param3, param2, param0);
         if (param1 != -65) {
           RichTextWidget.clearStaticReferences((byte) 8);
         }
@@ -235,7 +235,7 @@ class RichTextWidget extends InteractiveWidget {
         }
     }
 
-    void a(int param0, int param1, int param2, lk param3) {
+    void updatePointer(int param0, int param1, int param2, UiWidget param3) {
         int var5_int = 0;
         int var6 = 0;
         RuntimeException stackIn_6_0 = null;
@@ -244,7 +244,7 @@ class RichTextWidget extends InteractiveWidget {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var5 = null;
         try {
-          super.a(param0, param1, param2, param3);
+          super.updatePointer(param0, param1, param2, param3);
           this.field_E = null;
           if (this.field_g) {
             var5_int = -param1 + uc.field_C - this.field_r;
@@ -266,7 +266,7 @@ class RichTextWidget extends InteractiveWidget {
         }
     }
 
-    boolean a(lk param0, boolean param1) {
+    boolean takeFocus(UiWidget param0, boolean param1) {
         TextHotspotBounds discarded$1 = null;
         RuntimeException var3 = null;
         RuntimeException stackIn_6_0 = null;
@@ -334,8 +334,8 @@ class RichTextWidget extends InteractiveWidget {
         return null;
     }
 
-    RichTextWidget(String param0, fc param1) {
-        super(param0, (sk) null);
+    RichTextWidget(String param0, WidgetRenderer param1) {
+        super(param0, (WidgetEventListener) null);
         this.field_E = null;
         try {
           this.field_j = param1;

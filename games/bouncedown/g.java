@@ -21,7 +21,7 @@ final class g {
     int[] field_q;
 
     final static we b(int param0) {
-        we var1 = new we(se.field_C, fk.field_e, ConfirmedEmailAvailabilityValidator.field_n[0], ae.field_c[0], ih.field_V[0], qh.field_i[0], ph.field_c[0], he.field_k);
+        we var1 = new we(DropTargetWidgetContainer.field_C, fk.field_e, ConfirmedEmailAvailabilityValidator.field_n[0], ae.field_c[0], ih.field_V[0], qh.field_i[0], ph.field_c[0], he.field_k);
         if (param0 != -8964) {
           field_i = (String) null;
         }

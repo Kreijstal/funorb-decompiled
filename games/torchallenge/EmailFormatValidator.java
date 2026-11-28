@@ -99,7 +99,7 @@ final class EmailFormatValidator extends TextFieldValidator {
 
     final static void a(boolean param0, int param1) {
         if (null == ji.field_p) {
-          si.e((byte) 125);
+          ModalDialogHost.e((byte) 125);
         }
         if (param1 != 0) {
           return;
@@ -156,7 +156,7 @@ final class EmailFormatValidator extends TextFieldValidator {
           for (var6 = var2_int; var6 < var3; var6++) {
             var7 = param0.charAt(var6);
             if (ie.a((byte) 82, (char) var7)) {
-              var8 = uk.a((char) var7, (byte) -111);
+              var8 = DraggableWidgetContainer.a((char) var7, (byte) -111);
               if (0 != var8) {
                 discarded$0 = var5.append((char) var8);
               }
@@ -191,7 +191,7 @@ final class EmailFormatValidator extends TextFieldValidator {
           return;
         }
         try {
-          c.a(sa.field_b, 127, hk.field_d, bg.field_G);
+          c.a(sa.field_b, 127, hk.field_d, LabeledWidgetContainer.field_G);
           nj.a(0, 0, param1, param0 + 20895);
         } catch (RuntimeException runtimeException) {
           throw oj.wrapException((Throwable) ((Object) runtimeException), "il.G(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');

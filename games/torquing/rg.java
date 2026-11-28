@@ -342,9 +342,9 @@ final class rg extends am {
                 var19 = param6 + (-var17 - 1);
                 if (var19 >= var14) {
                   for (var20 = 0; var20 < var13; var20++) {
-                    dupTemp$0 = ie.a(-1 + (param1 + param5) - var20, jh.field_A);
+                    dupTemp$0 = ie.a(-1 + (param1 + param5) - var20, SingleChildWidgetContainer.field_A);
                     var18[dupTemp$0] = var8_int * var20 / var13;
-                    var18[ie.a(jh.field_A, var20 + param1)] = var8_int * var20 / var13;
+                    var18[ie.a(SingleChildWidgetContainer.field_A, var20 + param1)] = var8_int * var20 / var13;
                   }
                   if (var16 + var15 <= ci.field_c) {
                     dk.a(var18, var15, var16, var8_int);
@@ -360,17 +360,17 @@ final class rg extends am {
                   if (0 == this.field_x) {
                     for (var21 = 0; var13 > var21; var21++) {
                       var22 = var8_int * var21 / var13;
-                      dupTemp$1 = ie.a(jh.field_A, -1 + param1 - (-param5 + var21));
+                      dupTemp$1 = ie.a(SingleChildWidgetContainer.field_A, -1 + param1 - (-param5 + var21));
                       var18[dupTemp$1] = var20 * var22 >> 12;
-                      var18[ie.a(jh.field_A, var21 + param1)] = var20 * var22 >> 12;
+                      var18[ie.a(SingleChildWidgetContainer.field_A, var21 + param1)] = var20 * var22 >> 12;
                     }
                   } else {
                     for (var21 = 0; var21 < var13; var21++) {
                       var22 = var21 * var8_int / var13;
                       stackIn_50_0 = var18;
-                      stackIn_50_1 = ie.a(var21 + param1, jh.field_A);
+                      stackIn_50_1 = ie.a(var21 + param1, SingleChildWidgetContainer.field_A);
                       stackIn_50_2 = var18;
-                      stackIn_50_3 = ie.a(-var21 + (param1 + param5 - 1), jh.field_A);
+                      stackIn_50_3 = ie.a(-var21 + (param1 + param5 - 1), SingleChildWidgetContainer.field_A);
                       if (var22 >= var20) {
                         stackIn_51_4 = var20;
                       } else {
@@ -393,17 +393,17 @@ final class rg extends am {
                 if (0 == this.field_x) {
                   for (var20 = 0; var13 > var20; var20++) {
                     var21 = var8_int * var20 / var13;
-                    dupTemp$2 = ie.a(param1 + (param5 - var20 - 1), jh.field_A);
+                    dupTemp$2 = ie.a(param1 + (param5 - var20 - 1), SingleChildWidgetContainer.field_A);
                     var18[dupTemp$2] = var21 * var19 >> 12;
-                    var18[ie.a(jh.field_A, param1 + var20)] = var21 * var19 >> 12;
+                    var18[ie.a(SingleChildWidgetContainer.field_A, param1 + var20)] = var21 * var19 >> 12;
                   }
                 } else {
                   for (var20 = 0; var20 < var13; var20++) {
                     var21 = var20 * var8_int / var13;
                     stackIn_36_0 = var18;
-                    stackIn_36_1 = ie.a(param1 + var20, jh.field_A);
+                    stackIn_36_1 = ie.a(param1 + var20, SingleChildWidgetContainer.field_A);
                     stackIn_36_2 = var18;
-                    stackIn_36_3 = ie.a(-1 + (param1 + param5) - var20, jh.field_A);
+                    stackIn_36_3 = ie.a(-1 + (param1 + param5) - var20, SingleChildWidgetContainer.field_A);
                     if (var21 >= var19) {
                       stackIn_37_4 = var19;
                     } else {

@@ -325,12 +325,12 @@ final class l {
     final static oh a(byte param0, int param1) {
         oh var2 = new oh();
         if (param0 == 12) {
-          oc.field_G.addLast(var2, -103);
+          LabeledWidgetContainer.field_G.addLast(var2, -103);
           Bzip2State.a(param0 - 10, param1);
           return var2;
         }
         field_a = (ResourceArchive) null;
-        oc.field_G.addLast(var2, -103);
+        LabeledWidgetContainer.field_G.addLast(var2, -103);
         Bzip2State.a(param0 - 10, param1);
         return var2;
     }

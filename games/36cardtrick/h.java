@@ -63,7 +63,7 @@ final class h extends InteractiveWidget {
         int var7 = sj.field_b.get(11);
         int var8 = sj.field_b.get(12);
         int var9 = sj.field_b.get(13);
-        return qf.field_I[var3 - 1] + ", " + var4 / 10 + var4 % 10 + "-" + nf.field_b[var5] + "-" + var6 + " " + var7 / 10 + var7 % 10 + ":" + var8 / 10 + var8 % 10 + ":" + var9 / 10 + var9 % 10 + " GMT";
+        return ModalDialog.field_I[var3 - 1] + ", " + var4 / 10 + var4 % 10 + "-" + nf.field_b[var5] + "-" + var6 + " " + var7 / 10 + var7 % 10 + ":" + var8 / 10 + var8 % 10 + ":" + var9 / 10 + var9 % 10 + " GMT";
     }
 
     final static void e(byte param0) {
@@ -131,7 +131,7 @@ final class h extends InteractiveWidget {
         return var5;
     }
 
-    final boolean a(int param0, int param1, int param2, int param3, lk param4, int param5, int param6) {
+    final boolean pointerPressed(int param0, int param1, int param2, int param3, UiWidget param4, int param5, int param6) {
         int var12 = 0;
         RuntimeException stackIn_28_0 = null;
         StringBuilder stackIn_28_1 = null;
@@ -146,7 +146,7 @@ final class h extends InteractiveWidget {
         int var14 = 0;
         var14 = Main.field_T;
         try {
-          if (!super.a(param0, param1, param2, -96, param4, param5, param6)) {
+          if (!super.pointerPressed(param0, param1, param2, -96, param4, param5, param6)) {
             if (param3 <= -14) {
               return false;
             }

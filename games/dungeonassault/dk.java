@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class dk implements ca {
+final class dk implements WidgetRenderer {
     static int field_c;
     static RgbSprite field_b;
     static String field_e;
@@ -20,7 +20,7 @@ final class dk implements ca {
         field_b = null;
     }
 
-    public final void a(byte param0, lm param1, int param2, int param3, boolean param4) {
+    public final void paintWidget(byte param0, UiWidget param1, int param2, int param3, boolean param4) {
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
         String stackIn_13_2 = null;
@@ -41,7 +41,7 @@ final class dk implements ca {
             ((InteractiveWidget) (param1)).field_E) {
             var8.drawAdditive(var6_int + (1 + (-var8.field_E + param1.field_x >> 1)), 1 + var7 + (-var8.field_G + param1.field_s >> 1), 256);
           }
-          if (!param1.a((byte) 28)) {
+          if (!param1.isFocused((byte) 28)) {
             return;
           }
           NetworkGameClient.a(2 + var6_int, -4 + param1.field_s, param1.field_x - 4, var7 + 2, param0 - 33);

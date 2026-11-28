@@ -37,7 +37,7 @@ abstract class SocketConnector {
     }
 
     final static void a(byte param0) {
-        hj.field_K = null;
+        DropTargetWidgetContainer.field_K = null;
         ProxyAuthenticationRequiredException.field_a = null;
         sb.field_m = null;
         ConfirmedEmailAvailabilityValidator.field_s = null;

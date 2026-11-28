@@ -99,7 +99,7 @@ final class bl extends l {
         int var7Lifetime1Lifetime1;
         var9 = Vertigo2.field_L ? 1 : 0;
         try {
-          nm.field_J = true;
+          ModalDialog.field_J = true;
           TextFieldValidator.field_j = param1;
           if (0 == TextFieldValidator.field_j) {
             var3_int = dc.a(bc.field_c, qr.field_o, (byte) 101, MovingLevelTile.field_w, mf.field_c);

@@ -31,7 +31,7 @@ class ChessBoardState {
           }
           if (qk.field_h == 0) {
             pg.field_s = qk.field_h;
-            ma.field_D = false;
+            DequeWidgetContainer.field_D = false;
           }
           if (da.a(qk.field_h, true)) {
             var4_int = 0;

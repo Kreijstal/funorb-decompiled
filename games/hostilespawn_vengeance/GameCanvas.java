@@ -166,7 +166,7 @@ final class GameCanvas extends java.awt.Canvas {
                           }
                         }
                       }
-                      nh.a(var8, -29966);
+                      LabeledWidgetContainer.a(var8, -29966);
                     }
                   }
                 }
@@ -185,24 +185,24 @@ final class GameCanvas extends java.awt.Canvas {
             if (26 == param3.field_i) {
               u.a(-1, param3.field_j, true, 16, param3.field_l, 28);
             }
-            jn.field_F[ib.field_c].field_c = (double)(int)(Math.random() * 256.0);
-            jn.field_F[ib.field_c].field_j.copyCoordinatesFrom((byte) 46, param3.field_j);
-            jn.field_F[ib.field_c].field_l.a(param3.field_l, -28860);
-            jn.field_F[ib.field_c].field_e = 0;
-            jn.field_F[ib.field_c].field_h = 1;
-            jn.field_F[ib.field_c].field_i = 12;
+            AlphaWidgetContainer.field_F[ib.field_c].field_c = (double)(int)(Math.random() * 256.0);
+            AlphaWidgetContainer.field_F[ib.field_c].field_j.copyCoordinatesFrom((byte) 46, param3.field_j);
+            AlphaWidgetContainer.field_F[ib.field_c].field_l.a(param3.field_l, -28860);
+            AlphaWidgetContainer.field_F[ib.field_c].field_e = 0;
+            AlphaWidgetContainer.field_F[ib.field_c].field_h = 1;
+            AlphaWidgetContainer.field_F[ib.field_c].field_i = 12;
             ib.field_c = ib.field_c + 1;
             if (5 == param3.field_e) {
               hg.a((byte) 64, param3);
             }
             u.a(-1, param3.field_j, true, 16, param3.field_l, 35);
           } else {
-            jn.field_F[ib.field_c].field_c = param3.field_c;
-            jn.field_F[ib.field_c].field_j.copyCoordinatesFrom((byte) 46, param3.field_j);
-            jn.field_F[ib.field_c].field_l.a(param3.field_l, -28860);
-            jn.field_F[ib.field_c].field_e = 0;
-            jn.field_F[ib.field_c].field_h = 5;
-            jn.field_F[ib.field_c].field_i = 17;
+            AlphaWidgetContainer.field_F[ib.field_c].field_c = param3.field_c;
+            AlphaWidgetContainer.field_F[ib.field_c].field_j.copyCoordinatesFrom((byte) 46, param3.field_j);
+            AlphaWidgetContainer.field_F[ib.field_c].field_l.a(param3.field_l, -28860);
+            AlphaWidgetContainer.field_F[ib.field_c].field_e = 0;
+            AlphaWidgetContainer.field_F[ib.field_c].field_h = 5;
+            AlphaWidgetContainer.field_F[ib.field_c].field_i = 17;
             ib.field_c = ib.field_c + 1;
           }
           if (param3.field_e > 4) {

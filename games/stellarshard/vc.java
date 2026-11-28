@@ -97,20 +97,20 @@ final class vc {
           }
           try {
             if (kc.field_b == 0) {
-              dl.field_A = fa.field_p.requestDirectSocket(field_g, (byte) 34, ll.field_b);
+              DraggableWidgetContainer.field_A = fa.field_p.requestDirectSocket(field_g, (byte) 34, ll.field_b);
               kc.field_b = kc.field_b + 1;
             }
             if (kc.field_b == 1) {
-              if (dl.field_A.status == 2) {
+              if (DraggableWidgetContainer.field_A.status == 2) {
                 stackIn_15_0 = tc.a(-1, (byte) 127);
                 return stackIn_15_0;
               }
-              if (1 == dl.field_A.status) {
+              if (1 == DraggableWidgetContainer.field_A.status) {
                 kc.field_b = kc.field_b + 1;
               }
             }
             if (kc.field_b == 2) {
-              k.field_b = new BufferedSocket((java.net.Socket) (dl.field_A.result), fa.field_p);
+              k.field_b = new BufferedSocket((java.net.Socket) (DraggableWidgetContainer.field_A.result), fa.field_p);
               var3 = new PacketBuffer(13);
               bk.a(fd.field_nb, false, sk.field_b, var3, ld.field_C);
               var3.writeByte(false, 15);
@@ -140,7 +140,7 @@ final class vc {
               return stackIn_34_0;
             }
             od.field_v.a(ScorePopup.field_i, k.field_b, 70);
-            dl.field_A = null;
+            DraggableWidgetContainer.field_A = null;
             k.field_b = null;
             kc.field_b = 0;
             stackIn_32_0 = 0;

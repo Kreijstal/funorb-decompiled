@@ -699,12 +699,12 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
             if (hk.field_e != null &&
               b.field_i == null) {
               var6 = hk.field_e.getInsets();
-              ie.field_e.setLocation(var6.left + ue.field_D, var6.top + wi.field_c);
+              ie.field_e.setLocation(var6.left + AlphaWidgetContainer.field_D, var6.top + wi.field_c);
               if (MonkeyPuzzle2.field_F) {
-                ie.field_e.setLocation(ue.field_D, wi.field_c);
+                ie.field_e.setLocation(AlphaWidgetContainer.field_D, wi.field_c);
               }
             } else {
-              ie.field_e.setLocation(ue.field_D, wi.field_c);
+              ie.field_e.setLocation(AlphaWidgetContainer.field_D, wi.field_c);
             }
           }
           this.renderClientFrame(-25976);
@@ -903,7 +903,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
               ub.field_b = param1;
               kk.field_b = param1;
               wi.field_c = 0;
-              ue.field_D = 0;
+              AlphaWidgetContainer.field_D = 0;
               kd.field_c = param2;
               m.field_f = this;
               SecondaryNodeDeque.field_e = ii.a(false);
@@ -1042,12 +1042,12 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
           ie.field_e.setVisible(true);
           if (var2 == hk.field_e) {
             var3 = hk.field_e.getInsets();
-            ie.field_e.setLocation(ue.field_D + var3.left, wi.field_c + var3.top);
+            ie.field_e.setLocation(AlphaWidgetContainer.field_D + var3.left, wi.field_c + var3.top);
             if (var4 != 0) {
-              ie.field_e.setLocation(ue.field_D, wi.field_c);
+              ie.field_e.setLocation(AlphaWidgetContainer.field_D, wi.field_c);
             }
           } else {
-            ie.field_e.setLocation(ue.field_D, wi.field_c);
+            ie.field_e.setLocation(AlphaWidgetContainer.field_D, wi.field_c);
           }
           ie.field_e.addFocusListener((java.awt.event.FocusListener) (this));
           ie.field_e.requestFocus();

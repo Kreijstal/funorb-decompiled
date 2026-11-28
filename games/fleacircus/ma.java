@@ -29,7 +29,7 @@ final class ma {
           int var5Lifetime1;
           var7 = fleas.field_A ? 1 : 0;
           try {
-            if (qj.field_G) {
+            if (DropTargetWidgetContainer.field_G) {
               return true;
             }
             try {

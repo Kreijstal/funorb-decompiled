@@ -22,9 +22,9 @@ final class LoginPanel extends ComponentContainer implements TextFieldListener, 
     static String stringState0227;
 
     LoginPanel(String stringArgument1, String stringArgument2, boolean booleanArgument3, boolean booleanArgument4, boolean booleanArgument5) {
-        super(0, 0, 310, 190, (CallbackContract004) null);
-        UiComponentPart006 cachedUiComponentPart006Local1 = null;
-        UiComponentPart006 cachedUiComponentPart006Local2 = null;
+        super(0, 0, 310, 190, (WidgetRenderer) null);
+        LabeledWidgetContainer cachedUiComponentPart006Local1 = null;
+        LabeledWidgetContainer cachedUiComponentPart006Local2 = null;
         boolean stackBooleanLocal3 = false;
         boolean stackBooleanLocal4 = false;
         boolean stackBooleanLocal5 = false;
@@ -44,8 +44,8 @@ final class LoginPanel extends ComponentContainer implements TextFieldListener, 
         BitmapFont bitmapFontLocal19 = null;
         String stringLocal20 = null;
         MixedSupport061 mixedSupport061Local21 = null;
-        UiComponentPart006 uiComponentPart006Local22 = null;
-        UiComponentPart006 uiComponentPart006Local23 = null;
+        LabeledWidgetContainer uiComponentPart006Local22 = null;
+        LabeledWidgetContainer uiComponentPart006Local23 = null;
         try {
           this.stringState0225 = stringArgument2;
           stackBooleanLocal3 = (booleanArgument3);
@@ -58,40 +58,40 @@ final class LoginPanel extends ComponentContainer implements TextFieldListener, 
             this.booleanState0068)) {
             throw new IllegalStateException();
           }
-          this.uiComponentPart028State0001 = (EditableTextField) ((Object) new ValidatedTextField(stringArgument1, (CallbackContract006) (this), 100));
-          this.uiComponentPart028State0002 = (EditableTextField) ((Object) new ValidatedTextField("", (CallbackContract006) (this), 20));
+          this.uiComponentPart028State0001 = (EditableTextField) ((Object) new ValidatedTextField(stringArgument1, (WidgetEventListener) (this), 100));
+          this.uiComponentPart028State0002 = (EditableTextField) ((Object) new ValidatedTextField("", (WidgetEventListener) (this), 20));
           if (this.booleanState0067) {
-            this.interactiveComponentState0005 = new InteractiveComponent(GameAssets.stringState0504, (CallbackContract006) null);
-            this.interactiveComponentState0003 = new InteractiveComponent(SceneWidgetPart005.stringState0255, (CallbackContract006) null);
+            this.interactiveComponentState0005 = new InteractiveComponent(GameAssets.stringState0504, (WidgetEventListener) null);
+            this.interactiveComponentState0003 = new InteractiveComponent(SceneWidgetPart005.stringState0255, (WidgetEventListener) null);
             this.uiComponentPart028State0001.booleanState0035 = false;
           } else {
-            this.interactiveComponentState0005 = new InteractiveComponent(GameDomainSupport004.stringState0285, (CallbackContract006) null);
+            this.interactiveComponentState0005 = new InteractiveComponent(GameDomainSupport004.stringState0285, (WidgetEventListener) null);
             stackInteractiveComponentLocal6 = null;
             stackInteractiveComponentLocal7 = null;
             if (!this.booleanState0068) {
               stackInteractiveComponentLocal8 = null;
               stackInteractiveComponentLocal9 = null;
-              stackStringLocal10 = UiComponentPart003.stringState0060;
+              stackStringLocal10 = ModalDialog.stringState0060;
             } else {
               stackInteractiveComponentLocal8 = null;
               stackInteractiveComponentLocal9 = null;
               stackStringLocal10 = MixedSupport058.stringState0250;
             }
-            this.interactiveComponentState0003 = new InteractiveComponent(stackStringLocal10, (CallbackContract006) null);
+            this.interactiveComponentState0003 = new InteractiveComponent(stackStringLocal10, (WidgetEventListener) null);
             if (this.booleanState0069) {
-              this.interactiveComponentState0004 = new InteractiveComponent(MixedSupport057.stringState0246, (CallbackContract006) (this));
+              this.interactiveComponentState0004 = new InteractiveComponent(MixedSupport057.stringState0246, (WidgetEventListener) (this));
             }
           }
-          this.uiComponentPart028State0001.callbackContract004State0006 = (CallbackContract004) ((Object) new MixedSupport024(10000536));
-          this.uiComponentPart028State0002.callbackContract004State0006 = (CallbackContract004) ((Object) new MixedSupport050(10000536));
+          this.uiComponentPart028State0001.callbackContract004State0006 = (WidgetRenderer) ((Object) new MixedSupport024(10000536));
+          this.uiComponentPart028State0002.callbackContract004State0006 = (WidgetRenderer) ((Object) new MixedSupport050(10000536));
           mixedSupport041Local17 = new MixedSupport041();
-          this.interactiveComponentState0005.callbackContract004State0006 = (CallbackContract004) ((Object) mixedSupport041Local17);
+          this.interactiveComponentState0005.callbackContract004State0006 = (WidgetRenderer) ((Object) mixedSupport041Local17);
           if (this.interactiveComponentState0003 != null) {
-            this.interactiveComponentState0003.callbackContract004State0006 = (CallbackContract004) ((Object) mixedSupport041Local17);
+            this.interactiveComponentState0003.callbackContract004State0006 = (WidgetRenderer) ((Object) mixedSupport041Local17);
           }
           this.uiComponentPart028State0001.stringState0080 = MixedSupport033.stringState0161;
           if (this.interactiveComponentState0004 != null) {
-            this.interactiveComponentState0004.callbackContract004State0006 = (CallbackContract004) ((Object) mixedSupport041Local17);
+            this.interactiveComponentState0004.callbackContract004State0006 = (WidgetRenderer) ((Object) mixedSupport041Local17);
           }
           if (null != this.interactiveComponentState0004) {
             this.interactiveComponentState0004.stringState0080 = MixedSupport123.stringState0541;
@@ -99,9 +99,9 @@ final class LoginPanel extends ComponentContainer implements TextFieldListener, 
           if (!this.booleanState0067) {
             if (this.booleanState0068) {
               this.interactiveComponentState0003.stringState0080 = MixedSupport069.stringState0312;
-              this.interactiveComponentState0003.callbackContract004State0006 = (CallbackContract004) ((Object) new MixedSupport094());
+              this.interactiveComponentState0003.callbackContract004State0006 = (WidgetRenderer) ((Object) new MixedSupport094());
             } else {
-              this.interactiveComponentState0003.callbackContract004State0006 = (CallbackContract004) ((Object) new MixedSupport094());
+              this.interactiveComponentState0003.callbackContract004State0006 = (WidgetRenderer) ((Object) new MixedSupport094());
             }
           } else {
             this.interactiveComponentState0003.stringState0080 = MixedSupport049.stringState0205;
@@ -112,7 +112,7 @@ final class LoginPanel extends ComponentContainer implements TextFieldListener, 
             this.integerState0104 = this.integerState0104 + (5 + bitmapFontLocal19.textHeight(this.stringState0225, this.integerState0107 - 40, bitmapFontLocal19.integerState0518));
           }
           stringLocal20 = MixedSupport125.stringState0548;
-          mixedSupport061Local21 = DiagnosticSupport002.computeMixedSupport0610765(UiComponentPart029.computeApplet1485(25144), -10314);
+          mixedSupport061Local21 = DiagnosticSupport002.computeMixedSupport0610765(DraggableWidgetContainer.computeApplet1485(25144), -10314);
           if (mixedSupport061Local21 != MixedSupport005.mixedSupport061State0001) {
             if (mixedSupport061Local21 == RenderingSupport003.mixedSupport061State0002) {
               stringLocal20 = MixedSupport117.stringState0514;
@@ -120,49 +120,49 @@ final class LoginPanel extends ComponentContainer implements TextFieldListener, 
           } else {
             stringLocal20 = MixedSupport134.stringState0575;
           }
-          cachedUiComponentPart006Local1 = new UiComponentPart006(10, this.integerState0104, this.integerState0107 - 20, 25, this.uiComponentPart028State0001, false, 80, 3, bitmapFontLocal19, 16777215, stringLocal20);
+          cachedUiComponentPart006Local1 = new LabeledWidgetContainer(10, this.integerState0104, this.integerState0107 - 20, 25, this.uiComponentPart028State0001, false, 80, 3, bitmapFontLocal19, 16777215, stringLocal20);
           uiComponentPart006Local22 = cachedUiComponentPart006Local1;
-          this.performAction0895(cachedUiComponentPart006Local1, (byte) -55);
+          this.addChild(cachedUiComponentPart006Local1, (byte) -55);
           this.integerState0104 = this.integerState0104 + (((UiComponent) ((Object) uiComponentPart006Local22)).integerState0108 + 5);
-          cachedUiComponentPart006Local2 = new UiComponentPart006(10, this.integerState0104, -20 + this.integerState0107, 25, this.uiComponentPart028State0002, false, 80, 3, bitmapFontLocal19, 16777215, MixedSupport017.stringState0087);
+          cachedUiComponentPart006Local2 = new LabeledWidgetContainer(10, this.integerState0104, -20 + this.integerState0107, 25, this.uiComponentPart028State0002, false, 80, 3, bitmapFontLocal19, 16777215, MixedSupport017.stringState0087);
           uiComponentPart006Local23 = cachedUiComponentPart006Local2;
-          this.performAction0895(cachedUiComponentPart006Local2, (byte) -55);
-          this.interactiveComponentState0005.callbackContract006State0001 = (CallbackContract006) (this);
+          this.addChild(cachedUiComponentPart006Local2, (byte) -55);
+          this.interactiveComponentState0005.callbackContract006State0001 = (WidgetEventListener) (this);
           this.integerState0104 = this.integerState0104 + (5 + ((UiComponent) ((Object) uiComponentPart006Local23)).integerState0108);
           if (this.interactiveComponentState0004 != null) {
-            this.interactiveComponentState0004.callbackContract006State0001 = (CallbackContract006) (this);
+            this.interactiveComponentState0004.callbackContract006State0001 = (WidgetEventListener) (this);
           }
           if (this.interactiveComponentState0003 != null) {
-            this.interactiveComponentState0003.callbackContract006State0001 = (CallbackContract006) (this);
+            this.interactiveComponentState0003.callbackContract006State0001 = (WidgetEventListener) (this);
           }
           if (null == this.interactiveComponentState0004) {
-            this.interactiveComponentState0005.performAction0222(30, this.integerState0107 - 16, 8, this.integerState0104, -16555);
+            this.interactiveComponentState0005.setBounds(30, this.integerState0107 - 16, 8, this.integerState0104, -16555);
             this.integerState0104 = this.integerState0104 + 35;
           } else {
-            this.interactiveComponentState0005.performAction0222(30, this.integerState0107 - 95, 85, this.integerState0104, -16555);
+            this.interactiveComponentState0005.setBounds(30, this.integerState0107 - 95, 85, this.integerState0104, -16555);
             this.integerState0104 = this.integerState0104 + 60;
           }
           if (null != this.interactiveComponentState0004) {
-            this.interactiveComponentState0004.performAction0222(30, -10 + (-6 + this.integerState0107), 8, this.integerState0104, -16555);
+            this.interactiveComponentState0004.setBounds(30, -10 + (-6 + this.integerState0107), 8, this.integerState0104, -16555);
             this.integerState0104 = this.integerState0104 + 35;
           }
           if (this.interactiveComponentState0003 != null) {
             if (!this.booleanState0067 &&
               !this.booleanState0068) {
-              this.interactiveComponentState0003.performAction0222(20, 40, 8, this.integerState0104, -16555);
+              this.interactiveComponentState0003.setBounds(20, 40, 8, this.integerState0104, -16555);
               this.integerState0104 = this.integerState0104 + 25;
             } else {
-              this.interactiveComponentState0003.performAction0222(30, -10 + (-6 + this.integerState0107), 8, this.integerState0104, -16555);
+              this.interactiveComponentState0003.setBounds(30, -10 + (-6 + this.integerState0107), 8, this.integerState0104, -16555);
               this.integerState0104 = this.integerState0104 + 35;
             }
           }
-          this.performAction0222(this.integerState0104 + 3, this.integerState0107, 0, 0, -16555);
-          this.performAction0895(this.interactiveComponentState0005, (byte) -55);
+          this.setBounds(this.integerState0104 + 3, this.integerState0107, 0, 0, -16555);
+          this.addChild(this.interactiveComponentState0005, (byte) -55);
           if (null != this.interactiveComponentState0004) {
-            this.performAction0895(this.interactiveComponentState0004, (byte) -55);
+            this.addChild(this.interactiveComponentState0004, (byte) -55);
           }
           if (this.interactiveComponentState0003 != null) {
-            this.performAction0895(this.interactiveComponentState0003, (byte) -55);
+            this.addChild(this.interactiveComponentState0003, (byte) -55);
           }
           return;
         } catch (java.lang.RuntimeException caughtParameterLocal24) {
@@ -193,7 +193,7 @@ final class LoginPanel extends ComponentContainer implements TextFieldListener, 
         RuntimeException runtimeExceptionLocal5 = null;
         try {
           if (this.uiComponentPart028State0001 == uiComponentPart028Argument2) {
-            this.uiComponentPart028State0002.computeBoolean0221(false, (UiComponent) (this));
+            this.uiComponentPart028State0002.takeFocus(false, (UiComponent) (this));
           }
           if (uiComponentPart028Argument2 == this.uiComponentPart028State0002) {
             this.performAction0632((byte) -29);
@@ -510,7 +510,7 @@ final class LoginPanel extends ComponentContainer implements TextFieldListener, 
           stringLocal2 = stringArgument1;
           uiComponentPart028Local1.setText(stringLocal2, (byte) 114, false);
           if (integerArgument2 != 30534) {
-            this.computeBoolean0182(127, 108, (UiComponent) null, 'ﾫ');
+            this.handleKey(127, 108, (UiComponent) null, 'ﾫ');
           }
           this.uiComponentPart028State0002.clearText(0);
         } catch (RuntimeException runtimeException) {
@@ -518,7 +518,7 @@ final class LoginPanel extends ComponentContainer implements TextFieldListener, 
         }
     }
 
-    final boolean computeBoolean0182(int integerArgument1, int integerArgument2, UiComponent uiComponentArgument3, char characterArgument4) {
+    final boolean handleKey(int integerArgument1, int integerArgument2, UiComponent uiComponentArgument3, char characterArgument4) {
         int integerLocal1 = 0;
         RuntimeException runtimeExceptionLocal2 = null;
         boolean stackBooleanLocal3 = false;
@@ -528,18 +528,18 @@ final class LoginPanel extends ComponentContainer implements TextFieldListener, 
         String stackStringLocal7 = null;
         RuntimeException caughtExceptionLocal8 = null;
         try {
-          if (super.computeBoolean0182(65, integerArgument2, uiComponentArgument3, characterArgument4)) {
+          if (super.handleKey(65, integerArgument2, uiComponentArgument3, characterArgument4)) {
             return true;
           }
           integerLocal1 = 56 / ((-22 - integerArgument1) / 49);
           if (integerArgument2 == 98) {
-            stackBooleanLocal3 = this.computeBoolean0893(uiComponentArgument3, (byte) -45);
+            stackBooleanLocal3 = this.focusPreviousChild(uiComponentArgument3, (byte) -45);
             return stackBooleanLocal3;
           }
           if (99 != integerArgument2) {
             return false;
           }
-          stackBooleanLocal4 = this.computeBoolean0892(32, uiComponentArgument3);
+          stackBooleanLocal4 = this.focusNextChild(32, uiComponentArgument3);
           return stackBooleanLocal4;
         } catch (java.lang.RuntimeException caughtParameterLocal9) {
           caughtExceptionLocal8 = caughtParameterLocal9;
@@ -573,7 +573,7 @@ final class LoginPanel extends ComponentContainer implements TextFieldListener, 
         this.uiComponentPart028State0002.clearText(0);
     }
 
-    final void performAction0162(int integerArgument1, int integerArgument2, int integerArgument3, int integerArgument4) {
+    final void drawWidget(int integerArgument1, int integerArgument2, int integerArgument3, int integerArgument4) {
         if (this.stringState0225 != null) {
           GameDomainSupport003.bitmapFontState0015.drawParagraph(this.stringState0225, integerArgument1 + (this.integerState0110 + 20), integerArgument4 + (this.integerState0104 + 15), this.integerState0107 - 40, this.integerState0108, 16777215, -1, 1, 0, GameDomainSupport003.bitmapFontState0015.integerState0518);
         }
@@ -583,7 +583,7 @@ final class LoginPanel extends ComponentContainer implements TextFieldListener, 
         if (this.interactiveComponentState0004 != null) {
           SoftwareRaster.drawHorizontalLine(10 + integerArgument1, 134 + integerArgument4, -20 + this.integerState0107, 4210752);
         }
-        super.performAction0162(integerArgument1, -119, integerArgument3, integerArgument4);
+        super.drawWidget(integerArgument1, -119, integerArgument3, integerArgument4);
     }
 
     public final void onWidgetActivated(byte byteArgument1, int integerArgument2, InteractiveComponent interactiveComponentArgument3, int integerArgument4, int integerArgument5) {

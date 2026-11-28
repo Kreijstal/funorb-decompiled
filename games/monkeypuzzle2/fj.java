@@ -13,7 +13,7 @@ final class fj extends ButtonWidget {
     int field_G;
     int field_D;
 
-    final boolean a(int param0, int param1, int param2, int param3, UiWidget param4, int param5, int param6) {
+    final boolean pointerPressed(int param0, int param1, int param2, int param3, UiWidget param4, int param5, int param6) {
         RuntimeException stackIn_17_0 = null;
         StringBuilder stackIn_17_1 = null;
         String stackIn_18_2 = null;
@@ -25,7 +25,7 @@ final class fj extends ButtonWidget {
         int var12 = 0;
         var12 = MonkeyPuzzle2.field_F ? 1 : 0;
         try {
-          if (!super.a(param0, param1, param2, param3, param4, param5, param6)) {
+          if (!super.pointerPressed(param0, param1, param2, param3, param4, param5, param6)) {
             return false;
           }
           var8_int = param1 - this.field_I - (this.field_r + param6);

@@ -158,8 +158,8 @@ abstract class TextFieldValidator extends DebouncedFieldValidator implements Tex
     }
 
     final static void g(int param0) {
-        if (lf.field_S < 70) {
-          an.a(lf.field_S + 10, (byte) 105);
+        if (AlphaWidgetContainer.field_S < 70) {
+          an.a(AlphaWidgetContainer.field_S + 10, (byte) 105);
         } else {
           an.a(80, (byte) 111);
         }

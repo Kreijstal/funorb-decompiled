@@ -66,9 +66,9 @@ final class ee extends IntrusiveNode {
         int var8Lifetime1;
         var10 = SolKnight.field_L ? 1 : 0;
         try {
-          var1_int = th.field_J;
+          var1_int = DropTargetWidgetContainer.field_J;
           var2 = 0;
-          if (te.field_M == 2) {
+          if (AlphaWidgetContainer.field_M == 2) {
             var3_long = -fg.field_f + je.correctedCurrentTimeMillis(1);
             var2 = (int)((-var3_long + 10999L) / 1000L);
             if (0 > var2) {
@@ -81,7 +81,7 @@ final class ee extends IntrusiveNode {
           for (var3 = 0; var3 < vc.field_d.length; var3++) {
             var4 = ImageProducerRasterBuffer.field_l[var3];
             if (var4 >= 0) {
-              if (bc.field_K.field_f != var4) {
+              if (DraggableWidgetContainer.field_K.field_f != var4) {
                 var5 = FrameTimer.field_c;
               } else {
                 var5 = pb.field_b;
@@ -90,12 +90,12 @@ final class ee extends IntrusiveNode {
               var5 = hc.field_d;
             }
             var6 = vc.field_d[var3];
-            if (2 == te.field_M &&
+            if (2 == AlphaWidgetContainer.field_M &&
               var2 == 1) {
-              if (ak.field_b.length >= i.field_I.length) {
+              if (ak.field_b.length >= ModalDialogHost.field_I.length) {
                 stackIn_21_0 = ak.field_b.length;
               } else {
-                stackIn_21_0 = i.field_I.length;
+                stackIn_21_0 = ModalDialogHost.field_I.length;
               }
               var7 = stackIn_21_0;
               if (qc.field_h.length < ConfirmedEmailAvailabilityValidator.field_o.length) {
@@ -132,7 +132,7 @@ final class ee extends IntrusiveNode {
             var8Lifetime1 = PcmOutputWorker.field_d - (var7Lifetime1 >> 1);
             if (var4 >= 0) {
               var1_int = var1_int + EditableTextField.field_N;
-              if (bc.field_K.field_f != var4) {
+              if (DraggableWidgetContainer.field_K.field_f != var4) {
                 stackIn_48_0 = kb.field_d;
               } else {
                 stackIn_48_0 = ai.field_a;
@@ -144,7 +144,7 @@ final class ee extends IntrusiveNode {
               var1_int = var1_int + g.field_l;
             }
             if (var4 < 0) {
-              ke.field_H.drawString(var6, var8Lifetime1, var1_int + ArchiveIndex.field_g, var5, -1);
+              LabeledWidgetContainer.field_H.drawString(var6, var8Lifetime1, var1_int + ArchiveIndex.field_g, var5, -1);
               var1_int = var1_int + uc.field_i;
             } else {
               kb.field_f.drawString(var6, var8Lifetime1, var1_int + ph.field_k, var5, -1);

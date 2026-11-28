@@ -30,12 +30,12 @@ final class q {
           de.field_n = de.field_n - 1;
           if (de.field_n == 0) {
             de.field_n = 200;
-            var1 = (qb) (jn.field_H.beginForward(param0 ^ -14500));
+            var1 = (qb) (AlphaWidgetContainer.field_H.beginForward(param0 ^ -14500));
             while (var1 != null) {
               if (!var1.field_j.isLinked(3000)) {
                 var1.unlink(param0 ^ -14511);
               }
-              var1 = (qb) (jn.field_H.nextForward(12684));
+              var1 = (qb) (AlphaWidgetContainer.field_H.nextForward(12684));
             }
             if (ej.field_g != null) {
               var1Lifetime1 = (qb) (ej.field_g.beginForward(-27));
@@ -81,14 +81,14 @@ final class q {
         if (param0 != -1) {
           return (String) null;
         }
-        if (od.field_I == ti.field_b) {
+        if (DropTargetWidgetContainer.field_I == ti.field_b) {
           return qi.field_G;
         }
-        return fc.field_y;
+        return SingleChildWidgetContainer.field_y;
     }
 
     static {
-        jn.a(256, 50);
+        AlphaWidgetContainer.a(256, 50);
         field_l = "You destroyed the main reactor for this level. Activate another reactor to restore power to the lift.";
         field_i = null;
         field_a = "Find a way back to the lift.";

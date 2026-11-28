@@ -283,7 +283,7 @@ final class ti {
                 var26 = param6.field_y[var23];
                 fq.field_b[var23] = var9 + (var26 * var18 + var24 * var12 + var25 * var15 >> 16);
                 fd.field_t[var23] = var10 + (var16 * var25 + (var24 * var13 + var19 * var26) >> 16);
-                wq.field_G[var23] = var11 + (var26 * var20 + var25 * var17 + var24 * var14 >> 16);
+                AlphaWidgetContainer.field_G[var23] = var11 + (var26 * var20 + var25 * var17 + var24 * var14 >> 16);
                 var24 = param6.field_s[var23];
                 var25 = param6.field_l[var23];
                 var26 = param6.field_v[var23];
@@ -294,7 +294,7 @@ final class ti {
                 var25 = param6.field_b[var23];
                 var26 = param6.field_M[var23];
                 DisplayNameSelectionPanel.field_O[var23] = var9 + (var18 * var26 + var12 * var24 + var15 * var25 >> 16);
-                mg.field_J[var23] = var10 + (var13 * var24 + (var16 * var25 + var19 * var26) >> 16);
+                LabeledWidgetContainer.field_J[var23] = var10 + (var13 * var24 + (var16 * var25 + var19 * var26) >> 16);
                 nf.field_u[var23] = (var26 * var20 + var14 * var24 + var25 * var17 >> 16) + var11;
                 var23++;
                 if (var30 != 0) {

@@ -315,9 +315,9 @@ abstract class fb {
           ArchiveRequest.field_x = param5;
           jb.field_a = param0;
           ArchiveRequest.field_t = param2;
-          dl.field_C = new Sprite[param1.length];
+          DraggableWidgetContainer.field_C = new Sprite[param1.length];
           for (var7 = 0; param1.length > var7; var7++) {
-            dl.field_C[var7] = new Sprite(317, 34);
+            DraggableWidgetContainer.field_C[var7] = new Sprite(317, 34);
           }
           if (param4 != -1) {
             var9 = (PlatformTaskDispatcher) null;

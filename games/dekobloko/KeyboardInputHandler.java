@@ -118,7 +118,7 @@ final class KeyboardInputHandler implements java.awt.event.KeyListener, java.awt
             integerLocal7 = GameDomainSupport004.integerState0349 + 1 & 127;
             if (integerLocal7 != MixedSupport115.integerState0746) {
               MixedSupport099.integerArrayState0182[GameDomainSupport004.integerState0349] = integerLocal1;
-              UiComponentPart003.characterArrayState0003[GameDomainSupport004.integerState0349] = (char)0;
+              ModalDialog.characterArrayState0003[GameDomainSupport004.integerState0349] = (char)0;
               GameDomainSupport004.integerState0349 = integerLocal7;
             }
           }
@@ -174,7 +174,7 @@ final class KeyboardInputHandler implements java.awt.event.KeyListener, java.awt
               integerLocal2 = 1 + GameDomainSupport004.integerState0349 & 127;
               if (integerLocal2 != MixedSupport115.integerState0746) {
                 MixedSupport099.integerArrayState0182[GameDomainSupport004.integerState0349] = -1;
-                UiComponentPart003.characterArrayState0003[GameDomainSupport004.integerState0349] = (char)integerLocal1;
+                ModalDialog.characterArrayState0003[GameDomainSupport004.integerState0349] = (char)integerLocal1;
                 GameDomainSupport004.integerState0349 = integerLocal2;
               }
             }

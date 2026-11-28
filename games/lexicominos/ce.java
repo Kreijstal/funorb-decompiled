@@ -154,7 +154,7 @@ final class ce {
           }
           var2Lifetime2 = e.a("loading_animations", true);
           if (null != var2Lifetime2) {
-            ia.field_F = ni.a((byte) -55, var2Lifetime2);
+            AlphaWidgetContainer.field_F = ni.a((byte) -55, var2Lifetime2);
           }
           var2Lifetime3 = e.a("unpacking_animations", true);
           if (null != var2Lifetime3) {
@@ -363,7 +363,7 @@ final class ce {
           }
           var2Lifetime48 = e.a("_4of4", true);
           if (var2Lifetime48 != null) {
-            eg.field_E = ni.a((byte) -55, var2Lifetime48);
+            ModalDialogHost.field_E = ni.a((byte) -55, var2Lifetime48);
           }
           stackIn_224_0 = "tutorial_p1";
           stackIn_225_1 = !(param0);
@@ -425,7 +425,7 @@ final class ce {
           }
           var2Lifetime61 = e.a("tutorialp3_word3", true);
           if (var2Lifetime61 != null) {
-            jf.field_G = ni.a((byte) -55, var2Lifetime61);
+            LabeledWidgetContainer.field_G = ni.a((byte) -55, var2Lifetime61);
           }
           stackIn_290_0 = "keycode_rotate_1";
           stackIn_291_1 = !(param0);

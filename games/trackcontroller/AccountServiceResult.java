@@ -13,7 +13,7 @@ final class AccountServiceResult {
         jf.e(640);
         vg.field_o = true;
         u.field_i = true;
-        gl.field_E.l(24910);
+        AlphaWidgetContainer.field_E.closeAllDialogs(24910);
         MidiPlayer.a(oj.field_c, false, -16257);
         if (param0 != -27958) {
           AccountServiceResult.b((byte) -82);
@@ -101,7 +101,7 @@ final class AccountServiceResult {
         RuntimeException var1_ref = null;
         var4 = TrackController.field_F ? 1 : 0;
         try {
-          var5 = ok.field_F;
+          var5 = SingleChildWidgetContainer.field_F;
           var1 = var5;
           var2 = 0;
           var3 = var5.length;

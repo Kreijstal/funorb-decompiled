@@ -4,24 +4,24 @@
 import java.util.*;
 
 final class sf {
-    cg field_i;
+    WidgetRenderer field_i;
     int field_s;
     private int field_o;
     BitmapFont field_g;
     int field_k;
     int field_n;
-    cg field_f;
-    cg field_a;
+    WidgetRenderer field_f;
+    WidgetRenderer field_a;
     static Random field_d;
     int field_q;
     static long field_j;
     int field_c;
     int field_t;
-    cg field_h;
+    WidgetRenderer field_h;
     private boolean field_p;
     static long field_l;
     int field_r;
-    cg field_b;
+    WidgetRenderer field_b;
     static int field_e;
     static he[] field_m;
 
@@ -31,7 +31,7 @@ final class sf {
         int var15 = DrPhlogistonSavesTheEarth.field_D ? 1 : 0;
         DefaultTextWidgetRenderer var17 = new DefaultTextWidgetRenderer(param1, 2, 2, 2236962, 1, 1, 1, 2 + (param1.field_S + param1.field_x));
         var17.field_o = 16777215;
-        this.field_i = (cg) ((Object) var17);
+        this.field_i = (WidgetRenderer) ((Object) var17);
         ch var4 = new ch();
         var17.a(var4, -66);
         var4.field_b = 11711154;
@@ -56,22 +56,22 @@ final class sf {
         }
         var5[4] = (RgbSprite) ((Object) var18);
         var4.a((byte) 104, 4).a((byte) 125, true).a(var5, -111);
-        var4.a((byte) 124, 5).a(dl.a((byte) 58, 0, 65793, 0, 0), -86).a((byte) 108, true).b(256, -1);
-        this.field_b = (cg) ((Object) var4);
+        var4.a((byte) 124, 5).a(AlphaWidgetContainer.a((byte) 58, 0, 65793, 0, 0), -86).a((byte) 108, true).b(256, -1);
+        this.field_b = (WidgetRenderer) ((Object) var4);
         ch var6 = new ch(var4, true);
         var6.field_p = 0;
         ch var7 = new ch(var4, true);
         var7.field_p = 0;
         var7.a(0, DualLinkNode.a((byte) 121, 8947848));
         var7.a((byte) 65, 1).a(DualLinkNode.a((byte) 121, 11184810), -87).b(256, 2236962);
-        this.field_h = (cg) ((Object) new hb(param1, 2, 2, 16777215, -1, 5, 5, 15, 15, 4473924));
+        this.field_h = (WidgetRenderer) ((Object) new hb(param1, 2, 2, 16777215, -1, 5, 5, 15, 15, 4473924));
         lg discarded$0 = new lg(param1, 2, 2, 16777215, -1, 16777215, 16729156, 4473924);
         fm discarded$1 = new fm(param1, 16777215, -1, 125269879, 4473924, 3, 268435455);
         ch var8 = new ch();
         var17.a(var8, -54);
         var8.a((byte) 69, 0).a(eg.a((byte) 96, 7829367, 10066329, 15658734), -100).b(256, 1118481).c(-1, 85);
         var8.a((byte) 106, 4).a((byte) 117, true).a(var5, -63);
-        this.field_f = (cg) ((Object) var8);
+        this.field_f = (WidgetRenderer) ((Object) var8);
         RgbSprite[] var9 = new RgbSprite[9];
         var9[4] = new RgbSprite(2, 1);
         RgbSprite[] var10 = new RgbSprite[9];
@@ -108,14 +108,14 @@ final class sf {
     final void a(boolean param0, int param1, int param2, int param3, int param4, int param5, int param6) {
         SoftwareRasterizer.fillRectangleAlpha(param6, param4, param2, param5, param1, param3);
         if (param0) {
-          this.field_b = (cg) null;
+          this.field_b = (WidgetRenderer) null;
         }
     }
 
     final void a(byte param0, int param1, int param2, int param3, int param4, int param5) {
         SoftwareRasterizer.drawLine(param3, param5, param2, param1, param4);
         if (param0 != 95) {
-          this.field_b = (cg) null;
+          this.field_b = (WidgetRenderer) null;
         }
     }
 
@@ -280,7 +280,7 @@ final class sf {
         int var25Lifetime2;
         var26 = DrPhlogistonSavesTheEarth.field_D ? 1 : 0;
         try {
-          var27 = dh.field_N;
+          var27 = LabeledWidgetContainer.field_N;
           if (param0 != -4) {
             sf.a(88, 112);
           }

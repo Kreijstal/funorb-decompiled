@@ -26,9 +26,9 @@ final class bk {
         he.b((byte) 115);
         lb.field_d = true;
         AccountRegistrationPanel.field_I = true;
-        ResourceArchive.field_f.k(param0 ^ -12743);
+        ResourceArchive.field_f.closeAllDialogs(param0 ^ -12743);
         if (param0 == -19317) {
-          jj.a(false, oc.field_E, param0 + 21019);
+          jj.a(false, LabeledWidgetContainer.field_E, param0 + 21019);
           return;
         }
     }

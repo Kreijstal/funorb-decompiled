@@ -11,7 +11,7 @@ final class TunnelCamera extends TunnelEntity {
     static String field_K;
     double field_T;
     double field_L;
-    static sh field_Z;
+    static ModalDialogHost field_Z;
     static PrimaryNodeDeque field_J;
     private da field_S;
     double field_H;

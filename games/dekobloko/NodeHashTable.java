@@ -101,20 +101,20 @@ final class NodeHashTable implements Iterable {
           if (integerArgument1 != -31842) {
             stringLocal1 = (String) null;
             NodeHashTable.computeInteger1504(true, (String) null, true);
-            UiComponentPart006.uiComponentPart023State0001.performAction0185(MixedSupport118.uiComponentPart005State0001, (byte) 87);
+            LabeledWidgetContainer.uiComponentPart023State0001.performAction0185(MixedSupport118.uiComponentPart005State0001, (byte) 87);
             return;
           }
-          UiComponentPart006.uiComponentPart023State0001.performAction0185(MixedSupport118.uiComponentPart005State0001, (byte) 87);
+          LabeledWidgetContainer.uiComponentPart023State0001.performAction0185(MixedSupport118.uiComponentPart005State0001, (byte) 87);
           return;
         }
         MixedSupport118.uiComponentPart005State0001 = new DisplayNameSelectionPanel();
         if (integerArgument1 == -31842) {
-          UiComponentPart006.uiComponentPart023State0001.performAction0185(MixedSupport118.uiComponentPart005State0001, (byte) 87);
+          LabeledWidgetContainer.uiComponentPart023State0001.performAction0185(MixedSupport118.uiComponentPart005State0001, (byte) 87);
           return;
         }
         stringLocal2 = (String) null;
         NodeHashTable.computeInteger1504(true, (String) null, true);
-        UiComponentPart006.uiComponentPart023State0001.performAction0185(MixedSupport118.uiComponentPart005State0001, (byte) 87);
+        LabeledWidgetContainer.uiComponentPart023State0001.performAction0185(MixedSupport118.uiComponentPart005State0001, (byte) 87);
     }
 
     final static void performAction1498(int integerArgument1) {

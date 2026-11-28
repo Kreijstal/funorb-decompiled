@@ -52,12 +52,12 @@ final class DiskCacheWorker implements Runnable {
             var4 = CipherPacketBuffer.field_n[cf.field_f.field_b];
             if (var4 == 2 ||
               var4 == 5) {
-              hb.d((byte) 105);
+              LabeledWidgetContainer.d((byte) 105);
             }
           } else {
             if (var2 != 0 &&
               ne.field_u != 2) {
-              hb.d((byte) 52);
+              LabeledWidgetContainer.d((byte) 52);
             }
           }
           if (0 == var4 &&

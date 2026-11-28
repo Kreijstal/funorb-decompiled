@@ -410,7 +410,7 @@ final class BufferedCacheFile {
           ConfirmedEmailAvailabilityValidator.field_k = param2;
           ShieldEvent.field_r = param5;
           HomingMissileAnimation.field_x = param3;
-          raa.field_J = param0;
+          DraggableWidgetContainer.field_J = param0;
           nj.field_j = param4;
           if (param1 <= 19) {
             BufferedCacheFile.releaseStatics(-48);

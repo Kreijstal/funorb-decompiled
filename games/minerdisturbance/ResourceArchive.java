@@ -825,7 +825,7 @@ final class ResourceArchive {
         if (param0 != 0) {
           return;
         }
-        de.field_a.a((byte) -103, (fe) (bh.field_Z));
+        de.field_a.a((byte) -103, (UiWidget) (bh.field_Z));
     }
 
     final int getFileCapacity(int param0, int param1) {

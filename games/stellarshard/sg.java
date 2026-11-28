@@ -96,7 +96,7 @@ final class sg {
             h.field_d = param3;
             df.field_j = param2;
             od.field_z = param8;
-            kg.field_E = param5;
+            LabeledWidgetContainer.field_E = param5;
             ByteStorage.field_b = param11;
             if (param6 <= 72) {
               sg.a((byte) 88);

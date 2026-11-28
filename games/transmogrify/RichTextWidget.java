@@ -8,8 +8,8 @@ class RichTextWidget extends InteractiveWidget {
     private IntrusiveDeque field_E;
     static IntrusiveDeque field_C;
 
-    final void a(int param0, int param1, int param2, int param3, int param4) {
-        super.a(-109, param1, param2, param3, param4);
+    final void setBounds(int param0, int param1, int param2, int param3, int param4) {
+        super.setBounds(-109, param1, param2, param3, param4);
         this.rebuildHotspotBounds(-91);
         int var6 = 112 / ((param0 + 29) / 53);
     }
@@ -58,7 +58,7 @@ class RichTextWidget extends InteractiveWidget {
         }
     }
 
-    boolean a(UiWidget param0, int param1) {
+    boolean takeFocus(UiWidget param0, int param1) {
         RuntimeException var3 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -193,11 +193,11 @@ class RichTextWidget extends InteractiveWidget {
         return var1;
     }
 
-    void a(int param0, byte param1, UiWidget param2, int param3) {
+    void updatePointer(int param0, byte param1, UiWidget param2, int param3) {
         int var5_int = 0;
         int var6 = 0;
         try {
-          super.a(param0, param1, param2, param3);
+          super.updatePointer(param0, param1, param2, param3);
           this.field_B = null;
           if (this.field_g) {
             var5_int = -this.field_p + PacketBuffer.field_j - param3;
@@ -220,7 +220,7 @@ class RichTextWidget extends InteractiveWidget {
           return null;
         }
         if (param0 != 4) {
-          this.a(-19, 125, -68, (byte) 31);
+          this.drawWidget(-19, 125, -68, (byte) 31);
         }
         return this.field_D[this.field_B.field_n];
     }
@@ -248,14 +248,14 @@ class RichTextWidget extends InteractiveWidget {
     }
 
     final void a(int param0, int param1, int param2, int param3) {
-        this.a(26, param3, param0, param1, ((TextWidgetRenderer) ((Object) this.field_q)).getPreferredHeight((UiWidget) (this), 228));
+        this.setBounds(26, param3, param0, param1, ((TextWidgetRenderer) ((Object) this.field_q)).getPreferredHeight((UiWidget) (this), 228));
         if (param2 != -1) {
           field_C = (IntrusiveDeque) null;
         }
     }
 
     RichTextWidget(String param0, WidgetRenderer param1) {
-        super(param0, (ma) null);
+        super(param0, (WidgetEventListener) null);
         this.field_B = null;
         try {
           this.field_q = param1;
@@ -264,10 +264,10 @@ class RichTextWidget extends InteractiveWidget {
         }
     }
 
-    void a(int param0, int param1, int param2, byte param3) {
+    void drawWidget(int param0, int param1, int param2, byte param3) {
         int var8 = 0;
         int var9 = 0;
-        super.a(param0, param1, param2, (byte) -31);
+        super.drawWidget(param0, param1, param2, (byte) -31);
         if (param2 != 0) {
           return;
         }

@@ -45,7 +45,7 @@ class DefaultTextWidgetRenderer implements WidgetRenderer, TextWidgetRenderer {
         }
     }
 
-    public void a(int param0, int param1, boolean param2, byte param3, UiWidget param4) {
+    public void paintWidget(int param0, int param1, boolean param2, byte param3, UiWidget param4) {
         if (this.field_i == null) {
           return;
         }
@@ -111,7 +111,7 @@ class DefaultTextWidgetRenderer implements WidgetRenderer, TextWidgetRenderer {
           return;
         }
         try {
-          if (param3.b((byte) -110)) {
+          if (param3.isFocused((byte) -110)) {
             var13 = this.getTextLayout(param3, -2);
             var14 = var13;
             var7 = var14.getLineIndexForTextOffset(-1, param1);
@@ -122,7 +122,7 @@ class DefaultTextWidgetRenderer implements WidgetRenderer, TextWidgetRenderer {
             var12 = this.getTextOriginY(param3, -102, param2) + Math.min(this.d(param3, 15065), Math.min(var8.field_f, 1 + var7 < var14.field_b.length ? var13.field_b[1 + var7].field_a : var8.field_f));
             c.a(param0 - (-param3.field_p - param3.field_l), param3.field_p + param0, (byte) -50, param3.field_h + param2 + param3.field_n, param2 + param3.field_n);
             IterableNodeHashTable.field_e.a(var10, this.field_n, var12, var11, var10, (byte) 119);
-            fi.c(param4);
+            SingleChildWidgetContainer.c(param4);
           }
         } catch (RuntimeException runtimeException) {
           throw ch.wrapClientException((Throwable) ((Object) runtimeException), "h.N(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ')');
@@ -156,7 +156,7 @@ class DefaultTextWidgetRenderer implements WidgetRenderer, TextWidgetRenderer {
           if (param5 == param3) {
             return;
           }
-          if (param0.b((byte) -104)) {
+          if (param0.isFocused((byte) -104)) {
             var17 = this.getTextLayout(param0, -2);
             var18 = var17;
             if (param5 > param3) {
@@ -189,7 +189,7 @@ class DefaultTextWidgetRenderer implements WidgetRenderer, TextWidgetRenderer {
               var15 = stackIn_21_0;
               IterableNodeHashTable.field_e.a(this.field_g >>> 24, this.field_c + (param1 + param0.field_n - (-param0.field_o - var13.field_a)), var15 - var14, this.a(239, param0, param2, var14), this.field_g, var13.field_f, 4);
             }
-            fi.c(true);
+            SingleChildWidgetContainer.c(true);
             return;
           }
           return;
@@ -613,7 +613,7 @@ class DefaultTextWidgetRenderer implements WidgetRenderer, TextWidgetRenderer {
           } else {
             this.field_i.drawParagraph(this.c(param2, 108), this.a(239, param2, param1, param6), this.a(param2, (byte) 123, param5, param0), var9_int, var10, param4, param7, this.field_b, this.field_a, this.field_e);
           }
-          fi.c(true);
+          SingleChildWidgetContainer.c(true);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

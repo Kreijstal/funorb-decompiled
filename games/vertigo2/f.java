@@ -266,17 +266,17 @@ final class f extends TextureOperator {
             if (null != dc.field_L &&
               dc.field_L.field_e) {
               cp.a((byte) 127);
-              JaggrabClient.field_d.b(new gr(JaggrabClient.field_d, sd.field_I), 0);
+              JaggrabClient.field_d.showDialog(new gr(JaggrabClient.field_d, ModalDialogHost.field_I), 0);
             }
             return;
           }
           if (param0 != -6) {
             field_I = (String[]) null;
           }
-          JaggrabClient.field_d.a(qg.field_I, true, (byte) 115, NameSuggestionsPanel.field_N);
-          JaggrabClient.field_d.l(0);
+          JaggrabClient.field_d.processPointerInput(DraggableWidgetContainer.field_I, true, (byte) 115, NameSuggestionsPanel.field_N);
+          JaggrabClient.field_d.advanceDialogs(0);
           while (NodeHashTableIterator.a(false)) {
-            JaggrabClient.field_d.a(-122, DebouncedFieldValidator.field_f, TextureOperator.field_r);
+            JaggrabClient.field_d.processKeyInput(-122, DebouncedFieldValidator.field_f, TextureOperator.field_r);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

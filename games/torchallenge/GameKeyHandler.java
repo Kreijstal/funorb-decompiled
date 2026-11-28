@@ -16,11 +16,11 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
             if (var2_int != 0 &&
               var2_int != 65535 &&
               jj.isSupportedCp1252KeyCharacter((byte) 118, (char) var2_int)) {
-              var3 = 127 & 1 + b.field_M;
+              var3 = 127 & 1 + ModalDialog.field_M;
               if (var3 != ja.field_f) {
-                CrossfadingMidiPcmStream.field_C[b.field_M] = -1;
-                ql.field_k[b.field_M] = (char)var2_int;
-                b.field_M = var3;
+                CrossfadingMidiPcmStream.field_C[ModalDialog.field_M] = -1;
+                ql.field_k[ModalDialog.field_M] = (char)var2_int;
+                ModalDialog.field_M = var3;
               }
             }
           }
@@ -129,11 +129,11 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
               }
             }
             if (0 <= var2_int) {
-              var3 = 127 & b.field_M + 1;
+              var3 = 127 & ModalDialog.field_M + 1;
               if (ja.field_f != var3) {
-                CrossfadingMidiPcmStream.field_C[b.field_M] = var2_int;
-                ql.field_k[b.field_M] = (char)0;
-                b.field_M = var3;
+                CrossfadingMidiPcmStream.field_C[ModalDialog.field_M] = var2_int;
+                ql.field_k[ModalDialog.field_M] = (char)0;
+                ModalDialog.field_M = var3;
               }
             }
             var3Lifetime1 = param0.getModifiers();

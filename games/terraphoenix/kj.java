@@ -9,7 +9,7 @@ final class kj implements WidgetActionListener {
     static String field_f;
     static String field_e;
 
-    public final void a(int param0, UiWidget param1, int param2, int param3, boolean param4) {
+    public final void paintWidget(int param0, UiWidget param1, int param2, int param3, boolean param4) {
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
         String stackIn_12_2 = null;
@@ -30,7 +30,7 @@ final class kj implements WidgetActionListener {
             ((InteractiveWidget) (param1)).field_C) {
             var8.drawAdditive((-var8.field_q + param1.width >> 1) + (var6_int + 1), var7 + 1 + (-var8.field_u + param1.height >> 1), 256);
           }
-          if (!param1.d(-118)) {
+          if (!param1.isFocused(-118)) {
             return;
           }
           ed.a(-4 + param1.width, -4 + param1.height, 2 + var7, 52, var6_int + 2);

@@ -129,7 +129,7 @@ final class PasswordValidator extends TextFieldValidator {
             return stackIn_22_0;
           }
           if (gk.a(-1, var6, var5)) {
-            stackIn_26_0 = vg.field_x;
+            stackIn_26_0 = UiWidget.field_x;
             return stackIn_26_0;
           }
           if (!pc.a((byte) -115, var6, var5)) {
@@ -169,7 +169,7 @@ final class PasswordValidator extends TextFieldValidator {
         RuntimeException decompiledCaughtException = null;
         var5 = DrPhlogistonSavesTheEarth.field_D ? 1 : 0;
         try {
-          if (null == vg.field_j) {
+          if (null == UiWidget.field_j) {
             return null;
           }
           var6 = (CharSequence) ((Object) param0);
@@ -177,7 +177,7 @@ final class PasswordValidator extends TextFieldValidator {
           if (var2 == null) {
             var2 = param0;
           }
-          var3 = (hg) (vg.field_j.a((long)var2.hashCode(), -122));
+          var3 = (hg) (UiWidget.field_j.a((long)var2.hashCode(), -122));
           while (true) {
             if (var3 == null) {
               var4 = -26 / ((25 - param1) / 55);
@@ -190,7 +190,7 @@ final class PasswordValidator extends TextFieldValidator {
               var4_ref_String = var3.field_V;
             }
             if (!var4_ref_String.equals(var2)) {
-              var3 = (hg) (vg.field_j.b(-1));
+              var3 = (hg) (UiWidget.field_j.b(-1));
               continue;
             }
             break;

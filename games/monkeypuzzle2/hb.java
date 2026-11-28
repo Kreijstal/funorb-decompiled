@@ -37,11 +37,11 @@ final class hb extends PacketBuffer {
         nc.field_b[ConfirmedEmailAvailabilityValidator.field_n] = param1;
         hl.field_f[ConfirmedEmailAvailabilityValidator.field_n] = ConfirmedEmailAvailabilityValidator.field_n;
         gi.field_e[ConfirmedEmailAvailabilityValidator.field_n] = param3;
-        if (param3 > kj.field_G) {
+        if (param3 > ModalDialogHost.field_G) {
           fe.field_g = param3;
         }
         if (ah.field_j > param3) {
-          rh.field_C = param3;
+          ModalDialog.field_C = param3;
         }
         jc.field_a[ConfirmedEmailAvailabilityValidator.field_n] = param2;
         DebouncedFieldValidator.field_c[ConfirmedEmailAvailabilityValidator.field_n] = param0;
@@ -52,8 +52,8 @@ final class hb extends PacketBuffer {
         if (param4 != 1000) {
           field_k = (int[]) null;
         }
-        if (!(var7 >= rh.field_C)) {
-          rh.field_C = var7;
+        if (!(var7 >= ModalDialog.field_C)) {
+          ModalDialog.field_C = var7;
         }
         if (fe.field_g < var7) {
           fe.field_g = var7;
@@ -154,14 +154,14 @@ final class hb extends PacketBuffer {
         RuntimeException var2 = null;
         var3 = MonkeyPuzzle2.field_F ? 1 : 0;
         try {
-          w.a((byte) -92, kj.field_G, ConfirmedEmailAvailabilityValidator.field_n, 0, true, ah.field_j, param1);
+          w.a((byte) -92, ModalDialogHost.field_G, ConfirmedEmailAvailabilityValidator.field_n, 0, true, ah.field_j, param1);
           for (var2_int = 0; var2_int < ConfirmedEmailAvailabilityValidator.field_n; var2_int++) {
             hl.field_f[var2_int + param1] = var2_int;
           }
           if (param0 <= 90) {
             hb.a(-29, -107, -3, 17, 7, 5);
           }
-          w.a((byte) -78, fe.field_g, param1 + ConfirmedEmailAvailabilityValidator.field_n, param1, false, rh.field_C, param1 + param1);
+          w.a((byte) -78, fe.field_g, param1 + ConfirmedEmailAvailabilityValidator.field_n, param1, false, ModalDialog.field_C, param1 + param1);
           if (ConfirmedEmailAvailabilityValidator.field_n > param1) {
             ConfirmedEmailAvailabilityValidator.field_n = param1;
           }

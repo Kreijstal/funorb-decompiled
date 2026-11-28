@@ -674,7 +674,7 @@ final class RichTextLayout extends TextLayout {
           }
           var2Lifetime13 = wm.a("keyname_missile2", (byte) 35);
           if (null != var2Lifetime13) {
-            s.field_L = va.a(0, var2Lifetime13);
+            DropTargetWidgetContainer.field_L = va.a(0, var2Lifetime13);
           }
           var2Lifetime14 = wm.a("keyname_missile3", (byte) 50);
           if (null != var2Lifetime14) {
@@ -981,7 +981,7 @@ final class RichTextLayout extends TextLayout {
           }
           var2Lifetime89 = wm.a("ending3_OwingToYourHeroism", (byte) 93);
           if (null != var2Lifetime89) {
-            oe.field_S = va.a(0, var2Lifetime89);
+            ModalDialog.field_S = va.a(0, var2Lifetime89);
           }
           var2Lifetime90 = wm.a("ending4_ThankYouForPlaying", (byte) 54);
           if (var2Lifetime90 != null) {
@@ -1145,7 +1145,7 @@ final class RichTextLayout extends TextLayout {
           }
           var2Lifetime130 = wm.a("instructions_Invincibility", (byte) 45);
           if (null != var2Lifetime130) {
-            fj.field_D = va.a(0, var2Lifetime130);
+            UiWidget.field_D = va.a(0, var2Lifetime130);
           }
           var2Lifetime131 = wm.a("instructions_HomingEnergyWeapons", (byte) 51);
           if (var2Lifetime131 != null) {
@@ -1401,7 +1401,7 @@ final class RichTextLayout extends TextLayout {
           }
           var2Lifetime194 = wm.a("nextPowerUpAttractor_LevelN", (byte) 98);
           if (null != var2Lifetime194) {
-            oe.field_X = va.a(0, var2Lifetime194);
+            ModalDialog.field_X = va.a(0, var2Lifetime194);
           }
           var2Lifetime195 = wm.a("extraLife", (byte) 98);
           if (null != var2Lifetime195) {

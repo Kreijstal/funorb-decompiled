@@ -40,7 +40,7 @@ final class lj {
               if (param4 < 0L) {
                 var8Lifetime4 = var10 + "; Discard;";
               } else {
-                var8Lifetime4 = var10 + "; Expires=" + se.a(-80, fa.correctedCurrentTimeMillis(82) + 1000L * param4) + "; Max-Age=" + param4;
+                var8Lifetime4 = var10 + "; Expires=" + DropTargetWidgetContainer.a(-80, fa.correctedCurrentTimeMillis(82) + 1000L * param4) + "; Max-Age=" + param4;
               }
               JavaScriptBridge.evaluate((byte) 91, param0, "document.cookie=\"" + var8Lifetime4 + "\"");
               return;

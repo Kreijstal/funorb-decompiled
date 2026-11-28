@@ -114,7 +114,7 @@ final class MixedSupport083 {
                   stringLocal32 = GameDomainSupport002.stringState0141;
                 }
                 MixedSupport039.sceneWidgetState0030.stringState0598 = MixedSupport039.sceneWidgetState0030.stringState0598 + "<br>" + stringLocal32;
-                if ((UiComponentPart020.integerState0552 & 16) == 0 &&
+                if ((ArrayWidgetContainer.integerState0552 & 16) == 0 &&
                   !NanoFrameTimer.booleanState0028) {
                   MixedSupport039.sceneWidgetState0030.rgbSpriteArrayState0033 = MixedSupport021.sceneWidgetState0015.rgbSpriteArrayState0035;
                 }

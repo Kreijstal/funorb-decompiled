@@ -36,7 +36,7 @@ final class qc extends aa {
         }
     }
 
-    qc(ln param0, UiWidget param1) {
+    qc(ModalDialogHost param0, UiWidget param1) {
         super(param0, param1, 33, 20, 30);
     }
 

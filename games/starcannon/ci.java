@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ci implements de {
+final class ci implements WidgetRenderer {
     private BitmapFont field_h;
     static lb[] field_g;
     private int field_e;
@@ -23,7 +23,7 @@ final class ci implements de {
         }
     }
 
-    public final void a(int param0, boolean param1, int param2, int param3, UiWidget param4) {
+    public final void paintWidget(int param0, boolean param1, int param2, int param3, UiWidget param4) {
         int var11 = 0;
         RuntimeException var6 = null;
         int var7 = 0;

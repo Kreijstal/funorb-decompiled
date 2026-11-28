@@ -22,15 +22,15 @@ final class AccountServiceResult {
 
     final static void a(boolean param0, boolean param1) {
         qa.field_f = param0 ? new id(jf.field_d, ao.field_b) : new id(sg.field_b, de.field_d);
-        fm.field_T = new ci(0L, (ci) null);
-        fm.field_T.a((byte) 127, qa.field_f.field_a);
-        fm.field_T.a((byte) 123, sc.field_d);
+        ModalDialogHost.field_T = new ci(0L, (ci) null);
+        ModalDialogHost.field_T.a((byte) 127, qa.field_f.field_a);
+        ModalDialogHost.field_T.a((byte) 123, sc.field_d);
         RichTextLayout.field_i = new ci(0L, ki.field_P);
         if (param1) {
           dn.field_c = new ci(0L, (ci) null);
           RichTextLayout.field_i.a((byte) 123, qf.field_f);
           RichTextLayout.field_i.a((byte) 126, dn.field_c);
-          dn.field_c.a((byte) 126, bh.field_G);
+          dn.field_c.a((byte) 126, ArrayWidgetContainer.field_G);
           dn.field_c.a((byte) 123, BufferedSocket.field_d);
           cf.a(122, param0);
           return;
@@ -39,7 +39,7 @@ final class AccountServiceResult {
         dn.field_c = new ci(0L, (ci) null);
         RichTextLayout.field_i.a((byte) 123, qf.field_f);
         RichTextLayout.field_i.a((byte) 126, dn.field_c);
-        dn.field_c.a((byte) 126, bh.field_G);
+        dn.field_c.a((byte) 126, ArrayWidgetContainer.field_G);
         dn.field_c.a((byte) 123, BufferedSocket.field_d);
         cf.a(122, param0);
     }

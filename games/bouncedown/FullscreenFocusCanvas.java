@@ -52,9 +52,9 @@ final class FullscreenFocusCanvas extends java.awt.Canvas implements java.awt.ev
     final static int a(int param0) {
         if (param0 != 31083) {
           field_c = (lg) null;
-          return ak.field_y;
+          return SingleChildWidgetContainer.field_y;
         }
-        return ak.field_y;
+        return SingleChildWidgetContainer.field_y;
     }
 
     static {

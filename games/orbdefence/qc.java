@@ -3,7 +3,7 @@
  */
 import java.util.*;
 
-final class qc implements td {
+final class qc implements WidgetRenderer {
     private BitmapFont field_d;
     private int field_e;
     private int field_a;
@@ -12,7 +12,7 @@ final class qc implements td {
     static BitmapFont field_b;
     static AccountRequestState field_g;
 
-    public final void a(int param0, int param1, pj param2, int param3, boolean param4) {
+    public final void paintWidget(int param0, int param1, UiWidget param2, int param3, boolean param4) {
         int stackIn_6_0 = 0;
         RuntimeException stackIn_21_0 = null;
         StringBuilder stackIn_21_1 = null;
@@ -28,14 +28,14 @@ final class qc implements td {
         var11 = OrbDefence.field_D ? 1 : 0;
         try {
           if (!param2.field_t &&
-            !param2.d(-81)) {
+            !param2.isFocused(-81)) {
             stackIn_6_0 = 2188450;
           } else {
             stackIn_6_0 = 3249872;
           }
           var6_int = stackIn_6_0;
           this.field_d.drawParagraph("<u=" + Integer.toString(var6_int, 16) + ">" + param2.field_l + "</u>", param2.field_s + param1, param2.field_n + param0, param2.field_m, param2.field_r, var6_int, -1, this.field_a, this.field_e, this.field_d.field_H + this.field_d.field_B);
-          if (param2.d(-81)) {
+          if (param2.isFocused(-81)) {
             var7 = this.field_d.stringWidth(param2.field_l);
             var8 = this.field_d.field_H + this.field_d.field_B;
             var9 = param2.field_s + param1;
@@ -71,7 +71,7 @@ final class qc implements td {
           } else {
             stackIn_22_2 = "{...}";
           }
-          throw dd.wrapClientException((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw DraggableWidgetContainer.wrapClientException((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -112,7 +112,7 @@ final class qc implements td {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw dd.wrapClientException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(')').toString());
+          throw DraggableWidgetContainer.wrapClientException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -141,7 +141,7 @@ final class qc implements td {
           this.field_a = param1;
           this.field_e = param2;
         } catch (RuntimeException runtimeException) {
-          throw dd.wrapClientException((Throwable) ((Object) runtimeException), "qc.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw DraggableWidgetContainer.wrapClientException((Throwable) ((Object) runtimeException), "qc.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 

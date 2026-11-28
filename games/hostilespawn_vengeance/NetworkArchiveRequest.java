@@ -129,7 +129,7 @@ final class NetworkArchiveRequest extends ArchiveRequest {
             oa.field_d.field_l.field_f = oa.field_d.field_l.field_f + 1.0;
             oa.field_d.field_j.field_e = oa.field_d.field_j.field_e - 1;
           }
-          oa.field_d.field_c = nh.a(-12149, param1, param0);
+          oa.field_d.field_c = LabeledWidgetContainer.a(-12149, param1, param0);
           var3_double = param0.field_l.field_f + (double)param0.field_j.field_e;
           var5 = param0.field_l.field_a + (double)param0.field_j.field_g;
           oa.field_d.field_l.a(20, (byte) 94, oa.field_d.field_c);

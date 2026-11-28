@@ -8,19 +8,19 @@ final class sg {
     static String field_o;
     private boolean field_f;
     static String field_n;
-    de field_c;
-    de field_j;
+    WidgetRenderer field_c;
+    WidgetRenderer field_j;
     int field_r;
-    de field_d;
+    WidgetRenderer field_d;
     static java.awt.Frame field_i;
     static int field_k;
     BitmapFont field_l;
-    de field_t;
+    WidgetRenderer field_t;
     int field_b;
     static int field_e;
     static int field_q;
     int field_g;
-    de field_p;
+    WidgetRenderer field_p;
     int field_m;
     int field_h;
 
@@ -209,7 +209,7 @@ final class sg {
         try {
           var18 = new DefaultTextWidgetRenderer(param1, 2, 2, 2236962, 1, 1, 1, 2 + param1.field_q + param1.field_p);
           var18.field_c = 16777215;
-          this.field_j = (de) ((Object) var18);
+          this.field_j = (WidgetRenderer) ((Object) var18);
           var4 = new w();
           var18.a(-68, var4);
           this.field_a = 15658734;
@@ -239,21 +239,21 @@ final class sg {
           var5[4] = (Sprite) ((Object) var19);
           var4.a(4, (byte) -76).a(-38, true).a(var5, (byte) -74);
           var4.a(5, (byte) -76).a(RichTextWidget.b(0, -25343, 0, 0, 65793), (byte) -74).a(-52, true).c(-1, 2);
-          this.field_d = (de) ((Object) var4);
+          this.field_d = (WidgetRenderer) ((Object) var4);
           var6 = new w(var4, true);
           var6.field_h = 0;
           var7 = new w(var4, true);
           var7.field_h = 0;
           var7.a((byte) 68, gi.a(4477, 8947848));
           var7.a(1, (byte) -76).a(gi.a(4477, 11184810), (byte) -74).c(2236962, 2);
-          this.field_p = (de) ((Object) new ni(param1, 2, 2, 16777215, -1, 5, 5, 15, 15, 4473924));
+          this.field_p = (WidgetRenderer) ((Object) new ni(param1, 2, 2, 16777215, -1, 5, 5, 15, 15, 4473924));
           discarded$0 = new eg(param1, 2, 2, 16777215, -1, 16777215, 16729156, 4473924);
           discarded$1 = new ci(param1, 16777215, -1, 125269879, 4473924, 3, 268435455);
           var8 = new w();
           var18.a(-121, var8);
           var8.a(0, (byte) -76).a(el.b(7829367, 22396, 10066329, 15658734), (byte) -74).c(1118481, 2).a((byte) -104, -1);
           var8.a(4, (byte) -76).a(-120, true).a(var5, (byte) -74);
-          this.field_c = (de) ((Object) var8);
+          this.field_c = (WidgetRenderer) ((Object) var8);
           var9 = new Sprite[9];
           var10 = new Sprite[9];
           var9[4] = new Sprite(2, 1);

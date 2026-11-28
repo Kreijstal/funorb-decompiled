@@ -48,11 +48,11 @@ final class tf {
           var17 = var16;
           var17.position = -2 + param1.length;
           ti.field_g = var17.readUnsignedShort(7088);
-          fq.field_G = new byte[ti.field_g][];
+          AlphaWidgetContainer.field_G = new byte[ti.field_g][];
           PacketBuffer.field_o = new int[ti.field_g];
           PasswordValidator.field_o = new int[ti.field_g];
           pn.field_b = new byte[ti.field_g][];
-          na.field_G = new int[ti.field_g];
+          LabeledWidgetContainer.field_G = new int[ti.field_g];
           lp.field_e = new boolean[ti.field_g];
           vo.field_b = new int[ti.field_g];
           var17.position = -(8 * ti.field_g) - 7 + param1.length;
@@ -66,7 +66,7 @@ final class tf {
             PacketBuffer.field_o[var4] = var16.readUnsignedShort(7088);
           }
           for (var4Lifetime1 = 0; var4Lifetime1 < ti.field_g; var4Lifetime1++) {
-            na.field_G[var4Lifetime1] = var17.readUnsignedShort(7088);
+            LabeledWidgetContainer.field_G[var4Lifetime1] = var17.readUnsignedShort(7088);
           }
           for (var4Lifetime2 = 0; ti.field_g > var4Lifetime2; var4Lifetime2++) {
             vo.field_b[var4Lifetime2] = var17.readUnsignedShort(7088);
@@ -94,7 +94,7 @@ final class tf {
             var21 = new byte[var7];
             var19 = var21;
             var9 = var19;
-            fq.field_G[var4Lifetime5] = var21;
+            AlphaWidgetContainer.field_G[var4Lifetime5] = var21;
             var10 = 0;
             var11 = var17.readUnsignedByte((byte) -101);
             if ((1 & var11) == 0) {

@@ -253,7 +253,7 @@ final class MenuScreen extends DungeonAssaultScreen {
           if (var5 != 0 && (!this.field_x.b((byte) 127) ||
             !(mo.field_a <= ia.field_X))) {
             var6_ref_cf__ = eb.field_O;
-            var7 = oi.b(0, var6_ref_cf__.length);
+            var7 = DraggableWidgetContainer.b(0, var6_ref_cf__.length);
             var8_ref_cf = var6_ref_cf__[var7];
             cf.a(100, var8_ref_cf.field_e, var8_ref_cf.field_a << 2);
             ia.field_X = 20 + mo.field_a;
@@ -638,7 +638,7 @@ final class MenuScreen extends DungeonAssaultScreen {
                 if (gm.field_d.field_u == 1) {
                   stackIn_64_1 = i.field_y;
                 } else {
-                  stackIn_64_1 = ji.field_H;
+                  stackIn_64_1 = ModalDialogHost.field_H;
                 }
                 var10Lifetime2 = jk.a(stackIn_63_0, stackIn_64_1, 30496);
               }

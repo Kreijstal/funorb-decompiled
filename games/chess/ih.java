@@ -34,10 +34,10 @@ final class ih extends bf {
         pk.a(param0, -66);
     }
 
-    ih(jm param0, boolean param1, int param2, int param3, int param4, int param5) {
+    ih(WidgetRenderer param0, boolean param1, int param2, int param3, int param4, int param5) {
         this(param0, param1);
         try {
-          this.a(param3, 34, param5, param4, param2);
+          this.setBounds(param3, 34, param5, param4, param2);
         } catch (RuntimeException runtimeException) {
           throw SpriteGeometry.wrapClientException((Throwable) ((Object) runtimeException), "ih.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }
@@ -69,8 +69,8 @@ final class ih extends bf {
         return false;
     }
 
-    final void a(int param0, int param1, int param2, int param3) {
-        super.a(param0, param1, -128, param3);
+    final void drawWidget(int param0, int param1, int param2, int param3) {
+        super.drawWidget(param0, param1, -128, param3);
         if (param1 != 0) {
           return;
         }
@@ -84,24 +84,24 @@ final class ih extends bf {
         }
     }
 
-    private ih(jm param0, boolean param1) {
-        super(0, 0, 0, 0, (jm) null);
+    private ih(WidgetRenderer param0, boolean param1) {
+        super(0, 0, 0, 0, (WidgetRenderer) null);
         try {
-          this.field_R = (EditableTextField) ((Object) new ValidatedTextField("", (rg) null, 2));
-          this.field_P = (EditableTextField) ((Object) new ValidatedTextField("", (rg) null, 2));
-          this.field_W = (EditableTextField) ((Object) new ValidatedTextField("", (rg) null, 4));
+          this.field_R = (EditableTextField) ((Object) new ValidatedTextField("", (WidgetEventListener) null, 2));
+          this.field_P = (EditableTextField) ((Object) new ValidatedTextField("", (WidgetEventListener) null, 2));
+          this.field_W = (EditableTextField) ((Object) new ValidatedTextField("", (WidgetEventListener) null, 4));
           this.field_W.field_n = param0;
           this.field_P.field_n = param0;
           this.field_R.field_n = param0;
           this.field_X = param1 ? true : false;
           if (this.field_X) {
-            this.b(this.field_P, 95);
-            this.b(this.field_R, 95);
+            this.addChild(this.field_P, 95);
+            this.addChild(this.field_R, 95);
           } else {
-            this.b(this.field_R, 95);
-            this.b(this.field_P, 95);
+            this.addChild(this.field_R, 95);
+            this.addChild(this.field_P, 95);
           }
-          this.b(this.field_W, 95);
+          this.addChild(this.field_W, 95);
         } catch (RuntimeException runtimeException) {
           throw SpriteGeometry.wrapClientException((Throwable) ((Object) runtimeException), "ih.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
@@ -129,26 +129,26 @@ final class ih extends bf {
     final void a(boolean param0, BirthDateValidator param1) {
         try {
           super.a(param0, param1);
-          this.field_R.field_p = (rg) ((Object) param1);
-          this.field_P.field_p = (rg) ((Object) param1);
-          this.field_W.field_p = (rg) ((Object) param1);
+          this.field_R.field_p = (WidgetEventListener) ((Object) param1);
+          this.field_P.field_p = (WidgetEventListener) ((Object) param1);
+          this.field_W.field_p = (WidgetEventListener) ((Object) param1);
         } catch (RuntimeException runtimeException) {
           throw SpriteGeometry.wrapClientException((Throwable) ((Object) runtimeException), "ih.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
-    final void a(int param0, int param1, int param2, int param3, int param4) {
-        super.a(param0, 34, param2, param3, param4);
+    final void setBounds(int param0, int param1, int param2, int param3, int param4) {
+        super.setBounds(param0, 34, param2, param3, param4);
         int var6 = -130 + param3 >> 1;
         if (!this.field_X) {
-          this.field_R.a(0, 34, param2, 25, var6);
-          this.field_P.a(0, 34, param2, 25, var6 + 45);
-          this.field_W.a(0, (int) (char)param1, param2, 40, 90 + var6);
+          this.field_R.setBounds(0, 34, param2, 25, var6);
+          this.field_P.setBounds(0, 34, param2, 25, var6 + 45);
+          this.field_W.setBounds(0, (int) (char)param1, param2, 40, 90 + var6);
           return;
         }
-        this.field_P.a(0, 34, param2, 25, var6);
-        this.field_R.a(0, 34, param2, 25, var6 + 45);
-        this.field_W.a(0, (int) (char)param1, param2, 40, 90 + var6);
+        this.field_P.setBounds(0, 34, param2, 25, var6);
+        this.field_R.setBounds(0, 34, param2, 25, var6 + 45);
+        this.field_W.setBounds(0, (int) (char)param1, param2, 40, 90 + var6);
     }
 
     final int i(int param0) {
@@ -189,7 +189,7 @@ final class ih extends bf {
         bb.a(param1, param3 ^ -70, param0, param2);
     }
 
-    private final void a(mf param0, int param1, String param2, int param3, int param4) {
+    private final void a(UiWidget param0, int param1, String param2, int param3, int param4) {
         if (param3 != -2200) {
           return;
         }

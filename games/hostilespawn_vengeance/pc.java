@@ -943,7 +943,7 @@ final class pc {
                                 {
                                 }
                                 {
-                                    if (!od.a(var22_ref_oj.field_i, 1)) {
+                                    if (!DropTargetWidgetContainer.a(var22_ref_oj.field_i, 1)) {
                                         statePc = 156;
                                         continue scanLoop1;
                                     } else {
@@ -1858,7 +1858,7 @@ final class pc {
                             /* Inlined CFG state: 225. */
                             {
                                 var22_ref_oj = re.field_n[var21];
-                                stackOut_225_0 = od.a(var22_ref_oj.field_i, 1);
+                                stackOut_225_0 = DropTargetWidgetContainer.a(var22_ref_oj.field_i, 1);
                                 stackIn_241_0 = stackOut_225_0 ? 1 : 0;
                                 stackIn_226_0 = stackOut_225_0;
                                 if (var26 != 0) {

@@ -8,7 +8,7 @@ final class ii extends InteractiveWidget {
     static String field_F;
     private FieldValidator field_H;
 
-    final void a(int param0, byte param1, int param2, int param3) {
+    final void drawWidget(int param0, byte param1, int param2, int param3) {
         Sprite var15 = null;
         Sprite var18 = null;
         Sprite var12 = null;
@@ -18,7 +18,7 @@ final class ii extends InteractiveWidget {
         int var11 = stellarshard.field_B;
         int var9Lifetime1;
         int var10Lifetime1;
-        super.a(param0, param1, param2, param3);
+        super.drawWidget(param0, param1, param2, param3);
         if (param0 != 0) {
           return;
         }
@@ -154,7 +154,7 @@ final class ii extends InteractiveWidget {
         }
     }
 
-    final boolean a(int param0, UiWidget param1) {
+    final boolean takeFocus(int param0, UiWidget param1) {
         RuntimeException var3 = null;
         UiWidget var4 = null;
         RuntimeException stackIn_6_0 = null;
@@ -164,7 +164,7 @@ final class ii extends InteractiveWidget {
         try {
           if (param0 != -2147483648) {
             var4 = (UiWidget) null;
-            this.a(43, false, 76, (UiWidget) null);
+            this.updatePointer(43, false, 76, (UiWidget) null);
           }
           return false;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -181,10 +181,10 @@ final class ii extends InteractiveWidget {
         }
     }
 
-    final void a(int param0, boolean param1, int param2, UiWidget param3) {
+    final void updatePointer(int param0, boolean param1, int param2, UiWidget param3) {
         try {
           this.field_I = this.field_I + 1;
-          super.a(param0, param1, param2, param3);
+          super.updatePointer(param0, param1, param2, param3);
         } catch (RuntimeException runtimeException) {
           throw ma.a((Throwable) ((Object) runtimeException), "ii.N(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }

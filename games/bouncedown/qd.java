@@ -76,7 +76,7 @@ final class qd {
             return stackIn_4_0;
           }
           if (var2_int > 64) {
-            stackIn_8_0 = lk.field_t;
+            stackIn_8_0 = UiWidget.field_t;
             return stackIn_8_0;
           }
           if (param0.charAt(0) == 34) {

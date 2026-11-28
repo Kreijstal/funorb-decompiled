@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class df implements uk {
+final class df implements WidgetRenderer {
     private int field_i;
     static int field_c;
     private int field_b;
@@ -22,7 +22,7 @@ final class df implements uk {
         }
     }
 
-    public final void a(boolean param0, int param1, int param2, UiWidget param3, int param4) {
+    public final void paintWidget(boolean param0, int param1, int param2, UiWidget param3, int param4) {
         int var10 = 0;
         UiWidget stackIn_4_0 = null;
         RuntimeException stackIn_16_0 = null;

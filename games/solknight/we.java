@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class we implements j {
+final class we implements WidgetRenderer {
     private int field_j;
     private int field_i;
     private int field_g;
@@ -247,8 +247,8 @@ final class we implements j {
               UiWidget.a(qd.field_e[var7].field_p, 0, qd.field_e[var7].field_t, 3, qd.field_e[var7], 0, 1, (byte) 21);
             }
             ba.field_s = null;
-            ke.field_K = TextFieldValidator.field_e.copy();
-            ke.field_K.bindAsRenderTarget();
+            LabeledWidgetContainer.field_K = TextFieldValidator.field_e.copy();
+            LabeledWidgetContainer.field_K.bindAsRenderTarget();
             IterableNodeHashTable.a(SoftwareRasterizer.field_d * 2 / 3, 0, 0, 64, SoftwareRasterizer.field_a, true);
             SoftwareRasterizer.setRasterBuffer(var28, var2, var3);
             SoftwareRasterizer.restoreClip(lj.field_D);
@@ -256,7 +256,7 @@ final class we implements j {
             kc.field_Q = null;
             lk.field_c = (IsaacRandom.field_d.field_t - GameApplet.field_j.field_t) / 2 + 390;
             Archive.field_f = 390 + (-GameApplet.field_j.field_t + IsaacRandom.field_d.field_t) / 2;
-            ke.field_I = 434 + (IsaacRandom.field_d.field_p - GameApplet.field_j.field_p) / 2;
+            LabeledWidgetContainer.field_I = 434 + (IsaacRandom.field_d.field_p - GameApplet.field_j.field_p) / 2;
           }
           if (!param0) {
             field_e = 49;
@@ -304,11 +304,11 @@ final class we implements j {
               ja.field_a.field_r = ja.field_a.field_r + var9_intLifetime2 * 2;
               var6Lifetime1 = var6Lifetime1 + var9_intLifetime2 * 2;
               var8 = var8 + var9_intLifetime2;
-              ke.field_N = ke.field_N - var9_intLifetime2;
+              LabeledWidgetContainer.field_N = LabeledWidgetContainer.field_N - var9_intLifetime2;
             }
             if (ja.field_a.field_r < var6Lifetime1 + var8) {
               var9_intLifetime3 = var6Lifetime1 + var8 - ja.field_a.field_r;
-              ke.field_N = ke.field_N - var9_intLifetime3;
+              LabeledWidgetContainer.field_N = LabeledWidgetContainer.field_N - var9_intLifetime3;
               AgeValidator.field_o = AgeValidator.field_o + var9_intLifetime3;
               ja.field_a.field_n = ja.field_a.field_n + var9_intLifetime3;
               var8 = var8 + var9_intLifetime3;
@@ -324,7 +324,7 @@ final class we implements j {
             var9.draw(0, 0);
             rh.field_g = new Sprite(640, 480);
             rh.field_g.bindAsRenderTarget();
-            ja.field_a.drawRotated((ja.field_a.field_q >> 1) + gf.field_T, ke.field_N + (ja.field_a.field_r >> 1), aj.field_p, 4096);
+            ja.field_a.drawRotated((ja.field_a.field_q >> 1) + gf.field_T, LabeledWidgetContainer.field_N + (ja.field_a.field_r >> 1), aj.field_p, 4096);
             ja.field_a = null;
             rh.field_g.trimTransparentBorders();
             SoftwareRasterizer.setRasterBuffer(var29, var2Lifetime1, var3Lifetime1);
@@ -384,7 +384,7 @@ final class we implements j {
             IsaacRandom.field_d.draw(231, 390);
             var1 = TextFieldValidator.field_e;
             if (GameKeyHandler.field_b.field_f == 0) {
-              var1 = ke.field_K;
+              var1 = LabeledWidgetContainer.field_K;
             }
             var1.draw(0, 0);
             stackIn_50_0 = 40;
@@ -418,7 +418,7 @@ final class we implements j {
               IterableNodeHashTable.a(7 * IsaacRandom.field_d.field_t / 12, 436, 392, 64, IsaacRandom.field_d.field_p - 4, true);
             }
             stackIn_64_0 = -36;
-            stackIn_64_1 = ke.field_I;
+            stackIn_64_1 = LabeledWidgetContainer.field_I;
             stackIn_65_2 = (GameKeyHandler.field_b.field_f == 1);
             kb.a(stackIn_64_0, stackIn_64_1, stackIn_65_2, lk.field_c);
           }
@@ -506,7 +506,7 @@ final class we implements j {
         System.out.println("Error: " + hl.a(param0, "\n", "%0a", true));
     }
 
-    public final void a(byte param0, int param1, boolean param2, int param3, UiWidget param4) {
+    public final void paintWidget(byte param0, int param1, boolean param2, int param3, UiWidget param4) {
         int var7 = 0;
         int var8 = 0;
         double var9 = 0.0;

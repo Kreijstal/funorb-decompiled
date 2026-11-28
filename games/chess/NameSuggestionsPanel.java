@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class NameSuggestionsPanel extends ma implements WidgetActivationListener {
+final class NameSuggestionsPanel extends DequeWidgetContainer implements WidgetActivationListener {
     private NameSuggestionListener field_N;
     static int[] field_P;
     static ci[] field_K;
@@ -324,11 +324,11 @@ final class NameSuggestionsPanel extends ma implements WidgetActivationListener 
                   uj.field_k[var7] != null) {
                   var16 = uj.field_k[var7][var9];
                   if (var16 > 0 &&
-                    var16 > fm.field_W) {
+                    var16 > ModalDialogHost.field_W) {
                     var12 = 1;
                   }
                   if (var16 != 0 &&
-                    !lf.field_U &&
+                    !AlphaWidgetContainer.field_U &&
                     0 >= cl.field_d) {
                     var10 = 1;
                   }
@@ -355,7 +355,7 @@ final class NameSuggestionsPanel extends ma implements WidgetActivationListener 
                     var11 = 1;
                   }
                   if (var16Lifetime2 != 0 &&
-                    !lf.field_U &&
+                    !AlphaWidgetContainer.field_U &&
                     0 >= cl.field_d) {
                     var10 = 1;
                   }
@@ -472,7 +472,7 @@ final class NameSuggestionsPanel extends ma implements WidgetActivationListener 
                       }
                     }
                     if (var12 != 0) {
-                      var31 = MatchingFieldValidator.a(da.field_B, new String[]{Integer.toString(fm.field_W), Integer.toString(uj.field_k[var7][var9])}, (byte) -74);
+                      var31 = MatchingFieldValidator.a(da.field_B, new String[]{Integer.toString(ModalDialogHost.field_W), Integer.toString(uj.field_k[var7][var9])}, (byte) -74);
                       var22 = var31;
                       var25 = var22;
                       var22 = var25;
@@ -499,7 +499,7 @@ final class NameSuggestionsPanel extends ma implements WidgetActivationListener 
                       }
                     }
                   } else {
-                    var21 = lf.field_Q;
+                    var21 = AlphaWidgetContainer.field_Q;
                   }
                 }
                 if (var4_int != 0 &&
@@ -601,14 +601,14 @@ final class NameSuggestionsPanel extends ma implements WidgetActivationListener 
         }
     }
 
-    final void a(int param0, int param1, int param2, int param3) {
-        super.a(param0, param1, -89, param3);
+    final void drawWidget(int param0, int param1, int param2, int param3) {
+        super.drawWidget(param0, param1, -89, param3);
         if (0 != param1) {
           return;
         }
         if (param2 > -80) {
-          mf var6 = (mf) null;
-          this.a('￩', -83, 68, (mf) null);
+          UiWidget var6 = (UiWidget) null;
+          this.handleKey('￩', -83, 68, (UiWidget) null);
         }
         BitmapFont var5 = rb.field_b;
         if (null != this.field_O) {
@@ -617,7 +617,7 @@ final class NameSuggestionsPanel extends ma implements WidgetActivationListener 
     }
 
     NameSuggestionsPanel(NameSuggestionListener param0) {
-        super(0, 0, 0, 0, (jm) null);
+        super(0, 0, 0, 0, (WidgetRenderer) null);
         try {
           this.field_N = param0;
         } catch (RuntimeException runtimeException) {
@@ -652,16 +652,16 @@ final class NameSuggestionsPanel extends ma implements WidgetActivationListener 
             var4 = new wj(rb.field_b, 0, 1);
             this.field_R = new InteractiveWidget[1 + var3_int];
             for (var5 = 0; var3_int > var5; var5++) {
-              this.field_R[var5] = new InteractiveWidget(this.field_O[var5], (rg) (this));
-              this.field_R[var5].field_n = (jm) ((Object) var4);
+              this.field_R[var5] = new InteractiveWidget(this.field_O[var5], (WidgetEventListener) (this));
+              this.field_R[var5].field_n = (WidgetRenderer) ((Object) var4);
               this.field_R[var5].field_j = ih.field_Y;
-              this.field_R[var5].a(var5 * 16 + 20, 34, 15, 80, 0);
-              this.b(this.field_R[var5], 95);
+              this.field_R[var5].setBounds(var5 * 16 + 20, 34, 15, 80, 0);
+              this.addChild(this.field_R[var5], 95);
             }
-            this.field_R[var3_int] = new InteractiveWidget(SecondaryNodeDeque.field_d, (rg) (this));
-            this.field_R[var3_int].field_n = (jm) ((Object) var4);
-            this.field_R[var3_int].a((var3_int + 1) * 16 + 20, 34, 15, 100, 0);
-            this.b(this.field_R[var3_int], 95);
+            this.field_R[var3_int] = new InteractiveWidget(SecondaryNodeDeque.field_d, (WidgetEventListener) (this));
+            this.field_R[var3_int].field_n = (WidgetRenderer) ((Object) var4);
+            this.field_R[var3_int].setBounds((var3_int + 1) * 16 + 20, 34, 15, 100, 0);
+            this.addChild(this.field_R[var3_int], 95);
             return;
           }
           this.field_O = null;
@@ -691,7 +691,7 @@ final class NameSuggestionsPanel extends ma implements WidgetActivationListener 
         var7 = Chess.field_G;
         try {
           if (param4 != -24221) {
-            this.a(59, -126, 113, 15);
+            this.drawWidget(59, -126, 113, 15);
           }
           for (var6_int = 0; this.field_O.length > var6_int; var6_int++) {
             if (param0 == this.field_R[var6_int]) {
@@ -726,7 +726,7 @@ final class NameSuggestionsPanel extends ma implements WidgetActivationListener 
         field_L = (boolean[][]) null;
     }
 
-    final boolean a(char param0, int param1, int param2, mf param3) {
+    final boolean handleKey(char param0, int param1, int param2, UiWidget param3) {
         RuntimeException var5 = null;
         boolean stackIn_6_0 = false;
         boolean stackIn_9_0 = false;
@@ -735,17 +735,17 @@ final class NameSuggestionsPanel extends ma implements WidgetActivationListener 
         String stackIn_15_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (super.a(param0, param1, param2, param3)) {
+          if (super.handleKey(param0, param1, param2, param3)) {
             return true;
           }
           if (param1 == 98) {
-            stackIn_6_0 = this.a(param3, 27964);
+            stackIn_6_0 = this.focusPreviousChild(param3, 27964);
             return stackIn_6_0;
           }
           if (param1 != 99) {
             return false;
           }
-          stackIn_9_0 = this.a(param3, (byte) -73);
+          stackIn_9_0 = this.focusNextChild(param3, (byte) -73);
           return stackIn_9_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

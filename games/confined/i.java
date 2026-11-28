@@ -139,7 +139,7 @@ abstract class i extends GameAppletShell {
         if (param0 != 110) {
           return;
         }
-        if (!ga.g(15214) &&
+        if (!DequeWidgetContainer.g(15214) &&
           IntrusiveNode.field_e != 11) {
           ei.n(15102);
         }
@@ -256,7 +256,7 @@ abstract class i extends GameAppletShell {
               if (IntrusiveNodeHashTableIterator.field_f.tryLoadGroupByName("", 0)) {
                 wb.a(param0 ^ 104, IntrusiveNodeHashTableIterator.field_f);
                 IntrusiveNodeHashTableIterator.field_f = null;
-                am.g(-4258);
+                SingleChildWidgetContainer.g(-4258);
               }
             } else {
               IntrusiveNodeHashTableIterator.field_f = null;
@@ -287,27 +287,27 @@ abstract class i extends GameAppletShell {
           }
           if (TunnelCamera.field_G == null) {
             TunnelCamera.field_G = n.a(21146);
-            la.field_O = hd.a(58);
+            LabeledWidgetContainer.field_O = hd.a(58);
           }
-          og.a((byte) 122, tf.field_k, TunnelCamera.field_G, la.field_O);
+          og.a((byte) 122, tf.field_k, TunnelCamera.field_G, LabeledWidgetContainer.field_O);
           tf.field_k = null;
           field_r = null;
           wc.field_Wb = null;
           ClientException.a((java.applet.Applet) (this), 3);
-          am.g(-4258);
+          SingleChildWidgetContainer.g(-4258);
           we.field_c = 10;
         }
         if (we.field_c == 10) {
           if (hc.field_m != 0) {
-            fj.field_u = cc.a(cf.field_ib, param0 ^ -14283);
+            UiWidget.field_u = cc.a(cf.field_ib, param0 ^ -14283);
           }
           we.field_c = 11;
         }
         boolean decompiledFrameRemainder0 = true;
         if (we.field_c == 11) {
-          if (fj.field_u != null && (!fj.field_u.ensureIndexLoaded(param0 ^ 110) ||
-            !fj.field_u.tryLoadAllGroups(25057))) {
-            jc.a(ka.a(fj.field_u, hc.field_s, -12, b.field_k), 10265, 0.0f);
+          if (UiWidget.field_u != null && (!UiWidget.field_u.ensureIndexLoaded(param0 ^ 110) ||
+            !UiWidget.field_u.tryLoadAllGroups(25057))) {
+            jc.a(ka.a(UiWidget.field_u, hc.field_s, -12, b.field_k), 10265, 0.0f);
             decompiledFrameRemainder0 = false;
           }
           else {
@@ -374,7 +374,7 @@ abstract class i extends GameAppletShell {
                 ji.b((byte) 54);
                 break;
               case 5:
-                s.h(0);
+                DropTargetWidgetContainer.h(0);
                 break;
               case 7:
                 this.m(31819);
@@ -751,7 +751,7 @@ abstract class i extends GameAppletShell {
             throw new IllegalStateException();
           }
           if (1 == var4) {
-            var5_int = s.a(aa.a((byte) -115), md.c(97), (byte) -87);
+            var5_int = DropTargetWidgetContainer.a(aa.a((byte) -115), md.c(97), (byte) -87);
             if (-1 != var5_int) {
               GameCanvas.a(PasswordValidator.field_k, true, TextLayout.field_g, var5_int);
               PasswordValidator.field_k = null;
@@ -824,7 +824,7 @@ abstract class i extends GameAppletShell {
             vh.field_a.b(true, 17);
           }
           if (var4 == 11) {
-            me.a((byte) 102, ii.b(false));
+            AlphaWidgetContainer.a((byte) 102, ii.b(false));
           }
           if (var4 == 12) {
             li.a(ii.b(false), 104, ci.a((byte) -102));

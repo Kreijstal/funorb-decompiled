@@ -71,7 +71,7 @@ final class AccountNameAvailabilityValidator extends TextFieldValidator {
         if (param0 != -5) {
           AccountNameAvailabilityValidator.c((byte) -24);
         }
-        stackIn_6_0 = (null != GzipDecompressor.field_a) && (null != GzipDecompressor.field_a.l(-63));
+        stackIn_6_0 = (null != GzipDecompressor.field_a) && (null != GzipDecompressor.field_a.getTopOpenDialog(-63));
         return stackIn_6_0;
     }
 
@@ -163,7 +163,7 @@ final class AccountNameAvailabilityValidator extends TextFieldValidator {
           }
           var4 = (CharSequence) ((Object) param1);
           if (!ud.a(1560, var4)) {
-            stackIn_5_0 = ml.field_K;
+            stackIn_5_0 = LabeledWidgetContainer.field_K;
             return stackIn_5_0;
           }
           if (!param1.equals(this.checkedName)) {
@@ -180,7 +180,7 @@ final class AccountNameAvailabilityValidator extends TextFieldValidator {
           if (this.nameAvailable) {
             stackIn_17_0 = hm.field_b;
           } else {
-            stackIn_17_0 = ml.field_K;
+            stackIn_17_0 = LabeledWidgetContainer.field_K;
           }
           return stackIn_17_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

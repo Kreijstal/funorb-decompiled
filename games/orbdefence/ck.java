@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ck implements td {
+final class ck implements WidgetRenderer {
     private int field_a;
     private int field_i;
     static String[] field_h;
@@ -18,9 +18,9 @@ final class ck implements td {
     static RgbSprite[] field_c;
     private BitmapFont field_m;
 
-    public final void a(int param0, int param1, pj param2, int param3, boolean param4) {
+    public final void paintWidget(int param0, int param1, UiWidget param2, int param3, boolean param4) {
         int var10 = 0;
-        pj stackIn_4_0 = null;
+        UiWidget stackIn_4_0 = null;
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
         String stackIn_16_2 = null;
@@ -36,7 +36,7 @@ final class ck implements td {
           if (!(param2 instanceof ue)) {
             stackIn_4_0 = null;
           } else {
-            stackIn_4_0 = (pj) (param2);
+            stackIn_4_0 = (UiWidget) (param2);
           }
           var12 = (ue) (stackIn_4_0);
           if (var12 != null) {
@@ -67,7 +67,7 @@ final class ck implements td {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw dd.wrapClientException((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw DraggableWidgetContainer.wrapClientException((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -97,7 +97,7 @@ final class ck implements td {
           this.field_m = param0;
           this.field_b = param5;
         } catch (RuntimeException runtimeException) {
-          throw dd.wrapClientException((Throwable) ((Object) runtimeException), "ck.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
+          throw DraggableWidgetContainer.wrapClientException((Throwable) ((Object) runtimeException), "ck.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
         }
     }
 

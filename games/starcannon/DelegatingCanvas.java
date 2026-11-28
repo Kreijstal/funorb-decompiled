@@ -64,7 +64,7 @@ final class DelegatingCanvas extends java.awt.Canvas {
           gg.field_d = new int[bj.field_b];
           ac.field_d = new byte[bj.field_b][];
           og.field_c = new byte[bj.field_b][];
-          qd.field_H = new int[bj.field_b];
+          ModalDialog.field_H = new int[bj.field_b];
           fc.field_d = new int[bj.field_b];
           var17.position = -(bj.field_b * 8) + (-7 + param0.length);
           BufferedRandomAccessFile.field_m = var17.readUnsignedShort(-1174051992);
@@ -74,7 +74,7 @@ final class DelegatingCanvas extends java.awt.Canvas {
             fc.field_d[var4] = var16.readUnsignedShort(param1 - 1174051992);
           }
           for (var4Lifetime1 = 0; bj.field_b > var4Lifetime1; var4Lifetime1++) {
-            qd.field_H[var4Lifetime1] = var17.readUnsignedShort(-1174051992);
+            ModalDialog.field_H[var4Lifetime1] = var17.readUnsignedShort(-1174051992);
           }
           for (var4Lifetime2 = 0; bj.field_b > var4Lifetime2; var4Lifetime2++) {
             gg.field_d[var4Lifetime2] = var17.readUnsignedShort(-1174051992);
@@ -195,7 +195,7 @@ final class DelegatingCanvas extends java.awt.Canvas {
           String var4 = null;
           String var5 = null;
           try {
-            vk.field_v = param1;
+            DequeWidgetContainer.field_v = param1;
             try {
               var3 = param2.getParameter("cookieprefix");
               var4 = param2.getParameter("cookiehost");

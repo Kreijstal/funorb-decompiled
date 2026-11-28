@@ -28,8 +28,8 @@ final class UiComponentPart027 extends UiComponent {
         }
     }
 
-    final void performAction0222(int integerArgument1, int integerArgument2, int integerArgument3, int integerArgument4, int integerArgument5) {
-        super.performAction0222(integerArgument1, integerArgument2, integerArgument3, integerArgument4, integerArgument5);
+    final void setBounds(int integerArgument1, int integerArgument2, int integerArgument3, int integerArgument4, int integerArgument5) {
+        super.setBounds(integerArgument1, integerArgument2, integerArgument3, integerArgument4, integerArgument5);
         this.performAction1400(true);
     }
 
@@ -44,7 +44,7 @@ final class UiComponentPart027 extends UiComponent {
         this.rgbSpriteState0050 = new RgbSprite(this.integerState0108 >> 1, this.integerState0108);
     }
 
-    final void performAction0162(int integerArgument1, int integerArgument2, int integerArgument3, int integerArgument4) {
+    final void drawWidget(int integerArgument1, int integerArgument2, int integerArgument3, int integerArgument4) {
         if (integerArgument3 != 0) {
           return;
         }
@@ -137,7 +137,7 @@ final class UiComponentPart027 extends UiComponent {
         this.performAction1400(true);
     }
 
-    final void performAction0218(UiComponent uiComponentArgument1, int integerArgument2, int integerArgument3, int integerArgument4) {
+    final void updatePointer(UiComponent uiComponentArgument1, int integerArgument2, int integerArgument3, int integerArgument4) {
         RuntimeException stackRuntimeExceptionLocal1 = null;
         StringBuilder stackStringBuilderLocal2 = null;
         String stackStringLocal3 = null;
@@ -230,7 +230,7 @@ final class UiComponentPart027 extends UiComponent {
         this.integerState0675 = integerArgument5;
         this.integerState0676 = integerArgument7;
         this.integerState0674 = integerArgument8;
-        this.performAction0222(integerArgument4, integerArgument3, integerArgument1, integerArgument2, -16555);
+        this.setBounds(integerArgument4, integerArgument3, integerArgument1, integerArgument2, -16555);
     }
 
     static {

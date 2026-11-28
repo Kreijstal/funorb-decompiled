@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class jn extends ga implements WidgetActivationListener {
+final class jn extends DequeWidgetContainer implements WidgetActivationListener {
     private String field_Q;
     private InteractiveWidget[] field_L;
     private int[] field_H;
@@ -12,7 +12,7 @@ final class jn extends ga implements WidgetActivationListener {
     static PcmSample field_U;
     private dh field_S;
 
-    final InteractiveWidget a(String param0, uk param1, boolean param2) {
+    final InteractiveWidget a(String param0, WidgetEventListener param1, boolean param2) {
         InteractiveWidget var4 = null;
         RuntimeException var4_ref = null;
         int var5 = 0;
@@ -30,11 +30,11 @@ final class jn extends ga implements WidgetActivationListener {
             return stackIn_2_0;
           }
           var4 = new InteractiveWidget(param0, param1);
-          var4.field_n = (fe) ((Object) new je());
+          var4.field_n = (WidgetRenderer) ((Object) new je());
           var5 = this.field_z - 2;
-          this.a(-114, this.field_F, 0, this.field_z + 34, 0);
-          var4.a(-121, -14 + this.field_F, var5, 30, 7);
-          this.b(var4, 10);
+          this.setBounds(-114, this.field_F, 0, this.field_z + 34, 0);
+          var4.setBounds(-121, -14 + this.field_F, var5, 30, 7);
+          this.addChild(var4, 10);
           stackIn_4_0 = var4;
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -67,7 +67,7 @@ final class jn extends ga implements WidgetActivationListener {
     }
 
     jn(dh param0, BitmapFont param1, String param2) {
-        super(0, 0, 288, 0, (fe) null);
+        super(0, 0, 288, 0, (WidgetRenderer) null);
         int var4_int = 0;
         this.field_P = 0;
         try {
@@ -75,7 +75,7 @@ final class jn extends ga implements WidgetActivationListener {
           this.field_S = param0;
           this.field_T = param1;
           var4_int = null != this.field_Q ? this.field_T.textHeight(this.field_Q, 260, this.field_T.field_C) : 0;
-          this.a(-125, 288, 0, var4_int + 22, 0);
+          this.setBounds(-125, 288, 0, var4_int + 22, 0);
         } catch (RuntimeException runtimeException) {
           throw TextLineMetrics.a((Throwable) ((Object) runtimeException), "jn.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
@@ -103,12 +103,12 @@ final class jn extends ga implements WidgetActivationListener {
         this.field_P = param1;
     }
 
-    final void a(int param0, int param1, byte param2, int param3) {
+    final void drawWidget(int param0, int param1, byte param2, int param3) {
         if (param2 <= 36) {
           String var6 = (String) null;
           this.a(111, (String) null, -98);
         }
-        super.a(param0, param1, (byte) 125, param3);
+        super.drawWidget(param0, param1, (byte) 125, param3);
         this.field_T.drawParagraph(this.field_Q, param3 + this.field_q + 14, 10 + (this.field_m + param0), this.field_F - 28, this.field_z, 16777215, -1, 0, 0, this.field_T.field_C);
     }
 
@@ -120,7 +120,7 @@ final class jn extends ga implements WidgetActivationListener {
         try {
           var4_int = this.field_P;
           this.a(false, 1 + var4_int);
-          this.field_L[var4_int] = this.a(param1, (uk) (this), false);
+          this.field_L[var4_int] = this.a(param1, (WidgetEventListener) (this), false);
           this.field_H[var4_int] = param2;
         } catch (RuntimeException runtimeException) {
           throw TextLineMetrics.a((Throwable) ((Object) runtimeException), "jn.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');

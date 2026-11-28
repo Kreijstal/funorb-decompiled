@@ -488,14 +488,14 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
             field_g = (String) null;
           }
           var2_long = lj.correctedCurrentTimeMillis((byte) -113);
-          var4 = bh.field_q[qj.field_K];
-          bh.field_q[qj.field_K] = var2_long;
+          var4 = bh.field_q[DropTargetWidgetContainer.field_K];
+          bh.field_q[DropTargetWidgetContainer.field_K] = var2_long;
           if (0L != var4 &&
             var4 < var2_long) {
             var6_int = (int)(-var4 + var2_long);
             ak.field_c = (32000 + (var6_int >> 1)) / var6_int;
           }
-          qj.field_K = 31 & 1 + qj.field_K;
+          DropTargetWidgetContainer.field_K = 31 & 1 + DropTargetWidgetContainer.field_K;
           fieldTemp$1 = qc.field_b;
           qc.field_b = qc.field_b + 1;
           if (50 < fieldTemp$1) {

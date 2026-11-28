@@ -173,17 +173,17 @@ final class BoundedRandomAccessFile {
             if (null != DiskCacheWorker.field_a &&
               DiskCacheWorker.field_a.focusLost) {
               PcmOutputWorker.exitFullscreenAndRestoreFocus(true);
-              s.field_d.b(new ol(s.field_d, BufferedRandomAccessFile.field_b), (byte) -15);
+              s.field_d.showDialog(new ol(s.field_d, BufferedRandomAccessFile.field_b), (byte) -15);
             }
             return;
           }
-          s.field_d.a((byte) -116, hk.field_b, e.field_c, true);
-          s.field_d.l(-2054);
+          s.field_d.processPointerInput((byte) -116, hk.field_b, e.field_c, true);
+          s.field_d.advanceDialogs(-2054);
           if (param0) {
             return;
           }
           while (GzipInflater.b((byte) -114)) {
-            s.field_d.a(fd.field_n, 34, tb.field_d);
+            s.field_d.processKeyInput(fd.field_n, 34, tb.field_d);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

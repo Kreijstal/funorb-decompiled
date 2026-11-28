@@ -99,8 +99,8 @@ final class Bzip2Decompressor {
         var24 = null;
         var25 = null;
         param0.field_o = 1;
-        if (se.field_O == null) {
-          se.field_O = new int[param0.field_o * 100000];
+        if (DropTargetWidgetContainer.field_O == null) {
+          DropTargetWidgetContainer.field_O = new int[param0.field_o * 100000];
         }
         var26 = 1;
         while (true) {
@@ -271,14 +271,14 @@ final class Bzip2Decompressor {
                 param0.field_p[var4] = param0.field_p[var4] + param0.field_p[var4 - 1];
               }
               for (var4 = 0; var4 < var14; var4++) {
-                var1 = (byte)(se.field_O[var4] & 255);
+                var1 = (byte)(DropTargetWidgetContainer.field_O[var4] & 255);
                 dupTemp$1 = param0.field_p[var1 & 255];
-                se.field_O[dupTemp$1] = se.field_O[dupTemp$1] | var4 << 8;
+                DropTargetWidgetContainer.field_O[dupTemp$1] = DropTargetWidgetContainer.field_O[dupTemp$1] | var4 << 8;
                 param0.field_p[var1 & 255] = param0.field_p[var1 & 255] + 1;
               }
-              param0.field_z = se.field_O[param0.field_t] >> 8;
+              param0.field_z = DropTargetWidgetContainer.field_O[param0.field_t] >> 8;
               param0.field_c = 0;
-              param0.field_z = se.field_O[param0.field_z];
+              param0.field_z = DropTargetWidgetContainer.field_O[param0.field_z];
               param0.field_j = (byte)(param0.field_z & 255);
               param0.field_z = param0.field_z >> 8;
               param0.field_c = param0.field_c + 1;
@@ -342,7 +342,7 @@ final class Bzip2Decompressor {
               }
               dupTemp$0 = param0.field_n[var1 & 255] & 255;
               param0.field_E[dupTemp$0] = param0.field_E[dupTemp$0] + 1;
-              se.field_O[var14] = param0.field_n[var1 & 255] & 255;
+              DropTargetWidgetContainer.field_O[var14] = param0.field_n[var1 & 255] & 255;
               var14++;
               if (var12 == 0) {
                 var11++;
@@ -399,7 +399,7 @@ final class Bzip2Decompressor {
             var1 = param0.field_n[param0.field_J[param0.field_l[0]] & 255];
             param0.field_E[var1 & 255] = param0.field_E[var1 & 255] + var15;
             while (var15 > 0) {
-              se.field_O[var14] = var1 & 255;
+              DropTargetWidgetContainer.field_O[var14] = var1 & 255;
               var14++;
               var15--;
             }
@@ -477,7 +477,7 @@ final class Bzip2Decompressor {
         var3 = param0.field_D;
         var4 = param0.field_c;
         var5 = param0.field_j;
-        var15 = se.field_O;
+        var15 = DropTargetWidgetContainer.field_O;
         var14 = var15;
         var6 = var14;
         var7 = param0.field_z;
@@ -579,7 +579,7 @@ final class Bzip2Decompressor {
         param0.field_D = var3;
         param0.field_c = var4;
         param0.field_j = var5;
-        se.field_O = var6;
+        DropTargetWidgetContainer.field_O = var6;
         param0.field_z = var7;
         param0.field_A = var8;
         param0.field_m = var9;

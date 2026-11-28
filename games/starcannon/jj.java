@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class jj extends vk implements TextHotspotListener, WidgetActivationListener {
+final class jj extends DequeWidgetContainer implements TextHotspotListener, WidgetActivationListener {
     private RichTextWidget field_H;
     static String field_C;
     static volatile boolean field_E;
@@ -35,7 +35,7 @@ final class jj extends vk implements TextHotspotListener, WidgetActivationListen
           if (!qb.a((byte) 94, param0, param2, param1)) {
             return null;
           }
-          stackIn_6_0 = qd.a(param4.getFile(param0, true, param2), (byte) -71);
+          stackIn_6_0 = ModalDialog.a(param4.getFile(param0, true, param2), (byte) -71);
           return stackIn_6_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -132,7 +132,7 @@ final class jj extends vk implements TextHotspotListener, WidgetActivationListen
         }
     }
 
-    final boolean a(UiWidget param0, char param1, byte param2, int param3) {
+    final boolean handleKey(UiWidget param0, char param1, byte param2, int param3) {
         RuntimeException var5 = null;
         boolean stackIn_6_0 = false;
         boolean stackIn_9_0 = false;
@@ -141,17 +141,17 @@ final class jj extends vk implements TextHotspotListener, WidgetActivationListen
         String stackIn_15_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (super.a(param0, param1, param2, param3)) {
+          if (super.handleKey(param0, param1, param2, param3)) {
             return true;
           }
           if (param3 == 98) {
-            stackIn_6_0 = this.b(param2 ^ 36, param0);
+            stackIn_6_0 = this.focusPreviousChild(param2 ^ 36, param0);
             return stackIn_6_0;
           }
           if (param3 != 99) {
             return false;
           }
-          stackIn_9_0 = this.a((byte) -103, param0);
+          stackIn_9_0 = this.focusNextChild((byte) -103, param0);
           return stackIn_9_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -211,7 +211,7 @@ final class jj extends vk implements TextHotspotListener, WidgetActivationListen
     }
 
     jj(AccountCreationResultPanel param0) {
-        super(0, 0, 288, 0, (de) null);
+        super(0, 0, 288, 0, (WidgetRenderer) null);
         String var7 = null;
         int var3 = 0;
         DefaultTextWidgetRenderer var4 = null;
@@ -219,8 +219,8 @@ final class jj extends vk implements TextHotspotListener, WidgetActivationListen
         int var6 = 0;
         try {
           this.field_z = param0;
-          this.field_y = new InteractiveWidget(SpriteState.field_s, (qg) null);
-          this.field_y.field_o = (de) ((Object) new gb());
+          this.field_y = new InteractiveWidget(SpriteState.field_s, (WidgetEventListener) null);
+          this.field_y.field_o = (WidgetRenderer) ((Object) new gb());
           var7 = fb.a(field_C, -98, new String[]{this.a(false), this.j(-99)});
           var3 = 20;
           var4 = new DefaultTextWidgetRenderer(nb.field_c, 0, 0, 0, 0, 16777215, -1, 3, 0, nb.field_c.field_p, -1, 2147483647, true);
@@ -228,17 +228,17 @@ final class jj extends vk implements TextHotspotListener, WidgetActivationListen
           this.field_H.field_p = "";
           this.field_H.a(pc.field_b, -5, 0);
           this.field_H.a(pc.field_b, -103, 1);
-          this.field_H.field_g = (qg) (this);
+          this.field_H.field_g = (WidgetEventListener) (this);
           this.field_H.field_i = -40 + this.field_i;
           this.field_H.b(26, 95, var3, this.field_i - 40);
           var3 = var3 + (this.field_H.field_f + 15);
-          this.a(true, this.field_H);
+          this.addChild(true, this.field_H);
           var5 = 4;
           var6 = 200;
-          this.field_y.a(300 - var6 >> 1, var6, (byte) 120, 40, var3);
-          this.field_y.field_g = (qg) (this);
-          this.a(true, this.field_y);
-          this.a(0, 300, (byte) 118, var5 + (var3 + 55), 0);
+          this.field_y.setBounds(300 - var6 >> 1, var6, (byte) 120, 40, var3);
+          this.field_y.field_g = (WidgetEventListener) (this);
+          this.addChild(true, this.field_y);
+          this.setBounds(0, 300, (byte) 118, var5 + (var3 + 55), 0);
         } catch (RuntimeException runtimeException) {
           throw sd.wrapClientException((Throwable) ((Object) runtimeException), "jj.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }

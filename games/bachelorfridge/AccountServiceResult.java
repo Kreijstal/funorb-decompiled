@@ -71,15 +71,15 @@ final class AccountServiceResult {
                 var6.b(false);
               }
             }
-            raa.field_F = 0;
+            DraggableWidgetContainer.field_F = 0;
             for (var4 = 0; rga.field_a.length > var4; var4++) {
               if (rga.field_a[var4] != null) {
-                raa.field_F = raa.field_F + 1;
+                DraggableWidgetContainer.field_F = DraggableWidgetContainer.field_F + 1;
               }
             }
             AttackOrder.c((byte) -117);
           } else {
-            raa.field_F = 0;
+            DraggableWidgetContainer.field_F = 0;
           }
           stackIn_27_0 = true;
           if (1 != pu.field_j.field_h.field_o) {

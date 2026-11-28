@@ -119,7 +119,7 @@ final class tc extends DefaultTextWidgetRenderer {
         }
         kc.field_b = 0;
         k.field_b = null;
-        dl.field_A = null;
+        DraggableWidgetContainer.field_A = null;
         var2 = ll.field_b;
         ll.field_b = l.field_b;
         od.field_v.field_i = od.field_v.field_i + 1;
@@ -210,7 +210,7 @@ final class tc extends DefaultTextWidgetRenderer {
         }
     }
 
-    public final void a(boolean param0, int param1, int param2, UiWidget param3, int param4) {
+    public final void paintWidget(boolean param0, int param1, int param2, UiWidget param3, int param4) {
         UiWidget stackIn_3_0 = null;
         RuntimeException stackIn_33_0 = null;
         StringBuilder stackIn_33_1 = null;
@@ -261,7 +261,7 @@ final class tc extends DefaultTextWidgetRenderer {
               }
             }
           }
-          if (param3.e(0)) {
+          if (param3.isFocused(0)) {
             var13 = this.field_x[5];
             if (var13 != null) {
               var13.a(this, this.field_t, 99, param2, param3, param1);

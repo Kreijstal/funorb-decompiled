@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class sj implements jm {
+final class sj implements WidgetRenderer {
     static String[] chessFileLabels;
     static String field_a;
     static int field_n;
@@ -101,9 +101,9 @@ final class sj implements jm {
         field_t = null;
     }
 
-    public final void a(byte param0, int param1, int param2, boolean param3, mf param4) {
+    public final void paintWidget(byte param0, int param1, int param2, boolean param3, UiWidget param4) {
         int var10 = 0;
-        mf stackIn_4_0 = null;
+        UiWidget stackIn_4_0 = null;
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
         String stackIn_16_2 = null;
@@ -119,7 +119,7 @@ final class sj implements jm {
           if (!(param4 instanceof nc)) {
             stackIn_4_0 = null;
           } else {
-            stackIn_4_0 = (mf) (param4);
+            stackIn_4_0 = (UiWidget) (param4);
           }
           var12 = (nc) (stackIn_4_0);
           if (var12 == null) {

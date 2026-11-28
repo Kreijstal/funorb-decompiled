@@ -121,7 +121,7 @@ abstract class NetworkGameClient extends GameAppletShell {
         if (var2 == 0 ||
           var2 == 1) {
           if (11 == fa.field_c &&
-            rj.field_H == 0) {
+            DraggableWidgetContainer.field_H == 0) {
             ba.e((byte) -90);
           }
           return var2;
@@ -307,9 +307,9 @@ abstract class NetworkGameClient extends GameAppletShell {
             }
           }
           if (var4 == 3) {
-            if (rj.field_H != -1 &&
-              rj.field_H != 0) {
-              rj.field_H = -1;
+            if (DraggableWidgetContainer.field_H != -1 &&
+              DraggableWidgetContainer.field_H != 0) {
+              DraggableWidgetContainer.field_H = -1;
               NanoFrameTimer.c(true);
             }
             if (param0) {
@@ -569,31 +569,31 @@ abstract class NetworkGameClient extends GameAppletShell {
             DiskCacheWorker.field_c = hn.correctedCurrentTimeMillis((byte) 80) + 15000L;
           }
         }
-        if (rj.field_H == -1 ||
-          0 == rj.field_H) {
-          stackIn_23_0 = (rj.field_H != -1) ? 0 : 1;
+        if (DraggableWidgetContainer.field_H == -1 ||
+          0 == DraggableWidgetContainer.field_H) {
+          stackIn_23_0 = (DraggableWidgetContainer.field_H != -1) ? 0 : 1;
           var3Lifetime1 = stackIn_23_0;
-          rj.field_H = ud.a(param1 ^ 9768);
+          DraggableWidgetContainer.field_H = ud.a(param1 ^ 9768);
           if (var3Lifetime1 != 0 &&
-            rj.field_H == 0 &&
+            DraggableWidgetContainer.field_H == 0 &&
             fa.field_c == 11 &&
             !EditableTextField.c(false)) {
             ba.e((byte) -104);
           }
-          if (-1 != rj.field_H &&
-            rj.field_H != 0) {
+          if (-1 != DraggableWidgetContainer.field_H &&
+            DraggableWidgetContainer.field_H != 0) {
             DiskCacheWorker.field_c = 15000L + hn.correctedCurrentTimeMillis((byte) 80);
           }
         }
-        if (rj.field_H != -1 &&
-          0 != rj.field_H) {
+        if (DraggableWidgetContainer.field_H != -1 &&
+          0 != DraggableWidgetContainer.field_H) {
           if (pb.field_Kb >= 10) {
             if (fa.field_c >= 10) {
               cf.b(true);
-              if (3 != rj.field_H) {
-                if (4 != rj.field_H) {
-                  if (2 != rj.field_H) {
-                    if (rj.field_H == 5) {
+              if (3 != DraggableWidgetContainer.field_H) {
+                if (4 != DraggableWidgetContainer.field_H) {
+                  if (2 != DraggableWidgetContainer.field_H) {
+                    if (DraggableWidgetContainer.field_H == 5) {
                       la.a(5, ConfirmedEmailAvailabilityValidator.field_q, (byte) 83);
                     } else {
                       la.a(256, qb.field_m, (byte) 48);
@@ -610,12 +610,12 @@ abstract class NetworkGameClient extends GameAppletShell {
               i.field_d = true;
             }
           } else {
-            if (rj.field_H != 3) {
-              if (rj.field_H == 4) {
+            if (DraggableWidgetContainer.field_H != 3) {
+              if (DraggableWidgetContainer.field_H == 4) {
                 this.a(3904, "js5io");
               } else {
-                if (rj.field_H != 2) {
-                  if (5 == rj.field_H) {
+                if (DraggableWidgetContainer.field_H != 2) {
+                  if (5 == DraggableWidgetContainer.field_H) {
                     this.a(3904, "outofdate");
                   } else {
                     this.a(3904, "js5connect");
@@ -632,18 +632,18 @@ abstract class NetworkGameClient extends GameAppletShell {
         if (param1 != 9768) {
           this.a(7, true, -106, -37, -90, true, 83, 74);
         }
-        if ((rj.field_H != -1 &&
-          rj.field_H != 0 ||
+        if ((DraggableWidgetContainer.field_H != -1 &&
+          DraggableWidgetContainer.field_H != 0 ||
           EditableTextField.c(false)) &&
           hn.correctedCurrentTimeMillis((byte) 80) >= DiskCacheWorker.field_c) {
           i.field_d = false;
-          if (rj.field_H != -1 &&
-            rj.field_H != 0) {
-            rj.field_H = -1;
+          if (DraggableWidgetContainer.field_H != -1 &&
+            DraggableWidgetContainer.field_H != 0) {
+            DraggableWidgetContainer.field_H = -1;
             NanoFrameTimer.c(true);
           }
         }
-        if (rj.field_H == 0 &&
+        if (DraggableWidgetContainer.field_H == 0 &&
           !EditableTextField.c(false)) {
           tf.field_d = false;
         }

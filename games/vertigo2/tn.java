@@ -261,7 +261,7 @@ final class tn {
         this.field_l = sp.field_U;
         this.field_q = tj.field_b;
         if (param0) {
-          this.field_f = sd.field_P;
+          this.field_f = ModalDialogHost.field_P;
         } else {
           this.field_f = null;
         }

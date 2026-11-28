@@ -9,7 +9,7 @@ final class kg {
     final static void b(byte param0) {
         if (param0 <= 3) {
           kg.clearStaticReferences((byte) -28);
-          if (!g.j(7)) {
+          if (!DequeWidgetContainer.j(7)) {
             return;
           }
           if (NanoFrameTimer.field_f >= 2) {
@@ -18,7 +18,7 @@ final class kg {
           }
           return;
         }
-        if (!g.j(7)) {
+        if (!DequeWidgetContainer.j(7)) {
           return;
         }
         if (NanoFrameTimer.field_f >= 2) {

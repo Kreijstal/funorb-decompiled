@@ -33,7 +33,7 @@ final class lg {
         this.field_a = "";
         this.field_i = "";
         this.field_k = "";
-        this.field_m = kh.field_H[param0];
+        this.field_m = ModalDialog.field_H[param0];
         this.field_b = pf.field_e[param0];
         this.field_k = bd.field_f[param0];
         this.field_a = jg.field_jb[param0];

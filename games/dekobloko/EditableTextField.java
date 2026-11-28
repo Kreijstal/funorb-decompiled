@@ -157,7 +157,7 @@ class EditableTextField extends InteractiveComponent {
         return integerLocal2;
     }
 
-    final boolean computeBoolean0056(int integerArgument1, int integerArgument2, UiComponent uiComponentArgument3, int integerArgument4, int integerArgument5, int integerArgument6, byte byteArgument7) {
+    final boolean pointerPressed(int integerArgument1, int integerArgument2, UiComponent uiComponentArgument3, int integerArgument4, int integerArgument5, int integerArgument6, byte byteArgument7) {
         int stackIntegerLocal1 = 0;
         int stackIntegerLocal2 = 0;
         boolean stackBooleanLocal3 = false;
@@ -169,7 +169,7 @@ class EditableTextField extends InteractiveComponent {
         long longLocal9 = 0L;
         RuntimeException runtimeExceptionLocal10 = null;
         try {
-          if (!super.computeBoolean0056(integerArgument1, integerArgument2, uiComponentArgument3, integerArgument4, integerArgument5, integerArgument6, byteArgument7)) {
+          if (!super.pointerPressed(integerArgument1, integerArgument2, uiComponentArgument3, integerArgument4, integerArgument5, integerArgument6, byteArgument7)) {
             return false;
           }
           if (!(this.callbackContract004State0006 instanceof TextWidgetRenderer)) {
@@ -228,7 +228,7 @@ class EditableTextField extends InteractiveComponent {
         }
     }
 
-    EditableTextField(String stringArgument1, CallbackContract006 callbackContract006Argument2, int integerArgument3) {
+    EditableTextField(String stringArgument1, WidgetEventListener callbackContract006Argument2, int integerArgument3) {
         super(stringArgument1, callbackContract006Argument2);
         this.longState0044 = 0L;
         this.integerState0715 = -1;
@@ -316,16 +316,16 @@ class EditableTextField extends InteractiveComponent {
         }
     }
 
-    final void performAction0162(int integerArgument1, int integerArgument2, int integerArgument3, int integerArgument4) {
+    final void drawWidget(int integerArgument1, int integerArgument2, int integerArgument3, int integerArgument4) {
         TextWidgetRenderer callbackContract012Local1 = null;
         long longLocal2 = 0L;
         if (integerArgument2 > -103) {
           UiComponent uiComponentLocal3 = (UiComponent) null;
-          this.computeBoolean0182(-88, -47, (UiComponent) null, '%');
+          this.handleKey(-88, -47, (UiComponent) null, '%');
         }
         if (null != this.callbackContract004State0006 &&
           integerArgument3 == 0) {
-          this.callbackContract004State0006.performAction0017(this.booleanState0035, integerArgument1, integerArgument4, (byte) -110, (UiComponent) (this));
+          this.callbackContract004State0006.paintWidget(this.booleanState0035, integerArgument1, integerArgument4, (byte) -110, (UiComponent) (this));
           if (this.callbackContract004State0006 instanceof TextWidgetRenderer) {
             callbackContract012Local1 = (TextWidgetRenderer) ((Object) this.callbackContract004State0006);
             if (this.integerState0717 != this.integerState0718) {
@@ -339,11 +339,11 @@ class EditableTextField extends InteractiveComponent {
         }
     }
 
-    void performAction0218(UiComponent uiComponentArgument1, int integerArgument2, int integerArgument3, int integerArgument4) {
+    void updatePointer(UiComponent uiComponentArgument1, int integerArgument2, int integerArgument3, int integerArgument4) {
         TextWidgetRenderer callbackContract012Local1 = null;
         int integerLocal2 = 0;
         try {
-          super.performAction0218(uiComponentArgument1, 94, integerArgument3, integerArgument4);
+          super.updatePointer(uiComponentArgument1, 94, integerArgument3, integerArgument4);
           if (integerArgument2 < 38) {
             this.integerState0719 = 63;
           }
@@ -419,7 +419,7 @@ class EditableTextField extends InteractiveComponent {
         }
     }
 
-    final boolean computeBoolean0182(int integerArgument1, int integerArgument2, UiComponent uiComponentArgument3, char characterArgument4) {
+    final boolean handleKey(int integerArgument1, int integerArgument2, UiComponent uiComponentArgument3, char characterArgument4) {
         int cachedIntegerLocal1 = 0;
         int stackIntegerLocal2 = 0;
         int stackIntegerLocal3 = 0;

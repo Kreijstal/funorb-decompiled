@@ -153,7 +153,7 @@ final class IterableNodeCollection implements Iterable {
           MixedSupport035.integerState0219 = ResourceSupport001.integerState0021 + integerLocal7;
           MixedSupport111.integerState0721 = -(MixedSupport003.integerState0018 >> 1) + MixedSupport070.integerState0402;
           integerLocal9 = MixedSupport111.integerState0721;
-          for (integerLocal1 = 0; integerLocal1 < UiComponentPart010.stringArrayState0012.length; integerLocal1++) {
+          for (integerLocal1 = 0; integerLocal1 < AlphaWidgetContainer.stringArrayState0012.length; integerLocal1++) {
             integerLocal10 = MixedSupport129.integerArrayState0211[integerLocal1];
             if (integerLocal10 >= 0) {
               if (UiComponentPart033.mixedSupport116State0004.integerState0754 == integerLocal10) {
@@ -164,7 +164,7 @@ final class IterableNodeCollection implements Iterable {
             } else {
               integerLocal11 = FrameTimer.integerState0320;
             }
-            stringLocal12 = UiComponentPart010.stringArrayState0012[integerLocal1];
+            stringLocal12 = AlphaWidgetContainer.stringArrayState0012[integerLocal1];
             stackIntegerLocal2 = 0;
             stackStringLocal3 = stringLocal12;
             stackBooleanLocal4 = !(integerLocal10 < 0);

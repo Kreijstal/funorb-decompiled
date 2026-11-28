@@ -113,7 +113,7 @@ final class em extends ButtonWidget {
         field_C = null;
     }
 
-    private em(String param0, of param1) {
+    private em(String param0, WidgetEventListener param1) {
         this(param0, GzipDecompressor.field_b.field_i, param1);
         try {
           this.field_h = GzipDecompressor.field_b.field_l;
@@ -181,7 +181,7 @@ final class em extends ButtonWidget {
         }
     }
 
-    private em(String param0, ml param1, of param2) {
+    private em(String param0, WidgetRenderer param1, WidgetEventListener param2) {
         super(param0, param1, param2);
         try {
           this.field_h = GzipDecompressor.field_b.field_l;
@@ -200,7 +200,7 @@ final class em extends ButtonWidget {
         super.activateFromInput(-48, param1, param2, param3);
     }
 
-    em(String param0, of param1, boolean param2) {
+    em(String param0, WidgetEventListener param1, boolean param2) {
         this(param0, param1);
         try {
           this.field_u = param2 ? true : false;

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class lg implements cg {
+final class lg implements WidgetRenderer {
     private BitmapFont field_d;
     static int field_i;
     private int field_c;
@@ -34,14 +34,14 @@ final class lg implements cg {
             if (null != df.field_l &&
               df.field_l.focusLost) {
               af.b(6);
-              hg.field_S.a((byte) -115, (vg) (new ae(hg.field_S, uf.field_a)));
+              hg.field_S.showDialog((byte) -115, (UiWidget) (new ae(hg.field_S, uf.field_a)));
             }
             return;
           }
-          hg.field_S.a(NameSuggestionsPanel.field_P, fl.field_f, true, 0);
-          hg.field_S.b(false);
+          hg.field_S.processPointerInput(NameSuggestionsPanel.field_P, fl.field_f, true, 0);
+          hg.field_S.advanceDialogs(false);
           while (th.a(-109)) {
-            hg.field_S.a(di.field_c, sj.field_g, 121);
+            hg.field_S.processKeyInput(di.field_c, sj.field_g, 121);
           }
           if (param0 == 2) {
             return;
@@ -68,7 +68,7 @@ final class lg implements cg {
         return -71;
     }
 
-    public final void a(boolean param0, int param1, vg param2, int param3, int param4) {
+    public final void paintWidget(boolean param0, int param1, UiWidget param2, int param3, int param4) {
         RuntimeException var6 = null;
         int var7 = 0;
         int var8 = 0;
@@ -77,7 +77,7 @@ final class lg implements cg {
         int var12 = 0;
         int var13 = 0;
         nd var14 = null;
-        vg stackIn_3_0 = null;
+        UiWidget stackIn_3_0 = null;
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
         String stackIn_16_2 = null;
@@ -87,7 +87,7 @@ final class lg implements cg {
         int var12Lifetime1;
         try {
           if (param2 instanceof nd) {
-            stackIn_3_0 = (vg) (param2);
+            stackIn_3_0 = (UiWidget) (param2);
           } else {
             stackIn_3_0 = null;
           }

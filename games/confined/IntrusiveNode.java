@@ -7,7 +7,7 @@ class IntrusiveNode {
     static e field_g;
     static int field_j;
     IntrusiveNode field_h;
-    static qe field_k;
+    static DraggableWidgetContainer field_k;
     static boolean field_f;
     static byte[][] field_c;
     static int field_d;

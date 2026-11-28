@@ -68,7 +68,7 @@ final class BoundedRandomAccessFile {
             }
             if (var3_int != 0) {
               if (NetworkArchiveRequest.field_D) {
-                param0 = db.a(ud.field_a, new String[]{param0}, true);
+                param0 = ModalDialog.a(ud.field_a, new String[]{param0}, true);
               }
               if (ud.field_c) {
                 param0 = BufferedRandomAccessFile.field_e;

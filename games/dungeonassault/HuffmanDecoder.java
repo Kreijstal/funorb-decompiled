@@ -355,7 +355,7 @@ final class HuffmanDecoder {
         int var6Lifetime1;
         var8 = DungeonAssault.field_K;
         try {
-          bj.field_G = false;
+          DropTargetWidgetContainer.field_G = false;
           ao.field_o = param0;
           hi.field_c.b(4973, -10 + ao.field_o);
           if (9 < hi.field_c.field_H) {
@@ -439,7 +439,7 @@ final class HuffmanDecoder {
         int var6Lifetime1;
         var8 = DungeonAssault.field_K;
         try {
-          bj.field_G = false;
+          DropTargetWidgetContainer.field_G = false;
           ao.field_o = param0;
           hi.field_c.b(4973, -10 + ao.field_o);
           if (9 < hi.field_c.field_H) {

@@ -12,7 +12,7 @@ final class IsaacRandom {
     private int field_b;
     private int field_i;
     private int[] field_h;
-    static ei field_d;
+    static ModalDialogHost field_d;
     private int[] field_g;
 
     final static void a(int param0, int param1, int param2, Sprite[] param3) {

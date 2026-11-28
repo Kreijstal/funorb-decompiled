@@ -18,7 +18,7 @@ final class EmailFormatValidator extends TextFieldValidator {
           if (oe.field_b == rk.field_X) {
             return vh.field_p;
           }
-          if (sa.field_Q.b((byte) 121)) {
+          if (LabeledWidgetContainer.field_Q.b((byte) 121)) {
             return qg.field_c;
           }
           return vh.field_p;
@@ -26,7 +26,7 @@ final class EmailFormatValidator extends TextFieldValidator {
         if (oe.field_b == rk.field_X) {
           return vh.field_p;
         }
-        if (sa.field_Q.b((byte) 121)) {
+        if (LabeledWidgetContainer.field_Q.b((byte) 121)) {
           return qg.field_c;
         }
         return vh.field_p;

@@ -123,10 +123,10 @@ class fa extends mg {
             fa.a((BitmapFont) null, (BitmapFont) null, true, false, 27, -113, -121, 67, 2, -38, (RgbSprite[]) null, (RgbSprite[]) null, 66, -114, 40, 57, 65);
           }
           pl.e(-125);
-          qe.field_g.g((byte) -100);
+          qe.field_g.closeAllDialogs((byte) -100);
           mk.field_b = new LoginPanel(jd.field_G, (String) null, ne.field_d, param1, param0);
           MouseWheelInput.field_d = new ck(qe.field_g, mk.field_b);
-          qe.field_g.b(-3264, MouseWheelInput.field_d);
+          qe.field_g.showDialog(-3264, MouseWheelInput.field_d);
         } catch (RuntimeException runtimeException) {
           throw dn.wrapClientException((Throwable) ((Object) runtimeException), "fa.J(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }

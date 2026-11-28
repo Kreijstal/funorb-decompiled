@@ -72,7 +72,7 @@ final class LaserHubTile extends bo implements Cloneable {
           if (~param1.field_d != param0 ||
             param1.field_l != 0) {
             for (var2_int = 0; var2_int < jl.field_d; var2_int++) {
-              var3 = ol.field_D[var2_int];
+              var3 = ModalDialogHost.field_D[var2_int];
               if (var3.field_f == 2 &&
                 param1.field_d == var3.field_d &&
                 param1.field_l == var3.field_l) {

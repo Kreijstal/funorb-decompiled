@@ -13,7 +13,7 @@ final class vh extends ButtonWidget {
     static String field_K;
     private FieldValidator field_J;
 
-    final void a(int param0, int param1, int param2, int param3) {
+    final void drawWidget(int param0, int param1, int param2, int param3) {
         int var5;
         int var6;
         na var8;
@@ -24,7 +24,7 @@ final class vh extends ButtonWidget {
         Sprite var13;
         Sprite var14;
         var11 = MonkeyPuzzle2.field_F ? 1 : 0;
-        super.a(param0, param1, param2, param3);
+        super.drawWidget(param0, param1, param2, param3);
         if (param1 != 0) {
           return;
         }
@@ -206,14 +206,14 @@ final class vh extends ButtonWidget {
         }
     }
 
-    final void a(UiWidget param0, int param1, int param2, byte param3) {
+    final void updatePointer(UiWidget param0, int param1, int param2, byte param3) {
         try {
           this.field_D = this.field_D + 1;
           if (param3 >= -13) {
             int[] var6 = (int[]) null;
             vh.a((int[]) null, (byte) -48);
           }
-          super.a(param0, param1, param2, (byte) -44);
+          super.updatePointer(param0, param1, param2, (byte) -44);
         } catch (RuntimeException runtimeException) {
           throw la.a((Throwable) ((Object) runtimeException), "vh.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
@@ -224,11 +224,11 @@ final class vh extends ButtonWidget {
         if (param0 >= -23) {
           field_C = (float[]) null;
         }
-        stackIn_6_0 = (DiskArchiveRequest.field_o != null) && (null != DiskArchiveRequest.field_o.j(-50));
+        stackIn_6_0 = (DiskArchiveRequest.field_o != null) && (null != DiskArchiveRequest.field_o.getTopOpenDialog(-50));
         return stackIn_6_0;
     }
 
-    final boolean a(UiWidget param0, boolean param1) {
+    final boolean takeFocus(UiWidget param0, boolean param1) {
         RuntimeException var3 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;

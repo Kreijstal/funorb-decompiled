@@ -104,7 +104,7 @@ final class vf extends IntrusiveNode {
           if (0 != this.field_h) {
             var19 = ne.field_b[this.field_h % 32];
             var4 = var19;
-            var5 = (ia.field_H.field_p - var19.field_p) / 2;
+            var5 = (AlphaWidgetContainer.field_H.field_p - var19.field_p) / 2;
             var6 = this.field_l.length();
             var7 = (double)this.field_h * 3.141592653589793 / 64.0;
             var9 = (double)(var5 + (this.field_i + param2));

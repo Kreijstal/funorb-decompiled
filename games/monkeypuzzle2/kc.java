@@ -71,7 +71,7 @@ abstract class kc {
                 dl.field_c[var2] = true;
               }
             }
-            bh.field_e = jk.field_w;
+            bh.field_e = SingleChildWidgetContainer.field_w;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

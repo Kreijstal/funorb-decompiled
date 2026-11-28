@@ -34,7 +34,7 @@ final class TextLineMetrics {
 
     final static void performAction1104(int integerArgument1, int integerArgument2, byte byteArgument3, int integerArgument4, int integerArgument5) {
         MixedSupport042.performAction0537(integerArgument4 + 20, 256, 16777215, MixedSupport088.stringState0371, integerArgument2, SceneWidget.renderingSupport009State0007);
-        UiComponentPart029.renderingSupport009State0005.drawParagraph(LoginCredentials.tutorialTips[integerArgument1], integerArgument2, integerArgument4 + 24, 120, 200, 16777215, -1, 0, 0, 16);
+        DraggableWidgetContainer.renderingSupport009State0005.drawParagraph(LoginCredentials.tutorialTips[integerArgument1], integerArgument2, integerArgument4 + 24, 120, 200, 16777215, -1, 0, 0, 16);
         if (integerArgument1 == 0) {
           MixedSupport035.rgbSpriteArrayArrayState0006[integerArgument5][0].drawScaled(30 + integerArgument2, integerArgument4 + 101, 18, 18);
           MixedSupport035.rgbSpriteArrayArrayState0006[integerArgument5][0].drawScaled(48 + integerArgument2, 101 + integerArgument4, 18, 18);

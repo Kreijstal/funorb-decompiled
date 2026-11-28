@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class am extends vf {
+abstract class am extends ModalDialog {
     static Sprite[] field_M;
     private int field_L;
     private int field_I;
@@ -139,7 +139,7 @@ abstract class am extends vf {
 
     final void a(int param0, int param1, int param2, int param3) {
         if (param0 <= 0) {
-          this.b(-79, param2, param3);
+          this.setCenteredSize(-79, param2, param3);
           return;
         }
         this.field_H = param2;
@@ -159,13 +159,13 @@ abstract class am extends vf {
         }
     }
 
-    am(rp param0, int param1, int param2) {
+    am(ModalDialogHost param0, int param1, int param2) {
         super(param0, param1, param2);
         this.field_J = 0;
         this.field_L = 0;
     }
 
-    boolean a(int param0) {
+    boolean advanceDialogAnimation(int param0) {
         int var2 = 0;
         int var3 = 0;
         int fieldTemp$0 = 0;
@@ -185,27 +185,27 @@ abstract class am extends vf {
             this.field_J = 0;
             this.b(false);
           }
-          this.b(-123, var3, var2);
+          this.setCenteredSize(-123, var3, var2);
         }
         if (param0 > -32) {
           return false;
         }
-        return super.a(-116);
+        return super.advanceDialogAnimation(-116);
     }
 
-    boolean k(int param0) {
+    boolean snapDialogAnimation(int param0) {
         this.m(17310);
         if (param0 >= -59) {
           am.resetStaticState(false);
         }
-        return super.k(-81);
+        return super.snapDialogAnimation(-81);
     }
 
     void m(int param0) {
         if (this.field_J <= 0) {
           return;
         }
-        this.b(-35, this.field_H, this.field_P);
+        this.setCenteredSize(-35, this.field_H, this.field_P);
         if (param0 != 17310) {
           return;
         }

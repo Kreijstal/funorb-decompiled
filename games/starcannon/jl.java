@@ -146,20 +146,20 @@ final class jl {
             if (this.field_f != 4 &&
               this.field_f != 5) {
               if ((this.field_f == 6)) {
-                if (var6 > a.field_b.field_p + (200 - af.field_y.field_p - 5)) {
-                  var6 = -5 - af.field_y.field_p + 200 + a.field_b.field_p;
+                if (var6 > a.field_b.field_p + (200 - DropTargetWidgetContainer.field_y.field_p - 5)) {
+                  var6 = -5 - DropTargetWidgetContainer.field_y.field_p + 200 + a.field_b.field_p;
                 }
-                if (var7 < this.a((byte) -119, 1) + (this.b(-104, 1) + (af.field_y.field_p + af.field_y.field_q) + 5)) {
-                  var7 = 5 + this.a((byte) -120, 1) + (this.b(-115, 1) - (-af.field_y.field_p - af.field_y.field_q));
+                if (var7 < this.a((byte) -119, 1) + (this.b(-104, 1) + (DropTargetWidgetContainer.field_y.field_p + DropTargetWidgetContainer.field_y.field_q) + 5)) {
+                  var7 = 5 + this.a((byte) -120, 1) + (this.b(-115, 1) - (-DropTargetWidgetContainer.field_y.field_p - DropTargetWidgetContainer.field_y.field_q));
                 }
-                var8Lifetime1 = 10 + af.field_y.stringWidth(jh.field_e);
+                var8Lifetime1 = 10 + DropTargetWidgetContainer.field_y.stringWidth(jh.field_e);
                 if (var4Lifetime1 > (320 - (var8Lifetime1 >> 1))) {
                   var4Lifetime1 = -(var8Lifetime1 >> 1) + 320;
                 }
                 if (-(var8Lifetime1 >> 1) + (320 + var8Lifetime1) > var5) {
                   var5 = -(var8Lifetime1 >> 1) + 320 + var8Lifetime1;
                 }
-                stackIn_68_0 = af.field_y;
+                stackIn_68_0 = DropTargetWidgetContainer.field_y;
                 stackIn_68_1 = false;
                 stackIn_69_2 = (jg.field_H != 0);
                 stackIn_71_3 = false;
@@ -172,7 +172,7 @@ final class jl {
                   var4Lifetime1 = -(var8Lifetime1 >> 1) + 320;
                 }
                 stackIn_79_0 = 10;
-                stackIn_79_1 = af.field_y;
+                stackIn_79_1 = DropTargetWidgetContainer.field_y;
                 stackIn_79_2 = false;
                 stackIn_79_3 = true;
                 stackIn_80_4 = (BitPacketBuffer.field_k != 0);
@@ -184,7 +184,7 @@ final class jl {
                 if (var5 < (-(var8Lifetime1 >> 1) + var8Lifetime1 + 320)) {
                   var5 = -(var8Lifetime1 >> 1) + var8Lifetime1 + 320;
                 }
-                stackIn_89_0 = af.field_y;
+                stackIn_89_0 = DropTargetWidgetContainer.field_y;
                 stackIn_89_1 = false;
                 stackIn_90_2 = (BitPacketBuffer.field_k != 0);
                 stackIn_93_3 = (jg.field_H != 0);
@@ -216,8 +216,8 @@ final class jl {
               }
             }
           } else {
-            if ((-5 + (130 - af.field_y.field_p)) < var6) {
-              var6 = -5 + (-af.field_y.field_p + 130);
+            if ((-5 + (130 - DropTargetWidgetContainer.field_y.field_p)) < var6) {
+              var6 = -5 + (-DropTargetWidgetContainer.field_y.field_p + 130);
             }
           }
         } else {
@@ -225,7 +225,7 @@ final class jl {
             var6 = 115;
           }
           if (MouseInput.a(108)) {
-            var8Lifetime1 = af.field_y.stringWidth(n.field_g);
+            var8Lifetime1 = DropTargetWidgetContainer.field_y.stringWidth(n.field_g);
             if (-5 - (var8Lifetime1 >> 1) + 320 < var4Lifetime1) {
               var4Lifetime1 = -(var8Lifetime1 >> 1) + 320 - 5;
             }
@@ -258,20 +258,20 @@ final class jl {
               if ((this.field_f == 6)) {
                 var11Lifetime1 = 200 + a.field_b.field_p;
                 var12Lifetime1 = 4 + (a.field_b.field_r + a.field_b.field_q);
-                af.field_y.drawCentred(jh.field_e, 320, var11Lifetime1, 65535, -1);
-                stackIn_107_0 = af.field_y;
+                DropTargetWidgetContainer.field_y.drawCentred(jh.field_e, 320, var11Lifetime1, 65535, -1);
+                stackIn_107_0 = DropTargetWidgetContainer.field_y;
                 stackIn_107_1 = false;
                 stackIn_108_2 = (jg.field_H != 0);
                 stackIn_110_3 = false;
                 stackIn_111_4 = (0 != BitPacketBuffer.field_k);
                 ((BinaryBitmapFont) (Object) stackIn_107_0).drawCentred(StarCannon.a(stackIn_107_1, stackIn_108_2, stackIn_110_3, stackIn_111_4), 320, var12Lifetime1 + var11Lifetime1, 65535, -1);
-                stackIn_113_0 = af.field_y;
+                stackIn_113_0 = DropTargetWidgetContainer.field_y;
                 stackIn_113_1 = false;
                 stackIn_113_2 = true;
                 stackIn_114_3 = (BitPacketBuffer.field_k != 0);
                 stackIn_117_4 = (0 != jg.field_H);
                 ((BinaryBitmapFont) (Object) stackIn_113_0).drawCentred(dl.b(stackIn_113_1, stackIn_113_2, stackIn_114_3, stackIn_117_4), 320, 24 + (var12Lifetime1 * 3 + var11Lifetime1), 65535, -1);
-                stackIn_119_0 = af.field_y;
+                stackIn_119_0 = DropTargetWidgetContainer.field_y;
                 stackIn_119_1 = false;
                 stackIn_120_2 = (BitPacketBuffer.field_k != 0);
                 stackIn_123_3 = (jg.field_H != 0);
@@ -368,56 +368,56 @@ final class jl {
         var8 = StarCannon.field_A;
         param1 -= 30;
         var3 = 130;
-        af.field_y.drawRightAligned(SpriteState.field_t + (1 + we.field_k) + " / " + 4, param0 + param1, var3, 33023, 255);
+        DropTargetWidgetContainer.field_y.drawRightAligned(SpriteState.field_t + (1 + we.field_k) + " / " + 4, param0 + param1, var3, 33023, 255);
         var4 = 320 - param1;
         var5 = param1 << 1;
         var6 = 1024;
         var7 = we.field_k;
         if (var7 == 0) {
-          af.field_y.drawString(BufferedSocket.field_p, -param1 + 320, var3, 16777215, -1);
+          DropTargetWidgetContainer.field_y.drawString(BufferedSocket.field_p, -param1 + 320, var3, 16777215, -1);
           var3 += 30;
-          af.field_y.drawParagraph(ff.field_p, var4, var3, var5, var6, 49407, -1, 0, 0, 14);
+          DropTargetWidgetContainer.field_y.drawParagraph(ff.field_p, var4, var3, var5, var6, 49407, -1, 0, 0, 14);
         } else {
           if (var7 == 1) {
-            af.field_y.drawString(tc.field_y, 320 - param1, var3, 16777215, -1);
+            DropTargetWidgetContainer.field_y.drawString(ModalDialogHost.field_y, 320 - param1, var3, 16777215, -1);
             var3 += 30;
-            var3 = var3 + (14 + af.field_y.drawParagraph(s.field_a, var4, var3, var5, var6, 49407, -1, 0, 0, 14) * 14);
-            af.field_w[4 + pd.field_a * 8].c(var4, -6 + var3);
-            var3 = var3 + (14 + 14 * af.field_y.drawParagraph(FrameTimer.field_a, var4 + 40, var3, -40 + var5, var6, 49407, -1, 0, 0, 14));
-            var3 = var3 + (14 + 14 * af.field_y.drawParagraph(ac.field_c, var4, var3, var5, var6, 49407, -1, 0, 0, 14));
-            var3 = var3 + (af.field_y.drawParagraph(qd.field_y, var4, var3, var5, var6, 49407, -1, 0, 0, 14) * 14 + 14);
+            var3 = var3 + (14 + DropTargetWidgetContainer.field_y.drawParagraph(s.field_a, var4, var3, var5, var6, 49407, -1, 0, 0, 14) * 14);
+            DropTargetWidgetContainer.field_w[4 + pd.field_a * 8].c(var4, -6 + var3);
+            var3 = var3 + (14 + 14 * DropTargetWidgetContainer.field_y.drawParagraph(FrameTimer.field_a, var4 + 40, var3, -40 + var5, var6, 49407, -1, 0, 0, 14));
+            var3 = var3 + (14 + 14 * DropTargetWidgetContainer.field_y.drawParagraph(ac.field_c, var4, var3, var5, var6, 49407, -1, 0, 0, 14));
+            var3 = var3 + (DropTargetWidgetContainer.field_y.drawParagraph(ModalDialog.field_y, var4, var3, var5, var6, 49407, -1, 0, 0, 14) * 14 + 14);
             var3 += 14;
-            af.field_y.drawCentred(PasswordValidator.field_k, 320, var3, 16777215, -1);
+            DropTargetWidgetContainer.field_y.drawCentred(PasswordValidator.field_k, 320, var3, 16777215, -1);
             var3 += 14;
-            af.field_y.drawCentred(p.field_b, 320, var3, 16777215, -1);
+            DropTargetWidgetContainer.field_y.drawCentred(p.field_b, 320, var3, 16777215, -1);
             var3 += 14;
-            af.field_y.drawCentred(eb.field_e, 320, var3, 16777215, -1);
+            DropTargetWidgetContainer.field_y.drawCentred(eb.field_e, 320, var3, 16777215, -1);
           } else {
             if (var7 == 2) {
-              af.field_y.drawString(vc.field_k, -param1 + 320, var3, 16777215, -1);
+              DropTargetWidgetContainer.field_y.drawString(vc.field_k, -param1 + 320, var3, 16777215, -1);
               var3 += 30;
-              af.field_w[0 + 8 * pd.field_a].c(var4, -6 + var3);
-              var3 = var3 + (14 * af.field_y.drawParagraph(gf.field_e, var4 + 40, var3, var5 - 40, var6, 49407, -1, 0, 0, 14) + 14);
-              af.field_w[1 + 8 * pd.field_a].c(var4, -6 + var3);
-              var3 = var3 + (14 * af.field_y.drawParagraph(mc.field_i, var4 + 40, var3, var5 - 40, var6, 49407, -1, 0, 0, 14) + 14);
-              af.field_w[2 + pd.field_a * 8].c(var4, -6 + var3);
-              var3 = var3 + (14 + 14 * af.field_y.drawParagraph(ImageProducerRasterBuffer.field_k, var4 + 40, var3, var5 - 40, var6, 49407, -1, 0, 0, 14));
-              af.field_w[8 * pd.field_a + 5].c(var4, -6 + var3);
-              var3 = var3 + (14 * af.field_y.drawParagraph(a.field_c, 40 + var4, var3, -40 + var5, var6, 49407, -1, 0, 0, 14) + 14);
-              af.field_y.drawParagraph(la.field_a, var4, var3, var5, var6, 16777215, -1, 0, 0, 14);
+              DropTargetWidgetContainer.field_w[0 + 8 * pd.field_a].c(var4, -6 + var3);
+              var3 = var3 + (14 * DropTargetWidgetContainer.field_y.drawParagraph(gf.field_e, var4 + 40, var3, var5 - 40, var6, 49407, -1, 0, 0, 14) + 14);
+              DropTargetWidgetContainer.field_w[1 + 8 * pd.field_a].c(var4, -6 + var3);
+              var3 = var3 + (14 * DropTargetWidgetContainer.field_y.drawParagraph(mc.field_i, var4 + 40, var3, var5 - 40, var6, 49407, -1, 0, 0, 14) + 14);
+              DropTargetWidgetContainer.field_w[2 + pd.field_a * 8].c(var4, -6 + var3);
+              var3 = var3 + (14 + 14 * DropTargetWidgetContainer.field_y.drawParagraph(ImageProducerRasterBuffer.field_k, var4 + 40, var3, var5 - 40, var6, 49407, -1, 0, 0, 14));
+              DropTargetWidgetContainer.field_w[8 * pd.field_a + 5].c(var4, -6 + var3);
+              var3 = var3 + (14 * DropTargetWidgetContainer.field_y.drawParagraph(a.field_c, 40 + var4, var3, -40 + var5, var6, 49407, -1, 0, 0, 14) + 14);
+              DropTargetWidgetContainer.field_y.drawParagraph(la.field_a, var4, var3, var5, var6, 16777215, -1, 0, 0, 14);
             } else {
               if (3 == var7) {
-                af.field_y.drawString(AgeValidator.field_k, -param1 + 320, var3, 16777215, -1);
+                DropTargetWidgetContainer.field_y.drawString(AgeValidator.field_k, -param1 + 320, var3, 16777215, -1);
                 var3 += 30;
-                af.field_w[pd.field_a * 8 + 4].c(var4, -6 + var3);
-                var3 = var3 + (14 + 14 * af.field_y.drawParagraph(hb.field_g, 40 + var4, var3, -40 + var5, var6, 49407, -1, 0, 0, 14));
-                af.field_w[6 + 8 * pd.field_a].c(var4, var3 - 6);
-                var3 = var3 + (14 + af.field_y.drawParagraph(t.field_x, 40 + var4, var3, -40 + var5, var6, 49407, -1, 0, 0, 14) * 14);
-                af.field_w[pd.field_a * 8 + 7].c(var4, var3 - 6);
-                var3 = var3 + (14 + af.field_y.drawParagraph(TextHotspotBounds.field_i, 40 + var4, var3, var5 - 40, var6, 49407, -1, 0, 0, 14) * 14);
-                af.field_w[8 * pd.field_a + 3].c(var4, var3 - 6);
-                var3 = var3 + (14 + 14 * af.field_y.drawParagraph(NetworkArchiveRequest.field_y, 40 + var4, var3, var5 - 40, var6, 49407, -1, 0, 0, 14));
-                af.field_y.drawParagraph(RichTextWidget.field_B, var4, var3, var5, var6, 16777215, -1, 0, 0, 14);
+                DropTargetWidgetContainer.field_w[pd.field_a * 8 + 4].c(var4, -6 + var3);
+                var3 = var3 + (14 + 14 * DropTargetWidgetContainer.field_y.drawParagraph(hb.field_g, 40 + var4, var3, -40 + var5, var6, 49407, -1, 0, 0, 14));
+                DropTargetWidgetContainer.field_w[6 + 8 * pd.field_a].c(var4, var3 - 6);
+                var3 = var3 + (14 + DropTargetWidgetContainer.field_y.drawParagraph(t.field_x, 40 + var4, var3, -40 + var5, var6, 49407, -1, 0, 0, 14) * 14);
+                DropTargetWidgetContainer.field_w[pd.field_a * 8 + 7].c(var4, var3 - 6);
+                var3 = var3 + (14 + DropTargetWidgetContainer.field_y.drawParagraph(TextHotspotBounds.field_i, 40 + var4, var3, var5 - 40, var6, 49407, -1, 0, 0, 14) * 14);
+                DropTargetWidgetContainer.field_w[8 * pd.field_a + 3].c(var4, var3 - 6);
+                var3 = var3 + (14 + 14 * DropTargetWidgetContainer.field_y.drawParagraph(NetworkArchiveRequest.field_y, 40 + var4, var3, var5 - 40, var6, 49407, -1, 0, 0, 14));
+                DropTargetWidgetContainer.field_y.drawParagraph(RichTextWidget.field_B, var4, var3, var5, var6, 16777215, -1, 0, 0, 14);
               }
             }
           }
@@ -811,7 +811,7 @@ final class jl {
                                 if (MouseWheelSource.field_c >= 0) {
                                   FrameTimer.field_e.field_k = 0;
                                   MouseWheelSource.field_c = 0;
-                                  tj.field_G = 0;
+                                  DraggableWidgetContainer.field_G = 0;
                                   if (null != ah.field_a) {
                                     ah.field_a.fadeOutAndUnlink(6000);
                                     ah.field_a = null;
@@ -822,7 +822,7 @@ final class jl {
                                   }
                                   mj.a(dg.field_l, 12, 0, 12, 50);
                                 }
-                                tj.field_C = 0;
+                                DraggableWidgetContainer.field_C = 0;
                                 od.a(-116, -1, param1);
                                 mj.a(255, 12, 0, 12, 50);
                                 break;
@@ -976,8 +976,8 @@ final class jl {
               q.field_j = stackIn_51_0;
               FrameTimer.field_e.field_k = 1;
               FrameTimer.field_e.field_n = 0;
-              tj.field_G = 0;
-              ie.field_C = 0;
+              DraggableWidgetContainer.field_G = 0;
+              AlphaWidgetContainer.field_C = 0;
               FrameTimer.field_e.field_u = 580;
               ha.field_d = 0;
               var5_ref_bf = (bf) (AccountRegistrationPanel.field_y.beginForward(-3905));
@@ -1015,7 +1015,7 @@ final class jl {
 
     final static void a(gi param0, gi param1, int param2, int param3, int param4, int param5) {
         kc.field_S = param4;
-        ie.field_y = param0;
+        AlphaWidgetContainer.field_y = param0;
         mc.field_h = param2;
         rh.field_i = param5;
         if (param3 >= -5) {
@@ -1119,17 +1119,17 @@ final class jl {
         if (stackIn_40_0Lifetime1 >= stackIn_40_1Lifetime1) {
           var6 = this.field_g;
         }
-        ba.a(128 + ((af.field_y.field_r + af.field_y.field_q << 1) + af.field_y.field_p), jk.field_f, (byte) 14, 118, 408, 241 - af.field_y.field_p);
+        ba.a(128 + ((DropTargetWidgetContainer.field_y.field_r + DropTargetWidgetContainer.field_y.field_q << 1) + DropTargetWidgetContainer.field_y.field_p), jk.field_f, (byte) 14, 118, 408, 241 - DropTargetWidgetContainer.field_y.field_p);
         if (var6 != -1) {
-          var7Lifetime1 = af.field_y.field_q + af.field_y.field_r;
-          af.field_y.drawCentred(AgeValidator.field_j[var6], 320, 247, 16777215, -1);
+          var7Lifetime1 = DropTargetWidgetContainer.field_y.field_q + DropTargetWidgetContainer.field_y.field_r;
+          DropTargetWidgetContainer.field_y.drawCentred(AgeValidator.field_j[var6], 320, 247, 16777215, -1);
           var8 = 2 + var7Lifetime1;
           stackIn_49_0 = ((var5 & 1 << var6) == 0) ? 0 : 1;
           var9 = stackIn_49_0;
           if (var9 != 0) {
-            af.field_y.drawCentred(rj.field_f, 320, 247 + var8, 16777215, -1);
+            DropTargetWidgetContainer.field_y.drawCentred(rj.field_f, 320, 247 + var8, 16777215, -1);
           } else {
-            af.field_y.drawCentred(qb.field_c, 320, var8 + 247, 16727871, -1);
+            DropTargetWidgetContainer.field_y.drawCentred(qb.field_c, 320, var8 + 247, 16727871, -1);
           }
           var10 = (var8 << 1) + 247;
           if (var9 == 0) {
@@ -1142,24 +1142,24 @@ final class jl {
           } else {
             j.field_c[var6].draw(128, var10 - 18);
           }
-          var10 = var10 + af.field_y.field_p;
-          var10 = var10 + ((var8 >> 1) + af.field_y.drawParagraph(vd.field_h[var6], 276, var10 - af.field_y.field_p, 236, 1000, 65535, -1, 0, 0, var8) * var8);
-          af.field_y.drawString(ma.field_f + s.field_b[var6] * 100, 276, var10, 65535, -1);
+          var10 = var10 + DropTargetWidgetContainer.field_y.field_p;
+          var10 = var10 + ((var8 >> 1) + DropTargetWidgetContainer.field_y.drawParagraph(vd.field_h[var6], 276, var10 - DropTargetWidgetContainer.field_y.field_p, 236, 1000, 65535, -1, 0, 0, var8) * var8);
+          DropTargetWidgetContainer.field_y.drawString(ma.field_f + s.field_b[var6] * 100, 276, var10, 65535, -1);
           var10 = var10 + ((var8 >> 1) + var8);
           var3Lifetime1 = 276;
-          af.field_y.drawString(ja.field_g, var3Lifetime1, var10, 65535, -1);
-          var3Lifetime1 = var3Lifetime1 + af.field_y.stringWidth(ja.field_g);
+          DropTargetWidgetContainer.field_y.drawString(ja.field_g, var3Lifetime1, var10, 65535, -1);
+          var3Lifetime1 = var3Lifetime1 + DropTargetWidgetContainer.field_y.stringWidth(ja.field_g);
           for (var11 = 0; var11 < s.field_b[var6]; var11++) {
-            el.field_J.draw(var3Lifetime1, -af.field_y.field_p + var10);
+            el.field_J.draw(var3Lifetime1, -DropTargetWidgetContainer.field_y.field_p + var10);
             var3Lifetime1 = var3Lifetime1 + el.field_J.field_u / 3;
           }
           return;
         }
         if (!MouseInput.a(33)) {
-          af.field_y.drawCentred(jk.field_a, 320, 247 + af.field_y.field_p * 5, 65535, -1);
+          DropTargetWidgetContainer.field_y.drawCentred(jk.field_a, 320, 247 + DropTargetWidgetContainer.field_y.field_p * 5, 65535, -1);
         } else {
-          af.field_y.drawCentred(jk.field_a, 320, af.field_y.field_p * 4 + 247, 65535, -1);
-          af.field_y.drawCentred(n.field_g, 320, 247 + 7 * af.field_y.field_p, 65535, -1);
+          DropTargetWidgetContainer.field_y.drawCentred(jk.field_a, 320, DropTargetWidgetContainer.field_y.field_p * 4 + 247, 65535, -1);
+          DropTargetWidgetContainer.field_y.drawCentred(n.field_g, 320, 247 + 7 * DropTargetWidgetContainer.field_y.field_p, 65535, -1);
         }
         return;
     }
@@ -1360,7 +1360,7 @@ final class jl {
         String stackIn_30_0Lifetime1;
         BinaryBitmapFont var15Lifetime1;
         var14 = StarCannon.field_A;
-        var15 = af.field_y;
+        var15 = DropTargetWidgetContainer.field_y;
         var16 = var15;
         if (param0 != -24071) {
           return;
@@ -1378,7 +1378,7 @@ final class jl {
                 var3 = b.field_a;
                 var5 = var4_ref_vc.field_n[ji.field_a];
                 var20 = var4_ref_vc.field_o[ji.field_a];
-                var7 = tj.a(ji.field_a, -1, m.field_f, var4_ref_vc);
+                var7 = DraggableWidgetContainer.a(ji.field_a, -1, m.field_f, var4_ref_vc);
                 var8 = var16.field_p + 120;
                 var9 = 0;
                 while (var9 < 10) {
@@ -1465,7 +1465,7 @@ final class jl {
             od.a(param0 ^ -109, 0, true);
           }
         }
-        while (ad.e((byte) -81)) {
+        while (LabeledWidgetContainer.e((byte) -81)) {
           stackIn_25_0 = -14;
           stackIn_25_1 = ~lb.field_B;
           if (stackIn_25_0 != stackIn_25_1) {

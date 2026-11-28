@@ -31,7 +31,7 @@ final class he extends ch {
         }
         IndexedSprite[] var1 = new IndexedSprite[sc.field_c];
         for (var2 = 0; sc.field_c > var2; var2++) {
-          var1[var2] = new IndexedSprite(ra.field_a, GameCanvas.field_e, th.field_Jb[var2], nh.field_O[var2], TextInputField.field_X[var2], ConfirmedEmailAvailabilityValidator.field_r[var2], ja.field_e[var2], bf.field_d);
+          var1[var2] = new IndexedSprite(ra.field_a, GameCanvas.field_e, th.field_Jb[var2], LabeledWidgetContainer.field_O[var2], TextInputField.field_X[var2], ConfirmedEmailAvailabilityValidator.field_r[var2], ja.field_e[var2], bf.field_d);
         }
         uj.d(113);
         return var1;
@@ -75,17 +75,17 @@ final class he extends ch {
             -24 < var12 &&
             var12 < 24) {
             param4.field_F = param4.field_F - 1;
-            jn.field_F[ib.field_c].field_c = 256.0 * Math.random();
-            jn.field_F[ib.field_c].field_j.copyCoordinatesFrom((byte) 46, param1);
-            jn.field_F[ib.field_c].field_l.a(param4.field_l, -28860);
-            jn.field_F[ib.field_c].field_e = 1;
-            jn.field_F[ib.field_c].field_h = 0;
-            jn.field_F[ib.field_c].field_i = 1;
-            dupTemp$0 = jn.field_F[ib.field_c].field_l;
+            AlphaWidgetContainer.field_F[ib.field_c].field_c = 256.0 * Math.random();
+            AlphaWidgetContainer.field_F[ib.field_c].field_j.copyCoordinatesFrom((byte) 46, param1);
+            AlphaWidgetContainer.field_F[ib.field_c].field_l.a(param4.field_l, -28860);
+            AlphaWidgetContainer.field_F[ib.field_c].field_e = 1;
+            AlphaWidgetContainer.field_F[ib.field_c].field_h = 0;
+            AlphaWidgetContainer.field_F[ib.field_c].field_i = 1;
+            dupTemp$0 = AlphaWidgetContainer.field_F[ib.field_c].field_l;
             dupTemp$0.field_f = dupTemp$0.field_f + 0.5;
-            dupTemp$1 = jn.field_F[ib.field_c].field_l;
+            dupTemp$1 = AlphaWidgetContainer.field_F[ib.field_c].field_l;
             dupTemp$1.field_a = dupTemp$1.field_a + 0.5;
-            jn.field_F[ib.field_c].field_l.a((int)(Math.random() * 10.0), (byte) 94, jn.field_F[ib.field_c].field_c);
+            AlphaWidgetContainer.field_F[ib.field_c].field_l.a((int)(Math.random() * 10.0), (byte) 94, AlphaWidgetContainer.field_F[ib.field_c].field_c);
             ib.field_c = ib.field_c + 1;
           }
           if ((7 & em.field_c) == 0 &&
@@ -146,7 +146,7 @@ final class he extends ch {
             param1.field_z = 4;
             param1.field_F = 255;
             MouseInput.a(1, 76);
-            nh.a(param1, -29966);
+            LabeledWidgetContainer.a(param1, -29966);
           }
           param0.field_e = param0.field_e + 2;
           if (param0.field_e > 32) {

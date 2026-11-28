@@ -46,7 +46,7 @@ class jj extends db implements ButtonListener {
               }
               ((lc) (Object) stackIn_15_0).a(stackIn_15_1, stackIn_16_2, -1);
             } else {
-              var6.a(param2 ^ 4, (tg) (this), ib.field_c);
+              var6.a(param2 ^ 4, (WidgetEventListener) (this), ib.field_c);
             }
           } else {
             var6.a(param2 - 17030, dh.field_r, 11);
@@ -61,7 +61,7 @@ class jj extends db implements ButtonListener {
                   this.b(var6, -101);
                   return;
                 }
-                var6.a(param2 - 4, (tg) (this), ByteStorage.field_d);
+                var6.a(param2 - 4, (WidgetEventListener) (this), ByteStorage.field_d);
               }
             } else {
               var6.a(-17040, wg.field_h, 8);
@@ -117,7 +117,7 @@ class jj extends db implements ButtonListener {
         }
     }
 
-    jj(vl param0, BitmapFont param1, String param2, boolean param3, boolean param4) {
+    jj(ModalDialogHost param0, BitmapFont param1, String param2, boolean param3, boolean param4) {
         super(param0, new lc((jj) null, param1, param2), 77, 10, 10);
         try {
           this.field_jb = false;
@@ -127,7 +127,7 @@ class jj extends db implements ButtonListener {
           this.field_hb = param3 ? true : false;
           this.field_eb = new dg(13, 50, 274, 30, 15, 2113632, 4210752);
           this.field_eb.field_C = true;
-          this.a(false, this.field_eb);
+          this.addChild(false, this.field_eb);
         } catch (RuntimeException runtimeException) {
           throw LevelGrid.toClientException((Throwable) ((Object) runtimeException), "jj.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ')');
         }
@@ -177,7 +177,7 @@ class jj extends db implements ButtonListener {
         this.b(var2, -78);
     }
 
-    final boolean a(byte param0, char param1, UiWidget param2, int param3) {
+    final boolean handleKey(byte param0, char param1, UiWidget param2, int param3) {
         int var5_int = 0;
         RuntimeException var5 = null;
         boolean stackIn_5_0 = false;
@@ -191,7 +191,7 @@ class jj extends db implements ButtonListener {
             return true;
           }
           var5_int = -113 / ((param0 - 17) / 51);
-          stackIn_5_0 = super.a((byte) -104, param1, param2, param3);
+          stackIn_5_0 = super.handleKey((byte) -104, param1, param2, param3);
           return stackIn_5_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

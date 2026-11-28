@@ -64,7 +64,7 @@ final class hh extends InteractiveWidget {
         return this.field_K;
     }
 
-    final boolean a(int param0, int param1, boolean param2, int param3, int param4, int param5, UiWidget param6) {
+    final boolean pointerPressed(int param0, int param1, boolean param2, int param3, int param4, int param5, UiWidget param6) {
         int var12 = 0;
         RuntimeException stackIn_26_0 = null;
         StringBuilder stackIn_26_1 = null;
@@ -79,7 +79,7 @@ final class hh extends InteractiveWidget {
         int var14 = 0;
         var14 = SolKnight.field_L ? 1 : 0;
         try {
-          if (!super.a(param0, param1, param2, param3, param4, param5, param6)) {
+          if (!super.pointerPressed(param0, param1, param2, param3, param4, param5, param6)) {
             return false;
           }
           var8_int = param3 - param1 - this.field_I;

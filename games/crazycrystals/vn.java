@@ -104,7 +104,7 @@ final class vn extends ue {
                 !(32 + var8 > qh.field_i) ||
                 !(IsaacRandom.field_h >= var9) ||
                 !(IsaacRandom.field_h < var9 + 32))) {
-                var11 = oj.field_B;
+                var11 = DraggableWidgetContainer.field_B;
                 if (mo.field_l <= 0 &&
                   (1 << var10 & 769) == 0) {
                   var11 = PauseMenu.field_k;

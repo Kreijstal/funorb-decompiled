@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class jd implements t {
+final class jd implements WidgetRenderer {
     static String field_h;
     private int field_k;
     private int field_a;
@@ -14,7 +14,7 @@ final class jd implements t {
     static String field_f;
     private int field_j;
 
-    public final void a(int param0, UiWidget param1, int param2, boolean param3, int param4) {
+    public final void paintWidget(int param0, UiWidget param1, int param2, boolean param3, int param4) {
         int var10 = 0;
         UiWidget stackIn_4_0 = null;
         RuntimeException stackIn_16_0 = null;

@@ -42,7 +42,7 @@ final class nl extends am {
         var25 = this.b(0, 0, param1 + 1 & NameSuggestionsPanel.field_I);
         for (var11 = 0; ci.field_c > var11; var11++) {
           var12 = var7 * (var25[var11] - var26[var11]) >> 12;
-          var13 = (-var9[1 + var11 & jh.field_A] + var9[var11 - 1 & jh.field_A]) * var7 >> 12;
+          var13 = (-var9[1 + var11 & SingleChildWidgetContainer.field_A] + var9[var11 - 1 & SingleChildWidgetContainer.field_A]) * var7 >> 12;
           var14 = var13 >> 4;
           if (var14 < 0) {
             var14 = -var14;
@@ -182,12 +182,12 @@ final class nl extends am {
           var3[var4_int] = cq.field_y[ie.a(255, (int) var2[var4_int])];
         }
         if (param0 == -8791) {
-          var4 = new Sprite(fm.field_E, rh.field_d, PacketBuffer.field_o[0], na.field_G[0], vo.field_b[0], PasswordValidator.field_o[0], var3);
+          var4 = new Sprite(fm.field_E, rh.field_d, PacketBuffer.field_o[0], LabeledWidgetContainer.field_G[0], vo.field_b[0], PasswordValidator.field_o[0], var3);
           go.b(0);
           return var4;
         }
         field_y = (boolean[]) null;
-        var4Lifetime1 = new Sprite(fm.field_E, rh.field_d, PacketBuffer.field_o[0], na.field_G[0], vo.field_b[0], PasswordValidator.field_o[0], var3);
+        var4Lifetime1 = new Sprite(fm.field_E, rh.field_d, PacketBuffer.field_o[0], LabeledWidgetContainer.field_G[0], vo.field_b[0], PasswordValidator.field_o[0], var3);
         go.b(0);
         return var4Lifetime1;
     }

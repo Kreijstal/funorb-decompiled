@@ -20,7 +20,7 @@ final class oc {
           if (param3 != 20) {
             oc.clearStaticReferences(-29);
           }
-          if (nb.a(param2, param1, (byte) 125, param0)) {
+          if (DequeWidgetContainer.a(param2, param1, (byte) 125, param0)) {
             stackIn_6_0 = LoginPanel.a((byte) 108);
             return stackIn_6_0;
           }

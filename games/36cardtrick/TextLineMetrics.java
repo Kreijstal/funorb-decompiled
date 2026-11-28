@@ -204,7 +204,7 @@ final class TextLineMetrics {
             var4 = param0.substring(var2_int + 1);
             var5 = we.a(var3, 34);
             if (var5 == null) {
-              return n.b(var4, (byte) -117);
+              return AlphaWidgetContainer.b(var4, (byte) -117);
             }
             stackIn_12_0 = var5;
             return stackIn_12_0;

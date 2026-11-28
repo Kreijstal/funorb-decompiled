@@ -16,8 +16,8 @@ class RichTextWidget extends InteractiveWidget {
     static String field_N;
     static int field_O;
 
-    final void b(int param0, int param1, int param2, int param3, int param4) {
-        super.b(param0, param1, param2, param3, param4);
+    final void setBounds(int param0, int param1, int param2, int param3, int param4) {
+        super.setBounds(param0, param1, param2, param3, param4);
         this.rebuildHotspotBounds((byte) -21);
     }
 
@@ -41,7 +41,7 @@ class RichTextWidget extends InteractiveWidget {
                 RichTextWidget.a((String) null, (byte) -16);
               }
               var3 = kk.a(98, var3, param0);
-              ke.a((byte) -98, param0, var3.toString(), true);
+              LabeledWidgetContainer.a((byte) -98, param0, var3.toString(), true);
             } catch (java.lang.Exception decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var3_ref = (Exception) (Object) decompiledCaughtException;
@@ -100,7 +100,7 @@ class RichTextWidget extends InteractiveWidget {
             field_I = -117L;
           }
           var3 = (CharSequence) ((Object) param0);
-          stackIn_3_0 = kf.field_D.equals(FullscreenFocusCanvas.a(var3, -2));
+          stackIn_3_0 = ModalDialog.field_D.equals(FullscreenFocusCanvas.a(var3, -2));
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -116,8 +116,8 @@ class RichTextWidget extends InteractiveWidget {
         }
     }
 
-    RichTextWidget(String param0, j param1) {
-        super(param0, (dg) null);
+    RichTextWidget(String param0, WidgetRenderer param1) {
+        super(param0, (WidgetEventListener) null);
         this.field_Q = null;
         try {
           this.field_w = param1;
@@ -126,7 +126,7 @@ class RichTextWidget extends InteractiveWidget {
         }
     }
 
-    boolean a(int param0, UiWidget param1) {
+    boolean takeFocus(int param0, UiWidget param1) {
         RuntimeException var3 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -151,10 +151,10 @@ class RichTextWidget extends InteractiveWidget {
         }
     }
 
-    void a(int param0, int param1, int param2, int param3) {
+    void drawWidget(int param0, int param1, int param2, int param3) {
         int var7 = 0;
         int var8 = 0;
-        super.a(param0, param1, param2, param3);
+        super.drawWidget(param0, param1, param2, param3);
         if (param1 != 0) {
           return;
         }
@@ -404,7 +404,7 @@ class RichTextWidget extends InteractiveWidget {
         return this.field_M[this.field_Q.field_l];
     }
 
-    void a(int param0, int param1, int param2, UiWidget param3) {
+    void updatePointer(int param0, int param1, int param2, UiWidget param3) {
         int var5_int = 0;
         int var6 = 0;
         RuntimeException stackIn_8_0 = null;
@@ -416,7 +416,7 @@ class RichTextWidget extends InteractiveWidget {
           if (param1 != 18874) {
             return;
           }
-          super.a(param0, param1 ^ 0, param2, param3);
+          super.updatePointer(param0, param1 ^ 0, param2, param3);
           this.field_Q = null;
           if (this.field_v) {
             var5_int = -param0 + (PacketBuffer.field_j - this.field_m);
@@ -467,7 +467,7 @@ class RichTextWidget extends InteractiveWidget {
         if (param2 != 1) {
           return;
         }
-        this.b(((TextWidgetRenderer) ((Object) this.field_w)).getPreferredHeight((UiWidget) (this), 6), param3, param0, 0, param1);
+        this.setBounds(((TextWidgetRenderer) ((Object) this.field_w)).getPreferredHeight((UiWidget) (this), 6), param3, param0, 0, param1);
     }
 
     static {

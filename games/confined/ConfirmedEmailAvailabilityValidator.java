@@ -180,7 +180,7 @@ final class ConfirmedEmailAvailabilityValidator extends TextFieldValidator {
               JavaScriptBridge.evaluate(param1, true, "document.cookie=\"" + var5Lifetime6 + "\"");
             } catch (Throwable throwable) {
             }
-            am.a(param2 + 73, param1);
+            SingleChildWidgetContainer.a(param2 + 73, param1);
           } catch (RuntimeException runtimeException) {
             throw TextLineMetrics.a((Throwable) ((Object) runtimeException), "qc.B(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
           }

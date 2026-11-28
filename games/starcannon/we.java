@@ -16,7 +16,7 @@ final class we extends IntrusiveNode {
         if (!qa.field_a.b(false)) {
           return qa.field_a.a((byte) 2);
         }
-        if (ie.field_x == jl.field_a) {
+        if (AlphaWidgetContainer.field_x == jl.field_a) {
           return qa.field_a.a((byte) 2);
         }
         if (param0 != 29084) {

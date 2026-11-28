@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ba extends kn implements TextHotspotListener, WidgetActivationListener {
+final class ba extends DequeWidgetContainer implements TextHotspotListener, WidgetActivationListener {
     static ln field_K;
     private AccountCreationResultPanel field_J;
     static boolean field_M;
@@ -9,7 +9,7 @@ final class ba extends kn implements TextHotspotListener, WidgetActivationListen
     private InteractiveWidget field_I;
 
     ba(AccountCreationResultPanel param0) {
-        super(0, 0, 288, 0, (ad) null);
+        super(0, 0, 288, 0, (WidgetRenderer) null);
         String var7 = null;
         int var3 = 0;
         DefaultTextWidgetRenderer var4 = null;
@@ -17,8 +17,8 @@ final class ba extends kn implements TextHotspotListener, WidgetActivationListen
         int var6 = 0;
         try {
           this.field_J = param0;
-          this.field_I = new InteractiveWidget(oh.field_A, (rm) null);
-          this.field_I.field_A = (ad) ((Object) new wi());
+          this.field_I = new InteractiveWidget(oh.field_A, (WidgetEventListener) null);
+          this.field_I.field_A = (WidgetRenderer) ((Object) new wi());
           var7 = oa.a((byte) -98, tk.field_b, new String[]{this.a(false), this.e((byte) -65)});
           var3 = 20;
           var4 = new DefaultTextWidgetRenderer(bn.field_d, 0, 0, 0, 0, 16777215, -1, 3, 0, bn.field_d.field_I, -1, 2147483647, true);
@@ -27,16 +27,16 @@ final class ba extends kn implements TextHotspotListener, WidgetActivationListen
           this.field_L.a(-24, 0, wk.field_d);
           this.field_L.a(-100, 1, wk.field_d);
           this.field_L.field_v = -40 + this.field_v;
-          this.field_L.field_y = (rm) (this);
+          this.field_L.field_y = (WidgetEventListener) (this);
           this.field_L.b(26, -40 + this.field_v, 32088, var3);
           var3 = var3 + (15 + this.field_L.field_q);
-          this.a(-1, this.field_L);
+          this.addChild(-1, this.field_L);
           var5 = 4;
           var6 = 200;
-          this.field_I.a(40, -82, -var6 + 300 >> 1, var6, var3);
-          this.field_I.field_y = (rm) (this);
-          this.a(-1, this.field_I);
-          this.a(var5 + var3 + 55, -99, 0, 300, 0);
+          this.field_I.setBounds(40, -82, -var6 + 300 >> 1, var6, var3);
+          this.field_I.field_y = (WidgetEventListener) (this);
+          this.addChild(-1, this.field_I);
+          this.setBounds(var5 + var3 + 55, -99, 0, 300, 0);
         } catch (RuntimeException runtimeException) {
           throw lj.wrapClientException((Throwable) ((Object) runtimeException), "ba.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
@@ -104,7 +104,7 @@ final class ba extends kn implements TextHotspotListener, WidgetActivationListen
         return "<u=2164A2><col=2164A2>";
     }
 
-    final boolean a(char param0, fe param1, byte param2, int param3) {
+    final boolean handleKey(char param0, UiWidget param1, byte param2, int param3) {
         RuntimeException var5 = null;
         boolean stackIn_6_0 = false;
         boolean stackIn_10_0 = false;
@@ -113,17 +113,17 @@ final class ba extends kn implements TextHotspotListener, WidgetActivationListen
         String stackIn_14_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (super.a(param0, param1, param2, param3)) {
+          if (super.handleKey(param0, param1, param2, param3)) {
             return true;
           }
           if (98 == param3) {
-            stackIn_6_0 = this.b(param1, 0);
+            stackIn_6_0 = this.focusPreviousChild(param1, 0);
             return stackIn_6_0;
           }
           if (param3 != 99) {
             return false;
           }
-          stackIn_10_0 = this.a(param1, (byte) 12);
+          stackIn_10_0 = this.focusNextChild(param1, (byte) 12);
           return stackIn_10_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

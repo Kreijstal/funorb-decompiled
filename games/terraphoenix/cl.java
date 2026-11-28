@@ -3,7 +3,7 @@
  */
 final class cl extends WidgetContainer implements TextHotspotListener, WidgetActivationListener {
     private InteractiveWidget field_G;
-    static d field_J;
+    static ModalDialogHost field_J;
     static String field_I;
     private AccountCreationResultPanel field_H;
     private RichTextWidget field_F;
@@ -17,7 +17,7 @@ final class cl extends WidgetContainer implements TextHotspotListener, WidgetAct
         int var6 = 0;
         try {
           this.field_H = param0;
-          this.field_G = new InteractiveWidget(rj.field_e, (sc) null);
+          this.field_G = new InteractiveWidget(rj.field_e, (WidgetEventListener) null);
           this.field_G.listener = (WidgetActionListener) ((Object) new ic());
           var7 = MessageKeys.a(new String[]{this.f((byte) -69), this.d(false)}, -1, ArchiveRequest.field_y);
           var3 = 20;
@@ -26,17 +26,17 @@ final class cl extends WidgetContainer implements TextHotspotListener, WidgetAct
           this.field_F.field_x = "";
           this.field_F.a(0, ig.field_b, (byte) 126);
           this.field_F.a(1, ig.field_b, (byte) 25);
-          this.field_F.field_r = (sc) (this);
+          this.field_F.field_r = (WidgetEventListener) (this);
           this.field_F.width = -40 + this.width;
           this.field_F.b(var3, -96, 26, -40 + this.width);
           var3 = var3 + (15 + this.field_F.height);
-          this.b((byte) 95, this.field_F);
+          this.addChild((byte) 95, this.field_F);
           var5 = 4;
           var6 = 200;
-          this.field_G.a(var3, (byte) 46, var6, 300 - var6 >> 1, 40);
-          this.field_G.field_r = (sc) (this);
-          this.b((byte) 95, this.field_G);
-          this.a(0, (byte) 64, 300, 0, var5 + (var3 + 55));
+          this.field_G.setBounds(var3, (byte) 46, var6, 300 - var6 >> 1, 40);
+          this.field_G.field_r = (WidgetEventListener) (this);
+          this.addChild((byte) 95, this.field_G);
+          this.setBounds(0, (byte) 64, 300, 0, var5 + (var3 + 55));
         } catch (RuntimeException runtimeException) {
           throw qk.wrapException((Throwable) ((Object) runtimeException), "cl.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
@@ -111,7 +111,7 @@ final class cl extends WidgetContainer implements TextHotspotListener, WidgetAct
         return "</col></u>";
     }
 
-    final boolean a(char param0, UiWidget param1, int param2, int param3) {
+    final boolean handleKey(char param0, UiWidget param1, int param2, int param3) {
         RuntimeException var5 = null;
         boolean stackIn_6_0 = false;
         boolean stackIn_10_0 = false;
@@ -120,17 +120,17 @@ final class cl extends WidgetContainer implements TextHotspotListener, WidgetAct
         String stackIn_14_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (super.a(param0, param1, param2, param3)) {
+          if (super.handleKey(param0, param1, param2, param3)) {
             return true;
           }
           if (param3 == 98) {
-            stackIn_6_0 = this.a(48, param1);
+            stackIn_6_0 = this.focusPreviousChild(48, param1);
             return stackIn_6_0;
           }
           if (param3 != 99) {
             return false;
           }
-          stackIn_10_0 = this.a(param1, (byte) 92);
+          stackIn_10_0 = this.focusNextChild(param1, (byte) 92);
           return stackIn_10_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

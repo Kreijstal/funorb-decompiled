@@ -15,14 +15,14 @@ final class ve {
         RuntimeException var2 = null;
         var4 = HostileSpawn.field_I ? 1 : 0;
         try {
-          uf.a(rf.field_c, fc.field_z, 1512033985, true, param1, 0, i.field_f);
-          for (var2_int = 0; var2_int < fc.field_z; var2_int++) {
+          uf.a(rf.field_c, SingleChildWidgetContainer.field_z, 1512033985, true, param1, 0, i.field_f);
+          for (var2_int = 0; var2_int < SingleChildWidgetContainer.field_z; var2_int++) {
             PasswordValidator.field_s[var2_int + param1] = var2_int;
           }
           var3 = -108 % ((param0 - 73) / 39);
-          uf.a(kl.field_a, param1 + fc.field_z, 1512033985, false, param1 + param1, param1, bh.field_e);
-          if (fc.field_z > param1) {
-            fc.field_z = param1;
+          uf.a(kl.field_a, param1 + SingleChildWidgetContainer.field_z, 1512033985, false, param1 + param1, param1, bh.field_e);
+          if (SingleChildWidgetContainer.field_z > param1) {
+            SingleChildWidgetContainer.field_z = param1;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

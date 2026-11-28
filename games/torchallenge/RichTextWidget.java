@@ -12,7 +12,7 @@ class RichTextWidget extends InteractiveWidget {
     static boolean field_O;
     static String field_P;
 
-    void a(UiComponent param0, int param1, byte param2, int param3) {
+    void updatePointer(UiComponent param0, int param1, byte param2, int param3) {
         int var5_int = 0;
         int var6 = 0;
         RuntimeException stackIn_8_0 = null;
@@ -24,7 +24,7 @@ class RichTextWidget extends InteractiveWidget {
           if (param2 >= -97) {
             field_O = false;
           }
-          super.a(param0, param1, (byte) -105, param3);
+          super.updatePointer(param0, param1, (byte) -105, param3);
           this.field_S = null;
           if (this.field_w) {
             var5_int = -this.field_m + ConfirmedEmailAvailabilityValidator.field_u - param1;
@@ -61,13 +61,13 @@ class RichTextWidget extends InteractiveWidget {
         if (param1 != 2) {
           this.rebuildHotspotBounds(false);
         }
-        this.a((byte) 122, param3, ((TextWidgetRenderer) ((Object) this.field_q)).getPreferredHeight((UiComponent) (this), (byte) -117), param2, param0);
+        this.setBounds((byte) 122, param3, ((TextWidgetRenderer) ((Object) this.field_q)).getPreferredHeight((UiComponent) (this), (byte) -117), param2, param0);
     }
 
-    void a(int param0, int param1, boolean param2, int param3) {
+    void drawWidget(int param0, int param1, boolean param2, int param3) {
         int var7 = 0;
         int var8 = 0;
-        super.a(param0, param1, param2, param3);
+        super.drawWidget(param0, param1, param2, param3);
         if (param2) {
           String var9 = (String) null;
           RichTextWidget.a((String) null, '￢', (String) null, (byte) -27);
@@ -272,15 +272,15 @@ class RichTextWidget extends InteractiveWidget {
         return null;
     }
 
-    final void a(byte param0, int param1, int param2, int param3, int param4) {
-        super.a((byte) 104, param1, param2, param3, param4);
+    final void setBounds(byte param0, int param1, int param2, int param3, int param4) {
+        super.setBounds((byte) 104, param1, param2, param3, param4);
         if (param0 < 100) {
           return;
         }
         this.rebuildHotspotBounds(false);
     }
 
-    boolean a(UiComponent param0, int param1) {
+    boolean takeFocus(UiComponent param0, int param1) {
         RuntimeException var3 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
@@ -305,8 +305,8 @@ class RichTextWidget extends InteractiveWidget {
         }
     }
 
-    RichTextWidget(String param0, j param1) {
-        super(param0, (gg) null);
+    RichTextWidget(String param0, WidgetRenderer param1) {
+        super(param0, (WidgetEventListener) null);
         this.field_S = null;
         try {
           this.field_q = param1;

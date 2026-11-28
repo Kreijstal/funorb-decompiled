@@ -197,7 +197,7 @@ final class vl {
                         } else {
                           if (((this.field_n != -3)) && ((this.field_n == 10 ||
                             this.field_n == 11))) {
-                            SoftwareRasterizer.addRadialGlow(var3_int << 4, var4 << 4, this.field_p + 6 << 4, 192, ei.field_I);
+                            SoftwareRasterizer.addRadialGlow(var3_int << 4, var4 << 4, this.field_p + 6 << 4, 192, ModalDialogHost.field_I);
                           }
                         }
                       }
@@ -259,7 +259,7 @@ final class vl {
           if (this.field_f == 5) {
             if (-5 == this.field_n) {
               for (var6 = 0.0; 1.0 > var6; var6 = var6 + 0.1) {
-                SoftwareRasterizer.addRadialGlow((int)(var6 * this.field_j + (double)var3_int) << 4, (int)((double)var4 + var6 * this.field_a) << 4, (int)(6.0 + (-var6 + 1.0) * (double)this.field_p) << 4, 32 - (int)(32.0 * var6), ei.field_I);
+                SoftwareRasterizer.addRadialGlow((int)(var6 * this.field_j + (double)var3_int) << 4, (int)((double)var4 + var6 * this.field_a) << 4, (int)(6.0 + (-var6 + 1.0) * (double)this.field_p) << 4, 32 - (int)(32.0 * var6), ModalDialogHost.field_I);
               }
             } else {
               for (var6 = 0.0; var6 < 1.0; var6 = var6 + 0.1) {

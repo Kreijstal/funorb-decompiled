@@ -166,10 +166,10 @@ final class ia extends IntrusiveNode {
           EmailFormatValidator.field_n = EmailFormatValidator.field_n + 1;
           hg.a(95);
           if (CrossfadingMidiPcmStream.field_u.beginForward((byte) -95) != null) {
-            fieldTemp$0 = da.field_C + 1;
-            da.field_C = da.field_C + 1;
+            fieldTemp$0 = ModalDialogHost.field_C + 1;
+            ModalDialogHost.field_C = ModalDialogHost.field_C + 1;
             if (fieldTemp$0 == 335) {
-              da.field_C = 0;
+              ModalDialogHost.field_C = 0;
               CrossfadingMidiPcmStream.field_u.removeFirst(-94);
             }
           }
@@ -191,7 +191,7 @@ final class ia extends IntrusiveNode {
             n.submittedWordCount != 2) {
             dc.field_a = dc.field_a + 1;
           }
-          g.field_z = g.field_z - 1;
+          DropTargetWidgetContainer.field_z = DropTargetWidgetContainer.field_z - 1;
           stackIn_23_0 = (!MouseWheelInput.field_b) ? 0 : 1;
           var1_int = stackIn_23_0;
           if (ub.field_c != null &&
@@ -598,7 +598,7 @@ final class ia extends IntrusiveNode {
                 }
                 stackIn_375_0 = nc.field_s;
                 if (stackIn_375_0 == sg.field_d &&
-                  g.field_z > 0) {
+                  DropTargetWidgetContainer.field_z > 0) {
                   boolean decompiledFrameRemainder0 = true;
                   boolean decompiledFrameCompleted0 = true;
                   sg.field_d = null;
@@ -619,7 +619,7 @@ final class ia extends IntrusiveNode {
                   nc.field_s = null;
                   return;
                 }
-                g.field_z = 10;
+                DropTargetWidgetContainer.field_z = 10;
                 nc.field_s = sg.field_d;
                 return;
               }

@@ -70,7 +70,7 @@ final class sg {
         if (GzipDecompressor.field_d < param4) {
           DiskCacheWorker.field_b = param4;
         }
-        if (!(fj.field_U <= param4)) {
+        if (!(DraggableWidgetContainer.field_U <= param4)) {
           mj.field_d = param4;
         }
         ii.field_q[oe.field_c] = param0;

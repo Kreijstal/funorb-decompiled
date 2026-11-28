@@ -63,7 +63,7 @@ final class SpriteAnimationPlayer {
           if (param0 < 8) {
             this.advanceAnimation((byte) 98, 50);
           }
-          this.startAnimation(rf.field_M, param1, -10872);
+          this.startAnimation(ModalDialog.field_M, param1, -10872);
         } catch (RuntimeException runtimeException) {
           throw AccountServiceResult.wrapClientException((Throwable) ((Object) runtimeException), "wd.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
@@ -85,7 +85,7 @@ final class SpriteAnimationPlayer {
             this.field_h = 0;
             return;
           }
-          if (this.field_a != rf.field_M) {
+          if (this.field_a != ModalDialog.field_M) {
             this.field_g = null;
             return;
           }
@@ -100,7 +100,7 @@ final class SpriteAnimationPlayer {
           this.field_h = 0;
           return;
         }
-        if (this.field_a != rf.field_M) {
+        if (this.field_a != ModalDialog.field_M) {
           this.field_g = null;
           return;
         }
@@ -149,7 +149,7 @@ final class SpriteAnimationPlayer {
           this.field_m = 0;
           this.field_n = param1;
           if (null != this.field_n) {
-            this.field_b = this.field_n.field_j[0] * ji.a(320, false, 192) >>> 8;
+            this.field_b = this.field_n.field_j[0] * ModalDialogHost.a(320, false, 192) >>> 8;
             this.field_c = this.field_b;
             this.field_k = rl.field_f;
             this.prepareNextFrame((byte) 28);
@@ -180,12 +180,12 @@ final class SpriteAnimationPlayer {
         if (this.field_n.field_c > this.field_m) {
           if (param0 != 0) {
             SpriteAnimationPlayer.clearAnimationPlayerGlobals(-49);
-            this.field_b = this.field_n.field_j[this.field_m] * ji.a(320, false, 192) >>> 8;
+            this.field_b = this.field_n.field_j[this.field_m] * ModalDialogHost.a(320, false, 192) >>> 8;
             this.field_c = this.field_c + this.field_b;
             this.prepareNextFrame((byte) 28);
             return true;
           }
-          this.field_b = this.field_n.field_j[this.field_m] * ji.a(320, false, 192) >>> 8;
+          this.field_b = this.field_n.field_j[this.field_m] * ModalDialogHost.a(320, false, 192) >>> 8;
           this.field_c = this.field_c + this.field_b;
           this.prepareNextFrame((byte) 28);
           return true;
@@ -194,17 +194,17 @@ final class SpriteAnimationPlayer {
           this.field_m = 0;
           if (param0 != 0) {
             SpriteAnimationPlayer.clearAnimationPlayerGlobals(-49);
-            this.field_b = this.field_n.field_j[this.field_m] * ji.a(320, false, 192) >>> 8;
+            this.field_b = this.field_n.field_j[this.field_m] * ModalDialogHost.a(320, false, 192) >>> 8;
             this.field_c = this.field_c + this.field_b;
             this.prepareNextFrame((byte) 28);
             return true;
           }
-          this.field_b = this.field_n.field_j[this.field_m] * ji.a(320, false, 192) >>> 8;
+          this.field_b = this.field_n.field_j[this.field_m] * ModalDialogHost.a(320, false, 192) >>> 8;
           this.field_c = this.field_c + this.field_b;
           this.prepareNextFrame((byte) 28);
           return true;
         }
-        if (rf.field_M == this.field_a) {
+        if (ModalDialog.field_M == this.field_a) {
           this.startAnimation(rl.field_b, this.field_i, -10872);
           return false;
         }
@@ -226,7 +226,7 @@ final class SpriteAnimationPlayer {
           if (null == this.field_i) {
             return;
           }
-          this.advanceAnimation((byte) 109, oi.b(0, this.field_i.field_f));
+          this.advanceAnimation((byte) 109, DraggableWidgetContainer.b(0, this.field_i.field_f));
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

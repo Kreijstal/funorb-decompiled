@@ -47,7 +47,7 @@ final class vf extends WidgetContainer implements WidgetActivationListener {
             return stackIn_2_0;
           }
           if (ProxyAuthenticationRequiredException.a(param0, (byte) -5, param3, param2)) {
-            return dl.d((byte) 116);
+            return DraggableWidgetContainer.d((byte) 116);
           }
           return null;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -64,8 +64,8 @@ final class vf extends WidgetContainer implements WidgetActivationListener {
         }
     }
 
-    final void a(int param0, byte param1, int param2, int param3) {
-        super.a(param0, param1, param2, param3);
+    final void drawWidget(int param0, byte param1, int param2, int param3) {
+        super.drawWidget(param0, param1, param2, param3);
         this.field_G.drawParagraph(this.field_C, 14 + (param3 + this.field_w), 10 + param2 + this.field_k, this.field_p - 28, this.field_t, 16777215, -1, 0, 0, this.field_G.field_N);
     }
 
@@ -120,7 +120,7 @@ final class vf extends WidgetContainer implements WidgetActivationListener {
         }
     }
 
-    final InteractiveWidget a(lf param0, String param1, byte param2) {
+    final InteractiveWidget a(WidgetEventListener param0, String param1, byte param2) {
         InteractiveWidget var4 = null;
         RuntimeException var4_ref = null;
         int var5 = 0;
@@ -134,12 +134,12 @@ final class vf extends WidgetContainer implements WidgetActivationListener {
         RuntimeException decompiledCaughtException = null;
         try {
           var4 = new InteractiveWidget(param1, param0);
-          var4.field_u = (uk) ((Object) new b());
+          var4.field_u = (WidgetRenderer) ((Object) new b());
           var5 = -2 + this.field_t;
           var6 = -121 / ((15 - param2) / 46);
-          this.b(this.field_p, 0, 0, this.field_t + 34, 23987);
-          var4.b(-14 + this.field_p, 7, var5, 30, 23987);
-          this.b(4, var4);
+          this.setBounds(this.field_p, 0, 0, this.field_t + 34, 23987);
+          var4.setBounds(-14 + this.field_p, 7, var5, 30, 23987);
+          this.addChild(4, var4);
           stackIn_1_0 = var4;
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -167,10 +167,10 @@ final class vf extends WidgetContainer implements WidgetActivationListener {
         try {
           var4_int = this.field_B;
           this.a(var4_int + 1, 73);
-          this.field_J[var4_int] = this.a((lf) (this), param2, (byte) -96);
+          this.field_J[var4_int] = this.a((WidgetEventListener) (this), param2, (byte) -96);
           if (param0 != -31805) {
             String var5 = (String) null;
-            this.a((lf) null, (String) null, (byte) -31);
+            this.a((WidgetEventListener) null, (String) null, (byte) -31);
           }
           this.field_K[var4_int] = param1;
         } catch (RuntimeException runtimeException) {
@@ -236,7 +236,7 @@ final class vf extends WidgetContainer implements WidgetActivationListener {
     }
 
     vf(ck param0, BitmapFont param1, String param2) {
-        super(0, 0, 288, 0, (uk) null);
+        super(0, 0, 288, 0, (WidgetRenderer) null);
         int var4_int = 0;
         this.field_B = 0;
         try {
@@ -244,7 +244,7 @@ final class vf extends WidgetContainer implements WidgetActivationListener {
           this.field_G = param1;
           this.field_I = param0;
           var4_int = null != this.field_C ? this.field_G.textHeight(this.field_C, 260, this.field_G.field_N) : 0;
-          this.b(288, 0, 0, var4_int + 22, 23987);
+          this.setBounds(288, 0, 0, var4_int + 22, 23987);
         } catch (RuntimeException runtimeException) {
           throw ma.a((Throwable) ((Object) runtimeException), "vf.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }

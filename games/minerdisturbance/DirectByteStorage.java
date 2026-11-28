@@ -32,7 +32,7 @@ final class DirectByteStorage extends ByteStorage {
           return;
         }
         try {
-          mb.field_b.b(1, sj.field_h);
+          mb.field_b.showDialog(1, sj.field_h);
         } catch (RuntimeException runtimeException) {
           throw lj.wrapClientException((Throwable) ((Object) runtimeException), "t.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }

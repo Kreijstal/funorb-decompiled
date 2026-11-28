@@ -32,16 +32,16 @@ final class gb extends IntrusiveNode {
           var7 = SoftwareRasterizer.field_i;
           var8 = SoftwareRasterizer.field_c;
           if (null != cea.field_i &&
-            null != hl.field_C) {
-            param1 = param1 - (-hl.field_C.field_B + hl.field_C.field_u);
-            var9 = hl.field_C.stringWidth(param5);
+            null != AlphaWidgetContainer.field_C) {
+            param1 = param1 - (-AlphaWidgetContainer.field_C.field_B + AlphaWidgetContainer.field_C.field_u);
+            var9 = AlphaWidgetContainer.field_C.stringWidth(param5);
             var9 += 10;
             cea.field_i.bindAsRenderTarget();
             if ((var9 & 1) == 1) {
               var9++;
             }
             SoftwareRasterizer.clear();
-            hl.field_C.drawText(param5, 5, 3 + hl.field_C.field_u, param3, -1);
+            AlphaWidgetContainer.field_C.drawText(param5, 5, 3 + AlphaWidgetContainer.field_C.field_u, param3, -1);
             SoftwareRasterizer.setTarget(var12, var7, var8);
             HomingMissileEvent.d((byte) -121);
             if (param4) {

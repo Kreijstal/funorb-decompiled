@@ -151,7 +151,7 @@ public final class Bounce extends GameClient {
           hf.clearStaticReferences((byte) 124);
           c.clearStaticReferences((byte) 56);
           l.a(3);
-          pf.clearStaticReferences(-1);
+          ModalDialogHost.clearStaticReferences(-1);
           AccountCreationResultPanel.clearStaticReferences(false);
           db.n(260);
           ec.resetDeclaredStaticState(101);
@@ -224,11 +224,11 @@ public final class Bounce extends GameClient {
           sj.clearStaticReferences((byte) 42);
           vg.a(8);
           TextLayout.resetStaticState(19599);
-          lk.clearDeclaredStaticReferences((byte) 122);
-          ak.clearDeclaredStaticReferences(127);
+          UiWidget.clearDeclaredStaticReferences((byte) 122);
+          SingleChildWidgetContainer.clearDeclaredStaticReferences(127);
           wk.clearStaticReferences((byte) 38);
-          ri.a(-11673);
-          lc.clearStaticReferences(36368);
+          ModalDialog.a(-11673);
+          DequeWidgetContainer.clearStaticReferences(36368);
           ea.b(17695);
           vk.a(3);
           re.clearStaticReferences(false);
@@ -246,7 +246,7 @@ public final class Bounce extends GameClient {
           rj.clearStaticReferences(0);
           ch.clearStaticReferences(false);
           pa.clearStaticReferences(37);
-          hb.clearStaticReferences((byte) 123);
+          LabeledWidgetContainer.clearStaticReferences((byte) 123);
           EditableTextField.clearStaticReferences((byte) 94);
           mh.resetStaticState(-16167);
           ll.clearStaticReferences((byte) -83);
@@ -264,8 +264,8 @@ public final class Bounce extends GameClient {
           RichTextLayout.resetDeclaredStaticState(60);
           DirectByteStorage.clearStaticReferences(11041);
           aj.clearStaticReferences(false);
-          bj.clearStaticReferences(-119);
-          se.a(true);
+          DraggableWidgetContainer.clearStaticReferences(-119);
+          DropTargetWidgetContainer.a(true);
           eh.a((byte) 106);
           IterableNodeHashTable.a(-1);
           SecondaryNodeDeque.clearStaticReferences((byte) -53);
@@ -284,7 +284,7 @@ public final class Bounce extends GameClient {
           tc.clearStaticReferences(false);
           wg.clearStaticReferences(13922);
           pj.clearStaticReferences(-4);
-          jg.clearStaticReferences(-32572);
+          AlphaWidgetContainer.clearStaticReferences(-32572);
           fb.d(4);
           qg.clearStaticReferences((byte) 57);
           ld.clearStaticReferences(false);
@@ -883,9 +883,9 @@ public final class Bounce extends GameClient {
           jl.field_d.serviceOutput();
           stackIn_5_1 = (sj.field_f != null);
           this.a(stackIn_5_1, -73);
-          if (ri.field_z) {
+          if (ModalDialog.field_z) {
             this.openGameArchives(-16);
-            ri.field_z = false;
+            ModalDialog.field_z = false;
           }
           if (param0 != 37) {
             return;
@@ -1350,7 +1350,7 @@ public final class Bounce extends GameClient {
           BufferedSocket.field_o = nc.a("wall", ub.field_a, "", param1 - 3134);
           PacketBuffer.field_j = nc.a("topspikes", ub.field_a, "", param1 ^ 3134);
           vb.field_m = SectorCacheStore.a(ub.field_a, "", (byte) -68, "squish");
-          se.field_A = nc.a("spikes", ub.field_a, "", param1 ^ 3134);
+          DropTargetWidgetContainer.field_A = nc.a("spikes", ub.field_a, "", param1 ^ 3134);
           nc.a("scorebox", ub.field_a, "", 0);
           hd.field_a = SectorCacheStore.a(ub.field_a, "", (byte) -115, "pupils");
           LoginPanel.field_G = SectorCacheStore.a(ub.field_a, "", (byte) 111, "pops");

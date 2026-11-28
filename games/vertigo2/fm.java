@@ -97,8 +97,8 @@ final class fm {
           td.field_c.b(ad.field_f, param4 - 12771);
           var17 = new UiPanel(0L, (UiPanel) null);
           var17.field_M = new IntrusiveDeque();
-          mg.field_R = new od(0L, var17, param1, param3);
-          ad.field_f.b(mg.field_R, 119);
+          LabeledWidgetContainer.field_R = new od(0L, var17, param1, param3);
+          ad.field_f.b(LabeledWidgetContainer.field_R, 119);
           bp.field_C = new UiPanel(0L, param11);
           ad.field_f.b(bp.field_C, 125);
           dj.field_d = new UiPanel(0L, param8);
@@ -111,7 +111,7 @@ final class fm {
           hl.field_q = new UiPanel[5];
           w.field_C = new UiPanel[5];
           gh.field_d = new UiPanel[5];
-          mg.field_M = new UiPanel[5];
+          LabeledWidgetContainer.field_M = new UiPanel[5];
           var18 = 0;
           boolean decompiledNaturalLoopExit0 = false;
           while (!(decompiledNaturalLoopExit0 = (5 <= var18))) {
@@ -139,14 +139,14 @@ final class fm {
                 gh.field_d[var18] = new UiPanel(0L, np.field_Ib, var19);
                 w.field_C[var18] = new UiPanel(0L, (UiPanel) null);
                 w.field_C[var18].field_ab = 1;
-                mg.field_M[var18] = new UiPanel(0L, np.field_Ib);
-                mg.field_M[var18].field_ab = 1;
+                LabeledWidgetContainer.field_M[var18] = new UiPanel(0L, np.field_Ib);
+                LabeledWidgetContainer.field_M[var18].field_ab = 1;
                 hl.field_q[var18].b(gh.field_d[var18], 125);
                 hl.field_q[var18].b(w.field_C[var18], param4 ^ 12837);
-                hl.field_q[var18].b(mg.field_M[var18], 120);
+                hl.field_q[var18].b(LabeledWidgetContainer.field_M[var18], 120);
                 hl.field_q[var18].i(-2147483648);
                 td.field_c.b(hl.field_q[var18], param4 ^ 12834);
-                sd.field_L = sd.field_L + 1;
+                ModalDialogHost.field_L = ModalDialogHost.field_L + 1;
               }
               var18++;
               continue;

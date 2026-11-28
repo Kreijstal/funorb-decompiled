@@ -85,7 +85,7 @@ final class sp extends pu {
         }
         String var1 = kaa.c(97);
         FridgeScreen.field_e = new LoginPanel(var1, (String) null, true, false, false);
-        gja.field_m.a((UiWidget) (kka.field_l), (byte) 82);
+        gja.field_m.showDialog((UiWidget) (kka.field_l), (byte) 82);
         kka.field_l.e(FridgeScreen.field_e, 33);
         kka.field_l.m(param0 ^ 17311);
     }

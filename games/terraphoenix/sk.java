@@ -13,7 +13,7 @@ final class sk implements WidgetActionListener {
     static String field_d;
     private BitmapFont field_g;
 
-    public final void a(int param0, UiWidget param1, int param2, int param3, boolean param4) {
+    public final void paintWidget(int param0, UiWidget param1, int param2, int param3, boolean param4) {
         int var10 = 0;
         UiWidget stackIn_4_0 = null;
         RuntimeException stackIn_16_0 = null;

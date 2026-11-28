@@ -41,9 +41,9 @@ final class ag {
         try {
           var3 = null;
           var4 = null;
-          if (null != jg.field_B &&
-            !jg.field_B.equals(param0.getParameter("settings"))) {
-            var3 = jg.field_B;
+          if (null != AlphaWidgetContainer.field_B &&
+            !AlphaWidgetContainer.field_B.equals(param0.getParameter("settings"))) {
+            var3 = AlphaWidgetContainer.field_B;
             var4 = var3;
             var4 = var3;
           }

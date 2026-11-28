@@ -21,22 +21,22 @@ final class ve extends ej {
         field_O = null;
     }
 
-    ve(sk param0, String param1) {
+    ve(ModalDialogHost param0, String param1) {
         super(param0, 300, 120);
         int var3_int = 0;
         try {
           this.field_P = param1;
           if (null != this.field_P) {
             var3_int = qc.field_b.textHeight(this.field_P, 260, qc.field_b.field_H);
-            this.a(150 + var3_int, (byte) -81, 300);
+            this.setCenteredSize(150 + var3_int, (byte) -81, 300);
           }
           this.field_T = new dg(13, 50, 274, 30, 15, 2113632, 4210752);
           this.field_R = false;
           this.field_T.field_z = true;
           this.field_U = false;
-          this.a(this.field_T, (byte) 74);
+          this.addChild(this.field_T, (byte) 74);
         } catch (RuntimeException runtimeException) {
-          throw dd.wrapClientException((Throwable) ((Object) runtimeException), "ve.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw DraggableWidgetContainer.wrapClientException((Throwable) ((Object) runtimeException), "ve.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -138,7 +138,7 @@ final class ve extends ej {
           } else {
             stackIn_48_2 = "{...}";
           }
-          throw dd.wrapClientException((Throwable) ((Object) stackIn_47_0), ((StringBuilder) (Object) stackIn_47_1).append(stackIn_48_2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(')').toString());
+          throw DraggableWidgetContainer.wrapClientException((Throwable) ((Object) stackIn_47_0), ((StringBuilder) (Object) stackIn_47_1).append(stackIn_48_2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(')').toString());
         }
     }
 
@@ -182,7 +182,7 @@ final class ve extends ej {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw dd.wrapClientException((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw DraggableWidgetContainer.wrapClientException((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 

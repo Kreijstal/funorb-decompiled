@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class li implements fe {
+final class li implements WidgetRenderer {
     static String field_e;
     private int field_c;
     static boolean field_l;
@@ -17,7 +17,7 @@ final class li implements fe {
     static String field_n;
     static e field_k;
 
-    public final void a(byte param0, int param1, boolean param2, fj param3, int param4) {
+    public final void paintWidget(byte param0, int param1, boolean param2, UiWidget param3, int param4) {
         RuntimeException var6 = null;
         int var7 = 0;
         int var8 = 0;
@@ -26,7 +26,7 @@ final class li implements fe {
         int var12 = 0;
         int var13 = 0;
         jh var14 = null;
-        fj stackIn_3_0 = null;
+        UiWidget stackIn_3_0 = null;
         RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
         String stackIn_15_2 = null;
@@ -38,7 +38,7 @@ final class li implements fe {
           if (!(param3 instanceof jh)) {
             stackIn_3_0 = null;
           } else {
-            stackIn_3_0 = (fj) (param3);
+            stackIn_3_0 = (UiWidget) (param3);
           }
           var14 = (jh) (stackIn_3_0);
           SoftwareRasterizer.fillRectangle(param3.field_q + param1, param4 + param3.field_m, param3.field_F, param3.field_z, this.field_d);

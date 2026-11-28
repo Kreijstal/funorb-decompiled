@@ -92,8 +92,8 @@ final class ee {
           TextHotspotBounds.field_q > 0) {
           fieldTemp$1 = TextHotspotBounds.field_q - 1;
           TextHotspotBounds.field_q = TextHotspotBounds.field_q - 1;
-          var2_ref_byte__Lifetime1 = ei.field_H[fieldTemp$1];
-          ei.field_H[TextHotspotBounds.field_q] = null;
+          var2_ref_byte__Lifetime1 = ModalDialogHost.field_H[fieldTemp$1];
+          ModalDialogHost.field_H[TextHotspotBounds.field_q] = null;
           return var2_ref_byte__Lifetime1;
         }
         if (param0 == 30000 &&
@@ -145,7 +145,7 @@ final class ee {
           field_a = 106;
         }
         ResourceArchive.field_b.addLast(-53, var4);
-        kg.a(param0, var4, false);
+        LabeledWidgetContainer.a(param0, var4, false);
         return var4;
     }
 

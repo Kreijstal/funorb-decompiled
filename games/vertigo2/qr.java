@@ -44,7 +44,7 @@ final class qr extends jq {
         int var8Lifetime1;
         int var9Lifetime1;
         var13 = Vertigo2.field_L ? 1 : 0;
-        mg.field_R.field_Nb.field_M.clear(0);
+        LabeledWidgetContainer.field_R.field_Nb.field_M.clear(0);
         var4 = null;
         var5 = 0;
         var6 = 0;
@@ -84,7 +84,7 @@ final class qr extends jq {
         for (var8 = 0; var8 < no.field_d; var8++) {
           var9_ref_tn = eo.field_l[var8];
           if (null != var9_ref_tn.field_e) {
-            mg.field_R.field_Nb.b(var9_ref_tn.field_e, 127);
+            LabeledWidgetContainer.field_R.field_Nb.b(var9_ref_tn.field_e, 127);
             var9_ref_tn.field_e.a(73, var9_ref_tn.field_e.j(-21391), param3, var7Lifetime1, param0);
             var7Lifetime1 = var7Lifetime1 + param3;
             if (var9_ref_tn.field_e.field_tb != 0) {
@@ -92,22 +92,22 @@ final class qr extends jq {
             }
           }
         }
-        var8Lifetime1 = -var7Lifetime1 - (-var6 - mg.field_R.field_Nb.field_kb - mg.field_R.field_Nb.field_db);
+        var8Lifetime1 = -var7Lifetime1 - (-var6 - LabeledWidgetContainer.field_R.field_Nb.field_kb - LabeledWidgetContainer.field_R.field_Nb.field_db);
         if (param1 < 4) {
           return (tn) null;
         }
-        mg.field_R.field_Nb.field_db = mg.field_R.field_Nb.field_db - var8Lifetime1;
-        mg.field_R.field_Nb.field_N = mg.field_R.field_Nb.field_N + var8Lifetime1;
+        LabeledWidgetContainer.field_R.field_Nb.field_db = LabeledWidgetContainer.field_R.field_Nb.field_db - var8Lifetime1;
+        LabeledWidgetContainer.field_R.field_Nb.field_N = LabeledWidgetContainer.field_R.field_Nb.field_N + var8Lifetime1;
         if (dc.field_B) {
-          mg.field_R.field_Nb.field_db = var7Lifetime1;
+          LabeledWidgetContainer.field_R.field_Nb.field_db = var7Lifetime1;
         }
         if (dc.field_B) {
           dc.field_B = false;
-          mg.field_R.field_Nb.field_L = 0;
+          LabeledWidgetContainer.field_R.field_Nb.field_L = 0;
           nb.field_z = true;
-          mg.field_R.field_Nb.field_N = mg.field_R.field_Lb.field_db - mg.field_R.field_Nb.field_db;
+          LabeledWidgetContainer.field_R.field_Nb.field_N = LabeledWidgetContainer.field_R.field_Lb.field_db - LabeledWidgetContainer.field_R.field_Nb.field_db;
         }
-        mg.field_R.field_Nb.field_kb = var7Lifetime1 - mg.field_R.field_Nb.field_db;
+        LabeledWidgetContainer.field_R.field_Nb.field_kb = var7Lifetime1 - LabeledWidgetContainer.field_R.field_Nb.field_db;
         if (MouseWheelInput.field_a) {
           stackIn_40_0 = null;
           stackIn_40_1 = gk.field_c;
@@ -115,12 +115,12 @@ final class qr extends jq {
             nb.field_z = true;
           }
         }
-        var9Lifetime1 = -mg.field_R.field_Nb.field_db + (-mg.field_R.field_Nb.field_kb + mg.field_R.field_Lb.field_db);
+        var9Lifetime1 = -LabeledWidgetContainer.field_R.field_Nb.field_db + (-LabeledWidgetContainer.field_R.field_Nb.field_kb + LabeledWidgetContainer.field_R.field_Lb.field_db);
         if (nb.field_z) {
-          mg.field_R.field_Nb.field_L = -mg.field_R.field_Nb.field_N + var9Lifetime1;
+          LabeledWidgetContainer.field_R.field_Nb.field_L = -LabeledWidgetContainer.field_R.field_Nb.field_N + var9Lifetime1;
         }
-        mg.field_R.a(param3, true, -1, param2 * 2 * param3);
-        stackIn_48_0 = (mg.field_R.field_Nb.field_L + mg.field_R.field_Nb.field_N == var9Lifetime1);
+        LabeledWidgetContainer.field_R.a(param3, true, -1, param2 * 2 * param3);
+        stackIn_48_0 = (LabeledWidgetContainer.field_R.field_Nb.field_L + LabeledWidgetContainer.field_R.field_Nb.field_N == var9Lifetime1);
         nb.field_z = stackIn_48_0;
         return (tn) (var4);
     }

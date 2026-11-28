@@ -16,7 +16,7 @@ final class IsaacCipher {
 
     final static boolean b(byte param0) {
         int var1 = -29 % ((param0 + 65) / 52);
-        return bf.field_b == um.field_F ? true : false;
+        return bf.field_b == ArrayWidgetContainer.field_F ? true : false;
     }
 
     final static Sprite[] c(int param0) {

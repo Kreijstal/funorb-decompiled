@@ -15,9 +15,9 @@ final class jc implements ComponentLayout {
         }
         param0 = param0 & 8191;
         if (param0 < 4096) {
-          return param0 >= 2048 ? dk.field_D[4096 - param0] : dk.field_D[param0];
+          return param0 >= 2048 ? SingleChildWidgetContainer.field_D[4096 - param0] : SingleChildWidgetContainer.field_D[param0];
         }
-        return param0 < 6144 ? -dk.field_D[-4096 + param0] : -dk.field_D[8192 - param0];
+        return param0 < 6144 ? -SingleChildWidgetContainer.field_D[-4096 + param0] : -SingleChildWidgetContainer.field_D[8192 - param0];
     }
 
     public static void a(int param0) {
@@ -30,7 +30,7 @@ final class jc implements ComponentLayout {
         field_a = null;
     }
 
-    public final void a(int param0, int param1, boolean param2, UiComponent param3, int param4) {
+    public final void paintWidget(int param0, int param1, boolean param2, UiComponent param3, int param4) {
         int var6_int = 0;
         int var7 = 0;
         RgbSprite var8 = null;
@@ -51,7 +51,7 @@ final class jc implements ComponentLayout {
             ((InteractiveWidget) (param3)).field_G) {
             var8.drawAdditive(var6_int + (1 + (param3.field_u - var8.field_x >> 1)), (-var8.field_r + param3.field_j >> 1) + (var7 + 1), 256);
           }
-          if (param3.e(1)) {
+          if (param3.isFocused(1)) {
             ek.a(param3.field_j - 4, 2 + var6_int, 2 + var7, 1, -4 + param3.field_u);
           }
           return;

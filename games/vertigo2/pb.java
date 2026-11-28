@@ -134,7 +134,7 @@ final class pb {
             var64[var13] = var15Lifetime2;
           }
           for (var13Lifetime1 = 0; var13Lifetime1 < ja.field_a; var13Lifetime1++) {
-            var14Lifetime1 = ac.field_K[var13Lifetime1];
+            var14Lifetime1 = DropTargetWidgetContainer.field_K[var13Lifetime1];
             var15Lifetime1 = param3.field_p[var14Lifetime1];
             var16 = param3.field_L[var14Lifetime1];
             var17 = param3.field_c[var14Lifetime1];

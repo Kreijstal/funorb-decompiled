@@ -115,7 +115,7 @@ final class uq {
           }
           if ((decompiledFrameCompleted2) &&
             (decompiledFrameCompleted1)) {
-            stackIn_32_0 = mg.field_S;
+            stackIn_32_0 = LabeledWidgetContainer.field_S;
             if (param4 == -1) {
               stackIn_33_1 = 1;
             } else {

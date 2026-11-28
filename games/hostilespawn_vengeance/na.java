@@ -4,13 +4,13 @@
 final class na {
     int field_a;
     int field_f;
-    nn field_j;
-    nn field_n;
+    WidgetRenderer field_j;
+    WidgetRenderer field_n;
     int field_p;
-    nn field_e;
+    WidgetRenderer field_e;
     private boolean field_m;
-    nn field_h;
-    nn field_d;
+    WidgetRenderer field_h;
+    WidgetRenderer field_d;
     int field_l;
     private int field_k;
     static boolean field_b;
@@ -126,7 +126,7 @@ final class na {
         try {
           var17 = new DefaultTextWidgetRenderer(param0, 2, 2, 2236962, 1, 1, 1, param0.field_F + param0.field_y + 2);
           var17.field_j = 16777215;
-          this.field_h = (nn) ((Object) var17);
+          this.field_h = (WidgetRenderer) ((Object) var17);
           var4 = new ha();
           var17.a(-33, var4);
           this.field_o = -1;
@@ -152,21 +152,21 @@ final class na {
           var5[4] = (RgbSprite) ((Object) var18);
           var4.a(4, true).a((byte) -37, true).a(false, var5);
           var4.a(5, true).a(false, ArchiveProvider.a(65793, 0, (byte) 127, 0, 0)).a((byte) -128, true).a(-1, true);
-          this.field_e = (nn) ((Object) var4);
+          this.field_e = (WidgetRenderer) ((Object) var4);
           var6 = new ha(var4, true);
           var6.field_k = 0;
           var7 = new ha(var4, true);
           var7.field_k = 0;
           var7.a(false, CipherPacketBuffer.h(-71, 8947848));
           var7.a(1, true).a(false, CipherPacketBuffer.h(-96, 11184810)).a(2236962, true);
-          this.field_n = (nn) ((Object) new rf(param0, 2, 2, 16777215, -1, 5, 5, 15, 15, 4473924));
+          this.field_n = (WidgetRenderer) ((Object) new rf(param0, 2, 2, 16777215, -1, 5, 5, 15, 15, 4473924));
           discarded$0 = new ra(param0, 2, 2, 16777215, -1, 16777215, 16729156, 4473924);
           discarded$1 = new h(param0, 16777215, -1, 125269879, 4473924, 3, 268435455);
           var8 = new ha();
           var17.a(-80, var8);
           var8.a(0, true).a(false, TextLineMetrics.a(10066329, 15658734, (byte) -117, 7829367)).a(1118481, true).a(-2147483648, -1);
           var8.a(4, true).a((byte) -52, true).a(false, var5);
-          this.field_j = (nn) ((Object) var8);
+          this.field_j = (WidgetRenderer) ((Object) var8);
           var9 = new RgbSprite[9];
           var9[4] = new RgbSprite(2, 1);
           if (param1 <= 50) {

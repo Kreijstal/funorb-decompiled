@@ -5,7 +5,7 @@ final class ej extends ta {
     static volatile long field_jb;
     static int field_kb;
 
-    final void c(lk param0, byte param1) {
+    final void c(UiWidget param0, byte param1) {
         try {
           super.c(param0, (byte) 54);
           if (param1 < 28) {
@@ -17,7 +17,7 @@ final class ej extends ta {
     }
 
     final static int r(int param0) {
-        if (g.field_A < 2) {
+        if (DequeWidgetContainer.field_A < 2) {
           return 0;
         }
         if (0 != EditableTextField.field_I) {
@@ -76,7 +76,7 @@ final class ej extends ta {
         return 97;
     }
 
-    ej(j param0, lk param1) {
+    ej(ModalDialogHost param0, UiWidget param1) {
         super(param0, param1, 33, 20, 30);
     }
 

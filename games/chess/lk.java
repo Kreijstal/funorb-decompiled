@@ -45,7 +45,7 @@ final class lk {
         RuntimeException decompiledCaughtException = null;
         var5 = Chess.field_G;
         try {
-          DelegatingCanvas.field_a = kn.field_D;
+          DelegatingCanvas.field_a = SingleChildWidgetContainer.field_D;
           if (param1 != param2) {
             if (100 <= param2 &&
               param2 <= 105) {

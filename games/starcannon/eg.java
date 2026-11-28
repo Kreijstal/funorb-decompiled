@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class eg implements de {
+final class eg implements WidgetRenderer {
     private int field_e;
     static int field_l;
     private int field_d;
@@ -93,7 +93,7 @@ final class eg implements de {
         }
     }
 
-    public final void a(int param0, boolean param1, int param2, int param3, UiWidget param4) {
+    public final void paintWidget(int param0, boolean param1, int param2, int param3, UiWidget param4) {
         el var15 = null;
         int var7 = 0;
         int var8 = 0;

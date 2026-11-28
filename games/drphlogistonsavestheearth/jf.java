@@ -4,20 +4,20 @@
 import java.util.*;
 
 abstract class jf extends ca {
-    private vg field_hb;
+    private UiWidget field_hb;
     private int field_lb;
     static String field_fb;
     private int field_jb;
     private int field_mb;
     private cd field_ob;
-    private dl field_gb;
+    private AlphaWidgetContainer field_gb;
     static Random field_nb;
     private int field_pb;
     private int field_qb;
     static int[] field_ib;
     static String field_kb;
 
-    boolean a(int param0, char param1, vg param2, int param3) {
+    boolean handleKey(int param0, char param1, UiWidget param2, int param3) {
         RuntimeException var5 = null;
         RuntimeException stackIn_19_0 = null;
         StringBuilder stackIn_19_1 = null;
@@ -27,17 +27,17 @@ abstract class jf extends ca {
           if (param3 < 63) {
             return false;
           }
-          if (super.a(param0, param1, param2, 113)) {
+          if (super.handleKey(param0, param1, param2, 113)) {
             return true;
           }
           if (this.field_gb == null) {
             return false;
           }
           if (98 == param0) {
-            this.field_gb.a(false, param2);
+            this.field_gb.takeFocus(false, param2);
           }
           if (param0 == 99) {
-            this.field_gb.a(false, param2);
+            this.field_gb.takeFocus(false, param2);
           }
           return false;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -54,7 +54,7 @@ abstract class jf extends ca {
         }
     }
 
-    private final void a(byte param0, vg param1) {
+    private final void a(byte param0, UiWidget param1) {
         try {
           if (this.field_gb != null) {
             this.field_gb.unlink(param0 ^ 16157);
@@ -63,19 +63,19 @@ abstract class jf extends ca {
             field_nb = (Random) null;
           }
           if (param1 != null) {
-            param1.a(6 + this.field_jb, param1.field_k, 6, 16535, param1.field_w);
-            this.field_gb = new dl(param1);
+            param1.setBounds(6 + this.field_jb, param1.field_k, 6, 16535, param1.field_w);
+            this.field_gb = new AlphaWidgetContainer(param1);
           } else {
-            this.field_gb = new dl();
+            this.field_gb = new AlphaWidgetContainer();
           }
-          this.b(this.field_gb, (byte) 104);
+          this.addChild(this.field_gb, (byte) 104);
           this.field_hb = null;
         } catch (RuntimeException runtimeException) {
           throw ie.wrapClientException((Throwable) ((Object) runtimeException), "jf.V(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
-    jf(k param0, vg param1, int param2, int param3, int param4) {
+    jf(ModalDialogHost param0, UiWidget param1, int param2, int param3, int param4) {
         super(param0, 12 + param1.field_w, param1.field_k + param2 + 12);
         try {
           this.field_mb = param4;
@@ -98,43 +98,43 @@ abstract class jf extends ca {
         field_ib = null;
     }
 
-    boolean k(int param0) {
+    boolean advanceDialogAnimation(int param0) {
         int fieldTemp$0 = 0;
         int fieldTemp$1 = 0;
-        vg var4 = null;
+        UiWidget var4 = null;
         int var3 = DrPhlogistonSavesTheEarth.field_D ? 1 : 0;
-        vg var4Lifetime1;
-        vg var4Lifetime2;
-        vg var4Lifetime3;
+        UiWidget var4Lifetime1;
+        UiWidget var4Lifetime2;
+        UiWidget var4Lifetime3;
         if (null != this.field_ob) {
           if (this.field_ob != oe.field_c) {
             if (this.field_ob != kh.field_h) {
               if (param0 != 2968) {
-                var4 = (vg) null;
-                this.a((byte) -80, (vg) null);
-                return super.k(2968);
+                var4 = (UiWidget) null;
+                this.a((byte) -80, (UiWidget) null);
+                return super.advanceDialogAnimation(2968);
               }
-              return super.k(2968);
+              return super.advanceDialogAnimation(2968);
             }
             fieldTemp$0 = this.field_pb + 1;
             this.field_pb = this.field_pb + 1;
             if (fieldTemp$0 != this.field_qb) {
               this.field_gb.field_K = (this.field_pb << 8) / this.field_qb;
               if (param0 != 2968) {
-                var4 = (vg) null;
-                this.a((byte) -80, (vg) null);
-                return super.k(2968);
+                var4 = (UiWidget) null;
+                this.a((byte) -80, (UiWidget) null);
+                return super.advanceDialogAnimation(2968);
               }
-              return super.k(2968);
+              return super.advanceDialogAnimation(2968);
             }
             this.field_ob = null;
             this.field_gb.field_K = 256;
             if (param0 == 2968) {
-              return super.k(2968);
+              return super.advanceDialogAnimation(2968);
             }
-            var4 = (vg) null;
-            this.a((byte) -80, (vg) null);
-            return super.k(2968);
+            var4 = (UiWidget) null;
+            this.a((byte) -80, (UiWidget) null);
+            return super.advanceDialogAnimation(2968);
           }
           fieldTemp$1 = this.field_pb + 1;
           this.field_pb = this.field_pb + 1;
@@ -144,33 +144,33 @@ abstract class jf extends ca {
             this.field_pb = 0;
             this.field_gb.field_K = 0;
             if (param0 == 2968) {
-              return super.k(2968);
+              return super.advanceDialogAnimation(2968);
             }
-            var4Lifetime2 = (vg) null;
-            this.a((byte) -80, (vg) null);
-            return super.k(2968);
+            var4Lifetime2 = (UiWidget) null;
+            this.a((byte) -80, (UiWidget) null);
+            return super.advanceDialogAnimation(2968);
           }
           this.field_gb.field_K = 256 - (this.field_pb << 8) / this.field_lb;
           if (param0 == 2968) {
-            return super.k(2968);
+            return super.advanceDialogAnimation(2968);
           }
-          var4Lifetime3 = (vg) null;
-          this.a((byte) -80, (vg) null);
-          return super.k(2968);
+          var4Lifetime3 = (UiWidget) null;
+          this.a((byte) -80, (UiWidget) null);
+          return super.advanceDialogAnimation(2968);
         }
         if (param0 == 2968) {
-          return super.k(2968);
+          return super.advanceDialogAnimation(2968);
         }
-        var4Lifetime1 = (vg) null;
-        this.a((byte) -80, (vg) null);
-        return super.k(2968);
+        var4Lifetime1 = (UiWidget) null;
+        this.a((byte) -80, (UiWidget) null);
+        return super.advanceDialogAnimation(2968);
     }
 
     final void g(byte param0) {
         if (param0 < -111) {
           if (this.field_ob != null) {
             if (this.field_ob != kh.field_h) {
-              this.b(this.field_hb.field_w + 12, 1688990433, this.field_hb.field_k + (12 + this.field_jb));
+              this.setCenteredSize(this.field_hb.field_w + 12, 1688990433, this.field_hb.field_k + (12 + this.field_jb));
               this.a((byte) -52, this.field_hb);
             }
             this.field_gb.field_K = 256;
@@ -193,20 +193,20 @@ abstract class jf extends ca {
           this.field_hb = null;
           return;
         }
-        this.k(-41);
+        this.advanceDialogAnimation(-41);
         this.field_gb.field_K = 0;
         this.field_hb = null;
     }
 
-    final boolean j(int param0) {
+    final boolean snapDialogAnimation(int param0) {
         this.g((byte) -120);
         if (param0 != 0) {
           return true;
         }
-        return super.j(0);
+        return super.snapDialogAnimation(0);
     }
 
-    void a(int param0, vg param1) {
+    void a(int param0, UiWidget param1) {
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         String stackIn_11_2 = null;

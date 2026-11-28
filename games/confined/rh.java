@@ -11,7 +11,7 @@ final class rh extends RichTextWidget {
     static String field_db;
     static RgbSprite field_Z;
 
-    final void a(int param0, int param1, byte param2, int param3) {
+    final void drawWidget(int param0, int param1, byte param2, int param3) {
         String var5;
         fi var6;
         int var13;
@@ -57,11 +57,11 @@ final class rh extends RichTextWidget {
           this.rebuildHotspotBounds(false);
         }
         if (param2 >= 36) {
-          super.a(param0, param1, (byte) 94, param3);
+          super.drawWidget(param0, param1, (byte) 94, param3);
           var6Lifetime1 = this.field_bb.getValidationStatus(-3621);
           var28 = (TextWidgetRenderer) ((Object) this.field_n);
           var9 = this.field_q + param3;
-          var10 = var28.getTextOriginY(param0, 2, (fj) (this)) + (var28.getTextLayout((fj) (this), (byte) -88).getLayoutHeight(23791) >> 1);
+          var10 = var28.getTextOriginY(param0, 2, (UiWidget) (this)) + (var28.getTextLayout((UiWidget) (this), (byte) -88).getLayoutHeight(23791) >> 1);
           if (ab.field_b != var6Lifetime1 &&
             var6Lifetime1 != qh.field_x) {
             if (var6Lifetime1 == fb.field_e) {
@@ -101,12 +101,12 @@ final class rh extends RichTextWidget {
           this.field_eb.drawAdditive(var9 - (var26.field_t >> 1), var10 - var26.field_x, 256);
           return;
         }
-        this.a(-64, 111, (byte) -111, 110);
-        super.a(param0, param1, (byte) 94, param3);
+        this.drawWidget(-64, 111, (byte) -111, 110);
+        super.drawWidget(param0, param1, (byte) 94, param3);
         var6Lifetime2 = this.field_bb.getValidationStatus(-3621);
         var27 = (TextWidgetRenderer) ((Object) this.field_n);
         var9Lifetime1 = this.field_q + param3;
-        var10Lifetime1 = var27.getTextOriginY(param0, 2, (fj) (this)) + (var27.getTextLayout((fj) (this), (byte) -88).getLayoutHeight(23791) >> 1);
+        var10Lifetime1 = var27.getTextOriginY(param0, 2, (UiWidget) (this)) + (var27.getTextLayout((UiWidget) (this), (byte) -88).getLayoutHeight(23791) >> 1);
         if (ab.field_b == var6Lifetime2) {
           var18 = gg.field_q[0];
           var11Lifetime1 = var18.field_t << 1;
@@ -168,7 +168,7 @@ final class rh extends RichTextWidget {
         field_ab = null;
     }
 
-    final boolean a(fj param0, int param1) {
+    final boolean takeFocus(UiWidget param0, int param1) {
         RuntimeException var3 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
@@ -198,16 +198,16 @@ final class rh extends RichTextWidget {
         try {
           this.field_cb = param1;
           this.field_bb = param0;
-          this.a(-123, param4, param3, param5, param2);
+          this.setBounds(-123, param4, param3, param5, param2);
         } catch (RuntimeException runtimeException) {
           throw TextLineMetrics.a((Throwable) ((Object) runtimeException), "rh.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }
     }
 
-    final void a(fj param0, int param1, int param2, int param3) {
+    final void updatePointer(UiWidget param0, int param1, int param2, int param3) {
         try {
           this.field_Y = this.field_Y + 1;
-          super.a(param0, param1, param2, param3);
+          super.updatePointer(param0, param1, param2, param3);
         } catch (RuntimeException runtimeException) {
           throw TextLineMetrics.a((Throwable) ((Object) runtimeException), "rh.V(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
@@ -217,8 +217,8 @@ final class rh extends RichTextWidget {
         if (param0 <= -82) {
           return null;
         }
-        fj var3 = (fj) null;
-        this.a((fj) null, -88);
+        UiWidget var3 = (UiWidget) null;
+        this.takeFocus((UiWidget) null, -88);
         return null;
     }
 

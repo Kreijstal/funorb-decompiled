@@ -10,7 +10,7 @@ final class ob {
         int var3 = param1;
         pa.field_x = pa.field_x + var3;
         if (!PasswordValidator.field_p) {
-          kj.field_B.addLast(new bk(param0, var3, ac.field_d, ae.field_z, pa.field_x, GameScreen.field_c + tf.field_o), -66);
+          DequeWidgetContainer.field_B.addLast(new bk(param0, var3, ac.field_d, ae.field_z, pa.field_x, GameScreen.field_c + tf.field_o), -66);
         }
         GameScreen.field_c = GameScreen.field_c + var3;
         if (param2 == -7756) {

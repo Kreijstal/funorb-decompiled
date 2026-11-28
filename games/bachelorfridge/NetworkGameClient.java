@@ -319,7 +319,7 @@ abstract class NetworkGameClient extends GameAppletShell {
             dla.field_l = cda.a(0);
             de.field_E = SocketConnector.b(1);
           }
-          re.a(de.field_E, dla.field_l, em.field_T, false);
+          DropTargetWidgetContainer.a(de.field_E, dla.field_l, em.field_T, false);
           em.field_T = null;
           Bzip2State.field_B = null;
           fi.field_n = null;

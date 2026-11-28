@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class MixedSupport094 implements CallbackContract004 {
+final class MixedSupport094 implements WidgetRenderer {
     private int integerState0570;
     private BitmapFont bitmapFontState0017;
     static String stringState0394;
@@ -132,13 +132,13 @@ final class MixedSupport094 implements CallbackContract004 {
               stackIntegerLocal2 = ~integerLocal34;
               if (integerLocal35 != 0) {
                 if (stackIntegerLocal1 < stackIntegerLocal2) {
-                  if (UiComponentPart015.integerArrayState0100.length <= integerLocal23) {
+                  if (DropTargetWidgetContainer.integerArrayState0100.length <= integerLocal23) {
                     break scanLoop1;
                   }
                   integerLocal24 = mixedSupport138Argument7.shortArrayState0013[integerLocal23];
                   integerLocal25 = mixedSupport138Argument7.shortArrayState0011[integerLocal23];
                   integerLocal26 = mixedSupport138Argument7.shortArrayState0007[integerLocal23];
-                  UiComponentPart015.integerArrayState0100[integerLocal23] = integerLocal26 * integerLocal20 + (integerLocal17 * integerLocal25 + integerLocal24 * integerLocal14) >> 16;
+                  DropTargetWidgetContainer.integerArrayState0100[integerLocal23] = integerLocal26 * integerLocal20 + (integerLocal17 * integerLocal25 + integerLocal24 * integerLocal14) >> 16;
                   MixedSupport009.integerArrayState0016[integerLocal23] = integerLocal21 * integerLocal26 + integerLocal15 * integerLocal24 + integerLocal25 * integerLocal18 >> 16;
                   MixedSupport115.integerArrayState0205[integerLocal23] = integerLocal25 * integerLocal19 + integerLocal16 * integerLocal24 + integerLocal26 * integerLocal22 >> 16;
                   integerLocal23++;
@@ -219,13 +219,13 @@ final class MixedSupport094 implements CallbackContract004 {
                 if (stackIntegerLocal1 >= stackIntegerLocal2) {
                   break;
                 }
-                if (UiComponentPart015.integerArrayState0100.length <= integerLocal23) {
+                if (DropTargetWidgetContainer.integerArrayState0100.length <= integerLocal23) {
                   break;
                 }
                 integerLocal24 = mixedSupport138Argument7.shortArrayState0013[integerLocal23];
                 integerLocal25 = mixedSupport138Argument7.shortArrayState0011[integerLocal23];
                 integerLocal26 = mixedSupport138Argument7.shortArrayState0007[integerLocal23];
-                UiComponentPart015.integerArrayState0100[integerLocal23] = integerLocal26 * integerLocal20 + (integerLocal17 * integerLocal25 + integerLocal24 * integerLocal14) >> 16;
+                DropTargetWidgetContainer.integerArrayState0100[integerLocal23] = integerLocal26 * integerLocal20 + (integerLocal17 * integerLocal25 + integerLocal24 * integerLocal14) >> 16;
                 MixedSupport009.integerArrayState0016[integerLocal23] = integerLocal21 * integerLocal26 + integerLocal15 * integerLocal24 + integerLocal25 * integerLocal18 >> 16;
                 MixedSupport115.integerArrayState0205[integerLocal23] = integerLocal25 * integerLocal19 + integerLocal16 * integerLocal24 + integerLocal26 * integerLocal22 >> 16;
                 integerLocal23++;
@@ -261,7 +261,7 @@ final class MixedSupport094 implements CallbackContract004 {
         }
     }
 
-    public final void performAction0017(boolean booleanArgument1, int integerArgument2, int integerArgument3, byte byteArgument4, UiComponent uiComponentArgument5) {
+    public final void paintWidget(boolean booleanArgument1, int integerArgument2, int integerArgument3, byte byteArgument4, UiComponent uiComponentArgument5) {
         int stackIntegerLocal1 = 0;
         RuntimeException stackRuntimeExceptionLocal2 = null;
         StringBuilder stackStringBuilderLocal3 = null;
@@ -277,7 +277,7 @@ final class MixedSupport094 implements CallbackContract004 {
         integerLocal12 = DekoBlokoClient.obfuscationControl ? 1 : 0;
         try {
           if (!uiComponentArgument5.booleanState0018 &&
-            !uiComponentArgument5.computeBoolean0220(true)) {
+            !uiComponentArgument5.isFocused(true)) {
             stackIntegerLocal1 = 2188450;
           } else {
             stackIntegerLocal1 = 3249872;
@@ -287,7 +287,7 @@ final class MixedSupport094 implements CallbackContract004 {
             return;
           }
           this.bitmapFontState0017.drawParagraph("<u=" + Integer.toString(integerLocal6, 16) + ">" + uiComponentArgument5.stringState0078 + "</u>", uiComponentArgument5.integerState0110 + integerArgument2, uiComponentArgument5.integerState0104 + integerArgument3, uiComponentArgument5.integerState0107, uiComponentArgument5.integerState0108, integerLocal6, -1, this.integerState0570, this.integerState0571, this.bitmapFontState0017.integerState0523 + this.bitmapFontState0017.integerState0518);
-          if (uiComponentArgument5.computeBoolean0220(true)) {
+          if (uiComponentArgument5.isFocused(true)) {
             integerLocal8 = this.bitmapFontState0017.stringWidth(uiComponentArgument5.stringState0078);
             integerLocal9 = this.bitmapFontState0017.integerState0523 + this.bitmapFontState0017.integerState0518;
             integerLocal10 = uiComponentArgument5.integerState0110 + integerArgument2;
@@ -337,7 +337,7 @@ final class MixedSupport094 implements CallbackContract004 {
           return;
         }
         try {
-          integerLocal1 = integerLocal3 - UiComponentPart003.integerState0073 * UiComponentPart003.integerState0073;
+          integerLocal1 = integerLocal3 - ModalDialog.integerState0073 * ModalDialog.integerState0073;
           integerLocal2 = GameSession.integerState0618 + (MixedSupport003.integerState0017 - GameSession.integerState0618) * integerLocal1 / integerLocal3;
           RichTextLayout.sceneWidgetState0021.performAction1764(640, byteArgument1 + 100, integerLocal2, 120, MixedSupport139.integerState0857);
           MixedSupport049.performAction0585(MixedSupport003.integerState0017 - 24, MixedSupport063.integerState0335, 640, SecondaryNodeHashTable.integerState0540, 0, 5, (byte) -107);

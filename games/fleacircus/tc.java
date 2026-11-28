@@ -140,7 +140,7 @@ final class tc {
           if (var44.field_J != null &&
             1 < var44.field_h) {
             var60 = var44.field_J;
-            qj.a(0, 0, var60, ge.field_e, 0);
+            DropTargetWidgetContainer.a(0, 0, var60, ge.field_e, 0);
           } else {
             pb.b((byte) 124);
           }
@@ -183,7 +183,7 @@ final class tc {
             var64[var13] = var15Lifetime2;
           }
           for (var13Lifetime1 = 0; var13Lifetime1 < IntrusiveDeque.field_d; var13Lifetime1++) {
-            var14Lifetime1 = pk.field_J[var13Lifetime1];
+            var14Lifetime1 = DraggableWidgetContainer.field_J[var13Lifetime1];
             var15Lifetime1 = param7.field_Q[var14Lifetime1];
             var16 = param7.field_M[var14Lifetime1];
             var17 = param7.field_N[var14Lifetime1];

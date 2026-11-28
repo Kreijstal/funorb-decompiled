@@ -201,9 +201,9 @@ final class qa {
     final static void a(java.awt.Component param0, byte param1) {
         try {
           int var2_int = -45 % ((46 - param1) / 47);
-          param0.addMouseListener(wc.field_B);
-          param0.addMouseMotionListener(wc.field_B);
-          param0.addFocusListener(wc.field_B);
+          param0.addMouseListener(DropTargetWidgetContainer.field_B);
+          param0.addMouseMotionListener(DropTargetWidgetContainer.field_B);
+          param0.addFocusListener(DropTargetWidgetContainer.field_B);
         } catch (RuntimeException runtimeException) {
           throw ma.wrapException((Throwable) ((Object) runtimeException), "qa.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }

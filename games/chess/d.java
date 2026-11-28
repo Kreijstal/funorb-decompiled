@@ -14,7 +14,7 @@ final class d extends ci {
 
     final static boolean a(boolean param0) {
         sk.field_p = param0 ? true : false;
-        ma.field_E = ud.correctedCurrentTimeMillis(2) + 15000L;
+        DequeWidgetContainer.field_E = ud.correctedCurrentTimeMillis(2) + 15000L;
         return rm.field_Q == 11 ? true : false;
     }
 
@@ -22,9 +22,9 @@ final class d extends ci {
         try {
           AudioOutput.configureAudio(param1, param5, 10);
           mh.field_d = AudioOutput.createOutput(param3, param4, 0, 22050);
-          kn.field_F = AudioOutput.createOutput(param3, param4, 1, 2048);
+          SingleChildWidgetContainer.field_F = AudioOutput.createOutput(param3, param4, 1, 2048);
           h.field_s = new PcmStreamMixer();
-          kn.field_F.setRootStream(h.field_s);
+          SingleChildWidgetContainer.field_F.setRootStream(h.field_s);
           SpriteGeometry.field_q = param2;
           SpriteGeometry.field_q.setMasterVolume(64 * bc.field_b / 80, (byte) -100);
           mh.field_d.setRootStream(SpriteGeometry.field_q);
@@ -32,7 +32,7 @@ final class d extends ci {
             field_Mb = (SecondaryNodeHashTable) null;
           }
           ka.field_a = param0;
-          ka.field_a.setMasterVolume(lf.field_S * 64 / 80, (byte) -100);
+          ka.field_a.setMasterVolume(AlphaWidgetContainer.field_S * 64 / 80, (byte) -100);
           h.field_s.addChildStream(ka.field_a);
         } catch (RuntimeException runtimeException) {
           throw SpriteGeometry.wrapClientException((Throwable) ((Object) runtimeException), "d.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ',' + param6 + ')');

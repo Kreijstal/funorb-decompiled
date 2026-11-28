@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class NameSuggestionsPanel extends aj implements WidgetActivationListener {
+final class NameSuggestionsPanel extends DequeWidgetContainer implements WidgetActivationListener {
     private NameSuggestionListener field_z;
     private String[] field_y;
     private InteractiveWidget[] field_C;
@@ -74,16 +74,16 @@ final class NameSuggestionsPanel extends aj implements WidgetActivationListener 
               NameSuggestionsPanel.a((java.applet.Applet) null, (byte) -123, (java.net.URL) null);
             }
             for (var5 = 0; var5 < var3_int; var5++) {
-              this.field_C[var5] = new InteractiveWidget(this.field_y[var5], (ma) (this));
+              this.field_C[var5] = new InteractiveWidget(this.field_y[var5], (WidgetEventListener) (this));
               this.field_C[var5].field_q = (WidgetRenderer) ((Object) var4);
               this.field_C[var5].field_j = ae.field_c;
-              this.field_C[var5].a(param1 ^ 17099, var5 * 16 + 20, 0, 80, 15);
-              this.a((UiWidget) (this.field_C[var5]), (byte) -125);
+              this.field_C[var5].setBounds(param1 ^ 17099, var5 * 16 + 20, 0, 80, 15);
+              this.addChild((UiWidget) (this.field_C[var5]), (byte) -125);
             }
-            this.field_C[var3_int] = new InteractiveWidget(TextHotspotBounds.field_p, (ma) (this));
+            this.field_C[var3_int] = new InteractiveWidget(TextHotspotBounds.field_p, (WidgetEventListener) (this));
             this.field_C[var3_int].field_q = (WidgetRenderer) ((Object) var4);
-            this.field_C[var3_int].a(-127, 16 * var3_int + 16 + 20, 0, 100, 15);
-            this.a((UiWidget) (this.field_C[var3_int]), (byte) -92);
+            this.field_C[var3_int].setBounds(-127, 16 * var3_int + 16 + 20, 0, 100, 15);
+            this.addChild((UiWidget) (this.field_C[var3_int]), (byte) -92);
             return;
           }
           this.field_y = null;
@@ -102,7 +102,7 @@ final class NameSuggestionsPanel extends aj implements WidgetActivationListener 
         }
     }
 
-    final boolean a(int param0, UiWidget param1, byte param2, char param3) {
+    final boolean handleKey(int param0, UiWidget param1, byte param2, char param3) {
         int var5_int = 0;
         RuntimeException var5 = null;
         boolean stackIn_5_0 = false;
@@ -112,18 +112,18 @@ final class NameSuggestionsPanel extends aj implements WidgetActivationListener 
         String stackIn_14_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (super.a(param0, param1, (byte) 121, param3)) {
+          if (super.handleKey(param0, param1, (byte) 121, param3)) {
             return true;
           }
           if (98 == param0) {
-            stackIn_5_0 = this.a(2, param1);
+            stackIn_5_0 = this.focusPreviousChild(2, param1);
             return stackIn_5_0;
           }
           var5_int = 101 / ((65 - param2) / 55);
           if (99 != param0) {
             return false;
           }
-          stackIn_8_0 = this.b(param1, 49);
+          stackIn_8_0 = this.focusNextChild(param1, 49);
           return stackIn_8_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -263,8 +263,8 @@ final class NameSuggestionsPanel extends aj implements WidgetActivationListener 
         return (param2 + var3) / param1 - var3;
     }
 
-    final void a(int param0, int param1, int param2, byte param3) {
-        super.a(param0, param1, param2, (byte) 121);
+    final void drawWidget(int param0, int param1, int param2, byte param3) {
+        super.drawWidget(param0, param1, param2, (byte) 121);
         if (param2 != 0) {
           return;
         }

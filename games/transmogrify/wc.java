@@ -72,9 +72,9 @@ final class wc {
               LoginPanel.field_D.writeByte(6389, 14);
               LoginPanel.field_D.writeByte(6389, ll.field_V.a(-184).field_a);
               rb.a(-1, -377);
-              InteractiveWidget.field_z = g.field_y;
+              InteractiveWidget.field_z = DropTargetWidgetContainer.field_y;
             }
-            if (g.field_y == InteractiveWidget.field_z &&
+            if (DropTargetWidgetContainer.field_y == InteractiveWidget.field_z &&
               TextLayout.a(1, 0)) {
               var6_int = WordLanguage.field_l.readUnsignedByte((byte) 125);
               if (var6_int == 0) {

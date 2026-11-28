@@ -124,7 +124,7 @@ final class v {
           tb.field_e.bindAsRenderTarget();
           var2.drawOpaque(0, -ch.field_c.field_m);
           tb.field_e.field_l = ch.field_c.field_m;
-          fi.c(true);
+          SingleChildWidgetContainer.c(true);
         } catch (RuntimeException runtimeException) {
           throw ch.wrapClientException((Throwable) ((Object) runtimeException), "v.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

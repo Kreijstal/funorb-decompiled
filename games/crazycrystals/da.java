@@ -288,7 +288,7 @@ final class da extends ue {
           var11 = this.field_p;
           var3 = var11;
           var4 = this.field_h;
-          oj.a(false, var3, 320, 320, var4 * (double)var11.length, 31, var4, 130, (byte) -32, (double)var11[0].length * var4);
+          DraggableWidgetContainer.a(false, var3, 320, 320, var4 * (double)var11.length, 31, var4, 130, (byte) -32, (double)var11[0].length * var4);
           if (this.field_e > this.field_i) {
             var6 = AgeValidator.a(new String[]{((an) (this.field_d[this.field_e])).field_p}, io.field_J, 3);
             var7 = cj.field_E;
@@ -358,7 +358,7 @@ final class da extends ue {
         if (this.field_o != this.field_e) {
           if (0 <= this.field_e &&
             this.f(this.field_e, 56)) {
-            var11 = ol.field_z[this.field_r];
+            var11 = ModalDialogHost.field_z[this.field_r];
             var3 = (kb) (var11.elementAt(this.field_e));
             var4 = var3.field_b;
             var5 = var4[0].length;
@@ -660,7 +660,7 @@ final class da extends ue {
             }
           }
           if (param0) {
-            AwtRasterBuffer.field_f.a(0, og.a(0, ProfileDataRequest.field_h, to.field_a), og.a(0, IsaacRandom.field_h, qh.field_i));
+            AwtRasterBuffer.field_f.a(0, DequeWidgetContainer.a(0, ProfileDataRequest.field_h, to.field_a), DequeWidgetContainer.a(0, IsaacRandom.field_h, qh.field_i));
             if (AwtRasterBuffer.field_f.a(true)) {
               if (0 == AwtRasterBuffer.field_f.field_c) {
                 stackIn_59_0 = 3;
@@ -1050,7 +1050,7 @@ final class da extends ue {
           return;
         }
         try {
-          MouseWheelInput.field_d.a((qm) (mk.field_b), (byte) -50);
+          MouseWheelInput.field_d.a((UiWidget) (mk.field_b), (byte) -50);
         } catch (RuntimeException runtimeException) {
           throw dn.wrapClientException((Throwable) ((Object) runtimeException), "da.L(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
@@ -1171,8 +1171,8 @@ final class da extends ue {
         this.field_p = (PuzzleTile[][]) null;
         this.field_g = 0;
         this.field_o = -1;
-        if (ol.field_z[this.field_r] != null) {
-          this.field_g = ol.field_z[this.field_r].size();
+        if (ModalDialogHost.field_z[this.field_r] != null) {
+          this.field_g = ModalDialogHost.field_z[this.field_r].size();
         }
         this.field_i = FrameTimer.field_b[this.field_r];
         if (this.field_r == 1 &&
@@ -1191,7 +1191,7 @@ final class da extends ue {
         this.field_e = stackIn_12_1;
         this.d(24902);
         this.field_b.field_c = -1;
-        var9 = ol.field_z[this.field_r];
+        var9 = ModalDialogHost.field_z[this.field_r];
         this.field_d = new ik[5 + this.field_m];
         for (var3 = 0; this.field_m > var3; var3++) {
           var4 = sm.field_h;

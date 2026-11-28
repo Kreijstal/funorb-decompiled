@@ -16,7 +16,7 @@ final class pk extends ql {
 
     final static void g(int param0) {
         EmailFormatValidator.field_o = null;
-        gg.field_D = null;
+        ModalDialogHost.field_D = null;
         if (param0 < -56) {
           uh.field_j = null;
           p.field_k = null;
@@ -46,7 +46,7 @@ final class pk extends ql {
         this.field_h.field_d = 24 * this.field_f.field_g - 120;
         CrossfadingMidiPcmStream.a(0, 1);
         if (6 <= ln.field_a.field_v.length) {
-          nh.field_E.setCoordinates(ln.field_a.field_v[4], 8360, ln.field_a.field_v[5]);
+          LabeledWidgetContainer.field_E.setCoordinates(ln.field_a.field_v[4], 8360, ln.field_a.field_v[5]);
         }
     }
 
@@ -71,14 +71,14 @@ final class pk extends ql {
         GridPoint var2 = TextHotspotBounds.field_m[0].field_j;
         if (param0 == -1) {
           TextLineMetrics.field_d = (ln.field_a.field_d - var2.field_e) * 26 / ln.field_a.field_d;
-          if (!(ih.a(var2, (byte) -109, nh.field_E) >= 2)) {
+          if (!(ih.a(var2, (byte) -109, LabeledWidgetContainer.field_E) >= 2)) {
             mf.a(false, 2);
           }
           return;
         }
         field_i = (int[]) null;
         TextLineMetrics.field_d = (ln.field_a.field_d - var2.field_e) * 26 / ln.field_a.field_d;
-        if (!(ih.a(var2, (byte) -109, nh.field_E) >= 2)) {
+        if (!(ih.a(var2, (byte) -109, LabeledWidgetContainer.field_E) >= 2)) {
           mf.a(false, 2);
         }
     }

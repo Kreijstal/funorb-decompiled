@@ -322,7 +322,7 @@ final class el {
               q.field_h = ve.createAccountSuggestionsResult(param3, (byte) -113);
               return;
             }
-            q.field_h = mk.createAccountErrorResult(242763393, param2, param0);
+            q.field_h = ModalDialog.createAccountErrorResult(242763393, param2, param0);
           } else {
             stackIn_7_0 = !(ab.field_j >= 13);
             q.field_h = de.createAccountSuccessResult(stackIn_7_0, (byte) -116);

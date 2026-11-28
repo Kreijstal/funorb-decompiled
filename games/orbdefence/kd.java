@@ -541,7 +541,7 @@ final class kd {
           } else {
             stackIn_109_2 = "{...}";
           }
-          throw dd.wrapClientException((Throwable) ((Object) stackIn_108_0), ((StringBuilder) (Object) stackIn_108_1).append(stackIn_109_2).append(')').toString());
+          throw DraggableWidgetContainer.wrapClientException((Throwable) ((Object) stackIn_108_0), ((StringBuilder) (Object) stackIn_108_1).append(stackIn_109_2).append(')').toString());
         }
     }
 

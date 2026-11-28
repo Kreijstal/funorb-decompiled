@@ -356,7 +356,7 @@ final class fq extends ea implements Cloneable {
             je.field_j = je.field_j + 14;
             b.field_a = b.field_a + 14;
             this.e((byte) 76);
-            if (ab.field_D == null &&
+            if (ModalDialog.field_D == null &&
               param2 != null) {
               var6_int = param2.getAttributedPlayerMask(false);
               for (var7 = 0; var7 < 3; var7++) {
@@ -368,7 +368,7 @@ final class fq extends ea implements Cloneable {
               }
             }
             oe.field_a[this.field_u] = null;
-            if (null == ab.field_D) {
+            if (null == ModalDialog.field_D) {
               q.field_a[this.field_u].field_h = true;
             }
             qh.field_o.addElement(this);
@@ -689,7 +689,7 @@ final class fq extends ea implements Cloneable {
               var5 = pl.field_s;
               var6 = en.field_F;
             } else {
-              var6 = ol.field_E;
+              var6 = ModalDialogHost.field_E;
               var4 = g.field_c;
               var5 = PauseMenu.field_h;
             }
@@ -1295,7 +1295,7 @@ final class fq extends ea implements Cloneable {
               }
               if (var3_int == 16) {
                 if (this.field_B == 30) {
-                  oj.field_E.a(128, 12 * this.field_A + 9, 12 * this.field_t, 60, (byte) -111);
+                  DraggableWidgetContainer.field_E.a(128, 12 * this.field_A + 9, 12 * this.field_t, 60, (byte) -111);
                   return;
                 }
                 if (this.field_B != 36) {
@@ -1311,7 +1311,7 @@ final class fq extends ea implements Cloneable {
                 return;
               }
               if (this.field_B == 30) {
-                oj.field_E.a(128, this.field_A * 12 - 9, 12 * this.field_t, 60, (byte) -111);
+                DraggableWidgetContainer.field_E.a(128, this.field_A * 12 - 9, 12 * this.field_t, 60, (byte) -111);
                 return;
               }
               if (36 != this.field_B) {

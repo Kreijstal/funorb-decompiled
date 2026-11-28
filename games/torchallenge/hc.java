@@ -11,7 +11,7 @@ final class hc extends InteractiveWidget {
     static k field_P;
     static int field_O;
 
-    hc(String param0, gg param1, boolean param2) {
+    hc(String param0, WidgetEventListener param1, boolean param2) {
         this(param0, param1);
         try {
           this.field_D = param2 ? true : false;
@@ -108,7 +108,7 @@ final class hc extends InteractiveWidget {
           return;
         }
         try {
-          si.field_J = param0;
+          ModalDialogHost.field_J = param0;
           IterableNodeHashTable.field_f = param4;
           vk.field_k = param7;
           PasswordValidator.field_t = param2;
@@ -291,7 +291,7 @@ final class hc extends InteractiveWidget {
         }
     }
 
-    private hc(String param0, gg param1) {
+    private hc(String param0, WidgetEventListener param1) {
         this(param0, kl.field_e.field_f, param1);
         try {
           this.field_q = kl.field_e.field_l;
@@ -314,7 +314,7 @@ final class hc extends InteractiveWidget {
         boolean decompiledFrameRemainder0 = true;
         var1 = -73 % ((param0 + 52) / 54);
         if (NameSuggestionsPanel.field_K >= 20 &&
-          ih.f((byte) -108) && (!(0 < uk.field_H) ||
+          ih.f((byte) -108) && (!(0 < DraggableWidgetContainer.field_H) ||
           LevelDecoder.a((byte) -119))) {
           stackIn_7_0 = false;
           decompiledFrameRemainder0 = false;
@@ -325,7 +325,7 @@ final class hc extends InteractiveWidget {
         return stackIn_7_0;
     }
 
-    private hc(String param0, j param1, gg param2) {
+    private hc(String param0, WidgetRenderer param1, WidgetEventListener param2) {
         super(param0, param1, param2);
         try {
           this.field_q = kl.field_e.field_l;

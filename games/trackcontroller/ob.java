@@ -169,8 +169,8 @@ final class ob extends DualLinkNode {
         }
         try {
           if (null == ib.field_e) {
-            ib.field_e = new rk(gl.field_E, AsyncRequest.field_r);
-            gl.field_E.d((byte) -97, ib.field_e);
+            ib.field_e = new rk(AlphaWidgetContainer.field_E, AsyncRequest.field_r);
+            AlphaWidgetContainer.field_E.showDialog((byte) -97, ib.field_e);
           }
           ib.field_e.a(param3, (byte) 88, param0, param2);
           SoftwareRasterizer.clearRaster();
@@ -188,7 +188,7 @@ final class ob extends DualLinkNode {
         }
         if (null != this.field_r) {
           for (var2 = 0; var2 < this.field_r.length; var2++) {
-            this.field_r[var2] = ok.a(this.field_r[var2], 32768);
+            this.field_r[var2] = SingleChildWidgetContainer.a(this.field_r[var2], 32768);
           }
         }
     }

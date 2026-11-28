@@ -19,7 +19,7 @@ final class DisplayNameSelectionPanel extends ComponentContainer implements Name
         return UiComponentPart023.booleanState0134;
     }
 
-    final boolean computeBoolean0182(int integerArgument1, int integerArgument2, UiComponent uiComponentArgument3, char characterArgument4) {
+    final boolean handleKey(int integerArgument1, int integerArgument2, UiComponent uiComponentArgument3, char characterArgument4) {
         int integerLocal1 = 0;
         RuntimeException runtimeExceptionLocal2 = null;
         boolean stackBooleanLocal3 = false;
@@ -29,15 +29,15 @@ final class DisplayNameSelectionPanel extends ComponentContainer implements Name
         String stackStringLocal7 = null;
         RuntimeException caughtExceptionLocal8 = null;
         try {
-          if (super.computeBoolean0182(-85, integerArgument2, uiComponentArgument3, characterArgument4)) {
+          if (super.handleKey(-85, integerArgument2, uiComponentArgument3, characterArgument4)) {
             return true;
           }
           if (98 == integerArgument2) {
-            stackBooleanLocal3 = this.computeBoolean0893(uiComponentArgument3, (byte) -113);
+            stackBooleanLocal3 = this.focusPreviousChild(uiComponentArgument3, (byte) -113);
             return stackBooleanLocal3;
           }
           if (integerArgument2 == 99) {
-            stackBooleanLocal4 = this.computeBoolean0892(32, uiComponentArgument3);
+            stackBooleanLocal4 = this.focusNextChild(32, uiComponentArgument3);
             return stackBooleanLocal4;
           }
           integerLocal1 = -60 / ((-22 - integerArgument1) / 49);
@@ -60,14 +60,14 @@ final class DisplayNameSelectionPanel extends ComponentContainer implements Name
         ((PlayerNameAvailabilityValidator) (this.uiComponentPart021State0001.getFieldValidator(-105))).invalidateCheckedName(true);
         if (integerArgument1 != 25) {
           UiComponent uiComponentLocal1 = (UiComponent) null;
-          this.computeBoolean0182(79, 36, (UiComponent) null, 'ﾻ');
+          this.handleKey(79, 36, (UiComponent) null, 'ﾻ');
         }
     }
 
     private final int computeInteger0316(int integerArgument1, String stringArgument2, UiComponent uiComponentArgument3, String stringArgument4, boolean booleanArgument5, int integerArgument6, int integerArgument7) {
         RuntimeException runtimeExceptionLocal1 = null;
         AccountFieldStatusIndicator uiComponentPart022Local2 = null;
-        UiComponentPart006 uiComponentPart006Local3 = null;
+        LabeledWidgetContainer uiComponentPart006Local3 = null;
         int stackIntegerLocal4 = 0;
         RuntimeException stackRuntimeExceptionLocal5 = null;
         StringBuilder stackStringBuilderLocal6 = null;
@@ -78,11 +78,11 @@ final class DisplayNameSelectionPanel extends ComponentContainer implements Name
         String stackStringLocal11 = null;
         RuntimeException caughtExceptionLocal12 = null;
         try {
-          uiComponentPart006Local3 = new UiComponentPart006(20, integerArgument6, 120 + integerArgument7, 25, uiComponentArgument3, booleanArgument5, 120, 3, GameDomainSupport003.bitmapFontState0015, 16777215, stringArgument4);
-          this.performAction0895(uiComponentPart006Local3, (byte) -55);
+          uiComponentPart006Local3 = new LabeledWidgetContainer(20, integerArgument6, 120 + integerArgument7, 25, uiComponentArgument3, booleanArgument5, 120, 3, GameDomainSupport003.bitmapFontState0015, 16777215, stringArgument4);
+          this.addChild(uiComponentPart006Local3, (byte) -55);
           uiComponentPart022Local2 = new AccountFieldStatusIndicator(((FieldValidatorProvider) ((Object) uiComponentArgument3)).getFieldValidator(-126), stringArgument2, 126, integerArgument6 + uiComponentPart006Local3.integerState0108, integerArgument7 + 25, integerArgument1);
-          uiComponentPart022Local2.callbackContract006State0001 = (CallbackContract006) (this);
-          this.performAction0895(uiComponentPart022Local2, (byte) -55);
+          uiComponentPart022Local2.callbackContract006State0001 = (WidgetEventListener) (this);
+          this.addChild(uiComponentPart022Local2, (byte) -55);
           stackIntegerLocal4 = uiComponentPart022Local2.integerState0108 + uiComponentPart006Local3.integerState0108;
           return stackIntegerLocal4;
         } catch (java.lang.RuntimeException caughtParameterLocal13) {
@@ -369,12 +369,12 @@ final class DisplayNameSelectionPanel extends ComponentContainer implements Name
         stringState0102 = null;
     }
 
-    final void performAction0218(UiComponent uiComponentArgument1, int integerArgument2, int integerArgument3, int integerArgument4) {
+    final void updatePointer(UiComponent uiComponentArgument1, int integerArgument2, int integerArgument3, int integerArgument4) {
         try {
           if (integerArgument2 <= 38) {
             DisplayNameSelectionPanel.computeBoolean0321((byte) 40);
           }
-          super.performAction0218(uiComponentArgument1, 45, integerArgument3, integerArgument4);
+          super.updatePointer(uiComponentArgument1, 45, integerArgument3, integerArgument4);
           this.interactiveComponentState0002.booleanState0035 = this.canSubmitDisplayName((byte) -29);
         } catch (RuntimeException runtimeException) {
           throw ClientException.computeDiagnosticSupport0020365((Throwable) ((Object) runtimeException), "cn.A(" + (uiComponentArgument1 != null ? "{...}" : "null") + ',' + integerArgument2 + ',' + integerArgument3 + ',' + integerArgument4 + ')');
@@ -382,35 +382,35 @@ final class DisplayNameSelectionPanel extends ComponentContainer implements Name
     }
 
     public DisplayNameSelectionPanel() {
-        super(0, 0, 496, 0, (CallbackContract004) null);
-        this.uiComponentPart021State0001 = new ValidatedTextField("", (CallbackContract006) null, 12);
+        super(0, 0, 496, 0, (WidgetRenderer) null);
+        this.uiComponentPart021State0001 = new ValidatedTextField("", (WidgetEventListener) null, 12);
         DefaultTextWidgetRenderer mixedSupport001Local1 = new DefaultTextWidgetRenderer(MixedSupport011.bitmapFontState0006, 0, 0, 0, 0, 16777215, -1, 3, 0, GameDomainSupport003.bitmapFontState0015.integerState0518, -1, 2147483647, true);
-        UiComponent uiComponentLocal2 = new UiComponent(stringState0102, mixedSupport001Local1, (CallbackContract006) null);
-        this.interactiveComponentState0002 = new InteractiveComponent(MixedSupport050.stringState0208, (CallbackContract006) null);
-        this.interactiveComponentState0001 = new InteractiveComponent(MixedSupport036.stringState0167, (CallbackContract006) null);
+        UiComponent uiComponentLocal2 = new UiComponent(stringState0102, mixedSupport001Local1, (WidgetEventListener) null);
+        this.interactiveComponentState0002 = new InteractiveComponent(MixedSupport050.stringState0208, (WidgetEventListener) null);
+        this.interactiveComponentState0001 = new InteractiveComponent(MixedSupport036.stringState0167, (WidgetEventListener) null);
         this.uiComponentPart021State0001.stringState0080 = RichTextLayout.stringState0136;
         this.uiComponentPart021State0001.setFieldValidator(new PlayerNameAvailabilityValidator(this.uiComponentPart021State0001), -5362);
         this.interactiveComponentState0002.booleanState0035 = false;
-        this.interactiveComponentState0002.callbackContract004State0006 = (CallbackContract004) ((Object) new MixedSupport041());
-        this.interactiveComponentState0001.callbackContract004State0006 = (CallbackContract004) ((Object) new MixedSupport094());
-        this.uiComponentPart021State0001.callbackContract004State0006 = (CallbackContract004) ((Object) new MixedSupport024(10000536));
+        this.interactiveComponentState0002.callbackContract004State0006 = (WidgetRenderer) ((Object) new MixedSupport041());
+        this.interactiveComponentState0001.callbackContract004State0006 = (WidgetRenderer) ((Object) new MixedSupport094());
+        this.uiComponentPart021State0001.callbackContract004State0006 = (WidgetRenderer) ((Object) new MixedSupport024(10000536));
         int integerLocal3 = 20;
         int integerLocal4 = 4;
-        uiComponentLocal2.performAction0222(50, 270, 20, integerLocal3, -16555);
+        uiComponentLocal2.setBounds(50, 270, 20, integerLocal3, -16555);
         int integerLocal5 = 200;
         integerLocal3 += 50;
-        this.performAction0895(uiComponentLocal2, (byte) -55);
+        this.addChild(uiComponentLocal2, (byte) -55);
         integerLocal3 = integerLocal3 + (5 + this.computeInteger0315(integerLocal3, 170, -107, MixedSupport109.stringState0476, this.uiComponentPart021State0001, MixedSupport061.stringState0260));
-        this.interactiveComponentState0002.performAction0222(40, integerLocal5, -integerLocal5 + 496 >> 1, integerLocal3, -16555);
-        this.interactiveComponentState0001.performAction0222(40, 60, 3 + integerLocal4, integerLocal3 + 15, -16555);
-        this.interactiveComponentState0001.callbackContract006State0001 = (CallbackContract006) (this);
-        this.interactiveComponentState0002.callbackContract006State0001 = (CallbackContract006) (this);
-        this.performAction0895(this.interactiveComponentState0002, (byte) -55);
-        this.performAction0895(this.interactiveComponentState0001, (byte) -55);
+        this.interactiveComponentState0002.setBounds(40, integerLocal5, -integerLocal5 + 496 >> 1, integerLocal3, -16555);
+        this.interactiveComponentState0001.setBounds(40, 60, 3 + integerLocal4, integerLocal3 + 15, -16555);
+        this.interactiveComponentState0001.callbackContract006State0001 = (WidgetEventListener) (this);
+        this.interactiveComponentState0002.callbackContract006State0001 = (WidgetEventListener) (this);
+        this.addChild(this.interactiveComponentState0002, (byte) -55);
+        this.addChild(this.interactiveComponentState0001, (byte) -55);
         this.uiComponentPart007State0001 = new NameSuggestionsPanel((NameSuggestionListener) (this));
-        this.uiComponentPart007State0001.performAction0222(150, -60 - this.uiComponentPart021State0001.integerState0107 + this.integerState0107 - this.uiComponentPart021State0001.integerState0110, 60 + (this.uiComponentPart021State0001.integerState0107 + this.uiComponentPart021State0001.integerState0110), 20, -16555);
-        this.performAction0895(this.uiComponentPart007State0001, (byte) -55);
-        this.performAction0222(integerLocal4 + (integerLocal3 + 55), 496, 0, 0, -16555);
+        this.uiComponentPart007State0001.setBounds(150, -60 - this.uiComponentPart021State0001.integerState0107 + this.integerState0107 - this.uiComponentPart021State0001.integerState0110, 60 + (this.uiComponentPart021State0001.integerState0107 + this.uiComponentPart021State0001.integerState0110), 20, -16555);
+        this.addChild(this.uiComponentPart007State0001, (byte) -55);
+        this.setBounds(integerLocal4 + (integerLocal3 + 55), 496, 0, 0, -16555);
     }
 
     private final void submitDisplayName(int integerArgument1) {

@@ -4,7 +4,7 @@
 import java.util.*;
 
 final class GzipDecompressor {
-    static f field_a;
+    static ModalDialogHost field_a;
     private java.util.zip.Inflater field_c;
     static int field_e;
     static mf field_b;
@@ -24,7 +24,7 @@ final class GzipDecompressor {
 
     final static void a(int param0) {
         DisplayNameSelectionPanel.field_M = TextHotspotBounds.c((byte) 105);
-        nb.field_a = new f();
+        nb.field_a = new ModalDialogHost();
         wa.a(true, true, 30);
         if (param0 >= -53) {
           GzipDecompressor.a(true, 123, -100, 21);

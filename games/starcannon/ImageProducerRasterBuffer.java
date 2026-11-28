@@ -208,10 +208,10 @@ final class ImageProducerRasterBuffer extends AwtRasterBuffer implements java.aw
         int stackIn_22_0 = 0;
         RuntimeException decompiledCaughtException = null;
         try {
-          ti.field_b.a((byte) -117, true, SecondaryNodeDequeIterator.field_h, cl.field_j);
-          ti.field_b.h(-10597);
-          while (ad.e((byte) 107)) {
-            ti.field_b.a(lb.field_B, -119, StarCannon.field_E);
+          ti.field_b.processPointerInput((byte) -117, true, SecondaryNodeDequeIterator.field_h, cl.field_j);
+          ti.field_b.advanceDialogs(-10597);
+          while (LabeledWidgetContainer.e((byte) 107)) {
+            ti.field_b.processKeyInput(lb.field_B, -119, StarCannon.field_E);
           }
           if (md.field_a != -1) {
             var1_int = md.field_a;
@@ -226,7 +226,7 @@ final class ImageProducerRasterBuffer extends AwtRasterBuffer implements java.aw
           if (param0 != -78) {
             field_i = (ge) null;
           }
-          if (ie.field_x == jl.field_a) {
+          if (AlphaWidgetContainer.field_x == jl.field_a) {
             stackIn_14_0 = 1;
             return stackIn_14_0;
           }

@@ -128,13 +128,13 @@ final class TermsPanel extends WidgetContainer implements TextHotspotListener, W
           this.field_D.listener = (WidgetListener) (this);
           this.field_D.a(var3, this.width - 40, 26, (byte) -50);
           var3 = var3 + (15 + this.field_D.height);
-          this.c(this.field_D, -126);
+          this.addChild(this.field_D, -126);
           var5 = 4;
           var6 = 200;
-          this.field_E.a(-var6 + 300 >> 1, 40, (byte) 59, var6, var3);
+          this.field_E.setBounds(-var6 + 300 >> 1, 40, (byte) 59, var6, var3);
           this.field_E.listener = (WidgetListener) (this);
-          this.c(this.field_E, -127);
-          this.a(0, var5 + var3 + 55, (byte) 59, 300, 0);
+          this.addChild(this.field_E, -127);
+          this.setBounds(0, var5 + var3 + 55, (byte) 59, 300, 0);
         } catch (RuntimeException runtimeException) {
           throw pe.wrapException((Throwable) ((Object) runtimeException), "ar.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
@@ -153,13 +153,13 @@ final class TermsPanel extends WidgetContainer implements TextHotspotListener, W
             return true;
           }
           if (param1 == 98) {
-            stackIn_6_0 = this.a(-124, param3);
+            stackIn_6_0 = this.focusPreviousChild(-124, param3);
             return stackIn_6_0;
           }
           if (param1 != 99) {
             return false;
           }
-          stackIn_10_0 = this.b(param3, 1);
+          stackIn_10_0 = this.focusNextChild(param3, 1);
           return stackIn_10_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

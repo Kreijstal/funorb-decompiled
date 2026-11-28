@@ -17,7 +17,7 @@ final class vk extends InteractiveWidget {
         }
     }
 
-    private vk(String param0, ComponentLayout param1, kd param2) {
+    private vk(String param0, ComponentLayout param1, WidgetEventListener param2) {
         super(param0, param1, param2);
         try {
           this.field_p = DisplayNameSelectionPanel.field_M.field_d;
@@ -26,7 +26,7 @@ final class vk extends InteractiveWidget {
         }
     }
 
-    vk(String param0, kd param1, boolean param2) {
+    vk(String param0, WidgetEventListener param1, boolean param2) {
         this(param0, param1);
         try {
           this.field_G = param2 ? true : false;
@@ -35,7 +35,7 @@ final class vk extends InteractiveWidget {
         }
     }
 
-    private vk(String param0, kd param1) {
+    private vk(String param0, WidgetEventListener param1) {
         this(param0, DisplayNameSelectionPanel.field_M.field_p, param1);
         try {
           this.field_p = DisplayNameSelectionPanel.field_M.field_d;

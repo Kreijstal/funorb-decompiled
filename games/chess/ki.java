@@ -8,7 +8,7 @@ final class ki extends InteractiveWidget {
     static String field_N;
     static String field_Q;
 
-    private ki(String param0, jm param1, rg param2) {
+    private ki(String param0, WidgetRenderer param1, WidgetEventListener param2) {
         super(param0, param1, param2);
         try {
           this.field_n = FullscreenFocusCanvas.field_a.field_k;
@@ -32,7 +32,7 @@ final class ki extends InteractiveWidget {
         if (pd.field_Lb == null) {
           if (param0 == 0) {
             if (wn.field_e &&
-              ma.field_D) {
+              DequeWidgetContainer.field_D) {
               stackIn_29_0 = -7093;
               stackIn_30_1 = (param1) && (ak.a(true));
               DebouncedFieldValidator.a(stackIn_29_0, stackIn_30_1);
@@ -41,7 +41,7 @@ final class ki extends InteractiveWidget {
           }
           ki.b(false);
           if (wn.field_e &&
-            ma.field_D) {
+            DequeWidgetContainer.field_D) {
             stackIn_37_0 = -7093;
             stackIn_38_1 = (param1) && (ak.a(true));
             DebouncedFieldValidator.a(stackIn_37_0, stackIn_38_1);
@@ -51,7 +51,7 @@ final class ki extends InteractiveWidget {
         pd.field_Lb.b(16777215, param1);
         if (param0 == 0) {
           if (wn.field_e &&
-            ma.field_D) {
+            DequeWidgetContainer.field_D) {
             stackIn_10_0 = -7093;
             stackIn_11_1 = (param1) && (ak.a(true));
             DebouncedFieldValidator.a(stackIn_10_0, stackIn_11_1);
@@ -62,7 +62,7 @@ final class ki extends InteractiveWidget {
         if (!wn.field_e) {
           return;
         }
-        if (!ma.field_D) {
+        if (!DequeWidgetContainer.field_D) {
           return;
         }
         stackIn_19_0 = -7093;
@@ -90,7 +90,7 @@ final class ki extends InteractiveWidget {
         field_M = null;
     }
 
-    ki(String param0, rg param1, boolean param2) {
+    ki(String param0, WidgetEventListener param1, boolean param2) {
         this(param0, param1);
         try {
           this.field_I = param2 ? true : false;
@@ -131,7 +131,7 @@ final class ki extends InteractiveWidget {
         }
     }
 
-    private ki(String param0, rg param1) {
+    private ki(String param0, WidgetEventListener param1) {
         this(param0, FullscreenFocusCanvas.field_a.field_a, param1);
         try {
           this.field_n = FullscreenFocusCanvas.field_a.field_k;

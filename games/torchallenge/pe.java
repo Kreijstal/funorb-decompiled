@@ -21,20 +21,20 @@ final class pe extends v {
         }
     }
 
-    pe(si param0, String param1) {
+    pe(ModalDialogHost param0, String param1) {
         super(param0, 300, 120);
         int var3_int = 0;
         try {
           this.field_hb = param1;
           if (null != this.field_hb) {
             var3_int = dl.field_H.textHeight(this.field_hb, 260, dl.field_H.field_x);
-            this.b(0, 150 + var3_int, 300);
+            this.setCenteredSize(0, 150 + var3_int, 300);
           }
           this.field_bb = new ek(13, 50, 274, 30, 15, 2113632, 4210752);
           this.field_cb = false;
           this.field_ib = false;
           this.field_bb.field_L = true;
-          this.a(0, this.field_bb);
+          this.addChild(0, this.field_bb);
         } catch (RuntimeException runtimeException) {
           throw oj.wrapException((Throwable) ((Object) runtimeException), "pe.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

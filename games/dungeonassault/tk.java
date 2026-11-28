@@ -47,7 +47,7 @@ final class tk {
         }
         AgeValidator.field_s = true;
         MenuScreen.field_t = true;
-        lg.field_w.h(1);
+        lg.field_w.closeAllDialogs(1);
         gh.a(23321, ha.field_o, false);
     }
 

@@ -11,8 +11,8 @@ final class qd {
         byte[] var3 = null;
         byte[] var3Lifetime1;
         kc.field_b = param1;
-        if (null != fj.field_P) {
-          fj.field_P.setMasterVolume(16384, param1);
+        if (null != DraggableWidgetContainer.field_P) {
+          DraggableWidgetContainer.field_P.setMasterVolume(16384, param1);
         }
         if (SocketArchiveRequestConnection.field_n != null) {
           SocketArchiveRequestConnection.field_n.a(param1, -65);

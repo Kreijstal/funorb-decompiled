@@ -38,7 +38,7 @@ final class qa {
             for (var6 = 0; var6 < var3; var6++) {
               var10[var6] = bf.field_d[PcmOutputWorker.bitwiseAnd((int) var21[var6], 255)];
             }
-            var1[var2] = new RgbSprite(ra.field_a, GameCanvas.field_e, th.field_Jb[var2], nh.field_O[var2], TextInputField.field_X[var2], ConfirmedEmailAvailabilityValidator.field_r[var2], var22);
+            var1[var2] = new RgbSprite(ra.field_a, GameCanvas.field_e, th.field_Jb[var2], LabeledWidgetContainer.field_O[var2], TextInputField.field_X[var2], ConfirmedEmailAvailabilityValidator.field_r[var2], var22);
           } else {
             var15 = vh.field_a[var2];
             var11 = var15;
@@ -50,7 +50,7 @@ final class qa {
             for (var7 = 0; var7 < var3; var7++) {
               var6_ref_int__[var7] = ll.a(PcmOutputWorker.bitwiseAnd(-16777216, var15[var7] << 24), bf.field_d[PcmOutputWorker.bitwiseAnd((int) var21[var7], 255)]);
             }
-            var1[var2] = (RgbSprite) ((Object) new ArgbSprite(ra.field_a, GameCanvas.field_e, th.field_Jb[var2], nh.field_O[var2], TextInputField.field_X[var2], ConfirmedEmailAvailabilityValidator.field_r[var2], var17));
+            var1[var2] = (RgbSprite) ((Object) new ArgbSprite(ra.field_a, GameCanvas.field_e, th.field_Jb[var2], LabeledWidgetContainer.field_O[var2], TextInputField.field_X[var2], ConfirmedEmailAvailabilityValidator.field_r[var2], var17));
           }
         }
         if (param0 != 26627) {
@@ -346,7 +346,7 @@ final class qa {
             field_b = -46;
           }
           AccountServiceResult.field_d = new dg(im.field_e, pe.field_eb, param2, MatchingFieldValidator.field_o, DirectByteStorage.field_i);
-          im.field_e.c(AccountServiceResult.field_d, 101);
+          im.field_e.showDialog(AccountServiceResult.field_d, 101);
         } catch (RuntimeException runtimeException) {
           throw AccountCreationResultPanel.wrapClientException((Throwable) ((Object) runtimeException), "qa.G(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class db implements ml {
+final class db implements WidgetRenderer {
     private int field_f;
     private int field_d;
     private int field_j;
@@ -40,7 +40,7 @@ final class db implements ml {
         if (fk.field_a) {
           me.field_f.q(105);
         } else {
-          var1 = ue.field_G;
+          var1 = AlphaWidgetContainer.field_G;
           if (var1 > 0) {
             if (var1 != 1) {
               rc.field_i = gg.a(new String[]{Integer.toString(var1)}, IntrusiveDeque.field_d, true);
@@ -82,7 +82,7 @@ final class db implements ml {
         }
     }
 
-    public final void a(boolean param0, UiWidget param1, int param2, int param3, int param4) {
+    public final void paintWidget(boolean param0, UiWidget param1, int param2, int param3, int param4) {
         RuntimeException var6 = null;
         int var7 = 0;
         int var8 = 0;

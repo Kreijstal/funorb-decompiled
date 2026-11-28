@@ -136,7 +136,7 @@ final class PasswordValidator extends TextFieldValidator {
             stackIn_23_0 = GameApplet.field_b;
             return stackIn_23_0;
           }
-          if (ue.a(var5, var6, (byte) 66)) {
+          if (AlphaWidgetContainer.a(var5, var6, (byte) 66)) {
             stackIn_27_0 = DequeCursor.field_d;
             return stackIn_27_0;
           }

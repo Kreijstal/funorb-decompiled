@@ -2,20 +2,20 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class hc {
-    uk field_r;
+    WidgetRenderer field_r;
     private boolean field_a;
-    uk field_u;
+    WidgetRenderer field_u;
     int field_c;
     static ua field_s;
     int field_i;
     int field_l;
     private int field_n;
     static String[] field_m;
-    uk field_b;
+    WidgetRenderer field_b;
     int field_e;
     static String field_k;
-    uk field_j;
-    uk field_d;
+    WidgetRenderer field_j;
+    WidgetRenderer field_d;
     int field_o;
     static int[] field_f;
     int field_p;
@@ -26,7 +26,7 @@ final class hc {
 
     final void a(int param0, int param1, int param2, int param3, int param4, int param5, byte param6) {
         if (param6 < 64) {
-          this.field_j = (uk) null;
+          this.field_j = (WidgetRenderer) null;
         }
         SoftwareRasterizer.fillRectangleAlpha(param0, param3, param5, param4, param1, param2);
     }
@@ -234,7 +234,7 @@ final class hc {
         tc var14Lifetime2;
         try {
           var17 = new DefaultTextWidgetRenderer(param1, 2, 2, 2236962, 1, param0, 1, param1.field_N - (-param1.field_r - 2));
-          this.field_r = (uk) ((Object) var17);
+          this.field_r = (WidgetRenderer) ((Object) var17);
           var17.field_i = 16777215;
           var4 = new tc();
           var17.a(var4, (byte) -34);
@@ -261,21 +261,21 @@ final class hc {
           var5[4] = (Sprite) ((Object) var18);
           var4.a((byte) 116, 4).a((byte) 126, true).a((byte) 120, var5);
           var4.a((byte) -113, 5).a((byte) 120, di.a(0, 0, 0, 65793, (byte) -80)).a((byte) 124, true).a(-1, -1);
-          this.field_b = (uk) ((Object) var4);
+          this.field_b = (WidgetRenderer) ((Object) var4);
           var6 = new tc(var4, true);
           var6.field_h = 0;
           var7 = new tc(var4, true);
           var7.field_h = 0;
           var7.a(-74, he.a((byte) -121, 8947848));
           var7.a((byte) 120, 1).a((byte) 89, he.a((byte) -120, 11184810)).a(-1, 2236962);
-          this.field_j = (uk) ((Object) new bb(param1, 2, 2, 16777215, -1, 5, 5, 15, 15, 4473924));
+          this.field_j = (WidgetRenderer) ((Object) new bb(param1, 2, 2, 16777215, -1, 5, 5, 15, 15, 4473924));
           discarded$0 = new hh(param1, 2, 2, 16777215, -1, 16777215, 16729156, 4473924);
           discarded$1 = new df(param1, 16777215, -1, 125269879, 4473924, 3, 268435455);
           var8 = new tc();
           var17.a(var8, (byte) -34);
           var8.a((byte) -104, 0).a((byte) 108, cj.a(10066329, 7829367, 15658734, -17768)).a(-1, 1118481).a(false, -1);
           var8.a((byte) 115, 4).a((byte) 124, true).a((byte) 110, var5);
-          this.field_d = (uk) ((Object) var8);
+          this.field_d = (WidgetRenderer) ((Object) var8);
           var9 = new Sprite[9];
           var9[4] = new Sprite(2, 1);
           var10 = new Sprite[9];

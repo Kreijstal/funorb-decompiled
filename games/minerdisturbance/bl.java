@@ -27,9 +27,9 @@ abstract class bl extends DualLinkNode {
             if (uf.field_r != null) {
               uf.field_r.shutdown((byte) -32);
             }
-            if (null != fe.field_z) {
+            if (null != UiWidget.field_z) {
               try {
-                fe.field_z.close(-30821);
+                UiWidget.field_z.close(-30821);
               } catch (java.io.IOException decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;
                 var1 = (IOException) (Object) decompiledCaughtException;

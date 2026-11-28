@@ -12,20 +12,20 @@ final class kl extends en {
     private boolean field_W;
     private co field_X;
 
-    kl(ol param0, String param1) {
+    kl(ModalDialogHost param0, String param1) {
         super(param0, 300, 120);
         int var3_int = 0;
         try {
           this.field_Q = param1;
           if (this.field_Q != null) {
             var3_int = mo.field_m.textHeight(this.field_Q, 260, mo.field_m.field_o);
-            this.a(var3_int + 150, (byte) 119, 300);
+            this.setCenteredSize(var3_int + 150, (byte) 119, 300);
           }
           this.field_X = new co(13, 50, 274, 30, 15, 2113632, 4210752);
           this.field_X.field_H = true;
           this.field_W = false;
           this.field_R = false;
-          this.b(this.field_X, -121);
+          this.addChild(this.field_X, -121);
         } catch (RuntimeException runtimeException) {
           throw dn.wrapClientException((Throwable) ((Object) runtimeException), "kl.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

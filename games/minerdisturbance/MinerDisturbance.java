@@ -216,7 +216,7 @@ public final class MinerDisturbance extends ob {
             if (this.field_Q != null) {
               this.field_Q.b(77);
             }
-            cc.a((byte) -125);
+            ModalDialog.a((byte) -125);
             if (!MusicPatchPcmStream.field_w) {
               ff.a(false);
             }
@@ -536,7 +536,7 @@ public final class MinerDisturbance extends ob {
             }
             fieldTemp$1 = this.field_H;
             this.field_H = this.field_H + 1;
-            if (fieldTemp$1 >= ma.field_O.field_A) {
+            if (fieldTemp$1 >= DraggableWidgetContainer.field_O.field_A) {
               this.field_H = 0;
             }
             if (!ag.field_c) {
@@ -1327,7 +1327,7 @@ public final class MinerDisturbance extends ob {
           }
           if ((Bzip2State.field_C <= -300 &&
             1 == cm.field_o ||
-            !(kn.field_E > 0)) &&
+            !(DequeWidgetContainer.field_E > 0)) &&
             (!ValidatedTextField.field_V &&
             pl.field_h == 15)) {
             this.h((byte) 113);
@@ -1484,7 +1484,7 @@ public final class MinerDisturbance extends ob {
               ValidatedTextField.field_V) {
               fn.a(13, 242, param0 + 16509);
             }
-            if (25 <= jc.field_H &&
+            if (25 <= SingleChildWidgetContainer.field_H &&
               ValidatedTextField.field_V) {
               fn.a(12, 243, param0 + 16509);
             }
@@ -1654,7 +1654,7 @@ public final class MinerDisturbance extends ob {
                 boolean decompiledFrameRemainder8 = true;
                 if (var6Lifetime1 != 0 ||
                   var2_int == 0 ||
-                  !(kn.field_E > 250)) {
+                  !(DequeWidgetContainer.field_E > 250)) {
                   this.field_U = 0;
                   decompiledFrameRemainder8 = (var21 != 0);
                 }
@@ -1789,7 +1789,7 @@ public final class MinerDisturbance extends ob {
                     }
                   }
                 }
-                if (250 <= kn.field_E) {
+                if (250 <= DequeWidgetContainer.field_E) {
                   break;
                 }
                 if (!je.c(NanoFrameTimer.field_k, -1 + hf.field_t, 1, 1)) {
@@ -3426,7 +3426,7 @@ public final class MinerDisturbance extends ob {
             boolean decompiledFrameRemainder0 = true;
             if (!je.c(NanoFrameTimer.field_k, hf.field_t, 1, 1) &&
               je.d(NanoFrameTimer.field_k, hf.field_t, 1, 1) &&
-              kn.field_E > 300 &&
+              DequeWidgetContainer.field_E > 300 &&
               !qe.field_b[3]) {
               if (sc.field_b &&
                 !ByteStorage.a(16, 11764)) {
@@ -3436,16 +3436,16 @@ public final class MinerDisturbance extends ob {
                 var9Lifetime2 = -1 + var7Lifetime3;
                 ag.a(true, 16, -(ef.field_b[3].field_A >> 1) + (GzipDecompressor.field_a.field_A >> 1) + var9Lifetime2, -ef.field_b[3].field_y + var8Lifetime2);
               }
-              kn.field_E = 300;
+              DequeWidgetContainer.field_E = 300;
               decompiledFrameRemainder0 = (var21 != 0);
             }
             if ((decompiledFrameRemainder0) &&
               (sc.field_b)) {
               if (!qe.field_b[2] &&
                 !qe.field_b[19] ||
-                !(kn.field_E < 950)) {
+                !(DequeWidgetContainer.field_E < 950)) {
                 if ((!qe.field_b[2]) &&
-                  (!(450 <= kn.field_E)) &&
+                  (!(450 <= DequeWidgetContainer.field_E)) &&
                   (!ByteStorage.a(9, 11764))) {
                   var6Lifetime3Lifetime1 = sk.field_d / 10 + NanoFrameTimer.field_k * 32;
                   var7Lifetime3Lifetime1 = IsaacRandom.field_i / 10 + 32 * hf.field_t;
@@ -3463,18 +3463,18 @@ public final class MinerDisturbance extends ob {
                 }
               }
             }
-            kn.field_E = kn.field_E - 1;
-            if ((kn.field_E >= 0) &&
-              (decompiledFrameRemainder1 = !(kn.field_E % 50 <= 5)) &&
-              (decompiledFrameRemainder1 = !(kn.field_E % 50 >= 30))) {
-              decompiledFrameRemainder1 = !(kn.field_E >= 300);
+            DequeWidgetContainer.field_E = DequeWidgetContainer.field_E - 1;
+            if ((DequeWidgetContainer.field_E >= 0) &&
+              (decompiledFrameRemainder1 = !(DequeWidgetContainer.field_E % 50 <= 5)) &&
+              (decompiledFrameRemainder1 = !(DequeWidgetContainer.field_E % 50 >= 30))) {
+              decompiledFrameRemainder1 = !(DequeWidgetContainer.field_E >= 300);
             }
             if (decompiledFrameRemainder1) {
               tb.field_c = 55;
               if (je.c(NanoFrameTimer.field_k, hf.field_t, 1, 1)) {
                 tb.field_c = 63;
               }
-              if (!(kn.field_E >= 0)) {
+              if (!(DequeWidgetContainer.field_E >= 0)) {
                 if (!je.c(NanoFrameTimer.field_k, hf.field_t, 1, 1)) {
                   if ((!je.a(NanoFrameTimer.field_k, hf.field_t, 1, 1)) &&
                     (decompiledFrameRemainder1 = !(!je.d(NanoFrameTimer.field_k, hf.field_t, 1, 1)))) {
@@ -3485,36 +3485,36 @@ public final class MinerDisturbance extends ob {
                     rj.a((byte) -38, 11);
                     if (var21 != 0) {
                       rj.a((byte) -38, 1);
-                      kn.field_E = 500;
+                      DequeWidgetContainer.field_E = 500;
                       if (qe.field_b[2]) {
-                        kn.field_E = 1000;
+                        DequeWidgetContainer.field_E = 1000;
                       }
                       if (qe.field_b[19]) {
-                        kn.field_E = 2000;
+                        DequeWidgetContainer.field_E = 2000;
                       }
                     }
                   }
                 } else {
                   rj.a((byte) -38, 1);
                   if (var21 != 0) {
-                    kn.field_E = 500;
+                    DequeWidgetContainer.field_E = 500;
                     if (qe.field_b[2]) {
-                      kn.field_E = 1000;
+                      DequeWidgetContainer.field_E = 1000;
                     }
                     if (qe.field_b[19]) {
-                      kn.field_E = 2000;
+                      DequeWidgetContainer.field_E = 2000;
                     }
                   }
                 }
               }
             }
           } else {
-            kn.field_E = 500;
+            DequeWidgetContainer.field_E = 500;
             if (qe.field_b[2]) {
-              kn.field_E = 1000;
+              DequeWidgetContainer.field_E = 1000;
             }
             if (qe.field_b[19]) {
-              kn.field_E = 2000;
+              DequeWidgetContainer.field_E = 2000;
             }
           }
           if (qe.field_b[16] ||
@@ -4195,7 +4195,7 @@ public final class MinerDisturbance extends ob {
                 s.field_L[1] = jn.a("scroll_middle", -29553, "", fl.field_f);
                 s.field_L[2] = jn.a("scroll_bottom", -29553, "", fl.field_f);
                 ck.field_a = jn.a("seismograph_base", -29553, "", fl.field_f);
-                ma.field_O = jn.a("seismograph_grid", -29553, "", fl.field_f);
+                DraggableWidgetContainer.field_O = jn.a("seismograph_grid", -29553, "", fl.field_f);
                 ResourceArchive.field_e.setAsRasterTarget((byte) -45);
                 ol.field_a = jn.a("seismograph_needle", -29553, "", fl.field_f);
                 ol.field_c = jn.a("title_achievements", -29553, "", fl.field_f);
@@ -4203,7 +4203,7 @@ public final class MinerDisturbance extends ob {
                 sk.field_e = jn.a("title_bestscores", -29553, "", fl.field_f);
                 CipherPacketBuffer.field_x = jn.a("title_myscores", -29553, "", fl.field_f);
                 ha.field_a = jn.a("title_instructions", -29553, "", fl.field_f);
-                jc.field_G = jn.a("title_choose", -29553, "", fl.field_f);
+                SingleChildWidgetContainer.field_G = jn.a("title_choose", -29553, "", fl.field_f);
                 GzipDecompressor.field_a = jn.a("bubble", -29553, "", fl.field_f);
                 jn.a("highscorearrow", -29553, "", fl.field_f);
                 qn.field_J = bb.a("worm_gums", fl.field_f, -123, "");
@@ -4371,7 +4371,7 @@ public final class MinerDisturbance extends ob {
               }
               if (decompiledFrameRemainder0) {
                 if (5000 > a.field_c) {
-                  ce.field_d.drawCentred(se.field_J, param2, param3, param0, -1);
+                  ce.field_d.drawCentred(DropTargetWidgetContainer.field_J, param2, param3, param0, -1);
                   var5[2].b(var6, 0);
                   decompiledFrameRemainder0 = (var12 != 0);
                 }
@@ -4557,7 +4557,7 @@ public final class MinerDisturbance extends ob {
             if (a.field_c >= 50000) {
               if (100000 <= a.field_c) {
                 if (a.field_c < 200000) {
-                  ce.field_d.drawCentred(hm.field_N, param2, param3, param0, -1);
+                  ce.field_d.drawCentred(ModalDialogHost.field_N, param2, param3, param0, -1);
                   var5[5].b(var6Lifetime1, 0);
                   if (var12 == 0) {
                     return;
@@ -4768,7 +4768,7 @@ public final class MinerDisturbance extends ob {
           h.b(true);
           nn.a(true);
           ig.b(119);
-          hm.clearStaticReferences((byte) 112);
+          ModalDialogHost.clearStaticReferences((byte) 112);
           AccountCreationResultPanel.discardDeclaredStaticReferences((byte) -42);
           jl.releaseDeclaredStaticReferences((byte) 126);
           rg.resetStaticState(param0 ^ 28777);
@@ -4831,14 +4831,14 @@ public final class MinerDisturbance extends ob {
           qg.clearStaticReferences(0);
           fl.resetStaticState(-1);
           hh.clearStaticReferences(-125);
-          fe.l(-95);
-          jc.resetStaticState(0);
-          cc.clearDeclaredStaticReferences((byte) 15);
+          UiWidget.l(-95);
+          SingleChildWidgetContainer.resetStaticState(0);
+          ModalDialog.clearDeclaredStaticReferences((byte) 15);
           TextLayout.clearStaticReferences(false);
-          am.clearDeclaredStaticReferences(43);
+          LabeledWidgetContainer.clearDeclaredStaticReferences(43);
           ValidatedTextField.resetStaticState(-125);
           EditableTextField.clearDeclaredStaticReferences(param0 ^ -2);
-          kn.clearStaticReferences((byte) -15);
+          DequeWidgetContainer.clearStaticReferences((byte) -15);
           jk.releaseDeclaredStaticReferences((byte) -36);
           wf.g((byte) 87);
           oi.clearStaticReferences((byte) 91);
@@ -4892,8 +4892,8 @@ public final class MinerDisturbance extends ob {
           DirectByteStorage.clearStaticReferences(param0 - 1);
           RichTextLayout.clearStaticReferences(0);
           aa.clearStaticReferences((byte) -123);
-          ma.clearDeclaredStaticReferences(27934);
-          se.clearDeclaredStaticReferences(-13673);
+          DraggableWidgetContainer.clearDeclaredStaticReferences(27934);
+          DropTargetWidgetContainer.clearDeclaredStaticReferences(-13673);
           ph.a(0);
           bg.clearStaticReferences(15917);
           IterableNodeHashTable.clearStaticReferences(-1);
@@ -4943,7 +4943,7 @@ public final class MinerDisturbance extends ob {
           gk.clearStaticReferences((byte) -61);
           mn.d(42);
           qh.clearStaticReferences((byte) 110);
-          oj.n(65536);
+          AlphaWidgetContainer.n(65536);
           pe.clearStaticReferences((byte) -30);
           mj.clearStaticReferences((byte) -118);
           hj.clearStaticReferences(false);
@@ -6193,7 +6193,7 @@ public final class MinerDisturbance extends ob {
                             }
                             vh.a(-128);
                             this.renderClientFrame(false);
-                            am.a(NameSuggestionsPanel.field_Q, 27);
+                            LabeledWidgetContainer.a(NameSuggestionsPanel.field_Q, 27);
                             wf.p(4462);
                             pa.a(true, AccountRegistrationPanel.field_S, 60.0f);
                             this.renderClientFrame(false);
@@ -6279,7 +6279,7 @@ public final class MinerDisturbance extends ob {
             pa.a(true, u.a(gm.field_c, pk.field_g, w.field_X, -7157, ""), 4.0f);
             return;
           }
-          pa.a(true, u.a(ud.field_f, NameSuggestionsPanel.field_Q, hm.field_M, -7157, ""), 0.0f);
+          pa.a(true, u.a(ud.field_f, NameSuggestionsPanel.field_Q, ModalDialogHost.field_M, -7157, ""), 0.0f);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -6344,7 +6344,7 @@ public final class MinerDisturbance extends ob {
           if (cm.field_o == 1) {
             rg.field_sb = rg.field_sb + rg.field_sb / 2;
           }
-          jc.field_H = 0;
+          SingleChildWidgetContainer.field_H = 0;
           ch.field_h = -1;
           LoginPanel.field_I = 0;
           IntrusiveNode.field_a = 0;
@@ -6407,7 +6407,7 @@ public final class MinerDisturbance extends ob {
           pa.field_c = -1;
           q.field_b = mh.field_e;
           this.field_eb = false;
-          kn.field_E = 1000;
+          DequeWidgetContainer.field_E = 1000;
           pl.field_h = 15;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -6531,7 +6531,7 @@ public final class MinerDisturbance extends ob {
                           }
                         } else {
                           if (kj.a(false)) {
-                            jc.a(false, -105, jf.field_b);
+                            SingleChildWidgetContainer.a(false, -105, jf.field_b);
                             if (var4 == 0) {
                               break scanLoop1;
                             }
@@ -6542,13 +6542,13 @@ public final class MinerDisturbance extends ob {
                         }
                         if (tm.field_v == 5 &&
                           ig.a(-20144)) {
-                          jc.a(false, -121, 2);
+                          SingleChildWidgetContainer.a(false, -121, 2);
                           kd.a(cm.field_o, (byte) -111);
                           if (var4 != 0) {
-                            jc.a(false, -116, tm.field_v);
+                            SingleChildWidgetContainer.a(false, -116, tm.field_v);
                           }
                         } else {
-                          jc.a(false, -116, tm.field_v);
+                          SingleChildWidgetContainer.a(false, -116, tm.field_v);
                         }
                         if (a.field_c > 0) {
                           this.a(3, a.field_c);
@@ -6742,29 +6742,29 @@ public final class MinerDisturbance extends ob {
               fm.f((byte) 81);
               if (!kj.a(false)) {
                 if (ig.a(-20144)) {
-                  jc.a(true, -126, 5);
+                  SingleChildWidgetContainer.a(true, -126, 5);
                   decompiledFrameRemainder0 = (var10 != 0);
                 }
                 if (decompiledFrameRemainder0) {
-                  jc.a(true, -121, 2);
+                  SingleChildWidgetContainer.a(true, -121, 2);
                   kd.a(cm.field_o, (byte) -104);
                   if (var10 != 0) {
                     if (ha.field_b <= 0) {
-                      jc.a(true, -116, 4);
-                      jc.a(true, -105, 6);
+                      SingleChildWidgetContainer.a(true, -116, 4);
+                      SingleChildWidgetContainer.a(true, -105, 6);
                     } else {
-                      jc.a(true, -105, 6);
+                      SingleChildWidgetContainer.a(true, -105, 6);
                     }
                   }
                 }
               } else {
                 if (ha.field_b <= 0) {
-                  jc.a(true, -116, 4);
+                  SingleChildWidgetContainer.a(true, -116, 4);
                   if (var10 != 0) {
-                    jc.a(true, -105, 6);
+                    SingleChildWidgetContainer.a(true, -105, 6);
                   }
                 } else {
-                  jc.a(true, -105, 6);
+                  SingleChildWidgetContainer.a(true, -105, 6);
                 }
               }
             }
@@ -6939,15 +6939,15 @@ public final class MinerDisturbance extends ob {
                 ResourceArchive.playMusicTrack(-6358, ph.field_a);
                 fm.f((byte) 81);
                 if (!kj.a(false)) {
-                  jc.a(false, -107, 2);
+                  SingleChildWidgetContainer.a(false, -107, 2);
                   kd.a(cm.field_o, (byte) -106);
                   if (!(!ig.a(-20144))) {
-                    jc.a(false, -114, 5);
+                    SingleChildWidgetContainer.a(false, -114, 5);
                   }
                   decompiledFrameRemainder2 = false;
                 }
                 else {
-                  jc.a(false, -120, 6);
+                  SingleChildWidgetContainer.a(false, -120, 6);
                 }
               }
             }
@@ -6962,7 +6962,7 @@ public final class MinerDisturbance extends ob {
               if (qe.field_b[1]) {
                 var6Lifetime1Lifetime3 = jf.b((byte) 110);
                 uf.field_p[var6Lifetime1Lifetime3] = new gf(NanoFrameTimer.field_k, hf.field_t, 7);
-                cc.a(var6Lifetime1Lifetime3, 136989569);
+                ModalDialog.a(var6Lifetime1Lifetime3, 136989569);
               } else {
                 var6Lifetime1Lifetime3 = jf.b((byte) 101);
                 uf.field_p[var6Lifetime1Lifetime3] = new gf(NanoFrameTimer.field_k, hf.field_t, 6);
@@ -6980,7 +6980,7 @@ public final class MinerDisturbance extends ob {
               }
               var6Lifetime1Lifetime4 = jf.b((byte) 88);
               uf.field_p[var6Lifetime1Lifetime4] = new gf(NanoFrameTimer.field_k, hf.field_t, 20);
-              cc.a(var6Lifetime1Lifetime4, 136989569);
+              ModalDialog.a(var6Lifetime1Lifetime4, 136989569);
             }
             stackIn_402_0 = (rj.field_f > 1) ? 0 : 1;
             var6Lifetime1Lifetime5 = stackIn_402_0;
@@ -7066,12 +7066,12 @@ public final class MinerDisturbance extends ob {
                 ResourceArchive.playMusicTrack(-6358, ph.field_a);
                 fm.f((byte) 81);
                 if (kj.a(false)) {
-                  jc.a(false, -125, 6);
+                  SingleChildWidgetContainer.a(false, -125, 6);
                 } else {
-                  jc.a(false, -107, 2);
+                  SingleChildWidgetContainer.a(false, -107, 2);
                   kd.a(cm.field_o, (byte) -124);
                   if (ig.a(-20144)) {
-                    jc.a(false, -123, 5);
+                    SingleChildWidgetContainer.a(false, -123, 5);
                   }
                 }
               }
@@ -7161,15 +7161,15 @@ public final class MinerDisturbance extends ob {
           }
           ck.field_a.drawOpaque(15, 369);
           SoftwareRasterizer.setClip(19, 373, 69, 463);
-          var2_int = -this.field_H + (373 - (-90 - ma.field_O.field_A));
+          var2_int = -this.field_H + (373 - (-90 - DraggableWidgetContainer.field_O.field_A));
           var3_int = -this.field_H + 373;
           do {
             if (var2_int <= var3_int) {
               SoftwareRasterizer.resetClip();
               break;
             }
-            ma.field_O.drawOpaque(19, var3_int);
-            var3_int = var3_int + ma.field_O.field_A;
+            DraggableWidgetContainer.field_O.drawOpaque(19, var3_int);
+            var3_int = var3_int + DraggableWidgetContainer.field_O.field_A;
           } while (var10 == 0);
           boolean decompiledFrameRemainder0 = true;
           boolean decompiledFrameCompleted0 = true;

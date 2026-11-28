@@ -64,19 +64,19 @@ final class qn extends InteractiveWidget {
         return null;
     }
 
-    final void a(int param0, int param1, byte param2, fe param3) {
+    final void updatePointer(int param0, int param1, byte param2, UiWidget param3) {
         try {
           this.field_L = this.field_L + 1;
           if (param2 <= 49) {
             field_K = 44;
           }
-          super.a(param0, param1, (byte) 104, param3);
+          super.updatePointer(param0, param1, (byte) 104, param3);
         } catch (RuntimeException runtimeException) {
           throw lj.wrapClientException((Throwable) ((Object) runtimeException), "qn.V(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 
-    final void a(byte param0, int param1, int param2, int param3) {
+    final void drawWidget(byte param0, int param1, int param2, int param3) {
         Sprite var15 = null;
         Sprite var16 = null;
         Sprite var13 = null;
@@ -85,7 +85,7 @@ final class qn extends InteractiveWidget {
         int var11 = MinerDisturbance.field_ab;
         int var9Lifetime1;
         int var10Lifetime1;
-        super.a(param0, param1, param2, param3);
+        super.drawWidget(param0, param1, param2, param3);
         if (param3 != 0) {
           return;
         }
@@ -182,9 +182,9 @@ final class qn extends InteractiveWidget {
         }
     }
 
-    final boolean a(fe param0, int param1) {
+    final boolean takeFocus(UiWidget param0, int param1) {
         RuntimeException var3 = null;
-        fe var4 = null;
+        UiWidget var4 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -193,8 +193,8 @@ final class qn extends InteractiveWidget {
           if (param1 > 119) {
             return false;
           }
-          var4 = (fe) null;
-          this.a((fe) null, -111);
+          var4 = (UiWidget) null;
+          this.takeFocus((UiWidget) null, -111);
           return false;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

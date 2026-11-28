@@ -39,8 +39,8 @@ final class oc extends hn {
           }
           tl.field_q = tl.field_q + 1;
           if (tk.field_a) {
-            if (-1 == oj.field_J ||
-              nb.field_i[oj.field_J].c(-41)) {
+            if (-1 == AlphaWidgetContainer.field_J ||
+              nb.field_i[AlphaWidgetContainer.field_J].c(-41)) {
               stackIn_13_0 = (11 >= q.field_c) ? 0 : 1;
               var1_int = stackIn_13_0;
               if (var1_int == 0) {
@@ -61,16 +61,16 @@ final class oc extends hn {
                   }
                   return;
                 }
-                if (q.field_c != oj.field_J) {
+                if (q.field_c != AlphaWidgetContainer.field_J) {
                   ah.field_e = -1;
-                  if (oj.field_J == 2) {
+                  if (AlphaWidgetContainer.field_J == 2) {
                     sn.field_b[0] = null;
                     sn.field_b[1] = null;
                   }
-                  mc.field_w = oj.field_J;
-                  oj.field_J = q.field_c;
-                  if (oj.field_J == 5 ||
-                    oj.field_J == 2) {
+                  mc.field_w = AlphaWidgetContainer.field_J;
+                  AlphaWidgetContainer.field_J = q.field_c;
+                  if (AlphaWidgetContainer.field_J == 5 ||
+                    AlphaWidgetContainer.field_J == 2) {
                     mc.field_w = 4;
                   }
                 }
@@ -85,8 +85,8 @@ final class oc extends hn {
           }
           var1_intLifetime1 = -2;
           if (EditableTextField.field_L != 0) {
-            if (oj.field_J >= 0) {
-              stackIn_40_0 = (nb.field_i[oj.field_J].c(-39)) ? 1 : 0;
+            if (AlphaWidgetContainer.field_J >= 0) {
+              stackIn_40_0 = (nb.field_i[AlphaWidgetContainer.field_J].c(-39)) ? 1 : 0;
             } else {
               stackIn_40_0 = 0;
             }
@@ -94,17 +94,17 @@ final class oc extends hn {
             stackIn_40_0 = 0;
           }
           var2 = stackIn_40_0;
-          if (oj.field_J != 11) {
+          if (AlphaWidgetContainer.field_J != 11) {
             while (mm.b((byte) 70)) {
               if (lj.field_t == 13 &&
-                oj.field_J != 4 &&
-                oj.field_J != 6) {
-                if (0 == oj.field_J) {
+                AlphaWidgetContainer.field_J != 4 &&
+                AlphaWidgetContainer.field_J != 6) {
+                if (0 == AlphaWidgetContainer.field_J) {
                   el.field_c = true;
                   var1_intLifetime1 = -1;
                 }
-                if (oj.field_J != 2) {
-                  stackIn_60_0 = (oj.field_J == 5) ? 1 : 0;
+                if (AlphaWidgetContainer.field_J != 2) {
+                  stackIn_60_0 = (AlphaWidgetContainer.field_J == 5) ? 1 : 0;
                 } else {
                   stackIn_60_0 = 1;
                 }
@@ -118,9 +118,9 @@ final class oc extends hn {
                   var1_intLifetime1 = mc.field_w;
                 }
               } else {
-                if (oj.field_J != -1 &&
+                if (AlphaWidgetContainer.field_J != -1 &&
                   var2 == 0) {
-                  var3 = nb.field_i[oj.field_J].e(1);
+                  var3 = nb.field_i[AlphaWidgetContainer.field_J].e(1);
                   if (var3 > -2) {
                     var1_intLifetime1 = var3;
                   }
@@ -137,31 +137,31 @@ final class oc extends hn {
             }
             if (0 <= var1_intLifetime1 &&
               var2 == 0) {
-              nb.field_i[var1_intLifetime1].c(-1, oj.field_J);
+              nb.field_i[var1_intLifetime1].c(-1, AlphaWidgetContainer.field_J);
               nb.field_i[var1_intLifetime1].b((byte) -108);
             }
           }
-          if (oj.field_J >= 0 &&
+          if (AlphaWidgetContainer.field_J >= 0 &&
             var2 == 0) {
-            var3 = nb.field_i[oj.field_J].b(8779);
+            var3 = nb.field_i[AlphaWidgetContainer.field_J].b(8779);
             if (-2 < var3) {
               if (var3 >= 0) {
-                nb.field_i[var3].c(-1, oj.field_J);
+                nb.field_i[var3].c(-1, AlphaWidgetContainer.field_J);
                 nb.field_i[var3].b((byte) 55);
               }
               var1_intLifetime1 = var3;
             }
           }
           if (var1_intLifetime1 > -2 &&
-            oj.field_J != var1_intLifetime1) {
+            AlphaWidgetContainer.field_J != var1_intLifetime1) {
             q.field_c = var1_intLifetime1;
             tk.field_a = true;
           }
           boolean decompiledFrameRemainder0 = true;
           if (jk.field_ab != 0) {
-            if (3 != oj.field_J &&
-              8 != oj.field_J) {
-              if ((5 == oj.field_J)) {
+            if (3 != AlphaWidgetContainer.field_J &&
+              8 != AlphaWidgetContainer.field_J) {
+              if ((5 == AlphaWidgetContainer.field_J)) {
                 ce.a(EditableTextField.field_L, false, false, true);
               }
               decompiledFrameRemainder0 = false;
@@ -171,7 +171,7 @@ final class oc extends hn {
             }
           }
           fa.field_e = false;
-          if (oj.field_J == 4 &&
+          if (AlphaWidgetContainer.field_J == 4 &&
             DefaultTextWidgetRenderer.b(42)) {
             if (0 < qd.field_R) {
               qd.field_R = qd.field_R - 1;

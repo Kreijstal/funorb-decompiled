@@ -337,7 +337,7 @@ final class vf {
             return false;
           }
           var7 = new AccountCreationResultPanel(dc.field_a, param0);
-          dc.field_a.a(var7, (byte) 91);
+          dc.field_a.showDialog(var7, (byte) 91);
           boolean decompiledSharedTail0 = !(mc.b(120));
           if (!decompiledSharedTail0) {
             var7.o(11);

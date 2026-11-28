@@ -346,7 +346,7 @@ final class jk extends hm {
         try {
           var2_int = param0.length();
           if (var2_int == 0) {
-            stackIn_3_0 = tf.field_H;
+            stackIn_3_0 = AlphaWidgetContainer.field_H;
             return stackIn_3_0;
           }
           if (var2_int > 64) {

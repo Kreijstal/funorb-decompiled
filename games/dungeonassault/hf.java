@@ -4,14 +4,14 @@
 abstract class hf extends sj {
     static ResourceArchive field_pb;
     private int field_jb;
-    private lm field_xb;
+    private UiWidget field_xb;
     private int field_lb;
     static String field_ub;
     static IntrusiveDeque field_ob;
     static int field_sb;
     private int field_qb;
     private int field_tb;
-    private sd field_rb;
+    private AlphaWidgetContainer field_rb;
     private fb field_kb;
     static ad field_wb;
     static ed field_nb;
@@ -22,26 +22,26 @@ abstract class hf extends sj {
     static String field_zb;
     static pp field_mb;
 
-    private final void b(lm param0, byte param1) {
+    private final void b(UiWidget param0, byte param1) {
         try {
           if (this.field_rb != null) {
             this.field_rb.unlink(false);
           }
           int var3_int = -47 / ((param1 - 32) / 42);
           if (param0 != null) {
-            param0.b(0, param0.field_x, this.field_tb + 6, 6, param0.field_s);
-            this.field_rb = new sd(param0);
+            param0.setBounds(0, param0.field_x, this.field_tb + 6, 6, param0.field_s);
+            this.field_rb = new AlphaWidgetContainer(param0);
           } else {
-            this.field_rb = new sd();
+            this.field_rb = new AlphaWidgetContainer();
           }
-          this.b((byte) -57, (lm) (this.field_rb));
+          this.addChild((byte) -57, (UiWidget) (this.field_rb));
           this.field_xb = null;
         } catch (RuntimeException runtimeException) {
           throw AccountServiceResult.wrapClientException((Throwable) ((Object) runtimeException), "hf.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
-    hf(ji param0, lm param1, int param2, int param3, int param4) {
+    hf(ModalDialogHost param0, UiWidget param1, int param2, int param3, int param4) {
         super(param0, 12 + param1.field_x, param1.field_s + (param2 + 12));
         try {
           this.field_qb = param3;
@@ -69,15 +69,15 @@ abstract class hf extends sj {
         }
     }
 
-    final boolean i(int param0) {
+    final boolean snapDialogAnimation(int param0) {
         this.h((byte) 99);
         if (param0 != 462) {
           return true;
         }
-        return super.i(param0 ^ 0);
+        return super.snapDialogAnimation(param0 ^ 0);
     }
 
-    boolean a(lm param0, char param1, int param2, byte param3) {
+    boolean handleKey(UiWidget param0, char param1, int param2, byte param3) {
         RuntimeException var5 = null;
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
@@ -85,19 +85,19 @@ abstract class hf extends sj {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param3 < 55) {
-            this.field_rb = (sd) null;
+            this.field_rb = (AlphaWidgetContainer) null;
           }
-          if (super.a(param0, param1, param2, (byte) 124)) {
+          if (super.handleKey(param0, param1, param2, (byte) 124)) {
             return true;
           }
           if (this.field_rb != null) {
             if (98 == param2) {
-              this.field_rb.a(34, param0);
+              this.field_rb.takeFocus(34, param0);
             }
             if (param2 != 99) {
               return false;
             }
-            this.field_rb.a(34, param0);
+            this.field_rb.takeFocus(34, param0);
           }
           return false;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -118,7 +118,7 @@ abstract class hf extends sj {
         int var2 = -105 % ((22 - param0) / 35);
         if (this.field_kb != null) {
           if (this.field_kb != lp.field_o) {
-            this.b(-30, this.field_xb.field_s + (12 + this.field_tb), this.field_xb.field_x + 12);
+            this.setCenteredSize(-30, this.field_xb.field_s + (12 + this.field_tb), this.field_xb.field_x + 12);
             this.b(this.field_xb, (byte) -74);
           }
           this.field_rb.field_H = 256;
@@ -138,7 +138,7 @@ abstract class hf extends sj {
         this.field_xb = null;
     }
 
-    void b(int param0, lm param1) {
+    void b(int param0, UiWidget param1) {
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         String stackIn_11_2 = null;
@@ -158,7 +158,7 @@ abstract class hf extends sj {
           if (param0 == 1) {
             return;
           }
-          this.field_xb = (lm) null;
+          this.field_xb = (UiWidget) null;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -190,7 +190,7 @@ abstract class hf extends sj {
         }
     }
 
-    boolean f(byte param0) {
+    boolean advanceDialogAnimation(byte param0) {
         int fieldTemp$0 = 0;
         int fieldTemp$1 = 0;
         int var3;
@@ -199,7 +199,7 @@ abstract class hf extends sj {
           if (param0 != -90) {
             return false;
           }
-          return super.f((byte) -90);
+          return super.advanceDialogAnimation((byte) -90);
         }
         if (this.field_kb == hi.field_b) {
           fieldTemp$0 = this.field_lb + 1;
@@ -215,13 +215,13 @@ abstract class hf extends sj {
           if (param0 != -90) {
             return false;
           }
-          return super.f((byte) -90);
+          return super.advanceDialogAnimation((byte) -90);
         }
         if (lp.field_o != this.field_kb) {
           if (param0 != -90) {
             return false;
           }
-          return super.f((byte) -90);
+          return super.advanceDialogAnimation((byte) -90);
         }
         fieldTemp$1 = this.field_lb + 1;
         this.field_lb = this.field_lb + 1;
@@ -234,7 +234,7 @@ abstract class hf extends sj {
         if (param0 != -90) {
           return false;
         }
-        return super.f((byte) -90);
+        return super.advanceDialogAnimation((byte) -90);
     }
 
     static {

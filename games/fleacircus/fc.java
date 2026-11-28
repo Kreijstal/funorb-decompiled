@@ -207,7 +207,7 @@ final class fc {
           for (var9 = 0; nb.field_b > var9; var9++) {
             if (1 != jd.field_o[var9] &&
               cl.field_d[var9] == 0) {
-              if (db.field_H == 0) {
+              if (ModalDialog.field_H == 0) {
                 el.field_s[va.field_t[var9]].draw(-2 + qg.field_a[var9], -2 + dh.field_b[var9]);
               } else {
                 el.field_s[va.field_t[var9]].drawFlippedVertical(qg.field_a[var9] - 2, dh.field_b[var9] - 2);
@@ -215,7 +215,7 @@ final class fc {
             }
           }
           for (var9Lifetime1 = 0; pl.field_g > var9Lifetime1; var9Lifetime1++) {
-            var5 = f.field_F[var9Lifetime1];
+            var5 = ModalDialogHost.field_F[var9Lifetime1];
             var6 = ek.field_b[var9Lifetime1];
             aj.field_t[15].draw(16 * var5 - 4, -4 + (-2 + var6) * 16 + hl.field_C[var9Lifetime1]);
           }
@@ -291,20 +291,20 @@ final class fc {
           var9Lifetime6 = aj.field_t[2].field_t + 365;
           nc.field_d.drawOpaque(0, 0);
           nc.field_d.drawFlippedHorizontal(320, 0);
-          stackIn_85_0 = dk.field_C.field_a;
+          stackIn_85_0 = SingleChildWidgetContainer.field_C.field_a;
           if (mh.field_u == 1) {
-            stackIn_86_1 = gj.field_E;
+            stackIn_86_1 = DequeWidgetContainer.field_E;
           } else {
             stackIn_86_1 = a.field_b;
           }
-          og.a(stackIn_85_0, stackIn_86_1, 93, dk.field_C.field_l, dk.field_C.field_d, dk.field_C.field_n);
+          og.a(stackIn_85_0, stackIn_86_1, 93, SingleChildWidgetContainer.field_C.field_l, SingleChildWidgetContainer.field_C.field_d, SingleChildWidgetContainer.field_C.field_n);
           aj.field_t[2].draw(132, 367);
           oj.a(371, 0, 136, var2);
           stackIn_88_0 = MatchingFieldValidator.field_p;
           stackIn_88_1 = ha.field_p.toLowerCase();
-          stackIn_88_2 = 7 + (dk.field_C.field_l + 5);
+          stackIn_88_2 = 7 + (SingleChildWidgetContainer.field_C.field_l + 5);
           stackIn_88_3 = var9Lifetime6;
-          stackIn_88_4 = dk.field_C.a((byte) 114);
+          stackIn_88_4 = SingleChildWidgetContainer.field_C.a((byte) 114);
           stackIn_89_5 = (1 != ab.field_b);
           if (stackIn_88_4 & !stackIn_89_5) {
             stackIn_92_4 = 0;
@@ -316,7 +316,7 @@ final class fc {
           if (mh.field_u != 2) {
             stackIn_95_1 = a.field_b;
           } else {
-            stackIn_95_1 = gj.field_E;
+            stackIn_95_1 = DequeWidgetContainer.field_E;
           }
           og.a(stackIn_94_0, stackIn_95_1, 112, wd.field_a.field_l, wd.field_a.field_d, wd.field_a.field_n);
           aj.field_t[3].draw(352, 367);
@@ -334,7 +334,7 @@ final class fc {
           ((BitmapFont) (Object) stackIn_97_0).drawString(stackIn_97_1, stackIn_97_2, stackIn_97_3, stackIn_101_4, -1);
           stackIn_103_0 = de.field_b.field_a;
           if (mh.field_u == 3) {
-            stackIn_104_1 = gj.field_E;
+            stackIn_104_1 = DequeWidgetContainer.field_E;
           } else {
             stackIn_104_1 = a.field_b;
           }
@@ -353,11 +353,11 @@ final class fc {
           }
           ((BitmapFont) (Object) stackIn_106_0).drawString(stackIn_106_1, stackIn_106_2, stackIn_106_3, stackIn_110_4, -1);
           var11Lifetime2 = 100 % ((param0 - 66) / 60);
-          var10 = db.a(pk.field_G, new String[]{FrameTimer.field_c[fleas.field_E][var1_int]}, true);
-          var12 = db.a(fb.field_f, new String[]{Integer.toString(DiskArchiveRequest.field_z), Integer.toString((int) ia.field_m[fleas.field_E][var1_int].field_f)}, true);
-          var13 = db.a(va.field_s, new String[]{Integer.toString(pl.field_f), Integer.toString((int) ia.field_m[fleas.field_E][var1_int].field_e)}, true);
-          var14 = db.a(hm.field_h, new String[]{Integer.toString(wi.field_b)}, true);
-          var15 = db.a(pd.field_i, new String[]{Integer.toString(RichTextLayout.field_f ^ wi.field_p.field_b)}, true);
+          var10 = ModalDialog.a(DraggableWidgetContainer.field_G, new String[]{FrameTimer.field_c[fleas.field_E][var1_int]}, true);
+          var12 = ModalDialog.a(fb.field_f, new String[]{Integer.toString(DiskArchiveRequest.field_z), Integer.toString((int) ia.field_m[fleas.field_E][var1_int].field_f)}, true);
+          var13 = ModalDialog.a(va.field_s, new String[]{Integer.toString(pl.field_f), Integer.toString((int) ia.field_m[fleas.field_E][var1_int].field_e)}, true);
+          var14 = ModalDialog.a(hm.field_h, new String[]{Integer.toString(wi.field_b)}, true);
+          var15 = ModalDialog.a(pd.field_i, new String[]{Integer.toString(RichTextLayout.field_f ^ wi.field_p.field_b)}, true);
           var16 = ve.field_d;
           var17 = 3 + (int)(1.5 * (double)var16.field_H);
           var18 = 0;
@@ -368,8 +368,8 @@ final class fc {
           var16.drawString(var14, 120, 425 + var16.field_H, var18, var19);
           var16.drawString(var15, ol.field_f.field_l, 425 + var16.field_H, var18, var19);
           var20 = wa.a(false);
-          var21 = db.a(lf.field_b, new String[]{var20}, true);
-          var16.drawString(db.a(var21, new String[]{"C8BA91"}, true), 120, var16.field_H + 425 + var17, var18, var19);
+          var21 = ModalDialog.a(lf.field_b, new String[]{var20}, true);
+          var16.drawString(ModalDialog.a(var21, new String[]{"C8BA91"}, true), 120, var16.field_H + 425 + var17, var18, var19);
           ol.field_f.field_l = 250;
           ol.field_f.field_x = ve.field_d;
           ol.field_f.field_a = 425 + var17 - 4;
@@ -385,7 +385,7 @@ final class fc {
             if (var22 == 0) {
               stackIn_121_1 = a.field_b;
             } else {
-              stackIn_121_1 = gj.field_E;
+              stackIn_121_1 = DequeWidgetContainer.field_E;
             }
             og.a(stackIn_120_0, stackIn_121_1, 84, lk.field_D.field_l, lk.field_D.field_d + 6, 1 + lk.field_D.field_n);
             stackIn_123_0 = lk.field_D;
@@ -410,8 +410,8 @@ final class fc {
                 var25 = var25 - 2 * var26;
               }
               MatchingFieldValidator.field_p.drawWaveText(fi.field_l, 320, var25, 0, 0, PacketBuffer.field_j / 3);
-              var26_ref_String = var14 + "   " + db.a(fleas.field_I, new String[]{var20}, true);
-              MatchingFieldValidator.field_p.drawCentred(db.a(var26_ref_String, new String[]{"2"}, true), 320, var25 + MatchingFieldValidator.field_p.field_N, 0, 0);
+              var26_ref_String = var14 + "   " + ModalDialog.a(fleas.field_I, new String[]{var20}, true);
+              MatchingFieldValidator.field_p.drawCentred(ModalDialog.a(var26_ref_String, new String[]{"2"}, true), 320, var25 + MatchingFieldValidator.field_p.field_N, 0, 0);
               SoftwareRasterizer.restoreClip(si.field_R);
             }
           }
@@ -423,7 +423,7 @@ final class fc {
             var22Lifetime1 = stackIn_140_0 & stackIn_141_1 ? 1 : 0;
             stackIn_143_0 = -3 + si.field_y.field_a;
             if (var22Lifetime1 != 0) {
-              stackIn_144_1 = gj.field_E;
+              stackIn_144_1 = DequeWidgetContainer.field_E;
             } else {
               stackIn_144_1 = a.field_b;
             }

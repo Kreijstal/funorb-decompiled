@@ -1,0 +1,754 @@
+/*
+ * Decompiled by CFR-JS 0.4.0.
+ */
+import java.util.*;
+
+class UiWidget extends IntrusiveNode {
+    int field_s;
+    String field_t;
+    WidgetRenderer field_i;
+    static int field_n;
+    static int[] field_q;
+    TextLayout field_p;
+    int field_j;
+    String field_o;
+    int field_f;
+    int field_r;
+    WidgetEventListener field_l;
+    boolean field_m;
+    int field_h;
+    int field_g;
+    int field_k;
+
+    final void drawAllLayers(byte param0, int param1, int param2) {
+        int var4;
+        int var5_int;
+        String var5;
+        int var6;
+        int var7;
+        var7 = CrazyCrystals.field_B;
+        var4 = this.getMaximumRenderLayer((byte) 38);
+        var5_int = 0;
+        while (var4 >= var5_int) {
+          this.drawWidget(param2, (byte) -77, param1, var5_int);
+          var5_int++;
+          if (var7 == 0) {
+            continue;
+          }
+          break;
+        }
+        var5 = SpriteGeometry.a((byte) 6);
+        if (var5 != null) {
+          pi.field_j.a(var5, 3370, DiskCacheWorker.field_b, RichTextWidget.field_G);
+        }
+        var6 = 8 % ((param0 - 66) / 48);
+    }
+
+    boolean handleWheel(int param0, int param1, UiWidget param2, int param3, int param4, int param5, int param6) {
+        RuntimeException var8 = null;
+        RuntimeException stackIn_6_0 = null;
+        StringBuilder stackIn_6_1 = null;
+        String stackIn_7_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        try {
+          if (param0 == 1) {
+            return false;
+          }
+          this.containsPointer(-81, 38, true, -102, 61);
+          return false;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var8 = decompiledCaughtException;
+          stackIn_6_0 = var8;
+          stackIn_6_1 = new StringBuilder().append("qm.FB(").append(param0).append(',').append(param1).append(',');
+          if (param2 == null) {
+            stackIn_7_2 = "null";
+          } else {
+            stackIn_7_2 = "{...}";
+          }
+          throw dn.wrapClientException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(')').toString());
+        }
+    }
+
+    void pointerReleased(int param0, int param1, int param2, int param3, UiWidget param4, int param5) {
+        try {
+          this.field_s = param5;
+        } catch (RuntimeException runtimeException) {
+          throw dn.wrapClientException((Throwable) ((Object) runtimeException), "qm.PA(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ')');
+        }
+    }
+
+    String getTooltipText(byte param0) {
+        if (param0 >= -23) {
+          this.field_f = 96;
+          if (this.field_m) {
+            return this.field_t;
+          }
+          return null;
+        }
+        if (this.field_m) {
+          return this.field_t;
+        }
+        return null;
+    }
+
+    void updatePointer(UiWidget param0, int param1, int param2, int param3) {
+        int var5_int = 0;
+        int var6 = 0;
+        boolean stackIn_5_1 = false;
+        RuntimeException stackIn_11_0 = null;
+        StringBuilder stackIn_11_1 = null;
+        String stackIn_12_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException var5 = null;
+        try {
+          var5_int = this.containsPointer(IsaacRandom.field_h, param3, false, param2, qh.field_i) ? 1 : 0;
+          var6 = 125 % ((-50 - param1) / 59);
+          if ((this.field_m ? 1 : 0) != var5_int) {
+            stackIn_5_1 = (var5_int != 0);
+            this.field_m = stackIn_5_1;
+            if (this.field_l != null &&
+              this.field_l instanceof WidgetHoverListener) {
+              ((WidgetHoverListener) (this.field_l)).onWidgetHoverChanged(var5_int != 0, -2095, this);
+              return;
+            }
+          }
+          return;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var5 = decompiledCaughtException;
+          stackIn_11_0 = var5;
+          stackIn_11_1 = new StringBuilder().append("qm.N(");
+          if (param0 == null) {
+            stackIn_12_2 = "null";
+          } else {
+            stackIn_12_2 = "{...}";
+          }
+          throw dn.wrapClientException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+        }
+    }
+
+    final void appendDebugProperties(int param0, byte param1, StringBuilder param2, Hashtable param3) {
+        StringBuilder discarded$0 = null;
+        StringBuilder discarded$1 = null;
+        StringBuilder discarded$2 = null;
+        StringBuilder discarded$3 = null;
+        StringBuilder discarded$4 = null;
+        StringBuilder discarded$5 = null;
+        StringBuilder discarded$6 = null;
+        StringBuilder discarded$7 = null;
+        RuntimeException stackIn_23_0 = null;
+        StringBuilder stackIn_23_1 = null;
+        String stackIn_24_2 = null;
+        StringBuilder stackIn_26_1 = null;
+        String stackIn_27_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException var5 = null;
+        int var6 = 0;
+        var6 = CrazyCrystals.field_B;
+        try {
+          discarded$0 = param2.append(this.getClass().getName()).append("[0x").append(Integer.toHexString(this.hashCode())).append("] @").append(this.field_r).append(",").append(this.field_j).append(" ").append(this.field_g).append("x").append(this.field_f);
+          if (this.field_o != null) {
+            discarded$1 = param2.append(" text=\"").append(this.field_o).append('"');
+          }
+          if (this.field_m) {
+            discarded$2 = param2.append(" mouseover");
+          }
+          if (param1 < 119) {
+            return;
+          }
+          if (this.isFocused(-111)) {
+            discarded$3 = param2.append(" focused");
+          }
+          if (this.field_i != null) {
+            discarded$4 = param2.append(" renderer=");
+            if (this.field_i instanceof UiWidget) {
+              param2 = this.appendDebugTree(param0 + 1, -86, param3, param2);
+              if (var6 != 0) {
+                discarded$5 = param2.append(this.field_i);
+              }
+            } else {
+              discarded$5 = param2.append(this.field_i);
+            }
+          }
+          if (null != this.field_l) {
+            discarded$6 = param2.append(" listener=");
+            if (this.field_l instanceof UiWidget) {
+              param2 = this.appendDebugTree(1 + param0, -124, param3, param2);
+              if (var6 == 0) {
+                return;
+              }
+            }
+            discarded$7 = param2.append(this.field_l);
+          }
+          return;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var5 = decompiledCaughtException;
+          stackIn_23_0 = var5;
+          stackIn_23_1 = new StringBuilder().append("qm.QB(").append(param0).append(',').append(param1).append(',');
+          if (param2 == null) {
+            stackIn_24_2 = "null";
+          } else {
+            stackIn_24_2 = "{...}";
+          }
+          stackIn_26_1 = ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(',');
+          if (param3 == null) {
+            stackIn_27_2 = "null";
+          } else {
+            stackIn_27_2 = "{...}";
+          }
+          throw dn.wrapClientException((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(')').toString());
+        }
+    }
+
+    final static MouseWheelInput createMouseWheelInput(int param0) {
+        try {
+          Throwable var1 = null;
+          MouseWheelInput stackIn_3_0 = null;
+          Throwable decompiledCaughtException = null;
+          try {
+            if (param0 != 1) {
+              field_q = (int[]) null;
+            }
+            stackIn_3_0 = (MouseWheelInput) (Class.forName("MouseWheelHandler").newInstance());
+            return stackIn_3_0;
+          } catch (java.lang.Throwable decompiledCaughtParameter0) {
+            decompiledCaughtException = decompiledCaughtParameter0;
+            var1 = decompiledCaughtException;
+            return null;
+          }
+        } catch (RuntimeException | Error decompiledUncheckedException) {
+          throw decompiledUncheckedException;
+        } catch (Throwable decompiledCheckedException) {
+          throw new RuntimeException(decompiledCheckedException);
+        }
+    }
+
+    public final String toString() {
+        return this.appendDebugTree(0, -115, new Hashtable(), new StringBuilder()).toString();
+    }
+
+    StringBuilder appendDebugTree(int param0, int param1, Hashtable param2, StringBuilder param3) {
+        RuntimeException var5 = null;
+        StringBuilder stackIn_5_0 = null;
+        RuntimeException stackIn_8_0 = null;
+        StringBuilder stackIn_8_1 = null;
+        String stackIn_9_2 = null;
+        StringBuilder stackIn_11_1 = null;
+        String stackIn_12_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        try {
+          if (this.beginDebugTreeEntry(0, param0, param3, param2)) {
+            this.appendDebugProperties(param0, (byte) 123, param3, param2);
+          }
+          if (param1 > -85) {
+            this.field_k = 84;
+          }
+          stackIn_5_0 = (StringBuilder) (param3);
+          return stackIn_5_0;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var5 = decompiledCaughtException;
+          stackIn_8_0 = var5;
+          stackIn_8_1 = new StringBuilder().append("qm.MA(").append(param0).append(',').append(param1).append(',');
+          if (param2 == null) {
+            stackIn_9_2 = "null";
+          } else {
+            stackIn_9_2 = "{...}";
+          }
+          stackIn_11_1 = ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',');
+          if (param3 == null) {
+            stackIn_12_2 = "null";
+          } else {
+            stackIn_12_2 = "{...}";
+          }
+          throw dn.wrapClientException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
+        }
+    }
+
+    void setBounds(int param0, int param1, int param2, int param3, byte param4) {
+        if (param4 == -52) {
+          this.field_j = param2;
+          this.field_g = param3;
+          this.field_f = param0;
+          this.field_r = param1;
+          return;
+        }
+        field_q = (int[]) null;
+        this.field_j = param2;
+        this.field_g = param3;
+        this.field_f = param0;
+        this.field_r = param1;
+    }
+
+    void blur(byte param0) {
+        if (param0 > -84) {
+          this.field_k = 97;
+        }
+    }
+
+    final boolean processKeyInput(int param0, boolean param1, char param2) {
+        int var4 = 0;
+        int var4Lifetime1;
+        if (this.isFocused(-121)) {
+          if (this.handleKey(param0, 19279, this, param2)) {
+            return true;
+          }
+          var4 = param0;
+          if (var4 == 80) {
+            return this.takeFocus(true, this);
+          }
+          if (param1) {
+            this.getTooltipText((byte) -42);
+            return false;
+          }
+          return false;
+        }
+        var4Lifetime1 = param0;
+        if (var4Lifetime1 == 80) {
+          return this.takeFocus(true, this);
+        }
+        if (!param1) {
+          return false;
+        }
+        this.getTooltipText((byte) -42);
+        return false;
+    }
+
+    public static void g(int param0) {
+        if (param0 != 1) {
+          UiWidget.createMouseWheelInput(38);
+          field_q = null;
+          return;
+        }
+        field_q = null;
+    }
+
+    void drawWidget(int param0, byte param1, int param2, int param3) {
+        if (param3 == 0) {
+          if (this.field_i == null) {
+            if (param1 > -12) {
+              this.field_h = -114;
+              return;
+            }
+            return;
+          }
+          this.field_i.paintWidget(param0, false, param2, this, true);
+        }
+        if (param1 <= -12) {
+          return;
+        }
+        this.field_h = -114;
+    }
+
+    final boolean processPointerInput(int param0, boolean param1, boolean param2, int param3) {
+        int var5;
+        DraggableWidgetContainer var6;
+        int var7;
+        DraggableWidgetContainer var8;
+        DraggableWidgetContainer var9;
+        DraggableWidgetContainer var10;
+        DraggableWidgetContainer var11;
+        DraggableWidgetContainer var12;
+        DraggableWidgetContainer var13;
+        DraggableWidgetContainer var6Lifetime1;
+        DraggableWidgetContainer var6Lifetime2;
+        regionExit1: {
+          var7 = CrazyCrystals.field_B;
+          this.updatePointer(this, -125, param0, param3);
+          var5 = this.isFocused(-111) ? 1 : 0;
+          if (param2) {
+            if (of.field_H != 0) {
+              if (var5 == 0) {
+                if (WallTile.field_v == 0) {
+                  if (gg.field_c == 0 &&
+                    DisplayNameSelectionPanel.field_D != 0) {
+                    this.pointerReleased(IsaacRandom.field_h, param0, param3, qh.field_i, this, 0);
+                    var8 = ok.field_e;
+                    var6 = var8;
+                    if (var8 != null) {
+                      if (var8.field_l instanceof WidgetDropListener) {
+                        ((WidgetDropListener) (var8.field_l)).widgetDropped((DropTargetWidgetContainer) null, -27167, var8);
+                      }
+                      ok.field_e = null;
+                    }
+                    if (var7 != 0 &&
+                      var5 != 0 &&
+                      WallTile.field_v != 0) {
+                      this.blur((byte) -110);
+                    }
+                  }
+                } else {
+                  if (this.pointerPressed(param3, ProfileDataRequest.field_h, this, false, param0, WallTile.field_v, to.field_a)) {
+                    param2 = false;
+                    if (var7 == 0) {
+                      if (gg.field_c == 0 &&
+                        DisplayNameSelectionPanel.field_D != 0) {
+                        this.pointerReleased(IsaacRandom.field_h, param0, param3, qh.field_i, this, 0);
+                        var9 = ok.field_e;
+                        var6Lifetime1 = var9;
+                        if (var9 != null) {
+                          if (var9.field_l instanceof WidgetDropListener) {
+                            ((WidgetDropListener) (var9.field_l)).widgetDropped((DropTargetWidgetContainer) null, -27167, var9);
+                          }
+                          ok.field_e = null;
+                        }
+                        if (var7 != 0 &&
+                          var5 != 0 &&
+                          WallTile.field_v != 0) {
+                          this.blur((byte) -110);
+                        }
+                      }
+                      break regionExit1;
+                    }
+                  }
+                  if (((gg.field_c == 0)) &&
+                    ((DisplayNameSelectionPanel.field_D != 0))) {
+                    this.pointerReleased(IsaacRandom.field_h, param0, param3, qh.field_i, this, 0);
+                    var11 = ok.field_e;
+                    var6Lifetime2 = var11;
+                    if (var11 != null) {
+                      if (var11.field_l instanceof WidgetDropListener) {
+                        ((WidgetDropListener) (var11.field_l)).widgetDropped((DropTargetWidgetContainer) null, -27167, var11);
+                      }
+                      ok.field_e = null;
+                    }
+                  }
+                }
+                break regionExit1;
+              }
+              this.handleWheel(1, IsaacRandom.field_h, this, qh.field_i, param0, param3, of.field_H);
+            }
+            regionExit2: {
+              if (WallTile.field_v != 0) {
+                if (this.pointerPressed(param3, ProfileDataRequest.field_h, this, false, param0, WallTile.field_v, to.field_a)) {
+                  param2 = false;
+                  if (var7 == 0) {
+                    break regionExit2;
+                  }
+                }
+                if (var5 != 0) {
+                  this.blur((byte) -118);
+                  if (gg.field_c == 0) {
+                    if (DisplayNameSelectionPanel.field_D == 0) {
+                      break regionExit1;
+                    }
+                    this.pointerReleased(IsaacRandom.field_h, param0, param3, qh.field_i, this, 0);
+                    var12 = ok.field_e;
+                    if (var12 != null) {
+                      if (var12.field_l instanceof WidgetDropListener) {
+                        ((WidgetDropListener) (var12.field_l)).widgetDropped((DropTargetWidgetContainer) null, -27167, var12);
+                      }
+                      ok.field_e = null;
+                    }
+                    if (var7 != 0) {
+                      if (WallTile.field_v == 0) {
+                        break regionExit1;
+                      }
+                      this.blur((byte) -110);
+                    }
+                  }
+                  break regionExit1;
+                }
+              }
+            }
+            if ((gg.field_c == 0) &&
+              (DisplayNameSelectionPanel.field_D != 0)) {
+              this.pointerReleased(IsaacRandom.field_h, param0, param3, qh.field_i, this, 0);
+              var13 = ok.field_e;
+              if (var13 != null) {
+                if (var13.field_l instanceof WidgetDropListener) {
+                  ((WidgetDropListener) (var13.field_l)).widgetDropped((DropTargetWidgetContainer) null, -27167, var13);
+                }
+                ok.field_e = null;
+              }
+              if ((var7 != 0) &&
+                (var5 != 0 &&
+                WallTile.field_v != 0)) {
+                this.blur((byte) -110);
+              }
+            }
+          } else {
+            if (var5 != 0 &&
+              WallTile.field_v != 0) {
+              this.blur((byte) -110);
+            }
+          }
+        }
+        DisplayNameSelectionPanel.field_D = gg.field_c;
+        if (param1) {
+          return true;
+        }
+        ia.a((byte) -47, this.getTooltipText((byte) -54));
+        return param2;
+    }
+
+    final void refreshLayout(int param0) {
+        this.setBounds(this.field_f, this.field_r, this.field_j, this.field_g, (byte) -52);
+        if (param0 > -27) {
+          this.isFocused(-107);
+        }
+    }
+
+    boolean isFocused(int param0) {
+        if (param0 >= -107) {
+          return true;
+        }
+        return false;
+    }
+
+    boolean pointerPressed(int param0, int param1, UiWidget param2, boolean param3, int param4, int param5, int param6) {
+        RuntimeException var8 = null;
+        RuntimeException stackIn_6_0 = null;
+        StringBuilder stackIn_6_1 = null;
+        String stackIn_7_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        try {
+          if (!this.containsPointer(param1, param0, param3, param4, param6)) {
+            return false;
+          }
+          this.field_s = param5;
+          return false;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var8 = decompiledCaughtException;
+          stackIn_6_0 = var8;
+          stackIn_6_1 = new StringBuilder().append("qm.KA(").append(param0).append(',').append(param1).append(',');
+          if (param2 == null) {
+            stackIn_7_2 = "null";
+          } else {
+            stackIn_7_2 = "{...}";
+          }
+          throw dn.wrapClientException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(')').toString());
+        }
+    }
+
+    boolean takeFocus(boolean param0, UiWidget param1) {
+        RuntimeException var3 = null;
+        RuntimeException stackIn_7_0 = null;
+        StringBuilder stackIn_7_1 = null;
+        String stackIn_8_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        try {
+          if (param0) {
+            return false;
+          }
+          return true;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var3 = decompiledCaughtException;
+          stackIn_7_0 = var3;
+          stackIn_7_1 = new StringBuilder().append("qm.P(").append(param0).append(',');
+          if (param1 == null) {
+            stackIn_8_2 = "null";
+          } else {
+            stackIn_8_2 = "{...}";
+          }
+          throw dn.wrapClientException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
+        }
+    }
+
+    boolean handleKey(int param0, int param1, UiWidget param2, char param3) {
+        RuntimeException var5 = null;
+        RuntimeException stackIn_7_0 = null;
+        StringBuilder stackIn_7_1 = null;
+        String stackIn_8_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        try {
+          if (param1 == 19279) {
+            return false;
+          }
+          return false;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var5 = decompiledCaughtException;
+          stackIn_7_0 = var5;
+          stackIn_7_1 = new StringBuilder().append("qm.AA(").append(param0).append(',').append(param1).append(',');
+          if (param2 == null) {
+            stackIn_8_2 = "null";
+          } else {
+            stackIn_8_2 = "{...}";
+          }
+          throw dn.wrapClientException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param3).append(')').toString());
+        }
+    }
+
+    int getMaximumRenderLayer(byte param0) {
+        if (param0 < 30) {
+          this.appendDebugTree(-13, -26, (Hashtable) null, (StringBuilder) null);
+          return 0;
+        }
+        return 0;
+    }
+
+    UiWidget(String param0, WidgetEventListener param1) {
+        this(param0, pi.field_j.field_n, param1);
+    }
+
+    final boolean containsPointer(int param0, int param1, boolean param2, int param3, int param4) {
+        if (param2) {
+          return false;
+        }
+        if (param1 + this.field_r > param4) {
+          return false;
+        }
+        if (this.field_j + param3 > param0) {
+          return false;
+        }
+        if (param1 - (-this.field_r - this.field_g) <= param4) {
+          return false;
+        }
+        if (param3 + this.field_j + this.field_f > param0) {
+          return true;
+        }
+        return false;
+    }
+
+    final boolean beginDebugTreeEntry(int param0, int param1, StringBuilder param2, Hashtable param3) {
+        StringBuilder discarded$1 = null;
+        RuntimeException var5 = null;
+        RuntimeException stackIn_10_0 = null;
+        StringBuilder stackIn_10_1 = null;
+        String stackIn_11_2 = null;
+        StringBuilder stackIn_13_1 = null;
+        String stackIn_14_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        try {
+          if (param0 != 0) {
+            return true;
+          }
+          if (param3.containsKey(this)) {
+            discarded$1 = param2.append("<circular [0x").append(Integer.toHexString(this.hashCode())).append("]>");
+            return false;
+          }
+          param3.put(this, this);
+          return true;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var5 = decompiledCaughtException;
+          stackIn_10_0 = var5;
+          stackIn_10_1 = new StringBuilder().append("qm.IB(").append(param0).append(',').append(param1).append(',');
+          if (param2 == null) {
+            stackIn_11_2 = "null";
+          } else {
+            stackIn_11_2 = "{...}";
+          }
+          stackIn_13_1 = ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',');
+          if (param3 == null) {
+            stackIn_14_2 = "null";
+          } else {
+            stackIn_14_2 = "{...}";
+          }
+          throw dn.wrapClientException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
+        }
+    }
+
+    protected UiWidget() {
+        this.field_h = 0;
+        this.field_k = 0;
+    }
+
+    UiWidget(String param0, WidgetRenderer param1, WidgetEventListener param2) {
+        RuntimeException runtimeException = null;
+        TextWidgetRenderer var4 = null;
+        RuntimeException stackIn_6_0 = null;
+        StringBuilder stackIn_6_1 = null;
+        String stackIn_7_2 = null;
+        StringBuilder stackIn_9_1 = null;
+        String stackIn_10_2 = null;
+        StringBuilder stackIn_12_1 = null;
+        String stackIn_13_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        this.field_h = 0;
+        this.field_k = 0;
+        try {
+          this.field_l = param2;
+          this.field_o = param0;
+          this.field_i = param1;
+          if (this.field_i instanceof TextWidgetRenderer) {
+            var4 = (TextWidgetRenderer) ((Object) this.field_i);
+            this.field_g = var4.getPreferredWidth(this, -12817);
+            this.field_f = var4.getPreferredHeight(this, -1);
+          }
+          return;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          runtimeException = decompiledCaughtException;
+          stackIn_6_0 = runtimeException;
+          stackIn_6_1 = new StringBuilder().append("qm.<init>(");
+          if (param0 == null) {
+            stackIn_7_2 = "null";
+          } else {
+            stackIn_7_2 = "{...}";
+          }
+          stackIn_9_1 = ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',');
+          if (param1 == null) {
+            stackIn_10_2 = "null";
+          } else {
+            stackIn_10_2 = "{...}";
+          }
+          stackIn_12_1 = ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',');
+          if (param2 == null) {
+            stackIn_13_2 = "null";
+          } else {
+            stackIn_13_2 = "{...}";
+          }
+          throw dn.wrapClientException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
+        }
+    }
+
+    final static int a(rh param0, int param1, rh param2) {
+        RuntimeException var3 = null;
+        int stackIn_3_0 = 0;
+        RuntimeException stackIn_6_0 = null;
+        StringBuilder stackIn_6_1 = null;
+        String stackIn_7_2 = null;
+        StringBuilder stackIn_9_1 = null;
+        String stackIn_10_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        try {
+          if (param1 <= 84) {
+            UiWidget.g(-54);
+          }
+          stackIn_3_0 = ai.a(param2, false, (String) null, 0, param0, (byte) 84, 0);
+          return stackIn_3_0;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var3 = decompiledCaughtException;
+          stackIn_6_0 = var3;
+          stackIn_6_1 = new StringBuilder().append("qm.HB(");
+          if (param0 == null) {
+            stackIn_7_2 = "null";
+          } else {
+            stackIn_7_2 = "{...}";
+          }
+          stackIn_9_1 = ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(',');
+          if (param2 == null) {
+            stackIn_10_2 = "null";
+          } else {
+            stackIn_10_2 = "{...}";
+          }
+          throw dn.wrapClientException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
+        }
+    }
+
+    UiWidget(int param0, int param1, int param2, int param3, WidgetRenderer param4, WidgetEventListener param5) {
+        this.field_h = 0;
+        this.field_k = 0;
+        try {
+          this.field_g = param2;
+          this.field_i = param4;
+          this.field_r = param0;
+          this.field_l = param5;
+          this.field_f = param3;
+          this.field_j = param1;
+        } catch (RuntimeException runtimeException) {
+          throw dn.wrapClientException((Throwable) ((Object) runtimeException), "qm.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + (param5 != null ? "{...}" : "null") + ')');
+        }
+    }
+
+    static {
+        field_q = new int[8192];
+    }
+}

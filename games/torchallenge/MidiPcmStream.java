@@ -425,7 +425,7 @@ final class MidiPcmStream extends PcmStream {
             java.awt.Component var7 = (java.awt.Component) null;
             MidiPcmStream.a((byte) 92, (java.awt.Component) null);
           }
-          bg.a(param5, param0, 1024, param0, param4, param2, -118, param3);
+          LabeledWidgetContainer.a(param5, param0, 1024, param0, param4, param2, -118, param3);
         } catch (RuntimeException runtimeException) {
           throw oj.wrapException((Throwable) ((Object) runtimeException), "kb.H(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + (param5 != null ? "{...}" : "null") + ')');
         }

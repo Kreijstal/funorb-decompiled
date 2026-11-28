@@ -128,7 +128,7 @@ final class kc {
           String var5Lifetime3;
           String var5Lifetime4;
           try {
-            sa.field_P = param2;
+            LabeledWidgetContainer.field_P = param2;
             try {
               var3 = param0.getParameter("cookieprefix");
               var5 = var3;

@@ -203,13 +203,13 @@ final class jc {
     }
 
     final static DefaultTextWidgetRenderer a(byte param0) {
-        if (ok.field_D == null) {
-          ok.field_D = new DefaultTextWidgetRenderer(fk.field_a, 20, 0, 0, 0, 11579568, -1, 0, 0, fk.field_a.field_G, -1, 2147483647, true);
+        if (SingleChildWidgetContainer.field_D == null) {
+          SingleChildWidgetContainer.field_D = new DefaultTextWidgetRenderer(fk.field_a, 20, 0, 0, 0, 11579568, -1, 0, 0, fk.field_a.field_G, -1, 2147483647, true);
         }
         if (param0 < 71) {
           return (DefaultTextWidgetRenderer) null;
         }
-        return ok.field_D;
+        return SingleChildWidgetContainer.field_D;
     }
 
     public static void clearStaticReferences(int param0) {
@@ -230,7 +230,7 @@ final class jc {
         if (param0 < 66) {
           return (String) null;
         }
-        var6 = "(" + o.field_a + " " + u.field_o + " " + mc.field_L + ") " + uk.field_c;
+        var6 = "(" + o.field_a + " " + u.field_o + " " + DropTargetWidgetContainer.field_L + ") " + uk.field_c;
         var1 = var6;
         if (ConfirmedEmailAvailabilityValidator.field_o > 0) {
           var1 = var6 + ":";

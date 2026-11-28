@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class qh extends kj implements TextHotspotListener, WidgetActivationListener {
+final class qh extends DequeWidgetContainer implements TextHotspotListener, WidgetActivationListener {
     static int field_J;
     static int field_P;
     private AccountCreationResultPanel field_Q;
@@ -43,12 +43,12 @@ final class qh extends kj implements TextHotspotListener, WidgetActivationListen
         int var5Lifetime2;
         int var5Lifetime3;
         var9 = TorChallenge.field_F ? 1 : 0;
-        if (null != uk.field_N) {
-          uk.field_N.bindAsRenderTarget();
+        if (null != DraggableWidgetContainer.field_N) {
+          DraggableWidgetContainer.field_N.bindAsRenderTarget();
           SoftwareRasterizer.clearRaster();
         } else {
-          uk.field_N = new Sprite(640, 480);
-          uk.field_N.bindAsRenderTarget();
+          DraggableWidgetContainer.field_N = new Sprite(640, 480);
+          DraggableWidgetContainer.field_N.bindAsRenderTarget();
         }
         if (3 != param0) {
           if (ii.field_h == null) {
@@ -62,7 +62,7 @@ final class qh extends kj implements TextHotspotListener, WidgetActivationListen
         var3 = af.field_f[1];
         var5 = af.field_f[3];
         var4 = af.field_f[2];
-        sf.a(uk.field_N, InteractiveWidget.field_L, var3, var5, var2, var4, (byte) -55);
+        sf.a(DraggableWidgetContainer.field_N, InteractiveWidget.field_L, var3, var5, var2, var4, (byte) -55);
         if (param0 != 0 &&
           param0 != 1) {
           if (param0 == 2) {
@@ -70,14 +70,14 @@ final class qh extends kj implements TextHotspotListener, WidgetActivationListen
             var5Lifetime1 = IsaacRandom.field_i[3];
             var4Lifetime1 = IsaacRandom.field_i[2];
             var2Lifetime1 = IsaacRandom.field_i[0];
-            sf.a(uk.field_N, InteractiveWidget.field_L, var3Lifetime1, var5Lifetime1, var2Lifetime1, var4Lifetime1, (byte) -55);
+            sf.a(DraggableWidgetContainer.field_N, InteractiveWidget.field_L, var3Lifetime1, var5Lifetime1, var2Lifetime1, var4Lifetime1, (byte) -55);
           }
         } else {
           var4Lifetime1 = ob.field_b[2];
           var3Lifetime1 = ob.field_b[1];
           var2Lifetime1 = ob.field_b[0];
           var5Lifetime1 = ob.field_b[3];
-          sf.a(uk.field_N, InteractiveWidget.field_L, var3Lifetime1, var5Lifetime1, var2Lifetime1, var4Lifetime1, (byte) -55);
+          sf.a(DraggableWidgetContainer.field_N, InteractiveWidget.field_L, var3Lifetime1, var5Lifetime1, var2Lifetime1, var4Lifetime1, (byte) -55);
         }
         var4Lifetime2 = oj.field_e[2];
         if (!param1) {
@@ -88,7 +88,7 @@ final class qh extends kj implements TextHotspotListener, WidgetActivationListen
         var3Lifetime2 = oj.field_e[1];
         var10 = new Sprite(1 + var4Lifetime2 / 2, var5Lifetime2);
         sf.a(var10, ph.field_h, 0, var5Lifetime2, 0, var4Lifetime2 / 2 + 1, (byte) -55);
-        uk.field_N.bindAsRenderTarget();
+        DraggableWidgetContainer.field_N.bindAsRenderTarget();
         var10.drawTransparent(var2Lifetime2, var3Lifetime2);
         var10.drawFlippedHorizontal(var2Lifetime2 + var4Lifetime2 / 2 - 2, var3Lifetime2);
         var7 = di.field_t[vj.field_c].fullHeight;
@@ -102,12 +102,12 @@ final class qh extends kj implements TextHotspotListener, WidgetActivationListen
             var2Lifetime3 = oa.field_a[0];
             var4Lifetime3 = oa.field_a[2];
             var5Lifetime3 = oa.field_a[3];
-            sf.a(uk.field_N, InteractiveWidget.field_L, var3Lifetime3, var5Lifetime3, var2Lifetime3, var4Lifetime3, (byte) -55);
+            sf.a(DraggableWidgetContainer.field_N, InteractiveWidget.field_L, var3Lifetime3, var5Lifetime3, var2Lifetime3, var4Lifetime3, (byte) -55);
           }
         } else {
           var3Lifetime3 = ValidatedTextField.field_eb[vj.field_c][1];
           var2Lifetime3 = ValidatedTextField.field_eb[vj.field_c][0];
-          uk.field_N.bindAsRenderTarget();
+          DraggableWidgetContainer.field_N.bindAsRenderTarget();
           ie.field_f[vj.field_c][0].drawTransparent(var2Lifetime3, var3Lifetime3);
           IterableNodeHashTable.field_h = new Sprite(ie.field_f[vj.field_c][1].fullWidth, ie.field_f[vj.field_c][1].fullHeight);
           ac.field_a = new Sprite(ie.field_f[vj.field_c][1].fullWidth, ie.field_f[vj.field_c][1].fullHeight);
@@ -118,7 +118,7 @@ final class qh extends kj implements TextHotspotListener, WidgetActivationListen
           2 == param0) {
           var3Lifetime4 = nh.field_db[1];
           var2Lifetime4 = nh.field_db[0];
-          uk.field_N.bindAsRenderTarget();
+          DraggableWidgetContainer.field_N.bindAsRenderTarget();
           wf.field_b.drawTransparent(var2Lifetime4, var3Lifetime4);
         }
         SectorCacheStore.field_f.bindAsTarget(-53);
@@ -249,7 +249,7 @@ final class qh extends kj implements TextHotspotListener, WidgetActivationListen
         field_M = null;
     }
 
-    final boolean a(int param0, char param1, byte param2, UiComponent param3) {
+    final boolean handleKey(int param0, char param1, byte param2, UiComponent param3) {
         RuntimeException var5 = null;
         boolean stackIn_8_0 = false;
         boolean stackIn_12_0 = false;
@@ -261,17 +261,17 @@ final class qh extends kj implements TextHotspotListener, WidgetActivationListen
           if (param2 <= 9) {
             qh.clearDeclaredStaticReferences((byte) -104);
           }
-          if (super.a(param0, param1, (byte) 51, param3)) {
+          if (super.handleKey(param0, param1, (byte) 51, param3)) {
             return true;
           }
           if (param0 == 98) {
-            stackIn_8_0 = this.a(param3, (byte) -16);
+            stackIn_8_0 = this.focusPreviousChild(param3, (byte) -16);
             return stackIn_8_0;
           }
           if (99 != param0) {
             return false;
           }
-          stackIn_12_0 = this.b(109, param3);
+          stackIn_12_0 = this.focusNextChild(109, param3);
           return stackIn_12_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -398,7 +398,7 @@ final class qh extends kj implements TextHotspotListener, WidgetActivationListen
     }
 
     qh(AccountCreationResultPanel param0) {
-        super(0, 0, 288, 0, (j) null);
+        super(0, 0, 288, 0, (WidgetRenderer) null);
         String var7 = null;
         int var3 = 0;
         DefaultTextWidgetRenderer var4 = null;
@@ -406,8 +406,8 @@ final class qh extends kj implements TextHotspotListener, WidgetActivationListen
         int var6 = 0;
         try {
           this.field_Q = param0;
-          this.field_K = new InteractiveWidget(be.field_a, (gg) null);
-          this.field_K.field_q = (j) ((Object) new cl());
+          this.field_K = new InteractiveWidget(be.field_a, (WidgetEventListener) null);
+          this.field_K.field_q = (WidgetRenderer) ((Object) new cl());
           var7 = ni.a(new String[]{this.c(false), this.a(109)}, 0, lc.field_m);
           var3 = 20;
           var4 = new DefaultTextWidgetRenderer(RasterBuffer.field_g, 0, 0, 0, 0, 16777215, -1, 3, 0, RasterBuffer.field_g.field_x, -1, 2147483647, true);
@@ -416,16 +416,16 @@ final class qh extends kj implements TextHotspotListener, WidgetActivationListen
           this.field_N.a(0, false, gh.field_z);
           this.field_N.a(1, false, gh.field_z);
           this.field_N.field_p = this.field_p - 40;
-          this.field_N.field_k = (gg) (this);
+          this.field_N.field_k = (WidgetEventListener) (this);
           this.field_N.b(var3, 2, -40 + this.field_p, 26);
           var3 = var3 + (15 + this.field_N.field_l);
-          this.a(0, this.field_N);
+          this.addChild(0, this.field_N);
           var5 = 4;
           var6 = 200;
-          this.field_K.a((byte) 105, 300 - var6 >> 1, 40, var6, var3);
-          this.field_K.field_k = (gg) (this);
-          this.a(0, this.field_K);
-          this.a((byte) 106, 0, var5 + 55 + var3, 300, 0);
+          this.field_K.setBounds((byte) 105, 300 - var6 >> 1, 40, var6, var3);
+          this.field_K.field_k = (WidgetEventListener) (this);
+          this.addChild(0, this.field_K);
+          this.setBounds((byte) 106, 0, var5 + 55 + var3, 300, 0);
         } catch (RuntimeException runtimeException) {
           throw oj.wrapException((Throwable) ((Object) runtimeException), "qh.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }

@@ -48,16 +48,16 @@ final class TextHotspotBounds extends IntrusiveNode {
             for (var6_int = 0; var6_int < var3; var6_int++) {
               var9[var6_int] = cq.field_y[ie.a((int) var20[var6_int], 255)];
             }
-            var1[var2] = new Sprite(fm.field_E, rh.field_d, PacketBuffer.field_o[var2], na.field_G[var2], vo.field_b[var2], PasswordValidator.field_o[var2], var21);
+            var1[var2] = new Sprite(fm.field_E, rh.field_d, PacketBuffer.field_o[var2], LabeledWidgetContainer.field_G[var2], vo.field_b[var2], PasswordValidator.field_o[var2], var21);
           } else {
-            var22 = fq.field_G[var2];
+            var22 = AlphaWidgetContainer.field_G[var2];
             var16 = new int[var3];
             var13 = var16;
             var6 = var13;
             for (var7 = 0; var7 < var3; var7++) {
               var6[var7] = UiWidget.a(ie.a((int) var22[var7], 255) << 24, cq.field_y[ie.a((int) var20[var7], 255)]);
             }
-            var1[var2] = (Sprite) ((Object) new ArgbSprite(fm.field_E, rh.field_d, PacketBuffer.field_o[var2], na.field_G[var2], vo.field_b[var2], PasswordValidator.field_o[var2], var16));
+            var1[var2] = (Sprite) ((Object) new ArgbSprite(fm.field_E, rh.field_d, PacketBuffer.field_o[var2], LabeledWidgetContainer.field_G[var2], vo.field_b[var2], PasswordValidator.field_o[var2], var16));
           }
           var2++;
         }

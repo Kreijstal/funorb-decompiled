@@ -128,7 +128,7 @@ final class nh extends IntrusiveNode {
         String var3 = null;
         long var4 = 0L;
         try {
-          oa.field_I = true;
+          DropTargetWidgetContainer.field_I = true;
           var2 = "tuhstatbut";
           var3 = "rvnadlm";
           if (param0 <= 30) {

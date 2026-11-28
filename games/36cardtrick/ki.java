@@ -24,7 +24,7 @@ final class ki extends DefaultTextWidgetRenderer {
         ca.field_b = param2;
     }
 
-    public final void a(int param0, lk param1, int param2, int param3, boolean param4) {
+    public final void paintWidget(int param0, UiWidget param1, int param2, int param3, boolean param4) {
         int stackIn_6_0 = 0;
         int stackIn_13_0 = 0;
         int stackIn_18_0 = 0;
@@ -36,10 +36,10 @@ final class ki extends DefaultTextWidgetRenderer {
         RuntimeException var6 = null;
         int var7 = 0;
         int var8 = 0;
-        lk var9 = null;
+        UiWidget var9 = null;
         try {
           if (!param1.field_j) {
-            stackIn_6_0 = (param1.d(121)) ? 1 : 0;
+            stackIn_6_0 = (param1.isFocused(121)) ? 1 : 0;
           } else {
             stackIn_6_0 = 1;
           }
@@ -58,8 +58,8 @@ final class ki extends DefaultTextWidgetRenderer {
           }
           var7 = stackIn_13_0;
           if (param2 != 11447) {
-            var9 = (lk) null;
-            this.a(103, (lk) null, -110, -12, false);
+            var9 = (UiWidget) null;
+            this.paintWidget(103, (UiWidget) null, -110, -12, false);
           }
           GzipInflater.a(param1.field_h, this.field_r, var7, param1.field_o + param0, (-this.field_r[0].field_k + param1.field_q >> 1) + param3 + param1.field_i, (byte) -10);
           stackIn_18_0 = (param4) ? 16777215 : 7105644;

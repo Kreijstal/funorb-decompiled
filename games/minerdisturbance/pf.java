@@ -108,7 +108,7 @@ final class pf {
     }
 
     final static void a(int param0, boolean param1) {
-        mb.field_b.a(0, param0, -114);
+        mb.field_b.drawAllLayers(0, param0, -114);
     }
 
     pf(String param0, boolean param1) {

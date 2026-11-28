@@ -48,7 +48,7 @@ final class hj {
     }
 
     final static void a(Sprite param0, int param1) {
-        kg.d(false);
+        LabeledWidgetContainer.d(false);
         if (param1 != 1) {
           return;
         }

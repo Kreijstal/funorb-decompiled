@@ -108,7 +108,7 @@ class vb extends DualLinkNode {
     }
 
     final static void g(int param0) {
-        oa.field_G = -1;
+        DropTargetWidgetContainer.field_G = -1;
         if (param0 < 65) {
           vb.f(-26);
           pf.field_b = null;
@@ -167,13 +167,13 @@ class vb extends DualLinkNode {
           var1 = DebouncedFieldValidator.b(0);
           j.field_e = new LoginPanel(var1, (String) null, true, false, false);
           if (param0 == 28) {
-            wg.field_j.b((byte) -54, jh.field_C);
+            wg.field_j.showDialog((byte) -54, jh.field_C);
             jh.field_C.c((byte) 119, j.field_e);
             jh.field_C.p(-21);
             return;
           }
           field_i = (String) null;
-          wg.field_j.b((byte) -54, jh.field_C);
+          wg.field_j.showDialog((byte) -54, jh.field_C);
           jh.field_C.c((byte) 119, j.field_e);
           jh.field_C.p(-21);
           return;
@@ -182,12 +182,12 @@ class vb extends DualLinkNode {
         j.field_e = new LoginPanel(var1Lifetime1, (String) null, true, false, false);
         if (param0 != 28) {
           field_i = (String) null;
-          wg.field_j.b((byte) -54, jh.field_C);
+          wg.field_j.showDialog((byte) -54, jh.field_C);
           jh.field_C.c((byte) 119, j.field_e);
           jh.field_C.p(-21);
           return;
         }
-        wg.field_j.b((byte) -54, jh.field_C);
+        wg.field_j.showDialog((byte) -54, jh.field_C);
         jh.field_C.c((byte) 119, j.field_e);
         jh.field_C.p(-21);
     }

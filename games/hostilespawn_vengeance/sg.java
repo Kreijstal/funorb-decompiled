@@ -156,7 +156,7 @@ final class sg {
           var14 = (double)var7 + var10;
           var16 = (double)var8 + var12;
           for (var18 = 0; var18 < ib.field_c; var18++) {
-            var19 = jn.field_F[var18];
+            var19 = AlphaWidgetContainer.field_F[var18];
             var20 = var19.field_i;
             var21 = var19.field_j.field_e - var7;
             var22 = -var8 + var19.field_j.field_g;
@@ -274,7 +274,7 @@ final class sg {
                                         var23 != 34) {
                                         switch (var23) {
                                           case 33:
-                                            rj.a(var19, -2312);
+                                            DraggableWidgetContainer.a(var19, -2312);
                                             break regionExit1;
                                           case 12:
                                             var19.field_e = var19.field_e + 4;
@@ -326,7 +326,7 @@ final class sg {
                                             break regionExit1;
                                         }
                                       }
-                                      vd.a(var19, -127);
+                                      DequeWidgetContainer.a(var19, -127);
                                     } else {
                                       DualLinkDeque.a(var16, var29, var19, var3, var20, var14, false);
                                     }
@@ -351,14 +351,14 @@ final class sg {
             }
           }
           for (var18 = -1 + ib.field_c; var18 >= 0; var18--) {
-            if (-1 == jn.field_F[var18].field_i) {
+            if (-1 == AlphaWidgetContainer.field_F[var18].field_i) {
               ib.field_c = ib.field_c - 1;
-              jn.field_F[var18].field_c = jn.field_F[ib.field_c].field_c;
-              jn.field_F[var18].field_l.a(jn.field_F[ib.field_c].field_l, -28860);
-              jn.field_F[var18].field_j.copyCoordinatesFrom((byte) 46, jn.field_F[ib.field_c].field_j);
-              jn.field_F[var18].field_h = jn.field_F[ib.field_c].field_h;
-              jn.field_F[var18].field_e = jn.field_F[ib.field_c].field_e;
-              jn.field_F[var18].field_i = jn.field_F[ib.field_c].field_i;
+              AlphaWidgetContainer.field_F[var18].field_c = AlphaWidgetContainer.field_F[ib.field_c].field_c;
+              AlphaWidgetContainer.field_F[var18].field_l.a(AlphaWidgetContainer.field_F[ib.field_c].field_l, -28860);
+              AlphaWidgetContainer.field_F[var18].field_j.copyCoordinatesFrom((byte) 46, AlphaWidgetContainer.field_F[ib.field_c].field_j);
+              AlphaWidgetContainer.field_F[var18].field_h = AlphaWidgetContainer.field_F[ib.field_c].field_h;
+              AlphaWidgetContainer.field_F[var18].field_e = AlphaWidgetContainer.field_F[ib.field_c].field_e;
+              AlphaWidgetContainer.field_F[var18].field_i = AlphaWidgetContainer.field_F[ib.field_c].field_i;
             }
           }
           if (!param0) {

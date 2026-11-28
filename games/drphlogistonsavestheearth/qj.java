@@ -38,7 +38,7 @@ final class qj {
         DualLinkNode.field_r.draw(param2, param1);
         if (!param0) {
         } else {
-          var4 = k.field_L % DualLinkNode.field_r.field_y * 2;
+          var4 = ModalDialogHost.field_L % DualLinkNode.field_r.field_y * 2;
           if (!(var4 < DualLinkNode.field_r.field_y)) {
             var4 = DualLinkNode.field_r.field_y - var4 + DualLinkNode.field_r.field_y;
           }

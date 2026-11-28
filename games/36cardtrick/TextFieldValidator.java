@@ -88,7 +88,7 @@ abstract class TextFieldValidator extends DebouncedFieldValidator implements Tex
     final static aj b(boolean param0) {
         if (aj.field_a == null) {
           aj.field_a = new aj();
-          aj.field_a.a(-1, j.field_C);
+          aj.field_a.a(-1, ModalDialogHost.field_C);
           aj.field_a.field_d = 2763306;
           aj.field_a.field_e = 0;
           aj.field_a.field_l = 6;

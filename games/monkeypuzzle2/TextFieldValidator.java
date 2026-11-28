@@ -147,7 +147,7 @@ abstract class TextFieldValidator extends DebouncedFieldValidator implements Tex
         if (!vg.c(false)) {
           return true;
         }
-        if (ue.field_G <= 0) {
+        if (AlphaWidgetContainer.field_G <= 0) {
           return false;
         }
         if (!ej.a(12931)) {

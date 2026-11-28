@@ -26,7 +26,7 @@ final class kb implements WidgetRenderer {
         field_f = null;
     }
 
-    public final void a(int param0, int param1, int param2, boolean param3, UiWidget param4) {
+    public final void paintWidget(int param0, int param1, int param2, boolean param3, UiWidget param4) {
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
         String stackIn_12_2 = null;
@@ -47,7 +47,7 @@ final class kb implements WidgetRenderer {
             ((InteractiveWidget) (param4)).field_A) {
             var8.drawAdditive((-var8.field_w + param4.width >> 1) + 1 + var6_int, (-var8.field_u + param4.height >> 1) + var7 + 1, 256);
           }
-          if (!param4.g(2)) {
+          if (!param4.isFocused(2)) {
             return;
           }
           he.a(2 + var6_int, param4.height - 4, 2 + var7, 2, param4.width - 4);

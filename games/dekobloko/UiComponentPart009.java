@@ -7,7 +7,7 @@ final class UiComponentPart009 extends InteractiveComponent {
     static String[] stringArrayState0008;
     static String stringState0126;
 
-    UiComponentPart009(String stringArgument1, CallbackContract006 callbackContract006Argument2, boolean booleanArgument3) {
+    UiComponentPart009(String stringArgument1, WidgetEventListener callbackContract006Argument2, boolean booleanArgument3) {
         this(stringArgument1, callbackContract006Argument2);
         try {
           this.booleanState0034 = booleanArgument3 ? true : false;
@@ -16,7 +16,7 @@ final class UiComponentPart009 extends InteractiveComponent {
         }
     }
 
-    private UiComponentPart009(String stringArgument1, CallbackContract006 callbackContract006Argument2) {
+    private UiComponentPart009(String stringArgument1, WidgetEventListener callbackContract006Argument2) {
         this(stringArgument1, RenderingSupport001.networkSupport002State0001.callbackContract004State0001, callbackContract006Argument2);
         try {
           this.callbackContract004State0006 = RenderingSupport001.networkSupport002State0001.callbackContract004State0004;
@@ -81,10 +81,10 @@ final class UiComponentPart009 extends InteractiveComponent {
         RuntimeException caughtExceptionLocal5 = null;
         integerLocal2 = DekoBlokoClient.obfuscationControl ? 1 : 0;
         try {
-          mixedSupport020Local4 = (MixedSupport020) (UiComponentPart020.nodeDequeState0022.beginBackward((byte) 113));
+          mixedSupport020Local4 = (MixedSupport020) (ArrayWidgetContainer.nodeDequeState0022.beginBackward((byte) 113));
           while (mixedSupport020Local4 != null) {
             MixedSupport039.performAction0525((byte) 104, mixedSupport020Local4, integerArgument2);
-            mixedSupport020Local4 = (MixedSupport020) (UiComponentPart020.nodeDequeState0022.nextBackward(true));
+            mixedSupport020Local4 = (MixedSupport020) (ArrayWidgetContainer.nodeDequeState0022.nextBackward(true));
           }
           if (integerArgument1 == 640) {
             return;
@@ -99,7 +99,7 @@ final class UiComponentPart009 extends InteractiveComponent {
         }
     }
 
-    private UiComponentPart009(String stringArgument1, CallbackContract004 callbackContract004Argument2, CallbackContract006 callbackContract006Argument3) {
+    private UiComponentPart009(String stringArgument1, WidgetRenderer callbackContract004Argument2, WidgetEventListener callbackContract006Argument3) {
         super(stringArgument1, callbackContract004Argument2, callbackContract006Argument3);
         try {
           this.callbackContract004State0006 = RenderingSupport001.networkSupport002State0001.callbackContract004State0004;

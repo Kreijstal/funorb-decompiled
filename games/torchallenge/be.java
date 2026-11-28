@@ -162,12 +162,12 @@ final class be {
         if (!param0) {
           return (qa) null;
         }
-        String var1 = si.h(-118);
+        String var1 = ModalDialogHost.h(-118);
         if (var1 != null &&
           0 <= var1.indexOf('@')) {
           var1 = "";
         }
-        return new qa(si.h(16), ProxySocketConnector.d(125));
+        return new qa(ModalDialogHost.h(16), ProxySocketConnector.d(125));
     }
 
     final static ql a(int param0, int param1) {

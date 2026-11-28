@@ -16,10 +16,10 @@ final class ProxyAuthenticationRequiredException extends IOException {
         Object var1 = null;
         Throwable var2 = null;
         Throwable decompiledCaughtException = null;
-        if (i.field_J != null) {
-          var1 = i.field_J;
+        if (ModalDialogHost.field_J != null) {
+          var1 = ModalDialogHost.field_J;
           synchronized (var1) {
-            i.field_J = null;
+            ModalDialogHost.field_J = null;
           }
         }
         if (param0 != -15) {

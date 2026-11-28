@@ -42,7 +42,7 @@ final class fg extends IntrusiveNode {
           jc.field_f = 0;
           md.field_L = 1;
           pl.field_g = 0;
-          db.field_H = 0;
+          ModalDialog.field_H = 0;
           ue.field_d = 4;
           we.field_c = 0;
           oe.field_a = 0;

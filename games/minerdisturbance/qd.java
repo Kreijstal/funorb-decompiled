@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class qd extends kn implements WidgetActivationListener {
+final class qd extends DequeWidgetContainer implements WidgetActivationListener {
     static int field_M;
     static ae field_Q;
     private InteractiveWidget field_I;
@@ -25,7 +25,7 @@ final class qd extends kn implements WidgetActivationListener {
         try {
           if (param2 != this.field_L) {
             if (param2 == this.field_I) {
-              fe.e(param1 + 26307);
+              UiWidget.e(param1 + 26307);
             } else {
               if (param2 == this.field_N) {
                 km.a((byte) -63);
@@ -52,36 +52,36 @@ final class qd extends kn implements WidgetActivationListener {
         }
     }
 
-    final void a(byte param0, int param1, int param2, int param3) {
+    final void drawWidget(byte param0, int param1, int param2, int param3) {
         int var5 = param1 + this.field_u;
         int var6 = param2 + this.field_t;
         bn.field_d.drawParagraph(kf.field_b, var5 + 20, var6 + 20, -40 + this.field_v, -50 + this.field_q, 16777215, -1, 1, 0, bn.field_d.field_I);
-        super.a(param0, param1, param2, param3);
+        super.drawWidget(param0, param1, param2, param3);
     }
 
     public qd() {
-        super(0, 0, 476, 225, (ad) null);
-        this.field_I = new InteractiveWidget(u.field_a, (rm) null);
-        this.field_L = new InteractiveWidget(hk.field_c, (rm) null);
-        this.field_N = new InteractiveWidget(hj.field_a, (rm) null);
+        super(0, 0, 476, 225, (WidgetRenderer) null);
+        this.field_I = new InteractiveWidget(u.field_a, (WidgetEventListener) null);
+        this.field_L = new InteractiveWidget(hk.field_c, (WidgetEventListener) null);
+        this.field_N = new InteractiveWidget(hj.field_a, (WidgetEventListener) null);
         wi var1 = new wi();
-        this.field_I.field_A = (ad) ((Object) var1);
-        this.field_L.field_A = (ad) ((Object) var1);
-        this.field_N.field_A = (ad) ((Object) var1);
+        this.field_I.field_A = (WidgetRenderer) ((Object) var1);
+        this.field_L.field_A = (WidgetRenderer) ((Object) var1);
+        this.field_N.field_A = (WidgetRenderer) ((Object) var1);
         int var2 = 4;
         int var3 = 326;
         int var4 = var3 - var2 >> 1;
-        this.field_L.a(30, -115, -var3 + this.field_v >> 1, var4, -var2 + (-48 + this.field_q));
-        this.field_N.a(30, -51, var4 + (this.field_v - var3 >> 1) + var2, var4, -var2 - 48 + this.field_q);
-        this.field_I.a(30, -108, this.field_v - var3 >> 1, var3, -(var2 * 2) - 78 + this.field_q);
-        this.field_L.field_y = (rm) (this);
-        this.field_I.field_y = (rm) (this);
+        this.field_L.setBounds(30, -115, -var3 + this.field_v >> 1, var4, -var2 + (-48 + this.field_q));
+        this.field_N.setBounds(30, -51, var4 + (this.field_v - var3 >> 1) + var2, var4, -var2 - 48 + this.field_q);
+        this.field_I.setBounds(30, -108, this.field_v - var3 >> 1, var3, -(var2 * 2) - 78 + this.field_q);
+        this.field_L.field_y = (WidgetEventListener) (this);
+        this.field_I.field_y = (WidgetEventListener) (this);
         this.field_I.field_n = ha.field_f;
-        this.field_N.field_y = (rm) (this);
+        this.field_N.field_y = (WidgetEventListener) (this);
         this.field_N.field_n = si.field_c;
-        this.a(-1, this.field_L);
-        this.a(-1, this.field_I);
-        this.a(-1, this.field_N);
+        this.addChild(-1, this.field_L);
+        this.addChild(-1, this.field_I);
+        this.addChild(-1, this.field_N);
     }
 
     final static void a(int param0, String param1) {
@@ -90,13 +90,13 @@ final class qd extends kn implements WidgetActivationListener {
           if (param0 != 5) {
             field_J = -98;
           }
-          oj.a(12, 3);
+          AlphaWidgetContainer.a(12, 3);
         } catch (RuntimeException runtimeException) {
           throw lj.wrapClientException((Throwable) ((Object) runtimeException), "qd.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
-    final boolean a(char param0, fe param1, byte param2, int param3) {
+    final boolean handleKey(char param0, UiWidget param1, byte param2, int param3) {
         RuntimeException var5 = null;
         boolean stackIn_6_0 = false;
         boolean stackIn_10_0 = false;
@@ -105,17 +105,17 @@ final class qd extends kn implements WidgetActivationListener {
         String stackIn_14_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (super.a(param0, param1, param2, param3)) {
+          if (super.handleKey(param0, param1, param2, param3)) {
             return true;
           }
           if (param3 == 98) {
-            stackIn_6_0 = this.b(param1, 0);
+            stackIn_6_0 = this.focusPreviousChild(param1, 0);
             return stackIn_6_0;
           }
           if (param3 != 99) {
             return false;
           }
-          stackIn_10_0 = this.a(param1, (byte) 12);
+          stackIn_10_0 = this.focusNextChild(param1, (byte) 12);
           return stackIn_10_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -181,7 +181,7 @@ final class qd extends kn implements WidgetActivationListener {
           ti.field_M = param2;
           cg.field_C = true;
           if (0 == ti.field_M) {
-            var3_int = jc.a((byte) 106, gh.field_b, fd.field_J, w.field_S, IntrusiveDeque.field_a);
+            var3_int = SingleChildWidgetContainer.a((byte) 106, gh.field_b, fd.field_J, w.field_S, IntrusiveDeque.field_a);
             var4 = 3 + var3_int;
             IsaacRandom.field_m = new int[var4];
             ne.field_K = new String[var4];
@@ -200,7 +200,7 @@ final class qd extends kn implements WidgetActivationListener {
             IsaacRandom.field_m[-1 + var4] = 1;
             wf.field_P[1] = 5;
           } else if (ti.field_M == 1) {
-            var3_int = jc.a((byte) 106, gh.field_b, fd.field_J, w.field_S, IntrusiveDeque.field_a);
+            var3_int = SingleChildWidgetContainer.a((byte) 106, gh.field_b, fd.field_J, w.field_S, IntrusiveDeque.field_a);
             var4 = var3_int + 2;
             ne.field_K = new String[var4];
             IsaacRandom.field_m = new int[var4];
@@ -218,9 +218,9 @@ final class qd extends kn implements WidgetActivationListener {
           } else if (ti.field_M != 2) {
             if (ti.field_M == 3) {
               if (qa.field_a.privilegedTasksEnabled) {
-                var3_int = jc.a((byte) 106, gh.field_b, fd.field_J, w.field_S, ub.field_b);
+                var3_int = SingleChildWidgetContainer.a((byte) 106, gh.field_b, fd.field_J, w.field_S, ub.field_b);
               } else {
-                var3_int = jc.a((byte) 106, gh.field_b, fd.field_J, w.field_S, pn.field_d);
+                var3_int = SingleChildWidgetContainer.a((byte) 106, gh.field_b, fd.field_J, w.field_S, pn.field_d);
               }
               var4 = 2 + var3_int;
               IsaacRandom.field_m = new int[var4];
@@ -237,7 +237,7 @@ final class qd extends kn implements WidgetActivationListener {
               IsaacRandom.field_m[-1 + var4] = 0;
               wf.field_P[0] = 5;
             } else if (ti.field_M == 4) {
-              var3_int = jc.a((byte) 106, gh.field_b, fd.field_J, w.field_S, ri.field_f);
+              var3_int = SingleChildWidgetContainer.a((byte) 106, gh.field_b, fd.field_J, w.field_S, ri.field_f);
               var4 = var3_int + 2;
               IsaacRandom.field_m = new int[var4];
               ne.field_K = new String[var4];
@@ -256,7 +256,7 @@ final class qd extends kn implements WidgetActivationListener {
               if (ti.field_M != 5) {
                 throw new IllegalArgumentException();
               }
-              var3_int = jc.a((byte) 106, gh.field_b, fd.field_J, w.field_S, Bzip2State.field_F);
+              var3_int = SingleChildWidgetContainer.a((byte) 106, gh.field_b, fd.field_J, w.field_S, Bzip2State.field_F);
               var4 = 3 + var3_int;
               ne.field_K = new String[var4];
               IsaacRandom.field_m = new int[var4];
@@ -276,7 +276,7 @@ final class qd extends kn implements WidgetActivationListener {
               wf.field_P[1] = 5;
             }
           } else {
-            var3_int = jc.a((byte) 106, gh.field_b, fd.field_J, w.field_S, oa.a((byte) -74, fb.field_h, new String[]{"<br><%0><br>"}));
+            var3_int = SingleChildWidgetContainer.a((byte) 106, gh.field_b, fd.field_J, w.field_S, oa.a((byte) -74, fb.field_h, new String[]{"<br><%0><br>"}));
             var4 = -1;
             for (var5 = 0; var5 < var3_int; var5++) {
               if (!"<%0>".equals(fd.field_J[var5])) {
@@ -293,7 +293,7 @@ final class qd extends kn implements WidgetActivationListener {
             om.field_f = new String[-1 + (-var4 + var3_int)];
             ai.a(fd.field_J, 1 + var4, om.field_f, 0, var3_int - var4 - 1);
             var4 = -1;
-            var3_int = jc.a((byte) 106, gh.field_b, fd.field_J, w.field_S, oa.a((byte) -127, ff.field_e, new String[]{"<br><%0><br>"}));
+            var3_int = SingleChildWidgetContainer.a((byte) 106, gh.field_b, fd.field_J, w.field_S, oa.a((byte) -127, ff.field_e, new String[]{"<br><%0><br>"}));
             for (var5 = 0; var3_int > var5; var5++) {
               if (!"<%0>".equals(fd.field_J[var5])) {
                 continue;
@@ -494,7 +494,7 @@ final class qd extends kn implements WidgetActivationListener {
         GameAppletShell.field_g[0] = mn.field_v;
         GameAppletShell.field_g[3] = ArchiveRequest.field_u;
         GameAppletShell.field_g[1] = vc.field_w;
-        GameAppletShell.field_g[6] = cc.field_M;
+        GameAppletShell.field_g[6] = ModalDialog.field_M;
         GameAppletShell.field_g[2] = ka.field_c;
         GameAppletShell.field_g[4] = qe.field_e;
         GameAppletShell.field_g[5] = ng.field_i;
@@ -510,7 +510,7 @@ final class qd extends kn implements WidgetActivationListener {
         GameAppletShell.field_g[23] = ProxyAuthenticationRequiredException.field_d;
         GameAppletShell.field_g[14] = IterableNodeHashTable.field_e;
         GameAppletShell.field_g[15] = NetworkArchiveRequest.field_E;
-        GameAppletShell.field_g[22] = jc.field_D;
+        GameAppletShell.field_g[22] = SingleChildWidgetContainer.field_D;
         GameAppletShell.field_g[24] = IterableNodeHashTable.field_e;
         PasswordValidator.field_i = new String[35][][];
         GameAppletShell.field_g[7] = ck.field_c[0];
@@ -529,14 +529,14 @@ final class qd extends kn implements WidgetActivationListener {
         PasswordValidator.field_i[22] = wf.field_Q;
         PasswordValidator.field_i[16] = FrameTimer.field_a;
         PasswordValidator.field_i[9] = wi.field_x;
-        PasswordValidator.field_i[13] = oj.field_M;
+        PasswordValidator.field_i[13] = AlphaWidgetContainer.field_M;
         PasswordValidator.field_i[12] = qm.field_g;
         PasswordValidator.field_i[20] = jh.field_c;
         PasswordValidator.field_i[25] = pc.field_e;
         PasswordValidator.field_i[29] = DebouncedFieldValidator.field_d;
         PasswordValidator.field_i[4] = pf.field_d;
         PasswordValidator.field_i[2] = wi.field_u;
-        PasswordValidator.field_i[8] = kn.field_D;
+        PasswordValidator.field_i[8] = DequeWidgetContainer.field_D;
         PasswordValidator.field_i[17] = tl.field_n;
         PasswordValidator.field_i[5] = lf.field_i;
         PasswordValidator.field_i[1] = AccountServiceResult.field_b;

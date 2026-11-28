@@ -259,7 +259,7 @@ final class sg {
             if (!AccountRequestState.a((byte) -116)) {
               bi.field_a.drawParagraph(TextFieldValidator.field_k, 48, 50, 242, qc.field_c[this.field_d] - 100, 0, -1, 1, 1, bi.field_a.field_C);
             } else {
-              bi.field_a.drawParagraph(TextFieldValidator.field_k + "<br><br>" + al.field_G, 48, 50, 242, qc.field_c[this.field_d] - 100, 0, -1, 1, 1, bi.field_a.field_C);
+              bi.field_a.drawParagraph(TextFieldValidator.field_k + "<br><br>" + ModalDialog.field_G, 48, 50, 242, qc.field_c[this.field_d] - 100, 0, -1, 1, 1, bi.field_a.field_C);
             }
             return;
           }
@@ -294,7 +294,7 @@ final class sg {
           if (var6 != 0) {
             var10Lifetime1 = "?";
           }
-          bi.field_a.drawCentred(w.field_s + var10Lifetime1, 169, var8, 0, -1);
+          bi.field_a.drawCentred(UiWidget.field_s + var10Lifetime1, 169, var8, 0, -1);
           var8 = var8 + var7;
           var11 = bi.field_a.stringWidth(he.field_i);
           if (var6 == 0) {
@@ -500,23 +500,23 @@ final class sg {
                                                     param1) {
                                                     var4_int = this.a(false, ProxyAuthenticationRequiredException.field_a, ef.field_a, -89);
                                                     if (var4_int != -1) {
-                                                      jf.field_I = var4_int;
+                                                      LabeledWidgetContainer.field_I = var4_int;
                                                     }
                                                   }
                                                   if (this.field_c.f(-126) &&
                                                     !param1) {
-                                                    fieldTemp$0 = jf.field_I - 1;
-                                                    jf.field_I = jf.field_I - 1;
+                                                    fieldTemp$0 = LabeledWidgetContainer.field_I - 1;
+                                                    LabeledWidgetContainer.field_I = LabeledWidgetContainer.field_I - 1;
                                                     if (fieldTemp$0 < 0) {
-                                                      jf.field_I = fl.field_a.length - 1;
+                                                      LabeledWidgetContainer.field_I = fl.field_a.length - 1;
                                                     }
                                                   }
                                                   if (this.field_c.d((byte) 88) &&
                                                     !param1) {
-                                                    fieldTemp$1 = jf.field_I + 1;
-                                                    jf.field_I = jf.field_I + 1;
+                                                    fieldTemp$1 = LabeledWidgetContainer.field_I + 1;
+                                                    LabeledWidgetContainer.field_I = LabeledWidgetContainer.field_I + 1;
                                                     if (fieldTemp$1 == fl.field_a.length) {
-                                                      jf.field_I = 0;
+                                                      LabeledWidgetContainer.field_I = 0;
                                                     }
                                                   }
                                                 }
@@ -693,11 +693,11 @@ final class sg {
             if (this.field_c.d(0)) {
               if (TextLayout.field_a &&
                 !AccountRequestState.a((byte) -118)) {
-                if (!hh.field_N.field_k) {
+                if (!DraggableWidgetContainer.field_N.field_k) {
                   TextLayout.field_a = false;
                 } else {
-                  if (hh.field_N.field_n != null) {
-                    if (hh.field_N.field_n[1][0] != 0) {
+                  if (DraggableWidgetContainer.field_N.field_n != null) {
+                    if (DraggableWidgetContainer.field_N.field_n[1][0] != 0) {
                       TextLayout.field_a = false;
                     }
                   } else {
@@ -710,7 +710,7 @@ final class sg {
                   !el.field_c.a((byte) 94)) {
                   this.field_k.a((byte) -105, param1, -1, 2);
                 } else {
-                  hh.field_N = null;
+                  DraggableWidgetContainer.field_N = null;
                   if (vb.field_i >= 2 &&
                     wa.field_j[82]) {
                     oe.field_a = 0;
@@ -863,7 +863,7 @@ final class sg {
           }
           var8 = stackIn_19_0;
           var9 = 0;
-          var10 = -1 + jf.countSetBits((byte) 108, MouseWheelInput.field_a);
+          var10 = -1 + LabeledWidgetContainer.countSetBits((byte) 108, MouseWheelInput.field_a);
           this.field_e = -1;
           if (param1 != 640) {
             field_a = 35;
@@ -1055,7 +1055,7 @@ final class sg {
           }
           param1 = 2 + (2047 & var4_int) >> 2;
           param0 = ((var4_int & 4192829) >> 11) + 2 >> 2;
-          param0 = param0 - (118 + jf.field_N.field_r / 2);
+          param0 = param0 - (118 + LabeledWidgetContainer.field_N.field_r / 2);
           if (param0 < 0) {
             stackIn_18_0 = 0;
             return stackIn_18_0;
@@ -1416,15 +1416,15 @@ final class sg {
             boolean decompiledFrameRemainder0 = true;
             var3 = pa.field_d + (pa.field_d >> 1);
             if (!AccountRequestState.a((byte) -108)) {
-              if (hh.field_N == null) {
-                hh.field_N = ud.a(1, -68, 10, 3, 9);
+              if (DraggableWidgetContainer.field_N == null) {
+                DraggableWidgetContainer.field_N = ud.a(1, -68, 10, 3, 9);
               }
-              if (hh.field_N.field_k) {
-                if (hh.field_N.field_j != null) {
+              if (DraggableWidgetContainer.field_N.field_k) {
+                if (DraggableWidgetContainer.field_N.field_j != null) {
                   var2 = PcmOutputWorker.field_a;
-                  var14 = hh.field_N.field_j[jf.field_I];
-                  var19 = hh.field_N.field_n[jf.field_I];
-                  var6 = ul.a(AccountRequestState.field_d, hh.field_N, param0 ^ 52, jf.field_I);
+                  var14 = DraggableWidgetContainer.field_N.field_j[LabeledWidgetContainer.field_I];
+                  var19 = DraggableWidgetContainer.field_N.field_n[LabeledWidgetContainer.field_I];
+                  var6 = ul.a(AccountRequestState.field_d, DraggableWidgetContainer.field_N, param0 ^ 52, LabeledWidgetContainer.field_I);
                   var7 = 38;
                   for (var8_int = 0; 10 > var8_int; var8_int++) {
                     if (var14[var8_int] != null) {
@@ -1458,7 +1458,7 @@ final class sg {
               }
             } else {
               var2 = PcmOutputWorker.field_a;
-              jh.field_d.drawParagraph(al.field_G, 20, -jh.field_d.field_E + 280, 271, 1000, 0, -1, 1, 0, var3);
+              jh.field_d.drawParagraph(ModalDialog.field_G, 20, -jh.field_d.field_E + 280, 271, 1000, 0, -1, 1, 0, var3);
             }
             bi.field_a.drawParagraph(var2, 20, -bi.field_a.field_E + 200, 271, 1000, 0, -1, 1, 0, var3);
           } else {
@@ -1577,7 +1577,7 @@ final class sg {
                               var2_intLifetime1 = (pa.field_d >> 1) + pa.field_d;
                               var3 = 40;
                               jh.field_d.drawParagraph(RichTextLayout.field_q, 40, -jh.field_d.field_E + var3, 254, 1000, 0, -1, 0, 0, var2_intLifetime1);
-                              mk.field_h.drawRightAligned(eg.field_E, 294, -10 + SoftwareRasterizer.field_a, 0, -1);
+                              mk.field_h.drawRightAligned(ModalDialogHost.field_E, 294, -10 + SoftwareRasterizer.field_a, 0, -1);
                             }
                           }
                         }
@@ -1591,7 +1591,7 @@ final class sg {
                         var3 = var3 + var2_intLifetime1 * jh.field_d.drawParagraph(var6_ref_String, 40, var3 - jh.field_d.field_E, 254, 1000, 0, -1, 0, 0, var2_intLifetime1);
                         var3 = var3 + var2_intLifetime1;
                       }
-                      mk.field_h.drawRightAligned(eg.field_E, 294, SoftwareRasterizer.field_a - 10, 0, -1);
+                      mk.field_h.drawRightAligned(ModalDialogHost.field_E, 294, SoftwareRasterizer.field_a - 10, 0, -1);
                     }
                     decompiledFrameRemainder1 = false;
                   }
@@ -1611,13 +1611,13 @@ final class sg {
               if (this.field_m.field_J != 0) {
                 if (this.field_m.field_J > this.field_m.field_r) {
                   var2_intLifetime2 = 256 * this.field_m.field_r / this.field_m.field_J;
-                  ia.field_G.drawWithOpacity(50, 213, -var2_intLifetime2 + 256);
+                  AlphaWidgetContainer.field_G.drawWithOpacity(50, 213, -var2_intLifetime2 + 256);
                   InteractiveWidget.field_A[1].drawWithOpacity(0, this.field_m.field_M, var2_intLifetime2);
                 } else {
                   InteractiveWidget.field_A[1].draw(0, this.field_m.field_M);
                 }
               } else {
-                ia.field_G.draw(50, 213);
+                AlphaWidgetContainer.field_G.draw(50, 213);
                 if (this.field_m.field_A) {
                   this.a((byte) 66, 215, 53);
                 }
@@ -1771,7 +1771,7 @@ final class sg {
               stackIn_10_0 = (var7 == 3) ? 2 : var7;
               var8 = stackIn_10_0;
               var9 = 0;
-              if (var8 == jf.field_I) {
+              if (var8 == LabeledWidgetContainer.field_I) {
                 if (!this.field_c.field_i &&
                   param0) {
                   stackIn_17_0 = 16777215;
@@ -1816,14 +1816,14 @@ final class sg {
               if (var7Lifetime1 < 0) {
                 var7Lifetime1 = 0;
               }
-              jf.field_N.draw(var7Lifetime1 / 2 + 118, 11 + var4_int);
+              LabeledWidgetContainer.field_N.draw(var7Lifetime1 / 2 + 118, 11 + var4_int);
             }
           } else {
             var7Lifetime1 = oc.field_e;
             if (0 > var7Lifetime1) {
               var7Lifetime1 = 0;
             }
-            jf.field_N.draw(118 + var7Lifetime1 / 2, var4_int + 11);
+            LabeledWidgetContainer.field_N.draw(118 + var7Lifetime1 / 2, var4_int + 11);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

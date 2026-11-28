@@ -76,7 +76,7 @@ final class a extends kb {
         if (param0 != 45) {
           return (bj) null;
         }
-        return jf.field_M;
+        return LabeledWidgetContainer.field_M;
     }
 
     final static int c(boolean param0) {

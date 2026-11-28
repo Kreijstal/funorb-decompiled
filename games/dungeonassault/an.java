@@ -138,8 +138,8 @@ final class an extends DefaultTextWidgetRenderer {
         }
     }
 
-    public final void a(byte param0, lm param1, int param2, int param3, boolean param4) {
-        lm stackIn_3_0 = null;
+    public final void paintWidget(byte param0, UiWidget param1, int param2, int param3, boolean param4) {
+        UiWidget stackIn_3_0 = null;
         RuntimeException stackIn_30_0 = null;
         StringBuilder stackIn_30_1 = null;
         String stackIn_31_2 = null;
@@ -155,7 +155,7 @@ final class an extends DefaultTextWidgetRenderer {
         pi var15 = null;
         try {
           if (param1 instanceof InteractiveWidget) {
-            stackIn_3_0 = (lm) (param1);
+            stackIn_3_0 = (UiWidget) (param1);
           } else {
             stackIn_3_0 = null;
           }
@@ -187,7 +187,7 @@ final class an extends DefaultTextWidgetRenderer {
               }
             }
           }
-          if (param1.a((byte) 20)) {
+          if (param1.isFocused((byte) 20)) {
             var14 = this.field_B[5];
             if (var14 != null) {
               var14.a(param1, (byte) 100, this.field_A, param3, this, param2);

@@ -3,7 +3,7 @@
  */
 abstract class TextFieldValidator extends DebouncedFieldValidator implements TextFieldListener {
     static String field_g;
-    static dl field_e;
+    static DraggableWidgetContainer field_e;
     private EditableTextField field_f;
     static ResourceArchive field_i;
     static int field_h;
@@ -135,7 +135,7 @@ abstract class TextFieldValidator extends DebouncedFieldValidator implements Tex
           fc.field_e = 11;
           ol.field_g = new int[260];
           if (param0 != 25536) {
-            field_e = (dl) null;
+            field_e = (DraggableWidgetContainer) null;
           }
           for (var1_int = 0; var1_int < 256; var1_int++) {
             var2 = 15.0;

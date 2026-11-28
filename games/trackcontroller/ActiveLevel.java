@@ -415,7 +415,7 @@ final class ActiveLevel extends LevelGrid {
           }
         }
         if (0 == this.field_X) {
-          hl.a(10, 0);
+          ModalDialog.a(10, 0);
         }
         if (param1) {
           var4Lifetime1 = 0;
@@ -432,7 +432,7 @@ final class ActiveLevel extends LevelGrid {
           }
           if (var4Lifetime1 != 0) {
             this.field_T = Math.abs(this.score);
-            hl.a(10, 0);
+            ModalDialog.a(10, 0);
             sc.field_g = -2;
           }
         }
@@ -604,7 +604,7 @@ final class ActiveLevel extends LevelGrid {
     final void c(int param0, int param1) {
         int var4;
         var4 = TrackController.field_F ? 1 : 0;
-        hl.a(10, 0);
+        ModalDialog.a(10, 0);
         fe.a((param0 == 0), Model.field_P[param0], 256);
         if (param1 <= 110) {
           this.setPhase(27, 2);
@@ -1219,7 +1219,7 @@ final class ActiveLevel extends LevelGrid {
           this.field_M = this.i(123);
           this.field_u = null;
           this.field_t = -1000;
-          vl.n(-27145);
+          ModalDialogHost.n(-27145);
           vg.field_p = true;
           this.field_A.field_e = 0;
           this.field_z = false;
@@ -1431,7 +1431,7 @@ final class ActiveLevel extends LevelGrid {
             if (var3 < ba.field_b.field_G + 26) {
               if (var2_int < 156) {
                 if (var3 >= 0) {
-                  vl.field_K.drawTransparent(0, 0);
+                  ModalDialogHost.field_K.drawTransparent(0, 0);
                 } else {
                   WhirlpoolDigest.field_o.drawTransparent(0, 0);
                 }
@@ -1514,7 +1514,7 @@ final class ActiveLevel extends LevelGrid {
         }
         this.b(false, -28786);
         if (ak.field_b != -1) {
-          vl.a(-21173, ag.field_c[ak.field_b]);
+          ModalDialogHost.a(-21173, ag.field_c[ak.field_b]);
         }
     }
 
@@ -1528,7 +1528,7 @@ final class ActiveLevel extends LevelGrid {
           if (this.phase != 2) {
           } else {
             this.field_T = Math.abs(this.score);
-            hl.a(10, 0);
+            ModalDialog.a(10, 0);
             this.field_R = this.field_R + this.field_E;
             this.field_cb = this.field_cb - 1;
             if (this.level.levelIndex >= gj.levels.length) {
@@ -1713,11 +1713,11 @@ final class ActiveLevel extends LevelGrid {
 
     private final void a(byte param0, MovingBlock param1) {
         try {
-          this.tileFlags[param1.row][param1.column] = RandomAccessCacheFile.a(ok.a(this.tileFlags[param1.row][param1.column], this.b(16384, param1.columnStep, param1.rowStep)), 32640);
+          this.tileFlags[param1.row][param1.column] = RandomAccessCacheFile.a(SingleChildWidgetContainer.a(this.tileFlags[param1.row][param1.column], this.b(16384, param1.columnStep, param1.rowStep)), 32640);
           if (param0 > 0) {
             this.field_r = -66;
           }
-          this.tileFlags[param1.rowStep + param1.row][param1.columnStep + param1.column] = RandomAccessCacheFile.a(32640, ok.a(this.tileFlags[param1.row + param1.rowStep][param1.column + param1.columnStep], this.b(param1.rowStep, (byte) -86, param1.columnStep)));
+          this.tileFlags[param1.rowStep + param1.row][param1.columnStep + param1.column] = RandomAccessCacheFile.a(32640, SingleChildWidgetContainer.a(this.tileFlags[param1.row + param1.rowStep][param1.column + param1.columnStep], this.b(param1.rowStep, (byte) -86, param1.columnStep)));
         } catch (RuntimeException runtimeException) {
           throw LevelGrid.toClientException((Throwable) ((Object) runtimeException), "ri.U(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

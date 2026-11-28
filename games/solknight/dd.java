@@ -33,14 +33,14 @@ final class dd {
         byte[] var13 = null;
         var6 = SolKnight.field_L ? 1 : 0;
         try {
-          var9 = te.field_N;
+          var9 = AlphaWidgetContainer.field_N;
           if (!param0) {
             var7 = (String) null;
             dd.a((byte) -90, (String) null, -21);
           }
           var2 = var9.readUnsignedByte(255);
           if (0 == var2) {
-            var3_ref_wi = (wi) (bc.field_J.beginBackward((byte) 51));
+            var3_ref_wi = (wi) (DraggableWidgetContainer.field_J.beginBackward((byte) 51));
             if (var3_ref_wi == null) {
               je.a(!param0);
               return;

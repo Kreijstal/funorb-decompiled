@@ -46,7 +46,7 @@ final class qe extends UiWidget {
         if (param0 != -29239) {
           field_E = (String[]) null;
         }
-        fi.c(true);
+        SingleChildWidgetContainer.c(true);
         return var3;
     }
 
@@ -61,8 +61,8 @@ final class qe extends UiWidget {
         }
     }
 
-    final void a(int param0, int param1, int param2, int param3, int param4) {
-        super.a(-109, param1, param2, param3, param4);
+    final void setBounds(int param0, int param1, int param2, int param3, int param4) {
+        super.setBounds(-109, param1, param2, param3, param4);
         int var6 = 118 / ((param0 + 29) / 53);
         this.c(false);
     }
@@ -101,11 +101,11 @@ final class qe extends UiWidget {
           SoftwareRasterizer.drawHorizontalLine(var7 + this.field_t, var6, this.field_t, var12Lifetime1);
           SoftwareRasterizer.drawHorizontalLine(-this.field_t + var7, var6, this.field_t, var12Lifetime1);
         }
-        fi.c(true);
+        SingleChildWidgetContainer.c(true);
         return var14;
     }
 
-    final void a(int param0, byte param1, UiWidget param2, int param3) {
+    final void updatePointer(int param0, byte param1, UiWidget param2, int param3) {
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         String stackIn_11_2 = null;
@@ -169,13 +169,13 @@ final class qe extends UiWidget {
             param1.draw(var6, param2);
             var6 = var6 + param1.field_n;
           }
-          fi.c(true);
+          SingleChildWidgetContainer.c(true);
           if (param3 + this.field_y.field_n >= SoftwareRasterizer.field_d) {
             CrossfadingMidiPcmStream.a(this.field_K, 256);
             param1.draw(-this.field_G, 0);
             param1.draw(this.field_t * 2 - this.field_G, 0);
             this.field_C.drawMultiply(0, 0);
-            fi.c(true);
+            SingleChildWidgetContainer.c(true);
             this.field_K.draw(param3, param2);
           }
           if (var5_int - this.field_y.field_n <= SoftwareRasterizer.field_b) {
@@ -185,7 +185,7 @@ final class qe extends UiWidget {
             param1.draw(-var7, 0);
             param1.draw(this.field_t * 2 - var7, 0);
             this.field_y.drawMultiply(0, 0);
-            fi.c(true);
+            SingleChildWidgetContainer.c(true);
             this.field_K.draw(-this.field_y.field_n + var5_int, param2);
             return;
           }
@@ -208,7 +208,7 @@ final class qe extends UiWidget {
         this(param0, param1, param2, param3, param4, param5, param6, 8355711 & param5 >> 1, param6 >> 1 & 8355711);
     }
 
-    final void a(int param0, int param1, int param2, byte param3) {
+    final void drawWidget(int param0, int param1, int param2, byte param3) {
         if (0 != param2) {
           return;
         }
@@ -219,7 +219,7 @@ final class qe extends UiWidget {
         if (65536 > this.field_J) {
           c.a(this.field_l + var6, (this.field_l * this.field_J >> 16) + var6, (byte) -50, this.field_h + var7, var7);
           this.a((byte) -57, this.field_D[1], var7, var6);
-          fi.c(true);
+          SingleChildWidgetContainer.c(true);
         }
     }
 
@@ -243,7 +243,7 @@ final class qe extends UiWidget {
         this.field_M = param5;
         this.field_u = param8;
         this.field_B = param6;
-        this.a(75, param1, param0, param2, param3);
+        this.setBounds(75, param1, param0, param2, param3);
     }
 
     static {

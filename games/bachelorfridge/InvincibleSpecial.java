@@ -16,7 +16,7 @@ final class InvincibleSpecial extends SpecialOrder {
     }
 
     final static IndexedSprite b(int param0) {
-        IndexedSprite var1 = new IndexedSprite(ok.field_Bb, MassPoisonEvent.field_r, fl.field_j[0], AirstrikeAnimation.field_D[0], lq.field_A[0], InsanoSauceSpecial.field_s[0], BananarangAnimation.field_P[0], hk.field_f);
+        IndexedSprite var1 = new IndexedSprite(ok.field_Bb, MassPoisonEvent.field_r, fl.field_j[0], AirstrikeAnimation.field_D[0], ArrayWidgetContainer.field_A[0], InsanoSauceSpecial.field_s[0], BananarangAnimation.field_P[0], hk.field_f);
         if (param0 == -32124) {
           al.releaseStatics(-18073);
           return var1;

@@ -19,7 +19,7 @@ final class fi {
           if (null == MouseWheelInput.field_b) {
             return false;
           }
-          if (MouseWheelInput.field_b.a(false) != null) {
+          if (MouseWheelInput.field_b.getTopOpenDialog(false) != null) {
             return true;
           }
           return false;
@@ -27,7 +27,7 @@ final class fi {
         if (null == MouseWheelInput.field_b) {
           return false;
         }
-        if (MouseWheelInput.field_b.a(false) != null) {
+        if (MouseWheelInput.field_b.getTopOpenDialog(false) != null) {
           return true;
         }
         return false;

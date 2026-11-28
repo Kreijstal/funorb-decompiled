@@ -176,7 +176,7 @@ final class wl {
                         stackIn_34_0Lifetime1 = var16 << 4;
                         stackIn_34_1Lifetime1 = -var17;
                         var18 = stackIn_34_0Lifetime1 - stackIn_34_1Lifetime1;
-                        ac.field_K[var18] = var8;
+                        DropTargetWidgetContainer.field_K[var18] = var8;
                         eb.field_g[var16] = var17 + 1;
                         if (param0.field_G > 0 &&
                           param0.field_x != null) {

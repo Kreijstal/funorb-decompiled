@@ -73,7 +73,7 @@ final class UiComponentPart002 extends InteractiveComponent {
         }
     }
 
-    final boolean computeBoolean0056(int integerArgument1, int integerArgument2, UiComponent uiComponentArgument3, int integerArgument4, int integerArgument5, int integerArgument6, byte byteArgument7) {
+    final boolean pointerPressed(int integerArgument1, int integerArgument2, UiComponent uiComponentArgument3, int integerArgument4, int integerArgument5, int integerArgument6, byte byteArgument7) {
         int integerLocal1 = 0;
         RuntimeException stackRuntimeExceptionLocal2 = null;
         StringBuilder stackStringBuilderLocal3 = null;
@@ -88,7 +88,7 @@ final class UiComponentPart002 extends InteractiveComponent {
         int integerLocal12 = 0;
         integerLocal12 = DekoBlokoClient.obfuscationControl ? 1 : 0;
         try {
-          if (!super.computeBoolean0056(integerArgument1, integerArgument2, uiComponentArgument3, integerArgument4, integerArgument5, integerArgument6, byteArgument7)) {
+          if (!super.pointerPressed(integerArgument1, integerArgument2, uiComponentArgument3, integerArgument4, integerArgument5, integerArgument6, byteArgument7)) {
             return false;
           }
           integerLocal6 = -integerArgument6 + integerArgument2 - this.integerState0049;

@@ -20,13 +20,13 @@ final class rf extends DefaultTextWidgetRenderer {
         }
         IndexedSprite[] var1 = new IndexedSprite[ti.field_g];
         for (var2 = 0; ti.field_g > var2; var2++) {
-          var1[var2] = new IndexedSprite(fm.field_E, rh.field_d, PacketBuffer.field_o[var2], na.field_G[var2], vo.field_b[var2], PasswordValidator.field_o[var2], pn.field_b[var2], cq.field_y);
+          var1[var2] = new IndexedSprite(fm.field_E, rh.field_d, PacketBuffer.field_o[var2], LabeledWidgetContainer.field_G[var2], vo.field_b[var2], PasswordValidator.field_o[var2], pn.field_b[var2], cq.field_y);
         }
         go.b(0);
         return var1;
     }
 
-    public final void a(int param0, int param1, int param2, boolean param3, UiWidget param4) {
+    public final void paintWidget(int param0, int param1, int param2, boolean param3, UiWidget param4) {
         int stackIn_6_0 = 0;
         int stackIn_15_0 = 0;
         int stackIn_18_0 = 0;
@@ -41,14 +41,14 @@ final class rf extends DefaultTextWidgetRenderer {
         UiWidget var9 = null;
         try {
           if (!param4.field_s) {
-            stackIn_6_0 = (param4.g(2)) ? 1 : 0;
+            stackIn_6_0 = (param4.isFocused(2)) ? 1 : 0;
           } else {
             stackIn_6_0 = 1;
           }
           var6_int = stackIn_6_0;
           if (param0 <= 89) {
             var9 = (UiWidget) null;
-            this.a(-79, -81, -76, false, (UiWidget) null);
+            this.paintWidget(-79, -81, -76, false, (UiWidget) null);
           }
           if (param4 instanceof InteractiveWidget) {
             param3 = param3 & ((InteractiveWidget) (param4)).field_x;

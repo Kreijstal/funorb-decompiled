@@ -136,11 +136,11 @@ final class BufferedRandomAccessFile {
             var15 = var6[var9];
             qg[] var10 = var15;
             for (var11_int = 0; var15.length > var11_int; var11_int++) {
-              var15[var11_int] = h.a(var5[var9], (byte) 37, var20[var11_int]);
+              var15[var11_int] = LabeledWidgetContainer.a(var5[var9], (byte) 37, var20[var11_int]);
             }
           }
           var9Lifetime1 = var18.field_k;
-          h.k(126);
+          LabeledWidgetContainer.k(126);
           var18.bindAsRenderTarget();
           SoftwareRasterizer.grayscaleRectangle(0, 0, SoftwareRasterizer.field_f, SoftwareRasterizer.field_l);
           var16 = new RgbSprite(var9Lifetime1, var9Lifetime1);
@@ -156,7 +156,7 @@ final class BufferedRandomAccessFile {
           ValidatedTextField.g((byte) -105);
           FullscreenFocusCanvas.field_b = new RgbSprite[]{var16, var12, var11};
         } catch (RuntimeException runtimeException) {
-          throw dd.wrapClientException((Throwable) ((Object) runtimeException), "dj.G(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ')');
+          throw DraggableWidgetContainer.wrapClientException((Throwable) ((Object) runtimeException), "dj.G(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -349,7 +349,7 @@ final class BufferedRandomAccessFile {
           } else {
             stackIn_61_2 = "{...}";
           }
-          throw dd.wrapClientException((Throwable) ((Object) stackIn_60_0), ((StringBuilder) (Object) stackIn_60_1).append(stackIn_61_2).append(')').toString());
+          throw DraggableWidgetContainer.wrapClientException((Throwable) ((Object) stackIn_60_0), ((StringBuilder) (Object) stackIn_60_1).append(stackIn_61_2).append(')').toString());
         }
     }
 
@@ -360,7 +360,7 @@ final class BufferedRandomAccessFile {
         try {
           this.readFully(0, (byte) -126, param0.length, param0);
         } catch (RuntimeException runtimeException) {
-          throw dd.wrapClientException((Throwable) ((Object) runtimeException), "dj.H(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw DraggableWidgetContainer.wrapClientException((Throwable) ((Object) runtimeException), "dj.H(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -470,7 +470,7 @@ final class BufferedRandomAccessFile {
           } else {
             stackIn_56_2 = "{...}";
           }
-          throw dd.wrapClientException((Throwable) ((Object) stackIn_55_0), ((StringBuilder) (Object) stackIn_55_1).append(stackIn_56_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw DraggableWidgetContainer.wrapClientException((Throwable) ((Object) stackIn_55_0), ((StringBuilder) (Object) stackIn_55_1).append(stackIn_56_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -488,7 +488,7 @@ final class BufferedRandomAccessFile {
           this.field_a = 0L;
           this.field_m = new byte[param2];
         } catch (RuntimeException runtimeException) {
-          throw dd.wrapClientException((Throwable) ((Object) runtimeException), "dj.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw DraggableWidgetContainer.wrapClientException((Throwable) ((Object) runtimeException), "dj.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 

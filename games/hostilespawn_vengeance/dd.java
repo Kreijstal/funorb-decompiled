@@ -166,7 +166,7 @@ final class dd extends ql {
           }
           if (rl.field_c == 0 &&
             bm.field_c == 0 &&
-            0 <= ul.field_L) {
+            0 <= ModalDialog.field_L) {
             if (dn.field_i != ClientLookupTables.field_d) {
               var9 = vg.field_e;
               for (var2Lifetime1 = 0; var9.length > var2Lifetime1; var2Lifetime1++) {
@@ -174,25 +174,25 @@ final class dd extends ql {
                 var10Lifetime1.a(32669);
               }
             }
-            if (ul.field_L == 0 &&
+            if (ModalDialog.field_L == 0 &&
               TextHotspotBounds.field_m[0].field_j.field_e <= 43 &&
               58 >= TextHotspotBounds.field_m[0].field_j.field_g) {
-              ul.field_L = 1;
+              ModalDialog.field_L = 1;
               var11 = new GridPoint(42, 52);
               TextHotspotBounds.field_m[ProxySocketFactory.field_j] = new oj(var11, 6, rl.field_c);
               ln.field_a.field_c[var11.getClampedTileIndex(-4)] = 3;
               ProxySocketFactory.field_j = ProxySocketFactory.field_j + 1;
             }
-            if (ul.field_L == 0 &&
+            if (ModalDialog.field_L == 0 &&
               TextHotspotBounds.field_m[0].field_j.field_e >= 48 &&
               TextHotspotBounds.field_m[0].field_j.field_g <= 56) {
-              ul.field_L = 2;
+              ModalDialog.field_L = 2;
               var12 = new GridPoint(42, 52);
               TextHotspotBounds.field_m[ProxySocketFactory.field_j] = new oj(var12, 6, rl.field_c);
               ln.field_a.field_c[var12.getClampedTileIndex(-4)] = 3;
               ProxySocketFactory.field_j = ProxySocketFactory.field_j + 1;
             }
-            if (ul.field_L == 0) {
+            if (ModalDialog.field_L == 0) {
               var1_int = -uj.field_p.field_e + 888;
               var2Lifetime1Lifetime1 = -uj.field_p.field_g + 800 - 32 + 452;
               var3 = 320;
@@ -363,14 +363,14 @@ final class dd extends ql {
               SoftwareRasterizer.fillCircleAlpha(stackIn_87_0, stackIn_87_1, stackIn_87_2, stackIn_87_3, stackIn_88_4 >> 1);
               SoftwareRasterizer.resetClip();
             }
-            if (ul.field_L == 1 ||
-              ul.field_L == 2) {
+            if (ModalDialog.field_L == 1 ||
+              ModalDialog.field_L == 2) {
               var13 = new GridPoint(42, 52);
               if (ln.field_a.field_c[var13.getClampedTileIndex(-4)] != 3) {
-                ul.field_L = 3;
+                ModalDialog.field_L = 3;
               }
             }
-            if (1 == ul.field_L) {
+            if (1 == ModalDialog.field_L) {
               var1_intLifetime2 = -32 + (-uj.field_p.field_e + 576 + 321);
               var2Lifetime1Lifetime2 = 425 - uj.field_p.field_g + 710;
               var3Lifetime1 = 256;
@@ -412,43 +412,43 @@ final class dd extends ql {
               }
               SoftwareRasterizer.fillRectangleAlpha(stackIn_105_0, stackIn_105_1, stackIn_105_2, stackIn_105_3, stackIn_105_4, stackIn_106_5 >> 3);
             }
-            if (ul.field_L == 3 &&
+            if (ModalDialog.field_L == 3 &&
               TextHotspotBounds.field_m[0].field_j.field_e <= 42 &&
               TextHotspotBounds.field_m[0].field_j.field_g <= 49) {
-              ul.field_L = 4;
+              ModalDialog.field_L = 4;
             }
-            if (ul.field_L == 4 &&
+            if (ModalDialog.field_L == 4 &&
               TextHotspotBounds.field_m[0].field_j.field_e <= 42 &&
               TextHotspotBounds.field_m[0].field_j.field_g <= 49) {
-              ul.field_L = 5;
+              ModalDialog.field_L = 5;
             }
-            if (ul.field_L == 5 &&
+            if (ModalDialog.field_L == 5 &&
               50 <= TextHotspotBounds.field_m[0].field_j.field_e) {
-              ul.field_L = 10;
+              ModalDialog.field_L = 10;
             }
-            if (ul.field_L == 10 &&
+            if (ModalDialog.field_L == 10 &&
               TextHotspotBounds.field_m[0].field_j.field_e == 63 &&
               TextHotspotBounds.field_m[0].field_j.field_g <= 30) {
-              ul.field_L = 11;
+              ModalDialog.field_L = 11;
             }
-            if (ul.field_L == 10 &&
+            if (ModalDialog.field_L == 10 &&
               TextHotspotBounds.field_m[0].field_j.field_e == 77 &&
               TextHotspotBounds.field_m[0].field_j.field_g >= 43) {
-              ul.field_L = 12;
+              ModalDialog.field_L = 12;
             }
-            if (ul.field_L >= 10 &&
-              12 >= ul.field_L &&
+            if (ModalDialog.field_L >= 10 &&
+              12 >= ModalDialog.field_L &&
               TextHotspotBounds.field_m[0].field_j.field_e >= 82 &&
               TextHotspotBounds.field_m[0].field_j.field_g >= 30) {
-              ul.field_L = 13;
+              ModalDialog.field_L = 13;
             }
             if (DebouncedFieldValidator.field_a &&
               ClientLookupTables.field_d != dn.field_i) {
-              ul.field_L = 14;
+              ModalDialog.field_L = 14;
             }
-            if (ul.field_L == 13 &&
+            if (ModalDialog.field_L == 13 &&
               ha.field_t == 0) {
-              ul.field_L = 14;
+              ModalDialog.field_L = 14;
             }
           } else if (rl.field_c == 1 &&
             bm.field_c == 0) {
@@ -570,7 +570,7 @@ final class dd extends ql {
           }
         }
         CrossfadingMidiPcmStream.a(9, param0 ^ 1);
-        nh.field_E.copyCoordinatesFrom((byte) 46, this.field_l);
+        LabeledWidgetContainer.field_E.copyCoordinatesFrom((byte) 46, this.field_l);
         if (om.field_b) {
           TextHotspotBounds.field_m[0].field_j.copyCoordinatesFrom((byte) 46, this.field_l);
           VolumeRampingMidiPcmStream.field_Q[1] = true;
@@ -627,7 +627,7 @@ final class dd extends ql {
             ClientLookupTables.field_d != dn.field_i) {
             ti.a(236, (byte) 103, 19);
             CrossfadingMidiPcmStream.a(0, 1);
-            nh.field_E.copyCoordinatesFrom((byte) 46, this.field_f);
+            LabeledWidgetContainer.field_E.copyCoordinatesFrom((byte) 46, this.field_f);
             this.field_d.field_l = -1;
             this.field_p.field_l = -1;
             var4 = this.field_e;
@@ -644,7 +644,7 @@ final class dd extends ql {
         }
         boolean decompiledFrameRemainder0 = true;
         if (~ha.field_t == param0) {
-          if (nh.field_E.field_g - 1 > var8.field_g) {
+          if (LabeledWidgetContainer.field_E.field_g - 1 > var8.field_g) {
             if ((((ng.field_u & 15) == 0)) &&
               (!(this.field_g))) {
               this.a(this.field_k, param0 + 0);
@@ -652,7 +652,7 @@ final class dd extends ql {
             decompiledFrameRemainder0 = false;
           }
           else {
-            if (1 + nh.field_E.field_g < var8.field_g) {
+            if (1 + LabeledWidgetContainer.field_E.field_g < var8.field_g) {
               if ((((ng.field_u & 15) == 0)) &&
                 (!(this.field_g))) {
                 this.a(this.field_k, param0 + 0);
@@ -660,7 +660,7 @@ final class dd extends ql {
               decompiledFrameRemainder0 = false;
             }
             else {
-              if (var8.field_e != 1 + nh.field_E.field_e) {
+              if (var8.field_e != 1 + LabeledWidgetContainer.field_E.field_e) {
                 if ((((ng.field_u & 15) == 0)) &&
                   (!(this.field_g))) {
                   this.a(this.field_k, param0 + 0);

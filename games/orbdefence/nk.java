@@ -1136,7 +1136,7 @@ final class nk {
               if (var16 < 0) {
                 var16 = 0;
               }
-              pj.field_u[0].drawWithVerticalOpacityGradient(0, 0, var15, var16);
+              UiWidget.field_u[0].drawWithVerticalOpacityGradient(0, 0, var15, var16);
               decompiledFrameRemainder0 = (var20 != 0);
             }
             if (decompiledFrameRemainder0) {
@@ -1155,7 +1155,7 @@ final class nk {
               if (0 > var16) {
                 var16 = 0;
               }
-              pj.field_u[2].drawWithVerticalOpacityGradient(0, 0, var15, var16);
+              UiWidget.field_u[2].drawWithVerticalOpacityGradient(0, 0, var15, var16);
               if (this.field_o <= 300) {
                 ob.field_I.drawParagraph(sl.field_Z, 149, -this.field_o + 500, 340, 200, 0, 0, 1, 1, 14);
                 ob.field_I.drawParagraph(sl.field_Z, 150, -this.field_o + 499, 340, 200, 0, 0, 1, 1, 14);
@@ -1189,7 +1189,7 @@ final class nk {
             if (var16 < 0) {
               var16 = 0;
             }
-            pj.field_u[1].drawWithVerticalOpacityGradient(0, 0, var15, var16);
+            UiWidget.field_u[1].drawWithVerticalOpacityGradient(0, 0, var15, var16);
           }
           if (400 < this.field_o) {
             SoftwareRasterizer.fillRectangleAlpha(0, 0, 640, 480, 0, (this.field_o * 250 - 100000) / 100);
@@ -2022,7 +2022,7 @@ final class nk {
             rh.a((byte) -91, 6, true);
             if (var19 != 0) {
               il.field_f.c(-1);
-              kj.field_x = null;
+              SingleChildWidgetContainer.field_x = null;
               if (TextLayout.field_f != 0) {
                 rh.a((byte) 113, 5, true);
                 rh.a((byte) -45, 2, true);
@@ -2032,7 +2032,7 @@ final class nk {
             }
           } else {
             il.field_f.c(-1);
-            kj.field_x = null;
+            SingleChildWidgetContainer.field_x = null;
             if (TextLayout.field_f != 0) {
               rh.a((byte) 113, 5, true);
               if (var19 != 0) {
@@ -2277,7 +2277,7 @@ final class nk {
           }
         }
         nh.field_b = nh.field_b + 1;
-        mm.field_C = mm.field_C + 1;
+        DropTargetWidgetContainer.field_C = DropTargetWidgetContainer.field_C + 1;
         if ((4 <= this.field_m ||
           0 == this.field_m) && (this.field_j &&
           gi.field_e == 1)) {
@@ -2391,7 +2391,7 @@ final class nk {
             bl.field_p = var4Lifetime2;
           }
         }
-        mm.field_C = mm.field_C - (DiskCacheWorker.field_d - ua.field_a);
+        DropTargetWidgetContainer.field_C = DropTargetWidgetContainer.field_C - (DiskCacheWorker.field_d - ua.field_a);
         AccountNameAvailabilityValidator.field_r = AccountNameAvailabilityValidator.field_r - ua.field_a;
         a.field_r = a.field_r - DiskCacheWorker.field_d;
         if (param1) {
@@ -3017,29 +3017,29 @@ final class nk {
     }
 
     final void c(int param0) {
-        if (mm.field_A == null &&
+        if (DropTargetWidgetContainer.field_A == null &&
           wf.field_c.field_e[0].field_d > 0 &&
           !DirectByteStorage.field_d) {
           if (0 == this.field_b) {
-            mm.field_A = new vg(0, 65535, AccountNameAvailabilityValidator.field_r, mm.field_C, a.field_r, nh.field_b, new int[]{wf.field_c.field_x + wf.field_c.field_e[0].field_d * 105});
+            DropTargetWidgetContainer.field_A = new vg(0, 65535, AccountNameAvailabilityValidator.field_r, DropTargetWidgetContainer.field_C, a.field_r, nh.field_b, new int[]{wf.field_c.field_x + wf.field_c.field_e[0].field_d * 105});
           }
           if (1 == this.field_b) {
-            mm.field_A = new vg(1, 65534, AccountNameAvailabilityValidator.field_r, mm.field_C, a.field_r, nh.field_b, new int[]{105 * wf.field_c.field_e[0].field_d + wf.field_c.field_x});
+            DropTargetWidgetContainer.field_A = new vg(1, 65534, AccountNameAvailabilityValidator.field_r, DropTargetWidgetContainer.field_C, a.field_r, nh.field_b, new int[]{105 * wf.field_c.field_e[0].field_d + wf.field_c.field_x});
           }
           if (this.field_b == 2) {
-            mm.field_A = new vg(2, 65533, AccountNameAvailabilityValidator.field_r, mm.field_C, a.field_r, nh.field_b, new int[]{wf.field_c.field_e[0].field_d * 105 + wf.field_c.field_x});
+            DropTargetWidgetContainer.field_A = new vg(2, 65533, AccountNameAvailabilityValidator.field_r, DropTargetWidgetContainer.field_C, a.field_r, nh.field_b, new int[]{wf.field_c.field_e[0].field_d * 105 + wf.field_c.field_x});
           }
           if (this.field_b == 3) {
-            mm.field_A = new vg(3, 65532, AccountNameAvailabilityValidator.field_r, mm.field_C, a.field_r, nh.field_b, new int[]{wf.field_c.field_x + wf.field_c.field_e[0].field_d * 105});
+            DropTargetWidgetContainer.field_A = new vg(3, 65532, AccountNameAvailabilityValidator.field_r, DropTargetWidgetContainer.field_C, a.field_r, nh.field_b, new int[]{wf.field_c.field_x + wf.field_c.field_e[0].field_d * 105});
           }
           if (this.field_b == 4) {
-            mm.field_A = new vg(4, 65531, AccountNameAvailabilityValidator.field_r, mm.field_C, a.field_r, nh.field_b, new int[]{wf.field_c.field_e[0].field_d * 105 + wf.field_c.field_x});
+            DropTargetWidgetContainer.field_A = new vg(4, 65531, AccountNameAvailabilityValidator.field_r, DropTargetWidgetContainer.field_C, a.field_r, nh.field_b, new int[]{wf.field_c.field_e[0].field_d * 105 + wf.field_c.field_x});
           }
           if (5 == this.field_b) {
-            mm.field_A = new vg(5, 65530, AccountNameAvailabilityValidator.field_r, mm.field_C, a.field_r, nh.field_b, new int[]{wf.field_c.field_e[0].field_d * 105 + wf.field_c.field_x});
+            DropTargetWidgetContainer.field_A = new vg(5, 65530, AccountNameAvailabilityValidator.field_r, DropTargetWidgetContainer.field_C, a.field_r, nh.field_b, new int[]{wf.field_c.field_e[0].field_d * 105 + wf.field_c.field_x});
           }
           if (!n.b((byte) 31)) {
-            DiskCacheWorker.a(3, 10, mm.field_A);
+            DiskCacheWorker.a(3, 10, DropTargetWidgetContainer.field_A);
           }
         }
         if (param0 != -1) {
@@ -3058,7 +3058,7 @@ final class nk {
           var3.writeByte(param1.field_g, -68);
           var3.writeShort((byte) -60, param1.field_h);
         } catch (RuntimeException runtimeException) {
-          throw dd.wrapClientException((Throwable) ((Object) runtimeException), "nk.H(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw DraggableWidgetContainer.wrapClientException((Throwable) ((Object) runtimeException), "nk.H(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
@@ -3100,8 +3100,8 @@ final class nk {
         RuntimeException decompiledCaughtException = null;
         var2 = OrbDefence.field_D ? 1 : 0;
         try {
-          bm.field_d.a(PasswordValidator.field_o, false, true, ke.field_b);
-          bm.field_d.o(123);
+          bm.field_d.processPointerInput(PasswordValidator.field_o, false, true, ke.field_b);
+          bm.field_d.advanceDialogs(123);
           do {
             if (!nf.e(32722)) {
               if (mc.field_g != -1) {
@@ -3112,7 +3112,7 @@ final class nk {
               }
               break;
             }
-            bm.field_d.a(od.field_k, true, ob.field_K);
+            bm.field_d.processKeyInput(od.field_k, true, ob.field_K);
           } while (var2 == 0);
           if (param0 >= -93) {
             field_w = (tl) null;
@@ -3138,7 +3138,7 @@ final class nk {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw dd.wrapClientException((Throwable) ((Object) var1), "nk.D(" + param0 + ')');
+          throw DraggableWidgetContainer.wrapClientException((Throwable) ((Object) var1), "nk.D(" + param0 + ')');
         }
     }
 
@@ -3198,7 +3198,7 @@ final class nk {
         AccountNameAvailabilityValidator.field_r = 0;
         this.field_o = 0;
         TextLayout.field_f = 0;
-        mm.field_C = 0;
+        DropTargetWidgetContainer.field_C = 0;
         jk.field_j = new int[]{2, 2, -1, -1, -1, -1, 0};
         a.field_r = 0;
         nh.field_b = 0;

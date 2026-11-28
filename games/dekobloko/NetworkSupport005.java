@@ -29,7 +29,7 @@ final class NetworkSupport005 extends HashNode {
         if (integerArgument1 != 0) {
           return (MixedSupport056) null;
         }
-        cipherPacketBufferLocal10 = UiComponentPart006.cipherPacketBufferState0001;
+        cipherPacketBufferLocal10 = LabeledWidgetContainer.cipherPacketBufferState0001;
         integerLocal5 = cipherPacketBufferLocal10.readUnsignedByte((byte) -99);
         UiComponentPart019.integerState0505 = 127 & integerLocal5;
         stackBooleanLocal1 = ((integerLocal5 & 128) != 0);

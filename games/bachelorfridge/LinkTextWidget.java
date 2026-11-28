@@ -10,9 +10,9 @@ class LinkTextWidget extends InteractiveWidget {
     private TextLinkRegion field_E;
     private String[] field_I;
 
-    final void a(int param0, int param1, byte param2, int param3, int param4) {
+    final void setBounds(int param0, int param1, byte param2, int param3, int param4) {
         try {
-          super.a(param0, param1, param2, param3, param4);
+          super.setBounds(param0, param1, param2, param3, param4);
           this.rebuildHotspotBounds(21646);
         } catch (RuntimeException runtimeException) {
           throw pe.wrapException((Throwable) ((Object) runtimeException), "aha.P(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
@@ -1135,7 +1135,7 @@ class LinkTextWidget extends InteractiveWidget {
                 }
                 var2 = BuffVendorAnimation.a("WAITING_FOR_SAVEGAME", (byte) 98);
                 if (var2 != null) {
-                  hl.field_E = ChangeCreatureStatOrHealthEffect.a(var2, false);
+                  AlphaWidgetContainer.field_E = ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = BuffVendorAnimation.a("TURNS_AVAILABLE", (byte) 82);
                 if (null != var2) {
@@ -2276,7 +2276,7 @@ class LinkTextWidget extends InteractiveWidget {
                 }
                 var2 = BuffVendorAnimation.a("STATUS_EFFECT_LABEL", (byte) 123);
                 if (var2 != null) {
-                  vf.field_D = ChangeCreatureStatOrHealthEffect.a(var2, false);
+                  ModalDialog.field_D = ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = BuffVendorAnimation.a("loading_phrases,0", (byte) 122);
                 if (null != var2) {
@@ -2562,7 +2562,7 @@ class LinkTextWidget extends InteractiveWidget {
 
     final void a(int param0, int param1, int param2, byte param3) {
         try {
-          this.a(param2, ((WidgetMetrics) ((Object) this.renderer)).getPreferredHeight((UiWidget) (this), false), (byte) 59, param1, param0);
+          this.setBounds(param2, ((WidgetMetrics) ((Object) this.renderer)).getPreferredHeight((UiWidget) (this), false), (byte) 59, param1, param0);
           if (param3 != -50) {
             this.draw((byte) 33, 18, 3, 92);
           }

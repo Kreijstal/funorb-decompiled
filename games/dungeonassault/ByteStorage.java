@@ -18,7 +18,7 @@ abstract class ByteStorage {
     }
 
     final static void a(boolean param0, byte param1) {
-        lg.field_w.a(0, 0, 452);
+        lg.field_w.drawAllLayers(0, 0, 452);
         if (param1 != -106) {
           ByteStorage.a(-99, (byte) -119, 66, 70, false);
         }

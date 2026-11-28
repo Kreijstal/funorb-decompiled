@@ -11,13 +11,13 @@ class ql {
         int var3;
         int var4;
         if (~ha.field_t == param0 &&
-          nh.field_E.field_e > 0 && NameSuggestionsPanel.field_I != 2) {
+          LabeledWidgetContainer.field_E.field_e > 0 && NameSuggestionsPanel.field_I != 2) {
           var2 = TextHotspotBounds.field_m[0];
           var3 = (int)(0.5 + (var2.field_l.field_a + (double)var2.field_j.field_g));
           var4 = var2.field_j.field_e;
-          if (1 + nh.field_E.field_g == var3 &&
-            var4 >= -1 + nh.field_E.field_e &&
-            var4 <= nh.field_E.field_e + 1) {
+          if (1 + LabeledWidgetContainer.field_E.field_g == var3 &&
+            var4 >= -1 + LabeledWidgetContainer.field_E.field_e &&
+            var4 <= LabeledWidgetContainer.field_E.field_e + 1) {
             mf.a(false, 2);
           }
         }

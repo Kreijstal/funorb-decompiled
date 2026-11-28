@@ -27,10 +27,10 @@ final class PcmOutputWorker implements Runnable {
           if (ConfirmedEmailAvailabilityValidator.field_s > 2) {
             ConfirmedEmailAvailabilityValidator.field_s = 2;
           }
-          fj.field_S = 3 & param1;
+          DraggableWidgetContainer.field_S = 3 & param1;
           if (he.field_d <= 2) {
-            if (2 < fj.field_S) {
-              fj.field_S = 2;
+            if (2 < DraggableWidgetContainer.field_S) {
+              DraggableWidgetContainer.field_S = 2;
             }
             return;
           }
@@ -39,15 +39,15 @@ final class PcmOutputWorker implements Runnable {
           if (ConfirmedEmailAvailabilityValidator.field_s > 2) {
             ConfirmedEmailAvailabilityValidator.field_s = 2;
           }
-          fj.field_S = 3 & param1;
+          DraggableWidgetContainer.field_S = 3 & param1;
           if (he.field_d > 2) {
             he.field_d = 2;
           }
         }
-        if (2 >= fj.field_S) {
+        if (2 >= DraggableWidgetContainer.field_S) {
           return;
         }
-        fj.field_S = 2;
+        DraggableWidgetContainer.field_S = 2;
     }
 
     public final void run() {
@@ -578,7 +578,7 @@ final class PcmOutputWorker implements Runnable {
           var5.field_k = param2;
           var5.field_i = param1;
           LevelData.field_s.addLast((byte) -105, var5);
-          mc.a(false, param0, var5);
+          DropTargetWidgetContainer.a(false, param0, var5);
           return var5;
         }
         return (ti) null;

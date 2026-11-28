@@ -82,8 +82,8 @@ final class oq {
     }
 
     final static void a(boolean param0, boolean param1) {
-        ge.field_L = param1 ? true : false;
-        ge.a(320, 8, param0, LinkTextWidget.field_D, 2, 8, (LinkTextWidget.field_D.field_v + LinkTextWidget.field_D.field_B) * 3 / 2, (Sprite[]) null, LinkTextWidget.field_D.field_v, (byte) 91, 240, (Sprite[]) null);
+        LabeledWidgetContainer.field_L = param1 ? true : false;
+        LabeledWidgetContainer.a(320, 8, param0, LinkTextWidget.field_D, 2, 8, (LinkTextWidget.field_D.field_v + LinkTextWidget.field_D.field_B) * 3 / 2, (Sprite[]) null, LinkTextWidget.field_D.field_v, (byte) 91, 240, (Sprite[]) null);
         if (null != kga.field_c) {
           DiveBomberEvent.field_r.requestCursorVisibility((java.awt.Component) ((Object) kga.field_c), false, 127);
         }

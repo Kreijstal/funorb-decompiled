@@ -61,7 +61,7 @@ final class wg extends pk {
           if (param1 > -74) {
             wg.resetStaticState(88);
           }
-          kn.field_L = true;
+          SingleChildWidgetContainer.field_L = true;
         } catch (RuntimeException runtimeException) {
           throw SpriteGeometry.wrapClientException((Throwable) ((Object) runtimeException), "wg.G(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }

@@ -14,7 +14,7 @@ final class il {
     private int field_a;
     Sprite field_d;
     Sprite[] field_c;
-    static tj field_k;
+    static DraggableWidgetContainer field_k;
 
     final void a(il param0, int param1) {
         try {
@@ -241,7 +241,7 @@ final class il {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 != -74) {
-            field_k = (tj) null;
+            field_k = (DraggableWidgetContainer) null;
           }
           this.field_c = param0;
           return this;
@@ -272,7 +272,7 @@ final class il {
           field_e = null;
           return;
         }
-        field_k = (tj) null;
+        field_k = (DraggableWidgetContainer) null;
         field_k = null;
         field_f = null;
         field_e = null;

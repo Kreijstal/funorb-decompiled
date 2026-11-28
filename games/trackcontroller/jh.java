@@ -9,7 +9,7 @@ final class jh {
         if (param0 >= -54) {
           return;
         }
-        gl.field_E = new vl();
+        AlphaWidgetContainer.field_E = new ModalDialogHost();
         nk.a(true, 41, true);
     }
 

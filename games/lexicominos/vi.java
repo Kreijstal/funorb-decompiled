@@ -31,7 +31,7 @@ final class vi extends IntrusiveNode {
           for (var6 = 0; var6 < var3; var6++) {
             var5[var6] = ci.field_b[vg.a((int) var4[var6], 255)];
           }
-          var1[var2] = new RgbSprite(uc.field_fb, eh.field_b, mg.field_x[var2], rg.field_c[var2], pb.field_h[var2], bd.field_m[var2], var5);
+          var1[var2] = new RgbSprite(uc.field_fb, eh.field_b, SingleChildWidgetContainer.field_x[var2], rg.field_c[var2], pb.field_h[var2], bd.field_m[var2], var5);
         }
         GzipDecompressor.a(param0 ^ 27773);
         if (param0 != 23793) {
@@ -86,7 +86,7 @@ final class vi extends IntrusiveNode {
             stackIn_5_0 = (BinaryBitmapFont) null;
             return stackIn_5_0;
           }
-          var2 = new BinaryBitmapFont(param0, mg.field_x, rg.field_c, pb.field_h, bd.field_m, BufferedRandomAccessFile.field_f);
+          var2 = new BinaryBitmapFont(param0, SingleChildWidgetContainer.field_x, rg.field_c, pb.field_h, bd.field_m, BufferedRandomAccessFile.field_f);
           GzipDecompressor.a(12428);
           stackIn_7_0 = var2;
           return stackIn_7_0;

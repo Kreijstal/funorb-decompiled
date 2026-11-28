@@ -30,7 +30,7 @@ final class fe {
             fe.clearStaticReferences((byte) 54);
           }
         } catch (RuntimeException runtimeException) {
-          throw dd.wrapClientException((Throwable) ((Object) runtimeException), "fe.C(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + param5 + ')');
+          throw DraggableWidgetContainer.wrapClientException((Throwable) ((Object) runtimeException), "fe.C(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + param5 + ')');
         }
     }
 
@@ -41,7 +41,7 @@ final class fe {
           var1 = AccountCreationResultPanel.field_ib.a((byte) 85);
         }
         if (var1.length() == 0) {
-          var1 = jj.l(-112);
+          var1 = AlphaWidgetContainer.l(-112);
         }
         if (var1.length() == 0) {
           var1 = ec.field_F;
@@ -81,7 +81,7 @@ final class fe {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw dd.wrapClientException((Throwable) ((Object) var2), "fe.E(" + param0 + ',' + param1 + ')');
+          throw DraggableWidgetContainer.wrapClientException((Throwable) ((Object) var2), "fe.E(" + param0 + ',' + param1 + ')');
         }
     }
 

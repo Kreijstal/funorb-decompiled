@@ -36,7 +36,7 @@ final class ArchiveIndex {
         if (param0 < 111) {
           ArchiveIndex.resetStaticState((byte) 11);
         }
-        IndexedSprite var1 = new IndexedSprite(ah.field_A, sb.field_j, ConfirmedEmailAvailabilityValidator.field_s[0], hj.field_K[0], sb.field_m[0], ArchiveRequest.field_p[0], qc.field_b[0], ProxyAuthenticationRequiredException.field_a);
+        IndexedSprite var1 = new IndexedSprite(ah.field_A, sb.field_j, ConfirmedEmailAvailabilityValidator.field_s[0], DropTargetWidgetContainer.field_K[0], sb.field_m[0], ArchiveRequest.field_p[0], qc.field_b[0], ProxyAuthenticationRequiredException.field_a);
         SocketConnector.a((byte) 79);
         return var1;
     }
@@ -262,7 +262,7 @@ final class ArchiveIndex {
     ArchiveIndex(byte[] param0, int param1, byte[] param2) {
         int var4_int = 0;
         try {
-          this.field_i = j.a(0, param0.length, param0);
+          this.field_i = LabeledWidgetContainer.a(0, param0.length, param0);
           if (this.field_i != param1) {
             throw new RuntimeException();
           }

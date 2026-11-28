@@ -25,7 +25,7 @@ final class gma {
         InsanoSauceSpecial.c(false);
         ImageProducerRasterBuffer.field_j = param0 ? true : false;
         gfa.field_i = true;
-        gja.field_m.f((byte) -66);
+        gja.field_m.closeAllDialogs((byte) -66);
         uv.a(false, RaiseEvent.field_r, false);
     }
 

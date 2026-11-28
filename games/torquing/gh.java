@@ -10,7 +10,7 @@ final class gh {
 
     final static void b(int param0) {
         ah.field_c = AudioService.a((byte) 35);
-        dc.field_a = new ln();
+        dc.field_a = new ModalDialogHost();
         ea.a(true, (byte) 126, true);
         if (param0 != 1) {
           gh.b(-55);

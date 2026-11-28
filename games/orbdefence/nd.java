@@ -44,7 +44,7 @@ final class nd {
               var3_int = 1;
               hh.field_c = false;
             }
-            hc.a((byte) -96, var3_int != 0, tj.a(-112), IntrusiveNode.a(false), sk.field_H);
+            hc.a((byte) -96, var3_int != 0, tj.a(-112), IntrusiveNode.a(false), ModalDialogHost.field_H);
           } else {
             if (AccountRegistrationPanel.l(-28)) {
               if (TextFieldValidator.field_k == 0) {
@@ -73,7 +73,7 @@ final class nd {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw dd.wrapClientException((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param2).append(')').toString());
+          throw DraggableWidgetContainer.wrapClientException((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param2).append(')').toString());
         }
     }
 

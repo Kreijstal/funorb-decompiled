@@ -12,7 +12,7 @@ final class da implements java.awt.event.MouseListener, java.awt.event.MouseMoti
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (hh.field_M != null) {
+          if (DraggableWidgetContainer.field_M != null) {
             uc.field_eb = 0;
             cj.field_i = param0.getX();
             ij.field_h = param0.getY();
@@ -41,7 +41,7 @@ final class da implements java.awt.event.MouseListener, java.awt.event.MouseMoti
         int var2_int = 0;
         RuntimeException var2 = null;
         try {
-          if (null != hh.field_M) {
+          if (null != DraggableWidgetContainer.field_M) {
             uc.field_eb = 0;
             NameSuggestionsPanel.field_I = 0;
             ql.field_K = true;
@@ -225,7 +225,7 @@ final class da implements java.awt.event.MouseListener, java.awt.event.MouseMoti
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         try {
-          if (hh.field_M != null) {
+          if (DraggableWidgetContainer.field_M != null) {
             uc.field_eb = 0;
             cj.field_i = -1;
             ij.field_h = -1;
@@ -253,7 +253,7 @@ final class da implements java.awt.event.MouseListener, java.awt.event.MouseMoti
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         try {
-          if (hh.field_M != null) {
+          if (DraggableWidgetContainer.field_M != null) {
             uc.field_eb = 0;
             cj.field_i = param0.getX();
             ij.field_h = param0.getY();
@@ -281,7 +281,7 @@ final class da implements java.awt.event.MouseListener, java.awt.event.MouseMoti
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (hh.field_M != null) {
+          if (DraggableWidgetContainer.field_M != null) {
             NameSuggestionsPanel.field_I = 0;
           }
           return;
@@ -306,7 +306,7 @@ final class da implements java.awt.event.MouseListener, java.awt.event.MouseMoti
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (hh.field_M != null) {
+          if (DraggableWidgetContainer.field_M != null) {
             uc.field_eb = 0;
             cj.field_i = param0.getX();
             ij.field_h = param0.getY();
@@ -360,7 +360,7 @@ final class da implements java.awt.event.MouseListener, java.awt.event.MouseMoti
         int var2_int = 0;
         RuntimeException var2 = null;
         try {
-          if (hh.field_M != null) {
+          if (DraggableWidgetContainer.field_M != null) {
             uc.field_eb = 0;
             GameAppletShell.field_j = param0.getX();
             GzipDecompressor.field_b = param0.getY();

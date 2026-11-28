@@ -68,22 +68,22 @@ final class tb {
         int var4;
         var4 = 48 % ((param3 + 48) / 44);
         tf.a(90);
-        if (0 > fm.field_W) {
+        if (0 > ModalDialogHost.field_W) {
           fe.field_h.field_db = null;
           stackIn_7_0 = ql.field_d;
-          stackIn_8_1 = (param2) && (!param1) && (!fm.field_V) && (pd.field_Rb == null) && (ib.field_d == null);
+          stackIn_8_1 = (param2) && (!param1) && (!ModalDialogHost.field_V) && (pd.field_Rb == null) && (ib.field_d == null);
           ((ci) (Object) stackIn_7_0).a(stackIn_8_1, (byte) 88);
           stackIn_14_0 = rb.field_c;
-          stackIn_15_1 = (param2) && (!param1) && (!fm.field_V) && (pd.field_Rb == null) && (null == ib.field_d);
+          stackIn_15_1 = (param2) && (!param1) && (!ModalDialogHost.field_V) && (pd.field_Rb == null) && (null == ib.field_d);
           ((ci) (Object) stackIn_14_0).a(stackIn_15_1, (byte) 88);
           stackIn_19_0 = la.field_c;
-          stackIn_20_1 = (param2) && (!param1) && (fm.field_V);
+          stackIn_20_1 = (param2) && (!param1) && (ModalDialogHost.field_V);
           ((ci) (Object) stackIn_19_0).a(stackIn_20_1, (byte) 88);
           LoginPanel.field_W.field_a.f((byte) 109);
           if (ln.field_cc.field_L != 0) {
             tg.field_p = true;
           }
-          if (0 != ImageProducerRasterBuffer.field_l.field_L && (lf.field_U ||
+          if (0 != ImageProducerRasterBuffer.field_l.field_L && (AlphaWidgetContainer.field_U ||
             !(0 >= cl.field_d) ||
             !(sk.field_t < 2) &&
             ok.field_Jb[12])) {
@@ -97,26 +97,26 @@ final class tb {
             cd.a(0, mc.field_a, true, param0, mk.field_c, 121);
           }
           if (of.field_i.field_L != 0) {
-            fm.field_V = false;
+            ModalDialogHost.field_V = false;
           }
           return;
         }
-        fe.field_h.field_db = MatchingFieldValidator.a(hh.field_m, new String[]{Integer.toString(fm.field_W)}, (byte) -108);
+        fe.field_h.field_db = MatchingFieldValidator.a(hh.field_m, new String[]{Integer.toString(ModalDialogHost.field_W)}, (byte) -108);
         stackIn_46_0 = ql.field_d;
-        stackIn_47_1 = (param2) && (!param1) && (!fm.field_V) && (pd.field_Rb == null) && (ib.field_d == null);
+        stackIn_47_1 = (param2) && (!param1) && (!ModalDialogHost.field_V) && (pd.field_Rb == null) && (ib.field_d == null);
         ((ci) (Object) stackIn_46_0).a(stackIn_47_1, (byte) 88);
         stackIn_53_0 = rb.field_c;
-        stackIn_54_1 = (param2) && (!param1) && (!fm.field_V) && (pd.field_Rb == null) && (null == ib.field_d);
+        stackIn_54_1 = (param2) && (!param1) && (!ModalDialogHost.field_V) && (pd.field_Rb == null) && (null == ib.field_d);
         ((ci) (Object) stackIn_53_0).a(stackIn_54_1, (byte) 88);
         stackIn_58_0 = la.field_c;
-        stackIn_59_1 = (param2) && (!param1) && (fm.field_V);
+        stackIn_59_1 = (param2) && (!param1) && (ModalDialogHost.field_V);
         ((ci) (Object) stackIn_58_0).a(stackIn_59_1, (byte) 88);
         LoginPanel.field_W.field_a.f((byte) 109);
         if (ln.field_cc.field_L != 0) {
           tg.field_p = true;
         }
         if (0 != ImageProducerRasterBuffer.field_l.field_L) {
-          if (lf.field_U) {
+          if (AlphaWidgetContainer.field_U) {
             rh.a(0, param0);
           } else {
             if (0 < cl.field_d) {
@@ -135,7 +135,7 @@ final class tb {
             mk.field_c = wn.field_d[0];
             cd.a(0, mc.field_a, true, param0, mk.field_c, 121);
             if (of.field_i.field_L != 0) {
-              fm.field_V = false;
+              ModalDialogHost.field_V = false;
             }
             return;
           }
@@ -144,7 +144,7 @@ final class tb {
         if (of.field_i.field_L == 0) {
           return;
         }
-        fm.field_V = false;
+        ModalDialogHost.field_V = false;
     }
 
     final static void a(int param0, BitmapFont param1, int param2, RgbSprite[] param3, BitmapFont param4, int param5, RgbSprite[] param6, int param7, int param8, int param9, int param10, RgbSprite[] param11, int param12, int param13, int param14, int param15, int param16, int param17, int param18, int param19, int param20) {

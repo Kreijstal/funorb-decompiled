@@ -196,7 +196,7 @@ class qb extends k {
             }
           }
           dfa.field_b = -(var7Lifetime1 >> 1) + (var7Lifetime1 + sd.field_a);
-          ula.field_f = (ShieldEvent.field_r + raa.field_J << 1) * fw.field_i.field_e;
+          ula.field_f = (ShieldEvent.field_r + DraggableWidgetContainer.field_J << 1) * fw.field_i.field_e;
           StatusEffectInfo.field_a = sd.field_a - (var7Lifetime1 >> 1);
           for (var8Lifetime2 = 0; var8Lifetime2 < pt.field_a.length; var8Lifetime2++) {
             stackIn_37_0 = ula.field_f;

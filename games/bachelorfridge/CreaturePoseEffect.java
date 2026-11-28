@@ -311,7 +311,7 @@ final class CreaturePoseEffect extends EventEffect {
                 }
               }
               if ((decompiledFrameRemainder1) && (!(var10 < 2) || var19 != 0) && (DelegatingCanvas.field_b != null ||
-                null != re.field_F ||
+                null != DropTargetWidgetContainer.field_F ||
                 null != gma.field_c ||
                 null != wda.field_c)) {
                 var11 = 0;
@@ -329,9 +329,9 @@ final class CreaturePoseEffect extends EventEffect {
                       DelegatingCanvas.field_b[var16][var17_int]) {
                       var11 = 1;
                     }
-                    if (null != re.field_F &&
-                      null != re.field_F[var16]) {
-                      var18_int = re.field_F[var16][var17_int];
+                    if (null != DropTargetWidgetContainer.field_F &&
+                      null != DropTargetWidgetContainer.field_F[var16]) {
+                      var18_int = DropTargetWidgetContainer.field_F[var16][var17_int];
                       if (var18_int != 0 &&
                         !bha.field_l) {
                         var11 = 1;

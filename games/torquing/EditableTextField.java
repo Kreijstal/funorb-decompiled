@@ -354,7 +354,7 @@ class EditableTextField extends InteractiveWidget {
         }
     }
 
-    EditableTextField(String param0, ca param1, int param2) {
+    EditableTextField(String param0, WidgetEventListener param1, int param2) {
         super(param0, param1);
         this.field_E = 0L;
         this.field_F = false;
@@ -402,11 +402,11 @@ class EditableTextField extends InteractiveWidget {
         return var3;
     }
 
-    void a(int param0, UiWidget param1, int param2, int param3) {
+    void updatePointer(int param0, UiWidget param1, int param2, int param3) {
         TextWidgetRenderer var7 = null;
         int var6 = 0;
         try {
-          super.a(124, param1, param2, param3);
+          super.updatePointer(124, param1, param2, param3);
           this.scrollCaretIntoView(true);
           if (this.field_l == 1) {
             if (this.renderer instanceof TextWidgetRenderer) {
@@ -429,7 +429,7 @@ class EditableTextField extends InteractiveWidget {
         }
     }
 
-    final boolean a(int param0, UiWidget param1, char param2, int param3) {
+    final boolean handleKey(int param0, UiWidget param1, char param2, int param3) {
         int dupTemp$0 = 0;
         int stackIn_22_1 = 0;
         int stackIn_23_2 = 0;
@@ -584,7 +584,7 @@ class EditableTextField extends InteractiveWidget {
         }
     }
 
-    final void a(int param0, byte param1, int param2, int param3) {
+    final void drawWidget(int param0, byte param1, int param2, int param3) {
         TextWidgetRenderer var9 = null;
         long var6 = 0L;
         if (param1 >= -7) {
@@ -593,7 +593,7 @@ class EditableTextField extends InteractiveWidget {
         }
         if (null != this.renderer &&
           param0 == 0) {
-          this.renderer.a(114, param2, param3, this.field_x, (UiWidget) (this));
+          this.renderer.paintWidget(114, param2, param3, this.field_x, (UiWidget) (this));
           if (this.renderer instanceof TextWidgetRenderer) {
             var9 = (TextWidgetRenderer) ((Object) this.renderer);
             if (this.field_G != this.field_C) {
@@ -617,7 +617,7 @@ class EditableTextField extends InteractiveWidget {
         }
     }
 
-    final boolean a(int param0, int param1, int param2, int param3, int param4, UiWidget param5, byte param6) {
+    final boolean pointerPressed(int param0, int param1, int param2, int param3, int param4, UiWidget param5, byte param6) {
         int stackIn_5_1 = 0;
         int stackIn_6_2 = 0;
         boolean stackIn_9_1 = false;
@@ -629,7 +629,7 @@ class EditableTextField extends InteractiveWidget {
         long var8_long = 0L;
         RuntimeException var8 = null;
         try {
-          if (super.a(param0, param1, param2, param3, param4, param5, (byte) 70) &&
+          if (super.pointerPressed(param0, param1, param2, param3, param4, param5, (byte) 70) &&
             this.renderer instanceof TextWidgetRenderer) {
             var8_int = ((TextWidgetRenderer) ((Object) this.renderer)).findTextOffsetAtScreenPosition(k.field_e, -1, (UiWidget) (this), n.field_t, param2, param1);
             stackIn_5_1 = -94;

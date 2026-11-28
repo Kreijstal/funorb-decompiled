@@ -37,10 +37,10 @@ final class km {
         pb.a(69);
         if (param0 > -44) {
           field_b = (String) null;
-          oj.a(4, 3);
+          AlphaWidgetContainer.a(4, 3);
           return;
         }
-        oj.a(4, 3);
+        AlphaWidgetContainer.a(4, 3);
     }
 
     static {

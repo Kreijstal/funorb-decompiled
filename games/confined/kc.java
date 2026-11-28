@@ -4,15 +4,15 @@
 final class kc {
     static String field_n;
     private int field_a;
-    fe field_u;
+    WidgetRenderer field_u;
     static boolean field_o;
     static String field_q;
     private boolean field_b;
-    fe field_m;
-    fe field_w;
+    WidgetRenderer field_m;
+    WidgetRenderer field_w;
     int field_g;
-    fe field_h;
-    fe field_j;
+    WidgetRenderer field_h;
+    WidgetRenderer field_j;
     int field_c;
     int field_l;
     static String field_f;
@@ -137,7 +137,7 @@ final class kc {
         qh var14Lifetime2;
         try {
           var17 = new DefaultTextWidgetRenderer(param1, 2, 2, 2236962, 1, 1, 1, param1.field_C + param1.field_D + 2);
-          this.field_m = (fe) ((Object) var17);
+          this.field_m = (WidgetRenderer) ((Object) var17);
           var17.field_i = 16777215;
           var4 = new qh();
           var17.a(param0, var4);
@@ -164,21 +164,21 @@ final class kc {
           var5[4] = (RgbSprite) ((Object) var18);
           var4.b(4, -90).a(true, 0).a(-1, var5);
           var4.b(5, -97).a(-1, em.a(0, 0, 65793, (byte) 2, 0)).a(true, 0).a(1918, -1);
-          this.field_h = (fe) ((Object) var4);
+          this.field_h = (WidgetRenderer) ((Object) var4);
           var6 = new qh(var4, true);
           var6.field_p = 0;
           var7 = new qh(var4, true);
           var7.field_p = 0;
           var7.a((byte) -86, jf.a(8947848, (byte) 99));
           var7.b(1, -93).a(-1, jf.a(11184810, (byte) 86)).a(1918, 2236962);
-          this.field_j = (fe) ((Object) new b(param1, 2, 2, 16777215, -1, 5, 5, 15, 15, 4473924));
+          this.field_j = (WidgetRenderer) ((Object) new b(param1, 2, 2, 16777215, -1, 5, 5, 15, 15, 4473924));
           discarded$0 = new li(param1, 2, 2, 16777215, -1, 16777215, 16729156, 4473924);
           discarded$1 = new rc(param1, 16777215, -1, 125269879, 4473924, 3, 268435455);
           var8 = new qh();
           var17.a(false, var8);
           var8.b(0, -69).a(-1, en.a(!param0 ? true : false, 15658734, 10066329, 7829367)).a(1918, 1118481).c(-1, 97);
           var8.b(4, -106).a(true, 0).a(-1, var5);
-          this.field_u = (fe) ((Object) var8);
+          this.field_u = (WidgetRenderer) ((Object) var8);
           var9 = new RgbSprite[9];
           var10 = new RgbSprite[9];
           var9[4] = new RgbSprite(2, 1);
@@ -361,7 +361,7 @@ final class kc {
     final void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {
         SoftwareRasterizer.fillRectangleAlpha(param0, param1, param4, param5, param6, param2);
         if (param3 < 16) {
-          this.field_w = (fe) null;
+          this.field_w = (WidgetRenderer) null;
         }
     }
 
@@ -370,7 +370,7 @@ final class kc {
           SoftwareRasterizer.drawLine(param3, param1, param0, param2, param5);
           return;
         }
-        this.field_h = (fe) null;
+        this.field_h = (WidgetRenderer) null;
         SoftwareRasterizer.drawLine(param3, param1, param0, param2, param5);
     }
 

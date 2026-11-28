@@ -8,7 +8,7 @@ final class DiskArchiveRequest extends ArchiveRequest {
     static int field_A;
     byte[] field_y;
     int field_E;
-    static rj field_D;
+    static DraggableWidgetContainer field_D;
     static RgbSprite field_z;
 
     final int getProgressPercent(int param0) {
@@ -100,10 +100,10 @@ final class DiskArchiveRequest extends ArchiveRequest {
             var7 = hf.field_d[var4];
             if (2 == be.field_e &&
               var2 == 1) {
-              if (gg.field_D.length <= EmailFormatValidator.field_o.length) {
+              if (ModalDialogHost.field_D.length <= EmailFormatValidator.field_o.length) {
                 stackIn_17_0 = EmailFormatValidator.field_o.length;
               } else {
-                stackIn_17_0 = gg.field_D.length;
+                stackIn_17_0 = ModalDialogHost.field_D.length;
               }
               var8 = stackIn_17_0;
               if (var4 >= 6 &&

@@ -1,0 +1,94 @@
+/*
+ * Decompiled by CFR-JS 0.4.0.
+ */
+final class AlphaWidgetContainer extends SingleChildWidgetContainer {
+    int field_A;
+    static boolean field_D;
+    static String field_B;
+    static th field_C;
+    static String field_F;
+
+    final void drawWidget(int param0, byte param1, int param2, int param3) {
+        if (param0 != 0) {
+          return;
+        }
+        if (null == this.field_y) {
+          return;
+        }
+        if (0 == this.field_A) {
+          return;
+        }
+        if (this.field_A == 256) {
+          this.field_y.drawWidget(param0, (byte) -57, param2 + this.field_k, this.field_w + param3);
+          return;
+        }
+        Sprite var5 = new Sprite(this.field_y.field_p, this.field_y.field_t);
+        hj.a(var5, 1);
+        this.field_y.drawWidget(param0, param1, 0, 0);
+        DefaultTextWidgetRenderer.b((byte) -58);
+        var5.drawWithOpacity(param3 + this.field_w, this.field_k + param2, this.field_A);
+    }
+
+    public AlphaWidgetContainer() {
+        super(0, 0, 0, 0, (WidgetRenderer) null, (WidgetEventListener) null);
+        this.field_A = 256;
+    }
+
+    AlphaWidgetContainer(UiWidget param0) {
+        super(param0.field_w, param0.field_k, param0.field_p, param0.field_t, (WidgetRenderer) null, (WidgetEventListener) null);
+        try {
+          param0.setBounds(this.field_p, 0, 0, this.field_t, 23987);
+          this.field_A = 256;
+          this.field_y = param0;
+        } catch (RuntimeException runtimeException) {
+          throw ma.a((Throwable) ((Object) runtimeException), "oa.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+        }
+    }
+
+    final static int a(rb param0, int param1, boolean param2) {
+        RuntimeException var3 = null;
+        rb var4 = null;
+        int stackIn_3_0 = 0;
+        RuntimeException stackIn_6_0 = null;
+        StringBuilder stackIn_6_1 = null;
+        String stackIn_7_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        try {
+          if (param1 != 0) {
+            var4 = (rb) null;
+            AlphaWidgetContainer.a((rb) null, 119, true);
+          }
+          stackIn_3_0 = param0.c(param1 - 25186, param2);
+          return stackIn_3_0;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var3 = decompiledCaughtException;
+          stackIn_6_0 = var3;
+          stackIn_6_1 = new StringBuilder().append("oa.K(");
+          if (param0 == null) {
+            stackIn_7_2 = "null";
+          } else {
+            stackIn_7_2 = "{...}";
+          }
+          throw ma.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+        }
+    }
+
+    public static void clearDeclaredStaticReferences(int param0) {
+        field_B = null;
+        field_C = null;
+        if (param0 > -68) {
+          AlphaWidgetContainer.clearDeclaredStaticReferences(-65);
+          field_F = null;
+          return;
+        }
+        field_F = null;
+    }
+
+    static {
+        field_D = true;
+        field_B = "Click";
+        field_C = new th();
+        field_F = "Connection lost. <%0>";
+    }
+}

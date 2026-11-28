@@ -34,7 +34,7 @@ final class wd extends DefaultWidgetRenderer {
         }
     }
 
-    public final void a(int param0, UiWidget param1, int param2, int param3, boolean param4) {
+    public final void paintWidget(int param0, UiWidget param1, int param2, int param3, boolean param4) {
         UiWidget stackIn_3_0 = null;
         RuntimeException stackIn_30_0 = null;
         StringBuilder stackIn_30_1 = null;
@@ -298,7 +298,7 @@ final class wd extends DefaultWidgetRenderer {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         try {
-          hl.a((byte) -67, (java.awt.Component) ((Object) param1));
+          AlphaWidgetContainer.a((byte) -67, (java.awt.Component) ((Object) param1));
           DisplayNameSelectionPanel.a(-99, (java.awt.Component) ((Object) param1));
           if (param0 != 70) {
             field_w = (Sprite[]) null;

@@ -9,12 +9,12 @@ class DualLinkNode extends IntrusiveNode {
     static String field_i;
 
     final static void d(int param0) {
-        bm.field_d.n(7920);
+        bm.field_d.closeAllDialogs(7920);
         if (na.field_c == null) {
           na.field_c = new ve(bm.field_d, bm.field_a);
         }
         if (param0 == -1) {
-          bm.field_d.b((byte) 74, (pj) (na.field_c));
+          bm.field_d.showDialog((byte) 74, (UiWidget) (na.field_c));
           return;
         }
     }
@@ -128,7 +128,7 @@ class DualLinkNode extends IntrusiveNode {
           } else {
             stackIn_22_2 = "{...}";
           }
-          throw dd.wrapClientException((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(',').append(param4).append(',').append(param5).append(')').toString());
+          throw DraggableWidgetContainer.wrapClientException((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(',').append(param4).append(',').append(param5).append(')').toString());
         }
     }
 

@@ -7,7 +7,7 @@ final class PcmResampler {
     static he[] field_b;
     private int field_e;
     private int[][] field_a;
-    static k field_c;
+    static ModalDialogHost field_c;
     static String[] field_d;
 
     final byte[] resampleBytes(byte[] param0, byte param1) {
@@ -95,7 +95,7 @@ final class PcmResampler {
           param0 = (int)((long)param0 * (long)this.field_e / (long)this.field_g) + 6;
         }
         if (param1 != 101) {
-          field_c = (k) null;
+          field_c = (ModalDialogHost) null;
         }
         return param0;
     }
@@ -121,7 +121,7 @@ final class PcmResampler {
           }
           if (wg.field_u == lc.field_h &&
             param0.equals(NetworkArchiveRequest.field_I)) {
-            lc.field_h = pj.field_D;
+            lc.field_h = DequeWidgetContainer.field_D;
             stackIn_9_0 = kf.field_a;
             return stackIn_9_0;
           }
@@ -203,7 +203,7 @@ final class PcmResampler {
     public static void clearStaticReferences(int param0) {
         field_b = null;
         if (param0 != 0) {
-          field_c = (k) null;
+          field_c = (ModalDialogHost) null;
         }
         field_d = null;
         field_c = null;

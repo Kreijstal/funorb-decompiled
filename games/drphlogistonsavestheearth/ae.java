@@ -12,10 +12,10 @@ final class ae extends ca implements WidgetActivationListener {
     static int field_gb;
     static he[] field_lb;
 
-    ae(k param0, ia param1) {
+    ae(ModalDialogHost param0, ia param1) {
         super(param0, 200, 150);
         Object var3 = null;
-        vg var4 = null;
+        UiWidget var4 = null;
         Object stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
         String stackIn_13_2 = null;
@@ -41,14 +41,14 @@ final class ae extends ca implements WidgetActivationListener {
           } else {
             var3 = of.field_u;
           }
-          var4 = new vg((String) (var3), (fd) null);
+          var4 = new UiWidget((String) (var3), (WidgetEventListener) null);
           var4.field_w = this.field_w;
           var4.field_k = 80;
           var4.field_m = 50;
           var4.field_o = 0;
-          var4.field_l = (cg) ((Object) new DefaultTextWidgetRenderer(u.field_d, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true));
-          this.b(var4, (byte) 121);
-          this.field_fb = this.a((fd) (this), TextFieldValidator.field_h, 10);
+          var4.field_l = (WidgetRenderer) ((Object) new DefaultTextWidgetRenderer(u.field_d, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true));
+          this.addChild(var4, (byte) 121);
+          this.field_fb = this.a((WidgetEventListener) (this), TextFieldValidator.field_h, 10);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -91,7 +91,7 @@ final class ae extends ca implements WidgetActivationListener {
         try {
           if (!param2) {
             var7 = (String) null;
-            discarded$1 = this.a((fd) null, (String) null, -72);
+            discarded$1 = this.a((WidgetEventListener) null, (String) null, -72);
           }
           if (this.field_fb == param3) {
             this.o(0);
@@ -186,7 +186,7 @@ final class ae extends ca implements WidgetActivationListener {
         }
     }
 
-    private final InteractiveWidget a(fd param0, String param1, int param2) {
+    private final InteractiveWidget a(WidgetEventListener param0, String param1, int param2) {
         InteractiveWidget var4 = null;
         RuntimeException var4_ref = null;
         int var5 = 0;
@@ -200,16 +200,16 @@ final class ae extends ca implements WidgetActivationListener {
         RuntimeException decompiledCaughtException = null;
         try {
           var4 = new InteractiveWidget(param1, param0);
-          var4.field_l = (cg) ((Object) new ie());
+          var4.field_l = (WidgetRenderer) ((Object) new ie());
           var5 = this.field_k - 6;
           this.field_k = this.field_k + 38;
-          var4.a(var5, 30, 15, 16535, -14 + this.field_w - 16);
+          var4.setBounds(var5, 30, 15, 16535, -14 + this.field_w - 16);
           if (param2 != 10) {
             stackIn_2_0 = (InteractiveWidget) null;
             return stackIn_2_0;
           }
-          this.b(var4, (byte) 63);
-          this.e((byte) 64);
+          this.addChild(var4, (byte) 63);
+          this.refreshLayout((byte) 64);
           stackIn_4_0 = var4;
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

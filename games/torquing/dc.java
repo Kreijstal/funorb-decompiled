@@ -4,7 +4,7 @@
 final class dc {
     static String field_b;
     static long field_c;
-    static ln field_a;
+    static ModalDialogHost field_a;
 
     final static CoverageBitmapFont a(String param0, ResourceArchive param1, ResourceArchive param2, boolean param3, String param4) {
         int var5_int = 0;
@@ -105,7 +105,7 @@ final class dc {
           if (param2 == 2) {
             return;
           }
-          field_a = (ln) null;
+          field_a = (ModalDialogHost) null;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

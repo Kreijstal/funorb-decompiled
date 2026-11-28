@@ -499,7 +499,7 @@ final class PlayerAvatarRenderer extends LevelRenderable {
                     break;
                   case 9:
                     this.requestAvatarAnimation(17, (byte) -36);
-                    qg.a(1, 500, 10, 1);
+                    DraggableWidgetContainer.a(1, 500, 10, 1);
                     var5 = 1;
                     break;
                   case 2:

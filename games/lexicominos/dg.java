@@ -33,19 +33,19 @@ final class dg {
         if (!param1) {
           return true;
         }
-        if (null == al.field_H) {
-          al.field_H = vl.field_a.requestDirectSocket(nj.field_a, (byte) -58, AccountNameAvailabilityValidator.field_n);
+        if (null == ModalDialog.field_H) {
+          ModalDialog.field_H = vl.field_a.requestDirectSocket(nj.field_a, (byte) -58, AccountNameAvailabilityValidator.field_n);
         }
-        if (0 == al.field_H.status) {
+        if (0 == ModalDialog.field_H.status) {
           return false;
         }
         dupTemp$2 = rf.correctedCurrentTimeMillis(0);
         p.field_c = dupTemp$2;
         ta.field_e = dupTemp$2;
-        if (al.field_H.status != 1) {
+        if (ModalDialog.field_H.status != 1) {
         }
         AgeValidator.field_m = rh.field_r;
-        al.field_H = null;
+        ModalDialog.field_H = null;
         return true;
     }
 

@@ -24,14 +24,14 @@ final class vf extends InteractiveWidget {
             if (null != ImageProducerRasterBuffer.field_q &&
               ImageProducerRasterBuffer.field_q.focusLost) {
               tb.f((byte) -119);
-              nb.field_F.c(new jh(nb.field_F, hf.field_g), param0 + 118);
+              nb.field_F.showDialog(new jh(nb.field_F, hf.field_g), param0 + 118);
             }
             return;
           }
-          nb.field_F.a(im.field_f, param0 + 8800, true, ul.field_H);
-          nb.field_F.e((byte) 114);
-          while (jn.e((byte) 125)) {
-            nb.field_F.a(pj.field_e, SpriteBase.field_e, 80);
+          nb.field_F.processPointerInput(im.field_f, param0 + 8800, true, ModalDialog.field_H);
+          nb.field_F.advanceDialogs((byte) 114);
+          while (AlphaWidgetContainer.e((byte) 125)) {
+            nb.field_F.processKeyInput(pj.field_e, SpriteBase.field_e, 80);
           }
           if (param0 != -1) {
             field_H = (RgbSprite) null;
@@ -44,7 +44,7 @@ final class vf extends InteractiveWidget {
         }
     }
 
-    vf(String param0, mh param1, boolean param2) {
+    vf(String param0, WidgetEventListener param1, boolean param2) {
         this(param0, param1);
         try {
           this.field_A = param2 ? true : false;
@@ -53,7 +53,7 @@ final class vf extends InteractiveWidget {
         }
     }
 
-    private vf(String param0, mh param1) {
+    private vf(String param0, WidgetEventListener param1) {
         this(param0, gf.field_e.field_e, param1);
         try {
           this.field_h = gf.field_e.field_n;
@@ -62,7 +62,7 @@ final class vf extends InteractiveWidget {
         }
     }
 
-    private vf(String param0, nn param1, mh param2) {
+    private vf(String param0, WidgetRenderer param1, WidgetEventListener param2) {
         super(param0, param1, param2);
         try {
           this.field_h = gf.field_e.field_n;
@@ -278,7 +278,7 @@ final class vf extends InteractiveWidget {
           }
           ProxySocketFactory.field_h[0] = cm.a(128, 5, 0, 1);
           ProxySocketFactory.field_h[1] = cm.a(128, 5, 1, 1);
-          nh.field_L = RichTextWidget.a(6, 5);
+          LabeledWidgetContainer.field_L = RichTextWidget.a(6, 5);
           if (param0 != -8255) {
             var3 = (String[]) null;
             vf.createAccountSuggestionsResult((String[]) null, false);

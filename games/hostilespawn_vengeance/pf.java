@@ -157,12 +157,12 @@ final class pf {
 
     final static void b(byte param0) {
         de.c(-1);
-        rj.field_K = true;
+        DraggableWidgetContainer.field_K = true;
         MatchingFieldValidator.field_o = true;
         if (param0 != -64) {
           return;
         }
-        im.field_e.f((byte) 32);
+        im.field_e.closeAllDialogs((byte) 32);
         qa.a(false, (byte) -37, uj.field_h);
     }
 

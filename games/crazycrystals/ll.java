@@ -94,7 +94,7 @@ final class ll {
             MouseWheelInput.field_b = 0;
             var4 = var10.field_b;
             oe.field_a = new fq[3];
-            ol.field_B = 0;
+            ModalDialogHost.field_B = 0;
             rl.field_h = 0;
             qh.field_o = new Vector();
             tm.field_e = 0;

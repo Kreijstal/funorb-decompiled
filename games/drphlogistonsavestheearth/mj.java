@@ -51,7 +51,7 @@ class mj extends DefaultTextWidgetRenderer {
         }
     }
 
-    public final void a(boolean param0, int param1, vg param2, int param3, int param4) {
+    public final void paintWidget(boolean param0, int param1, UiWidget param2, int param3, int param4) {
         RuntimeException var6 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
@@ -61,7 +61,7 @@ class mj extends DefaultTextWidgetRenderer {
           if (param0) {
             MouseInput.a(param2.field_w, param4 + param2.field_o, param2.field_m + param3, param2.field_k, 60);
           }
-          super.a(param0, 127, param2, param3, param4);
+          super.paintWidget(param0, 127, param2, param3, param4);
           if (param1 >= 94) {
             return;
           }

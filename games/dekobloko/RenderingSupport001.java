@@ -39,7 +39,7 @@ final class RenderingSupport001 extends HashNode {
             }
             if (booleanArgument2) {
               graphicsLocal12.setColor(java.awt.Color.black);
-              graphicsLocal12.fillRect(0, 0, UiComponentPart006.integerState0133, MixedSupport090.integerState0548);
+              graphicsLocal12.fillRect(0, 0, LabeledWidgetContainer.integerState0133, MixedSupport090.integerState0548);
             }
             if (colorArgument5 == null) {
               colorArgument5 = new java.awt.Color(140, 17, 17);
@@ -58,11 +58,11 @@ final class RenderingSupport001 extends HashNode {
               graphicsLocal13.setFont(SoftwareFramebuffer.fontState0001);
               graphicsLocal13.setColor(java.awt.Color.white);
               graphicsLocal13.drawString(stringArgument4, (-(integerArgument3 * stringArgument4.length()) + 304) / 2, 22);
-              graphicsLocal12.drawImage(MixedSupport078.imageState0002, UiComponentPart006.integerState0133 / 2 - 152, MixedSupport090.integerState0548 / 2 - 18, (java.awt.image.ImageObserver) null);
+              graphicsLocal12.drawImage(MixedSupport078.imageState0002, LabeledWidgetContainer.integerState0133 / 2 - 152, MixedSupport090.integerState0548 / 2 - 18, (java.awt.image.ImageObserver) null);
             } catch (java.lang.Exception caughtParameterLocal14) {
               caughtExceptionLocal6 = caughtParameterLocal14;
               exceptionLocal9 = (Exception) (Object) caughtExceptionLocal6;
-              integerLocal10 = -152 + UiComponentPart006.integerState0133 / 2;
+              integerLocal10 = -152 + LabeledWidgetContainer.integerState0133 / 2;
               integerLocal11 = MixedSupport090.integerState0548 / 2 - 18;
               graphicsLocal12.setColor(colorArgument5);
               graphicsLocal12.drawRect(integerLocal10, integerLocal11, 303, 33);
@@ -77,7 +77,7 @@ final class RenderingSupport001 extends HashNode {
             if (null != PasswordValidator.stringState0526) {
               graphicsLocal12.setFont(SoftwareFramebuffer.fontState0001);
               graphicsLocal12.setColor(java.awt.Color.white);
-              graphicsLocal12.drawString(PasswordValidator.stringState0526, UiComponentPart006.integerState0133 / 2 - 6 * PasswordValidator.stringState0526.length() / 2, MixedSupport090.integerState0548 / 2 - 26);
+              graphicsLocal12.drawString(PasswordValidator.stringState0526, LabeledWidgetContainer.integerState0133 / 2 - 6 * PasswordValidator.stringState0526.length() / 2, MixedSupport090.integerState0548 / 2 - 26);
             }
           } catch (java.lang.Exception caughtParameterLocal15) {
             caughtExceptionLocal6 = caughtParameterLocal15;

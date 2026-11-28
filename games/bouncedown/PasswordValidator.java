@@ -113,10 +113,10 @@ final class PasswordValidator extends TextFieldValidator {
             return stackIn_18_0;
           }
           if (var6.length() <= 0) {
-            stackIn_21_0 = lk.field_s;
+            stackIn_21_0 = UiWidget.field_s;
             return stackIn_21_0;
           }
-          if (pf.a(128, var5, var6)) {
+          if (ModalDialogHost.a(128, var5, var6)) {
             stackIn_24_0 = ll.field_J;
             return stackIn_24_0;
           }

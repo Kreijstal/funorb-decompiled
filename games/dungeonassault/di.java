@@ -60,7 +60,7 @@ final class di {
           while (true) {
             if (pp.field_J < 0) {
               ra.field_c.position = 0;
-              if (!oi.a(-12929, 1)) {
+              if (!DraggableWidgetContainer.a(-12929, 1)) {
                 return false;
               }
               pp.field_J = ra.field_c.m(255);

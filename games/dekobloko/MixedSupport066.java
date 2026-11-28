@@ -65,10 +65,10 @@ final class MixedSupport066 {
     final static void performAction0828(byte byteArgument1) {
         if (byteArgument1 != -36) {
           asyncTaskState0004 = (AsyncTask) null;
-          LoginCredentials.performAction0790(UiComponentPart029.computeApplet1485(25144), 0);
+          LoginCredentials.performAction0790(DraggableWidgetContainer.computeApplet1485(25144), 0);
           return;
         }
-        LoginCredentials.performAction0790(UiComponentPart029.computeApplet1485(25144), 0);
+        LoginCredentials.performAction0790(DraggableWidgetContainer.computeApplet1485(25144), 0);
     }
 
     static {

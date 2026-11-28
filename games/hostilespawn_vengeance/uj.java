@@ -36,7 +36,7 @@ final class uj extends IntrusiveNode {
         TextInputField.field_X = null;
         ConfirmedEmailAvailabilityValidator.field_r = null;
         ja.field_e = (byte[][]) null;
-        nh.field_O = null;
+        LabeledWidgetContainer.field_O = null;
         th.field_Jb = null;
     }
 

@@ -37,7 +37,7 @@ final class ah {
         try {
           var2_int = param0.length();
           if (var2_int == 0) {
-            stackIn_4_0 = w.field_k;
+            stackIn_4_0 = UiWidget.field_k;
             return stackIn_4_0;
           }
           if (var2_int > 64) {
@@ -143,7 +143,7 @@ final class ah {
         if (param0 != -55) {
           return (aj[]) null;
         }
-        return new aj[]{gj.field_w, q.field_d, NanoFrameTimer.field_n, vb.field_l, NanoFrameTimer.field_d, uj.field_c, TextLineMetrics.field_b, li.field_R, ByteStorage.field_b, he.field_c, w.field_n, vf.field_m, fb.field_l, GameAppletShell.field_d};
+        return new aj[]{gj.field_w, q.field_d, NanoFrameTimer.field_n, vb.field_l, NanoFrameTimer.field_d, uj.field_c, TextLineMetrics.field_b, li.field_R, ByteStorage.field_b, he.field_c, UiWidget.field_n, vf.field_m, fb.field_l, GameAppletShell.field_d};
     }
 
     static {

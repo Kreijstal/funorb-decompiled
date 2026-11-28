@@ -42,7 +42,7 @@ final class ph {
             return false;
           }
           var3_int = -121 % ((param1 - 42) / 59);
-          if (ue.a(param2, param0, (byte) -84)) {
+          if (AlphaWidgetContainer.a(param2, param0, (byte) -84)) {
             return false;
           }
           if (!di.a(95, param0, param2)) {

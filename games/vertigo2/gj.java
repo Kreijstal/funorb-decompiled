@@ -639,7 +639,7 @@ final class gj extends TextureOperator {
             if (Vertigo2.field_M.field_tb != 0) {
               BufferedRandomAccessFile.field_g = false;
             }
-            mg.a(false, param1, false, gd.field_j);
+            LabeledWidgetContainer.a(false, param1, false, gd.field_j);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

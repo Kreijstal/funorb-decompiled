@@ -319,7 +319,7 @@ final class aj extends DualLinkNode {
         try {
           if (AwtRasterBuffer.field_c.a(-48) &&
             !param0.equals(AwtRasterBuffer.field_c.c(param1 - 16954))) {
-            AwtRasterBuffer.field_c = pk.a((byte) 68, param0);
+            AwtRasterBuffer.field_c = DraggableWidgetContainer.a((byte) 68, param0);
           }
           if (param1 != -1) {
             var3 = (PlatformTaskDispatcher) null;

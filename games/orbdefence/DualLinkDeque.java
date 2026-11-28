@@ -37,7 +37,7 @@ final class DualLinkDeque implements Iterable {
           param0.field_g.field_f = param0;
           param0.field_f.field_g = param0;
         } catch (RuntimeException runtimeException) {
-          throw dd.wrapClientException((Throwable) ((Object) runtimeException), "qe.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw DraggableWidgetContainer.wrapClientException((Throwable) ((Object) runtimeException), "qe.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

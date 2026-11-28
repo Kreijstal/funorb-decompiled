@@ -28,7 +28,7 @@ final class sk extends WidgetContainer implements WidgetActivationListener {
         var8 = MonkeyPuzzle2.field_F ? 1 : 0;
         try {
           if (param3 != 7) {
-            this.a(-78, -17, -121, 56);
+            this.drawWidget(-78, -17, -121, 56);
           }
           for (var6_int = 0; var6_int < this.field_C; var6_int++) {
             if (this.field_B[var6_int] != param4) {
@@ -63,7 +63,7 @@ final class sk extends WidgetContainer implements WidgetActivationListener {
           var4_int = this.field_C;
           this.a(var4_int + 1, -101);
           int var5 = -96 / ((param0 - 55) / 36);
-          this.field_B[var4_int] = this.a(0, (of) (this), param2);
+          this.field_B[var4_int] = this.a(0, (WidgetEventListener) (this), param2);
           this.field_z[var4_int] = param1;
         } catch (RuntimeException runtimeException) {
           throw la.a((Throwable) ((Object) runtimeException), "sk.J(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
@@ -78,8 +78,8 @@ final class sk extends WidgetContainer implements WidgetActivationListener {
         field_F = null;
     }
 
-    final void a(int param0, int param1, int param2, int param3) {
-        super.a(param0, param1, param2, param3);
+    final void drawWidget(int param0, int param1, int param2, int param3) {
+        super.drawWidget(param0, param1, param2, param3);
         this.field_A.drawParagraph(this.field_E, 14 + param3 + this.field_r, 10 + param2 + this.field_e, this.field_l - 28, this.field_p, 16777215, -1, 0, 0, this.field_A.field_C);
     }
 
@@ -164,7 +164,7 @@ final class sk extends WidgetContainer implements WidgetActivationListener {
     }
 
     sk(ha param0, BitmapFont param1, String param2) {
-        super(0, 0, 288, 0, (ml) null);
+        super(0, 0, 288, 0, (WidgetRenderer) null);
         int var4_int = 0;
         this.field_C = 0;
         try {
@@ -172,13 +172,13 @@ final class sk extends WidgetContainer implements WidgetActivationListener {
           this.field_E = param2;
           this.field_A = param1;
           var4_int = null != this.field_E ? this.field_A.textHeight(this.field_E, 260, this.field_A.field_C) : 0;
-          this.a(22 + var4_int, 13361, 0, 288, 0);
+          this.setBounds(22 + var4_int, 13361, 0, 288, 0);
         } catch (RuntimeException runtimeException) {
           throw la.a((Throwable) ((Object) runtimeException), "sk.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
-    final ButtonWidget a(int param0, of param1, String param2) {
+    final ButtonWidget a(int param0, WidgetEventListener param1, String param2) {
         ButtonWidget var4 = null;
         RuntimeException var4_ref = null;
         int var5 = 0;
@@ -191,11 +191,11 @@ final class sk extends WidgetContainer implements WidgetActivationListener {
         RuntimeException decompiledCaughtException = null;
         try {
           var4 = new ButtonWidget(param2, param1);
-          var4.field_h = (ml) ((Object) new hd());
+          var4.field_h = (WidgetRenderer) ((Object) new hd());
           var5 = -2 + this.field_p;
-          this.a(this.field_p + 34, 13361, 0, this.field_l, param0);
-          var4.a(30, 13361, 7, this.field_l - 14, var5);
-          this.b((byte) -78, var4);
+          this.setBounds(this.field_p + 34, 13361, 0, this.field_l, param0);
+          var4.setBounds(30, 13361, 7, this.field_l - 14, var5);
+          this.addChild((byte) -78, var4);
           stackIn_1_0 = var4;
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

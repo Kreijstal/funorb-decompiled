@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ae extends og implements WidgetActivationListener {
+final class ae extends DequeWidgetContainer implements WidgetActivationListener {
     static String field_D;
     static int field_F;
     private InteractiveWidget field_z;
@@ -11,31 +11,31 @@ final class ae extends og implements WidgetActivationListener {
     static String field_C;
 
     public ae() {
-        super(0, 0, 476, 225, (wo) null);
-        this.field_E = new InteractiveWidget(LaserTraceCursor.field_d, (bi) null);
-        this.field_B = new InteractiveWidget(ProfileDataRequest.field_i, (bi) null);
-        this.field_z = new InteractiveWidget(ip.field_b, (bi) null);
+        super(0, 0, 476, 225, (WidgetRenderer) null);
+        this.field_E = new InteractiveWidget(LaserTraceCursor.field_d, (WidgetEventListener) null);
+        this.field_B = new InteractiveWidget(ProfileDataRequest.field_i, (WidgetEventListener) null);
+        this.field_z = new InteractiveWidget(ip.field_b, (WidgetEventListener) null);
         ve var1 = new ve();
-        this.field_E.field_i = (wo) ((Object) var1);
-        this.field_B.field_i = (wo) ((Object) var1);
-        this.field_z.field_i = (wo) ((Object) var1);
+        this.field_E.field_i = (WidgetRenderer) ((Object) var1);
+        this.field_B.field_i = (WidgetRenderer) ((Object) var1);
+        this.field_z.field_i = (WidgetRenderer) ((Object) var1);
         int var2 = 4;
         int var3 = 326;
         int var4 = var3 - var2 >> 1;
-        this.field_B.a(30, this.field_g - var3 >> 1, -48 + this.field_f - var2, var4, (byte) -52);
-        this.field_z.a(30, var4 + ((-var3 + this.field_g >> 1) + var2), this.field_f - 48 - var2, var4, (byte) -52);
-        this.field_E.a(30, this.field_g - var3 >> 1, -(var2 * 2) - 78 + this.field_f, var3, (byte) -52);
-        this.field_B.field_l = (bi) (this);
-        this.field_E.field_l = (bi) (this);
-        this.field_z.field_l = (bi) (this);
+        this.field_B.setBounds(30, this.field_g - var3 >> 1, -48 + this.field_f - var2, var4, (byte) -52);
+        this.field_z.setBounds(30, var4 + ((-var3 + this.field_g >> 1) + var2), this.field_f - 48 - var2, var4, (byte) -52);
+        this.field_E.setBounds(30, this.field_g - var3 >> 1, -(var2 * 2) - 78 + this.field_f, var3, (byte) -52);
+        this.field_B.field_l = (WidgetEventListener) (this);
+        this.field_E.field_l = (WidgetEventListener) (this);
+        this.field_z.field_l = (WidgetEventListener) (this);
         this.field_E.field_t = GameCanvas.field_c;
         this.field_z.field_t = CipherPacketBuffer.field_o;
-        this.b(this.field_B, 1);
-        this.b(this.field_E, -5);
-        this.b(this.field_z, -115);
+        this.addChild(this.field_B, 1);
+        this.addChild(this.field_E, -5);
+        this.addChild(this.field_z, -115);
     }
 
-    final boolean a(int param0, int param1, qm param2, char param3) {
+    final boolean handleKey(int param0, int param1, UiWidget param2, char param3) {
         RuntimeException var5 = null;
         boolean stackIn_6_0 = false;
         boolean stackIn_10_0 = false;
@@ -44,17 +44,17 @@ final class ae extends og implements WidgetActivationListener {
         String stackIn_14_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (super.a(param0, param1, param2, param3)) {
+          if (super.handleKey(param0, param1, param2, param3)) {
             return true;
           }
           if (param0 == 98) {
-            stackIn_6_0 = this.a((byte) -124, param2);
+            stackIn_6_0 = this.focusPreviousChild((byte) -124, param2);
             return stackIn_6_0;
           }
           if (param0 != 99) {
             return false;
           }
-          stackIn_10_0 = this.a(param2, -25911);
+          stackIn_10_0 = this.focusNextChild(param2, -25911);
           return stackIn_10_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -119,14 +119,14 @@ final class ae extends og implements WidgetActivationListener {
         }
     }
 
-    final void a(int param0, byte param1, int param2, int param3) {
+    final void drawWidget(int param0, byte param1, int param2, int param3) {
         int var5 = 0;
         int var6 = 0;
         if (param1 < -12) {
           var5 = this.field_r + param2;
           var6 = this.field_j + param0;
           ai.field_h.drawParagraph(BufferedSocket.field_h, 20 + var5, 20 + var6, -40 + this.field_g, this.field_f - 50, 16777215, -1, 1, 0, ai.field_h.field_o);
-          super.a(param0, (byte) -20, param2, param3);
+          super.drawWidget(param0, (byte) -20, param2, param3);
           return;
         }
     }

@@ -95,10 +95,10 @@ final class kf extends IntrusiveNode {
         Object var1 = null;
         Throwable var2 = null;
         Throwable decompiledCaughtException = null;
-        if (null != wc.field_B) {
-          var1 = wc.field_B;
+        if (null != DropTargetWidgetContainer.field_B) {
+          var1 = DropTargetWidgetContainer.field_B;
           synchronized (var1) {
-            wc.field_B = null;
+            DropTargetWidgetContainer.field_B = null;
           }
         }
         if (param0 != 0) {

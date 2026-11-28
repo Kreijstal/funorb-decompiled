@@ -74,7 +74,7 @@ final class NetworkSupport004 {
         if (integerArgument1 != -29550) {
           return;
         }
-        UiComponentPart010.performAction0416((byte) 53);
+        AlphaWidgetContainer.performAction0416((byte) 53);
         CipherPacketBuffer.performAction1648(-4840);
     }
 

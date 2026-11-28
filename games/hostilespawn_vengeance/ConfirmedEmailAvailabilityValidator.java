@@ -193,7 +193,7 @@ final class ConfirmedEmailAvailabilityValidator extends TextFieldValidator {
                   ha.field_t == 4 &&
                   var39Lifetime2.field_i == 125 &&
                   var19 < 5) {
-                  var5.field_c = ProxySocketFactory.a((double)var10, (double)nh.field_E.field_e, 16, (double)var11, (double)nh.field_E.field_g);
+                  var5.field_c = ProxySocketFactory.a((double)var10, (double)LabeledWidgetContainer.field_E.field_e, 16, (double)var11, (double)LabeledWidgetContainer.field_E.field_g);
                   ca.a(81.5, 1, 37.0, true, 64);
                   CrossfadingMidiPcmStream.a(0, 1);
                 }
@@ -241,8 +241,8 @@ final class ConfirmedEmailAvailabilityValidator extends TextFieldValidator {
                       DiskArchiveRequest.field_A = rb.field_m;
                       GameCanvas.field_g = j.field_c;
                     }
-                    if (nh.field_H != 2 &&
-                      nh.field_H != 3) {
+                    if (LabeledWidgetContainer.field_H != 2 &&
+                      LabeledWidgetContainer.field_H != 3) {
                       stackIn_116_0 = 2;
                     } else {
                       stackIn_116_0 = 1;
@@ -258,8 +258,8 @@ final class ConfirmedEmailAvailabilityValidator extends TextFieldValidator {
                       if (cf.field_q.length <= var39Lifetime2.field_z) {
                         var39Lifetime2.field_z = 0;
                       }
-                      if (ng.field_p[nh.field_H] != null &&
-                        cg.field_b >= ng.field_p[nh.field_H].length) {
+                      if (ng.field_p[LabeledWidgetContainer.field_H] != null &&
+                        cg.field_b >= ng.field_p[LabeledWidgetContainer.field_H].length) {
                         cg.field_b = 0;
                       }
                       dn.field_b = dn.field_b + 1;
@@ -504,14 +504,14 @@ final class ConfirmedEmailAvailabilityValidator extends TextFieldValidator {
                       var26 = var39Lifetime2.field_j.field_g * 24;
                       if (uj.field_p.field_g - 24 <= var26 &&
                         var26 < 480 + uj.field_p.field_g) {
-                        jn.field_F[ib.field_c].field_c = 256.0 * Math.random();
-                        jn.field_F[ib.field_c].field_j.copyCoordinatesFrom((byte) 46, var39Lifetime2.field_j);
-                        jn.field_F[ib.field_c].field_l.a(var39Lifetime2.field_l, -28860);
-                        dupTemp$2 = jn.field_F[ib.field_c].field_l;
+                        AlphaWidgetContainer.field_F[ib.field_c].field_c = 256.0 * Math.random();
+                        AlphaWidgetContainer.field_F[ib.field_c].field_j.copyCoordinatesFrom((byte) 46, var39Lifetime2.field_j);
+                        AlphaWidgetContainer.field_F[ib.field_c].field_l.a(var39Lifetime2.field_l, -28860);
+                        dupTemp$2 = AlphaWidgetContainer.field_F[ib.field_c].field_l;
                         dupTemp$2.field_f = dupTemp$2.field_f + (Math.random() + -0.5);
-                        jn.field_F[ib.field_c].field_e = 0;
-                        jn.field_F[ib.field_c].field_h = 0;
-                        jn.field_F[ib.field_c].field_i = 6;
+                        AlphaWidgetContainer.field_F[ib.field_c].field_e = 0;
+                        AlphaWidgetContainer.field_F[ib.field_c].field_h = 0;
+                        AlphaWidgetContainer.field_F[ib.field_c].field_i = 6;
                         ib.field_c = ib.field_c + 1;
                       }
                       ln.field_a.field_c[var39Lifetime2.field_j.getClampedTileIndex(bm.a((int) param0, -63))] = 4;
@@ -595,7 +595,7 @@ final class ConfirmedEmailAvailabilityValidator extends TextFieldValidator {
               }
               var17Lifetime1 = var16Lifetime1 + var15;
               if (ha.field_t == 10 &&
-                var43.field_j.hasSameCoordinates(nh.field_E, -126) &&
+                var43.field_j.hasSameCoordinates(LabeledWidgetContainer.field_E, -126) &&
                 var17Lifetime1 < 3) {
                 r.field_a = 1;
                 ca.a(19.0, 0, 32.4, true, 0);
@@ -1070,7 +1070,7 @@ final class ConfirmedEmailAvailabilityValidator extends TextFieldValidator {
               var11 = 224;
               var12 = 96;
               var13 = 160;
-              var14 = nh.field_H;
+              var14 = LabeledWidgetContainer.field_H;
               if (1 == var14) {
                 var11 -= 4;
                 var10 += 4;
@@ -1093,11 +1093,11 @@ final class ConfirmedEmailAvailabilityValidator extends TextFieldValidator {
                       } else {
                         var8 = 1;
                       }
-                      stackIn_134_0 = (var8 == nh.field_H) ? 0 : 1;
+                      stackIn_134_0 = (var8 == LabeledWidgetContainer.field_H) ? 0 : 1;
                       var9 = stackIn_134_0;
                       if (var9 != 0 &&
                         var8 == 0 &&
-                        nh.field_H == 1 &&
+                        LabeledWidgetContainer.field_H == 1 &&
                         6 != cg.field_b &&
                         7 != cg.field_b &&
                         cg.field_b != 18 &&
@@ -1112,9 +1112,9 @@ final class ConfirmedEmailAvailabilityValidator extends TextFieldValidator {
                         } else {
                           cg.field_b = 6;
                         }
-                        nh.field_H = var8;
+                        LabeledWidgetContainer.field_H = var8;
                       }
-                      fj.field_Pb = fj.field_Pb + (double)(-MatchingFieldValidator.field_u[nh.field_H] + 256);
+                      fj.field_Pb = fj.field_Pb + (double)(-MatchingFieldValidator.field_u[LabeledWidgetContainer.field_H] + 256);
                       while (256.0 <= fj.field_Pb) {
                         fj.field_Pb = fj.field_Pb - 256.0;
                       }
@@ -1150,11 +1150,11 @@ final class ConfirmedEmailAvailabilityValidator extends TextFieldValidator {
               }
             }
             if (decompiledFrameRemainder0) {
-              stackIn_167_0 = (var8 == nh.field_H) ? 0 : 1;
+              stackIn_167_0 = (var8 == LabeledWidgetContainer.field_H) ? 0 : 1;
               var9Lifetime1 = stackIn_167_0;
               if (var9Lifetime1 != 0 &&
                 var8 == 0 &&
-                nh.field_H == 1 &&
+                LabeledWidgetContainer.field_H == 1 &&
                 6 != cg.field_b &&
                 7 != cg.field_b &&
                 cg.field_b != 18 &&
@@ -1169,9 +1169,9 @@ final class ConfirmedEmailAvailabilityValidator extends TextFieldValidator {
                 } else {
                   cg.field_b = 6;
                 }
-                nh.field_H = var8;
+                LabeledWidgetContainer.field_H = var8;
               }
-              fj.field_Pb = fj.field_Pb + (double)(-MatchingFieldValidator.field_u[nh.field_H] + 256);
+              fj.field_Pb = fj.field_Pb + (double)(-MatchingFieldValidator.field_u[LabeledWidgetContainer.field_H] + 256);
               while (256.0 <= fj.field_Pb) {
                 fj.field_Pb = fj.field_Pb - 256.0;
               }
@@ -1182,7 +1182,7 @@ final class ConfirmedEmailAvailabilityValidator extends TextFieldValidator {
             if (MusicPatchPcmStream.field_l) {
               fj.field_Pb = 0.0;
             }
-            if (nh.field_H != 0) {
+            if (LabeledWidgetContainer.field_H != 0) {
               if (cg.field_b == 3 &&
                 param2.field_p == 0) {
                 eh.field_c.playSample(em.field_a[11], 100, uh.field_i);
@@ -1246,9 +1246,9 @@ final class ConfirmedEmailAvailabilityValidator extends TextFieldValidator {
             GzipDecompressor.field_c[1] = false;
             GzipDecompressor.field_c[0] = false;
           }
-          if (nh.field_M > 0) {
-            nh.field_M = nh.field_M - 1;
-            if (nh.field_M == 0) {
+          if (LabeledWidgetContainer.field_M > 0) {
+            LabeledWidgetContainer.field_M = LabeledWidgetContainer.field_M - 1;
+            if (LabeledWidgetContainer.field_M == 0) {
               dn.field_j = -1;
             }
           }
@@ -1361,10 +1361,10 @@ final class ConfirmedEmailAvailabilityValidator extends TextFieldValidator {
           if (jm.field_e >= 0 &&
             var6Lifetime3 != 1) {
             eh.field_c.playSample(TextInputField.field_V[5 + jm.field_e], 100, uh.field_i);
-            if (ag.field_k > 4) {
+            if (UiWidget.field_k > 4) {
               eh.field_c.playSample(TextInputField.field_V[(int)(2.0 * Math.random()) + 10], 100, uh.field_i);
             }
-            ag.field_k = 0;
+            UiWidget.field_k = 0;
             jm.field_e = -1;
           }
           if (we.field_b >= 0 &&
@@ -1372,11 +1372,11 @@ final class ConfirmedEmailAvailabilityValidator extends TextFieldValidator {
             we.field_b = -1;
           }
           var7 = km.field_A;
-          if (nh.field_H != 0) {
+          if (LabeledWidgetContainer.field_H != 0) {
             var7 = cf.field_q;
           }
           if (0 <= hf.field_i) {
-            var7 = od.field_G;
+            var7 = DropTargetWidgetContainer.field_G;
           }
           if (ClientLookupTables.field_d != var7) {
             stackIn_315_0 = (ClientLookupTables.field_d != dn.field_i) ? 1 : 0;
@@ -1388,7 +1388,7 @@ final class ConfirmedEmailAvailabilityValidator extends TextFieldValidator {
             ClientLookupTables.field_d = var7;
             dn.field_b = 0;
           }
-          if (ClientLookupTables.field_d != od.field_G) {
+          if (ClientLookupTables.field_d != DropTargetWidgetContainer.field_G) {
             pj.field_v = -1;
           }
           ln.field_a.field_c[param3] = 3;

@@ -28,7 +28,7 @@ final class hj {
         String var7;
         String var8;
         var5 = MinerDisturbance.field_ab;
-        var6 = "(" + lc.field_s + " " + rd.field_a + " " + ud.field_a + ") " + oj.field_K;
+        var6 = "(" + lc.field_s + " " + rd.field_a + " " + ud.field_a + ") " + AlphaWidgetContainer.field_K;
         var1 = var6;
         if (rj.field_d > 0) {
           var1 = var6 + ":";

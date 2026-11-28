@@ -175,7 +175,7 @@ final class DualNodeDeque {
             return false;
           }
           MixedSupport146.integerState0931 = MixedSupport099.integerArrayState0182[MixedSupport115.integerState0746];
-          ArchiveRequestManager.characterState0002 = UiComponentPart003.characterArrayState0003[MixedSupport115.integerState0746];
+          ArchiveRequestManager.characterState0002 = ModalDialog.characterArrayState0003[MixedSupport115.integerState0746];
           MixedSupport115.integerState0746 = 1 + MixedSupport115.integerState0746 & 127;
           stackBooleanLocal5 = true;
         }
@@ -239,7 +239,7 @@ final class DualNodeDeque {
             return false;
           }
           MixedSupport146.integerState0931 = MixedSupport099.integerArrayState0182[MixedSupport115.integerState0746];
-          ArchiveRequestManager.characterState0002 = UiComponentPart003.characterArrayState0003[MixedSupport115.integerState0746];
+          ArchiveRequestManager.characterState0002 = ModalDialog.characterArrayState0003[MixedSupport115.integerState0746];
           MixedSupport115.integerState0746 = 1 + MixedSupport115.integerState0746 & 127;
           stackBooleanLocal5 = true;
         }

@@ -100,7 +100,7 @@ abstract class rl extends oh {
         int var3 = 0;
         InteractiveWidget.field_y = 0;
         lo.field_b = null;
-        rc.field_a = ol.field_z[param1];
+        rc.field_a = ModalDialogHost.field_z[param1];
         CrystalTile.field_o = param1;
         if (param1 == 0) {
           vh.field_a = true;
@@ -115,7 +115,7 @@ abstract class rl extends oh {
           je.field_j = DisplayNameSelectionPanel.field_F;
           LevelProgressUpdate.field_h = sm.field_f;
           b.field_a = MusicPatchPcmStream.field_n;
-          fp.field_a = ei.field_F;
+          fp.field_a = LabeledWidgetContainer.field_F;
           var3 = param2;
           mb.field_g = mb.field_g + var3;
           AccountCreationResultPanel.n(-26);

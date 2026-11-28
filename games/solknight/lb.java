@@ -17,20 +17,20 @@ final class lb extends ld {
         this.field_Y.field_B = false;
     }
 
-    lb(i param0, String param1) {
+    lb(ModalDialogHost param0, String param1) {
         super(param0, 300, 120);
         int var3_int = 0;
         try {
           this.field_S = param1;
           if (null != this.field_S) {
             var3_int = uc.field_g.textHeight(this.field_S, 260, uc.field_g.field_F);
-            this.b(300, -2038584927, 150 + var3_int);
+            this.setCenteredSize(300, -2038584927, 150 + var3_int);
           }
           this.field_Y = new c(13, 50, 274, 30, 15, 2113632, 4210752);
           this.field_Z = false;
           this.field_X = false;
           this.field_Y.field_B = true;
-          this.a(this.field_Y, 5411);
+          this.addChild(this.field_Y, 5411);
         } catch (RuntimeException runtimeException) {
           throw fc.wrapClientException((Throwable) ((Object) runtimeException), "lb.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

@@ -15,7 +15,7 @@ final class bl extends InteractiveWidget {
     static BufferedSocket field_V;
     static String field_Q;
 
-    final boolean a(int param0, int param1, int param2, int param3, int param4, int param5, UiComponent param6) {
+    final boolean pointerPressed(int param0, int param1, int param2, int param3, int param4, int param5, UiComponent param6) {
         int var12 = 0;
         RuntimeException stackIn_28_0 = null;
         StringBuilder stackIn_28_1 = null;
@@ -33,7 +33,7 @@ final class bl extends InteractiveWidget {
           if (param2 != -81) {
             this.a(58, 19);
           }
-          if (!super.a(param0, param1, param2 ^ 0, param3, param4, param5, param6)) {
+          if (!super.pointerPressed(param0, param1, param2 ^ 0, param3, param4, param5, param6)) {
             return false;
           }
           var8_int = -param4 + param1 - this.field_W;

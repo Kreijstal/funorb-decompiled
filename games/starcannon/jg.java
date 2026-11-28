@@ -21,20 +21,20 @@ final class jg extends InteractiveWidget {
         return null;
     }
 
-    final void a(int param0, int param1, UiWidget param2, int param3) {
+    final void updatePointer(int param0, int param1, UiWidget param2, int param3) {
         try {
           if (param0 < 27) {
             UiWidget var6 = (UiWidget) null;
-            this.a(64, (UiWidget) null);
+            this.takeFocus(64, (UiWidget) null);
           }
           this.field_G = this.field_G + 1;
-          super.a(40, param1, param2, param3);
+          super.updatePointer(40, param1, param2, param3);
         } catch (RuntimeException runtimeException) {
           throw sd.wrapClientException((Throwable) ((Object) runtimeException), "jg.U(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
     }
 
-    final void a(int param0, int param1, byte param2, int param3) {
+    final void drawWidget(int param0, int param1, byte param2, int param3) {
         int var5;
         int var6;
         p var8;
@@ -48,7 +48,7 @@ final class jg extends InteractiveWidget {
         int var9Lifetime1;
         int var10Lifetime1;
         var11 = StarCannon.field_A;
-        super.a(param0, param1, param2, param3);
+        super.drawWidget(param0, param1, param2, param3);
         if (param0 != 0) {
           return;
         }
@@ -119,7 +119,7 @@ final class jg extends InteractiveWidget {
         EditableTextField.field_H.drawAdditive(var5 - var15.field_x, -var15.field_q + var6, 256);
     }
 
-    final boolean a(int param0, UiWidget param1) {
+    final boolean takeFocus(int param0, UiWidget param1) {
         RuntimeException var3 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;

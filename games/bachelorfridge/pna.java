@@ -213,7 +213,7 @@ final class pna extends UiComponent {
           nd.field_i = new UiComponent(0L, DisableAnimation.field_z, iia.field_n);
           ScavengerSpecial.field_q = new UiComponent(0L, DisableAnimation.field_z, DreamsAnimation.field_z);
           SplitSpecial.field_p = new UiComponent(0L, DisableAnimation.field_z, oda.field_a);
-          vf.field_F = new UiComponent(0L, DisableAnimation.field_z, iga.field_b);
+          ModalDialog.field_F = new UiComponent(0L, DisableAnimation.field_z, iga.field_b);
           TextLinkRegion.field_l = new UiComponent(0L, vda.field_a, fu.field_s);
           p.field_n = new sga(0L, new UiComponent(0L, (UiComponent) null), vg.field_k, MoveEventAnimation.field_y);
           ae.field_a = new UiComponent(0L, vo.field_b, si.field_d.toUpperCase());
@@ -241,7 +241,7 @@ final class pna extends UiComponent {
           if (IntrusiveDeque.field_c) {
             nea.field_yb.a(-1, SplitSpecial.field_p);
           }
-          nea.field_yb.a(-1, vf.field_F);
+          nea.field_yb.a(-1, ModalDialog.field_F);
           nea.field_yb.a(-1, TextLinkRegion.field_l);
           nea.field_yb.a(-1, p.field_n);
           if (IntrusiveDeque.field_c) {

@@ -141,7 +141,7 @@ final class rc {
               mp.field_a.drawString(var6, var8, AccountServiceResult.field_e + var2, var5, -1);
               var2 = var2 + (cd.field_e + (i.field_o + lc.field_j));
             } else {
-              hc.field_e.drawString(var6, var8, var2 + da.field_C, var5, -1);
+              hc.field_e.drawString(var6, var8, var2 + SingleChildWidgetContainer.field_C, var5, -1);
               var2 = var2 + gb.field_a;
             }
           }

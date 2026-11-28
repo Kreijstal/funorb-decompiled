@@ -49,7 +49,7 @@ final class ImageProducerRasterBuffer extends AwtRasterBuffer implements java.aw
         if (param0 != 0) {
           field_k = (he[]) null;
         }
-        stackIn_6_0 = (null != hg.field_S) && (hg.field_S.k(param0 + 110) != null);
+        stackIn_6_0 = (null != hg.field_S) && (hg.field_S.getTopOpenDialog(param0 + 110) != null);
         return stackIn_6_0;
     }
 

@@ -36,7 +36,7 @@ final class wa extends lw {
             stackIn_4_0 = null;
             return (AntialiasedBitmapFont) (stackIn_4_0);
           }
-          var2 = new AntialiasedBitmapFont(param1, fl.field_j, AirstrikeAnimation.field_D, lq.field_A, InsanoSauceSpecial.field_s, hk.field_f, BananarangAnimation.field_P);
+          var2 = new AntialiasedBitmapFont(param1, fl.field_j, AirstrikeAnimation.field_D, ArrayWidgetContainer.field_A, InsanoSauceSpecial.field_s, hk.field_f, BananarangAnimation.field_P);
           al.releaseStatics(-18073);
           stackIn_6_0 = var2;
           return stackIn_6_0;

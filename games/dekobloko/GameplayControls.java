@@ -397,7 +397,7 @@ final class GameplayControls {
         int integerLocal2;
         String stringLocal3;
         boolean frameRemainderLocal4 = true;
-        if (UiComponentPart015.integerState0319 < 3 && (!(PasswordValidator.integerState0776 >= 2) ||
+        if (DropTargetWidgetContainer.integerState0319 < 3 && (!(PasswordValidator.integerState0776 >= 2) ||
           !MixedSupport011.booleanArrayState0002[12])) {
           stackIntegerLocal1 = (UiComponentPart023.computeBoolean1242(-30146)) ? 0 : 1;
           integerLocal2 = stackIntegerLocal1;

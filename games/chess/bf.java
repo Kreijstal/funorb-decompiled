@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class bf extends ma implements FieldValidatorProvider {
+abstract class bf extends DequeWidgetContainer implements FieldValidatorProvider {
     static SecondaryNodeHashTable field_M;
     private BirthDateValidator field_L;
     static ci field_K;
@@ -44,12 +44,12 @@ abstract class bf extends ma implements FieldValidatorProvider {
 
     abstract boolean h(byte param0);
 
-    bf(int param0, int param1, int param2, int param3, jm param4) {
+    bf(int param0, int param1, int param2, int param3, WidgetRenderer param4) {
         super(param0, param1, param2, param3, param4);
     }
 
     final static void a(boolean param0, int param1) {
-        ji.field_U = 1000000000L / (long)param1;
+        DropTargetWidgetContainer.field_U = 1000000000L / (long)param1;
         if (!param0) {
           bf.clearStaticReferences(true);
         }

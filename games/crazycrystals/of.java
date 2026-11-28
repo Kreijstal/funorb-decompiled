@@ -61,7 +61,7 @@ final class of extends InteractiveWidget {
             field_D = -59;
           }
           for (var3_intLifetime1 = 0; 7 > var3_intLifetime1; var3_intLifetime1++) {
-            oj.field_L[var3_intLifetime1] = bl.a(param2, "initialset", "bonus" + var3_intLifetime1 + "-disappear").a();
+            DraggableWidgetContainer.field_L[var3_intLifetime1] = bl.a(param2, "initialset", "bonus" + var3_intLifetime1 + "-disappear").a();
           }
           bp.field_a = bl.a(param2, "initialset", "penalty-disappear").a();
           je.field_f = ha.a(param0, "initialset", "score-count").b();
@@ -87,7 +87,7 @@ final class of extends InteractiveWidget {
         }
     }
 
-    of(String param0, bi param1, boolean param2) {
+    of(String param0, WidgetEventListener param1, boolean param2) {
         this(param0, param1);
         try {
           this.field_A = param2 ? true : false;
@@ -96,7 +96,7 @@ final class of extends InteractiveWidget {
         }
     }
 
-    private of(String param0, bi param1) {
+    private of(String param0, WidgetEventListener param1) {
         this(param0, pi.field_j.field_p, param1);
         try {
           this.field_i = pi.field_j.field_i;
@@ -123,7 +123,7 @@ final class of extends InteractiveWidget {
         }
     }
 
-    private of(String param0, wo param1, bi param2) {
+    private of(String param0, WidgetRenderer param1, WidgetEventListener param2) {
         super(param0, param1, param2);
         try {
           this.field_i = pi.field_j.field_i;

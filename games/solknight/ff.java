@@ -13,7 +13,7 @@ final class ff {
 
     final static void b(int param0) {
         ph.field_f = DualLinkNode.b(false);
-        u.field_b = new i();
+        u.field_b = new ModalDialogHost();
         hl.a(true, 24574, true);
         if (param0 != -13408) {
           String var2 = (String) null;
@@ -101,7 +101,7 @@ final class ff {
           IOException var15 = null;
           RuntimeException var15_ref = null;
           try {
-            te.field_N = new BitPacketBuffer(param11);
+            AlphaWidgetContainer.field_N = new BitPacketBuffer(param11);
             id.field_c = new BitPacketBuffer(param7);
             AgeValidator.field_m = param9;
             b.field_b = param2;

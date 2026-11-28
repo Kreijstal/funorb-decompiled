@@ -52,31 +52,31 @@ final class AccountCreationResultPanel extends wa implements WidgetActivationLis
         }
     }
 
-    final boolean j(int param0) {
+    final boolean advanceDialogAnimation(int param0) {
         AccountServiceResult var2 = null;
         if (this.field_K) {
           if (this.field_Cb) {
             if (param0 == 1) {
-              return super.j(1);
+              return super.advanceDialogAnimation(1);
             }
             return true;
           }
           var2 = PacketBuffer.pollAccountCreationResult(false);
           if (var2 == null) {
             if (param0 == 1) {
-              return super.j(1);
+              return super.advanceDialogAnimation(1);
             }
             return true;
           }
           this.showAccountCreationResult(false, var2, (byte) 98);
         }
         if (param0 == 1) {
-          return super.j(1);
+          return super.advanceDialogAnimation(1);
         }
         return true;
     }
 
-    AccountCreationResultPanel(si param0, AccountRegistrationPanel param1) {
+    AccountCreationResultPanel(ModalDialogHost param0, AccountRegistrationPanel param1) {
         super(param0, dl.field_H, cd.field_a, false, false);
         try {
           this.field_Bb = param1;
@@ -140,13 +140,13 @@ final class AccountCreationResultPanel extends wa implements WidgetActivationLis
           if (!param1.success) {
             if (!this.field_Eb) {
               if (param1.statusCode != 5) {
-                var5.a(-1, 2083, b.field_R);
+                var5.a(-1, 2083, ModalDialog.field_R);
               } else {
                 var5.a(11, 2083, te.field_c);
                 var5.a(17, 2083, ph.field_f);
               }
             } else {
-              var5.a((byte) 46, (gg) (this), be.field_a);
+              var5.a((byte) 46, (WidgetEventListener) (this), be.field_a);
             }
             if (param1.statusCode != 3) {
               if (6 == param1.statusCode) {
@@ -160,7 +160,7 @@ final class AccountCreationResultPanel extends wa implements WidgetActivationLis
               this.c(0, new qh(this));
               return;
             }
-            var5.a((byte) 46, (gg) (this), be.field_a);
+            var5.a((byte) 46, (WidgetEventListener) (this), be.field_a);
           }
           this.c(0, var5);
           return;

@@ -51,7 +51,7 @@ final class UiComponentPart018 extends ComponentContainer implements TextHotspot
     }
 
     UiComponentPart018(UiComponentPart033 uiComponentPart033Argument1) {
-        super(0, 0, 288, 0, (CallbackContract004) null);
+        super(0, 0, 288, 0, (WidgetRenderer) null);
         String stringLocal1 = null;
         int integerLocal2 = 0;
         DefaultTextWidgetRenderer mixedSupport001Local3 = null;
@@ -59,8 +59,8 @@ final class UiComponentPart018 extends ComponentContainer implements TextHotspot
         int integerLocal5 = 0;
         try {
           this.uiComponentPart033State0001 = uiComponentPart033Argument1;
-          this.interactiveComponentState0010 = new InteractiveComponent(MixedSupport034.stringState0163, (CallbackContract006) null);
-          this.interactiveComponentState0010.callbackContract004State0006 = (CallbackContract004) ((Object) new MixedSupport041());
+          this.interactiveComponentState0010 = new InteractiveComponent(MixedSupport034.stringState0163, (WidgetEventListener) null);
+          this.interactiveComponentState0010.callbackContract004State0006 = (WidgetRenderer) ((Object) new MixedSupport041());
           stringLocal1 = NodeHashTableIterator.substituteIndexedPlaceholders(118, MixedSupport057.stringState0247, new String[]{this.computeString1036((byte) 60), this.computeString1035((byte) 57)});
           integerLocal2 = 20;
           mixedSupport001Local3 = new DefaultTextWidgetRenderer(GameDomainSupport003.bitmapFontState0015, 0, 0, 0, 0, 16777215, -1, 3, 0, GameDomainSupport003.bitmapFontState0015.integerState0518, -1, 2147483647, true);
@@ -69,16 +69,16 @@ final class UiComponentPart018 extends ComponentContainer implements TextHotspot
           this.uiComponentPart025State0001.performAction1362(MixedSupport107.stringState0464, 0, 1);
           this.uiComponentPart025State0001.performAction1362(MixedSupport107.stringState0464, 1, 1);
           this.uiComponentPart025State0001.integerState0107 = -40 + this.integerState0107;
-          this.uiComponentPart025State0001.callbackContract006State0001 = (CallbackContract006) (this);
+          this.uiComponentPart025State0001.callbackContract006State0001 = (WidgetEventListener) (this);
           this.uiComponentPart025State0001.performAction1364(15, 26, integerLocal2, this.integerState0107 - 40);
           integerLocal2 = integerLocal2 + (this.uiComponentPart025State0001.integerState0108 + 15);
-          this.performAction0895(this.uiComponentPart025State0001, (byte) -55);
+          this.addChild(this.uiComponentPart025State0001, (byte) -55);
           integerLocal4 = 4;
           integerLocal5 = 200;
-          this.interactiveComponentState0010.performAction0222(40, integerLocal5, 300 - integerLocal5 >> 1, integerLocal2, -16555);
-          this.interactiveComponentState0010.callbackContract006State0001 = (CallbackContract006) (this);
-          this.performAction0895(this.interactiveComponentState0010, (byte) -55);
-          this.performAction0222(integerLocal4 + 55 + integerLocal2, 300, 0, 0, -16555);
+          this.interactiveComponentState0010.setBounds(40, integerLocal5, 300 - integerLocal5 >> 1, integerLocal2, -16555);
+          this.interactiveComponentState0010.callbackContract006State0001 = (WidgetEventListener) (this);
+          this.addChild(this.interactiveComponentState0010, (byte) -55);
+          this.setBounds(integerLocal4 + 55 + integerLocal2, 300, 0, 0, -16555);
         } catch (RuntimeException runtimeException) {
           throw ClientException.computeDiagnosticSupport0020365((Throwable) ((Object) runtimeException), "md.<init>(" + (uiComponentPart033Argument1 != null ? "{...}" : "null") + ')');
         }
@@ -171,7 +171,7 @@ final class UiComponentPart018 extends ComponentContainer implements TextHotspot
         return "</col></u>";
     }
 
-    final boolean computeBoolean0182(int integerArgument1, int integerArgument2, UiComponent uiComponentArgument3, char characterArgument4) {
+    final boolean handleKey(int integerArgument1, int integerArgument2, UiComponent uiComponentArgument3, char characterArgument4) {
         int integerLocal1 = 0;
         RuntimeException runtimeExceptionLocal2 = null;
         boolean stackBooleanLocal3 = false;
@@ -181,15 +181,15 @@ final class UiComponentPart018 extends ComponentContainer implements TextHotspot
         String stackStringLocal7 = null;
         RuntimeException caughtExceptionLocal8 = null;
         try {
-          if (super.computeBoolean0182(-119, integerArgument2, uiComponentArgument3, characterArgument4)) {
+          if (super.handleKey(-119, integerArgument2, uiComponentArgument3, characterArgument4)) {
             return true;
           }
           if (integerArgument2 == 98) {
-            stackBooleanLocal3 = this.computeBoolean0893(uiComponentArgument3, (byte) -57);
+            stackBooleanLocal3 = this.focusPreviousChild(uiComponentArgument3, (byte) -57);
             return stackBooleanLocal3;
           }
           if (integerArgument2 == 99) {
-            stackBooleanLocal4 = this.computeBoolean0892(32, uiComponentArgument3);
+            stackBooleanLocal4 = this.focusNextChild(32, uiComponentArgument3);
             return stackBooleanLocal4;
           }
           integerLocal1 = -29 / ((-22 - integerArgument1) / 49);

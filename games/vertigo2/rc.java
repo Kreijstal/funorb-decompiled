@@ -39,7 +39,7 @@ final class rc {
         if (0 == jq.field_b) {
           DefaultTextWidgetRenderer.field_s.a(16777215, (byte) 60, -1, 40, TextureOperator.field_w, var5);
           DefaultTextWidgetRenderer.field_s.a(16777215, (byte) 84, -1, 410, ao.field_R, var5);
-          var13.drawParagraph(sd.field_K, 40, var4 * 1 + (var3 + 130), 350, 225, 16777215, -1, 0, 0, var13.field_M + var13.field_z);
+          var13.drawParagraph(ModalDialogHost.field_K, 40, var4 * 1 + (var3 + 130), 350, 225, 16777215, -1, 0, 0, var13.field_M + var13.field_z);
           mp.field_a.draw(60, 290);
           SoftwareRasterizer.drawVerticalLineAlpha(390, var3 + 130 + 4, 324 - (-var3 + 80), 16777215, 100);
           var13.drawParagraph(pp.field_w, 410, 130 + (var3 + 1 * var4), 190, 225, 16777215, -1, 0, 0, var13.field_z + var13.field_M);
@@ -120,7 +120,7 @@ final class rc {
         }
         DefaultTextWidgetRenderer.field_s.a(16777215, (byte) 60, -1, 40, TextureOperator.field_w, var5);
         DefaultTextWidgetRenderer.field_s.a(16777215, (byte) 84, -1, 410, ao.field_R, var5);
-        var13.drawParagraph(sd.field_K, 40, var4 * 1 + (var3 + 130), 350, 225, 16777215, -1, 0, 0, var13.field_M + var13.field_z);
+        var13.drawParagraph(ModalDialogHost.field_K, 40, var4 * 1 + (var3 + 130), 350, 225, 16777215, -1, 0, 0, var13.field_M + var13.field_z);
         mp.field_a.draw(60, 290);
         SoftwareRasterizer.drawVerticalLineAlpha(390, var3 + 130 + 4, 324 - (-var3 + 80), 16777215, 100);
         var13.drawParagraph(pp.field_w, 410, 130 + (var3 + 1 * var4), 190, 225, 16777215, -1, 0, 0, var13.field_z + var13.field_M);

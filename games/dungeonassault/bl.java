@@ -134,7 +134,7 @@ final class bl {
           ml.field_a.rotateCounterclockwise();
           AchievementIconEntry.field_q = dd.a((byte) -112, 4, bo.field_Kb);
           qf.field_f = dd.a((byte) -112, 4, IntroSequenceScreen.field_y);
-          ji.field_G = dd.a((byte) -112, 4, qh.field_q);
+          ModalDialogHost.field_G = dd.a((byte) -112, 4, qh.field_q);
           field_o = dd.a((byte) -112, 4, tn.field_W);
           DungeonRaidScreen.field_S = dd.a((byte) -112, 4, Bzip2State.field_x);
           im.field_m = dd.a((byte) -112, 4, ml.field_a);
@@ -279,7 +279,7 @@ final class bl {
           DualLinkNode.field_q = oh.a(hj.field_Z, "pieces", 11091, "piece_darkelf");
           PlayerDungeonProfile.field_v = oh.a(hj.field_Z, "pieces", 11091, "piece_demon");
           fp.field_b = oh.a(hj.field_Z, "pieces", 11091, "piece_dryhad");
-          bj.field_F = oh.a(hj.field_Z, "pieces", 11091, "piece_dwarf");
+          DropTargetWidgetContainer.field_F = oh.a(hj.field_Z, "pieces", 11091, "piece_dwarf");
           ie.field_i = oh.a(hj.field_Z, "pieces", 11091, "piece_enchantress");
           hl.field_h = oh.a(hj.field_Z, "pieces", 11091, "piece_goblin_cleaver");
           tn.field_I = oh.a(hj.field_Z, "pieces", 11091, "piece_goblin_club");
@@ -296,8 +296,8 @@ final class bl {
           le.field_d = oh.a(hj.field_Z, "pieces", 11091, "piece_ork_shaman");
           oo.field_c = oh.a(hj.field_Z, "pieces", 11091, "piece_pitdemon");
           cg.field_b = oh.a(hj.field_Z, "pieces", 11091, "piece_priest");
-          lm.field_z = oh.a(hj.field_Z, "pieces", 11091, "piece_rat");
-          ii.field_H = oh.a(hj.field_Z, "pieces", 11091, "piece_rotworm");
+          UiWidget.field_z = oh.a(hj.field_Z, "pieces", 11091, "piece_rat");
+          DequeWidgetContainer.field_H = oh.a(hj.field_Z, "pieces", 11091, "piece_rotworm");
           sp.field_a = oh.a(hj.field_Z, "pieces", 11091, "piece_saurus_imp");
           qd.field_d = oh.a(hj.field_Z, "pieces", 11091, "piece_saurus_spawn");
           na.field_A = oh.a(hj.field_Z, "pieces", 11091, "piece_saurus_warrior");
@@ -353,7 +353,7 @@ final class bl {
             fb.field_f.field_a = 0;
             fb.field_f.field_b = 0;
           }
-          la.field_b.setInlineSprites(new q[]{fb.field_f, rf.a(10)}, new int[]{9, 10});
+          la.field_b.setInlineSprites(new q[]{fb.field_f, ModalDialog.a(10)}, new int[]{9, 10});
           fl.field_i = fn.a(2);
           PackedBitSet.field_h = fl.field_i.copyMirroredHorizontally();
           SecondaryNodeDeque.field_a = rj.a((byte) 127);

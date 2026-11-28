@@ -27,7 +27,7 @@ final class fk extends InteractiveWidget {
         field_D = null;
     }
 
-    final boolean b(int param0, int param1, UiWidget param2, int param3, int param4, int param5, int param6) {
+    final boolean pointerPressed(int param0, int param1, UiWidget param2, int param3, int param4, int param5, int param6) {
         int var12 = 0;
         RuntimeException stackIn_28_0 = null;
         StringBuilder stackIn_28_1 = null;
@@ -42,7 +42,7 @@ final class fk extends InteractiveWidget {
         int var14 = 0;
         var14 = Transmogrify.field_A ? 1 : 0;
         try {
-          if (!super.b(param0, param1, param2, param3, param4, param5, param6)) {
+          if (!super.pointerPressed(param0, param1, param2, param3, param4, param5, param6)) {
             return false;
           }
           var8_int = -param3 + param0 - this.field_B;
@@ -101,7 +101,7 @@ final class fk extends InteractiveWidget {
         RuntimeException var3_ref = null;
         try {
           param0 = hd.a('_', (byte) -81, "", param0);
-          var3 = vl.b(-1, param2);
+          var3 = DraggableWidgetContainer.b(-1, param2);
           if (param1 != 34) {
             fk.clearStaticReferences((byte) -127);
           }

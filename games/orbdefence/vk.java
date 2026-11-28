@@ -13,7 +13,7 @@ final class vk extends DefaultTextWidgetRenderer {
     final static void a(int param0, boolean param1) {
         kb.field_m = 0;
         SpriteGeometry.field_n = 0;
-        h.field_A = og.field_b;
+        LabeledWidgetContainer.field_A = og.field_b;
         GzipDecompressor.field_c = param0;
         ArchiveRequest.field_k = new ml(2);
         ArchiveRequest.field_k.a(-1, ka.a(24316, ua.field_a, DiskCacheWorker.field_d), 0, param1);
@@ -35,7 +35,7 @@ final class vk extends DefaultTextWidgetRenderer {
         ab.field_h = new IntrusiveDeque();
     }
 
-    public final void a(int param0, int param1, pj param2, int param3, boolean param4) {
+    public final void paintWidget(int param0, int param1, UiWidget param2, int param3, boolean param4) {
         int stackIn_8_0 = 0;
         int stackIn_15_0 = 0;
         int stackIn_18_0 = 0;
@@ -52,7 +52,7 @@ final class vk extends DefaultTextWidgetRenderer {
             vk.clearStaticReferences((byte) 66);
           }
           if (!param2.field_t) {
-            stackIn_8_0 = (param2.d(-81)) ? 1 : 0;
+            stackIn_8_0 = (param2.isFocused(-81)) ? 1 : 0;
           } else {
             stackIn_8_0 = 1;
           }
@@ -85,7 +85,7 @@ final class vk extends DefaultTextWidgetRenderer {
           } else {
             stackIn_23_2 = "{...}";
           }
-          throw dd.wrapClientException((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw DraggableWidgetContainer.wrapClientException((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -126,7 +126,7 @@ final class vk extends DefaultTextWidgetRenderer {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw dd.wrapClientException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
+          throw DraggableWidgetContainer.wrapClientException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
         }
     }
 
@@ -185,7 +185,7 @@ final class vk extends DefaultTextWidgetRenderer {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw dd.wrapClientException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
+          throw DraggableWidgetContainer.wrapClientException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
         }
     }
 }

@@ -47,7 +47,7 @@ final class tm {
         String var8;
         String var1Lifetime1;
         var5 = Chess.field_G;
-        var6 = "(" + lf.field_T + " " + wc.field_u + " " + hh.field_o + ") " + wg.field_B;
+        var6 = "(" + AlphaWidgetContainer.field_T + " " + wc.field_u + " " + hh.field_o + ") " + wg.field_B;
         var1 = var6;
         if (sb.field_sb <= 0) {
           if (param0 <= -119) {

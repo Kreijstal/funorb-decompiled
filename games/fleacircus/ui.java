@@ -37,7 +37,7 @@ final class ui extends oh {
         }
     }
 
-    ui(f param0, UiComponent param1) {
+    ui(ModalDialogHost param0, UiComponent param1) {
         super(param0, param1, 33, 20, 30);
     }
 

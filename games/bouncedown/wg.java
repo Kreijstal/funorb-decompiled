@@ -9,7 +9,7 @@ final class wg extends tc {
         this(FrameTimer.field_a, param0);
     }
 
-    final String a(boolean param0, lk param1) {
+    final String a(boolean param0, UiWidget param1) {
         RuntimeException var3 = null;
         String stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;

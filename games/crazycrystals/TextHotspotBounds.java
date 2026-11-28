@@ -208,15 +208,15 @@ final class TextHotspotBounds extends IntrusiveNode {
         Object var2 = null;
         var4 = CrazyCrystals.field_B;
         try {
-          if (null != om.field_x) {
-            var1 = AccountRegistrationPanel.a(true, om.field_x, (byte) 51);
+          if (null != SingleChildWidgetContainer.field_x) {
+            var1 = AccountRegistrationPanel.a(true, SingleChildWidgetContainer.field_x, (byte) 51);
             if (var1 != null) {
               var2 = gf.field_c;
               synchronized (var2) {
                 gf.field_c.flushAndMarkDrainCheck();
                 fq.field_x.a(88, var1, true);
               }
-              om.field_x = null;
+              SingleChildWidgetContainer.field_x = null;
             }
           }
           if (null == AccountRegistrationPanel.a(false, "menu", (byte) 19)) {

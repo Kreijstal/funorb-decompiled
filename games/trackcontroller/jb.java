@@ -14,10 +14,10 @@ final class jb {
             jb.a((byte) -108, true, (MidiPlayer) null, -51, (java.awt.Component) null, 84, (PlatformTaskDispatcher) null, 73);
           }
           jf.e(640);
-          gl.field_E.l(24910);
+          AlphaWidgetContainer.field_E.closeAllDialogs(24910);
           LevelView.field_y = new LoginPanel(qg.field_c, (String) null, vg.field_o, param2, param1);
-          GameApplet.field_g = new pj(gl.field_E, LevelView.field_y);
-          gl.field_E.d((byte) -70, GameApplet.field_g);
+          GameApplet.field_g = new pj(AlphaWidgetContainer.field_E, LevelView.field_y);
+          AlphaWidgetContainer.field_E.showDialog((byte) -70, GameApplet.field_g);
         } catch (RuntimeException runtimeException) {
           throw LevelGrid.toClientException((Throwable) ((Object) runtimeException), "jb.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
@@ -31,12 +31,12 @@ final class jb {
           ProxySocketConnector.field_e = new PcmStreamMixer();
           Archive.field_h = param5 * 1000 / param7;
           SpriteState.field_x.setRootStream(ProxySocketConnector.field_e);
-          fj.field_P = param2;
+          DraggableWidgetContainer.field_P = param2;
           if (param0 >= -99) {
             field_d = -37;
           }
-          fj.field_P.setMasterVolume(16384, kc.field_b);
-          sb.field_b.setRootStream(fj.field_P);
+          DraggableWidgetContainer.field_P.setMasterVolume(16384, kc.field_b);
+          sb.field_b.setRootStream(DraggableWidgetContainer.field_P);
         } catch (RuntimeException runtimeException) {
           throw LevelGrid.toClientException((Throwable) ((Object) runtimeException), "jb.B(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ',' + (param6 != null ? "{...}" : "null") + ',' + param7 + ')');
         }

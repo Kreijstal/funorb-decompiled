@@ -4,7 +4,7 @@
 abstract class wi {
     int field_a;
     int field_l;
-    static pk field_e;
+    static DraggableWidgetContainer field_e;
     static String field_h;
     int field_d;
     static int field_b;

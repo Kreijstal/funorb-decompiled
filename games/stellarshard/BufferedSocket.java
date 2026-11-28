@@ -69,7 +69,7 @@ final class BufferedSocket implements Runnable {
         }
         try {
           var9 = var17.field_y;
-          kg.d(false);
+          LabeledWidgetContainer.d(false);
           var17.bindAsRenderTarget();
           SoftwareRasterizer.grayscaleRectangle(0, 0, SoftwareRasterizer.field_i, SoftwareRasterizer.field_b);
           var15 = new Sprite(var9, var9);

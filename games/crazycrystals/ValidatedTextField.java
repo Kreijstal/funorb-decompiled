@@ -15,7 +15,7 @@ final class ValidatedTextField extends EditableTextField implements FieldValidat
         return this.field_S;
     }
 
-    ValidatedTextField(String param0, bi param1, int param2) {
+    ValidatedTextField(String param0, WidgetEventListener param1, int param2) {
         super(param0, param1, param2);
     }
 
@@ -35,18 +35,18 @@ final class ValidatedTextField extends EditableTextField implements FieldValidat
           }
           return;
         }
-        qm var3 = (qm) null;
-        this.a((qm) null, 84, -107, 114);
+        UiWidget var3 = (UiWidget) null;
+        this.updatePointer((UiWidget) null, 84, -107, 114);
         super.notifyTextChanged(127);
         if (null != this.field_S) {
           this.field_S.recordInputChange((byte) 78);
         }
     }
 
-    final void a(qm param0, int param1, int param2, int param3) {
+    final void updatePointer(UiWidget param0, int param1, int param2, int param3) {
         try {
           int var5_int = -123 / ((param1 + 50) / 59);
-          super.a(param0, -115, param2, param3);
+          super.updatePointer(param0, -115, param2, param3);
           this.field_P = -param3 - this.field_r + qh.field_i;
         } catch (RuntimeException runtimeException) {
           throw dn.wrapClientException((Throwable) ((Object) runtimeException), "sd.N(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');

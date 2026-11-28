@@ -4,16 +4,16 @@
 final class nd {
     static String field_k;
     static String field_o;
-    wo field_n;
-    wo field_e;
+    WidgetRenderer field_n;
+    WidgetRenderer field_e;
     int field_c;
-    wo field_p;
+    WidgetRenderer field_p;
     private boolean field_a;
-    wo field_i;
+    WidgetRenderer field_i;
     BitmapFont field_m;
     int field_d;
     int field_h;
-    wo field_q;
+    WidgetRenderer field_q;
     int field_l;
     int field_j;
     private int field_b;
@@ -88,7 +88,7 @@ final class nd {
         try {
           var17 = new DefaultTextWidgetRenderer(param0, 2, 2, 2236962, 1, 1, 1, 2 + (param0.field_o + param0.field_u));
           var17.field_c = 16777215;
-          this.field_n = (wo) ((Object) var17);
+          this.field_n = (WidgetRenderer) ((Object) var17);
           var4 = new fk();
           var17.a((byte) 119, var4);
           this.field_m = param0;
@@ -114,21 +114,21 @@ final class nd {
           var5[4] = (RgbSprite) ((Object) var18);
           var4.a((byte) -124, 4).a(false, true).a(46, var5);
           var4.a((byte) 43, 5).a(31, AgeValidator.a(0, 0, (byte) -70, 65793, 0)).a(param1, true).b(-1, -98);
-          this.field_p = (wo) ((Object) var4);
+          this.field_p = (WidgetRenderer) ((Object) var4);
           var6 = new fk(var4, true);
           var6.field_i = 0;
           var7 = new fk(var4, true);
           var7.field_i = 0;
           var7.a(mi.b(127, 8947848), 0);
           var7.a((byte) 101, 1).a(44, mi.b(-90, 11184810)).b(2236962, -48);
-          this.field_i = (wo) ((Object) new fl(param0, 2, 2, 16777215, -1, 5, 5, 15, 15, 4473924));
+          this.field_i = (WidgetRenderer) ((Object) new fl(param0, 2, 2, 16777215, -1, 5, 5, 15, 15, 4473924));
           discarded$0 = new gk(param0, 2, 2, 16777215, -1, 16777215, 16729156, 4473924);
           discarded$1 = new ip(param0, 16777215, -1, 125269879, 4473924, 3, 268435455);
           var8 = new fk();
           var17.a((byte) 119, var8);
           var8.a((byte) 8, 0).a(105, NanoFrameTimer.a(7829367, 10066329, 15658734, (byte) 127)).b(1118481, -51).a(-1, 0);
           var8.a((byte) -3, 4).a(false, true).a(69, var5);
-          this.field_q = (wo) ((Object) var8);
+          this.field_q = (WidgetRenderer) ((Object) var8);
           var9 = new RgbSprite[9];
           var10 = new RgbSprite[9];
           var9[4] = new RgbSprite(2, 1);
@@ -285,7 +285,7 @@ final class nd {
     final void a(int param0, int param1, int param2, int param3, int param4, int param5, byte param6) {
         SoftwareRasterizer.fillRectangleAlpha(param0, param2, param5, param1, param3, param4);
         if (param6 != 11) {
-          this.field_q = (wo) null;
+          this.field_q = (WidgetRenderer) null;
         }
     }
 

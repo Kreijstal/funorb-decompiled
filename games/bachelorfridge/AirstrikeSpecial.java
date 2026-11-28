@@ -21,7 +21,7 @@ final class AirstrikeSpecial extends SpecialOrder {
           if (param1 == null) {
             return null;
           }
-          var2 = new BinaryBitmapFont(param1, fl.field_j, AirstrikeAnimation.field_D, lq.field_A, InsanoSauceSpecial.field_s, BananarangAnimation.field_P);
+          var2 = new BinaryBitmapFont(param1, fl.field_j, AirstrikeAnimation.field_D, ArrayWidgetContainer.field_A, InsanoSauceSpecial.field_s, BananarangAnimation.field_P);
           al.releaseStatics(-18073);
           if (param0 != -3) {
             AirstrikeSpecial.releaseStatics(5);

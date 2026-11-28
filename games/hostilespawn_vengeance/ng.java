@@ -35,19 +35,19 @@ final class ng extends IntrusiveNode {
           if (param5 != -8625) {
             ng.clearStaticReferences(-53);
           }
-          if (od.field_I != e.field_q) {
+          if (DropTargetWidgetContainer.field_I != e.field_q) {
             return false;
           }
           var8 = new AccountCreationResultPanel(im.field_e, param0);
-          im.field_e.c(var8, param5 ^ -8686);
-          if (fc.i(-1)) {
+          im.field_e.showDialog(var8, param5 ^ -8686);
+          if (SingleChildWidgetContainer.i(-1)) {
             var8.r(-104);
             return true;
           }
           cg.field_e = param4;
           fj.field_Sb = param6;
           qi.field_G = param3;
-          od.field_I = ti.field_b;
+          DropTargetWidgetContainer.field_I = ti.field_b;
           wj.field_H = null;
           uh.field_o = param2;
           ia.field_h = param1;
@@ -239,7 +239,7 @@ final class ng extends IntrusiveNode {
             }
             if (var17 == null) {
               var50 = (oj) null;
-              nh.a((oj) null, -29966);
+              LabeledWidgetContainer.a((oj) null, -29966);
             } else {
               stackIn_60_0 = (param1.field_i == 28) ? 2 : 1;
               var32Lifetime1 = stackIn_60_0;
@@ -280,7 +280,7 @@ final class ng extends IntrusiveNode {
                   }
                 }
               }
-              nh.a((oj) (var17), param0 ^ -30020);
+              LabeledWidgetContainer.a((oj) (var17), param0 ^ -30020);
             }
           }
           if (param0 != 78) {

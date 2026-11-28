@@ -11,7 +11,7 @@ final class sa {
     final static void a(int param0) {
         ProxySocketFactory.field_h[0] = cm.a(128, 5, 0, 1);
         ProxySocketFactory.field_h[1] = cm.a(128, 5, 1, 1);
-        nh.field_L = RichTextWidget.a(6, param0);
+        LabeledWidgetContainer.field_L = RichTextWidget.a(6, param0);
     }
 
     public static void clearStaticReferences(byte param0) {

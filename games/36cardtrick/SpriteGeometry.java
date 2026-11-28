@@ -18,7 +18,7 @@ abstract class SpriteGeometry extends DualLinkNode {
             return false;
           }
           if (!vg.field_d) {
-            return !g.j(param0 - 27) ? true : false;
+            return !DequeWidgetContainer.j(param0 - 27) ? true : false;
           }
           return false;
         }
@@ -26,7 +26,7 @@ abstract class SpriteGeometry extends DualLinkNode {
           return false;
         }
         if (!vg.field_d) {
-          return !g.j(param0 - 27) ? true : false;
+          return !DequeWidgetContainer.j(param0 - 27) ? true : false;
         }
         return false;
     }

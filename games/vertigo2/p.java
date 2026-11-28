@@ -152,11 +152,11 @@ final class p {
     }
 
     final static void a(int param0) {
-        AccountServiceResult.field_e.i(param0 ^ param0);
+        AccountServiceResult.field_e.closeAllDialogs(param0 ^ param0);
         if (null == bb.field_F) {
           bb.field_F = new fg(AccountServiceResult.field_e, eg.field_t);
         }
-        AccountServiceResult.field_e.b(bb.field_F, 0);
+        AccountServiceResult.field_e.showDialog(bb.field_F, 0);
     }
 
     public static void clearStaticReferences(int param0) {

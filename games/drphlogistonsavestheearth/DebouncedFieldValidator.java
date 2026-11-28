@@ -17,9 +17,9 @@ abstract class DebouncedFieldValidator implements FieldValidator {
           }
           AudioOutput.configureAudio(param1, param2, 10);
           el.field_sb = AudioOutput.createOutput(param0, param5, 0, 22050);
-          k.field_J = AudioOutput.createOutput(param0, param5, 1, 1024);
+          ModalDialogHost.field_J = AudioOutput.createOutput(param0, param5, 1, 1024);
           ej.field_a = new PcmStreamMixer();
-          k.field_J.setRootStream(ej.field_a);
+          ModalDialogHost.field_J.setRootStream(ej.field_a);
           s.field_a = param3;
           param3.a(SecondaryNodeDequeIterator.field_b * 128 / 80, (byte) -13);
           el.field_sb.setRootStream(param3);
@@ -32,7 +32,7 @@ abstract class DebouncedFieldValidator implements FieldValidator {
 
     public final vh getValidationStatus(int param0) {
         if (this.hasMissingInput(false)) {
-          return pi.field_P;
+          return DraggableWidgetContainer.field_P;
         }
         if (param0 != -12317) {
           field_e = -119;

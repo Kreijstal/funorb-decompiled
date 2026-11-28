@@ -32,7 +32,7 @@ final class oq extends qc {
           if (param2 != 4462) {
             oq.a(-92, 42, (byte) 11, 8, -120);
           }
-          wq.field_M = param0;
+          AlphaWidgetContainer.field_M = param0;
           un.field_Lb = new b(param6, param7, param8, param4, param3, param1, param5);
         } catch (RuntimeException runtimeException) {
           throw wn.wrapClientException((Throwable) ((Object) runtimeException), "oq.K(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + (param5 != null ? "{...}" : "null") + ',' + (param6 != null ? "{...}" : "null") + ',' + param7 + ',' + (param8 != null ? "{...}" : "null") + ')');

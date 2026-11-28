@@ -23,16 +23,16 @@ class vn extends bj implements WidgetActivationListener {
         MusicPatchPcmStream.field_t[5] = sa.field_f;
         MusicPatchPcmStream.field_t[11] = ii.field_N;
         MusicPatchPcmStream.field_t[17] = fl.field_s;
-        MusicPatchPcmStream.field_t[6] = kn.field_E;
+        MusicPatchPcmStream.field_t[6] = SingleChildWidgetContainer.field_E;
         MusicPatchPcmStream.field_t[20] = mn.field_j;
         MusicPatchPcmStream.field_t[9] = sj.field_f;
         MusicPatchPcmStream.field_t[4] = BirthDateValidator.field_h;
-        MusicPatchPcmStream.field_t[19] = kn.field_K;
+        MusicPatchPcmStream.field_t[19] = SingleChildWidgetContainer.field_K;
         MusicPatchPcmStream.field_t[15] = va.field_e;
         if (param0 == 6) {
           MusicPatchPcmStream.field_t[21] = le.field_b;
           MusicPatchPcmStream.field_t[7] = SecondaryNodeDequeIterator.field_e;
-          MusicPatchPcmStream.field_t[18] = kn.field_J;
+          MusicPatchPcmStream.field_t[18] = SingleChildWidgetContainer.field_J;
           MusicPatchPcmStream.field_t[16] = InteractiveWidget.field_G;
           MusicPatchPcmStream.field_t[13] = ProxyAuthenticationRequiredException.field_c;
           return;
@@ -40,12 +40,12 @@ class vn extends bj implements WidgetActivationListener {
         field_Eb = (String) null;
         MusicPatchPcmStream.field_t[21] = le.field_b;
         MusicPatchPcmStream.field_t[7] = SecondaryNodeDequeIterator.field_e;
-        MusicPatchPcmStream.field_t[18] = kn.field_J;
+        MusicPatchPcmStream.field_t[18] = SingleChildWidgetContainer.field_J;
         MusicPatchPcmStream.field_t[16] = InteractiveWidget.field_G;
         MusicPatchPcmStream.field_t[13] = ProxyAuthenticationRequiredException.field_c;
     }
 
-    vn(fm param0, BitmapFont param1, String param2, boolean param3, boolean param4) {
+    vn(ModalDialogHost param0, BitmapFont param1, String param2, boolean param3, boolean param4) {
         super(param0, new e((vn) null, param1, param2), 77, 10, 10);
         try {
           this.field_yb = false;
@@ -55,7 +55,7 @@ class vn extends bj implements WidgetActivationListener {
           this.field_tb = false;
           this.field_wb = new rm(13, 50, 274, 30, 15, 2113632, 4210752);
           this.field_wb.field_W = true;
-          this.b(this.field_wb, 95);
+          this.addChild(this.field_wb, 95);
         } catch (RuntimeException runtimeException) {
           throw SpriteGeometry.wrapClientException((Throwable) ((Object) runtimeException), "vn.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ')');
         }
@@ -82,7 +82,7 @@ class vn extends bj implements WidgetActivationListener {
         var2Lifetime2 = -90 % ((param0 + 67) / 41);
     }
 
-    final boolean a(char param0, int param1, int param2, mf param3) {
+    final boolean handleKey(char param0, int param1, int param2, UiWidget param3) {
         RuntimeException var5 = null;
         boolean stackIn_7_0 = false;
         RuntimeException stackIn_10_0 = null;
@@ -94,7 +94,7 @@ class vn extends bj implements WidgetActivationListener {
             this.field_zb = true;
           }
           if (13 != param1) {
-            stackIn_7_0 = super.a(param0, param1, -1, param3);
+            stackIn_7_0 = super.handleKey(param0, param1, -1, param3);
             return stackIn_7_0;
           }
           this.k((byte) -115);
@@ -163,7 +163,7 @@ class vn extends bj implements WidgetActivationListener {
               }
               ((e) (Object) stackIn_15_0).a(stackIn_15_1, stackIn_15_2, stackIn_16_3);
             } else {
-              var6.a((byte) -114, (rg) (this), DefaultTextWidgetRenderer.field_f);
+              var6.a((byte) -114, (WidgetEventListener) (this), DefaultTextWidgetRenderer.field_f);
             }
           } else {
             var6.a(11, 29, PcmOutputWorker.field_a);
@@ -173,7 +173,7 @@ class vn extends bj implements WidgetActivationListener {
             if (param0 != 4) {
               if (param0 != 6) {
                 if (param0 == 9) {
-                  var6.a((byte) -114, (rg) (this), rn.field_c);
+                  var6.a((byte) -114, (WidgetEventListener) (this), rn.field_c);
                 }
               } else {
                 var6.a(9, 31, gg.field_e);
@@ -213,14 +213,14 @@ class vn extends bj implements WidgetActivationListener {
             ArchiveProvider.field_d.k((byte) -113);
             var3 = ec.e((byte) -64);
             ResourceArchive.field_b = new LoginPanel(var3, (String) null, true, false, false);
-            jh.field_e.b(nj.field_w, (byte) -46);
+            jh.field_e.showDialog(nj.field_w, (byte) -46);
             nj.field_w.c(ResourceArchive.field_b, 88);
             nj.field_w.i((byte) -126);
             return;
           }
           var2 = ec.e((byte) -64);
           ResourceArchive.field_b = new LoginPanel(var2, (String) null, true, false, false);
-          jh.field_e.b(nj.field_w, (byte) -46);
+          jh.field_e.showDialog(nj.field_w, (byte) -46);
           nj.field_w.c(ResourceArchive.field_b, 88);
           nj.field_w.i((byte) -126);
           return;
@@ -228,7 +228,7 @@ class vn extends bj implements WidgetActivationListener {
         if (null == ArchiveProvider.field_d) {
           var5 = ec.e((byte) -64);
           ResourceArchive.field_b = new LoginPanel(var5, (String) null, true, false, false);
-          jh.field_e.b(nj.field_w, (byte) -46);
+          jh.field_e.showDialog(nj.field_w, (byte) -46);
           nj.field_w.c(ResourceArchive.field_b, 88);
           nj.field_w.i((byte) -126);
           return;
@@ -236,7 +236,7 @@ class vn extends bj implements WidgetActivationListener {
         ArchiveProvider.field_d.k((byte) -113);
         String var4 = ec.e((byte) -64);
         ResourceArchive.field_b = new LoginPanel(var4, (String) null, true, false, false);
-        jh.field_e.b(nj.field_w, (byte) -46);
+        jh.field_e.showDialog(nj.field_w, (byte) -46);
         nj.field_w.c(ResourceArchive.field_b, 88);
         nj.field_w.i((byte) -126);
     }
@@ -252,7 +252,7 @@ class vn extends bj implements WidgetActivationListener {
             ChessBoardState.a(false, 3);
             this.k((byte) -121);
           } else {
-            sg.a(bh.i(param4 ^ -24270), (byte) 120, "tochangedisplayname.ws");
+            sg.a(ArrayWidgetContainer.i(param4 ^ -24270), (byte) 120, "tochangedisplayname.ws");
           }
           if (param4 == -24221) {
             return;

@@ -1103,7 +1103,7 @@ final class ContextualRuntimeException extends RuntimeException {
                 }
                 var2 = kb.a("justplay", (byte) 123);
                 if (var2 != null) {
-                  gl.field_z = eg.a(param0 + 120, var2);
+                  AlphaWidgetContainer.field_z = eg.a(param0 + 120, var2);
                 }
                 var2 = kb.a("justplay_excl", (byte) 106);
                 if (null != var2) {
@@ -1111,7 +1111,7 @@ final class ContextualRuntimeException extends RuntimeException {
                 }
                 var2 = kb.a("login", (byte) 117);
                 if (null != var2) {
-                  da.field_B = eg.a(120, var2);
+                  ModalDialogHost.field_B = eg.a(120, var2);
                 }
                 var2 = kb.a("goback", (byte) 116);
                 if (var2 != null) {
@@ -1155,7 +1155,7 @@ final class ContextualRuntimeException extends RuntimeException {
                 }
                 var2 = kb.a("connectionlost_reconnecting", (byte) 108);
                 if (var2 != null) {
-                  oc.field_E = eg.a(120, var2);
+                  LabeledWidgetContainer.field_E = eg.a(120, var2);
                 }
                 var2 = kb.a("connectionlost_withreason", (byte) 122);
                 if (null != var2) {
@@ -1331,14 +1331,14 @@ final class ContextualRuntimeException extends RuntimeException {
                 }
                 var2 = kb.a("openinpopupwindow", (byte) 117);
                 if (var2 != null) {
-                  mk.field_E = eg.a(89, var2);
+                  ModalDialog.field_E = eg.a(89, var2);
                 }
                 if (param0 != 7) {
                   ContextualRuntimeException.a(-73, -128, 4, -48, -51, 80, -121, -83, -75, (byte) 70, 69, 52, 57, -118, -119, -35);
                 }
                 var2 = kb.a("create", (byte) 112);
                 if (var2 != null) {
-                  da.field_A = eg.a(123, var2);
+                  ModalDialogHost.field_A = eg.a(123, var2);
                 }
                 var2 = kb.a("create_pleasechooseapassword", (byte) 116);
                 if (null != var2) {
@@ -1698,7 +1698,7 @@ final class ContextualRuntimeException extends RuntimeException {
                 }
                 var2 = kb.a("create_alert_mismatch", (byte) 117);
                 if (null != var2) {
-                  gl.field_C = eg.a(118, var2);
+                  AlphaWidgetContainer.field_C = eg.a(118, var2);
                 }
                 var2 = kb.a("create_passwordvalid", (byte) 113);
                 if (null != var2) {
@@ -1818,7 +1818,7 @@ final class ContextualRuntimeException extends RuntimeException {
                 }
                 var2 = kb.a("waitingfor_soundeffects", (byte) 113);
                 if (null != var2) {
-                  oc.field_H = eg.a(116, var2);
+                  LabeledWidgetContainer.field_H = eg.a(116, var2);
                 }
                 var2 = kb.a("waitingfor_music", (byte) 112);
                 if (var2 != null) {
@@ -2304,7 +2304,7 @@ final class ContextualRuntimeException extends RuntimeException {
                 }
                 var2 = kb.a("mouseoveranicon", (byte) 118);
                 if (null != var2) {
-                  aj.field_v = eg.a(105, var2);
+                  DequeWidgetContainer.field_v = eg.a(105, var2);
                 }
                 var2 = kb.a("notyetachieved", (byte) 120);
                 if (var2 != null) {
@@ -2716,7 +2716,7 @@ final class ContextualRuntimeException extends RuntimeException {
                 }
                 var2 = kb.a("fs_accept_countdown_pl", (byte) 108);
                 if (var2 != null) {
-                  mk.field_C = eg.a(90, var2);
+                  ModalDialog.field_C = eg.a(90, var2);
                 }
                 var2 = kb.a("fs_nonmember", (byte) 115);
                 if (null != var2) {

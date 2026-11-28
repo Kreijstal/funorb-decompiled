@@ -113,7 +113,7 @@ final class te {
                 nj.field_c[~var2] = false;
               }
             }
-            ConfirmedEmailAvailabilityValidator.field_n = b.field_M;
+            ConfirmedEmailAvailabilityValidator.field_n = ModalDialog.field_M;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

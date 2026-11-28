@@ -262,7 +262,7 @@ final class AgeValidator extends TextFieldValidator {
           var1[ob.field_Ib] = lg.field_d;
           var1[ob.field_Gb] = HuffmanDecoder.field_d;
           var1[ob.field_pc] = hj.field_P;
-          var1[ob.field_gc] = rf.field_N;
+          var1[ob.field_gc] = ModalDialog.field_N;
           var1[ob.field_bc] = BoundedRandomAccessFile.field_f;
           var1[ob.field_ec] = pm.field_k;
           var1[ob.field_Ub] = j.field_S;
@@ -270,7 +270,7 @@ final class AgeValidator extends TextFieldValidator {
           var2[ob.field_fc] = ha.field_l;
           var2[ob.field_hc] = IntrusiveNode.field_f;
           var2[ob.field_Mb] = rp.field_f;
-          var2[ob.field_Wb] = bj.field_H;
+          var2[ob.field_Wb] = DropTargetWidgetContainer.field_H;
           var2[ob.field_Nb] = hk.field_d;
           var2[ob.field_jc] = mi.field_a;
           var2[ob.field_Hb] = al.field_i;
@@ -391,7 +391,7 @@ final class AgeValidator extends TextFieldValidator {
             hp.field_b[14].field_G = var4Lifetime13;
             hp.field_b[14].field_F = var3_ref_StringLifetime13;
           }
-          var3_ref_StringLifetime14 = sd.field_I;
+          var3_ref_StringLifetime14 = AlphaWidgetContainer.field_I;
           var4Lifetime14 = df.field_f;
           if (null != hp.field_b[15]) {
             hp.field_b[15].field_F = var3_ref_StringLifetime14;
@@ -505,7 +505,7 @@ final class AgeValidator extends TextFieldValidator {
             hp.field_b[33].field_G = var4Lifetime32;
             hp.field_b[33].field_F = var3_ref_StringLifetime32;
           }
-          var3_ref_StringLifetime33 = lm.field_r;
+          var3_ref_StringLifetime33 = UiWidget.field_r;
           var4Lifetime33 = jd.field_n;
           if (hp.field_b[34] != null) {
             hp.field_b[34].field_F = var3_ref_StringLifetime33;
@@ -812,7 +812,7 @@ final class AgeValidator extends TextFieldValidator {
           }
           var3_ref_StringLifetime71 = DualLinkNode.field_s;
           var4Lifetime71 = ic.field_z;
-          var5Lifetime37 = ii.field_J;
+          var5Lifetime37 = DequeWidgetContainer.field_J;
           if (null != gh.field_i[37]) {
             gh.field_i[37].field_z = var3_ref_StringLifetime71;
             gh.field_i[37].field_t = var4Lifetime71;
@@ -823,8 +823,8 @@ final class AgeValidator extends TextFieldValidator {
           li.field_b[2] = df.field_d;
           li.field_b[1] = tp.field_z;
           ByteStorage.field_a[1] = lj.field_j;
-          ByteStorage.field_a[0] = da.field_E;
-          ByteStorage.field_a[3] = bj.field_J;
+          ByteStorage.field_a[0] = SingleChildWidgetContainer.field_E;
+          ByteStorage.field_a[3] = DropTargetWidgetContainer.field_J;
           ByteStorage.field_a[2] = an.field_C;
           DiskCacheWorker.field_e = new String[254];
           for (var3 = 0; var3 < Bzip2State.field_p.length; var3++) {
@@ -1084,7 +1084,7 @@ final class AgeValidator extends TextFieldValidator {
             fo.field_b = (tl.field_i.field_v - MouseWheelInput.field_g.field_v) / 2 + 390;
             wk.field_h = (tl.field_i.field_y - MouseWheelInput.field_g.field_y) / 2 + 231;
           }
-          if (rf.field_Q == null) {
+          if (ModalDialog.field_Q == null) {
             return;
           }
           if (MenuScreen.field_z != null &&
@@ -1165,8 +1165,8 @@ final class AgeValidator extends TextFieldValidator {
             var16.bindAsRenderTarget();
             TextLineMetrics.field_l.drawParagraph(var5_ref_String, 3, 3, var16.field_y - 6, var16.field_v - 6, 16777215, -1, 0, 1, TextLineMetrics.field_l.field_H + TextLineMetrics.field_l.field_E);
             uc.a(1, 3, var16.field_y, var16, 0, var16.field_v, 0, false);
-            rf.field_Q.bindAsRenderTarget();
-            var16.draw(199 - rf.field_Q.field_w, 83 - rf.field_Q.field_A);
+            ModalDialog.field_Q.bindAsRenderTarget();
+            var16.draw(199 - ModalDialog.field_Q.field_w, 83 - ModalDialog.field_Q.field_A);
             SoftwareRasterizer.setRasterBuffer(var29, var2Lifetime2, var3Lifetime2);
             SoftwareRasterizer.restoreClip(rp.field_e);
           }
@@ -1180,11 +1180,11 @@ final class AgeValidator extends TextFieldValidator {
             var5Lifetime1 = 20 + ol.field_b.field_E + var4;
             var6Lifetime2 = -(var5Lifetime1 / 2) + 427;
             var7Lifetime2 = ol.field_b.field_E + (var6Lifetime2 + 20);
-            rf.field_Q.bindAsRenderTarget();
-            TextLineMetrics.field_l.drawString(rp.field_h, var7Lifetime2 - rf.field_Q.field_w, TextLineMetrics.field_l.field_H + 155 - (rf.field_Q.field_A - TextLineMetrics.field_l.field_E), 16777215, -1);
-            uc.a(1, 3, var4, rf.field_Q, -rf.field_Q.field_w + (var7Lifetime2 - 4), 50, -rf.field_Q.field_A + 155, false);
-            var8Lifetime1 = -((-TextLineMetrics.field_l.field_E - TextLineMetrics.field_l.field_H + (-3 + ol.field_b.field_G)) / 2) + (155 - rf.field_Q.field_A);
-            ol.field_b.draw(-rf.field_Q.field_w + var6Lifetime2, var8Lifetime1);
+            ModalDialog.field_Q.bindAsRenderTarget();
+            TextLineMetrics.field_l.drawString(rp.field_h, var7Lifetime2 - ModalDialog.field_Q.field_w, TextLineMetrics.field_l.field_H + 155 - (ModalDialog.field_Q.field_A - TextLineMetrics.field_l.field_E), 16777215, -1);
+            uc.a(1, 3, var4, ModalDialog.field_Q, -ModalDialog.field_Q.field_w + (var7Lifetime2 - 4), 50, -ModalDialog.field_Q.field_A + 155, false);
+            var8Lifetime1 = -((-TextLineMetrics.field_l.field_E - TextLineMetrics.field_l.field_H + (-3 + ol.field_b.field_G)) / 2) + (155 - ModalDialog.field_Q.field_A);
+            ol.field_b.draw(-ModalDialog.field_Q.field_w + var6Lifetime2, var8Lifetime1);
             SoftwareRasterizer.setRasterBuffer(var30, var2Lifetime3, var3Lifetime3);
             SoftwareRasterizer.restoreClip(rp.field_e);
             ol.field_b = null;
@@ -1199,7 +1199,7 @@ final class AgeValidator extends TextFieldValidator {
           if (gn.field_c != null) {
             gn.field_c.draw(0, 0);
           }
-          rf.field_Q.draw(0, 0);
+          ModalDialog.field_Q.draw(0, 0);
           if (IntroSequenceScreen.field_r != null) {
             IntroSequenceScreen.field_r.draw(0, 0);
           }

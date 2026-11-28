@@ -6,7 +6,7 @@ final class jk extends hf {
     static int[] field_Bb;
     static int[] field_Db;
 
-    final void b(int param0, lm param1) {
+    final void b(int param0, UiWidget param1) {
         try {
           super.b(param0, param1);
         } catch (RuntimeException runtimeException) {
@@ -166,7 +166,7 @@ final class jk extends hf {
         field_Db = null;
     }
 
-    jk(ji param0, lm param1) {
+    jk(ModalDialogHost param0, UiWidget param1) {
         super(param0, param1, 33, 20, 30);
     }
 

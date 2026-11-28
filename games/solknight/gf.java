@@ -7,7 +7,7 @@ abstract class gf extends ld {
     private int field_db;
     private int field_W;
     private UiWidget field_S;
-    private te field_V;
+    private AlphaWidgetContainer field_V;
     static int field_T;
     private int field_eb;
     static AccountRequestState field_Z;
@@ -17,15 +17,15 @@ abstract class gf extends ld {
     static Sprite[] field_fb;
     static s field_cb;
 
-    final boolean e(byte param0) {
+    final boolean snapDialogAnimation(byte param0) {
         this.e(true);
         if (param0 != 124) {
           return true;
         }
-        return super.e((byte) 124);
+        return super.snapDialogAnimation((byte) 124);
     }
 
-    boolean a(char param0, byte param1, int param2, UiWidget param3) {
+    boolean handleKey(char param0, byte param1, int param2, UiWidget param3) {
         int var5_int = 0;
         RuntimeException var5 = null;
         RuntimeException stackIn_13_0 = null;
@@ -33,15 +33,15 @@ abstract class gf extends ld {
         String stackIn_14_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (super.a(param0, (byte) -117, param2, param3)) {
+          if (super.handleKey(param0, (byte) -117, param2, param3)) {
             return true;
           }
           if (null != this.field_V) {
             if (param2 == 98) {
-              this.field_V.a(-1463, param3);
+              this.field_V.takeFocus(-1463, param3);
             }
             if (99 == param2) {
-              this.field_V.a(-1463, param3);
+              this.field_V.takeFocus(-1463, param3);
             }
           }
           var5_int = 120 / ((param1 - 31) / 56);
@@ -60,7 +60,7 @@ abstract class gf extends ld {
         }
     }
 
-    gf(i param0, UiWidget param1, int param2, int param3, int param4) {
+    gf(ModalDialogHost param0, UiWidget param1, int param2, int param3, int param4) {
         super(param0, param1.field_t + 12, 12 + param2 + param1.field_x);
         try {
           this.field_eb = param2;
@@ -86,12 +86,12 @@ abstract class gf extends ld {
           this.field_V.unlink(10);
         }
         if (param0 == null) {
-          this.field_V = new te();
+          this.field_V = new AlphaWidgetContainer();
         } else {
-          param0.b(param0.field_x, param0.field_t, 6, 0, this.field_eb + 6);
-          this.field_V = new te(param0);
+          param0.setBounds(param0.field_x, param0.field_t, 6, 0, this.field_eb + 6);
+          this.field_V = new AlphaWidgetContainer(param0);
         }
-        this.a(this.field_V, param1 + 22188);
+        this.addChild(this.field_V, param1 + 22188);
         if (param1 != -16777) {
           return;
         }
@@ -108,7 +108,7 @@ abstract class gf extends ld {
           return;
         }
         if (this.field_U != ImageProducerRasterBuffer.field_j) {
-          this.b(this.field_S.field_t + 12, -2038584927, this.field_eb + 12 + this.field_S.field_x);
+          this.setCenteredSize(this.field_S.field_t + 12, -2038584927, this.field_eb + 12 + this.field_S.field_x);
           this.b(this.field_S, -16777);
         } else {
           this.field_V.field_H = 256;
@@ -171,71 +171,71 @@ abstract class gf extends ld {
         }
     }
 
-    boolean h(int param0) {
+    boolean advanceDialogAnimation(int param0) {
         int fieldTemp$0 = 0;
         int fieldTemp$1 = 0;
         int fieldTemp$2 = 0;
         int var3 = SolKnight.field_L ? 1 : 0;
         if (param0 != 1784) {
           UiWidget var4 = (UiWidget) null;
-          this.a('ﾴ', (byte) -22, -26, (UiWidget) null);
+          this.handleKey('ﾴ', (byte) -22, -26, (UiWidget) null);
           if (this.field_U == null) {
-            return super.h(param0 + 0);
+            return super.advanceDialogAnimation(param0 + 0);
           }
           if (this.field_U != ah.field_j) {
             if (this.field_U != ImageProducerRasterBuffer.field_j) {
-              return super.h(param0 + 0);
+              return super.advanceDialogAnimation(param0 + 0);
             }
             fieldTemp$0 = this.field_bb + 1;
             this.field_bb = this.field_bb + 1;
             if (fieldTemp$0 == this.field_db) {
               this.field_U = null;
               this.field_V.field_H = 256;
-              return super.h(param0 + 0);
+              return super.advanceDialogAnimation(param0 + 0);
             }
             this.field_V.field_H = (this.field_bb << 8) / this.field_db;
-            return super.h(param0 + 0);
+            return super.advanceDialogAnimation(param0 + 0);
           }
           fieldTemp$1 = this.field_bb + 1;
           this.field_bb = this.field_bb + 1;
           if (this.field_ab != fieldTemp$1) {
             this.field_V.field_H = -((this.field_bb << 8) / this.field_ab) + 256;
-            return super.h(param0 + 0);
+            return super.advanceDialogAnimation(param0 + 0);
           }
           this.field_U = kc.field_I;
           this.b(this.field_S.field_x + 12 + this.field_eb, 0, this.field_W, this.field_S.field_t + 12);
           this.field_bb = 0;
           this.field_V.field_H = 0;
-          return super.h(param0 + 0);
+          return super.advanceDialogAnimation(param0 + 0);
         }
         if (this.field_U == null) {
-          return super.h(param0 + 0);
+          return super.advanceDialogAnimation(param0 + 0);
         }
         if (this.field_U != ah.field_j) {
           if (this.field_U != ImageProducerRasterBuffer.field_j) {
-            return super.h(param0 + 0);
+            return super.advanceDialogAnimation(param0 + 0);
           }
           fieldTemp$2 = this.field_bb + 1;
           this.field_bb = this.field_bb + 1;
           if (fieldTemp$2 == this.field_db) {
             this.field_U = null;
             this.field_V.field_H = 256;
-            return super.h(param0 + 0);
+            return super.advanceDialogAnimation(param0 + 0);
           }
           this.field_V.field_H = (this.field_bb << 8) / this.field_db;
-          return super.h(param0 + 0);
+          return super.advanceDialogAnimation(param0 + 0);
         }
         int fieldTemp$3 = this.field_bb + 1;
         this.field_bb = this.field_bb + 1;
         if (this.field_ab != fieldTemp$3) {
           this.field_V.field_H = -((this.field_bb << 8) / this.field_ab) + 256;
-          return super.h(param0 + 0);
+          return super.advanceDialogAnimation(param0 + 0);
         }
         this.field_U = kc.field_I;
         this.b(this.field_S.field_x + 12 + this.field_eb, 0, this.field_W, this.field_S.field_t + 12);
         this.field_bb = 0;
         this.field_V.field_H = 0;
-        return super.h(param0 + 0);
+        return super.advanceDialogAnimation(param0 + 0);
     }
 
     static {

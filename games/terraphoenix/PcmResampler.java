@@ -24,14 +24,14 @@ final class PcmResampler {
         RuntimeException decompiledCaughtException = null;
         var2 = Terraphoenix.field_V;
         try {
-          jl.field_I.a(true, qf.field_c, wd.field_a, 115);
-          jl.field_I.i((byte) 126);
+          AlphaWidgetContainer.field_I.processPointerInput(true, qf.field_c, wd.field_a, 115);
+          AlphaWidgetContainer.field_I.advanceDialogs((byte) 126);
           if (param0 != 1) {
             stackIn_3_0 = -58;
             return stackIn_3_0;
           }
           while (DefaultTextWidgetRenderer.d(1)) {
-            jl.field_I.a(lf.field_c, SectorCacheStore.field_g, (byte) -121);
+            AlphaWidgetContainer.field_I.processKeyInput(lf.field_c, SectorCacheStore.field_g, (byte) -121);
           }
           if (ga.field_c != -1) {
             var1_int = ga.field_c;

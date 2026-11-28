@@ -17,7 +17,7 @@ final class fl extends oe {
         if (param0 != 897584976) {
           return true;
         }
-        stackIn_6_0 = (null != DelayedPcmStream.field_q) && (DelayedPcmStream.field_q.k(param0 ^ 897584976) != null);
+        stackIn_6_0 = (null != DelayedPcmStream.field_q) && (DelayedPcmStream.field_q.getTopOpenDialog(param0 ^ 897584976) != null);
         return stackIn_6_0;
     }
 
@@ -130,14 +130,14 @@ final class fl extends oe {
                         var18 = -1 + (gl.field_f - var17);
                       }
                       if (var17 < 0) {
-                        qd.a(var17 + var18, 27, var16Lifetime2, param2, param6);
+                        ModalDialog.a(var17 + var18, 27, var16Lifetime2, param2, param6);
                       } else {
-                        qd.a(var18, 56, var16Lifetime2 + var17, param2, param6);
+                        ModalDialog.a(var18, 56, var16Lifetime2 + var17, param2, param6);
                       }
                     } else {
                       if (0 <= var17 &&
                         var17 < gl.field_f) {
-                        qd.a(var18, 125, var16Lifetime2 + var17, param2, param6);
+                        ModalDialog.a(var18, 125, var16Lifetime2 + var17, param2, param6);
                       }
                     }
                   }
@@ -181,14 +181,14 @@ final class fl extends oe {
                     var17Lifetime1 = gl.field_f - var16Lifetime1 - 1;
                   }
                   if (var16Lifetime1 < 0) {
-                    qd.a(var17Lifetime1 + var16Lifetime1, 25, var15Lifetime1, param2, param6);
+                    ModalDialog.a(var17Lifetime1 + var16Lifetime1, 25, var15Lifetime1, param2, param6);
                   } else {
-                    qd.a(var17Lifetime1, 38, var16Lifetime1 + var15Lifetime1, param2, param6);
+                    ModalDialog.a(var17Lifetime1, 38, var16Lifetime1 + var15Lifetime1, param2, param6);
                   }
                 } else {
                   if (0 <= var16Lifetime1 &&
                     var16Lifetime1 < gl.field_f) {
-                    qd.a(var17Lifetime1, param7 ^ -45, var15Lifetime1 + var16Lifetime1, param2, param6);
+                    ModalDialog.a(var17Lifetime1, param7 ^ -45, var15Lifetime1 + var16Lifetime1, param2, param6);
                   }
                 }
               }

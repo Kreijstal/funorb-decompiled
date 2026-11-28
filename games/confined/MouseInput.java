@@ -118,10 +118,10 @@ final class MouseInput implements java.awt.event.MouseListener, java.awt.event.M
             ByteStorage.field_f = param0.getY();
             ri.correctedCurrentTimeMillis(-3);
             if (!javax.swing.SwingUtilities.isRightMouseButton(param0)) {
-              sh.field_K = 1;
+              ModalDialogHost.field_K = 1;
               pe.field_n = 1;
             } else {
-              sh.field_K = 2;
+              ModalDialogHost.field_K = 2;
               pe.field_n = 2;
             }
             var2_int = param0.getModifiers();
@@ -208,8 +208,8 @@ final class MouseInput implements java.awt.event.MouseListener, java.awt.event.M
           var1 = BufferedSocket.d(85);
           om.field_p = new LoginPanel(var1, (String) null, true, false, false);
           if (param0 == 2) {
-            TunnelCamera.field_Z.c(dn.field_b, 0);
-            dn.field_b.a((fj) (om.field_p), (byte) -72);
+            TunnelCamera.field_Z.showDialog(dn.field_b, 0);
+            dn.field_b.a((UiWidget) (om.field_p), (byte) -72);
             dn.field_b.m(118);
             return;
           }
@@ -218,8 +218,8 @@ final class MouseInput implements java.awt.event.MouseListener, java.awt.event.M
         var1Lifetime1 = BufferedSocket.d(85);
         om.field_p = new LoginPanel(var1Lifetime1, (String) null, true, false, false);
         if (param0 == 2) {
-          TunnelCamera.field_Z.c(dn.field_b, 0);
-          dn.field_b.a((fj) (om.field_p), (byte) -72);
+          TunnelCamera.field_Z.showDialog(dn.field_b, 0);
+          dn.field_b.a((UiWidget) (om.field_p), (byte) -72);
           dn.field_b.m(118);
           return;
         }

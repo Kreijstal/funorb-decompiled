@@ -48,7 +48,7 @@ final class AccountNameAvailabilityValidator extends TextFieldValidator {
             return false;
           }
           var8 = new AccountCreationResultPanel(mb.field_b, param2);
-          mb.field_b.b(1, var8);
+          mb.field_b.showDialog(1, var8);
           if (cm.a(true)) {
             var8.t(23101);
             return true;
@@ -196,7 +196,7 @@ final class AccountNameAvailabilityValidator extends TextFieldValidator {
           if (this.nameAvailable) {
             return lg.field_a;
           }
-          stackIn_13_0 = hm.field_L;
+          stackIn_13_0 = ModalDialogHost.field_L;
           return stackIn_13_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

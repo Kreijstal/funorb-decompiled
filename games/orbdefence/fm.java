@@ -92,7 +92,7 @@ final class fm {
             MidiPcmStream.field_m.drawCentred(CrossfadingMidiPcmStream.a(-415993727, new String[]{NodeHashTableIterator.field_a}, FullscreenFocusCanvas.field_g), var6, 110, 16777215, -1);
             rc.field_a.drawCentred(CrossfadingMidiPcmStream.a(-415993727, new String[]{NodeHashTableIterator.field_a}, qb.field_b), var6, 130, 16777215, -1);
             MidiPcmStream.field_m.drawCentred(tg.field_d, var6, 180, 16777215, -1);
-            rc.field_a.drawCentred(mm.field_E, var6, 200, 16777215, -1);
+            rc.field_a.drawCentred(DropTargetWidgetContainer.field_E, var6, 200, 16777215, -1);
             ve.a(3, var12.field_k, var12, var12.field_o, 1, 0, (byte) 98, 0);
             nl.field_e.bindAsRenderTarget();
             var12.draw(18 - nl.field_e.field_p, -nl.field_e.field_u + 241);
@@ -182,15 +182,15 @@ final class fm {
             SoftwareRasterizer.setRasterBuffer(var29, var2Lifetime1, var3Lifetime1);
             SoftwareRasterizer.restoreClip(rh.field_e);
           }
-          if (pj.field_k != null &&
+          if (UiWidget.field_k != null &&
             rc.field_a != null) {
             var30 = SoftwareRasterizer.field_b;
             var2Lifetime2 = SoftwareRasterizer.field_f;
             var3Lifetime2 = SoftwareRasterizer.field_l;
             SoftwareRasterizer.saveClip(rh.field_e);
             var16 = new RgbSprite(412, 43);
-            var17 = CrossfadingMidiPcmStream.a(-415993727, new String[]{pj.field_k}, ValidatedTextField.field_U);
-            pj.field_k = null;
+            var17 = CrossfadingMidiPcmStream.a(-415993727, new String[]{UiWidget.field_k}, ValidatedTextField.field_U);
+            UiWidget.field_k = null;
             var16.bindAsRenderTarget();
             rc.field_a.drawParagraph(var17, 3, 3, var16.field_o - 6, -6 + var16.field_k, 16777215, -1, 0, 1, rc.field_a.field_B + rc.field_a.field_H);
             ve.a(3, var16.field_k, var16, var16.field_o, 1, 0, (byte) 55, 0);
@@ -313,7 +313,7 @@ final class fm {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw dd.wrapClientException((Throwable) ((Object) var1_ref), "fm.C(" + param0 + ')');
+          throw DraggableWidgetContainer.wrapClientException((Throwable) ((Object) var1_ref), "fm.C(" + param0 + ')');
         }
     }
 
@@ -358,7 +358,7 @@ final class fm {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw dd.wrapClientException((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw DraggableWidgetContainer.wrapClientException((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -403,7 +403,7 @@ final class fm {
           } else {
             stackIn_21_2 = "{...}";
           }
-          throw dd.wrapClientException((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param1).append(')').toString());
+          throw DraggableWidgetContainer.wrapClientException((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param1).append(')').toString());
         }
     }
 

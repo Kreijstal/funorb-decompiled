@@ -3,9 +3,9 @@
  */
 final class bl {
     static RgbSprite field_n;
-    td field_e;
+    WidgetRenderer field_e;
     int field_k;
-    td field_c;
+    WidgetRenderer field_c;
     private boolean field_b;
     BitmapFont field_j;
     int field_i;
@@ -15,11 +15,11 @@ final class bl {
     int field_a;
     static volatile int field_g;
     private int field_m;
-    td field_f;
+    WidgetRenderer field_f;
     int field_h;
     int field_r;
-    td field_l;
-    td field_q;
+    WidgetRenderer field_l;
+    WidgetRenderer field_q;
 
     final void a(BitmapFont param0, int param1) {
         DefaultTextWidgetRenderer var18 = null;
@@ -47,7 +47,7 @@ final class bl {
         try {
           var18 = new DefaultTextWidgetRenderer(param0, 2, 2, 2236962, 1, 1, 1, param0.field_B + param0.field_H + 2);
           var18.field_s = 16777215;
-          this.field_f = (td) ((Object) var18);
+          this.field_f = (WidgetRenderer) ((Object) var18);
           var4 = new sj();
           var18.a((byte) 81, var4);
           this.field_h = 3;
@@ -73,14 +73,14 @@ final class bl {
           var5[4] = (RgbSprite) ((Object) var19);
           var4.a(4, true).a(true, (byte) -57).a(var5, 0);
           var4.a(5, true).a(q.a(false, 0, 0, 0, 65793), 0).a(true, (byte) -57).a((byte) 114, -1);
-          this.field_l = (td) ((Object) var4);
+          this.field_l = (WidgetRenderer) ((Object) var4);
           var6 = new sj(var4, true);
           var6.field_h = 0;
           var7 = new sj(var4, true);
           var7.field_h = 0;
           var7.a(124, bg.a(-84, 8947848));
           var7.a(1, true).a(bg.a(-126, 11184810), 0).a((byte) 113, 2236962);
-          this.field_e = (td) ((Object) new ci(param0, 2, 2, 16777215, -1, 5, 5, 15, 15, 4473924));
+          this.field_e = (WidgetRenderer) ((Object) new ci(param0, 2, 2, 16777215, -1, 5, 5, 15, 15, 4473924));
           if (param1 != -2699) {
             String var16 = (String) null;
             this.a(-85, (byte) 81, -88, (String) null);
@@ -91,7 +91,7 @@ final class bl {
           var18.a((byte) 81, var8);
           var8.a(0, true).a(vf.a(10066329, 7829367, 15658734, (byte) -94), 0).a((byte) 116, 1118481).c(-1, param1 + 2701);
           var8.a(4, true).a(true, (byte) -57).a(var5, 0);
-          this.field_q = (td) ((Object) var8);
+          this.field_q = (WidgetRenderer) ((Object) var8);
           var9 = new RgbSprite[9];
           var9[4] = new RgbSprite(2, 1);
           var10 = new RgbSprite[9];
@@ -117,7 +117,7 @@ final class bl {
           var20 = new sj(var4, true);
           var20.a(-1, var13);
         } catch (RuntimeException runtimeException) {
-          throw dd.wrapClientException((Throwable) ((Object) runtimeException), "bl.H(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw DraggableWidgetContainer.wrapClientException((Throwable) ((Object) runtimeException), "bl.H(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -167,7 +167,7 @@ final class bl {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw dd.wrapClientException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw DraggableWidgetContainer.wrapClientException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -197,7 +197,7 @@ final class bl {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw dd.wrapClientException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
+          throw DraggableWidgetContainer.wrapClientException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
         }
     }
 
@@ -286,7 +286,7 @@ final class bl {
           } else {
             stackIn_30_2 = "{...}";
           }
-          throw dd.wrapClientException((Throwable) ((Object) stackIn_29_0), ((StringBuilder) (Object) stackIn_29_1).append(stackIn_30_2).append(')').toString());
+          throw DraggableWidgetContainer.wrapClientException((Throwable) ((Object) stackIn_29_0), ((StringBuilder) (Object) stackIn_29_1).append(stackIn_30_2).append(')').toString());
         }
     }
 

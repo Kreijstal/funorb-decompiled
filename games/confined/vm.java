@@ -16,7 +16,7 @@ final class vm extends HomingProjectile {
           if (param2 >= -5) {
             field_ab = (String) null;
           }
-          this.a(89, qe.field_O[(15 & this.field_db) >> 2], param1, param3);
+          this.a(89, DraggableWidgetContainer.field_O[(15 & this.field_db) >> 2], param1, param3);
         } catch (RuntimeException runtimeException) {
           throw TextLineMetrics.a((Throwable) ((Object) runtimeException), "vm.QA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + (param4 != null ? "{...}" : "null") + ')');
         }

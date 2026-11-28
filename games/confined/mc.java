@@ -44,7 +44,7 @@ final class mc {
     }
 
     final static String a(int param0) {
-        if (oe.field_Q == ValidatedTextField.field_fb) {
+        if (ModalDialog.field_Q == ValidatedTextField.field_fb) {
           return jb.field_o;
         }
         if (ValidatedTextField.field_fb == RichTextWidget.field_S) {

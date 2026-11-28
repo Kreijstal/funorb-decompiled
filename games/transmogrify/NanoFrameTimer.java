@@ -47,17 +47,17 @@ final class NanoFrameTimer extends FrameTimer {
         var2 = Transmogrify.field_A ? 1 : 0;
         try {
           if (ae.a(-12863)) {
-            oi.field_k.a(fc.field_f, ij.field_a, true, 4);
-            oi.field_k.l(param0 ^ param0);
+            oi.field_k.processPointerInput(fc.field_f, ij.field_a, true, 4);
+            oi.field_k.advanceDialogs(param0 ^ param0);
             while (pc.b(param0 ^ -121)) {
-              oi.field_k.a(-81, sg.field_n, ch.field_d);
+              oi.field_k.processKeyInput(-81, sg.field_n, ch.field_d);
             }
             return;
           }
           if (null != ub.field_c &&
             ub.field_c.field_c) {
             GzipDecompressor.b(param0 + 3);
-            oi.field_k.b((UiWidget) (new ll(oi.field_k, fi.field_w)), (byte) -71);
+            oi.field_k.showDialog((UiWidget) (new ll(oi.field_k, SingleChildWidgetContainer.field_w)), (byte) -71);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

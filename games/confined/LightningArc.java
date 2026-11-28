@@ -383,7 +383,7 @@ final class LightningArc extends dc {
           if (null == DelegatingCanvas.field_b) {
             return false;
           }
-          if (DelegatingCanvas.field_b.h(0) != null) {
+          if (DelegatingCanvas.field_b.getTopOpenDialog(0) != null) {
             return true;
           }
           return false;
@@ -391,7 +391,7 @@ final class LightningArc extends dc {
         if (null == DelegatingCanvas.field_b) {
           return false;
         }
-        if (DelegatingCanvas.field_b.h(0) != null) {
+        if (DelegatingCanvas.field_b.getTopOpenDialog(0) != null) {
           return true;
         }
         return false;

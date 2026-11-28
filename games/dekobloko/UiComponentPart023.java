@@ -33,7 +33,7 @@ final class UiComponentPart023 extends UiComponentPart004 {
         return MixedSupport134.booleanState0194;
     }
 
-    UiComponentPart023(UiComponentPart016 uiComponentPart016Argument1, UiComponent uiComponentArgument2) {
+    UiComponentPart023(ModalDialogHost uiComponentPart016Argument1, UiComponent uiComponentArgument2) {
         super(uiComponentPart016Argument1, uiComponentArgument2, 33, 20, 30);
     }
 
@@ -139,7 +139,7 @@ final class UiComponentPart023 extends UiComponentPart004 {
             }
             DekoBlokoClient.updateLobbyRoomRows(integerArgument2, integerArgument3, booleanArgument1, integerArgument9, booleanArgument4, integerArgument10, (byte) -119);
             MixedSupport020.performAction0296(integerArgument2, -17339, integerArgument10, ValidationStatus.sceneWidgetPart008State0006, booleanArgument1);
-            UiComponentPart020.integerState0552 = UiComponentPart020.integerState0552 + 1;
+            ArrayWidgetContainer.integerState0552 = ArrayWidgetContainer.integerState0552 + 1;
             return;
           }
           if (SoftwareRaster.integerState0284 == MixedSupport076.framebufferState0001.integerState0191 &&
@@ -176,7 +176,7 @@ final class UiComponentPart023 extends UiComponentPart004 {
                 }
                 DekoBlokoClient.updateLobbyRoomRows(integerArgument2, integerArgument3, booleanArgument1, integerArgument9, booleanArgument4, integerArgument10, (byte) -119);
                 MixedSupport020.performAction0296(integerArgument2, -17339, integerArgument10, ValidationStatus.sceneWidgetPart008State0006, booleanArgument1);
-                UiComponentPart020.integerState0552 = UiComponentPart020.integerState0552 + 1;
+                ArrayWidgetContainer.integerState0552 = ArrayWidgetContainer.integerState0552 + 1;
                 return;
               }
               UiComponentPart019.performAction1048(5);
@@ -260,7 +260,7 @@ final class UiComponentPart023 extends UiComponentPart004 {
         }
         DekoBlokoClient.updateLobbyRoomRows(integerArgument2, integerArgument3, booleanArgument1, integerArgument9, booleanArgument4, integerArgument10, (byte) -119);
         MixedSupport020.performAction0296(integerArgument2, -17339, integerArgument10, ValidationStatus.sceneWidgetPart008State0006, booleanArgument1);
-        UiComponentPart020.integerState0552 = UiComponentPart020.integerState0552 + 1;
+        ArrayWidgetContainer.integerState0552 = ArrayWidgetContainer.integerState0552 + 1;
     }
 
     static {

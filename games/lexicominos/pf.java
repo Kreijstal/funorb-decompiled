@@ -28,9 +28,9 @@ final class pf extends fk {
     final bj a(byte param0) {
         if (param0 != 45) {
           pf.clearDeclaredStaticReferences(true);
-          return jf.field_L;
+          return LabeledWidgetContainer.field_L;
         }
-        return jf.field_L;
+        return LabeledWidgetContainer.field_L;
     }
 
     static {

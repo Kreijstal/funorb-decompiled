@@ -39,7 +39,7 @@ final class fj extends IntrusiveNode {
           var10_ref_int__ = param1;
           for (var11 = 0; var10_ref_int__.length > var11; var11++) {
             var12 = var10_ref_int__[var11];
-            var13 = te.field_I[var12];
+            var13 = AlphaWidgetContainer.field_I[var12];
             if (var13 == null) {
               var13 = "ERROR: missing text";
             }
@@ -60,7 +60,7 @@ final class fj extends IntrusiveNode {
           jb.field_a[param5] = 320 - var10;
           LoginPanel.field_P[param5] = 320 + var10;
           ah.field_i[param5] = param4;
-          si.field_F[param5] = param0;
+          SingleChildWidgetContainer.field_F[param5] = param0;
           if (param5 != 2) {
             return;
           }
@@ -96,7 +96,7 @@ final class fj extends IntrusiveNode {
         String var1 = s.o(-74);
         if (param0 >= 26) {
           ClientException.field_a = new LoginPanel(var1, (String) null, true, false, false);
-          u.field_b.b(gf.field_cb, 125);
+          u.field_b.showDialog(gf.field_cb, 125);
           gf.field_cb.c(-3399, ClientException.field_a);
           gf.field_cb.e(true);
           return;

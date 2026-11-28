@@ -36,13 +36,13 @@ final class rk {
     final static void a(int param0, String param1, boolean param2, boolean param3) {
         try {
           ig.a(-92);
-          DisplayNameSelectionPanel.field_N.k(-20281);
+          DisplayNameSelectionPanel.field_N.closeAllDialogs(-20281);
           if (param0 != 4) {
             field_a = 22;
           }
           vk.field_c = new LoginPanel(gi.field_b, (String) null, fe.field_g, param3, param2);
           TextLayout.field_c = new ec(DisplayNameSelectionPanel.field_N, vk.field_c);
-          DisplayNameSelectionPanel.field_N.b(TextLayout.field_c, false);
+          DisplayNameSelectionPanel.field_N.showDialog(TextLayout.field_c, false);
         } catch (RuntimeException runtimeException) {
           throw CipherPacketBuffer.wrapClientException((Throwable) ((Object) runtimeException), "rk.E(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
         }
@@ -146,8 +146,8 @@ final class rk {
           Bzip2State.field_s = param7;
           fk.field_d = param8;
           tb.field_p = (v) ((Object) new tb());
-          hb.field_F = new DiskCacheWorker(param6);
-          ih.field_Q = new oj(tb.field_p, hb.field_F);
+          LabeledWidgetContainer.field_F = new DiskCacheWorker(param6);
+          ih.field_Q = new oj(tb.field_p, LabeledWidgetContainer.field_F);
         } catch (RuntimeException runtimeException) {
           throw CipherPacketBuffer.wrapClientException((Throwable) ((Object) runtimeException), "rk.C(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ',' + param5 + ',' + (param6 != null ? "{...}" : "null") + ',' + param7 + ',' + param8 + ')');
         }

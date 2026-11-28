@@ -97,7 +97,7 @@ final class EmailFormatValidator extends TextFieldValidator {
           vb.a((byte) 44);
           return;
         }
-        sd.field_c.b(true);
+        sd.field_c.snapAndPruneDialogs(true);
         if (null != ji.field_a) {
           ji.field_a.c(true);
         }

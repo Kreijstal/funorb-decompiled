@@ -16,7 +16,7 @@ final class BufferedSocket implements Runnable {
     private boolean field_l;
     private java.net.Socket field_j;
     private PlatformTaskDispatcher field_n;
-    static hm field_a;
+    static ModalDialogHost field_a;
     private boolean field_f;
     static int field_d;
     private int field_k;
@@ -231,7 +231,7 @@ final class BufferedSocket implements Runnable {
         Throwable decompiledCaughtException = null;
         Object var1 = null;
         if (param0 > -46) {
-          field_a = (hm) null;
+          field_a = (ModalDialogHost) null;
         }
         if (null == TextHotspotBounds.field_y) {
           return;
@@ -286,7 +286,7 @@ final class BufferedSocket implements Runnable {
           if (!param0) {
             return;
           }
-          field_a = (hm) null;
+          field_a = (ModalDialogHost) null;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

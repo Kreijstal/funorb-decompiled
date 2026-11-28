@@ -104,7 +104,7 @@ final class ConfirmedEmailAvailabilityValidator extends TextFieldValidator {
         if (param0 >= -64) {
           field_s = (String) null;
           fg.field_a[4] = new jl(4);
-          ad.a(2, new int[]{8, 9, 10, 6}, true);
+          LabeledWidgetContainer.a(2, new int[]{8, 9, 10, 6}, true);
           fg.field_a[2] = new jl(2);
           if (0 >= u.field_d) {
             if (u.field_d <= 0) {
@@ -126,7 +126,7 @@ final class ConfirmedEmailAvailabilityValidator extends TextFieldValidator {
             }
             return;
           }
-          ad.a(1, new int[]{1, 12, 13, 20, 4, 3, 7}, true);
+          LabeledWidgetContainer.a(1, new int[]{1, 12, 13, 20, 4, 3, 7}, true);
           fg.field_a[1] = new jl(1);
           if (u.field_d <= 0) {
             return;
@@ -138,11 +138,11 @@ final class ConfirmedEmailAvailabilityValidator extends TextFieldValidator {
           return;
         }
         fg.field_a[4] = new jl(4);
-        ad.a(2, new int[]{8, 9, 10, 6}, true);
+        LabeledWidgetContainer.a(2, new int[]{8, 9, 10, 6}, true);
         fg.field_a[2] = new jl(2);
         if (0 < u.field_d &&
           ha.a(100, nb.field_e)) {
-          ad.a(1, new int[]{1, 12, 13, 20, 4, 3, 7}, true);
+          LabeledWidgetContainer.a(1, new int[]{1, 12, 13, 20, 4, 3, 7}, true);
           fg.field_a[1] = new jl(1);
           if (u.field_d <= 0) {
             return;

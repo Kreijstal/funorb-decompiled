@@ -51,7 +51,7 @@ final class hl {
               var5 = bg.field_r;
             } else {
               if (ma.field_tb.field_f != var4) {
-                var5 = dh.field_M;
+                var5 = LabeledWidgetContainer.field_M;
               } else {
                 var5 = bb.field_g;
               }
@@ -78,7 +78,7 @@ final class hl {
               GameClientShell.field_o.drawString(var6, var8, ae.field_kb + var2, var5, -1);
               var2 = var2 + (pa.field_a + (SpriteGeometry.field_F + pd.field_b));
             } else {
-              k.field_H.drawString(var6, var8, var2 + cd.field_b, var5, -1);
+              ModalDialogHost.field_H.drawString(var6, var8, var2 + cd.field_b, var5, -1);
               var2 = var2 + LoginPanel.field_R;
             }
           }

@@ -227,7 +227,7 @@ final class BucketBoard {
             if (booleanArgument2) {
               this.settledCells[integerLocal3] = 56;
             } else {
-              this.settledCells[integerLocal3] = UiComponentPart006.bitwiseOr(32, PlayerBoardUpdateQueue.bitwiseAnd(integerLocal4, 268435455));
+              this.settledCells[integerLocal3] = LabeledWidgetContainer.bitwiseOr(32, PlayerBoardUpdateQueue.bitwiseAnd(integerLocal4, 268435455));
             }
           }
         }
@@ -372,7 +372,7 @@ final class BucketBoard {
           integerLocal31 = 0;
           this.selectedCellIndices[0] = integerArgument7;
           integerLocal23 = 1;
-          this.settledCells[integerArgument7] = UiComponentPart006.bitwiseOr(-2147483648, integerLocal19);
+          this.settledCells[integerArgument7] = LabeledWidgetContainer.bitwiseOr(-2147483648, integerLocal19);
           integerLocal24 = 0;
           if (integerArgument6 >= 0) {
             integerLocal24 = 1;
@@ -942,7 +942,7 @@ final class BucketBoard {
     }
 
     private final void performAction0984(boolean booleanArgument1) {
-        int integerLocal1 = -300 + UiComponentPart016.computeInteger0830((byte) 122, 601, AccountRegistrationPanel.randomState0003);
+        int integerLocal1 = -300 + ModalDialogHost.computeInteger0830((byte) 122, 601, AccountRegistrationPanel.randomState0003);
         integerLocal1 = integerLocal1 * (integerLocal1 * integerLocal1) / 90000;
         DefaultTextWidgetRenderer.performAction0007(integerLocal1, this.integerState0474 / 4, MixedSupport006.rawSoundState0001, this.integerState0462, 256);
         if (booleanArgument1) {
@@ -1163,7 +1163,7 @@ final class BucketBoard {
                   if (!booleanArgument3 && (16 == (integerLocal24 & 24) ||
                     (integerLocal24 & 24) == 24) && (integerLocal19 < -1 + this.boardHeight &&
                     this.settledCells[integerLocal18 + this.boardWidth] == 0)) {
-                    this.settledCells[integerLocal18 + this.boardWidth] = UiComponentPart006.bitwiseOr(PlayerBoardUpdateQueue.bitwiseAnd(integerLocal24, 31), 32);
+                    this.settledCells[integerLocal18 + this.boardWidth] = LabeledWidgetContainer.bitwiseOr(PlayerBoardUpdateQueue.bitwiseAnd(integerLocal24, 31), 32);
                     this.settledCells[integerLocal18] = 0;
                     integerLocal16++;
                     integerLocal14 = 1;
@@ -1176,7 +1176,7 @@ final class BucketBoard {
                       integerLocal21 + this.integerState0481 < this.boardWidth &&
                       this.settledCells[this.integerState0481 + integerLocal18] == 0 &&
                       this.settledCells[this.boardWidth + integerLocal18 + this.integerState0481] == 0)) {
-                      this.settledCells[this.integerState0481 + integerLocal18] = UiComponentPart006.bitwiseOr(PlayerBoardUpdateQueue.bitwiseAnd(31, integerLocal24), 32);
+                      this.settledCells[this.integerState0481 + integerLocal18] = LabeledWidgetContainer.bitwiseOr(PlayerBoardUpdateQueue.bitwiseAnd(31, integerLocal24), 32);
                       this.settledCells[integerLocal18] = 0;
                       integerLocal14 = 1;
                       integerLocal16++;
@@ -1189,7 +1189,7 @@ final class BucketBoard {
                         this.boardWidth > -this.integerState0481 + integerLocal21 &&
                         this.settledCells[-this.integerState0481 + integerLocal18] == 0 &&
                         this.settledCells[-this.integerState0481 + (integerLocal18 + this.boardWidth)] == 0)) {
-                        this.settledCells[-this.integerState0481 + integerLocal18] = UiComponentPart006.bitwiseOr(PlayerBoardUpdateQueue.bitwiseAnd(31, integerLocal24), 32);
+                        this.settledCells[-this.integerState0481 + integerLocal18] = LabeledWidgetContainer.bitwiseOr(PlayerBoardUpdateQueue.bitwiseAnd(31, integerLocal24), 32);
                         integerLocal14 = 1;
                         this.settledCells[integerLocal18] = 0;
                         integerLocal16++;
@@ -2660,8 +2660,8 @@ final class BucketBoard {
             if (returnedShapeLocal9.integerState0691 == 12 &&
               integerLocal10 >= 5) {
               this.stringState0335 = NodeHashTableIterator.substituteIndexedPlaceholders(105, MixedSupport130.stringState0564, new String[]{Integer.toString(integerLocal10)});
-              this.integerState0451 = UiComponentPart016.computeInteger0830((byte) 62, 7, AccountRegistrationPanel.randomState0003) - 3;
-              this.integerState0457 = UiComponentPart016.computeInteger0830((byte) 126, 7, AccountRegistrationPanel.randomState0003) - 3;
+              this.integerState0451 = ModalDialogHost.computeInteger0830((byte) 62, 7, AccountRegistrationPanel.randomState0003) - 3;
+              this.integerState0457 = ModalDialogHost.computeInteger0830((byte) 126, 7, AccountRegistrationPanel.randomState0003) - 3;
               this.integerState0472 = 0;
               integerArrayLocal19 = Bzip2State.integerArrayState0252;
               integerLocal25 = integerLocal10 / 10;

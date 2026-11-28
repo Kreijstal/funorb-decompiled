@@ -186,8 +186,8 @@ final class em extends am implements WidgetActionListener {
           var6 = -85 % ((param0 + 69) / 54);
           var5 = this.height - 6;
           this.height = this.height + 38;
-          var4.a(15, 30, (byte) 59, this.width - 14 - 16, var5);
-          this.c(var4, 61);
+          var4.setBounds(15, 30, (byte) 59, this.width - 14 - 16, var5);
+          this.addChild(var4, 61);
           this.refreshLayout(6);
           stackIn_1_0 = var4;
           return stackIn_1_0;
@@ -211,7 +211,7 @@ final class em extends am implements WidgetActionListener {
         }
     }
 
-    em(rp param0, lo param1) {
+    em(ModalDialogHost param0, lo param1) {
         super(param0, 200, 150);
         Object var3 = null;
         UiWidget var4 = null;
@@ -246,7 +246,7 @@ final class em extends am implements WidgetActionListener {
           var4.x = 0;
           var4.width = this.width;
           var4.renderer = (WidgetRenderer) ((Object) new DefaultWidgetRenderer(oc.field_l, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true));
-          this.c(var4, 70);
+          this.addChild(var4, 70);
           this.field_U = this.a(-2, ala.field_d, (WidgetListener) (this));
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

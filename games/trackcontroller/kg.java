@@ -34,20 +34,20 @@ final class kg {
           if (null != SocketArchiveRequestConnection.field_n) {
             ia.a(param0, param2, 1048576, 1000000, param3);
           }
-          if (fj.field_P == null) {
+          if (DraggableWidgetContainer.field_P == null) {
             return;
           }
           var5 = sb.field_b;
           synchronized (var5) {
-            fj.field_P.a(param2, (byte) -113, -1);
+            DraggableWidgetContainer.field_P.a(param2, (byte) -113, -1);
             if (param3 == GameShell.field_n) {
               return;
             }
-            fj.field_P.stopPlayback(11795);
+            DraggableWidgetContainer.field_P.stopPlayback(11795);
             sb.field_b.flushAndMarkDrainCheck();
             GameShell.field_n = param3;
             if (GameShell.field_n != null) {
-              fj.field_P.a(GameShell.field_n, 14526, param0);
+              DraggableWidgetContainer.field_P.a(GameShell.field_n, 14526, param0);
             }
           }
           return;

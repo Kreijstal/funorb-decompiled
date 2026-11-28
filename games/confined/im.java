@@ -15,14 +15,14 @@ final class im {
     }
 
     final static void a(byte param0) {
-        s.field_K = false;
+        DropTargetWidgetContainer.field_K = false;
         IntrusiveNode.field_f = false;
         if (param0 >= -58) {
           return;
         }
         DefaultTextWidgetRenderer.a((byte) -117, -1);
         RichTextWidget.field_S = ml.field_a;
-        oe.field_Q = ml.field_a;
+        ModalDialog.field_Q = ml.field_a;
     }
 
     final static boolean a(String param0, int param1) {

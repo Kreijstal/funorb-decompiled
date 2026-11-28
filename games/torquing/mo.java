@@ -112,7 +112,7 @@ final class mo extends am {
               eb.field_f = !param1 ? -1 : -2;
               wk.field_h = !param1 ? -1 : -2;
               IntrusiveNode.a(vg.field_j, 107, tp.field_i, wa.field_d, SocketConnector.field_d);
-              jd.a((byte) -95, -1);
+              DropTargetWidgetContainer.a((byte) -95, -1);
             } catch (IOException iOException) {
               ef.field_a = wj.field_i;
             }
@@ -157,8 +157,8 @@ final class mo extends am {
           if (nc.field_d != null) {
             var2_int = nc.field_d.length;
           } else {
-            if (ln.field_H != null) {
-              var2_int = ln.field_H.length;
+            if (ModalDialogHost.field_H != null) {
+              var2_int = ModalDialogHost.field_H.length;
             }
           }
           if (-1 != var2_int) {

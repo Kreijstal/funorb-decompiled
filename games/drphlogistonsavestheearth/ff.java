@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ff extends pj implements WidgetActivationListener {
+final class ff extends DequeWidgetContainer implements WidgetActivationListener {
     private InteractiveWidget field_J;
     static String field_K;
     private InteractiveWidget field_L;
@@ -13,39 +13,39 @@ final class ff extends pj implements WidgetActivationListener {
     static he[][] field_Q;
 
     public ff() {
-        super(0, 0, 476, 225, (cg) null);
-        this.field_L = new InteractiveWidget(ai.field_v, (fd) null);
-        this.field_M = new InteractiveWidget(ej.field_c, (fd) null);
-        this.field_J = new InteractiveWidget(ml.field_m, (fd) null);
+        super(0, 0, 476, 225, (WidgetRenderer) null);
+        this.field_L = new InteractiveWidget(ai.field_v, (WidgetEventListener) null);
+        this.field_M = new InteractiveWidget(ej.field_c, (WidgetEventListener) null);
+        this.field_J = new InteractiveWidget(ml.field_m, (WidgetEventListener) null);
         ie var1 = new ie();
-        this.field_L.field_l = (cg) ((Object) var1);
-        this.field_M.field_l = (cg) ((Object) var1);
-        this.field_J.field_l = (cg) ((Object) var1);
+        this.field_L.field_l = (WidgetRenderer) ((Object) var1);
+        this.field_M.field_l = (WidgetRenderer) ((Object) var1);
+        this.field_J.field_l = (WidgetRenderer) ((Object) var1);
         int var2 = 4;
         int var3 = 326;
         int var4 = var3 - var2 >> 1;
-        this.field_M.a(this.field_k - 48 - var2, 30, -var3 + this.field_w >> 1, 16535, var4);
-        this.field_J.a(this.field_k - 48 - var2, 30, var2 + ((this.field_w - var3 >> 1) + var4), 16535, var4);
-        this.field_L.a(-(2 * var2) + (-78 + this.field_k), 30, -var3 + this.field_w >> 1, 16535, var3);
-        this.field_M.field_u = (fd) (this);
-        this.field_L.field_u = (fd) (this);
+        this.field_M.setBounds(this.field_k - 48 - var2, 30, -var3 + this.field_w >> 1, 16535, var4);
+        this.field_J.setBounds(this.field_k - 48 - var2, 30, var2 + ((this.field_w - var3 >> 1) + var4), 16535, var4);
+        this.field_L.setBounds(-(2 * var2) + (-78 + this.field_k), 30, -var3 + this.field_w >> 1, 16535, var3);
+        this.field_M.field_u = (WidgetEventListener) (this);
+        this.field_L.field_u = (WidgetEventListener) (this);
         this.field_L.field_v = ai.field_w;
-        this.field_J.field_u = (fd) (this);
+        this.field_J.field_u = (WidgetEventListener) (this);
         this.field_J.field_v = AccountRegistrationPanel.field_X;
-        this.b(this.field_M, (byte) 101);
-        this.b(this.field_L, (byte) 95);
-        this.b(this.field_J, (byte) 82);
+        this.addChild(this.field_M, (byte) 101);
+        this.addChild(this.field_L, (byte) 95);
+        this.addChild(this.field_J, (byte) 82);
     }
 
     static long a(long param0, long param1) {
         return param0 ^ param1;
     }
 
-    final void a(int param0, int param1, byte param2, int param3) {
+    final void drawWidget(int param0, int param1, byte param2, int param3) {
         int var5 = param0 + this.field_o;
         int var6 = this.field_m + param3;
         DualLinkNode.field_i.drawParagraph(ProxyAuthenticationRequiredException.field_a, var5 + 20, 20 + var6, -40 + this.field_w, this.field_k - 50, 16777215, -1, 1, 0, DualLinkNode.field_i.field_x);
-        super.a(param0, param1, param2, param3);
+        super.drawWidget(param0, param1, param2, param3);
     }
 
     public final void onWidgetActivated(int param0, int param1, boolean param2, InteractiveWidget param3, int param4) {
@@ -124,7 +124,7 @@ final class ff extends pj implements WidgetActivationListener {
         }
     }
 
-    final boolean a(int param0, char param1, vg param2, int param3) {
+    final boolean handleKey(int param0, char param1, UiWidget param2, int param3) {
         RuntimeException var5 = null;
         InteractiveWidget var6 = null;
         boolean stackIn_8_0 = false;
@@ -138,17 +138,17 @@ final class ff extends pj implements WidgetActivationListener {
             var6 = (InteractiveWidget) null;
             this.onWidgetActivated(-113, 58, true, (InteractiveWidget) null, 25);
           }
-          if (super.a(param0, param1, param2, 97)) {
+          if (super.handleKey(param0, param1, param2, 97)) {
             return true;
           }
           if (98 == param0) {
-            stackIn_8_0 = this.a(param2, 65535);
+            stackIn_8_0 = this.focusPreviousChild(param2, 65535);
             return stackIn_8_0;
           }
           if (param0 != 99) {
             return false;
           }
-          stackIn_11_0 = this.a(param2, (byte) 61);
+          stackIn_11_0 = this.focusNextChild(param2, (byte) 61);
           return stackIn_11_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

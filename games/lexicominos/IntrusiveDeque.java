@@ -8,7 +8,7 @@ final class IntrusiveDeque {
     final static void a(int param0, BitmapFont param1, byte param2, BitmapFont param3) {
         try {
           int var4_int = 88 % ((35 - param2) / 55);
-          nb.field_x = param0;
+          DequeWidgetContainer.field_x = param0;
           fb.field_m = param1;
           pb.field_i = param3;
           Lexicominos.a(SoftwareRasterizer.field_f / 2, 67, SoftwareRasterizer.field_a / 2);

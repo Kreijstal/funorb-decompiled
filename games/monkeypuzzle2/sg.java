@@ -33,7 +33,7 @@ final class sg {
         this.field_g = 0;
         this.field_c = 0;
         if (0 == this.field_f) {
-          this.field_g = oa.field_H;
+          this.field_g = DropTargetWidgetContainer.field_H;
         }
     }
 
@@ -86,10 +86,10 @@ final class sg {
         this.field_c = 0;
         this.field_d = 0;
         if (this.field_f == 0) {
-          this.field_g = oa.field_H;
+          this.field_g = DropTargetWidgetContainer.field_H;
         }
         if (param0 == this.field_f &&
-          oa.field_H == 98) {
+          DropTargetWidgetContainer.field_H == 98) {
           if (0 >= this.field_a) {
             this.field_a = this.field_i;
           }
@@ -97,7 +97,7 @@ final class sg {
           this.field_a = this.field_a - 1;
         }
         if (this.field_f == 0 &&
-          oa.field_H == 99) {
+          DropTargetWidgetContainer.field_H == 99) {
           this.field_a = this.field_a + 1;
           if (this.field_i <= this.field_a) {
             this.field_a = 0;

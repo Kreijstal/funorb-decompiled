@@ -30,7 +30,7 @@ abstract class Sprite {
         if (!booleanArgument2) {
           return;
         }
-        UiComponentPart010.stringState0150 = InputAdapter003.stringArrayState0042[integerArgument1];
+        AlphaWidgetContainer.stringState0150 = InputAdapter003.stringArrayState0042[integerArgument1];
         MixedSupport037.stringState0174 = MixedSupport083.stringArrayState0024[integerArgument1];
         MixedSupport028.stringState0137 = GameSession.stringArrayState0033[integerArgument1];
     }

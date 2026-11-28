@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class pb implements j {
+final class pb implements WidgetRenderer {
     static int field_c;
     static int field_b;
     static int[] field_a;
@@ -62,7 +62,7 @@ final class pb implements j {
         }
     }
 
-    public final void a(byte param0, int param1, boolean param2, int param3, UiWidget param4) {
+    public final void paintWidget(byte param0, int param1, boolean param2, int param3, UiWidget param4) {
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
         String stackIn_12_2 = null;
@@ -83,7 +83,7 @@ final class pb implements j {
             ((InteractiveWidget) (param4)).field_F) {
             var8.drawAdditive((-var8.field_q + param4.field_t >> 1) + 1 + var6_int, (param4.field_x - var8.field_r >> 1) + (1 + var7), 256);
           }
-          if (param4.b(true)) {
+          if (param4.isFocused(true)) {
             ci.a(-4 + param4.field_t, 2 + var7, -4 + param4.field_x, 2 + var6_int, (byte) 122);
           }
           return;
@@ -146,7 +146,7 @@ final class pb implements j {
           }
           for (var3_int = 0; var3_int < 50; var3_int++) {
             if (null != param0.field_d.peekEvent()) {
-              i.sleepMillis((byte) 100, 1L);
+              ModalDialogHost.sleepMillis((byte) 100, 1L);
               continue;
             }
             break;

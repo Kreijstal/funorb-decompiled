@@ -440,7 +440,7 @@ final class ai {
         return this;
     }
 
-    final void a(mf param0, ai param1, int param2, int param3, nj param4, int param5) {
+    final void a(UiWidget param0, ai param1, int param2, int param3, nj param4, int param5) {
         RuntimeException stackIn_24_0 = null;
         StringBuilder stackIn_24_1 = null;
         String stackIn_25_2 = null;
@@ -631,7 +631,7 @@ final class ai {
         return this;
     }
 
-    final void a(int param0, nj param1, int param2, mf param3, int param4) {
+    final void a(int param0, nj param1, int param2, UiWidget param3, int param4) {
         BitmapFont stackIn_21_0;
         String stackIn_21_1;
         int stackIn_21_2;

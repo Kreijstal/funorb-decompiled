@@ -59,21 +59,21 @@ final class DynamicLight extends IntrusiveNode {
                 var10 = (String) null;
                 PacketBuffer.field_o = g.a(-26547, DequeCursor.field_d, false, (String) null, param2);
               } else {
-                PacketBuffer.field_o = sh.a(12831, param4, param2, false);
+                PacketBuffer.field_o = ModalDialogHost.a(12831, param4, param2, false);
               }
               vh.field_a.position = 0;
               vh.field_a.writeByte(93, 14);
               vh.field_a.writeByte(90, PacketBuffer.field_o.b((byte) -42).field_c);
               tb.a(-1, 111);
-              lk.field_d = oe.field_U;
+              lk.field_d = ModalDialog.field_U;
             }
-            if (lk.field_d == oe.field_U &&
+            if (lk.field_d == ModalDialog.field_U &&
               jj.a(1, (byte) 118)) {
               var6_int = e.field_c.readUnsignedByte(32);
               if (var6_int == 0) {
                 lk.field_d = tb.field_a;
               } else {
-                lk.field_d = ga.field_J;
+                lk.field_d = DequeWidgetContainer.field_J;
                 Confined.field_F = var6_int;
                 ai.field_i = -1;
               }
@@ -96,7 +96,7 @@ final class DynamicLight extends IntrusiveNode {
               if (var6_intLifetime1 != 0 &&
                 var6_intLifetime1 != 1) {
                 if (var6_intLifetime1 != 8) {
-                  lk.field_d = ga.field_J;
+                  lk.field_d = DequeWidgetContainer.field_J;
                   ai.field_i = -1;
                   decompiledFrameRemainder0 = false;
                 }
@@ -184,7 +184,7 @@ final class DynamicLight extends IntrusiveNode {
               stackIn_76_0 = Confined.field_F;
               return stackIn_76_0;
             }
-            if (ga.field_J == lk.field_d &&
+            if (DequeWidgetContainer.field_J == lk.field_d &&
               jc.a(-93)) {
               dc.d(113);
               if (Confined.field_F == 7 &&
@@ -203,7 +203,7 @@ final class DynamicLight extends IntrusiveNode {
             }
             if (kl.field_G == null) {
               if (sg.field_y) {
-                if (30000L < la.h(124)) {
+                if (30000L < LabeledWidgetContainer.h(124)) {
                   PasswordValidator.field_k = HomingProjectile.field_S;
                 } else {
                   PasswordValidator.field_k = ka.field_G;

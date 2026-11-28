@@ -13,9 +13,9 @@ final class ni {
     final static int a(int param0, int param1) {
         param0 = param0 & param1;
         if (4096 <= param0) {
-          return param0 < 6144 ? -vd.field_B[-4096 + param0] : -vd.field_B[8192 - param0];
+          return param0 < 6144 ? -DequeWidgetContainer.field_B[-4096 + param0] : -DequeWidgetContainer.field_B[8192 - param0];
         }
-        return param0 < 2048 ? vd.field_B[param0] : vd.field_B[4096 - param0];
+        return param0 < 2048 ? DequeWidgetContainer.field_B[param0] : DequeWidgetContainer.field_B[4096 - param0];
     }
 
     final static boolean a(int param0, byte param1) {
@@ -98,7 +98,7 @@ final class ni {
           ni.a(123);
         }
         if (null == sa.field_a) {
-          sa.field_a = new DefaultTextWidgetRenderer(jn.field_G, 20, 0, 0, 0, 11579568, -1, 0, 0, jn.field_G.field_y, -1, 2147483647, true);
+          sa.field_a = new DefaultTextWidgetRenderer(AlphaWidgetContainer.field_G, 20, 0, 0, 0, 11579568, -1, 0, 0, AlphaWidgetContainer.field_G.field_y, -1, 2147483647, true);
         }
         return sa.field_a;
     }

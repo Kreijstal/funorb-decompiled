@@ -92,20 +92,20 @@ final class fg extends sp {
         }
     }
 
-    fg(sd param0, String param1) {
+    fg(ModalDialogHost param0, String param1) {
         super(param0, 300, 120);
         int var3_int = 0;
         try {
           this.field_fb = param1;
           if (null != this.field_fb) {
             var3_int = sg.field_a.textHeight(this.field_fb, 260, sg.field_a.field_z);
-            this.b(-1535749535, 300, var3_int + 150);
+            this.setCenteredSize(-1535749535, 300, var3_int + 150);
           }
           this.field_W = new we(13, 50, 274, 30, 15, 2113632, 4210752);
           this.field_Z = false;
           this.field_ab = false;
           this.field_W.field_F = true;
-          this.c((byte) -12, this.field_W);
+          this.addChild((byte) -12, this.field_W);
         } catch (RuntimeException runtimeException) {
           throw wn.wrapClientException((Throwable) ((Object) runtimeException), "fg.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

@@ -13,7 +13,7 @@ class UiComponent extends HashNode {
     static int integerState0106;
     int integerState0107;
     int integerState0108;
-    CallbackContract004 callbackContract004State0006;
+    WidgetRenderer callbackContract004State0006;
     static String stringState0079;
     static RgbSprite[] rgbSpriteArrayState0005;
     int integerState0109;
@@ -22,7 +22,7 @@ class UiComponent extends HashNode {
     static GameSession gameSessionState0001;
     String stringState0080;
     TextLayout textLayoutState0001;
-    CallbackContract006 callbackContract006State0001;
+    WidgetEventListener callbackContract006State0001;
 
     String getTooltipText(byte byteArgument1) {
         if (byteArgument1 == 113) {
@@ -32,7 +32,7 @@ class UiComponent extends HashNode {
         return !this.booleanState0018 ? null : this.stringState0080;
     }
 
-    boolean computeBoolean0221(boolean booleanArgument1, UiComponent uiComponentArgument2) {
+    boolean takeFocus(boolean booleanArgument1, UiComponent uiComponentArgument2) {
         RuntimeException runtimeExceptionLocal1 = null;
         RuntimeException stackRuntimeExceptionLocal2 = null;
         StringBuilder stackStringBuilderLocal3 = null;
@@ -58,16 +58,16 @@ class UiComponent extends HashNode {
         }
     }
 
-    final void performAction0228(int integerArgument1) {
+    final void refreshLayout(int integerArgument1) {
         if (integerArgument1 > 106) {
-          this.performAction0222(this.integerState0108, this.integerState0107, this.integerState0110, this.integerState0104, -16555);
+          this.setBounds(this.integerState0108, this.integerState0107, this.integerState0110, this.integerState0104, -16555);
           return;
         }
-        this.computeInteger0226(52);
-        this.performAction0222(this.integerState0108, this.integerState0107, this.integerState0110, this.integerState0104, -16555);
+        this.getMaximumRenderLayer(52);
+        this.setBounds(this.integerState0108, this.integerState0107, this.integerState0110, this.integerState0104, -16555);
     }
 
-    StringBuilder computeStringBuilder0219(Hashtable hashtableArgument1, int integerArgument2, StringBuilder stringBuilderArgument3, boolean booleanArgument4) {
+    StringBuilder appendDebugTree(Hashtable hashtableArgument1, int integerArgument2, StringBuilder stringBuilderArgument3, boolean booleanArgument4) {
         RuntimeException runtimeExceptionLocal1 = null;
         StringBuilder stackStringBuilderLocal2 = null;
         StringBuilder stackStringBuilderLocal3 = null;
@@ -82,8 +82,8 @@ class UiComponent extends HashNode {
             stackStringBuilderLocal2 = (StringBuilder) null;
             return stackStringBuilderLocal2;
           }
-          if (this.computeBoolean0215(0, integerArgument2, hashtableArgument1, stringBuilderArgument3)) {
-            this.performAction0206((byte) 72, stringBuilderArgument3, hashtableArgument1, integerArgument2);
+          if (this.beginDebugTreeEntry(0, integerArgument2, hashtableArgument1, stringBuilderArgument3)) {
+            this.appendDebugProperties((byte) 72, stringBuilderArgument3, hashtableArgument1, integerArgument2);
           }
           stackStringBuilderLocal3 = (StringBuilder) (stringBuilderArgument3);
           return stackStringBuilderLocal3;
@@ -107,7 +107,7 @@ class UiComponent extends HashNode {
         }
     }
 
-    final boolean computeBoolean0215(int integerArgument1, int integerArgument2, Hashtable hashtableArgument3, StringBuilder stringBuilderArgument4) {
+    final boolean beginDebugTreeEntry(int integerArgument1, int integerArgument2, Hashtable hashtableArgument3, StringBuilder stringBuilderArgument4) {
         StringBuilder discarded$1 = null;
         RuntimeException runtimeExceptionLocal2 = null;
         RuntimeException stackRuntimeExceptionLocal3 = null;
@@ -146,16 +146,16 @@ class UiComponent extends HashNode {
         }
     }
 
-    final boolean computeBoolean0209(int integerArgument1, char characterArgument2, byte byteArgument3) {
+    final boolean processKeyInput(int integerArgument1, char characterArgument2, byte byteArgument3) {
         int integerLocal1 = 0;
         int integerLocal2;
-        if (this.computeBoolean0220(true)) {
-          if (this.computeBoolean0182(59, integerArgument1, this, characterArgument2)) {
+        if (this.isFocused(true)) {
+          if (this.handleKey(59, integerArgument1, this, characterArgument2)) {
             return true;
           }
           integerLocal1 = integerArgument1;
           if (integerLocal1 == 80) {
-            return this.computeBoolean0221(false, this);
+            return this.takeFocus(false, this);
           }
           if (byteArgument3 >= 100) {
             return false;
@@ -164,7 +164,7 @@ class UiComponent extends HashNode {
         }
         integerLocal2 = integerArgument1;
         if (integerLocal2 == 80) {
-          return this.computeBoolean0221(false, this);
+          return this.takeFocus(false, this);
         }
         if (byteArgument3 >= 100) {
           return false;
@@ -172,7 +172,7 @@ class UiComponent extends HashNode {
         return true;
     }
 
-    boolean computeBoolean0214(int integerArgument1, int integerArgument2, int integerArgument3, UiComponent uiComponentArgument4, int integerArgument5, int integerArgument6, boolean booleanArgument7) {
+    boolean handleWheel(int integerArgument1, int integerArgument2, int integerArgument3, UiComponent uiComponentArgument4, int integerArgument5, int integerArgument6, boolean booleanArgument7) {
         RuntimeException runtimeExceptionLocal1 = null;
         RuntimeException stackRuntimeExceptionLocal2 = null;
         StringBuilder stackStringBuilderLocal3 = null;
@@ -198,7 +198,7 @@ class UiComponent extends HashNode {
         }
     }
 
-    void performAction0162(int integerArgument1, int integerArgument2, int integerArgument3, int integerArgument4) {
+    void drawWidget(int integerArgument1, int integerArgument2, int integerArgument3, int integerArgument4) {
         if (integerArgument3 == 0) {
           if (null == this.callbackContract004State0006) {
             if (integerArgument2 > -103) {
@@ -207,7 +207,7 @@ class UiComponent extends HashNode {
             }
             return;
           }
-          this.callbackContract004State0006.performAction0017(true, integerArgument1, integerArgument4, (byte) -118, this);
+          this.callbackContract004State0006.paintWidget(true, integerArgument1, integerArgument4, (byte) -118, this);
         }
         if (integerArgument2 > -103) {
           UiComponent.performAction0212(-50, -124, -49, 105, 114, (String) null, (PlatformService) null, -111, -67);
@@ -215,7 +215,7 @@ class UiComponent extends HashNode {
         }
     }
 
-    UiComponent(String stringArgument1, CallbackContract006 callbackContract006Argument2) {
+    UiComponent(String stringArgument1, WidgetEventListener callbackContract006Argument2) {
         this(stringArgument1, RenderingSupport001.networkSupport002State0001.callbackContract004State0005, callbackContract006Argument2);
     }
 
@@ -283,13 +283,13 @@ class UiComponent extends HashNode {
         }
     }
 
-    void performAction0222(int integerArgument1, int integerArgument2, int integerArgument3, int integerArgument4, int integerArgument5) {
+    void setBounds(int integerArgument1, int integerArgument2, int integerArgument3, int integerArgument4, int integerArgument5) {
         this.integerState0108 = integerArgument1;
         this.integerState0107 = integerArgument2;
         this.integerState0104 = integerArgument4;
         this.integerState0110 = integerArgument3;
         if (integerArgument5 != -16555) {
-          this.computeBoolean0217(68, true, -45, 80);
+          this.processPointerInput(68, true, -45, 80);
           return;
         }
     }
@@ -297,7 +297,7 @@ class UiComponent extends HashNode {
     final static void performAction0212(int integerArgument1, int integerArgument2, int integerArgument3, int integerArgument4, int integerArgument5, String stringArgument6, PlatformService platformServiceArgument7, int integerArgument8, int integerArgument9) {
         MixedSupport014.integerState0099 = integerArgument5;
         MixedSupport039.integerState0233 = integerArgument3;
-        UiComponentPart003.platformServiceState0001 = platformServiceArgument7;
+        ModalDialog.platformServiceState0001 = platformServiceArgument7;
         MixedSupport050.integerState0265 = integerArgument1;
         GameDomainSupport003.integerState0278 = integerArgument9;
         MixedSupport098.stringState0416 = stringArgument6;
@@ -315,7 +315,7 @@ class UiComponent extends HashNode {
         }
     }
 
-    int computeInteger0226(int integerArgument1) {
+    int getMaximumRenderLayer(int integerArgument1) {
         int integerLocal1 = 7 / ((integerArgument1 - 36) / 51);
         return 0;
     }
@@ -334,20 +334,20 @@ class UiComponent extends HashNode {
         }
     }
 
-    boolean computeBoolean0056(int integerArgument1, int integerArgument2, UiComponent uiComponentArgument3, int integerArgument4, int integerArgument5, int integerArgument6, byte byteArgument7) {
+    boolean pointerPressed(int integerArgument1, int integerArgument2, UiComponent uiComponentArgument3, int integerArgument4, int integerArgument5, int integerArgument6, byte byteArgument7) {
         RuntimeException runtimeExceptionLocal1 = null;
         RuntimeException stackRuntimeExceptionLocal2 = null;
         StringBuilder stackStringBuilderLocal3 = null;
         String stackStringLocal4 = null;
         RuntimeException caughtExceptionLocal5 = null;
         try {
-          if (this.computeBoolean0207(integerArgument2, (byte) -83, integerArgument5, integerArgument1, integerArgument6)) {
+          if (this.containsPointer(integerArgument2, (byte) -83, integerArgument5, integerArgument1, integerArgument6)) {
             this.integerState0109 = integerArgument4;
           }
           if (byteArgument7 == -55) {
             return false;
           }
-          this.computeBoolean0207(19, (byte) 11, -125, -81, -78);
+          this.containsPointer(19, (byte) 11, -125, -81, -78);
           return false;
         } catch (java.lang.RuntimeException caughtParameterLocal6) {
           caughtExceptionLocal5 = caughtParameterLocal6;
@@ -363,7 +363,7 @@ class UiComponent extends HashNode {
         }
     }
 
-    void performAction0218(UiComponent uiComponentArgument1, int integerArgument2, int integerArgument3, int integerArgument4) {
+    void updatePointer(UiComponent uiComponentArgument1, int integerArgument2, int integerArgument3, int integerArgument4) {
         int integerLocal1 = 0;
         int stackIntegerLocal2 = 0;
         boolean stackBooleanLocal3 = false;
@@ -373,14 +373,14 @@ class UiComponent extends HashNode {
         RuntimeException caughtExceptionLocal7 = null;
         RuntimeException runtimeExceptionLocal8 = null;
         try {
-          integerLocal1 = this.computeBoolean0207(HashNode.integerState0069, (byte) -87, integerArgument3, MixedSupport101.integerState0590, integerArgument4) ? 1 : 0;
+          integerLocal1 = this.containsPointer(HashNode.integerState0069, (byte) -87, integerArgument3, MixedSupport101.integerState0590, integerArgument4) ? 1 : 0;
           stackIntegerLocal2 = (this.booleanState0018) ? 0 : 1;
           if (stackIntegerLocal2 == integerLocal1) {
             stackBooleanLocal3 = (integerLocal1 != 0);
             this.booleanState0018 = stackBooleanLocal3;
             if (this.callbackContract006State0001 != null &&
-              this.callbackContract006State0001 instanceof CallbackContract003) {
-              ((CallbackContract003) (this.callbackContract006State0001)).performAction0588(integerLocal1 != 0, this, true);
+              this.callbackContract006State0001 instanceof WidgetHoverListener) {
+              ((WidgetHoverListener) (this.callbackContract006State0001)).onWidgetHoverChanged(integerLocal1 != 0, this, true);
             }
           }
           if (integerArgument2 < 38) {
@@ -401,25 +401,25 @@ class UiComponent extends HashNode {
         }
     }
 
-    void performAction0225(byte byteArgument1) {
+    void blur(byte byteArgument1) {
         if (byteArgument1 == -95) {
           return;
         }
         this.stringState0080 = (String) null;
     }
 
-    final void performAction0210(int integerArgument1, int integerArgument2, byte byteArgument3) {
+    final void drawAllLayers(int integerArgument1, int integerArgument2, byte byteArgument3) {
         int integerLocal1;
         int integerLocal2;
         int integerLocal3;
         String stringLocal4;
         String stringLocal5;
         integerLocal3 = DekoBlokoClient.obfuscationControl ? 1 : 0;
-        integerLocal1 = this.computeInteger0226(94);
+        integerLocal1 = this.getMaximumRenderLayer(94);
         integerLocal2 = 0;
         if (byteArgument3 == -72) {
           while (integerLocal2 <= integerLocal1) {
-            this.performAction0162(integerArgument2, -118, integerLocal2, integerArgument1);
+            this.drawWidget(integerArgument2, -118, integerLocal2, integerArgument1);
             integerLocal2++;
             if (integerLocal3 == 0) {
               continue;
@@ -432,9 +432,9 @@ class UiComponent extends HashNode {
           }
           return;
         }
-        this.performAction0162(-73, -87, 50, 71);
+        this.drawWidget(-73, -87, 50, 71);
         while (integerLocal2 <= integerLocal1) {
-          this.performAction0162(integerArgument2, -118, integerLocal2, integerArgument1);
+          this.drawWidget(integerArgument2, -118, integerLocal2, integerArgument1);
           integerLocal2++;
           if (integerLocal3 == 0) {
             continue;
@@ -447,7 +447,7 @@ class UiComponent extends HashNode {
         }
     }
 
-    void performAction0213(int integerArgument1, int integerArgument2, int integerArgument3, UiComponent uiComponentArgument4, int integerArgument5, int integerArgument6) {
+    void pointerReleased(int integerArgument1, int integerArgument2, int integerArgument3, UiComponent uiComponentArgument4, int integerArgument5, int integerArgument6) {
         try {
           this.integerState0109 = 0;
           if (integerArgument2 != 64) {
@@ -458,19 +458,19 @@ class UiComponent extends HashNode {
         }
     }
 
-    final boolean computeBoolean0217(int integerArgument1, boolean booleanArgument2, int integerArgument3, int integerArgument4) {
+    final boolean processPointerInput(int integerArgument1, boolean booleanArgument2, int integerArgument3, int integerArgument4) {
         int integerLocal1;
         int integerLocal2;
-        UiComponentPart029 uiComponentPart029Local3;
-        UiComponentPart029 uiComponentPart029Local4;
-        UiComponentPart029 uiComponentPart029Local5;
+        DraggableWidgetContainer uiComponentPart029Local3;
+        DraggableWidgetContainer uiComponentPart029Local4;
+        DraggableWidgetContainer uiComponentPart029Local5;
         integerLocal2 = DekoBlokoClient.obfuscationControl ? 1 : 0;
-        this.performAction0218(this, 79, integerArgument1, integerArgument3);
-        integerLocal1 = this.computeBoolean0220(true) ? 1 : 0;
+        this.updatePointer(this, 79, integerArgument1, integerArgument3);
+        integerLocal1 = this.isFocused(true) ? 1 : 0;
         if (!booleanArgument2) {
           if (integerLocal1 != 0 &&
             SceneWidgetPart005.integerState0328 != 0) {
-            this.performAction0225((byte) -95);
+            this.blur((byte) -95);
           }
           if (integerArgument4 != 29166) {
             this.integerState0104 = 110;
@@ -481,15 +481,15 @@ class UiComponent extends HashNode {
         }
         if (HuffmanCodec.integerState0353 == 0) {
           if (SceneWidgetPart005.integerState0328 != 0) {
-            if (this.computeBoolean0056(TextLineMetrics.integerState0535, LoginPanel.integerState0276, this, SceneWidgetPart005.integerState0328, integerArgument1, integerArgument3, (byte) -55)) {
+            if (this.pointerPressed(TextLineMetrics.integerState0535, LoginPanel.integerState0276, this, SceneWidgetPart005.integerState0328, integerArgument1, integerArgument3, (byte) -55)) {
               booleanArgument2 = false;
               if ((integerLocal2 != 0) &&
                 (integerLocal1 != 0)) {
-                this.performAction0225((byte) -95);
+                this.blur((byte) -95);
               }
             } else {
               if (integerLocal1 != 0) {
-                this.performAction0225((byte) -95);
+                this.blur((byte) -95);
               }
             }
           }
@@ -509,18 +509,18 @@ class UiComponent extends HashNode {
             MixedSupport112.performAction1470(this.getTooltipText((byte) 113), -1);
             return booleanArgument2;
           }
-          this.performAction0213(MixedSupport101.integerState0590, 64, integerArgument3, this, integerArgument1, HashNode.integerState0069);
+          this.pointerReleased(MixedSupport101.integerState0590, 64, integerArgument3, this, integerArgument1, HashNode.integerState0069);
           uiComponentPart029Local3 = UiComponentPart017.uiComponentPart029State0001;
           if (uiComponentPart029Local3 != null) {
-            if (uiComponentPart029Local3.callbackContract006State0001 instanceof CallbackContract010) {
-              ((CallbackContract010) (uiComponentPart029Local3.callbackContract006State0001)).performAction1092(uiComponentPart029Local3, (UiComponentPart015) null, (byte) -128);
+            if (uiComponentPart029Local3.callbackContract006State0001 instanceof WidgetDropListener) {
+              ((WidgetDropListener) (uiComponentPart029Local3.callbackContract006State0001)).widgetDropped(uiComponentPart029Local3, (DropTargetWidgetContainer) null, (byte) -128);
             }
             UiComponentPart017.uiComponentPart029State0001 = null;
           }
           if (integerLocal2 != 0 &&
             integerLocal1 != 0 &&
             SceneWidgetPart005.integerState0328 != 0) {
-            this.performAction0225((byte) -95);
+            this.blur((byte) -95);
           }
           if (integerArgument4 != 29166) {
             this.integerState0104 = 110;
@@ -531,7 +531,7 @@ class UiComponent extends HashNode {
         }
         if (integerLocal1 == 0) {
           if (SceneWidgetPart005.integerState0328 != 0 &&
-            this.computeBoolean0056(TextLineMetrics.integerState0535, LoginPanel.integerState0276, this, SceneWidgetPart005.integerState0328, integerArgument1, integerArgument3, (byte) -55)) {
+            this.pointerPressed(TextLineMetrics.integerState0535, LoginPanel.integerState0276, this, SceneWidgetPart005.integerState0328, integerArgument1, integerArgument3, (byte) -55)) {
             booleanArgument2 = false;
             if (integerLocal2 == 0) {
             }
@@ -552,18 +552,18 @@ class UiComponent extends HashNode {
             MixedSupport112.performAction1470(this.getTooltipText((byte) 113), -1);
             return booleanArgument2;
           }
-          this.performAction0213(MixedSupport101.integerState0590, 64, integerArgument3, this, integerArgument1, HashNode.integerState0069);
+          this.pointerReleased(MixedSupport101.integerState0590, 64, integerArgument3, this, integerArgument1, HashNode.integerState0069);
           uiComponentPart029Local4 = UiComponentPart017.uiComponentPart029State0001;
           if (uiComponentPart029Local4 != null) {
-            if (uiComponentPart029Local4.callbackContract006State0001 instanceof CallbackContract010) {
-              ((CallbackContract010) (uiComponentPart029Local4.callbackContract006State0001)).performAction1092(uiComponentPart029Local4, (UiComponentPart015) null, (byte) -128);
+            if (uiComponentPart029Local4.callbackContract006State0001 instanceof WidgetDropListener) {
+              ((WidgetDropListener) (uiComponentPart029Local4.callbackContract006State0001)).widgetDropped(uiComponentPart029Local4, (DropTargetWidgetContainer) null, (byte) -128);
             }
             UiComponentPart017.uiComponentPart029State0001 = null;
           }
           if (integerLocal2 != 0 &&
             integerLocal1 != 0 &&
             SceneWidgetPart005.integerState0328 != 0) {
-            this.performAction0225((byte) -95);
+            this.blur((byte) -95);
           }
           if (integerArgument4 != 29166) {
             this.integerState0104 = 110;
@@ -572,15 +572,15 @@ class UiComponent extends HashNode {
           MixedSupport112.performAction1470(this.getTooltipText((byte) 113), -1);
           return booleanArgument2;
         }
-        this.computeBoolean0214(MixedSupport101.integerState0590, integerArgument1, HashNode.integerState0069, this, HuffmanCodec.integerState0353, integerArgument3, false);
+        this.handleWheel(MixedSupport101.integerState0590, integerArgument1, HashNode.integerState0069, this, HuffmanCodec.integerState0353, integerArgument3, false);
         if (SceneWidgetPart005.integerState0328 != 0) {
-          if (this.computeBoolean0056(TextLineMetrics.integerState0535, LoginPanel.integerState0276, this, SceneWidgetPart005.integerState0328, integerArgument1, integerArgument3, (byte) -55)) {
+          if (this.pointerPressed(TextLineMetrics.integerState0535, LoginPanel.integerState0276, this, SceneWidgetPart005.integerState0328, integerArgument1, integerArgument3, (byte) -55)) {
             booleanArgument2 = false;
             if (integerLocal2 != 0) {
-              this.performAction0225((byte) -95);
+              this.blur((byte) -95);
             }
           } else {
-            this.performAction0225((byte) -95);
+            this.blur((byte) -95);
           }
         }
         if (DualNode.integerState0062 != 0) {
@@ -599,18 +599,18 @@ class UiComponent extends HashNode {
           MixedSupport112.performAction1470(this.getTooltipText((byte) 113), -1);
           return booleanArgument2;
         }
-        this.performAction0213(MixedSupport101.integerState0590, 64, integerArgument3, this, integerArgument1, HashNode.integerState0069);
+        this.pointerReleased(MixedSupport101.integerState0590, 64, integerArgument3, this, integerArgument1, HashNode.integerState0069);
         uiComponentPart029Local5 = UiComponentPart017.uiComponentPart029State0001;
         if (uiComponentPart029Local5 != null) {
-          if (uiComponentPart029Local5.callbackContract006State0001 instanceof CallbackContract010) {
-            ((CallbackContract010) (uiComponentPart029Local5.callbackContract006State0001)).performAction1092(uiComponentPart029Local5, (UiComponentPart015) null, (byte) -128);
+          if (uiComponentPart029Local5.callbackContract006State0001 instanceof WidgetDropListener) {
+            ((WidgetDropListener) (uiComponentPart029Local5.callbackContract006State0001)).widgetDropped(uiComponentPart029Local5, (DropTargetWidgetContainer) null, (byte) -128);
           }
           UiComponentPart017.uiComponentPart029State0001 = null;
         }
         if (integerLocal2 != 0 &&
           integerLocal1 != 0 &&
           SceneWidgetPart005.integerState0328 != 0) {
-          this.performAction0225((byte) -95);
+          this.blur((byte) -95);
         }
         if (integerArgument4 != 29166) {
           this.integerState0104 = 110;
@@ -621,10 +621,10 @@ class UiComponent extends HashNode {
     }
 
     public final String toString() {
-        return this.computeStringBuilder0219(new Hashtable(), 0, new StringBuilder(), true).toString();
+        return this.appendDebugTree(new Hashtable(), 0, new StringBuilder(), true).toString();
     }
 
-    final boolean computeBoolean0207(int integerArgument1, byte byteArgument2, int integerArgument3, int integerArgument4, int integerArgument5) {
+    final boolean containsPointer(int integerArgument1, byte byteArgument2, int integerArgument3, int integerArgument4, int integerArgument5) {
         boolean stackBooleanLocal1 = false;
         if (byteArgument2 > -29) {
           UiComponent.performAction0208(-81, (byte) -68, -126, (String) null, 93, (String) null);
@@ -652,7 +652,7 @@ class UiComponent extends HashNode {
         return stackBooleanLocal1;
     }
 
-    boolean computeBoolean0182(int integerArgument1, int integerArgument2, UiComponent uiComponentArgument3, char characterArgument4) {
+    boolean handleKey(int integerArgument1, int integerArgument2, UiComponent uiComponentArgument3, char characterArgument4) {
         int integerLocal1 = 0;
         RuntimeException runtimeExceptionLocal2 = null;
         RuntimeException stackRuntimeExceptionLocal3 = null;
@@ -687,7 +687,7 @@ class UiComponent extends HashNode {
         }
     }
 
-    final void performAction0206(byte byteArgument1, StringBuilder stringBuilderArgument2, Hashtable hashtableArgument3, int integerArgument4) {
+    final void appendDebugProperties(byte byteArgument1, StringBuilder stringBuilderArgument2, Hashtable hashtableArgument3, int integerArgument4) {
         StringBuilder discarded$0 = null;
         StringBuilder discarded$1 = null;
         StringBuilder discarded$2 = null;
@@ -716,13 +716,13 @@ class UiComponent extends HashNode {
           if (this.booleanState0018) {
             discarded$2 = stringBuilderArgument2.append(" mouseover");
           }
-          if (this.computeBoolean0220(true)) {
+          if (this.isFocused(true)) {
             discarded$3 = stringBuilderArgument2.append(" focused");
           }
           if (null != this.callbackContract004State0006) {
             discarded$4 = stringBuilderArgument2.append(" renderer=");
             if (this.callbackContract004State0006 instanceof UiComponent) {
-              stringBuilderArgument2 = this.computeStringBuilder0219(hashtableArgument3, integerArgument4 + 1, stringBuilderArgument2, true);
+              stringBuilderArgument2 = this.appendDebugTree(hashtableArgument3, integerArgument4 + 1, stringBuilderArgument2, true);
               if (integerLocal16 != 0) {
                 discarded$5 = stringBuilderArgument2.append(this.callbackContract004State0006);
               }
@@ -735,10 +735,10 @@ class UiComponent extends HashNode {
             if (!(this.callbackContract006State0001 instanceof UiComponent)) {
               discarded$7 = stringBuilderArgument2.append(this.callbackContract006State0001);
               if (integerLocal16 != 0) {
-                stringBuilderArgument2 = this.computeStringBuilder0219(hashtableArgument3, 1 + integerArgument4, stringBuilderArgument2, true);
+                stringBuilderArgument2 = this.appendDebugTree(hashtableArgument3, 1 + integerArgument4, stringBuilderArgument2, true);
               }
             } else {
-              stringBuilderArgument2 = this.computeStringBuilder0219(hashtableArgument3, 1 + integerArgument4, stringBuilderArgument2, true);
+              stringBuilderArgument2 = this.appendDebugTree(hashtableArgument3, 1 + integerArgument4, stringBuilderArgument2, true);
             }
           }
           return;
@@ -762,7 +762,7 @@ class UiComponent extends HashNode {
         }
     }
 
-    boolean computeBoolean0220(boolean booleanArgument1) {
+    boolean isFocused(boolean booleanArgument1) {
         if (!booleanArgument1) {
           UiComponent.performAction0227(120);
           return false;
@@ -813,7 +813,7 @@ class UiComponent extends HashNode {
         this.integerState0103 = 0;
     }
 
-    UiComponent(String stringArgument1, CallbackContract004 callbackContract004Argument2, CallbackContract006 callbackContract006Argument3) {
+    UiComponent(String stringArgument1, WidgetRenderer callbackContract004Argument2, WidgetEventListener callbackContract006Argument3) {
         RuntimeException runtimeException = null;
         TextWidgetRenderer callbackContract012Local2 = null;
         RuntimeException stackRuntimeExceptionLocal3 = null;
@@ -862,7 +862,7 @@ class UiComponent extends HashNode {
         }
     }
 
-    UiComponent(int integerArgument1, int integerArgument2, int integerArgument3, int integerArgument4, CallbackContract004 callbackContract004Argument5, CallbackContract006 callbackContract006Argument6) {
+    UiComponent(int integerArgument1, int integerArgument2, int integerArgument3, int integerArgument4, WidgetRenderer callbackContract004Argument5, WidgetEventListener callbackContract006Argument6) {
         this.integerState0105 = 0;
         this.integerState0103 = 0;
         try {

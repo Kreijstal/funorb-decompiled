@@ -106,7 +106,7 @@ final class AccountCreationResultPanel extends ph implements WidgetActivationLis
           }
           this.field_ob = true;
           if (param1.success) {
-            var4 = qd.field_C;
+            var4 = ModalDialog.field_C;
           } else {
             if (null != param1.suggestions) {
               var4 = ConfirmedEmailAvailabilityValidator.field_s;
@@ -130,7 +130,7 @@ final class AccountCreationResultPanel extends ph implements WidgetActivationLis
               this.c(20317, new jj(this));
               return;
             }
-            var5.a((byte) 110, (qg) (this), SpriteState.field_s);
+            var5.a((byte) 110, (WidgetEventListener) (this), SpriteState.field_s);
           } else {
             if (!this.field_ub) {
               if (param1.statusCode == 5) {
@@ -140,10 +140,10 @@ final class AccountCreationResultPanel extends ph implements WidgetActivationLis
                 var5.a(InteractiveWidget.field_t, 13759, -1);
               }
             } else {
-              var5.a((byte) 110, (qg) (this), SpriteState.field_s);
+              var5.a((byte) 110, (WidgetEventListener) (this), SpriteState.field_s);
             }
             if (param1.statusCode == 3) {
-              var5.a(kf.field_u, param2 ^ 7507, 7);
+              var5.a(SingleChildWidgetContainer.field_u, param2 ^ 7507, 7);
             } else {
               if (6 == param1.statusCode) {
                 var5.a(InteractiveWidget.field_w, 13759, 9);
@@ -166,7 +166,7 @@ final class AccountCreationResultPanel extends ph implements WidgetActivationLis
         }
     }
 
-    AccountCreationResultPanel(tc param0, AccountRegistrationPanel param1) {
+    AccountCreationResultPanel(ModalDialogHost param0, AccountRegistrationPanel param1) {
         super(param0, AwtRasterBuffer.field_a, ge.field_a, false, false);
         try {
           this.field_pb = param1;
@@ -182,7 +182,7 @@ final class AccountCreationResultPanel extends ph implements WidgetActivationLis
         this.showAccountCreationResult(true, fb.createAccountErrorResult(KeyboardInput.field_d, 248, 0), 10476);
     }
 
-    final boolean g(byte param0) {
+    final boolean advanceDialogAnimation(byte param0) {
         AccountServiceResult var2 = null;
         if (this.field_G &&
           !this.field_ob) {
@@ -194,7 +194,7 @@ final class AccountCreationResultPanel extends ph implements WidgetActivationLis
         if (param0 != -124) {
           field_rb = (hj[]) null;
         }
-        return super.g((byte) -124);
+        return super.advanceDialogAnimation((byte) -124);
     }
 
     static {

@@ -378,7 +378,7 @@ final class PasswordValidator extends TextFieldValidator {
           }
           var5 = var4;
           if (f.a(var5, -51)) {
-            stackIn_5_0 = kh.field_M;
+            stackIn_5_0 = ModalDialog.field_M;
             return stackIn_5_0;
           }
           if (NameSuggestionsPanel.a(var5, true)) {
@@ -407,7 +407,7 @@ final class PasswordValidator extends TextFieldValidator {
             return stackIn_25_0;
           }
           if (!oh.a((byte) -85, var7, var5)) {
-            return kh.field_M;
+            return ModalDialog.field_M;
           }
           stackIn_29_0 = NanoFrameTimer.field_i;
           return stackIn_29_0;

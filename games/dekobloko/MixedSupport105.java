@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class MixedSupport105 implements CallbackContract004 {
+final class MixedSupport105 implements WidgetRenderer {
     private int integerState0655;
     private int integerState0656;
     static String stringState0452;
@@ -21,7 +21,7 @@ final class MixedSupport105 implements CallbackContract004 {
           if (null != UiComponentPart008.bufferedFileState0001) {
             try {
               UiComponentPart008.bufferedFileState0001.seek(0L, (byte) -109);
-              UiComponentPart008.bufferedFileState0001.write(UiComponentPart006.cipherPacketBufferState0001.payload, (byte) 117, UiComponentPart006.cipherPacketBufferState0001.position, 24);
+              UiComponentPart008.bufferedFileState0001.write(LabeledWidgetContainer.cipherPacketBufferState0001.payload, (byte) 117, LabeledWidgetContainer.cipherPacketBufferState0001.position, 24);
             } catch (java.lang.Exception caughtParameterLocal3) {
               caughtExceptionLocal2 = caughtParameterLocal3;
               exceptionLocal1 = (Exception) (Object) caughtExceptionLocal2;
@@ -30,7 +30,7 @@ final class MixedSupport105 implements CallbackContract004 {
           if (byteArgument1 != 64) {
             return;
           }
-          UiComponentPart006.cipherPacketBufferState0001.position = UiComponentPart006.cipherPacketBufferState0001.position + 24;
+          LabeledWidgetContainer.cipherPacketBufferState0001.position = LabeledWidgetContainer.cipherPacketBufferState0001.position + 24;
         } catch (RuntimeException | Error uncheckedExceptionLocal4) {
           throw uncheckedExceptionLocal4;
         } catch (Throwable checkedExceptionLocal5) {
@@ -86,7 +86,7 @@ final class MixedSupport105 implements CallbackContract004 {
         return renderingSupport007Local7;
     }
 
-    public final void performAction0017(boolean booleanArgument1, int integerArgument2, int integerArgument3, byte byteArgument4, UiComponent uiComponentArgument5) {
+    public final void paintWidget(boolean booleanArgument1, int integerArgument2, int integerArgument3, byte byteArgument4, UiComponent uiComponentArgument5) {
         int integerLocal1 = 0;
         UiComponent stackUiComponentLocal2 = null;
         RuntimeException stackRuntimeExceptionLocal3 = null;

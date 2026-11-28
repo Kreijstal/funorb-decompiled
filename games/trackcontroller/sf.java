@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class sf extends td implements ButtonListener {
+final class sf extends DequeWidgetContainer implements ButtonListener {
     private ButtonWidget field_E;
     private ButtonWidget field_C;
     static ba field_D;
@@ -127,7 +127,7 @@ final class sf extends td implements ButtonListener {
         }
     }
 
-    final boolean a(byte param0, char param1, UiWidget param2, int param3) {
+    final boolean handleKey(byte param0, char param1, UiWidget param2, int param3) {
         int var5_int = 0;
         RuntimeException var5 = null;
         boolean stackIn_5_0 = false;
@@ -137,15 +137,15 @@ final class sf extends td implements ButtonListener {
         String stackIn_17_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (super.a((byte) 117, param1, param2, param3)) {
+          if (super.handleKey((byte) 117, param1, param2, param3)) {
             return true;
           }
           if (98 == param3) {
-            stackIn_5_0 = this.a(param2, -125);
+            stackIn_5_0 = this.focusPreviousChild(param2, -125);
             return stackIn_5_0;
           }
           if (param3 == 99) {
-            stackIn_10_0 = this.a(param2, true);
+            stackIn_10_0 = this.focusNextChild(param2, true);
             return stackIn_10_0;
           }
           var5_int = -53 % ((17 - param0) / 51);
@@ -1461,7 +1461,7 @@ final class sf extends td implements ButtonListener {
                 }
                 var2 = TextLineMetrics.a(0, "creatingyouraccount");
                 if (var2 != null) {
-                  sa.field_J = ta.a(32200, var2);
+                  LabeledWidgetContainer.field_J = ta.a(32200, var2);
                 }
                 var2 = TextLineMetrics.a(0, "create_youmustaccept");
                 if (null != var2) {
@@ -1913,7 +1913,7 @@ final class sf extends td implements ButtonListener {
                 }
                 var2 = TextLineMetrics.a(0, "waitingfor_graphics");
                 if (var2 != null) {
-                  sa.field_K = ta.a(32200, var2);
+                  LabeledWidgetContainer.field_K = ta.a(32200, var2);
                 }
                 var2 = TextLineMetrics.a(0, "waitingfor_models");
                 if (var2 != null) {
@@ -2141,7 +2141,7 @@ final class sf extends td implements ButtonListener {
                 }
                 var2 = TextLineMetrics.a(0, "resumegame");
                 if (null != var2) {
-                  fj.field_R = ta.a(32200, var2);
+                  DraggableWidgetContainer.field_R = ta.a(32200, var2);
                 }
                 var2 = TextLineMetrics.a(0, "resumetutorial");
                 if (null != var2) {
@@ -2820,7 +2820,7 @@ final class sf extends td implements ButtonListener {
                 }
                 var2 = TextLineMetrics.a(0, "fs_accept_countdown_sing");
                 if (null != var2) {
-                  mc.field_J = ta.a(32200, var2);
+                  DropTargetWidgetContainer.field_J = ta.a(32200, var2);
                 }
                 var2 = TextLineMetrics.a(0, "fs_accept_countdown_pl");
                 if (var2 != null) {
@@ -2848,7 +2848,7 @@ final class sf extends td implements ButtonListener {
                 }
                 var2 = TextLineMetrics.a(0, "fs_focus");
                 if (null != var2) {
-                  fj.field_O = ta.a(32200, var2);
+                  DraggableWidgetContainer.field_O = ta.a(32200, var2);
                 }
                 var2 = TextLineMetrics.a(0, "fs_focus_or_resolution");
                 if (null != var2) {
@@ -3209,33 +3209,33 @@ final class sf extends td implements ButtonListener {
     }
 
     public sf() {
-        super(0, 0, 476, 225, (t) null);
+        super(0, 0, 476, 225, (WidgetRenderer) null);
         dc var1 = null;
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
         try {
-          this.field_G = new ButtonWidget(md.field_f, (tg) null);
-          this.field_E = new ButtonWidget(UiWidget.field_v, (tg) null);
-          this.field_C = new ButtonWidget(DebouncedFieldValidator.field_d, (tg) null);
+          this.field_G = new ButtonWidget(md.field_f, (WidgetEventListener) null);
+          this.field_E = new ButtonWidget(UiWidget.field_v, (WidgetEventListener) null);
+          this.field_C = new ButtonWidget(DebouncedFieldValidator.field_d, (WidgetEventListener) null);
           var1 = new dc();
-          this.field_G.field_y = (t) ((Object) var1);
-          this.field_E.field_y = (t) ((Object) var1);
-          this.field_C.field_y = (t) ((Object) var1);
+          this.field_G.field_y = (WidgetRenderer) ((Object) var1);
+          this.field_E.field_y = (WidgetRenderer) ((Object) var1);
+          this.field_C.field_y = (WidgetRenderer) ((Object) var1);
           var2 = 4;
           var3 = 326;
           var4 = var3 - var2 >> 1;
-          this.field_E.a(30, -3050, this.field_u - 48 - var2, var4, -var3 + this.field_x >> 1);
-          this.field_C.a(30, -3050, this.field_u - 48 - var2, var4, var2 + ((this.field_x - var3 >> 1) + var4));
-          this.field_G.a(30, -3050, -(2 * var2) + (-78 + this.field_u), var3, -var3 + this.field_x >> 1);
-          this.field_E.field_l = (tg) (this);
-          this.field_G.field_l = (tg) (this);
+          this.field_E.setBounds(30, -3050, this.field_u - 48 - var2, var4, -var3 + this.field_x >> 1);
+          this.field_C.setBounds(30, -3050, this.field_u - 48 - var2, var4, var2 + ((this.field_x - var3 >> 1) + var4));
+          this.field_G.setBounds(30, -3050, -(2 * var2) + (-78 + this.field_u), var3, -var3 + this.field_x >> 1);
+          this.field_E.field_l = (WidgetEventListener) (this);
+          this.field_G.field_l = (WidgetEventListener) (this);
           this.field_G.field_n = DefaultTextWidgetRenderer.field_g;
-          this.field_C.field_l = (tg) (this);
+          this.field_C.field_l = (WidgetEventListener) (this);
           this.field_C.field_n = kh.field_b;
-          this.a(false, this.field_E);
-          this.a(false, this.field_G);
-          this.a(false, this.field_C);
+          this.addChild(false, this.field_E);
+          this.addChild(false, this.field_G);
+          this.addChild(false, this.field_C);
         } catch (RuntimeException runtimeException) {
           throw LevelGrid.toClientException((Throwable) ((Object) runtimeException), "sf.<init>()");
         }
@@ -3319,7 +3319,7 @@ final class sf extends td implements ButtonListener {
         }
     }
 
-    final void a(int param0, int param1, int param2, int param3) {
+    final void drawWidget(int param0, int param1, int param2, int param3) {
         int var5_int = 0;
         int var6 = 0;
         if (param3 != 29221) {
@@ -3329,7 +3329,7 @@ final class sf extends td implements ButtonListener {
           var5_int = param1 + this.field_p;
           var6 = this.field_m + param2;
           gk.field_c.drawParagraph(we.field_a, var5_int + 20, 20 + var6, this.field_x - 40, -50 + this.field_u, 16777215, -1, 1, 0, gk.field_c.field_G);
-          super.a(param0, param1, param2, param3 + 0);
+          super.drawWidget(param0, param1, param2, param3 + 0);
         } catch (RuntimeException runtimeException) {
           throw LevelGrid.toClientException((Throwable) ((Object) runtimeException), "sf.E(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
@@ -3345,7 +3345,7 @@ final class sf extends td implements ButtonListener {
         var7 = TrackController.field_F ? 1 : 0;
         try {
           if (param4 != -27322) {
-            this.a(44, -32, -121, 106);
+            this.drawWidget(44, -32, -121, 106);
           }
           if (param0 != this.field_E) {
             if (param0 == this.field_G) {
@@ -3362,7 +3362,7 @@ final class sf extends td implements ButtonListener {
               return;
             }
           }
-          vl.m(1);
+          ModalDialogHost.m(1);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

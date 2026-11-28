@@ -97,7 +97,7 @@ final class PasswordValidator extends TextFieldValidator {
           if (Character.isISOControl(param1)) {
             return false;
           }
-          if (vl.a(param1, param0 ^ -3296)) {
+          if (ModalDialogHost.a(param1, param0 ^ -3296)) {
             return true;
           }
           if (param0 != -19050) {

@@ -41,12 +41,12 @@ final class rg {
             if (var4 == 45) {
               if (0 == var3 ||
                 var3 == var2_int - 1) {
-                stackIn_16_0 = si.field_C;
+                stackIn_16_0 = SingleChildWidgetContainer.field_C;
                 return stackIn_16_0;
               }
             } else {
               if (cg.field_b.indexOf(var4) == -1) {
-                stackIn_19_0 = si.field_C;
+                stackIn_19_0 = SingleChildWidgetContainer.field_C;
                 return stackIn_19_0;
               }
             }
@@ -132,7 +132,7 @@ final class rg {
           field_c = 11;
         }
         if (gf.field_Z == ma.field_o) {
-          return te.field_K;
+          return AlphaWidgetContainer.field_K;
         }
         if (PacketBuffer.field_i == gf.field_Z) {
           return uh.field_r;

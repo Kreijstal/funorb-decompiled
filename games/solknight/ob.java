@@ -11,8 +11,8 @@ final class ob extends IntrusiveNode {
 
     final static void a(int param0, java.awt.Component param1) {
         try {
-          param1.removeKeyListener(i.field_J);
-          param1.removeFocusListener(i.field_J);
+          param1.removeKeyListener(ModalDialogHost.field_J);
+          param1.removeFocusListener(ModalDialogHost.field_J);
           fg.field_b = param0;
         } catch (RuntimeException runtimeException) {
           throw fc.wrapClientException((Throwable) ((Object) runtimeException), "ob.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');

@@ -284,14 +284,14 @@ final class ProxySocketConnector extends SocketConnector {
             if (var3_int != 0) {
               var1.readString(param0 ^ -12255);
             }
-            var5_ref = fi.b(var4_ref_String, (byte) 51);
+            var5_ref = SingleChildWidgetContainer.b(var4_ref_String, (byte) 51);
             var6_ref = var1.readString(12248);
             var7_ref = BitPacketBuffer.normalizePlayerName((byte) -128, (CharSequence) ((Object) var4_ref_String));
             if (null == var7_ref) {
               var7_ref = var4_ref_String;
             }
             if (null == var5_ref) {
-              var5_ref = fi.b(var6_ref, (byte) 51);
+              var5_ref = SingleChildWidgetContainer.b(var6_ref, (byte) 51);
               if (null != var5_ref) {
                 rb.field_b.a(19200, (long)var7_ref.hashCode(), var5_ref);
               }
@@ -334,7 +334,7 @@ final class ProxySocketConnector extends SocketConnector {
           }
           if (LetterTile.field_u == null) {
             LetterTile.field_u = new wb(128);
-            vl.field_A = 0;
+            DraggableWidgetContainer.field_A = 0;
           }
           var3Lifetime1 = var1.readString(12248);
           if (((String) (var3Lifetime1)).equals("")) {
@@ -342,9 +342,9 @@ final class ProxySocketConnector extends SocketConnector {
           }
           var4_ref_StringLifetime1 = var1.readString(param0 + 12255);
           var5 = var1.readString(param0 + 12255);
-          var6 = mk.a(124, var4_ref_StringLifetime1);
+          var6 = ModalDialog.a(124, var4_ref_StringLifetime1);
           if (var6 == null) {
-            var6 = mk.a(param0 ^ -111, var5);
+            var6 = ModalDialog.a(param0 ^ -111, var5);
             if (null != var6) {
               LetterTile.field_u.a(19200, (long)BitPacketBuffer.normalizePlayerName((byte) -128, (CharSequence) ((Object) var4_ref_StringLifetime1)).hashCode(), var6);
             }
@@ -352,8 +352,8 @@ final class ProxySocketConnector extends SocketConnector {
           if (null == var6) {
             var6 = new uk();
             LetterTile.field_u.a(19200, (long)BitPacketBuffer.normalizePlayerName((byte) -128, (CharSequence) ((Object) var4_ref_StringLifetime1)).hashCode(), var6);
-            fieldTemp$0 = vl.field_A;
-            vl.field_A = vl.field_A + 1;
+            fieldTemp$0 = DraggableWidgetContainer.field_A;
+            DraggableWidgetContainer.field_A = DraggableWidgetContainer.field_A + 1;
             var6.field_hb = fieldTemp$0;
             PacketBuffer.field_k.addLast(var6, param0 ^ 116);
           }

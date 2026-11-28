@@ -618,7 +618,7 @@ final class ee extends lk {
               ConfirmedEmailAvailabilityValidator.field_n.position = 0;
               rk.field_b = param0[sm.field_i];
             }
-            if (!ol.f((byte) 60)) {
+            if (!ModalDialogHost.f((byte) 60)) {
               return false;
             }
             if (IntrusiveDeque.field_d == 0) {
@@ -631,7 +631,7 @@ final class ee extends lk {
             }
             var4 = IntrusiveDeque.field_d;
             if (0.0 != FloatingScoreLabel.field_b) {
-              var4 = (int)((double)var4 + og.field_w.nextGaussian() * FloatingScoreLabel.field_b);
+              var4 = (int)((double)var4 + DequeWidgetContainer.field_w.nextGaussian() * FloatingScoreLabel.field_b);
               if (var4 < 0) {
                 var4 = 0;
               }

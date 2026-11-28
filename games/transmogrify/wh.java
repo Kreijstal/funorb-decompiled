@@ -40,7 +40,7 @@ final class wh extends InteractiveWidget {
         field_I = null;
     }
 
-    final boolean b(int param0, int param1, UiWidget param2, int param3, int param4, int param5, int param6) {
+    final boolean pointerPressed(int param0, int param1, UiWidget param2, int param3, int param4, int param5, int param6) {
         RuntimeException stackIn_24_0 = null;
         StringBuilder stackIn_24_1 = null;
         String stackIn_25_2 = null;
@@ -52,7 +52,7 @@ final class wh extends InteractiveWidget {
         int var12 = 0;
         var12 = Transmogrify.field_A ? 1 : 0;
         try {
-          if (!super.b(param0, param1, param2, param3, param4 ^ 0, param5, param6)) {
+          if (!super.pointerPressed(param0, param1, param2, param3, param4 ^ 0, param5, param6)) {
             if (param4 == -30386) {
               return false;
             }

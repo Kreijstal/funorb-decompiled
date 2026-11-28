@@ -9,7 +9,7 @@ final class PcmOutputWorker implements Runnable {
     static ha[] field_b;
 
     final static void a(boolean param0, int param1) {
-        sd.field_c.a(0, (byte) -124, 0);
+        sd.field_c.drawAllLayers(0, (byte) -124, 0);
         if (param1 < 35) {
           field_b = (ha[]) null;
         }
@@ -110,8 +110,8 @@ final class PcmOutputWorker implements Runnable {
         AccountCreationResultPanel.a(DiskCacheWorker.field_a, (byte) -111);
         DiskCacheWorker.field_a.exitFullscreen((byte) -81, jk.field_a);
         DiskCacheWorker.field_a = null;
-        if (null != wc.field_A) {
-          wc.field_A.a((byte) 10);
+        if (null != DropTargetWidgetContainer.field_A) {
+          DropTargetWidgetContainer.field_A.a((byte) 10);
         }
         tb.field_c.requestFocus();
     }

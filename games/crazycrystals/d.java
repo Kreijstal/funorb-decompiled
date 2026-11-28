@@ -46,7 +46,7 @@ final class d {
     }
 
     final static void a(byte param0, boolean param1) {
-        qe.field_g.a((byte) -80, 0, 0);
+        qe.field_g.drawAllLayers((byte) -80, 0, 0);
         int var2 = 51 % ((param0 - 10) / 47);
     }
 

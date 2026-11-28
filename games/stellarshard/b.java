@@ -202,7 +202,7 @@ final class b extends DefaultTextWidgetRenderer {
         this.field_s = ImageProducerRasterBuffer.field_i;
     }
 
-    public final void a(boolean param0, int param1, int param2, UiWidget param3, int param4) {
+    public final void paintWidget(boolean param0, int param1, int param2, UiWidget param3, int param4) {
         int stackIn_6_0 = 0;
         int stackIn_15_0 = 0;
         int stackIn_18_0 = 0;
@@ -216,7 +216,7 @@ final class b extends DefaultTextWidgetRenderer {
         int var8 = 0;
         try {
           if (!param3.field_q) {
-            stackIn_6_0 = (param3.e(0)) ? 1 : 0;
+            stackIn_6_0 = (param3.isFocused(0)) ? 1 : 0;
           } else {
             stackIn_6_0 = 1;
           }

@@ -269,11 +269,11 @@ final class fc {
                   var6[var7] = (char)0;
                 }
               }
-              this.field_w[0][4] = jf.field_G.charAt(1);
-              this.field_w[0][5] = jf.field_G.charAt(2);
-              this.field_w[0][6] = jf.field_G.charAt(3);
-              this.field_w[0][7] = jf.field_G.charAt(4);
-              this.field_w[1][3] = jf.field_G.charAt(0);
+              this.field_w[0][4] = LabeledWidgetContainer.field_G.charAt(1);
+              this.field_w[0][5] = LabeledWidgetContainer.field_G.charAt(2);
+              this.field_w[0][6] = LabeledWidgetContainer.field_G.charAt(3);
+              this.field_w[0][7] = LabeledWidgetContainer.field_G.charAt(4);
+              this.field_w[1][3] = LabeledWidgetContainer.field_G.charAt(0);
               this.field_w[1][4] = ch.field_d.charAt(0);
               if (DebouncedFieldValidator.field_e != 2) {
                 this.field_w[1][6] = ch.field_d.charAt(2);
@@ -1058,7 +1058,7 @@ final class fc {
           return;
         }
         if (4 != this.field_K) {
-          stackIn_5_0 = ia.field_H;
+          stackIn_5_0 = AlphaWidgetContainer.field_H;
         } else {
           stackIn_5_0 = lg.field_c;
         }
@@ -1083,7 +1083,7 @@ final class fc {
                 var7Lifetime1 = stackIn_16_0;
                 if (var7Lifetime1 >= 255) {
                   var14Lifetime1 = var2;
-                  if (mg.field_B) {
+                  if (SingleChildWidgetContainer.field_B) {
                     var14Lifetime1.draw(var5Lifetime1, var3 - this.field_F[var4Lifetime1][var6Lifetime1]);
                   } else {
                     eb.a(89, this.field_m, 0, var14Lifetime1, this.field_w[var4Lifetime1][var6Lifetime1], -this.field_F[var4Lifetime1][var6Lifetime1] + var3, var5Lifetime1);
@@ -1092,7 +1092,7 @@ final class fc {
                   if (var7Lifetime1 > 0) {
                     var14Lifetime1 = var2;
                     var14Lifetime1.drawWithOpacity(var5Lifetime1, -this.field_F[var4Lifetime1][var6Lifetime1] + var3, var7Lifetime1);
-                    if (!mg.field_B) {
+                    if (!SingleChildWidgetContainer.field_B) {
                       this.field_m.field_f.drawCentredCharacterAlpha(this.field_w[var4Lifetime1][var6Lifetime1], var14Lifetime1.field_p / 2 + var5Lifetime1, (this.field_m.field_b + var14Lifetime1.field_u) / 2 + var3, 0, var7Lifetime1);
                     }
                   }

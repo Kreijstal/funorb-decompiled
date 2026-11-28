@@ -66,12 +66,12 @@ class dh extends sj implements WidgetActivationListener {
         jn var2 = new jn(this, this.field_xb, ne.field_d);
         if (param0 >= 73) {
           var2.a(0, NetworkArchiveRequest.field_C, 15);
-          this.a((fj) (var2), (byte) -72);
+          this.a((UiWidget) (var2), (byte) -72);
           return;
         }
     }
 
-    final boolean a(fj param0, byte param1, int param2, char param3) {
+    final boolean handleKey(UiWidget param0, byte param1, int param2, char param3) {
         int var5_int = 0;
         RuntimeException var5 = null;
         boolean stackIn_4_0 = false;
@@ -82,7 +82,7 @@ class dh extends sj implements WidgetActivationListener {
         try {
           if (param2 != 13) {
             var5_int = -48 % ((param1 - 47) / 43);
-            stackIn_4_0 = super.a(param0, (byte) -2, param2, param3);
+            stackIn_4_0 = super.handleKey(param0, (byte) -2, param2, param3);
             return stackIn_4_0;
           }
           this.n(10);
@@ -118,7 +118,7 @@ class dh extends sj implements WidgetActivationListener {
         }
     }
 
-    dh(sh param0, BitmapFont param1, String param2, boolean param3, boolean param4) {
+    dh(ModalDialogHost param0, BitmapFont param1, String param2, boolean param3, boolean param4) {
         super(param0, new jn((dh) null, param1, param2), 77, 10, 10);
         try {
           this.field_xb = param1;
@@ -128,7 +128,7 @@ class dh extends sj implements WidgetActivationListener {
           this.field_ub = param4 ? true : false;
           this.field_wb = new ib(13, 50, 274, 30, 15, 2113632, 4210752);
           this.field_wb.field_N = true;
-          this.b(this.field_wb, 10);
+          this.addChild(this.field_wb, 10);
         } catch (RuntimeException runtimeException) {
           throw TextLineMetrics.a((Throwable) ((Object) runtimeException), "dh.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ')');
         }
@@ -160,7 +160,7 @@ class dh extends sj implements WidgetActivationListener {
           var4 = var6;
           if (5 != param1) {
             if (256 == param1) {
-              var6.a(aa.field_a, (uk) (this), false);
+              var6.a(aa.field_a, (WidgetEventListener) (this), false);
             } else {
               stackIn_11_0 = var6;
               stackIn_11_1 = 0;
@@ -185,12 +185,12 @@ class dh extends sj implements WidgetActivationListener {
                 var6.a(0, NetworkArchiveRequest.field_y, 9);
               } else {
                 if (param1 == 9) {
-                  var6.a(ai.field_g, (uk) (this), param2);
+                  var6.a(ai.field_g, (WidgetEventListener) (this), param2);
                 }
               }
             }
           }
-          this.a((fj) (var6), (byte) -72);
+          this.a((UiWidget) (var6), (byte) -72);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

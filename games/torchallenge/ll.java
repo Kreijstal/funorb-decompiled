@@ -48,19 +48,19 @@ final class ll {
         int var22Lifetime1;
         int var22Lifetime2;
         var23 = TorChallenge.field_F ? 1 : 0;
-        var12 = kj.field_C[0].fullWidth;
+        var12 = DequeWidgetContainer.field_C[0].fullWidth;
         var13 = -1;
         var14 = param11 - param2;
         var15 = 0;
-        var16 = si.field_F;
+        var16 = ModalDialogHost.field_F;
         if (param1 == 0) {
-          var16 = si.field_F;
+          var16 = ModalDialogHost.field_F;
         }
         if (1 == param1) {
-          var16 = kj.field_C[0];
+          var16 = DequeWidgetContainer.field_C[0];
         }
         if (param1 == 2) {
-          var16 = kj.field_C[1];
+          var16 = DequeWidgetContainer.field_C[1];
         }
         if (!param5) {
           if (!param4 &&

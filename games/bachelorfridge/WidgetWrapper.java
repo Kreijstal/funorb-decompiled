@@ -3,7 +3,7 @@
  */
 import java.util.*;
 
-abstract class WidgetWrapper extends UiWidget implements e {
+abstract class WidgetWrapper extends UiWidget implements WidgetContainerMarker {
     static String field_y;
     static BinaryBitmapFont field_z;
     static String field_B;
@@ -12,7 +12,7 @@ abstract class WidgetWrapper extends UiWidget implements e {
     void draw(byte param0, int param1, int param2, int param3) {
         if (0 == param2 &&
           this.renderer != null) {
-          this.renderer.a(param3, (UiWidget) (this), 32679, param1, true);
+          this.renderer.paintWidget(param3, (UiWidget) (this), 32679, param1, true);
         }
         if (null != this.child) {
           this.child.draw((byte) 125, param1 + this.y, param2, param3 + this.x);
@@ -29,7 +29,7 @@ abstract class WidgetWrapper extends UiWidget implements e {
         field_z = null;
     }
 
-    final boolean a(int param0, int param1, int param2, int param3, int param4, UiWidget param5, int param6) {
+    final boolean handleWheel(int param0, int param1, int param2, int param3, int param4, UiWidget param5, int param6) {
         RuntimeException var8 = null;
         boolean stackIn_7_0 = false;
         RuntimeException stackIn_10_0 = null;
@@ -40,7 +40,7 @@ abstract class WidgetWrapper extends UiWidget implements e {
           if (param1 != 13) {
             field_B = (String) null;
           }
-          stackIn_7_0 = (this.child != null) && (this.child.isFocused(param1 ^ 1010)) && (this.child.a(param0, 13, param2, param3, param4, param5, param6));
+          stackIn_7_0 = (this.child != null) && (this.child.isFocused(param1 ^ 1010)) && (this.child.handleWheel(param0, 13, param2, param3, param4, param5, param6));
           return stackIn_7_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -56,7 +56,7 @@ abstract class WidgetWrapper extends UiWidget implements e {
         }
     }
 
-    boolean b(int param0, int param1, int param2, int param3, int param4, UiWidget param5, int param6) {
+    boolean pointerPressed(int param0, int param1, int param2, int param3, int param4, UiWidget param5, int param6) {
         RuntimeException var8 = null;
         boolean stackIn_7_0 = false;
         RuntimeException stackIn_10_0 = null;
@@ -67,7 +67,7 @@ abstract class WidgetWrapper extends UiWidget implements e {
           if (param1 != -7375) {
             return false;
           }
-          stackIn_7_0 = (this.child != null) && (this.child.b(param0, -7375, param2 + this.x, param3, param4 + this.y, param5, param6));
+          stackIn_7_0 = (this.child != null) && (this.child.pointerPressed(param0, -7375, param2 + this.x, param3, param4 + this.y, param5, param6));
           return stackIn_7_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -106,19 +106,19 @@ abstract class WidgetWrapper extends UiWidget implements e {
         super(param0, param1, param2, param3, param4, param5);
     }
 
-    final int b(int param0) {
+    final int getMaximumRenderLayer(int param0) {
         if (param0 > -3) {
           return -117;
         }
-        return this.child == null ? 0 : this.child.b(-34);
+        return this.child == null ? 0 : this.child.getMaximumRenderLayer(-34);
     }
 
-    final void a(int param0, int param1, byte param2, int param3, int param4) {
-        super.a(param0, param1, param2, param3, param4);
-        this.a(-81);
+    final void setBounds(int param0, int param1, byte param2, int param3, int param4) {
+        super.setBounds(param0, param1, param2, param3, param4);
+        this.layoutChild(-81);
     }
 
-    StringBuilder a(Hashtable param0, int param1, byte param2, StringBuilder param3) {
+    StringBuilder appendDebugTree(Hashtable param0, int param1, byte param2, StringBuilder param3) {
         RuntimeException var5 = null;
         StringBuilder stackIn_5_0 = null;
         RuntimeException stackIn_8_0 = null;
@@ -131,9 +131,9 @@ abstract class WidgetWrapper extends UiWidget implements e {
           if (param2 < 20) {
             this.child = (UiWidget) null;
           }
-          if (this.a(param0, param1, param3, (byte) 121)) {
-            this.a(9, param0, param3, param1);
-            this.b(param1, param0, param3, 108);
+          if (this.beginDebugTreeEntry(param0, param1, param3, (byte) 121)) {
+            this.appendDebugProperties(9, param0, param3, param1);
+            this.appendChildDebugTree(param1, param0, param3, 108);
           }
           stackIn_5_0 = (StringBuilder) (param3);
           return stackIn_5_0;
@@ -157,7 +157,7 @@ abstract class WidgetWrapper extends UiWidget implements e {
         }
     }
 
-    void a(int param0) {
+    void layoutChild(int param0) {
         if (this.child != null) {
           this.child.refreshLayout(6);
         }
@@ -170,7 +170,7 @@ abstract class WidgetWrapper extends UiWidget implements e {
         if (param0 != 1023) {
           field_y = (String) null;
         }
-        return null != this.d((byte) 111) ? true : false;
+        return null != this.getFocusedChild((byte) 111) ? true : false;
     }
 
     final boolean handleKey(int param0, int param1, char param2, UiWidget param3) {
@@ -191,9 +191,9 @@ abstract class WidgetWrapper extends UiWidget implements e {
           var5_int = param1;
           if (var5_int == 80) {
             if (InvincibleEvent.field_q[81]) {
-              stackIn_9_0 = this.a(0, param3);
+              stackIn_9_0 = this.focusPreviousChild(0, param3);
             } else {
-              stackIn_9_0 = this.b(-14391, param3);
+              stackIn_9_0 = this.focusNextChild(-14391, param3);
             }
             return stackIn_9_0;
           }
@@ -201,7 +201,7 @@ abstract class WidgetWrapper extends UiWidget implements e {
             return false;
           }
           var6 = (UiWidget) null;
-          this.b(-49, 33, 67, -11, -47, (UiWidget) null, 62);
+          this.pointerPressed(-49, 33, 67, -11, -47, (UiWidget) null, 62);
           return false;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -217,7 +217,7 @@ abstract class WidgetWrapper extends UiWidget implements e {
         }
     }
 
-    final void b(int param0, Hashtable param1, StringBuilder param2, int param3) {
+    final void appendChildDebugTree(int param0, Hashtable param1, StringBuilder param2, int param3) {
         StringBuilder discarded$11 = null;
         int var5_int = 0;
         StringBuilder discarded$13 = null;
@@ -242,7 +242,7 @@ abstract class WidgetWrapper extends UiWidget implements e {
           if (this.child == null) {
             discarded$12 = param2.append("null");
           } else {
-            this.child.a(param1, 1 + param0, (byte) 74, param2);
+            this.child.appendDebugTree(param1, 1 + param0, (byte) 74, param2);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -265,7 +265,7 @@ abstract class WidgetWrapper extends UiWidget implements e {
         }
     }
 
-    void a(int param0, int param1, byte param2, UiWidget param3, int param4, int param5) {
+    void pointerReleased(int param0, int param1, byte param2, UiWidget param3, int param4, int param5) {
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         String stackIn_9_2 = null;
@@ -276,7 +276,7 @@ abstract class WidgetWrapper extends UiWidget implements e {
             field_y = (String) null;
           }
           if (null != this.child) {
-            this.child.a(this.x + param0, param1, (byte) -101, param3, param4, param5 + this.y);
+            this.child.pointerReleased(this.x + param0, param1, (byte) -101, param3, param4, param5 + this.y);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -313,7 +313,7 @@ abstract class WidgetWrapper extends UiWidget implements e {
         }
     }
 
-    private final boolean a(int param0, UiWidget param1) {
+    private final boolean focusPreviousChild(int param0, UiWidget param1) {
         RuntimeException var3 = null;
         boolean stackIn_7_0 = false;
         RuntimeException stackIn_10_0 = null;
@@ -322,7 +322,7 @@ abstract class WidgetWrapper extends UiWidget implements e {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 != 0) {
-            this.d((byte) 124);
+            this.getFocusedChild((byte) 124);
           }
           stackIn_7_0 = (this.child != null) && (!this.child.isFocused(1023)) && (this.child.acquireFocus(param1, param0 - 97));
           return stackIn_7_0;
@@ -340,7 +340,7 @@ abstract class WidgetWrapper extends UiWidget implements e {
         }
     }
 
-    private final boolean b(int param0, UiWidget param1) {
+    private final boolean focusNextChild(int param0, UiWidget param1) {
         RuntimeException var3 = null;
         UiWidget var4 = null;
         boolean stackIn_7_0 = false;
@@ -351,7 +351,7 @@ abstract class WidgetWrapper extends UiWidget implements e {
         try {
           if (param0 != -14391) {
             var4 = (UiWidget) null;
-            this.a(124, 28, -53, 58, -115, (UiWidget) null, -70);
+            this.handleWheel(124, 28, -53, 58, -115, (UiWidget) null, -70);
           }
           stackIn_7_0 = (this.child != null) && (!this.child.isFocused(param0 ^ -15306)) && (this.child.acquireFocus(param1, -83));
           return stackIn_7_0;
@@ -369,7 +369,7 @@ abstract class WidgetWrapper extends UiWidget implements e {
         }
     }
 
-    UiWidget d(byte param0) {
+    UiWidget getFocusedChild(byte param0) {
         UiWidget var2 = this.child;
         if (var2 != null &&
           var2.isFocused(1023)) {
@@ -378,7 +378,7 @@ abstract class WidgetWrapper extends UiWidget implements e {
         if (param0 > 38) {
           return null;
         }
-        this.b(93);
+        this.getMaximumRenderLayer(93);
         return null;
     }
 
@@ -391,7 +391,7 @@ abstract class WidgetWrapper extends UiWidget implements e {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 >= -78) {
-            this.b(-31);
+            this.getMaximumRenderLayer(-31);
           }
           stackIn_6_0 = (this.child != null) && (this.child.acquireFocus(param0, -113));
           return stackIn_6_0;

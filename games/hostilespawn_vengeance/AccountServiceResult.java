@@ -92,12 +92,12 @@ final class AccountServiceResult {
             ej.d((byte) 90)) {
             eh.field_c.playSample(NetworkArchiveRequest.field_A[17], 100, uh.field_i / 2);
           }
-          jn.field_F[ib.field_c].field_c = (double)(int)(Math.random() * 256.0);
-          jn.field_F[ib.field_c].field_j.copyCoordinatesFrom((byte) 46, param1.field_j);
-          jn.field_F[ib.field_c].field_l.a(param1.field_l, -28860);
-          jn.field_F[ib.field_c].field_e = 0;
-          jn.field_F[ib.field_c].field_h = 1;
-          jn.field_F[ib.field_c].field_i = 12;
+          AlphaWidgetContainer.field_F[ib.field_c].field_c = (double)(int)(Math.random() * 256.0);
+          AlphaWidgetContainer.field_F[ib.field_c].field_j.copyCoordinatesFrom((byte) 46, param1.field_j);
+          AlphaWidgetContainer.field_F[ib.field_c].field_l.a(param1.field_l, -28860);
+          AlphaWidgetContainer.field_F[ib.field_c].field_e = 0;
+          AlphaWidgetContainer.field_F[ib.field_c].field_h = 1;
+          AlphaWidgetContainer.field_F[ib.field_c].field_i = 12;
           ib.field_c = ib.field_c + 1;
           hg.a((byte) 64, param1);
           u.a(-1, param1.field_j, true, param0, param1.field_l, 31);

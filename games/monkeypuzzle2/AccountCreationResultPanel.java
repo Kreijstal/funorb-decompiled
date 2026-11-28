@@ -10,7 +10,7 @@ final class AccountCreationResultPanel extends ha implements WidgetActivationLis
     static String field_kb;
     static int field_lb;
 
-    AccountCreationResultPanel(kj param0, AccountRegistrationPanel param1) {
+    AccountCreationResultPanel(ModalDialogHost param0, AccountRegistrationPanel param1) {
         super(param0, IntrusiveDeque.field_c, c.field_j, false, false);
         try {
           this.field_jb = param1;
@@ -59,7 +59,7 @@ final class AccountCreationResultPanel extends ha implements WidgetActivationLis
               this.c((byte) 54, new ja(this));
               return;
             }
-            var5.a(0, (of) (this), pi.field_i);
+            var5.a(0, (WidgetEventListener) (this), pi.field_i);
           } else {
             if (!this.field_nb) {
               if (5 == param0.statusCode) {
@@ -69,7 +69,7 @@ final class AccountCreationResultPanel extends ha implements WidgetActivationLis
                 var5.a((byte) -81, -1, nf.field_E);
               }
             } else {
-              var5.a(0, (of) (this), pi.field_i);
+              var5.a(0, (WidgetEventListener) (this), pi.field_i);
             }
             if (3 != param0.statusCode) {
               if (param0.statusCode != 6) {
@@ -132,29 +132,29 @@ final class AccountCreationResultPanel extends ha implements WidgetActivationLis
         }
     }
 
-    final boolean k(int param0) {
+    final boolean advanceDialogAnimation(int param0) {
         if (!this.field_z) {
           if (param0 == -23913) {
-            return super.k(param0 ^ 0);
+            return super.advanceDialogAnimation(param0 ^ 0);
           }
           return true;
         }
         if (this.field_mb) {
           if (param0 == -23913) {
-            return super.k(param0 ^ 0);
+            return super.advanceDialogAnimation(param0 ^ 0);
           }
           return true;
         }
         AccountServiceResult var2 = dl.pollAccountCreationResult(param0 + 23913);
         if (var2 == null) {
           if (param0 == -23913) {
-            return super.k(param0 ^ 0);
+            return super.advanceDialogAnimation(param0 ^ 0);
           }
           return true;
         }
         this.showAccountCreationResult(var2, 9, false);
         if (param0 == -23913) {
-          return super.k(param0 ^ 0);
+          return super.advanceDialogAnimation(param0 ^ 0);
         }
         return true;
     }

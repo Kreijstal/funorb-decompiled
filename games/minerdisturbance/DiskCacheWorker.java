@@ -14,12 +14,12 @@ final class DiskCacheWorker implements Runnable {
 
     final static void a(int param0) {
         if (param0 == -6145) {
-          oj.a(4, param0 ^ -6148);
+          AlphaWidgetContainer.a(4, param0 ^ -6148);
           return;
         }
         int[] var2 = (int[]) null;
         DiskCacheWorker.a(-93, (int[]) null, 25);
-        oj.a(4, param0 ^ -6148);
+        AlphaWidgetContainer.a(4, param0 ^ -6148);
     }
 
     final void shutdown(byte param0) {

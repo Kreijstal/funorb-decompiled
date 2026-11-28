@@ -26,10 +26,10 @@ final class bd {
             bd.a((byte) 46);
           }
           cd.a(param1 ^ -99);
-          wg.field_j.k(param1 ^ 25);
+          wg.field_j.closeAllDialogs(param1 ^ 25);
           j.field_e = new LoginPanel(bh.field_b, (String) null, fk.field_a, param0, param2);
           jh.field_C = new ra(wg.field_j, j.field_e);
-          wg.field_j.b((byte) -101, jh.field_C);
+          wg.field_j.showDialog((byte) -101, jh.field_C);
         } catch (RuntimeException runtimeException) {
           throw la.a((Throwable) ((Object) runtimeException), "bd.A(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
@@ -61,10 +61,10 @@ final class bd {
             bd.a((byte) 46);
           }
           cd.a(param1 ^ -99);
-          wg.field_j.k(param1 ^ 25);
+          wg.field_j.closeAllDialogs(param1 ^ 25);
           j.field_e = new LoginPanel(bh.field_b, (String) null, fk.field_a, param0, param2);
           jh.field_C = new ra(wg.field_j, j.field_e);
-          wg.field_j.b((byte) -101, jh.field_C);
+          wg.field_j.showDialog((byte) -101, jh.field_C);
         } catch (RuntimeException runtimeException) {
           throw la.a((Throwable) ((Object) runtimeException), "bd.A(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }

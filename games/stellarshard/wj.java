@@ -98,7 +98,7 @@ final class wj extends fb {
               stackIn_5_0 = -1;
               return stackIn_5_0;
             }
-            if (GzipDecompressor.field_d == oa.field_C) {
+            if (GzipDecompressor.field_d == AlphaWidgetContainer.field_C) {
               if (!param5) {
                 le.field_n = h.a(param0, (byte) -117, false, param3);
               } else {
@@ -722,7 +722,7 @@ final class wj extends fb {
             MouseWheelInput.field_a = qd.a(nh.field_g, "button", "benefits", (byte) 78);
             dd.field_a = qd.a(nh.field_g, "signup_text", "benefits", (byte) 57);
             IsaacRandom.field_e = qd.a(nh.field_g, "menu_text", "benefits", (byte) 42);
-            ui.field_F = qd.a(nh.field_g, "button_frame", "benefits", (byte) 59);
+            ModalDialog.field_F = qd.a(nh.field_g, "button_frame", "benefits", (byte) 59);
             MatchingFieldValidator.field_l = qd.a(nh.field_g, "arrow", "benefits", (byte) 118);
             o.field_h = (BitmapFont) ((Object) EditableTextField.a("benefits", "large_font", nh.field_g, -109, vf.field_E));
             fj.field_f = (BitmapFont) ((Object) EditableTextField.a("benefits", "small_font", nh.field_g, -116, vf.field_E));
@@ -749,9 +749,9 @@ final class wj extends fb {
             ValidatedTextField.field_T.bindAsRenderTarget();
             var12.draw(-ValidatedTextField.field_T.field_t + 18, 241 - ValidatedTextField.field_T.field_s);
             for (var7 = 0; pk.field_d.length > var7; var7++) {
-              dl.field_C[var7].bindAsRenderTarget();
-              fj.field_f.drawParagraph(pk.field_d[var7], 3, 3, -6 + dl.field_C[var7].field_v, dl.field_C[var7].field_y - 6, ArchiveRequest.field_x, -1, 1, 1, fj.field_f.field_N + fj.field_f.field_r);
-              IntrusiveDeque.a(dl.field_C[var7], 1, 0, dl.field_C[var7].field_y, 3, 0, dl.field_C[var7].field_v, true);
+              DraggableWidgetContainer.field_C[var7].bindAsRenderTarget();
+              fj.field_f.drawParagraph(pk.field_d[var7], 3, 3, -6 + DraggableWidgetContainer.field_C[var7].field_v, DraggableWidgetContainer.field_C[var7].field_y - 6, ArchiveRequest.field_x, -1, 1, 1, fj.field_f.field_N + fj.field_f.field_r);
+              IntrusiveDeque.a(DraggableWidgetContainer.field_C[var7], 1, 0, DraggableWidgetContainer.field_C[var7].field_y, 3, 0, DraggableWidgetContainer.field_C[var7].field_v, true);
             }
             pk.field_d = null;
             q.field_b = dd.field_a.copy();
@@ -759,11 +759,11 @@ final class wj extends fb {
             ob.a(117, 0, 64, SoftwareRasterizer.field_i, SoftwareRasterizer.field_b * 2 / 3, 0);
             SoftwareRasterizer.setRasterBuffer(var27, var2, var3);
             SoftwareRasterizer.restoreClip(pk.field_i);
-            wc.field_y = 231 + (MouseWheelInput.field_a.field_v - ui.field_F.field_v) / 2;
-            cm.field_a = (MouseWheelInput.field_a.field_v - ui.field_F.field_v) / 2 + 434;
-            af.field_l = (MouseWheelInput.field_a.field_y - ui.field_F.field_y) / 2 + 390;
+            wc.field_y = 231 + (MouseWheelInput.field_a.field_v - ModalDialog.field_F.field_v) / 2;
+            cm.field_a = (MouseWheelInput.field_a.field_v - ModalDialog.field_F.field_v) / 2 + 434;
+            af.field_l = (MouseWheelInput.field_a.field_y - ModalDialog.field_F.field_y) / 2 + 390;
             nh.field_g = null;
-            RasterBuffer.field_a = 390 + (-ui.field_F.field_y + MouseWheelInput.field_a.field_y) / 2;
+            RasterBuffer.field_a = 390 + (-ModalDialog.field_F.field_y + MouseWheelInput.field_a.field_y) / 2;
           }
           if (ve.field_a == null) {
             return;
@@ -885,7 +885,7 @@ final class wj extends fb {
             jd.field_a.draw(0, 0);
           }
           if (null != MouseWheelInput.field_a &&
-            null != ui.field_F) {
+            null != ModalDialog.field_F) {
             MouseWheelInput.field_a.draw(231, 390);
             var2_ref_pb = dd.field_a;
             if (cd.field_L.field_f == 0) {
@@ -915,7 +915,7 @@ final class wj extends fb {
             tk.a(stackIn_54_0, wc.field_y, RasterBuffer.field_a, -127);
           }
           if (null != MouseWheelInput.field_a &&
-            null != ui.field_F) {
+            null != ModalDialog.field_F) {
             MouseWheelInput.field_a.draw(434, 390);
             IsaacRandom.field_e.draw(0, 0);
             if (1 == cd.field_L.field_f) {
@@ -933,7 +933,7 @@ final class wj extends fb {
               var3Lifetime5 = 40 + (ih.b(gj.field_v << 4, 64763) * 40 >> 16);
               if (var3Lifetime5 <= 0) {
                 kc.a(36);
-                dl.field_C[nk.field_c].draw(269, 340);
+                DraggableWidgetContainer.field_C[nk.field_c].draw(269, 340);
                 return;
               }
               if (-MatchingFieldValidator.field_l.field_v + 269 < ni.field_e &&
@@ -954,7 +954,7 @@ final class wj extends fb {
             }
           }
           kc.a(36);
-          dl.field_C[nk.field_c].draw(269, 340);
+          DraggableWidgetContainer.field_C[nk.field_c].draw(269, 340);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

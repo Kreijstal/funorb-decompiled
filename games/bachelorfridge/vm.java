@@ -165,7 +165,7 @@ abstract class vm {
             param3.field_d != null) {
             ej.a(-11163);
           }
-          lq.field_y = 0;
+          ArrayWidgetContainer.field_y = 0;
           var8 = 0;
           boolean decompiledNaturalLoopExit0 = false;
           while (!(decompiledNaturalLoopExit0 = (!(param3.field_K > var8)))) {
@@ -221,7 +221,7 @@ abstract class vm {
                           dupTemp$0 = param3.field_d[var8];
                           fg.field_a[dupTemp$0] = fg.field_a[dupTemp$0] + 1;
                         }
-                        lq.field_y = lq.field_y + 1;
+                        ArrayWidgetContainer.field_y = ArrayWidgetContainer.field_y + 1;
                         break;
                       }
                     }

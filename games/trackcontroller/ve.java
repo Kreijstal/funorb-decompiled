@@ -179,7 +179,7 @@ final class ve extends ug {
                         if (param3.field_a > 0 &&
                           null != param3.field_x) {
                           dupTemp$0 = param3.field_x[var9];
-                          ok.field_F[dupTemp$0] = ok.field_F[dupTemp$0] + 1;
+                          SingleChildWidgetContainer.field_F[dupTemp$0] = SingleChildWidgetContainer.field_F[dupTemp$0] + 1;
                         }
                         ug.field_Q = ug.field_Q + 1;
                         break;
@@ -200,9 +200,9 @@ final class ve extends ug {
             param3.field_x != null) {
             var9Lifetime1 = 0;
             var10Lifetime1 = 0;
-            while (!(var10Lifetime1 >= ok.field_F.length)) {
-              var11Lifetime1 = ok.field_F[var10Lifetime1];
-              ok.field_F[var10Lifetime1] = var9Lifetime1;
+            while (!(var10Lifetime1 >= SingleChildWidgetContainer.field_F.length)) {
+              var11Lifetime1 = SingleChildWidgetContainer.field_F[var10Lifetime1];
+              SingleChildWidgetContainer.field_F[var10Lifetime1] = var9Lifetime1;
               var9Lifetime1 = var9Lifetime1 + var11Lifetime1;
               var10Lifetime1++;
               if (var20 != 0) {

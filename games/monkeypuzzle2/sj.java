@@ -224,7 +224,7 @@ final class sj {
           ie.field_b = lb.a(false, "", param3, "achievements_large");
           NodeHashTableIterator.field_e = lb.a(false, "", param3, "menu_frame");
           PasswordValidator.field_q = lb.a(false, "", param3, "menu_monkey");
-          kj.field_F = ma.a(param3, "menu_vine", 16711680, "");
+          ModalDialogHost.field_F = ma.a(param3, "menu_vine", 16711680, "");
           wg.field_g = ma.a(param3, "title_logo", 16711680, "");
           UiWidget.field_f = lb.a(false, "", param3, "title_monkey");
           w.field_b = lb.a(false, "", param3, "title_flashes");

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class tb extends ui {
+abstract class tb extends ModalDialog {
     private int field_I;
     private int field_J;
     private int field_N;
@@ -153,7 +153,7 @@ abstract class tb extends ui {
 
     final void a(int param0, int param1, byte param2, int param3) {
         if (0 >= param0) {
-          this.a(param1, (byte) -91, param3);
+          this.setCenteredSize(param1, (byte) -91, param3);
           return;
         }
         this.field_O = 0;
@@ -165,18 +165,18 @@ abstract class tb extends ui {
         if (param2 == -97) {
           return;
         }
-        this.d(true);
+        this.advanceDialogAnimation(true);
     }
 
-    boolean h(int param0) {
+    boolean snapDialogAnimation(int param0) {
         if (param0 <= 98) {
           return false;
         }
         this.i(3642);
-        return super.h(105);
+        return super.snapDialogAnimation(105);
     }
 
-    boolean d(boolean param0) {
+    boolean advanceDialogAnimation(boolean param0) {
         int var2 = 0;
         int var3 = 0;
         int fieldTemp$0 = 0;
@@ -196,16 +196,16 @@ abstract class tb extends ui {
             var2 = this.field_I + (this.field_N - this.field_I) * var4 / var5;
             var3 = this.field_M + (this.field_J - this.field_M) * var4 / var5;
           }
-          this.a(var2, (byte) -13, var3);
+          this.setCenteredSize(var2, (byte) -13, var3);
         }
         if (param0) {
-          return super.d(true);
+          return super.advanceDialogAnimation(true);
         }
         this.field_O = -55;
-        return super.d(true);
+        return super.advanceDialogAnimation(true);
     }
 
-    tb(ei param0, int param1, int param2) {
+    tb(ModalDialogHost param0, int param1, int param2) {
         super(param0, param1, param2);
         this.field_O = 0;
         this.field_L = 0;
@@ -216,13 +216,13 @@ abstract class tb extends ui {
           return;
         }
         if (param0 == 3642) {
-          this.a(this.field_N, (byte) -27, this.field_J);
+          this.setCenteredSize(this.field_N, (byte) -27, this.field_J);
           this.field_L = 0;
           this.j(-21);
           return;
         }
         this.field_J = 125;
-        this.a(this.field_N, (byte) -27, this.field_J);
+        this.setCenteredSize(this.field_N, (byte) -27, this.field_J);
         this.field_L = 0;
         this.j(-21);
     }

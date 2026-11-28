@@ -7,7 +7,7 @@ class aa extends DefaultTextWidgetRenderer {
     static boolean field_q;
     static int field_t;
 
-    public final void a(int param0, int param1, boolean param2, UiComponent param3, int param4) {
+    public final void paintWidget(int param0, int param1, boolean param2, UiComponent param3, int param4) {
         try {
           if (param0 >= -36) {
             field_s = (String) null;
@@ -15,7 +15,7 @@ class aa extends DefaultTextWidgetRenderer {
           if (param2) {
             pj.a((byte) 127, param3.field_u, param3.field_z + param4, param3.field_y + param1, param3.field_j);
           }
-          super.a(-59, param1, param2, param3, param4);
+          super.paintWidget(-59, param1, param2, param3, param4);
         } catch (RuntimeException runtimeException) {
           throw pf.wrapClientException((Throwable) ((Object) runtimeException), "aa.B(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ')');
         }

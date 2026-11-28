@@ -109,10 +109,10 @@ final class oa {
         var3 = var9.readUnsignedByte(-98);
         stackIn_3_0 = (0 != (128 & var3));
         o.field_m = stackIn_3_0;
-        uk.field_L = 127 & var3;
+        DraggableWidgetContainer.field_L = 127 & var3;
         ih.field_K = var9.readUnsignedByte(-85);
         ik.field_b = var9.readLong(-123);
-        if (uk.field_L != 2) {
+        if (DraggableWidgetContainer.field_L != 2) {
           hc.field_O = 0;
           hf.field_e = 0;
         } else {
@@ -131,11 +131,11 @@ final class oa {
         } else {
           SpriteLoader.field_b = var9.readString(false);
         }
-        if (uk.field_L == 1) {
+        if (DraggableWidgetContainer.field_L == 1) {
           var9.readUnsignedShort(false);
           var9.readString(false);
         } else {
-          if (uk.field_L == 4) {
+          if (DraggableWidgetContainer.field_L == 4) {
             var9.readUnsignedShort(false);
             var9.readString(false);
           }

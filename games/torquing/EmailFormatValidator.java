@@ -21,7 +21,7 @@ final class EmailFormatValidator extends TextFieldValidator {
         int var6Lifetime3;
         var7 = Torquing.field_u;
         var2 = 0;
-        var3 = jh.field_z;
+        var3 = SingleChildWidgetContainer.field_z;
         if (var3 < 5) {
           var2 = 8192 * var3 * var3 / 1100;
           var4 = 1;

@@ -111,7 +111,7 @@ class ph extends qj implements WidgetActivationListener {
         }
     }
 
-    final boolean a(UiWidget param0, char param1, byte param2, int param3) {
+    final boolean handleKey(UiWidget param0, char param1, byte param2, int param3) {
         RuntimeException var5 = null;
         boolean stackIn_6_0 = false;
         RuntimeException stackIn_9_0 = null;
@@ -123,7 +123,7 @@ class ph extends qj implements WidgetActivationListener {
             this.field_jb = false;
           }
           if (param3 != 13) {
-            stackIn_6_0 = super.a(param0, param1, (byte) -90, param3);
+            stackIn_6_0 = super.handleKey(param0, param1, (byte) -90, param3);
             return stackIn_6_0;
           }
           this.n(108);
@@ -176,18 +176,18 @@ class ph extends qj implements WidgetActivationListener {
               }
               ((kj) (Object) stackIn_14_0).a(stackIn_15_1, 13759, -1);
             } else {
-              var5.a((byte) 88, (qg) (this), ma.field_g);
+              var5.a((byte) 88, (WidgetEventListener) (this), ma.field_g);
             }
           }
           if (3 == param1) {
-            var5.a(kf.field_u, 13759, 7);
+            var5.a(SingleChildWidgetContainer.field_u, 13759, 7);
           } else {
             if (param1 == 4) {
               var5.a(s.field_d, 13759, 8);
             } else {
               if (param1 != 6) {
                 if (param1 == 9) {
-                  var5.a((byte) 123, (qg) (this), db.field_B);
+                  var5.a((byte) 123, (WidgetEventListener) (this), db.field_B);
                 }
               } else {
                 var5.a(InteractiveWidget.field_w, 13759, 9);
@@ -210,7 +210,7 @@ class ph extends qj implements WidgetActivationListener {
         }
     }
 
-    ph(tc param0, BitmapFont param1, String param2, boolean param3, boolean param4) {
+    ph(ModalDialogHost param0, BitmapFont param1, String param2, boolean param3, boolean param4) {
         super(param0, new kj((ph) null, param1, param2), 77, 10, 10);
         try {
           this.field_hb = false;
@@ -220,7 +220,7 @@ class ph extends qj implements WidgetActivationListener {
           this.field_fb = param1;
           this.field_kb = new fa(13, 50, 274, 30, 15, 2113632, 4210752);
           this.field_kb.field_D = true;
-          this.a(true, this.field_kb);
+          this.addChild(true, this.field_kb);
         } catch (RuntimeException runtimeException) {
           throw sd.wrapClientException((Throwable) ((Object) runtimeException), "ph.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ')');
         }

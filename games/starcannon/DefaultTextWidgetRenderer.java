@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class DefaultTextWidgetRenderer implements de, TextWidgetRenderer {
+class DefaultTextWidgetRenderer implements WidgetRenderer, TextWidgetRenderer {
     BitmapFont field_f;
     int field_e;
     int field_c;
@@ -47,7 +47,7 @@ class DefaultTextWidgetRenderer implements de, TextWidgetRenderer {
           if (param0 != -3) {
             field_p = true;
           }
-          if (param1.d(true)) {
+          if (param1.isFocused(true)) {
             var13 = this.getTextLayout(param1, (byte) -41);
             var14 = var13;
             var7 = var14.getLineIndexForTextOffset(param4, 0);
@@ -330,7 +330,7 @@ class DefaultTextWidgetRenderer implements de, TextWidgetRenderer {
         }
     }
 
-    public void a(int param0, boolean param1, int param2, int param3, UiWidget param4) {
+    public void paintWidget(int param0, boolean param1, int param2, int param3, UiWidget param4) {
         if (null == this.field_f) {
           return;
         }
@@ -612,7 +612,7 @@ class DefaultTextWidgetRenderer implements de, TextWidgetRenderer {
           if (param4 <= 54) {
             return;
           }
-          if (param3.d(true)) {
+          if (param3.isFocused(true)) {
             var17 = this.getTextLayout(param3, (byte) -104);
             var18 = var17;
             if (param5 < param2) {

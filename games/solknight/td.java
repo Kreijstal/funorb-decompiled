@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class td implements j {
+final class td implements WidgetRenderer {
     static String field_i;
     static int field_l;
     private int field_m;
@@ -45,7 +45,7 @@ final class td implements j {
         int var11Lifetime1;
         var12 = SolKnight.field_L ? 1 : 0;
         try {
-          var14 = te.field_N;
+          var14 = AlphaWidgetContainer.field_N;
           var16 = var14;
           var2 = var16.readUnsignedByte(255);
           var3 = (dj) (sa.field_n.beginBackward((byte) 51));
@@ -135,7 +135,7 @@ final class td implements j {
         return param0 | param1;
     }
 
-    public final void a(byte param0, int param1, boolean param2, int param3, UiWidget param4) {
+    public final void paintWidget(byte param0, int param1, boolean param2, int param3, UiWidget param4) {
         UiWidget stackIn_3_0 = null;
         RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;

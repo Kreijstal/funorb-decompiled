@@ -5,12 +5,12 @@ class mc extends DefaultTextWidgetRenderer {
     static r field_x;
     static RgbSprite[] field_w;
 
-    public final void a(byte param0, lm param1, int param2, int param3, boolean param4) {
+    public final void paintWidget(byte param0, UiWidget param1, int param2, int param3, boolean param4) {
         try {
           if (param4) {
             DualLinkNode.a(2, param2 + param1.field_q, param1.field_x, param1.field_s, param3 + param1.field_v);
           }
-          super.a(param0, param1, param2, param3, param4);
+          super.paintWidget(param0, param1, param2, param3, param4);
         } catch (RuntimeException runtimeException) {
           throw AccountServiceResult.wrapClientException((Throwable) ((Object) runtimeException), "mc.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }

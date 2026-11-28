@@ -12,14 +12,14 @@ final class oi extends WidgetContainer implements WidgetActivationListener {
     static String[] field_M;
     private si field_G;
 
-    final void a(int param0, int param1, int param2, int param3) {
-        super.a(param0, -126, param2, param3);
+    final void drawWidget(int param0, int param1, int param2, int param3) {
+        super.drawWidget(param0, -126, param2, param3);
         if (param1 < -106) {
           this.field_I.drawParagraph(this.field_N, param0 - (-this.x - 14), 10 + (param3 + this.y), -28 + this.width, this.height, 16777215, -1, 0, 0, this.field_I.field_s);
           return;
         }
         String var6 = (String) null;
-        this.a((byte) 29, (sc) null, (String) null);
+        this.a((byte) 29, (WidgetEventListener) null, (String) null);
         this.field_I.drawParagraph(this.field_N, param0 - (-this.x - 14), 10 + (param3 + this.y), -28 + this.width, this.height, 16777215, -1, 0, 0, this.field_I.field_s);
     }
 
@@ -53,7 +53,7 @@ final class oi extends WidgetContainer implements WidgetActivationListener {
           this.field_G = param0;
           this.field_I = param1;
           var4_int = null == this.field_N ? 0 : this.field_I.textHeight(this.field_N, 260, this.field_I.field_s);
-          this.a(0, (byte) 126, 288, 0, var4_int + 22);
+          this.setBounds(0, (byte) 126, 288, 0, var4_int + 22);
         } catch (RuntimeException runtimeException) {
           throw qk.wrapException((Throwable) ((Object) runtimeException), "oi.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
@@ -95,14 +95,14 @@ final class oi extends WidgetContainer implements WidgetActivationListener {
           int var5 = 53 / ((param2 - 0) / 41);
           var4_int = this.field_F;
           this.b(1 + var4_int, 20682);
-          this.field_K[var4_int] = this.a((byte) 23, (sc) (this), param1);
+          this.field_K[var4_int] = this.a((byte) 23, (WidgetEventListener) (this), param1);
           this.field_L[var4_int] = param0;
         } catch (RuntimeException runtimeException) {
           throw qk.wrapException((Throwable) ((Object) runtimeException), "oi.G(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
-    final InteractiveWidget a(byte param0, sc param1, String param2) {
+    final InteractiveWidget a(byte param0, WidgetEventListener param1, String param2) {
         InteractiveWidget var4 = null;
         RuntimeException var4_ref = null;
         int var5 = 0;
@@ -122,9 +122,9 @@ final class oi extends WidgetContainer implements WidgetActivationListener {
           var4 = new InteractiveWidget(param2, param1);
           var4.listener = (WidgetActionListener) ((Object) new ic());
           var5 = -2 + this.height;
-          this.a(0, (byte) 107, this.width, 0, 34 + this.height);
-          var4.a(var5, (byte) 85, this.width - 14, 7, 30);
-          this.b((byte) 95, var4);
+          this.setBounds(0, (byte) 107, this.width, 0, 34 + this.height);
+          var4.setBounds(var5, (byte) 85, this.width - 14, 7, 30);
+          this.addChild((byte) 95, var4);
           stackIn_3_0 = var4;
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -150,10 +150,10 @@ final class oi extends WidgetContainer implements WidgetActivationListener {
     final static void a(int param0, boolean param1) {
         if (param0 != -22417) {
           oi.clearStaticReferences((byte) 108);
-          jl.field_I.a((byte) -43, 0, 0);
+          AlphaWidgetContainer.field_I.drawAllLayers((byte) -43, 0, 0);
           return;
         }
-        jl.field_I.a((byte) -43, 0, 0);
+        AlphaWidgetContainer.field_I.drawAllLayers((byte) -43, 0, 0);
     }
 
     static {

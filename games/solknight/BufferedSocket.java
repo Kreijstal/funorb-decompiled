@@ -262,10 +262,10 @@ final class BufferedSocket implements Runnable {
         } else {
           field_b = (BinaryBitmapFont) null;
           if (param1 < sa.field_m) {
-            if (ke.field_I > param1) {
+            if (LabeledWidgetContainer.field_I > param1) {
               return -1;
             }
-            if (ke.field_I + GameApplet.field_j.field_p <= param1) {
+            if (LabeledWidgetContainer.field_I + GameApplet.field_j.field_p <= param1) {
               return -1;
             }
             if (lk.field_c > param0) {
@@ -277,10 +277,10 @@ final class BufferedSocket implements Runnable {
             return 1;
           }
           if (sa.field_m + GameApplet.field_j.field_p <= param1) {
-            if (ke.field_I > param1) {
+            if (LabeledWidgetContainer.field_I > param1) {
               return -1;
             }
-            if (ke.field_I + GameApplet.field_j.field_p <= param1) {
+            if (LabeledWidgetContainer.field_I + GameApplet.field_j.field_p <= param1) {
               return -1;
             }
             if (lk.field_c > param0) {
@@ -296,10 +296,10 @@ final class BufferedSocket implements Runnable {
             return 0;
           }
         }
-        if (ke.field_I > param1) {
+        if (LabeledWidgetContainer.field_I > param1) {
           return -1;
         }
-        if (ke.field_I + GameApplet.field_j.field_p <= param1) {
+        if (LabeledWidgetContainer.field_I + GameApplet.field_j.field_p <= param1) {
           return -1;
         }
         if (lk.field_c > param0) {
@@ -386,7 +386,7 @@ final class BufferedSocket implements Runnable {
           }
           if (param1.charAt(0) == 34) {
             if (param1.charAt(var2_int - 1) != 34) {
-              stackIn_11_0 = si.field_C;
+              stackIn_11_0 = SingleChildWidgetContainer.field_C;
               return stackIn_11_0;
             }
             var3 = 0;
@@ -395,7 +395,7 @@ final class BufferedSocket implements Runnable {
               if (var5 != 92) {
                 if (var5 == 34 &&
                   var3 == 0) {
-                  stackIn_24_0 = si.field_C;
+                  stackIn_24_0 = SingleChildWidgetContainer.field_C;
                   return stackIn_24_0;
                 }
                 var3 = 0;
@@ -418,13 +418,13 @@ final class BufferedSocket implements Runnable {
                 decompiledFrameRemainder0 = false;
               }
               else {
-                stackIn_37_0 = si.field_C;
+                stackIn_37_0 = SingleChildWidgetContainer.field_C;
                 return stackIn_37_0;
               }
             }
             if (decompiledFrameRemainder0) {
               if (ab.field_q.indexOf(var5Lifetime1) == -1) {
-                stackIn_42_0 = si.field_C;
+                stackIn_42_0 = SingleChildWidgetContainer.field_C;
                 return stackIn_42_0;
               }
               var3Lifetime1 = 0;
@@ -465,8 +465,8 @@ final class BufferedSocket implements Runnable {
             field_b = (BinaryBitmapFont) null;
           }
           while (DelegatingCanvas.a((byte) -56)) {
-            bc.field_K.a(true);
-            if (bc.field_K.d((byte) -38)) {
+            DraggableWidgetContainer.field_K.a(true);
+            if (DraggableWidgetContainer.field_K.d((byte) -38)) {
               var1_int = 1;
             }
             if (13 != MatchingFieldValidator.field_n) {
@@ -474,14 +474,14 @@ final class BufferedSocket implements Runnable {
             }
             var2 = 1;
           }
-          bc.field_K.a(-121, uc.a(PacketBuffer.field_j, 1691746689, field_m), uc.a(SpriteState.field_o, 1691746689, s.field_gb));
-          if (bc.field_K.d((byte) -36)) {
+          DraggableWidgetContainer.field_K.a(-121, uc.a(PacketBuffer.field_j, 1691746689, field_m), uc.a(SpriteState.field_o, 1691746689, s.field_gb));
+          if (DraggableWidgetContainer.field_K.d((byte) -36)) {
             var1_int = 1;
           }
           var3 = 0;
           if (var1_int != 0 &&
-            bc.field_K.field_f >= 0) {
-            var3 = fl.field_b[bc.field_K.field_f];
+            DraggableWidgetContainer.field_K.field_f >= 0) {
+            var3 = fl.field_b[DraggableWidgetContainer.field_K.field_f];
             if (var3 == 2) {
               kh.a(-78);
             } else if (5 == var3) {
@@ -489,12 +489,12 @@ final class BufferedSocket implements Runnable {
             }
           } else {
             if (var2 != 0 &&
-              te.field_M != 2) {
+              AlphaWidgetContainer.field_M != 2) {
               kh.a(-89);
             }
           }
           if (0 == var3 &&
-            te.field_M == 2) {
+            AlphaWidgetContainer.field_M == 2) {
             var4 = je.correctedCurrentTimeMillis(1) - fg.field_f;
             var6 = (int)((-var4 + 10999L) / 1000L);
             if (0 >= var6) {
@@ -531,7 +531,7 @@ final class BufferedSocket implements Runnable {
           }
           if (null != this.field_d) {
             while (0 == this.field_d.status) {
-              i.sleepMillis((byte) 56, 1L);
+              ModalDialogHost.sleepMillis((byte) 56, 1L);
             }
             if (this.field_d.status == 1) {
               try {

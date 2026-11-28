@@ -83,7 +83,7 @@ final class aj extends IntrusiveNode {
         int var3 = 0;
         var3 = TrackController.field_F ? 1 : 0;
         try {
-          vl.field_H = vl.field_H + 1;
+          ModalDialogHost.field_H = ModalDialogHost.field_H + 1;
           if (param0 >= -117) {
             field_m = -86;
           }
@@ -100,8 +100,8 @@ final class aj extends IntrusiveNode {
           }
           if (decompiledFrameRemainder0) {
             if (!cd.field_j) {
-              if (vl.field_H >= ib.field_d) {
-                stackIn_19_0 = (kj.field_r + ib.field_d > vl.field_H) ? 1 : 0;
+              if (ModalDialogHost.field_H >= ib.field_d) {
+                stackIn_19_0 = (kj.field_r + ib.field_d > ModalDialogHost.field_H) ? 1 : 0;
               } else {
                 stackIn_19_0 = 0;
               }
@@ -110,15 +110,15 @@ final class aj extends IntrusiveNode {
             }
             var2_int = stackIn_19_0;
             if (param1 == null) {
-              vl.field_H = 0;
+              ModalDialogHost.field_H = 0;
             } else {
               if (cd.field_j) {
-                vl.field_H = ib.field_d;
+                ModalDialogHost.field_H = ib.field_d;
               } else {
                 if (var2_int == 0) {
-                  vl.field_H = 0;
+                  ModalDialogHost.field_H = 0;
                 } else {
-                  vl.field_H = ib.field_d;
+                  ModalDialogHost.field_H = ib.field_d;
                 }
               }
             }
@@ -134,17 +134,17 @@ final class aj extends IntrusiveNode {
           }
           ClientException.field_f = param1;
           if (!cd.field_j &&
-            ib.field_d > vl.field_H &&
+            ib.field_d > ModalDialogHost.field_H &&
             GameScreen.mouseMoved) {
             r.field_j = j.field_c;
-            vl.field_H = 0;
+            ModalDialogHost.field_H = 0;
             field_m = nk.field_l;
           }
           nk.field_l = -1;
           j.field_c = -1;
           if (cd.field_j &&
-            vl.field_H == ib.field_f) {
-            vl.field_H = 0;
+            ModalDialogHost.field_H == ib.field_f) {
+            ModalDialogHost.field_H = 0;
             cd.field_j = false;
             return;
           }

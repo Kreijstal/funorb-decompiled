@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class MixedSupport124 {
-    static UiComponentPart016 uiComponentPart016State0003;
+    static ModalDialogHost uiComponentPart016State0003;
     static RgbSprite rgbSpriteState0059;
     static int integerState0789;
     static String stringState0542;

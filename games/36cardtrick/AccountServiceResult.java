@@ -97,7 +97,7 @@ final class AccountServiceResult {
             }
             if (var3_int != 0) {
               if (TextFieldValidator.field_f) {
-                param2 = re.a(lk.field_p, new String[]{param2}, (byte) -50);
+                param2 = re.a(UiWidget.field_p, new String[]{param2}, (byte) -50);
               }
               if (ij.field_g) {
                 param2 = ph.field_a;

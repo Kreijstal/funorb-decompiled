@@ -155,7 +155,7 @@ final class hl {
             hl.a((byte) 99);
           }
           while (var2_int < PcmOutputWorker.field_c) {
-            hi.field_G[param1 + var2_int] = var2_int;
+            AlphaWidgetContainer.field_G[param1 + var2_int] = var2_int;
             var2_int++;
           }
           wc.a(false, true, v.field_Z, param1, pi.field_e, param1 + param1, param1 + PcmOutputWorker.field_c);
@@ -196,7 +196,7 @@ final class hl {
           } else {
             if (param1 >= 100 &&
               param1 <= 105) {
-              GameScreen.field_h = wk.createAccountSuggestionsResult(param2, param0 - 1);
+              GameScreen.field_h = DropTargetWidgetContainer.createAccountSuggestionsResult(param2, param0 - 1);
               return;
             }
             GameScreen.field_h = mg.createAccountErrorResult((byte) 81, param3, param1);

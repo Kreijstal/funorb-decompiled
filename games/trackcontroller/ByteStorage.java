@@ -58,7 +58,7 @@ abstract class ByteStorage {
     abstract byte[] getBytes(byte param0);
 
     final static int a(int param0, int param1) {
-        param1 = fj.b(param0 ^ -48, param1);
+        param1 = DraggableWidgetContainer.b(param0 ^ -48, param1);
         if (param1 == 32) {
           return 38;
         }

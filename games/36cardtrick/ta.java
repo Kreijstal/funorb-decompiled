@@ -8,11 +8,11 @@ abstract class ta extends jc {
     private int field_gb;
     private int field_ab;
     private int field_cb;
-    private n field_W;
+    private AlphaWidgetContainer field_W;
     private int field_bb;
     static String field_fb;
     static PcmStreamMixer field_hb;
-    private lk field_db;
+    private UiWidget field_db;
     static double field_Z;
     static String[] field_ib;
 
@@ -52,7 +52,7 @@ abstract class ta extends jc {
         }
     }
 
-    boolean a(boolean param0) {
+    boolean advanceDialogAnimation(boolean param0) {
         int fieldTemp$6 = 0;
         int fieldTemp$7 = 0;
         int var3;
@@ -85,10 +85,10 @@ abstract class ta extends jc {
             }
           }
         }
-        return super.a(true);
+        return super.advanceDialogAnimation(true);
     }
 
-    private final void c(int param0, lk param1) {
+    private final void c(int param0, UiWidget param1) {
         if (null != this.field_W) {
           this.field_W.unlink(90);
         }
@@ -97,47 +97,47 @@ abstract class ta extends jc {
         }
         try {
           if (param1 == null) {
-            this.field_W = new n();
+            this.field_W = new AlphaWidgetContainer();
           } else {
-            param1.a(param1.field_q, this.field_cb + 6, param1.field_h, 6, true);
-            this.field_W = new n(param1);
+            param1.setBounds(param1.field_q, this.field_cb + 6, param1.field_h, 6, true);
+            this.field_W = new AlphaWidgetContainer(param1);
           }
-          this.b(this.field_W, (byte) 118);
+          this.addChild(this.field_W, (byte) 118);
           this.field_db = null;
         } catch (RuntimeException runtimeException) {
           throw ma.wrapException((Throwable) ((Object) runtimeException), "ta.H(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
-    final boolean o(int param0) {
+    final boolean snapDialogAnimation(int param0) {
         this.q(0);
         if (param0 != 928516712) {
           return true;
         }
-        return super.o(928516712);
+        return super.snapDialogAnimation(928516712);
     }
 
-    boolean a(char param0, byte param1, int param2, lk param3) {
+    boolean handleKey(char param0, byte param1, int param2, UiWidget param3) {
         RuntimeException var5 = null;
         RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;
         String stackIn_17_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (super.a(param0, (byte) -114, param2, param3)) {
+          if (super.handleKey(param0, (byte) -114, param2, param3)) {
             return true;
           }
           if (param1 > -99) {
-            this.field_W = (n) null;
+            this.field_W = (AlphaWidgetContainer) null;
           }
           if (null != this.field_W) {
             if (param2 == 98) {
-              this.field_W.a(123, param3);
+              this.field_W.takeFocus(123, param3);
             }
             if (99 != param2) {
               return false;
             }
-            this.field_W.a(117, param3);
+            this.field_W.takeFocus(117, param3);
           }
           return false;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -184,7 +184,7 @@ abstract class ta extends jc {
         field_eb = null;
     }
 
-    ta(j param0, lk param1, int param2, int param3, int param4) {
+    ta(ModalDialogHost param0, UiWidget param1, int param2, int param3, int param4) {
         super(param0, param1.field_h + 12, param1.field_q + (12 + param2));
         try {
           this.field_X = param3;
@@ -200,7 +200,7 @@ abstract class ta extends jc {
     final void q(int param0) {
         if (null != this.field_Y) {
           if (jk.field_b != this.field_Y) {
-            this.a(this.field_cb + (12 + this.field_db.field_q), this.field_db.field_h + 12, ~param0);
+            this.setCenteredSize(this.field_cb + (12 + this.field_db.field_q), this.field_db.field_h + 12, ~param0);
             this.c(0, this.field_db);
           }
           this.field_Y = null;
@@ -209,7 +209,7 @@ abstract class ta extends jc {
         super.q(param0);
     }
 
-    void c(lk param0, byte param1) {
+    void c(UiWidget param0, byte param1) {
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         String stackIn_11_2 = null;

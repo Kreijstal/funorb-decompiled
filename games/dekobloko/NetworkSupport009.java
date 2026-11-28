@@ -364,7 +364,7 @@ final class NetworkSupport009 {
           }
           try {
             if (integerArgument1 == MixedSupport053.integerState0273) {
-              MixedSupport021.asyncTaskState0001 = UiComponentPart003.platformServiceState0001.computeAsyncTask0514(124, MixedSupport098.stringState0416, MixedSupport014.integerState0099);
+              MixedSupport021.asyncTaskState0001 = ModalDialog.platformServiceState0001.computeAsyncTask0514(124, MixedSupport098.stringState0416, MixedSupport014.integerState0099);
               MixedSupport053.integerState0273 = MixedSupport053.integerState0273 + 1;
             }
             if (MixedSupport053.integerState0273 == 1) {
@@ -377,7 +377,7 @@ final class NetworkSupport009 {
               }
             }
             if (MixedSupport053.integerState0273 == 2) {
-              EditableTextField.bufferedSocketState0003 = new BufferedSocket((java.net.Socket) (MixedSupport021.asyncTaskState0001.objectState0004), UiComponentPart003.platformServiceState0001);
+              EditableTextField.bufferedSocketState0003 = new BufferedSocket((java.net.Socket) (MixedSupport021.asyncTaskState0001.objectState0004), ModalDialog.platformServiceState0001);
               packetBufferLocal9 = new PacketBuffer(13);
               MixedSupport049.performAction0587(GameDomainSupport003.integerState0278, MixedSupport039.integerState0233, 17, packetBufferLocal9, DisplayNameSelectionPanel.integerState0122);
               packetBufferLocal9.writeByte(true, 15);

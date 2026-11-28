@@ -3,7 +3,7 @@
  */
 import java.util.*;
 
-abstract class ComponentDecorator extends UiComponent implements CallbackContract014 {
+abstract class ComponentDecorator extends UiComponent implements WidgetContainerMarker {
     static SceneWidget sceneWidgetState0077;
     static String[] stringArrayState0020;
     static SceneWidget sceneWidgetState0078;
@@ -11,7 +11,7 @@ abstract class ComponentDecorator extends UiComponent implements CallbackContrac
     UiComponent uiComponentState0002;
     static RgbSprite rgbSpriteState0034;
 
-    void performAction0213(int integerArgument1, int integerArgument2, int integerArgument3, UiComponent uiComponentArgument4, int integerArgument5, int integerArgument6) {
+    void pointerReleased(int integerArgument1, int integerArgument2, int integerArgument3, UiComponent uiComponentArgument4, int integerArgument5, int integerArgument6) {
         boolean discarded$1 = false;
         RuntimeException stackRuntimeExceptionLocal2 = null;
         StringBuilder stackStringBuilderLocal3 = null;
@@ -20,10 +20,10 @@ abstract class ComponentDecorator extends UiComponent implements CallbackContrac
         RuntimeException runtimeExceptionLocal6 = null;
         try {
           if (integerArgument2 != 64) {
-            discarded$1 = this.computeBoolean1014((UiComponent) null, (byte) -1);
+            discarded$1 = this.focusPreviousChild((UiComponent) null, (byte) -1);
           }
           if (this.uiComponentState0002 != null) {
-            this.uiComponentState0002.performAction0213(integerArgument1, 64, integerArgument3 + this.integerState0110, uiComponentArgument4, this.integerState0104 + integerArgument5, integerArgument6);
+            this.uiComponentState0002.pointerReleased(integerArgument1, 64, integerArgument3 + this.integerState0110, uiComponentArgument4, this.integerState0104 + integerArgument5, integerArgument6);
           }
           return;
         } catch (java.lang.RuntimeException caughtParameterLocal7) {
@@ -40,16 +40,16 @@ abstract class ComponentDecorator extends UiComponent implements CallbackContrac
         }
     }
 
-    void performAction0162(int integerArgument1, int integerArgument2, int integerArgument3, int integerArgument4) {
+    void drawWidget(int integerArgument1, int integerArgument2, int integerArgument3, int integerArgument4) {
         RuntimeException caughtExceptionLocal1 = null;
         RuntimeException runtimeExceptionLocal2 = null;
         try {
           if (integerArgument3 == 0 &&
             this.callbackContract004State0006 != null) {
-            this.callbackContract004State0006.performAction0017(true, integerArgument1, integerArgument4, (byte) -98, (UiComponent) (this));
+            this.callbackContract004State0006.paintWidget(true, integerArgument1, integerArgument4, (byte) -98, (UiComponent) (this));
           }
           if (this.uiComponentState0002 != null) {
-            this.uiComponentState0002.performAction0162(integerArgument1 + this.integerState0110, -119, integerArgument3, integerArgument4 + this.integerState0104);
+            this.uiComponentState0002.drawWidget(integerArgument1 + this.integerState0110, -119, integerArgument3, integerArgument4 + this.integerState0104);
           }
           if (integerArgument2 > -103) {
             sceneWidgetState0078 = (SceneWidget) null;
@@ -62,16 +62,16 @@ abstract class ComponentDecorator extends UiComponent implements CallbackContrac
         }
     }
 
-    final void performAction0222(int integerArgument1, int integerArgument2, int integerArgument3, int integerArgument4, int integerArgument5) {
+    final void setBounds(int integerArgument1, int integerArgument2, int integerArgument3, int integerArgument4, int integerArgument5) {
         try {
-          super.performAction0222(integerArgument1, integerArgument2, integerArgument3, integerArgument4, integerArgument5);
-          this.performAction1016(true);
+          super.setBounds(integerArgument1, integerArgument2, integerArgument3, integerArgument4, integerArgument5);
+          this.layoutChild(true);
         } catch (RuntimeException runtimeException) {
           throw ClientException.computeDiagnosticSupport0020365((Throwable) ((Object) runtimeException), "ma.DA(" + integerArgument1 + ',' + integerArgument2 + ',' + integerArgument3 + ',' + integerArgument4 + ',' + integerArgument5 + ')');
         }
     }
 
-    final int computeInteger0226(int integerArgument1) {
+    final int getMaximumRenderLayer(int integerArgument1) {
         int integerLocal1 = 0;
         RuntimeException runtimeExceptionLocal2 = null;
         int stackIntegerLocal3 = 0;
@@ -81,7 +81,7 @@ abstract class ComponentDecorator extends UiComponent implements CallbackContrac
           if (this.uiComponentState0002 == null) {
             stackIntegerLocal3 = 0;
           } else {
-            stackIntegerLocal3 = this.uiComponentState0002.computeInteger0226(125);
+            stackIntegerLocal3 = this.uiComponentState0002.getMaximumRenderLayer(125);
           }
           return stackIntegerLocal3;
         } catch (java.lang.RuntimeException caughtParameterLocal5) {
@@ -116,7 +116,7 @@ abstract class ComponentDecorator extends UiComponent implements CallbackContrac
         }
     }
 
-    UiComponent computeUiComponent0832(int integerArgument1) {
+    UiComponent getFocusedChild(int integerArgument1) {
         UiComponent uiComponentLocal1 = null;
         RuntimeException runtimeExceptionLocal2 = null;
         UiComponent stackUiComponentLocal3 = null;
@@ -126,7 +126,7 @@ abstract class ComponentDecorator extends UiComponent implements CallbackContrac
         try {
           uiComponentLocal1 = this.uiComponentState0002;
           if (uiComponentLocal1 != null &&
-            uiComponentLocal1.computeBoolean0220(true)) {
+            uiComponentLocal1.isFocused(true)) {
             stackUiComponentLocal3 = uiComponentLocal1;
             return stackUiComponentLocal3;
           }
@@ -143,19 +143,19 @@ abstract class ComponentDecorator extends UiComponent implements CallbackContrac
         }
     }
 
-    void performAction0218(UiComponent uiComponentArgument1, int integerArgument2, int integerArgument3, int integerArgument4) {
+    void updatePointer(UiComponent uiComponentArgument1, int integerArgument2, int integerArgument3, int integerArgument4) {
         RuntimeException stackRuntimeExceptionLocal1 = null;
         StringBuilder stackStringBuilderLocal2 = null;
         String stackStringLocal3 = null;
         RuntimeException caughtExceptionLocal4 = null;
         RuntimeException runtimeExceptionLocal5 = null;
         try {
-          super.performAction0218(uiComponentArgument1, 119, integerArgument3, integerArgument4);
+          super.updatePointer(uiComponentArgument1, 119, integerArgument3, integerArgument4);
           if (this.uiComponentState0002 != null) {
-            this.uiComponentState0002.performAction0218(uiComponentArgument1, 110, integerArgument3 + this.integerState0104, this.integerState0110 + integerArgument4);
+            this.uiComponentState0002.updatePointer(uiComponentArgument1, 110, integerArgument3 + this.integerState0104, this.integerState0110 + integerArgument4);
           }
           if (integerArgument2 <= 38) {
-            this.performAction1016(false);
+            this.layoutChild(false);
           }
           return;
         } catch (java.lang.RuntimeException caughtParameterLocal6) {
@@ -172,7 +172,7 @@ abstract class ComponentDecorator extends UiComponent implements CallbackContrac
         }
     }
 
-    private final boolean computeBoolean1014(UiComponent uiComponentArgument1, byte byteArgument2) {
+    private final boolean focusPreviousChild(UiComponent uiComponentArgument1, byte byteArgument2) {
         RuntimeException runtimeExceptionLocal1 = null;
         boolean stackBooleanLocal2 = false;
         RuntimeException stackRuntimeExceptionLocal3 = null;
@@ -181,9 +181,9 @@ abstract class ComponentDecorator extends UiComponent implements CallbackContrac
         RuntimeException caughtExceptionLocal6 = null;
         try {
           if (byteArgument2 != -112) {
-            this.computeBoolean0056(112, -42, (UiComponent) null, -60, 72, 122, (byte) 63);
+            this.pointerPressed(112, -42, (UiComponent) null, -60, 72, 122, (byte) 63);
           }
-          stackBooleanLocal2 = (this.uiComponentState0002 != null) && (!this.uiComponentState0002.computeBoolean0220(true)) && (this.uiComponentState0002.computeBoolean0221(false, uiComponentArgument1));
+          stackBooleanLocal2 = (this.uiComponentState0002 != null) && (!this.uiComponentState0002.isFocused(true)) && (this.uiComponentState0002.takeFocus(false, uiComponentArgument1));
           return stackBooleanLocal2;
         } catch (java.lang.RuntimeException caughtParameterLocal7) {
           caughtExceptionLocal6 = caughtParameterLocal7;
@@ -199,7 +199,7 @@ abstract class ComponentDecorator extends UiComponent implements CallbackContrac
         }
     }
 
-    final boolean computeBoolean0221(boolean booleanArgument1, UiComponent uiComponentArgument2) {
+    final boolean takeFocus(boolean booleanArgument1, UiComponent uiComponentArgument2) {
         RuntimeException runtimeExceptionLocal1 = null;
         boolean stackBooleanLocal2 = false;
         RuntimeException stackRuntimeExceptionLocal3 = null;
@@ -210,7 +210,7 @@ abstract class ComponentDecorator extends UiComponent implements CallbackContrac
           if (booleanArgument1) {
             return true;
           }
-          stackBooleanLocal2 = (null != this.uiComponentState0002) && (this.uiComponentState0002.computeBoolean0221(false, uiComponentArgument2));
+          stackBooleanLocal2 = (null != this.uiComponentState0002) && (this.uiComponentState0002.takeFocus(false, uiComponentArgument2));
           return stackBooleanLocal2;
         } catch (java.lang.RuntimeException caughtParameterLocal7) {
           caughtExceptionLocal6 = caughtParameterLocal7;
@@ -226,7 +226,7 @@ abstract class ComponentDecorator extends UiComponent implements CallbackContrac
         }
     }
 
-    final boolean computeBoolean0214(int integerArgument1, int integerArgument2, int integerArgument3, UiComponent uiComponentArgument4, int integerArgument5, int integerArgument6, boolean booleanArgument7) {
+    final boolean handleWheel(int integerArgument1, int integerArgument2, int integerArgument3, UiComponent uiComponentArgument4, int integerArgument5, int integerArgument6, boolean booleanArgument7) {
         RuntimeException runtimeExceptionLocal1 = null;
         UiComponent stackUiComponentLocal2 = null;
         boolean stackBooleanLocal3 = false;
@@ -243,8 +243,8 @@ abstract class ComponentDecorator extends UiComponent implements CallbackContrac
           if (this.uiComponentState0002 != null) {
             stackUiComponentLocal2 = this.uiComponentState0002;
             stackBooleanLocal3 = !(booleanArgument7);
-            if (((UiComponent) (Object) stackUiComponentLocal2).computeBoolean0220(stackBooleanLocal3) &&
-              this.uiComponentState0002.computeBoolean0214(integerArgument1, integerArgument2, integerArgument3, uiComponentArgument4, integerArgument5, integerArgument6, false)) {
+            if (((UiComponent) (Object) stackUiComponentLocal2).isFocused(stackBooleanLocal3) &&
+              this.uiComponentState0002.handleWheel(integerArgument1, integerArgument2, integerArgument3, uiComponentArgument4, integerArgument5, integerArgument6, false)) {
               stackBooleanLocal4 = true;
               frameRemainderLocal9 = false;
             }
@@ -467,15 +467,15 @@ abstract class ComponentDecorator extends UiComponent implements CallbackContrac
         }
     }
 
-    final boolean computeBoolean0220(boolean booleanArgument1) {
+    final boolean isFocused(boolean booleanArgument1) {
         RuntimeException runtimeExceptionLocal1 = null;
         boolean stackBooleanLocal2 = false;
         RuntimeException caughtExceptionLocal3 = null;
         try {
           if (!booleanArgument1) {
-            this.computeBoolean0056(-67, 8, (UiComponent) null, -37, -30, 67, (byte) -40);
+            this.pointerPressed(-67, 8, (UiComponent) null, -37, -30, 67, (byte) -40);
           }
-          stackBooleanLocal2 = (null != this.computeUiComponent0832(14));
+          stackBooleanLocal2 = (null != this.getFocusedChild(14));
           return stackBooleanLocal2;
         } catch (java.lang.RuntimeException caughtParameterLocal4) {
           caughtExceptionLocal3 = caughtParameterLocal4;
@@ -516,7 +516,7 @@ abstract class ComponentDecorator extends UiComponent implements CallbackContrac
         }
     }
 
-    final boolean computeBoolean0182(int integerArgument1, int integerArgument2, UiComponent uiComponentArgument3, char characterArgument4) {
+    final boolean handleKey(int integerArgument1, int integerArgument2, UiComponent uiComponentArgument3, char characterArgument4) {
         int integerLocal1 = 0;
         RuntimeException runtimeExceptionLocal2 = null;
         boolean stackBooleanLocal3 = false;
@@ -526,8 +526,8 @@ abstract class ComponentDecorator extends UiComponent implements CallbackContrac
         RuntimeException caughtExceptionLocal7 = null;
         try {
           if (this.uiComponentState0002 != null &&
-            this.uiComponentState0002.computeBoolean0220(true) &&
-            this.uiComponentState0002.computeBoolean0182(-125, integerArgument2, uiComponentArgument3, characterArgument4)) {
+            this.uiComponentState0002.isFocused(true) &&
+            this.uiComponentState0002.handleKey(-125, integerArgument2, uiComponentArgument3, characterArgument4)) {
             return true;
           }
           integerLocal1 = integerArgument2;
@@ -536,9 +536,9 @@ abstract class ComponentDecorator extends UiComponent implements CallbackContrac
             return false;
           }
           if (MixedSupport011.booleanArrayState0002[81]) {
-            stackBooleanLocal3 = this.computeBoolean1014(uiComponentArgument3, (byte) -112);
+            stackBooleanLocal3 = this.focusPreviousChild(uiComponentArgument3, (byte) -112);
           } else {
-            stackBooleanLocal3 = this.computeBoolean1017(false, uiComponentArgument3);
+            stackBooleanLocal3 = this.focusNextChild(false, uiComponentArgument3);
           }
           return stackBooleanLocal3;
         } catch (java.lang.RuntimeException caughtParameterLocal8) {
@@ -555,7 +555,7 @@ abstract class ComponentDecorator extends UiComponent implements CallbackContrac
         }
     }
 
-    private final boolean computeBoolean1017(boolean booleanArgument1, UiComponent uiComponentArgument2) {
+    private final boolean focusNextChild(boolean booleanArgument1, UiComponent uiComponentArgument2) {
         RuntimeException runtimeExceptionLocal1 = null;
         UiComponent stackUiComponentLocal2 = null;
         boolean stackBooleanLocal3 = false;
@@ -572,8 +572,8 @@ abstract class ComponentDecorator extends UiComponent implements CallbackContrac
           if (null != this.uiComponentState0002) {
             stackUiComponentLocal2 = this.uiComponentState0002;
             stackBooleanLocal3 = !(booleanArgument1);
-            if (!((UiComponent) (Object) stackUiComponentLocal2).computeBoolean0220(stackBooleanLocal3) &&
-              this.uiComponentState0002.computeBoolean0221(false, uiComponentArgument2)) {
+            if (!((UiComponent) (Object) stackUiComponentLocal2).isFocused(stackBooleanLocal3) &&
+              this.uiComponentState0002.takeFocus(false, uiComponentArgument2)) {
               stackBooleanLocal4 = true;
               frameRemainderLocal9 = false;
             }
@@ -613,11 +613,11 @@ abstract class ComponentDecorator extends UiComponent implements CallbackContrac
         }
     }
 
-    ComponentDecorator(int integerArgument1, int integerArgument2, int integerArgument3, int integerArgument4, CallbackContract004 callbackContract004Argument5, CallbackContract006 callbackContract006Argument6) {
+    ComponentDecorator(int integerArgument1, int integerArgument2, int integerArgument3, int integerArgument4, WidgetRenderer callbackContract004Argument5, WidgetEventListener callbackContract006Argument6) {
         super(integerArgument1, integerArgument2, integerArgument3, integerArgument4, callbackContract004Argument5, callbackContract006Argument6);
     }
 
-    final void performAction1010(byte byteArgument1, int integerArgument2, StringBuilder stringBuilderArgument3, Hashtable hashtableArgument4) {
+    final void appendChildDebugTree(byte byteArgument1, int integerArgument2, StringBuilder stringBuilderArgument3, Hashtable hashtableArgument4) {
         StringBuilder discarded$12 = null;
         StringBuilder discarded$13 = null;
         StringBuilder discarded$14 = null;
@@ -634,7 +634,7 @@ abstract class ComponentDecorator extends UiComponent implements CallbackContrac
         try {
           discarded$12 = stringBuilderArgument3.append('\n');
           if (byteArgument1 > -37) {
-            this.computeBoolean0056(36, -51, (UiComponent) null, -111, 8, 107, (byte) -44);
+            this.pointerPressed(36, -51, (UiComponent) null, -111, 8, 107, (byte) -44);
           }
           integerLocal4 = 0;
           do {
@@ -650,7 +650,7 @@ abstract class ComponentDecorator extends UiComponent implements CallbackContrac
             discarded$13 = stringBuilderArgument3.append(' ');
             integerLocal4++;
           } while (integerLocal5 == 0);
-          this.uiComponentState0002.computeStringBuilder0219(hashtableArgument4, integerArgument2 + 1, stringBuilderArgument3, true);
+          this.uiComponentState0002.appendDebugTree(hashtableArgument4, integerArgument2 + 1, stringBuilderArgument3, true);
           return;
         } catch (java.lang.RuntimeException caughtParameterLocal13) {
           caughtExceptionLocal11 = caughtParameterLocal13;
@@ -672,15 +672,15 @@ abstract class ComponentDecorator extends UiComponent implements CallbackContrac
         }
     }
 
-    void performAction1016(boolean booleanArgument1) {
+    void layoutChild(boolean booleanArgument1) {
         RuntimeException caughtExceptionLocal1 = null;
         RuntimeException runtimeExceptionLocal2 = null;
         try {
           if (null != this.uiComponentState0002) {
-            this.uiComponentState0002.performAction0228(112);
+            this.uiComponentState0002.refreshLayout(112);
           }
           if (!booleanArgument1) {
-            this.computeBoolean0220(true);
+            this.isFocused(true);
           }
           return;
         } catch (java.lang.RuntimeException caughtParameterLocal3) {
@@ -690,13 +690,13 @@ abstract class ComponentDecorator extends UiComponent implements CallbackContrac
         }
     }
 
-    final void performAction0225(byte byteArgument1) {
+    final void blur(byte byteArgument1) {
         if (byteArgument1 != -95) {
           return;
         }
         try {
           if (this.uiComponentState0002 != null) {
-            this.uiComponentState0002.performAction0225((byte) -95);
+            this.uiComponentState0002.blur((byte) -95);
           }
         } catch (RuntimeException runtimeException) {
           throw ClientException.computeDiagnosticSupport0020365((Throwable) ((Object) runtimeException), "ma.WB(" + byteArgument1 + ')');
@@ -722,7 +722,7 @@ abstract class ComponentDecorator extends UiComponent implements CallbackContrac
         }
     }
 
-    boolean computeBoolean0056(int integerArgument1, int integerArgument2, UiComponent uiComponentArgument3, int integerArgument4, int integerArgument5, int integerArgument6, byte byteArgument7) {
+    boolean pointerPressed(int integerArgument1, int integerArgument2, UiComponent uiComponentArgument3, int integerArgument4, int integerArgument5, int integerArgument6, byte byteArgument7) {
         RuntimeException runtimeExceptionLocal1 = null;
         boolean stackBooleanLocal2 = false;
         RuntimeException stackRuntimeExceptionLocal3 = null;
@@ -731,9 +731,9 @@ abstract class ComponentDecorator extends UiComponent implements CallbackContrac
         RuntimeException caughtExceptionLocal6 = null;
         try {
           if (byteArgument7 != -55) {
-            this.computeUiComponent0832(59);
+            this.getFocusedChild(59);
           }
-          stackBooleanLocal2 = (this.uiComponentState0002 != null) && (this.uiComponentState0002.computeBoolean0056(integerArgument1, integerArgument2, uiComponentArgument3, integerArgument4, this.integerState0104 + integerArgument5, this.integerState0110 + integerArgument6, (byte) -55));
+          stackBooleanLocal2 = (this.uiComponentState0002 != null) && (this.uiComponentState0002.pointerPressed(integerArgument1, integerArgument2, uiComponentArgument3, integerArgument4, this.integerState0104 + integerArgument5, this.integerState0110 + integerArgument6, (byte) -55));
           return stackBooleanLocal2;
         } catch (java.lang.RuntimeException caughtParameterLocal7) {
           caughtExceptionLocal6 = caughtParameterLocal7;
@@ -749,7 +749,7 @@ abstract class ComponentDecorator extends UiComponent implements CallbackContrac
         }
     }
 
-    StringBuilder computeStringBuilder0219(Hashtable hashtableArgument1, int integerArgument2, StringBuilder stringBuilderArgument3, boolean booleanArgument4) {
+    StringBuilder appendDebugTree(Hashtable hashtableArgument1, int integerArgument2, StringBuilder stringBuilderArgument3, boolean booleanArgument4) {
         RuntimeException runtimeExceptionLocal1 = null;
         StringBuilder stackStringBuilderLocal2 = null;
         StringBuilder stackStringBuilderLocal3 = null;
@@ -760,9 +760,9 @@ abstract class ComponentDecorator extends UiComponent implements CallbackContrac
         String stackStringLocal8 = null;
         RuntimeException caughtExceptionLocal9 = null;
         try {
-          if (this.computeBoolean0215(0, integerArgument2, hashtableArgument1, stringBuilderArgument3)) {
-            this.performAction0206((byte) 72, stringBuilderArgument3, hashtableArgument1, integerArgument2);
-            this.performAction1010((byte) -116, integerArgument2, stringBuilderArgument3, hashtableArgument1);
+          if (this.beginDebugTreeEntry(0, integerArgument2, hashtableArgument1, stringBuilderArgument3)) {
+            this.appendDebugProperties((byte) 72, stringBuilderArgument3, hashtableArgument1, integerArgument2);
+            this.appendChildDebugTree((byte) -116, integerArgument2, stringBuilderArgument3, hashtableArgument1);
           }
           if (booleanArgument4) {
             stackStringBuilderLocal3 = (StringBuilder) (stringBuilderArgument3);

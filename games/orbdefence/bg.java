@@ -14,7 +14,7 @@ final class bg {
             bg.a((byte) -85);
           }
         } catch (RuntimeException runtimeException) {
-          throw dd.wrapClientException((Throwable) ((Object) runtimeException), "bg.B(" + param0 + ')');
+          throw DraggableWidgetContainer.wrapClientException((Throwable) ((Object) runtimeException), "bg.B(" + param0 + ')');
         }
     }
 
@@ -33,7 +33,7 @@ final class bg {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw dd.wrapClientException((Throwable) ((Object) var2_ref), "bg.E(" + param0 + ',' + param1 + ')');
+          throw DraggableWidgetContainer.wrapClientException((Throwable) ((Object) var2_ref), "bg.E(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -45,7 +45,7 @@ final class bg {
           qc.field_g = tl.field_h;
           tg.field_c = tl.field_h;
         } catch (RuntimeException runtimeException) {
-          throw dd.wrapClientException((Throwable) ((Object) runtimeException), "bg.A(" + param0 + ')');
+          throw DraggableWidgetContainer.wrapClientException((Throwable) ((Object) runtimeException), "bg.A(" + param0 + ')');
         }
     }
 
@@ -63,7 +63,7 @@ final class bg {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw dd.wrapClientException((Throwable) ((Object) var1), "bg.D(" + param0 + ')');
+          throw DraggableWidgetContainer.wrapClientException((Throwable) ((Object) var1), "bg.D(" + param0 + ')');
         }
     }
 
@@ -275,7 +275,7 @@ final class bg {
           } else {
             stackIn_82_2 = "{...}";
           }
-          throw dd.wrapClientException((Throwable) ((Object) stackIn_73_0), ((StringBuilder) (Object) stackIn_81_1).append(stackIn_82_2).append(')').toString());
+          throw DraggableWidgetContainer.wrapClientException((Throwable) ((Object) stackIn_73_0), ((StringBuilder) (Object) stackIn_81_1).append(stackIn_82_2).append(')').toString());
         }
     }
 

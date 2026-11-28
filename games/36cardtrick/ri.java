@@ -12,7 +12,7 @@ final class ri {
         if (param0 < 5) {
           return false;
         }
-        stackIn_6_0 = (cd.field_e >= 10) && (13 <= g.field_A);
+        stackIn_6_0 = (cd.field_e >= 10) && (13 <= DequeWidgetContainer.field_A);
         return stackIn_6_0;
     }
 

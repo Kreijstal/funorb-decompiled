@@ -85,7 +85,7 @@ final class MatchingFieldValidator extends TextFieldValidator {
           if (param0 == null) {
             return null;
           }
-          var2 = new CoverageBitmapFont(param0, th.field_Jb, nh.field_O, TextInputField.field_X, ConfirmedEmailAvailabilityValidator.field_r, bf.field_d, ja.field_e);
+          var2 = new CoverageBitmapFont(param0, th.field_Jb, LabeledWidgetContainer.field_O, TextInputField.field_X, ConfirmedEmailAvailabilityValidator.field_r, bf.field_d, ja.field_e);
           uj.d(-126);
           stackIn_7_0 = var2;
           return stackIn_7_0;

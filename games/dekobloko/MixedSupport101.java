@@ -34,12 +34,12 @@ final class MixedSupport101 {
             MixedSupport101.computeInteger1269(7, 120, -115);
           }
           integerLocal2 = MixedSupport111.integerState0721;
-          while (UiComponentPart010.stringArrayState0012.length > integerLocal1) {
+          while (AlphaWidgetContainer.stringArrayState0012.length > integerLocal1) {
             integerLocal3 = MixedSupport129.integerArrayState0211[integerLocal1];
             if (integerLocal3 < 0) {
               integerLocal2 = integerLocal2 + ComponentDecorator.integerState0497;
             } else {
-              integerLocal4 = NetworkArchiveRequestManager.computeInteger1288(0, UiComponentPart010.stringArrayState0012[integerLocal1], true);
+              integerLocal4 = NetworkArchiveRequestManager.computeInteger1288(0, AlphaWidgetContainer.stringArrayState0012[integerLocal1], true);
               integerLocal2 = integerLocal2 + PcmResampler.integerState0344;
               integerLocal5 = -(integerLocal4 >> 1) + MixedSupport004.integerState0029;
               if (MixedSupport049.computeBoolean0586(17, integerArgument1, integerArgument3, integerLocal4 + (DebouncedFieldValidator.integerState0050 << 1), integerLocal2, BirthDateInput.integerState0835 + (MixedSupport076.integerState0433 << 1), integerLocal5 - DebouncedFieldValidator.integerState0050)) {

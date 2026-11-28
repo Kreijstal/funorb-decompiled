@@ -65,7 +65,7 @@ final class ea {
               if (fk.field_E != var2) {
                 this.field_r.a(var2, var3, -23222);
               } else {
-                if (var3 != mk.field_x) {
+                if (var3 != ModalDialog.field_x) {
                   this.field_r.a(var2, var3, -23222);
                 }
               }
@@ -77,7 +77,7 @@ final class ea {
               if (fk.field_E != var2) {
                 this.field_r.a(var2, var3, -23222);
               } else {
-                if (var3 != mk.field_x) {
+                if (var3 != ModalDialog.field_x) {
                   this.field_r.a(var2, var3, -23222);
                 }
               }
@@ -92,7 +92,7 @@ final class ea {
                   if (fk.field_E != var2) {
                     this.field_r.a(var2, var3, -23222);
                   } else {
-                    if (var3 != mk.field_x) {
+                    if (var3 != ModalDialog.field_x) {
                       this.field_r.a(var2, var3, -23222);
                     }
                   }
@@ -101,11 +101,11 @@ final class ea {
               }
               if (decompiledFrameRemainder1) {
                 if (fk.field_E == var2 &&
-                  var3 == mk.field_x) {
+                  var3 == ModalDialog.field_x) {
                   if (0 >= this.field_c) {
                     return;
                   }
-                  gl.field_D = (-fk.field_E + this.field_c) / 2;
+                  AlphaWidgetContainer.field_D = (-fk.field_E + this.field_c) / 2;
                   return;
                 }
                 this.field_r.a(var2, var3, -23222);
@@ -113,7 +113,7 @@ final class ea {
             }
           }
           if (0 < this.field_c) {
-            gl.field_D = (-fk.field_E + this.field_c) / 2;
+            AlphaWidgetContainer.field_D = (-fk.field_E + this.field_c) / 2;
           }
           return;
         }
@@ -139,12 +139,12 @@ final class ea {
               if (fk.field_E != var2) {
                 this.field_r.a(var2, var3Lifetime1, -23222);
               } else {
-                if (var3Lifetime1 != mk.field_x) {
+                if (var3Lifetime1 != ModalDialog.field_x) {
                   this.field_r.a(var2, var3Lifetime1, -23222);
                 }
               }
               if (0 < this.field_c) {
-                gl.field_D = (-fk.field_E + this.field_c) / 2;
+                AlphaWidgetContainer.field_D = (-fk.field_E + this.field_c) / 2;
               }
               return;
             }
@@ -159,12 +159,12 @@ final class ea {
             if (fk.field_E != var2) {
               this.field_r.a(var2, var3Lifetime1, -23222);
             } else {
-              if (var3Lifetime1 != mk.field_x) {
+              if (var3Lifetime1 != ModalDialog.field_x) {
                 this.field_r.a(var2, var3Lifetime1, -23222);
               }
             }
             if (0 < this.field_c) {
-              gl.field_D = (-fk.field_E + this.field_c) / 2;
+              AlphaWidgetContainer.field_D = (-fk.field_E + this.field_c) / 2;
             }
             return;
           }
@@ -180,11 +180,11 @@ final class ea {
               if (fk.field_E != var2) {
                 this.field_r.a(var2, var3Lifetime1, -23222);
                 if (0 < this.field_c) {
-                  gl.field_D = (-fk.field_E + this.field_c) / 2;
+                  AlphaWidgetContainer.field_D = (-fk.field_E + this.field_c) / 2;
                 }
                 return;
               }
-              if (var3Lifetime1 != mk.field_x) {
+              if (var3Lifetime1 != ModalDialog.field_x) {
                 this.field_r.a(var2, var3Lifetime1, -23222);
               }
               decompiledFrameRemainder0 = false;
@@ -195,7 +195,7 @@ final class ea {
           if (fk.field_E != var2) {
             this.field_r.a(var2, var3Lifetime1, -23222);
           } else {
-            if (var3Lifetime1 != mk.field_x) {
+            if (var3Lifetime1 != ModalDialog.field_x) {
               this.field_r.a(var2, var3Lifetime1, -23222);
             }
           }
@@ -203,7 +203,7 @@ final class ea {
         if (0 >= this.field_c) {
           return;
         }
-        gl.field_D = (-fk.field_E + this.field_c) / 2;
+        AlphaWidgetContainer.field_D = (-fk.field_E + this.field_c) / 2;
         return;
     }
 
@@ -235,7 +235,7 @@ final class ea {
         FullscreenFocusCanvas var2 = null;
         FullscreenFocusCanvas var2Lifetime1;
         this.field_p = fk.field_E;
-        this.field_e = mk.field_x;
+        this.field_e = ModalDialog.field_x;
         this.field_r.a(this.field_a, this.field_o, -23222);
         if (param0 == -18) {
           mg.field_c = false;
@@ -293,14 +293,14 @@ final class ea {
           }
         }
         if (this.field_c > fk.field_E) {
-          gl.field_D = (-fk.field_E + this.field_c) / 2;
+          AlphaWidgetContainer.field_D = (-fk.field_E + this.field_c) / 2;
         } else {
           if (this.field_c > 0) {
-            gl.field_D = 0;
+            AlphaWidgetContainer.field_D = 0;
           }
         }
         if (this.field_d == fk.field_E &&
-          mk.field_x == this.field_f) {
+          ModalDialog.field_x == this.field_f) {
           return;
         }
         this.field_r.a(this.field_d, this.field_f, -23222);

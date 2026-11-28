@@ -8,7 +8,7 @@ abstract class SpriteState extends DualLinkNode {
     int field_v;
     int field_u;
     int field_q;
-    static cb field_w;
+    static DraggableWidgetContainer field_w;
     static volatile long field_x;
     static char[] field_s;
     int field_r;

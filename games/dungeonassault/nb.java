@@ -33,7 +33,7 @@ final class nb {
         if (wh.field_d) {
           return;
         }
-        wh.field_d = rf.field_S;
+        wh.field_d = ModalDialog.field_S;
         if (wh.field_d) {
           InteractiveWidget.h(94);
           bo.g(1);

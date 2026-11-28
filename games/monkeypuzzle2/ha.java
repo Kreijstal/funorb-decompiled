@@ -15,7 +15,7 @@ class ha extends pc implements WidgetActivationListener {
     static boolean field_db;
     private BitmapFont field_ib;
 
-    final boolean a(UiWidget param0, char param1, int param2, int param3) {
+    final boolean handleKey(UiWidget param0, char param1, int param2, int param3) {
         int var5_int = 0;
         RuntimeException var5 = null;
         boolean stackIn_4_0 = false;
@@ -26,7 +26,7 @@ class ha extends pc implements WidgetActivationListener {
         try {
           if (param2 != 13) {
             var5_int = -44 / ((param3 - 37) / 50);
-            stackIn_4_0 = super.a(param0, param1, param2, 120);
+            stackIn_4_0 = super.handleKey(param0, param1, param2, 120);
             return stackIn_4_0;
           }
           this.g((byte) -75);
@@ -96,7 +96,7 @@ class ha extends pc implements WidgetActivationListener {
         int var8 = ec.field_b.get(11);
         int var9 = ec.field_b.get(12);
         int var10 = ec.field_b.get(13);
-        return jk.field_y[var3 - 1] + ", " + var4 / 10 + var4 % 10 + "-" + uc.field_f[var5] + "-" + var6 + " " + var8 / 10 + var8 % 10 + ":" + var9 / 10 + var9 % 10 + ":" + var10 / 10 + var10 % 10 + " GMT";
+        return SingleChildWidgetContainer.field_y[var3 - 1] + ", " + var4 / 10 + var4 % 10 + "-" + uc.field_f[var5] + "-" + var6 + " " + var8 / 10 + var8 % 10 + ":" + var9 / 10 + var9 % 10 + ":" + var10 / 10 + var10 % 10 + " GMT";
     }
 
     final static void a(int param0, int param1, int param2, int param3, Sprite[] param4, Sprite[] param5, int param6, int param7, int param8, int param9, BitmapFont param10) {
@@ -119,7 +119,7 @@ class ha extends pc implements WidgetActivationListener {
         field_fb = null;
     }
 
-    ha(kj param0, BitmapFont param1, String param2, boolean param3, boolean param4) {
+    ha(ModalDialogHost param0, BitmapFont param1, String param2, boolean param3, boolean param4) {
         super(param0, new sk((ha) null, param1, param2), 77, 10, 10);
         try {
           this.field_hb = param3 ? true : false;
@@ -129,7 +129,7 @@ class ha extends pc implements WidgetActivationListener {
           this.field_eb = param4 ? true : false;
           this.field_gb = new jh(13, 50, 274, 30, 15, 2113632, 4210752);
           this.field_gb.field_G = true;
-          this.b((byte) -104, this.field_gb);
+          this.addChild((byte) -104, this.field_gb);
         } catch (RuntimeException runtimeException) {
           throw la.a((Throwable) ((Object) runtimeException), "ha.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ')');
         }
@@ -183,7 +183,7 @@ class ha extends pc implements WidgetActivationListener {
             var6.a((byte) 102, 17, vh.field_L);
           } else {
             if (param2 == 256) {
-              var6.a(0, (of) (this), qd.field_c);
+              var6.a(0, (WidgetEventListener) (this), qd.field_c);
             } else {
               stackIn_11_0 = var6;
               stackIn_11_1 = 92;
@@ -202,7 +202,7 @@ class ha extends pc implements WidgetActivationListener {
                 var6.a((byte) 108, 9, NanoFrameTimer.field_k);
               } else {
                 if (param2 == 9) {
-                  var6.a(0, (of) (this), qa.field_b);
+                  var6.a(0, (WidgetEventListener) (this), qa.field_b);
                 }
               }
             } else {

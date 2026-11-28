@@ -36,7 +36,7 @@ final class in {
     final static void a(boolean param0, boolean param1, int param2, boolean param3, boolean param4, int param5, int param6, int param7, byte param8, boolean param9) {
         int var11;
         var11 = Vertigo2.field_L ? 1 : 0;
-        if (!param9 && (qg.field_G != SoftwareRasterizer.field_e ||
+        if (!param9 && (DraggableWidgetContainer.field_G != SoftwareRasterizer.field_e ||
           SoftwareRasterizer.field_j != om.field_D) && (SoftwareRasterizer.field_j == TextLayout.field_g.field_d &&
           TextLayout.field_g.field_i == SoftwareRasterizer.field_e)) {
           if (null != gd.field_j) {
@@ -50,7 +50,7 @@ final class in {
           }
         }
         if (!param9) {
-          ml.field_w = (qg.field_G - 640) / 2;
+          ml.field_w = (DraggableWidgetContainer.field_G - 640) / 2;
         } else {
           ml.field_w = on.field_c;
         }
@@ -134,23 +134,23 @@ final class in {
             field_b = (Random) null;
           }
           for (var2_int = 0; var2_int < 3; var2_int++) {
-            wq.field_I[var2_int] = 0;
+            AlphaWidgetContainer.field_I[var2_int] = 0;
           }
           for (var2_intLifetime1 = 0; no.field_d > var2_intLifetime1; var2_intLifetime1++) {
             if (param0.field_s == eo.field_l[var2_intLifetime1].field_s) {
               dupTemp$3 = eo.field_l[var2_intLifetime1].a((byte) -128);
-              wq.field_I[dupTemp$3] = wq.field_I[dupTemp$3] + 1;
+              AlphaWidgetContainer.field_I[dupTemp$3] = AlphaWidgetContainer.field_I[dupTemp$3] + 1;
             }
           }
           dupTemp$0 = param0.a((byte) 110);
-          wq.field_I[dupTemp$0] = wq.field_I[dupTemp$0] + 1;
+          AlphaWidgetContainer.field_I[dupTemp$0] = AlphaWidgetContainer.field_I[dupTemp$0] + 1;
           var2_intLifetime2 = 0;
           for (var3 = 0; no.field_d > var3; var3++) {
             boolean decompiledFrameRemainder0 = true;
             if (eo.field_l[var3].field_s == param0.field_s) {
               var4 = eo.field_l[var3].a((byte) 77);
-              if (wq.field_I[var4] > ll.field_b) {
-                wq.field_I[var4] = wq.field_I[var4] - 1;
+              if (AlphaWidgetContainer.field_I[var4] > ll.field_b) {
+                AlphaWidgetContainer.field_I[var4] = AlphaWidgetContainer.field_I[var4] - 1;
                 decompiledFrameRemainder0 = false;
               }
             }

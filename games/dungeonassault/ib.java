@@ -179,7 +179,7 @@ final class ib {
             }
             var1[var2] = new RgbSprite(ce.field_x, tb.field_i, MusicPatchPcmStream.field_t[var2], RichTextLayout.field_g[var2], jc.field_f[var2], jn.field_k[var2], var22);
           } else {
-            var16 = rf.field_P[var2];
+            var16 = ModalDialog.field_P[var2];
             var12 = var16;
             var9 = var12;
             var5 = var9;

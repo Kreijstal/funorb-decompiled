@@ -66,7 +66,7 @@ final class bk {
           do {
             var5 = param1.nextInt();
           } while (var5 >= var4);
-          stackIn_10_0 = te.b(25403, param0, var5);
+          stackIn_10_0 = AlphaWidgetContainer.b(25403, param0, var5);
           return stackIn_10_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -186,9 +186,9 @@ final class bk {
     final static String a(int param0) {
         if (param0 != 0) {
           field_a = (PlatformTask) null;
-          return te.field_N.readString(param0 + 109);
+          return AlphaWidgetContainer.field_N.readString(param0 + 109);
         }
-        return te.field_N.readString(param0 + 109);
+        return AlphaWidgetContainer.field_N.readString(param0 + 109);
     }
 
     static {

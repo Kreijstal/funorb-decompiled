@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class tg implements ci {
+final class tg implements WidgetRenderer {
     final static String a(byte param0, String param1, String param2, ResourceArchive param3, String param4) {
         RuntimeException var5 = null;
         String stackIn_3_0 = null;
@@ -123,7 +123,7 @@ final class tg implements ci {
         return true;
     }
 
-    public final void a(int param0, lk param1, int param2, int param3, boolean param4) {
+    public final void paintWidget(int param0, UiWidget param1, int param2, int param3, boolean param4) {
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
         String stackIn_12_2 = null;
@@ -146,7 +146,7 @@ final class tg implements ci {
             ((InteractiveWidget) (param1)).field_D) {
             var8.drawAdditive(1 + (var6_int + (-var8.field_l + param1.field_h >> 1)), (-var8.field_k + param1.field_q >> 1) + 1 + var7, 256);
           }
-          if (!param1.d(82)) {
+          if (!param1.isFocused(82)) {
             return;
           }
           NetworkArchiveRequest.a(2 + var7, 71, -4 + param1.field_h, -4 + param1.field_q, var6_int + 2);

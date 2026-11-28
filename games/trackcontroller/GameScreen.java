@@ -3,7 +3,7 @@
  */
 final class GameScreen {
     static int keyQueueWrite;
-    static vl field_b;
+    static ModalDialogHost field_b;
     private int field_c;
     cd field_e;
     private int field_h;
@@ -146,7 +146,7 @@ final class GameScreen {
 
     final static int a(byte param0) {
         if (param0 != -29) {
-          field_b = (vl) null;
+          field_b = (ModalDialogHost) null;
         }
         return mb.field_f;
     }
@@ -167,13 +167,13 @@ final class GameScreen {
         try {
           var3_int = param1;
           var4 = MovingBlock.field_q;
-          while (var3_int < sa.field_I.length) {
+          while (var3_int < LabeledWidgetContainer.field_I.length) {
             var5 = mj.field_b[var3_int];
             stackIn_13_0 = var5;
             if (stackIn_13_0 < 0) {
               var4 = var4 + dh.field_l;
             } else {
-              var6 = ib.a(true, param1 ^ 10, sa.field_I[var3_int]);
+              var6 = ib.a(true, param1 ^ 10, LabeledWidgetContainer.field_I[var3_int]);
               var7 = -(var6 >> 1) + sf.field_F;
               var4 = var4 + na.field_e;
               if (NanoFrameTimer.a(-mb.field_c + var7, param0, param1 ^ 10, (mb.field_c << 1) + var6, var4, param2, ArchiveIndex.field_m + (of.field_f << 1))) {
@@ -926,8 +926,8 @@ final class GameScreen {
           DisplayNameSelectionPanel.font.drawString(TextFieldValidator.field_l, var3Lifetime1, var8Lifetime1, 0, -1);
           var3Lifetime1 = var3Lifetime1 + DisplayNameSelectionPanel.font.stringWidth(TextFieldValidator.field_l);
           for (var9Lifetime1 = 0; rd.field_f[var7] > var9Lifetime1; var9Lifetime1++) {
-            mc.field_E.drawTransparent(var3Lifetime1, -DisplayNameSelectionPanel.font.field_G + var8Lifetime1);
-            var3Lifetime1 = var3Lifetime1 + mc.field_E.field_t / 3;
+            DropTargetWidgetContainer.field_E.drawTransparent(var3Lifetime1, -DisplayNameSelectionPanel.font.field_G + var8Lifetime1);
+            var3Lifetime1 = var3Lifetime1 + DropTargetWidgetContainer.field_E.field_t / 3;
           }
           return;
         }
@@ -1028,7 +1028,7 @@ final class GameScreen {
     private final boolean a(int param0, int param1) {
         boolean stackIn_9_0 = false;
         if (param1 != 10) {
-          field_b = (vl) null;
+          field_b = (ModalDialogHost) null;
         }
         if (0 != (th.field_l & 1 << param0)) {
           return true;
@@ -1282,7 +1282,7 @@ final class GameScreen {
           var5Lifetime1 = ud.field_b;
         }
         if (var5Lifetime1 != null) {
-          vl.a(-21173, (String) (var5Lifetime1));
+          ModalDialogHost.a(-21173, (String) (var5Lifetime1));
         }
         return;
     }

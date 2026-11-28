@@ -59,19 +59,19 @@ final class ValidatedTextField extends EditableTextField implements FieldValidat
         field_Z = null;
     }
 
-    final void a(int param0, int param1, mf param2, int param3) {
+    final void updatePointer(int param0, int param1, UiWidget param2, int param3) {
         try {
           if (param1 >= -6) {
             field_cb = (String[]) null;
           }
-          super.a(param0, -30, param2, param3);
+          super.updatePointer(param0, -30, param2, param3);
           this.field_bb = -param0 + (-this.field_u + BufferedSocket.field_k);
         } catch (RuntimeException runtimeException) {
           throw SpriteGeometry.wrapClientException((Throwable) ((Object) runtimeException), "bg.G(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
     }
 
-    ValidatedTextField(String param0, rg param1, int param2) {
+    ValidatedTextField(String param0, WidgetEventListener param1, int param2) {
         super(param0, param1, param2);
     }
 

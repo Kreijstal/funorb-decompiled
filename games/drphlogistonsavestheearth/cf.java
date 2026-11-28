@@ -15,8 +15,8 @@ final class cf {
         sg.field_a = false;
         MouseWheelInput.field_c = false;
         sf.a(-1, 11649);
-        lc.field_h = pj.field_D;
-        TextHotspotBounds.field_q = pj.field_D;
+        lc.field_h = DequeWidgetContainer.field_D;
+        TextHotspotBounds.field_q = DequeWidgetContainer.field_D;
         if (param0 == -107) {
           return;
         }

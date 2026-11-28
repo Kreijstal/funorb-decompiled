@@ -163,7 +163,7 @@ final class re {
         int[][] var19Lifetime1;
         var16 = Main.field_T;
         if (dl.d(0)) {
-          var2 = j.field_F + "<br><br>" + MouseInputHandler.field_g;
+          var2 = ModalDialogHost.field_F + "<br><br>" + MouseInputHandler.field_g;
         } else {
           if (null == this.field_d.field_cb) {
             this.field_d.field_cb = NodeHashTableIterator.a(8, 3, 25404, fb.field_c[this.field_d.field_C], 1);
@@ -199,7 +199,7 @@ final class re {
                   if (null == var19Lifetime1[var4]) {
                     var2 = t.field_f;
                   } else {
-                    var2 = j.field_F;
+                    var2 = ModalDialogHost.field_F;
                     var7 = wh.a(var3, var4, -122, this.field_d.field_P);
                     var8 = 115;
                     var9 = eb.field_c.field_J[0][2];
@@ -657,7 +657,7 @@ final class re {
                                     if (3 == var8) {
                                       var6 = mf.field_i;
                                       if (this.field_f.e(14354)) {
-                                        g.a(-114);
+                                        DequeWidgetContainer.a(-114);
                                       }
                                       if (this.field_f.b(2)) {
                                         id.a((byte) 100);
@@ -829,7 +829,7 @@ final class re {
                             PcmOutputWorker.exitFullscreenAndRestoreFocus(true);
                           } else {
                             var8 = param0 ? 1 : 0;
-                            mb.a(qa.field_b.field_s * 3 >> 1, 18, g.field_C, var8 != 0, 9414, 240, tc.field_a, 6, 320, 2, 18, qa.field_b);
+                            mb.a(qa.field_b.field_s * 3 >> 1, 18, DequeWidgetContainer.field_C, var8 != 0, 9414, 240, tc.field_a, 6, 320, 2, 18, qa.field_b);
                           }
                         }
                       }
@@ -1143,7 +1143,7 @@ final class re {
               if (4 == this.field_i) {
                 var4Lifetime1 = -1;
                 var5 = param2 + 121;
-                var26 = g.field_y;
+                var26 = DequeWidgetContainer.field_y;
                 for (var7 = 0; var7 < var26.length; var7++) {
                   var22 = var26[var7];
                   var19 = var22;
@@ -1205,7 +1205,7 @@ final class re {
                   }
                   ((BinaryBitmapFont) (Object) stackIn_62_0).drawString(stackIn_63_1, 388, var7Lifetime2, 16711680, -1);
                   var7Lifetime2 = var7Lifetime2 + (5 + var6);
-                  var7Lifetime2 = var7Lifetime2 + var6 * qa.field_b.drawParagraph(lk.field_u[var4Lifetime1], 388, var7Lifetime2 - qa.field_b.field_s, 179, 480, 0, -1, 0, 0, var6);
+                  var7Lifetime2 = var7Lifetime2 + var6 * qa.field_b.drawParagraph(UiWidget.field_u[var4Lifetime1], 388, var7Lifetime2 - qa.field_b.field_s, 179, 480, 0, -1, 0, 0, var6);
                   qa.field_b.drawString(eg.field_a + 100 * eb.field_i[var4Lifetime1], 388, var7Lifetime2, 0, -1);
                   var7Lifetime2 = var7Lifetime2 + var6;
                   var9Lifetime2 = 388;
@@ -1395,7 +1395,7 @@ final class re {
                   var14Lifetime2 = var14Lifetime2 + var13Lifetime2;
                   qa.field_b.drawString(pk.field_b, var15, var14Lifetime2, 16711680, -1);
                   var14Lifetime2 = var14Lifetime2 + (5 + var13Lifetime2);
-                  var14Lifetime2 = var14Lifetime2 + qa.field_b.drawParagraph(lk.field_u[var10Lifetime1Lifetime1], var15, -qa.field_b.field_s + var14Lifetime2, -var15 + 588, 480, 0, -1, 0, 0, var13Lifetime2) * var13Lifetime2;
+                  var14Lifetime2 = var14Lifetime2 + qa.field_b.drawParagraph(UiWidget.field_u[var10Lifetime1Lifetime1], var15, -qa.field_b.field_s + var14Lifetime2, -var15 + 588, 480, 0, -1, 0, 0, var13Lifetime2) * var13Lifetime2;
                   qa.field_b.drawString(eg.field_a + 100 * eb.field_i[var10Lifetime1Lifetime1], var15, var14Lifetime2, 0, -1);
                   var8Lifetime1Lifetime3 = var15;
                   var14Lifetime2 = var14Lifetime2 + var13Lifetime2;

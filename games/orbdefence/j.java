@@ -44,7 +44,7 @@ final class j {
             }
           }
           for (var3 = 0; FullscreenFocusCanvas.field_d.length > var3; var3++) {
-            var4 = dd.field_B[var3];
+            var4 = DraggableWidgetContainer.field_B[var3];
             if (0 > var4) {
               var5 = he.field_C;
             } else {
@@ -57,18 +57,18 @@ final class j {
             var6 = FullscreenFocusCanvas.field_d[var3];
             if (kg.field_m == 2 &&
               1 == var2) {
-              if (pj.field_o.length < fd.field_e.length) {
+              if (UiWidget.field_o.length < fd.field_e.length) {
                 stackIn_21_0 = fd.field_e.length;
               } else {
-                stackIn_21_0 = pj.field_o.length;
+                stackIn_21_0 = UiWidget.field_o.length;
               }
               var7 = stackIn_21_0;
               if (var3 >= 6 &&
                 var3 < 6 + var7) {
-                if (pj.field_o.length + (-6 + var3 - var7) < 0) {
+                if (UiWidget.field_o.length + (-6 + var3 - var7) < 0) {
                   stackIn_27_0 = "";
                 } else {
-                  stackIn_27_0 = pj.field_o[-var7 + pj.field_o.length - 6 + var3];
+                  stackIn_27_0 = UiWidget.field_o[-var7 + UiWidget.field_o.length - 6 + var3];
                 }
                 var6 = stackIn_27_0;
               }
@@ -118,7 +118,7 @@ final class j {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw dd.wrapClientException((Throwable) ((Object) var1), "j.C(" + param0 + ')');
+          throw DraggableWidgetContainer.wrapClientException((Throwable) ((Object) var1), "j.C(" + param0 + ')');
         }
     }
 
@@ -142,7 +142,7 @@ final class j {
             j.a((byte) 124);
           }
         } catch (RuntimeException runtimeException) {
-          throw dd.wrapClientException((Throwable) ((Object) runtimeException), "j.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw DraggableWidgetContainer.wrapClientException((Throwable) ((Object) runtimeException), "j.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
@@ -152,7 +152,7 @@ final class j {
           this.field_d = param1;
           param2[this.field_a] = param1;
         } catch (RuntimeException runtimeException) {
-          throw dd.wrapClientException((Throwable) ((Object) runtimeException), "j.<init>(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw DraggableWidgetContainer.wrapClientException((Throwable) ((Object) runtimeException), "j.<init>(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 

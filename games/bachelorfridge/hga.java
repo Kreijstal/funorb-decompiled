@@ -9,20 +9,20 @@ final class hga extends am {
     private boolean field_W;
     private String field_S;
 
-    hga(rp param0, String param1) {
+    hga(ModalDialogHost param0, String param1) {
         super(param0, 300, 120);
         int var3_int = 0;
         try {
           this.field_V = param1;
           if (null != this.field_V) {
             var3_int = qia.field_a.measureWrappedHeight(this.field_V, 260, qia.field_a.field_u);
-            this.b(-93, var3_int + 150, 300);
+            this.setCenteredSize(-93, var3_int + 150, 300);
           }
           this.field_T = new de(13, 50, 274, 30, 15, 2113632, 4210752);
           this.field_X = false;
           this.field_T.field_P = true;
           this.field_W = false;
-          this.c(this.field_T, 25);
+          this.addChild(this.field_T, 25);
         } catch (RuntimeException runtimeException) {
           throw pe.wrapException((Throwable) ((Object) runtimeException), "hga.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

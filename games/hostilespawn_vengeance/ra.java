@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ra implements nn {
+final class ra implements WidgetRenderer {
     static CoverageBitmapFont field_e;
     static String field_f;
     private int field_m;
@@ -84,7 +84,7 @@ final class ra implements nn {
         }
     }
 
-    public final void a(int param0, int param1, int param2, ag param3, boolean param4) {
+    public final void paintWidget(int param0, int param1, int param2, UiWidget param3, boolean param4) {
         RuntimeException var6 = null;
         int var7 = 0;
         int var8 = 0;
@@ -93,7 +93,7 @@ final class ra implements nn {
         int var12 = 0;
         int var13 = 0;
         g var14 = null;
-        ag stackIn_3_0 = null;
+        UiWidget stackIn_3_0 = null;
         RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
         String stackIn_15_2 = null;
@@ -103,7 +103,7 @@ final class ra implements nn {
         int var12Lifetime1;
         try {
           if (param3 instanceof g) {
-            stackIn_3_0 = (ag) (param3);
+            stackIn_3_0 = (UiWidget) (param3);
           } else {
             stackIn_3_0 = null;
           }

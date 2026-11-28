@@ -80,7 +80,7 @@ final class cf extends ci {
             stackIn_4_0 = AccountRequestState.field_c;
           }
           ByteStorage.a(stackIn_4_0, true);
-          qa.field_f.a(fm.field_T.field_M, 0, 0, -2 + (-40 + fm.field_T.field_pb), true);
+          qa.field_f.a(ModalDialogHost.field_T.field_M, 0, 0, -2 + (-40 + ModalDialogHost.field_T.field_pb), true);
           ec.field_j.a(0, de.field_d.field_M, -2147483648, fe.field_g, 0);
           stackIn_6_0 = ln.field_vc;
           stackIn_6_1 = 0;
@@ -92,7 +92,7 @@ final class cf extends ci {
           ((ci) (Object) stackIn_6_0).a(stackIn_6_1, -stackIn_7_2 + de.field_d.field_M, -2147483648, 18, fe.field_g + 2);
           nb.field_Ib.a(-2 + (de.field_d.field_M - sc.field_e - 40), 42 + sc.field_e, -2147483648, 18, 2 + fe.field_g);
           RichTextWidget.field_S.a(2, -20 + (de.field_d.field_pb - fe.field_g) - 2, 20 + (fe.field_g + 2), -3, sc.field_e, 0, de.field_d.field_M);
-          sc.field_d.a(0, fm.field_T.field_M, -2147483648, 40, fm.field_T.field_pb - 40);
+          sc.field_d.a(0, ModalDialogHost.field_T.field_M, -2147483648, 40, ModalDialogHost.field_T.field_pb - 40);
           sc.field_f.a(0, BirthDateValidator.field_k.field_M, -2147483648, 30, 0);
           ce.field_d.a(0, BirthDateValidator.field_k.field_M, -2147483648, -2 + (-40 + BirthDateValidator.field_k.field_pb - 30), 30);
           var2_int = 3 + qa.field_e;
@@ -203,7 +203,7 @@ final class cf extends ci {
           qf.field_f.a(0, RichTextLayout.field_i.field_M, -2147483648, 24, 0);
           dn.field_c.a(0, RichTextLayout.field_i.field_M, -2147483648, -24 + RichTextLayout.field_i.field_pb, 24);
           dn.field_c.field_Ab = wh.a(67, dn.field_c.field_pb, 3, 11579568, 8421504, 1);
-          bh.field_G.a(5, -10 + dn.field_c.field_M, -2147483648, -2 + (-24 + (-10 + dn.field_c.field_pb)), 5);
+          ArrayWidgetContainer.field_G.a(5, -10 + dn.field_c.field_M, -2147483648, -2 + (-24 + (-10 + dn.field_c.field_pb)), 5);
           BufferedSocket.field_d.a((-80 + dn.field_c.field_M) / 2, 80, -2147483648, 24, -24 + dn.field_c.field_pb - 5);
           dj.g(2);
           return;

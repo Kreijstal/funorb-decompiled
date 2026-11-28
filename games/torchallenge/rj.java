@@ -144,16 +144,16 @@ final class rj {
               else {
                 if (stackIn_65_0 <= stackIn_65_1) {
                   tj.field_a[var23Lifetime2] = var27Lifetime1 / var29Lifetime1 + var21Lifetime2;
-                  si.field_K[var23Lifetime2] = var28Lifetime1 / var29Lifetime1 + var22Lifetime2;
+                  ModalDialogHost.field_K[var23Lifetime2] = var28Lifetime1 / var29Lifetime1 + var22Lifetime2;
                   if (var8 < var29Lifetime1) {
                     var8 = var29Lifetime1;
                   }
                   if (var7_int > var29Lifetime1) {
                     var7_int = var29Lifetime1;
                   }
-                  bg.field_O[var23Lifetime2] = var29Lifetime1;
+                  LabeledWidgetContainer.field_O[var23Lifetime2] = var29Lifetime1;
                 } else {
-                  bg.field_O[var23Lifetime2] = -2147483648;
+                  LabeledWidgetContainer.field_O[var23Lifetime2] = -2147483648;
                 }
                 if (param1) {
                   bk.field_q[var23Lifetime2] = var27Lifetime1 >> IterableNodeHashTable.field_g;

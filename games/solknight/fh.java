@@ -90,7 +90,7 @@ final class fh {
             var6 = (String) null;
             fh.a((String) null, (byte) -122);
           }
-          stackIn_13_0 = si.field_C;
+          stackIn_13_0 = SingleChildWidgetContainer.field_C;
           return stackIn_13_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

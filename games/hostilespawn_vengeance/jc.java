@@ -141,19 +141,19 @@ final class jc {
     }
 
     final static AccountServiceResult pollAccountCreationResult(boolean param0) {
-        if (od.field_I == e.field_q) {
+        if (DropTargetWidgetContainer.field_I == e.field_q) {
           throw new IllegalStateException();
         }
         if (param0) {
           field_a = (RgbSprite) null;
-          if (od.field_I == BoundedRandomAccessFile.field_b) {
-            od.field_I = e.field_q;
+          if (DropTargetWidgetContainer.field_I == BoundedRandomAccessFile.field_b) {
+            DropTargetWidgetContainer.field_I = e.field_q;
             return wj.field_H;
           }
           return null;
         }
-        if (od.field_I == BoundedRandomAccessFile.field_b) {
-          od.field_I = e.field_q;
+        if (DropTargetWidgetContainer.field_I == BoundedRandomAccessFile.field_b) {
+          DropTargetWidgetContainer.field_I = e.field_q;
           return wj.field_H;
         }
         return null;

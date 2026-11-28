@@ -224,10 +224,10 @@ final class jd {
 
     final static boolean b(byte param0) {
         if (param0 == 75) {
-          return kn.a(ec.field_f, TextHotspotBounds.field_p, param0 ^ 29787);
+          return SingleChildWidgetContainer.a(ec.field_f, TextHotspotBounds.field_p, param0 ^ 29787);
         }
         field_a = (String) null;
-        return kn.a(ec.field_f, TextHotspotBounds.field_p, param0 ^ 29787);
+        return SingleChildWidgetContainer.a(ec.field_f, TextHotspotBounds.field_p, param0 ^ 29787);
     }
 
     static {

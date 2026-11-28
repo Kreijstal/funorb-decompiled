@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ue implements cg {
+final class ue implements WidgetRenderer {
     static String field_d;
     static int field_b;
     static gk field_a;
@@ -81,7 +81,7 @@ final class ue implements cg {
         field_c = null;
     }
 
-    public final void a(boolean param0, int param1, vg param2, int param3, int param4) {
+    public final void paintWidget(boolean param0, int param1, UiWidget param2, int param3, int param4) {
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         String stackIn_11_2 = null;
@@ -102,7 +102,7 @@ final class ue implements cg {
             ((InteractiveWidget) (param2)).field_A) {
             var8.drawAdditive(1 + var6_int + (-var8.field_z + param2.field_w >> 1), var7 - (-1 - (param2.field_k - var8.field_C >> 1)), 256);
           }
-          if (param2.a(true)) {
+          if (param2.isFocused(true)) {
             ce.a(-4 + param2.field_k, 2 + var6_int, -16579, param2.field_w - 4, 2 + var7);
           }
           return;

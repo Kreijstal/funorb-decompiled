@@ -3,7 +3,7 @@
  */
 import java.io.*;
 
-final class NameSuggestionsPanel extends pj implements WidgetActivationListener {
+final class NameSuggestionsPanel extends DequeWidgetContainer implements WidgetActivationListener {
     private InteractiveWidget[] field_K;
     static int field_P;
     private NameSuggestionListener field_R;
@@ -1117,7 +1117,7 @@ final class NameSuggestionsPanel extends pj implements WidgetActivationListener 
                 }
                 var2 = wg.a("connectionlost_withreason", 0);
                 if (null != var2) {
-                  dl.field_J = mj.a((byte) -110, var2);
+                  AlphaWidgetContainer.field_J = mj.a((byte) -110, var2);
                 }
                 var2 = wg.a("passwordverificationrequired", param0 - 7);
                 if (null != var2) {
@@ -1601,7 +1601,7 @@ final class NameSuggestionsPanel extends pj implements WidgetActivationListener 
                 }
                 var2 = wg.a("create_alert_doublespace", 0);
                 if (var2 != null) {
-                  pi.field_R = mj.a((byte) -110, var2);
+                  DraggableWidgetContainer.field_R = mj.a((byte) -110, var2);
                 }
                 var2 = wg.a("create_alert_passchars", 0);
                 if (null != var2) {
@@ -1625,7 +1625,7 @@ final class NameSuggestionsPanel extends pj implements WidgetActivationListener 
                 }
                 var2 = wg.a("create_alert_passcontainsname_partial", 0);
                 if (null != var2) {
-                  vg.field_x = mj.a((byte) -122, var2);
+                  UiWidget.field_x = mj.a((byte) -122, var2);
                 }
                 var2 = wg.a("create_alert_checkname", 0);
                 if (null != var2) {
@@ -1917,7 +1917,7 @@ final class NameSuggestionsPanel extends pj implements WidgetActivationListener 
                 }
                 var2 = wg.a("achievements", param0 ^ 7);
                 if (null != var2) {
-                  pi.field_W = mj.a((byte) -23, var2);
+                  DraggableWidgetContainer.field_W = mj.a((byte) -23, var2);
                 }
                 var2 = wg.a("achievementsthisgame", param0 ^ 7);
                 if (var2 != null) {
@@ -2671,7 +2671,7 @@ final class NameSuggestionsPanel extends pj implements WidgetActivationListener 
                 }
                 var2 = wg.a("fs_accept_countdown_pl", param0 - 7);
                 if (var2 != null) {
-                  dl.field_I = mj.a((byte) -102, var2);
+                  AlphaWidgetContainer.field_I = mj.a((byte) -102, var2);
                 }
                 var2 = wg.a("fs_nonmember", 0);
                 if (var2 != null) {
@@ -3060,7 +3060,7 @@ final class NameSuggestionsPanel extends pj implements WidgetActivationListener 
     }
 
     NameSuggestionsPanel(NameSuggestionListener param0) {
-        super(0, 0, 0, 0, (cg) null);
+        super(0, 0, 0, 0, (WidgetRenderer) null);
         RuntimeException runtimeException = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -3106,7 +3106,7 @@ final class NameSuggestionsPanel extends pj implements WidgetActivationListener 
           a.field_c = eb.field_d[param1];
           int var2_int = 55 % ((param0 - 57) / 55);
           TextLineMetrics.field_d = ph.field_f[param1];
-          dh.field_J = tg.field_c[param1];
+          LabeledWidgetContainer.field_J = tg.field_c[param1];
         } catch (RuntimeException runtimeException) {
           throw ie.wrapClientException((Throwable) ((Object) runtimeException), "jd.E(" + param0 + ',' + param1 + ')');
         }
@@ -3185,12 +3185,12 @@ final class NameSuggestionsPanel extends pj implements WidgetActivationListener 
         }
     }
 
-    final void a(int param0, int param1, byte param2, int param3) {
+    final void drawWidget(int param0, int param1, byte param2, int param3) {
         RuntimeException runtimeException = null;
         BitmapFont var5 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          super.a(param0, param1, param2, param3);
+          super.drawWidget(param0, param1, param2, param3);
           if (param1 != 0) {
             return;
           }
@@ -3213,7 +3213,7 @@ final class NameSuggestionsPanel extends pj implements WidgetActivationListener 
           Throwable decompiledCaughtException = null;
           IOException var2_ref = null;
           try {
-            if (param0 <= dh.field_N.position) {
+            if (param0 <= LabeledWidgetContainer.field_N.position) {
               return true;
             }
             if (null == uj.field_j) {
@@ -3225,16 +3225,16 @@ final class NameSuggestionsPanel extends pj implements WidgetActivationListener 
               }
               var2_int = uj.field_j.availableBytes((byte) -122);
               if (var2_int > 0) {
-                if (var2_int > -dh.field_N.position + param0) {
-                  var2_int = -dh.field_N.position + param0;
+                if (var2_int > -LabeledWidgetContainer.field_N.position + param0) {
+                  var2_int = -LabeledWidgetContainer.field_N.position + param0;
                 }
-                uj.field_j.readFully((byte) -14, dh.field_N.payload, dh.field_N.position, var2_int);
+                uj.field_j.readFully((byte) -14, LabeledWidgetContainer.field_N.payload, LabeledWidgetContainer.field_N.position, var2_int);
                 el.field_rb = la.correctedCurrentTimeMillis(false);
-                dh.field_N.position = dh.field_N.position + var2_int;
-                if (param0 > dh.field_N.position) {
+                LabeledWidgetContainer.field_N.position = LabeledWidgetContainer.field_N.position + var2_int;
+                if (param0 > LabeledWidgetContainer.field_N.position) {
                   return false;
                 }
-                dh.field_N.position = 0;
+                LabeledWidgetContainer.field_N.position = 0;
                 return true;
               }
               if (var2_int < 0 ||
@@ -3291,17 +3291,17 @@ final class NameSuggestionsPanel extends pj implements WidgetActivationListener 
             var5 = 0;
             do {
               if (var5 >= var3_int) {
-                this.field_K[var3_int] = new InteractiveWidget(mh.field_e, (fd) (this));
-                this.field_K[var3_int].field_l = (cg) ((Object) var4);
-                this.field_K[var3_int].a(20 + 16 * (var3_int + 1), 15, 0, 16535, 100);
-                this.b(this.field_K[var3_int], (byte) 78);
+                this.field_K[var3_int] = new InteractiveWidget(mh.field_e, (WidgetEventListener) (this));
+                this.field_K[var3_int].field_l = (WidgetRenderer) ((Object) var4);
+                this.field_K[var3_int].setBounds(20 + 16 * (var3_int + 1), 15, 0, 16535, 100);
+                this.addChild(this.field_K[var3_int], (byte) 78);
                 break;
               }
-              this.field_K[var5] = new InteractiveWidget(this.field_J[var5], (fd) (this));
-              this.field_K[var5].field_l = (cg) ((Object) var4);
+              this.field_K[var5] = new InteractiveWidget(this.field_J[var5], (WidgetEventListener) (this));
+              this.field_K[var5].field_l = (WidgetRenderer) ((Object) var4);
               this.field_K[var5].field_v = lk.field_l;
-              this.field_K[var5].a(16 * var5 + 20, 15, 0, 16535, 80);
-              this.b(this.field_K[var5], (byte) 33);
+              this.field_K[var5].setBounds(16 * var5 + 20, 15, 0, 16535, 80);
+              this.addChild(this.field_K[var5], (byte) 33);
               var5++;
             } while (var6 == 0);
             if (param0 != 2) {
@@ -3325,7 +3325,7 @@ final class NameSuggestionsPanel extends pj implements WidgetActivationListener 
         }
     }
 
-    final boolean a(int param0, char param1, vg param2, int param3) {
+    final boolean handleKey(int param0, char param1, UiWidget param2, int param3) {
         RuntimeException var5 = null;
         boolean stackIn_12_0 = false;
         boolean stackIn_17_0 = false;
@@ -3334,18 +3334,18 @@ final class NameSuggestionsPanel extends pj implements WidgetActivationListener 
         String stackIn_24_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (super.a(param0, param1, param2, 85)) {
+          if (super.handleKey(param0, param1, param2, 85)) {
             return true;
           }
           if (param3 < 63) {
             return true;
           }
           if (param0 == 98) {
-            stackIn_12_0 = this.a(param2, 65535);
+            stackIn_12_0 = this.focusPreviousChild(param2, 65535);
             return stackIn_12_0;
           }
           if (param0 == 99) {
-            stackIn_17_0 = this.a(param2, (byte) 121);
+            stackIn_17_0 = this.focusNextChild(param2, (byte) 121);
             return stackIn_17_0;
           }
           return false;

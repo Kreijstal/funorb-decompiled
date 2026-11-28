@@ -126,7 +126,7 @@ final class k {
           var2 = new Sprite(param0.getFileByName("final_frame.jpg", "", (byte) -12), (java.awt.Component) ((Object) qd.field_j));
           var3 = var2.field_v;
           var4 = var2.field_y;
-          kg.d(false);
+          LabeledWidgetContainer.d(false);
           wh.field_a = new Sprite(var3, param1 * var4 / 4);
           wh.field_a.bindAsRenderTarget();
           var2.drawOpaque(0, 0);

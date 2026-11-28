@@ -10,8 +10,8 @@ final class ValidatedTextField extends EditableTextField implements FieldValidat
 
     final String getTooltipText(int param0) {
         if (param0 != 0) {
-          lk var3 = (lk) null;
-          this.a(57, 60, -66, (lk) null);
+          UiWidget var3 = (UiWidget) null;
+          this.updatePointer(57, 60, -66, (UiWidget) null);
           if (!this.field_g) {
             return null;
           }
@@ -31,9 +31,9 @@ final class ValidatedTextField extends EditableTextField implements FieldValidat
         return null;
     }
 
-    final void a(int param0, int param1, int param2, lk param3) {
+    final void updatePointer(int param0, int param1, int param2, UiWidget param3) {
         try {
-          super.a(param0 ^ 0, param1, param2, param3);
+          super.updatePointer(param0 ^ 0, param1, param2, param3);
           if (param0 != -1) {
             field_O = 53;
           }
@@ -98,10 +98,10 @@ final class ValidatedTextField extends EditableTextField implements FieldValidat
               return;
             }
             ej.a(param1 ^ 0, var3);
-            var7 = ak.a(param1 - 57, ":", "%3a", var3);
-            var8 = ak.a(15, "@", "%40", var7);
-            var9 = ak.a(88, "&", "%26", var8);
-            var10 = ak.a(param1 ^ 48, "#", "%23", var9);
+            var7 = SingleChildWidgetContainer.a(param1 - 57, ":", "%3a", var3);
+            var8 = SingleChildWidgetContainer.a(15, "@", "%40", var7);
+            var9 = SingleChildWidgetContainer.a(88, "&", "%26", var8);
+            var10 = SingleChildWidgetContainer.a(param1 ^ 48, "#", "%23", var9);
             if (ResourceArchive.field_j == null) {
               return;
             }
@@ -177,7 +177,7 @@ final class ValidatedTextField extends EditableTextField implements FieldValidat
               var2 = 0;
             }
           }
-          for (var3 = 0; se.field_E.length > var3; var3++) {
+          for (var3 = 0; DropTargetWidgetContainer.field_E.length > var3; var3++) {
             var4 = IterableNodeHashTable.field_a[var3];
             if (var4 < 0) {
               var5 = IntrusiveDeque.field_a;
@@ -188,7 +188,7 @@ final class ValidatedTextField extends EditableTextField implements FieldValidat
                 var5 = ag.field_c;
               }
             }
-            var6 = se.field_E[var3];
+            var6 = DropTargetWidgetContainer.field_E[var3];
             if (ne.field_u == 2 &&
               var2 == 1) {
               if (t.field_r.length > eb.field_E.length) {
@@ -263,7 +263,7 @@ final class ValidatedTextField extends EditableTextField implements FieldValidat
         return this.field_N;
     }
 
-    ValidatedTextField(String param0, sk param1, int param2) {
+    ValidatedTextField(String param0, WidgetEventListener param1, int param2) {
         super(param0, param1, param2);
     }
 

@@ -41,7 +41,7 @@ final class pk {
           var4_int = 63 / ((-39 - param3) / 62);
           if (255 == param2) {
             stackIn_5_0 = !(u.field_k >= 13);
-            DelegatingCanvas.field_d = dg.createAccountSuccessResult(stackIn_5_0, 0);
+            DelegatingCanvas.field_d = SingleChildWidgetContainer.createAccountSuccessResult(stackIn_5_0, 0);
             return;
           }
           if (param2 < 100) {

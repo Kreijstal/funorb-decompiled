@@ -16,7 +16,7 @@ final class w extends wd implements ButtonListener {
         field_V = null;
     }
 
-    private final ButtonWidget a(int param0, String param1, tg param2) {
+    private final ButtonWidget a(int param0, String param1, WidgetEventListener param2) {
         ButtonWidget var4 = null;
         RuntimeException var4_ref = null;
         int var5 = 0;
@@ -34,12 +34,12 @@ final class w extends wd implements ButtonListener {
             return stackIn_2_0;
           }
           var4 = new ButtonWidget(param1, param2);
-          var4.field_y = (t) ((Object) new dc());
+          var4.field_y = (WidgetRenderer) ((Object) new dc());
           var5 = this.field_u - 6;
           this.field_u = this.field_u + 38;
-          var4.a(30, -3050, var5, -30 + this.field_x, 15);
-          this.a(false, var4);
-          this.g(110);
+          var4.setBounds(30, -3050, var5, -30 + this.field_x, 15);
+          this.addChild(false, var4);
+          this.refreshLayout(110);
           stackIn_4_0 = var4;
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -91,7 +91,7 @@ final class w extends wd implements ButtonListener {
         }
     }
 
-    w(vl param0, mk param1) {
+    w(ModalDialogHost param0, mk param1) {
         super(param0, 200, 150);
         Object var3 = null;
         Object stackIn_12_0 = null;
@@ -112,7 +112,7 @@ final class w extends wd implements ButtonListener {
                 var3 = cg.field_e;
               }
             } else {
-              var3 = fj.field_O;
+              var3 = DraggableWidgetContainer.field_O;
               this.field_u = this.field_u + 10;
               if (rf.b(120)) {
                 this.field_u = this.field_u + 20;
@@ -120,14 +120,14 @@ final class w extends wd implements ButtonListener {
               }
             }
           }
-          var4 = new UiWidget((String) (var3), (tg) null);
+          var4 = new UiWidget((String) (var3), (WidgetEventListener) null);
           var4.field_m = 50;
           var4.field_x = this.field_x;
           var4.field_u = 80;
           var4.field_p = 0;
-          var4.field_y = (t) ((Object) new DefaultTextWidgetRenderer(fk.field_a, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true));
-          this.a(false, var4);
-          this.field_S = this.a(23879, MovingBlock.field_k, (tg) (this));
+          var4.field_y = (WidgetRenderer) ((Object) new DefaultTextWidgetRenderer(fk.field_a, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true));
+          this.addChild(false, var4);
+          this.field_S = this.a(23879, MovingBlock.field_k, (WidgetEventListener) (this));
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

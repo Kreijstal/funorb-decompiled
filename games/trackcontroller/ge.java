@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ge extends td implements TextHotspotListener, ButtonListener {
+final class ge extends DequeWidgetContainer implements TextHotspotListener, ButtonListener {
     private AccountCreationResultPanel field_C;
     static boolean field_D;
     private ButtonWidget field_E;
@@ -57,7 +57,7 @@ final class ge extends td implements TextHotspotListener, ButtonListener {
     }
 
     ge(AccountCreationResultPanel param0) {
-        super(0, 0, 288, 0, (t) null);
+        super(0, 0, 288, 0, (WidgetRenderer) null);
         String var7 = null;
         int var3 = 0;
         DefaultTextWidgetRenderer var4 = null;
@@ -65,8 +65,8 @@ final class ge extends td implements TextHotspotListener, ButtonListener {
         int var6 = 0;
         try {
           this.field_C = param0;
-          this.field_E = new ButtonWidget(ConfirmedEmailAvailabilityValidator.field_m, (tg) null);
-          this.field_E.field_y = (t) ((Object) new dc());
+          this.field_E = new ButtonWidget(ConfirmedEmailAvailabilityValidator.field_m, (WidgetEventListener) null);
+          this.field_E.field_y = (WidgetRenderer) ((Object) new dc());
           var7 = dh.a((byte) -81, new String[]{this.k(0), this.j(11844)}, qd.field_b);
           var3 = 20;
           var4 = new DefaultTextWidgetRenderer(gk.field_c, 0, 0, 0, 0, 16777215, -1, 3, 0, gk.field_c.field_G, -1, 2147483647, true);
@@ -74,17 +74,17 @@ final class ge extends td implements TextHotspotListener, ButtonListener {
           this.field_F.field_n = "";
           this.field_F.a((byte) 58, bb.field_a, 0);
           this.field_F.a((byte) 80, bb.field_a, 1);
-          this.field_F.field_l = (tg) (this);
+          this.field_F.field_l = (WidgetEventListener) (this);
           this.field_F.field_x = -40 + this.field_x;
           this.field_F.a(var3, (byte) -44, this.field_x - 40, 26);
           var3 = var3 + (this.field_F.field_u + 15);
-          this.a(false, this.field_F);
+          this.addChild(false, this.field_F);
           var5 = 4;
           var6 = 200;
-          this.field_E.a(40, -3050, var3, var6, 300 - var6 >> 1);
-          this.field_E.field_l = (tg) (this);
-          this.a(false, this.field_E);
-          this.a(55 + var3 + var5, -3050, 0, 300, 0);
+          this.field_E.setBounds(40, -3050, var3, var6, 300 - var6 >> 1);
+          this.field_E.field_l = (WidgetEventListener) (this);
+          this.addChild(false, this.field_E);
+          this.setBounds(55 + var3 + var5, -3050, 0, 300, 0);
         } catch (RuntimeException runtimeException) {
           throw LevelGrid.toClientException((Throwable) ((Object) runtimeException), "ge.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
@@ -97,7 +97,7 @@ final class ge extends td implements TextHotspotListener, ButtonListener {
         return "<u=2164A2><col=2164A2>";
     }
 
-    final boolean a(byte param0, char param1, UiWidget param2, int param3) {
+    final boolean handleKey(byte param0, char param1, UiWidget param2, int param3) {
         int var5_int = 0;
         RuntimeException var5 = null;
         boolean stackIn_5_0 = false;
@@ -108,17 +108,17 @@ final class ge extends td implements TextHotspotListener, ButtonListener {
         RuntimeException decompiledCaughtException = null;
         try {
           var5_int = 82 / ((param0 - 17) / 51);
-          if (super.a((byte) -75, param1, param2, param3)) {
+          if (super.handleKey((byte) -75, param1, param2, param3)) {
             return true;
           }
           if (param3 == 98) {
-            stackIn_5_0 = this.a(param2, 121);
+            stackIn_5_0 = this.focusPreviousChild(param2, 121);
             return stackIn_5_0;
           }
           if (99 != param3) {
             return false;
           }
-          stackIn_8_0 = this.a(param2, true);
+          stackIn_8_0 = this.focusNextChild(param2, true);
           return stackIn_8_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -196,8 +196,8 @@ final class ge extends td implements TextHotspotListener, ButtonListener {
                 ne.field_a.payload[var5_int] = var4_ref_wa.field_m[var5_int];
               }
               o.field_a = u.field_o;
-              u.field_o = mc.field_L;
-              mc.field_L = uk.field_c;
+              u.field_o = DropTargetWidgetContainer.field_L;
+              DropTargetWidgetContainer.field_L = uk.field_c;
               uk.field_c = var4_ref_wa.field_i;
               return true;
             }
@@ -217,8 +217,8 @@ final class ge extends td implements TextHotspotListener, ButtonListener {
             }
             if (s.field_b == 0) {
               o.field_a = u.field_o;
-              u.field_o = mc.field_L;
-              mc.field_L = uk.field_c;
+              u.field_o = DropTargetWidgetContainer.field_L;
+              DropTargetWidgetContainer.field_L = uk.field_c;
               uk.field_c = AccountRegistrationPanel.field_K;
               AccountRegistrationPanel.field_K = -1;
               return true;

@@ -151,7 +151,7 @@ final class nd extends IntrusiveNode {
                 }
                 if (param6) {
                   TextLayout.field_h[var23Lifetime2] = var27Lifetime1 >> hb.field_l;
-                  jl.field_A[var23Lifetime2] = var28Lifetime1 >> hb.field_l;
+                  AlphaWidgetContainer.field_A[var23Lifetime2] = var28Lifetime1 >> hb.field_l;
                   qa.field_a[var23Lifetime2] = var29Lifetime1;
                 }
                 var23Lifetime2++;
@@ -182,7 +182,7 @@ final class nd extends IntrusiveNode {
                   var26Lifetime1Lifetime1 = param0.field_q[var23Lifetime2];
                   TutorialController.field_u[var23Lifetime2] = (var24Lifetime1Lifetime1 * var12 - (-(var15 * var25Lifetime1Lifetime1) - var18 * var26Lifetime1Lifetime1) >> 16) + var9;
                   PcmPlayerPump.field_f[var23Lifetime2] = var10 + (var24Lifetime1Lifetime1 * var13 + var16 * var25Lifetime1Lifetime1 + var26Lifetime1Lifetime1 * var19 >> 16);
-                  hj.field_J[var23Lifetime2] = (var17 * var25Lifetime1Lifetime1 + var24Lifetime1Lifetime1 * var14 + var26Lifetime1Lifetime1 * var20 >> 16) + var11;
+                  DropTargetWidgetContainer.field_J[var23Lifetime2] = (var17 * var25Lifetime1Lifetime1 + var24Lifetime1Lifetime1 * var14 + var26Lifetime1Lifetime1 * var20 >> 16) + var11;
                   var24Lifetime1Lifetime1 = param0.field_O[var23Lifetime2];
                   var25Lifetime1Lifetime1 = param0.field_d[var23Lifetime2];
                   var26Lifetime1Lifetime1 = param0.field_b[var23Lifetime2];
@@ -268,7 +268,7 @@ final class nd extends IntrusiveNode {
 
     final static void c(byte param0) {
         FrameTimer.field_c = je.a(param0 ^ -16);
-        jl.field_I = new d();
+        AlphaWidgetContainer.field_I = new ModalDialogHost();
         if (param0 != -11) {
           return;
         }
@@ -314,7 +314,7 @@ final class nd extends IntrusiveNode {
           var1 = lk.c(-62);
           mb.field_s = new LoginPanel(var1, (String) null, true, false, false);
           var2 = -47 % ((-58 - param0) / 40);
-          jl.field_I.a((UiWidget) (bj.field_f), (byte) -1);
+          AlphaWidgetContainer.field_I.showDialog((UiWidget) (bj.field_f), (byte) -1);
           bj.field_f.a(mb.field_s, -67);
           bj.field_f.j(-2065096856);
           return;

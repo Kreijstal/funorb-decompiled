@@ -69,7 +69,7 @@ final class ImageProducerRasterBuffer extends RasterBuffer implements java.awt.i
         if (var2 == null) {
           return;
         }
-        var2.a(td.field_c.field_ob, 54, td.field_c.field_C);
+        var2.drawAllLayers(td.field_c.field_ob, 54, td.field_c.field_C);
     }
 
     public static void clearDeclaredStaticReferences(int param0) {

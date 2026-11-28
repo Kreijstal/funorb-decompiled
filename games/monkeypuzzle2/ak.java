@@ -244,7 +244,7 @@ final class ak extends DefaultTextWidgetRenderer {
         return dupTemp$0;
     }
 
-    public final void a(boolean param0, UiWidget param1, int param2, int param3, int param4) {
+    public final void paintWidget(boolean param0, UiWidget param1, int param2, int param3, int param4) {
         UiWidget stackIn_3_0 = null;
         RuntimeException stackIn_33_0 = null;
         StringBuilder stackIn_33_1 = null;
@@ -297,7 +297,7 @@ final class ak extends DefaultTextWidgetRenderer {
               }
             }
           }
-          if (param1.b((byte) 56)) {
+          if (param1.isFocused((byte) 56)) {
             var14 = this.field_s[5];
             if (var14 != null) {
               var14.a(param3, this, param2, 114, param1, this.field_q);

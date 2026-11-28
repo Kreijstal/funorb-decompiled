@@ -24,9 +24,9 @@ final class vf {
           if (AccountRequestState.field_a != IsaacCipher.field_f) {
             return false;
           }
-          var8 = new AccountCreationResultPanel(jl.field_I, param0);
+          var8 = new AccountCreationResultPanel(AlphaWidgetContainer.field_I, param0);
           var7 = var8;
-          jl.field_I.a((UiWidget) (var8), (byte) -1);
+          AlphaWidgetContainer.field_I.showDialog((UiWidget) (var8), (byte) -1);
           if (param4) {
             return true;
           }

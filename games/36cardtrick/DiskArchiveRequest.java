@@ -34,10 +34,10 @@ final class DiskArchiveRequest extends ArchiveRequest {
           sg.field_d = new RgbSprite(var3, 3 * var4 / 4);
           sg.field_d.bindAsRenderTarget();
           var2.drawOpaque(param1, 0);
-          qg.field_z = new RgbSprite(var3, var4 - sg.field_d.field_o);
-          qg.field_z.bindAsRenderTarget();
+          SingleChildWidgetContainer.field_z = new RgbSprite(var3, var4 - sg.field_d.field_o);
+          SingleChildWidgetContainer.field_z.bindAsRenderTarget();
           var2.drawOpaque(0, -sg.field_d.field_o);
-          qg.field_z.field_n = sg.field_d.field_o;
+          SingleChildWidgetContainer.field_z.field_n = sg.field_d.field_o;
           gg.a(14756);
         } catch (RuntimeException runtimeException) {
           throw ma.wrapException((Throwable) ((Object) runtimeException), "ab.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
@@ -85,7 +85,7 @@ final class DiskArchiveRequest extends ArchiveRequest {
             }
             var4 = new byte[var3_int];
             var5 = 54 % ((6 - param1) / 55);
-            param0.position = param0.position + qf.field_J.a(var3_int, var4, param0.payload, 0, 109, param0.position);
+            param0.position = param0.position + ModalDialog.field_J.a(var3_int, var4, param0.payload, 0, 109, param0.position);
             var6 = NameSuggestionsPanel.decodeCp1252String(255, 0, var4, var3_int);
             stackIn_4_0 = var6;
             return stackIn_4_0;

@@ -51,13 +51,13 @@ final class vd {
         BitPacketBuffer var8 = null;
         ba var9 = null;
         var7 = SolKnight.field_L ? 1 : 0;
-        var8 = te.field_N;
+        var8 = AlphaWidgetContainer.field_N;
         var2 = var8;
         var3 = var8.readUnsignedByte(255);
         stackIn_3_0 = ((var3 & 128) != 0);
         ml.field_e = stackIn_3_0;
         ProxySocketConnector.field_m = 127 & var3;
-        th.field_I = var8.readUnsignedByte(255);
+        DropTargetWidgetContainer.field_I = var8.readUnsignedByte(255);
         q.field_b = var8.readLong(10526);
         if (ProxySocketConnector.field_m != 2) {
           ah.field_c = 0;

@@ -49,7 +49,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
               df.field_c = 0;
               fb.field_f = 0;
               TextFieldValidator.field_j = param5;
-              kg.field_H = param5;
+              LabeledWidgetContainer.field_H = param5;
               tc.field_u = hf.a((byte) -96);
               dupTemp$0 = new PlatformTaskDispatcher(param0, param6, param1, true);
               DebouncedFieldValidator.field_d = dupTemp$0;
@@ -611,7 +611,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
           qd.field_j.requestFocus();
           lh.field_f = true;
           ua.field_b = true;
-          of.field_F = true;
+          DropTargetWidgetContainer.field_F = true;
           if (param0 != 31178) {
             return;
           }
@@ -703,7 +703,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
         RuntimeException decompiledCaughtException = null;
         try {
           lh.field_f = true;
-          of.field_F = true;
+          DropTargetWidgetContainer.field_F = true;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -732,12 +732,12 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
         try {
           if (this == ProxySocketConnector.field_j &&
             !qc.field_b) {
-            of.field_F = true;
+            DropTargetWidgetContainer.field_F = true;
             if (wl.field_ab &&
               ih.correctedCurrentTimeMillis((byte) -98) - AgeValidator.field_m > 1000L) {
               var2 = param0.getClipBounds();
               if (var2 != null) {
-                if (var2.width < kg.field_H) {
+                if (var2.width < LabeledWidgetContainer.field_H) {
                   return;
                 }
                 if (var2.height < dd.field_d) {
@@ -837,7 +837,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
           ab.field_a = ab.field_a + 1;
           if (fieldTemp$1 > 50) {
             ab.field_a = ab.field_a - 50;
-            of.field_F = true;
+            DropTargetWidgetContainer.field_F = true;
             qd.field_j.setSize(TextFieldValidator.field_j, td.field_d);
             qd.field_j.setVisible(true);
             boolean decompiledSharedTail0 = (null != DualLinkNode.field_q &&

@@ -138,12 +138,12 @@ final class DirectByteStorage extends ByteStorage {
             if (!param0) {
               var11 = 0;
               var12 = k.field_b[var4];
-              if (uk.field_U[ea.field_e] >= 0) {
-                var12 = var12 << uk.field_U[ea.field_e];
+              if (DraggableWidgetContainer.field_U[ea.field_e] >= 0) {
+                var12 = var12 << DraggableWidgetContainer.field_U[ea.field_e];
               } else {
-                var12 = var12 >> -uk.field_U[ea.field_e];
+                var12 = var12 >> -DraggableWidgetContainer.field_U[ea.field_e];
               }
-              var10 = (b.field_N[ea.field_e] == 0) ? var6 : var7;
+              var10 = (ModalDialog.field_N[ea.field_e] == 0) ? var6 : var7;
               var12 = var12 & RandomAccessCacheFile.field_h[ea.field_e];
               var10 = var10 & RandomAccessCacheFile.field_h[ea.field_e];
               if (0 != (var12 ^ var10)) {
@@ -153,7 +153,7 @@ final class DirectByteStorage extends ByteStorage {
                 var11 = 0;
               }
               if (var11 != 0) {
-                var5 = 8 * var4 + b.field_N[ea.field_e] * 4;
+                var5 = 8 * var4 + ModalDialog.field_N[ea.field_e] * 4;
                 hf.field_d[0 + var5] = (byte)p.a((int) hf.field_d[0 + var5], jh.a(var12, 255));
                 hf.field_d[1 + var5] = (byte)p.a((int) hf.field_d[1 + var5], jh.a(255, jh.a(65280, var12) >> 8));
                 hf.field_d[2 + var5] = (byte)p.a((int) hf.field_d[2 + var5], jh.a(jh.a(16711680, var12), 16759179) >> 16);

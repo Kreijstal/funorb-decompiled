@@ -103,7 +103,7 @@ abstract class wh extends DualLinkNode {
         try {
           var5_int = MouseWheelInput.bitLength((param4 - param0) * 3, (byte) 1);
           var6 = 3 * param0;
-          vg.d((byte) 103);
+          UiWidget.d((byte) 103);
           var7 = var5_int - 10;
           if (0 < param3.field_G &&
             null != param3.field_O) {
@@ -305,8 +305,8 @@ abstract class wh extends DualLinkNode {
           ib.field_f.a(false, -87);
           kk.a(param0 + 168, param3, param1, param2);
           lc.c((byte) 109);
-          lc.field_h = pj.field_D;
-          TextHotspotBounds.field_q = pj.field_D;
+          lc.field_h = DequeWidgetContainer.field_D;
+          TextHotspotBounds.field_q = DequeWidgetContainer.field_D;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

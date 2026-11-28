@@ -79,7 +79,7 @@ abstract class LevelRenderable {
           var8 = -4 % ((3 - param5) / 42);
           var9 = new AccountCreationResultPanel(AccountServiceResult.field_e, param6);
           var7 = var9;
-          AccountServiceResult.field_e.b(var9, 0);
+          AccountServiceResult.field_e.showDialog(var9, 0);
           if (ko.e((byte) -94)) {
             var9.o(16614);
             return true;

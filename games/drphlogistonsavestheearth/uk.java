@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class uk implements cg {
+final class uk implements WidgetRenderer {
     static int field_g;
     static RgbSprite field_f;
     static he[] field_b;
@@ -29,7 +29,7 @@ final class uk implements cg {
         var8 = DrPhlogistonSavesTheEarth.field_D ? 1 : 0;
         try {
           boolean decompiledFrameRemainder0 = true;
-          var9 = dh.field_N;
+          var9 = LabeledWidgetContainer.field_N;
           var2 = var9.readUnsignedByte(31760);
           var3 = var9.readUnsignedByte(31760);
           if (0 == var2) {
@@ -94,7 +94,7 @@ final class uk implements cg {
         field_b = null;
     }
 
-    public final void a(boolean param0, int param1, vg param2, int param3, int param4) {
+    public final void paintWidget(boolean param0, int param1, UiWidget param2, int param3, int param4) {
         int stackIn_8_0 = 0;
         RuntimeException stackIn_23_0 = null;
         StringBuilder stackIn_23_1 = null;
@@ -113,14 +113,14 @@ final class uk implements cg {
             field_b = (he[]) null;
           }
           if (!param2.field_n &&
-            !param2.a(true)) {
+            !param2.isFocused(true)) {
             stackIn_8_0 = 2188450;
           } else {
             stackIn_8_0 = 3249872;
           }
           var6_int = stackIn_8_0;
           this.field_c.drawParagraph("<u=" + Integer.toString(var6_int, 16) + ">" + param2.field_p + "</u>", param4 + param2.field_o, param2.field_m + param3, param2.field_w, param2.field_k, var6_int, -1, this.field_d, this.field_a, this.field_c.field_S + this.field_c.field_x);
-          if (param2.a(true)) {
+          if (param2.isFocused(true)) {
             var7 = this.field_c.stringWidth(param2.field_p);
             var8 = this.field_c.field_S + this.field_c.field_x;
             var9 = param4 + param2.field_o;

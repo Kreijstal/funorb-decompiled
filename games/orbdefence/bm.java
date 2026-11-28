@@ -5,7 +5,7 @@ final class bm {
     static String field_c;
     static String field_a;
     static String field_b;
-    static sk field_d;
+    static ModalDialogHost field_d;
     static boolean field_e;
 
     static long a(long param0, long param1) {
@@ -68,7 +68,7 @@ final class bm {
             } else {
               stackIn_12_2 = "{...}";
             }
-            throw dd.wrapClientException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
+            throw DraggableWidgetContainer.wrapClientException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;

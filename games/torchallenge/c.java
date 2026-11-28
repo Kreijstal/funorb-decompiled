@@ -189,16 +189,16 @@ final class c {
             var3Lifetime1++;
           }
           for (var3Lifetime2 = 0; var3Lifetime2 < 6; var3Lifetime2++) {
-            kj.field_I[var3Lifetime2] = false;
+            DequeWidgetContainer.field_I[var3Lifetime2] = false;
             if (var2 != 0 &&
               1 < var3Lifetime2) {
-              kj.field_I[var3Lifetime2] = true;
+              DequeWidgetContainer.field_I[var3Lifetime2] = true;
             }
             if (PasswordValidator.field_p &&
               aj.field_h) {
               ac.field_d = ac.field_d + 64;
               pi.field_a = pi.field_a + 128;
-              kj.field_I[var3Lifetime2] = false;
+              DequeWidgetContainer.field_I[var3Lifetime2] = false;
             }
           }
           return;
@@ -223,7 +223,7 @@ final class c {
     }
 
     final static void a(boolean param0, boolean param1) {
-        t.field_b.a(0, 0, 0);
+        t.field_b.drawAllLayers(0, 0, 0);
         if (param1) {
           field_b = (Sprite) null;
         }
@@ -233,7 +233,7 @@ final class c {
         try {
           if (null == oa.field_k) {
             oa.field_k = new pe(t.field_b, jh.field_a);
-            t.field_b.a((byte) 86, (UiComponent) (oa.field_k));
+            t.field_b.showDialog((byte) 86, (UiComponent) (oa.field_k));
           }
           oa.field_k.a(param2, param0, param3, false);
           SoftwareRasterizer.clearRaster();

@@ -7,7 +7,7 @@ abstract class pc extends nf {
     private int field_W;
     private sd field_O;
     private int field_S;
-    private ue field_Y;
+    private AlphaWidgetContainer field_Y;
     private int field_V;
     private UiWidget field_T;
     static Sprite[] field_U;
@@ -25,15 +25,15 @@ abstract class pc extends nf {
             this.field_Y.unlink(param1 ^ -19820);
           }
           if (param0 != null) {
-            param0.a(param0.field_p, 13361, 6, param0.field_l, this.field_V + 6);
-            this.field_Y = new ue(param0);
+            param0.setBounds(param0.field_p, 13361, 6, param0.field_l, this.field_V + 6);
+            this.field_Y = new AlphaWidgetContainer(param0);
             if (MonkeyPuzzle2.field_F) {
-              this.field_Y = new ue();
+              this.field_Y = new AlphaWidgetContainer();
             }
           } else {
-            this.field_Y = new ue();
+            this.field_Y = new AlphaWidgetContainer();
           }
-          this.b((byte) -114, this.field_Y);
+          this.addChild((byte) -114, this.field_Y);
           this.field_T = null;
           if (param1 != 6) {
             this.p(-125);
@@ -114,7 +114,7 @@ abstract class pc extends nf {
         }
     }
 
-    boolean k(int param0) {
+    boolean advanceDialogAnimation(int param0) {
         int fieldTemp$4 = 0;
         int fieldTemp$5 = 0;
         int fieldTemp$7 = 0;
@@ -123,10 +123,10 @@ abstract class pc extends nf {
         var3 = MonkeyPuzzle2.field_F ? 1 : 0;
         if (null == this.field_O) {
           if (param0 == -23913) {
-            return super.k(-23913);
+            return super.advanceDialogAnimation(-23913);
           }
-          this.b(false);
-          return super.k(-23913);
+          this.snapDialogAnimation(false);
+          return super.advanceDialogAnimation(-23913);
         }
         if (fl.field_c == this.field_O) {
           fieldTemp$4 = this.field_X + 1;
@@ -143,17 +143,17 @@ abstract class pc extends nf {
             }
           }
           if (param0 == -23913) {
-            return super.k(-23913);
+            return super.advanceDialogAnimation(-23913);
           }
-          this.b(false);
-          return super.k(-23913);
+          this.snapDialogAnimation(false);
+          return super.advanceDialogAnimation(-23913);
         }
         if (this.field_O != ie.field_c) {
           if (param0 == -23913) {
-            return super.k(-23913);
+            return super.advanceDialogAnimation(-23913);
           }
-          this.b(false);
-          return super.k(-23913);
+          this.snapDialogAnimation(false);
+          return super.advanceDialogAnimation(-23913);
         }
         fieldTemp$5 = this.field_X + 1;
         this.field_X = this.field_X + 1;
@@ -173,18 +173,18 @@ abstract class pc extends nf {
             this.field_Y.field_F = -((this.field_X << 8) / this.field_S) + 256;
           }
           if (param0 == -23913) {
-            return super.k(-23913);
+            return super.advanceDialogAnimation(-23913);
           }
-          this.b(false);
-          return super.k(-23913);
+          this.snapDialogAnimation(false);
+          return super.advanceDialogAnimation(-23913);
         }
         this.field_Y.field_F = (this.field_X << 8) / this.field_W;
         if (var3 == 0) {
           if (param0 == -23913) {
-            return super.k(-23913);
+            return super.advanceDialogAnimation(-23913);
           }
-          this.b(false);
-          return super.k(-23913);
+          this.snapDialogAnimation(false);
+          return super.advanceDialogAnimation(-23913);
         }
         fieldTemp$6 = this.field_X + 1;
         this.field_X = this.field_X + 1;
@@ -198,10 +198,10 @@ abstract class pc extends nf {
           this.field_Y.field_F = -((this.field_X << 8) / this.field_S) + 256;
         }
         if (param0 == -23913) {
-          return super.k(-23913);
+          return super.advanceDialogAnimation(-23913);
         }
-        this.b(false);
-        return super.k(-23913);
+        this.snapDialogAnimation(false);
+        return super.advanceDialogAnimation(-23913);
     }
 
     final static String a(byte param0, boolean param1, CharSequence param2) {
@@ -297,17 +297,17 @@ abstract class pc extends nf {
         }
     }
 
-    final boolean b(boolean param0) {
+    final boolean snapDialogAnimation(boolean param0) {
         if (!param0) {
           this.p(-21);
-          return super.b(false);
+          return super.snapDialogAnimation(false);
         }
         this.field_T = (UiWidget) null;
         this.p(-21);
-        return super.b(false);
+        return super.snapDialogAnimation(false);
     }
 
-    boolean a(UiWidget param0, char param1, int param2, int param3) {
+    boolean handleKey(UiWidget param0, char param1, int param2, int param3) {
         int var5_int = 0;
         RuntimeException var5 = null;
         RuntimeException stackIn_14_0 = null;
@@ -316,17 +316,17 @@ abstract class pc extends nf {
         RuntimeException decompiledCaughtException = null;
         try {
           var5_int = 72 / ((param3 - 37) / 50);
-          if (super.a(param0, param1, param2, -113)) {
+          if (super.handleKey(param0, param1, param2, -113)) {
             return true;
           }
           if (this.field_Y == null) {
             return false;
           }
           if (param2 == 98) {
-            this.field_Y.a(param0, false);
+            this.field_Y.takeFocus(param0, false);
           }
           if (param2 == 99) {
-            this.field_Y.a(param0, false);
+            this.field_Y.takeFocus(param0, false);
           }
           return false;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -346,7 +346,7 @@ abstract class pc extends nf {
     final void p(int param0) {
         if (null != this.field_O) {
           if (ie.field_c != this.field_O) {
-            this.a(12 + this.field_V + this.field_T.field_p, (byte) -11, this.field_T.field_l + 12);
+            this.setCenteredSize(12 + this.field_V + this.field_T.field_p, (byte) -11, this.field_T.field_l + 12);
             this.a(this.field_T, 6);
           } else {
             this.field_Y.field_F = 256;
@@ -382,7 +382,7 @@ abstract class pc extends nf {
         }
     }
 
-    pc(kj param0, UiWidget param1, int param2, int param3, int param4) {
+    pc(ModalDialogHost param0, UiWidget param1, int param2, int param3, int param4) {
         super(param0, 12 + param1.field_l, param1.field_p + (param2 + 12));
         try {
           this.field_W = param3;
@@ -434,7 +434,7 @@ abstract class pc extends nf {
                 param2 = gg.a(new String[]{param2}, ek.field_c, true);
               }
               if (ja.field_F) {
-                param2 = oa.field_F;
+                param2 = DropTargetWidgetContainer.field_F;
               }
               me.field_f.a(-10, param2, param1);
             }

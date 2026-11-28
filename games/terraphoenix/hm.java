@@ -44,7 +44,7 @@ final class hm extends UiWidget {
         return var3;
     }
 
-    final void a(int param0, int param1, int param2, int param3) {
+    final void drawWidget(int param0, int param1, int param2, int param3) {
         Sprite discarded$0 = null;
         if (param2 != 0) {
           return;
@@ -62,8 +62,8 @@ final class hm extends UiWidget {
         }
     }
 
-    final void a(int param0, byte param1, int param2, int param3, int param4) {
-        super.a(param0, (byte) 65, param2, param3, param4);
+    final void setBounds(int param0, byte param1, int param2, int param3, int param4) {
+        super.setBounds(param0, (byte) 65, param2, param3, param4);
         this.e((byte) 76);
         if (param1 < 45) {
           field_J = (String) null;
@@ -122,7 +122,7 @@ final class hm extends UiWidget {
         try {
           if (param3 != -1) {
             var9 = (UiWidget) null;
-            this.a((UiWidget) null, 26, 3, -111);
+            this.updatePointer((UiWidget) null, 26, 3, -111);
           }
           var5_int = this.width + param2;
           TextFieldValidator.a(-this.field_C.field_r + var5_int, param1, 16105, param1 + this.height, this.field_C.field_r + param2);
@@ -219,7 +219,7 @@ final class hm extends UiWidget {
           for (var7 = var2_int; var3 > var7; var7++) {
             var8 = param1.charAt(var7);
             if (ja.a((char) var8, (byte) 106)) {
-              var9 = kh.a((char) var8, (byte) -128);
+              var9 = ModalDialog.a((char) var8, (byte) -128);
               if (0 != var9) {
                 discarded$0 = var6.append((char) var9);
               }
@@ -266,7 +266,7 @@ final class hm extends UiWidget {
         field_H = null;
     }
 
-    final void a(UiWidget param0, int param1, int param2, int param3) {
+    final void updatePointer(UiWidget param0, int param1, int param2, int param3) {
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         String stackIn_9_2 = null;
@@ -316,7 +316,7 @@ final class hm extends UiWidget {
         this.field_K = param4;
         this.field_E = param8;
         this.field_Q = param6;
-        this.a(param1, (byte) 113, param2, param0, param3);
+        this.setBounds(param1, (byte) 113, param2, param0, param3);
     }
 
     static {

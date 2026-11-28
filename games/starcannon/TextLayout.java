@@ -68,7 +68,7 @@ abstract class TextLayout {
             TextLayout.b(121);
           }
           var2 = 0;
-          while (ad.e((byte) -115)) {
+          while (LabeledWidgetContainer.e((byte) -115)) {
             ja.field_c.a(0);
             if (ja.field_c.g(param0 - 31380)) {
               var1_int = 1;
@@ -98,7 +98,7 @@ abstract class TextLayout {
           }
           if (var3 == 0 &&
             2 == SecondaryNodeDeque.field_a) {
-            var4 = -af.field_x + dd.correctedCurrentTimeMillis(125);
+            var4 = -DropTargetWidgetContainer.field_x + dd.correctedCurrentTimeMillis(125);
             var6 = (int)((10999L - var4) / 1000L);
             if (var6 <= 0) {
               AccountServiceResult.a((byte) 63, 5, true);

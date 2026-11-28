@@ -84,7 +84,7 @@ final class vj extends ql {
               if (this.field_m + ImageProducerRasterBuffer.field_p >= 3 &&
                 15 == ha.field_t) {
                 CrossfadingMidiPcmStream.a(16, 1);
-                nh.field_E.setCoordinates(-1, 8360, -1);
+                LabeledWidgetContainer.field_E.setCoordinates(-1, 8360, -1);
                 var5 = this.field_x[var4];
                 this.field_o.field_a = 1;
                 var6 = var4;
@@ -295,7 +295,7 @@ final class vj extends ql {
           this.field_t[this.field_n] = true;
           if (this.field_m == 3) {
             CrossfadingMidiPcmStream.a(0, 1);
-            nh.field_E.copyCoordinatesFrom((byte) 46, this.field_f);
+            LabeledWidgetContainer.field_E.copyCoordinatesFrom((byte) 46, this.field_f);
             var4_ref_oc = this.field_k[this.field_n];
             this.field_r.field_a = 1;
             var5_int = this.field_n;
@@ -409,7 +409,7 @@ final class vj extends ql {
         this.field_r = new v(ea.field_b, param0, 0, 200);
         this.field_l = false;
         CrossfadingMidiPcmStream.a(15, 1);
-        nh.field_E.setCoordinates(-1, 8360, -1);
+        LabeledWidgetContainer.field_E.setCoordinates(-1, 8360, -1);
         return;
     }
 

@@ -29,9 +29,9 @@ final class ea {
     final static int[][] a(byte param0) {
         if (param0 != 13) {
           ea.a((byte) 114);
-          return dg.field_L;
+          return LabeledWidgetContainer.field_L;
         }
-        return dg.field_L;
+        return LabeledWidgetContainer.field_L;
     }
 
     final static void c(int param0) {

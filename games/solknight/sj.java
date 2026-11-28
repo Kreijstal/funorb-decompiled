@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class sj implements j {
+final class sj implements WidgetRenderer {
     static DisplayNameSelectionPanel field_d;
     private int field_a;
     private int field_c;
@@ -11,7 +11,7 @@ final class sj implements j {
     private int field_f;
     private int field_h;
 
-    public final void a(byte param0, int param1, boolean param2, int param3, UiWidget param4) {
+    public final void paintWidget(byte param0, int param1, boolean param2, int param3, UiWidget param4) {
         int var10 = 0;
         UiWidget stackIn_4_0 = null;
         RuntimeException stackIn_16_0 = null;

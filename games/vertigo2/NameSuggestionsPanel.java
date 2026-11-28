@@ -15,7 +15,7 @@ final class NameSuggestionsPanel extends WidgetContainer implements WidgetActiva
     static boolean[] field_Q;
     static boolean field_P;
 
-    final boolean a(char param0, int param1, int param2, UiWidget param3) {
+    final boolean handleKey(char param0, int param1, int param2, UiWidget param3) {
         RuntimeException var5 = null;
         boolean stackIn_6_0 = false;
         boolean stackIn_10_0 = false;
@@ -24,15 +24,15 @@ final class NameSuggestionsPanel extends WidgetContainer implements WidgetActiva
         String stackIn_18_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (super.a(param0, param1 ^ 0, param2, param3)) {
+          if (super.handleKey(param0, param1 ^ 0, param2, param3)) {
             return true;
           }
           if (param2 == 98) {
-            stackIn_6_0 = this.a(32345, param3);
+            stackIn_6_0 = this.focusPreviousChild(32345, param3);
             return stackIn_6_0;
           }
           if (99 == param2) {
-            stackIn_10_0 = this.b((byte) -122, param3);
+            stackIn_10_0 = this.focusNextChild((byte) -122, param3);
             return stackIn_10_0;
           }
           if (param1 == 13) {
@@ -154,16 +154,16 @@ final class NameSuggestionsPanel extends WidgetContainer implements WidgetActiva
             }
             this.field_G = new InteractiveWidget[1 + var3_int];
             for (var5 = 0; var5 < var3_int; var5++) {
-              this.field_G[var5] = new InteractiveWidget(this.field_E[var5], (uf) (this));
+              this.field_G[var5] = new InteractiveWidget(this.field_E[var5], (WidgetEventListener) (this));
               this.field_G[var5].listener = (WidgetListener) ((Object) var4);
               this.field_G[var5].field_q = GameApplet.field_k;
               this.field_G[var5].setBounds(false, 0, 20 + var5 * 16, 15, 80);
-              this.c((byte) -29, this.field_G[var5]);
+              this.addChild((byte) -29, this.field_G[var5]);
             }
-            this.field_G[var3_int] = new InteractiveWidget(pl.field_p, (uf) (this));
+            this.field_G[var3_int] = new InteractiveWidget(pl.field_p, (WidgetEventListener) (this));
             this.field_G[var3_int].listener = (WidgetListener) ((Object) var4);
             this.field_G[var3_int].setBounds(false, 0, 20 + (16 * var3_int + 16), 15, 100);
-            this.c((byte) -39, this.field_G[var3_int]);
+            this.addChild((byte) -39, this.field_G[var3_int]);
             return;
           }
           this.field_E = null;
@@ -195,8 +195,8 @@ final class NameSuggestionsPanel extends WidgetContainer implements WidgetActiva
         field_M = null;
     }
 
-    final void a(boolean param0, int param1, int param2, int param3) {
-        super.a(param0, param1, param2, param3);
+    final void drawWidget(boolean param0, int param1, int param2, int param3) {
+        super.drawWidget(param0, param1, param2, param3);
         if (param1 != 0) {
           return;
         }

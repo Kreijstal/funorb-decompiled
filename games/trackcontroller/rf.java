@@ -6,7 +6,7 @@ final class rf {
     static int[] field_a;
     static int field_b;
     static String field_d;
-    static fj field_e;
+    static DraggableWidgetContainer field_e;
 
     public static void a(int param0) {
         field_a = null;
@@ -36,7 +36,7 @@ final class rf {
           }
           var5 = (ti) (LevelData.field_s.first(2));
           while (var5 != null) {
-            mc.a(false, param0, var5);
+            DropTargetWidgetContainer.a(false, param0, var5);
             var5 = (ti) (LevelData.field_s.next(10));
           }
           return;
@@ -66,7 +66,7 @@ final class rf {
         ClientException.field_f = null;
         cd.field_j = false;
         aj.field_m = -1;
-        vl.field_H = 0;
+        ModalDialogHost.field_H = 0;
     }
 
     final static ji[] a(PlatformTaskDispatcher param0, boolean param1) {

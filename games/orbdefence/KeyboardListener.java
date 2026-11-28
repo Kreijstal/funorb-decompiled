@@ -38,7 +38,7 @@ final class KeyboardListener implements java.awt.event.KeyListener, java.awt.eve
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw dd.wrapClientException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw DraggableWidgetContainer.wrapClientException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 
@@ -80,7 +80,7 @@ final class KeyboardListener implements java.awt.event.KeyListener, java.awt.eve
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw dd.wrapClientException((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
+          throw DraggableWidgetContainer.wrapClientException((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
         }
     }
 
@@ -141,13 +141,13 @@ final class KeyboardListener implements java.awt.event.KeyListener, java.awt.eve
           } else {
             stackIn_25_2 = "{...}";
           }
-          throw dd.wrapClientException((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(')').toString());
+          throw DraggableWidgetContainer.wrapClientException((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(')').toString());
         }
     }
 
     final static String a(int param0) {
         if (qc.field_g == PacketBuffer.field_m) {
-          return sk.field_G;
+          return ModalDialogHost.field_G;
         }
         if (!RichTextLayout.field_u.a(false)) {
           return RichTextLayout.field_u.a(-63);
@@ -178,7 +178,7 @@ final class KeyboardListener implements java.awt.event.KeyListener, java.awt.eve
           }
           param0.consume();
         } catch (RuntimeException runtimeException) {
-          throw dd.wrapClientException((Throwable) ((Object) runtimeException), "qh.keyTyped(" + (param0 != null ? "{...}" : "null") + ')');
+          throw DraggableWidgetContainer.wrapClientException((Throwable) ((Object) runtimeException), "qh.keyTyped(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

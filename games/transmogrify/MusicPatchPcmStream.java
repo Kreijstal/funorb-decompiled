@@ -417,7 +417,7 @@ final class MusicPatchPcmStream extends PcmStream {
             return false;
           }
           var7 = new AccountCreationResultPanel(ResourceArchive.field_f, param0);
-          ResourceArchive.field_f.b((UiWidget) (var7), (byte) -71);
+          ResourceArchive.field_f.showDialog((UiWidget) (var7), (byte) -71);
           if (!PacketBuffer.f((byte) 105)) {
             ArchiveRequest.field_v = of.field_d;
             q.field_h = null;
@@ -658,7 +658,7 @@ final class MusicPatchPcmStream extends PcmStream {
           }
           EmailFormatValidator.field_m = param0;
           jl.field_o = param2;
-          gl.field_B = param4;
+          AlphaWidgetContainer.field_B = param4;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

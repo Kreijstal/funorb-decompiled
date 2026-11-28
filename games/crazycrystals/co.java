@@ -3,7 +3,7 @@
  */
 import java.io.*;
 
-final class co extends qm {
+final class co extends UiWidget {
     private int field_E;
     private RgbSprite field_z;
     private int field_v;
@@ -47,8 +47,8 @@ final class co extends qm {
         return var3;
     }
 
-    final void a(int param0, int param1, int param2, int param3, byte param4) {
-        super.a(param0, param1, param2, param3, param4);
+    final void setBounds(int param0, int param1, int param2, int param3, byte param4) {
+        super.setBounds(param0, param1, param2, param3, param4);
         this.h(0);
     }
 
@@ -144,7 +144,7 @@ final class co extends qm {
         }
     }
 
-    final void a(qm param0, int param1, int param2, int param3) {
+    final void updatePointer(UiWidget param0, int param1, int param2, int param3) {
         try {
           if (this.field_H) {
             this.field_I = this.field_I + 1;
@@ -211,7 +211,7 @@ final class co extends qm {
           var5_int = this.field_g + param3;
           qp.a(this.field_z.field_l + param3, this.field_f + param2, var5_int - this.field_z.field_l, (byte) 73, param2);
           if (param0 <= 0) {
-            this.a(-15, -31, 68, -69, (byte) -1);
+            this.setBounds(-15, -31, 68, -69, (byte) -1);
           }
           for (var6 = -this.field_I + param3; var6 < var5_int; var6 = var6 + param1.field_l) {
             param1.draw(var6, param2);
@@ -251,7 +251,7 @@ final class co extends qm {
         }
     }
 
-    final void a(int param0, byte param1, int param2, int param3) {
+    final void drawWidget(int param0, byte param1, int param2, int param3) {
         if (param3 != 0) {
           return;
         }
@@ -314,7 +314,7 @@ final class co extends qm {
               } else {
                 ah.a(g.field_a, var4, 3, (byte) 119, 3);
                 ah.a(hc.field_c, var4, 3, (byte) -71, 6);
-                aj.a(32293, CipherPacketBuffer.field_k[0], var4, 9, 9, oj.field_M);
+                aj.a(32293, CipherPacketBuffer.field_k[0], var4, 9, 9, DraggableWidgetContainer.field_M);
                 aj.a(32293, CipherPacketBuffer.field_k[1], var4, 13, 12, am.field_f);
                 aj.a(32293, CipherPacketBuffer.field_k[1], var4, 25, 25, tn.field_o);
                 aj.a(32293, CipherPacketBuffer.field_k[2], var4, 28, 27, GameAppletShell.field_f);
@@ -325,7 +325,7 @@ final class co extends qm {
               ah.a(FrameTimer.field_c, var4, 12, (byte) 97, 12);
               ah.a(fp.field_f, var4, 19, (byte) -38, 19);
               ah.a(cb.field_q, var4, 24, (byte) 122, 24);
-              ah.a(oj.field_C, var4, 30, (byte) 103, 30);
+              ah.a(DraggableWidgetContainer.field_C, var4, 30, (byte) 103, 30);
             }
           }
         } else {
@@ -342,7 +342,7 @@ final class co extends qm {
         this.field_u = param7;
         this.field_C = param6;
         this.field_v = param4;
-        this.a(param3, param0, param1, param2, (byte) -52);
+        this.setBounds(param3, param0, param1, param2, (byte) -52);
     }
 
     static {

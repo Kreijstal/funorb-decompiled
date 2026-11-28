@@ -9,7 +9,7 @@ final class oh {
 
     final static void a(byte param0) {
         if (null != dc.field_a) {
-          dc.field_a.b(false);
+          dc.field_a.snapAndPruneDialogs(false);
         }
         if (param0 != 84) {
           return;

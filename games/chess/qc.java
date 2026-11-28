@@ -84,7 +84,7 @@ final class qc {
                   }
                   if (var5 >= 2 &&
                     !param1) {
-                    stackIn_29_0 = ji.field_Q;
+                    stackIn_29_0 = DropTargetWidgetContainer.field_Q;
                     return stackIn_29_0;
                   }
                 }

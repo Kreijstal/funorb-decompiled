@@ -142,9 +142,9 @@ final class dj extends DualLinkNode {
     }
 
     final static void g(int param0) {
-        hd.field_c.a(0, -(bo.field_c ? 44 + sc.field_e : 0) + bh.field_G.field_M, -2147483648, 18, 0);
-        ChessBoardState.field_c.a(-40 + (bh.field_G.field_M + (-sc.field_e - 2)), 42 + sc.field_e, -2147483648, 18, 0);
-        ib.field_c.a(param0, bh.field_G.field_pb - 20, 20, -3, sc.field_e, 0, bh.field_G.field_M);
+        hd.field_c.a(0, -(bo.field_c ? 44 + sc.field_e : 0) + ArrayWidgetContainer.field_G.field_M, -2147483648, 18, 0);
+        ChessBoardState.field_c.a(-40 + (ArrayWidgetContainer.field_G.field_M + (-sc.field_e - 2)), 42 + sc.field_e, -2147483648, 18, 0);
+        ib.field_c.a(param0, ArrayWidgetContainer.field_G.field_pb - 20, 20, -3, sc.field_e, 0, ArrayWidgetContainer.field_G.field_M);
     }
 
     final static FrameTimer h(int param0) {

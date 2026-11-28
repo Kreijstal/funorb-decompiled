@@ -38,7 +38,7 @@ final class ImageProducerRasterBuffer extends AwtRasterBuffer implements java.aw
             var5 = (java.awt.Canvas) null;
             ImageProducerRasterBuffer.a((java.awt.Canvas) null, false, false);
           }
-          if (g.field_A < 10) {
+          if (DequeWidgetContainer.field_A < 10) {
             var3_int = 0;
             if (ii.field_a) {
               var3_int = 1;

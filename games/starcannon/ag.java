@@ -214,7 +214,7 @@ abstract class ag extends GameApplet {
           } else {
             if (var2 != 2) {
               if (var2 == 3) {
-                vk.f(-96);
+                DequeWidgetContainer.f(-96);
               } else {
                 if (var2 == 4) {
                   wa.b((byte) -101);
@@ -233,7 +233,7 @@ abstract class ag extends GameApplet {
                             if (var2 != 11 &&
                               var2 != 12) {
                               if (var2 == 13) {
-                                vk.f((byte) 78);
+                                DequeWidgetContainer.f((byte) 78);
                                 return;
                               }
                               if (17 == var2) {
@@ -415,7 +415,7 @@ abstract class ag extends GameApplet {
               if (kl.field_b.tryLoadGroupByName("", param1 ^ 9882)) {
                 eh.a((byte) 63, kl.field_b);
                 kl.field_b = null;
-                tc.j(32);
+                ModalDialogHost.j(32);
               }
             } else {
               kl.field_b = null;
@@ -453,7 +453,7 @@ abstract class ag extends GameApplet {
           li.field_b = null;
           Bzip2State.field_k = null;
           PacketBuffer.a((java.applet.Applet) (this), 65);
-          tc.j(param1 ^ -33);
+          ModalDialogHost.j(param1 ^ -33);
           IntrusiveDeque.field_d = 10;
         }
         if (10 == IntrusiveDeque.field_d) {
@@ -562,7 +562,7 @@ abstract class ag extends GameApplet {
           if (1 == var4) {
             var5_int = AccountCreationResultPanel.a((byte) -49, DiskArchiveRequest.d((byte) 10), AccountServiceResult.b(-1006263007));
             if (var5_int != -1) {
-              ie.a(-111, UiWidget.field_r, ph.field_nb, var5_int);
+              AlphaWidgetContainer.a(-111, UiWidget.field_r, ph.field_nb, var5_int);
               UiWidget.field_r = null;
               ph.field_nb = null;
             }
@@ -618,7 +618,7 @@ abstract class ag extends GameApplet {
             bl.field_a = 10;
           }
           if (7 == var4) {
-            vk.b(ll.b(param0 ^ 80), 32);
+            DequeWidgetContainer.b(ll.b(param0 ^ 80), 32);
           }
           if (var4 == 8) {
             DirectByteStorage.a(18065, ll.b(104));

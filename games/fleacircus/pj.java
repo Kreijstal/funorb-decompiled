@@ -69,9 +69,9 @@ final class pj extends cb {
             for (var6_intLifetime1 = 0; var6_intLifetime1 < var4; var6_intLifetime1++) {
               BufferedSocket.a((byte) -107, var15);
               if (var6_intLifetime1 == 0) {
-                lg.a(rf.field_l, var6_intLifetime1, w.field_a, wd.field_c, -103, dk.field_B);
+                lg.a(rf.field_l, var6_intLifetime1, w.field_a, wd.field_c, -103, SingleChildWidgetContainer.field_B);
               } else {
-                lg.a(rf.field_l, var6_intLifetime1, w.field_a, wd.field_c, -113, dk.field_B);
+                lg.a(rf.field_l, var6_intLifetime1, w.field_a, wd.field_c, -113, SingleChildWidgetContainer.field_B);
               }
             }
             cm.a(var5, (byte) 118);

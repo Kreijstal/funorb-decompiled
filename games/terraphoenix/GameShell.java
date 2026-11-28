@@ -383,7 +383,7 @@ abstract class GameShell extends GameApplet {
                       k.a(256, BufferedRandomAccessFile.field_f, false);
                     }
                   } else {
-                    k.a(256, j.field_P, false);
+                    k.a(256, LabeledWidgetContainer.field_P, false);
                   }
                 } else {
                   k.a(256, lb.field_a, false);
@@ -464,7 +464,7 @@ abstract class GameShell extends GameApplet {
           NetworkArchiveRequest.a(PasswordValidator.field_q, ch.field_g, false, bi.field_d) &&
           GameShell.a((byte) 103, ch.field_g)) {
           IntrusiveDeque.e(-119);
-          hj.clearStaticReferences(-7958);
+          DropTargetWidgetContainer.clearStaticReferences(-7958);
           TutorialController.field_e = TextHotspotBounds.field_k;
           wd.field_b = false;
           NameSuggestionsPanel.a(ch.field_g, DelegatingCanvas.field_c, PasswordValidator.field_q, bi.field_d, (byte) -22);

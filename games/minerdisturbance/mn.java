@@ -12,7 +12,7 @@ final class mn extends gk {
         super(param0, param1);
     }
 
-    final String a(fe param0, byte param1) {
+    final String a(UiWidget param0, byte param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         String stackIn_1_0 = null;
@@ -51,7 +51,7 @@ final class mn extends gk {
         try {
           if (null == AccountRequestState.field_e) {
             AccountRequestState.field_e = new jl(mb.field_b, ic.field_i);
-            mb.field_b.b(1, AccountRequestState.field_e);
+            mb.field_b.showDialog(1, AccountRequestState.field_e);
           }
           AccountRequestState.field_e.a(param0 ^ 68, param3, param1, param2);
           SoftwareRasterizer.clearRaster();

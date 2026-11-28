@@ -1,0 +1,323 @@
+/*
+ * Decompiled by CFR-JS 0.4.0.
+ */
+final class LabeledWidgetContainer extends SingleChildWidgetContainer {
+    private BitmapFont field_L;
+    private boolean field_J;
+    private int field_M;
+    private int field_F;
+    static int[] field_G;
+    static int field_E;
+    private int field_H;
+    private String field_D;
+    static String[] field_I;
+
+    LabeledWidgetContainer(int param0, int param1, int param2, int param3, UiWidget param4, boolean param5, int param6, int param7, BitmapFont param8, int param9, String param10) {
+        super(param0, param1, param2, param3, (WidgetRenderer) null, (WidgetEventListener) null);
+        boolean stackIn_4_1 = false;
+        int stackIn_10_0 = 0;
+        RuntimeException stackIn_14_0 = null;
+        StringBuilder stackIn_14_1 = null;
+        String stackIn_15_2 = null;
+        StringBuilder stackIn_17_1 = null;
+        String stackIn_18_2 = null;
+        StringBuilder stackIn_20_1 = null;
+        String stackIn_21_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        int var12_int = 0;
+        RuntimeException var12 = null;
+        int var13 = 0;
+        int var14 = 0;
+        try {
+          this.field_H = param6;
+          this.field_M = param7;
+          stackIn_4_1 = (param5);
+          this.field_J = stackIn_4_1;
+          this.field_C = param4;
+          this.field_D = param10;
+          this.field_F = param9;
+          this.field_L = param8;
+          var12_int = this.field_H - this.field_M;
+          var13 = this.field_L.textHeight(param10, var12_int, this.field_L.field_x) + this.field_M * 2;
+          if (param3 >= var13) {
+            var13 = param3;
+          } else {
+            this.setBounds((byte) 127, param0, param1, var13, param2);
+          }
+          if (!this.field_J) {
+            stackIn_10_0 = this.field_H + this.field_M * 2;
+          } else {
+            stackIn_10_0 = 0;
+          }
+          var14 = stackIn_10_0;
+          this.field_C.setBounds((byte) 123, var14, (-param3 + var13 >> 1) + this.field_M, param3 - this.field_M * 2, -(this.field_M * 3) + (-this.field_H + param2));
+          return;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var12 = decompiledCaughtException;
+          stackIn_14_0 = var12;
+          stackIn_14_1 = new StringBuilder().append("na.<init>(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
+          if (param4 == null) {
+            stackIn_15_2 = "null";
+          } else {
+            stackIn_15_2 = "{...}";
+          }
+          stackIn_17_1 = ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(',');
+          if (param8 == null) {
+            stackIn_18_2 = "null";
+          } else {
+            stackIn_18_2 = "{...}";
+          }
+          stackIn_20_1 = ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param9).append(',');
+          if (param10 == null) {
+            stackIn_21_2 = "null";
+          } else {
+            stackIn_21_2 = "{...}";
+          }
+          throw RichTextWidget.wrapThrowable((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(')').toString());
+        }
+    }
+
+    final static int a(da param0, String param1, int param2, da param3, int param4, boolean param5, int param6) {
+        int var12 = 0;
+        int stackIn_5_0 = 0;
+        PacketBuffer stackIn_11_0 = null;
+        String stackIn_12_1 = null;
+        PacketBuffer stackIn_14_0 = null;
+        String stackIn_15_1 = null;
+        int stackIn_36_0 = 0;
+        int stackIn_47_0 = 0;
+        int stackIn_57_0 = 0;
+        int stackIn_65_0 = 0;
+        int stackIn_67_0 = 0;
+        RuntimeException stackIn_70_0 = null;
+        StringBuilder stackIn_70_1 = null;
+        String stackIn_71_2 = null;
+        StringBuilder stackIn_73_1 = null;
+        String stackIn_74_2 = null;
+        StringBuilder stackIn_76_1 = null;
+        String stackIn_77_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException var7 = null;
+        String var8 = null;
+        int var9 = 0;
+        String var9_ref_String = null;
+        int var10 = 0;
+        String var11_ref_String = null;
+        int var11 = 0;
+        int var13 = 0;
+        da var14 = null;
+        String var15 = null;
+        Object var16 = null;
+        CharSequence var17 = null;
+        int var10Lifetime1;
+        int var9Lifetime1;
+        int var9Lifetime2;
+        int var9Lifetime3;
+        var16 = null;
+        var13 = Torquing.field_u;
+        try {
+          var15 = param3.b((byte) -38);
+          var8 = param0.b((byte) -107);
+          if (null == vk.field_E &&
+            !mo.a(269, false)) {
+            stackIn_5_0 = -1;
+            return stackIn_5_0;
+          }
+          if (ef.field_a == TextHotspotBounds.field_o) {
+            jl.field_T = null;
+            wa.field_d.position = 0;
+            if (param1 != null) {
+              var9 = 0;
+              jb.field_c.position = 0;
+              if (param5) {
+                var9 = var9 | 1;
+              }
+              jb.field_c.writeInt((byte) 60, AudioService.field_d.nextInt());
+              jb.field_c.writeInt((byte) 60, AudioService.field_d.nextInt());
+              jb.field_c.writePrefixedString(var15, (byte) -72);
+              jb.field_c.writePrefixedString(var8, (byte) -72);
+              var17 = (CharSequence) ((Object) param1);
+              jb.field_c.writePrefixedString(lp.a(var17, 109), (byte) -72);
+              jb.field_c.writeShort(param6, 109);
+              jb.field_c.writeByte(90, param4);
+              jb.field_c.writeByte(90, var9);
+              wa.field_d.writeByte(90, 18);
+              wa.field_d.position = wa.field_d.position + 2;
+              var10 = wa.field_d.position;
+              var11_ref_String = RichTextWidget.a(-108, ip.a(9));
+              if (var11_ref_String == null) {
+                var11_ref_String = "";
+              }
+              wa.field_d.writeString((byte) 4, var11_ref_String);
+              ok.a(jb.field_c, ua.field_a, wa.field_d, gk.field_b, -4);
+              wa.field_d.backpatchShortLength(-var10 + wa.field_d.position, param2 + 400395746);
+            } else {
+              jb.field_c.position = 0;
+              jb.field_c.writeInt((byte) 60, AudioService.field_d.nextInt());
+              jb.field_c.writeInt((byte) 60, AudioService.field_d.nextInt());
+              stackIn_11_0 = jb.field_c;
+              if (!param3.a((byte) 104)) {
+                stackIn_12_1 = "";
+              } else {
+                stackIn_12_1 = var15;
+              }
+              ((PacketBuffer) (Object) stackIn_11_0).writePrefixedString(stackIn_12_1, (byte) -72);
+              stackIn_14_0 = jb.field_c;
+              if (param0.a((byte) -113)) {
+                stackIn_15_1 = var8;
+              } else {
+                stackIn_15_1 = "";
+              }
+              ((PacketBuffer) (Object) stackIn_14_0).writePrefixedString(stackIn_15_1, (byte) -72);
+              wa.field_d.writeByte(90, 16);
+              wa.field_d.position = wa.field_d.position + 1;
+              var9 = wa.field_d.position;
+              ok.a(jb.field_c, ua.field_a, wa.field_d, gk.field_b, -4);
+              wa.field_d.backpatchByteLength((byte) 48, -var9 + wa.field_d.position);
+            }
+            DropTargetWidgetContainer.a((byte) -118, -1);
+            ef.field_a = IntrusiveNode.field_c;
+          }
+          if (param2 != -25978) {
+            var14 = (da) null;
+            LabeledWidgetContainer.a((da) null, (String) null, 121, (da) null, -99, true, 19);
+          }
+          if (IntrusiveNode.field_c == ef.field_a &&
+            BufferedSocket.a(1, param2 + 25978)) {
+            var9Lifetime1 = kj.field_d.readUnsignedByte((byte) -101);
+            kj.field_d.position = 0;
+            if (100 <= var9Lifetime1 &&
+              var9Lifetime1 <= 105) {
+              Model.field_n = new String[var9Lifetime1 - 100];
+              ef.field_a = pl.field_s;
+            } else {
+              if (248 == var9Lifetime1) {
+                ae.a(ip.a(9), (byte) 25);
+                pl.field_u = od.field_u;
+                ih.b(true);
+                lh.field_J = false;
+                stackIn_36_0 = var9Lifetime1;
+                return stackIn_36_0;
+              }
+              if (var9Lifetime1 == 99) {
+                BufferedSocket.a(ol.b(-92), param2 ^ -25978);
+                jl.field_T = new Boolean(NetworkArchiveRequest.a(kj.field_d, 28066));
+                kj.field_d.position = 0;
+              } else {
+                fa.field_e = var9Lifetime1;
+                ef.field_a = ah.field_b;
+                oo.field_a = -1;
+              }
+            }
+          }
+          if (pl.field_s == ef.field_a) {
+            var9Lifetime2 = 2;
+            if (BufferedSocket.a(var9Lifetime2, 0)) {
+              var10Lifetime1 = kj.field_d.readUnsignedShort(7088);
+              kj.field_d.position = 0;
+              if (BufferedSocket.a(var10Lifetime1, 0)) {
+                var11 = Model.field_n.length;
+                for (var12 = 0; var12 < var11; var12++) {
+                  Model.field_n[var12] = kj.field_d.readPrefixedString(-7519);
+                }
+                ih.b(true);
+                lh.field_J = false;
+                stackIn_47_0 = 100 + var11;
+                return stackIn_47_0;
+              }
+            }
+          }
+          if (ef.field_a == ah.field_b &&
+            ah.a(param2 + 25980)) {
+            if (fa.field_e != 255) {
+              pl.field_u = kj.field_d.readString((byte) 124);
+            } else {
+              var9_ref_String = kj.field_d.readNullableString(19);
+              if (var9_ref_String != null) {
+                om.a((byte) 73, var9_ref_String, ip.a(9));
+              }
+            }
+            ih.b(true);
+            lh.field_J = false;
+            stackIn_57_0 = fa.field_e;
+            return stackIn_57_0;
+          }
+          if (vk.field_E == null) {
+            if (lh.field_J) {
+              if (lc.h((byte) -76) > 30000L) {
+                pl.field_u = eb.field_h;
+              } else {
+                pl.field_u = hq.field_e;
+              }
+              lh.field_J = false;
+              stackIn_65_0 = 249;
+              return stackIn_65_0;
+            }
+            var9Lifetime3 = ea.field_t;
+            ea.field_t = sf.field_a;
+            lh.field_J = true;
+            sf.field_a = var9Lifetime3;
+          }
+          stackIn_67_0 = -1;
+          return stackIn_67_0;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var7 = decompiledCaughtException;
+          stackIn_70_0 = var7;
+          stackIn_70_1 = new StringBuilder().append("na.J(");
+          if (param0 == null) {
+            stackIn_71_2 = "null";
+          } else {
+            stackIn_71_2 = "{...}";
+          }
+          stackIn_73_1 = ((StringBuilder) (Object) stackIn_70_1).append(stackIn_71_2).append(',');
+          if (param1 == null) {
+            stackIn_74_2 = "null";
+          } else {
+            stackIn_74_2 = "{...}";
+          }
+          stackIn_76_1 = ((StringBuilder) (Object) stackIn_73_1).append(stackIn_74_2).append(',').append(param2).append(',');
+          if (param3 == null) {
+            stackIn_77_2 = "null";
+          } else {
+            stackIn_77_2 = "{...}";
+          }
+          throw RichTextWidget.wrapThrowable((Throwable) ((Object) stackIn_70_0), ((StringBuilder) (Object) stackIn_76_1).append(stackIn_77_2).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(')').toString());
+        }
+    }
+
+    public static void clearStaticReferences(int param0) {
+        if (param0 != 0) {
+          field_I = (String[]) null;
+        }
+        field_I = null;
+        field_G = null;
+    }
+
+    final void drawWidget(int param0, byte param1, int param2, int param3) {
+        int var5 = this.x + param3;
+        if (param1 >= -7) {
+          this.getTooltipText(85);
+        }
+        int var6 = param2 + this.y;
+        super.drawWidget(param0, (byte) -91, param2, param3);
+        if (param0 != 0) {
+          return;
+        }
+        int var7 = !this.field_J ? 0 : -this.field_H + (this.width - 2 * this.field_M);
+        this.field_L.drawParagraph(this.field_D, var5 - (-var7 - this.field_M), var6 + this.field_M, -this.field_M + this.field_H, this.height - 2 * this.field_M, this.field_F, -1, !this.field_J ? 2 : 0, 1, this.field_L.field_x);
+    }
+
+    final String getTooltipText(int param0) {
+        int var2 = this.field_C.field_s ? 1 : 0;
+        this.field_C.field_s = this.field_s;
+        String var3 = this.field_C.getTooltipText(param0);
+        this.field_C.field_s = var2 != 0 ? true : false;
+        return var3;
+    }
+
+    static {
+        field_I = new String[]{"By rating", "By win percentage"};
+    }
+}

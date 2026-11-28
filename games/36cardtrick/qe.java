@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class qe extends g implements TextHotspotListener, WidgetActivationListener {
+final class qe extends DequeWidgetContainer implements TextHotspotListener, WidgetActivationListener {
     private AccountCreationResultPanel field_K;
     private InteractiveWidget field_F;
     private RichTextWidget field_D;
@@ -18,7 +18,7 @@ final class qe extends g implements TextHotspotListener, WidgetActivationListene
         field_H = null;
     }
 
-    final boolean a(char param0, byte param1, int param2, lk param3) {
+    final boolean handleKey(char param0, byte param1, int param2, UiWidget param3) {
         RuntimeException var5 = null;
         boolean stackIn_6_0 = false;
         boolean stackIn_13_0 = false;
@@ -27,11 +27,11 @@ final class qe extends g implements TextHotspotListener, WidgetActivationListene
         String stackIn_17_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (super.a(param0, (byte) -121, param2, param3)) {
+          if (super.handleKey(param0, (byte) -121, param2, param3)) {
             return true;
           }
           if (param2 == 98) {
-            stackIn_6_0 = this.b(-116, param3);
+            stackIn_6_0 = this.focusPreviousChild(-116, param3);
             return stackIn_6_0;
           }
           if (param1 > -99) {
@@ -40,7 +40,7 @@ final class qe extends g implements TextHotspotListener, WidgetActivationListene
           if (99 != param2) {
             return false;
           }
-          stackIn_13_0 = this.a(param3, (byte) -28);
+          stackIn_13_0 = this.focusNextChild(param3, (byte) -28);
           return stackIn_13_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -57,7 +57,7 @@ final class qe extends g implements TextHotspotListener, WidgetActivationListene
     }
 
     qe(AccountCreationResultPanel param0) {
-        super(0, 0, 288, 0, (ci) null);
+        super(0, 0, 288, 0, (WidgetRenderer) null);
         String var7 = null;
         int var3 = 0;
         DefaultTextWidgetRenderer var4 = null;
@@ -65,26 +65,26 @@ final class qe extends g implements TextHotspotListener, WidgetActivationListene
         int var6 = 0;
         try {
           this.field_K = param0;
-          this.field_F = new InteractiveWidget(bj.field_b, (pl) null);
-          this.field_F.field_v = (ci) ((Object) new ki());
+          this.field_F = new InteractiveWidget(bj.field_b, (WidgetEventListener) null);
+          this.field_F.field_v = (WidgetRenderer) ((Object) new ki());
           var7 = re.a(dd.field_h, new String[]{this.l(1), this.d((byte) -110)}, (byte) -50);
           var3 = 20;
-          var4 = new DefaultTextWidgetRenderer(j.field_C, 0, 0, 0, 0, 16777215, -1, 3, 0, j.field_C.field_s, -1, 2147483647, true);
+          var4 = new DefaultTextWidgetRenderer(ModalDialogHost.field_C, 0, 0, 0, 0, 16777215, -1, 3, 0, ModalDialogHost.field_C.field_s, -1, 2147483647, true);
           this.field_D = new RichTextWidget(var7, var4);
           this.field_D.field_n = "";
           this.field_D.a(ni.field_b, (byte) 126, 0);
           this.field_D.a(ni.field_b, (byte) 98, 1);
-          this.field_D.field_k = (pl) (this);
+          this.field_D.field_k = (WidgetEventListener) (this);
           this.field_D.field_h = -40 + this.field_h;
           this.field_D.b(96, -40 + this.field_h, 26, var3);
           var3 = var3 + (15 + this.field_D.field_q);
-          this.b(this.field_D, (byte) 118);
+          this.addChild(this.field_D, (byte) 118);
           var5 = 4;
           var6 = 200;
-          this.field_F.a(40, var3, var6, 300 - var6 >> 1, true);
-          this.field_F.field_k = (pl) (this);
-          this.b(this.field_F, (byte) 118);
-          this.a(var5 + (55 + var3), 0, 300, 0, true);
+          this.field_F.setBounds(40, var3, var6, 300 - var6 >> 1, true);
+          this.field_F.field_k = (WidgetEventListener) (this);
+          this.addChild(this.field_F, (byte) 118);
+          this.setBounds(var5 + (55 + var3), 0, 300, 0, true);
         } catch (RuntimeException runtimeException) {
           throw ma.wrapException((Throwable) ((Object) runtimeException), "qe.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }

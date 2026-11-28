@@ -177,9 +177,9 @@ final class MixedSupport061 {
         int integerLocal1 = 0;
         int integerLocal2 = 0;
         GameSession.integerState0618 = integerArgument1;
-        if (UiComponentPart003.integerState0073 != UiComponentPart009.integerState0149) {
+        if (ModalDialog.integerState0073 != UiComponentPart009.integerState0149) {
           integerLocal1 = UiComponentPart009.integerState0149 * UiComponentPart009.integerState0149;
-          integerLocal2 = integerLocal1 - UiComponentPart003.integerState0073 * UiComponentPart003.integerState0073;
+          integerLocal2 = integerLocal1 - ModalDialog.integerState0073 * ModalDialog.integerState0073;
           integerArgument1 = integerArgument1 + integerLocal2 * (MixedSupport003.integerState0017 - integerArgument1) / integerLocal1;
         }
         if (integerArgument2 <= -24) {

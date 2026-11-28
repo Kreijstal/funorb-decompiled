@@ -22,19 +22,19 @@ final class je {
     }
 
     final static void a(int param0) {
-        if (~gl.field_y == param0) {
+        if (~AlphaWidgetContainer.field_y == param0) {
           bk.c(-19317);
-          gl.field_y = 11;
-          g.field_A = true;
+          AlphaWidgetContainer.field_y = 11;
+          DropTargetWidgetContainer.field_A = true;
           return;
         }
         if (!Transmogrify.d(false)) {
           bk.c(-19317);
-          gl.field_y = 11;
-          g.field_A = true;
+          AlphaWidgetContainer.field_y = 11;
+          DropTargetWidgetContainer.field_A = true;
           return;
         }
-        g.field_A = true;
+        DropTargetWidgetContainer.field_A = true;
     }
 
     static {

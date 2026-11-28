@@ -65,7 +65,7 @@ final class LoginRequestBuilder {
           }
           ok.a(jb.field_c, ua.field_a, wa.field_d, gk.field_b, -4);
           wa.field_d.backpatchShortLength(wa.field_d.position - var5_int, 400369768);
-          jd.a((byte) -95, -1);
+          DropTargetWidgetContainer.a((byte) -95, -1);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

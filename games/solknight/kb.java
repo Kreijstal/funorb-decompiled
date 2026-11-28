@@ -72,35 +72,35 @@ final class kb {
     }
 
     final static void b(byte param0) {
-        if (te.field_I != null) {
+        if (AlphaWidgetContainer.field_I != null) {
           return;
         }
-        te.field_I = new String[20];
-        te.field_I[3] = ea.field_q;
-        te.field_I[4] = og.field_d;
-        te.field_I[5] = h.field_f;
-        te.field_I[2] = ti.field_d;
-        te.field_I[1] = lb.field_T;
-        te.field_I[15] = c.field_L;
-        te.field_I[0] = ng.field_e;
-        te.field_I[11] = vh.field_a;
-        te.field_I[13] = gd.field_a;
-        te.field_I[7] = qe.field_F;
-        te.field_I[16] = ff.field_b;
-        te.field_I[6] = h.field_f;
-        te.field_I[12] = vb.field_f;
-        te.field_I[14] = k.field_a;
-        te.field_I[17] = UiWidget.field_s;
-        te.field_I[10] = gf.field_X[2];
-        te.field_I[18] = ah.field_g;
+        AlphaWidgetContainer.field_I = new String[20];
+        AlphaWidgetContainer.field_I[3] = ea.field_q;
+        AlphaWidgetContainer.field_I[4] = og.field_d;
+        AlphaWidgetContainer.field_I[5] = h.field_f;
+        AlphaWidgetContainer.field_I[2] = ti.field_d;
+        AlphaWidgetContainer.field_I[1] = lb.field_T;
+        AlphaWidgetContainer.field_I[15] = c.field_L;
+        AlphaWidgetContainer.field_I[0] = ng.field_e;
+        AlphaWidgetContainer.field_I[11] = vh.field_a;
+        AlphaWidgetContainer.field_I[13] = gd.field_a;
+        AlphaWidgetContainer.field_I[7] = qe.field_F;
+        AlphaWidgetContainer.field_I[16] = ff.field_b;
+        AlphaWidgetContainer.field_I[6] = h.field_f;
+        AlphaWidgetContainer.field_I[12] = vb.field_f;
+        AlphaWidgetContainer.field_I[14] = k.field_a;
+        AlphaWidgetContainer.field_I[17] = UiWidget.field_s;
+        AlphaWidgetContainer.field_I[10] = gf.field_X[2];
+        AlphaWidgetContainer.field_I[18] = ah.field_g;
         if (param0 < -101) {
-          te.field_I[9] = gf.field_X[1];
-          te.field_I[8] = gf.field_X[0];
+          AlphaWidgetContainer.field_I[9] = gf.field_X[1];
+          AlphaWidgetContainer.field_I[8] = gf.field_X[0];
           return;
         }
         field_c = (String[]) null;
-        te.field_I[9] = gf.field_X[1];
-        te.field_I[8] = gf.field_X[0];
+        AlphaWidgetContainer.field_I[9] = gf.field_X[1];
+        AlphaWidgetContainer.field_I[8] = gf.field_X[0];
     }
 
     final boolean a(int param0) {

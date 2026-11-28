@@ -16,7 +16,7 @@ final class ib implements ComponentLayout {
     private BitmapFont field_c;
     static int[][] field_a;
 
-    public final void a(int param0, int param1, boolean param2, UiComponent param3, int param4) {
+    public final void paintWidget(int param0, int param1, boolean param2, UiComponent param3, int param4) {
         UiComponent stackIn_5_0 = null;
         RuntimeException stackIn_22_0 = null;
         StringBuilder stackIn_22_1 = null;
@@ -234,7 +234,7 @@ final class ib implements ComponentLayout {
             fieldTemp$0 = Bzip2State.field_A;
             Bzip2State.field_A = Bzip2State.field_A + 1;
             var6.field_mb = fieldTemp$0;
-            tf.field_E.addLast(false, var6);
+            AlphaWidgetContainer.field_E.addLast(false, var6);
           }
           if (null != var3Lifetime1) {
             var3Lifetime1 = ((String) (var3Lifetime1)).intern();
@@ -242,7 +242,7 @@ final class ib implements ComponentLayout {
           var6.field_lb = (String) (var3Lifetime1);
           var6.field_jb = var4_ref_StringLifetime1;
           var6.unlink(-1);
-          var7 = (gm) (tf.field_E.beginForward((byte) 47));
+          var7 = (gm) (AlphaWidgetContainer.field_E.beginForward((byte) 47));
           scanLoop1: while (true) {
             if (var7 != null) {
               stackOut_45_0 = hm.a(var7, var6, true);
@@ -252,12 +252,12 @@ final class ib implements ComponentLayout {
                 break scanLoop1;
               }
               if (stackIn_46_0) {
-                var7 = (gm) (tf.field_E.nextForward((byte) -105));
+                var7 = (gm) (AlphaWidgetContainer.field_E.nextForward((byte) -105));
                 continue;
               }
             }
             if (var7 == null) {
-              tf.field_E.addLast(false, var6);
+              AlphaWidgetContainer.field_E.addLast(false, var6);
               if (var8 == 0) {
                 return;
               }

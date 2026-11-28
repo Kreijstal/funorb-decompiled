@@ -248,7 +248,7 @@ abstract class GameShell extends GameApplet {
           }
           discarded$0 = this.a(stackIn_11_1, stackIn_11_2, stackIn_12_3);
         } else {
-          if (gl.field_I >= 10) {
+          if (AlphaWidgetContainer.field_I >= 10) {
             if (!DefaultTextWidgetRenderer.a(false)) {
               kj.d(250);
             } else {
@@ -355,7 +355,7 @@ abstract class GameShell extends GameApplet {
           int var5_intLifetime1;
           int var5_intLifetime2;
           var8 = TrackController.field_F ? 1 : 0;
-          var4 = ValidatedTextField.a(hl.field_F, NodeHashTableIterator.field_c, (byte) 95, param2);
+          var4 = ValidatedTextField.a(ModalDialog.field_F, NodeHashTableIterator.field_c, (byte) 95, param2);
           if (var4 == 0) {
             throw new IllegalStateException();
           }
@@ -378,7 +378,7 @@ abstract class GameShell extends GameApplet {
             stackIn_17_2 = (param0) ? false : true;
             var5_intLifetime1 = ba.a(stackIn_16_0, stackIn_16_1, qk.b(stackIn_17_2), GameApplet.c(6), EmailFormatValidator.h(0), gj.a((byte) -119), 0);
             if (var5_intLifetime1 != -1) {
-              gl.a(TextHotspotBounds.field_t, ca.field_a, var5_intLifetime1, (byte) 113);
+              AlphaWidgetContainer.a(TextHotspotBounds.field_t, ca.field_a, var5_intLifetime1, (byte) 113);
               TextHotspotBounds.field_t = null;
               ca.field_a = null;
             }
@@ -599,7 +599,7 @@ abstract class GameShell extends GameApplet {
         }
         if (gj.field_c != -1 &&
           gj.field_c != 0) {
-          if (gl.field_I >= 10) {
+          if (AlphaWidgetContainer.field_I >= 10) {
             if (LoginPanel.field_N >= 10) {
               SecondaryNodeDequeIterator.a(-28717);
               if (gj.field_c != 3) {
@@ -656,22 +656,22 @@ abstract class GameShell extends GameApplet {
           !IntrusiveNode.c(38)) {
           qh.field_i = false;
         }
-        if (gl.field_I == 0 &&
+        if (AlphaWidgetContainer.field_I == 0 &&
           dd.c((byte) 55)) {
-          gl.field_I = 1;
+          AlphaWidgetContainer.field_I = 1;
         }
-        if (gl.field_I == 1) {
-          if (hl.field_F != 0) {
+        if (AlphaWidgetContainer.field_I == 1) {
+          if (ModalDialog.field_F != 0) {
             ff.field_b = mf.a(tf.field_a, (byte) -70);
           }
           ei.field_i = vh.a(cg.field_c, 98, false, 1, true);
           ha.field_x = vh.a(rf.field_b, 98, false, 1, true);
-          ok.field_G = vh.a(fk.field_b, 98, false, 1, true);
+          SingleChildWidgetContainer.field_G = vh.a(fk.field_b, 98, false, 1, true);
           fb.field_b = ha.field_x;
           RichTextWidget.field_L = ei.field_i;
-          gl.field_I = 2;
+          AlphaWidgetContainer.field_I = 2;
         }
-        if (gl.field_I == 2) {
+        if (AlphaWidgetContainer.field_I == 2) {
           if (null != ff.field_b &&
             ff.field_b.ensureIndexLoaded(-25)) {
             if (ff.field_b.hasGroupName("", (byte) -125)) {
@@ -685,17 +685,17 @@ abstract class GameShell extends GameApplet {
             }
           }
           if (ff.field_b == null) {
-            gl.field_I = 3;
+            AlphaWidgetContainer.field_I = 3;
           }
         }
-        if (gl.field_I == 3 &&
-          EmailFormatValidator.a(ei.field_i, ha.field_x, (byte) -112, ok.field_G) &&
-          RasterBuffer.a(-25, ok.field_G)) {
+        if (AlphaWidgetContainer.field_I == 3 &&
+          EmailFormatValidator.a(ei.field_i, ha.field_x, (byte) -112, SingleChildWidgetContainer.field_G) &&
+          RasterBuffer.a(-25, SingleChildWidgetContainer.field_G)) {
           AccountServiceResult.b((byte) -98);
           LevelGrid.b((byte) -51);
           qi.field_k = gj.field_a;
           BufferedSocket.field_d = false;
-          oe.a(oc.field_i, ei.field_i, ha.field_x, ok.field_G, -28484);
+          oe.a(oc.field_i, ei.field_i, ha.field_x, SingleChildWidgetContainer.field_G, -28484);
           if (dg.field_B ||
             null != sk.field_h) {
             stackIn_100_0 = sk.field_h;
@@ -710,22 +710,22 @@ abstract class GameShell extends GameApplet {
             MatchingFieldValidator.field_n = wd.q(11782);
             uh.field_e = r.e(-12364);
           }
-          ok.a(MatchingFieldValidator.field_n, uh.field_e, (byte) 52, ok.field_G);
-          ok.field_G = null;
+          SingleChildWidgetContainer.a(MatchingFieldValidator.field_n, uh.field_e, (byte) 52, SingleChildWidgetContainer.field_G);
+          SingleChildWidgetContainer.field_G = null;
           ha.field_x = null;
           ei.field_i = null;
           ButtonWidget.a((java.applet.Applet) (this), (byte) 33);
           qi.d(-80);
-          gl.field_I = 10;
+          AlphaWidgetContainer.field_I = 10;
         }
-        if (10 == gl.field_I) {
-          if (hl.field_F != 0) {
+        if (10 == AlphaWidgetContainer.field_I) {
+          if (ModalDialog.field_F != 0) {
             ed.field_I = mf.a(SecondaryNodeDeque.field_b, (byte) -74);
           }
-          gl.field_I = 11;
+          AlphaWidgetContainer.field_I = 11;
         }
         boolean decompiledFrameRemainder0 = true;
-        if (gl.field_I == 11) {
+        if (AlphaWidgetContainer.field_I == 11) {
           if (null != ed.field_I && (!ed.field_I.ensureIndexLoaded(-47) ||
             !ed.field_I.tryLoadAllGroups((byte) 48))) {
             ud.a(128, 0.0f, ug.a(ArchiveIndex.field_t, ed.field_I, 2147483647, jb.field_c));
@@ -733,14 +733,14 @@ abstract class GameShell extends GameApplet {
           }
           else {
             ag.field_e = true;
-            gl.field_I = 12;
+            AlphaWidgetContainer.field_I = 12;
           }
         }
-        if (gl.field_I == 12 &&
+        if (AlphaWidgetContainer.field_I == 12 &&
           !ag.field_e) {
-          gl.field_I = 13;
+          AlphaWidgetContainer.field_I = 13;
         }
-        if (13 == gl.field_I) {
+        if (13 == AlphaWidgetContainer.field_I) {
           var4Lifetime2 = 1;
           if (FrameTimer.field_b != null) {
             stackIn_135_0 = (!FrameTimer.field_b.a(true)) ? 0 : 1;
@@ -748,7 +748,7 @@ abstract class GameShell extends GameApplet {
             ud.a(128, FrameTimer.field_b.field_i, FrameTimer.field_b.field_a);
           }
           if (var4Lifetime2 != 0) {
-            gl.field_I = 20;
+            AlphaWidgetContainer.field_I = 20;
           }
         }
         if (!param1 &&
@@ -772,13 +772,13 @@ abstract class GameShell extends GameApplet {
         var10.pack();
         var10.dispose();
         this.setBackground(java.awt.Color.black);
-        hl.field_F = this.field_A;
-        ld.a(hl.field_F, (byte) -29);
+        ModalDialog.field_F = this.field_A;
+        ld.a(ModalDialog.field_F, (byte) -29);
         if (param5 != 3) {
           this.field_u = 81;
         }
-        uj.a(this.field_t, this.field_w, this.field_p, param3, 5000, this.field_o, this.field_u, 5000, true, rg.field_c, param0, hl.field_F, this.field_q, this.field_r);
-        FrameTimer.a(this.field_u, rg.field_c, hl.field_F, this.field_q, this.field_t, this.field_o, param3, 101, this.field_p);
+        uj.a(this.field_t, this.field_w, this.field_p, param3, 5000, this.field_o, this.field_u, 5000, true, rg.field_c, param0, ModalDialog.field_F, this.field_q, this.field_r);
+        FrameTimer.a(this.field_u, rg.field_c, ModalDialog.field_F, this.field_q, this.field_t, this.field_o, param3, 101, this.field_p);
         kf.a(false);
         rd.field_l = lg.createMouseWheelInput(124);
         DelegatingCanvas.a(true, ki.field_f);

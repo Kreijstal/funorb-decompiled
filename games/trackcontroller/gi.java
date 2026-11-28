@@ -161,7 +161,7 @@ final class gi extends DefaultTextWidgetRenderer {
         }
     }
 
-    public final void a(int param0, UiWidget param1, int param2, boolean param3, int param4) {
+    public final void paintWidget(int param0, UiWidget param1, int param2, boolean param3, int param4) {
         UiWidget stackIn_3_0 = null;
         RuntimeException stackIn_31_0 = null;
         StringBuilder stackIn_31_1 = null;
@@ -212,7 +212,7 @@ final class gi extends DefaultTextWidgetRenderer {
               }
             }
           }
-          if (param1.h(-115)) {
+          if (param1.isFocused(-115)) {
             var13 = this.field_s[5];
             if (var13 != null) {
               var13.a(this, param2, param1, param0 ^ 24968, this.field_p, param4);
@@ -247,7 +247,7 @@ final class gi extends DefaultTextWidgetRenderer {
           var4_int = param0;
           if (param2 != -33) {
             UiWidget var5 = (UiWidget) null;
-            this.a(111, (UiWidget) null, -5, true, -65);
+            this.paintWidget(111, (UiWidget) null, -5, true, -65);
           }
           if (null == this.field_s[var4_int]) {
             this.field_s[var4_int] = new qi();

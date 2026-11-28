@@ -3,7 +3,7 @@
  */
 import java.io.*;
 
-final class ui extends g implements WidgetActivationListener {
+final class ui extends DequeWidgetContainer implements WidgetActivationListener {
     static String field_K;
     private int[] field_G;
     private af field_E;
@@ -14,12 +14,12 @@ final class ui extends g implements WidgetActivationListener {
     static String field_F;
     private int field_D;
 
-    final void a(int param0, int param1, int param2, int param3) {
-        super.a(param0, param1, param2, param3);
+    final void drawWidget(int param0, int param1, int param2, int param3) {
+        super.drawWidget(param0, param1, param2, param3);
         this.field_J.drawParagraph(this.field_L, this.field_o + param0 + 14, 10 + param1 + this.field_i, this.field_h - 28, this.field_q, 16777215, -1, 0, 0, this.field_J.field_s);
     }
 
-    final InteractiveWidget a(pl param0, boolean param1, String param2) {
+    final InteractiveWidget a(WidgetEventListener param0, boolean param1, String param2) {
         InteractiveWidget var4 = null;
         RuntimeException var4_ref = null;
         int var5 = 0;
@@ -32,13 +32,13 @@ final class ui extends g implements WidgetActivationListener {
         RuntimeException decompiledCaughtException = null;
         try {
           var4 = new InteractiveWidget(param2, param0);
-          var4.field_v = (ci) ((Object) new ki());
+          var4.field_v = (WidgetRenderer) ((Object) new ki());
           var5 = -2 + this.field_q;
-          this.a(this.field_q + 34, 0, this.field_h, 0, param1);
-          var4.a(30, var5, this.field_h - 14, 7, param1);
-          this.b(var4, (byte) 118);
+          this.setBounds(this.field_q + 34, 0, this.field_h, 0, param1);
+          var4.setBounds(30, var5, this.field_h - 14, 7, param1);
+          this.addChild(var4, (byte) 118);
           if (!param1) {
-            this.a(-77, -111, 74, 6);
+            this.drawWidget(-77, -111, 74, 6);
           }
           stackIn_3_0 = var4;
           return stackIn_3_0;
@@ -112,7 +112,7 @@ final class ui extends g implements WidgetActivationListener {
     }
 
     ui(af param0, BitmapFont param1, String param2) {
-        super(0, 0, 288, 0, (ci) null);
+        super(0, 0, 288, 0, (WidgetRenderer) null);
         int var4_int = 0;
         this.field_D = 0;
         try {
@@ -120,7 +120,7 @@ final class ui extends g implements WidgetActivationListener {
           this.field_E = param0;
           this.field_J = param1;
           var4_int = this.field_L != null ? this.field_J.textHeight(this.field_L, 260, this.field_J.field_s) : 0;
-          this.a(22 + var4_int, 0, 288, 0, true);
+          this.setBounds(22 + var4_int, 0, 288, 0, true);
         } catch (RuntimeException runtimeException) {
           throw ma.wrapException((Throwable) ((Object) runtimeException), "ui.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
@@ -152,11 +152,11 @@ final class ui extends g implements WidgetActivationListener {
         try {
           if (param2 != -14) {
             String var5 = (String) null;
-            this.a((pl) null, true, (String) null);
+            this.a((WidgetEventListener) null, true, (String) null);
           }
           var4_int = this.field_D;
           this.a(1 + var4_int, -44);
-          this.field_I[var4_int] = this.a((pl) (this), true, param0);
+          this.field_I[var4_int] = this.a((WidgetEventListener) (this), true, param0);
           this.field_G[var4_int] = param1;
         } catch (RuntimeException runtimeException) {
           throw ma.wrapException((Throwable) ((Object) runtimeException), "ui.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');

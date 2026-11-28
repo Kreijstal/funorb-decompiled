@@ -48,7 +48,7 @@ final class ve extends DefaultTextWidgetRenderer {
         }
     }
 
-    public final void a(int param0, boolean param1, int param2, qm param3, boolean param4) {
+    public final void paintWidget(int param0, boolean param1, int param2, UiWidget param3, boolean param4) {
         int stackIn_6_0 = 0;
         int stackIn_14_0 = 0;
         int stackIn_17_0 = 0;
@@ -62,7 +62,7 @@ final class ve extends DefaultTextWidgetRenderer {
         int var8 = 0;
         try {
           if (!param3.field_m) {
-            stackIn_6_0 = (param3.e(-109)) ? 1 : 0;
+            stackIn_6_0 = (param3.isFocused(-109)) ? 1 : 0;
           } else {
             stackIn_6_0 = 1;
           }

@@ -156,14 +156,14 @@ final class pj extends ql {
             r.field_a = 1;
             this.field_q = false;
             CrossfadingMidiPcmStream.a(0, 1);
-            nh.field_E.copyCoordinatesFrom((byte) 46, this.field_j);
+            LabeledWidgetContainer.field_E.copyCoordinatesFrom((byte) 46, this.field_j);
           }
           if (var3Lifetime1 > this.field_d) {
             this.field_d = var3Lifetime1;
             if (this.field_A[2]) {
               r.field_a = 0;
               CrossfadingMidiPcmStream.a(4, param0 ^ -2);
-              nh.field_E.setCoordinates(-1, 8360, -1);
+              LabeledWidgetContainer.field_E.setCoordinates(-1, 8360, -1);
               if (var3Lifetime1 == 3) {
                 le.field_D = 5;
               }
@@ -306,7 +306,7 @@ final class pj extends ql {
           var15 = var9;
           CrossfadingMidiPcmStream.a(0, param0 + 1);
           this.field_j = new GridPoint(var12[2], var12[3]);
-          nh.field_E.copyCoordinatesFrom((byte) 46, this.field_j);
+          LabeledWidgetContainer.field_E.copyCoordinatesFrom((byte) 46, this.field_j);
           this.field_y = new v(m.field_k, var12[4] * 24 - 100, 24 * (-5 + var12[5]) - 30, 200);
           if (VolumeRampingMidiPcmStream.field_Q[4]) {
             this.field_y.field_l = -1;

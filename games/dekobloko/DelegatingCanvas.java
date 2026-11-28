@@ -49,7 +49,7 @@ final class DelegatingCanvas extends java.awt.Canvas {
         CipherPacketBuffer cipherPacketBufferLocal17 = null;
         integerLocal12 = DekoBlokoClient.obfuscationControl ? 1 : 0;
         try {
-          cipherPacketBufferLocal17 = UiComponentPart006.cipherPacketBufferState0001;
+          cipherPacketBufferLocal17 = LabeledWidgetContainer.cipherPacketBufferState0001;
           integerLocal5 = cipherPacketBufferLocal17.readUnsignedByte((byte) -36);
           if (integerLocal5 == 0) {
             integerArrayLocal7 = UiComponentPart002.computeIntegerArray0082(56);

@@ -64,7 +64,7 @@ final class qa extends DefaultTextWidgetRenderer {
         this(2188450, 2591221, 9543);
     }
 
-    public final void a(int param0, int param1, boolean param2, byte param3, UiWidget param4) {
+    public final void paintWidget(int param0, int param1, boolean param2, byte param3, UiWidget param4) {
         int stackIn_6_0 = 0;
         int stackIn_13_0 = 0;
         int stackIn_16_0 = 0;
@@ -80,7 +80,7 @@ final class qa extends DefaultTextWidgetRenderer {
         try {
           var6_int = -26 % ((51 - param3) / 47);
           if (!param4.field_g) {
-            stackIn_6_0 = (param4.b((byte) 45)) ? 1 : 0;
+            stackIn_6_0 = (param4.isFocused((byte) 45)) ? 1 : 0;
           } else {
             stackIn_6_0 = 1;
           }

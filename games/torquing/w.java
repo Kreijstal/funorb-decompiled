@@ -27,7 +27,7 @@ class w extends to {
     private Sprite[] field_hb;
     private int field_I;
     private int field_P;
-    static ln field_G;
+    static ModalDialogHost field_G;
     private String field_L;
     private int field_B;
     static ce field_cb;

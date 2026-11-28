@@ -152,7 +152,7 @@ abstract class FrameTimer {
 
     final static void b(int param0) {
         tk.field_e = null;
-        fj.field_s = null;
+        UiWidget.field_s = null;
         if (param0 != 15229) {
           field_e = (PcmSample) null;
         }

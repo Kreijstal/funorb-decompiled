@@ -238,7 +238,7 @@ final class vg {
         } else {
           var5Lifetime1 = param2 + 206 - IntrusiveNode.field_d.field_y;
           var9Lifetime1 = IntrusiveNode.field_d.field_t + IntrusiveNode.field_d.field_y;
-          var5Lifetime1 = var5Lifetime1 + var9Lifetime1 * IntrusiveNode.field_d.drawParagraph(aj.field_v, 283, var5Lifetime1, 310, 1000, 0, -1, 1, 0, var9Lifetime1);
+          var5Lifetime1 = var5Lifetime1 + var9Lifetime1 * IntrusiveNode.field_d.drawParagraph(DequeWidgetContainer.field_v, 283, var5Lifetime1, 310, 1000, 0, -1, 1, 0, var9Lifetime1);
           var5Lifetime1 = var5Lifetime1 + var9Lifetime1;
           if (IntrusiveDeque.b((byte) 95)) {
             IntrusiveNode.field_d.drawParagraph(tj.field_t, 283, var5Lifetime1, 310, 1000, 0, -1, 1, 0, var9Lifetime1);
@@ -563,7 +563,7 @@ final class vg {
                   if (var9 == 11) {
                     if (!(!this.field_j.f(-9112))) {
                       vk.a((byte) 106, FullscreenFocusCanvas.field_d[0]);
-                      vl.a((byte) 93, ha.b(125));
+                      DraggableWidgetContainer.a((byte) 93, ha.b(125));
                     }
                     break regionExit1;
                   }
@@ -918,7 +918,7 @@ final class vg {
                   stackIn_11_1 = (hc.field_u == 0) ? false : true;
                   stackIn_13_2 = false;
                   stackIn_14_3 = (SecondaryNodeDeque.field_g == 0) ? false : true;
-                  var8 = aj.a(stackIn_10_0, stackIn_11_1, stackIn_13_2, stackIn_14_3);
+                  var8 = DequeWidgetContainer.a(stackIn_10_0, stackIn_11_1, stackIn_13_2, stackIn_14_3);
                   var5Lifetime1 = var4 * IntrusiveNode.field_d.lineCount(var8, 341);
                   IntrusiveNode.field_d.drawParagraph(var8, 150, var3, 341, var5Lifetime1, 0, -1, 1, 0, var4);
                   var3 = var3 + var5Lifetime1;

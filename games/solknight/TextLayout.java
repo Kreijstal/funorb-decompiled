@@ -3,7 +3,7 @@
  */
 abstract class TextLayout {
     TextLineMetrics[] field_c;
-    static bc field_a;
+    static DraggableWidgetContainer field_a;
     static String field_b;
 
     final int a(int param0, int param1, int param2, String param3) {

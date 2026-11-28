@@ -179,7 +179,7 @@ final class gg {
               if (var30 != 0) {
                 if (stackIn_62_0 < stackIn_62_1) {
                   stackIn_71_0 = ~var18;
-                  stackIn_71_1 = ~mk.field_w.length;
+                  stackIn_71_1 = ~ModalDialog.field_w.length;
                   break scanLoop1;
                 }
                 decompiledFrameRemainder0 = false;
@@ -266,7 +266,7 @@ final class gg {
                     break;
                   }
                   stackIn_71_0 = ~var18;
-                  stackIn_71_1 = ~mk.field_w.length;
+                  stackIn_71_1 = ~ModalDialog.field_w.length;
                   if (var30 != 0) {
                     break scanLoop1;
                   }
@@ -276,7 +276,7 @@ final class gg {
                   var19 = param4.field_e[var18];
                   var20 = param4.field_F[var18];
                   var21Lifetime2 = param4.field_L[var18];
-                  mk.field_w[var18] = var15 * var21Lifetime2 + (var9 * var19 + var12 * var20) >> 16;
+                  ModalDialog.field_w[var18] = var15 * var21Lifetime2 + (var9 * var19 + var12 * var20) >> 16;
                   nh.field_j[var18] = var19 * var10 + (var20 * var13 + var21Lifetime2 * var16) >> 16;
                   d.field_b[var18] = var21Lifetime2 * var17 + (var14 * var20 + var19 * var11) >> 16;
                   var18++;

@@ -379,7 +379,7 @@ abstract class bi extends GameApplet {
           var3 = 1200 * gg.c(0);
           if (this.field_q ||
             !(var3 >= qa.b(125)) &&
-            !(var3 >= rh.a(1))) {
+            !(var3 >= ModalDialog.a(1))) {
             this.field_q = false;
             PacketBuffer.a(-1);
             cf.a((byte) 108);
@@ -630,7 +630,7 @@ abstract class bi extends GameApplet {
         }
         fe.field_h = this.field_o;
         AccountCreationResultPanel.a(3860, fe.field_h);
-        kj.a(fe.field_h, this.field_x, this.field_t, 5000, param0, this.field_p, this.field_u, this.field_w, param5, 5000, this.field_v, (byte) -111, this.field_r, rc.field_k);
+        ModalDialogHost.a(fe.field_h, this.field_x, this.field_t, 5000, param0, this.field_p, this.field_u, this.field_w, param5, 5000, this.field_v, (byte) -111, this.field_r, rc.field_k);
         ii.a(rc.field_k, this.field_u, this.field_x, fe.field_h, this.field_r, param0, this.field_p, this.field_v, -2045);
         sj.a(92);
         DisplayNameSelectionPanel.field_A = cf.createMouseWheelInput(param4 + 25427);
@@ -681,7 +681,7 @@ abstract class bi extends GameApplet {
                             if (var2 != 11 &&
                               var2 != 12) {
                               if (var2 == 13) {
-                                rh.l(78);
+                                ModalDialog.l(78);
                                 return;
                               }
                               if (var2 == 17) {

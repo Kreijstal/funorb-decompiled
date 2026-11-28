@@ -25,7 +25,7 @@ class db extends DefaultTextWidgetRenderer {
         field_u = null;
     }
 
-    public final void a(byte param0, int param1, boolean param2, fj param3, int param4) {
+    public final void paintWidget(byte param0, int param1, boolean param2, UiWidget param3, int param4) {
         try {
           if (param2) {
             ea.a(true, param4 + param3.field_m, param1 + param3.field_q, param3.field_z, param3.field_F);
@@ -33,7 +33,7 @@ class db extends DefaultTextWidgetRenderer {
           if (param0 >= -97) {
             db.clearStaticReferences((byte) -16);
           }
-          super.a((byte) -113, param1, param2, param3, param4);
+          super.paintWidget((byte) -113, param1, param2, param3, param4);
         } catch (RuntimeException runtimeException) {
           throw TextLineMetrics.a((Throwable) ((Object) runtimeException), "db.C(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ')');
         }

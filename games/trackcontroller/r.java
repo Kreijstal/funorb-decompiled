@@ -15,14 +15,14 @@ final class r extends IntrusiveNode {
     }
 
     final static void f(int param0) {
-        gl.field_E.l(24910);
+        AlphaWidgetContainer.field_E.closeAllDialogs(24910);
         if (param0 != -635) {
           return;
         }
         if (ib.field_e == null) {
-          ib.field_e = new rk(gl.field_E, AsyncRequest.field_r);
+          ib.field_e = new rk(AlphaWidgetContainer.field_E, AsyncRequest.field_r);
         }
-        gl.field_E.d((byte) -63, ib.field_e);
+        AlphaWidgetContainer.field_E.showDialog((byte) -63, ib.field_e);
     }
 
     private r() throws Throwable {
@@ -33,7 +33,7 @@ final class r extends IntrusiveNode {
         if (!param0) {
           r.e(-40);
         }
-        return !sa.field_Q.b((byte) 92) ? true : false;
+        return !LabeledWidgetContainer.field_Q.b((byte) 92) ? true : false;
     }
 
     final static String a(CharSequence param0, int param1) {

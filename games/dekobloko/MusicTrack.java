@@ -75,7 +75,7 @@ final class MusicTrack {
         if (integerArgument1 != -12040) {
           return (String) null;
         }
-        return UiComponentPart006.cipherPacketBufferState0001.readNullTerminatedString((byte) -38);
+        return LabeledWidgetContainer.cipherPacketBufferState0001.readNullTerminatedString((byte) -38);
     }
 
     public static void clearStaticReferences(int integerArgument1) {

@@ -74,7 +74,7 @@ final class ue extends WidgetContainer implements TextHotspotListener, WidgetAct
         int var6 = 0;
         try {
           this.field_E = param0;
-          this.field_P = new InteractiveWidget(vi.field_x, (uf) null);
+          this.field_P = new InteractiveWidget(vi.field_x, (WidgetEventListener) null);
           this.field_P.listener = (WidgetListener) ((Object) new vo());
           var7 = Vertigo2.a(new String[]{this.a(0), this.a((byte) -88)}, BlastDebrisModel.field_n, -127);
           var3 = 20;
@@ -83,16 +83,16 @@ final class ue extends WidgetContainer implements TextHotspotListener, WidgetAct
           this.field_L.field_q = "";
           this.field_L.a(0, 0, fm.field_c);
           this.field_L.a(1, 0, fm.field_c);
-          this.field_L.field_v = (uf) (this);
+          this.field_L.field_v = (WidgetEventListener) (this);
           this.field_L.width = -40 + this.width;
           this.field_L.b(26, var3, (byte) 119, -40 + this.width);
           var3 = var3 + (15 + this.field_L.height);
-          this.c((byte) 87, this.field_L);
+          this.addChild((byte) 87, this.field_L);
           var5 = 4;
           var6 = 200;
           this.field_P.setBounds(false, 300 - var6 >> 1, var3, 40, var6);
-          this.field_P.field_v = (uf) (this);
-          this.c((byte) 77, this.field_P);
+          this.field_P.field_v = (WidgetEventListener) (this);
+          this.addChild((byte) 77, this.field_P);
           this.setBounds(false, 0, 0, var5 + (55 + var3), 300);
         } catch (RuntimeException runtimeException) {
           throw wn.wrapClientException((Throwable) ((Object) runtimeException), "ue.<init>(" + (param0 != null ? "{...}" : "null") + ')');
@@ -107,7 +107,7 @@ final class ue extends WidgetContainer implements TextHotspotListener, WidgetAct
         return "<u=2164A2><col=2164A2>";
     }
 
-    final boolean a(char param0, int param1, int param2, UiWidget param3) {
+    final boolean handleKey(char param0, int param1, int param2, UiWidget param3) {
         RuntimeException var5 = null;
         boolean stackIn_7_0 = false;
         boolean stackIn_10_0 = false;
@@ -116,17 +116,17 @@ final class ue extends WidgetContainer implements TextHotspotListener, WidgetAct
         String stackIn_16_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (super.a(param0, param1, param2, param3)) {
+          if (super.handleKey(param0, param1, param2, param3)) {
             return true;
           }
           if (param2 == 98) {
-            stackIn_7_0 = this.a(32345, param3);
+            stackIn_7_0 = this.focusPreviousChild(32345, param3);
             return stackIn_7_0;
           }
           if (param2 != 99) {
             return false;
           }
-          stackIn_10_0 = this.b((byte) -95, param3);
+          stackIn_10_0 = this.focusNextChild((byte) -95, param3);
           return stackIn_10_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

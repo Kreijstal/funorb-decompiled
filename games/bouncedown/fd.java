@@ -40,7 +40,7 @@ class fd extends DualLinkNode {
             var1 = vk.field_c.a(0);
           }
           if (var1.length() == 0) {
-            var1 = bj.j(44);
+            var1 = DraggableWidgetContainer.j(44);
           }
           if (var1.length() == 0) {
             var1 = wk.field_H;
@@ -52,7 +52,7 @@ class fd extends DualLinkNode {
           var1 = vk.field_c.a(0);
         }
         if (var1.length() == 0) {
-          var1 = bj.j(44);
+          var1 = DraggableWidgetContainer.j(44);
         }
         if (var1.length() == 0) {
           var1 = wk.field_H;

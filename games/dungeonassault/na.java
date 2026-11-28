@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class na extends DefaultTextWidgetRenderer {
-    static ji field_D;
+    static ModalDialogHost field_D;
     static RgbSprite field_A;
     static DiskCacheWorker field_y;
     private int field_F;
@@ -44,7 +44,7 @@ final class na extends DefaultTextWidgetRenderer {
         this.field_u = hc.field_f;
     }
 
-    public final void a(byte param0, lm param1, int param2, int param3, boolean param4) {
+    public final void paintWidget(byte param0, UiWidget param1, int param2, int param3, boolean param4) {
         int stackIn_6_0 = 0;
         int stackIn_14_0 = 0;
         int stackIn_17_0 = 0;
@@ -58,7 +58,7 @@ final class na extends DefaultTextWidgetRenderer {
         int var8 = 0;
         try {
           if (!param1.field_u) {
-            stackIn_6_0 = (param1.a((byte) 75)) ? 1 : 0;
+            stackIn_6_0 = (param1.isFocused((byte) 75)) ? 1 : 0;
           } else {
             stackIn_6_0 = 1;
           }

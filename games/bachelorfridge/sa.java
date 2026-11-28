@@ -348,7 +348,7 @@ final class sa extends pu {
                     return;
                   }
                   if (var2 == 23) {
-                    ge.field_F = ((PacketBuffer) ((Object) var1)).readLong(param0 ^ 108);
+                    LabeledWidgetContainer.field_F = ((PacketBuffer) ((Object) var1)).readLong(param0 ^ 108);
                     return;
                   }
                   SpiltMilkEvent.a(1, "L1: " + nia.d((byte) -106), (Throwable) null);

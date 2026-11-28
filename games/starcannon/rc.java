@@ -20,7 +20,7 @@ final class rc {
         gh.field_C = null;
         og.field_c = (byte[][]) null;
         int var1 = 4 % ((param0 - 27) / 33);
-        qd.field_H = null;
+        ModalDialog.field_H = null;
         gg.field_d = null;
         of.field_g = null;
     }

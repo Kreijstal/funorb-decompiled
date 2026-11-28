@@ -250,7 +250,7 @@ final class ml {
             param3.field_e = 1;
             var9_int = 16;
             for (var10 = 0; var10 < var9_int; var10++) {
-              var13 = jn.field_F[ib.field_c];
+              var13 = AlphaWidgetContainer.field_F[ib.field_c];
               var13.field_c = Math.random() * 256.0;
               if (!(var13.field_c < 0.0)) {
                 if (256.0 <= var13.field_c) {
@@ -278,7 +278,7 @@ final class ml {
             if (param3.field_i != 14) {
               var9_intLifetime1 = 16;
               for (var10Lifetime1 = 0; var9_intLifetime1 > var10Lifetime1; var10Lifetime1++) {
-                var14 = jn.field_F[ib.field_c];
+                var14 = AlphaWidgetContainer.field_F[ib.field_c];
                 var14.field_c = 256.0 * Math.random();
                 if (!(0.0 > var14.field_c)) {
                   if (var14.field_c >= 256.0) {

@@ -58,21 +58,21 @@ final class DiskArchiveRequest extends ArchiveRequest {
         String stackIn_15_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (jl.field_a == ie.field_x) {
+          if (jl.field_a == AlphaWidgetContainer.field_x) {
             return null;
           }
           if (param0 > -27) {
             stackIn_5_0 = (AccountServiceResult) null;
             return stackIn_5_0;
           }
-          if (ie.field_x == s.field_f &&
+          if (AlphaWidgetContainer.field_x == s.field_f &&
             param1.equals(te.field_a)) {
-            ie.field_x = cl.field_k;
+            AlphaWidgetContainer.field_x = cl.field_k;
             stackIn_9_0 = mf.field_a;
             return stackIn_9_0;
           }
           mf.field_a = null;
-          ie.field_x = jl.field_a;
+          AlphaWidgetContainer.field_x = jl.field_a;
           te.field_a = param1;
           stackIn_11_0 = null;
           return (AccountServiceResult) (stackIn_11_0);

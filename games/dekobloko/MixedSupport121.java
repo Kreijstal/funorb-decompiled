@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class MixedSupport121 implements CallbackContract004 {
+final class MixedSupport121 implements WidgetRenderer {
     static String[] stringArrayState0047;
     static BinaryBitmapFont renderingSupport009State0006;
     static SecondaryNodeHashTable secondaryNodeHashTableState0005;
@@ -25,7 +25,7 @@ final class MixedSupport121 implements CallbackContract004 {
         }
     }
 
-    public final void performAction0017(boolean booleanArgument1, int integerArgument2, int integerArgument3, byte byteArgument4, UiComponent uiComponentArgument5) {
+    public final void paintWidget(boolean booleanArgument1, int integerArgument2, int integerArgument3, byte byteArgument4, UiComponent uiComponentArgument5) {
         RuntimeException stackRuntimeExceptionLocal1 = null;
         StringBuilder stackStringBuilderLocal2 = null;
         String stackStringLocal3 = null;
@@ -43,7 +43,7 @@ final class MixedSupport121 implements CallbackContract004 {
             ((InteractiveComponent) (uiComponentArgument5)).booleanState0034) {
             rgbSpriteLocal8.drawAdditive((uiComponentArgument5.integerState0107 - rgbSpriteLocal8.integerState0254 >> 1) + integerLocal5 + 1, 1 + integerLocal7 + (uiComponentArgument5.integerState0108 - rgbSpriteLocal8.integerState0260 >> 1), 256);
           }
-          if (uiComponentArgument5.computeBoolean0220(true)) {
+          if (uiComponentArgument5.isFocused(true)) {
             AgeValidator.drawDottedRectangle(-4 + uiComponentArgument5.integerState0107, 2 + integerLocal5, (byte) 124, 2 + integerLocal7, uiComponentArgument5.integerState0108 - 4);
           }
           if (byteArgument4 < -60) {

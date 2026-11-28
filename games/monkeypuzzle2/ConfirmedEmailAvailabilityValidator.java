@@ -88,7 +88,7 @@ final class ConfirmedEmailAvailabilityValidator extends TextFieldValidator {
             return stackIn_6_0;
           }
           if (param0 == 1) {
-            stackIn_11_0 = ue.field_E;
+            stackIn_11_0 = AlphaWidgetContainer.field_E;
             return stackIn_11_0;
           }
           stackIn_9_0 = (String) null;

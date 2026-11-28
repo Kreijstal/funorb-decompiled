@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class fl implements ad {
+final class fl implements WidgetRenderer {
     private int field_i;
     private int field_m;
     static ResourceArchive field_f;
@@ -16,9 +16,9 @@ final class fl implements ad {
     private int field_a;
     private int field_l;
 
-    public final void a(int param0, int param1, fe param2, int param3, boolean param4) {
+    public final void paintWidget(int param0, int param1, UiWidget param2, int param3, boolean param4) {
         int var10 = 0;
-        fe stackIn_4_0 = null;
+        UiWidget stackIn_4_0 = null;
         RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;
         String stackIn_17_2 = null;
@@ -32,7 +32,7 @@ final class fl implements ad {
         var11 = MinerDisturbance.field_ab;
         try {
           if (param2 instanceof ne) {
-            stackIn_4_0 = (fe) (param2);
+            stackIn_4_0 = (UiWidget) (param2);
           } else {
             stackIn_4_0 = null;
           }

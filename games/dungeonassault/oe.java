@@ -26,7 +26,7 @@ final class oe extends IntrusiveNode {
           java.net.MalformedURLException var4_ref = null;
           try {
             if (PlatformTaskDispatcher.field_n.startsWith("win") &&
-              ji.a(param3, -38)) {
+              ModalDialogHost.a(param3, -38)) {
               return;
             }
             try {

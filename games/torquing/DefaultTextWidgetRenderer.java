@@ -179,7 +179,7 @@ class DefaultTextWidgetRenderer implements WidgetRenderer, TextWidgetRenderer {
         String stackIn_12_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (param1.g(2)) {
+          if (param1.isFocused(2)) {
             var13 = this.getTextLayout((byte) 121, param1);
             var14 = var13;
             var7 = var14.getLineIndexForTextOffset(param2, (byte) 110);
@@ -569,7 +569,7 @@ class DefaultTextWidgetRenderer implements WidgetRenderer, TextWidgetRenderer {
           if (param3 != -1419356520) {
             return;
           }
-          if (!param5.g(2)) {
+          if (!param5.isFocused(2)) {
             return;
           }
           var17 = this.getTextLayout((byte) 99, param5);
@@ -648,7 +648,7 @@ class DefaultTextWidgetRenderer implements WidgetRenderer, TextWidgetRenderer {
         }
     }
 
-    public void a(int param0, int param1, int param2, boolean param3, UiWidget param4) {
+    public void paintWidget(int param0, int param1, int param2, boolean param3, UiWidget param4) {
         if (param0 < 89) {
           this.getFontLineHeight(false);
         }

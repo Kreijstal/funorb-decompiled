@@ -54,7 +54,7 @@ final class mc {
         if (param2 == -3) {
           this.field_q.a(3, 0);
           this.field_o = true;
-          jc.a((0 != param0), param1 - 140, 4);
+          SingleChildWidgetContainer.a((0 != param0), param1 - 140, 4);
           return;
         }
         if (param2 == -5) {
@@ -1016,7 +1016,7 @@ final class mc {
         var7Lifetime2 = -this.field_v - 0;
         var8 = IntrusiveDeque.field_f;
         if (this.field_i[21]) {
-          var8 = se.field_L;
+          var8 = DropTargetWidgetContainer.field_L;
         }
         var9 = mm.field_a;
         this.field_r.bindAsRenderTarget();
@@ -1150,7 +1150,7 @@ final class mc {
               }
             } else {
               RichTextWidget.field_K[0].drawOpaque(487, 326);
-              var13_ref = hm.field_J[ah.field_f];
+              var13_ref = ModalDialogHost.field_J[ah.field_f];
             }
           }
           if (var13_ref != null) {

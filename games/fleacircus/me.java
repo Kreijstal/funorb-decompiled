@@ -14,7 +14,7 @@ final class me implements ComponentLayout {
     static int[] field_i;
     static RgbSprite field_g;
 
-    public final void a(int param0, int param1, boolean param2, UiComponent param3, int param4) {
+    public final void paintWidget(int param0, int param1, boolean param2, UiComponent param3, int param4) {
         int stackIn_7_0 = 0;
         RuntimeException stackIn_21_0 = null;
         StringBuilder stackIn_21_1 = null;
@@ -33,14 +33,14 @@ final class me implements ComponentLayout {
             field_g = (RgbSprite) null;
           }
           if (!param3.field_x &&
-            !param3.e(1)) {
+            !param3.isFocused(1)) {
             stackIn_7_0 = 2188450;
           } else {
             stackIn_7_0 = 3249872;
           }
           var6_int = stackIn_7_0;
           this.field_j.drawParagraph("<u=" + Integer.toString(var6_int, 16) + ">" + param3.field_i + "</u>", param1 + param3.field_y, param4 + param3.field_z, param3.field_u, param3.field_j, var6_int, -1, this.field_h, this.field_d, this.field_j.field_H + this.field_j.field_K);
-          if (!param3.e(1)) {
+          if (!param3.isFocused(1)) {
             return;
           }
           var7 = this.field_j.stringWidth(param3.field_i);

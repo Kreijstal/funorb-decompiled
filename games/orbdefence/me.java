@@ -120,7 +120,7 @@ final class me extends IntrusiveNode {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw dd.wrapClientException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param1).append(')').toString());
+          throw DraggableWidgetContainer.wrapClientException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -240,7 +240,7 @@ final class me extends IntrusiveNode {
 
     final static void c(boolean param0) {
         AccountNameAvailabilityValidator.field_t = null;
-        pj.field_o = null;
+        UiWidget.field_o = null;
         pc.field_db = false;
         fd.field_e = null;
         sj.field_u = null;

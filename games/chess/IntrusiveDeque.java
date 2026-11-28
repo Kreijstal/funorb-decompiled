@@ -387,8 +387,8 @@ final class IntrusiveDeque {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         try {
-          if (null != kb.field_O) {
-            kb.field_O.field_Y.setNameSuggestions(param1, -1);
+          if (null != DraggableWidgetContainer.field_O) {
+            DraggableWidgetContainer.field_O.field_Y.setNameSuggestions(param1, -1);
           }
           if (param0 < 88) {
             field_b = (String) null;

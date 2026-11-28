@@ -87,7 +87,7 @@ class IntrusiveNode {
 
     final static void a(int param0, int param1, int param2, int param3, int param4) {
         int var5 = -112 / ((param0 + 39) / 56);
-        kg.d(false);
+        LabeledWidgetContainer.d(false);
         SoftwareRasterizer.intersectClip(param4, param2, param1, param3);
     }
 

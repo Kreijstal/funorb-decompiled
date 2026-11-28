@@ -22,7 +22,7 @@ final class cd extends pk {
         if (this.field_v == bi.field_f) {
           this.field_r.a(this.field_i, this.field_k);
         } else {
-          if (this.field_v != ji.field_O) {
+          if (this.field_v != DropTargetWidgetContainer.field_O) {
             this.field_q.a(this.field_i, this.field_k);
           } else {
             if (null != this.field_s) {
@@ -184,7 +184,7 @@ final class cd extends pk {
             stackIn_39_1 = !(this.field_d);
             this.field_d = stackIn_39_1;
           } else {
-            this.field_v = ji.field_O;
+            this.field_v = DropTargetWidgetContainer.field_O;
             if (!this.field_y) {
               if (!this.c(91)) {
                 this.field_d = false;

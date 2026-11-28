@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class sj extends rf {
+abstract class sj extends ModalDialog {
     private int field_ab;
     private int field_gb;
     private int field_Z;
@@ -62,7 +62,7 @@ abstract class sj extends rf {
         }
     }
 
-    sj(ji param0, int param1, int param2) {
+    sj(ModalDialogHost param0, int param1, int param2) {
         super(param0, param1, param2);
         this.field_ab = 0;
         this.field_Z = 0;
@@ -70,7 +70,7 @@ abstract class sj extends rf {
 
     final void b(int param0, int param1, int param2, int param3) {
         if (0 >= param1) {
-          this.b(-15, param2, param0);
+          this.setCenteredSize(-15, param2, param0);
           return;
         }
         this.field_Y = this.field_s;
@@ -187,28 +187,28 @@ abstract class sj extends rf {
         if (this.field_Z <= 0) {
           return;
         }
-        this.b(119, this.field_gb, this.field_X);
+        this.setCenteredSize(119, this.field_gb, this.field_X);
         int var2 = -27 % ((param0 - 22) / 35);
         this.field_Z = 0;
         this.k(0);
     }
 
-    boolean i(int param0) {
+    boolean snapDialogAnimation(int param0) {
         this.h((byte) -61);
         if (param0 != 462) {
           this.h((byte) -64);
         }
-        return super.i(param0 + 0);
+        return super.snapDialogAnimation(param0 + 0);
     }
 
-    boolean f(byte param0) {
+    boolean advanceDialogAnimation(byte param0) {
         int var2 = 0;
         int var3 = 0;
         int fieldTemp$0 = 0;
         int var4 = 0;
         int var5 = 0;
         if (param0 != -90) {
-          this.i(-114);
+          this.snapDialogAnimation(-114);
         }
         if (this.field_Z <= 0) {
         } else {
@@ -225,9 +225,9 @@ abstract class sj extends rf {
             var2 = (-this.field_fb + this.field_X) * var4 / var5 + this.field_fb;
             var3 = (this.field_gb - this.field_Y) * var4 / var5 + this.field_Y;
           }
-          this.b(15, var3, var2);
+          this.setCenteredSize(15, var3, var2);
         }
-        return super.f((byte) -90);
+        return super.advanceDialogAnimation((byte) -90);
     }
 
     final static void a(int param0, int param1, int param2, int param3, String param4, String param5) {

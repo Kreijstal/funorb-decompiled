@@ -8,7 +8,7 @@ final class gm extends AcceleratingProjectile {
     private TunnelEntity field_eb;
 
     gm(GameSession param0, MovingTunnelEntity param1, double[] param2, double param3, double param4, double param5) {
-        super(param0, param1, 0.4, 0.02, 8.0, param2, param3, param4, param5, fj.field_G);
+        super(param0, param1, 0.4, 0.02, 8.0, param2, param3, param4, param5, UiWidget.field_G);
         this.field_db = new DynamicLight((TunnelEntity) (this));
         try {
           this.field_eb = (TunnelEntity) ((Object) param0.field_B);
@@ -108,7 +108,7 @@ final class gm extends AcceleratingProjectile {
     }
 
     gm(GameSession param0, PlayerShip param1) {
-        super(param0, param1, 0.4, 0.02, 64.0, fj.field_G);
+        super(param0, param1, 0.4, 0.02, 64.0, UiWidget.field_G);
         double[] var4 = null;
         this.field_db = new DynamicLight((TunnelEntity) (this));
         try {

@@ -8,7 +8,7 @@ final class kf {
     static int[] field_a;
     static int[] field_e;
     static boolean field_g;
-    static ol field_h;
+    static ModalDialogHost field_h;
     static String field_f;
 
     public static void resetStaticState(int param0) {

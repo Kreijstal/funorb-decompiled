@@ -415,7 +415,7 @@ final class qh {
         rf.field_c = -2147483648;
         bh.field_e = 2147483647;
         kl.field_a = -2147483648;
-        fc.field_z = 0;
+        SingleChildWidgetContainer.field_z = 0;
     }
 
     final static boolean a(char param0, int param1) {
@@ -722,7 +722,7 @@ final class qh {
             this.field_a = 3;
           }
           while (true) {
-            if (!jn.e((byte) 75)) {
+            if (!AlphaWidgetContainer.e((byte) 75)) {
               return;
             }
             if (32 == pj.field_e) {

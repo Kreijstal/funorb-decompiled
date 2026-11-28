@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ri implements j {
+final class ri implements WidgetRenderer {
     static int field_f;
     private int field_b;
     static String field_d;
@@ -24,7 +24,7 @@ final class ri implements j {
         }
     }
 
-    public final void a(byte param0, int param1, boolean param2, int param3, UiWidget param4) {
+    public final void paintWidget(byte param0, int param1, boolean param2, int param3, UiWidget param4) {
         int stackIn_6_0 = 0;
         RuntimeException stackIn_22_0 = null;
         StringBuilder stackIn_22_1 = null;
@@ -40,7 +40,7 @@ final class ri implements j {
         var11 = SolKnight.field_L ? 1 : 0;
         try {
           if (!param4.field_v &&
-            !param4.b(true)) {
+            !param4.isFocused(true)) {
             stackIn_6_0 = 2188450;
           } else {
             stackIn_6_0 = 3249872;
@@ -50,7 +50,7 @@ final class ri implements j {
           if (param0 < 113) {
             return;
           }
-          if (param4.b(true)) {
+          if (param4.isFocused(true)) {
             var7 = this.field_e.stringWidth(param4.field_i);
             var8 = this.field_e.field_s + this.field_e.field_F;
             var9 = param3 + param4.field_m;

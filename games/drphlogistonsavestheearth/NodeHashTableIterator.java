@@ -81,8 +81,8 @@ final class NodeHashTableIterator implements Iterator {
     final static void a(boolean param0) {
         cf.a((byte) -107);
         sg.field_a = param0 ? true : false;
-        pj.field_F = true;
-        PcmResampler.field_c.j(300);
+        DequeWidgetContainer.field_F = true;
+        PcmResampler.field_c.closeAllDialogs(300);
         nc.a(field_c, false, (byte) 79);
     }
 

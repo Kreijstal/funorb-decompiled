@@ -66,7 +66,7 @@ final class pb {
         }
         var5 = var8.readUnsignedShort(param0 - 1174065599);
         try {
-          var9 = ad.field_C.a(var5, -32769);
+          var9 = LabeledWidgetContainer.field_C.a(var5, -32769);
           vd.field_e = var9.e(-95);
           if (fb.field_e.equals(we.field_i)) {
             stackIn_24_0 = null;

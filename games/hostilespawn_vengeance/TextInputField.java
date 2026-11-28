@@ -38,9 +38,9 @@ final class TextInputField extends EditableTextField implements FieldValidatorPr
         SoftwareRasterizer.intersectClip(param3, param1, param0, param2);
     }
 
-    final void a(ag param0, int param1, int param2, int param3) {
+    final void updatePointer(UiWidget param0, int param1, int param2, int param3) {
         try {
-          super.a(param0, param1, param2, param3);
+          super.updatePointer(param0, param1, param2, param3);
           this.field_Z = -param3 + (j.field_c - this.field_v);
         } catch (RuntimeException runtimeException) {
           throw AccountCreationResultPanel.wrapClientException((Throwable) ((Object) runtimeException), "sf.W(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
@@ -124,7 +124,7 @@ final class TextInputField extends EditableTextField implements FieldValidatorPr
         return null;
     }
 
-    TextInputField(String param0, mh param1, int param2) {
+    TextInputField(String param0, WidgetEventListener param1, int param2) {
         super(param0, param1, param2);
     }
 

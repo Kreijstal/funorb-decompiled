@@ -333,7 +333,7 @@ final class GzipDecompressor {
                 return stackIn_66_0;
               }
             }
-            while (ad.e((byte) 93)) {
+            while (LabeledWidgetContainer.e((byte) 93)) {
               ea.field_a.b(0, param1 - 101);
               if (ea.field_a.g(0)) {
                 if (ea.field_a.field_k == 0) {

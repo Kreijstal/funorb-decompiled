@@ -17,7 +17,7 @@ final class di extends id {
         field_x = null;
     }
 
-    final String c(int param0, w param1) {
+    final String c(int param0, UiWidget param1) {
         RuntimeException var3 = null;
         String stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;

@@ -29,7 +29,7 @@ final class gm {
         String[] var6 = null;
         var5 = HostileSpawn.field_I ? 1 : 0;
         try {
-          od.field_I = BoundedRandomAccessFile.field_b;
+          DropTargetWidgetContainer.field_I = BoundedRandomAccessFile.field_b;
           if (255 != param3) {
             if (param3 < 100) {
               wj.field_H = an.createAccountErrorResult(param3, -10, param1);
@@ -162,7 +162,7 @@ final class gm {
         return this;
     }
 
-    final void a(ha param0, int param1, int param2, ag param3, int param4) {
+    final void a(ha param0, int param1, int param2, UiWidget param3, int param4) {
         BitmapFont stackIn_21_0 = null;
         String stackIn_21_1 = null;
         int stackIn_21_2 = 0;
@@ -260,7 +260,7 @@ final class gm {
         }
     }
 
-    final void a(ag param0, gm param1, byte param2, ha param3, int param4, int param5) {
+    final void a(UiWidget param0, gm param1, byte param2, ha param3, int param4, int param5) {
         RuntimeException stackIn_25_0 = null;
         StringBuilder stackIn_25_1 = null;
         String stackIn_26_2 = null;

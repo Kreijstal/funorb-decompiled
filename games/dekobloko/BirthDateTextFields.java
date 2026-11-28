@@ -27,11 +27,11 @@ final class BirthDateTextFields extends BirthDateInput {
         }
     }
 
-    final void performAction0162(int integerArgument1, int integerArgument2, int integerArgument3, int integerArgument4) {
+    final void drawWidget(int integerArgument1, int integerArgument2, int integerArgument3, int integerArgument4) {
         if (integerArgument2 > -103) {
           return;
         }
-        super.performAction0162(integerArgument1, -120, integerArgument3, integerArgument4);
+        super.drawWidget(integerArgument1, -120, integerArgument3, integerArgument4);
         if (integerArgument3 != 0) {
           return;
         }
@@ -90,24 +90,24 @@ final class BirthDateTextFields extends BirthDateInput {
         }
     }
 
-    private BirthDateTextFields(CallbackContract004 callbackContract004Argument1, boolean booleanArgument2) {
-        super(0, 0, 0, 0, (CallbackContract004) null);
+    private BirthDateTextFields(WidgetRenderer callbackContract004Argument1, boolean booleanArgument2) {
+        super(0, 0, 0, 0, (WidgetRenderer) null);
         try {
-          this.uiComponentPart028State0003 = (EditableTextField) ((Object) new ValidatedTextField("", (CallbackContract006) null, 2));
-          this.uiComponentPart028State0004 = (EditableTextField) ((Object) new ValidatedTextField("", (CallbackContract006) null, 2));
-          this.uiComponentPart028State0005 = (EditableTextField) ((Object) new ValidatedTextField("", (CallbackContract006) null, 4));
+          this.uiComponentPart028State0003 = (EditableTextField) ((Object) new ValidatedTextField("", (WidgetEventListener) null, 2));
+          this.uiComponentPart028State0004 = (EditableTextField) ((Object) new ValidatedTextField("", (WidgetEventListener) null, 2));
+          this.uiComponentPart028State0005 = (EditableTextField) ((Object) new ValidatedTextField("", (WidgetEventListener) null, 4));
           this.uiComponentPart028State0005.callbackContract004State0006 = callbackContract004Argument1;
           this.uiComponentPart028State0004.callbackContract004State0006 = callbackContract004Argument1;
           this.uiComponentPart028State0003.callbackContract004State0006 = callbackContract004Argument1;
           this.booleanState0136 = booleanArgument2 ? true : false;
           if (!this.booleanState0136) {
-            this.performAction0895(this.uiComponentPart028State0003, (byte) -55);
-            this.performAction0895(this.uiComponentPart028State0004, (byte) -55);
+            this.addChild(this.uiComponentPart028State0003, (byte) -55);
+            this.addChild(this.uiComponentPart028State0004, (byte) -55);
           } else {
-            this.performAction0895(this.uiComponentPart028State0004, (byte) -55);
-            this.performAction0895(this.uiComponentPart028State0003, (byte) -55);
+            this.addChild(this.uiComponentPart028State0004, (byte) -55);
+            this.addChild(this.uiComponentPart028State0003, (byte) -55);
           }
-          this.performAction0895(this.uiComponentPart028State0005, (byte) -55);
+          this.addChild(this.uiComponentPart028State0005, (byte) -55);
         } catch (RuntimeException runtimeException) {
           throw ClientException.computeDiagnosticSupport0020365((Throwable) ((Object) runtimeException), "pn.<init>(" + (callbackContract004Argument1 != null ? "{...}" : "null") + ',' + booleanArgument2 + ')');
         }
@@ -155,10 +155,10 @@ final class BirthDateTextFields extends BirthDateInput {
         }
     }
 
-    BirthDateTextFields(CallbackContract004 callbackContract004Argument1, boolean booleanArgument2, int integerArgument3, int integerArgument4, int integerArgument5, int integerArgument6) {
+    BirthDateTextFields(WidgetRenderer callbackContract004Argument1, boolean booleanArgument2, int integerArgument3, int integerArgument4, int integerArgument5, int integerArgument6) {
         this(callbackContract004Argument1, booleanArgument2);
         try {
-          this.performAction0222(integerArgument6, integerArgument5, integerArgument3, integerArgument4, -16555);
+          this.setBounds(integerArgument6, integerArgument5, integerArgument3, integerArgument4, -16555);
         } catch (RuntimeException runtimeException) {
           throw ClientException.computeDiagnosticSupport0020365((Throwable) ((Object) runtimeException), "pn.<init>(" + (callbackContract004Argument1 != null ? "{...}" : "null") + ',' + booleanArgument2 + ',' + integerArgument3 + ',' + integerArgument4 + ',' + integerArgument5 + ',' + integerArgument6 + ')');
         }
@@ -199,9 +199,9 @@ final class BirthDateTextFields extends BirthDateInput {
             SceneWidgetPart014 sceneWidgetPart014Local1 = (SceneWidgetPart014) null;
             BirthDateTextFields.computeBoolean1276((SceneWidgetPart014) null, (SceneWidgetPart014) null, true);
           }
-          this.uiComponentPart028State0003.callbackContract006State0001 = (CallbackContract006) ((Object) inputAdapter002Argument2);
-          this.uiComponentPart028State0004.callbackContract006State0001 = (CallbackContract006) ((Object) inputAdapter002Argument2);
-          this.uiComponentPart028State0005.callbackContract006State0001 = (CallbackContract006) ((Object) inputAdapter002Argument2);
+          this.uiComponentPart028State0003.callbackContract006State0001 = (WidgetEventListener) ((Object) inputAdapter002Argument2);
+          this.uiComponentPart028State0004.callbackContract006State0001 = (WidgetEventListener) ((Object) inputAdapter002Argument2);
+          this.uiComponentPart028State0005.callbackContract006State0001 = (WidgetEventListener) ((Object) inputAdapter002Argument2);
         } catch (RuntimeException runtimeException) {
           throw ClientException.computeDiagnosticSupport0020365((Throwable) ((Object) runtimeException), "pn.H(" + byteArgument1 + ',' + (inputAdapter002Argument2 != null ? "{...}" : "null") + ')');
         }
@@ -280,17 +280,17 @@ final class BirthDateTextFields extends BirthDateInput {
         }
     }
 
-    final void performAction0222(int integerArgument1, int integerArgument2, int integerArgument3, int integerArgument4, int integerArgument5) {
-        super.performAction0222(integerArgument1, integerArgument2, integerArgument3, integerArgument4, -16555);
+    final void setBounds(int integerArgument1, int integerArgument2, int integerArgument3, int integerArgument4, int integerArgument5) {
+        super.setBounds(integerArgument1, integerArgument2, integerArgument3, integerArgument4, -16555);
         int integerLocal1 = integerArgument2 - 130 >> 1;
         if (this.booleanState0136) {
-          this.uiComponentPart028State0004.performAction0222(integerArgument1, 25, integerLocal1, 0, -16555);
-          this.uiComponentPart028State0003.performAction0222(integerArgument1, 25, 45 + integerLocal1, 0, -16555);
+          this.uiComponentPart028State0004.setBounds(integerArgument1, 25, integerLocal1, 0, -16555);
+          this.uiComponentPart028State0003.setBounds(integerArgument1, 25, 45 + integerLocal1, 0, -16555);
         } else {
-          this.uiComponentPart028State0003.performAction0222(integerArgument1, 25, integerLocal1, 0, -16555);
-          this.uiComponentPart028State0004.performAction0222(integerArgument1, 25, 45 + integerLocal1, 0, integerArgument5 + 0);
+          this.uiComponentPart028State0003.setBounds(integerArgument1, 25, integerLocal1, 0, -16555);
+          this.uiComponentPart028State0004.setBounds(integerArgument1, 25, 45 + integerLocal1, 0, integerArgument5 + 0);
         }
-        this.uiComponentPart028State0005.performAction0222(integerArgument1, 40, integerLocal1 + 90, 0, integerArgument5);
+        this.uiComponentPart028State0005.setBounds(integerArgument1, 40, integerLocal1 + 90, 0, integerArgument5);
     }
 
     final int getYear(byte byteArgument1) {
@@ -373,7 +373,7 @@ final class BirthDateTextFields extends BirthDateInput {
           if (!booleanArgument2) {
             ComponentContainer.gameSessionState0002.nodeDequeState0024.addFirst(new RenderingSupport006(MixedSupport116.stringState0511, 10, false), 2777);
           } else {
-            ComponentContainer.gameSessionState0002.nodeDequeState0024.addFirst(new RenderingSupport006(UiComponentPart016.stringState0296, 10, false), 2777);
+            ComponentContainer.gameSessionState0002.nodeDequeState0024.addFirst(new RenderingSupport006(ModalDialogHost.stringState0296, 10, false), 2777);
           }
           MixedSupport007.booleanState0005 = booleanArgument3;
           UiComponentPart012.booleanState0059 = false;

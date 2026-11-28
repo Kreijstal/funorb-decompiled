@@ -6,14 +6,14 @@ import java.io.*;
 class fg extends DefaultTextWidgetRenderer {
     static int field_u;
 
-    public final void a(int param0, int param1, pj param2, int param3, boolean param4) {
+    public final void paintWidget(int param0, int param1, UiWidget param2, int param3, boolean param4) {
         try {
           if (param4) {
             tl.a(param2.field_r, param2.field_n + param0, param2.field_s + param1, param2.field_m, param3 ^ 4459);
           }
-          super.a(param0, param1, param2, param3, param4);
+          super.paintWidget(param0, param1, param2, param3, param4);
         } catch (RuntimeException runtimeException) {
-          throw dd.wrapClientException((Throwable) ((Object) runtimeException), "fg.A(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ')');
+          throw DraggableWidgetContainer.wrapClientException((Throwable) ((Object) runtimeException), "fg.A(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ')');
         }
     }
 
@@ -46,7 +46,7 @@ class fg extends DefaultTextWidgetRenderer {
               lh.field_c = stackIn_13_0;
               fe.field_b = stackIn_13_0;
               ce.field_d = stackIn_13_0;
-              dh.field_bb = sk.field_E;
+              dh.field_bb = ModalDialogHost.field_E;
               var5.position = 0;
               nl.a(20994, gi.field_a, ti.field_eb, uk.field_b, dk.field_a);
               bh.a(-1, -1);
@@ -79,7 +79,7 @@ class fg extends DefaultTextWidgetRenderer {
           NetworkArchiveRequest.field_w = AudioOutput.createOutput(param4, param3, 0, param0);
           wf.field_b = AudioOutput.createOutput(param4, param3, 1, param1);
           vb.field_f = new PcmStreamMixer();
-          h.field_H = param1 * 1000 / param2;
+          LabeledWidgetContainer.field_H = param1 * 1000 / param2;
           wf.field_b.setRootStream(vb.field_f);
           ml.field_c = param6;
           ml.field_c.b(ImageProducerRasterBuffer.field_g, 106);
@@ -88,7 +88,7 @@ class fg extends DefaultTextWidgetRenderer {
           }
           NetworkArchiveRequest.field_w.setRootStream(ml.field_c);
         } catch (RuntimeException runtimeException) {
-          throw dd.wrapClientException((Throwable) ((Object) runtimeException), "fg.BA(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ',' + (param6 != null ? "{...}" : "null") + ',' + param7 + ')');
+          throw DraggableWidgetContainer.wrapClientException((Throwable) ((Object) runtimeException), "fg.BA(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ',' + (param6 != null ? "{...}" : "null") + ',' + param7 + ')');
         }
     }
 
@@ -102,7 +102,7 @@ class fg extends DefaultTextWidgetRenderer {
             fg.a(127, -79, -7, (java.awt.Component) null, (PlatformTaskDispatcher) null, false, (MidiPcmStream) null, false);
           }
         } catch (RuntimeException runtimeException) {
-          throw dd.wrapClientException((Throwable) ((Object) runtimeException), "fg.W(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw DraggableWidgetContainer.wrapClientException((Throwable) ((Object) runtimeException), "fg.W(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -193,7 +193,7 @@ class fg extends DefaultTextWidgetRenderer {
           } else {
             stackIn_43_2 = "{...}";
           }
-          throw dd.wrapClientException((Throwable) ((Object) stackIn_42_0), ((StringBuilder) (Object) stackIn_42_1).append(stackIn_43_2).append(')').toString());
+          throw DraggableWidgetContainer.wrapClientException((Throwable) ((Object) stackIn_42_0), ((StringBuilder) (Object) stackIn_42_1).append(stackIn_43_2).append(')').toString());
         }
     }
 
@@ -226,7 +226,7 @@ class fg extends DefaultTextWidgetRenderer {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw dd.wrapClientException((Throwable) ((Object) var1), "fg.DA(" + param0 + ')');
+          throw DraggableWidgetContainer.wrapClientException((Throwable) ((Object) var1), "fg.DA(" + param0 + ')');
         }
     }
 

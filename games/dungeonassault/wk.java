@@ -163,10 +163,10 @@ final class wk {
         RuntimeException decompiledCaughtException = null;
         var2 = DungeonAssault.field_K;
         try {
-          lg.field_w.a(wo.field_b, (byte) 66, TextHotspotBounds.field_m, true);
-          lg.field_w.b(true);
+          lg.field_w.processPointerInput(wo.field_b, (byte) 66, TextHotspotBounds.field_m, true);
+          lg.field_w.advanceDialogs(true);
           while (ha.b((byte) 47)) {
-            lg.field_w.a(126, mm.field_t, ob.field_Yb);
+            lg.field_w.processKeyInput(126, mm.field_t, ob.field_Yb);
           }
           if (param0) {
             stackIn_6_0 = 11;

@@ -19,7 +19,7 @@ class InteractiveWidget extends UiComponent {
     static int[] field_K;
     static String field_J;
 
-    boolean a(UiComponent param0, int param1) {
+    boolean takeFocus(UiComponent param0, int param1) {
         RuntimeException var3 = null;
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
@@ -31,13 +31,13 @@ class InteractiveWidget extends UiComponent {
           }
           if (this.field_F &&
             this.field_M) {
-            param0.d(6064);
+            param0.blur(6064);
             this.field_B = true;
             if (this.field_k != null) {
-              if (!(this.field_k instanceof mk)) {
+              if (!(this.field_k instanceof WidgetFocusListener)) {
                 return true;
               }
-              ((mk) (this.field_k)).a((UiComponent) (this), this.field_B, (byte) -74);
+              ((WidgetFocusListener) (this.field_k)).onWidgetFocusChanged((UiComponent) (this), this.field_B, (byte) -74);
             }
             return true;
           }
@@ -56,7 +56,7 @@ class InteractiveWidget extends UiComponent {
         }
     }
 
-    boolean a(int param0, char param1, byte param2, UiComponent param3) {
+    boolean handleKey(int param0, char param1, byte param2, UiComponent param3) {
         RuntimeException var5 = null;
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
@@ -66,7 +66,7 @@ class InteractiveWidget extends UiComponent {
           if (param2 <= 9) {
             return false;
           }
-          if (!this.c(86)) {
+          if (!this.isFocused(86)) {
             return false;
           }
           if (param0 != 84 &&
@@ -89,39 +89,39 @@ class InteractiveWidget extends UiComponent {
         }
     }
 
-    InteractiveWidget(String param0, gg param1) {
+    InteractiveWidget(String param0, WidgetEventListener param1) {
         this(param0, kl.field_e.field_f, param1);
     }
 
-    final boolean c(int param0) {
+    final boolean isFocused(int param0) {
         if (param0 > 76) {
           return this.field_B;
         }
         UiComponent var3 = (UiComponent) null;
-        this.a(54, -80, 117, 118, -114, 23, (UiComponent) null);
+        this.pointerPressed(54, -80, 117, 118, -114, 23, (UiComponent) null);
         return this.field_B;
     }
 
-    void a(UiComponent param0, int param1, byte param2, int param3) {
-        super.a(param0, param1, (byte) -112, param3);
+    void updatePointer(UiComponent param0, int param1, byte param2, int param3) {
+        super.updatePointer(param0, param1, (byte) -112, param3);
         if (param2 >= -97) {
           return;
         }
         try {
           if (this.field_z != 0 &&
             this.field_z != wh.field_e) {
-            if (this.a(ph.field_d, ConfirmedEmailAvailabilityValidator.field_u, param3, -29991, param1) &&
+            if (this.containsPointer(ph.field_d, ConfirmedEmailAvailabilityValidator.field_u, param3, -29991, param1) &&
               wh.field_e == 0) {
               this.activateFromInput(-param3 + ph.field_d, -13461, ConfirmedEmailAvailabilityValidator.field_u - param1, this.field_z);
             }
-            this.a(param3, (byte) 119, param0, param1, ConfirmedEmailAvailabilityValidator.field_u, ph.field_d);
+            this.pointerReleased(param3, (byte) 119, param0, param1, ConfirmedEmailAvailabilityValidator.field_u, ph.field_d);
           }
         } catch (RuntimeException runtimeException) {
           throw oj.wrapException((Throwable) ((Object) runtimeException), "ng.U(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
-    boolean a(int param0, int param1, int param2, int param3, int param4, int param5, UiComponent param6) {
+    boolean pointerPressed(int param0, int param1, int param2, int param3, int param4, int param5, UiComponent param6) {
         RuntimeException var8 = null;
         RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
@@ -129,19 +129,19 @@ class InteractiveWidget extends UiComponent {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param2 != -81) {
-            this.c(43);
+            this.isFocused(43);
           }
           if (!this.field_F) {
             return false;
           }
-          if (!this.a(param0, param1, param3, -29991, param4)) {
+          if (!this.containsPointer(param0, param1, param3, -29991, param4)) {
             return false;
           }
-          this.a(param6, 0);
+          this.takeFocus(param6, 0);
           this.field_z = param5;
           if (null != this.field_k &&
-            this.field_k instanceof pb) {
-            ((pb) (this.field_k)).a(param3, param1, (byte) -1, param0, this, param4, param5);
+            this.field_k instanceof WidgetPointerListener) {
+            ((WidgetPointerListener) (this.field_k)).onWidgetPointerPressed(param3, param1, (byte) -1, param0, this, param4, param5);
           }
           return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -158,11 +158,11 @@ class InteractiveWidget extends UiComponent {
         }
     }
 
-    final void a(int param0, byte param1, UiComponent param2, int param3, int param4, int param5) {
+    final void pointerReleased(int param0, byte param1, UiComponent param2, int param3, int param4, int param5) {
         try {
           if (null != this.field_k &&
-            this.field_k instanceof pb) {
-            ((pb) (this.field_k)).a(param5, true, param4, this, param3, param0);
+            this.field_k instanceof WidgetPointerListener) {
+            ((WidgetPointerListener) (this.field_k)).onWidgetPointerReleased(param5, true, param4, this, param3, param0);
           }
           this.field_z = 0;
           int var7_int = 94 / ((-29 - param1) / 39);
@@ -171,7 +171,7 @@ class InteractiveWidget extends UiComponent {
         }
     }
 
-    final StringBuilder a(Hashtable param0, int param1, StringBuilder param2, boolean param3) {
+    final StringBuilder appendDebugTree(Hashtable param0, int param1, StringBuilder param2, boolean param3) {
         StringBuilder discarded$2 = null;
         StringBuilder discarded$3 = null;
         RuntimeException var5 = null;
@@ -186,8 +186,8 @@ class InteractiveWidget extends UiComponent {
           if (!param3) {
             field_I = 125;
           }
-          if (this.a(param0, param1, -126, param2)) {
-            this.a(param2, -125, param0, param1);
+          if (this.beginDebugTreeEntry(param0, param1, -126, param2)) {
+            this.appendDebugProperties(param2, -125, param0, param1);
             if (this.field_D) {
               discarded$2 = param2.append(" active");
             }
@@ -217,7 +217,7 @@ class InteractiveWidget extends UiComponent {
         }
     }
 
-    InteractiveWidget(String param0, j param1, gg param2) {
+    InteractiveWidget(String param0, WidgetRenderer param1, WidgetEventListener param2) {
         super(param0, param1, param2);
         this.field_F = true;
         this.field_B = false;
@@ -244,7 +244,7 @@ class InteractiveWidget extends UiComponent {
         }
     }
 
-    final void d(int param0) {
+    final void blur(int param0) {
         if (param0 != 6064) {
           InteractiveWidget.clearStaticReferences(true);
           if (!this.field_B) {
@@ -254,8 +254,8 @@ class InteractiveWidget extends UiComponent {
           if (this.field_k == null) {
             return;
           }
-          if (this.field_k instanceof mk) {
-            ((mk) (this.field_k)).a((UiComponent) (this), this.field_B, (byte) -54);
+          if (this.field_k instanceof WidgetFocusListener) {
+            ((WidgetFocusListener) (this.field_k)).onWidgetFocusChanged((UiComponent) (this), this.field_B, (byte) -54);
             return;
           }
           return;
@@ -267,8 +267,8 @@ class InteractiveWidget extends UiComponent {
         if (this.field_k == null) {
           return;
         }
-        if (this.field_k instanceof mk) {
-          ((mk) (this.field_k)).a((UiComponent) (this), this.field_B, (byte) -54);
+        if (this.field_k instanceof WidgetFocusListener) {
+          ((WidgetFocusListener) (this.field_k)).onWidgetFocusChanged((UiComponent) (this), this.field_B, (byte) -54);
           return;
         }
     }

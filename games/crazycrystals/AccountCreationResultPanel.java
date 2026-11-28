@@ -11,7 +11,7 @@ final class AccountCreationResultPanel extends na implements WidgetActivationLis
     static PcmSample field_nb;
     private boolean field_sb;
 
-    final boolean g(byte param0) {
+    final boolean advanceDialogAnimation(byte param0) {
         AccountServiceResult var2 = null;
         if (this.field_C &&
           !this.field_sb) {
@@ -24,7 +24,7 @@ final class AccountCreationResultPanel extends na implements WidgetActivationLis
           AccountServiceResult var3 = (AccountServiceResult) null;
           this.showAccountCreationResult(-88, true, (AccountServiceResult) null);
         }
-        return super.g((byte) 8);
+        return super.advanceDialogAnimation((byte) 8);
     }
 
     final void o(int param0) {
@@ -86,7 +86,7 @@ final class AccountCreationResultPanel extends na implements WidgetActivationLis
         }
     }
 
-    AccountCreationResultPanel(ol param0, AccountRegistrationPanel param1) {
+    AccountCreationResultPanel(ModalDialogHost param0, AccountRegistrationPanel param1) {
         super(param0, mo.field_m, vn.field_i, false, false);
         try {
           this.field_pb = param1;
@@ -132,13 +132,13 @@ final class AccountCreationResultPanel extends na implements WidgetActivationLis
           }
           if (param2.success) {
             if (param2.field_f) {
-              this.a((qm) (new ph(this)), (byte) -50);
+              this.a((UiWidget) (new ph(this)), (byte) -50);
               return;
             }
-            var5.a(go.field_j, (bi) (this), 39);
+            var5.a(go.field_j, (WidgetEventListener) (this), 39);
           } else {
             if (this.field_ob) {
-              var5.a(go.field_j, (bi) (this), 117);
+              var5.a(go.field_j, (WidgetEventListener) (this), 117);
             } else {
               if (param2.statusCode != 5) {
                 var5.a(cf.field_h, (byte) -124, -1);
@@ -149,7 +149,7 @@ final class AccountCreationResultPanel extends na implements WidgetActivationLis
             }
             if (param2.statusCode != 3) {
               if (6 != param2.statusCode) {
-                this.a((qm) (var5), (byte) -50);
+                this.a((UiWidget) (var5), (byte) -50);
                 return;
               }
               var5.a(sb.field_C, (byte) -124, 9);
@@ -157,7 +157,7 @@ final class AccountCreationResultPanel extends na implements WidgetActivationLis
               var5.a(ik.field_f, (byte) -124, 7);
             }
           }
-          this.a((qm) (var5), (byte) -50);
+          this.a((UiWidget) (var5), (byte) -50);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

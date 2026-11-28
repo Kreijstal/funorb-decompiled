@@ -240,7 +240,7 @@ final class PowerUpPickup extends MovingTunnelEntity {
         if (param3 > AgeValidator.field_j) {
           ka.field_P = param3;
         }
-        am.field_I[mc.field_c] = param1;
+        SingleChildWidgetContainer.field_I[mc.field_c] = param1;
         em.field_b[mc.field_c] = param0;
         oc.field_m[mc.field_c] = param5;
         int var6 = param0 + (param1 + param5);
@@ -428,7 +428,7 @@ final class PowerUpPickup extends MovingTunnelEntity {
                                   } else {
                                     param1.field_tb = 4;
                                     kc.a(b.a(new String[]{"4"}, HomingProjectile.field_X, 1177), (TunnelEntity) (this), 116, true);
-                                    pk.a((byte) 48, b.a(new String[]{s.field_L}, SecondaryNodeDequeIterator.field_e, 1177));
+                                    pk.a((byte) 48, b.a(new String[]{DropTargetWidgetContainer.field_L}, SecondaryNodeDequeIterator.field_e, 1177));
                                   }
                                   this.d(10797);
                                 } else {
@@ -498,7 +498,7 @@ final class PowerUpPickup extends MovingTunnelEntity {
                                             this.field_A.field_J.field_e = 3 + this.field_A.field_J.field_o;
                                             this.field_A.field_J.field_m = this.field_A.field_J.field_o + 3;
                                             if (this.field_A.field_J.field_m <= 24) {
-                                              hc.field_u = b.a(new String[]{Integer.toString(this.field_A.field_J.field_m)}, oe.field_X, 1177);
+                                              hc.field_u = b.a(new String[]{Integer.toString(this.field_A.field_J.field_m)}, ModalDialog.field_X, 1177);
                                               KeyboardInput.field_f = 0;
                                             }
                                           } else {

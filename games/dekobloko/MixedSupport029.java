@@ -16,7 +16,7 @@ final class MixedSupport029 {
         int integerLocal1 = 0;
         try {
           integerLocal1 = 2;
-          if (UiComponentPart029.renderingSupport009State0005 == bitmapFontArgument6) {
+          if (DraggableWidgetContainer.renderingSupport009State0005 == bitmapFontArgument6) {
             integerLocal1 = 1;
           }
           bitmapFontArgument6.drawCentred(stringArgument3, integerArgument2 - integerLocal1, integerArgument4 - integerLocal1, 0, -1);
@@ -62,7 +62,7 @@ final class MixedSupport029 {
         if (uiComponentPart019Local2 == null) {
           return;
         }
-        uiComponentPart019Local2.performAction0210(RichTextLayout.sceneWidgetState0021.integerState0886, RichTextLayout.sceneWidgetState0021.integerState0892, (byte) -72);
+        uiComponentPart019Local2.drawAllLayers(RichTextLayout.sceneWidgetState0021.integerState0886, RichTextLayout.sceneWidgetState0021.integerState0892, (byte) -72);
     }
 
     final static void performAction0409(ResourceArchive resourceArchiveArgument1, int integerArgument2, PcmStreamMixer pcmStreamMixerArgument3, int integerArgument4) {

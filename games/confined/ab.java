@@ -21,7 +21,7 @@ final class ab {
           var3_int = param0;
           var4 = uh.field_c;
           while (var3_int < dl.field_c.length) {
-            var5 = la.field_T[var3_int];
+            var5 = LabeledWidgetContainer.field_T[var3_int];
             if (var5 < 0) {
               var4 = var4 + wm.field_bb;
             } else {

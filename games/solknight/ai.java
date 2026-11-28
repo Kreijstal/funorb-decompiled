@@ -20,7 +20,7 @@ final class ai {
           if (param6 >= -115) {
             field_d = (String) null;
           }
-          ke.field_N = param9;
+          LabeledWidgetContainer.field_N = param9;
           ji.field_a = param0;
         } catch (RuntimeException runtimeException) {
           throw fc.wrapClientException((Throwable) ((Object) runtimeException), "ai.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + (param8 != null ? "{...}" : "null") + ',' + param9 + ',' + param10 + ')');
@@ -53,7 +53,7 @@ final class ai {
             try {
               MouseWheelInput.field_d = new BufferedSocket((java.net.Socket) (bk.field_a.result), ConfirmedEmailAvailabilityValidator.field_n);
               id.field_c.position = 0;
-              var4 = te.field_N;
+              var4 = AlphaWidgetContainer.field_N;
               var5 = var4;
               stackIn_11_0 = (param0) ? -2 : -1;
               nf.field_U = stackIn_11_0;
@@ -61,7 +61,7 @@ final class ai {
               FullscreenFocusCanvas.field_e = stackIn_11_0;
               var5.position = 0;
               AccountRequestState.field_e = qc.field_i;
-              si.a(jj.field_s, (byte) 22, jh.field_f, ci.field_jb, id.field_c);
+              SingleChildWidgetContainer.a(jj.field_s, (byte) 22, jh.field_f, ci.field_jb, id.field_c);
               qf.a(param1 + 37, -1);
             } catch (java.io.IOException decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;

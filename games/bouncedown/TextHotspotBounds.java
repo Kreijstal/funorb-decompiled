@@ -18,7 +18,7 @@ final class TextHotspotBounds extends IntrusiveNode {
     final static void a(int param0, byte param1) {
         try {
           int var2_int = 98 / ((51 - param1) / 61);
-          hb.field_H = 1000000000L / (long)param0;
+          LabeledWidgetContainer.field_H = 1000000000L / (long)param0;
         } catch (RuntimeException runtimeException) {
           throw CipherPacketBuffer.wrapClientException((Throwable) ((Object) runtimeException), "ui.C(" + param0 + ',' + param1 + ')');
         }

@@ -126,12 +126,12 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
           if (param0 != 6) {
             GameApplet.g(-74);
           }
-          if (!sa.field_Q.b((byte) 114)) {
-            stackIn_8_0 = sa.field_Q.a((byte) 63);
+          if (!LabeledWidgetContainer.field_Q.b((byte) 114)) {
+            stackIn_8_0 = LabeledWidgetContainer.field_Q.a((byte) 63);
             return stackIn_8_0;
           }
           if (oe.field_b == rk.field_X) {
-            stackIn_13_0 = sa.field_Q.a((byte) 63);
+            stackIn_13_0 = LabeledWidgetContainer.field_Q.a((byte) 63);
             return stackIn_13_0;
           }
           stackIn_15_0 = qg.field_c;

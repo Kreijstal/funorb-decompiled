@@ -10,7 +10,7 @@ abstract class AwtRasterBuffer {
     int[] field_b;
     static ci field_g;
     static BitmapFont field_d;
-    static kb field_a;
+    static DraggableWidgetContainer field_a;
     static long[] field_f;
 
     abstract void drawImage(int param0, int param1, java.awt.Graphics param2, int param3);

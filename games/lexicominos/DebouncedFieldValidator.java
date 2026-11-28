@@ -106,15 +106,15 @@ abstract class DebouncedFieldValidator implements FieldValidator {
         int var6 = 0;
         String var7 = null;
         try {
-          l.field_F[0] = q.field_a.nextInt();
-          l.field_F[1] = q.field_a.nextInt();
-          l.field_F[2] = (int)(LoginPanel.field_M >> 32);
+          DropTargetWidgetContainer.field_F[0] = q.field_a.nextInt();
+          DropTargetWidgetContainer.field_F[1] = q.field_a.nextInt();
+          DropTargetWidgetContainer.field_F[2] = (int)(LoginPanel.field_M >> 32);
           of.field_a.position = 0;
-          l.field_F[3] = (int)LoginPanel.field_M;
-          of.field_a.writeInt(l.field_F[0], param3 ^ 32335);
-          of.field_a.writeInt(l.field_F[1], -32287);
-          of.field_a.writeInt(l.field_F[2], -32287);
-          of.field_a.writeInt(l.field_F[3], -32287);
+          DropTargetWidgetContainer.field_F[3] = (int)LoginPanel.field_M;
+          of.field_a.writeInt(DropTargetWidgetContainer.field_F[0], param3 ^ 32335);
+          of.field_a.writeInt(DropTargetWidgetContainer.field_F[1], -32287);
+          of.field_a.writeInt(DropTargetWidgetContainer.field_F[2], -32287);
+          of.field_a.writeInt(DropTargetWidgetContainer.field_F[3], -32287);
           SpriteGeometry.a(93, of.field_a);
           of.field_a.writeShort(89, param4);
           param2.a(of.field_a, 7895);

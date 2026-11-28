@@ -15,7 +15,7 @@ final class AccountCreationResultPanel extends ck implements WidgetActivationLis
         }
     }
 
-    AccountCreationResultPanel(ei param0, AccountRegistrationPanel param1) {
+    AccountCreationResultPanel(ModalDialogHost param0, AccountRegistrationPanel param1) {
         super(param0, DualLinkDequeIterator.field_c, vj.field_b, false, false);
         try {
           this.field_nb = param1;
@@ -96,7 +96,7 @@ final class AccountCreationResultPanel extends ck implements WidgetActivationLis
                 var5.a(-31805, -1, bk.field_e);
               }
             } else {
-              var5.a((lf) (this), tc.field_q, (byte) 118);
+              var5.a((WidgetEventListener) (this), tc.field_q, (byte) 118);
             }
             if (param0.statusCode == 3) {
               var5.a(-31805, 7, gh.field_a);
@@ -110,7 +110,7 @@ final class AccountCreationResultPanel extends ck implements WidgetActivationLis
               this.b(new sj(this), param1 ^ -30938);
               return;
             }
-            var5.a((lf) (this), tc.field_q, (byte) -125);
+            var5.a((WidgetEventListener) (this), tc.field_q, (byte) -125);
           }
           this.b(var5, 23143);
           return;
@@ -128,31 +128,31 @@ final class AccountCreationResultPanel extends ck implements WidgetActivationLis
         }
     }
 
-    final boolean d(boolean param0) {
+    final boolean advanceDialogAnimation(boolean param0) {
         AccountServiceResult var2;
         if (!this.field_G) {
           if (param0) {
-            return super.d(true);
+            return super.advanceDialogAnimation(true);
           }
           AccountCreationResultPanel.i((byte) -113);
-          return super.d(true);
+          return super.advanceDialogAnimation(true);
         }
         if (this.field_mb) {
           if (param0) {
-            return super.d(true);
+            return super.advanceDialogAnimation(true);
           }
           AccountCreationResultPanel.i((byte) -113);
-          return super.d(true);
+          return super.advanceDialogAnimation(true);
         }
         var2 = AccountRegistrationPanel.pollAccountCreationResult(0);
         if (var2 != null) {
           this.showAccountCreationResult(var2, -8895, false);
         }
         if (param0) {
-          return super.d(true);
+          return super.advanceDialogAnimation(true);
         }
         AccountCreationResultPanel.i((byte) -113);
-        return super.d(true);
+        return super.advanceDialogAnimation(true);
     }
 
     public static void clearStaticReferences(boolean param0) {

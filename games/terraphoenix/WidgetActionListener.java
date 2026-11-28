@@ -2,5 +2,5 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 interface WidgetActionListener {
-    public abstract void a(int param0, UiWidget param1, int param2, int param3, boolean param4);
+    public abstract void paintWidget(int param0, UiWidget param1, int param2, int param3, boolean param4);
 }

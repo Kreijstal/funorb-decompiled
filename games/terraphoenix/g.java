@@ -474,9 +474,9 @@ class g extends wa {
         var21 = this.field_wb + var19;
         var22 = var20 + this.field_bb;
         if (this.field_z) {
-          jl.a(var16, param4, param8, param0, (byte) -104, param1);
+          AlphaWidgetContainer.a(var16, param4, param8, param0, (byte) -104, param1);
         } else {
-          jl.a(var16, this.field_lb, this.field_Bb, this.field_x, (byte) 91, this.field_vb);
+          AlphaWidgetContainer.a(var16, this.field_lb, this.field_Bb, this.field_x, (byte) 91, this.field_vb);
         }
         if (var17 != null) {
           var23_int = var21 + this.field_vb;

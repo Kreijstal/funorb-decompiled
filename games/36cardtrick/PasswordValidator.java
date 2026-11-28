@@ -95,18 +95,18 @@ final class PasswordValidator extends TextFieldValidator {
             return stackIn_34_0;
           }
           if (gi.a(var5, -123, var6)) {
-            stackIn_23_0 = qi.field_F;
+            stackIn_23_0 = DraggableWidgetContainer.field_F;
             return stackIn_23_0;
           }
           if (ArchiveRequest.a(var6, (byte) -115, var5)) {
             stackIn_27_0 = i.field_b;
             return stackIn_27_0;
           }
-          if (!g.a(var6, var5, -1)) {
+          if (!DequeWidgetContainer.a(var6, var5, -1)) {
             stackIn_32_0 = s.field_b;
             return stackIn_32_0;
           }
-          stackIn_30_0 = qi.field_F;
+          stackIn_30_0 = DraggableWidgetContainer.field_F;
           return stackIn_30_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

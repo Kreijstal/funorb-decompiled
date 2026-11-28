@@ -618,7 +618,7 @@ final class ch {
           }
           if (param1.field_D == 0) {
             if (ConfirmedEmailAvailabilityValidator.field_q >= 1) {
-              var6 = jc.field_E;
+              var6 = SingleChildWidgetContainer.field_E;
             } else {
               var6 = BattleUnit.field_kb;
             }
@@ -710,11 +710,11 @@ final class ch {
                       }
                     }
                     if (od.field_c[var6_int].field_b[2] <= 0) {
-                      AccountRequestState.field_f.drawString(kh.field_K + od.field_c[var6_int].field_b[1] + "%", -this.field_i + 512, 347, 0, -1);
+                      AccountRequestState.field_f.drawString(ModalDialog.field_K + od.field_c[var6_int].field_b[1] + "%", -this.field_i + 512, 347, 0, -1);
                     }
                     AccountRequestState.field_f.drawString(ef.field_c + od.field_c[var6_int].field_g[1] + "%", 362 - this.field_i, 362, 0, -1);
                     if (0 < od.field_c[var6_int].field_b[2]) {
-                      AccountRequestState.field_f.drawString(kh.field_K + od.field_c[var6_int].field_b[2] + "%", 512 - this.field_i, 362, 0, -1);
+                      AccountRequestState.field_f.drawString(ModalDialog.field_K + od.field_c[var6_int].field_b[2] + "%", 512 - this.field_i, 362, 0, -1);
                     }
                     AccountRequestState.field_f.drawString(ai.field_e + od.field_c[var6_int].field_s, 362 - this.field_i, 377, 0, -1);
                     return;
@@ -733,7 +733,7 @@ final class ch {
                     var8 = 2 * var8 / 3;
                   }
                   AccountRequestState.field_f.drawString(DiskCacheWorker.field_g + var8 + "%", 362 - this.field_i, 347, 0, -1);
-                  AccountRequestState.field_f.drawString(kh.field_K + od.field_c[var6_int].field_b[0] + "%", -this.field_i + 512, 347, 0, -1);
+                  AccountRequestState.field_f.drawString(ModalDialog.field_K + od.field_c[var6_int].field_b[0] + "%", -this.field_i + 512, 347, 0, -1);
                   AccountRequestState.field_f.drawString(ai.field_e + od.field_c[var6_int].field_s, -this.field_i + 362, 362, 0, -1);
                   return;
                 }

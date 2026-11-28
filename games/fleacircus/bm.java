@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class bm extends gj implements WidgetActivationListener {
+final class bm extends DequeWidgetContainer implements WidgetActivationListener {
     private InteractiveWidget[] field_F;
     private bd field_L;
     private String field_H;
@@ -78,7 +78,7 @@ final class bm extends gj implements WidgetActivationListener {
         field_N = null;
     }
 
-    final InteractiveWidget a(kd param0, boolean param1, String param2) {
+    final InteractiveWidget a(WidgetEventListener param0, boolean param1, String param2) {
         InteractiveWidget var4 = null;
         RuntimeException var4_ref = null;
         int var5 = 0;
@@ -96,9 +96,9 @@ final class bm extends gj implements WidgetActivationListener {
             this.field_G = (BitmapFont) null;
           }
           var5 = this.field_j - 2;
-          this.a(0, this.field_u, 0, this.field_j + 34, 80);
-          var4.a(7, this.field_u - 14, var5, 30, 80);
-          this.a((UiComponent) (var4), (byte) -32);
+          this.setBounds(0, this.field_u, 0, this.field_j + 34, 80);
+          var4.setBounds(7, this.field_u - 14, var5, 30, 80);
+          this.addChild((UiComponent) (var4), (byte) -32);
           stackIn_3_0 = var4;
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -203,7 +203,7 @@ final class bm extends gj implements WidgetActivationListener {
         try {
           var4_int = this.field_J;
           this.a(param1 ^ param1, 1 + var4_int);
-          this.field_F[var4_int] = this.a((kd) (this), true, param0);
+          this.field_F[var4_int] = this.a((WidgetEventListener) (this), true, param0);
           this.field_I[var4_int] = param2;
         } catch (RuntimeException runtimeException) {
           throw pf.wrapClientException((Throwable) ((Object) runtimeException), "bm.FA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
@@ -219,14 +219,14 @@ final class bm extends gj implements WidgetActivationListener {
           this.field_H = param2;
           this.field_L = param0;
           var4_int = null == this.field_H ? 0 : this.field_G.textHeight(this.field_H, 260, this.field_G.field_H);
-          this.a(0, 288, 0, var4_int + 22, 80);
+          this.setBounds(0, 288, 0, var4_int + 22, 80);
         } catch (RuntimeException runtimeException) {
           throw pf.wrapClientException((Throwable) ((Object) runtimeException), "bm.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
-    final void b(int param0, int param1, boolean param2, int param3) {
-        super.b(param0, param1, param2, param3);
+    final void drawWidget(int param0, int param1, boolean param2, int param3) {
+        super.drawWidget(param0, param1, param2, param3);
         this.field_G.drawParagraph(this.field_H, 14 + param1 + this.field_y, param0 + (this.field_z + 10), -28 + this.field_u, this.field_j, 16777215, -1, 0, 0, this.field_G.field_H);
     }
 

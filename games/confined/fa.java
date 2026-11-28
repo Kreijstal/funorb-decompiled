@@ -9,7 +9,7 @@ final class fa extends InteractiveWidget {
     static double field_R;
     static RgbSprite field_U;
 
-    private fa(String param0, fe param1, uk param2) {
+    private fa(String param0, WidgetRenderer param1, WidgetEventListener param2) {
         super(param0, param1, param2);
         try {
           this.field_n = KeyboardInput.field_d.field_j;
@@ -34,7 +34,7 @@ final class fa extends InteractiveWidget {
         tg.field_H = tg.field_H + 1;
     }
 
-    fa(String param0, uk param1, boolean param2) {
+    fa(String param0, WidgetEventListener param1, boolean param2) {
         this(param0, param1);
         try {
           this.field_O = param2 ? true : false;
@@ -109,7 +109,7 @@ final class fa extends InteractiveWidget {
         return var10;
     }
 
-    private fa(String param0, uk param1) {
+    private fa(String param0, WidgetEventListener param1) {
         this(param0, KeyboardInput.field_d.field_h, param1);
         try {
           this.field_n = KeyboardInput.field_d.field_j;

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class og extends gj implements TextHotspotListener, WidgetActivationListener {
+final class og extends DequeWidgetContainer implements TextHotspotListener, WidgetActivationListener {
     private RichTextWidget field_H;
     private InteractiveWidget field_G;
     private AccountCreationResultPanel field_F;
@@ -200,7 +200,7 @@ final class og extends gj implements TextHotspotListener, WidgetActivationListen
         }
     }
 
-    final boolean a(int param0, int param1, UiComponent param2, char param3) {
+    final boolean handleKey(int param0, int param1, UiComponent param2, char param3) {
         RuntimeException var5 = null;
         boolean stackIn_7_0 = false;
         boolean stackIn_10_0 = false;
@@ -209,17 +209,17 @@ final class og extends gj implements TextHotspotListener, WidgetActivationListen
         String stackIn_16_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (super.a(param0, param1, param2, param3)) {
+          if (super.handleKey(param0, param1, param2, param3)) {
             return true;
           }
           if (98 == param1) {
-            stackIn_7_0 = this.b(param2, -28533);
+            stackIn_7_0 = this.focusPreviousChild(param2, -28533);
             return stackIn_7_0;
           }
           if (99 != param1) {
             return false;
           }
-          stackIn_10_0 = this.a(32, param2);
+          stackIn_10_0 = this.focusNextChild(32, param2);
           return stackIn_10_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -244,9 +244,9 @@ final class og extends gj implements TextHotspotListener, WidgetActivationListen
         int var6 = 0;
         try {
           this.field_F = param0;
-          this.field_G = new InteractiveWidget(ee.field_k, (kd) null);
+          this.field_G = new InteractiveWidget(ee.field_k, (WidgetEventListener) null);
           this.field_G.field_p = (ComponentLayout) ((Object) new ri());
-          var7 = db.a(oh.field_jb, new String[]{this.a(-115), this.j(0)}, true);
+          var7 = ModalDialog.a(oh.field_jb, new String[]{this.a(-115), this.j(0)}, true);
           var3 = 20;
           var4 = new DefaultTextWidgetRenderer(ug.field_e, 0, 0, 0, 0, 16777215, -1, 3, 0, ug.field_e.field_H, -1, 2147483647, true);
           this.field_H = new RichTextWidget(var7, var4);
@@ -254,16 +254,16 @@ final class og extends gj implements TextHotspotListener, WidgetActivationListen
           this.field_H.a(0, TextLineMetrics.field_f, 0);
           this.field_H.a(0, TextLineMetrics.field_f, 1);
           this.field_H.field_u = -40 + this.field_u;
-          this.field_H.field_s = (kd) (this);
+          this.field_H.field_s = (WidgetEventListener) (this);
           this.field_H.b(this.field_u - 40, 26, var3, -9);
           var3 = var3 + (15 + this.field_H.field_j);
-          this.a((UiComponent) (this.field_H), (byte) -55);
+          this.addChild((UiComponent) (this.field_H), (byte) -55);
           var5 = 4;
           var6 = 200;
-          this.field_G.a(-var6 + 300 >> 1, var6, var3, 40, 80);
-          this.field_G.field_s = (kd) (this);
-          this.a((UiComponent) (this.field_G), (byte) -70);
-          this.a(0, 300, 0, var3 - (-55 - var5), 80);
+          this.field_G.setBounds(-var6 + 300 >> 1, var6, var3, 40, 80);
+          this.field_G.field_s = (WidgetEventListener) (this);
+          this.addChild((UiComponent) (this.field_G), (byte) -70);
+          this.setBounds(0, 300, 0, var3 - (-55 - var5), 80);
         } catch (RuntimeException runtimeException) {
           throw pf.wrapClientException((Throwable) ((Object) runtimeException), "og.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }

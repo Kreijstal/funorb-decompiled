@@ -77,7 +77,7 @@ final class je extends DefaultTextWidgetRenderer {
         }
     }
 
-    public final void a(byte param0, int param1, boolean param2, fj param3, int param4) {
+    public final void paintWidget(byte param0, int param1, boolean param2, UiWidget param3, int param4) {
         int stackIn_8_0 = 0;
         int stackIn_16_0 = 0;
         int stackIn_19_0 = 0;
@@ -96,7 +96,7 @@ final class je extends DefaultTextWidgetRenderer {
             je.a(126, true, (CharSequence) null);
           }
           if (!param3.field_w) {
-            stackIn_8_0 = (param3.e((byte) -18)) ? 1 : 0;
+            stackIn_8_0 = (param3.isFocused((byte) -18)) ? 1 : 0;
           } else {
             stackIn_8_0 = 1;
           }

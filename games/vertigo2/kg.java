@@ -425,7 +425,7 @@ final class kg extends TextureOperator {
 
     final static boolean h(int param0) {
         int var1 = -55 % ((51 - param0) / 47);
-        return nm.field_J;
+        return ModalDialog.field_J;
     }
 
     public kg() {

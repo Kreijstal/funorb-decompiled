@@ -4,7 +4,7 @@
 final class oh {
     static int field_e;
     static sa field_c;
-    static pi field_b;
+    static DraggableWidgetContainer field_b;
     static boolean field_a;
     static int field_d;
 

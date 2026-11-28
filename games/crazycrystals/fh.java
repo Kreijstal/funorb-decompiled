@@ -81,7 +81,7 @@ final class fh extends ScoreModifier {
 
     final int countPlayerApplications(int param0, byte param1) {
         int var3 = 77 % ((55 - param1) / 50);
-        return (1 << param0 & ol.field_B) != 0 ? 1 : 0;
+        return (1 << param0 & ModalDialogHost.field_B) != 0 ? 1 : 0;
     }
 
     static {

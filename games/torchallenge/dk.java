@@ -2,17 +2,17 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class dk {
-    j field_l;
+    WidgetRenderer field_l;
     int field_k;
     BitmapFont field_t;
-    j field_i;
+    WidgetRenderer field_i;
     static pa field_s;
     private int field_b;
     static String field_d;
     int field_e;
-    j field_f;
+    WidgetRenderer field_f;
     static int field_a;
-    j field_q;
+    WidgetRenderer field_q;
     int field_n;
     int field_h;
     int field_r;
@@ -21,7 +21,7 @@ final class dk {
     static Sprite[][] field_c;
     int field_p;
     int field_o;
-    j field_m;
+    WidgetRenderer field_m;
 
     final void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {
         if (param0 == 4) {
@@ -190,7 +190,7 @@ final class dk {
             this.a((BitmapFont) null, 22);
           }
           var18 = new DefaultTextWidgetRenderer(param0, 2, 2, 2236962, 1, 1, 1, 2 + param0.field_K + param0.field_x);
-          this.field_q = (j) ((Object) var18);
+          this.field_q = (WidgetRenderer) ((Object) var18);
           var18.field_k = 16777215;
           var4 = new ga();
           var18.a(param1 + 22255, var4);
@@ -217,21 +217,21 @@ final class dk {
           var5[4] = (Sprite) ((Object) var19);
           var4.a(4, -27140).a(true, -1).a((byte) -120, var5);
           var4.a(5, param1 ^ 15719).a((byte) -124, bf.a(65793, (byte) 50, 0, 0, 0)).a(true, param1 + 22372).b(-764, -1);
-          this.field_f = (j) ((Object) var4);
+          this.field_f = (WidgetRenderer) ((Object) var4);
           var6 = new ga(var4, true);
           var6.field_e = 0;
           var7 = new ga(var4, true);
           var7.field_e = 0;
           var7.a((byte) 107, rj.a(39, 8947848));
           var7.a(1, -27140).a((byte) -76, rj.a(54, 11184810)).b(-764, 2236962);
-          this.field_l = (j) ((Object) new mc(param0, 2, 2, 16777215, -1, 5, 5, 15, 15, 4473924));
+          this.field_l = (WidgetRenderer) ((Object) new mc(param0, 2, 2, 16777215, -1, 5, 5, 15, 15, 4473924));
           discarded$0 = new g(param0, 2, 2, 16777215, -1, 16777215, 16729156, 4473924);
           discarded$1 = new ph(param0, 16777215, -1, 125269879, 4473924, 3, 268435455);
           var8 = new ga();
           var18.a(param1 + 22245, var8);
           var8.a(0, -27140).a((byte) -57, v.a(10066329, 82, 15658734, 7829367)).b(-764, 1118481).b(-1, (byte) -113);
           var8.a(4, -27140).a(true, -1).a((byte) -74, var5);
-          this.field_m = (j) ((Object) var8);
+          this.field_m = (WidgetRenderer) ((Object) var8);
           var9 = new Sprite[9];
           var10 = new Sprite[9];
           var9[4] = new Sprite(2, 1);

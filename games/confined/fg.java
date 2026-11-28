@@ -29,9 +29,9 @@ final class fg extends eh {
         }
         if (null == an.field_n) {
           an.field_n = new int[2 * param1];
-          if (am.field_I == null ||
-            !(am.field_I.length >= param1)) {
-            am.field_I = new int[param1 * 2];
+          if (SingleChildWidgetContainer.field_I == null ||
+            !(SingleChildWidgetContainer.field_I.length >= param1)) {
+            SingleChildWidgetContainer.field_I = new int[param1 * 2];
           }
           var3 = -12 % ((param2 - 28) / 35);
           if (null == em.field_b ||
@@ -57,9 +57,9 @@ final class fg extends eh {
         } else {
           if (param1 > an.field_n.length) {
             an.field_n = new int[2 * param1];
-            if (am.field_I == null ||
-              !(am.field_I.length >= param1)) {
-              am.field_I = new int[param1 * 2];
+            if (SingleChildWidgetContainer.field_I == null ||
+              !(SingleChildWidgetContainer.field_I.length >= param1)) {
+              SingleChildWidgetContainer.field_I = new int[param1 * 2];
             }
             var3 = -12 % ((param2 - 28) / 35);
             if (null == em.field_b ||
@@ -111,8 +111,8 @@ final class fg extends eh {
               }
             }
           } else {
-            if (am.field_I == null) {
-              am.field_I = new int[param1 * 2];
+            if (SingleChildWidgetContainer.field_I == null) {
+              SingleChildWidgetContainer.field_I = new int[param1 * 2];
               var3 = -12 % ((param2 - 28) / 35);
               if (null == em.field_b ||
                 !(em.field_b.length >= param1)) {
@@ -163,7 +163,7 @@ final class fg extends eh {
                 }
               }
             } else {
-              if (am.field_I.length >= param1) {
+              if (SingleChildWidgetContainer.field_I.length >= param1) {
                 var3 = -12 % ((param2 - 28) / 35);
                 if (null == em.field_b ||
                   !(em.field_b.length >= param1)) {
@@ -214,7 +214,7 @@ final class fg extends eh {
                   }
                 }
               } else {
-                am.field_I = new int[param1 * 2];
+                SingleChildWidgetContainer.field_I = new int[param1 * 2];
                 var3 = -12 % ((param2 - 28) / 35);
                 if (null == em.field_b ||
                   !(em.field_b.length >= param1)) {

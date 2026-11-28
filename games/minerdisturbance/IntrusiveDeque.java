@@ -201,7 +201,7 @@ final class IntrusiveDeque {
     }
 
     final static void f(byte param0) {
-        oj.a(17, 3);
+        AlphaWidgetContainer.a(17, 3);
         if (param0 != 67) {
           IntrusiveDeque.f((byte) 88);
         }

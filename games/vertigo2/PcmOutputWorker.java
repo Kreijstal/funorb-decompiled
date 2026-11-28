@@ -76,7 +76,7 @@ final class PcmOutputWorker implements Runnable {
                 var2.serviceOutput();
               }
             }
-            um.sleepMillis(true, 10L);
+            ArrayWidgetContainer.sleepMillis(true, 10L);
             Object var5 = (Object) null;
             e.a(this.field_c, (Object) null, -29785);
           }
@@ -126,7 +126,7 @@ final class PcmOutputWorker implements Runnable {
     }
 
     final static void a(int param0) {
-        qg.field_G = SoftwareRasterizer.field_e;
+        DraggableWidgetContainer.field_G = SoftwareRasterizer.field_e;
         om.field_D = SoftwareRasterizer.field_j;
         km.i(202);
         qo.field_D.a(0, 14017, ca.field_h.field_Fb, 0, -2 + (-40 + ca.field_h.field_db));

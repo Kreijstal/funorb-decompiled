@@ -15,7 +15,7 @@ final class tg {
           }
           if (td.field_b == null) {
             td.field_b = new kl(qe.field_g, ValidatedTextField.field_T);
-            qe.field_g.b(param2 ^ 3223, td.field_b);
+            qe.field_g.showDialog(param2 ^ 3223, td.field_b);
           }
           td.field_b.a(8405024, param3, param0, param1);
           SoftwareRasterizer.clearRaster();

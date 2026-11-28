@@ -31,7 +31,7 @@ final class sm extends ResultScenePhase {
         int var7 = an.field_t.get(11);
         int var8 = an.field_t.get(12);
         int var9 = an.field_t.get(13);
-        return ed.field_y[-1 + var3] + ", " + var4 / 10 + var4 % 10 + "-" + mn.field_l[var5] + "-" + var6 + " " + var7 / 10 + var7 % 10 + ":" + var8 / 10 + var8 % 10 + ":" + var9 / 10 + var9 % 10 + " GMT";
+        return DropTargetWidgetContainer.field_y[-1 + var3] + ", " + var4 / 10 + var4 % 10 + "-" + mn.field_l[var5] + "-" + var6 + " " + var7 / 10 + var7 % 10 + ":" + var8 / 10 + var8 % 10 + ":" + var9 / 10 + var9 % 10 + " GMT";
     }
 
     final static String a(byte param0, boolean param1, CharSequence param2) {
@@ -56,7 +56,7 @@ final class sm extends ResultScenePhase {
         var8 = CrazyCrystals.field_B;
         try {
           if (param2 == null) {
-            stackIn_3_0 = om.field_v;
+            stackIn_3_0 = SingleChildWidgetContainer.field_v;
             return stackIn_3_0;
           }
           var3_int = param2.length();
@@ -91,10 +91,10 @@ final class sm extends ResultScenePhase {
               stackIn_18_0 = on.field_a;
               return stackIn_18_0;
             }
-            stackIn_13_0 = om.field_v;
+            stackIn_13_0 = SingleChildWidgetContainer.field_v;
             return stackIn_13_0;
           }
-          stackIn_8_0 = om.field_v;
+          stackIn_8_0 = SingleChildWidgetContainer.field_v;
           return stackIn_8_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

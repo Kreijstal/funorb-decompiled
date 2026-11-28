@@ -7,7 +7,7 @@ abstract class oh extends jj {
     private int field_eb;
     private ak field_fb;
     static int field_db;
-    private tf field_hb;
+    private AlphaWidgetContainer field_hb;
     private int field_cb;
     private int field_gb;
     private int field_bb;
@@ -19,7 +19,7 @@ abstract class oh extends jj {
           return;
         }
         if (fl.field_e != this.field_fb) {
-          this.a(this.field_ib.field_j + (this.field_gb + 12), (byte) -128, this.field_ib.field_u + 12);
+          this.setCenteredSize(this.field_ib.field_j + (this.field_gb + 12), (byte) -128, this.field_ib.field_u + 12);
           this.c(this.field_ib, 115);
         } else {
           this.field_hb.field_F = 256;
@@ -34,7 +34,7 @@ abstract class oh extends jj {
 
     final static void a(ResourceArchive param0, ResourceArchive param1, boolean param2, byte param3, ResourceArchive param4) {
         try {
-          AwtRasterBuffer.field_c = pk.a((byte) 68, "");
+          AwtRasterBuffer.field_c = DraggableWidgetContainer.a((byte) 68, "");
           AwtRasterBuffer.field_c.a(false, 10518);
           RichTextLayout.a(param4, param1, param3 ^ 31756, param0);
           if (param3 != 28) {
@@ -48,7 +48,7 @@ abstract class oh extends jj {
         }
     }
 
-    boolean a(int param0) {
+    boolean advanceDialogAnimation(int param0) {
         int fieldTemp$0 = 0;
         int var2 = 0;
         int var3 = fleas.field_A ? 1 : 0;
@@ -59,12 +59,12 @@ abstract class oh extends jj {
         int var2Lifetime1Lifetime2;
         if (null == this.field_fb) {
           var2 = -59 / ((38 - param0) / 49);
-          return super.a(-57);
+          return super.advanceDialogAnimation(-57);
         }
         if (this.field_fb != rk.field_w) {
           if (this.field_fb != fl.field_e) {
             var2Lifetime1 = -59 / ((38 - param0) / 49);
-            return super.a(-57);
+            return super.advanceDialogAnimation(-57);
           }
           fieldTemp$0 = this.field_eb + 1;
           this.field_eb = this.field_eb + 1;
@@ -72,25 +72,25 @@ abstract class oh extends jj {
             this.field_fb = null;
             this.field_hb.field_F = 256;
             var2Lifetime1Lifetime1 = -59 / ((38 - param0) / 49);
-            return super.a(-57);
+            return super.advanceDialogAnimation(-57);
           }
           this.field_hb.field_F = (this.field_eb << 8) / this.field_cb;
           var2Lifetime1Lifetime2 = -59 / ((38 - param0) / 49);
-          return super.a(-57);
+          return super.advanceDialogAnimation(-57);
         }
         int fieldTemp$1 = this.field_eb + 1;
         this.field_eb = this.field_eb + 1;
         if (fieldTemp$1 == this.field_ab) {
-          this.field_fb = ml.field_I;
+          this.field_fb = LabeledWidgetContainer.field_I;
           this.a(this.field_bb, 12 + this.field_ib.field_u, 12 - (-this.field_gb - this.field_ib.field_j), -95);
           this.field_hb.field_F = 0;
           this.field_eb = 0;
           var2Lifetime2 = -59 / ((38 - param0) / 49);
-          return super.a(-57);
+          return super.advanceDialogAnimation(-57);
         }
         this.field_hb.field_F = -((this.field_eb << 8) / this.field_ab) + 256;
         var2Lifetime3 = -59 / ((38 - param0) / 49);
-        return super.a(-57);
+        return super.advanceDialogAnimation(-57);
     }
 
     final void m(int param0) {
@@ -105,7 +105,7 @@ abstract class oh extends jj {
         int var2 = 89 % ((-56 - param0) / 45);
     }
 
-    oh(f param0, UiComponent param1, int param2, int param3, int param4) {
+    oh(ModalDialogHost param0, UiComponent param1, int param2, int param3, int param4) {
         super(param0, 12 + param1.field_u, param1.field_j + (12 + param2));
         try {
           this.field_bb = param4;
@@ -123,12 +123,12 @@ abstract class oh extends jj {
           this.field_hb.unlink(-1);
         }
         if (param0 != null) {
-          param0.a(6, param0.field_u, 6 + this.field_gb, param0.field_j, 80);
-          this.field_hb = new tf(param0);
+          param0.setBounds(6, param0.field_u, 6 + this.field_gb, param0.field_j, 80);
+          this.field_hb = new AlphaWidgetContainer(param0);
         } else {
-          this.field_hb = new tf();
+          this.field_hb = new AlphaWidgetContainer();
         }
-        this.a((UiComponent) (this.field_hb), (byte) -85);
+        this.addChild((UiComponent) (this.field_hb), (byte) -85);
         if (param1 <= 79) {
           return;
         }
@@ -167,7 +167,7 @@ abstract class oh extends jj {
         RuntimeException decompiledCaughtException = null;
         try {
           this.field_ib = param0;
-          if (ml.field_I == this.field_fb) {
+          if (LabeledWidgetContainer.field_I == this.field_fb) {
             this.a(this.field_bb, 12 + this.field_ib.field_u, 12 - (-this.field_gb - this.field_ib.field_j), 122);
             this.field_eb = 0;
           } else {
@@ -236,24 +236,24 @@ abstract class oh extends jj {
         field_jb = (String) null;
     }
 
-    final boolean j(int param0) {
+    final boolean snapDialogAnimation(int param0) {
         this.l(-1);
         if (param0 > 70) {
-          return super.j(80);
+          return super.snapDialogAnimation(80);
         }
         UiComponent var3 = (UiComponent) null;
         this.d((UiComponent) null, 45);
-        return super.j(80);
+        return super.snapDialogAnimation(80);
     }
 
-    boolean a(int param0, int param1, UiComponent param2, char param3) {
+    boolean handleKey(int param0, int param1, UiComponent param2, char param3) {
         RuntimeException var5 = null;
         RuntimeException stackIn_18_0 = null;
         StringBuilder stackIn_18_1 = null;
         String stackIn_19_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (super.a(param0 + 0, param1, param2, param3)) {
+          if (super.handleKey(param0 + 0, param1, param2, param3)) {
             return true;
           }
           if (param0 != -2) {
@@ -263,10 +263,10 @@ abstract class oh extends jj {
             return false;
           }
           if (param1 == 98) {
-            this.field_hb.a(param2, -61);
+            this.field_hb.takeFocus(param2, -61);
           }
           if (param1 == 99) {
-            this.field_hb.a(param2, -70);
+            this.field_hb.takeFocus(param2, -70);
           }
           return false;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

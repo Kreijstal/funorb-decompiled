@@ -21,7 +21,7 @@ final class bl {
         if (qg.field_g == fh.field_B) {
           return ej.field_b;
         }
-        return ak.field_w;
+        return SingleChildWidgetContainer.field_w;
     }
 
     final int a(byte param0) {
@@ -50,7 +50,7 @@ final class bl {
     }
 
     bl(boolean param0) {
-        this.field_i = jg.field_D;
+        this.field_i = AlphaWidgetContainer.field_D;
         this.field_k = MusicPatchPcmStream.field_n;
         this.field_j = DirectByteStorage.field_c;
         this.field_c = g.field_i;

@@ -15,9 +15,9 @@ final class ClientLookupTables {
         param1 = param1 & 8191;
         int var2 = -46 / ((-47 - param0) / 34);
         if (4096 > param1) {
-          return param1 < 2048 ? vd.field_B[-param1 + 2048] : -vd.field_B[param1 - 2048];
+          return param1 < 2048 ? DequeWidgetContainer.field_B[-param1 + 2048] : -DequeWidgetContainer.field_B[param1 - 2048];
         }
-        return param1 < 6144 ? -vd.field_B[-param1 + 6144] : vd.field_B[-6144 + param1];
+        return param1 < 6144 ? -DequeWidgetContainer.field_B[-param1 + 6144] : DequeWidgetContainer.field_B[-6144 + param1];
     }
 
     public static void clearStaticReferences(boolean param0) {

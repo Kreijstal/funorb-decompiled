@@ -60,7 +60,7 @@ final class vb {
               wa.field_d.position = 0;
               wa.field_d.writeByte(90, 14);
               wa.field_d.writeByte(90, eh.field_i.a(false).field_a);
-              jd.a((byte) -122, -1);
+              DropTargetWidgetContainer.a((byte) -122, -1);
               ef.field_a = en.field_v;
             }
             if (en.field_v == ef.field_a &&
@@ -709,13 +709,13 @@ final class vb {
         RuntimeException var4 = null;
         try {
           km.a(30);
-          dc.field_a.h(63);
+          dc.field_a.closeAllDialogs(63);
           un.field_k = new LoginPanel(eo.field_a, (String) null, ff.field_a, param0, param2);
           if (param3 != 4805) {
             vb.a((VertexMesh) null, (byte) 25, false, (int[]) null, (int[]) null, false, true);
           }
           hb.field_x = new qc(dc.field_a, un.field_k);
-          dc.field_a.a(hb.field_x, (byte) 113);
+          dc.field_a.showDialog(hb.field_x, (byte) 113);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

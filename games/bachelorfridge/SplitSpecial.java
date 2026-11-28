@@ -181,7 +181,7 @@ final class SplitSpecial extends SpecialOrder {
                   SleepEvent.a(-1, (int[]) null, 0L, (String) null, var16, -1, -123, rba.field_a.field_xb, var7);
                   if (var7.field_vb != null &&
                     !sha.a((byte) -24, NetworkGameClient.field_u.field_j) &&
-                    !hl.field_I) {
+                    !AlphaWidgetContainer.field_I) {
                     if (!sea.field_j) {
                       var17 = NetworkGameClient.field_u;
                       var18 = lga.a(true, new String[]{var16}, jv.field_m);

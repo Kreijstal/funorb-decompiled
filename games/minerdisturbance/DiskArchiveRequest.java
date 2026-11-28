@@ -75,7 +75,7 @@ final class DiskArchiveRequest extends ArchiveRequest {
     final static void h(int param0) {
         MusicPatchPcmStream.field_B = false;
         wc.field_b = false;
-        oj.a(param0, 3);
+        AlphaWidgetContainer.a(param0, 3);
         ic.field_l = mc.field_t;
         AccountRequestState.field_h = mc.field_t;
     }

@@ -65,7 +65,7 @@ final class wi extends InteractiveWidget {
         }
     }
 
-    final boolean a(int param0, int param1, w param2, int param3, int param4, int param5, int param6) {
+    final boolean pointerPressed(int param0, int param1, UiWidget param2, int param3, int param4, int param5, int param6) {
         int var12 = 0;
         RuntimeException stackIn_26_0 = null;
         StringBuilder stackIn_26_1 = null;
@@ -80,7 +80,7 @@ final class wi extends InteractiveWidget {
         int var14 = 0;
         var14 = Lexicominos.field_L ? 1 : 0;
         try {
-          if (!super.a(param0, param1, param2, param3, param4, param5, param6)) {
+          if (!super.pointerPressed(param0, param1, param2, param3, param4, param5, param6)) {
             return false;
           }
           var8_int = -this.field_G + (param6 - param5);
@@ -133,7 +133,7 @@ final class wi extends InteractiveWidget {
 
     final static void a(int param0, int param1, byte param2, BitmapFont param3, int param4, int param5, int param6, int param7, int param8, RgbSprite[] param9, RgbSprite[] param10) {
         try {
-          ia.a((byte) 46);
+          AlphaWidgetContainer.a((byte) 46);
           int var11_int = -27 % ((param2 + 35) / 52);
         } catch (RuntimeException runtimeException) {
           throw ld.wrapClientException((Throwable) ((Object) runtimeException), "wi.D(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ',' + (param9 != null ? "{...}" : "null") + ',' + (param10 != null ? "{...}" : "null") + ')');

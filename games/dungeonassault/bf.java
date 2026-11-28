@@ -136,8 +136,8 @@ final class bf {
               df.field_c.drawOpaque(var2_int, 48);
             }
           } else {
-            var2_int = oi.b(0, 3);
-            var3 = oi.b(0, 3);
+            var2_int = DraggableWidgetContainer.b(0, 3);
+            var3 = DraggableWidgetContainer.b(0, 3);
             dm.field_d[var2_int].drawOpaque(41, 48);
             IterableNodeHashTable.field_f[var3].drawOpaque(-IterableNodeHashTable.field_f[0].field_y + 599, 48);
             df.field_c.drawOpaque(41 + dm.field_d[var2_int].field_y, 48);
@@ -346,8 +346,8 @@ final class bf {
             this.field_a[var2] = this.field_a[var2] - 6;
           }
         }
-        var2Lifetime1 = 864 + oi.b(0, 160);
-        var3 = 0.01 * (double)oi.b(0, 21400);
+        var2Lifetime1 = 864 + DraggableWidgetContainer.b(0, 160);
+        var3 = 0.01 * (double)DraggableWidgetContainer.b(0, 21400);
         this.field_c[this.field_g] = (int)((double)var2Lifetime1 * Math.sin(var3));
         this.field_j[this.field_g] = (int)((double)var2Lifetime1 * Math.cos(var3));
         this.field_g = this.field_g + 1;

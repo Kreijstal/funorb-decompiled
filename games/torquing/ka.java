@@ -269,7 +269,7 @@ final class ka extends IntrusiveNode {
           }
           bh.field_b = vk.field_A + var3_intLifetime1 - (var3_intLifetime1 >> 1);
           v.field_a = -(var3_intLifetime1 >> 1) + vk.field_A;
-          ii.field_k = (WidgetContainer.field_z + ln.field_D << 1) * kb.field_g.field_i;
+          ii.field_k = (WidgetContainer.field_z + ModalDialogHost.field_D << 1) * kb.field_g.field_i;
           for (var4Lifetime2 = 0; wh.field_z.length > var4Lifetime2; var4Lifetime2++) {
             stackIn_116_0 = ii.field_k;
             if (0 <= mn.field_Z[var4Lifetime2]) {
@@ -295,8 +295,8 @@ final class ka extends IntrusiveNode {
               kb.field_e[var4Lifetime3][0] = -aq.field_b + var8Lifetime1;
               kb.field_e[var4Lifetime3][1] = var5Lifetime3;
               kb.field_e[var4Lifetime3][2] = var7Lifetime2 + (aq.field_b << 1);
-              kb.field_e[var4Lifetime3][3] = (ln.field_D << 1) + TextLineMetrics.field_d;
-              var5Lifetime3 = var5Lifetime3 + (WidgetContainer.field_z + ((ln.field_D << 1) + TextLineMetrics.field_d));
+              kb.field_e[var4Lifetime3][3] = (ModalDialogHost.field_D << 1) + TextLineMetrics.field_d;
+              var5Lifetime3 = var5Lifetime3 + (WidgetContainer.field_z + ((ModalDialogHost.field_D << 1) + TextLineMetrics.field_d));
             }
             var4Lifetime3++;
           }

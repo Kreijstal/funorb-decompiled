@@ -52,7 +52,7 @@ final class ac {
           if (param2 >= 0) {
             field_j = (int[]) null;
           }
-          stackIn_6_0 = ag.d((byte) 51);
+          stackIn_6_0 = UiWidget.d((byte) 51);
           return stackIn_6_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -243,10 +243,10 @@ final class ac {
         }
         try {
           de.c(param2 ^ 0);
-          im.field_e.f((byte) 32);
+          im.field_e.closeAllDialogs((byte) 32);
           ib.field_e = new LoginPanel(rf.field_e, (String) null, MatchingFieldValidator.field_o, param1, param0);
           ke.field_s = new ta(im.field_e, ib.field_e);
-          im.field_e.c(ke.field_s, param2 ^ -116);
+          im.field_e.showDialog(ke.field_s, param2 ^ -116);
         } catch (RuntimeException runtimeException) {
           throw AccountCreationResultPanel.wrapClientException((Throwable) ((Object) runtimeException), "ac.A(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }

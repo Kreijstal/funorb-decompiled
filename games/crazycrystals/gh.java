@@ -122,7 +122,7 @@ final class gh extends ea implements Cloneable {
         int var8 = 0;
         var8 = CrazyCrystals.field_B;
         try {
-          if (null == ab.field_D) {
+          if (null == ModalDialog.field_D) {
             BoundedRandomAccessFile.field_e = BoundedRandomAccessFile.field_e - 1;
             if (param2 != null) {
               var6_int = param2.getAttributedPlayerMask(false);
@@ -561,10 +561,10 @@ final class gh extends ea implements Cloneable {
             fq.field_x.d(62);
             gf.field_c.flushAndMarkDrainCheck();
           }
-          om.field_x = null;
+          SingleChildWidgetContainer.field_x = null;
           if (param0 != null) {
             fq.field_x.setMasterVolume(-20562, param3 * param2 >> 6);
-            om.field_x = param0;
+            SingleChildWidgetContainer.field_x = param0;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -872,8 +872,8 @@ final class gh extends ea implements Cloneable {
           rb.field_g = null;
           ScoreModifier.field_f.a((byte) -29);
           ScoreModifier.field_f = null;
-          oj.field_E.a((byte) -42);
-          oj.field_E = null;
+          DraggableWidgetContainer.field_E.a((byte) -42);
+          DraggableWidgetContainer.field_E = null;
           LaserHubTile.field_q.a((byte) -68);
           LaserHubTile.field_q = null;
           ck.field_db.a((byte) -86);
@@ -891,7 +891,7 @@ final class gh extends ea implements Cloneable {
           SectorCacheStore.field_a.i((byte) -45);
         }
         oh.field_d = new DisplayNameSelectionPanel();
-        MouseWheelInput.field_d.a((qm) (oh.field_d), (byte) -50);
+        MouseWheelInput.field_d.a((UiWidget) (oh.field_d), (byte) -50);
         if (param0 != -10) {
           field_F = (BitmapFont) null;
         }

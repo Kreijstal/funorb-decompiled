@@ -196,11 +196,11 @@ final class h {
           field_d = (RgbSprite[]) null;
         }
         if (param1 == 30000 &&
-          ed.field_z > 0) {
-          fieldTemp$3 = ed.field_z - 1;
-          ed.field_z = ed.field_z - 1;
+          DropTargetWidgetContainer.field_z > 0) {
+          fieldTemp$3 = DropTargetWidgetContainer.field_z - 1;
+          DropTargetWidgetContainer.field_z = DropTargetWidgetContainer.field_z - 1;
           var2_ref_byte__Lifetime2 = oc.field_a[fieldTemp$3];
-          oc.field_a[ed.field_z] = null;
+          oc.field_a[DropTargetWidgetContainer.field_z] = null;
           return var2_ref_byte__Lifetime2;
         }
         if (null != lp.field_a) {

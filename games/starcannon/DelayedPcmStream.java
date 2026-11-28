@@ -6,7 +6,7 @@ final class DelayedPcmStream extends PcmStream {
     private PcmStream field_m;
     static java.math.BigInteger field_j;
     static Sprite field_k;
-    static tc field_q;
+    static ModalDialogHost field_q;
     static int field_p;
     static int field_n;
     static Sprite[] field_o;

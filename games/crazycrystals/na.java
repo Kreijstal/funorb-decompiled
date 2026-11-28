@@ -70,7 +70,7 @@ class na extends ud implements WidgetActivationListener {
             var6.a(dn.field_c, (byte) -124, 17);
           } else {
             if (param0 == 256) {
-              var6.a(ba.field_l, (bi) (this), 98);
+              var6.a(ba.field_l, (WidgetEventListener) (this), 98);
             } else {
               stackIn_12_0 = var6;
               if (!this.field_ib) {
@@ -87,7 +87,7 @@ class na extends ud implements WidgetActivationListener {
             } else {
               if (6 != param0) {
                 if (param0 == 9) {
-                  var6.a(nk.field_k, (bi) (this), 52);
+                  var6.a(nk.field_k, (WidgetEventListener) (this), 52);
                 }
               } else {
                 var6.a(sb.field_C, (byte) -124, 9);
@@ -96,7 +96,7 @@ class na extends ud implements WidgetActivationListener {
           } else {
             var6.a(ik.field_f, (byte) -124, 7);
           }
-          this.a((qm) (var6), (byte) -50);
+          this.a((UiWidget) (var6), (byte) -50);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -119,7 +119,7 @@ class na extends ud implements WidgetActivationListener {
           this.field_cb.b((byte) 0, 4210752, 2121792);
           var2 = new jd(this, this.field_jb, kj.field_c);
           var2.a(vm.field_e, (byte) -124, 15);
-          this.a((qm) (var2), (byte) -50);
+          this.a((UiWidget) (var2), (byte) -50);
           return;
         }
         InteractiveWidget var3 = (InteractiveWidget) null;
@@ -127,7 +127,7 @@ class na extends ud implements WidgetActivationListener {
         this.field_cb.b((byte) 0, 4210752, 2121792);
         var2Lifetime1 = new jd(this, this.field_jb, kj.field_c);
         var2Lifetime1.a(vm.field_e, (byte) -124, 15);
-        this.a((qm) (var2Lifetime1), (byte) -50);
+        this.a((UiWidget) (var2Lifetime1), (byte) -50);
     }
 
     final static void a(int param0, boolean param1, PuzzleTile[][] param2, int param3, int param4) {
@@ -174,7 +174,7 @@ class na extends ud implements WidgetActivationListener {
         }
     }
 
-    na(ol param0, BitmapFont param1, String param2, boolean param3, boolean param4) {
+    na(ModalDialogHost param0, BitmapFont param1, String param2, boolean param3, boolean param4) {
         super(param0, new jd((na) null, param1, param2), 77, 10, 10);
         try {
           this.field_gb = false;
@@ -184,13 +184,13 @@ class na extends ud implements WidgetActivationListener {
           this.field_ib = param3 ? true : false;
           this.field_cb = new co(13, 50, 274, 30, 15, 2113632, 4210752);
           this.field_cb.field_H = true;
-          this.b(this.field_cb, -117);
+          this.addChild(this.field_cb, -117);
         } catch (RuntimeException runtimeException) {
           throw dn.wrapClientException((Throwable) ((Object) runtimeException), "na.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ')');
         }
     }
 
-    final boolean a(int param0, int param1, qm param2, char param3) {
+    final boolean handleKey(int param0, int param1, UiWidget param2, char param3) {
         RuntimeException var5 = null;
         boolean stackIn_8_0 = false;
         RuntimeException stackIn_11_0 = null;
@@ -203,7 +203,7 @@ class na extends ud implements WidgetActivationListener {
             return true;
           }
           if (param1 == 19279) {
-            stackIn_8_0 = super.a(param0, 19279, param2, param3);
+            stackIn_8_0 = super.handleKey(param0, 19279, param2, param3);
             return stackIn_8_0;
           }
           return false;

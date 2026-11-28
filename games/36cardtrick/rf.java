@@ -61,7 +61,7 @@ final class rf implements Runnable {
     final static void c(int param0) {
         Throwable decompiledCaughtException = null;
         Object var1 = null;
-        var1 = wc.field_B;
+        var1 = DropTargetWidgetContainer.field_B;
         synchronized (var1) {
           qd.field_a = qd.field_a + 1;
           DebouncedFieldValidator.field_c = GzipInflater.field_a;

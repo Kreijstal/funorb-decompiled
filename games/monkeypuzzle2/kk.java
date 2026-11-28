@@ -136,8 +136,8 @@ final class kk {
             PasswordValidator.field_q[bc.field_a].draw(-(PasswordValidator.field_q[0].field_m >> 1) + 80, ne.field_b);
             break;
           }
-          kj.field_F.draw(-(kj.field_F.field_m >> 1) + 80, var2_int);
-          var2_int = var2_int + kj.field_F.field_n;
+          ModalDialogHost.field_F.draw(-(ModalDialogHost.field_F.field_m >> 1) + 80, var2_int);
+          var2_int = var2_int + ModalDialogHost.field_F.field_n;
         } while (var6 == 0);
         var2_int = 0;
         do {
@@ -145,8 +145,8 @@ final class kk {
             PasswordValidator.field_q[NetworkArchiveRequest.field_r].drawFlippedHorizontal(-(PasswordValidator.field_q[0].field_m >> 1) + 560, ClientException.field_e);
             break;
           }
-          kj.field_F.draw(560 - (kj.field_F.field_m >> 1), var2_int);
-          var2_int = var2_int + kj.field_F.field_n;
+          ModalDialogHost.field_F.draw(560 - (ModalDialogHost.field_F.field_m >> 1), var2_int);
+          var2_int = var2_int + ModalDialogHost.field_F.field_n;
         } while (var6 == 0);
         var2_int = 0;
         scanLoop1: while (true) {
@@ -539,7 +539,7 @@ final class kk {
             if (this.field_g == 5 ||
               this.field_g == 6 ||
               this.field_g == 8) {
-              ee.field_F = -1;
+              DraggableWidgetContainer.field_F = -1;
             }
             ProxyAuthenticationRequiredException.field_d[this.field_e].c((byte) -122);
             if (this.field_e == 2) {
@@ -574,7 +574,7 @@ final class kk {
         }
         boolean decompiledNaturalLoopExit0 = false;
         while (!(decompiledNaturalLoopExit0 = (!AwtRasterBuffer.a(-1)))) {
-          if (13 == oa.field_H &&
+          if (13 == DropTargetWidgetContainer.field_H &&
             this.field_g != 0) {
             if (this.field_g == 7) {
               continue;
@@ -871,7 +871,7 @@ final class kk {
         boolean decompiledFrameRemainder0 = true;
         var2 = this.field_c.field_a;
         if (!this.field_c.a((byte) 10) &&
-          oa.field_H == 96) {
+          DropTargetWidgetContainer.field_H == 96) {
           this.field_c.field_b = false;
           if (var2 < 0) {
             var2 = 0;
@@ -891,7 +891,7 @@ final class kk {
           }
         }
         if (!this.field_c.a((byte) 10) &&
-          oa.field_H == 97) {
+          DropTargetWidgetContainer.field_H == 97) {
           this.field_c.field_b = false;
           if (0 <= var2) {
             if (1 != var2) {
@@ -914,7 +914,7 @@ final class kk {
         }
         regionExit1: {
           if (!this.field_c.a((byte) 10) &&
-            oa.field_H == 98) {
+            DropTargetWidgetContainer.field_H == 98) {
             this.field_c.field_b = false;
             if (var2 < 0) {
               var2 = 2;
@@ -935,7 +935,7 @@ final class kk {
           }
         }
         if (!this.field_c.a((byte) 10) &&
-          oa.field_H == 99) {
+          DropTargetWidgetContainer.field_H == 99) {
           this.field_c.field_b = false;
           if (var2 != -1) {
             if (var2 >= 1) {
@@ -1216,7 +1216,7 @@ final class kk {
                   break;
                 }
               }
-              ue.a((byte) 122, param1);
+              AlphaWidgetContainer.a((byte) 122, param1);
               if (var8 == 0) {
                 break;
               }
@@ -1417,7 +1417,7 @@ final class kk {
         }
         var3 = this.field_c.field_a;
         if (!this.field_c.a((byte) 10) &&
-          oa.field_H == 96) {
+          DropTargetWidgetContainer.field_H == 96) {
           if (var3 >= 0) {
             if (0 == var3 % param1) {
               var3 = var3 + param1;
@@ -1435,7 +1435,7 @@ final class kk {
           var3--;
         }
         if (!this.field_c.a((byte) 10) &&
-          97 == oa.field_H) {
+          97 == DropTargetWidgetContainer.field_H) {
           if (var3 < 0) {
             var3 = 0;
             if (var4 != 0) {
@@ -1459,7 +1459,7 @@ final class kk {
           this.field_c.field_b = false;
         }
         if (!this.field_c.a((byte) 10) &&
-          oa.field_H == 98) {
+          DropTargetWidgetContainer.field_H == 98) {
           if (param1 <= var3) {
             var3 = 1;
             if (var4 != 0) {
@@ -1474,7 +1474,7 @@ final class kk {
           }
         }
         if (!this.field_c.a((byte) 10) &&
-          oa.field_H == 99) {
+          DropTargetWidgetContainer.field_H == 99) {
           var3 = var3 + param1;
           if (var3 >= this.field_c.field_i) {
             if ((this.field_c.field_i + this.field_c.field_i % param1) < var3) {

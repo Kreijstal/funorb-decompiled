@@ -116,7 +116,7 @@ final class e {
             var14 = var6[var9];
             wj[] var10 = var14;
             for (var11_int = 0; var11_int < var14.length; var11_int++) {
-              var14[var11_int] = ol.a(var19[var11_int], 120, var5[var9]);
+              var14[var11_int] = ModalDialogHost.a(var19[var11_int], 120, var5[var9]);
             }
           }
           var9Lifetime1 = var17.field_u;

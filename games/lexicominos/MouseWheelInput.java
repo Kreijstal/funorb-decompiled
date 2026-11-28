@@ -33,7 +33,7 @@ abstract class MouseWheelInput {
           }
           var5_int = param4.getGroupIdByName(param0, (byte) -89);
           var6 = param4.getFileIdByName(param1, -27964, var5_int);
-          stackIn_4_0 = eg.a(var6, var5_int, param4, param3, 96);
+          stackIn_4_0 = ModalDialogHost.a(var6, var5_int, param4, param3, 96);
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

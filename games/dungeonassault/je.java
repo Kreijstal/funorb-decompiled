@@ -26,7 +26,7 @@ final class je {
         String stackIn_5_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var2_int = oi.b(param0, param1.length);
+          var2_int = DraggableWidgetContainer.b(param0, param1.length);
           stackIn_1_0 = gd.a(64, param1[var2_int]);
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

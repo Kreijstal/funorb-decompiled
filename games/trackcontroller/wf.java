@@ -24,11 +24,11 @@ final class wf {
           if (DiskArchiveStore.field_f != IndexedSpriteState.field_h) {
             return false;
           }
-          var8 = new AccountCreationResultPanel(gl.field_E, param4);
+          var8 = new AccountCreationResultPanel(AlphaWidgetContainer.field_E, param4);
           if (param0 != 29) {
             return false;
           }
-          gl.field_E.d((byte) -125, var8);
+          AlphaWidgetContainer.field_E.showDialog((byte) -125, var8);
           if (pa.b((byte) 91)) {
             var8.u(-118);
             return true;

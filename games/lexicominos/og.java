@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class og implements rd {
+final class og implements WidgetRenderer {
     private int field_d;
     static String field_c;
     static String field_b;
@@ -22,9 +22,9 @@ final class og implements rd {
         field_j = null;
     }
 
-    public final void a(int param0, int param1, boolean param2, w param3, int param4) {
+    public final void paintWidget(int param0, int param1, boolean param2, UiWidget param3, int param4) {
         int var10 = 0;
-        w stackIn_4_0 = null;
+        UiWidget stackIn_4_0 = null;
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
         String stackIn_16_2 = null;
@@ -40,7 +40,7 @@ final class og implements rd {
           if (!(param3 instanceof wi)) {
             stackIn_4_0 = null;
           } else {
-            stackIn_4_0 = (w) (param3);
+            stackIn_4_0 = (UiWidget) (param3);
           }
           var12 = (wi) (stackIn_4_0);
           if (var12 != null) {

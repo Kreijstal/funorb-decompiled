@@ -44,7 +44,7 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
           if (var2_int >= 0) {
             var3 = ActiveLevel.field_V + 1 & 127;
             if (field_d != var3) {
-              mc.field_K[ActiveLevel.field_V] = var2_int;
+              DropTargetWidgetContainer.field_K[ActiveLevel.field_V] = var2_int;
               AsyncRequest.field_o[ActiveLevel.field_V] = (char)0;
               ActiveLevel.field_V = var3;
             }
@@ -174,7 +174,7 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
               NameSuggestionsPanel.isSupportedCp1252KeyCharacter(-92, (char) var2_int)) {
               var3 = 1 + ActiveLevel.field_V & 127;
               if (field_d != var3) {
-                mc.field_K[ActiveLevel.field_V] = -1;
+                DropTargetWidgetContainer.field_K[ActiveLevel.field_V] = -1;
                 AsyncRequest.field_o[ActiveLevel.field_V] = (char)var2_int;
                 ActiveLevel.field_V = var3;
               }

@@ -377,7 +377,7 @@ final class ro extends kl {
         this.field_t = 1;
         this.field_C = param0;
         int var5 = this.f(-2);
-        this.field_x = var5 != 0 ? oi.b(0, this.f(-2)) : 0;
+        this.field_x = var5 != 0 ? DraggableWidgetContainer.b(0, this.f(-2)) : 0;
         if (null == this.field_n) {
           this.field_n = null;
           return;
@@ -421,7 +421,7 @@ final class ro extends kl {
           oe.field_m.j(-63 + this.field_a, 21);
           ad.field_e.i(23, -38 + this.field_i);
           ad.field_e.f(-39 + this.field_a, this.field_i - 38);
-          da.a(ak.field_p, cm.field_M, this.field_a >> 1, 1917623617, (36 + IntrusiveNode.field_c.field_H >> 1) + 14, IntrusiveNode.field_c);
+          SingleChildWidgetContainer.a(ak.field_p, cm.field_M, this.field_a >> 1, 1917623617, (36 + IntrusiveNode.field_c.field_H >> 1) + 14, IntrusiveNode.field_c);
           jh.b();
           return;
         }
@@ -441,7 +441,7 @@ final class ro extends kl {
         oe.field_m.j(-63 + this.field_a, 21);
         ad.field_e.i(23, -38 + this.field_i);
         ad.field_e.f(-39 + this.field_a, this.field_i - 38);
-        da.a(ak.field_p, cm.field_M, this.field_a >> 1, 1917623617, (36 + IntrusiveNode.field_c.field_H >> 1) + 14, IntrusiveNode.field_c);
+        SingleChildWidgetContainer.a(ak.field_p, cm.field_M, this.field_a >> 1, 1917623617, (36 + IntrusiveNode.field_c.field_H >> 1) + 14, IntrusiveNode.field_c);
         jh.b();
     }
 

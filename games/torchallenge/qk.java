@@ -131,7 +131,7 @@ final class qk extends kg {
         }
         m.field_j = new DisplayNameSelectionPanel();
         if (param0 < -43) {
-          bg.field_K.c(0, m.field_j);
+          LabeledWidgetContainer.field_K.c(0, m.field_j);
           return;
         }
     }

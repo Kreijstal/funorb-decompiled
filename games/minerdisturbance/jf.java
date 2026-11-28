@@ -27,10 +27,10 @@ final class jf {
         Sprite var17 = new Sprite(param1.getFileByName("", param2 ^ 18, "button.gif"), (java.awt.Component) ((Object) ef.field_c));
         pb.a("commonui", param0, "dropdown", (byte) -77);
         ln[] var5 = tb.a("screen_options", "commonui", param0, 1);
-        kn.field_F = new ln[4];
+        DequeWidgetContainer.field_F = new ln[4];
         kc.field_f = new ln[4];
         qe.field_c = new ln[4];
-        ln[][] var6 = new ln[][]{kn.field_F, kc.field_f, qe.field_c};
+        ln[][] var6 = new ln[][]{DequeWidgetContainer.field_F, kc.field_f, qe.field_c};
         int[][] var19 = new int[4][];
         int[][] var16 = var19;
         int[][] var7 = var16;

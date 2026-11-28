@@ -123,7 +123,7 @@ final class qk extends ButtonWidget {
         }
     }
 
-    final boolean a(UiWidget param0, int param1, int param2, int param3, int param4, int param5, int param6) {
+    final boolean pointerPressed(UiWidget param0, int param1, int param2, int param3, int param4, int param5, int param6) {
         int var12 = 0;
         RuntimeException stackIn_26_0 = null;
         StringBuilder stackIn_26_1 = null;
@@ -138,7 +138,7 @@ final class qk extends ButtonWidget {
         int var14 = 0;
         var14 = TrackController.field_F ? 1 : 0;
         try {
-          if (!super.a(param0, param1, param2, param3, param4, param5, param6)) {
+          if (!super.pointerPressed(param0, param1, param2, param3, param4, param5, param6)) {
             return false;
           }
           var8_int = param2 - param5 - this.field_I;

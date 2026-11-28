@@ -703,7 +703,7 @@ final class lg {
                 }
                 var2 = lh.b(-1, "rankingSplasher");
                 if (null != var2) {
-                  se.field_J = bh.a(var2, -125);
+                  DropTargetWidgetContainer.field_J = bh.a(var2, -125);
                 }
                 var2 = lh.b(-1, "rankingMeddling");
                 if (var2 != null) {
@@ -755,7 +755,7 @@ final class lg {
                 }
                 var2 = lh.b(-1, "rankingBoreal");
                 if (null != var2) {
-                  hm.field_N = bh.a(var2, -128);
+                  ModalDialogHost.field_N = bh.a(var2, -128);
                 }
                 var2 = lh.b(-1, "rankingArcticExplorer");
                 if (null != var2) {
@@ -1457,7 +1457,7 @@ final class lg {
                 }
                 var2 = lh.b(-1, "tutorialMining,0,0");
                 if (var2 != null) {
-                  kn.field_D[0][0] = bh.a(var2, -127);
+                  DequeWidgetContainer.field_D[0][0] = bh.a(var2, -127);
                 }
                 var2 = lh.b(-1, "tutorialOxygenMeter,0,0");
                 if (var2 != null) {
@@ -1485,7 +1485,7 @@ final class lg {
                 }
                 var2 = lh.b(-1, "tutorialLootTheDead,0,0");
                 if (var2 != null) {
-                  oj.field_M[0][0] = bh.a(var2, -128);
+                  AlphaWidgetContainer.field_M[0][0] = bh.a(var2, -128);
                 }
                 var2 = lh.b(-1, "tutorialSeimographSpike,0,0");
                 if (var2 != null) {
@@ -1709,7 +1709,7 @@ final class lg {
                 }
                 var2 = lh.b(-1, "sellBasicKit");
                 if (var2 != null) {
-                  se.field_L = bh.a(var2, 68);
+                  DropTargetWidgetContainer.field_L = bh.a(var2, 68);
                 }
                 var2 = lh.b(-1, "shopTorch,0");
                 if (var2 != null) {
@@ -1721,11 +1721,11 @@ final class lg {
                 }
                 var2 = lh.b(-1, "shopDynamite,0");
                 if (null != var2) {
-                  hm.field_J[0] = bh.a(var2, 68);
+                  ModalDialogHost.field_J[0] = bh.a(var2, 68);
                 }
                 var2 = lh.b(-1, "shopDynamite,1");
                 if (var2 != null) {
-                  hm.field_J[1] = bh.a(var2, -125);
+                  ModalDialogHost.field_J[1] = bh.a(var2, -125);
                 }
                 var2 = lh.b(-1, "shopAqualung,0");
                 if (null != var2) {
@@ -1873,7 +1873,7 @@ final class lg {
                 }
                 var2 = lh.b(-1, "optionsOptions");
                 if (null != var2) {
-                  jc.field_D = bh.a(var2, -119);
+                  SingleChildWidgetContainer.field_D = bh.a(var2, -119);
                 }
                 var2 = lh.b(-1, "optionsMembersExpansion");
                 if (null != var2) {

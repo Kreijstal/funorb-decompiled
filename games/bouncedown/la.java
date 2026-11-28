@@ -19,10 +19,10 @@ final class la extends InteractiveWidget {
         field_C = null;
     }
 
-    final void a(int param0, int param1, int param2, lk param3) {
+    final void updatePointer(int param0, int param1, int param2, UiWidget param3) {
         try {
           this.field_F = this.field_F + 1;
-          super.a(param0, param1, param2, param3);
+          super.updatePointer(param0, param1, param2, param3);
         } catch (RuntimeException runtimeException) {
           throw CipherPacketBuffer.wrapClientException((Throwable) ((Object) runtimeException), "la.P(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
@@ -38,7 +38,7 @@ final class la extends InteractiveWidget {
         return (String) null;
     }
 
-    final void a(int param0, int param1, int param2, int param3) {
+    final void drawWidget(int param0, int param1, int param2, int param3) {
         int var5;
         int var6;
         vf var8;
@@ -58,7 +58,7 @@ final class la extends InteractiveWidget {
         int var10Lifetime1;
         int var10Lifetime2;
         var11 = Bounce.field_N;
-        super.a(param0, param1, 119, param3);
+        super.drawWidget(param0, param1, 119, param3);
         if (param0 != 0) {
           return;
         }
@@ -105,7 +105,7 @@ final class la extends InteractiveWidget {
           sj.field_c.drawAdditive(var5 - var22.field_t, var6 - var22.field_o, 256);
           return;
         }
-        this.a(54, -73, 123, 16);
+        this.drawWidget(54, -73, 123, 16);
         if (TextHotspotBounds.field_o == var8) {
           var15 = field_E[0];
           var9Lifetime1 = var15.field_t << 1;
@@ -172,7 +172,7 @@ final class la extends InteractiveWidget {
         int var4Lifetime1;
         String var1Lifetime1;
         var5 = Bounce.field_N;
-        var7 = "(" + ak.field_z + " " + i.field_f + " " + DebouncedFieldValidator.field_b + ") " + wa.field_d;
+        var7 = "(" + SingleChildWidgetContainer.field_z + " " + i.field_f + " " + DebouncedFieldValidator.field_b + ") " + wa.field_d;
         var1 = var7;
         if (param0 <= -104) {
           if (pe.field_d <= 0) {
@@ -226,7 +226,7 @@ final class la extends InteractiveWidget {
         return var1Lifetime1;
     }
 
-    final boolean a(lk param0, boolean param1) {
+    final boolean takeFocus(UiWidget param0, boolean param1) {
         RuntimeException var3 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;

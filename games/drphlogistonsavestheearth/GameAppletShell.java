@@ -350,15 +350,15 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
             if (!NameSuggestionsPanel.a(1, param0 + 35356)) {
               return false;
             }
-            gf.field_C = dh.field_N.readUnsignedByte(31760);
-            dh.field_N.position = 0;
+            gf.field_C = LabeledWidgetContainer.field_N.readUnsignedByte(31760);
+            LabeledWidgetContainer.field_N.position = 0;
           }
           if (-2 == gf.field_C) {
             if (!NameSuggestionsPanel.a(2, 5929)) {
               return false;
             }
-            gf.field_C = dh.field_N.readUnsignedShort(-788751192);
-            dh.field_N.position = 0;
+            gf.field_C = LabeledWidgetContainer.field_N.readUnsignedShort(-788751192);
+            LabeledWidgetContainer.field_N.position = 0;
           }
           if (param0 != -29427) {
             field_h = (PacketBuffer) null;
@@ -710,7 +710,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
           }
           DiskCacheWorker.field_g.addFocusListener((java.awt.event.FocusListener) (this));
           DiskCacheWorker.field_g.requestFocus();
-          pj.field_C = true;
+          DequeWidgetContainer.field_C = true;
           NetworkArchiveRequest.field_J = true;
           eh.field_a = true;
           ci.field_U = false;
@@ -842,7 +842,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
           BufferedRandomAccessFile.field_f = 31 & 1 + BufferedRandomAccessFile.field_f;
           var6 = this;
           synchronized (var6) {
-            pj.field_C = NetworkArchiveRequest.field_J;
+            DequeWidgetContainer.field_C = NetworkArchiveRequest.field_J;
             if (param0 != -17) {
               field_i = (RgbSprite) null;
             }

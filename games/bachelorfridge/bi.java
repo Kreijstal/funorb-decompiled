@@ -97,7 +97,7 @@ abstract class bi extends jla {
             var21 = param3.field_g;
             var22 = 40 + (param6 + var18);
             var23 = lga.a(true, new String[]{String.valueOf(var19)}, qea.field_a);
-            var24 = lga.a(true, new String[]{kna.field_g[var20]}, vf.field_D);
+            var24 = lga.a(true, new String[]{kna.field_g[var20]}, ModalDialog.field_D);
             var25 = lga.a(true, new String[]{Integer.toString(var21 - 1)}, ona.field_xb);
             CreatureActor.field_h.drawText(var23, param4 + 20, var22, 0, -1);
             if (var20 != 0) {
@@ -150,11 +150,11 @@ abstract class bi extends jla {
         if (param0 != 2) {
           bi.a(49, true, -128, (MoveDefinition) null, 0, 127, 48, false, -0.8479634019263611);
         }
-        gja.field_m.f((byte) -66);
+        gja.field_m.closeAllDialogs((byte) -66);
         if (null == hp.field_d) {
           hp.field_d = new hga(gja.field_m, AnimationNode.field_i);
         }
-        gja.field_m.a((UiWidget) (hp.field_d), (byte) 111);
+        gja.field_m.showDialog((UiWidget) (hp.field_d), (byte) 111);
     }
 
     void b(boolean param0, int param1, int param2) {

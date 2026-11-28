@@ -105,7 +105,7 @@ final class bf {
     bf(boolean param0) {
         this.field_e = ik.field_b;
         this.field_k = hc.field_O;
-        this.field_b = uk.field_L;
+        this.field_b = DraggableWidgetContainer.field_L;
         this.field_a = SpriteLoader.field_b;
         if (!param0) {
           this.field_j = null;

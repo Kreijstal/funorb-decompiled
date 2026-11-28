@@ -28,13 +28,13 @@ final class rh {
               var4 = var4 + un.field_i;
             } else {
               var6 = AgeValidator.a(true, true, pt.field_a[var3_int]);
-              var4 = var4 + raa.field_J;
+              var4 = var4 + DraggableWidgetContainer.field_J;
               var7 = sd.field_a - (var6 >> 1);
               if (SleepAnimation.a(BoardView.field_t + (ShieldEvent.field_r << 1), param2, var6 + (ConfirmedEmailAvailabilityValidator.field_k << 1), 1, var7 - ConfirmedEmailAvailabilityValidator.field_k, var4, param0)) {
                 stackIn_9_0 = var5;
                 return stackIn_9_0;
               }
-              var4 = var4 + (raa.field_J + (ShieldEvent.field_r << 1) + BoardView.field_t);
+              var4 = var4 + (DraggableWidgetContainer.field_J + (ShieldEvent.field_r << 1) + BoardView.field_t);
             }
             var3_int++;
           }
@@ -117,7 +117,7 @@ final class rh {
           }
           i.field_a.a(19842, param2);
           if (ao.field_d != null) {
-            if (hl.field_I) {
+            if (AlphaWidgetContainer.field_I) {
               ao.field_d.processInput(param2, i.field_a.field_D, i.field_a.field_M, 6381);
             } else {
               ao.field_d = null;

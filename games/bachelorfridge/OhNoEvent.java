@@ -26,7 +26,7 @@ final class OhNoEvent extends SpecialEvent {
         ls.field_a = null;
         du.field_b = null;
         sj.field_k = null;
-        ge.field_K = null;
+        LabeledWidgetContainer.field_K = null;
         iga.field_a = null;
         SnowAnimation.field_y = null;
         RageSpecial.field_p = null;
@@ -37,7 +37,7 @@ final class OhNoEvent extends SpecialEvent {
         hh.field_b = null;
         DreamsEvent.field_r = null;
         HuffmanCodec.field_a = null;
-        hl.field_D = null;
+        AlphaWidgetContainer.field_D = null;
         lf.field_b = null;
         DefaultWidgetRenderer.field_h = null;
         BuffVendorAnimation.field_C = null;

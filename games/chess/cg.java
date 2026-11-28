@@ -109,17 +109,17 @@ final class cg {
             for (var9 = 0; var9 < var8; var9++) {
               ec.field_l[var9] = -1;
             }
-            eh.field_L = new int[2];
+            ModalDialog.field_L = new int[2];
             for (var9 = 0; var7 > var9; var9++) {
               bd.field_e[var9] = da.field_A[var9];
             }
             bd.field_e[-3 + var8] = "";
             bd.field_e[var8 - 2] = var6;
             ec.field_l[-2 + var8] = 0;
-            eh.field_L[0] = 1;
+            ModalDialog.field_L[0] = 1;
             bd.field_e[-1 + var8] = sj.field_m;
             ec.field_l[-1 + var8] = 1;
-            eh.field_L[1] = 2;
+            ModalDialog.field_L[1] = 2;
           } else {
             if (TextLineMetrics.field_g != 1) {
               throw new IllegalArgumentException();
@@ -131,16 +131,16 @@ final class cg {
             for (var9 = 0; var9 < var8; var9++) {
               ec.field_l[var9] = -1;
             }
-            eh.field_L = new int[1];
+            ModalDialog.field_L = new int[1];
             for (var9 = 0; var9 < var7; var9++) {
               bd.field_e[var9] = da.field_A[var9];
             }
             bd.field_e[-2 + var8] = "";
             bd.field_e[var8 - 1] = sj.field_m;
             ec.field_l[-1 + var8] = 0;
-            eh.field_L[0] = 2;
+            ModalDialog.field_L[0] = 2;
           }
-          nj.field_u.field_f = eh.field_L.length;
+          nj.field_u.field_f = ModalDialog.field_L.length;
           var7Lifetime1 = 0;
           for (var8Lifetime1 = 0; bd.field_e.length > var8Lifetime1; var8Lifetime1++) {
             stackIn_25_0 = bd.field_e[var8Lifetime1];
@@ -154,7 +154,7 @@ final class cg {
               var7Lifetime1 = var9Lifetime1;
             }
           }
-          bd.field_d = nj.field_u.field_f * (mf.field_z + fh.field_e << 1);
+          bd.field_d = nj.field_u.field_f * (UiWidget.field_z + fh.field_e << 1);
           vh.field_g = -(var7Lifetime1 >> 1) + of.field_k;
           tf.field_o = -(var7Lifetime1 >> 1) + var7Lifetime1 + of.field_k;
           if (param0 != -25) {

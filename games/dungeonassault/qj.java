@@ -25,7 +25,7 @@ final class qj {
     final static void a(byte param0) {
         int var1 = -31 / ((param0 + 45) / 35);
         hl.field_a = ea.b(120);
-        lg.field_w = new ji();
+        lg.field_w = new ModalDialogHost();
         na.a(true, 2591221, true);
     }
 

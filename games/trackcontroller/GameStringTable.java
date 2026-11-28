@@ -105,7 +105,7 @@ final class GameStringTable extends IntrusiveNode {
           }
           var2Lifetime1 = DualLinkNode.a("pauseanim", -523);
           if (var2Lifetime1 != null) {
-            vl.field_E = ta.a(32200, var2Lifetime1);
+            ModalDialogHost.field_E = ta.a(32200, var2Lifetime1);
           }
           var2Lifetime2 = DualLinkNode.a("first_page", -523);
           if (var2Lifetime2 != null) {
@@ -392,7 +392,7 @@ final class GameStringTable extends IntrusiveNode {
           }
           var2Lifetime72 = DualLinkNode.a("besteach", -523);
           if (var2Lifetime72 != null) {
-            vl.field_J = ta.a(32200, var2Lifetime72);
+            ModalDialogHost.field_J = ta.a(32200, var2Lifetime72);
           }
           var2Lifetime73 = DualLinkNode.a("showall", -523);
           if (null != var2Lifetime73) {

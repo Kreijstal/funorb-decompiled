@@ -1144,7 +1144,7 @@ final class li implements uj {
                 }
                 var2 = PasswordValidator.a(114, "connectionlost_withreason");
                 if (null != var2) {
-                  fe.field_r = bh.a(var2, -128);
+                  UiWidget.field_r = bh.a(var2, -128);
                 }
                 var2 = PasswordValidator.a(-118, "passwordverificationrequired");
                 if (null != var2) {
@@ -1556,7 +1556,7 @@ final class li implements uj {
                 }
                 var2 = PasswordValidator.a(param0 ^ 9327, "create_password_tooltip");
                 if (var2 != null) {
-                  fe.field_C = bh.a(var2, 81);
+                  UiWidget.field_C = bh.a(var2, 81);
                 }
                 var2 = PasswordValidator.a(-106, "create_password_hint");
                 if (var2 != null) {
@@ -1608,7 +1608,7 @@ final class li implements uj {
                 }
                 var2 = PasswordValidator.a(-121, "create_username_unavailable");
                 if (null != var2) {
-                  hm.field_L = bh.a(var2, 67);
+                  ModalDialogHost.field_L = bh.a(var2, 67);
                 }
                 var2 = PasswordValidator.a(38, "create_username_available");
                 if (var2 != null) {
@@ -1800,7 +1800,7 @@ final class li implements uj {
                 }
                 var2 = PasswordValidator.a(param0 - 9207, "waitingfor_soundeffects");
                 if (var2 != null) {
-                  hm.field_M = bh.a(var2, 54);
+                  ModalDialogHost.field_M = bh.a(var2, 54);
                 }
                 var2 = PasswordValidator.a(param0 ^ 9287, "waitingfor_music");
                 if (null != var2) {
@@ -1927,7 +1927,7 @@ final class li implements uj {
                 }
                 var2 = PasswordValidator.a(-107, "music_colon");
                 if (null != var2) {
-                  cc.field_M = bh.a(var2, param0 - 9147);
+                  ModalDialog.field_M = bh.a(var2, param0 - 9147);
                 }
                 var2 = PasswordValidator.a(-104, "fullscreen");
                 if (var2 != null) {
@@ -2781,7 +2781,7 @@ final class li implements uj {
                 }
                 var2 = PasswordValidator.a(-117, "hs_friend_tip");
                 if (null != var2) {
-                  am.field_N = bh.a(var2, 68);
+                  LabeledWidgetContainer.field_N = bh.a(var2, 68);
                 }
                 var2 = PasswordValidator.a(param0 ^ -9286, "hs_friend_tip_multi");
                 if (null != var2) {

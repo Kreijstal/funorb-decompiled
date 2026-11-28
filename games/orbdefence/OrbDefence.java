@@ -114,7 +114,7 @@ public final class OrbDefence extends NetworkGameClient {
           this.e((byte) -115);
         }
         bh.a(0, -1);
-        if (sg.c(true)) {
+        if (ModalDialog.c(true)) {
           var3 = this.j(7);
           if (2 == var3) {
             md.b((byte) -121);
@@ -152,7 +152,7 @@ public final class OrbDefence extends NetworkGameClient {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw dd.wrapClientException((Throwable) ((Object) var1), "OrbDefence.B(" + param0 + ')');
+          throw DraggableWidgetContainer.wrapClientException((Throwable) ((Object) var1), "OrbDefence.B(" + param0 + ')');
         }
     }
 
@@ -236,7 +236,7 @@ public final class OrbDefence extends NetworkGameClient {
           fl.field_a = new byte[ec.field_K][];
           wc.field_a = new int[ec.field_K];
           var18.position = param0.length - (7 + 8 * ec.field_K);
-          sg.field_B = var18.readUnsignedShort(98203176);
+          ModalDialog.field_B = var18.readUnsignedShort(98203176);
           var3 = -1 % ((-4 - param1) / 62);
           he.field_r = var18.readUnsignedShort(98203176);
           var4 = (var18.readUnsignedByte((byte) 90) & 255) + 1;
@@ -350,7 +350,7 @@ public final class OrbDefence extends NetworkGameClient {
           } else {
             stackIn_58_2 = "{...}";
           }
-          throw dd.wrapClientException((Throwable) ((Object) stackIn_57_0), ((StringBuilder) (Object) stackIn_57_1).append(stackIn_58_2).append(',').append(param1).append(')').toString());
+          throw DraggableWidgetContainer.wrapClientException((Throwable) ((Object) stackIn_57_0), ((StringBuilder) (Object) stackIn_57_1).append(stackIn_58_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -436,7 +436,7 @@ public final class OrbDefence extends NetworkGameClient {
         cj.clearStaticReferences(1280);
         bg.a((byte) -107);
         ke.a((byte) -80);
-        sk.releaseDeclaredStaticReferences(-79);
+        ModalDialogHost.releaseDeclaredStaticReferences(-79);
         AccountCreationResultPanel.resetDeclaredStaticReferences(11285);
         ve.clearStaticReferences(false);
         pc.resetStaticState(-1);
@@ -510,12 +510,12 @@ public final class OrbDefence extends NetworkGameClient {
         ab.clearStaticReferences(false);
         ck.clearStaticReferences(22499);
         TextLayout.clearStaticReferences(0);
-        pj.clearDeclaredStaticReferences(-75);
+        UiWidget.clearDeclaredStaticReferences(-75);
         InteractiveWidget.resetStaticState(99);
-        kj.clearStaticReferences((byte) 81);
+        SingleChildWidgetContainer.clearStaticReferences((byte) 81);
         ej.releaseDeclaredStaticReferences(-15640);
-        sg.clearDeclaredStaticReferences((byte) 87);
-        ta.clearStaticReferences((byte) -95);
+        ModalDialog.clearDeclaredStaticReferences((byte) 87);
+        DequeWidgetContainer.clearStaticReferences((byte) -95);
         gd.clearStaticReferences(24);
         kf.clearStaticReferences(-17218);
         oe.clearDeclaredStaticReferences(-12563);
@@ -539,7 +539,7 @@ public final class OrbDefence extends NetworkGameClient {
         me.clearDeclaredStaticReferences(5);
         vc.a((byte) 116);
         rc.a(-127);
-        h.releaseDeclaredStaticReferences(-115);
+        LabeledWidgetContainer.releaseDeclaredStaticReferences(-115);
         ValidatedTextField.q(119);
         EditableTextField.n(1);
         hl.discardDeclaredStaticReferences(0);
@@ -561,8 +561,8 @@ public final class OrbDefence extends NetworkGameClient {
         vf.clearStaticReferences(1);
         RichTextLayout.clearDeclaredStaticReferences(0);
         tj.a((byte) -58);
-        dd.clearDeclaredStaticReferences((byte) -119);
-        mm.releaseDeclaredStaticReferences(21006);
+        DraggableWidgetContainer.clearDeclaredStaticReferences((byte) -119);
+        DropTargetWidgetContainer.releaseDeclaredStaticReferences(21006);
         ba.clearStaticReferences(50);
         IterableNodeHashTable.clearStaticReferences(-1);
         DualLinkDeque.clearStaticReferences(param0);
@@ -581,7 +581,7 @@ public final class OrbDefence extends NetworkGameClient {
         qc.a(4784);
         eg.clearStaticReferences(-123);
         fi.clearStaticReferences(-8601);
-        jj.releaseDeclaredStaticReferences(37);
+        AlphaWidgetContainer.releaseDeclaredStaticReferences(37);
         ti.e(67);
         d.clearStaticReferences((byte) -128);
         ad.clearStaticReferences(true);
@@ -848,7 +848,7 @@ public final class OrbDefence extends NetworkGameClient {
                           j.a(55.0f, TextLineMetrics.a(TextFieldValidator.field_e, pd.field_r, param1 ^ -14383, ProxyAuthenticationRequiredException.field_a, ""), (byte) 105);
                           return false;
                         }
-                        j.a(45.0f, TextLineMetrics.a(kj.field_z, bh.field_d, param1 - 14513, jj.field_B, ""), (byte) 120);
+                        j.a(45.0f, TextLineMetrics.a(SingleChildWidgetContainer.field_z, bh.field_d, param1 - 14513, AlphaWidgetContainer.field_B, ""), (byte) 120);
                         return false;
                       }
                       j.a(40.0f, TextLineMetrics.a(ha.field_l, lg.field_c, -14416, qd.field_a, ""), (byte) 112);
@@ -869,7 +869,7 @@ public final class OrbDefence extends NetworkGameClient {
             j.a(5.0f, TextLineMetrics.a(TextFieldValidator.field_e, GameAppletShell.field_d, -14416, ProxyAuthenticationRequiredException.field_a, "arialbold14"), (byte) 113);
             return false;
           }
-          j.a(3.0f, TextLineMetrics.a(kj.field_z, j.field_b, param1 - 14513, jj.field_B, "basic"), (byte) 120);
+          j.a(3.0f, TextLineMetrics.a(SingleChildWidgetContainer.field_z, j.field_b, param1 - 14513, AlphaWidgetContainer.field_B, "basic"), (byte) 120);
           return false;
         }
         if (null != AccountCreationResultPanel.field_hb) {
@@ -982,7 +982,7 @@ public final class OrbDefence extends NetworkGameClient {
         }
         ob.field_I.setInlineSprites(var4, var5);
         jd.field_c.setInlineSprites(var4, var5);
-        pj.field_u = p.a(13863, "", bh.field_d, "menu_overlays");
+        UiWidget.field_u = p.a(13863, "", bh.field_d, "menu_overlays");
         am.field_d = new RgbSprite[6];
         am.field_d[0] = fk.a(bh.field_d, "baseimage", -83, "");
         am.field_d[1] = fk.a(bh.field_d, "baseimage2", 79, "");
@@ -1060,10 +1060,10 @@ public final class OrbDefence extends NetworkGameClient {
         DualLinkNode.a(80, (byte) -38, (java.applet.Applet) (this), SpriteGeometry.field_r, 0, 255);
         var7 = fk.a(bh.field_d, "mb_frames", param1 ^ 38, "");
         ImageProducerRasterBuffer.a(-63, ui.field_e, var7);
-        pj.a(param1 - 97, fk.a(bh.field_d, "mb_logo", 40, ""));
+        UiWidget.a(param1 - 97, fk.a(bh.field_d, "mb_logo", 40, ""));
         ProxyAuthenticationRequiredException.a(90, p.a(13863, "", bh.field_d, "mb_sshots"));
         var13 = fk.a(bh.field_d, "mb_pricing_bg", 60, "");
-        kj.a(var13, 80, (byte) 45, 10, 10, 10, 140, 1500, 10);
+        SingleChildWidgetContainer.a(var13, 80, (byte) 45, 10, 10, 10, 140, 1500, 10);
         bh.field_d = null;
         pd.field_r = null;
         vd.a(70);
@@ -1146,7 +1146,7 @@ public final class OrbDefence extends NetworkGameClient {
             RichTextWidget.field_O = RichTextWidget.field_O + 1;
             if (RichTextWidget.field_O == 10) {
               if (kf.field_c == 2) {
-                kj.field_x = null;
+                SingleChildWidgetContainer.field_x = null;
               }
               kf.field_c = kk.field_S;
               RichTextWidget.field_O = 0;

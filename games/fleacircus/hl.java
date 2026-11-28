@@ -49,8 +49,8 @@ class hl extends lc {
         if (param0 != 0) {
           return;
         }
-        if (db.field_J != null) {
-          db.field_J.dispose();
+        if (ModalDialog.field_J != null) {
+          ModalDialog.field_J.dispose();
         }
         if (null != tg.field_i) {
           tg.field_i.dispose();

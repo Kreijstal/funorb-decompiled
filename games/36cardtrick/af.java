@@ -16,13 +16,13 @@ class af extends ta implements WidgetActivationListener {
         ui var2 = new ui(this, this.field_pb, RichTextWidget.field_E);
         var2.a(sh.field_h, 15, -14);
         if (param0) {
-          lk var3 = (lk) null;
-          this.a('9', (byte) -80, 48, (lk) null);
+          UiWidget var3 = (UiWidget) null;
+          this.handleKey('9', (byte) -80, 48, (UiWidget) null);
         }
         this.c(var2, (byte) 110);
     }
 
-    final boolean a(char param0, byte param1, int param2, lk param3) {
+    final boolean handleKey(char param0, byte param1, int param2, UiWidget param3) {
         RuntimeException var5 = null;
         boolean stackIn_6_0 = false;
         RuntimeException stackIn_9_0 = null;
@@ -34,7 +34,7 @@ class af extends ta implements WidgetActivationListener {
             this.d(true);
           }
           if (13 != param2) {
-            stackIn_6_0 = super.a(param0, (byte) -106, param2, param3);
+            stackIn_6_0 = super.handleKey(param0, (byte) -106, param2, param3);
             return stackIn_6_0;
           }
           this.s(-122);
@@ -143,7 +143,7 @@ class af extends ta implements WidgetActivationListener {
         return (java.awt.Container) ((Object) PasswordValidator.g(-120));
     }
 
-    af(j param0, BitmapFont param1, String param2, boolean param3, boolean param4) {
+    af(ModalDialogHost param0, BitmapFont param1, String param2, boolean param3, boolean param4) {
         super(param0, new ui((af) null, param1, param2), 77, 10, 10);
         try {
           this.field_nb = param4 ? true : false;
@@ -153,7 +153,7 @@ class af extends ta implements WidgetActivationListener {
           this.field_qb = false;
           this.field_kb = new ng(13, 50, 274, 30, 15, 2113632, 4210752);
           this.field_kb.field_I = true;
-          this.b(this.field_kb, (byte) 118);
+          this.addChild(this.field_kb, (byte) 118);
         } catch (RuntimeException runtimeException) {
           throw ma.wrapException((Throwable) ((Object) runtimeException), "af.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ')');
         }
@@ -300,7 +300,7 @@ class af extends ta implements WidgetActivationListener {
               }
               ((ui) (Object) stackIn_13_0).a(stackIn_14_1, -1, -14);
             } else {
-              var6.a((pl) (this), true, tc.field_c);
+              var6.a((WidgetEventListener) (this), true, tc.field_c);
             }
           }
           if (param2 != 3) {
@@ -312,7 +312,7 @@ class af extends ta implements WidgetActivationListener {
                   this.c(var6, (byte) 95);
                   return;
                 }
-                var6.a((pl) (this), true, wf.field_a);
+                var6.a((WidgetEventListener) (this), true, wf.field_a);
               } else {
                 var6.a(jh.field_a, 9, -14);
               }

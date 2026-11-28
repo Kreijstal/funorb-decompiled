@@ -44,7 +44,7 @@ final class ValidatedTextField extends EditableTextField implements FieldValidat
         this.field_Q = (FieldValidator) null;
     }
 
-    ValidatedTextField(String param0, ma param1, int param2) {
+    ValidatedTextField(String param0, WidgetEventListener param1, int param2) {
         super(param0, param1, param2);
     }
 
@@ -52,7 +52,7 @@ final class ValidatedTextField extends EditableTextField implements FieldValidat
         if (param0) {
           return false;
         }
-        if (gl.field_y < 10) {
+        if (AlphaWidgetContainer.field_y < 10) {
           return false;
         }
         if (!ge.field_x) {
@@ -77,9 +77,9 @@ final class ValidatedTextField extends EditableTextField implements FieldValidat
         return this.field_j;
     }
 
-    final void a(int param0, byte param1, UiWidget param2, int param3) {
+    final void updatePointer(int param0, byte param1, UiWidget param2, int param3) {
         try {
-          super.a(param0, param1, param2, param3);
+          super.updatePointer(param0, param1, param2, param3);
           this.field_P = -param3 + (PacketBuffer.field_j - this.field_p);
         } catch (RuntimeException runtimeException) {
           throw ch.wrapClientException((Throwable) ((Object) runtimeException), "vc.B(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');

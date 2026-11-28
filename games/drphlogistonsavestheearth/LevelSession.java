@@ -160,7 +160,7 @@ final class LevelSession {
               var2 = 0;
               do {
                 if (var2 >= 75) {
-                  si.field_F.drawAdditive(var10 + 300, 200, 256);
+                  SingleChildWidgetContainer.field_F.drawAdditive(var10 + 300, 200, 256);
                   break;
                 }
                 var11 = wi.field_f[var2];
@@ -790,7 +790,7 @@ final class LevelSession {
         var2 = (double)this.field_gb / 256.0 * 3.141592653589793;
         var4 = 89;
         var5 = 464;
-        var6 = var4 - (int)(pj.a(var2, param0 + 35407) * 27.0);
+        var6 = var4 - (int)(DequeWidgetContainer.a(var2, param0 + 35407) * 27.0);
         var7 = -(int)(27.0 * ji.a(65535, var2)) + var5;
         var8 = -1;
         scanLoop1: while (true) {
@@ -828,7 +828,7 @@ final class LevelSession {
         while (!(decompiledNaturalLoopExit0 = (var9 < var10_int))) {
           var11_int = (int)(Math.floor((double)this.field_H / Math.pow(10.0, (double)(var10_int + 1))) * Math.pow(10.0, (double)(1 + var10_int)));
           var12_int = (int)Math.floor((double)(-var11_int + this.field_H) / Math.pow(10.0, (double)var10_int));
-          stackIn_26_0 = pi.field_S[var12_int];
+          stackIn_26_0 = DraggableWidgetContainer.field_S[var12_int];
           stackIn_26_1 = ~var9;
           stackIn_26_2 = -7;
           if (var17 == 0) {
@@ -844,24 +844,24 @@ final class LevelSession {
           break;
         }
         if (decompiledNaturalLoopExit0) {
-          stackIn_26_0 = pi.field_S[this.field_L];
+          stackIn_26_0 = DraggableWidgetContainer.field_S[this.field_L];
           stackIn_26_1 = 161;
           stackIn_26_2 = 438;
         }
         ((he) (Object) stackIn_26_0).e(stackIn_26_1, stackIn_26_2);
         if (this.field_w >= 0) {
-          pi.field_S[this.field_w].e(383, 438);
+          DraggableWidgetContainer.field_S[this.field_w].e(383, 438);
         }
-        dh.field_R[DisplayNameSelectionPanel.field_J].a(408, 429);
+        LabeledWidgetContainer.field_R[DisplayNameSelectionPanel.field_J].a(408, 429);
         SoftwareRasterizer.saveClip(this.field_t);
         SoftwareRasterizer.setClip(400, 425, 515, 475);
         if (this.field_J - pa.field_c <= 10) {
-          dh.field_R[ib.field_t].a(408, -((-pa.field_c + this.field_J) * 5) + 479);
+          LabeledWidgetContainer.field_R[ib.field_t].a(408, -((-pa.field_c + this.field_J) * 5) + 479);
           if (var17 != 0) {
-            dh.field_R[ib.field_t].a(408, 429);
+            LabeledWidgetContainer.field_R[ib.field_t].a(408, 429);
           }
         } else {
-          dh.field_R[ib.field_t].a(408, 429);
+          LabeledWidgetContainer.field_R[ib.field_t].a(408, 429);
         }
         SoftwareRasterizer.restoreClip(this.field_t);
         var10 = "x" + this.field_A;
@@ -882,7 +882,7 @@ final class LevelSession {
         var4Lifetime1 = 551;
         var5Lifetime1 = 464;
         var13 = (double)this.field_u / 200.0 * 3.141592653589793;
-        var6Lifetime1 = -(int)(27.0 * pj.a(var13, 32768)) + var4Lifetime1;
+        var6Lifetime1 = -(int)(27.0 * DequeWidgetContainer.a(var13, 32768)) + var4Lifetime1;
         var7Lifetime1 = -(int)(ji.a(param0 + 68174, var13) * 27.0) + var5Lifetime1;
         var15_int = -1;
         scanLoop2: while (true) {
@@ -1463,7 +1463,7 @@ final class LevelSession {
     final bg j(byte param0) {
         if (0 < this.field_H &&
           !this.field_W) {
-          return vg.a(true, this.field_f, this.field_x, 3, this.field_i, 65514, this.field_g, new int[]{this.field_H}, 21);
+          return UiWidget.a(true, this.field_f, this.field_x, 3, this.field_i, 65514, this.field_g, new int[]{this.field_H}, 21);
         }
         if (param0 == -68) {
           return null;
@@ -1565,7 +1565,7 @@ final class LevelSession {
         String var5 = null;
         int var6 = 0;
         var6 = DrPhlogistonSavesTheEarth.field_D ? 1 : 0;
-        var2 = BufferedSocket.field_a * 3 * pi.field_S[0].field_c / -150;
+        var2 = BufferedSocket.field_a * 3 * DraggableWidgetContainer.field_S[0].field_c / -150;
         var3 = (-TextHotspotBounds.field_m.field_h + 640) / 2;
         var4 = -(TextHotspotBounds.field_m.field_h / 2) + 120;
         boolean decompiledSharedTail0 = !(BufferedSocket.field_a <= -25);
@@ -1586,7 +1586,7 @@ final class LevelSession {
             cb.field_b.drawCentred(a.field_f, 320, 45 + var4, 16777215, 0);
             break;
           }
-          pi.field_S[var5_int].e(var3 + 94, -var2 + (48 + (var4 + 53 - pi.field_S[0].field_c * -var5_int)));
+          DraggableWidgetContainer.field_S[var5_int].e(var3 + 94, -var2 + (48 + (var4 + 53 - DraggableWidgetContainer.field_S[0].field_c * -var5_int)));
           var5_int++;
         } while (var6 == 0);
         if (!param0) {
@@ -1605,20 +1605,20 @@ final class LevelSession {
         int var2Lifetime1;
         var3 = DrPhlogistonSavesTheEarth.field_D ? 1 : 0;
         if (ck.field_f[98]) {
-          si.field_C[0] = true;
+          SingleChildWidgetContainer.field_C[0] = true;
           this.field_j = this.field_j - 0.5;
         }
         if (ck.field_f[99]) {
           this.field_j = this.field_j + 0.5;
-          si.field_C[1] = true;
+          SingleChildWidgetContainer.field_C[1] = true;
         }
         if (ck.field_f[96]) {
           this.field_c = this.field_c - 0.5;
-          si.field_C[2] = true;
+          SingleChildWidgetContainer.field_C[2] = true;
         }
         if (ck.field_f[97]) {
           this.field_c = this.field_c + 0.5;
-          si.field_C[3] = true;
+          SingleChildWidgetContainer.field_C[3] = true;
         }
         if (ck.field_f[81] &&
           this.field_O) {
@@ -1777,28 +1777,28 @@ final class LevelSession {
           if (decompiledFrameRemainder1) {
             if (ck.field_f[11]) {
               if (ck.field_f[25]) {
-                k.a(0, 1);
+                ModalDialogHost.a(0, 1);
               }
               if (ck.field_f[16]) {
-                k.a(0, 2);
+                ModalDialogHost.a(0, 2);
               }
               if (ck.field_f[17]) {
-                k.a(param0 ^ 215, 4);
+                ModalDialogHost.a(param0 ^ 215, 4);
               }
               if (ck.field_f[18]) {
-                k.a(0, 8);
+                ModalDialogHost.a(0, 8);
               }
               if (ck.field_f[19]) {
-                k.a(0, 16);
+                ModalDialogHost.a(0, 16);
               }
               if (ck.field_f[20]) {
-                k.a(param0 - 215, 32);
+                ModalDialogHost.a(param0 - 215, 32);
               }
               if (ck.field_f[21]) {
-                k.a(param0 - 215, 50);
+                ModalDialogHost.a(param0 - 215, 50);
               }
               if (ck.field_f[22]) {
-                k.a(0, 100);
+                ModalDialogHost.a(0, 100);
               }
             }
             if (ck.field_f[10]) {
@@ -2241,8 +2241,8 @@ final class LevelSession {
           var2 = 1;
           var3 = 0;
           scanLoop1: while (true) {
-            if (si.field_C.length > var3) {
-              var2 = var2 != 0 & si.field_C[var3] ? 1 : 0;
+            if (SingleChildWidgetContainer.field_C.length > var3) {
+              var2 = var2 != 0 & SingleChildWidgetContainer.field_C[var3] ? 1 : 0;
               var3++;
               if (var4 == 0) {
                 continue;
@@ -2514,8 +2514,8 @@ final class LevelSession {
           this.s(94);
           var2 = 0;
           while (true) {
-            if (si.field_C.length > var2) {
-              si.field_C[var2] = true;
+            if (SingleChildWidgetContainer.field_C.length > var2) {
+              SingleChildWidgetContainer.field_C[var2] = true;
               var2++;
               if (var3 == 0) {
                 continue;
@@ -2536,7 +2536,7 @@ final class LevelSession {
             gf.field_D = Math.max(1 + sd.field_a.levelNumber, gf.field_D);
             var4 = new nl(0, -1 + gf.field_D, 0, 0, 0, 0);
             if (oh.a(param0 - 1)) {
-              dl.field_M.addLast(var4, param0 + 254);
+              AlphaWidgetContainer.field_M.addLast(var4, param0 + 254);
               if (var3 != 0) {
                 rc.a(5, var4, -11659);
               }
@@ -2820,7 +2820,7 @@ final class LevelSession {
                     } else {
                       var17 = Math.random() * 6.283185307179586;
                       var7.field_b = ji.a(65535, var17);
-                      var7.field_p = pj.a(var17, 32768);
+                      var7.field_p = DequeWidgetContainer.a(var17, 32768);
                     }
                   }
                   var9++;
@@ -3063,7 +3063,7 @@ final class LevelSession {
                       !var41.field_s &&
                       !wh.field_v[var39.field_Q] && (0 == var20 ||
                       var41.h(63))) {
-                      var24 = dl.a(true, -var41.field_o - (double)var41.field_I - (double)var20 + (double)var18, -var41.field_N - (double)var41.field_t + (double)var19);
+                      var24 = AlphaWidgetContainer.a(true, -var41.field_o - (double)var41.field_I - (double)var20 + (double)var18, -var41.field_N - (double)var41.field_t + (double)var19);
                       stackIn_99_0 = var24;
                       if (var41.field_Q == 36) {
                         stackIn_100_1 = 30.0;
@@ -3190,8 +3190,8 @@ final class LevelSession {
                 var33 = 0;
                 while (var33 < 5) {
                   var34_double = ji.a(65535, (double)this.field_J / 5.0) * var13 * ji.a(65535, var17[var33] + var15);
-                  var36 = var13 * ji.a(65535, (double)this.field_J / 5.0) * pj.a(var17[var33] + var15, 32768);
-                  this.field_m[this.g((byte) 119)] = new gf(param0, var34_double + (-15.0 + var3), var36 + var5, ji.a(65535, var15 + var17[var33]) * var13, pj.a(var15 + var17[var33], 32768) * var13, 800.0, this.field_D);
+                  var36 = var13 * ji.a(65535, (double)this.field_J / 5.0) * DequeWidgetContainer.a(var17[var33] + var15, 32768);
+                  this.field_m[this.g((byte) 119)] = new gf(param0, var34_double + (-15.0 + var3), var36 + var5, ji.a(65535, var15 + var17[var33]) * var13, DequeWidgetContainer.a(var15 + var17[var33], 32768) * var13, 800.0, this.field_D);
                   var33++;
                 }
                 var32++;

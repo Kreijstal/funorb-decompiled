@@ -10,36 +10,36 @@ final class AccountCreationResultPanel extends dh implements WidgetActivationLis
     static String field_gb;
     static LoginPanel field_ib;
 
-    final boolean d(boolean param0) {
+    final boolean advanceDialogAnimation(boolean param0) {
         AccountServiceResult var2 = null;
         AccountServiceResult var2Lifetime1;
         if (param0) {
           field_ib = (LoginPanel) null;
           if (!this.field_A) {
-            return super.d(false);
+            return super.advanceDialogAnimation(false);
           }
           if (this.field_lb) {
-            return super.d(false);
+            return super.advanceDialogAnimation(false);
           }
           var2 = l.pollAccountCreationResult((byte) -20);
           if (var2 != null) {
             this.showAccountCreationResult(false, (byte) 126, var2);
-            return super.d(false);
+            return super.advanceDialogAnimation(false);
           }
-          return super.d(false);
+          return super.advanceDialogAnimation(false);
         }
         if (!this.field_A) {
-          return super.d(false);
+          return super.advanceDialogAnimation(false);
         }
         if (this.field_lb) {
-          return super.d(false);
+          return super.advanceDialogAnimation(false);
         }
         var2Lifetime1 = l.pollAccountCreationResult((byte) -20);
         if (var2Lifetime1 != null) {
           this.showAccountCreationResult(false, (byte) 126, var2Lifetime1);
-          return super.d(false);
+          return super.advanceDialogAnimation(false);
         }
-        return super.d(false);
+        return super.advanceDialogAnimation(false);
     }
 
     public final void onWidgetActivated(byte param0, int param1, int param2, InteractiveWidget param3, int param4) {
@@ -52,7 +52,7 @@ final class AccountCreationResultPanel extends dh implements WidgetActivationLis
           mh.b((byte) -57);
           this.q(4210752);
         } catch (RuntimeException runtimeException) {
-          throw dd.wrapClientException((Throwable) ((Object) runtimeException), "ig.M(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ')');
+          throw DraggableWidgetContainer.wrapClientException((Throwable) ((Object) runtimeException), "ig.M(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ')');
         }
     }
 
@@ -108,10 +108,10 @@ final class AccountCreationResultPanel extends dh implements WidgetActivationLis
               this.a(false, new ob(this));
               return;
             }
-            var5.a(sk.field_C, -34, (ag) (this));
+            var5.a(ModalDialogHost.field_C, -34, (WidgetEventListener) (this));
           } else {
             if (this.field_kb) {
-              var5.a(sk.field_C, -34, (ag) (this));
+              var5.a(ModalDialogHost.field_C, -34, (WidgetEventListener) (this));
             } else {
               if (param2.statusCode == 5) {
                 var5.a(vc.field_n, 11, -15858);
@@ -140,16 +140,16 @@ final class AccountCreationResultPanel extends dh implements WidgetActivationLis
           } else {
             stackIn_34_2 = "{...}";
           }
-          throw dd.wrapClientException((Throwable) ((Object) stackIn_33_0), ((StringBuilder) (Object) stackIn_33_1).append(stackIn_34_2).append(')').toString());
+          throw DraggableWidgetContainer.wrapClientException((Throwable) ((Object) stackIn_33_0), ((StringBuilder) (Object) stackIn_33_1).append(stackIn_34_2).append(')').toString());
         }
     }
 
-    AccountCreationResultPanel(sk param0, AccountRegistrationPanel param1) {
+    AccountCreationResultPanel(ModalDialogHost param0, AccountRegistrationPanel param1) {
         super(param0, qc.field_b, bh.field_f, false, false);
         try {
           this.field_jb = param1;
         } catch (RuntimeException runtimeException) {
-          throw dd.wrapClientException((Throwable) ((Object) runtimeException), "ig.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw DraggableWidgetContainer.wrapClientException((Throwable) ((Object) runtimeException), "ig.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

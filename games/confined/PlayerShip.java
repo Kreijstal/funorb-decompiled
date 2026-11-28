@@ -637,7 +637,7 @@ final class PlayerShip extends MovingTunnelEntity {
                 stackIn_150_4 = this.field_A;
                 stackIn_150_5 = this;
                 stackIn_150_6 = var3;
-                stackIn_150_7 = me.field_J;
+                stackIn_150_7 = AlphaWidgetContainer.field_J;
                 stackIn_150_8 = 0.0;
                 stackIn_150_9 = 0.0;
                 if (0 >= this.field_Pb) {
@@ -682,7 +682,7 @@ final class PlayerShip extends MovingTunnelEntity {
                   stackIn_163_4 = this.field_A;
                   stackIn_163_5 = this;
                   stackIn_163_6 = var3;
-                  stackIn_163_7 = me.field_J;
+                  stackIn_163_7 = AlphaWidgetContainer.field_J;
                   stackIn_163_8 = -0.04 * var17;
                   stackIn_163_9 = -0.04 * var15;
                   if (0 >= this.field_Pb) {
@@ -714,7 +714,7 @@ final class PlayerShip extends MovingTunnelEntity {
                   stackIn_169_4 = this.field_A;
                   stackIn_169_5 = this;
                   stackIn_169_6 = var3;
-                  stackIn_169_7 = me.field_J;
+                  stackIn_169_7 = AlphaWidgetContainer.field_J;
                   stackIn_169_8 = -0.02 * var17;
                   stackIn_169_9 = var15 * -0.02;
                   if (this.field_Pb <= 0) {
@@ -746,7 +746,7 @@ final class PlayerShip extends MovingTunnelEntity {
                   stackIn_175_4 = this.field_A;
                   stackIn_175_5 = this;
                   stackIn_175_6 = var3;
-                  stackIn_175_7 = me.field_J;
+                  stackIn_175_7 = AlphaWidgetContainer.field_J;
                   stackIn_175_8 = 0.02 * var17;
                   stackIn_175_9 = 0.02 * var15;
                   if (this.field_Pb <= 0) {
@@ -778,7 +778,7 @@ final class PlayerShip extends MovingTunnelEntity {
                   stackIn_181_4 = this.field_A;
                   stackIn_181_5 = this;
                   stackIn_181_6 = var3;
-                  stackIn_181_7 = me.field_J;
+                  stackIn_181_7 = AlphaWidgetContainer.field_J;
                   stackIn_181_8 = var17 * 0.04;
                   stackIn_181_9 = 0.04 * var15;
                   if (0 >= this.field_Pb) {

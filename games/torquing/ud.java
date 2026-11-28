@@ -11,7 +11,7 @@ final class ud extends IntrusiveNode {
     long[] field_o;
 
     final static String b(int param0) {
-        if (!jd.field_E &&
+        if (!DropTargetWidgetContainer.field_E &&
           lp.field_b >= MatchingFieldValidator.field_l &&
           MatchingFieldValidator.field_l + TooltipPanel.field_g > lp.field_b) {
           return wb.field_t;

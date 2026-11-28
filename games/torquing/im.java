@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class im extends bb {
+abstract class im extends ModalDialog {
     private int field_F;
     private int field_I;
     private int field_H;
@@ -129,7 +129,7 @@ abstract class im extends bb {
 
     final void b(int param0, byte param1, int param2, int param3) {
         if (0 >= param2) {
-          this.a(param3, (byte) -25, param0);
+          this.setCenteredSize(param3, (byte) -25, param0);
           return;
         }
         this.field_H = param0;
@@ -143,12 +143,12 @@ abstract class im extends bb {
         this.field_F = 0;
     }
 
-    boolean a(byte param0) {
+    boolean snapDialogAnimation(byte param0) {
         if (param0 < 114) {
           im.clearStaticReferences(81);
         }
         this.j(0);
-        return super.a((byte) 122);
+        return super.snapDialogAnimation((byte) 122);
     }
 
     final static boolean l(int param0) {
@@ -156,7 +156,7 @@ abstract class im extends bb {
         if (param0 != 169) {
           return false;
         }
-        stackIn_6_0 = (w.field_G != null) && (null != w.field_G.a(0));
+        stackIn_6_0 = (w.field_G != null) && (null != w.field_G.getTopOpenDialog(0));
         return stackIn_6_0;
     }
 
@@ -164,7 +164,7 @@ abstract class im extends bb {
         if (this.field_K <= 0) {
           return;
         }
-        this.a(this.field_G, (byte) -25, this.field_H);
+        this.setCenteredSize(this.field_G, (byte) -25, this.field_H);
         this.field_K = param0;
         this.g((byte) 126);
     }
@@ -175,13 +175,13 @@ abstract class im extends bb {
         }
     }
 
-    im(ln param0, int param1, int param2) {
+    im(ModalDialogHost param0, int param1, int param2) {
         super(param0, param1, param2);
         this.field_F = 0;
         this.field_K = 0;
     }
 
-    boolean h(int param0) {
+    boolean advanceDialogAnimation(int param0) {
         int var2 = 0;
         int var3 = 0;
         int fieldTemp$0 = 0;
@@ -201,12 +201,12 @@ abstract class im extends bb {
             var2 = (this.field_G - this.field_I) * var4 / var5 + this.field_I;
             var3 = this.field_M + (this.field_H - this.field_M) * var4 / var5;
           }
-          this.a(var2, (byte) -25, var3);
+          this.setCenteredSize(var2, (byte) -25, var3);
         }
         if (param0 != -7) {
           this.field_H = -80;
         }
-        return super.h(param0 ^ 0);
+        return super.advanceDialogAnimation(param0 ^ 0);
     }
 
     public static void clearStaticReferences(int param0) {

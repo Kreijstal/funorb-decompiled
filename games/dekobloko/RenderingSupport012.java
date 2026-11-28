@@ -147,7 +147,7 @@ final class RenderingSupport012 {
             integerLocal11 = 255 & byteArrayArgument2[integerLocal7] << integerLocal9 | (byteArrayArgument2[1 + integerLocal7] & 255) >>> 8 - integerLocal9;
             if (0 <= integerLocal11 &&
               integerLocal11 < 256) {
-              this.byteArrayState0023[this.integerState0650] = (byte)UiComponentPart006.bitwiseOr((int) this.byteArrayState0023[this.integerState0650], integerLocal11 >>> integerLocal10);
+              this.byteArrayState0023[this.integerState0650] = (byte)LabeledWidgetContainer.bitwiseOr((int) this.byteArrayState0023[this.integerState0650], integerLocal11 >>> integerLocal10);
               this.integerState0649 = this.integerState0649 + (-integerLocal10 + 8);
               this.integerState0650 = this.integerState0650 + 1;
               if (this.integerState0649 == 512) {
@@ -167,7 +167,7 @@ final class RenderingSupport012 {
             stackIntegerLocal1 = byteArrayArgument2[integerLocal7] << integerLocal9;
             stackIntegerLocal2 = 255;
             integerLocal16 = stackIntegerLocal1 & stackIntegerLocal2;
-            this.byteArrayState0023[this.integerState0650] = (byte)UiComponentPart006.bitwiseOr((int) this.byteArrayState0023[this.integerState0650], integerLocal16 >>> integerLocal10);
+            this.byteArrayState0023[this.integerState0650] = (byte)LabeledWidgetContainer.bitwiseOr((int) this.byteArrayState0023[this.integerState0650], integerLocal16 >>> integerLocal10);
           } else {
             integerLocal16 = 0;
           }
@@ -241,7 +241,7 @@ final class RenderingSupport012 {
         int integerLocal11 = 0;
         integerLocal11 = DekoBlokoClient.obfuscationControl ? 1 : 0;
         try {
-          this.byteArrayState0023[this.integerState0650] = (byte)UiComponentPart006.bitwiseOr((int) this.byteArrayState0023[this.integerState0650], 128 >>> PlayerBoardUpdateQueue.bitwiseAnd(this.integerState0649, 7));
+          this.byteArrayState0023[this.integerState0650] = (byte)LabeledWidgetContainer.bitwiseOr((int) this.byteArrayState0023[this.integerState0650], 128 >>> PlayerBoardUpdateQueue.bitwiseAnd(this.integerState0649, 7));
           this.integerState0650 = this.integerState0650 + 1;
           if (this.integerState0650 > 32) {
             while (this.integerState0650 < 64) {

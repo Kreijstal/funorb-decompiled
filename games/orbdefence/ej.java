@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class ej extends sg {
+abstract class ej extends ModalDialog {
     private int field_G;
     static String[] field_J;
     private int field_M;
@@ -10,7 +10,7 @@ abstract class ej extends sg {
     private int field_K;
     private int field_H;
 
-    boolean d(boolean param0) {
+    boolean advanceDialogAnimation(boolean param0) {
         int var2 = 0;
         int var3 = 0;
         int fieldTemp$0 = 0;
@@ -31,27 +31,27 @@ abstract class ej extends sg {
             this.field_G = 0;
             this.n(6630);
           }
-          this.a(var3, (byte) -81, var2);
+          this.setCenteredSize(var3, (byte) -81, var2);
         }
         if (param0) {
           ej.releaseDeclaredStaticReferences(121);
         }
-        return super.d(false);
+        return super.advanceDialogAnimation(false);
     }
 
-    boolean l(int param0) {
+    boolean snapDialogAnimation(int param0) {
         this.m(0);
         if (param0 != 194) {
           return true;
         }
-        return super.l(param0 + 0);
+        return super.snapDialogAnimation(param0 + 0);
     }
 
     void m(int param0) {
         if (this.field_G <= 0) {
           return;
         }
-        this.a(this.field_L, (byte) -81, this.field_H);
+        this.setCenteredSize(this.field_L, (byte) -81, this.field_H);
         this.field_G = param0;
         this.n(6630);
     }
@@ -62,7 +62,7 @@ abstract class ej extends sg {
         }
     }
 
-    ej(sk param0, int param1, int param2) {
+    ej(ModalDialogHost param0, int param1, int param2) {
         super(param0, param1, param2);
         this.field_G = 0;
         this.field_K = 0;
@@ -70,7 +70,7 @@ abstract class ej extends sg {
 
     final void a(int param0, int param1, int param2, byte param3) {
         if (param0 <= 0) {
-          this.a(param2, (byte) -81, param1);
+          this.setCenteredSize(param2, (byte) -81, param1);
           return;
         }
         this.field_L = param2;

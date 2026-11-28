@@ -14,7 +14,7 @@ final class bf {
         int var2 = 0;
         Throwable decompiledCaughtException = null;
         Object var1 = null;
-        var1 = hh.field_M;
+        var1 = DraggableWidgetContainer.field_M;
         synchronized (var1) {
           ul.field_o = NameSuggestionsPanel.field_I;
           uc.field_eb = uc.field_eb + 1;

@@ -3,7 +3,7 @@
  */
 import java.io.*;
 
-class DefaultTextWidgetRenderer implements uk, TextWidgetRenderer {
+class DefaultTextWidgetRenderer implements WidgetRenderer, TextWidgetRenderer {
     int field_c;
     int field_h;
     int field_i;
@@ -44,7 +44,7 @@ class DefaultTextWidgetRenderer implements uk, TextWidgetRenderer {
           if (param5 == param1) {
             return;
           }
-          if (!param0.e(param3)) {
+          if (!param0.isFocused(param3)) {
             return;
           }
           var17 = this.getTextLayout(param0, (byte) 111);
@@ -114,7 +114,7 @@ class DefaultTextWidgetRenderer implements uk, TextWidgetRenderer {
         String stackIn_12_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (param3.e(0)) {
+          if (param3.isFocused(0)) {
             var13 = this.getTextLayout(param3, (byte) 100);
             var14 = var13;
             var7 = var14.getLineIndexForTextOffset(74, param0);
@@ -372,7 +372,7 @@ class DefaultTextWidgetRenderer implements uk, TextWidgetRenderer {
         }
     }
 
-    public void a(boolean param0, int param1, int param2, UiWidget param3, int param4) {
+    public void paintWidget(boolean param0, int param1, int param2, UiWidget param3, int param4) {
         if (null == this.field_a) {
           return;
         }

@@ -130,7 +130,7 @@ final class eb {
         for (var4_int = 0; var4_int < var1; var4_int++) {
           var3[var4_int] = ci.field_b[vg.a(255, (int) var2[var4_int])];
         }
-        RgbSprite var4 = new RgbSprite(uc.field_fb, eh.field_b, mg.field_x[0], rg.field_c[0], pb.field_h[0], bd.field_m[0], var3);
+        RgbSprite var4 = new RgbSprite(uc.field_fb, eh.field_b, SingleChildWidgetContainer.field_x[0], rg.field_c[0], pb.field_h[0], bd.field_m[0], var3);
         GzipDecompressor.a(12428);
         return var4;
     }

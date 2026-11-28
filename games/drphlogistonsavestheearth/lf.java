@@ -43,7 +43,7 @@ final class lf {
           while (param0 != 0L) {
             var8 = param0;
             param0 = param0 / 37L;
-            var10 = bd.field_K[(int)(-(param0 * 37L) + var8)];
+            var10 = ModalDialog.field_K[(int)(-(param0 * 37L) + var8)];
             if (var10 == 95) {
               var11 = var7.length() - 1;
               var10 = 160;

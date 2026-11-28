@@ -28,11 +28,11 @@ final class ca {
           if (param1 != 647) {
             field_d = (String) null;
           }
-          if (sa.field_Q.b((byte) 86) &&
-            !param0.equals(sa.field_Q.a((byte) 63))) {
-            sa.field_Q = c.a(param0, 30692);
+          if (LabeledWidgetContainer.field_Q.b((byte) 86) &&
+            !param0.equals(LabeledWidgetContainer.field_Q.a((byte) 63))) {
+            LabeledWidgetContainer.field_Q = c.a(param0, 30692);
           }
-          stackIn_7_0 = sa.field_Q;
+          stackIn_7_0 = LabeledWidgetContainer.field_Q;
           return stackIn_7_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

@@ -75,11 +75,11 @@ final class StatusEffectInfo {
             }
             ai.field_c = false;
           }
-          if (ge.field_D) {
+          if (LabeledWidgetContainer.field_D) {
             ih.d((byte) -109);
             FlirtEvent.e(46);
             DualLinkNode.c(106);
-            ge.field_D = false;
+            LabeledWidgetContainer.field_D = false;
           }
           if (OhNoEvent.field_s == 12) {
             AirstrikeEvent.d(-89);
@@ -114,7 +114,7 @@ final class StatusEffectInfo {
         if (!param0) {
           return true;
         }
-        stackIn_6_0 = (null != pja.field_e) && (null != pja.field_e.h(0));
+        stackIn_6_0 = (null != pja.field_e) && (null != pja.field_e.getTopOpenDialog(0));
         return stackIn_6_0;
     }
 

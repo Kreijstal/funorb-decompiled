@@ -213,7 +213,7 @@ final class ic extends jh {
         }
         pb.field_K = param1;
         fg.field_b = param2;
-        am.field_J = param3;
+        LabeledWidgetContainer.field_J = param3;
     }
 
     public static void b(int param0) {

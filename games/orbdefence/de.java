@@ -42,19 +42,19 @@ final class de {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw dd.wrapClientException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
+          throw DraggableWidgetContainer.wrapClientException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
         }
     }
 
     final static void a(int param0, RgbSprite param1) {
         try {
-          h.k(125);
+          LabeledWidgetContainer.k(125);
           SoftwareRasterizer.setRasterBuffer(param1.field_v, param1.field_s, param1.field_t);
           if (param0 >= -120) {
             de.clearStaticReferences(-128);
           }
         } catch (RuntimeException runtimeException) {
-          throw dd.wrapClientException((Throwable) ((Object) runtimeException), "de.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw DraggableWidgetContainer.wrapClientException((Throwable) ((Object) runtimeException), "de.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

@@ -58,7 +58,7 @@ final class dj {
               dj.a((PacketBuffer) null, (byte) 79);
             }
             TextLayout.field_b = param7;
-            ii.field_D = param4;
+            DequeWidgetContainer.field_D = param4;
             la.field_c = param5;
             sc.field_q = param13;
             SpriteGeometry.field_D = param6;

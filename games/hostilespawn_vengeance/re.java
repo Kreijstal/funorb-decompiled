@@ -796,7 +796,7 @@ final class re {
         }
         if (rl.field_c < 0) {
           if (!ta.p(3)) {
-            ul.field_O = false;
+            ModalDialog.field_O = false;
             if (var6 != 0) {
               this.a(138, (byte) -55, 74, 324, 235);
               ByteStorage.field_d[bm.field_c][rl.field_c].drawTransparent(327, 77);
@@ -805,7 +805,7 @@ final class re {
               if (null != this.field_G) {
                 this.field_G.a(106, false);
               }
-              ul.field_O = false;
+              ModalDialog.field_O = false;
             }
           }
         } else {
@@ -816,9 +816,9 @@ final class re {
           if (null != this.field_G) {
             this.field_G.a(106, false);
           }
-          ul.field_O = false;
+          ModalDialog.field_O = false;
         }
-        if (ul.field_O) {
+        if (ModalDialog.field_O) {
           this.a(70, (byte) -55, 74, 324, 235);
           al.field_Z.drawParagraph(la.field_i.toUpperCase(), 334, 80, 215, 200, 16776960, -1, 0, 0, 16);
         }
@@ -830,7 +830,7 @@ final class re {
           this.h(-58, -28);
         }
         if (this.field_d != 2) {
-          ul.field_O = false;
+          ModalDialog.field_O = false;
           this.field_E = null;
           if ((HostileSpawn.field_I) &&
             (null == this.field_E)) {
@@ -1241,7 +1241,7 @@ final class re {
         if (ta.p(3)) {
           wh.field_d.drawParagraph(VolumeRampingMidiPcmStream.field_X.toUpperCase(), 64, 200, 512, 100, 16776960, -1, 1, 0, wh.field_d.field_y + wh.field_d.field_F);
           al.field_Z.drawParagraph(u.field_a.toUpperCase(), 64, 345, 512, 1000, 16776960, -1, 1, 0, wh.field_d.field_F + wh.field_d.field_y);
-          hm.a(576, ul.field_J, false, 30, 353, 32);
+          hm.a(576, ModalDialog.field_J, false, 30, 353, 32);
           return;
         }
         var4_ref = null;
@@ -2232,16 +2232,16 @@ final class re {
           if (param1 <= sc.field_g.field_i) {
             return true;
           }
-          if (null == ag.field_t) {
+          if (null == UiWidget.field_t) {
             return false;
           }
           try {
-            var2_int = ag.field_t.availableBytes((byte) 120);
+            var2_int = UiWidget.field_t.availableBytes((byte) 120);
             if (var2_int > 0) {
               if (var2_int > (param1 - sc.field_g.field_i)) {
                 var2_int = -sc.field_g.field_i + param1;
               }
-              ag.field_t.readFully(-1, sc.field_g.field_n, sc.field_g.field_i, var2_int);
+              UiWidget.field_t.readFully(-1, sc.field_g.field_n, sc.field_g.field_i, var2_int);
               bb.field_c = hn.correctedCurrentTimeMillis((byte) 80);
               sc.field_g.field_i = sc.field_g.field_i + var2_int;
               if (sc.field_g.field_i < param1) {
@@ -2392,7 +2392,7 @@ final class re {
                       if (ta.p(param1 + 10102) &&
                         pf.field_o == 1 &&
                         this.field_w[var6Lifetime1][var8].field_Eb) {
-                        ul.field_O = true;
+                        ModalDialog.field_O = true;
                       }
                     } else {
                       bm.field_c = var6Lifetime1;
@@ -2722,7 +2722,7 @@ final class re {
           var5Lifetime3 = var6_ref_String;
           var5Lifetime3 = var6_ref_String;
           if (var6_ref_String != null) {
-            var5Lifetime3 = var5Lifetime3 + "<br>" + vg.a(new String[]{var6_ref_String}, 120, ag.field_j);
+            var5Lifetime3 = var5Lifetime3 + "<br>" + vg.a(new String[]{var6_ref_String}, 120, UiWidget.field_j);
           }
         }
         var6 = 25;
@@ -2737,10 +2737,10 @@ final class re {
 
     private final void j(int param0) {
         int var2 = -113 % ((71 - param0) / 52);
-        hm.a(8, ul.field_J, false, 330, 76, 316);
-        hm.a(576, ul.field_J, false, 47, 32, 32);
+        hm.a(8, ModalDialog.field_J, false, 330, 76, 316);
+        hm.a(576, ModalDialog.field_J, false, 47, 32, 32);
         this.a((byte) -29, il.field_e);
-        hm.a(576, ul.field_J, false, 46, 362, 32);
+        hm.a(576, ModalDialog.field_J, false, 46, 362, 32);
         this.a((byte) 50, 39, hn.field_e, 80);
         this.a((byte) 50, 325, ec.field_c, 80);
     }
@@ -2998,9 +2998,9 @@ final class re {
         var3 = this.a((RgbSprite) null, vb.field_Hb, var3, (String) null, (byte) 80, this.e((byte) -44, 4));
         var3 = this.a((RgbSprite) null, di.field_c, var3, (String) null, (byte) 80, this.e((byte) -44, 5));
         var3 = this.a((RgbSprite) null, m.field_r, var3, (String) null, (byte) 80, this.e((byte) -44, 6));
-        var3 = this.a((RgbSprite) null, od.field_C, var3, (String) null, (byte) 80, this.e((byte) -44, 7));
+        var3 = this.a((RgbSprite) null, DropTargetWidgetContainer.field_C, var3, (String) null, (byte) 80, this.e((byte) -44, 7));
         var3 = this.a(al.field_O, 87, var3);
-        var3 = this.a((RgbSprite) null, od.field_B, var3, (String) null, (byte) 80, wk.field_b[1]);
+        var3 = this.a((RgbSprite) null, DropTargetWidgetContainer.field_B, var3, (String) null, (byte) 80, wk.field_b[1]);
         var3 = this.a((RgbSprite) null, mf.field_a, var3, (String) null, (byte) 80, wk.field_b[3]);
         var3 = this.a((RgbSprite) null, ha.field_x, var3, (String) null, (byte) 80, wk.field_b[11]);
         SoftwareRasterizer.setClip(0, 0, 640, var4);
@@ -3633,7 +3633,7 @@ final class re {
           this.field_d != 14 &&
           this.field_d != 15) {
           fb.a(32, 398, 11992, 32, 576);
-          jn.a(100, Math.min(LoginPanel.field_H, 30), 0, 0);
+          AlphaWidgetContainer.a(100, Math.min(LoginPanel.field_H, 30), 0, 0);
         }
     }
 
@@ -3691,7 +3691,7 @@ final class re {
           var11 = sg.d(24);
           var6_ref_String = var11;
           if (var6_ref_String != null) {
-            var5Lifetime2 = var5Lifetime2 + "<br>" + vg.a(new String[]{var11}, 95, ag.field_j);
+            var5Lifetime2 = var5Lifetime2 + "<br>" + vg.a(new String[]{var11}, 95, UiWidget.field_j);
           }
         }
         if (param1 == 9) {
@@ -3945,7 +3945,7 @@ final class re {
             var4 = id.field_b;
             if (VolumeRampingMidiPcmStream.field_U[0] == 5 ||
               5 == VolumeRampingMidiPcmStream.field_U[1]) {
-              var4 = od.field_E;
+              var4 = DropTargetWidgetContainer.field_E;
               if (0 >= VolumeRampingMidiPcmStream.field_ib[2]) {
                 var4 = g.field_O;
               }
@@ -4132,7 +4132,7 @@ final class re {
               var10 += 36;
             }
             if (var11 != null) {
-              var24 = vg.a(new String[]{var11}, 65, ag.field_j).toUpperCase();
+              var24 = vg.a(new String[]{var11}, 65, UiWidget.field_j).toUpperCase();
               if ((-4 + var6) < AccountRegistrationPanel.field_L.stringWidth(var24)) {
                 wh.field_d.drawParagraph(var24, var5 + 4, var10 - 35, var6 - 8, 100, var13, -1, 1, 0, 18);
                 if (var16 != 0) {
@@ -4596,7 +4596,7 @@ final class re {
             e.field_l = null;
           }
         }
-        ag.field_w = 30.0f;
+        UiWidget.field_w = 30.0f;
         vb.field_Jb = 0.8999999761581421f;
         qm.field_O = 0.5f;
         ea.field_d = 0.5f;
@@ -4618,8 +4618,8 @@ final class re {
           CrossfadingMidiPcmStream.field_v.b(PcmOutputWorker.moveFloatTowardTarget((byte) -54, ea.field_d, var5Lifetime2, 0.009999999776482582f));
         }
         var5Lifetime3 = CrossfadingMidiPcmStream.field_v.g();
-        if (var5Lifetime3 != ag.field_w) {
-          CrossfadingMidiPcmStream.field_v.e(PcmOutputWorker.moveFloatTowardTarget((byte) -40, ag.field_w, var5Lifetime3, 1.0f));
+        if (var5Lifetime3 != UiWidget.field_w) {
+          CrossfadingMidiPcmStream.field_v.e(PcmOutputWorker.moveFloatTowardTarget((byte) -40, UiWidget.field_w, var5Lifetime3, 1.0f));
         }
         var5Lifetime4 = CrossfadingMidiPcmStream.field_v.k();
         if (an.field_n != var5Lifetime4) {

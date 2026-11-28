@@ -126,7 +126,7 @@ final class DualLinkDeque implements Iterable {
                       var19.field_I = 0;
                     }
                     var19.field_F = 255;
-                    if (!od.a(var20, 1) ||
+                    if (!DropTargetWidgetContainer.a(var20, 1) ||
                       var19.field_h != 0) {
                       param2.field_i = 11;
                       param2.field_e = 1;
@@ -141,7 +141,7 @@ final class DualLinkDeque implements Iterable {
                         ti.a(246, (byte) -30, 9);
                       }
                     }
-                    nh.a(var19, -29966);
+                    LabeledWidgetContainer.a(var19, -29966);
                     if (1 == uj.field_l) {
                       var17Lifetime2 = (int)(24.0 * (-var11 + param5));
                       var18Lifetime1 = (int)(24.0 * (-var13 + param0));

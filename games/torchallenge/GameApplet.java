@@ -29,10 +29,10 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
           if (param0 >= -61) {
             field_o = -101;
           }
-          if (bg.field_P != null) {
-            bg.field_P.removeFocusListener((java.awt.event.FocusListener) (this));
-            bg.field_P.getParent().setBackground(java.awt.Color.black);
-            bg.field_P.getParent().remove((java.awt.Component) ((Object) bg.field_P));
+          if (LabeledWidgetContainer.field_P != null) {
+            LabeledWidgetContainer.field_P.removeFocusListener((java.awt.event.FocusListener) (this));
+            LabeledWidgetContainer.field_P.getParent().setBackground(java.awt.Color.black);
+            LabeledWidgetContainer.field_P.getParent().remove((java.awt.Component) ((Object) LabeledWidgetContainer.field_P));
           }
           boolean decompiledFrameRemainder0 = true;
           if (null == nk.field_d) {
@@ -58,21 +58,21 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
             var2 = nk.field_d;
           }
           ((java.awt.Container) (var2)).setLayout((java.awt.LayoutManager) null);
-          bg.field_P = (java.awt.Canvas) ((Object) new DelegatingCanvas((java.awt.Component) (this)));
-          ((java.awt.Container) (var2)).add((java.awt.Component) ((Object) bg.field_P));
-          bg.field_P.setSize(sd.field_c, fl.field_v);
-          bg.field_P.setVisible(true);
+          LabeledWidgetContainer.field_P = (java.awt.Canvas) ((Object) new DelegatingCanvas((java.awt.Component) (this)));
+          ((java.awt.Container) (var2)).add((java.awt.Component) ((Object) LabeledWidgetContainer.field_P));
+          LabeledWidgetContainer.field_P.setSize(sd.field_c, fl.field_v);
+          LabeledWidgetContainer.field_P.setVisible(true);
           if (var2 == gi.field_b) {
             var3 = gi.field_b.getInsets();
-            bg.field_P.setLocation(ra.field_g + var3.left, DefaultTextWidgetRenderer.field_d + var3.top);
+            LabeledWidgetContainer.field_P.setLocation(ra.field_g + var3.left, DefaultTextWidgetRenderer.field_d + var3.top);
             if (var4 != 0) {
-              bg.field_P.setLocation(ra.field_g, DefaultTextWidgetRenderer.field_d);
+              LabeledWidgetContainer.field_P.setLocation(ra.field_g, DefaultTextWidgetRenderer.field_d);
             }
           } else {
-            bg.field_P.setLocation(ra.field_g, DefaultTextWidgetRenderer.field_d);
+            LabeledWidgetContainer.field_P.setLocation(ra.field_g, DefaultTextWidgetRenderer.field_d);
           }
-          bg.field_P.addFocusListener((java.awt.event.FocusListener) (this));
-          bg.field_P.requestFocus();
+          LabeledWidgetContainer.field_P.addFocusListener((java.awt.event.FocusListener) (this));
+          LabeledWidgetContainer.field_P.requestFocus();
           c.field_a = true;
           m.field_d = true;
           je.field_f = true;
@@ -213,7 +213,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
                 }
                 AccountServiceResult.a((byte) 88);
                 this.e(-87);
-                SectorCacheStore.field_f = dk.a(fl.field_v, (java.awt.Component) ((Object) bg.field_P), -124, sd.field_c);
+                SectorCacheStore.field_f = dk.a(fl.field_v, (java.awt.Component) ((Object) LabeledWidgetContainer.field_P), -124, sd.field_c);
                 this.initializeGame(-117);
                 hl.field_b = ac.a(true);
                 do {
@@ -234,7 +234,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
                   do {
                     if (!(k.field_g > var3)) {
                       this.runFrame(-30261);
-                      GzipDecoder.postEventQueueWakeup(119, ArchiveRequest.field_u, bg.field_P);
+                      GzipDecoder.postEventQueueWakeup(119, ArchiveRequest.field_u, LabeledWidgetContainer.field_P);
                       break;
                     }
                     this.runTick(126);
@@ -288,17 +288,17 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
           if (fieldTemp$0 > 50) {
             je.field_f = true;
             TextLayout.field_c = TextLayout.field_c - 50;
-            bg.field_P.setSize(sd.field_c, fl.field_v);
-            bg.field_P.setVisible(true);
+            LabeledWidgetContainer.field_P.setSize(sd.field_c, fl.field_v);
+            LabeledWidgetContainer.field_P.setVisible(true);
             if (null != gi.field_b &&
               nk.field_d == null) {
               var6 = gi.field_b.getInsets();
-              bg.field_P.setLocation(var6.left + ra.field_g, DefaultTextWidgetRenderer.field_d + var6.top);
+              LabeledWidgetContainer.field_P.setLocation(var6.left + ra.field_g, DefaultTextWidgetRenderer.field_d + var6.top);
               if (TorChallenge.field_F) {
-                bg.field_P.setLocation(ra.field_g, DefaultTextWidgetRenderer.field_d);
+                LabeledWidgetContainer.field_P.setLocation(ra.field_g, DefaultTextWidgetRenderer.field_d);
               }
             } else {
-              bg.field_P.setLocation(ra.field_g, DefaultTextWidgetRenderer.field_d);
+              LabeledWidgetContainer.field_P.setLocation(ra.field_g, DefaultTextWidgetRenderer.field_d);
             }
           }
           this.drawFrame(param0 ^ -26805);
@@ -715,10 +715,10 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
             decompiledCaughtException = decompiledCaughtParameter0;
             exception = (Exception) (Object) decompiledCaughtException;
           }
-          if (null != bg.field_P) {
+          if (null != LabeledWidgetContainer.field_P) {
             try {
-              bg.field_P.removeFocusListener((java.awt.event.FocusListener) (this));
-              bg.field_P.getParent().remove((java.awt.Component) ((Object) bg.field_P));
+              LabeledWidgetContainer.field_P.removeFocusListener((java.awt.event.FocusListener) (this));
+              LabeledWidgetContainer.field_P.getParent().remove((java.awt.Component) ((Object) LabeledWidgetContainer.field_P));
             } catch (java.lang.Exception decompiledCaughtParameter1) {
               decompiledCaughtException = decompiledCaughtParameter1;
               exception = (Exception) (Object) decompiledCaughtException;

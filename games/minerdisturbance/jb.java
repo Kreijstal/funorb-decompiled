@@ -224,7 +224,7 @@ final class jb extends IntrusiveNode {
                   var25_ref = oa.a((byte) -127, en.field_a[var15], new String[]{"" + vi.field_q});
                 }
                 if (var15 == 12) {
-                  var25_ref = oa.a((byte) -81, en.field_a[var15], new String[]{"" + jc.field_H});
+                  var25_ref = oa.a((byte) -81, en.field_a[var15], new String[]{"" + SingleChildWidgetContainer.field_H});
                 }
                 if (var16 != 0 &&
                   var15 == 19) {
@@ -244,7 +244,7 @@ final class jb extends IntrusiveNode {
                 }
                 if (var16 != 0 &&
                   var15 == 27) {
-                  var25_ref = oa.a((byte) -75, en.field_a[var15], new String[]{"" + am.c((byte) -50), "35"});
+                  var25_ref = oa.a((byte) -75, en.field_a[var15], new String[]{"" + LabeledWidgetContainer.c((byte) -50), "35"});
                 }
                 if (var16 != 0 &&
                   var15 == 31) {
@@ -511,7 +511,7 @@ final class jb extends IntrusiveNode {
                   var25_ref = oa.a((byte) -127, en.field_a[var15], new String[]{"" + vi.field_q});
                 }
                 if (var15 == 12) {
-                  var25_ref = oa.a((byte) -81, en.field_a[var15], new String[]{"" + jc.field_H});
+                  var25_ref = oa.a((byte) -81, en.field_a[var15], new String[]{"" + SingleChildWidgetContainer.field_H});
                 }
                 if (var16 != 0 &&
                   var15 == 19) {
@@ -531,7 +531,7 @@ final class jb extends IntrusiveNode {
                 }
                 if (var16 != 0 &&
                   var15 == 27) {
-                  var25_ref = oa.a((byte) -75, en.field_a[var15], new String[]{"" + am.c((byte) -50), "35"});
+                  var25_ref = oa.a((byte) -75, en.field_a[var15], new String[]{"" + LabeledWidgetContainer.c((byte) -50), "35"});
                 }
                 if (var16 != 0 &&
                   var15 == 31) {

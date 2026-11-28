@@ -35,14 +35,14 @@ final class qp {
         var10 = Vertigo2.field_L ? 1 : 0;
         try {
           var7_int = g.a(param4, param5 - 25412);
-          if (null == sd.field_O) {
-            sd.field_O = new java.security.SecureRandom();
+          if (null == ModalDialogHost.field_O) {
+            ModalDialogHost.field_O = new java.security.SecureRandom();
           }
           var13 = new int[4];
           var12 = var13;
           var8 = var12;
           for (var9 = 0; var9 < 4; var9++) {
-            var8[var9] = sd.field_O.nextInt();
+            var8[var9] = ModalDialogHost.field_O.nextInt();
           }
           if (param5 != 63) {
             field_g = (int[]) null;

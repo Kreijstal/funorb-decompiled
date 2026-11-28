@@ -15,7 +15,7 @@ final class de extends IntrusiveNode {
         eh.field_e = false;
         MatchingFieldValidator.field_o = false;
         g.a((byte) 104, param0);
-        od.field_I = e.field_q;
+        DropTargetWidgetContainer.field_I = e.field_q;
         ki.field_f = e.field_q;
     }
 

@@ -21,7 +21,7 @@ final class tn extends IntrusiveNode {
           if (param0 < 1) {
             return false;
           }
-          if (mf.a(param3, param1, param2 ^ -16806) >= param0) {
+          if (UiWidget.a(param3, param1, param2 ^ -16806) >= param0) {
             return true;
           }
           return false;
@@ -29,7 +29,7 @@ final class tn extends IntrusiveNode {
         if (param0 < 1) {
           return false;
         }
-        if (mf.a(param3, param1, param2 ^ -16806) >= param0) {
+        if (UiWidget.a(param3, param1, param2 ^ -16806) >= param0) {
           return true;
         }
         return false;
@@ -48,7 +48,7 @@ final class tn extends IntrusiveNode {
           this.field_k = param0;
           this.field_o = param0.getTargetVolume();
           this.field_n = param1;
-          this.field_k.setVolume(this.field_o * lf.field_S / 80);
+          this.field_k.setVolume(this.field_o * AlphaWidgetContainer.field_S / 80);
         } catch (RuntimeException runtimeException) {
           throw SpriteGeometry.wrapClientException((Throwable) ((Object) runtimeException), "tn.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

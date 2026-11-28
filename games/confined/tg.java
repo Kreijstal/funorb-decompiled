@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class tg extends ga implements WidgetActivationListener {
+final class tg extends DequeWidgetContainer implements WidgetActivationListener {
     static int field_S;
     private InteractiveWidget field_P;
     static int[] field_T;
@@ -50,7 +50,7 @@ final class tg extends ga implements WidgetActivationListener {
         }
     }
 
-    final boolean a(fj param0, byte param1, int param2, char param3) {
+    final boolean handleKey(UiWidget param0, byte param1, int param2, char param3) {
         int var5_int = 0;
         RuntimeException var5 = null;
         boolean stackIn_7_0 = false;
@@ -60,18 +60,18 @@ final class tg extends ga implements WidgetActivationListener {
         String stackIn_16_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (super.a(param0, (byte) -115, param2, param3)) {
+          if (super.handleKey(param0, (byte) -115, param2, param3)) {
             return true;
           }
           if (param2 == 98) {
-            stackIn_7_0 = this.c(param0, 32);
+            stackIn_7_0 = this.focusPreviousChild(param0, 32);
             return stackIn_7_0;
           }
           var5_int = 39 / ((param1 - 47) / 43);
           if (param2 != 99) {
             return false;
           }
-          stackIn_10_0 = this.a(17731, param0);
+          stackIn_10_0 = this.focusNextChild(17731, param0);
           return stackIn_10_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -88,28 +88,28 @@ final class tg extends ga implements WidgetActivationListener {
     }
 
     public tg() {
-        super(0, 0, 476, 225, (fe) null);
-        this.field_O = new InteractiveWidget(ej.field_c, (uk) null);
-        this.field_P = new InteractiveWidget(qn.field_m, (uk) null);
-        this.field_Q = new InteractiveWidget(ug.field_cb, (uk) null);
+        super(0, 0, 476, 225, (WidgetRenderer) null);
+        this.field_O = new InteractiveWidget(ej.field_c, (WidgetEventListener) null);
+        this.field_P = new InteractiveWidget(qn.field_m, (WidgetEventListener) null);
+        this.field_Q = new InteractiveWidget(ug.field_cb, (WidgetEventListener) null);
         je var1 = new je();
-        this.field_O.field_n = (fe) ((Object) var1);
-        this.field_P.field_n = (fe) ((Object) var1);
-        this.field_Q.field_n = (fe) ((Object) var1);
+        this.field_O.field_n = (WidgetRenderer) ((Object) var1);
+        this.field_P.field_n = (WidgetRenderer) ((Object) var1);
+        this.field_Q.field_n = (WidgetRenderer) ((Object) var1);
         int var2 = 4;
         int var3 = 326;
         int var4 = -var2 + var3 >> 1;
-        this.field_P.a(-110, var4, -48 + this.field_z - var2, 30, -var3 + this.field_F >> 1);
-        this.field_Q.a(-128, var4, -48 + this.field_z - var2, 30, (-var3 + this.field_F >> 1) + (var4 + var2));
-        this.field_O.a(-111, var3, -78 + this.field_z - 2 * var2, 30, this.field_F - var3 >> 1);
-        this.field_P.field_t = (uk) (this);
-        this.field_O.field_t = (uk) (this);
+        this.field_P.setBounds(-110, var4, -48 + this.field_z - var2, 30, -var3 + this.field_F >> 1);
+        this.field_Q.setBounds(-128, var4, -48 + this.field_z - var2, 30, (-var3 + this.field_F >> 1) + (var4 + var2));
+        this.field_O.setBounds(-111, var3, -78 + this.field_z - 2 * var2, 30, this.field_F - var3 >> 1);
+        this.field_P.field_t = (WidgetEventListener) (this);
+        this.field_O.field_t = (WidgetEventListener) (this);
         this.field_O.field_C = eh.field_eb;
-        this.field_Q.field_t = (uk) (this);
+        this.field_Q.field_t = (WidgetEventListener) (this);
         this.field_Q.field_C = nl.field_a;
-        this.b(this.field_P, 10);
-        this.b(this.field_O, 10);
-        this.b(this.field_Q, 10);
+        this.addChild(this.field_P, 10);
+        this.addChild(this.field_O, 10);
+        this.addChild(this.field_Q, 10);
     }
 
     public static void resetStaticState(byte param0) {
@@ -131,7 +131,7 @@ final class tg extends ga implements WidgetActivationListener {
         Bzip2State.a((byte) -122);
     }
 
-    final void a(int param0, int param1, byte param2, int param3) {
+    final void drawWidget(int param0, int param1, byte param2, int param3) {
         int var5 = 0;
         int var6 = 0;
         int var5Lifetime1;
@@ -140,14 +140,14 @@ final class tg extends ga implements WidgetActivationListener {
           var5 = this.field_q + param3;
           var6 = this.field_m + param0;
           gm.field_cb.drawParagraph(gb.field_c, 20 + var5, var6 + 20, -40 + this.field_F, -50 + this.field_z, 16777215, -1, 1, 0, gm.field_cb.field_C);
-          super.a(param0, param1, (byte) 86, param3);
+          super.drawWidget(param0, param1, (byte) 86, param3);
           return;
         }
         field_R = (double[]) null;
         var5Lifetime1 = this.field_q + param3;
         var6Lifetime1 = this.field_m + param0;
         gm.field_cb.drawParagraph(gb.field_c, 20 + var5Lifetime1, var6Lifetime1 + 20, -40 + this.field_F, -50 + this.field_z, 16777215, -1, 1, 0, gm.field_cb.field_C);
-        super.a(param0, param1, (byte) 86, param3);
+        super.drawWidget(param0, param1, (byte) 86, param3);
     }
 
     static {

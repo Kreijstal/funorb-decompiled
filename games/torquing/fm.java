@@ -8,7 +8,7 @@ final class fm extends WidgetContainer implements WidgetActivationListener {
     private InteractiveWidget field_B;
     static ResourceArchive field_F;
 
-    final boolean a(int param0, UiWidget param1, char param2, int param3) {
+    final boolean handleKey(int param0, UiWidget param1, char param2, int param3) {
         int var5_int = 0;
         RuntimeException var5 = null;
         boolean stackIn_6_0 = false;
@@ -19,17 +19,17 @@ final class fm extends WidgetContainer implements WidgetActivationListener {
         RuntimeException decompiledCaughtException = null;
         try {
           var5_int = 61 / ((param3 + 33) / 57);
-          if (super.a(param0, param1, param2, -94)) {
+          if (super.handleKey(param0, param1, param2, -94)) {
             return true;
           }
           if (param0 == 98) {
-            stackIn_6_0 = this.a((byte) -91, param1);
+            stackIn_6_0 = this.focusPreviousChild((byte) -91, param1);
             return stackIn_6_0;
           }
           if (99 != param0) {
             return false;
           }
-          stackIn_9_0 = this.b(param1, -9928);
+          stackIn_9_0 = this.focusNextChild(param1, -9928);
           return stackIn_9_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -45,14 +45,14 @@ final class fm extends WidgetContainer implements WidgetActivationListener {
         }
     }
 
-    final void a(int param0, byte param1, int param2, int param3) {
+    final void drawWidget(int param0, byte param1, int param2, int param3) {
         int var5 = param3 + this.x;
         int var6 = param2 + this.y;
         if (param1 > -7) {
           field_E = 119;
         }
         TranslucentSpriteLayer.field_e.drawParagraph(jl.field_U, 20 + var5, var6 + 20, -40 + this.width, -50 + this.height, 16777215, -1, 1, 0, TranslucentSpriteLayer.field_e.field_x);
-        super.a(param0, (byte) -112, param2, param3);
+        super.drawWidget(param0, (byte) -112, param2, param3);
     }
 
     final static int a(int param0, char param1, CharSequence param2) {
@@ -181,9 +181,9 @@ final class fm extends WidgetContainer implements WidgetActivationListener {
 
     public fm() {
         super(0, 0, 476, 225, (WidgetRenderer) null);
-        this.field_C = new InteractiveWidget(qh.field_e, (ca) null);
-        this.field_D = new InteractiveWidget(RichTextLayout.field_k, (ca) null);
-        this.field_B = new InteractiveWidget(FrameTimer.field_c, (ca) null);
+        this.field_C = new InteractiveWidget(qh.field_e, (WidgetEventListener) null);
+        this.field_D = new InteractiveWidget(RichTextLayout.field_k, (WidgetEventListener) null);
+        this.field_B = new InteractiveWidget(FrameTimer.field_c, (WidgetEventListener) null);
         rf var1 = new rf();
         this.field_C.renderer = (WidgetRenderer) ((Object) var1);
         this.field_D.renderer = (WidgetRenderer) ((Object) var1);
@@ -191,17 +191,17 @@ final class fm extends WidgetContainer implements WidgetActivationListener {
         int var2 = 4;
         int var3 = 326;
         int var4 = var3 - var2 >> 1;
-        this.field_D.a((byte) -52, this.width - var3 >> 1, -var2 + (-48 + this.height), 30, var4);
-        this.field_B.a((byte) 126, (this.width - var3 >> 1) + var4 + var2, -var2 + (-48 + this.height), 30, var4);
-        this.field_C.a((byte) 124, -var3 + this.width >> 1, -78 + this.height - var2 * 2, 30, var3);
-        this.field_D.listener = (ca) (this);
-        this.field_C.listener = (ca) (this);
-        this.field_B.listener = (ca) (this);
+        this.field_D.setBounds((byte) -52, this.width - var3 >> 1, -var2 + (-48 + this.height), 30, var4);
+        this.field_B.setBounds((byte) 126, (this.width - var3 >> 1) + var4 + var2, -var2 + (-48 + this.height), 30, var4);
+        this.field_C.setBounds((byte) 124, -var3 + this.width >> 1, -78 + this.height - var2 * 2, 30, var3);
+        this.field_D.listener = (WidgetEventListener) (this);
+        this.field_C.listener = (WidgetEventListener) (this);
+        this.field_B.listener = (WidgetEventListener) (this);
         this.field_C.field_n = MatchingFieldValidator.field_q;
         this.field_B.field_n = ll.field_m;
-        this.a(this.field_D, -6938);
-        this.a(this.field_C, -6938);
-        this.a(this.field_B, -6938);
+        this.addChild(this.field_D, -6938);
+        this.addChild(this.field_C, -6938);
+        this.addChild(this.field_B, -6938);
     }
 
     public static void h(int param0) {

@@ -49,7 +49,7 @@ class RichTextWidget extends InteractiveWidget {
         this.field_K = new IntrusiveDeque();
         var2 = 0;
         var3 = (TextWidgetRenderer) ((Object) this.field_i);
-        var4 = var3.getTextLayout((w) (this), (byte) -111);
+        var4 = var3.getTextLayout((UiWidget) (this), (byte) -111);
         while (true) {
           var5 = this.field_u.indexOf("<hotspot=", var2);
           if (var5 == -1) {
@@ -94,11 +94,11 @@ class RichTextWidget extends InteractiveWidget {
         }
     }
 
-    void a(byte param0, w param1, int param2, int param3) {
+    void updatePointer(byte param0, UiWidget param1, int param2, int param3) {
         int var5_int = 0;
         int var6 = 0;
         try {
-          super.a(param0, param1, param2, param3);
+          super.updatePointer(param0, param1, param2, param3);
           this.field_I = null;
           if (this.field_m) {
             var5_int = -this.field_t - param3 + bk.field_b;
@@ -226,7 +226,7 @@ class RichTextWidget extends InteractiveWidget {
         }
     }
 
-    boolean a(byte param0, w param1) {
+    boolean takeFocus(byte param0, UiWidget param1) {
         RuntimeException var3 = null;
         CharSequence var4 = null;
         RuntimeException stackIn_6_0 = null;
@@ -256,25 +256,25 @@ class RichTextWidget extends InteractiveWidget {
 
     final void b(int param0, int param1, int param2, int param3) {
         if (param2 == -2) {
-          this.a(((TextWidgetRenderer) ((Object) this.field_i)).getPreferredHeight(-13293, (w) (this)), param3, true, param1, param0);
+          this.setBounds(((TextWidgetRenderer) ((Object) this.field_i)).getPreferredHeight(-13293, (UiWidget) (this)), param3, true, param1, param0);
           return;
         }
         this.getTooltipText(35);
-        this.a(((TextWidgetRenderer) ((Object) this.field_i)).getPreferredHeight(-13293, (w) (this)), param3, true, param1, param0);
+        this.setBounds(((TextWidgetRenderer) ((Object) this.field_i)).getPreferredHeight(-13293, (UiWidget) (this)), param3, true, param1, param0);
     }
 
-    void a(byte param0, int param1, int param2, int param3) {
+    void drawWidget(byte param0, int param1, int param2, int param3) {
         int var7 = 0;
         int var8 = 0;
-        super.a(param0, param1, param2, param3);
+        super.drawWidget(param0, param1, param2, param3);
         if (param3 != 0) {
           return;
         }
         TextWidgetRenderer var9 = (TextWidgetRenderer) ((Object) this.field_i);
         TextHotspotBounds var6 = this.field_I;
         if (var6 != null) {
-          var7 = var9.getTextOriginX((w) (this), 102, param2);
-          var8 = var9.getTextOriginY((w) (this), 20340, param1);
+          var7 = var9.getTextOriginX((UiWidget) (this), 102, param2);
+          var8 = var9.getTextOriginY((UiWidget) (this), 20340, param1);
           do {
             TriangleMesh.a(var6.field_h + 2, -2 + (var8 + var6.field_k), var7 + var6.field_j - 2, param0 ^ -116, var6.field_l + 2);
             var6 = var6.field_p;
@@ -283,8 +283,8 @@ class RichTextWidget extends InteractiveWidget {
         }
     }
 
-    RichTextWidget(String param0, rd param1) {
-        super(param0, (vd) null);
+    RichTextWidget(String param0, WidgetRenderer param1) {
+        super(param0, (WidgetEventListener) null);
         this.field_I = null;
         try {
           this.field_i = param1;
@@ -293,8 +293,8 @@ class RichTextWidget extends InteractiveWidget {
         }
     }
 
-    final void a(int param0, int param1, boolean param2, int param3, int param4) {
-        super.a(param0, param1, true, param3, param4);
+    final void setBounds(int param0, int param1, boolean param2, int param3, int param4) {
+        super.setBounds(param0, param1, true, param3, param4);
         this.rebuildHotspotBounds(param2);
     }
 

@@ -72,7 +72,7 @@ final class MixedSupport009 extends DefaultTextWidgetRenderer {
         try {
           if (integerArgument1 <= 97) {
             UiComponent uiComponentLocal2 = (UiComponent) null;
-            this.performAction0017(true, -54, 87, (byte) -121, (UiComponent) null);
+            this.paintWidget(true, -54, 87, (byte) -121, (UiComponent) null);
           }
           integerLocal1 = integerArgument3;
           if (this.mixedSupport118ArrayState0001[integerLocal1] == null) {
@@ -167,7 +167,7 @@ final class MixedSupport009 extends DefaultTextWidgetRenderer {
         }
     }
 
-    public final void performAction0017(boolean booleanArgument1, int integerArgument2, int integerArgument3, byte byteArgument4, UiComponent uiComponentArgument5) {
+    public final void paintWidget(boolean booleanArgument1, int integerArgument2, int integerArgument3, byte byteArgument4, UiComponent uiComponentArgument5) {
         UiComponent stackUiComponentLocal1 = null;
         RuntimeException stackRuntimeExceptionLocal2 = null;
         StringBuilder stackStringBuilderLocal3 = null;
@@ -216,7 +216,7 @@ final class MixedSupport009 extends DefaultTextWidgetRenderer {
               }
             }
           }
-          if (uiComponentArgument5.computeBoolean0220(true)) {
+          if (uiComponentArgument5.isFocused(true)) {
             mixedSupport118Local13 = this.mixedSupport118ArrayState0001[5];
             if (mixedSupport118Local13 != null) {
               mixedSupport118Local13.performAction1547(this.mixedSupport118State0001, this, 126, integerArgument3, integerArgument2, uiComponentArgument5);
@@ -232,7 +232,7 @@ final class MixedSupport009 extends DefaultTextWidgetRenderer {
           ByteStorage.performAction1060((byte) -5);
           if (byteArgument4 > -60) {
             uiComponentLocal9 = (UiComponent) null;
-            this.performAction0017(true, -61, 21, (byte) -12, (UiComponent) null);
+            this.paintWidget(true, -61, 21, (byte) -12, (UiComponent) null);
           }
           return;
         } catch (java.lang.RuntimeException caughtParameterLocal15) {

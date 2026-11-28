@@ -53,7 +53,7 @@ class DualLinkNode extends IntrusiveNode {
     final static void a(byte param0) {
         ki.field_b = new AccountRegistrationPanel();
         int var1 = 18 % ((param0 + 84) / 36);
-        dn.field_b.a((fj) (ki.field_b), (byte) -72);
+        dn.field_b.a((UiWidget) (ki.field_b), (byte) -72);
     }
 
     final static bm a(int[] param0, bm param1, int param2) {

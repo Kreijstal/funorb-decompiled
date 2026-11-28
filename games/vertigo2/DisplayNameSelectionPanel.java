@@ -77,13 +77,13 @@ final class DisplayNameSelectionPanel extends WidgetContainer implements NameSug
         return true;
     }
 
-    final void a(byte param0, int param1, int param2, UiWidget param3) {
+    final void updatePointer(byte param0, int param1, int param2, UiWidget param3) {
         try {
           if (param0 < 6) {
             InteractiveWidget var6 = (InteractiveWidget) null;
             this.onWidgetActivated(-59, (InteractiveWidget) null, (byte) -25, -54, -33);
           }
-          super.a((byte) 122, param1, param2, param3);
+          super.updatePointer((byte) 122, param1, param2, param3);
           this.field_L.field_F = this.canSubmitDisplayName(-94);
         } catch (RuntimeException runtimeException) {
           throw wn.wrapClientException((Throwable) ((Object) runtimeException), "ne.E(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
@@ -93,7 +93,7 @@ final class DisplayNameSelectionPanel extends WidgetContainer implements NameSug
     private final int a(int param0, int param1, String param2, int param3, int param4, String param5, UiWidget param6) {
         RuntimeException var8 = null;
         qe var9 = null;
-        mg var10 = null;
+        LabeledWidgetContainer var10 = null;
         int stackIn_1_0 = 0;
         RuntimeException stackIn_4_0 = null;
         StringBuilder stackIn_4_1 = null;
@@ -104,11 +104,11 @@ final class DisplayNameSelectionPanel extends WidgetContainer implements NameSug
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var10 = new mg(20, param0, 120 + param1, 25, param6, false, 120, 3, qc.field_x, 16777215, param2);
-          this.c((byte) -78, var10);
+          var10 = new LabeledWidgetContainer(20, param0, 120 + param1, 25, param6, false, 120, 3, qc.field_x, 16777215, param2);
+          this.addChild((byte) -78, var10);
           var9 = new qe(((FieldValidatorProvider) ((Object) param6)).getFieldValidator((byte) -5), param5, 126, param0 + var10.height, param1 - param3, param4);
-          var9.field_v = (uf) (this);
-          this.c((byte) 104, var9);
+          var9.field_v = (WidgetEventListener) (this);
+          this.addChild((byte) 104, var9);
           stackIn_1_0 = var10.height + var9.height;
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -146,7 +146,7 @@ final class DisplayNameSelectionPanel extends WidgetContainer implements NameSug
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 == this.field_M) {
-            sd.f((byte) -1);
+            ModalDialogHost.f((byte) -1);
           } else {
             if (param1 == this.field_L) {
               this.submitDisplayName(-95);
@@ -229,11 +229,11 @@ final class DisplayNameSelectionPanel extends WidgetContainer implements NameSug
 
     public DisplayNameSelectionPanel() {
         super(0, 0, 496, 0, (WidgetListener) null);
-        this.field_H = new ValidatedTextField("", (uf) null, 12);
+        this.field_H = new ValidatedTextField("", (WidgetEventListener) null, 12);
         DefaultTextWidgetRenderer var1 = new DefaultTextWidgetRenderer(bl.field_N, 0, 0, 0, 0, 16777215, -1, 3, 0, qc.field_x.field_z, -1, 2147483647, true);
-        UiWidget var2 = new UiWidget(km.field_v, var1, (uf) null);
-        this.field_L = new InteractiveWidget(bm.field_y, (uf) null);
-        this.field_M = new InteractiveWidget(mp.field_c, (uf) null);
+        UiWidget var2 = new UiWidget(km.field_v, var1, (WidgetEventListener) null);
+        this.field_L = new InteractiveWidget(bm.field_y, (WidgetEventListener) null);
+        this.field_M = new InteractiveWidget(mp.field_c, (WidgetEventListener) null);
         this.field_H.field_q = BlastDebrisBatch.field_d;
         this.field_H.setFieldValidator(true, new AccountNameAvailabilityValidator(this.field_H));
         this.field_L.field_F = false;
@@ -245,21 +245,21 @@ final class DisplayNameSelectionPanel extends WidgetContainer implements NameSug
         int var5 = 200;
         var2.setBounds(false, 20, var3, 50, 270);
         var3 += 50;
-        this.c((byte) -117, var2);
+        this.addChild((byte) -117, var2);
         var3 = var3 + (this.a(GameShell.field_q, LevelTile.field_m, this.field_H, 170, var3, false) + 5);
         this.field_L.setBounds(false, -var5 + 496 >> 1, var3, 40, var5);
         this.field_M.setBounds(false, 3 + var4, var3 + 15, 40, 60);
-        this.field_M.field_v = (uf) (this);
-        this.field_L.field_v = (uf) (this);
-        this.c((byte) -31, this.field_L);
-        this.c((byte) -71, this.field_M);
+        this.field_M.field_v = (WidgetEventListener) (this);
+        this.field_L.field_v = (WidgetEventListener) (this);
+        this.addChild((byte) -31, this.field_L);
+        this.addChild((byte) -71, this.field_M);
         this.field_K = new NameSuggestionsPanel((NameSuggestionListener) (this));
         this.field_K.setBounds(false, this.field_H.x + (this.field_H.width + 60), 20, 150, -60 + this.width - this.field_H.x - this.field_H.width);
-        this.c((byte) 125, this.field_K);
+        this.addChild((byte) 125, this.field_K);
         this.setBounds(false, 0, 0, var3 + 55 + var4, 496);
     }
 
-    final boolean a(char param0, int param1, int param2, UiWidget param3) {
+    final boolean handleKey(char param0, int param1, int param2, UiWidget param3) {
         int discarded$1 = 0;
         RuntimeException var5 = null;
         UiWidget var6 = null;
@@ -274,17 +274,17 @@ final class DisplayNameSelectionPanel extends WidgetContainer implements NameSug
             var6 = (UiWidget) null;
             discarded$1 = this.a((String) null, (String) null, (UiWidget) null, -104, -105, false);
           }
-          if (super.a(param0, param1 + 0, param2, param3)) {
+          if (super.handleKey(param0, param1 + 0, param2, param3)) {
             return true;
           }
           if (param2 == 98) {
-            stackIn_8_0 = this.a(32345, param3);
+            stackIn_8_0 = this.focusPreviousChild(32345, param3);
             return stackIn_8_0;
           }
           if (param2 != 99) {
             return false;
           }
-          stackIn_11_0 = this.b((byte) -98, param3);
+          stackIn_11_0 = this.focusNextChild((byte) -98, param3);
           return stackIn_11_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

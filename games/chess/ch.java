@@ -31,20 +31,20 @@ final class ch extends k {
         field_eb = null;
     }
 
-    ch(fm param0, String param1) {
+    ch(ModalDialogHost param0, String param1) {
         super(param0, 300, 120);
         int var3_int = 0;
         try {
           this.field_fb = param1;
           if (this.field_fb != null) {
             var3_int = tk.field_a.textHeight(this.field_fb, 260, tk.field_a.field_C);
-            this.a(300, (byte) 78, var3_int + 150);
+            this.setCenteredSize(300, (byte) 78, var3_int + 150);
           }
           this.field_hb = new rm(13, 50, 274, 30, 15, 2113632, 4210752);
           this.field_bb = false;
           this.field_cb = false;
           this.field_hb.field_W = true;
-          this.b(this.field_hb, 95);
+          this.addChild(this.field_hb, 95);
         } catch (RuntimeException runtimeException) {
           throw SpriteGeometry.wrapClientException((Throwable) ((Object) runtimeException), "ch.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

@@ -70,21 +70,21 @@ final class af extends IntrusiveNode {
     final static void a(boolean param0, byte param1) {
         if (param1 >= -41) {
           af.a(true, (byte) 62);
-          IsaacRandom.field_d.a(0, 0, 0);
+          IsaacRandom.field_d.drawAllLayers(0, 0, 0);
           return;
         }
-        IsaacRandom.field_d.a(0, 0, 0);
+        IsaacRandom.field_d.drawAllLayers(0, 0, 0);
     }
 
     final static int a(int param0, int param1, int param2) {
-        if (ui.field_F == null) {
+        if (ModalDialog.field_F == null) {
           return -1;
         }
         if (param0 == 1) {
           if (param1 >= wc.field_y &&
-            param1 < ui.field_F.field_v + wc.field_y &&
+            param1 < ModalDialog.field_F.field_v + wc.field_y &&
             RasterBuffer.field_a <= param2 &&
-            RasterBuffer.field_a + ui.field_F.field_y > param2) {
+            RasterBuffer.field_a + ModalDialog.field_F.field_y > param2) {
             return 0;
           }
         } else {
@@ -93,47 +93,47 @@ final class af extends IntrusiveNode {
             if (param1 < cm.field_a) {
               return -1;
             }
-            if (param1 >= ui.field_F.field_v + cm.field_a) {
+            if (param1 >= ModalDialog.field_F.field_v + cm.field_a) {
               return -1;
             }
             if (param2 < field_l) {
               return -1;
             }
-            if (ui.field_F.field_y + field_l <= param2) {
+            if (ModalDialog.field_F.field_y + field_l <= param2) {
               return -1;
             }
             return 1;
           }
-          if (param1 >= ui.field_F.field_v + wc.field_y) {
+          if (param1 >= ModalDialog.field_F.field_v + wc.field_y) {
             if (param1 < cm.field_a) {
               return -1;
             }
-            if (param1 >= ui.field_F.field_v + cm.field_a) {
+            if (param1 >= ModalDialog.field_F.field_v + cm.field_a) {
               return -1;
             }
             if (param2 < field_l) {
               return -1;
             }
-            if (ui.field_F.field_y + field_l <= param2) {
+            if (ModalDialog.field_F.field_y + field_l <= param2) {
               return -1;
             }
             return 1;
           }
           if (RasterBuffer.field_a <= param2 &&
-            RasterBuffer.field_a + ui.field_F.field_y > param2) {
+            RasterBuffer.field_a + ModalDialog.field_F.field_y > param2) {
             return 0;
           }
         }
         if (param1 < cm.field_a) {
           return -1;
         }
-        if (param1 >= ui.field_F.field_v + cm.field_a) {
+        if (param1 >= ModalDialog.field_F.field_v + cm.field_a) {
           return -1;
         }
         if (param2 < field_l) {
           return -1;
         }
-        if (ui.field_F.field_y + field_l > param2) {
+        if (ModalDialog.field_F.field_y + field_l > param2) {
           return 1;
         }
         return -1;

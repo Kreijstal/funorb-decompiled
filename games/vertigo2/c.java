@@ -80,7 +80,7 @@ class c extends v {
             if (var2_int < 0) {
               rm.b((byte) 94);
             } else {
-              if (qg.b(false) > 30000L) {
+              if (DraggableWidgetContainer.b(false) > 30000L) {
                 rm.b((byte) 94);
               }
             }
@@ -328,7 +328,7 @@ class c extends v {
             var9 = 0;
             var10 = 0;
             while (var8 > var9) {
-              var11 = ac.field_I[var9];
+              var11 = DropTargetWidgetContainer.field_I[var9];
               var6[0][var10] = Vertigo2.field_I[var11];
               var7[0][var10 * 4] = on.field_e[var11];
               var7[0][4 * var10 + 1] = IntrusiveNode.field_g[var11];
@@ -346,7 +346,7 @@ class c extends v {
             var14 = 0;
             var10Lifetime1 = var14;
             while (var9Lifetime1 < var8) {
-              var11Lifetime1 = ac.field_I[var5 + var9Lifetime1];
+              var11Lifetime1 = DropTargetWidgetContainer.field_I[var5 + var9Lifetime1];
               var6[1][var14] = Vertigo2.field_I[var11Lifetime1];
               var7[1][4 * var14] = on.field_e[var11Lifetime1];
               var7[1][1 + var14 * 4] = IntrusiveNode.field_g[var11Lifetime1];

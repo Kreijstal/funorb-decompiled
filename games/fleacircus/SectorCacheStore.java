@@ -393,17 +393,17 @@ final class SectorCacheStore {
             field_c = true;
           }
           if (AccountNameAvailabilityValidator.c((byte) -5)) {
-            GzipDecompressor.field_a.a(hm.field_d, param0 + 41, true, bk.field_b);
-            GzipDecompressor.field_a.d(true);
+            GzipDecompressor.field_a.processPointerInput(hm.field_d, param0 + 41, true, bk.field_b);
+            GzipDecompressor.field_a.advanceDialogs(true);
             while (SecondaryNodeDeque.b(-113)) {
-              GzipDecompressor.field_a.a(id.field_b, (byte) -105, ji.field_a);
+              GzipDecompressor.field_a.processKeyInput(id.field_b, (byte) -105, ji.field_a);
             }
             return;
           }
           if (null != ResourceArchive.field_p &&
             ResourceArchive.field_p.focusLost) {
             IntrusiveNode.a(false);
-            GzipDecompressor.field_a.b(new ic(GzipDecompressor.field_a, fb.field_g), (byte) -35);
+            GzipDecompressor.field_a.showDialog(new ic(GzipDecompressor.field_a, fb.field_g), (byte) -35);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

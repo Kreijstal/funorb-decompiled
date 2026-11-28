@@ -22,17 +22,17 @@ final class AccountRegistrationPanel extends ComponentContainer implements TextH
     static boolean booleanState0185;
 
     public AccountRegistrationPanel() {
-        super(0, 0, 496, 0, (CallbackContract004) null);
-        this.uiComponentPart021State0002 = new ValidatedTextField("", (CallbackContract006) null, 12);
-        this.uiComponentPart021State0007 = new ValidatedTextField("", (CallbackContract006) null, 100);
-        this.uiComponentPart021State0004 = new ValidatedTextField("", (CallbackContract006) null, 100);
-        this.uiComponentPart021State0005 = new ValidatedTextField("", (CallbackContract006) null, 20);
-        this.uiComponentPart021State0006 = new ValidatedTextField("", (CallbackContract006) null, 20);
-        this.uiComponentPart021State0003 = new ValidatedTextField("", (CallbackContract006) null, 3);
+        super(0, 0, 496, 0, (WidgetRenderer) null);
+        this.uiComponentPart021State0002 = new ValidatedTextField("", (WidgetEventListener) null, 12);
+        this.uiComponentPart021State0007 = new ValidatedTextField("", (WidgetEventListener) null, 100);
+        this.uiComponentPart021State0004 = new ValidatedTextField("", (WidgetEventListener) null, 100);
+        this.uiComponentPart021State0005 = new ValidatedTextField("", (WidgetEventListener) null, 20);
+        this.uiComponentPart021State0006 = new ValidatedTextField("", (WidgetEventListener) null, 20);
+        this.uiComponentPart021State0003 = new ValidatedTextField("", (WidgetEventListener) null, 3);
         int integerLocal1 = 1;
-        this.uiComponentPart009State0001 = new UiComponentPart009("", (CallbackContract006) null, integerLocal1 != 0);
-        this.interactiveComponentState0012 = new InteractiveComponent(UiComponentPart029.stringState0497, (CallbackContract006) null);
-        this.interactiveComponentState0013 = new InteractiveComponent(GameDomainSupport002.stringState0146, (CallbackContract006) null);
+        this.uiComponentPart009State0001 = new UiComponentPart009("", (WidgetEventListener) null, integerLocal1 != 0);
+        this.interactiveComponentState0012 = new InteractiveComponent(DraggableWidgetContainer.stringState0497, (WidgetEventListener) null);
+        this.interactiveComponentState0013 = new InteractiveComponent(GameDomainSupport002.stringState0146, (WidgetEventListener) null);
         this.uiComponentPart021State0002.stringState0080 = RichTextLayout.stringState0136;
         this.uiComponentPart021State0007.stringState0080 = ResourceSupport001.stringState0011;
         this.uiComponentPart021State0004.stringState0080 = MixedSupport002.stringState0004;
@@ -47,17 +47,17 @@ final class AccountRegistrationPanel extends ComponentContainer implements TextH
         this.uiComponentPart021State0006.setFieldValidator(new MatchingFieldValidator(this.uiComponentPart021State0006, this.uiComponentPart021State0005), -5362);
         this.uiComponentPart021State0003.setFieldValidator(new AgeValidator(this.uiComponentPart021State0003), -5362);
         this.interactiveComponentState0012.booleanState0035 = false;
-        this.interactiveComponentState0012.callbackContract004State0006 = (CallbackContract004) ((Object) new MixedSupport041());
-        this.interactiveComponentState0013.callbackContract004State0006 = (CallbackContract004) ((Object) new MixedSupport094());
-        this.uiComponentPart021State0002.callbackContract004State0006 = (CallbackContract004) ((Object) new MixedSupport024(10000536));
+        this.interactiveComponentState0012.callbackContract004State0006 = (WidgetRenderer) ((Object) new MixedSupport041());
+        this.interactiveComponentState0013.callbackContract004State0006 = (WidgetRenderer) ((Object) new MixedSupport094());
+        this.uiComponentPart021State0002.callbackContract004State0006 = (WidgetRenderer) ((Object) new MixedSupport024(10000536));
         MixedSupport024 cachedMixedSupport024Local2 = new MixedSupport024(10000536);
-        this.uiComponentPart021State0004.callbackContract004State0006 = (CallbackContract004) ((Object) cachedMixedSupport024Local2);
-        this.uiComponentPart021State0007.callbackContract004State0006 = (CallbackContract004) ((Object) cachedMixedSupport024Local2);
-        this.uiComponentPart021State0003.callbackContract004State0006 = (CallbackContract004) ((Object) new MixedSupport024(10000536));
-        this.uiComponentPart009State0001.callbackContract004State0006 = (CallbackContract004) ((Object) new MixedSupport121());
+        this.uiComponentPart021State0004.callbackContract004State0006 = (WidgetRenderer) ((Object) cachedMixedSupport024Local2);
+        this.uiComponentPart021State0007.callbackContract004State0006 = (WidgetRenderer) ((Object) cachedMixedSupport024Local2);
+        this.uiComponentPart021State0003.callbackContract004State0006 = (WidgetRenderer) ((Object) new MixedSupport024(10000536));
+        this.uiComponentPart009State0001.callbackContract004State0006 = (WidgetRenderer) ((Object) new MixedSupport121());
         MixedSupport050 cachedMixedSupport050Local3 = new MixedSupport050(10000536);
-        this.uiComponentPart021State0006.callbackContract004State0006 = (CallbackContract004) ((Object) cachedMixedSupport050Local3);
-        this.uiComponentPart021State0005.callbackContract004State0006 = (CallbackContract004) ((Object) cachedMixedSupport050Local3);
+        this.uiComponentPart021State0006.callbackContract004State0006 = (WidgetRenderer) ((Object) cachedMixedSupport050Local3);
+        this.uiComponentPart021State0005.callbackContract004State0006 = (WidgetRenderer) ((Object) cachedMixedSupport050Local3);
         String stringLocal4 = NodeHashTableIterator.substituteIndexedPlaceholders(102, NetworkSupport007.stringState0347, new String[]{this.computeString1596((byte) 63), this.computeString1597((byte) 29)});
         int integerLocal5 = 20;
         integerLocal5 = integerLocal5 + this.computeInteger1588(9828, this.uiComponentPart021State0007, integerLocal5, MixedSupport031.stringState0153, 170);
@@ -66,30 +66,30 @@ final class AccountRegistrationPanel extends ComponentContainer implements TextH
         integerLocal5 = integerLocal5 + (this.computeInteger1589(125, this.uiComponentPart021State0006, integerLocal5, MixedSupport117.stringState0518, MixedSupport045.stringState0191, 170) + 5);
         integerLocal5 = integerLocal5 + (5 + this.computeInteger1589(114, this.uiComponentPart021State0002, integerLocal5, MixedSupport109.stringState0476, MixedSupport061.stringState0260, 170));
         integerLocal5 = integerLocal5 + this.computeInteger1591(RenderingSupport012.stringState0444, (byte) -107, this.uiComponentPart021State0003, 170, integerLocal5);
-        UiComponentPart006 uiComponentPart006Local6 = new UiComponentPart006(46, integerLocal5, -90 + this.integerState0107, 25, this.uiComponentPart009State0001, true, -120 + this.integerState0107, 5, MixedSupport011.bitmapFontState0006, 11579568, MixedSupport051.stringState0211);
-        this.performAction0895(uiComponentPart006Local6, (byte) -55);
+        LabeledWidgetContainer uiComponentPart006Local6 = new LabeledWidgetContainer(46, integerLocal5, -90 + this.integerState0107, 25, this.uiComponentPart009State0001, true, -120 + this.integerState0107, 5, MixedSupport011.bitmapFontState0006, 11579568, MixedSupport051.stringState0211);
+        this.addChild(uiComponentPart006Local6, (byte) -55);
         integerLocal5 = integerLocal5 + uiComponentPart006Local6.integerState0108;
         DefaultTextWidgetRenderer mixedSupport001Local7 = new DefaultTextWidgetRenderer(GameDomainSupport003.bitmapFontState0015, 0, 0, 0, 0, 16777215, -1, 0, 0, GameDomainSupport003.bitmapFontState0015.integerState0518, -1, 2147483647, true);
         this.uiComponentPart025State0002 = new RichTextWidget(stringLocal4, mixedSupport001Local7);
         this.uiComponentPart025State0002.stringState0080 = "";
         this.uiComponentPart025State0002.performAction1362(MixedSupport107.stringState0464, 0, 1);
         this.uiComponentPart025State0002.performAction1362(MixedSupport107.stringState0464, 1, 1);
-        this.uiComponentPart025State0002.callbackContract006State0001 = (CallbackContract006) (this);
+        this.uiComponentPart025State0002.callbackContract006State0001 = (WidgetEventListener) (this);
         this.uiComponentPart025State0002.performAction1364(-114, 46, integerLocal5, -90 + this.integerState0107);
         integerLocal5 = integerLocal5 + (15 + this.uiComponentPart025State0002.integerState0108);
-        this.performAction0895(this.uiComponentPart025State0002, (byte) -55);
+        this.addChild(this.uiComponentPart025State0002, (byte) -55);
         int integerLocal8 = 4;
         int integerLocal9 = 200;
-        this.interactiveComponentState0012.performAction0222(40, integerLocal9, -integerLocal9 + 496 >> 1, integerLocal5, -16555);
-        this.interactiveComponentState0013.performAction0222(40, 60, 3 + integerLocal8, integerLocal5 + 15, -16555);
-        this.interactiveComponentState0013.callbackContract006State0001 = (CallbackContract006) (this);
-        this.interactiveComponentState0012.callbackContract006State0001 = (CallbackContract006) (this);
-        this.performAction0895(this.interactiveComponentState0012, (byte) -55);
-        this.performAction0895(this.interactiveComponentState0013, (byte) -55);
+        this.interactiveComponentState0012.setBounds(40, integerLocal9, -integerLocal9 + 496 >> 1, integerLocal5, -16555);
+        this.interactiveComponentState0013.setBounds(40, 60, 3 + integerLocal8, integerLocal5 + 15, -16555);
+        this.interactiveComponentState0013.callbackContract006State0001 = (WidgetEventListener) (this);
+        this.interactiveComponentState0012.callbackContract006State0001 = (WidgetEventListener) (this);
+        this.addChild(this.interactiveComponentState0012, (byte) -55);
+        this.addChild(this.interactiveComponentState0013, (byte) -55);
         this.uiComponentPart007State0002 = new NameSuggestionsPanel((NameSuggestionListener) (this));
-        this.uiComponentPart007State0002.performAction0222(150, -60 - this.uiComponentPart021State0002.integerState0107 + (this.integerState0107 - this.uiComponentPart021State0002.integerState0110), this.uiComponentPart021State0002.integerState0110 + this.uiComponentPart021State0002.integerState0107 + 60, this.uiComponentPart021State0002.integerState0104 + 20, -16555);
-        this.performAction0895(this.uiComponentPart007State0002, (byte) -55);
-        this.performAction0222(55 + integerLocal5 + integerLocal8, 496, 0, 0, -16555);
+        this.uiComponentPart007State0002.setBounds(150, -60 - this.uiComponentPart021State0002.integerState0107 + (this.integerState0107 - this.uiComponentPart021State0002.integerState0110), this.uiComponentPart021State0002.integerState0110 + this.uiComponentPart021State0002.integerState0107 + 60, this.uiComponentPart021State0002.integerState0104 + 20, -16555);
+        this.addChild(this.uiComponentPart007State0002, (byte) -55);
+        this.setBounds(55 + integerLocal5 + integerLocal8, 496, 0, 0, -16555);
     }
 
     private final boolean submitRegistration(byte byteArgument1) {
@@ -179,13 +179,13 @@ final class AccountRegistrationPanel extends ComponentContainer implements TextH
         }
     }
 
-    final void performAction0218(UiComponent uiComponentArgument1, int integerArgument2, int integerArgument3, int integerArgument4) {
+    final void updatePointer(UiComponent uiComponentArgument1, int integerArgument2, int integerArgument3, int integerArgument4) {
         try {
-          super.performAction0218(uiComponentArgument1, 75, integerArgument3, integerArgument4);
+          super.updatePointer(uiComponentArgument1, 75, integerArgument3, integerArgument4);
           this.interactiveComponentState0012.booleanState0035 = this.canSubmitRegistration(-113);
           if (integerArgument2 <= 38) {
             UiComponent uiComponentLocal1 = (UiComponent) null;
-            this.computeBoolean0182(-32, 53, (UiComponent) null, '[');
+            this.handleKey(-32, 53, (UiComponent) null, '[');
           }
         } catch (RuntimeException runtimeException) {
           throw ClientException.computeDiagnosticSupport0020365((Throwable) ((Object) runtimeException), "tf.A(" + (uiComponentArgument1 != null ? "{...}" : "null") + ',' + integerArgument2 + ',' + integerArgument3 + ',' + integerArgument4 + ')');
@@ -257,7 +257,7 @@ final class AccountRegistrationPanel extends ComponentContainer implements TextH
     private final int computeInteger1590(UiComponent uiComponentArgument1, String stringArgument2, int integerArgument3, byte byteArgument4, int integerArgument5, int integerArgument6, String stringArgument7) {
         RuntimeException runtimeExceptionLocal1 = null;
         AccountFieldStatusIndicator uiComponentPart022Local2 = null;
-        UiComponentPart006 uiComponentPart006Local3 = null;
+        LabeledWidgetContainer uiComponentPart006Local3 = null;
         int stackIntegerLocal4 = 0;
         RuntimeException stackRuntimeExceptionLocal5 = null;
         StringBuilder stackStringBuilderLocal6 = null;
@@ -268,11 +268,11 @@ final class AccountRegistrationPanel extends ComponentContainer implements TextH
         String stackStringLocal11 = null;
         RuntimeException caughtExceptionLocal12 = null;
         try {
-          uiComponentPart006Local3 = new UiComponentPart006(20, integerArgument6, 120 + integerArgument5, 25, uiComponentArgument1, false, 120, 3, GameDomainSupport003.bitmapFontState0015, 16777215, stringArgument2);
-          this.performAction0895(uiComponentPart006Local3, (byte) -55);
+          uiComponentPart006Local3 = new LabeledWidgetContainer(20, integerArgument6, 120 + integerArgument5, 25, uiComponentArgument1, false, 120, 3, GameDomainSupport003.bitmapFontState0015, 16777215, stringArgument2);
+          this.addChild(uiComponentPart006Local3, (byte) -55);
           uiComponentPart022Local2 = new AccountFieldStatusIndicator(((FieldValidatorProvider) ((Object) uiComponentArgument1)).getFieldValidator(-122), stringArgument7, 126, integerArgument6 + uiComponentPart006Local3.integerState0108, integerArgument5 + 50, integerArgument3);
-          uiComponentPart022Local2.callbackContract006State0001 = (CallbackContract006) (this);
-          this.performAction0895(uiComponentPart022Local2, (byte) -55);
+          uiComponentPart022Local2.callbackContract006State0001 = (WidgetEventListener) (this);
+          this.addChild(uiComponentPart022Local2, (byte) -55);
           if (byteArgument4 != -44) {
             booleanState0185 = false;
           }
@@ -382,7 +382,7 @@ final class AccountRegistrationPanel extends ComponentContainer implements TextH
         return false;
     }
 
-    final boolean computeBoolean0182(int integerArgument1, int integerArgument2, UiComponent uiComponentArgument3, char characterArgument4) {
+    final boolean handleKey(int integerArgument1, int integerArgument2, UiComponent uiComponentArgument3, char characterArgument4) {
         int integerLocal1 = 0;
         RuntimeException runtimeExceptionLocal2 = null;
         boolean stackBooleanLocal3 = false;
@@ -393,17 +393,17 @@ final class AccountRegistrationPanel extends ComponentContainer implements TextH
         RuntimeException caughtExceptionLocal8 = null;
         try {
           integerLocal1 = -45 % ((-22 - integerArgument1) / 49);
-          if (super.computeBoolean0182(-84, integerArgument2, uiComponentArgument3, characterArgument4)) {
+          if (super.handleKey(-84, integerArgument2, uiComponentArgument3, characterArgument4)) {
             return true;
           }
           if (integerArgument2 == 98) {
-            stackBooleanLocal3 = this.computeBoolean0893(uiComponentArgument3, (byte) -115);
+            stackBooleanLocal3 = this.focusPreviousChild(uiComponentArgument3, (byte) -115);
             return stackBooleanLocal3;
           }
           if (99 != integerArgument2) {
             return false;
           }
-          stackBooleanLocal4 = this.computeBoolean0892(32, uiComponentArgument3);
+          stackBooleanLocal4 = this.focusNextChild(32, uiComponentArgument3);
           return stackBooleanLocal4;
         } catch (java.lang.RuntimeException caughtParameterLocal9) {
           caughtExceptionLocal8 = caughtParameterLocal9;
@@ -492,21 +492,21 @@ final class AccountRegistrationPanel extends ComponentContainer implements TextH
         MixedSupport056 mixedSupport056Local8 = null;
         integerLocal6 = DekoBlokoClient.obfuscationControl ? 1 : 0;
         try {
-          if (UiComponentPart003.integerState0073 < UiComponentPart009.integerState0149) {
-            UiComponentPart003.integerState0073 = UiComponentPart003.integerState0073 + 1;
+          if (ModalDialog.integerState0073 < UiComponentPart009.integerState0149) {
+            ModalDialog.integerState0073 = ModalDialog.integerState0073 + 1;
           }
           if (MixedSupport076.framebufferState0001.integerState0191 != MixedSupport003.integerState0017) {
             GameSession.integerState0618 = GameSession.integerState0618 + (MixedSupport076.framebufferState0001.integerState0191 - MixedSupport003.integerState0017);
             MixedSupport003.integerState0017 = MixedSupport076.framebufferState0001.integerState0191;
           }
-          if (UiComponentPart003.integerState0073 <= 0) {
+          if (ModalDialog.integerState0073 <= 0) {
             return;
           }
           MixedSupport094.performAction1203((byte) -100);
           RichTextLayout.sceneWidgetState0021.performAction1772(false, booleanArgument2);
           if (MixedSupport009.uiComponentPart019State0001 != null) {
             if (MixedSupport144.booleanState0221) {
-              MixedSupport009.uiComponentPart019State0001.computeBoolean0217(RichTextLayout.sceneWidgetState0021.integerState0886, booleanArgument2, RichTextLayout.sceneWidgetState0021.integerState0892, 29166);
+              MixedSupport009.uiComponentPart019State0001.processPointerInput(RichTextLayout.sceneWidgetState0021.integerState0886, booleanArgument2, RichTextLayout.sceneWidgetState0021.integerState0892, 29166);
             } else {
               MixedSupport009.uiComponentPart019State0001 = null;
             }
@@ -518,7 +518,7 @@ final class AccountRegistrationPanel extends ComponentContainer implements TextH
                 RenderingSupport002.performAction0244(1, sceneWidgetLocal4, integerLocal1);
               }
               integerLocal5 = ReturnedShape.computeInteger1429(0, integerLocal1);
-              NodeHashTable.sceneWidgetArrayState0004[integerLocal1].rgbSpriteState0070 = UiComponentPart010.rgbSpriteArrayState0010[integerLocal5];
+              NodeHashTable.sceneWidgetArrayState0004[integerLocal1].rgbSpriteState0070 = AlphaWidgetContainer.rgbSpriteArrayState0010[integerLocal5];
               MixedSupport076.sceneWidgetArrayState0002[integerLocal1].stringState0598 = InputAdapter003.stringArrayState0044[integerLocal5];
             }
           }
@@ -544,7 +544,7 @@ final class AccountRegistrationPanel extends ComponentContainer implements TextH
     private final int computeInteger1591(String stringArgument1, byte byteArgument2, UiComponent uiComponentArgument3, int integerArgument4, int integerArgument5) {
         RuntimeException runtimeExceptionLocal1 = null;
         UiComponentPart011 uiComponentPart011Local2 = null;
-        UiComponentPart006 uiComponentPart006Local3 = null;
+        LabeledWidgetContainer uiComponentPart006Local3 = null;
         int stackIntegerLocal4 = 0;
         RuntimeException stackRuntimeExceptionLocal5 = null;
         StringBuilder stackStringBuilderLocal6 = null;
@@ -553,14 +553,14 @@ final class AccountRegistrationPanel extends ComponentContainer implements TextH
         String stackStringLocal9 = null;
         RuntimeException caughtExceptionLocal10 = null;
         try {
-          uiComponentPart006Local3 = new UiComponentPart006(20, integerArgument5, 120 + integerArgument4, 25, uiComponentArgument3, false, 120, 3, GameDomainSupport003.bitmapFontState0015, 16777215, stringArgument1);
-          this.performAction0895(uiComponentPart006Local3, (byte) -55);
+          uiComponentPart006Local3 = new LabeledWidgetContainer(20, integerArgument5, 120 + integerArgument4, 25, uiComponentArgument3, false, 120, 3, GameDomainSupport003.bitmapFontState0015, 16777215, stringArgument1);
+          this.addChild(uiComponentPart006Local3, (byte) -55);
           uiComponentPart011Local2 = new UiComponentPart011(((FieldValidatorProvider) ((Object) uiComponentArgument3)).getFieldValidator(-126));
-          this.performAction0895(uiComponentPart011Local2, (byte) -55);
+          this.addChild(uiComponentPart011Local2, (byte) -55);
           if (byteArgument2 != -107) {
             this.uiComponentPart007State0002 = (NameSuggestionsPanel) null;
           }
-          uiComponentPart011Local2.performAction0222(15, 15, uiComponentPart006Local3.integerState0107 + (uiComponentPart006Local3.integerState0110 + 3), uiComponentPart006Local3.integerState0104 + (-15 + uiComponentPart006Local3.integerState0108 >> 1), -16555);
+          uiComponentPart011Local2.setBounds(15, 15, uiComponentPart006Local3.integerState0107 + (uiComponentPart006Local3.integerState0110 + 3), uiComponentPart006Local3.integerState0104 + (-15 + uiComponentPart006Local3.integerState0108 >> 1), -16555);
           stackIntegerLocal4 = uiComponentPart006Local3.integerState0108;
           return stackIntegerLocal4;
         } catch (java.lang.RuntimeException caughtParameterLocal11) {
@@ -585,7 +585,7 @@ final class AccountRegistrationPanel extends ComponentContainer implements TextH
 
     private final int computeInteger1588(int integerArgument1, UiComponent uiComponentArgument2, int integerArgument3, String stringArgument4, int integerArgument5) {
         int discarded$1 = 0;
-        UiComponentPart006 uiComponentPart006Local2 = null;
+        LabeledWidgetContainer uiComponentPart006Local2 = null;
         RuntimeException runtimeExceptionLocal3 = null;
         String stringLocal4 = null;
         int stackIntegerLocal5 = 0;
@@ -596,8 +596,8 @@ final class AccountRegistrationPanel extends ComponentContainer implements TextH
         String stackStringLocal10 = null;
         RuntimeException caughtExceptionLocal11 = null;
         try {
-          uiComponentPart006Local2 = new UiComponentPart006(20, integerArgument3, integerArgument5 + 120, 25, uiComponentArgument2, false, 120, 3, GameDomainSupport003.bitmapFontState0015, 16777215, stringArgument4);
-          this.performAction0895(uiComponentPart006Local2, (byte) -55);
+          uiComponentPart006Local2 = new LabeledWidgetContainer(20, integerArgument3, integerArgument5 + 120, 25, uiComponentArgument2, false, 120, 3, GameDomainSupport003.bitmapFontState0015, 16777215, stringArgument4);
+          this.addChild(uiComponentPart006Local2, (byte) -55);
           if (integerArgument1 != 9828) {
             stringLocal4 = (String) null;
             discarded$1 = this.computeInteger1590((UiComponent) null, (String) null, -93, (byte) 120, -33, 113, (String) null);

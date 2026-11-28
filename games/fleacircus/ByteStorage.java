@@ -184,7 +184,7 @@ abstract class ByteStorage {
 
     final static void a(int param0, MidiPcmStream param1, int param2, int param3, int param4, PlatformTaskDispatcher param5, java.awt.Component param6, boolean param7) {
         AudioOutput.configureAudio(param4, param7, 10);
-        db.field_J = AudioOutput.createOutput(param5, param6, 0, param2);
+        ModalDialog.field_J = AudioOutput.createOutput(param5, param6, 0, param2);
         if (param3 < 2) {
           return;
         }
@@ -195,7 +195,7 @@ abstract class ByteStorage {
           tg.field_i.setRootStream(qg.field_f);
           DebouncedFieldValidator.field_h = param1;
           DebouncedFieldValidator.field_h.b(17, CrossfadingMidiPcmStream.field_D);
-          db.field_J.setRootStream(DebouncedFieldValidator.field_h);
+          ModalDialog.field_J.setRootStream(DebouncedFieldValidator.field_h);
         } catch (RuntimeException runtimeException) {
           throw pf.wrapClientException((Throwable) ((Object) runtimeException), "hd.G(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ',' + (param6 != null ? "{...}" : "null") + ',' + param7 + ')');
         }

@@ -28,7 +28,7 @@ final class AccountCreationPanel extends WidgetContainer implements TextHotspotL
         RuntimeException var6 = null;
         int var7 = 0;
         wu var8 = null;
-        ge var9 = null;
+        LabeledWidgetContainer var9 = null;
         int stackIn_1_0 = 0;
         RuntimeException stackIn_4_0 = null;
         StringBuilder stackIn_4_1 = null;
@@ -37,12 +37,12 @@ final class AccountCreationPanel extends WidgetContainer implements TextHotspotL
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var9 = new ge(20, param1, param2 + 120, 25, param4, false, 120, 3, jca.field_a, 16777215, param0);
+          var9 = new LabeledWidgetContainer(20, param1, param2 + 120, 25, param4, false, 120, 3, jca.field_a, 16777215, param0);
           var7 = -49 % ((55 - param3) / 43);
-          this.c(var9, 107);
+          this.addChild(var9, 107);
           var8 = new wu(((FieldValidatorProvider) ((Object) param4)).getFieldValidator(16728128));
-          this.c(var8, 117);
-          var8.a(var9.x + (var9.width + 3), 15, (byte) 59, 15, (var9.height - 15 >> 1) + var9.y);
+          this.addChild(var8, 117);
+          var8.setBounds(var9.x + (var9.width + 3), 15, (byte) 59, 15, (var9.height - 15 >> 1) + var9.y);
           stackIn_1_0 = var9.height;
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -68,7 +68,7 @@ final class AccountCreationPanel extends WidgetContainer implements TextHotspotL
     private final int a(UiWidget param0, String param1, int param2, int param3, int param4, byte param5, String param6) {
         RuntimeException var8 = null;
         nf var9 = null;
-        ge var10 = null;
+        LabeledWidgetContainer var10 = null;
         int stackIn_3_0 = 0;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -82,11 +82,11 @@ final class AccountCreationPanel extends WidgetContainer implements TextHotspotL
           if (param5 != -14) {
             this.field_F = (ValidatedTextField) null;
           }
-          var10 = new ge(20, param2, param4 + 120, 25, param0, false, 120, 3, jca.field_a, 16777215, param6);
-          this.c(var10, 120);
+          var10 = new LabeledWidgetContainer(20, param2, param4 + 120, 25, param0, false, 120, 3, jca.field_a, 16777215, param6);
+          this.addChild(var10, 120);
           var9 = new nf(((FieldValidatorProvider) ((Object) param0)).getFieldValidator(16728128), param1, 126, var10.height + param2, param4 + 50, param3);
           var9.listener = (WidgetListener) (this);
-          this.c(var9, -124);
+          this.addChild(var9, -124);
           stackIn_3_0 = var9.height + var10.height;
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -208,8 +208,8 @@ final class AccountCreationPanel extends WidgetContainer implements TextHotspotL
         var3 = var3 + (this.a(-20199, var3, this.field_F, ug.field_m, hm.field_a, 170) + 5);
         var3 = var3 + (this.a(-20199, var3, this.field_C, saa.field_u, DreamsAnimation.field_v, 170) + 5);
         var3 = var3 + this.a(ResourceArchive.field_h, var3, 170, (byte) -32, this.field_D);
-        ge var4 = new ge(46, var3, -90 + this.width, 25, this.field_H, true, this.width - 120, 5, oc.field_l, 11579568, ona.field_vb);
-        this.c(var4, 38);
+        LabeledWidgetContainer var4 = new LabeledWidgetContainer(46, var3, -90 + this.width, 25, this.field_H, true, this.width - 120, 5, oc.field_l, 11579568, ona.field_vb);
+        this.addChild(var4, 38);
         var3 = var3 + var4.height;
         DefaultWidgetRenderer var5 = new DefaultWidgetRenderer(jca.field_a, 0, 0, 0, 0, 16777215, -1, 0, 0, jca.field_a.field_u, -1, 2147483647, true);
         this.field_E = new LinkTextWidget(var2, var5);
@@ -219,19 +219,19 @@ final class AccountCreationPanel extends WidgetContainer implements TextHotspotL
         this.field_E.listener = (WidgetListener) (this);
         this.field_E.a(var3, -90 + this.width, 46, (byte) -50);
         var3 = var3 + (15 + this.field_E.height);
-        this.c(this.field_E, 102);
+        this.addChild(this.field_E, 102);
         int var6 = 4;
         int var7 = 200;
-        this.field_L.a(496 - var7 >> 1, 40, (byte) 59, var7, var3);
-        this.field_M.a(3 + var6, 40, (byte) 59, 60, 15 + var3);
+        this.field_L.setBounds(496 - var7 >> 1, 40, (byte) 59, var7, var3);
+        this.field_M.setBounds(3 + var6, 40, (byte) 59, 60, 15 + var3);
         this.field_M.listener = (WidgetListener) (this);
         this.field_L.listener = (WidgetListener) (this);
-        this.c(this.field_L, -126);
-        this.c(this.field_M, -120);
+        this.addChild(this.field_L, -126);
+        this.addChild(this.field_M, -120);
         this.field_J = new NameSuggestionsPanel((NameSuggestionListener) (this));
-        this.field_J.a(60 + (this.field_C.x + this.field_C.width), 150, (byte) 59, -60 + (-this.field_C.width - this.field_C.x) + this.width, 20 + this.field_C.y);
-        this.c(this.field_J, 39);
-        this.a(0, var6 + var3 + 55, (byte) 59, 496, 0);
+        this.field_J.setBounds(60 + (this.field_C.x + this.field_C.width), 150, (byte) 59, -60 + (-this.field_C.width - this.field_C.x) + this.width, 20 + this.field_C.y);
+        this.addChild(this.field_J, 39);
+        this.setBounds(0, var6 + var3 + 55, (byte) 59, 496, 0);
     }
 
     private final String l(int param0) {
@@ -359,13 +359,13 @@ final class AccountCreationPanel extends WidgetContainer implements TextHotspotL
             return true;
           }
           if (param1 == 98) {
-            stackIn_6_0 = this.a(-126, param3);
+            stackIn_6_0 = this.focusPreviousChild(-126, param3);
             return stackIn_6_0;
           }
           if (param1 != 99) {
             return false;
           }
-          stackIn_10_0 = this.b(param3, 1);
+          stackIn_10_0 = this.focusNextChild(param3, 1);
           return stackIn_10_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -382,7 +382,7 @@ final class AccountCreationPanel extends WidgetContainer implements TextHotspotL
     }
 
     private final int a(int param0, int param1, String param2, UiWidget param3, int param4) {
-        ge var6 = null;
+        LabeledWidgetContainer var6 = null;
         RuntimeException var6_ref = null;
         int stackIn_1_0 = 0;
         RuntimeException stackIn_4_0 = null;
@@ -392,8 +392,8 @@ final class AccountCreationPanel extends WidgetContainer implements TextHotspotL
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var6 = new ge(20, param0, 120 + param1, 25, param3, false, param4, 3, jca.field_a, 16777215, param2);
-          this.c(var6, 63);
+          var6 = new LabeledWidgetContainer(20, param0, 120 + param1, 25, param3, false, param4, 3, jca.field_a, 16777215, param2);
+          this.addChild(var6, 63);
           stackIn_1_0 = var6.height;
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

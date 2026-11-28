@@ -173,8 +173,8 @@ final class vc {
           so.field_B > 0) {
           fieldTemp$0 = so.field_B - 1;
           so.field_B = so.field_B - 1;
-          var2_ref_byte__ = ac.field_O[fieldTemp$0];
-          ac.field_O[so.field_B] = null;
+          var2_ref_byte__ = DropTargetWidgetContainer.field_O[fieldTemp$0];
+          DropTargetWidgetContainer.field_O[so.field_B] = null;
           return var2_ref_byte__;
         }
         if (param0 == 5000 &&

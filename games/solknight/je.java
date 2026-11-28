@@ -150,12 +150,12 @@ final class je {
           if (param0 > -59) {
             return;
           }
-          if (null == kf.field_G) {
+          if (null == ModalDialog.field_G) {
             return;
           }
-          for (var3_int = 0; kf.field_G.length > var3_int; var3_int++) {
-            if (null != kf.field_G[var3_int]) {
-              kf.field_G[var3_int].a((byte) 117, param2, param1);
+          for (var3_int = 0; ModalDialog.field_G.length > var3_int; var3_int++) {
+            if (null != ModalDialog.field_G[var3_int]) {
+              ModalDialog.field_G[var3_int].a((byte) 117, param2, param1);
             }
           }
           return;

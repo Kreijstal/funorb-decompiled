@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class rb extends gj implements WidgetActivationListener {
+final class rb extends DequeWidgetContainer implements WidgetActivationListener {
     private InteractiveWidget field_I;
     private InteractiveWidget field_J;
     static int field_H;
@@ -101,7 +101,7 @@ final class rb extends gj implements WidgetActivationListener {
               ud.field_b.position = 0;
               ud.field_b.writeByte(-11, 14);
               ud.field_b.writeByte(-11, cf.field_c.a(true).field_c);
-              dk.b((byte) 41, -1);
+              SingleChildWidgetContainer.b((byte) 41, -1);
               ResourceArchive.field_k = je.field_P;
             }
             if (ResourceArchive.field_k == je.field_P &&
@@ -158,7 +158,7 @@ final class rb extends gj implements WidgetActivationListener {
               var11 = AccountRequestState.field_a.readNullableString((byte) -115);
               var7 = AccountRequestState.field_a.readUnsignedByte(false);
               if ((var7 & 1) != 0) {
-                f.d((byte) -37);
+                ModalDialogHost.d((byte) -37);
               }
               if (!param2) {
                 stackIn_44_0 = ((var7 & 4) != 0);
@@ -184,7 +184,7 @@ final class rb extends gj implements WidgetActivationListener {
               nb.field_h = AccountRequestState.field_a.readUnsignedByte(false);
               ResourceArchive.field_k = fh.field_b;
               if (cf.field_c.a(true) == wa.field_g) {
-                ml.field_F.a(true, BoundedRandomAccessFile.getApplet((byte) -111));
+                LabeledWidgetContainer.field_F.a(true, BoundedRandomAccessFile.getApplet((byte) -111));
               } else {
                 if (cf.field_c.a(true) == AccountServiceResult.field_i) {
                   wd.field_b.a(true, BoundedRandomAccessFile.getApplet((byte) -116));
@@ -293,14 +293,14 @@ final class rb extends gj implements WidgetActivationListener {
         }
     }
 
-    final void b(int param0, int param1, boolean param2, int param3) {
+    final void drawWidget(int param0, int param1, boolean param2, int param3) {
         int var5 = this.field_y + param1;
         int var6 = this.field_z + param0;
         ug.field_e.drawParagraph(rd.field_b, var5 + 20, var6 + 20, this.field_u - 40, this.field_j - 50, 16777215, -1, 1, 0, ug.field_e.field_H);
-        super.b(param0, param1, param2, param3);
+        super.drawWidget(param0, param1, param2, param3);
     }
 
-    final boolean a(int param0, int param1, UiComponent param2, char param3) {
+    final boolean handleKey(int param0, int param1, UiComponent param2, char param3) {
         RuntimeException var5 = null;
         boolean stackIn_6_0 = false;
         boolean stackIn_9_0 = false;
@@ -309,17 +309,17 @@ final class rb extends gj implements WidgetActivationListener {
         String stackIn_15_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (super.a(param0, param1, param2, param3)) {
+          if (super.handleKey(param0, param1, param2, param3)) {
             return true;
           }
           if (param1 == 98) {
-            stackIn_6_0 = this.b(param2, -28533);
+            stackIn_6_0 = this.focusPreviousChild(param2, -28533);
             return stackIn_6_0;
           }
           if (param1 != 99) {
             return false;
           }
-          stackIn_9_0 = this.a(32, param2);
+          stackIn_9_0 = this.focusNextChild(32, param2);
           return stackIn_9_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -337,9 +337,9 @@ final class rb extends gj implements WidgetActivationListener {
 
     public rb() {
         super(0, 0, 476, 225, (ComponentLayout) null);
-        this.field_J = new InteractiveWidget(qk.field_h, (kd) null);
-        this.field_F = new InteractiveWidget(qj.field_J, (kd) null);
-        this.field_I = new InteractiveWidget(tc.field_g, (kd) null);
+        this.field_J = new InteractiveWidget(qk.field_h, (WidgetEventListener) null);
+        this.field_F = new InteractiveWidget(DropTargetWidgetContainer.field_J, (WidgetEventListener) null);
+        this.field_I = new InteractiveWidget(tc.field_g, (WidgetEventListener) null);
         ri var1 = new ri();
         this.field_J.field_p = (ComponentLayout) ((Object) var1);
         this.field_F.field_p = (ComponentLayout) ((Object) var1);
@@ -347,17 +347,17 @@ final class rb extends gj implements WidgetActivationListener {
         int var2 = 4;
         int var3 = 326;
         int var4 = -var2 + var3 >> 1;
-        this.field_F.a(-var3 + this.field_u >> 1, var4, -var2 + this.field_j - 48, 30, 80);
-        this.field_I.a(var2 + (var4 + (-var3 + this.field_u >> 1)), var4, -var2 + (-48 + this.field_j), 30, 80);
-        this.field_J.a(this.field_u - var3 >> 1, var3, this.field_j - (78 + var2 * 2), 30, 80);
-        this.field_F.field_s = (kd) (this);
-        this.field_J.field_s = (kd) (this);
+        this.field_F.setBounds(-var3 + this.field_u >> 1, var4, -var2 + this.field_j - 48, 30, 80);
+        this.field_I.setBounds(var2 + (var4 + (-var3 + this.field_u >> 1)), var4, -var2 + (-48 + this.field_j), 30, 80);
+        this.field_J.setBounds(this.field_u - var3 >> 1, var3, this.field_j - (78 + var2 * 2), 30, 80);
+        this.field_F.field_s = (WidgetEventListener) (this);
+        this.field_J.field_s = (WidgetEventListener) (this);
         this.field_J.field_m = se.field_f;
-        this.field_I.field_s = (kd) (this);
+        this.field_I.field_s = (WidgetEventListener) (this);
         this.field_I.field_m = AgeValidator.field_n;
-        this.a((UiComponent) (this.field_F), (byte) -39);
-        this.a((UiComponent) (this.field_J), (byte) -59);
-        this.a((UiComponent) (this.field_I), (byte) -53);
+        this.addChild((UiComponent) (this.field_F), (byte) -39);
+        this.addChild((UiComponent) (this.field_J), (byte) -59);
+        this.addChild((UiComponent) (this.field_I), (byte) -53);
     }
 
     final static void a(int param0, int param1, int param2, RgbSprite param3, int param4, int param5, byte param6, int param7, int param8) {

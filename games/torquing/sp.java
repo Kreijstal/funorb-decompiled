@@ -19,20 +19,20 @@ final class sp extends im {
         this.h((byte) -28);
     }
 
-    sp(ln param0, String param1) {
+    sp(ModalDialogHost param0, String param1) {
         super(param0, 300, 120);
         int var3_int = 0;
         try {
           this.field_N = param1;
           if (this.field_N != null) {
             var3_int = LoginPanel.field_E.textHeight(this.field_N, 260, LoginPanel.field_E.field_x);
-            this.a(300, (byte) -25, 150 + var3_int);
+            this.setCenteredSize(300, (byte) -25, 150 + var3_int);
           }
           this.field_T = new kf(13, 50, 274, 30, 15, 2113632, 4210752);
           this.field_T.field_M = true;
           this.field_O = false;
           this.field_P = false;
-          this.a(this.field_T, -6938);
+          this.addChild(this.field_T, -6938);
         } catch (RuntimeException runtimeException) {
           throw RichTextWidget.wrapThrowable((Throwable) ((Object) runtimeException), "sp.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

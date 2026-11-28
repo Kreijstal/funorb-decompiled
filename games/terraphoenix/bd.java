@@ -51,7 +51,7 @@ final class bd {
         RuntimeException var6_ref = null;
         int var7 = 0;
         try {
-          jl.a(this.field_b, param1.height, param0 + param1.y, param1.width, (byte) 18, param1.x + param2);
+          AlphaWidgetContainer.a(this.field_b, param1.height, param0 + param1.y, param1.width, (byte) 18, param1.x + param2);
           if (null != this.field_c) {
             var6_int = this.field_g + param1.x + param2;
             if (1 == param4.field_h) {
@@ -173,7 +173,7 @@ final class bd {
             if (IndexedSpriteState.field_b == null) {
               return;
             }
-            stackIn_13_0 = d.field_K;
+            stackIn_13_0 = ModalDialogHost.field_K;
             stackIn_13_1 = null;
             stackIn_13_2 = null;
             stackIn_13_3 = IndexedSpriteState.field_b.getCodeBase();

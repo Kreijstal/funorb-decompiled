@@ -429,9 +429,9 @@ final class wp extends tga {
                   DelegatingCanvas.field_b[var7][var9]) {
                   var10 = 1;
                 }
-                if (null != re.field_F &&
-                  null != re.field_F[var7]) {
-                  var16 = re.field_F[var7][var9];
+                if (null != DropTargetWidgetContainer.field_F &&
+                  null != DropTargetWidgetContainer.field_F[var7]) {
+                  var16 = DropTargetWidgetContainer.field_F[var7][var9];
                   if (var16 != 0 &&
                     !bha.field_l &&
                     ProxySocketConnector.field_f <= 0) {
@@ -575,7 +575,7 @@ final class wp extends tga {
                       }
                     }
                     if (var12 != 0) {
-                      var31_ref = lga.a(true, new String[]{Integer.toString(wk.field_a), Integer.toString(re.field_F[var7][var9])}, oca.field_o);
+                      var31_ref = lga.a(true, new String[]{Integer.toString(wk.field_a), Integer.toString(DropTargetWidgetContainer.field_F[var7][var9])}, oca.field_o);
                       var21 = var31_ref;
                       var21 = var31_ref;
                       if (var21 != null) {

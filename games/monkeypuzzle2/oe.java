@@ -63,10 +63,10 @@ final class oe {
         if (!this.field_n) {
           if (this.field_j <= ub.field_b) {
             if (this.field_j > 0) {
-              ue.field_D = 0;
+              AlphaWidgetContainer.field_D = 0;
             }
           } else {
-            ue.field_D = (-ub.field_b + this.field_j) / 2;
+            AlphaWidgetContainer.field_D = (-ub.field_b + this.field_j) / 2;
           }
           if (ub.field_b != this.field_p) {
             this.field_r.a(this.field_q, this.field_p, -116);
@@ -176,7 +176,7 @@ final class oe {
           this.field_r.a(var3, var2, -121);
         }
         if (this.field_j > 0) {
-          ue.field_D = (-ub.field_b + this.field_j) / 2;
+          AlphaWidgetContainer.field_D = (-ub.field_b + this.field_j) / 2;
         }
     }
 

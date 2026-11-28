@@ -9,7 +9,7 @@ class InteractiveComponent extends UiComponent {
     private boolean booleanState0036;
     private boolean booleanState0037;
 
-    boolean computeBoolean0221(boolean booleanArgument1, UiComponent uiComponentArgument2) {
+    boolean takeFocus(boolean booleanArgument1, UiComponent uiComponentArgument2) {
         RuntimeException runtimeExceptionLocal1 = null;
         RuntimeException stackRuntimeExceptionLocal2 = null;
         StringBuilder stackStringBuilderLocal3 = null;
@@ -19,15 +19,15 @@ class InteractiveComponent extends UiComponent {
           if (this.booleanState0035 &&
             this.booleanState0037) {
             if (booleanArgument1) {
-              this.performAction0225((byte) 59);
+              this.blur((byte) 59);
             }
-            uiComponentArgument2.performAction0225((byte) -95);
+            uiComponentArgument2.blur((byte) -95);
             this.booleanState0036 = true;
             if (this.callbackContract006State0001 != null) {
-              if (!(this.callbackContract006State0001 instanceof CallbackContract008)) {
+              if (!(this.callbackContract006State0001 instanceof WidgetFocusListener)) {
                 return true;
               }
-              ((CallbackContract008) (this.callbackContract006State0001)).performAction1009(-28841, this.booleanState0036, (UiComponent) (this));
+              ((WidgetFocusListener) (this.callbackContract006State0001)).onWidgetFocusChanged(-28841, this.booleanState0036, (UiComponent) (this));
             }
             return true;
           }
@@ -67,7 +67,7 @@ class InteractiveComponent extends UiComponent {
         }
     }
 
-    boolean computeBoolean0056(int integerArgument1, int integerArgument2, UiComponent uiComponentArgument3, int integerArgument4, int integerArgument5, int integerArgument6, byte byteArgument7) {
+    boolean pointerPressed(int integerArgument1, int integerArgument2, UiComponent uiComponentArgument3, int integerArgument4, int integerArgument5, int integerArgument6, byte byteArgument7) {
         RuntimeException runtimeExceptionLocal1 = null;
         RuntimeException stackRuntimeExceptionLocal2 = null;
         StringBuilder stackStringBuilderLocal3 = null;
@@ -78,12 +78,12 @@ class InteractiveComponent extends UiComponent {
             this.booleanState0036 = true;
           }
           if (this.booleanState0035 &&
-            this.computeBoolean0207(integerArgument2, (byte) -48, integerArgument5, integerArgument1, integerArgument6)) {
-            this.computeBoolean0221(false, uiComponentArgument3);
+            this.containsPointer(integerArgument2, (byte) -48, integerArgument5, integerArgument1, integerArgument6)) {
+            this.takeFocus(false, uiComponentArgument3);
             this.integerState0109 = integerArgument4;
             if (null != this.callbackContract006State0001 &&
-              this.callbackContract006State0001 instanceof CallbackContract016) {
-              ((CallbackContract016) (this.callbackContract006State0001)).performAction1509(integerArgument4, -4040, this, integerArgument6, integerArgument1, integerArgument5, integerArgument2);
+              this.callbackContract006State0001 instanceof WidgetPointerListener) {
+              ((WidgetPointerListener) (this.callbackContract006State0001)).onWidgetPointerPressed(integerArgument4, -4040, this, integerArgument6, integerArgument1, integerArgument5, integerArgument2);
             }
             return true;
           }
@@ -102,7 +102,7 @@ class InteractiveComponent extends UiComponent {
         }
     }
 
-    final void performAction0225(byte byteArgument1) {
+    final void blur(byte byteArgument1) {
         UiComponent uiComponentLocal1 = null;
         UiComponent uiComponentLocal2;
         UiComponent uiComponentLocal3;
@@ -112,7 +112,7 @@ class InteractiveComponent extends UiComponent {
             return;
           }
           uiComponentLocal1 = (UiComponent) null;
-          this.performAction0218((UiComponent) null, -106, -89, 48);
+          this.updatePointer((UiComponent) null, -106, -89, 48);
           return;
         }
         this.booleanState0036 = false;
@@ -121,23 +121,23 @@ class InteractiveComponent extends UiComponent {
             return;
           }
           uiComponentLocal2 = (UiComponent) null;
-          this.performAction0218((UiComponent) null, -106, -89, 48);
+          this.updatePointer((UiComponent) null, -106, -89, 48);
           return;
         }
-        if (this.callbackContract006State0001 instanceof CallbackContract008) {
-          ((CallbackContract008) (this.callbackContract006State0001)).performAction1009(-28841, this.booleanState0036, (UiComponent) (this));
+        if (this.callbackContract006State0001 instanceof WidgetFocusListener) {
+          ((WidgetFocusListener) (this.callbackContract006State0001)).onWidgetFocusChanged(-28841, this.booleanState0036, (UiComponent) (this));
           if (byteArgument1 == -95) {
             return;
           }
           uiComponentLocal3 = (UiComponent) null;
-          this.performAction0218((UiComponent) null, -106, -89, 48);
+          this.updatePointer((UiComponent) null, -106, -89, 48);
           return;
         }
         if (byteArgument1 == -95) {
           return;
         }
         uiComponentLocal4 = (UiComponent) null;
-        this.performAction0218((UiComponent) null, -106, -89, 48);
+        this.updatePointer((UiComponent) null, -106, -89, 48);
     }
 
     final static RgbSprite[] computeRgbSpriteArray0463(String stringArgument1, String stringArgument2, int integerArgument3, ResourceArchive resourceArchiveArgument4) {
@@ -191,7 +191,7 @@ class InteractiveComponent extends UiComponent {
         }
     }
 
-    final StringBuilder computeStringBuilder0219(Hashtable hashtableArgument1, int integerArgument2, StringBuilder stringBuilderArgument3, boolean booleanArgument4) {
+    final StringBuilder appendDebugTree(Hashtable hashtableArgument1, int integerArgument2, StringBuilder stringBuilderArgument3, boolean booleanArgument4) {
         StringBuilder discarded$2 = null;
         StringBuilder discarded$3 = null;
         RuntimeException runtimeExceptionLocal3 = null;
@@ -206,8 +206,8 @@ class InteractiveComponent extends UiComponent {
           if (!booleanArgument4) {
             this.booleanState0035 = true;
           }
-          if (this.computeBoolean0215(0, integerArgument2, hashtableArgument1, stringBuilderArgument3)) {
-            this.performAction0206((byte) 72, stringBuilderArgument3, hashtableArgument1, integerArgument2);
+          if (this.beginDebugTreeEntry(0, integerArgument2, hashtableArgument1, stringBuilderArgument3)) {
+            this.appendDebugProperties((byte) 72, stringBuilderArgument3, hashtableArgument1, integerArgument2);
             if (this.booleanState0034) {
               discarded$2 = stringBuilderArgument3.append(" active");
             }
@@ -244,30 +244,30 @@ class InteractiveComponent extends UiComponent {
         UiComponentPart023.booleanState0134 = false;
     }
 
-    void performAction0218(UiComponent uiComponentArgument1, int integerArgument2, int integerArgument3, int integerArgument4) {
+    void updatePointer(UiComponent uiComponentArgument1, int integerArgument2, int integerArgument3, int integerArgument4) {
         try {
           if (integerArgument2 < 38) {
             this.booleanState0034 = true;
           }
-          super.performAction0218(uiComponentArgument1, 94, integerArgument3, integerArgument4);
+          super.updatePointer(uiComponentArgument1, 94, integerArgument3, integerArgument4);
           if (this.integerState0109 != 0 &&
             DualNode.integerState0062 != this.integerState0109) {
-            if (this.computeBoolean0207(HashNode.integerState0069, (byte) -124, integerArgument3, MixedSupport101.integerState0590, integerArgument4) &&
+            if (this.containsPointer(HashNode.integerState0069, (byte) -124, integerArgument3, MixedSupport101.integerState0590, integerArgument4) &&
               DualNode.integerState0062 == 0) {
               this.activateFromInput(-integerArgument4 + HashNode.integerState0069, MixedSupport101.integerState0590 - integerArgument3, this.integerState0109, 520);
             }
-            this.performAction0213(MixedSupport101.integerState0590, 64, integerArgument4, uiComponentArgument1, integerArgument3, HashNode.integerState0069);
+            this.pointerReleased(MixedSupport101.integerState0590, 64, integerArgument4, uiComponentArgument1, integerArgument3, HashNode.integerState0069);
           }
         } catch (RuntimeException runtimeException) {
           throw ClientException.computeDiagnosticSupport0020365((Throwable) ((Object) runtimeException), "ek.A(" + (uiComponentArgument1 != null ? "{...}" : "null") + ',' + integerArgument2 + ',' + integerArgument3 + ',' + integerArgument4 + ')');
         }
     }
 
-    InteractiveComponent(String stringArgument1, CallbackContract006 callbackContract006Argument2) {
+    InteractiveComponent(String stringArgument1, WidgetEventListener callbackContract006Argument2) {
         this(stringArgument1, RenderingSupport001.networkSupport002State0001.callbackContract004State0001, callbackContract006Argument2);
     }
 
-    boolean computeBoolean0182(int integerArgument1, int integerArgument2, UiComponent uiComponentArgument3, char characterArgument4) {
+    boolean handleKey(int integerArgument1, int integerArgument2, UiComponent uiComponentArgument3, char characterArgument4) {
         int integerLocal1 = 0;
         RuntimeException runtimeExceptionLocal2 = null;
         RuntimeException stackRuntimeExceptionLocal3 = null;
@@ -276,7 +276,7 @@ class InteractiveComponent extends UiComponent {
         RuntimeException caughtExceptionLocal6 = null;
         try {
           integerLocal1 = -127 / ((integerArgument1 + 22) / 49);
-          if (this.computeBoolean0220(true) && (integerArgument2 == 84 ||
+          if (this.isFocused(true) && (integerArgument2 == 84 ||
             integerArgument2 == 83)) {
             this.activateFromInput(-1, -1, 1, 520);
             return true;
@@ -323,7 +323,7 @@ class InteractiveComponent extends UiComponent {
         return renderingSupport007Local2;
     }
 
-    final boolean computeBoolean0220(boolean booleanArgument1) {
+    final boolean isFocused(boolean booleanArgument1) {
         if (!booleanArgument1) {
           this.booleanState0035 = false;
           return this.booleanState0036;
@@ -331,7 +331,7 @@ class InteractiveComponent extends UiComponent {
         return this.booleanState0036;
     }
 
-    final void performAction0213(int integerArgument1, int integerArgument2, int integerArgument3, UiComponent uiComponentArgument4, int integerArgument5, int integerArgument6) {
+    final void pointerReleased(int integerArgument1, int integerArgument2, int integerArgument3, UiComponent uiComponentArgument4, int integerArgument5, int integerArgument6) {
         RuntimeException runtimeExceptionLocal1 = null;
         RuntimeException stackRuntimeExceptionLocal2 = null;
         StringBuilder stackStringBuilderLocal3 = null;
@@ -339,8 +339,8 @@ class InteractiveComponent extends UiComponent {
         RuntimeException caughtExceptionLocal5 = null;
         try {
           if (null != this.callbackContract006State0001 &&
-            this.callbackContract006State0001 instanceof CallbackContract016) {
-            ((CallbackContract016) (this.callbackContract006State0001)).performAction1508(integerArgument1, integerArgument3, integerArgument5, integerArgument6, this, integerArgument2 + 19001);
+            this.callbackContract006State0001 instanceof WidgetPointerListener) {
+            ((WidgetPointerListener) (this.callbackContract006State0001)).onWidgetPointerReleased(integerArgument1, integerArgument3, integerArgument5, integerArgument6, this, integerArgument2 + 19001);
           }
           this.integerState0109 = 0;
           if (integerArgument2 == 64) {
@@ -362,7 +362,7 @@ class InteractiveComponent extends UiComponent {
         }
     }
 
-    InteractiveComponent(String stringArgument1, CallbackContract004 callbackContract004Argument2, CallbackContract006 callbackContract006Argument3) {
+    InteractiveComponent(String stringArgument1, WidgetRenderer callbackContract004Argument2, WidgetEventListener callbackContract006Argument3) {
         super(stringArgument1, callbackContract004Argument2, callbackContract006Argument3);
         this.booleanState0036 = false;
         this.booleanState0035 = true;

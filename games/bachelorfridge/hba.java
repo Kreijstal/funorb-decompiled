@@ -87,7 +87,7 @@ final class hba extends AttackEvent {
           BattleState.field_I = hk.a("button_frame_pressed", param1, 74, "basic");
           hh.field_b = pi.a(param1, -8845, "basic", "move_icons");
           nia.field_l = pi.a(param1, -8845, "basic", "icon_frames");
-          hl.field_D = hh.field_b;
+          AlphaWidgetContainer.field_D = hh.field_b;
           fe.field_j = new Sprite(16, 16);
           fe.field_j.bindAsRenderTarget();
           hh.field_b[2].drawHalfSize(0, 0);
@@ -103,7 +103,7 @@ final class hba extends AttackEvent {
           ChangeCreatureStatOrHealthEffect.field_i = new IndexedSprite[3];
           dupTemp$0 = var10[6];
           HuffmanCodec.field_b = dupTemp$0;
-          ge.field_K = dupTemp$0;
+          LabeledWidgetContainer.field_K = dupTemp$0;
           nha.field_a = var10[4];
           HuffmanCodec.field_a = var10[15];
           ProxyAuthenticationRequiredException.field_a = var10[3];

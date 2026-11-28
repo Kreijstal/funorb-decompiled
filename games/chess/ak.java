@@ -268,7 +268,7 @@ final class ak extends IntrusiveNode {
 
     final static void c(byte param0) {
         FullscreenFocusCanvas.field_a = hm.a(-64);
-        jh.field_e = new fm();
+        jh.field_e = new ModalDialogHost();
         if (param0 >= -87) {
           return;
         }

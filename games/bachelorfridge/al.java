@@ -97,7 +97,7 @@ final class al {
         BananarangAnimation.field_P = (byte[][]) null;
         AirstrikeAnimation.field_D = null;
         hk.field_f = null;
-        lq.field_A = null;
+        ArrayWidgetContainer.field_A = null;
         fl.field_j = null;
     }
 

@@ -16,20 +16,20 @@ class UiWidget extends IntrusiveNode {
     int field_h;
     WidgetRenderer field_q;
     int field_s;
-    ma field_m;
+    WidgetEventListener field_m;
 
-    UiWidget(String param0, ma param1) {
+    UiWidget(String param0, WidgetEventListener param1) {
         this(param0, IterableNodeHashTable.field_e.field_q, param1);
     }
 
-    boolean b(int param0, int param1, UiWidget param2, int param3, int param4, int param5, int param6) {
+    boolean pointerPressed(int param0, int param1, UiWidget param2, int param3, int param4, int param5, int param6) {
         RuntimeException var8 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         String stackIn_9_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (this.b(param3, param6, -1, param0, param5)) {
+          if (this.containsPointer(param3, param6, -1, param0, param5)) {
             this.field_s = param1;
           }
           if (param4 == -30386) {
@@ -51,7 +51,7 @@ class UiWidget extends IntrusiveNode {
         }
     }
 
-    final void a(StringBuilder param0, int param1, int param2, Hashtable param3) {
+    final void appendDebugProperties(StringBuilder param0, int param1, int param2, Hashtable param3) {
         StringBuilder discarded$0 = null;
         StringBuilder discarded$1 = null;
         StringBuilder discarded$2 = null;
@@ -79,7 +79,7 @@ class UiWidget extends IntrusiveNode {
             discarded$2 = param0.append(" mouseover");
           }
           var5_int = -48 % ((param1 - 22) / 40);
-          if (this.b((byte) 121)) {
+          if (this.isFocused((byte) 121)) {
             discarded$3 = param0.append(" focused");
           }
           if (null != this.field_q) {
@@ -87,7 +87,7 @@ class UiWidget extends IntrusiveNode {
             if (!(this.field_q instanceof UiWidget)) {
               discarded$5 = param0.append(this.field_q);
             } else {
-              param0 = this.a(param2 + 1, -109, param0, param3);
+              param0 = this.appendDebugTree(param2 + 1, -109, param0, param3);
             }
           }
           if (this.field_m != null) {
@@ -96,7 +96,7 @@ class UiWidget extends IntrusiveNode {
               discarded$7 = param0.append(this.field_m);
               return;
             }
-            param0 = this.a(1 + param2, -115, param0, param3);
+            param0 = this.appendDebugTree(1 + param2, -115, param0, param3);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -125,7 +125,7 @@ class UiWidget extends IntrusiveNode {
         }
         PasswordValidator.field_n = true;
         n.a(true, param0);
-        gl.field_y = 0;
+        AlphaWidgetContainer.field_y = 0;
     }
 
     final static int d(int param0) {
@@ -135,21 +135,21 @@ class UiWidget extends IntrusiveNode {
         return BufferedSocket.field_l;
     }
 
-    final void c(byte param0) {
+    final void refreshLayout(byte param0) {
         if (param0 <= 14) {
-          this.g(100);
+          this.getMaximumRenderLayer(100);
         }
-        this.a(-96, this.field_n, this.field_p, this.field_l, this.field_h);
+        this.setBounds(-96, this.field_n, this.field_p, this.field_l, this.field_h);
     }
 
-    final boolean a(int param0, char param1, int param2) {
-        if (this.b((byte) 38) &&
-          this.a(param2, this, (byte) -27, param1)) {
+    final boolean processKeyInput(int param0, char param1, int param2) {
+        if (this.isFocused((byte) 38) &&
+          this.handleKey(param2, this, (byte) -27, param1)) {
           return true;
         }
         int var4 = param2;
         if (var4 == 80) {
-          return this.a(this, -106);
+          return this.takeFocus(this, -106);
         }
         if (param0 != -81) {
           this.field_p = 19;
@@ -158,13 +158,13 @@ class UiWidget extends IntrusiveNode {
         return false;
     }
 
-    void e(int param0) {
+    void blur(int param0) {
         if (param0 != -29113) {
-          this.a(84, 80, 23, -23, 76);
+          this.setBounds(84, 80, 23, -23, 76);
         }
     }
 
-    boolean a(int param0, UiWidget param1, byte param2, char param3) {
+    boolean handleKey(int param0, UiWidget param1, byte param2, char param3) {
         int var5_int = 0;
         RuntimeException var5 = null;
         RuntimeException stackIn_4_0 = null;
@@ -188,7 +188,7 @@ class UiWidget extends IntrusiveNode {
         }
     }
 
-    final boolean a(byte param0, Hashtable param1, StringBuilder param2, int param3) {
+    final boolean beginDebugTreeEntry(byte param0, Hashtable param1, StringBuilder param2, int param3) {
         StringBuilder discarded$1 = null;
         RuntimeException var5 = null;
         RuntimeException stackIn_9_0 = null;
@@ -199,7 +199,7 @@ class UiWidget extends IntrusiveNode {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 > -1) {
-            this.a(93, 124, 81, -75, -10);
+            this.setBounds(93, 124, 81, -75, -10);
           }
           if (!param1.containsKey(this)) {
             param1.put(this, this);
@@ -227,7 +227,7 @@ class UiWidget extends IntrusiveNode {
         }
     }
 
-    int g(int param0) {
+    int getMaximumRenderLayer(int param0) {
         if (param0 >= -41) {
           UiWidget.bitLength((byte) 106, -11);
           return 0;
@@ -235,7 +235,7 @@ class UiWidget extends IntrusiveNode {
         return 0;
     }
 
-    void a(int param0, int param1, int param2, int param3, int param4) {
+    void setBounds(int param0, int param1, int param2, int param3, int param4) {
         int var6 = 112 / ((param0 + 29) / 53);
         this.field_l = param3;
         this.field_h = param4;
@@ -243,7 +243,7 @@ class UiWidget extends IntrusiveNode {
         this.field_p = param2;
     }
 
-    boolean a(int param0, int param1, UiWidget param2, int param3, int param4, int param5, int param6) {
+    boolean handleWheel(int param0, int param1, UiWidget param2, int param3, int param4, int param5, int param6) {
         RuntimeException var8 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -269,7 +269,7 @@ class UiWidget extends IntrusiveNode {
         }
     }
 
-    void a(int param0, byte param1, UiWidget param2, int param3) {
+    void updatePointer(int param0, byte param1, UiWidget param2, int param3) {
         int var5_int = 0;
         int stackIn_5_0 = 0;
         boolean stackIn_9_1 = false;
@@ -279,7 +279,7 @@ class UiWidget extends IntrusiveNode {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var5 = null;
         try {
-          var5_int = this.b(param3, param0, -1, PacketBuffer.field_j, bk.field_a) ? 1 : 0;
+          var5_int = this.containsPointer(param3, param0, -1, PacketBuffer.field_j, bk.field_a) ? 1 : 0;
           if (param1 != -12) {
             this.field_s = 86;
           }
@@ -288,10 +288,10 @@ class UiWidget extends IntrusiveNode {
             stackIn_9_1 = (var5_int != 0);
             this.field_g = stackIn_9_1;
             if (null != this.field_m) {
-              if (!(this.field_m instanceof ja)) {
+              if (!(this.field_m instanceof WidgetHoverListener)) {
                 return;
               }
-              ((ja) (this.field_m)).a(var5_int != 0, 5257, this);
+              ((WidgetHoverListener) (this.field_m)).onWidgetHoverChanged(var5_int != 0, 5257, this);
             }
           }
           return;
@@ -316,11 +316,11 @@ class UiWidget extends IntrusiveNode {
         return !this.field_g ? null : this.field_j;
     }
 
-    void a(int param0, int param1, UiWidget param2, int param3, int param4, int param5) {
+    void pointerReleased(int param0, int param1, UiWidget param2, int param3, int param4, int param5) {
         try {
           this.field_s = 0;
           if (param3 != -1) {
-            this.g(-118);
+            this.getMaximumRenderLayer(-118);
           }
         } catch (RuntimeException runtimeException) {
           throw ch.wrapClientException((Throwable) ((Object) runtimeException), "qg.BA(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ',' + param5 + ')');
@@ -328,15 +328,15 @@ class UiWidget extends IntrusiveNode {
     }
 
     public final String toString() {
-        return this.a(0, -21, new StringBuilder(), new Hashtable()).toString();
+        return this.appendDebugTree(0, -21, new StringBuilder(), new Hashtable()).toString();
     }
 
-    boolean b(byte param0) {
+    boolean isFocused(byte param0) {
         int var2 = 95 / ((param0 + 57) / 46);
         return false;
     }
 
-    boolean a(UiWidget param0, int param1) {
+    boolean takeFocus(UiWidget param0, int param1) {
         RuntimeException var3 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
@@ -389,15 +389,15 @@ class UiWidget extends IntrusiveNode {
         }
     }
 
-    void a(int param0, int param1, int param2, byte param3) {
+    void drawWidget(int param0, int param1, int param2, byte param3) {
         int var5 = 112 / ((param3 - 77) / 34);
         if (param2 == 0 &&
           null != this.field_q) {
-          this.field_q.a(param0, param1, true, (byte) 110, this);
+          this.field_q.paintWidget(param0, param1, true, (byte) 110, this);
         }
     }
 
-    final boolean b(int param0, int param1, int param2, int param3, int param4) {
+    final boolean containsPointer(int param0, int param1, int param2, int param3, int param4) {
         boolean stackIn_8_0 = false;
         if (param2 != -1) {
           this.field_o = -25;
@@ -436,7 +436,7 @@ class UiWidget extends IntrusiveNode {
         return 21;
     }
 
-    StringBuilder a(int param0, int param1, StringBuilder param2, Hashtable param3) {
+    StringBuilder appendDebugTree(int param0, int param1, StringBuilder param2, Hashtable param3) {
         RuntimeException var5 = null;
         StringBuilder stackIn_5_0 = null;
         StringBuilder stackIn_7_0 = null;
@@ -447,8 +447,8 @@ class UiWidget extends IntrusiveNode {
         String stackIn_14_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (this.a((byte) -103, param3, param2, param0)) {
-            this.a(param2, 78, param0, param3);
+          if (this.beginDebugTreeEntry((byte) -103, param3, param2, param0)) {
+            this.appendDebugProperties(param2, 78, param0, param3);
           }
           if (param1 <= -20) {
             stackIn_7_0 = (StringBuilder) (param2);
@@ -476,37 +476,37 @@ class UiWidget extends IntrusiveNode {
         }
     }
 
-    final boolean a(int param0, int param1, boolean param2, int param3) {
+    final boolean processPointerInput(int param0, int param1, boolean param2, int param3) {
         int var5;
         int var7;
-        vl var6;
+        DraggableWidgetContainer var6;
         var7 = Transmogrify.field_A ? 1 : 0;
-        this.a(param0, (byte) -12, this, param1);
-        var5 = this.b((byte) 63) ? 1 : 0;
+        this.updatePointer(param0, (byte) -12, this, param1);
+        var5 = this.isFocused((byte) 63) ? 1 : 0;
         if (param3 != 4) {
           return false;
         }
         if (param2) {
           if (f.field_a != 0 &&
             var5 != 0) {
-            this.a(param1, bk.field_a, this, param0, f.field_a, -17, PacketBuffer.field_j);
+            this.handleWheel(param1, bk.field_a, this, param0, f.field_a, -17, PacketBuffer.field_j);
           }
           if (tg.field_d != 0) {
-            if (this.b(TextLineMetrics.field_b, tg.field_d, this, param1, -30386, nk.field_c, param0)) {
+            if (this.pointerPressed(TextLineMetrics.field_b, tg.field_d, this, param1, -30386, nk.field_c, param0)) {
               param2 = false;
             } else {
               if (var5 != 0) {
-                this.e(-29113);
+                this.blur(-29113);
               }
             }
           }
           if (b.field_k == 0 &&
             hi.field_g != 0) {
-            this.a(param0, PacketBuffer.field_j, this, -1, bk.field_a, param1);
+            this.pointerReleased(param0, PacketBuffer.field_j, this, -1, bk.field_a, param1);
             var6 = b.field_i;
             if (var6 != null) {
-              if (var6.field_m instanceof s) {
-                ((s) (var6.field_m)).a((g) null, 2089, var6);
+              if (var6.field_m instanceof WidgetDropListener) {
+                ((WidgetDropListener) (var6.field_m)).widgetDropped((DropTargetWidgetContainer) null, 2089, var6);
               }
               b.field_i = null;
             }
@@ -514,7 +514,7 @@ class UiWidget extends IntrusiveNode {
         } else {
           if (var5 != 0 &&
             0 != tg.field_d) {
-            this.e(-29113);
+            this.blur(-29113);
           }
         }
         hi.field_g = b.field_k;
@@ -522,15 +522,15 @@ class UiWidget extends IntrusiveNode {
         return param2;
     }
 
-    final void a(int param0, int param1, int param2) {
+    final void drawAllLayers(int param0, int param1, int param2) {
         int var5_int = 0;
         int var6 = Transmogrify.field_A ? 1 : 0;
-        int var4 = this.g(-64);
+        int var4 = this.getMaximumRenderLayer(-64);
         if (param1 >= -13) {
           return;
         }
         for (var5_int = 0; var5_int <= var4; var5_int++) {
-          this.a(param2, param0, var5_int, (byte) 123);
+          this.drawWidget(param2, param0, var5_int, (byte) 123);
         }
         String var5 = ra.a((byte) 113);
         if (var5 != null) {
@@ -543,7 +543,7 @@ class UiWidget extends IntrusiveNode {
         this.field_o = 0;
     }
 
-    UiWidget(String param0, WidgetRenderer param1, ma param2) {
+    UiWidget(String param0, WidgetRenderer param1, WidgetEventListener param2) {
         RuntimeException runtimeException = null;
         TextWidgetRenderer var4 = null;
         RuntimeException stackIn_6_0 = null;
@@ -592,7 +592,7 @@ class UiWidget extends IntrusiveNode {
         }
     }
 
-    UiWidget(int param0, int param1, int param2, int param3, WidgetRenderer param4, ma param5) {
+    UiWidget(int param0, int param1, int param2, int param3, WidgetRenderer param4, WidgetEventListener param5) {
         this.field_r = 0;
         this.field_o = 0;
         try {

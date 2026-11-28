@@ -46,7 +46,7 @@ final class rh extends WidgetContainer implements WidgetActivationListener {
         try {
           var4_int = this.field_N;
           this.c(27812, var4_int + 1);
-          this.field_P[var4_int] = this.a(param0, (uf) (this), -121);
+          this.field_P[var4_int] = this.a(param0, (WidgetEventListener) (this), -121);
           this.field_J[var4_int] = param1;
           if (param2 >= -24) {
             field_I = (UiPanel) null;
@@ -66,8 +66,8 @@ final class rh extends WidgetContainer implements WidgetActivationListener {
         }
     }
 
-    final void a(boolean param0, int param1, int param2, int param3) {
-        super.a(param0, param1, param2, param3);
+    final void drawWidget(boolean param0, int param1, int param2, int param3) {
+        super.drawWidget(param0, param1, param2, param3);
         this.field_M.drawParagraph(this.field_K, 14 + (param2 + this.x), 10 + (param3 + this.y), this.width - 28, this.height, 16777215, -1, 0, 0, this.field_M.field_z);
         if (param0) {
           rh.b(81, -4);
@@ -193,7 +193,7 @@ final class rh extends WidgetContainer implements WidgetActivationListener {
         return ii.field_z;
     }
 
-    final InteractiveWidget a(String param0, uf param1, int param2) {
+    final InteractiveWidget a(String param0, WidgetEventListener param1, int param2) {
         InteractiveWidget var4 = null;
         RuntimeException var4_ref = null;
         int var5 = 0;
@@ -213,7 +213,7 @@ final class rh extends WidgetContainer implements WidgetActivationListener {
           var5 = -2 + this.height;
           this.setBounds(false, 0, 0, this.height + 34, this.width);
           var4.setBounds(false, 7, var5, 30, -14 + this.width);
-          this.c((byte) 116, var4);
+          this.addChild((byte) 116, var4);
           stackIn_3_0 = var4;
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -240,7 +240,7 @@ final class rh extends WidgetContainer implements WidgetActivationListener {
         if (param0 != -14) {
           rh.b(-7, 112);
         }
-        nm.field_F = param1;
+        ModalDialog.field_F = param1;
     }
 
     final static Sprite[] a(Sprite param0, int param1) {

@@ -35,20 +35,20 @@ final class sd extends bi {
         this.field_T = true;
     }
 
-    sd(da param0, String param1) {
+    sd(ModalDialogHost param0, String param1) {
         super(param0, 300, 120);
         int var3_int = 0;
         try {
           this.field_U = param1;
           if (this.field_U != null) {
             var3_int = ArchiveRequest.field_q.textHeight(this.field_U, 260, ArchiveRequest.field_q.field_y);
-            this.a(300, var3_int + 150, false);
+            this.setCenteredSize(300, var3_int + 150, false);
           }
           this.field_R = new qe(13, 50, 274, 30, 15, 2113632, 4210752);
           this.field_R.field_w = true;
           this.field_T = false;
           this.field_S = false;
-          this.a((UiWidget) (this.field_R), (byte) -120);
+          this.addChild((UiWidget) (this.field_R), (byte) -120);
         } catch (RuntimeException runtimeException) {
           throw ch.wrapClientException((Throwable) ((Object) runtimeException), "sd.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

@@ -70,7 +70,7 @@ final class f {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
-          throw dd.wrapClientException((Throwable) ((Object) var5), "f.I(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw DraggableWidgetContainer.wrapClientException((Throwable) ((Object) var5), "f.I(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -81,7 +81,7 @@ final class f {
             f.a(-16, (ha) null, (byte) 46);
           }
         } catch (RuntimeException runtimeException) {
-          throw dd.wrapClientException((Throwable) ((Object) runtimeException), "f.O(" + param0 + ',' + param1 + ')');
+          throw DraggableWidgetContainer.wrapClientException((Throwable) ((Object) runtimeException), "f.O(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -98,7 +98,7 @@ final class f {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw dd.wrapClientException((Throwable) ((Object) var1), "f.A(" + param0 + ')');
+          throw DraggableWidgetContainer.wrapClientException((Throwable) ((Object) var1), "f.A(" + param0 + ')');
         }
     }
 
@@ -736,7 +736,7 @@ final class f {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw dd.wrapClientException((Throwable) ((Object) var2), "f.L(" + param0 + ')');
+          throw DraggableWidgetContainer.wrapClientException((Throwable) ((Object) var2), "f.L(" + param0 + ')');
         }
     }
 
@@ -746,7 +746,7 @@ final class f {
             this.field_x = 36;
           }
         } catch (RuntimeException runtimeException) {
-          throw dd.wrapClientException((Throwable) ((Object) runtimeException), "f.J(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw DraggableWidgetContainer.wrapClientException((Throwable) ((Object) runtimeException), "f.J(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -766,13 +766,13 @@ final class f {
           lb.field_g = lb.field_g | var3_int;
           oj.field_r.addLast(-74, new kg(param0));
           if (!DirectByteStorage.field_d) {
-            MouseWheelInput.field_b.addLast(-105, new ha(param0, param1, AccountNameAvailabilityValidator.field_r, mm.field_C, a.field_r, nh.field_b - wf.field_c.field_e[0].field_d));
+            MouseWheelInput.field_b.addLast(-105, new ha(param0, param1, AccountNameAvailabilityValidator.field_r, DropTargetWidgetContainer.field_C, a.field_r, nh.field_b - wf.field_c.field_e[0].field_d));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw dd.wrapClientException((Throwable) ((Object) var3), "f.M(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw DraggableWidgetContainer.wrapClientException((Throwable) ((Object) var3), "f.M(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -788,7 +788,7 @@ final class f {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw dd.wrapClientException((Throwable) ((Object) var1), "f.F(" + param0 + ')');
+          throw DraggableWidgetContainer.wrapClientException((Throwable) ((Object) var1), "f.F(" + param0 + ')');
         }
     }
 
@@ -933,7 +933,7 @@ final class f {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw dd.wrapClientException((Throwable) ((Object) var2_ref), "f.B(" + param0 + ')');
+          throw DraggableWidgetContainer.wrapClientException((Throwable) ((Object) var2_ref), "f.B(" + param0 + ')');
         }
     }
 
@@ -953,7 +953,7 @@ final class f {
           }
           var3 = var2.field_o;
           var4 = var2.field_k;
-          h.k(122);
+          LabeledWidgetContainer.k(122);
           CrossfadingMidiPcmStream.field_j = new RgbSprite(var3, var4 * 3 / 4);
           CrossfadingMidiPcmStream.field_j.bindAsRenderTarget();
           var2.drawOpaque(0, 0);
@@ -973,7 +973,7 @@ final class f {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw dd.wrapClientException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
+          throw DraggableWidgetContainer.wrapClientException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -1071,7 +1071,7 @@ final class f {
           } else {
             stackIn_37_2 = "{...}";
           }
-          throw dd.wrapClientException((Throwable) ((Object) stackIn_36_0), ((StringBuilder) (Object) stackIn_36_1).append(stackIn_37_2).append(',').append(param1).append(')').toString());
+          throw DraggableWidgetContainer.wrapClientException((Throwable) ((Object) stackIn_36_0), ((StringBuilder) (Object) stackIn_36_1).append(stackIn_37_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -1136,7 +1136,7 @@ final class f {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           runtimeException = decompiledCaughtException;
-          throw dd.wrapClientException((Throwable) ((Object) runtimeException), "f.E(" + param0 + ')');
+          throw DraggableWidgetContainer.wrapClientException((Throwable) ((Object) runtimeException), "f.E(" + param0 + ')');
         }
     }
 
@@ -1204,7 +1204,7 @@ final class f {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3_ref = decompiledCaughtException;
-          throw dd.wrapClientException((Throwable) ((Object) var3_ref), "f.K(" + param0 + ',' + param1 + ')');
+          throw DraggableWidgetContainer.wrapClientException((Throwable) ((Object) var3_ref), "f.K(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -1252,7 +1252,7 @@ final class f {
           } else {
             stackIn_24_2 = "{...}";
           }
-          throw dd.wrapClientException((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(')').toString());
+          throw DraggableWidgetContainer.wrapClientException((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(')').toString());
         }
     }
 
@@ -1297,7 +1297,7 @@ final class f {
           } else {
             stackIn_22_2 = "{...}";
           }
-          throw dd.wrapClientException((Throwable) (stackIn_17_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(',').append(param2).append(')').toString());
+          throw DraggableWidgetContainer.wrapClientException((Throwable) (stackIn_17_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -1323,7 +1323,7 @@ final class f {
           } else {
             stackIn_6_2 = "{...}";
           }
-          throw dd.wrapClientException((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_5_1).append(stackIn_6_2).append(',').append(param2).append(')').toString());
+          throw DraggableWidgetContainer.wrapClientException((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_5_1).append(stackIn_6_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -1404,7 +1404,7 @@ final class f {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw dd.wrapClientException((Throwable) ((Object) var2), "f.<init>(" + param0 + ')');
+          throw DraggableWidgetContainer.wrapClientException((Throwable) ((Object) var2), "f.<init>(" + param0 + ')');
         }
     }
 

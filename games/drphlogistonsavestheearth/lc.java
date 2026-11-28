@@ -268,7 +268,7 @@ final class lc extends IntrusiveNode {
 
     final static void c(byte param0) {
         ja.field_Q = fg.a(1);
-        PcmResampler.field_c = new k();
+        PcmResampler.field_c = new ModalDialogHost();
         int var1 = -73 % ((param0 - 47) / 52);
         FullscreenFocusCanvas.a((byte) -29, true, true);
     }
@@ -304,7 +304,7 @@ final class lc extends IntrusiveNode {
     final static void a(byte param0) {
         fl.field_i = false;
         int var1 = 51 % ((-60 - param0) / 37);
-        dh.field_N.readUnsignedByte(31760);
+        LabeledWidgetContainer.field_N.readUnsignedByte(31760);
     }
 
     lc() {

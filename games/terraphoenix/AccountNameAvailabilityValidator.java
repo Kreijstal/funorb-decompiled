@@ -157,8 +157,8 @@ final class AccountNameAvailabilityValidator extends TextFieldValidator {
     }
 
     final static void e(byte param0) {
-        if (jl.field_I != null) {
-          jl.field_I.h((byte) -28);
+        if (AlphaWidgetContainer.field_I != null) {
+          AlphaWidgetContainer.field_I.snapAndPruneDialogs((byte) -28);
           if (vi.field_n == null) {
             if (param0 >= 29) {
               ProxyAuthenticationRequiredException.b(107);
@@ -243,18 +243,18 @@ final class AccountNameAvailabilityValidator extends TextFieldValidator {
           ie.field_b.writeBytes(-222449912, param6, param5, param0);
           ie.field_b.padZerosTo(var7_int, -2108648176);
           ie.field_b.xteaEncrypt(-6716, var12);
-          if (null == jc.field_z ||
-            !(100 <= jc.field_z.payload.length)) {
-            jc.field_z = new PacketBuffer(100);
+          if (null == SingleChildWidgetContainer.field_z ||
+            !(100 <= SingleChildWidgetContainer.field_z.payload.length)) {
+            SingleChildWidgetContainer.field_z = new PacketBuffer(100);
           }
-          jc.field_z.position = 0;
-          jc.field_z.writeByte(10, 92);
+          SingleChildWidgetContainer.field_z.position = 0;
+          SingleChildWidgetContainer.field_z.writeByte(10, 92);
           for (var9Lifetime1 = 0; var9Lifetime1 < 4; var9Lifetime1++) {
-            jc.field_z.writeInt(var12[var9Lifetime1], 8959);
+            SingleChildWidgetContainer.field_z.writeInt(var12[var9Lifetime1], 8959);
           }
-          jc.field_z.writeShort(-1564407352, param5);
-          jc.field_z.rsaEncrypt(param4, (byte) -52, param3);
-          param1.writeBytes(-222449912, jc.field_z.payload, jc.field_z.position, 0);
+          SingleChildWidgetContainer.field_z.writeShort(-1564407352, param5);
+          SingleChildWidgetContainer.field_z.rsaEncrypt(param4, (byte) -52, param3);
+          param1.writeBytes(-222449912, SingleChildWidgetContainer.field_z.payload, SingleChildWidgetContainer.field_z.position, 0);
           var9Lifetime2 = 39 % ((param2 - 0) / 61);
           param1.writeBytes(-222449912, ie.field_b.payload, ie.field_b.position, 0);
           return;

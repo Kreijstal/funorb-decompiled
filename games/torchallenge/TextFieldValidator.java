@@ -59,7 +59,7 @@ abstract class TextFieldValidator extends DebouncedFieldValidator implements Tex
             return stackIn_3_0;
           }
           if (var2_int > 63) {
-            stackIn_6_0 = uk.field_I;
+            stackIn_6_0 = DraggableWidgetContainer.field_I;
             return stackIn_6_0;
           }
           for (var4 = 0; var4 < var2_int; var4++) {

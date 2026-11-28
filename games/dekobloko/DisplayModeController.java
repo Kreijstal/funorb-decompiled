@@ -77,17 +77,17 @@ final class DisplayModeController {
           for (integerLocal14 = 0; 4 > integerLocal14; integerLocal14++) {
             integerArrayLocal13[integerLocal14] = EditableTextField.secureRandomState0001.nextInt();
           }
-          if (null == UiComponentPart010.packetBufferState0004 ||
-            !(integerLocal11 <= UiComponentPart010.packetBufferState0004.payload.length)) {
-            UiComponentPart010.packetBufferState0004 = new PacketBuffer(integerLocal11);
+          if (null == AlphaWidgetContainer.packetBufferState0004 ||
+            !(integerLocal11 <= AlphaWidgetContainer.packetBufferState0004.payload.length)) {
+            AlphaWidgetContainer.packetBufferState0004 = new PacketBuffer(integerLocal11);
           }
-          UiComponentPart010.packetBufferState0004.position = 0;
+          AlphaWidgetContainer.packetBufferState0004.position = 0;
           if (byteArgument2 < 101) {
             return;
           }
-          UiComponentPart010.packetBufferState0004.writeBytes(false, integerArgument3, byteArrayArgument7, integerArgument1);
-          UiComponentPart010.packetBufferState0004.padToLength(102, integerLocal11);
-          UiComponentPart010.packetBufferState0004.xteaEncrypt((byte) -105, integerArrayLocal18);
+          AlphaWidgetContainer.packetBufferState0004.writeBytes(false, integerArgument3, byteArrayArgument7, integerArgument1);
+          AlphaWidgetContainer.packetBufferState0004.padToLength(102, integerLocal11);
+          AlphaWidgetContainer.packetBufferState0004.xteaEncrypt((byte) -105, integerArrayLocal18);
           if (DebouncedFieldValidator.packetBufferState0001 == null ||
             !(100 <= DebouncedFieldValidator.packetBufferState0001.payload.length)) {
             DebouncedFieldValidator.packetBufferState0001 = new PacketBuffer(100);
@@ -103,7 +103,7 @@ final class DisplayModeController {
           DebouncedFieldValidator.packetBufferState0001.writeShort(-1, integerArgument3);
           DebouncedFieldValidator.packetBufferState0001.rsaEncrypt(bigIntegerArgument5, bigIntegerArgument4, true);
           packetBufferArgument6.writeBytes(false, DebouncedFieldValidator.packetBufferState0001.position, DebouncedFieldValidator.packetBufferState0001.payload, 0);
-          packetBufferArgument6.writeBytes(false, UiComponentPart010.packetBufferState0004.position, UiComponentPart010.packetBufferState0004.payload, 0);
+          packetBufferArgument6.writeBytes(false, AlphaWidgetContainer.packetBufferState0004.position, AlphaWidgetContainer.packetBufferState0004.payload, 0);
           return;
         } catch (java.lang.RuntimeException caughtParameterLocal20) {
           caughtExceptionLocal10 = caughtParameterLocal20;
@@ -142,7 +142,7 @@ final class DisplayModeController {
         FullscreenCanvas fullscreenCanvasLocal2;
         if (integerArgument1 == 27134) {
           this.integerState0701 = MixedSupport090.integerState0548;
-          this.integerState0702 = UiComponentPart006.integerState0133;
+          this.integerState0702 = LabeledWidgetContainer.integerState0133;
           this.callbackContract017State0001.performAction1613(-4328, this.integerState0709, this.integerState0699);
           LoginCredentials.booleanState0086 = false;
           fullscreenCanvasLocal1 = InputAdapter003.createFullscreenCanvas(this.integerState0699, GzipDecompressor.platformServiceState0003, 0, 0, 67, this.integerState0709);
@@ -153,7 +153,7 @@ final class DisplayModeController {
         }
         DisplayModeController.computeBoolean1437(-14);
         this.integerState0701 = MixedSupport090.integerState0548;
-        this.integerState0702 = UiComponentPart006.integerState0133;
+        this.integerState0702 = LabeledWidgetContainer.integerState0133;
         this.callbackContract017State0001.performAction1613(-4328, this.integerState0709, this.integerState0699);
         LoginCredentials.booleanState0086 = false;
         fullscreenCanvasLocal2 = InputAdapter003.createFullscreenCanvas(this.integerState0699, GzipDecompressor.platformServiceState0003, 0, 0, 67, this.integerState0709);
@@ -188,14 +188,14 @@ final class DisplayModeController {
           }
           return;
         }
-        if (UiComponentPart006.integerState0133 < this.integerState0704) {
-          IconLabelWidget.integerState0648 = (this.integerState0704 - UiComponentPart006.integerState0133) / 2;
+        if (LabeledWidgetContainer.integerState0133 < this.integerState0704) {
+          IconLabelWidget.integerState0648 = (this.integerState0704 - LabeledWidgetContainer.integerState0133) / 2;
         } else {
           if (this.integerState0704 > 0) {
             IconLabelWidget.integerState0648 = 0;
           }
         }
-        if (this.integerState0703 == UiComponentPart006.integerState0133 &&
+        if (this.integerState0703 == LabeledWidgetContainer.integerState0133 &&
           MixedSupport090.integerState0548 == this.integerState0706) {
           return;
         }
@@ -228,7 +228,7 @@ final class DisplayModeController {
           if (this.integerState0714 > integerLocal2) {
             integerLocal2 = this.integerState0714;
             if (!(0.0f < this.floatState0004)) {
-              if (UiComponentPart006.integerState0133 != integerLocal1) {
+              if (LabeledWidgetContainer.integerState0133 != integerLocal1) {
                 this.callbackContract017State0001.performAction1613(-4328, integerLocal2, integerLocal1);
               } else {
                 if (MixedSupport090.integerState0548 != integerLocal2) {
@@ -239,7 +239,7 @@ final class DisplayModeController {
                 DisplayModeController.clearStaticReferences((byte) 59);
               }
               if (this.integerState0704 > 0) {
-                IconLabelWidget.integerState0648 = (this.integerState0704 - UiComponentPart006.integerState0133) / 2;
+                IconLabelWidget.integerState0648 = (this.integerState0704 - LabeledWidgetContainer.integerState0133) / 2;
               }
               return;
             }
@@ -251,7 +251,7 @@ final class DisplayModeController {
             } else {
               integerLocal2 = (int)((float)integerLocal1 / this.floatState0004);
             }
-            if (UiComponentPart006.integerState0133 != integerLocal1) {
+            if (LabeledWidgetContainer.integerState0133 != integerLocal1) {
               this.callbackContract017State0001.performAction1613(-4328, integerLocal2, integerLocal1);
             } else {
               if (MixedSupport090.integerState0548 != integerLocal2) {
@@ -262,25 +262,25 @@ final class DisplayModeController {
               DisplayModeController.clearStaticReferences((byte) 59);
             }
             if (this.integerState0704 > 0) {
-              IconLabelWidget.integerState0648 = (this.integerState0704 - UiComponentPart006.integerState0133) / 2;
+              IconLabelWidget.integerState0648 = (this.integerState0704 - LabeledWidgetContainer.integerState0133) / 2;
             }
             return;
           }
         }
         if (!(0.0f < this.floatState0004)) {
-          if (UiComponentPart006.integerState0133 != integerLocal1 ||
+          if (LabeledWidgetContainer.integerState0133 != integerLocal1 ||
             MixedSupport090.integerState0548 != integerLocal2) {
             this.callbackContract017State0001.performAction1613(-4328, integerLocal2, integerLocal1);
             if (integerArgument1 == 60) {
               if (this.integerState0704 <= 0) {
                 return;
               }
-              IconLabelWidget.integerState0648 = (this.integerState0704 - UiComponentPart006.integerState0133) / 2;
+              IconLabelWidget.integerState0648 = (this.integerState0704 - LabeledWidgetContainer.integerState0133) / 2;
               return;
             }
             DisplayModeController.clearStaticReferences((byte) 59);
             if (this.integerState0704 > 0) {
-              IconLabelWidget.integerState0648 = (this.integerState0704 - UiComponentPart006.integerState0133) / 2;
+              IconLabelWidget.integerState0648 = (this.integerState0704 - LabeledWidgetContainer.integerState0133) / 2;
             }
             return;
           }
@@ -288,7 +288,7 @@ final class DisplayModeController {
           integerLocal5 = (int)((float)integerLocal2 * this.floatState0004 + 0.5f);
           if (integerLocal5 > integerLocal1) {
             integerLocal2 = (int)((float)integerLocal1 / this.floatState0004);
-            if (UiComponentPart006.integerState0133 != integerLocal1 ||
+            if (LabeledWidgetContainer.integerState0133 != integerLocal1 ||
               MixedSupport090.integerState0548 != integerLocal2) {
               this.callbackContract017State0001.performAction1613(-4328, integerLocal2, integerLocal1);
             }
@@ -296,7 +296,7 @@ final class DisplayModeController {
             if (integerLocal1 > integerLocal5) {
               integerLocal1 = integerLocal5;
             }
-            if (UiComponentPart006.integerState0133 != integerLocal1) {
+            if (LabeledWidgetContainer.integerState0133 != integerLocal1) {
               this.callbackContract017State0001.performAction1613(-4328, integerLocal2, integerLocal1);
             } else {
               if (MixedSupport090.integerState0548 != integerLocal2) {
@@ -311,7 +311,7 @@ final class DisplayModeController {
         if (this.integerState0704 <= 0) {
           return;
         }
-        IconLabelWidget.integerState0648 = (this.integerState0704 - UiComponentPart006.integerState0133) / 2;
+        IconLabelWidget.integerState0648 = (this.integerState0704 - LabeledWidgetContainer.integerState0133) / 2;
     }
 
     final static void performAction1439(int integerArgument1, int integerArgument2, int integerArgument3, int integerArgument4, int integerArgument5, int integerArgument6, int integerArgument7) {

@@ -47,7 +47,7 @@ final class hj {
           var5_int = wb.bitLength((byte) 100, (-param4 + param3) * 3);
           var6 = 3 * param4;
           var7 = var5_int - 10;
-          jg.k(0);
+          AlphaWidgetContainer.k(0);
           if (param1 >= -127) {
             hj.a(23);
           }
@@ -222,7 +222,7 @@ final class hj {
           var5_int = wb.bitLength((byte) 100, (-param4 + param3) * 3);
           var6 = 3 * param4;
           var7 = var5_int - 10;
-          jg.k(0);
+          AlphaWidgetContainer.k(0);
           if (param1 >= -127) {
             hj.a(23);
           }

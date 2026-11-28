@@ -190,7 +190,7 @@ final class ClientException extends RuntimeException {
           stackIn_42_1 = param3 * (Archive.field_f + 2) * 4;
           stackIn_42_2 = 2;
           stackIn_42_3 = param2;
-          stackIn_43_4 = (wq.field_M == param1);
+          stackIn_43_4 = (AlphaWidgetContainer.field_M == param1);
           stackIn_46_0 = (!((od) (Object) stackIn_42_0).a(stackIn_42_1, stackIn_42_2, stackIn_42_3, stackIn_43_4, -55, Archive.field_f * 2 + 4)) ? 0 : 1;
           var9Lifetime1 = stackIn_46_0;
           var12 = 58 % ((param0 + 19) / 46);
@@ -368,7 +368,7 @@ final class ClientException extends RuntimeException {
                 if (var13.field_Lb.field_tb != 0) {
                   PacketBuffer.a(var13.field_Pb, param4, (byte) -128);
                 } else {
-                  tj.a(sd.field_N, 0, param1, var13, false, 0, no.field_e);
+                  tj.a(ModalDialogHost.field_N, 0, param1, var13, false, 0, no.field_e);
                 }
               } else {
                 ui.a(var13.field_Pb, param4, (byte) 99);
@@ -514,7 +514,7 @@ final class ClientException extends RuntimeException {
                   }
                 } else {
                   if (var27Lifetime1 != 0) {
-                    var25Lifetime2 = var35 + "<br>" + mg.field_G + (String) (var26);
+                    var25Lifetime2 = var35 + "<br>" + LabeledWidgetContainer.field_G + (String) (var26);
                   } else {
                     var25Lifetime2 = var35 + "<br>" + Vertigo2.a(new String[]{(String) (var26)}, in.field_d, -114);
                   }
@@ -522,7 +522,7 @@ final class ClientException extends RuntimeException {
                 if (vd.field_d == param1 &&
                   !LevelCamera.isLocalPlayerLobbyHost(false)) {
                   var28 = gd.field_j.field_Nb;
-                  var25Lifetime2 = (String) (var25Lifetime2) + "<br>" + Vertigo2.a(new String[]{var28}, ac.field_J, -119);
+                  var25Lifetime2 = (String) (var25Lifetime2) + "<br>" + Vertigo2.a(new String[]{var28}, DropTargetWidgetContainer.field_J, -119);
                 }
                 ko.field_S = (String) (var25Lifetime2);
               }

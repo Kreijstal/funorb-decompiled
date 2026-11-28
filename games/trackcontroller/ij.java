@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ij implements t {
+final class ij implements WidgetRenderer {
     private int field_f;
     private int field_n;
     private BitmapFont field_i;
@@ -137,7 +137,7 @@ final class ij implements t {
         }
     }
 
-    public final void a(int param0, UiWidget param1, int param2, boolean param3, int param4) {
+    public final void paintWidget(int param0, UiWidget param1, int param2, boolean param3, int param4) {
         UiWidget stackIn_3_0 = null;
         RuntimeException stackIn_18_0 = null;
         StringBuilder stackIn_18_1 = null;
@@ -253,105 +253,105 @@ final class ij implements t {
           TextFieldValidator.field_h = param1;
           mh.field_i = true;
           if (TextFieldValidator.field_h == 0) {
-            var3_int = MouseWheelInput.a((byte) -8, r.field_k, sc.field_f, s.field_a, ok.field_C);
+            var3_int = MouseWheelInput.a((byte) -8, r.field_k, sc.field_f, s.field_a, SingleChildWidgetContainer.field_C);
             var4 = var3_int + 3;
-            sa.field_I = new String[var4];
+            LabeledWidgetContainer.field_I = new String[var4];
             mj.field_b = new int[var4];
             for (var5 = 0; var5 < var4; var5++) {
               mj.field_b[var5] = -1;
             }
             ac.field_c = new int[2];
             for (var5 = 0; var3_int > var5; var5++) {
-              sa.field_I[var5] = ok.field_C[var5];
+              LabeledWidgetContainer.field_I[var5] = SingleChildWidgetContainer.field_C[var5];
             }
-            sa.field_I[var4 - 3] = "";
-            sa.field_I[-2 + var4] = ma.field_a;
+            LabeledWidgetContainer.field_I[var4 - 3] = "";
+            LabeledWidgetContainer.field_I[-2 + var4] = ma.field_a;
             mj.field_b[-2 + var4] = 0;
             ac.field_c[0] = 4;
-            sa.field_I[-1 + var4] = MovingBlock.field_k;
+            LabeledWidgetContainer.field_I[-1 + var4] = MovingBlock.field_k;
             mj.field_b[-1 + var4] = 1;
             ac.field_c[1] = 5;
           } else if (TextFieldValidator.field_h == 1) {
-            var3_int = MouseWheelInput.a((byte) -8, r.field_k, sc.field_f, s.field_a, ok.field_C);
+            var3_int = MouseWheelInput.a((byte) -8, r.field_k, sc.field_f, s.field_a, SingleChildWidgetContainer.field_C);
             var4 = var3_int + 2;
-            sa.field_I = new String[var4];
+            LabeledWidgetContainer.field_I = new String[var4];
             mj.field_b = new int[var4];
             for (var5 = 0; var5 < var4; var5++) {
               mj.field_b[var5] = -1;
             }
             ac.field_c = new int[1];
             for (var5 = 0; var3_int > var5; var5++) {
-              sa.field_I[var5] = ok.field_C[var5];
+              LabeledWidgetContainer.field_I[var5] = SingleChildWidgetContainer.field_C[var5];
             }
-            sa.field_I[-2 + var4] = "";
-            sa.field_I[var4 - 1] = MovingBlock.field_k;
+            LabeledWidgetContainer.field_I[-2 + var4] = "";
+            LabeledWidgetContainer.field_I[var4 - 1] = MovingBlock.field_k;
             mj.field_b[-1 + var4] = 0;
             ac.field_c[0] = 5;
           } else if (TextFieldValidator.field_h != 2) {
             if (TextFieldValidator.field_h == 3) {
               if (!rg.field_c.privilegedTasksEnabled) {
-                var3_int = MouseWheelInput.a((byte) -8, r.field_k, sc.field_f, WhirlpoolDigest.field_c, ok.field_C);
+                var3_int = MouseWheelInput.a((byte) -8, r.field_k, sc.field_f, WhirlpoolDigest.field_c, SingleChildWidgetContainer.field_C);
               } else {
-                var3_int = MouseWheelInput.a((byte) -8, r.field_k, sc.field_f, GameKeyHandler.field_b, ok.field_C);
+                var3_int = MouseWheelInput.a((byte) -8, r.field_k, sc.field_f, GameKeyHandler.field_b, SingleChildWidgetContainer.field_C);
               }
               var4 = var3_int + 2;
               mj.field_b = new int[var4];
-              sa.field_I = new String[var4];
+              LabeledWidgetContainer.field_I = new String[var4];
               for (var5 = 0; var5 < var4; var5++) {
                 mj.field_b[var5] = -1;
               }
               ac.field_c = new int[1];
               for (var5 = 0; var3_int > var5; var5++) {
-                sa.field_I[var5] = ok.field_C[var5];
+                LabeledWidgetContainer.field_I[var5] = SingleChildWidgetContainer.field_C[var5];
               }
-              sa.field_I[-2 + var4] = "";
-              sa.field_I[-1 + var4] = MovingBlock.field_k;
+              LabeledWidgetContainer.field_I[-2 + var4] = "";
+              LabeledWidgetContainer.field_I[-1 + var4] = MovingBlock.field_k;
               mj.field_b[var4 - 1] = 0;
               ac.field_c[0] = 5;
             } else if (TextFieldValidator.field_h == 4) {
-              var3_int = MouseWheelInput.a((byte) -8, r.field_k, sc.field_f, fj.field_O, ok.field_C);
+              var3_int = MouseWheelInput.a((byte) -8, r.field_k, sc.field_f, DraggableWidgetContainer.field_O, SingleChildWidgetContainer.field_C);
               var4 = 2 + var3_int;
-              sa.field_I = new String[var4];
+              LabeledWidgetContainer.field_I = new String[var4];
               mj.field_b = new int[var4];
               for (var5 = 0; var5 < var4; var5++) {
                 mj.field_b[var5] = -1;
               }
               ac.field_c = new int[1];
               for (var5 = 0; var5 < var3_int; var5++) {
-                sa.field_I[var5] = ok.field_C[var5];
+                LabeledWidgetContainer.field_I[var5] = SingleChildWidgetContainer.field_C[var5];
               }
-              sa.field_I[-2 + var4] = "";
-              sa.field_I[-1 + var4] = MovingBlock.field_k;
+              LabeledWidgetContainer.field_I[-2 + var4] = "";
+              LabeledWidgetContainer.field_I[-1 + var4] = MovingBlock.field_k;
               mj.field_b[-1 + var4] = 0;
               ac.field_c[0] = 5;
             } else {
               if (TextFieldValidator.field_h != 5) {
                 throw new IllegalArgumentException();
               }
-              var3_int = MouseWheelInput.a((byte) -8, r.field_k, sc.field_f, cg.field_e, ok.field_C);
+              var3_int = MouseWheelInput.a((byte) -8, r.field_k, sc.field_f, cg.field_e, SingleChildWidgetContainer.field_C);
               var4 = var3_int + 3;
-              sa.field_I = new String[var4];
+              LabeledWidgetContainer.field_I = new String[var4];
               mj.field_b = new int[var4];
               for (var5 = 0; var5 < var4; var5++) {
                 mj.field_b[var5] = -1;
               }
               ac.field_c = new int[2];
               for (var5 = 0; var3_int > var5; var5++) {
-                sa.field_I[var5] = ok.field_C[var5];
+                LabeledWidgetContainer.field_I[var5] = SingleChildWidgetContainer.field_C[var5];
               }
-              sa.field_I[-3 + var4] = "";
-              sa.field_I[-2 + var4] = GameStringTable.field_i;
+              LabeledWidgetContainer.field_I[-3 + var4] = "";
+              LabeledWidgetContainer.field_I[-2 + var4] = GameStringTable.field_i;
               mj.field_b[-2 + var4] = 0;
               ac.field_c[0] = 3;
-              sa.field_I[-1 + var4] = MovingBlock.field_k;
+              LabeledWidgetContainer.field_I[-1 + var4] = MovingBlock.field_k;
               mj.field_b[var4 - 1] = 1;
               ac.field_c[1] = 5;
             }
           } else {
-            var3_int = MouseWheelInput.a((byte) -8, r.field_k, sc.field_f, dh.a((byte) -64, new String[]{"<br><%0><br>"}, mc.field_J), ok.field_C);
+            var3_int = MouseWheelInput.a((byte) -8, r.field_k, sc.field_f, dh.a((byte) -64, new String[]{"<br><%0><br>"}, DropTargetWidgetContainer.field_J), SingleChildWidgetContainer.field_C);
             var4 = -1;
             for (var5 = 0; var3_int > var5; var5++) {
-              if (!"<%0>".equals(ok.field_C[var5])) {
+              if (!"<%0>".equals(SingleChildWidgetContainer.field_C[var5])) {
                 continue;
               }
               var4 = var5;
@@ -361,13 +361,13 @@ final class ij implements t {
               throw new IllegalStateException();
             }
             RichTextWidget.field_O = new String[var4];
-            pd.a(ok.field_C, 0, RichTextWidget.field_O, 0, var4);
+            pd.a(SingleChildWidgetContainer.field_C, 0, RichTextWidget.field_O, 0, var4);
             DisplayNameSelectionPanel.field_J = new String[-1 + var3_int - var4];
-            pd.a(ok.field_C, var4 + 1, DisplayNameSelectionPanel.field_J, 0, var3_int - var4 - 1);
-            var3_int = MouseWheelInput.a((byte) -8, r.field_k, sc.field_f, dh.a((byte) -61, new String[]{"<br><%0><br>"}, AccountRequestState.field_a), ok.field_C);
+            pd.a(SingleChildWidgetContainer.field_C, var4 + 1, DisplayNameSelectionPanel.field_J, 0, var3_int - var4 - 1);
+            var3_int = MouseWheelInput.a((byte) -8, r.field_k, sc.field_f, dh.a((byte) -61, new String[]{"<br><%0><br>"}, AccountRequestState.field_a), SingleChildWidgetContainer.field_C);
             var4 = -1;
             for (var5 = 0; var3_int > var5; var5++) {
-              if (!"<%0>".equals(ok.field_C[var5])) {
+              if (!"<%0>".equals(SingleChildWidgetContainer.field_C[var5])) {
                 continue;
               }
               var4 = var5;
@@ -377,9 +377,9 @@ final class ij implements t {
               throw new IllegalStateException();
             }
             jf.field_i = new String[var4];
-            pd.a(ok.field_C, 0, jf.field_i, 0, var4);
+            pd.a(SingleChildWidgetContainer.field_C, 0, jf.field_i, 0, var4);
             IntrusiveDequeCursor.field_c = new String[-var4 + var3_int - 1];
-            pd.a(ok.field_C, 1 + var4, IntrusiveDequeCursor.field_c, 0, -1 + (var3_int - var4));
+            pd.a(SingleChildWidgetContainer.field_C, 1 + var4, IntrusiveDequeCursor.field_c, 0, -1 + (var3_int - var4));
             if (jf.field_i.length > RichTextWidget.field_O.length) {
               stackIn_22_0 = jf.field_i.length;
             } else {
@@ -394,23 +394,23 @@ final class ij implements t {
             var6 = stackIn_25_0;
             var7 = var6 + var5 + 7;
             mj.field_b = new int[var7];
-            sa.field_I = new String[var7];
+            LabeledWidgetContainer.field_I = new String[var7];
             for (var8 = 0; var8 < var7; var8++) {
               mj.field_b[var8] = -1;
             }
-            sa.field_I[1] = ValidatedTextField.field_U;
+            LabeledWidgetContainer.field_I[1] = ValidatedTextField.field_U;
             ac.field_c = new int[2];
-            sa.field_I[0] = lg.field_c;
+            LabeledWidgetContainer.field_I[0] = lg.field_c;
             mj.field_b[1] = 0;
             ac.field_c[1] = 2;
             mj.field_b[3] = 1;
-            sa.field_I[2] = ji.field_d;
-            sa.field_I[4] = uh.field_d;
-            sa.field_I[3] = uk.field_e;
-            sa.field_I[5] = "";
+            LabeledWidgetContainer.field_I[2] = ji.field_d;
+            LabeledWidgetContainer.field_I[4] = uh.field_d;
+            LabeledWidgetContainer.field_I[3] = uk.field_e;
+            LabeledWidgetContainer.field_I[5] = "";
             ac.field_c[0] = 5;
             for (var8Lifetime2 = 0; var8Lifetime2 < var5; var8Lifetime2++) {
-              stackIn_32_0 = sa.field_I;
+              stackIn_32_0 = LabeledWidgetContainer.field_I;
               stackIn_32_1 = var8Lifetime2 + 6;
               if (jf.field_i.length + (var8Lifetime2 - var5) >= 0) {
                 stackIn_33_2 = jf.field_i[var8Lifetime2 + jf.field_i.length - var5];
@@ -419,10 +419,10 @@ final class ij implements t {
               }
               stackIn_32_0[stackIn_32_1] = stackIn_33_2;
             }
-            sa.field_I[var5 + 6] = null;
+            LabeledWidgetContainer.field_I[var5 + 6] = null;
             mj.field_b[var5 + 6] = -2;
             for (var8Lifetime3 = 0; var6 > var8Lifetime3; var8Lifetime3++) {
-              stackIn_38_0 = sa.field_I;
+              stackIn_38_0 = LabeledWidgetContainer.field_I;
               stackIn_38_1 = var8Lifetime3 + (var5 + 7);
               if (IntrusiveDequeCursor.field_c.length <= var8Lifetime3) {
                 stackIn_39_2 = "";
@@ -435,9 +435,9 @@ final class ij implements t {
           }
           GzipDecompressor.field_f.field_i = ac.field_c.length;
           var3_intLifetime1 = 0;
-          for (var4Lifetime1 = 0; var4Lifetime1 < sa.field_I.length; var4Lifetime1++) {
+          for (var4Lifetime1 = 0; var4Lifetime1 < LabeledWidgetContainer.field_I.length; var4Lifetime1++) {
             stackIn_88_0 = !(mj.field_b[var4Lifetime1] < 0);
-            var5Lifetime1 = ib.a(stackIn_88_0, 10, sa.field_I[var4Lifetime1]);
+            var5Lifetime1 = ib.a(stackIn_88_0, 10, LabeledWidgetContainer.field_I[var4Lifetime1]);
             if (var3_intLifetime1 < var5Lifetime1) {
               var3_intLifetime1 = var5Lifetime1;
             }
@@ -464,7 +464,7 @@ final class ij implements t {
           cd.field_b = var3_intLifetime1 + (sf.field_F - (var3_intLifetime1 >> 1));
           DisplayNameSelectionPanel.field_D = -(var3_intLifetime1 >> 1) + sf.field_F;
           oi.field_b = GzipDecompressor.field_f.field_i * (na.field_e + of.field_f << 1);
-          for (var4Lifetime2 = 0; var4Lifetime2 < sa.field_I.length; var4Lifetime2++) {
+          for (var4Lifetime2 = 0; var4Lifetime2 < LabeledWidgetContainer.field_I.length; var4Lifetime2++) {
             stackIn_110_0 = oi.field_b;
             if (mj.field_b[var4Lifetime2] < 0) {
               stackIn_111_1 = dh.field_l;
@@ -477,15 +477,15 @@ final class ij implements t {
             field_j = (ba) null;
           }
           MovingBlock.field_q = gf.field_q - (oi.field_b >> 1);
-          ud.field_a = new int[sa.field_I.length][];
+          ud.field_a = new int[LabeledWidgetContainer.field_I.length][];
           var4Lifetime3 = 0;
           var5Lifetime3 = MovingBlock.field_q;
-          while (sa.field_I.length > var4Lifetime3) {
+          while (LabeledWidgetContainer.field_I.length > var4Lifetime3) {
             var6Lifetime1 = mj.field_b[var4Lifetime3];
             if (var6Lifetime1 < 0) {
               var5Lifetime3 = var5Lifetime3 + dh.field_l;
             } else {
-              var7Lifetime2 = ib.a(true, 10, sa.field_I[var4Lifetime3]);
+              var7Lifetime2 = ib.a(true, 10, LabeledWidgetContainer.field_I[var4Lifetime3]);
               var8Lifetime1 = -(var7Lifetime2 >> 1) + sf.field_F;
               var5Lifetime3 = var5Lifetime3 + na.field_e;
               ud.field_a[var4Lifetime3] = new int[4];

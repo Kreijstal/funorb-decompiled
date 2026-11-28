@@ -4,7 +4,7 @@
 final class mb {
     static BufferedSocket field_c;
     static Sprite[] field_d;
-    static hm field_b;
+    static ModalDialogHost field_b;
     static String field_a;
 
     final static char decodeCp1252Byte(boolean param0, byte param1) {

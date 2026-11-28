@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ab implements td {
+final class ab implements WidgetRenderer {
     private int field_m;
     private int field_d;
     private int field_b;
@@ -16,7 +16,7 @@ final class ab implements td {
     static int field_f;
     static int field_l;
 
-    public final void a(int param0, int param1, pj param2, int param3, boolean param4) {
+    public final void paintWidget(int param0, int param1, UiWidget param2, int param3, boolean param4) {
         bj var15 = null;
         int var7 = 0;
         int var8 = 0;
@@ -45,8 +45,8 @@ final class ab implements td {
           var9Lifetime1 = 2.0 * (3.141592653589793 * (double)var15.field_J) / (double)var15.field_I;
           var11Lifetime1 = (int)(-Math.sin(var9Lifetime1) * (double)var15.field_G);
           if (param3 != -4394) {
-            pj var14 = (pj) null;
-            this.a(19, 76, (pj) null, 43, true);
+            UiWidget var14 = (UiWidget) null;
+            this.paintWidget(19, 76, (UiWidget) null, 43, true);
           }
           var12Lifetime1 = (int)(Math.cos(var9Lifetime1) * (double)var15.field_G);
           SoftwareRasterizer.drawLine(var7, var8, var7 + var11Lifetime1, var12Lifetime1 + var8, 1);
@@ -55,7 +55,7 @@ final class ab implements td {
             this.field_k.drawParagraph(param2.field_l, param2.field_s + (param1 + var13), param0 + param2.field_n + this.field_b, param2.field_m - (var13 + this.field_m), param2.field_r - (this.field_m << 1), this.field_e, this.field_c, 1, 1, 0);
           }
         } catch (RuntimeException runtimeException) {
-          throw dd.wrapClientException((Throwable) ((Object) runtimeException), "ab.A(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ')');
+          throw DraggableWidgetContainer.wrapClientException((Throwable) ((Object) runtimeException), "ab.A(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ')');
         }
     }
 
@@ -107,7 +107,7 @@ final class ab implements td {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = (RuntimeException) (Object) decompiledCaughtException;
-          throw dd.wrapClientException((Throwable) ((Object) var1), "ab.B(" + param0 + ')');
+          throw DraggableWidgetContainer.wrapClientException((Throwable) ((Object) var1), "ab.B(" + param0 + ')');
         }
     }
 
@@ -122,7 +122,7 @@ final class ab implements td {
           this.field_i = param6;
           this.field_a = param7;
         } catch (RuntimeException runtimeException) {
-          throw dd.wrapClientException((Throwable) ((Object) runtimeException), "ab.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ')');
+          throw DraggableWidgetContainer.wrapClientException((Throwable) ((Object) runtimeException), "ab.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ')');
         }
     }
 

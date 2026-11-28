@@ -154,7 +154,7 @@ final class ja extends WidgetContainer implements TextHotspotListener, WidgetAct
     }
 
     ja(AccountCreationResultPanel param0) {
-        super(0, 0, 288, 0, (ml) null);
+        super(0, 0, 288, 0, (WidgetRenderer) null);
         String var7 = null;
         int var3 = 0;
         DefaultTextWidgetRenderer var4 = null;
@@ -162,8 +162,8 @@ final class ja extends WidgetContainer implements TextHotspotListener, WidgetAct
         int var6 = 0;
         try {
           this.field_C = param0;
-          this.field_D = new ButtonWidget(pi.field_i, (of) null);
-          this.field_D.field_h = (ml) ((Object) new hd());
+          this.field_D = new ButtonWidget(pi.field_i, (WidgetEventListener) null);
+          this.field_D.field_h = (WidgetRenderer) ((Object) new hd());
           var7 = gg.a(new String[]{this.a(1971849544), this.d((byte) 106)}, oi.field_i, true);
           var3 = 20;
           var4 = new DefaultTextWidgetRenderer(ButtonWidget.field_z, 0, 0, 0, 0, 16777215, -1, 3, 0, ButtonWidget.field_z.field_C, -1, 2147483647, true);
@@ -171,23 +171,23 @@ final class ja extends WidgetContainer implements TextHotspotListener, WidgetAct
           this.field_z.field_m = "";
           this.field_z.a(false, 0, kg.field_a);
           this.field_z.a(false, 1, kg.field_a);
-          this.field_z.field_o = (of) (this);
+          this.field_z.field_o = (WidgetEventListener) (this);
           this.field_z.field_l = this.field_l - 40;
           this.field_z.c(26, var3, -40 + this.field_l, -1);
           var3 = var3 + (15 + this.field_z.field_p);
-          this.b((byte) -41, this.field_z);
+          this.addChild((byte) -41, this.field_z);
           var5 = 4;
           var6 = 200;
-          this.field_D.a(40, 13361, -var6 + 300 >> 1, var6, var3);
-          this.field_D.field_o = (of) (this);
-          this.b((byte) -111, this.field_D);
-          this.a(var3 - (-55 - var5), 13361, 0, 300, 0);
+          this.field_D.setBounds(40, 13361, -var6 + 300 >> 1, var6, var3);
+          this.field_D.field_o = (WidgetEventListener) (this);
+          this.addChild((byte) -111, this.field_D);
+          this.setBounds(var3 - (-55 - var5), 13361, 0, 300, 0);
         } catch (RuntimeException runtimeException) {
           throw la.a((Throwable) ((Object) runtimeException), "ja.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
-    final boolean a(UiWidget param0, char param1, int param2, int param3) {
+    final boolean handleKey(UiWidget param0, char param1, int param2, int param3) {
         int var5_int = 0;
         RuntimeException var5 = null;
         boolean stackIn_5_0 = false;
@@ -197,15 +197,15 @@ final class ja extends WidgetContainer implements TextHotspotListener, WidgetAct
         String stackIn_15_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (super.a(param0, param1, param2, -80)) {
+          if (super.handleKey(param0, param1, param2, -80)) {
             return true;
           }
           if (param2 == 98) {
-            stackIn_5_0 = this.a((byte) 109, param0);
+            stackIn_5_0 = this.focusPreviousChild((byte) 109, param0);
             return stackIn_5_0;
           }
           if (param2 == 99) {
-            stackIn_9_0 = this.b(param0, false);
+            stackIn_9_0 = this.focusNextChild(param0, false);
             return stackIn_9_0;
           }
           var5_int = -4 % ((37 - param3) / 50);

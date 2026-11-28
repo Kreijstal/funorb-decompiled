@@ -7,14 +7,14 @@ abstract class sj extends ug {
     private rf field_ib;
     private int field_ob;
     private int field_mb;
-    private me field_lb;
+    private AlphaWidgetContainer field_lb;
     static String field_pb;
     private int field_qb;
     static int[] field_rb;
-    private fj field_nb;
+    private UiWidget field_nb;
     private int field_jb;
 
-    boolean a(fj param0, byte param1, int param2, char param3) {
+    boolean handleKey(UiWidget param0, byte param1, int param2, char param3) {
         int var5_int = 0;
         RuntimeException var5 = null;
         RuntimeException stackIn_13_0 = null;
@@ -23,17 +23,17 @@ abstract class sj extends ug {
         RuntimeException decompiledCaughtException = null;
         try {
           var5_int = 28 / ((47 - param1) / 43);
-          if (super.a(param0, (byte) 115, param2, param3)) {
+          if (super.handleKey(param0, (byte) 115, param2, param3)) {
             return true;
           }
           if (this.field_lb == null) {
             return false;
           }
           if (param2 == 98) {
-            this.field_lb.a(param0, 418);
+            this.field_lb.takeFocus(param0, 418);
           }
           if (param2 == 99) {
-            this.field_lb.a(param0, 418);
+            this.field_lb.takeFocus(param0, 418);
           }
           return false;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -50,7 +50,7 @@ abstract class sj extends ug {
         }
     }
 
-    private final void a(boolean param0, fj param1) {
+    private final void a(boolean param0, UiWidget param1) {
         try {
           if (null != this.field_lb) {
             this.field_lb.unlink(true);
@@ -59,12 +59,12 @@ abstract class sj extends ug {
             this.field_mb = 112;
           }
           if (param1 != null) {
-            param1.a(-110, param1.field_F, 6 + this.field_ob, param1.field_z, 6);
-            this.field_lb = new me(param1);
+            param1.setBounds(-110, param1.field_F, 6 + this.field_ob, param1.field_z, 6);
+            this.field_lb = new AlphaWidgetContainer(param1);
           } else {
-            this.field_lb = new me();
+            this.field_lb = new AlphaWidgetContainer();
           }
-          this.b(this.field_lb, 10);
+          this.addChild(this.field_lb, 10);
           this.field_nb = null;
         } catch (RuntimeException runtimeException) {
           throw TextLineMetrics.a((Throwable) ((Object) runtimeException), "sj.HB(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
@@ -74,7 +74,7 @@ abstract class sj extends ug {
     final void m(int param0) {
         if (this.field_ib != null) {
           if (PowerUpPickup.field_S != this.field_ib) {
-            this.a(-41, this.field_nb.field_z + this.field_ob + 12, this.field_nb.field_F + 12);
+            this.setCenteredSize(-41, this.field_nb.field_z + this.field_ob + 12, this.field_nb.field_F + 12);
             this.a(true, this.field_nb);
           }
           this.field_lb.field_K = 256;
@@ -84,11 +84,11 @@ abstract class sj extends ug {
           super.m(61);
           return;
         }
-        this.j(-110);
+        this.snapDialogAnimation(-110);
         super.m(61);
     }
 
-    sj(sh param0, fj param1, int param2, int param3, int param4) {
+    sj(ModalDialogHost param0, UiWidget param1, int param2, int param3, int param4) {
         super(param0, 12 + param1.field_F, param1.field_z + 12 + param2);
         try {
           this.field_hb = param4;
@@ -101,7 +101,7 @@ abstract class sj extends ug {
         }
     }
 
-    boolean l(int param0) {
+    boolean advanceDialogAnimation(int param0) {
         int fieldTemp$0 = 0;
         int fieldTemp$1 = 0;
         int var3 = Confined.field_J ? 1 : 0;
@@ -113,9 +113,9 @@ abstract class sj extends ug {
               this.field_lb.field_K = -((this.field_mb << 8) / this.field_jb) + 256;
               if (param0 != -6) {
                 field_rb = (int[]) null;
-                return super.l(param0 ^ 0);
+                return super.advanceDialogAnimation(param0 ^ 0);
               }
-              return super.l(param0 ^ 0);
+              return super.advanceDialogAnimation(param0 ^ 0);
             }
             this.field_ib = TextLayout.field_a;
             this.a(this.field_nb.field_z + (this.field_ob + 12), this.field_hb, 6, this.field_nb.field_F + 12);
@@ -123,16 +123,16 @@ abstract class sj extends ug {
             this.field_mb = 0;
             if (param0 != -6) {
               field_rb = (int[]) null;
-              return super.l(param0 ^ 0);
+              return super.advanceDialogAnimation(param0 ^ 0);
             }
-            return super.l(param0 ^ 0);
+            return super.advanceDialogAnimation(param0 ^ 0);
           }
           if (this.field_ib != PowerUpPickup.field_S) {
             if (param0 == -6) {
-              return super.l(param0 ^ 0);
+              return super.advanceDialogAnimation(param0 ^ 0);
             }
             field_rb = (int[]) null;
-            return super.l(param0 ^ 0);
+            return super.advanceDialogAnimation(param0 ^ 0);
           }
           fieldTemp$1 = this.field_mb + 1;
           this.field_mb = this.field_mb + 1;
@@ -140,23 +140,23 @@ abstract class sj extends ug {
             this.field_lb.field_K = 256;
             this.field_ib = null;
             if (param0 == -6) {
-              return super.l(param0 ^ 0);
+              return super.advanceDialogAnimation(param0 ^ 0);
             }
             field_rb = (int[]) null;
-            return super.l(param0 ^ 0);
+            return super.advanceDialogAnimation(param0 ^ 0);
           }
           this.field_lb.field_K = (this.field_mb << 8) / this.field_qb;
           if (param0 == -6) {
-            return super.l(param0 ^ 0);
+            return super.advanceDialogAnimation(param0 ^ 0);
           }
           field_rb = (int[]) null;
-          return super.l(param0 ^ 0);
+          return super.advanceDialogAnimation(param0 ^ 0);
         }
         if (param0 == -6) {
-          return super.l(param0 ^ 0);
+          return super.advanceDialogAnimation(param0 ^ 0);
         }
         field_rb = (int[]) null;
-        return super.l(param0 ^ 0);
+        return super.advanceDialogAnimation(param0 ^ 0);
     }
 
     public static void releaseDeclaredStaticReferences(byte param0) {
@@ -187,17 +187,17 @@ abstract class sj extends ug {
         this.field_lb.field_K = 0;
     }
 
-    final boolean j(int param0) {
+    final boolean snapDialogAnimation(int param0) {
         if (param0 <= -35) {
           this.m(107);
-          return super.j(-97);
+          return super.snapDialogAnimation(-97);
         }
         field_rb = (int[]) null;
         this.m(107);
-        return super.j(-97);
+        return super.snapDialogAnimation(-97);
     }
 
-    void a(fj param0, byte param1) {
+    void a(UiWidget param0, byte param1) {
         RuntimeException var3 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;

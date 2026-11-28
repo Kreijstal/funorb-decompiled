@@ -62,10 +62,10 @@ final class de {
           while (true) {
             var3 = param0.requestFullscreenExit(39, param1);
             while (var3.status == 0) {
-              i.sleepMillis((byte) 89, 10L);
+              ModalDialogHost.sleepMillis((byte) 89, 10L);
             }
             if (var3.status != 1) {
-              i.sleepMillis((byte) 30, 100L);
+              ModalDialogHost.sleepMillis((byte) 30, 100L);
               continue;
             }
             break;

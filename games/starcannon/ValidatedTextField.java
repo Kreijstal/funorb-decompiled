@@ -12,7 +12,7 @@ final class ValidatedTextField extends EditableTextField implements FieldValidat
         return this.field_L;
     }
 
-    ValidatedTextField(String param0, qg param1, int param2) {
+    ValidatedTextField(String param0, WidgetEventListener param1, int param2) {
         super(param0, param1, param2);
     }
 
@@ -49,12 +49,12 @@ final class ValidatedTextField extends EditableTextField implements FieldValidat
         }
     }
 
-    final void a(int param0, int param1, UiWidget param2, int param3) {
+    final void updatePointer(int param0, int param1, UiWidget param2, int param3) {
         if (param0 < 27) {
           return;
         }
         try {
-          super.a(90, param1, param2, param3);
+          super.updatePointer(90, param1, param2, param3);
           this.field_K = -param1 + pe.field_d - this.field_s;
         } catch (RuntimeException runtimeException) {
           throw sd.wrapClientException((Throwable) ((Object) runtimeException), "ng.U(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
@@ -124,7 +124,7 @@ final class ValidatedTextField extends EditableTextField implements FieldValidat
             }
             var3 = param1.substring(0, var2_int);
             var4 = param1.substring(var2_int + 1);
-            var5 = vk.a((byte) 63, var3);
+            var5 = DequeWidgetContainer.a((byte) 63, var3);
             if (var5 == null) {
               return b.a(var4, 112);
             }

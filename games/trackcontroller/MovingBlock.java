@@ -183,7 +183,7 @@ final class MovingBlock extends IntrusiveNode {
               LevelView.field_C.writeByte(16, (byte) -87);
               LevelView.field_C.position = LevelView.field_C.position + 1;
               var9 = LevelView.field_C.position;
-              NodeHashTableIterator.a(sc.field_d, LevelView.field_C, fj.field_N, 0, PasswordValidator.field_p);
+              NodeHashTableIterator.a(sc.field_d, LevelView.field_C, DraggableWidgetContainer.field_N, 0, PasswordValidator.field_p);
               LevelView.field_C.backpatchByteLength(true, -var9 + LevelView.field_C.position);
             } else {
               var9 = 0;
@@ -208,7 +208,7 @@ final class MovingBlock extends IntrusiveNode {
                 var11_ref_StringLifetime4 = "";
               }
               LevelView.field_C.writeString((byte) -57, var11_ref_StringLifetime4);
-              NodeHashTableIterator.a(sc.field_d, LevelView.field_C, fj.field_N, 0, PasswordValidator.field_p);
+              NodeHashTableIterator.a(sc.field_d, LevelView.field_C, DraggableWidgetContainer.field_N, 0, PasswordValidator.field_p);
               LevelView.field_C.backpatchShortLength(-var10 + LevelView.field_C.position, (byte) -96);
             }
             MovingBlock.a(-1, -1);

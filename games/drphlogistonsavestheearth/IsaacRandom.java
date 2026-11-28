@@ -33,7 +33,7 @@ final class IsaacRandom {
         var6 = DrPhlogistonSavesTheEarth.field_D ? 1 : 0;
         try {
           boolean decompiledFrameRemainder0 = true;
-          var9 = dh.field_N;
+          var9 = LabeledWidgetContainer.field_N;
           var2 = var9.readUnsignedByte(param0 ^ 31764);
           if (var2 == 0) {
             var8 = (uj) (md.field_e.beginForward(param0 ^ -11147));

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class DefaultTextWidgetRenderer implements fc, TextWidgetRenderer {
+class DefaultTextWidgetRenderer implements WidgetRenderer, TextWidgetRenderer {
     private boolean field_l;
     static int field_a;
     int field_i;
@@ -70,7 +70,7 @@ class DefaultTextWidgetRenderer implements fc, TextWidgetRenderer {
         return param0 | param1;
     }
 
-    public final int getPreferredHeight(lk param0, int param1) {
+    public final int getPreferredHeight(UiWidget param0, int param1) {
         RuntimeException var3 = null;
         int stackIn_3_0 = 0;
         RuntimeException stackIn_6_0 = null;
@@ -102,9 +102,9 @@ class DefaultTextWidgetRenderer implements fc, TextWidgetRenderer {
         this(param0, param1, param1, param2, param2, param3, param4, param5, param6, param7, -1, 2147483647, false);
     }
 
-    private final int a(int param0, int param1, int param2, lk param3) {
+    private final int a(int param0, int param1, int param2, UiWidget param3) {
         RuntimeException var5 = null;
-        lk var6 = null;
+        UiWidget var6 = null;
         int stackIn_3_0 = 0;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -112,8 +112,8 @@ class DefaultTextWidgetRenderer implements fc, TextWidgetRenderer {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 != 0) {
-            var6 = (lk) null;
-            this.findTextOffsetAtScreenPosition((lk) null, -65, -58, 30, 1, -87);
+            var6 = (UiWidget) null;
+            this.findTextOffsetAtScreenPosition((UiWidget) null, -65, -58, 30, 1, -87);
           }
           stackIn_3_0 = param3.field_r + (param1 + this.field_m) - (-param3.field_v - param2);
           return stackIn_3_0;
@@ -131,7 +131,7 @@ class DefaultTextWidgetRenderer implements fc, TextWidgetRenderer {
         }
     }
 
-    public final void paintCaret(lk param0, int param1, byte param2, int param3, int param4) {
+    public final void paintCaret(UiWidget param0, int param1, byte param2, int param3, int param4) {
         int var7 = 0;
         TextLineMetrics var8 = null;
         int var9 = 0;
@@ -151,7 +151,7 @@ class DefaultTextWidgetRenderer implements fc, TextWidgetRenderer {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var6 = null;
         try {
-          if (param0.e(1)) {
+          if (param0.isFocused(1)) {
             var14 = this.getTextLayout(param0, param2 - 65);
             var15 = var14;
             var7 = var15.getLineIndexForTextOffset(param1, 0);
@@ -202,8 +202,8 @@ class DefaultTextWidgetRenderer implements fc, TextWidgetRenderer {
           param0.field_d = this.field_d;
           param0.field_l = this.field_l;
           if (param1 != -122) {
-            lk var4 = (lk) null;
-            this.getPreferredHeight((lk) null, 74);
+            UiWidget var4 = (UiWidget) null;
+            this.getPreferredHeight((UiWidget) null, 74);
           }
           param0.field_f = this.field_f;
           param0.field_i = this.field_i;
@@ -294,7 +294,7 @@ class DefaultTextWidgetRenderer implements fc, TextWidgetRenderer {
         }
     }
 
-    private final void a(int param0, int param1, byte param2, lk param3, int param4, int param5, int param6, int param7) {
+    private final void a(int param0, int param1, byte param2, UiWidget param3, int param4, int param5, int param6, int param7) {
         RuntimeException stackIn_28_0 = null;
         StringBuilder stackIn_28_1 = null;
         String stackIn_29_2 = null;
@@ -376,7 +376,7 @@ class DefaultTextWidgetRenderer implements fc, TextWidgetRenderer {
           String var5Lifetime5;
           String var5Lifetime6;
           try {
-            jg.field_B = param2;
+            AlphaWidgetContainer.field_B = param2;
             try {
               var6 = param1.getParameter("cookieprefix");
               var5 = var6;
@@ -388,7 +388,7 @@ class DefaultTextWidgetRenderer implements fc, TextWidgetRenderer {
               var5Lifetime4 = var7;
               var5Lifetime5 = var7;
               if (param0 != param2.length()) {
-                var5Lifetime6 = var7 + "; Expires=" + se.a(-106, 94608000000L + fa.correctedCurrentTimeMillis(81)) + "; Max-Age=" + 94608000L;
+                var5Lifetime6 = var7 + "; Expires=" + DropTargetWidgetContainer.a(-106, 94608000000L + fa.correctedCurrentTimeMillis(81)) + "; Max-Age=" + 94608000L;
               } else {
                 var5Lifetime6 = var7 + "; Expires=Thu, 01-Jan-1970 00:00:00 GMT; Max-Age=0";
               }
@@ -406,7 +406,7 @@ class DefaultTextWidgetRenderer implements fc, TextWidgetRenderer {
         }
     }
 
-    public final TextLayout getTextLayout(lk param0, int param1) {
+    public final TextLayout getTextLayout(UiWidget param0, int param1) {
         RuntimeException var3 = null;
         TextLayout stackIn_8_0 = null;
         RuntimeException stackIn_11_0 = null;
@@ -441,7 +441,7 @@ class DefaultTextWidgetRenderer implements fc, TextWidgetRenderer {
         }
     }
 
-    String a(boolean param0, lk param1) {
+    String a(boolean param0, UiWidget param1) {
         RuntimeException var3 = null;
         String stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
@@ -468,7 +468,7 @@ class DefaultTextWidgetRenderer implements fc, TextWidgetRenderer {
         }
     }
 
-    public final int getTextOriginY(int param0, lk param1, byte param2) {
+    public final int getTextOriginY(int param0, UiWidget param1, byte param2) {
         RuntimeException var4 = null;
         byte[] var5 = null;
         int stackIn_3_0 = 0;
@@ -497,7 +497,7 @@ class DefaultTextWidgetRenderer implements fc, TextWidgetRenderer {
         }
     }
 
-    public final void paintSelection(int param0, lk param1, int param2, int param3, int param4, byte param5) {
+    public final void paintSelection(int param0, UiWidget param1, int param2, int param3, int param4, byte param5) {
         int var12 = 0;
         int stackIn_16_0 = 0;
         int stackIn_21_0 = 0;
@@ -524,7 +524,7 @@ class DefaultTextWidgetRenderer implements fc, TextWidgetRenderer {
           if (param5 <= 86) {
             return;
           }
-          if (param1.e(1)) {
+          if (param1.isFocused(1)) {
             var17 = this.getTextLayout(param1, 0);
             var18 = var17;
             if (param4 < param3) {
@@ -582,7 +582,7 @@ class DefaultTextWidgetRenderer implements fc, TextWidgetRenderer {
         return this.field_b.field_s + this.field_b.field_x;
     }
 
-    public final int getPreferredWidth(int param0, lk param1) {
+    public final int getPreferredWidth(int param0, UiWidget param1) {
         RuntimeException var3 = null;
         byte[] var4 = null;
         int stackIn_3_0 = 0;
@@ -612,7 +612,7 @@ class DefaultTextWidgetRenderer implements fc, TextWidgetRenderer {
         }
     }
 
-    public final int getTextAreaWidth(lk param0, byte param1) {
+    public final int getTextAreaWidth(UiWidget param0, byte param1) {
         RuntimeException var3 = null;
         int stackIn_3_0 = 0;
         RuntimeException stackIn_6_0 = null;
@@ -639,7 +639,7 @@ class DefaultTextWidgetRenderer implements fc, TextWidgetRenderer {
         }
     }
 
-    private final void b(int param0, lk param1) {
+    private final void b(int param0, UiWidget param1) {
         RuntimeException stackIn_35_0 = null;
         StringBuilder stackIn_35_1 = null;
         String stackIn_36_2 = null;
@@ -650,13 +650,13 @@ class DefaultTextWidgetRenderer implements fc, TextWidgetRenderer {
         int var5 = 0;
         int var6 = 0;
         int var7 = 0;
-        lk var8 = null;
+        UiWidget var8 = null;
         int var6Lifetime1;
         var7 = Bounce.field_N;
         try {
           if (param0 > -2) {
-            var8 = (lk) null;
-            this.getTextAreaWidth((lk) null, (byte) -16);
+            var8 = (UiWidget) null;
+            this.getTextAreaWidth((UiWidget) null, (byte) -16);
           }
           if (param1.field_l == null) {
             param1.field_l = (TextLayout) ((Object) new RichTextLayout());
@@ -712,7 +712,7 @@ class DefaultTextWidgetRenderer implements fc, TextWidgetRenderer {
         }
     }
 
-    private final void a(int param0, lk param1, int param2, int param3) {
+    private final void a(int param0, UiWidget param1, int param2, int param3) {
         if (param2 != -9087) {
           return;
         }
@@ -723,7 +723,7 @@ class DefaultTextWidgetRenderer implements fc, TextWidgetRenderer {
         }
     }
 
-    public final int getTextOriginX(int param0, int param1, lk param2) {
+    public final int getTextOriginX(int param0, int param1, UiWidget param2) {
         RuntimeException var4 = null;
         int stackIn_3_0 = 0;
         RuntimeException stackIn_6_0 = null;
@@ -750,7 +750,7 @@ class DefaultTextWidgetRenderer implements fc, TextWidgetRenderer {
         }
     }
 
-    public final int findTextOffsetAtScreenPosition(lk param0, int param1, int param2, int param3, int param4, int param5) {
+    public final int findTextOffsetAtScreenPosition(UiWidget param0, int param1, int param2, int param3, int param4, int param5) {
         RuntimeException var7 = null;
         int stackIn_3_0 = 0;
         RuntimeException stackIn_6_0 = null;
@@ -778,7 +778,7 @@ class DefaultTextWidgetRenderer implements fc, TextWidgetRenderer {
         }
     }
 
-    private final int a(byte param0, lk param1) {
+    private final int a(byte param0, UiWidget param1) {
         RuntimeException var3 = null;
         DefaultTextWidgetRenderer var4 = null;
         int stackIn_3_0 = 0;
@@ -828,7 +828,7 @@ class DefaultTextWidgetRenderer implements fc, TextWidgetRenderer {
         return null;
     }
 
-    private final int a(byte param0, lk param1, int param2, int param3) {
+    private final int a(byte param0, UiWidget param1, int param2, int param3) {
         RuntimeException var5 = null;
         String var6 = null;
         int stackIn_3_0 = 0;
@@ -857,7 +857,7 @@ class DefaultTextWidgetRenderer implements fc, TextWidgetRenderer {
         }
     }
 
-    public void a(int param0, lk param1, byte param2, boolean param3, int param4) {
+    public void paintWidget(int param0, UiWidget param1, byte param2, boolean param3, int param4) {
         if (this.field_b == null) {
           return;
         }

@@ -766,11 +766,11 @@ final class TranslatedUiText {
                 }
                 byteArrayState0015 = NetworkSupport008.computeByteArray1172("privatechat_friend_notlisted", -15192);
                 if (null != byteArrayState0015) {
-                  UiComponentPart029.stringState0496 = MixedSupport105.computeString1370(byteArrayState0015, 2);
+                  DraggableWidgetContainer.stringState0496 = MixedSupport105.computeString1370(byteArrayState0015, 2);
                 }
                 byteArrayState0015 = NetworkSupport008.computeByteArray1172("chatviewscrolledup", -15192);
                 if (null != byteArrayState0015) {
-                  UiComponentPart003.stringState0059 = MixedSupport105.computeString1370(byteArrayState0015, 2);
+                  ModalDialog.stringState0059 = MixedSupport105.computeString1370(byteArrayState0015, 2);
                 }
                 byteArrayState0015 = NetworkSupport008.computeByteArray1172("thisisrunescapeclan", -15192);
                 if (null != byteArrayState0015) {
@@ -1144,7 +1144,7 @@ final class TranslatedUiText {
                 }
                 byteArrayState0015 = NetworkSupport008.computeByteArray1172("back", -15192);
                 if (byteArrayState0015 != null) {
-                  UiComponentPart003.stringState0060 = MixedSupport105.computeString1370(byteArrayState0015, 2);
+                  ModalDialog.stringState0060 = MixedSupport105.computeString1370(byteArrayState0015, 2);
                 }
                 byteArrayState0015 = NetworkSupport008.computeByteArray1172("exitfullscreenmode", -15192);
                 if (null != byteArrayState0015) {
@@ -1304,7 +1304,7 @@ final class TranslatedUiText {
                 }
                 byteArrayState0015 = NetworkSupport008.computeByteArray1172("create", -15192);
                 if (byteArrayState0015 != null) {
-                  UiComponentPart029.stringState0497 = MixedSupport105.computeString1370(byteArrayState0015, 2);
+                  DraggableWidgetContainer.stringState0497 = MixedSupport105.computeString1370(byteArrayState0015, 2);
                 }
                 byteArrayState0015 = NetworkSupport008.computeByteArray1172("create_pleasechooseapassword", -15192);
                 if (byteArrayState0015 != null) {
@@ -1892,7 +1892,7 @@ final class TranslatedUiText {
                 }
                 byteArrayState0015 = NetworkSupport008.computeByteArray1172("instructions", -15192);
                 if (null != byteArrayState0015) {
-                  UiComponentPart006.stringState0109 = MixedSupport105.computeString1370(byteArrayState0015, 2);
+                  LabeledWidgetContainer.stringState0109 = MixedSupport105.computeString1370(byteArrayState0015, 2);
                 }
                 byteArrayState0015 = NetworkSupport008.computeByteArray1172("tutorial", -15192);
                 if (null != byteArrayState0015) {
@@ -2681,7 +2681,7 @@ final class TranslatedUiText {
                 }
                 byteArrayState0015 = NetworkSupport008.computeByteArray1172("fs_accept_countdown_sing", -15192);
                 if (byteArrayState0015 != null) {
-                  UiComponentPart006.stringState0108 = MixedSupport105.computeString1370(byteArrayState0015, 2);
+                  LabeledWidgetContainer.stringState0108 = MixedSupport105.computeString1370(byteArrayState0015, 2);
                 }
                 byteArrayState0015 = NetworkSupport008.computeByteArray1172("fs_accept_countdown_pl", -15192);
                 if (null != byteArrayState0015) {
@@ -2729,7 +2729,7 @@ final class TranslatedUiText {
                 }
                 byteArrayState0015 = NetworkSupport008.computeByteArray1172("mb_caption_title", -15192);
                 if (null != byteArrayState0015) {
-                  UiComponentPart016.stringState0297 = MixedSupport105.computeString1370(byteArrayState0015, 2);
+                  ModalDialogHost.stringState0297 = MixedSupport105.computeString1370(byteArrayState0015, 2);
                 }
                 byteArrayState0015 = NetworkSupport008.computeByteArray1172("mb_including_gamename", -15192);
                 if (null != byteArrayState0015) {
@@ -2793,11 +2793,11 @@ final class TranslatedUiText {
                 }
                 byteArrayState0015 = NetworkSupport008.computeByteArray1172("rating_mode_long_name,0", -15192);
                 if (byteArrayState0015 != null) {
-                  UiComponentPart020.stringArrayState0025[0] = MixedSupport105.computeString1370(byteArrayState0015, 2);
+                  ArrayWidgetContainer.stringArrayState0025[0] = MixedSupport105.computeString1370(byteArrayState0015, 2);
                 }
                 byteArrayState0015 = NetworkSupport008.computeByteArray1172("rating_mode_long_name,1", -15192);
                 if (null != byteArrayState0015) {
-                  UiComponentPart020.stringArrayState0025[1] = MixedSupport105.computeString1370(byteArrayState0015, 2);
+                  ArrayWidgetContainer.stringArrayState0025[1] = MixedSupport105.computeString1370(byteArrayState0015, 2);
                 }
                 byteArrayState0015 = NetworkSupport008.computeByteArray1172("graphics_config_fixed_size", -15192);
                 if (null != byteArrayState0015) {

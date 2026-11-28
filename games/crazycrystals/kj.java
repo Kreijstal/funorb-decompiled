@@ -55,8 +55,8 @@ final class kj {
             cl.field_j[var2_int] = 0;
           }
           for (var2_intLifetime1 = 0; jl.field_d > var2_intLifetime1; var2_intLifetime1++) {
-            if (ol.field_D[var2_intLifetime1].field_f == param0.field_f) {
-              dupTemp$3 = ol.field_D[var2_intLifetime1].a(true);
+            if (ModalDialogHost.field_D[var2_intLifetime1].field_f == param0.field_f) {
+              dupTemp$3 = ModalDialogHost.field_D[var2_intLifetime1].a(true);
               cl.field_j[dupTemp$3] = cl.field_j[dupTemp$3] + 1;
             }
           }
@@ -65,8 +65,8 @@ final class kj {
           var2_intLifetime2 = 0;
           for (var3 = 0; jl.field_d > var3; var3++) {
             boolean decompiledFrameRemainder0 = true;
-            if (param0.field_f == ol.field_D[var3].field_f) {
-              var4 = ol.field_D[var3].a(true);
+            if (param0.field_f == ModalDialogHost.field_D[var3].field_f) {
+              var4 = ModalDialogHost.field_D[var3].a(true);
               if (cj.field_A < cl.field_j[var4]) {
                 cl.field_j[var4] = cl.field_j[var4] - 1;
                 decompiledFrameRemainder0 = false;
@@ -75,13 +75,13 @@ final class kj {
             if (decompiledFrameRemainder0) {
               incrementValue$2 = var2_intLifetime2;
               var2_intLifetime2++;
-              ol.field_D[incrementValue$2] = ol.field_D[var3];
+              ModalDialogHost.field_D[incrementValue$2] = ModalDialogHost.field_D[var3];
             }
           }
           jl.field_d = var2_intLifetime2;
           fieldTemp$1 = jl.field_d;
           jl.field_d = jl.field_d + 1;
-          ol.field_D[fieldTemp$1] = param0;
+          ModalDialogHost.field_D[fieldTemp$1] = param0;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

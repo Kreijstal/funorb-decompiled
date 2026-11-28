@@ -91,7 +91,7 @@ final class wl {
             stackIn_34_5 = pi.field_c;
             stackIn_34_6 = 127;
             stackIn_36_7 = (DebouncedFieldValidator.field_b) || (ij.field_z);
-            ic.$cfr$intArgs$a$ceabca3815d0(stackIn_34_0, stackIn_34_1, stackIn_34_2, stackIn_34_3, stackIn_34_4, stackIn_34_5, stackIn_34_6, stackIn_36_7);
+            SingleChildWidgetContainer.$cfr$intArgs$a$ceabca3815d0(stackIn_34_0, stackIn_34_1, stackIn_34_2, stackIn_34_3, stackIn_34_4, stackIn_34_5, stackIn_34_6, stackIn_36_7);
           }
           if (ol.field_a &&
             BufferedSocket.field_p != null) {
@@ -235,27 +235,27 @@ final class wl {
           }
         }
         BufferedSocket.field_p.x(96);
-        while (kj.e((byte) 120)) {
+        while (DequeWidgetContainer.e((byte) 120)) {
           ac.field_d = ac.field_d ^ 1 << tf.field_o;
           pi.field_a = pi.field_a - ub.field_j;
           ae.field_z = ae.field_z ^ 1 << tf.field_o;
           DiskArchiveRequest.field_z = DiskArchiveRequest.field_z - 1;
           if (this.field_f &&
             nj.field_c[82] &&
-            b.field_J == 11) {
+            ModalDialog.field_J == 11) {
             SocketConnector.field_k = 3;
             ol.field_a = true;
             ac.field_d = ac.field_d + 64;
             pi.field_a = pi.field_a + 128;
             PasswordValidator.field_p = true;
           }
-          if (b.field_J == 13) {
+          if (ModalDialog.field_J == 13) {
             be.a(1, (byte) -110, false);
             FullscreenFocusCanvas.field_j = true;
             return;
           }
           if (this.field_f &&
-            1 == b.field_J) {
+            1 == ModalDialog.field_J) {
             DiskArchiveRequest.field_z = DiskArchiveRequest.field_z + 256;
             if (aj.field_h) {
               aj.field_h = false;
@@ -266,7 +266,7 @@ final class wl {
             ae.field_z = ae.field_z - 64;
           }
           if (this.field_f &&
-            b.field_J == 2) {
+            ModalDialog.field_J == 2) {
             ub.field_j = ub.field_j - 32;
             pa.field_x = pa.field_x + 128;
             if (!rc.field_u) {
@@ -277,7 +277,7 @@ final class wl {
           if (!this.field_f) {
             continue;
           }
-          if (3 != b.field_J) {
+          if (3 != ModalDialog.field_J) {
             continue;
           }
           GameScreen.field_c = GameScreen.field_c - 32;

@@ -42,7 +42,7 @@ final class DiskArchiveRequest extends AsyncRequest {
 
     final static void a(boolean param0, int param1) {
         int var2 = 89 / ((param1 - 11) / 33);
-        gl.field_E.a(0, 0, 0);
+        AlphaWidgetContainer.field_E.drawAllLayers(0, 0, 0);
     }
 
     DiskArchiveRequest() {

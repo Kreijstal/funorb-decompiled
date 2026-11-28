@@ -45,7 +45,7 @@ final class ll {
                 ve.field_z = param1;
                 var2 = te.a("loginm3", -107);
                 if (null != var2) {
-                  kj.field_E = TextLineMetrics.a(var2, (byte) -112);
+                  ModalDialogHost.field_E = TextLineMetrics.a(var2, (byte) -112);
                 }
                 var2 = te.a("loginm2", param0 ^ -17);
                 if (var2 != null) {
@@ -1034,7 +1034,7 @@ final class ll {
                 }
                 var2 = te.a("pleasetryagain", -26);
                 if (null != var2) {
-                  oa.field_F = TextLineMetrics.a(var2, (byte) -75);
+                  DropTargetWidgetContainer.field_F = TextLineMetrics.a(var2, (byte) -75);
                 }
                 var2 = te.a("pleasereenterpass", -103);
                 if (null != var2) {
@@ -1526,7 +1526,7 @@ final class ll {
                 }
                 var2 = te.a("create_displayname_tooltip", param0 - 116);
                 if (null != var2) {
-                  oa.field_E = TextLineMetrics.a(var2, (byte) -94);
+                  DropTargetWidgetContainer.field_E = TextLineMetrics.a(var2, (byte) -94);
                 }
                 var2 = te.a("create_displayname_hint", param0 - 61);
                 if (var2 != null) {
@@ -1650,7 +1650,7 @@ final class ll {
                 }
                 var2 = te.a("create_alert_invalidage", -29);
                 if (null != var2) {
-                  mh.field_H = TextLineMetrics.a(var2, (byte) -38);
+                  LabeledWidgetContainer.field_H = TextLineMetrics.a(var2, (byte) -38);
                 }
                 var2 = te.a("create_alert_yearrange", -21);
                 if (var2 != null) {
@@ -1666,7 +1666,7 @@ final class ll {
                 }
                 var2 = te.a("create_emailvalid", -31);
                 if (var2 != null) {
-                  ue.field_E = TextLineMetrics.a(var2, (byte) -100);
+                  AlphaWidgetContainer.field_E = TextLineMetrics.a(var2, (byte) -100);
                 }
                 var2 = te.a("create_account_success", -63);
                 if (var2 != null) {

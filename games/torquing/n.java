@@ -32,8 +32,8 @@ final class n extends DualLinkNode {
         if (jg.field_t == null) {
           return -1;
         }
-        if (param0 >= na.field_E &&
-          param0 < na.field_E + jg.field_t.field_s &&
+        if (param0 >= LabeledWidgetContainer.field_E &&
+          param0 < LabeledWidgetContainer.field_E + jg.field_t.field_s &&
           we.field_h <= param2 &&
           jg.field_t.field_t + we.field_h > param2) {
           return 0;

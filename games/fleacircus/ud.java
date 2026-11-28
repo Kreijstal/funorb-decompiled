@@ -212,21 +212,21 @@ final class ud {
           var3 = -15 % ((-48 - param0) / 60);
           var4 = 0;
           while (var4 < ContextualRuntimeException.field_g.length) {
-            ContextualRuntimeException.field_g[var4] = je.field_O[db.a((byte) -115, new Random(), je.field_O.length)];
+            ContextualRuntimeException.field_g[var4] = je.field_O[ModalDialog.a((byte) -115, new Random(), je.field_O.length)];
             {
               while ((null == AccountCreationResultPanel.field_tb[var4] ||
                 AccountCreationResultPanel.field_tb[var4] == ContextualRuntimeException.field_g[var4])) {
-                AccountCreationResultPanel.field_tb[var4] = je.field_O[db.a((byte) -115, new Random(), je.field_O.length)];
+                AccountCreationResultPanel.field_tb[var4] = je.field_O[ModalDialog.a((byte) -115, new Random(), je.field_O.length)];
               }
               {
                 var4++;
               }
             }
           }
-          gj.field_A = new rk(320, 420, MusicPatchPcmStream.field_m, UiComponent.field_l, InteractiveWidget.field_H, IntrusiveNode.field_b);
-          gj.field_A.field_t = fl.field_f;
-          gj.field_A.field_y = 1;
-          gj.field_A.field_z = -1;
+          DequeWidgetContainer.field_A = new rk(320, 420, MusicPatchPcmStream.field_m, UiComponent.field_l, InteractiveWidget.field_H, IntrusiveNode.field_b);
+          DequeWidgetContainer.field_A.field_t = fl.field_f;
+          DequeWidgetContainer.field_A.field_y = 1;
+          DequeWidgetContainer.field_A.field_z = -1;
           AccountRegistrationPanel.field_L = new mf(3, 1560);
           GzipDecompressor.field_b = new mf(6, 165);
           fb.field_a = new mf(3, 4715);

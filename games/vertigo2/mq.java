@@ -315,7 +315,7 @@ final class mq extends DefaultTextWidgetRenderer {
         }
     }
 
-    public final void a(boolean param0, int param1, boolean param2, UiWidget param3, int param4) {
+    public final void paintWidget(boolean param0, int param1, boolean param2, UiWidget param3, int param4) {
         UiWidget stackIn_3_0 = null;
         RuntimeException stackIn_35_0 = null;
         StringBuilder stackIn_35_1 = null;
@@ -363,7 +363,7 @@ final class mq extends DefaultTextWidgetRenderer {
               }
             }
           }
-          if (param3.f(125)) {
+          if (param3.isFocused(125)) {
             var13 = this.field_w[5];
             if (var13 != null) {
               var13.a(this, param1, param3, -93, param4, this.field_x);

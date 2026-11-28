@@ -1,0 +1,223 @@
+/*
+ * Decompiled by CFR-JS 0.4.0.
+ */
+abstract class ModalDialog extends DequeWidgetContainer {
+    private ModalDialogHost field_I;
+    boolean field_K;
+    static String field_M;
+    private int field_J;
+    static int[] field_L;
+
+    final void drawWidget(byte param0, int param1, int param2, int param3) {
+        if (this.field_J == 0) {
+          return;
+        }
+        if (this.field_J >= 256) {
+          if (param3 == 0) {
+            this.b(21533, this.field_t + param2, this.field_u + param1);
+            super.drawWidget((byte) 4, param1, param2, param3);
+            return;
+          }
+          return;
+        }
+        if (null == mn.field_t) {
+          mn.field_t = new Sprite(this.field_v, this.field_q);
+          ArchiveProvider.a(mn.field_t, 127);
+          SoftwareRasterizer.clearRaster();
+          this.b(21533, 0, 0);
+          super.drawWidget(param0, -param1 - this.field_u, -param2 - this.field_t, param3);
+          tk.b(true);
+          mn.field_t.drawWithOpacity(this.field_u + param1, this.field_t + param2, this.field_J);
+          return;
+        }
+        if (this.field_v > mn.field_t.field_y) {
+          mn.field_t = new Sprite(this.field_v, this.field_q);
+          ArchiveProvider.a(mn.field_t, 127);
+          SoftwareRasterizer.clearRaster();
+          this.b(21533, 0, 0);
+          super.drawWidget(param0, -param1 - this.field_u, -param2 - this.field_t, param3);
+          tk.b(true);
+          mn.field_t.drawWithOpacity(this.field_u + param1, this.field_t + param2, this.field_J);
+          return;
+        }
+        if (mn.field_t.field_C >= this.field_q) {
+          ArchiveProvider.a(mn.field_t, 127);
+          SoftwareRasterizer.clearRaster();
+          this.b(21533, 0, 0);
+          super.drawWidget(param0, -param1 - this.field_u, -param2 - this.field_t, param3);
+          tk.b(true);
+          mn.field_t.drawWithOpacity(this.field_u + param1, this.field_t + param2, this.field_J);
+          return;
+        }
+        mn.field_t = new Sprite(this.field_v, this.field_q);
+        ArchiveProvider.a(mn.field_t, 127);
+        SoftwareRasterizer.clearRaster();
+        this.b(21533, 0, 0);
+        super.drawWidget(param0, -param1 - this.field_u, -param2 - this.field_t, param3);
+        tk.b(true);
+        mn.field_t.drawWithOpacity(this.field_u + param1, this.field_t + param2, this.field_J);
+    }
+
+    final static void a(int param0, int param1) {
+        dk.field_e = dk.field_e + 1;
+        if (25 == dk.field_e) {
+          dk.field_e = 0;
+        }
+        gl.field_u[dk.field_e] = RawPcmStream.createForPlaybackRate(re.field_a[17], 100, oc.field_f);
+        TextLineMetrics.a(1963987425, gl.field_u[dk.field_e]);
+        IterableNodeHashTable.field_c[dk.field_e] = param0;
+        if (param1 == 136989569) {
+          return;
+        }
+        ModalDialog.a(25, 120);
+    }
+
+    final void setCenteredSize(int param0, int param1, byte param2) {
+        if (param2 == 55) {
+          this.setBounds(param0, -101, -param1 + ConfirmedEmailAvailabilityValidator.field_n >> 1, param1, ae.field_c - param0 >> 1);
+          return;
+        }
+    }
+
+    final UiWidget getFocusedChild(int param0) {
+        UiWidget var2 = super.getFocusedChild(123);
+        if (param0 <= 107) {
+          this.field_I = (ModalDialogHost) null;
+          if (var2 == null) {
+            return (UiWidget) (this);
+          }
+          return var2;
+        }
+        if (var2 == null) {
+          return (UiWidget) (this);
+        }
+        return var2;
+    }
+
+    final static void a(byte param0) {
+        int var3 = 0;
+        int var2 = 0;
+        int var4 = 0;
+        int var5 = MinerDisturbance.field_ab;
+        cm var6 = (cm) (ce.field_a.beginForward(94));
+        cm var1 = var6;
+        int var2Lifetime1;
+        int var2Lifetime2;
+        int var4Lifetime1;
+        int var4Lifetime2;
+        if (var1 != null) {
+          var3 = tf.field_a;
+          if (var3 < 100) {
+            var2 = 480 + (32 + (-var3 / 2 - 38));
+            var4 = ce.field_d.maxLineWidth(CipherPacketBuffer.field_A[var6.field_s], 640);
+            ArchiveIndex.a(var2 - 10, 60, -var4 + 570, var4 + 60, (byte) 60, he.field_b);
+            nj.field_c[var6.field_s].drawQuarterSize(590, var2);
+            ce.field_d.drawRightAligned(CipherPacketBuffer.field_A[var6.field_s], 582, var2 + ce.field_d.field_I, 1, -1);
+            if (param0 >= -79) {
+              ModalDialog.a(37, 30);
+              return;
+            }
+            return;
+          }
+          if (var3 >= 250) {
+            var2Lifetime1 = -123 - (-(var3 / 2) - 480) - 58;
+            var4Lifetime1 = ce.field_d.maxLineWidth(CipherPacketBuffer.field_A[var6.field_s], 640);
+            ArchiveIndex.a(var2Lifetime1 - 10, 60, -var4Lifetime1 + 570, var4Lifetime1 + 60, (byte) 60, he.field_b);
+            nj.field_c[var6.field_s].drawQuarterSize(590, var2Lifetime1);
+            ce.field_d.drawRightAligned(CipherPacketBuffer.field_A[var6.field_s], 582, var2Lifetime1 + ce.field_d.field_I, 1, -1);
+            if (param0 >= -79) {
+              ModalDialog.a(37, 30);
+              return;
+            }
+            return;
+          }
+          var2Lifetime2 = 424;
+          var4Lifetime2 = ce.field_d.maxLineWidth(CipherPacketBuffer.field_A[var6.field_s], 640);
+          ArchiveIndex.a(var2Lifetime2 - 10, 60, -var4Lifetime2 + 570, var4Lifetime2 + 60, (byte) 60, he.field_b);
+          nj.field_c[var6.field_s].drawQuarterSize(590, var2Lifetime2);
+          ce.field_d.drawRightAligned(CipherPacketBuffer.field_A[var6.field_s], 582, var2Lifetime2 + ce.field_d.field_I, 1, -1);
+        }
+        if (param0 < -79) {
+          return;
+        }
+        ModalDialog.a(37, 30);
+    }
+
+    public static void clearDeclaredStaticReferences(byte param0) {
+        if (param0 != 15) {
+          return;
+        }
+        field_M = null;
+        field_L = null;
+    }
+
+    private final int getTargetAlpha(byte param0) {
+        int var2 = -108 / ((param0 - 53) / 58);
+        return !this.field_K ? 0 : this.field_I.getTopOpenDialog((byte) 83) == this ? 256 : 0;
+    }
+
+    boolean advanceDialogAnimation(int param0) {
+        boolean stackIn_12_0 = false;
+        boolean stackIn_24_0 = false;
+        int var2;
+        int var3;
+        var2 = this.getTargetAlpha((byte) 116);
+        var3 = -this.field_J + var2;
+        if (0 < var3) {
+          this.field_J = this.field_J + (-1 + var3 + 8) / 8;
+          if (0 > var3) {
+            this.field_J = this.field_J + (var3 - 15) / 16;
+          }
+          if (param0 != -4) {
+            return true;
+          }
+          if (this.field_J != 0) {
+            return false;
+          }
+          if (var2 != 0) {
+            return false;
+          }
+          stackIn_12_0 = !(this.field_K);
+          return stackIn_12_0;
+        }
+        if (0 > var3) {
+          this.field_J = this.field_J + (var3 - 15) / 16;
+        }
+        if (param0 != -4) {
+          return true;
+        }
+        stackIn_24_0 = (this.field_J == 0) && (var2 == 0) && (!this.field_K);
+        return stackIn_24_0;
+    }
+
+    abstract void b(int param0, int param1, int param2);
+
+    boolean snapDialogAnimation(boolean param0) {
+        this.field_J = this.getTargetAlpha((byte) -86);
+        if (param0) {
+          return false;
+        }
+        if (this.field_J != 0) {
+          return false;
+        }
+        if (!this.field_K) {
+          return true;
+        }
+        return false;
+    }
+
+    ModalDialog(ModalDialogHost param0, int param1, int param2) {
+        super(-param1 + ConfirmedEmailAvailabilityValidator.field_n >> 1, ae.field_c - param2 >> 1, param1, param2, (WidgetRenderer) null);
+        try {
+          this.field_K = false;
+          this.field_J = 0;
+          this.field_I = param0;
+        } catch (RuntimeException runtimeException) {
+          throw lj.wrapClientException((Throwable) ((Object) runtimeException), "cc.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+        }
+    }
+
+    static {
+        field_M = "Music: ";
+    }
+}

@@ -30,7 +30,7 @@ final class kh {
           return;
         }
         un.field_Hb = l.field_a;
-        um.field_F = l.field_a;
+        ArrayWidgetContainer.field_F = l.field_a;
     }
 
     public static void clearStaticReferences(boolean param0) {

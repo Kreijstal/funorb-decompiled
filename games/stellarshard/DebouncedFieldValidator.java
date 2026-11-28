@@ -59,10 +59,10 @@ abstract class DebouncedFieldValidator implements FieldValidator {
         SoftwareRasterizer.resetClip();
         jf.field_n[2].draw(-jf.field_n[2].field_w + (param4 + var7_int / 2), 2 + (param6 - (-2 + l.field_f.field_N / 2)) - jf.field_n[0].field_x / 2);
         if (!(nj.field_f[param1] <= 0)) {
-          SoftwareRasterizer.addRadialGlow(param4 - (var7_int / 2 - 12) << 4, param6 + 2 - (l.field_f.field_N / 2 - 2) << 4, 512, nj.field_f[param1] * 4, ei.field_I);
-          SoftwareRasterizer.addRadialGlow(-14 + (var7_int / 2 + param4) << 4, -(l.field_f.field_N / 2) + 2 + param6 + 2 << 4, 512, nj.field_f[param1] * 4, ei.field_I);
-          SoftwareRasterizer.addRadialGlow(param4 - (var7_int / 2 - 12) << 4, -(l.field_f.field_N / 2) + (2 + param6 + 2) << 4, 256, nj.field_f[param1] * 2, ei.field_B);
-          SoftwareRasterizer.addRadialGlow(-14 + (var7_int / 2 + param4) << 4, 2 - l.field_f.field_N / 2 + (2 + param6) << 4, 256, nj.field_f[param1] * 2, ei.field_B);
+          SoftwareRasterizer.addRadialGlow(param4 - (var7_int / 2 - 12) << 4, param6 + 2 - (l.field_f.field_N / 2 - 2) << 4, 512, nj.field_f[param1] * 4, ModalDialogHost.field_I);
+          SoftwareRasterizer.addRadialGlow(-14 + (var7_int / 2 + param4) << 4, -(l.field_f.field_N / 2) + 2 + param6 + 2 << 4, 512, nj.field_f[param1] * 4, ModalDialogHost.field_I);
+          SoftwareRasterizer.addRadialGlow(param4 - (var7_int / 2 - 12) << 4, -(l.field_f.field_N / 2) + (2 + param6 + 2) << 4, 256, nj.field_f[param1] * 2, ModalDialogHost.field_B);
+          SoftwareRasterizer.addRadialGlow(-14 + (var7_int / 2 + param4) << 4, 2 - l.field_f.field_N / 2 + (2 + param6) << 4, 256, nj.field_f[param1] * 2, ModalDialogHost.field_B);
         }
         if (param3) {
           return;
@@ -117,7 +117,7 @@ abstract class DebouncedFieldValidator implements FieldValidator {
           }
           var5 = (af) (ResourceArchive.field_b.beginForward(-110));
           while (var5 != null) {
-            kg.a(param0, var5, false);
+            LabeledWidgetContainer.a(param0, var5, false);
             var5 = (af) (ResourceArchive.field_b.nextForward((byte) 87));
           }
           return;

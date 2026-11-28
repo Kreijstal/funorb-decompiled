@@ -54,7 +54,7 @@ final class dd extends u {
           var2 = "tuhstatbut";
           var3 = "rvnadlm";
           var4 = -1L;
-          jk.a(0, var3, var4, param1, var2);
+          DropTargetWidgetContainer.a(0, var3, var4, param1, var2);
         } catch (RuntimeException runtimeException) {
           throw ie.wrapClientException((Throwable) ((Object) runtimeException), "dd.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
@@ -146,7 +146,7 @@ final class dd extends u {
           if (param6 != -81) {
             field_g = (DisplayNameSelectionPanel) null;
           }
-          var61 = k.field_I;
+          var61 = ModalDialogHost.field_I;
           var63 = field_k;
           for (var13 = 0; param7.field_H > var13; var13++) {
             var14 = param0 * var61[var13] + (param3 * var62[var13] + var63[var13] * param4) >> 8;

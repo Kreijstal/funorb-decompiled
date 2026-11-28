@@ -11,7 +11,7 @@ final class km extends InteractiveWidget {
     int field_F;
     int field_G;
 
-    final boolean b(int param0, int param1, int param2, int param3, int param4, UiWidget param5, int param6) {
+    final boolean pointerPressed(int param0, int param1, int param2, int param3, int param4, UiWidget param5, int param6) {
         RuntimeException stackIn_19_0 = null;
         StringBuilder stackIn_19_1 = null;
         String stackIn_20_2 = null;
@@ -23,7 +23,7 @@ final class km extends InteractiveWidget {
         int var12 = 0;
         var12 = BachelorFridge.field_y;
         try {
-          if (!super.b(param0, param1, param2, param3, param4, param5, param6)) {
+          if (!super.pointerPressed(param0, param1, param2, param3, param4, param5, param6)) {
             return false;
           }
           var8_int = -this.x - (param2 + (this.field_A - param0));

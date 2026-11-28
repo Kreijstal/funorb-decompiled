@@ -34,7 +34,7 @@ final class hn extends kl {
         int var4 = DungeonAssault.field_K;
         try {
           var1 = new RgbSprite(540, 140);
-          lm.a(var1, (byte) 70);
+          UiWidget.a(var1, (byte) 70);
           re.b();
           if (param0 != -117) {
             field_t = -63;

@@ -89,9 +89,9 @@ final class RemoveDefeatedCreatureEffect extends EventEffect {
         var2 = BachelorFridge.field_y;
         try {
           gja.field_m.processInput(true, hk.field_e, RichTextLayout.field_q, param0 ^ 6380);
-          gja.field_m.i(0);
+          gja.field_m.advanceDialogs(0);
           while (kaa.b(127)) {
-            gja.field_m.a(dla.field_j, (byte) 7, gf.field_k);
+            gja.field_m.processKeyInput(dla.field_j, (byte) 7, gf.field_k);
           }
           if (TBomberEvent.field_r != -1) {
             var1_int = TBomberEvent.field_r;

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ob extends ta implements TextHotspotListener, WidgetActivationListener {
+final class ob extends DequeWidgetContainer implements TextHotspotListener, WidgetActivationListener {
     private AccountCreationResultPanel field_B;
     static String field_E;
     static int field_K;
@@ -22,7 +22,7 @@ final class ob extends ta implements TextHotspotListener, WidgetActivationListen
           }
           int var6_int = -98 / ((param0 + 3) / 62);
         } catch (RuntimeException runtimeException) {
-          throw dd.wrapClientException((Throwable) ((Object) runtimeException), "ob.M(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ')');
+          throw DraggableWidgetContainer.wrapClientException((Throwable) ((Object) runtimeException), "ob.M(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ')');
         }
     }
 
@@ -74,12 +74,12 @@ final class ob extends ta implements TextHotspotListener, WidgetActivationListen
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw dd.wrapClientException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
+          throw DraggableWidgetContainer.wrapClientException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
         }
     }
 
     ob(AccountCreationResultPanel param0) {
-        super(0, 0, 288, 0, (td) null);
+        super(0, 0, 288, 0, (WidgetRenderer) null);
         String var7 = null;
         int var3 = 0;
         DefaultTextWidgetRenderer var4 = null;
@@ -87,8 +87,8 @@ final class ob extends ta implements TextHotspotListener, WidgetActivationListen
         int var6 = 0;
         try {
           this.field_B = param0;
-          this.field_G = new InteractiveWidget(sk.field_C, (ag) null);
-          this.field_G.field_j = (td) ((Object) new vk());
+          this.field_G = new InteractiveWidget(ModalDialogHost.field_C, (WidgetEventListener) null);
+          this.field_G.field_j = (WidgetRenderer) ((Object) new vk());
           var7 = CrossfadingMidiPcmStream.a(-415993727, new String[]{this.m(67), this.k(-804)}, lb.field_a);
           var3 = 20;
           var4 = new DefaultTextWidgetRenderer(lm.field_f, 0, 0, 0, 0, 16777215, -1, 3, 0, lm.field_f.field_H, -1, 2147483647, true);
@@ -96,25 +96,25 @@ final class ob extends ta implements TextHotspotListener, WidgetActivationListen
           this.field_A.field_i = "";
           this.field_A.a(0, ConfirmedEmailAvailabilityValidator.field_p, 2);
           this.field_A.a(1, ConfirmedEmailAvailabilityValidator.field_p, 2);
-          this.field_A.field_h = (ag) (this);
+          this.field_A.field_h = (WidgetEventListener) (this);
           this.field_A.field_m = this.field_m - 40;
           this.field_A.a(var3, (byte) 53, -40 + this.field_m, 26);
           var3 = var3 + (this.field_A.field_r + 15);
-          this.a(this.field_A, (byte) 74);
+          this.addChild(this.field_A, (byte) 74);
           var5 = 4;
           var6 = 200;
-          this.field_G.a(300 - var6 >> 1, var3, 40, (byte) -90, var6);
-          this.field_G.field_h = (ag) (this);
-          this.a(this.field_G, (byte) 74);
-          this.a(0, 0, var5 + var3 + 55, (byte) -90, 300);
+          this.field_G.setBounds(300 - var6 >> 1, var3, 40, (byte) -90, var6);
+          this.field_G.field_h = (WidgetEventListener) (this);
+          this.addChild(this.field_G, (byte) 74);
+          this.setBounds(0, 0, var5 + var3 + 55, (byte) -90, 300);
         } catch (RuntimeException runtimeException) {
-          throw dd.wrapClientException((Throwable) ((Object) runtimeException), "ob.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw DraggableWidgetContainer.wrapClientException((Throwable) ((Object) runtimeException), "ob.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
     final static java.awt.Container l(int param0) {
-        if (h.field_J != null) {
-          return (java.awt.Container) ((Object) h.field_J);
+        if (LabeledWidgetContainer.field_J != null) {
+          return (java.awt.Container) ((Object) LabeledWidgetContainer.field_J);
         }
         if (param0 != 4) {
           ob.resetStaticState((byte) -91);
@@ -131,7 +131,7 @@ final class ob extends ta implements TextHotspotListener, WidgetActivationListen
         return "</col></u>";
     }
 
-    final boolean a(char param0, int param1, pj param2, int param3) {
+    final boolean handleKey(char param0, int param1, UiWidget param2, int param3) {
         RuntimeException var5 = null;
         boolean stackIn_6_0 = false;
         boolean stackIn_10_0 = false;
@@ -140,17 +140,17 @@ final class ob extends ta implements TextHotspotListener, WidgetActivationListen
         String stackIn_14_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (super.a(param0, param1, param2, param3)) {
+          if (super.handleKey(param0, param1, param2, param3)) {
             return true;
           }
           if (param1 == 98) {
-            stackIn_6_0 = this.a(param2, false);
+            stackIn_6_0 = this.focusPreviousChild(param2, false);
             return stackIn_6_0;
           }
           if (param1 != 99) {
             return false;
           }
-          stackIn_10_0 = this.b(param2, false);
+          stackIn_10_0 = this.focusNextChild(param2, false);
           return stackIn_10_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -162,7 +162,7 @@ final class ob extends ta implements TextHotspotListener, WidgetActivationListen
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw dd.wrapClientException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param3).append(')').toString());
+          throw DraggableWidgetContainer.wrapClientException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param3).append(')').toString());
         }
     }
 

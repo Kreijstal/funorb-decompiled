@@ -15,16 +15,16 @@ class ig extends DefaultTextWidgetRenderer {
         field_r = null;
     }
 
-    public final void a(int param0, int param1, int param2, boolean param3, UiWidget param4) {
+    public final void paintWidget(int param0, int param1, int param2, boolean param3, UiWidget param4) {
         try {
           if (param3) {
             EditableTextField.a(param4.y + param1, param4.x + param2, param4.height, param4.width, false);
           }
           if (param0 < 89) {
             UiWidget var7 = (UiWidget) null;
-            this.a(-112, 5, -61, true, (UiWidget) null);
+            this.paintWidget(-112, 5, -61, true, (UiWidget) null);
           }
-          super.a(117, param1, param2, param3, param4);
+          super.paintWidget(117, param1, param2, param3, param4);
         } catch (RuntimeException runtimeException) {
           throw RichTextWidget.wrapThrowable((Throwable) ((Object) runtimeException), "ig.A(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ')');
         }

@@ -233,7 +233,7 @@ final class UiComponentPart014 extends UiComponentPart030 implements WidgetActiv
         }
     }
 
-    private final InteractiveComponent computeInteractiveComponent0699(CallbackContract006 callbackContract006Argument1, String stringArgument2, byte byteArgument3) {
+    private final InteractiveComponent computeInteractiveComponent0699(WidgetEventListener callbackContract006Argument1, String stringArgument2, byte byteArgument3) {
         InteractiveComponent interactiveComponentLocal1 = null;
         RuntimeException runtimeExceptionLocal2 = null;
         int integerLocal3 = 0;
@@ -246,15 +246,15 @@ final class UiComponentPart014 extends UiComponentPart030 implements WidgetActiv
         RuntimeException caughtExceptionLocal10 = null;
         try {
           interactiveComponentLocal1 = new InteractiveComponent(stringArgument2, callbackContract006Argument1);
-          interactiveComponentLocal1.callbackContract004State0006 = (CallbackContract004) ((Object) new MixedSupport041());
+          interactiveComponentLocal1.callbackContract004State0006 = (WidgetRenderer) ((Object) new MixedSupport041());
           integerLocal3 = this.integerState0108 - 6;
           this.integerState0108 = this.integerState0108 + 38;
           if (byteArgument3 != -90) {
             sceneWidgetState0053 = (SceneWidget) null;
           }
-          interactiveComponentLocal1.performAction0222(30, -16 + (this.integerState0107 - 14), 15, integerLocal3, byteArgument3 - 16465);
-          this.performAction0895(interactiveComponentLocal1, (byte) -55);
-          this.performAction0228(109);
+          interactiveComponentLocal1.setBounds(30, -16 + (this.integerState0107 - 14), 15, integerLocal3, byteArgument3 - 16465);
+          this.addChild(interactiveComponentLocal1, (byte) -55);
+          this.refreshLayout(109);
           stackInteractiveComponentLocal4 = interactiveComponentLocal1;
           return stackInteractiveComponentLocal4;
         } catch (java.lang.RuntimeException caughtParameterLocal11) {
@@ -369,7 +369,7 @@ final class UiComponentPart014 extends UiComponentPart030 implements WidgetActiv
         return NetworkSupport009.computeInteger1184(0);
     }
 
-    UiComponentPart014(UiComponentPart016 uiComponentPart016Argument1, MixedSupport080 mixedSupport080Argument2) {
+    UiComponentPart014(ModalDialogHost uiComponentPart016Argument1, MixedSupport080 mixedSupport080Argument2) {
         super(uiComponentPart016Argument1, 200, 150);
         Object objectLocal1 = null;
         UiComponent uiComponentLocal2 = null;
@@ -398,14 +398,14 @@ final class UiComponentPart014 extends UiComponentPart030 implements WidgetActiv
           } else {
             objectLocal1 = NodeHashTable.stringState0507;
           }
-          uiComponentLocal2 = new UiComponent((String) (objectLocal1), (CallbackContract006) null);
+          uiComponentLocal2 = new UiComponent((String) (objectLocal1), (WidgetEventListener) null);
           uiComponentLocal2.integerState0107 = this.integerState0107;
           uiComponentLocal2.integerState0110 = 0;
           uiComponentLocal2.integerState0108 = 80;
           uiComponentLocal2.integerState0104 = 50;
-          uiComponentLocal2.callbackContract004State0006 = (CallbackContract004) ((Object) new DefaultTextWidgetRenderer(MixedSupport011.bitmapFontState0006, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true));
-          this.performAction0895(uiComponentLocal2, (byte) -55);
-          this.interactiveComponentState0006 = this.computeInteractiveComponent0699((CallbackContract006) (this), ValidatedTextField.stringState0383, (byte) -90);
+          uiComponentLocal2.callbackContract004State0006 = (WidgetRenderer) ((Object) new DefaultTextWidgetRenderer(MixedSupport011.bitmapFontState0006, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true));
+          this.addChild(uiComponentLocal2, (byte) -55);
+          this.interactiveComponentState0006 = this.computeInteractiveComponent0699((WidgetEventListener) (this), ValidatedTextField.stringState0383, (byte) -90);
           return;
         } catch (java.lang.RuntimeException caughtParameterLocal9) {
           caughtExceptionLocal8 = caughtParameterLocal9;

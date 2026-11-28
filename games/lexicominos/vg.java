@@ -68,23 +68,23 @@ final class vg {
     }
 
     final static void a(int param0) {
-        ug.field_A.h(0);
+        ug.field_A.closeAllDialogs(0);
         if (param0 <= 100) {
           field_b = 110;
           if (qj.field_fb == null) {
             qj.field_fb = new uk(ug.field_A, jj.field_d);
-            ug.field_A.a(-14579, qj.field_fb);
+            ug.field_A.showDialog(-14579, qj.field_fb);
             return;
           }
-          ug.field_A.a(-14579, qj.field_fb);
+          ug.field_A.showDialog(-14579, qj.field_fb);
           return;
         }
         if (qj.field_fb != null) {
-          ug.field_A.a(-14579, qj.field_fb);
+          ug.field_A.showDialog(-14579, qj.field_fb);
           return;
         }
         qj.field_fb = new uk(ug.field_A, jj.field_d);
-        ug.field_A.a(-14579, qj.field_fb);
+        ug.field_A.showDialog(-14579, qj.field_fb);
     }
 
     static int a(int param0, int param1) {

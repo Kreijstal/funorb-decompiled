@@ -3,7 +3,7 @@
  */
 import java.io.*;
 
-final class NameSuggestionsPanel extends gj implements WidgetActivationListener {
+final class NameSuggestionsPanel extends DequeWidgetContainer implements WidgetActivationListener {
     static int[] field_H;
     private String[] field_K;
     static String[] field_J;
@@ -13,7 +13,7 @@ final class NameSuggestionsPanel extends gj implements WidgetActivationListener 
     static si[] field_F;
     private NameSuggestionListener field_G;
 
-    final boolean a(int param0, int param1, UiComponent param2, char param3) {
+    final boolean handleKey(int param0, int param1, UiComponent param2, char param3) {
         RuntimeException var5 = null;
         boolean stackIn_7_0 = false;
         boolean stackIn_13_0 = false;
@@ -22,11 +22,11 @@ final class NameSuggestionsPanel extends gj implements WidgetActivationListener 
         String stackIn_19_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (super.a(param0 ^ 0, param1, param2, param3)) {
+          if (super.handleKey(param0 ^ 0, param1, param2, param3)) {
             return true;
           }
           if (param1 == 98) {
-            stackIn_7_0 = this.b(param2, -28533);
+            stackIn_7_0 = this.focusPreviousChild(param2, -28533);
             return stackIn_7_0;
           }
           if (param0 != -2) {
@@ -35,7 +35,7 @@ final class NameSuggestionsPanel extends gj implements WidgetActivationListener 
           if (param1 != 99) {
             return false;
           }
-          stackIn_13_0 = this.a(32, param2);
+          stackIn_13_0 = this.focusNextChild(32, param2);
           return stackIn_13_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -204,8 +204,8 @@ final class NameSuggestionsPanel extends gj implements WidgetActivationListener 
         }
     }
 
-    final void b(int param0, int param1, boolean param2, int param3) {
-        super.b(param0, param1, param2, param3);
+    final void drawWidget(int param0, int param1, boolean param2, int param3) {
+        super.drawWidget(param0, param1, param2, param3);
         if (param3 != 0) {
           return;
         }
@@ -240,17 +240,17 @@ final class NameSuggestionsPanel extends gj implements WidgetActivationListener 
             var4 = new me(ug.field_e, 0, 1);
             this.field_M = new InteractiveWidget[var3_int + 1];
             for (var5 = 0; var5 < var3_int; var5++) {
-              this.field_M[var5] = new InteractiveWidget(this.field_K[var5], (kd) (this));
+              this.field_M[var5] = new InteractiveWidget(this.field_K[var5], (WidgetEventListener) (this));
               this.field_M[var5].field_p = (ComponentLayout) ((Object) var4);
               this.field_M[var5].field_m = IntrusiveNode.field_d;
-              this.field_M[var5].a(0, 80, 20 + var5 * 16, 15, 80);
-              this.a((UiComponent) (this.field_M[var5]), (byte) -89);
+              this.field_M[var5].setBounds(0, 80, 20 + var5 * 16, 15, 80);
+              this.addChild((UiComponent) (this.field_M[var5]), (byte) -89);
             }
-            this.field_M[var3_int] = new InteractiveWidget(ue.field_b, (kd) (this));
+            this.field_M[var3_int] = new InteractiveWidget(ue.field_b, (WidgetEventListener) (this));
             var5Lifetime1 = -104 / ((param1 - 15) / 54);
             this.field_M[var3_int].field_p = (ComponentLayout) ((Object) var4);
-            this.field_M[var3_int].a(0, 100, (var3_int + 1) * 16 + 20, 15, 80);
-            this.a((UiComponent) (this.field_M[var3_int]), (byte) -112);
+            this.field_M[var3_int].setBounds(0, 100, (var3_int + 1) * 16 + 20, 15, 80);
+            this.addChild((UiComponent) (this.field_M[var3_int]), (byte) -112);
             return;
           }
           this.field_K = null;

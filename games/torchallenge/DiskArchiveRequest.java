@@ -50,7 +50,7 @@ final class DiskArchiveRequest extends ArchiveRequest {
 
     final static void c(boolean param0) {
         String var2 = (String) null;
-        wk.a((String) null, -105, GameKeyHandler.field_d);
+        DropTargetWidgetContainer.a((String) null, -105, GameKeyHandler.field_d);
         if (param0) {
           field_A = (int[][]) null;
         }

@@ -1,0 +1,74 @@
+/*
+ * Decompiled by CFR-JS 0.4.0.
+ */
+final class AlphaWidgetContainer extends SingleChildWidgetContainer {
+    static String[] field_A;
+    static volatile int field_y;
+    int field_z;
+
+    public AlphaWidgetContainer() {
+        super(0, 0, 0, 0, (WidgetRenderer) null, (WidgetEventListener) null);
+        this.field_z = 256;
+    }
+
+    final void drawWidget(int param0, byte param1, int param2, int param3) {
+        if (param3 != 0) {
+          return;
+        }
+        if (this.field_w == null) {
+          return;
+        }
+        if (this.field_z == 0) {
+          return;
+        }
+        if (this.field_z == 256) {
+          this.field_w.drawWidget(param0 + this.field_j, (byte) -45, this.field_r + param2, param3);
+          return;
+        }
+        RgbSprite var6 = new RgbSprite(this.field_w.field_g, this.field_w.field_f);
+        if (param1 <= -12) {
+          em.a((byte) 38, var6);
+          this.field_w.drawWidget(0, (byte) -121, 0, param3);
+          lg.a(1);
+          var6.drawWithOpacity(this.field_r + param2, param0 + this.field_j, this.field_z);
+          return;
+        }
+        this.drawWidget(75, (byte) 112, 48, 106);
+        em.a((byte) 38, var6);
+        this.field_w.drawWidget(0, (byte) -121, 0, param3);
+        lg.a(1);
+        var6.drawWithOpacity(this.field_r + param2, param0 + this.field_j, this.field_z);
+    }
+
+    final static void a(int param0, int param1) {
+        hd.field_b = kb.field_f[param0];
+        ModelMesh.field_h = ck.field_fb[param0];
+        if (param1 > -24) {
+          return;
+        }
+        ge.field_a = gk.field_k[param0];
+    }
+
+    AlphaWidgetContainer(UiWidget param0) {
+        super(param0.field_r, param0.field_j, param0.field_g, param0.field_f, (WidgetRenderer) null, (WidgetEventListener) null);
+        try {
+          param0.setBounds(this.field_f, 0, 0, this.field_g, (byte) -52);
+          this.field_w = param0;
+          this.field_z = 256;
+        } catch (RuntimeException runtimeException) {
+          throw dn.wrapClientException((Throwable) ((Object) runtimeException), "th.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+        }
+    }
+
+    public static void resetStaticState(int param0) {
+        field_A = null;
+        if (param0 != -13117) {
+          field_y = -61;
+        }
+    }
+
+    static {
+        field_A = new String[255];
+        field_y = 0;
+    }
+}

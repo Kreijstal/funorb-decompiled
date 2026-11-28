@@ -10,7 +10,7 @@ final class w extends IntrusiveNode {
         var4.field_k = param1;
         var4.field_f = param3;
         hd.field_c.addLast(param0, var4);
-        ed.a((byte) 121, param2, var4);
+        DropTargetWidgetContainer.a((byte) 121, param2, var4);
         return var4;
     }
 

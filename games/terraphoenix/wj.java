@@ -110,10 +110,10 @@ final class wj {
                 mh.field_a = vf.field_c;
                 qh.field_d = -1;
               } else {
-                mh.field_a = cb.field_J;
+                mh.field_a = DraggableWidgetContainer.field_J;
               }
             }
-            if (mh.field_a == cb.field_J &&
+            if (mh.field_a == DraggableWidgetContainer.field_J &&
               FrameTimer.a(-110, 8)) {
               kd.field_c = LevelEditor.field_j.readLong((byte) 78);
               LevelEditor.field_j.position = 0;

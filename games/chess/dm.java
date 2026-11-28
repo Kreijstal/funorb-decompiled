@@ -16,8 +16,8 @@ abstract class dm {
         if (param0) {
           return;
         }
-        if (lf.field_S > 10) {
-          an.a(-10 + lf.field_S, (byte) 120);
+        if (AlphaWidgetContainer.field_S > 10) {
+          an.a(-10 + AlphaWidgetContainer.field_S, (byte) 120);
         } else {
           an.a(0, (byte) 96);
         }

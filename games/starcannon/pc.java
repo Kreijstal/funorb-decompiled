@@ -13,14 +13,14 @@ final class pc {
         int var1 = a.field_b.stringWidth(mj.field_c[13]);
         if (var1 > ak.field_e) {
           ak.field_e = var1;
-          ad.a(0, new int[]{0, 3, 19, 12, 13, 4, 20, 2, 14, 11}, true);
-          ad.a(1, new int[]{1, 12, 13, 20, 3, 7}, true);
-          ad.a(2, new int[]{15, 5}, true);
-          ad.a(3, new int[]{17, 6, 18}, true);
-          ad.a(4, new int[]{15, 5}, true);
-          ad.a(5, new int[]{2, 6}, true);
-          ad.a(6, new int[]{15, 16}, true);
-          ad.a(7, new int[]{21, 5}, true);
+          LabeledWidgetContainer.a(0, new int[]{0, 3, 19, 12, 13, 4, 20, 2, 14, 11}, true);
+          LabeledWidgetContainer.a(1, new int[]{1, 12, 13, 20, 3, 7}, true);
+          LabeledWidgetContainer.a(2, new int[]{15, 5}, true);
+          LabeledWidgetContainer.a(3, new int[]{17, 6, 18}, true);
+          LabeledWidgetContainer.a(4, new int[]{15, 5}, true);
+          LabeledWidgetContainer.a(5, new int[]{2, 6}, true);
+          LabeledWidgetContainer.a(6, new int[]{15, 16}, true);
+          LabeledWidgetContainer.a(7, new int[]{21, 5}, true);
           var2 = a.field_b.field_q + a.field_b.field_r + 4;
           if (param0 == -5695) {
             qi.field_a[6] = a.field_b.field_q + (a.field_b.field_p + 200) + var2;
@@ -29,14 +29,14 @@ final class pc {
           }
           return;
         }
-        ad.a(0, new int[]{0, 3, 19, 12, 13, 4, 20, 2, 14, 11}, true);
-        ad.a(1, new int[]{1, 12, 13, 20, 3, 7}, true);
-        ad.a(2, new int[]{15, 5}, true);
-        ad.a(3, new int[]{17, 6, 18}, true);
-        ad.a(4, new int[]{15, 5}, true);
-        ad.a(5, new int[]{2, 6}, true);
-        ad.a(6, new int[]{15, 16}, true);
-        ad.a(7, new int[]{21, 5}, true);
+        LabeledWidgetContainer.a(0, new int[]{0, 3, 19, 12, 13, 4, 20, 2, 14, 11}, true);
+        LabeledWidgetContainer.a(1, new int[]{1, 12, 13, 20, 3, 7}, true);
+        LabeledWidgetContainer.a(2, new int[]{15, 5}, true);
+        LabeledWidgetContainer.a(3, new int[]{17, 6, 18}, true);
+        LabeledWidgetContainer.a(4, new int[]{15, 5}, true);
+        LabeledWidgetContainer.a(5, new int[]{2, 6}, true);
+        LabeledWidgetContainer.a(6, new int[]{15, 16}, true);
+        LabeledWidgetContainer.a(7, new int[]{21, 5}, true);
         var2Lifetime1 = a.field_b.field_q + a.field_b.field_r + 4;
         if (param0 == -5695) {
           qi.field_a[6] = a.field_b.field_q + (a.field_b.field_p + 200) + var2Lifetime1;

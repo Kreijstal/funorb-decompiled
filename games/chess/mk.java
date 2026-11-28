@@ -13,7 +13,7 @@ final class mk {
         if (param0 <= 107) {
           mk.clearStaticReferences((byte) -116);
         }
-        stackIn_6_0 = (null != ji.field_V) && (ji.field_V.k(-120) != null);
+        stackIn_6_0 = (null != DropTargetWidgetContainer.field_V) && (DropTargetWidgetContainer.field_V.getTopOpenDialog(-120) != null);
         return stackIn_6_0;
     }
 

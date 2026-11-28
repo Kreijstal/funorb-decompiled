@@ -492,7 +492,7 @@ public abstract class AppletShell extends java.applet.Applet implements Runnable
           if (param2 != -1) {
             return;
           }
-          DisplayNameSelectionPanel.field_N.b(nk.field_a, false);
+          DisplayNameSelectionPanel.field_N.showDialog(nk.field_a, false);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -717,7 +717,7 @@ public abstract class AppletShell extends java.applet.Applet implements Runnable
                     }
                   }
                   if (decompiledFrameRemainder0) {
-                    nl.field_c = ff.field_D.waitAndCountTicks(0, hb.field_H);
+                    nl.field_c = ff.field_D.waitAndCountTicks(0, LabeledWidgetContainer.field_H);
                     stackIn_103_0 = 0;
                   }
                   var3 = stackIn_103_0;

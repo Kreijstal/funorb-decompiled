@@ -12,8 +12,8 @@ final class bo {
         SecondaryNodeHashTable.field_g = false;
         cf.field_Nb = false;
         ChessBoardState.a(false, -1);
-        DelegatingCanvas.field_a = ji.field_T;
-        MidiPcmStream.field_A = ji.field_T;
+        DelegatingCanvas.field_a = DropTargetWidgetContainer.field_T;
+        MidiPcmStream.field_A = DropTargetWidgetContainer.field_T;
         if (param0 <= 30) {
           field_a = (String) null;
         }

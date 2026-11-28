@@ -83,11 +83,11 @@ final class dg extends UiWidget {
         this(param0, param1, param2, param3, param4, param5, param6, 8355711 & param5 >> 1, param6 >> 1 & 8355711);
     }
 
-    final void a(int param0, int param1, int param2, int param3) {
+    final void drawWidget(int param0, int param1, int param2, int param3) {
         int var5 = 0;
         int var6 = 0;
         if (param3 != 29221) {
-          this.a(-117, 48, 62, -30);
+          this.drawWidget(-117, 48, 62, -30);
         }
         if (param0 == 0) {
           var5 = this.field_p + param1;
@@ -102,8 +102,8 @@ final class dg extends UiWidget {
         }
     }
 
-    final void a(int param0, int param1, int param2, int param3, int param4) {
-        super.a(param0, param1, param2, param3, param4);
+    final void setBounds(int param0, int param1, int param2, int param3, int param4) {
+        super.setBounds(param0, param1, param2, param3, param4);
         this.i(-22504);
     }
 
@@ -200,7 +200,7 @@ final class dg extends UiWidget {
         return (Sprite) null;
     }
 
-    final void a(int param0, int param1, byte param2, UiWidget param3) {
+    final void updatePointer(int param0, int param1, byte param2, UiWidget param3) {
         RuntimeException var5 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
@@ -280,7 +280,7 @@ final class dg extends UiWidget {
         this.field_D = param6;
         this.field_I = param5;
         this.field_K = param4;
-        this.a(param3, -3050, param1, param2, param0);
+        this.setBounds(param3, -3050, param1, param2, param0);
     }
 
     static {

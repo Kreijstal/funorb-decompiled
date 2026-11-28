@@ -34,7 +34,7 @@ final class n {
     final static void a(BitmapFont param0, int param1, boolean param2, RgbSprite[] param3, int param4, int param5, int param6, int param7, int param8, BitmapFont param9, int param10, int param11, int param12, int param13, RgbSprite[] param14) {
         try {
           RgbSprite[] var16 = (RgbSprite[]) null;
-          tb.a(le.field_f, param9, -26472, param3, param0, param12, (RgbSprite[]) null, param8, kg.field_V, param4, param13, param14, 480, 0, param5, kj.field_h, 0, param7, param6, param10, param1);
+          tb.a(le.field_f, param9, -26472, param3, param0, param12, (RgbSprite[]) null, param8, LabeledWidgetContainer.field_V, param4, param13, param14, 480, 0, param5, kj.field_h, 0, param7, param6, param10, param1);
           if (param11 < 123) {
             field_d = (String[]) null;
           }
@@ -67,11 +67,11 @@ final class n {
           pi.field_c.a(false, -1730123902);
           BufferedSocket.a(param3 ^ 86, param4, param1, param0);
           ak.c((byte) -128);
-          MidiPcmStream.field_A = ji.field_T;
+          MidiPcmStream.field_A = DropTargetWidgetContainer.field_T;
           if (param3 != 0) {
             field_b = (bn[]) null;
           }
-          DelegatingCanvas.field_a = ji.field_T;
+          DelegatingCanvas.field_a = DropTargetWidgetContainer.field_T;
         } catch (RuntimeException runtimeException) {
           throw SpriteGeometry.wrapClientException((Throwable) ((Object) runtimeException), "n.C(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ')');
         }

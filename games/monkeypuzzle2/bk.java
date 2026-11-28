@@ -38,21 +38,21 @@ final class bk extends IntrusiveNode {
     final static DefaultTextWidgetRenderer a(boolean param0) {
         byte[] var2 = null;
         byte[] var2Lifetime1;
-        if (jk.field_x == null) {
-          jk.field_x = new DefaultTextWidgetRenderer(pf.field_c, 20, 0, 0, 0, 11579568, -1, 0, 0, pf.field_c.field_C, -1, 2147483647, true);
+        if (SingleChildWidgetContainer.field_x == null) {
+          SingleChildWidgetContainer.field_x = new DefaultTextWidgetRenderer(pf.field_c, 20, 0, 0, 0, 11579568, -1, 0, 0, pf.field_c.field_C, -1, 2147483647, true);
           if (!param0) {
             var2 = (byte[]) null;
             bk.copyBytes(121, (byte[]) null);
-            return jk.field_x;
+            return SingleChildWidgetContainer.field_x;
           }
-          return jk.field_x;
+          return SingleChildWidgetContainer.field_x;
         }
         if (param0) {
-          return jk.field_x;
+          return SingleChildWidgetContainer.field_x;
         }
         var2Lifetime1 = (byte[]) null;
         bk.copyBytes(121, (byte[]) null);
-        return jk.field_x;
+        return SingleChildWidgetContainer.field_x;
     }
 
     private bk() throws Throwable {

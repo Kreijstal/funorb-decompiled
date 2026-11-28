@@ -18,13 +18,13 @@ final class ValidatedTextField extends EditableTextField implements FieldValidat
         return this.field_N;
     }
 
-    ValidatedTextField(String param0, ca param1, int param2) {
+    ValidatedTextField(String param0, WidgetEventListener param1, int param2) {
         super(param0, param1, param2);
     }
 
-    final void a(int param0, UiWidget param1, int param2, int param3) {
+    final void updatePointer(int param0, UiWidget param1, int param2, int param3) {
         try {
-          super.a(-73, param1, param2, param3);
+          super.updatePointer(-73, param1, param2, param3);
           this.field_O = -this.x + n.field_t - param3;
           int var5_int = -91 % ((param0 + 28) / 43);
         } catch (RuntimeException runtimeException) {
@@ -79,19 +79,19 @@ final class ValidatedTextField extends EditableTextField implements FieldValidat
     }
 
     final static void j(byte param0) {
-        dc.field_a.h(6);
+        dc.field_a.closeAllDialogs(6);
         if (param0 == -34) {
           if (d.field_r == null) {
             d.field_r = new sp(dc.field_a, LevelRun.field_u);
           }
-          dc.field_a.a(d.field_r, (byte) 112);
+          dc.field_a.showDialog(d.field_r, (byte) 112);
           return;
         }
         field_P = (String) null;
         if (d.field_r == null) {
           d.field_r = new sp(dc.field_a, LevelRun.field_u);
         }
-        dc.field_a.a(d.field_r, (byte) 112);
+        dc.field_a.showDialog(d.field_r, (byte) 112);
     }
 
     static {

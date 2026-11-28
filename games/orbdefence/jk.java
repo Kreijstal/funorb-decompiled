@@ -47,7 +47,7 @@ final class jk {
           int var2 = -45 / ((26 - param0) / 52);
           var1 = fe.b((byte) -127);
           AccountCreationResultPanel.field_ib = new LoginPanel(var1, (String) null, true, false, false);
-          bm.field_d.b((byte) 74, (pj) (kg.field_j));
+          bm.field_d.showDialog((byte) 74, (UiWidget) (kg.field_j));
           kg.field_j.a(false, AccountCreationResultPanel.field_ib);
           kg.field_j.m(0);
           return;
@@ -80,7 +80,7 @@ final class jk {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw dd.wrapClientException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw DraggableWidgetContainer.wrapClientException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 
@@ -107,7 +107,7 @@ final class jk {
           param1.field_f = var5.readInt(0);
           var5.backpatchByteLength((byte) 113, var5.position - var4);
         } catch (RuntimeException runtimeException) {
-          throw dd.wrapClientException((Throwable) ((Object) runtimeException), "jk.H(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw DraggableWidgetContainer.wrapClientException((Throwable) ((Object) runtimeException), "jk.H(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
@@ -222,7 +222,7 @@ final class jk {
             stackIn_8_0 = -1;
             return stackIn_8_0;
           }
-          if (sk.field_E == dh.field_bb) {
+          if (ModalDialogHost.field_E == dh.field_bb) {
             uk.field_b.position = 0;
             ci.field_h = null;
             if (param3 == null) {
@@ -379,7 +379,7 @@ final class jk {
           } else {
             stackIn_75_2 = "{...}";
           }
-          throw dd.wrapClientException((Throwable) ((Object) stackIn_68_0), ((StringBuilder) (Object) stackIn_74_1).append(stackIn_75_2).append(',').append(param5).append(',').append(param6).append(')').toString());
+          throw DraggableWidgetContainer.wrapClientException((Throwable) ((Object) stackIn_68_0), ((StringBuilder) (Object) stackIn_74_1).append(stackIn_75_2).append(',').append(param5).append(',').append(param6).append(')').toString());
         }
     }
 

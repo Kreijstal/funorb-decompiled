@@ -20,7 +20,7 @@ final class MixedSupport045 implements CallbackContract007 {
         RuntimeException caughtExceptionLocal9 = null;
         try {
           integerLocal1 = 2;
-          if (bitmapFontArgument8 == UiComponentPart029.renderingSupport009State0005) {
+          if (bitmapFontArgument8 == DraggableWidgetContainer.renderingSupport009State0005) {
             integerLocal1 = 1;
           }
           bitmapFontArgument8.drawParagraph(stringArgument4, integerArgument11 - integerLocal1, -integerLocal1 + integerArgument3, integerArgument1, integerArgument6, 65793, -1, integerArgument10, integerArgument2, integerArgument5);

@@ -24,7 +24,7 @@ final class ld {
         AccountRegistrationPanel.field_O.drawOpaque(0, var2 / 2 + 200);
         this.c(200 + var2 / 2, param0 ^ -66);
         MouseWheelInput.field_f.d(0, 200 + var2 / 2);
-        this.a(jk.field_L, 220, var2, -50);
+        this.a(DropTargetWidgetContainer.field_L, 220, var2, -50);
         dj.a(NodeHashTableIterator.field_e, 75, lf.field_b, false, 380);
         for (var3 = 0; var3 < 3; var3++) {
           for (var4 = 0; var4 < 3; var4++) {
@@ -907,7 +907,7 @@ final class ld {
         lc.field_s.a(50, var4);
         ki.field_b.a(83, var4 - 16);
         TextHotspotBounds.field_l.a(83, 17 + var4);
-        si.field_D.a(116, var4);
+        SingleChildWidgetContainer.field_D.a(116, var4);
         cb.field_b.drawString(fm.field_c, var5, var4 + var6, 4210752, -1);
         var7 = di.field_e[0];
         var8 = 480 + (30 + var2);
@@ -1080,7 +1080,7 @@ final class ld {
             var15_ref_String__ = new String[]{hg.field_ob[20], hg.field_ob[21], hg.field_ob[22]};
             var16 = var7.stringWidth(var15_ref_String__[1]) / 2 + 15;
             for (var18_int = 0; 3 > var18_int; var18_int++) {
-              if (pj.field_H) {
+              if (DequeWidgetContainer.field_H) {
                 if (ck.field_c >= -var16 + 320) {
                   var17 = (ck.field_c <= 320 + var16) ? 1 : 2;
                 } else {
@@ -1288,7 +1288,7 @@ final class ld {
         if (-1 != this.field_e.field_f) {
           this.a(this.field_e.field_f, 80, true);
         }
-        jk.field_J = ob.field_g;
+        DropTargetWidgetContainer.field_J = ob.field_g;
         pa.field_b = ck.field_c;
     }
 
@@ -1732,20 +1732,20 @@ final class ld {
                                 if (param2 &&
                                   var10 != -1) {
                                   pa.field_d = var10;
-                                  pj.field_H = true;
+                                  DequeWidgetContainer.field_H = true;
                                 }
                               }
                               if (pa.field_b != ck.field_c ||
-                                ob.field_g != jk.field_J) {
-                                pj.field_H = true;
+                                ob.field_g != DropTargetWidgetContainer.field_J) {
+                                DequeWidgetContainer.field_H = true;
                               }
                               if (this.field_e.h(116)) {
-                                pj.field_H = false;
+                                DequeWidgetContainer.field_H = false;
                                 pa.field_d = pa.field_d - 1;
                               }
                               if (this.field_e.b(param1 + 15)) {
                                 pa.field_d = pa.field_d + 1;
-                                pj.field_H = false;
+                                DequeWidgetContainer.field_H = false;
                               }
                               if (pa.field_d >= 0) {
                                 if (pa.field_d > 2) {
@@ -1990,7 +1990,7 @@ final class ld {
           var21 = 185 + var4 + var25.field_E;
           var22 = 297;
           var23 = var19Lifetime1 * 5;
-          var25.drawParagraph(jk.field_K[var14Lifetime1], var20, var21, var22, var23, 0, -1, 0, 1, var19Lifetime1);
+          var25.drawParagraph(DropTargetWidgetContainer.field_K[var14Lifetime1], var20, var21, var22, var23, 0, -1, 0, 1, var19Lifetime1);
         } else {
           var25.drawParagraph(NodeHashTableIterator.field_j, 166, -var25.field_x + var4 + 150, 500, 200, 0, -1, 0, 0, var25.field_x);
           if (oh.a(0)) {
@@ -2152,7 +2152,7 @@ final class ld {
           return;
         }
         var3 = ji.a(65535, (double)lf.field_b / 100.0) * 0.75;
-        var5 = pj.a((double)lf.field_b / 99.0, 32768) * 0.75;
+        var5 = DequeWidgetContainer.a((double)lf.field_b / 99.0, 32768) * 0.75;
         var13 = new int[93];
         var12 = var13;
         var7 = var12;

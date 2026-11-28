@@ -16,29 +16,29 @@ final class MixedSupport036 {
     final static void performAction0505(int integerArgument1, byte byteArgument2, boolean booleanArgument3, int integerArgument4) {
         MixedSupport042.performAction0537(integerArgument1 + 20, 256, 16777215, MixedSupport129.stringState0559, integerArgument4 + 4, SceneWidget.renderingSupport009State0007);
         integerArgument1 += 26;
-        MixedSupport042.performAction0537(12 + integerArgument1, 256, 16777215, GameplayControls.stringArrayState0056[0], 4 + integerArgument4, UiComponentPart029.renderingSupport009State0005);
+        MixedSupport042.performAction0537(12 + integerArgument1, 256, 16777215, GameplayControls.stringArrayState0056[0], 4 + integerArgument4, DraggableWidgetContainer.renderingSupport009State0005);
         UiComponentPart023.rgbSpriteArrayState0021[0].draw(122 + integerArgument4, integerArgument1);
         integerArgument1 += 16;
-        MixedSupport042.performAction0537(12 + integerArgument1, byteArgument2 ^ 261, 16777215, GameplayControls.stringArrayState0056[1], integerArgument4 + 4, UiComponentPart029.renderingSupport009State0005);
+        MixedSupport042.performAction0537(12 + integerArgument1, byteArgument2 ^ 261, 16777215, GameplayControls.stringArrayState0056[1], integerArgument4 + 4, DraggableWidgetContainer.renderingSupport009State0005);
         UiComponentPart023.rgbSpriteArrayState0021[1].draw(integerArgument4 + 122, integerArgument1);
         integerArgument1 += 23;
         if (byteArgument2 != 5) {
           String stringLocal1 = (String) null;
           MixedSupport036.computeBoolean0504((byte) 7, (String) null);
         }
-        MixedSupport042.performAction0537(12 + integerArgument1, 256, 16777215, GameplayControls.stringArrayState0056[2], 4 + integerArgument4, UiComponentPart029.renderingSupport009State0005);
+        MixedSupport042.performAction0537(12 + integerArgument1, 256, 16777215, GameplayControls.stringArrayState0056[2], 4 + integerArgument4, DraggableWidgetContainer.renderingSupport009State0005);
         UiComponentPart023.rgbSpriteArrayState0021[3].draw(122 + integerArgument4, integerArgument1);
         integerArgument1 += 16;
-        MixedSupport042.performAction0537(integerArgument1 + 12, 256, 16777215, GameplayControls.stringArrayState0056[3], 4 + integerArgument4, UiComponentPart029.renderingSupport009State0005);
+        MixedSupport042.performAction0537(integerArgument1 + 12, 256, 16777215, GameplayControls.stringArrayState0056[3], 4 + integerArgument4, DraggableWidgetContainer.renderingSupport009State0005);
         UiComponentPart023.rgbSpriteArrayState0021[2].draw(integerArgument4 + 100, integerArgument1);
-        MixedSupport029.performAction0407(16777215, 119 + integerArgument4, "/", 12 + integerArgument1, (byte) 75, UiComponentPart029.renderingSupport009State0005);
+        MixedSupport029.performAction0407(16777215, 119 + integerArgument4, "/", 12 + integerArgument1, (byte) 75, DraggableWidgetContainer.renderingSupport009State0005);
         UiComponentPart023.rgbSpriteArrayState0021[4].draw(122 + integerArgument4, integerArgument1);
         integerArgument1 += 23;
-        MixedSupport042.performAction0537(integerArgument1 + 12, 256, 16777215, GameplayControls.stringArrayState0056[5], integerArgument4 + 4, UiComponentPart029.renderingSupport009State0005);
+        MixedSupport042.performAction0537(integerArgument1 + 12, 256, 16777215, GameplayControls.stringArrayState0056[5], integerArgument4 + 4, DraggableWidgetContainer.renderingSupport009State0005);
         UiComponentPart023.rgbSpriteArrayState0021[5].draw(122 + integerArgument4, integerArgument1);
         integerArgument1 += 23;
         if (booleanArgument3) {
-          MixedSupport042.performAction0537(12 + integerArgument1, 256, 16777215, GameplayControls.stringArrayState0056[6], 4 + integerArgument4, UiComponentPart029.renderingSupport009State0005);
+          MixedSupport042.performAction0537(12 + integerArgument1, 256, 16777215, GameplayControls.stringArrayState0056[6], 4 + integerArgument4, DraggableWidgetContainer.renderingSupport009State0005);
           UiComponentPart023.rgbSpriteArrayState0021[6].draw(integerArgument4 + 122, integerArgument1);
         }
     }

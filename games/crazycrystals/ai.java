@@ -282,8 +282,8 @@ final class ai implements Runnable {
                 var9 = var9 | 1;
               }
               SectorCacheStore.field_c.position = 0;
-              SectorCacheStore.field_c.writeInt(og.field_w.nextInt(), -16384);
-              SectorCacheStore.field_c.writeInt(og.field_w.nextInt(), -16384);
+              SectorCacheStore.field_c.writeInt(DequeWidgetContainer.field_w.nextInt(), -16384);
+              SectorCacheStore.field_c.writeInt(DequeWidgetContainer.field_w.nextInt(), -16384);
               SectorCacheStore.field_c.writePrefixedString(var14, (byte) -103);
               SectorCacheStore.field_c.writePrefixedString(var8, (byte) -99);
               var15 = (CharSequence) ((Object) param2);
@@ -303,8 +303,8 @@ final class ai implements Runnable {
               tp.field_f.backpatchShortLength(977272835, -var10 + tp.field_f.position);
             } else {
               SectorCacheStore.field_c.position = 0;
-              SectorCacheStore.field_c.writeInt(og.field_w.nextInt(), -16384);
-              SectorCacheStore.field_c.writeInt(og.field_w.nextInt(), -16384);
+              SectorCacheStore.field_c.writeInt(DequeWidgetContainer.field_w.nextInt(), -16384);
+              SectorCacheStore.field_c.writeInt(DequeWidgetContainer.field_w.nextInt(), -16384);
               stackIn_13_0 = SectorCacheStore.field_c;
               if (!param0.a(-124)) {
                 stackIn_14_1 = "";
@@ -374,7 +374,7 @@ final class ai implements Runnable {
             }
           }
           if (gj.field_k == kf.field_b &&
-            ol.f((byte) 60)) {
+            ModalDialogHost.f((byte) 60)) {
             if (bf.field_b != 255) {
               re.field_j = ConfirmedEmailAvailabilityValidator.field_n.readString(122);
             } else {

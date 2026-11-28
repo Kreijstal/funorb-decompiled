@@ -539,7 +539,7 @@ final class ChessBoardRenderer extends ChessBoardState {
     }
 
     final static void a(byte param0, boolean param1) {
-        jh.field_e.a(true, 0, 0);
+        jh.field_e.drawAllLayers(true, 0, 0);
         if (param0 != -31) {
           field_O = (String) null;
         }

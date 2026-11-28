@@ -499,7 +499,7 @@ final class CombatState {
           return false;
         }
         if (param2 == 0) {
-          stackIn_7_0 = (param0 == 0) && (oi.b(0, 2) == 0);
+          stackIn_7_0 = (param0 == 0) && (DraggableWidgetContainer.b(0, 2) == 0);
           return stackIn_7_0;
         }
         if (0 == param0) {
@@ -511,14 +511,14 @@ final class CombatState {
         }
         if (0 > var4) {
           var4 = 1 << -var4;
-          stackIn_16_0 = (oi.b(0, 1 + var4) == 0);
+          stackIn_16_0 = (DraggableWidgetContainer.b(0, 1 + var4) == 0);
           return stackIn_16_0;
         }
         if (var4 > 10) {
           return true;
         }
         var4 = 1 << var4;
-        stackIn_22_0 = (oi.b(0, 1 + var4) != 0);
+        stackIn_22_0 = (DraggableWidgetContainer.b(0, 1 + var4) != 0);
         return stackIn_22_0;
     }
 
@@ -1837,7 +1837,7 @@ final class CombatState {
         for (var3 = 0; var3 < 4; var3++) {
           if (this.field_A[var3] != null &&
             (6 & this.field_A[var3].field_o) == 0 &&
-            0 == oi.b(0, 3) &&
+            0 == DraggableWidgetContainer.b(0, 3) &&
             !this.field_A[var3].field_n.hasAbility(ob.field_bc, -85)) {
             this.applyDragonFireToRaider(param0 + 60, this.field_A[var3]);
             var2 = var2 | 1 << var3;

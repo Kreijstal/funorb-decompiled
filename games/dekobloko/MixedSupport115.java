@@ -39,7 +39,7 @@ abstract class MixedSupport115 extends DualNode {
           if (2 == TextHotspotBounds.integerState0585 &&
             !MixedSupport056.computeBoolean0666((byte) -53)) {
             if (!RenderingSupport012.computeBoolean1345(TextLayout.stringState0081, 3)) {
-              objectLocal5 = NodeHashTableIterator.substituteIndexedPlaceholders(96, UiComponentPart029.stringState0496, new String[]{MixedSupport029.stringState0149});
+              objectLocal5 = NodeHashTableIterator.substituteIndexedPlaceholders(96, DraggableWidgetContainer.stringState0496, new String[]{MixedSupport029.stringState0149});
               if (integerLocal14 != 0) {
                 objectLocal5 = NodeHashTableIterator.substituteIndexedPlaceholders(87, MixedSupport023.stringState0105, new String[]{MixedSupport029.stringState0149});
               }
@@ -54,7 +54,7 @@ abstract class MixedSupport115 extends DualNode {
           if (null == objectLocal5 &&
             !ProxySocketFactory.booleanState0169 &&
             AccountRegistrationPanel.sceneWidgetState0116 == null) {
-            objectLocal5 = UiComponentPart003.stringState0059;
+            objectLocal5 = ModalDialog.stringState0059;
           }
           if (null != objectLocal5) {
             MixedSupport020.performAction0298((String) null, 0, MixedSupport061.integerState0332, (String) (objectLocal5), -24503);

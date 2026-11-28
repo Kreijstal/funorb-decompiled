@@ -1,0 +1,78 @@
+/*
+ * Decompiled by CFR-JS 0.4.0.
+ */
+final class DropTargetWidgetContainer extends SingleChildWidgetContainer {
+    static int[] field_K;
+    static String field_J;
+    static AccountRegistrationPanel field_H;
+    static Sprite field_E;
+    static int field_L;
+
+    public static void clearStaticReferences(boolean param0) {
+        field_J = null;
+        field_K = null;
+        field_H = null;
+        if (param0) {
+          return;
+        }
+        field_E = null;
+    }
+
+    final void pointerReleased(UiWidget param0, boolean param1, int param2, int param3, int param4, int param5) {
+        DraggableWidgetContainer var7 = null;
+        try {
+          super.pointerReleased(param0, param1, param2, param3, param4, param5);
+          var7 = rf.field_e;
+          if (var7 != null) {
+            if (!this.containsPointer(param5, param3, param4, false, param2)) {
+              return;
+            }
+            if (this.field_l instanceof WidgetDropListener) {
+              ((WidgetDropListener) (this.field_l)).widgetDropped(var7, this, 21277);
+              rf.field_e = null;
+              return;
+            }
+            if (!(var7.field_l instanceof WidgetDropListener)) {
+              return;
+            }
+            ((WidgetDropListener) (var7.field_l)).widgetDropped(var7, this, 21277);
+            rf.field_e = null;
+          }
+        } catch (RuntimeException runtimeException) {
+          throw LevelGrid.toClientException((Throwable) ((Object) runtimeException), "mc.GB(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
+        }
+    }
+
+    private DropTargetWidgetContainer(int param0, int param1, int param2, int param3, WidgetRenderer param4, WidgetEventListener param5, UiWidget param6) {
+        super(param0, param1, param2, param3, param4, param5);
+        try {
+          this.field_B = param6;
+        } catch (RuntimeException runtimeException) {
+          throw LevelGrid.toClientException((Throwable) ((Object) runtimeException), "mc.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + (param5 != null ? "{...}" : "null") + ',' + (param6 != null ? "{...}" : "null") + ')');
+        }
+    }
+
+    final static void a(boolean param0, int param1, ti param2) {
+        BitPacketBuffer var3 = null;
+        try {
+          var3 = LevelView.field_C;
+          if (param0) {
+            field_E = (Sprite) null;
+          }
+          var3.writeCipheredByte(param1, 7);
+          var3.writeByte(5, (byte) -123);
+          var3.writeByte(0, (byte) -114);
+          var3.writeShort(param2.field_i, (byte) -127);
+          var3.writeByte(param2.field_l, (byte) -89);
+          var3.writeByte(param2.field_k, (byte) -68);
+        } catch (RuntimeException runtimeException) {
+          throw LevelGrid.toClientException((Throwable) ((Object) runtimeException), "mc.A(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+        }
+    }
+
+    static {
+        field_K = new int[128];
+        field_L = -1;
+        field_J = "If you do nothing the game will revert to normal view in <%0> second.";
+    }
+}

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class db extends vk implements WidgetActivationListener {
+final class db extends DequeWidgetContainer implements WidgetActivationListener {
     private InteractiveWidget field_y;
     private InteractiveWidget field_A;
     static long field_C;
@@ -48,31 +48,31 @@ final class db extends vk implements WidgetActivationListener {
     }
 
     public db() {
-        super(0, 0, 476, 225, (de) null);
-        this.field_y = new InteractiveWidget(qj.field_V, (qg) null);
-        this.field_A = new InteractiveWidget(Bzip2State.field_v, (qg) null);
-        this.field_z = new InteractiveWidget(LoginPanel.field_E, (qg) null);
+        super(0, 0, 476, 225, (WidgetRenderer) null);
+        this.field_y = new InteractiveWidget(qj.field_V, (WidgetEventListener) null);
+        this.field_A = new InteractiveWidget(Bzip2State.field_v, (WidgetEventListener) null);
+        this.field_z = new InteractiveWidget(LoginPanel.field_E, (WidgetEventListener) null);
         gb var1 = new gb();
-        this.field_y.field_o = (de) ((Object) var1);
-        this.field_A.field_o = (de) ((Object) var1);
-        this.field_z.field_o = (de) ((Object) var1);
+        this.field_y.field_o = (WidgetRenderer) ((Object) var1);
+        this.field_A.field_o = (WidgetRenderer) ((Object) var1);
+        this.field_z.field_o = (WidgetRenderer) ((Object) var1);
         int var2 = 4;
         int var3 = 326;
         int var4 = -var2 + var3 >> 1;
-        this.field_A.a(this.field_i - var3 >> 1, var4, (byte) 123, 30, -var2 + this.field_f - 48);
-        this.field_z.a(var4 + ((this.field_i - var3 >> 1) + var2), var4, (byte) 116, 30, -48 + this.field_f - var2);
-        this.field_y.a(this.field_i - var3 >> 1, var3, (byte) 127, 30, -(2 * var2) - 78 + this.field_f);
-        this.field_A.field_g = (qg) (this);
-        this.field_y.field_g = (qg) (this);
-        this.field_z.field_g = (qg) (this);
+        this.field_A.setBounds(this.field_i - var3 >> 1, var4, (byte) 123, 30, -var2 + this.field_f - 48);
+        this.field_z.setBounds(var4 + ((this.field_i - var3 >> 1) + var2), var4, (byte) 116, 30, -48 + this.field_f - var2);
+        this.field_y.setBounds(this.field_i - var3 >> 1, var3, (byte) 127, 30, -(2 * var2) - 78 + this.field_f);
+        this.field_A.field_g = (WidgetEventListener) (this);
+        this.field_y.field_g = (WidgetEventListener) (this);
+        this.field_z.field_g = (WidgetEventListener) (this);
         this.field_y.field_p = wj.field_f;
         this.field_z.field_p = ej.field_t;
-        this.a(true, this.field_A);
-        this.a(true, this.field_y);
-        this.a(true, this.field_z);
+        this.addChild(true, this.field_A);
+        this.addChild(true, this.field_y);
+        this.addChild(true, this.field_z);
     }
 
-    final boolean a(UiWidget param0, char param1, byte param2, int param3) {
+    final boolean handleKey(UiWidget param0, char param1, byte param2, int param3) {
         RuntimeException var5 = null;
         boolean stackIn_5_0 = false;
         boolean stackIn_9_0 = false;
@@ -81,17 +81,17 @@ final class db extends vk implements WidgetActivationListener {
         String stackIn_13_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (super.a(param0, param1, param2, param3)) {
+          if (super.handleKey(param0, param1, param2, param3)) {
             return true;
           }
           if (param3 == 98) {
-            stackIn_5_0 = this.b(-10, param0);
+            stackIn_5_0 = this.focusPreviousChild(-10, param0);
             return stackIn_5_0;
           }
           if (param3 != 99) {
             return false;
           }
-          stackIn_9_0 = this.a((byte) -103, param0);
+          stackIn_9_0 = this.focusNextChild((byte) -103, param0);
           return stackIn_9_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -107,11 +107,11 @@ final class db extends vk implements WidgetActivationListener {
         }
     }
 
-    final void a(int param0, int param1, byte param2, int param3) {
+    final void drawWidget(int param0, int param1, byte param2, int param3) {
         int var5 = param1 + this.field_s;
         int var6 = this.field_j + param3;
         nb.field_c.drawParagraph(ec.field_c, 20 + var5, var6 + 20, -40 + this.field_i, this.field_f - 50, 16777215, -1, 1, 0, nb.field_c.field_p);
-        super.a(param0, param1, param2, param3);
+        super.drawWidget(param0, param1, param2, param3);
     }
 
     public static void clearStaticReferences(int param0) {

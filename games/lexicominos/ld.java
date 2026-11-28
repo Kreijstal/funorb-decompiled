@@ -13,7 +13,7 @@ final class ld extends InteractiveWidget {
         }
     }
 
-    final boolean a(byte param0, w param1) {
+    final boolean takeFocus(byte param0, UiWidget param1) {
         RuntimeException var3 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
@@ -93,10 +93,10 @@ final class ld extends InteractiveWidget {
         ni.a(-125, 4);
     }
 
-    final void a(byte param0, w param1, int param2, int param3) {
+    final void updatePointer(byte param0, UiWidget param1, int param2, int param3) {
         try {
           this.field_F = this.field_F + 1;
-          super.a(param0, param1, param2, param3);
+          super.updatePointer(param0, param1, param2, param3);
         } catch (RuntimeException runtimeException) {
           throw ld.wrapClientException((Throwable) ((Object) runtimeException), "ld.FA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
         }
@@ -110,7 +110,7 @@ final class ld extends InteractiveWidget {
         }
     }
 
-    final void a(byte param0, int param1, int param2, int param3) {
+    final void drawWidget(byte param0, int param1, int param2, int param3) {
         RgbSprite var15 = null;
         RgbSprite var16 = null;
         RgbSprite var14 = null;
@@ -120,7 +120,7 @@ final class ld extends InteractiveWidget {
         int var11 = Lexicominos.field_L ? 1 : 0;
         int var9Lifetime1;
         int var10Lifetime1;
-        super.a(param0, param1, param2, param3);
+        super.drawWidget(param0, param1, param2, param3);
         if (param3 != 0) {
           return;
         }

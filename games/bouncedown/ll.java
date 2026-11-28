@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ll extends lk {
+final class ll extends UiWidget {
     private int field_x;
     private int field_w;
     private RgbSprite[] field_z;
@@ -28,12 +28,12 @@ final class ll extends lk {
         }
     }
 
-    final void b(int param0, int param1, int param2, int param3, int param4) {
-        super.b(param0, param1, param2, param3, param4);
+    final void setBounds(int param0, int param1, int param2, int param3, int param4) {
+        super.setBounds(param0, param1, param2, param3, param4);
         this.a(true);
     }
 
-    final void a(int param0, int param1, int param2, int param3) {
+    final void drawWidget(int param0, int param1, int param2, int param3) {
         if (0 != param0) {
           return;
         }
@@ -87,7 +87,7 @@ final class ll extends lk {
         return var14;
     }
 
-    final void a(int param0, int param1, int param2, lk param3) {
+    final void updatePointer(int param0, int param1, int param2, UiWidget param3) {
         RgbSprite discarded$1 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
@@ -275,7 +275,7 @@ final class ll extends lk {
         this.field_K = param4;
         this.field_G = param5;
         this.field_L = param7;
-        this.b(param3, 80, param2, param0, param1);
+        this.setBounds(param3, 80, param2, param0, param1);
     }
 
     static {

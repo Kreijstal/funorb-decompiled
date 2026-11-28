@@ -9,7 +9,7 @@ final class ub extends InteractiveWidget {
     static int field_C;
     static int[] field_D;
 
-    final void a(int param0, byte param1, int param2, int param3) {
+    final void drawWidget(int param0, byte param1, int param2, int param3) {
         int var5;
         int var6;
         cd var8;
@@ -23,7 +23,7 @@ final class ub extends InteractiveWidget {
         int var9Lifetime1;
         int var10Lifetime1;
         var11 = Torquing.field_u;
-        super.a(param0, (byte) -126, param2, param3);
+        super.drawWidget(param0, (byte) -126, param2, param3);
         if (0 != param0) {
           return;
         }
@@ -130,7 +130,7 @@ final class ub extends InteractiveWidget {
         }
     }
 
-    final boolean a(UiWidget param0, boolean param1) {
+    final boolean takeFocus(UiWidget param0, boolean param1) {
         RuntimeException var3 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
@@ -155,11 +155,11 @@ final class ub extends InteractiveWidget {
         }
     }
 
-    final void a(int param0, UiWidget param1, int param2, int param3) {
+    final void updatePointer(int param0, UiWidget param1, int param2, int param3) {
         try {
           this.field_H = this.field_H + 1;
           int var5_int = -105 % ((param0 + 28) / 43);
-          super.a(-84, param1, param2, param3);
+          super.updatePointer(-84, param1, param2, param3);
         } catch (RuntimeException runtimeException) {
           throw RichTextWidget.wrapThrowable((Throwable) ((Object) runtimeException), "ub.P(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
         }

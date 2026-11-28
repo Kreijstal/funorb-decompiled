@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class jd extends og implements WidgetActivationListener {
+final class jd extends DequeWidgetContainer implements WidgetActivationListener {
     static java.awt.Canvas field_D;
     private String field_M;
     static RgbSprite field_A;
@@ -99,7 +99,7 @@ final class jd extends og implements WidgetActivationListener {
     }
 
     jd(na param0, BitmapFont param1, String param2) {
-        super(0, 0, 288, 0, (wo) null);
+        super(0, 0, 288, 0, (WidgetRenderer) null);
         int var4_int = 0;
         this.field_F = 0;
         try {
@@ -107,13 +107,13 @@ final class jd extends og implements WidgetActivationListener {
           this.field_C = param1;
           this.field_M = param2;
           var4_int = null == this.field_M ? 0 : this.field_C.textHeight(this.field_M, 260, this.field_C.field_o);
-          this.a(22 + var4_int, 0, 0, 288, (byte) -52);
+          this.setBounds(22 + var4_int, 0, 0, 288, (byte) -52);
         } catch (RuntimeException runtimeException) {
           throw dn.wrapClientException((Throwable) ((Object) runtimeException), "jd.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
-    final InteractiveWidget a(String param0, bi param1, int param2) {
+    final InteractiveWidget a(String param0, WidgetEventListener param1, int param2) {
         InteractiveWidget var4 = null;
         RuntimeException var4_ref = null;
         int var5 = 0;
@@ -127,11 +127,11 @@ final class jd extends og implements WidgetActivationListener {
         RuntimeException decompiledCaughtException = null;
         try {
           var4 = new InteractiveWidget(param0, param1);
-          var4.field_i = (wo) ((Object) new ve());
+          var4.field_i = (WidgetRenderer) ((Object) new ve());
           var5 = -2 + this.field_f;
-          this.a(34 + this.field_f, 0, 0, this.field_g, (byte) -52);
-          var4.a(30, 7, var5, this.field_g - 14, (byte) -52);
-          this.b(var4, 35);
+          this.setBounds(34 + this.field_f, 0, 0, this.field_g, (byte) -52);
+          var4.setBounds(30, 7, var5, this.field_g - 14, (byte) -52);
+          this.addChild(var4, 35);
           if (param2 < 4) {
             var6 = (String) null;
             this.a((String) null, (byte) 44, 127);
@@ -158,8 +158,8 @@ final class jd extends og implements WidgetActivationListener {
         }
     }
 
-    final void a(int param0, byte param1, int param2, int param3) {
-        super.a(param0, (byte) -92, param2, param3);
+    final void drawWidget(int param0, byte param1, int param2, int param3) {
+        super.drawWidget(param0, (byte) -92, param2, param3);
         this.field_C.drawParagraph(this.field_M, 14 + (this.field_r + param2), 10 + (param0 + this.field_j), -28 + this.field_g, this.field_f, 16777215, -1, 0, 0, this.field_C.field_o);
         if (param1 > -12) {
           String var6 = (String) null;
@@ -201,7 +201,7 @@ final class jd extends og implements WidgetActivationListener {
             field_D = (java.awt.Canvas) null;
           }
           this.a(119, var4_int + 1);
-          this.field_L[var4_int] = this.a(param0, (bi) (this), param1 + 167);
+          this.field_L[var4_int] = this.a(param0, (WidgetEventListener) (this), param1 + 167);
           this.field_E[var4_int] = param2;
         } catch (RuntimeException runtimeException) {
           throw dn.wrapClientException((Throwable) ((Object) runtimeException), "jd.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');

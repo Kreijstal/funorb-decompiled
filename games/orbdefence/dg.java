@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class dg extends pj {
+final class dg extends UiWidget {
     private RgbSprite field_G;
     private int field_A;
     static String field_C;
@@ -75,7 +75,7 @@ final class dg extends pj {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw dd.wrapClientException((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
+          throw DraggableWidgetContainer.wrapClientException((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
         }
     }
 
@@ -151,8 +151,8 @@ final class dg extends pj {
         return var14;
     }
 
-    final void a(int param0, int param1, int param2, byte param3, int param4) {
-        super.a(param0, param1, param2, param3, param4);
+    final void setBounds(int param0, int param1, int param2, byte param3, int param4) {
+        super.setBounds(param0, param1, param2, param3, param4);
         this.c(false);
     }
 
@@ -174,7 +174,7 @@ final class dg extends pj {
         this.field_G = new RgbSprite(this.field_r >> 1, this.field_r);
     }
 
-    final void a(int param0, int param1, int param2, int param3) {
+    final void drawWidget(int param0, int param1, int param2, int param3) {
         if (0 != param1) {
           return;
         }
@@ -191,7 +191,7 @@ final class dg extends pj {
         }
     }
 
-    final void a(byte param0, pj param1, int param2, int param3) {
+    final void updatePointer(byte param0, UiWidget param1, int param2, int param3) {
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         String stackIn_9_2 = null;
@@ -218,7 +218,7 @@ final class dg extends pj {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw dd.wrapClientException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw DraggableWidgetContainer.wrapClientException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -228,7 +228,7 @@ final class dg extends pj {
         this.field_x = param6;
         this.field_y = param5;
         this.field_D = param4;
-        this.a(param0, param1, param3, (byte) -90, param2);
+        this.setBounds(param0, param1, param3, (byte) -90, param2);
     }
 
     static {

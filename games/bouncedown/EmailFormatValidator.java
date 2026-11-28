@@ -144,36 +144,36 @@ final class EmailFormatValidator extends TextFieldValidator {
           if (ne.field_u == 0) {
             var3_int = r.a(EditableTextField.field_E, ClientException.field_g, vg.field_g, 1, ResourceArchive.field_a);
             var4 = 3 + var3_int;
-            se.field_E = new String[var4];
+            DropTargetWidgetContainer.field_E = new String[var4];
             IterableNodeHashTable.field_a = new int[var4];
             for (var5 = 0; var4 > var5; var5++) {
               IterableNodeHashTable.field_a[var5] = -1;
             }
             CipherPacketBuffer.field_n = new int[2];
             for (var5 = 0; var3_int > var5; var5++) {
-              se.field_E[var5] = ClientException.field_g[var5];
+              DropTargetWidgetContainer.field_E[var5] = ClientException.field_g[var5];
             }
-            se.field_E[var4 - 3] = "";
-            se.field_E[-2 + var4] = tb.field_o;
+            DropTargetWidgetContainer.field_E[var4 - 3] = "";
+            DropTargetWidgetContainer.field_E[-2 + var4] = tb.field_o;
             IterableNodeHashTable.field_a[var4 - 2] = 0;
             CipherPacketBuffer.field_n[0] = 4;
-            se.field_E[-1 + var4] = uk.field_b;
+            DropTargetWidgetContainer.field_E[-1 + var4] = uk.field_b;
             IterableNodeHashTable.field_a[var4 - 1] = 1;
             CipherPacketBuffer.field_n[1] = 5;
           } else if (1 == ne.field_u) {
             var3_int = r.a(EditableTextField.field_E, ClientException.field_g, vg.field_g, 1, ResourceArchive.field_a);
             var4 = var3_int + 2;
-            se.field_E = new String[var4];
+            DropTargetWidgetContainer.field_E = new String[var4];
             IterableNodeHashTable.field_a = new int[var4];
             for (var5 = 0; var4 > var5; var5++) {
               IterableNodeHashTable.field_a[var5] = -1;
             }
             CipherPacketBuffer.field_n = new int[1];
             for (var5 = 0; var3_int > var5; var5++) {
-              se.field_E[var5] = ClientException.field_g[var5];
+              DropTargetWidgetContainer.field_E[var5] = ClientException.field_g[var5];
             }
-            se.field_E[var4 - 2] = "";
-            se.field_E[-1 + var4] = uk.field_b;
+            DropTargetWidgetContainer.field_E[var4 - 2] = "";
+            DropTargetWidgetContainer.field_E[-1 + var4] = uk.field_b;
             IterableNodeHashTable.field_a[var4 - 1] = 0;
             CipherPacketBuffer.field_n[0] = 5;
           } else if (2 != ne.field_u) {
@@ -184,33 +184,33 @@ final class EmailFormatValidator extends TextFieldValidator {
                 var3_int = r.a(EditableTextField.field_E, ClientException.field_g, ra.field_f, param1 + 25699, ResourceArchive.field_a);
               }
               var4 = 2 + var3_int;
-              se.field_E = new String[var4];
+              DropTargetWidgetContainer.field_E = new String[var4];
               IterableNodeHashTable.field_a = new int[var4];
               for (var5 = 0; var5 < var4; var5++) {
                 IterableNodeHashTable.field_a[var5] = -1;
               }
               CipherPacketBuffer.field_n = new int[1];
               for (var5 = 0; var3_int > var5; var5++) {
-                se.field_E[var5] = ClientException.field_g[var5];
+                DropTargetWidgetContainer.field_E[var5] = ClientException.field_g[var5];
               }
-              se.field_E[-2 + var4] = "";
-              se.field_E[-1 + var4] = uk.field_b;
+              DropTargetWidgetContainer.field_E[-2 + var4] = "";
+              DropTargetWidgetContainer.field_E[-1 + var4] = uk.field_b;
               IterableNodeHashTable.field_a[var4 - 1] = 0;
               CipherPacketBuffer.field_n[0] = 5;
             } else if (ne.field_u == 4) {
               var3_int = r.a(EditableTextField.field_E, ClientException.field_g, of.field_a, 1, ResourceArchive.field_a);
               var4 = var3_int + 2;
               IterableNodeHashTable.field_a = new int[var4];
-              se.field_E = new String[var4];
+              DropTargetWidgetContainer.field_E = new String[var4];
               for (var5 = 0; var5 < var4; var5++) {
                 IterableNodeHashTable.field_a[var5] = -1;
               }
               CipherPacketBuffer.field_n = new int[1];
               for (var5 = 0; var3_int > var5; var5++) {
-                se.field_E[var5] = ClientException.field_g[var5];
+                DropTargetWidgetContainer.field_E[var5] = ClientException.field_g[var5];
               }
-              se.field_E[var4 - 2] = "";
-              se.field_E[var4 - 1] = uk.field_b;
+              DropTargetWidgetContainer.field_E[var4 - 2] = "";
+              DropTargetWidgetContainer.field_E[var4 - 1] = uk.field_b;
               IterableNodeHashTable.field_a[-1 + var4] = 0;
               CipherPacketBuffer.field_n[0] = 5;
             } else {
@@ -219,20 +219,20 @@ final class EmailFormatValidator extends TextFieldValidator {
               }
               var3_int = r.a(EditableTextField.field_E, ClientException.field_g, pe.field_g, param1 + 25699, ResourceArchive.field_a);
               var4 = 3 + var3_int;
-              se.field_E = new String[var4];
+              DropTargetWidgetContainer.field_E = new String[var4];
               IterableNodeHashTable.field_a = new int[var4];
               for (var5 = 0; var5 < var4; var5++) {
                 IterableNodeHashTable.field_a[var5] = -1;
               }
               CipherPacketBuffer.field_n = new int[2];
               for (var5 = 0; var5 < var3_int; var5++) {
-                se.field_E[var5] = ClientException.field_g[var5];
+                DropTargetWidgetContainer.field_E[var5] = ClientException.field_g[var5];
               }
-              se.field_E[-3 + var4] = "";
-              se.field_E[var4 - 2] = wa.field_f;
+              DropTargetWidgetContainer.field_E[-3 + var4] = "";
+              DropTargetWidgetContainer.field_E[var4 - 2] = wa.field_f;
               IterableNodeHashTable.field_a[-2 + var4] = 0;
               CipherPacketBuffer.field_n[0] = 3;
-              se.field_E[-1 + var4] = uk.field_b;
+              DropTargetWidgetContainer.field_E[-1 + var4] = uk.field_b;
               IterableNodeHashTable.field_a[var4 - 1] = 1;
               CipherPacketBuffer.field_n[1] = 5;
             }
@@ -254,7 +254,7 @@ final class EmailFormatValidator extends TextFieldValidator {
             ll.field_E = new String[var3_int - var4 - 1];
             cb.a(ClientException.field_g, var4 + 1, ll.field_E, 0, -var4 + (var3_int - 1));
             var4 = -1;
-            var3_int = r.a(EditableTextField.field_E, ClientException.field_g, BufferedRandomAccessFile.a(se.field_B, new String[]{"<br><%0><br>"}, (byte) -126), param1 ^ -25697, ResourceArchive.field_a);
+            var3_int = r.a(EditableTextField.field_E, ClientException.field_g, BufferedRandomAccessFile.a(DropTargetWidgetContainer.field_B, new String[]{"<br><%0><br>"}, (byte) -126), param1 ^ -25697, ResourceArchive.field_a);
             for (var5 = 0; var3_int > var5; var5++) {
               if (!"<%0>".equals(ClientException.field_g[var5])) {
                 continue;
@@ -282,24 +282,24 @@ final class EmailFormatValidator extends TextFieldValidator {
             }
             var6 = stackIn_60_0;
             var7 = var6 + (7 + var5);
-            se.field_E = new String[var7];
+            DropTargetWidgetContainer.field_E = new String[var7];
             IterableNodeHashTable.field_a = new int[var7];
             for (var8 = 0; var7 > var8; var8++) {
               IterableNodeHashTable.field_a[var8] = -1;
             }
             IterableNodeHashTable.field_a[1] = 0;
-            se.field_E[0] = AccountNameAvailabilityValidator.field_l;
-            se.field_E[1] = eb.field_F;
+            DropTargetWidgetContainer.field_E[0] = AccountNameAvailabilityValidator.field_l;
+            DropTargetWidgetContainer.field_E[1] = eb.field_F;
             CipherPacketBuffer.field_n = new int[2];
             CipherPacketBuffer.field_n[0] = 5;
             CipherPacketBuffer.field_n[1] = 2;
             IterableNodeHashTable.field_a[3] = 1;
-            se.field_E[4] = SpriteGeometry.field_u;
-            se.field_E[5] = "";
-            se.field_E[3] = ab.field_g;
-            se.field_E[2] = field_j;
+            DropTargetWidgetContainer.field_E[4] = SpriteGeometry.field_u;
+            DropTargetWidgetContainer.field_E[5] = "";
+            DropTargetWidgetContainer.field_E[3] = ab.field_g;
+            DropTargetWidgetContainer.field_E[2] = field_j;
             for (var8Lifetime2 = 0; var8Lifetime2 < var5; var8Lifetime2++) {
-              stackIn_67_0 = se.field_E;
+              stackIn_67_0 = DropTargetWidgetContainer.field_E;
               stackIn_67_1 = 6 + var8Lifetime2;
               if (-var5 + t.field_r.length + var8Lifetime2 < 0) {
                 stackIn_68_2 = "";
@@ -308,10 +308,10 @@ final class EmailFormatValidator extends TextFieldValidator {
               }
               stackIn_67_0[stackIn_67_1] = stackIn_68_2;
             }
-            se.field_E[6 + var5] = null;
+            DropTargetWidgetContainer.field_E[6 + var5] = null;
             IterableNodeHashTable.field_a[var5 + 6] = -2;
             for (var8Lifetime3 = 0; var6 > var8Lifetime3; var8Lifetime3++) {
-              stackIn_72_0 = se.field_E;
+              stackIn_72_0 = DropTargetWidgetContainer.field_E;
               stackIn_72_1 = var8Lifetime3 + (7 + var5);
               stackIn_72_2 = var8Lifetime3;
               stackIn_72_3 = vb.field_k.length;
@@ -329,9 +329,9 @@ final class EmailFormatValidator extends TextFieldValidator {
             EmailFormatValidator.clearStaticReferences(-32);
           }
           var3_intLifetime1 = 0;
-          for (var4Lifetime1 = 0; var4Lifetime1 < se.field_E.length; var4Lifetime1++) {
+          for (var4Lifetime1 = 0; var4Lifetime1 < DropTargetWidgetContainer.field_E.length; var4Lifetime1++) {
             stackIn_91_0 = !(IterableNodeHashTable.field_a[var4Lifetime1] < 0);
-            var5Lifetime1 = SectorCacheStore.a(stackIn_91_0, se.field_E[var4Lifetime1], true);
+            var5Lifetime1 = SectorCacheStore.a(stackIn_91_0, DropTargetWidgetContainer.field_E[var4Lifetime1], true);
             if (var5Lifetime1 > var3_intLifetime1) {
               var3_intLifetime1 = var5Lifetime1;
             }
@@ -358,7 +358,7 @@ final class EmailFormatValidator extends TextFieldValidator {
           AwtRasterBuffer.field_a = (hj.field_a + ConfirmedEmailAvailabilityValidator.field_m << 1) * cf.field_f.field_f;
           TextHotspotBounds.field_p = var3_intLifetime1 + bi.field_h - (var3_intLifetime1 >> 1);
           bb.field_b = bi.field_h - (var3_intLifetime1 >> 1);
-          for (var4Lifetime2 = 0; var4Lifetime2 < se.field_E.length; var4Lifetime2++) {
+          for (var4Lifetime2 = 0; var4Lifetime2 < DropTargetWidgetContainer.field_E.length; var4Lifetime2++) {
             stackIn_115_0 = AwtRasterBuffer.field_a;
             if (IterableNodeHashTable.field_a[var4Lifetime2] >= 0) {
               stackIn_116_1 = pb.field_j;
@@ -368,13 +368,13 @@ final class EmailFormatValidator extends TextFieldValidator {
             AwtRasterBuffer.field_a = stackIn_115_0 + stackIn_116_1;
           }
           jl.field_a = uf.field_a - (AwtRasterBuffer.field_a >> 1);
-          NetworkArchiveRequest.field_r = new int[se.field_E.length][];
+          NetworkArchiveRequest.field_r = new int[DropTargetWidgetContainer.field_E.length][];
           var4Lifetime3 = 0;
           var5Lifetime3 = jl.field_a;
-          while (se.field_E.length > var4Lifetime3) {
+          while (DropTargetWidgetContainer.field_E.length > var4Lifetime3) {
             var6Lifetime1 = IterableNodeHashTable.field_a[var4Lifetime3];
             if (var6Lifetime1 >= 0) {
-              var7Lifetime2 = SectorCacheStore.a(true, se.field_E[var4Lifetime3], true);
+              var7Lifetime2 = SectorCacheStore.a(true, DropTargetWidgetContainer.field_E[var4Lifetime3], true);
               var5Lifetime3 = var5Lifetime3 + hj.field_a;
               var8Lifetime1 = -(var7Lifetime2 >> 1) + bi.field_h;
               NetworkArchiveRequest.field_r[var4Lifetime3] = new int[4];

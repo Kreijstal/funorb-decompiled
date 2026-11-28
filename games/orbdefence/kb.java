@@ -196,7 +196,7 @@ final class kb extends IntrusiveNode {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
-          throw dd.wrapClientException((Throwable) ((Object) var4), "kb.C(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw DraggableWidgetContainer.wrapClientException((Throwable) ((Object) var4), "kb.C(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -225,7 +225,7 @@ final class kb extends IntrusiveNode {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw dd.wrapClientException((Throwable) ((Object) var2), "kb.A(" + param0 + ')');
+          throw DraggableWidgetContainer.wrapClientException((Throwable) ((Object) var2), "kb.A(" + param0 + ')');
         }
     }
 
@@ -250,7 +250,7 @@ final class kb extends IntrusiveNode {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6 = decompiledCaughtException;
-          throw dd.wrapClientException((Throwable) ((Object) var6), "kb.N(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw DraggableWidgetContainer.wrapClientException((Throwable) ((Object) var6), "kb.N(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
@@ -335,7 +335,7 @@ final class kb extends IntrusiveNode {
             } else {
               stackIn_34_2 = "{...}";
             }
-            throw dd.wrapClientException((Throwable) ((Object) stackIn_33_0), ((StringBuilder) (Object) stackIn_33_1).append(stackIn_34_2).append(',').append(param1).append(')').toString());
+            throw DraggableWidgetContainer.wrapClientException((Throwable) ((Object) stackIn_33_0), ((StringBuilder) (Object) stackIn_33_1).append(stackIn_34_2).append(',').append(param1).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -397,7 +397,7 @@ final class kb extends IntrusiveNode {
             } else {
               stackIn_19_2 = "{...}";
             }
-            throw dd.wrapClientException((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(')').toString());
+            throw DraggableWidgetContainer.wrapClientException((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -569,7 +569,7 @@ final class kb extends IntrusiveNode {
           } else {
             stackIn_115_2 = "{...}";
           }
-          throw dd.wrapClientException((Throwable) ((Object) stackIn_114_0), ((StringBuilder) (Object) stackIn_114_1).append(stackIn_115_2).append(',').append(param2).append(')').toString());
+          throw DraggableWidgetContainer.wrapClientException((Throwable) ((Object) stackIn_114_0), ((StringBuilder) (Object) stackIn_114_1).append(stackIn_115_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -613,7 +613,7 @@ final class kb extends IntrusiveNode {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
-          throw dd.wrapClientException((Throwable) ((Object) var4), "kb.K(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw DraggableWidgetContainer.wrapClientException((Throwable) ((Object) var4), "kb.K(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -713,7 +713,7 @@ final class kb extends IntrusiveNode {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw dd.wrapClientException((Throwable) ((Object) var2), "kb.G(" + param0 + ')');
+          throw DraggableWidgetContainer.wrapClientException((Throwable) ((Object) var2), "kb.G(" + param0 + ')');
         }
     }
 
@@ -825,7 +825,7 @@ final class kb extends IntrusiveNode {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw dd.wrapClientException((Throwable) ((Object) var2), "kb.H(" + param0 + ')');
+          throw DraggableWidgetContainer.wrapClientException((Throwable) ((Object) var2), "kb.H(" + param0 + ')');
         }
     }
 
@@ -1178,7 +1178,7 @@ final class kb extends IntrusiveNode {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
-          throw dd.wrapClientException((Throwable) ((Object) var4), "kb.I(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw DraggableWidgetContainer.wrapClientException((Throwable) ((Object) var4), "kb.I(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -1829,7 +1829,7 @@ final class kb extends IntrusiveNode {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw dd.wrapClientException((Throwable) (var2), "kb.J(" + param0 + ')');
+          throw DraggableWidgetContainer.wrapClientException((Throwable) (var2), "kb.J(" + param0 + ')');
         }
     }
 
@@ -1920,7 +1920,7 @@ final class kb extends IntrusiveNode {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var7 = decompiledCaughtException;
-          throw dd.wrapClientException((Throwable) ((Object) var7), "kb.F(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
+          throw DraggableWidgetContainer.wrapClientException((Throwable) ((Object) var7), "kb.F(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }
     }
 
@@ -1968,7 +1968,7 @@ final class kb extends IntrusiveNode {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw dd.wrapClientException((Throwable) ((Object) var2), "kb.L(" + param0 + ')');
+          throw DraggableWidgetContainer.wrapClientException((Throwable) ((Object) var2), "kb.L(" + param0 + ')');
         }
     }
 
@@ -2006,7 +2006,7 @@ final class kb extends IntrusiveNode {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw dd.wrapClientException((Throwable) ((Object) var2), "kb.M(" + param0 + ')');
+          throw DraggableWidgetContainer.wrapClientException((Throwable) ((Object) var2), "kb.M(" + param0 + ')');
         }
     }
 
@@ -2053,7 +2053,7 @@ final class kb extends IntrusiveNode {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw dd.wrapClientException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
+          throw DraggableWidgetContainer.wrapClientException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
         }
     }
 

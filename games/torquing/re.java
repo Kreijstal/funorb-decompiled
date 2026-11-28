@@ -77,7 +77,7 @@ final class re {
               IntrusiveNode.field_b[var3_int] = (var3_int << 12) / param2;
             }
             ci.field_c = param2;
-            jh.field_A = param2 - 1;
+            SingleChildWidgetContainer.field_A = param2 - 1;
             ff.field_b = param2 * 32;
           }
           if (param0 != MatchingFieldValidator.field_o) {

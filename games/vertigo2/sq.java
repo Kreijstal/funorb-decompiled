@@ -25,11 +25,11 @@ final class sq {
     final static void a(byte param0) {
         wj.field_c = new String[kq.field_Jb];
         wj.field_c[16] = g.field_b;
-        wj.field_c[21] = mg.field_L;
+        wj.field_c[21] = LabeledWidgetContainer.field_L;
         wj.field_c[17] = mm.field_b;
         wj.field_c[4] = ok.field_a;
         wj.field_c[9] = SocketConnector.field_d;
-        wj.field_c[19] = ac.field_M;
+        wj.field_c[19] = DropTargetWidgetContainer.field_M;
         wj.field_c[6] = hm.field_B;
         wj.field_c[18] = bo.field_p;
         wj.field_c[11] = ie.field_Sb;

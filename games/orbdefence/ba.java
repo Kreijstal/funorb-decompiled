@@ -21,14 +21,14 @@ final class ba {
         } else {
           var1 = new qg[ec.field_K];
           for (var2 = 0; ec.field_K > var2; var2++) {
-            var1[var2] = new qg(sg.field_B, he.field_r, jd.field_g[var2], wc.field_a[var2], wh.field_b[var2], m.field_a[var2], fl.field_a[var2], vc.field_g);
+            var1[var2] = new qg(ModalDialog.field_B, he.field_r, jd.field_g[var2], wc.field_a[var2], wh.field_b[var2], m.field_a[var2], fl.field_a[var2], vc.field_g);
           }
           md.$cfr$intArgs$a$6121ff5511c4(-127);
           return var1;
         }
         var1Lifetime1 = new qg[ec.field_K];
         for (var2Lifetime1 = 0; ec.field_K > var2Lifetime1; var2Lifetime1++) {
-          var1Lifetime1[var2Lifetime1] = new qg(sg.field_B, he.field_r, jd.field_g[var2Lifetime1], wc.field_a[var2Lifetime1], wh.field_b[var2Lifetime1], m.field_a[var2Lifetime1], fl.field_a[var2Lifetime1], vc.field_g);
+          var1Lifetime1[var2Lifetime1] = new qg(ModalDialog.field_B, he.field_r, jd.field_g[var2Lifetime1], wc.field_a[var2Lifetime1], wh.field_b[var2Lifetime1], m.field_a[var2Lifetime1], fl.field_a[var2Lifetime1], vc.field_g);
         }
         md.$cfr$intArgs$a$6121ff5511c4(-127);
         return var1Lifetime1;
@@ -87,7 +87,7 @@ final class ba {
           SoftwareRasterizer.drawRectangleOutline(468, 6, 164, 24, 8947848);
           BufferedSocket.field_a.a(-40);
         } catch (RuntimeException runtimeException) {
-          throw dd.wrapClientException((Throwable) ((Object) runtimeException), "ba.A(" + param0 + ')');
+          throw DraggableWidgetContainer.wrapClientException((Throwable) ((Object) runtimeException), "ba.A(" + param0 + ')');
         }
     }
 

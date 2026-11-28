@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class InputAdapter001 implements CallbackContract004 {
+final class InputAdapter001 implements WidgetRenderer {
     static String stringState0033;
     private int integerState0040;
     private int integerState0041;
@@ -39,7 +39,7 @@ final class InputAdapter001 implements CallbackContract004 {
         }
     }
 
-    public final void performAction0017(boolean booleanArgument1, int integerArgument2, int integerArgument3, byte byteArgument4, UiComponent uiComponentArgument5) {
+    public final void paintWidget(boolean booleanArgument1, int integerArgument2, int integerArgument3, byte byteArgument4, UiComponent uiComponentArgument5) {
         RuntimeException runtimeExceptionLocal1 = null;
         int integerLocal2 = 0;
         int integerLocal3 = 0;

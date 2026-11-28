@@ -14,7 +14,7 @@ final class kp {
           pd.a(AwtRasterBuffer.field_h, -32);
           hf.i((byte) -32);
           fd.a(52);
-          lm.b((byte) -99);
+          UiWidget.b((byte) -99);
           if (ef.b(0)) {
             ac.field_B.d((byte) -87, 1);
             op.a(0, 0);
@@ -28,7 +28,7 @@ final class kp {
         }
         hf.i((byte) -32);
         fd.a(52);
-        lm.b((byte) -99);
+        UiWidget.b((byte) -99);
         if (ef.b(0)) {
           ac.field_B.d((byte) -87, 1);
           op.a(0, 0);

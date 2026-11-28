@@ -10,13 +10,13 @@ final class ValidatedTextField extends EditableTextField implements FieldValidat
     private int field_S;
     static String field_W;
 
-    ValidatedTextField(String param0, tg param1, int param2) {
+    ValidatedTextField(String param0, WidgetEventListener param1, int param2) {
         super(param0, param1, param2);
     }
 
-    final void a(int param0, int param1, byte param2, UiWidget param3) {
+    final void updatePointer(int param0, int param1, byte param2, UiWidget param3) {
         try {
-          super.a(param0, param1, param2, param3);
+          super.updatePointer(param0, param1, param2, param3);
           this.field_S = -param1 - this.field_p + kf.mouseX;
         } catch (RuntimeException runtimeException) {
           throw LevelGrid.toClientException((Throwable) ((Object) runtimeException), "lf.EA(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');

@@ -23,7 +23,7 @@ final class kh {
         FullscreenFocusCanvas.field_d = false;
         qc.field_h = null;
         ak.field_b = null;
-        i.field_I = null;
+        ModalDialogHost.field_I = null;
         if (param0 >= -29) {
           kh.resetStaticState(false);
         }

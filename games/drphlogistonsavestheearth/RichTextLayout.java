@@ -39,7 +39,7 @@ final class RichTextLayout extends TextLayout {
               DrPhlogistonSavesTheEarth.a(0, param1 - 423, param2, 0);
             } else {
               if (af.field_b != 0) {
-                dh.a(107, param2);
+                LabeledWidgetContainer.a(107, param2);
               } else {
                 kf.a(param0, false, (byte) -125);
                 DrPhlogistonSavesTheEarth.a(0, -120, param2, 0);

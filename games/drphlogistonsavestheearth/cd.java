@@ -27,8 +27,8 @@ final class cd {
           if (null != ol.field_a) {
             ol.field_a.d(true);
           }
-          pi.field_O = new LoginPanel(param0, param2, false, true, true);
-          PcmOutputWorker.field_e.a(33, pi.field_O);
+          DraggableWidgetContainer.field_O = new LoginPanel(param0, param2, false, true, true);
+          PcmOutputWorker.field_e.a(33, DraggableWidgetContainer.field_O);
           if (param1 <= -2) {
             return;
           }
@@ -73,11 +73,11 @@ final class cd {
           if (TextLineMetrics.field_f != null) {
             try {
               TextLineMetrics.field_f.seek(0L, (byte) -63);
-              TextLineMetrics.field_f.write(24, dh.field_N.position, 18017, dh.field_N.payload);
+              TextLineMetrics.field_f.write(24, LabeledWidgetContainer.field_N.position, 18017, LabeledWidgetContainer.field_N.payload);
             } catch (java.lang.Exception decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var1 = (Exception) (Object) decompiledCaughtException;
-              dh.field_N.position = dh.field_N.position + 24;
+              LabeledWidgetContainer.field_N.position = LabeledWidgetContainer.field_N.position + 24;
               if (param0 == 4) {
                 return;
               }
@@ -85,7 +85,7 @@ final class cd {
               return;
             }
           }
-          dh.field_N.position = dh.field_N.position + 24;
+          LabeledWidgetContainer.field_N.position = LabeledWidgetContainer.field_N.position + 24;
           if (param0 != 4) {
             cd.a(4);
           }

@@ -39,7 +39,7 @@ final class sb extends IntrusiveNode {
           if (param1 == null) {
             return null;
           }
-          var2 = new CoverageBitmapFont(param1, ConfirmedEmailAvailabilityValidator.field_s, hj.field_K, field_m, ArchiveRequest.field_p, ProxyAuthenticationRequiredException.field_a, qc.field_b);
+          var2 = new CoverageBitmapFont(param1, ConfirmedEmailAvailabilityValidator.field_s, DropTargetWidgetContainer.field_K, field_m, ArchiveRequest.field_p, ProxyAuthenticationRequiredException.field_a, qc.field_b);
           SocketConnector.a((byte) 95);
           stackIn_6_0 = var2;
           return stackIn_6_0;

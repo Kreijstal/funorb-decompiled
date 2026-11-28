@@ -57,11 +57,11 @@ final class ek extends UiComponent {
         }
     }
 
-    final void a(byte param0, int param1, int param2, int param3, int param4) {
+    final void setBounds(byte param0, int param1, int param2, int param3, int param4) {
         if (param0 <= 100) {
           this.field_D = 71;
         }
-        super.a((byte) 108, param1, param2, param3, param4);
+        super.setBounds((byte) 108, param1, param2, param3, param4);
         this.g(483);
     }
 
@@ -158,7 +158,7 @@ final class ek extends UiComponent {
         this.g(param0 - 23444);
     }
 
-    final void a(UiComponent param0, int param1, byte param2, int param3) {
+    final void updatePointer(UiComponent param0, int param1, byte param2, int param3) {
         Sprite discarded$1 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
@@ -269,7 +269,7 @@ final class ek extends UiComponent {
         this.field_E = new Sprite(this.field_l >> 1, this.field_l);
     }
 
-    final void a(int param0, int param1, boolean param2, int param3) {
+    final void drawWidget(int param0, int param1, boolean param2, int param3) {
         if (0 != param3) {
           return;
         }
@@ -292,7 +292,7 @@ final class ek extends UiComponent {
         this.field_D = param5;
         this.field_H = param6;
         this.field_I = param8;
-        this.a((byte) 127, param0, param3, param2, param1);
+        this.setBounds((byte) 127, param0, param3, param2, param1);
     }
 
     private final Sprite a(boolean param0, int param1, int param2) {

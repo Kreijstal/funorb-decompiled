@@ -234,7 +234,7 @@ abstract class MouseWheelInput {
         }
         AccountRequestState.field_b = 0;
         bj.field_gb = -2147483648;
-        bh.field_F = 2147483647;
+        ArrayWidgetContainer.field_F = 2147483647;
         nj.field_t = 2147483647;
         eb.field_y = -2147483648;
     }

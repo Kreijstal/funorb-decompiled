@@ -50,8 +50,8 @@ final class nj extends DefaultTextWidgetRenderer {
         }
     }
 
-    public final void a(byte param0, int param1, int param2, boolean param3, mf param4) {
-        mf stackIn_3_0 = null;
+    public final void paintWidget(byte param0, int param1, int param2, boolean param3, UiWidget param4) {
+        UiWidget stackIn_3_0 = null;
         RuntimeException stackIn_30_0 = null;
         StringBuilder stackIn_30_1 = null;
         String stackIn_31_2 = null;
@@ -66,7 +66,7 @@ final class nj extends DefaultTextWidgetRenderer {
         ai var14 = null;
         try {
           if (param4 instanceof InteractiveWidget) {
-            stackIn_3_0 = (mf) (param4);
+            stackIn_3_0 = (UiWidget) (param4);
           } else {
             stackIn_3_0 = null;
           }
@@ -98,7 +98,7 @@ final class nj extends DefaultTextWidgetRenderer {
               }
             }
           }
-          if (param4.d((byte) -67)) {
+          if (param4.isFocused((byte) -67)) {
             var13 = this.field_y[5];
             if (var13 != null) {
               var13.a(param4, this.field_s, param2, -22160, this, param1);
@@ -266,7 +266,7 @@ final class nj extends DefaultTextWidgetRenderer {
         int var5 = 0;
         try {
           AgeValidator.field_o.field_db = param1;
-          fm.field_V = true;
+          ModalDialogHost.field_V = true;
           var2_int = ph.field_j.field_e;
           var3 = ph.field_j.field_i;
           if (param0 != -101) {
@@ -419,14 +419,14 @@ final class nj extends DefaultTextWidgetRenderer {
 
     final static void a(boolean param0, int param1, String param2, boolean param3) {
         bo.a((byte) 123);
-        jh.field_e.i(0);
+        jh.field_e.closeAllDialogs(0);
         ResourceArchive.field_b = new LoginPanel(pi.field_a, (String) null, SecondaryNodeHashTable.field_g, param0, param3);
         if (param1 != 2) {
           return;
         }
         try {
           field_w = new sb(jh.field_e, ResourceArchive.field_b);
-          jh.field_e.b(field_w, (byte) -75);
+          jh.field_e.showDialog(field_w, (byte) -75);
         } catch (RuntimeException runtimeException) {
           throw SpriteGeometry.wrapClientException((Throwable) ((Object) runtimeException), "nj.F(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }

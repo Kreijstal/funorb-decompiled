@@ -33,7 +33,7 @@ final class kg {
         try {
           if (null == vl.field_f) {
             vl.field_f = new ul(wg.field_j, rc.field_i);
-            wg.field_j.b((byte) -74, vl.field_f);
+            wg.field_j.showDialog((byte) -74, vl.field_f);
           }
           vl.field_f.a(param1, param0, 4210752, param2);
           SoftwareRasterizer.clearRaster();

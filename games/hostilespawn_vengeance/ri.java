@@ -13,7 +13,7 @@ final class ri extends IntrusiveNode {
     static boolean field_o;
 
     final static void a(byte param0, boolean param1, String param2, String param3) {
-        fc.field_y = param2;
+        SingleChildWidgetContainer.field_y = param2;
         if (param0 <= 109) {
           return;
         }

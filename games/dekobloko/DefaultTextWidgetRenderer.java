@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class DefaultTextWidgetRenderer implements CallbackContract004, TextWidgetRenderer {
+class DefaultTextWidgetRenderer implements WidgetRenderer, TextWidgetRenderer {
     int integerState0001;
     int integerState0002;
     static int[] integerArrayState0001;
@@ -175,7 +175,7 @@ class DefaultTextWidgetRenderer implements CallbackContract004, TextWidgetRender
         RuntimeException caughtExceptionLocal16 = null;
         RuntimeException runtimeExceptionLocal17 = null;
         try {
-          if (uiComponentArgument1.computeBoolean0220(true)) {
+          if (uiComponentArgument1.isFocused(true)) {
             textLayoutLocal7 = this.getTextLayout(uiComponentArgument1, (byte) 53);
             textLayoutLocal8 = textLayoutLocal7;
             integerLocal1 = textLayoutLocal8.getLineIndexForTextOffset(false, integerArgument2);
@@ -214,7 +214,7 @@ class DefaultTextWidgetRenderer implements CallbackContract004, TextWidgetRender
         }
     }
 
-    public void performAction0017(boolean booleanArgument1, int integerArgument2, int integerArgument3, byte byteArgument4, UiComponent uiComponentArgument5) {
+    public void paintWidget(boolean booleanArgument1, int integerArgument2, int integerArgument3, byte byteArgument4, UiComponent uiComponentArgument5) {
         int discarded$0 = 0;
         if (byteArgument4 >= -60) {
           UiComponent uiComponentLocal2 = (UiComponent) null;
@@ -431,7 +431,7 @@ class DefaultTextWidgetRenderer implements CallbackContract004, TextWidgetRender
           if (integerArgument2 == integerArgument1) {
             return;
           }
-          if (uiComponentArgument6.computeBoolean0220(true)) {
+          if (uiComponentArgument6.isFocused(true)) {
             textLayoutLocal17 = this.getTextLayout(uiComponentArgument6, (byte) 100);
             textLayoutLocal18 = textLayoutLocal17;
             if (integerArgument1 < integerArgument2) {

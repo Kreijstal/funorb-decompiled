@@ -68,7 +68,7 @@ final class FullscreenFocusCanvas extends java.awt.Canvas implements java.awt.ev
             return stackIn_16_0;
           }
           if (RichTextLayout.a(param1, -52)) {
-            stackIn_19_0 = MatchingFieldValidator.a(mf.field_B, new String[]{param1}, (byte) -85);
+            stackIn_19_0 = MatchingFieldValidator.a(UiWidget.field_B, new String[]{param1}, (byte) -85);
             return stackIn_19_0;
           }
           if (param2 != 64) {
@@ -149,7 +149,7 @@ final class FullscreenFocusCanvas extends java.awt.Canvas implements java.awt.ev
         if (lk.field_a != null) {
           return (java.awt.Container) ((Object) lk.field_a);
         }
-        return (java.awt.Container) ((Object) bh.i(81));
+        return (java.awt.Container) ((Object) ArrayWidgetContainer.i(81));
     }
 
     final static String a(int param0, String param1, int param2) {
@@ -182,11 +182,11 @@ final class FullscreenFocusCanvas extends java.awt.Canvas implements java.awt.ev
             return stackIn_9_0;
           }
           if (param0 == 8) {
-            stackIn_13_0 = lf.field_P;
+            stackIn_13_0 = AlphaWidgetContainer.field_P;
             return stackIn_13_0;
           }
           if (param0 == 9) {
-            stackIn_17_0 = ma.field_F;
+            stackIn_17_0 = DequeWidgetContainer.field_F;
             return stackIn_17_0;
           }
           if (param0 == 10) {

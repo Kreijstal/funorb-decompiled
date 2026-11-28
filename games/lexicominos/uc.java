@@ -15,7 +15,7 @@ class uc extends re implements WidgetActivationListener {
     static String field_mb;
     static DefaultTextWidgetRenderer field_kb;
 
-    final boolean a(char param0, int param1, w param2, byte param3) {
+    final boolean handleKey(char param0, int param1, UiWidget param2, byte param3) {
         int var5_int = 0;
         RuntimeException var5 = null;
         boolean stackIn_5_0 = false;
@@ -29,7 +29,7 @@ class uc extends re implements WidgetActivationListener {
             return true;
           }
           var5_int = 23 % ((param3 + 13) / 55);
-          stackIn_5_0 = super.a(param0, param1, param2, (byte) 114);
+          stackIn_5_0 = super.handleKey(param0, param1, param2, (byte) 114);
           return stackIn_5_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -81,7 +81,7 @@ class uc extends re implements WidgetActivationListener {
               }
               ((vc) (Object) stackIn_11_0).a(stackIn_12_1, -1, 111);
             } else {
-              var5.a(-1, og.field_j, (vd) (this));
+              var5.a(-1, og.field_j, (WidgetEventListener) (this));
             }
           }
           if (param1 == 3) {
@@ -93,7 +93,7 @@ class uc extends re implements WidgetActivationListener {
                   this.b(118, var5);
                   return;
                 }
-                var5.a(-1, qj.field_eb, (vd) (this));
+                var5.a(-1, qj.field_eb, (WidgetEventListener) (this));
               } else {
                 var5.a(lb.field_b, 9, 105);
               }
@@ -193,7 +193,7 @@ class uc extends re implements WidgetActivationListener {
         this.b(117, var2);
     }
 
-    uc(eg param0, BitmapFont param1, String param2, boolean param3, boolean param4) {
+    uc(ModalDialogHost param0, BitmapFont param1, String param2, boolean param3, boolean param4) {
         super(param0, new vc((uc) null, param1, param2), 77, 10, 10);
         try {
           this.field_ob = false;
@@ -203,7 +203,7 @@ class uc extends re implements WidgetActivationListener {
           this.field_jb = param1;
           this.field_gb = new md(13, 50, 274, 30, 15, 2113632, 4210752);
           this.field_gb.field_G = true;
-          this.b((byte) -65, (w) (this.field_gb));
+          this.addChild((byte) -65, (UiWidget) (this.field_gb));
         } catch (RuntimeException runtimeException) {
           throw ld.wrapClientException((Throwable) ((Object) runtimeException), "uc.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ')');
         }

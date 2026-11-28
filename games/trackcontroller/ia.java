@@ -31,10 +31,10 @@ final class ia {
             stackIn_3_0 = 79;
             return stackIn_3_0;
           }
-          gl.field_E.a(DiskArchiveStore.field_d, true, param0, LevelView.field_z);
-          gl.field_E.b(true);
+          AlphaWidgetContainer.field_E.processPointerInput(DiskArchiveStore.field_d, true, param0, LevelView.field_z);
+          AlphaWidgetContainer.field_E.advanceDialogs(true);
           while (mh.e(127)) {
-            gl.field_E.a(md.field_d, 3931, kg.field_d);
+            AlphaWidgetContainer.field_E.processKeyInput(md.field_d, 3931, kg.field_d);
           }
           if (LevelView.field_v != -1) {
             var1_int = LevelView.field_v;
@@ -50,7 +50,7 @@ final class ia {
             stackIn_15_0 = 1;
             return stackIn_15_0;
           }
-          if (!sa.field_Q.b((byte) 121)) {
+          if (!LabeledWidgetContainer.field_Q.b((byte) 121)) {
             stackIn_18_0 = 1;
             return stackIn_18_0;
           }

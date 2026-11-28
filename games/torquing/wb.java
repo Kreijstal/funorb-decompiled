@@ -189,9 +189,9 @@ final class wb extends am {
             mk.field_a.bindAsRenderTarget();
             var12.draw(18 - mk.field_a.field_v, -mk.field_a.field_r + 241);
             for (var7 = 0; ik.field_k.length > var7; var7++) {
-              ln.field_H[var7].bindAsRenderTarget();
-              DelayedPcmStream.field_o.drawParagraph(ik.field_k[var7], 3, 3, ln.field_H[var7].field_s - 6, ln.field_H[var7].field_t - 6, fa.field_c, -1, 1, 1, DelayedPcmStream.field_o.field_t + DelayedPcmStream.field_o.field_x);
-              hb.a(0, false, ln.field_H[var7], ln.field_H[var7].field_t, ln.field_H[var7].field_s, 1, 0, 3);
+              ModalDialogHost.field_H[var7].bindAsRenderTarget();
+              DelayedPcmStream.field_o.drawParagraph(ik.field_k[var7], 3, 3, ModalDialogHost.field_H[var7].field_s - 6, ModalDialogHost.field_H[var7].field_t - 6, fa.field_c, -1, 1, 1, DelayedPcmStream.field_o.field_t + DelayedPcmStream.field_o.field_x);
+              hb.a(0, false, ModalDialogHost.field_H[var7], ModalDialogHost.field_H[var7].field_t, ModalDialogHost.field_H[var7].field_s, 1, 0, 3);
             }
             ik.field_k = null;
             RandomAccessCacheFile.field_f = je.field_e.copy();
@@ -200,7 +200,7 @@ final class wb extends am {
             SoftwareRasterizer.setRasterBuffer(var27, var2, var3);
             SoftwareRasterizer.restoreClip(mo.field_w);
             qm.field_a = null;
-            na.field_E = 231 + (vk.field_s.field_s - jg.field_t.field_s) / 2;
+            LabeledWidgetContainer.field_E = 231 + (vk.field_s.field_s - jg.field_t.field_s) / 2;
             db.field_j = (-jg.field_t.field_s + vk.field_s.field_s) / 2 + 434;
             we.field_h = 390 + (-jg.field_t.field_t + vk.field_s.field_t) / 2;
             nc.field_a = 390 + (vk.field_s.field_t - jg.field_t.field_t) / 2;
@@ -208,7 +208,7 @@ final class wb extends am {
           if (param0 != -1) {
             field_u = (MouseWheelInput) null;
           }
-          if (null == jd.field_D) {
+          if (null == DropTargetWidgetContainer.field_D) {
             return;
           }
           if (Bzip2State.field_F != null &&
@@ -289,8 +289,8 @@ final class wb extends am {
             var16.bindAsRenderTarget();
             DelayedPcmStream.field_o.drawParagraph(var5_ref_String, 3, 3, var16.field_s - 6, -6 + var16.field_t, 16777215, -1, 0, 1, DelayedPcmStream.field_o.field_t + DelayedPcmStream.field_o.field_x);
             hb.a(0, false, var16, var16.field_t, var16.field_s, 1, 0, 3);
-            jd.field_D.bindAsRenderTarget();
-            var16.draw(199 - jd.field_D.field_v, -jd.field_D.field_r + 83);
+            DropTargetWidgetContainer.field_D.bindAsRenderTarget();
+            var16.draw(199 - DropTargetWidgetContainer.field_D.field_v, -DropTargetWidgetContainer.field_D.field_r + 83);
             SoftwareRasterizer.setRasterBuffer(var29, var2Lifetime2, var3Lifetime2);
             SoftwareRasterizer.restoreClip(mo.field_w);
           }
@@ -304,25 +304,25 @@ final class wb extends am {
             var5Lifetime1 = var4 - (-kj.field_b.field_w - 20);
             var6Lifetime2 = -(var5Lifetime1 / 2) + 427;
             var7Lifetime2 = 20 + var6Lifetime2 + kj.field_b.field_w;
-            jd.field_D.bindAsRenderTarget();
-            DelayedPcmStream.field_o.drawString(eh.field_e, -jd.field_D.field_v + var7Lifetime2, DelayedPcmStream.field_o.field_x + (155 - (jd.field_D.field_r - DelayedPcmStream.field_o.field_t)), 16777215, -1);
-            hb.a(var7Lifetime2 + (-jd.field_D.field_v - 4), false, jd.field_D, 50, var4, 1, 155 - jd.field_D.field_r, 3);
-            var8Lifetime1 = -((-DelayedPcmStream.field_o.field_t + (-DelayedPcmStream.field_o.field_x + kj.field_b.field_u) - 3) / 2) + (-jd.field_D.field_r + 155);
-            kj.field_b.draw(var6Lifetime2 - jd.field_D.field_v, var8Lifetime1);
+            DropTargetWidgetContainer.field_D.bindAsRenderTarget();
+            DelayedPcmStream.field_o.drawString(eh.field_e, -DropTargetWidgetContainer.field_D.field_v + var7Lifetime2, DelayedPcmStream.field_o.field_x + (155 - (DropTargetWidgetContainer.field_D.field_r - DelayedPcmStream.field_o.field_t)), 16777215, -1);
+            hb.a(var7Lifetime2 + (-DropTargetWidgetContainer.field_D.field_v - 4), false, DropTargetWidgetContainer.field_D, 50, var4, 1, 155 - DropTargetWidgetContainer.field_D.field_r, 3);
+            var8Lifetime1 = -((-DelayedPcmStream.field_o.field_t + (-DelayedPcmStream.field_o.field_x + kj.field_b.field_u) - 3) / 2) + (-DropTargetWidgetContainer.field_D.field_r + 155);
+            kj.field_b.draw(var6Lifetime2 - DropTargetWidgetContainer.field_D.field_v, var8Lifetime1);
             SoftwareRasterizer.setRasterBuffer(var30, var2Lifetime3, var3Lifetime3);
             SoftwareRasterizer.restoreClip(mo.field_w);
             kj.field_b = null;
           }
           SoftwareRasterizer.saveClip(mo.field_w);
-          SoftwareRasterizer.fillRoundedRectangleAlpha(16, 16, 608, 112, 15, ln.field_G, VertexMesh.field_o);
-          SoftwareRasterizer.fillRoundedRectangleAlpha(231, 144, 393, 232, 15, ln.field_G, VertexMesh.field_o);
+          SoftwareRasterizer.fillRoundedRectangleAlpha(16, 16, 608, 112, 15, ModalDialogHost.field_G, VertexMesh.field_o);
+          SoftwareRasterizer.fillRoundedRectangleAlpha(231, 144, 393, 232, 15, ModalDialogHost.field_G, VertexMesh.field_o);
           if (RasterBuffer.field_f != null) {
             RasterBuffer.field_f.draw(0, 0);
           }
           if (null != mk.field_a) {
             mk.field_a.draw(0, 0);
           }
-          jd.field_D.draw(0, 0);
+          DropTargetWidgetContainer.field_D.draw(0, 0);
           if (MouseWheelInput.field_b != null) {
             MouseWheelInput.field_b.draw(0, 0);
           }
@@ -353,7 +353,7 @@ final class wb extends am {
               var1.drawAdditive(-1, -1, var2Lifetime4);
             }
             stackIn_58_0 = we.field_h;
-            stackIn_58_1 = na.field_E;
+            stackIn_58_1 = LabeledWidgetContainer.field_E;
             stackIn_58_2 = 0;
             stackIn_59_3 = (sd.field_s.field_g == 0);
             eh.a(stackIn_58_0, stackIn_58_1, stackIn_58_2, stackIn_59_3);
@@ -397,10 +397,10 @@ final class wb extends am {
               }
             }
             lc.g(param0 + 102);
-            ln.field_H[da.field_a].draw(269, 340);
+            ModalDialogHost.field_H[da.field_a].draw(269, 340);
           } else {
             lc.g(param0 + 102);
-            ln.field_H[da.field_a].draw(269, 340);
+            ModalDialogHost.field_H[da.field_a].draw(269, 340);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -436,7 +436,7 @@ final class wb extends am {
           var24 = this.b(0, 0, 1 + param1 & NameSuggestionsPanel.field_I);
           for (var7 = 0; ci.field_c > var7; var7++) {
             var8 = this.field_s * (var24[var7] - var25[var7]);
-            var9 = this.field_s * (var5[jh.field_A & 1 + var7] - var5[var7 - 1 & jh.field_A]);
+            var9 = this.field_s * (var5[SingleChildWidgetContainer.field_A & 1 + var7] - var5[var7 - 1 & SingleChildWidgetContainer.field_A]);
             var10 = var9 >> 12;
             var11 = var8 >> 12;
             var12 = var10 * var10 >> 12;

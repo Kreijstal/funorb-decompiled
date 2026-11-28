@@ -288,7 +288,7 @@ abstract class ByteStorage {
             }
             if (lo.field_k == null) {
               if (gn.field_d) {
-                if (30000L < qg.b(false)) {
+                if (30000L < DraggableWidgetContainer.b(false)) {
                   nk.field_Kb = tf.field_m;
                 } else {
                   nk.field_Kb = ba.field_c;

@@ -63,10 +63,10 @@ final class qb {
     }
 
     final static void b(int param0) {
-        tc.field_x = false;
+        ModalDialogHost.field_x = false;
         s.field_c = false;
         fd.a(param0, 0);
-        ie.field_x = cl.field_k;
+        AlphaWidgetContainer.field_x = cl.field_k;
         DualLinkNode.field_k = cl.field_k;
     }
 

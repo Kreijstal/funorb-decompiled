@@ -479,7 +479,7 @@ final class CrossfadingMidiPcmStream extends PcmStream {
             stackIn_2_0 = (RgbSprite) null;
             return stackIn_2_0;
           }
-          if (nb.a(param1, param3, (byte) 127, param0)) {
+          if (DequeWidgetContainer.a(param1, param3, (byte) 127, param0)) {
             stackIn_7_0 = eb.a((byte) 27);
             return stackIn_7_0;
           }

@@ -24,13 +24,13 @@ final class hm {
     final static void a(int param0) {
         pi.field_j = rl.c(-9918);
         if (param0 == -3121) {
-          qe.field_g = new ol();
+          qe.field_g = new ModalDialogHost();
           LoginPanel.a(param0 ^ 3095, true, true);
           return;
         }
         PacketBuffer var2 = (PacketBuffer) null;
         hm.a((PacketBuffer) null, -93);
-        qe.field_g = new ol();
+        qe.field_g = new ModalDialogHost();
         LoginPanel.a(param0 ^ 3095, true, true);
     }
 

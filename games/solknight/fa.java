@@ -37,7 +37,7 @@ final class fa {
             return stackIn_2_0;
           }
           if (!param1) {
-            stackIn_7_0 = ke.field_H.stringWidth(param0);
+            stackIn_7_0 = LabeledWidgetContainer.field_H.stringWidth(param0);
             return stackIn_7_0;
           }
           stackIn_5_0 = kb.field_f.stringWidth(param0);

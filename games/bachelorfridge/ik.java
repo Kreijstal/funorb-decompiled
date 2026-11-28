@@ -98,7 +98,7 @@ final class ik {
     final void a(int param0) {
         String var3 = null;
         if (null != this.field_j &&
-          ~this.field_e != ~ge.field_F) {
+          ~this.field_e != ~LabeledWidgetContainer.field_F) {
           var3 = this.b(param0 - 13144);
           String var2 = var3;
           this.field_a.a(lga.a(true, new String[]{var3}, wba.field_d), true, 17);
@@ -118,7 +118,7 @@ final class ik {
           return;
         }
         if (null != this.field_j &&
-          this.field_e != ge.field_F &&
+          this.field_e != LabeledWidgetContainer.field_F &&
           SnowAnimation.field_w != null &&
           ZombiesEvent.d(-117)) {
           var7 = gf.a(this.field_e, false);
@@ -233,7 +233,7 @@ final class ik {
           if (param1 >= -105) {
             this.a(false);
           }
-          if (null != this.field_j && (~ge.field_F != ~this.field_e ||
+          if (null != this.field_j && (~LabeledWidgetContainer.field_F != ~this.field_e ||
             param2 == 2)) {
             if (um.field_c != 2) {
               return;
@@ -248,14 +248,14 @@ final class ik {
               this.field_a.a(lga.a(true, new String[]{var7}, hba.field_v), true, 6);
               if (param0 != null &&
                 2 != param2 &&
-                !hl.field_I) {
+                !AlphaWidgetContainer.field_I) {
                 this.field_c = param0;
                 this.field_a.a(lga.a(true, new String[]{var7}, pe.field_n), true, 19);
               }
             }
             if (var5 != null) {
               if (!sha.a((byte) -24, this.field_j) &&
-                !hl.field_I) {
+                !AlphaWidgetContainer.field_I) {
                 if (!sea.field_j) {
                   this.field_a.a(lga.a(true, new String[]{var7}, jv.field_m), true, 8);
                 }
@@ -427,7 +427,7 @@ final class ik {
           return true;
         }
         var5 = (String) null;
-        vf.a(this.field_j, 0, 124, (String) null, var4_ref, 2);
+        ModalDialog.a(this.field_j, 0, 124, (String) null, var4_ref, 2);
         return true;
     }
 

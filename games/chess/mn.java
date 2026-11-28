@@ -217,8 +217,8 @@ final class mn extends wn {
               var3 = "[" + MatchingFieldValidator.a(InteractiveWidget.field_D, new String[]{param1.field_b}, (byte) -122) + "] ";
             }
             if (param1.field_k == 4 &&
-              kb.field_P != null) {
-              var3 = "[" + kb.field_P + "] ";
+              DraggableWidgetContainer.field_P != null) {
+              var3 = "[" + DraggableWidgetContainer.field_P + "] ";
             }
             if (param1.field_k == 3) {
               var3 = "[#" + param1.field_b + "] ";

@@ -12,7 +12,7 @@ final class nc extends InteractiveWidget {
     static he[] field_I;
     static RgbSprite field_K;
 
-    private nc(String param0, cg param1, fd param2) {
+    private nc(String param0, WidgetRenderer param1, WidgetEventListener param2) {
         super(param0, param1, param2);
         try {
           this.field_l = ja.field_Q.field_h;
@@ -26,7 +26,7 @@ final class nc extends InteractiveWidget {
         super.activateFromInput(param0, param1, param2, param3);
     }
 
-    private nc(String param0, fd param1) {
+    private nc(String param0, WidgetEventListener param1) {
         this(param0, ja.field_Q.field_b, param1);
         try {
           this.field_l = ja.field_Q.field_h;
@@ -35,7 +35,7 @@ final class nc extends InteractiveWidget {
         }
     }
 
-    nc(String param0, fd param1, boolean param2) {
+    nc(String param0, WidgetEventListener param1, boolean param2) {
         this(param0, param1);
         try {
           this.field_A = param2 ? true : false;
@@ -286,12 +286,12 @@ final class nc extends InteractiveWidget {
             if (45 == var4) {
               if (0 == var3 ||
                 -1 + var2_int == var3) {
-                stackIn_18_0 = dh.field_H;
+                stackIn_18_0 = LabeledWidgetContainer.field_H;
                 return stackIn_18_0;
               }
             } else {
               if (-1 == field_N.indexOf(var4)) {
-                stackIn_22_0 = dh.field_H;
+                stackIn_22_0 = LabeledWidgetContainer.field_H;
                 return stackIn_22_0;
               }
             }
@@ -319,7 +319,7 @@ final class nc extends InteractiveWidget {
         try {
           hl.field_b = param1;
           ol.field_a = new ma(PcmResampler.field_c, wi.field_e, param0, sg.field_a, hl.field_b);
-          PcmResampler.field_c.a((byte) -110, (vg) (ol.field_a));
+          PcmResampler.field_c.showDialog((byte) -110, (UiWidget) (ol.field_a));
         } catch (RuntimeException runtimeException) {
           throw ie.wrapClientException((Throwable) ((Object) runtimeException), "nc.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }

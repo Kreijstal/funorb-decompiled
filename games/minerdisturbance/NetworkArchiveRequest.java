@@ -54,7 +54,7 @@ final class NetworkArchiveRequest extends ArchiveRequest {
     }
 
     final static void i(int param0) {
-        int var1 = ma.o(-14933);
+        int var1 = DraggableWidgetContainer.o(-14933);
         int var2 = NameSuggestionsPanel.n(param0 ^ param0);
         rb.field_e.a(var2 + (rf.field_b << 1), lj.field_p - rf.field_b, var1 + (ProxyAuthenticationRequiredException.field_c << 1), 26202, cg.field_o - ProxyAuthenticationRequiredException.field_c);
         AccountRegistrationPanel.n(-107);

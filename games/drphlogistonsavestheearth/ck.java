@@ -24,12 +24,12 @@ final class ck {
           ol.field_a.d(true);
         }
         String var1 = gk.a(0);
-        pi.field_O = new LoginPanel(var1, (String) null, true, false, false);
+        DraggableWidgetContainer.field_O = new LoginPanel(var1, (String) null, true, false, false);
         if (param0 <= 71) {
           field_d = (he[]) null;
         }
-        PcmResampler.field_c.a((byte) -112, (vg) (PcmOutputWorker.field_e));
-        PcmOutputWorker.field_e.a(33, pi.field_O);
+        PcmResampler.field_c.showDialog((byte) -112, (UiWidget) (PcmOutputWorker.field_e));
+        PcmOutputWorker.field_e.a(33, DraggableWidgetContainer.field_O);
         PcmOutputWorker.field_e.g((byte) -125);
     }
 

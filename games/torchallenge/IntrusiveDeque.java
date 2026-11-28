@@ -186,7 +186,7 @@ final class IntrusiveDeque {
             var14 = ni.a(new String[]{nk.field_g[di.field_A]}, 0, ClientException.field_f);
             var5 = tk.field_R.maxLineWidth(var14, IterableNodeHashTable.field_f);
             var6Lifetime1 = tk.field_R.textHeight(var14, IterableNodeHashTable.field_f, tk.field_R.field_K + tk.field_R.field_x);
-            var7Lifetime1 = (IterableNodeHashTable.field_f - var5) / 2 + si.field_J;
+            var7Lifetime1 = (IterableNodeHashTable.field_f - var5) / 2 + ModalDialogHost.field_J;
             var5 += 6;
             var7Lifetime1 -= 3;
             var8 = vk.field_k + (pi.field_b - var6Lifetime1) / 2;
@@ -196,7 +196,7 @@ final class IntrusiveDeque {
               vk.field_d.offsetX = vk.field_d.offsetX + var9_int;
               var7Lifetime1 = var7Lifetime1 + var9_int;
               var5 = var5 + var9_int * 2;
-              si.field_J = si.field_J + var9_int;
+              ModalDialogHost.field_J = ModalDialogHost.field_J + var9_int;
               rl.field_f = rl.field_f - var9_int;
             }
             var8 -= 3;
@@ -206,7 +206,7 @@ final class IntrusiveDeque {
               rl.field_f = rl.field_f - var9_intLifetime1;
               vk.field_d.fullWidth = vk.field_d.fullWidth + 2 * var9_intLifetime1;
               var7Lifetime1 = var7Lifetime1 + var9_intLifetime1;
-              si.field_J = si.field_J + var9_intLifetime1;
+              ModalDialogHost.field_J = ModalDialogHost.field_J + var9_intLifetime1;
               vk.field_d.offsetX = vk.field_d.offsetX + var9_intLifetime1;
               var5 = var5 + var9_intLifetime1 * 2;
             }
@@ -231,7 +231,7 @@ final class IntrusiveDeque {
             vk.field_d.normalizeCanvas();
             var9 = new Sprite(vk.field_d.fullWidth, vk.field_d.fullHeight);
             var9.bindAsRenderTarget();
-            tk.field_R.drawParagraph(var14, si.field_J, vk.field_k, IterableNodeHashTable.field_f, pi.field_b, 16777215, -1, 1, 1, tk.field_R.field_x + tk.field_R.field_K);
+            tk.field_R.drawParagraph(var14, ModalDialogHost.field_J, vk.field_k, IterableNodeHashTable.field_f, pi.field_b, 16777215, -1, 1, 1, tk.field_R.field_x + tk.field_R.field_K);
             ih.a(var9.fullWidth, 0, 4, var9.fullHeight, 3, var9, 0, 1);
             vk.field_d.bindAsRenderTarget();
             var9.drawTransparent(0, 0);
@@ -474,7 +474,7 @@ final class IntrusiveDeque {
         if (param2 != -6665) {
           field_d = (String[]) null;
         }
-        kj.field_G = param0;
+        DequeWidgetContainer.field_G = param0;
     }
 
     final void addFirst(byte param0, IntrusiveNode param1) {

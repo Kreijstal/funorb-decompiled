@@ -96,8 +96,8 @@ final class qi extends DefaultTextWidgetRenderer {
         }
     }
 
-    public final void a(int param0, lk param1, byte param2, boolean param3, int param4) {
-        lk stackIn_3_0 = null;
+    public final void paintWidget(int param0, UiWidget param1, byte param2, boolean param3, int param4) {
+        UiWidget stackIn_3_0 = null;
         RuntimeException stackIn_33_0 = null;
         StringBuilder stackIn_33_1 = null;
         String stackIn_34_2 = null;
@@ -113,7 +113,7 @@ final class qi extends DefaultTextWidgetRenderer {
         kg var14 = null;
         try {
           if (param1 instanceof InteractiveWidget) {
-            stackIn_3_0 = (lk) (param1);
+            stackIn_3_0 = (UiWidget) (param1);
           } else {
             stackIn_3_0 = null;
           }
@@ -145,7 +145,7 @@ final class qi extends DefaultTextWidgetRenderer {
               }
             }
           }
-          if (param1.e(1)) {
+          if (param1.isFocused(1)) {
             var13 = this.field_q[5];
             if (var13 != null) {
               var13.a(this.field_t, param4, param0, this, false, param1);
@@ -291,7 +291,7 @@ final class qi extends DefaultTextWidgetRenderer {
         kg[] var3 = null;
         kg var5 = null;
         int var6 = 0;
-        lk var7 = null;
+        UiWidget var7 = null;
         kg[] var8 = null;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
@@ -303,8 +303,8 @@ final class qi extends DefaultTextWidgetRenderer {
           var8 = this.field_q;
           var3 = var8;
           if (param0 != 7) {
-            var7 = (lk) null;
-            this.a(-84, (lk) null, (byte) 115, true, 56);
+            var7 = (UiWidget) null;
+            this.paintWidget(-84, (UiWidget) null, (byte) 115, true, 56);
           }
           for (var4 = 0; var8.length > var4; var4++) {
             var5 = var8[var4];
@@ -448,7 +448,7 @@ final class qi extends DefaultTextWidgetRenderer {
           qh.field_i = new int[EmailFormatValidator.field_p];
           ih.field_V = new int[EmailFormatValidator.field_p];
           var17.position = param0.length + (-7 - 8 * EmailFormatValidator.field_p);
-          se.field_C = var17.readUnsignedShort(-1640531527);
+          DropTargetWidgetContainer.field_C = var17.readUnsignedShort(-1640531527);
           fk.field_e = var17.readUnsignedShort(param1 - 1640543433);
           var3 = 1 + (var17.readUnsignedByte((byte) -105) & 255);
           for (var4 = 0; EmailFormatValidator.field_p > var4; var4++) {

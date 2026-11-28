@@ -1068,14 +1068,14 @@ final class BattleState {
               param0.field_Eb[0] = ImageProducerRasterBuffer.field_i;
               if (this.field_N == 1) {
                 stackIn_557_0 = 39;
-                if (d.field_H) {
+                if (ModalDialogHost.field_H) {
                   stackIn_558_1 = 34;
                 } else {
                   stackIn_558_1 = 33;
                 }
                 qd.$cfr$intArgs$a$e9dea5688aa5(stackIn_557_0, stackIn_558_1);
-                stackIn_562_0 = !(d.field_H);
-                d.field_H = stackIn_562_0;
+                stackIn_562_0 = !(ModalDialogHost.field_H);
+                ModalDialogHost.field_H = stackIn_562_0;
               }
             }
             if (var3_int >= 184 &&
@@ -1501,8 +1501,8 @@ final class BattleState {
           }
           if (param1 == 49 &&
             !ConfirmedEmailAvailabilityValidator.field_o) {
-            stackIn_22_0 = !(d.field_H);
-            d.field_H = stackIn_22_0;
+            stackIn_22_0 = !(ModalDialogHost.field_H);
+            ModalDialogHost.field_H = stackIn_22_0;
           }
           if (param1 == 40 &&
             !ConfirmedEmailAvailabilityValidator.field_o) {
@@ -3783,7 +3783,7 @@ final class BattleState {
               mh.a((byte) 113, 8, 247);
             }
           }
-          cb.a(false, this.field_i);
+          DraggableWidgetContainer.a(false, this.field_i);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -4014,7 +4014,7 @@ final class BattleState {
                     if (var12 > this.field_q.field_jb && (!(var12 - 10 <= this.field_q.field_jb) ||
                       this.field_m ||
                       !(this.field_q.field_jb >= 10))) {
-                      this.map.a(-(48 * var7Lifetime1) - 36 + var6Lifetime1, 16711680, var4Lifetime1, -2, hj.field_A);
+                      this.map.a(-(48 * var7Lifetime1) - 36 + var6Lifetime1, 16711680, var4Lifetime1, -2, DropTargetWidgetContainer.field_A);
                     } else {
                       if (var12 > this.field_q.field_jb) {
                         var12 = this.field_q.field_jb;
@@ -4129,7 +4129,7 @@ final class BattleState {
               }
             }
             if (decompiledFrameCompleted6) {
-              jl.h((byte) -108);
+              AlphaWidgetContainer.h((byte) -108);
               stackIn_187_0 = param0 ? 1 : 0;
             }
             if (stackIn_187_0 != 1) {
@@ -4812,7 +4812,7 @@ final class BattleState {
               }
               var9 = 24 * FrameTimer.field_f.lineCount(this.field_K, var8);
               SoftwareRasterizer.fillRectangle(320 - var8 / 2 - 10, 237 - (var9 / 2 - 122), var8 + 20, 8 + var9, 8388608);
-              jl.a(jc.field_G, 6 + var9 + 8, 116 + (-(var9 / 2) + 240), 20 + var8 + 6, (byte) -115, -13 + (-(var8 / 2) + 320));
+              AlphaWidgetContainer.a(SingleChildWidgetContainer.field_G, 6 + var9 + 8, 116 + (-(var9 / 2) + 240), 20 + var8 + 6, (byte) -115, -13 + (-(var8 / 2) + 320));
               Bzip2State.a(116, 24, var8 + (-(var8 / 2) + 320), this.field_K, -(var8 / 2) + 320, 50 + (240 - var9 + 105), 16777215);
               this.field_K = null;
             }
@@ -4837,19 +4837,19 @@ final class BattleState {
             if (var8 >= 320) {
               var8 = 320;
             }
-            if (var8 < AccountRequestState.field_f.stringWidth(jc.field_B)) {
-              var8 = AccountRequestState.field_f.stringWidth(jc.field_B);
+            if (var8 < AccountRequestState.field_f.stringWidth(SingleChildWidgetContainer.field_B)) {
+              var8 = AccountRequestState.field_f.stringWidth(SingleChildWidgetContainer.field_B);
             }
             var9 = 24 + 24 * FrameTimer.field_f.lineCount(this.field_K, var8);
             SoftwareRasterizer.fillRectangle(-10 - var8 / 2 + 320, 50 + (-28 - var9 / 2 + 240), var8 + 20, 8 + var9, 8388608);
-            stackIn_753_0 = jc.field_G;
+            stackIn_753_0 = SingleChildWidgetContainer.field_G;
             stackIn_753_1 = var9 + 14;
             stackIn_753_2 = 209 + (-(var9 / 2) + 50);
           }
           if (decompiledFrameRemainder0) {
-            jl.a(stackIn_753_0, stackIn_753_1, stackIn_753_2, var8 + 26, (byte) 103, -3 + (310 - var8 / 2));
+            AlphaWidgetContainer.a(stackIn_753_0, stackIn_753_1, stackIn_753_2, var8 + 26, (byte) 103, -3 + (310 - var8 / 2));
             FrameTimer.field_f.drawParagraph(this.field_K, -(var8 / 2) + 320, 24 + (240 - var9 / 2), var8, var9, 16777215, 0, 1, 0, FrameTimer.field_f.field_s);
-            AccountRequestState.field_f.drawCentred(jc.field_B, 320, 24 + (var9 / 2 + 240), 16777215, -1);
+            AccountRequestState.field_f.drawCentred(SingleChildWidgetContainer.field_B, 320, 24 + (var9 / 2 + 240), 16777215, -1);
           }
           vb.field_i = 25;
           ge.field_b = 610;
@@ -10133,7 +10133,7 @@ final class BattleState {
                         } else {
                             /* Inlined CFG state: 657. */
                             {
-                                this.field_K = this.units[var5].field_Z.b(1) + d.field_O;
+                                this.field_K = this.units[var5].field_Z.b(1) + ModalDialogHost.field_O;
                                 statePc = 659;
                                 continue scanLoop1;
                             }

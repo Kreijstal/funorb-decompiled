@@ -220,7 +220,7 @@ final class jm {
             }
             if (var15 == null) {
               var47 = (oj) null;
-              nh.a((oj) null, -29966);
+              LabeledWidgetContainer.a((oj) null, -29966);
             } else {
               if (((oj) (var15)).a(param3.field_i, -93) &&
                 ((oj) (var15)).field_i != 5 &&
@@ -243,7 +243,7 @@ final class jm {
               if (((oj) (var15)).field_I <= 0) {
                 param3.field_i = 3;
               }
-              nh.a((oj) (var15), -29966);
+              LabeledWidgetContainer.a((oj) (var15), -29966);
               if ((((oj) (var15)).field_i == 5 ||
                 ((oj) (var15)).b(6) ||
                 ((oj) (var15)).field_i == 22) &&
@@ -300,7 +300,7 @@ final class jm {
     }
 
     final static String a(byte param0) {
-        if (od.field_I == ti.field_b) {
+        if (DropTargetWidgetContainer.field_I == ti.field_b) {
           return fj.field_Sb;
         }
         if (!c.field_a.d((byte) -59)) {

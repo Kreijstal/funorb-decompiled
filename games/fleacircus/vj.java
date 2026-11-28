@@ -60,8 +60,8 @@ final class vj {
 
     vj() {
         fleas.field_L = 0;
-        this.field_b = db.a((byte) -115, DirectByteStorage.field_j, 65536) << 16;
-        this.field_b = this.field_b + db.a((byte) -115, DirectByteStorage.field_j, 65536);
+        this.field_b = ModalDialog.a((byte) -115, DirectByteStorage.field_j, 65536) << 16;
+        this.field_b = this.field_b + ModalDialog.a((byte) -115, DirectByteStorage.field_j, 65536);
         mc.field_b = 0;
         wi.field_b = 0;
         pg.field_d = 61453;

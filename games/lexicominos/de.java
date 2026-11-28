@@ -76,7 +76,7 @@ final class de extends RuntimeException {
         try {
           if (null == qj.field_fb) {
             qj.field_fb = new uk(ug.field_A, jj.field_d);
-            ug.field_A.a(-14579, qj.field_fb);
+            ug.field_A.showDialog(-14579, qj.field_fb);
           }
           qj.field_fb.a(param0, param2, 125, param1);
           SoftwareRasterizer.clearRaster();

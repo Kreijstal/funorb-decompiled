@@ -57,8 +57,8 @@ final class ra {
 
     final static String a(byte param0) {
         if (!lk.field_c &&
-          da.field_y >= bk.field_d &&
-          da.field_y < ek.field_g + bk.field_d) {
+          ModalDialogHost.field_y >= bk.field_d &&
+          ModalDialogHost.field_y < ek.field_g + bk.field_d) {
           return tj.field_v;
         }
         if (param0 >= 26) {
@@ -87,7 +87,7 @@ final class ra {
           }
           ac.field_m.bindAsRenderTarget();
           var1.drawHalfSize(param0, 0);
-          fi.c(true);
+          SingleChildWidgetContainer.c(true);
         } catch (RuntimeException runtimeException) {
           throw ch.wrapClientException((Throwable) ((Object) runtimeException), "ra.B(" + param0 + ')');
         }

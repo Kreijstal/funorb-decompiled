@@ -13,7 +13,7 @@ final class PcmOutputWorker implements Runnable {
     final static void a(BitmapFont param0, Sprite[] param1, int param2, int param3, int param4, Sprite[] param5, int param6, int param7, int param8, boolean param9, int param10, int param11, int param12, int param13, int param14, BitmapFont param15) {
         try {
           gj.a(param12, wg.field_h, lc.field_e, param2, qj.field_D, rb.field_cb, param10, ki.field_s, param7, param15, param4, param13, param0, param14, AccountNameAvailabilityValidator.field_u, param2 ^ -386, param3, param11, param6, new gg(param1), new gg(param5));
-          jk.a(-97, param9, param8);
+          SingleChildWidgetContainer.a(-97, param9, param8);
         } catch (RuntimeException runtimeException) {
           throw la.a((Throwable) ((Object) runtimeException), "ff.F(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ',' + param6 + ',' + param7 + ',' + param8 + ',' + param9 + ',' + param10 + ',' + param11 + ',' + param12 + ',' + param13 + ',' + param14 + ',' + (param15 != null ? "{...}" : "null") + ')');
         }

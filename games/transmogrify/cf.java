@@ -64,7 +64,7 @@ final class cf extends IntrusiveNode {
         }
         try {
           dl.field_l.a(false, false);
-          aj.a(param0, param1, param2, 2394342);
+          DequeWidgetContainer.a(param0, param1, param2, 2394342);
           eg.a(81);
           db.field_a = RichTextLayout.field_n;
           ArchiveRequest.field_v = RichTextLayout.field_n;

@@ -33,8 +33,8 @@ final class IntrusiveNodeHashTable implements Iterable {
             ra.field_i[var2_int] = 0;
           }
           for (var2_intLifetime1 = 0; qb.field_i > var2_intLifetime1; var2_intLifetime1++) {
-            if (param0.field_f == rj.field_J[var2_intLifetime1].field_f) {
-              dupTemp$3 = rj.field_J[var2_intLifetime1].a(false);
+            if (param0.field_f == DraggableWidgetContainer.field_J[var2_intLifetime1].field_f) {
+              dupTemp$3 = DraggableWidgetContainer.field_J[var2_intLifetime1].a(false);
               ra.field_i[dupTemp$3] = ra.field_i[dupTemp$3] + 1;
             }
           }
@@ -46,8 +46,8 @@ final class IntrusiveNodeHashTable implements Iterable {
           }
           for (var3 = 0; var3 < qb.field_i; var3++) {
             boolean decompiledFrameRemainder0 = true;
-            if (rj.field_J[var3].field_f == param0.field_f) {
-              var4 = rj.field_J[var3].a(false);
+            if (DraggableWidgetContainer.field_J[var3].field_f == param0.field_f) {
+              var4 = DraggableWidgetContainer.field_J[var3].a(false);
               if (ra.field_i[var4] > uj.field_n) {
                 ra.field_i[var4] = ra.field_i[var4] - 1;
                 decompiledFrameRemainder0 = false;
@@ -56,13 +56,13 @@ final class IntrusiveNodeHashTable implements Iterable {
             if (decompiledFrameRemainder0) {
               incrementValue$2 = var2_intLifetime2;
               var2_intLifetime2++;
-              rj.field_J[incrementValue$2] = rj.field_J[var3];
+              DraggableWidgetContainer.field_J[incrementValue$2] = DraggableWidgetContainer.field_J[var3];
             }
           }
           qb.field_i = var2_intLifetime2;
           fieldTemp$1 = qb.field_i;
           qb.field_i = qb.field_i + 1;
-          rj.field_J[fieldTemp$1] = param0;
+          DraggableWidgetContainer.field_J[fieldTemp$1] = param0;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -104,7 +104,7 @@ final class IntrusiveNodeHashTable implements Iterable {
         }
         String var1 = BufferedRandomAccessFile.b(-104);
         ib.field_e = new LoginPanel(var1, (String) null, true, false, false);
-        im.field_e.c(ke.field_s, 86);
+        im.field_e.showDialog(ke.field_s, 86);
         ke.field_s.b(ib.field_e, (byte) 110);
         ke.field_s.m(param0 ^ -108);
     }
@@ -158,14 +158,14 @@ final class IntrusiveNodeHashTable implements Iterable {
           if (param1 >= -22) {
             return;
           }
-          var2 = (qb) (jn.field_H.beginForward(-9));
+          var2 = (qb) (AlphaWidgetContainer.field_H.beginForward(-9));
           while (var2 != null) {
             if (!var2.field_j.isLinked(3000)) {
               var2.unlink(-69);
             } else {
               var2.field_h.setVolume(var2.field_l * wj.field_O + 128 >> 8);
             }
-            var2 = (qb) (jn.field_H.nextForward(12684));
+            var2 = (qb) (AlphaWidgetContainer.field_H.nextForward(12684));
           }
           if (ej.field_g != null) {
             var2Lifetime1 = (qb) (ej.field_g.beginForward(-69));

@@ -47,7 +47,7 @@ final class ij extends IntrusiveNode {
         var9 = Confined.field_J ? 1 : 0;
         try {
           var10 = (CharSequence) ((Object) param2);
-          var3_int = ga.a((byte) -89, param1, var10);
+          var3_int = DequeWidgetContainer.a((byte) -89, param1, var10);
           var4 = new String[1 + var3_int];
           var5 = 0;
           var6 = param0;

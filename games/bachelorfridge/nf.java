@@ -182,7 +182,7 @@ final class nf extends LinkTextWidget {
         try {
           this.field_L = param0;
           this.field_O = param1;
-          this.a(param2, param5, (byte) 59, param4, param3);
+          this.setBounds(param2, param5, (byte) 59, param4, param3);
         } catch (RuntimeException runtimeException) {
           throw pe.wrapException((Throwable) ((Object) runtimeException), "nf.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }

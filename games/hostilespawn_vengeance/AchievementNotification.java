@@ -221,14 +221,14 @@ final class AchievementNotification extends IntrusiveNode {
                         var18 = -1 + ge.field_h - var17;
                       }
                       if (0 <= var17) {
-                        jn.a(param0, var18, -1, param2, var16Lifetime2 + var17);
+                        AlphaWidgetContainer.a(param0, var18, -1, param2, var16Lifetime2 + var17);
                       } else {
-                        jn.a(param0, var18 + var17, -1, param2, var16Lifetime2);
+                        AlphaWidgetContainer.a(param0, var18 + var17, -1, param2, var16Lifetime2);
                       }
                     } else {
                       if (var17 >= 0 &&
                         ge.field_h > var17) {
-                        jn.a(param0, var18, -1, param2, var17 + var16Lifetime2);
+                        AlphaWidgetContainer.a(param0, var18, -1, param2, var17 + var16Lifetime2);
                       }
                     }
                   }
@@ -275,14 +275,14 @@ final class AchievementNotification extends IntrusiveNode {
                     var17Lifetime1 = -var16Lifetime1 + (ge.field_h - 1);
                   }
                   if (var16Lifetime1 < 0) {
-                    jn.a(param0, var17Lifetime1 + var16Lifetime1, -1, param2, var15Lifetime1);
+                    AlphaWidgetContainer.a(param0, var17Lifetime1 + var16Lifetime1, -1, param2, var15Lifetime1);
                   } else {
-                    jn.a(param0, var17Lifetime1, -1, param2, var15Lifetime1 + var16Lifetime1);
+                    AlphaWidgetContainer.a(param0, var17Lifetime1, -1, param2, var15Lifetime1 + var16Lifetime1);
                   }
                 } else {
                   if (var16Lifetime1 >= 0 &&
                     var16Lifetime1 < ge.field_h) {
-                    jn.a(param0, var17Lifetime1, -1, param2, var16Lifetime1 + var15Lifetime1);
+                    AlphaWidgetContainer.a(param0, var17Lifetime1, -1, param2, var16Lifetime1 + var15Lifetime1);
                   }
                 }
               }

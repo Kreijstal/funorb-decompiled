@@ -96,7 +96,7 @@ final class vd {
           var41 = var49;
           var8 = var41;
           var64 = new int[param6.field_l];
-          var62 = mk.field_w;
+          var62 = ModalDialog.field_w;
           var63 = nh.field_j;
           var61 = d.field_b;
           for (var13 = 0; var13 < param6.field_l; var13++) {
@@ -131,19 +131,19 @@ final class vd {
             var15Lifetime1 = param6.field_o[var14Lifetime1];
             var16 = param6.field_s[var14Lifetime1];
             var17 = param6.field_G[var14Lifetime1];
-            if (mk.field_w.length <= param6.field_b[var14Lifetime1]) {
+            if (ModalDialog.field_w.length <= param6.field_b[var14Lifetime1]) {
               stackIn_25_0 = -1;
             } else {
               stackIn_25_0 = param6.field_b[var14Lifetime1];
             }
             var18 = stackIn_25_0;
-            if (mk.field_w.length > param6.field_n[var14Lifetime1]) {
+            if (ModalDialog.field_w.length > param6.field_n[var14Lifetime1]) {
               stackIn_28_0 = param6.field_n[var14Lifetime1];
             } else {
               stackIn_28_0 = -1;
             }
             var19 = stackIn_28_0;
-            if (param6.field_J[var14Lifetime1] < mk.field_w.length) {
+            if (param6.field_J[var14Lifetime1] < ModalDialog.field_w.length) {
               stackIn_31_0 = param6.field_J[var14Lifetime1];
             } else {
               stackIn_31_0 = -1;

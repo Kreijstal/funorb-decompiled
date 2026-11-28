@@ -12,7 +12,7 @@ final class la extends ca {
     final static void a(int param0, String param1, byte param2) {
         int var3_int = 0;
         try {
-          rj.field_K = false;
+          DraggableWidgetContainer.field_K = false;
           if (param2 < 41) {
             field_h = (RgbSprite) null;
           }
@@ -36,7 +36,7 @@ final class la extends ca {
               SocketFactory.a(true);
             }
             if (var3_int != 0) {
-              if (rj.field_K) {
+              if (DraggableWidgetContainer.field_K) {
                 param1 = vg.a(new String[]{param1}, 21, Bzip2State.field_o);
               }
               if (DirectByteStorage.field_i) {
@@ -147,7 +147,7 @@ final class la extends ca {
 
     final static void a(int param0, int param1) {
         MouseWheelInput.field_b = de.field_k[param1];
-        u.field_j = gg.field_C[param1];
+        u.field_j = ModalDialogHost.field_C[param1];
         if (param0 == -29828) {
           ad.field_b = gm.field_k[param1];
           return;

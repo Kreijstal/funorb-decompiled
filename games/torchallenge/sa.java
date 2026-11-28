@@ -23,7 +23,7 @@ final class sa {
           return sd.field_g;
         }
         if (!IntrusiveDeque.field_a.ensureIndexLoaded(-7957)) {
-          return uk.field_K;
+          return DraggableWidgetContainer.field_K;
         }
         if (!IntrusiveDeque.field_a.tryLoadGroupByName(5, "commonui")) {
           return ra.field_m + " - " + IntrusiveDeque.field_a.getGroupLoadPercentByName(112, "commonui") + "%";

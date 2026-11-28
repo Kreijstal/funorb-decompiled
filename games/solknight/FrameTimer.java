@@ -20,7 +20,7 @@ abstract class FrameTimer {
         if (var4 <= (long)param0) {
           return this.advanceTicks(param1, true);
         }
-        i.sleepMillis((byte) 20, var4);
+        ModalDialogHost.sleepMillis((byte) 20, var4);
         return this.advanceTicks(param1, true);
     }
 

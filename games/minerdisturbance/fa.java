@@ -10,7 +10,7 @@ final class fa {
 
     final static void c(int param0) {
         if (null != mb.field_b) {
-          mb.field_b.a(true);
+          mb.field_b.snapAndPruneDialogs(true);
           if (null != AccountRequestState.field_e) {
             AccountRequestState.field_e.r(4595);
           }

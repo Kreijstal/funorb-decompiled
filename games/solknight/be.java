@@ -23,10 +23,10 @@ final class be extends InteractiveWidget {
         int var8;
         var8 = SolKnight.field_L ? 1 : 0;
         var1 = -ArchiveSource.field_c + 320;
-        var2 = -si.field_E + (-ea.field_p[kb.field_b] + 720);
+        var2 = -SingleChildWidgetContainer.field_E + (-ea.field_p[kb.field_b] + 720);
         if (ClientException.field_b >= 0) {
           var3 = -var1 - ArchiveSource.field_c + ((ArchiveRequest.field_o >> 4) + 320);
-          var4 = -var2 - si.field_E + (AccountServiceResult.field_e >> 4);
+          var4 = -var2 - SingleChildWidgetContainer.field_E + (AccountServiceResult.field_e >> 4);
         } else {
           var4 = -var2 + BufferedSocket.field_m;
           var3 = PacketBuffer.field_j - var1;
@@ -271,7 +271,7 @@ final class be extends InteractiveWidget {
         }
     }
 
-    final boolean a(int param0, int param1, boolean param2, int param3, int param4, int param5, UiWidget param6) {
+    final boolean pointerPressed(int param0, int param1, boolean param2, int param3, int param4, int param5, UiWidget param6) {
         RuntimeException stackIn_22_0 = null;
         StringBuilder stackIn_22_1 = null;
         String stackIn_23_2 = null;
@@ -283,7 +283,7 @@ final class be extends InteractiveWidget {
         int var12 = 0;
         var12 = SolKnight.field_L ? 1 : 0;
         try {
-          if (!super.a(param0, param1, param2, param3, param4, param5, param6)) {
+          if (!super.pointerPressed(param0, param1, param2, param3, param4, param5, param6)) {
             if (!param2) {
               return false;
             }

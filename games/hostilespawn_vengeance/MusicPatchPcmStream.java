@@ -233,7 +233,7 @@ final class MusicPatchPcmStream extends PcmStream {
                 i.field_b = param1;
                 var2 = vj.a("loginm3", 24);
                 if (var2 != null) {
-                  od.field_H = PcmResampler.a(124, var2);
+                  DropTargetWidgetContainer.field_H = PcmResampler.a(124, var2);
                 }
                 var2 = vj.a("loginm2", 24);
                 if (var2 != null) {
@@ -1578,7 +1578,7 @@ final class MusicPatchPcmStream extends PcmStream {
                 }
                 var2 = vj.a("create_welcome", 24);
                 if (var2 != null) {
-                  jn.field_K = PcmResampler.a(126, var2);
+                  AlphaWidgetContainer.field_K = PcmResampler.a(126, var2);
                 }
                 var2 = vj.a("create_u13_welcome", 24);
                 if (var2 != null) {
@@ -1614,7 +1614,7 @@ final class MusicPatchPcmStream extends PcmStream {
                 }
                 var2 = vj.a("create_age", 24);
                 if (null != var2) {
-                  gg.field_E = PcmResampler.a(124, var2);
+                  ModalDialogHost.field_E = PcmResampler.a(124, var2);
                 }
                 var2 = vj.a("create_u13_email", 24);
                 if (null != var2) {
@@ -1734,7 +1734,7 @@ final class MusicPatchPcmStream extends PcmStream {
                 }
                 var2 = vj.a("create_email_tooltip", 24);
                 if (null != var2) {
-                  ul.field_M = PcmResampler.a(125, var2);
+                  ModalDialog.field_M = PcmResampler.a(125, var2);
                 }
                 var2 = vj.a("create_email_confirm_tooltip", 24);
                 if (null != var2) {
@@ -2972,11 +2972,11 @@ final class MusicPatchPcmStream extends PcmStream {
                 }
                 var2 = vj.a("rating_mode_long_name,0", 24);
                 if (null != var2) {
-                  jn.field_I[0] = PcmResampler.a(125, var2);
+                  AlphaWidgetContainer.field_I[0] = PcmResampler.a(125, var2);
                 }
                 var2 = vj.a("rating_mode_long_name,1", 24);
                 if (null != var2) {
-                  jn.field_I[1] = PcmResampler.a(127, var2);
+                  AlphaWidgetContainer.field_I[1] = PcmResampler.a(127, var2);
                 }
                 var2 = vj.a("graphics_config_fixed_size", 24);
                 if (null != var2) {

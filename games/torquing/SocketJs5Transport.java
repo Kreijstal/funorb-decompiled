@@ -3272,11 +3272,11 @@ final class SocketJs5Transport extends Js5Transport {
                 }
                 var2 = se.a((byte) -33, "rating_mode_name,0");
                 if (var2 != null) {
-                  na.field_I[0] = SecondaryNodeDeque.a(var2, false);
+                  LabeledWidgetContainer.field_I[0] = SecondaryNodeDeque.a(var2, false);
                 }
                 var2 = se.a((byte) -33, "rating_mode_name,1");
                 if (var2 != null) {
-                  na.field_I[1] = SecondaryNodeDeque.a(var2, false);
+                  LabeledWidgetContainer.field_I[1] = SecondaryNodeDeque.a(var2, false);
                 }
                 var2 = se.a((byte) -33, "rating_mode_long_name,0");
                 if (null != var2) {
@@ -3784,7 +3784,7 @@ final class SocketJs5Transport extends Js5Transport {
         try {
           if (d.field_r == null) {
             d.field_r = new sp(dc.field_a, LevelRun.field_u);
-            dc.field_a.a(d.field_r, (byte) 97);
+            dc.field_a.showDialog(d.field_r, (byte) 97);
           }
           d.field_r.a(param2, 116, param3, param0);
           SoftwareRasterizer.clearRaster();

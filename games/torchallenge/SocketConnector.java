@@ -12,7 +12,7 @@ abstract class SocketConnector {
     static boolean field_f;
     static boolean field_a;
     static int[][] field_c;
-    static uk field_b;
+    static DraggableWidgetContainer field_b;
     String host;
     static int[] field_g;
     static Sprite field_h;

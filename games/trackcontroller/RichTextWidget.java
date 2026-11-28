@@ -10,8 +10,8 @@ class RichTextWidget extends ButtonWidget {
     static Archive field_L;
     private TextHotspotBounds field_N;
 
-    final void a(int param0, int param1, int param2, int param3, int param4) {
-        super.a(param0, param1 + 0, param2, param3, param4);
+    final void setBounds(int param0, int param1, int param2, int param3, int param4) {
+        super.setBounds(param0, param1 + 0, param2, param3, param4);
         if (param1 != -3050) {
           field_O = (String[]) null;
         }
@@ -131,8 +131,8 @@ class RichTextWidget extends ButtonWidget {
         }
     }
 
-    RichTextWidget(String param0, t param1) {
-        super(param0, (tg) null);
+    RichTextWidget(String param0, WidgetRenderer param1) {
+        super(param0, (WidgetEventListener) null);
         this.field_N = null;
         try {
           this.field_y = param1;
@@ -166,10 +166,10 @@ class RichTextWidget extends ButtonWidget {
         return null;
     }
 
-    void a(int param0, int param1, int param2, int param3) {
+    void drawWidget(int param0, int param1, int param2, int param3) {
         int var7 = 0;
         int var8 = 0;
-        super.a(param0, param1, param2, param3);
+        super.drawWidget(param0, param1, param2, param3);
         if (param0 != 0) {
           return;
         }
@@ -189,10 +189,10 @@ class RichTextWidget extends ButtonWidget {
         if (param1 != -44) {
           return;
         }
-        this.a(((TextWidgetRenderer) ((Object) this.field_y)).getPreferredHeight(103, (UiWidget) (this)), -3050, param0, param2, param3);
+        this.setBounds(((TextWidgetRenderer) ((Object) this.field_y)).getPreferredHeight(103, (UiWidget) (this)), -3050, param0, param2, param3);
     }
 
-    boolean a(byte param0, UiWidget param1) {
+    boolean takeFocus(byte param0, UiWidget param1) {
         RuntimeException var3 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -218,11 +218,11 @@ class RichTextWidget extends ButtonWidget {
         }
     }
 
-    void a(int param0, int param1, byte param2, UiWidget param3) {
+    void updatePointer(int param0, int param1, byte param2, UiWidget param3) {
         int var5_int = 0;
         int var6 = 0;
         try {
-          super.a(param0, param1, param2, param3);
+          super.updatePointer(param0, param1, param2, param3);
           this.field_N = null;
           if (this.field_q) {
             var5_int = kf.mouseX - (param1 + this.field_p);

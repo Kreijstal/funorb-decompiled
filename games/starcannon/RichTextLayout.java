@@ -308,7 +308,7 @@ final class RichTextLayout extends TextLayout {
 
     final static boolean d(byte param0) {
         int var1 = 62 % ((param0 - 86) / 37);
-        return tc.field_x;
+        return ModalDialogHost.field_x;
     }
 
     final void layoutSingleLineRightAligned(String param0, int param1, byte param2, int param3, BitmapFont param4) {

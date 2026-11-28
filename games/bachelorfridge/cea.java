@@ -8,7 +8,7 @@ final class cea {
     static byte[][] field_d;
     private double field_g;
     static wk field_h;
-    static raa field_b;
+    static DraggableWidgetContainer field_b;
     static Sprite field_i;
     static String field_a;
 
@@ -46,7 +46,7 @@ final class cea {
             stackIn_5_0 = (PalettedBitmapFont) null;
             return stackIn_5_0;
           }
-          var2 = new PalettedBitmapFont(param0, fl.field_j, AirstrikeAnimation.field_D, lq.field_A, InsanoSauceSpecial.field_s, hk.field_f, BananarangAnimation.field_P);
+          var2 = new PalettedBitmapFont(param0, fl.field_j, AirstrikeAnimation.field_D, ArrayWidgetContainer.field_A, InsanoSauceSpecial.field_s, hk.field_f, BananarangAnimation.field_P);
           al.releaseStatics(-18073);
           stackIn_7_0 = var2;
           return stackIn_7_0;
@@ -85,7 +85,7 @@ final class cea {
           var3 = var3 % 65536.0;
           return (int)Math.round(var3);
         }
-        field_b = (raa) null;
+        field_b = (DraggableWidgetContainer) null;
         var3Lifetime1 = (double)this.field_e + (double)param0 * this.field_g;
         var3Lifetime1 = var3Lifetime1 % 65536.0;
         return (int)Math.round(var3Lifetime1);

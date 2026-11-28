@@ -57,14 +57,14 @@ final class NodeHashTableIterator implements Iterator {
         int[] integerArrayLocal14 = null;
         integerLocal11 = DekoBlokoClient.obfuscationControl ? 1 : 0;
         try {
-          cipherPacketBufferLocal12 = UiComponentPart006.cipherPacketBufferState0001;
+          cipherPacketBufferLocal12 = LabeledWidgetContainer.cipherPacketBufferState0001;
           if (byteArgument1 != 53) {
             NodeHashTableIterator.clearStaticReferences(20);
           }
           integerLocal4 = cipherPacketBufferLocal12.readUnsignedByte((byte) -44);
           integerLocal5 = cipherPacketBufferLocal12.readUnsignedByte((byte) -117);
           if (integerLocal4 == 0) {
-            mixedSupport113Local7 = (MixedSupport113) (UiComponentPart010.nodeDequeState0008.beginBackward((byte) -68));
+            mixedSupport113Local7 = (MixedSupport113) (AlphaWidgetContainer.nodeDequeState0008.beginBackward((byte) -68));
             if (mixedSupport113Local7 == null) {
               NodeHashTable.performAction1498(78);
               return;
@@ -297,23 +297,23 @@ final class NodeHashTableIterator implements Iterator {
         for (integerLocal1 = 0; integerLocal1 < 15; integerLocal1++) {
           integerArrayLocal2 = integerArrayState0025;
           integerLocal3 = integerLocal1;
-          integerArrayLocal2[integerLocal3 >> 5] = UiComponentPart006.bitwiseOr(integerArrayLocal2[integerLocal3 >> 5], 1 << PlayerBoardUpdateQueue.bitwiseAnd(integerLocal3, 31));
+          integerArrayLocal2[integerLocal3 >> 5] = LabeledWidgetContainer.bitwiseOr(integerArrayLocal2[integerLocal3 >> 5], 1 << PlayerBoardUpdateQueue.bitwiseAnd(integerLocal3, 31));
         }
         for (integerLocal5 = 15; 31 > integerLocal5; integerLocal5++) {
           integerArrayLocal4 = integerArrayState0026;
           integerLocal6 = integerLocal5;
-          integerArrayLocal4[integerLocal6 >> 5] = UiComponentPart006.bitwiseOr(integerArrayLocal4[integerLocal6 >> 5], 1 << PlayerBoardUpdateQueue.bitwiseAnd(31, integerLocal6));
+          integerArrayLocal4[integerLocal6 >> 5] = LabeledWidgetContainer.bitwiseOr(integerArrayLocal4[integerLocal6 >> 5], 1 << PlayerBoardUpdateQueue.bitwiseAnd(31, integerLocal6));
         }
         int[] integerArrayLocal7 = integerArrayState0027;
-        integerArrayLocal7[0] = UiComponentPart006.bitwiseOr(integerArrayLocal7[0], 8);
+        integerArrayLocal7[0] = LabeledWidgetContainer.bitwiseOr(integerArrayLocal7[0], 8);
         int[] integerArrayLocal8 = integerArrayState0027;
-        integerArrayLocal8[0] = UiComponentPart006.bitwiseOr(integerArrayLocal8[0], 128);
+        integerArrayLocal8[0] = LabeledWidgetContainer.bitwiseOr(integerArrayLocal8[0], 128);
         int[] integerArrayLocal9 = integerArrayState0027;
-        integerArrayLocal9[0] = UiComponentPart006.bitwiseOr(integerArrayLocal9[0], 4194304);
+        integerArrayLocal9[0] = LabeledWidgetContainer.bitwiseOr(integerArrayLocal9[0], 4194304);
         int[] integerArrayLocal10 = integerArrayState0028;
-        integerArrayLocal10[0] = UiComponentPart006.bitwiseOr(integerArrayLocal10[0], 1);
+        integerArrayLocal10[0] = LabeledWidgetContainer.bitwiseOr(integerArrayLocal10[0], 1);
         int[] integerArrayLocal11 = integerArrayState0028;
-        integerArrayLocal11[0] = UiComponentPart006.bitwiseOr(integerArrayLocal11[0], 2048);
+        integerArrayLocal11[0] = LabeledWidgetContainer.bitwiseOr(integerArrayLocal11[0], 2048);
         stringState0098 = "Creating your account";
         stringState0099 = "Connection lost. <%0>";
     }

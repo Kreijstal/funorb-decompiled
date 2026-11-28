@@ -7,7 +7,7 @@ final class bm {
     static String field_c;
 
     final void a(int param0, int param1, int param2, int param3, int param4) {
-        jl.a(this.field_a, param2, param4, param0, (byte) -123, param1);
+        AlphaWidgetContainer.a(this.field_a, param2, param4, param0, (byte) -123, param1);
         if (param3 != 0) {
           this.a(104, -42, -62, 0, 118);
         }

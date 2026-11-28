@@ -144,7 +144,7 @@ final class la extends IntrusiveNode {
     final static void a(int param0) {
         int var1 = bf.b((byte) -37);
         int var2 = vb.a((byte) -76);
-        he.field_c.a(false, var1 + (pg.field_b << 1), -fh.field_b + th.field_J, (fh.field_b << 1) + var2, pk.field_ab - pg.field_b);
+        he.field_c.a(false, var1 + (pg.field_b << 1), -fh.field_b + DropTargetWidgetContainer.field_J, (fh.field_b << 1) + var2, pk.field_ab - pg.field_b);
         ee.d(-4537);
         if (param0 >= 14) {
           return;

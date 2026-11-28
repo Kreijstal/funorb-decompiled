@@ -39,17 +39,17 @@ final class SecondaryNodeDeque implements Iterable {
         var2 = TorChallenge.field_F ? 1 : 0;
         try {
           if (we.b(false)) {
-            TorChallenge.field_H.a(e.field_m, param0, qa.field_b, true);
-            TorChallenge.field_H.j(-86);
-            while (kj.e((byte) -124)) {
-              TorChallenge.field_H.a(di.field_m, b.field_J, -58);
+            TorChallenge.field_H.processPointerInput(e.field_m, param0, qa.field_b, true);
+            TorChallenge.field_H.advanceDialogs(-86);
+            while (DequeWidgetContainer.e((byte) -124)) {
+              TorChallenge.field_H.processKeyInput(di.field_m, ModalDialog.field_J, -58);
             }
             return;
           }
           if (null != gi.field_d &&
             gi.field_d.field_i) {
             ij.c((byte) -109);
-            TorChallenge.field_H.a((byte) 123, (UiComponent) (new nh(TorChallenge.field_H, de.field_b)));
+            TorChallenge.field_H.showDialog((byte) 123, (UiComponent) (new nh(TorChallenge.field_H, de.field_b)));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

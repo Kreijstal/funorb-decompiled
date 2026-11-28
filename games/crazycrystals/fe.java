@@ -170,10 +170,10 @@ final class fe extends ResultScenePhase {
           cn.field_e = new am(RawPcmStream.createForPlaybackRate(DefaultTextWidgetRenderer.field_d, 95 + (int)(Math.random() * 11.0), 0));
           jj.field_c = new am(RawPcmStream.createForPlaybackRate(an.field_s, 100, 0));
           m.field_n = new am(RawPcmStream.createForPlaybackRate(cl.field_m, 100, 0));
-          MouseInputHandler.field_d = new am(RawPcmStream.createForPlaybackRate(ab.field_z, 100, 0));
+          MouseInputHandler.field_d = new am(RawPcmStream.createForPlaybackRate(ModalDialog.field_z, 100, 0));
           rb.field_g = new am(RawPcmStream.createForPlaybackRate(AccountCreationResultPanel.field_nb, 100, 0));
           ScoreModifier.field_f = new am(RawPcmStream.createForPlaybackRate(tg.field_c, 100, 0));
-          oj.field_E = new am(RawPcmStream.createForPlaybackRate(ProxyAuthenticationRequiredException.field_b, 100, 0));
+          DraggableWidgetContainer.field_E = new am(RawPcmStream.createForPlaybackRate(ProxyAuthenticationRequiredException.field_b, 100, 0));
           LaserHubTile.field_q = new am(RawPcmStream.createForPlaybackRate(EditableTextField.field_H, 100, 0));
           e.b((byte) -122);
         } catch (RuntimeException runtimeException) {

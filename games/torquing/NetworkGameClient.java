@@ -123,33 +123,33 @@ abstract class NetworkGameClient extends GameApplet {
             DualLinkNode.field_k = km.correctedCurrentTimeMillis(-1) + 15000L;
           }
         }
-        if (aj.field_J == -1 ||
-          aj.field_J == 0) {
-          stackIn_22_0 = (aj.field_J != -1) ? 0 : 1;
+        if (DraggableWidgetContainer.field_J == -1 ||
+          DraggableWidgetContainer.field_J == 0) {
+          stackIn_22_0 = (DraggableWidgetContainer.field_J != -1) ? 0 : 1;
           var3Lifetime1 = stackIn_22_0;
-          aj.field_J = un.a(0);
+          DraggableWidgetContainer.field_J = un.a(0);
           if (var3Lifetime1 != 0 &&
-            0 == aj.field_J &&
+            0 == DraggableWidgetContainer.field_J &&
             op.field_i == 11 &&
             !mk.a((byte) 38)) {
             qa.a((byte) -72);
           }
-          if (aj.field_J != -1 &&
-            aj.field_J != 0) {
+          if (DraggableWidgetContainer.field_J != -1 &&
+            DraggableWidgetContainer.field_J != 0) {
             DualLinkNode.field_k = km.correctedCurrentTimeMillis(-1) + 15000L;
           }
         }
-        if (aj.field_J != -1 &&
-          0 != aj.field_J) {
+        if (DraggableWidgetContainer.field_J != -1 &&
+          0 != DraggableWidgetContainer.field_J) {
           if (b.field_x < 10) {
-            if (aj.field_J == 3) {
+            if (DraggableWidgetContainer.field_J == 3) {
               this.a(10, "js5crc");
             } else {
-              if (aj.field_J == 4) {
+              if (DraggableWidgetContainer.field_J == 4) {
                 this.a(param0 - 13, "js5io");
               } else {
-                if (2 != aj.field_J) {
-                  if (aj.field_J != 5) {
+                if (2 != DraggableWidgetContainer.field_J) {
+                  if (DraggableWidgetContainer.field_J != 5) {
                     this.a(10, "js5connect");
                   } else {
                     this.a(10, "outofdate");
@@ -162,14 +162,14 @@ abstract class NetworkGameClient extends GameApplet {
           } else {
             if (op.field_i >= 10) {
               InteractiveWidget.h(param0 ^ -107);
-              if (aj.field_J != 3) {
-                if (aj.field_J == 4) {
+              if (DraggableWidgetContainer.field_J != 3) {
+                if (DraggableWidgetContainer.field_J == 4) {
                   dc.a(256, ib.field_a, 2);
                 } else {
-                  if (aj.field_J == 2) {
+                  if (DraggableWidgetContainer.field_J == 2) {
                     dc.a(256, ra.field_b, param0 - 21);
                   } else {
-                    if (aj.field_J != 5) {
+                    if (DraggableWidgetContainer.field_J != 5) {
                       dc.a(256, jk.field_b, 2);
                     } else {
                       dc.a(5, e.field_d, 2);
@@ -183,18 +183,18 @@ abstract class NetworkGameClient extends GameApplet {
             }
           }
         }
-        if ((-1 != aj.field_J &&
-          aj.field_J != 0 ||
+        if ((-1 != DraggableWidgetContainer.field_J &&
+          DraggableWidgetContainer.field_J != 0 ||
           mk.a((byte) 38)) &&
           DualLinkNode.field_k <= km.correctedCurrentTimeMillis(-1)) {
           gk.field_a = false;
-          if (aj.field_J != -1 &&
-            aj.field_J != 0) {
-            aj.field_J = -1;
+          if (DraggableWidgetContainer.field_J != -1 &&
+            DraggableWidgetContainer.field_J != 0) {
+            DraggableWidgetContainer.field_J = -1;
             jl.b((byte) 106);
           }
         }
-        if (aj.field_J == 0 &&
+        if (DraggableWidgetContainer.field_J == 0 &&
           !mk.a((byte) 38)) {
           MenuScreen.field_g = false;
         }
@@ -461,7 +461,7 @@ abstract class NetworkGameClient extends GameApplet {
             km.a((byte) -128, 5);
           }
           if (hh.field_d[5]) {
-            jd.a(true, 6);
+            DropTargetWidgetContainer.a(true, 6);
           }
           if (hh.field_d[6]) {
             fa.a(7, -21386);
@@ -525,7 +525,7 @@ abstract class NetworkGameClient extends GameApplet {
         if (var2 == 0 ||
           var2 == 1) {
           if (op.field_i == 11 &&
-            aj.field_J == 0) {
+            DraggableWidgetContainer.field_J == 0) {
             qa.a((byte) -95);
           }
           return var2;
@@ -698,9 +698,9 @@ abstract class NetworkGameClient extends GameApplet {
             }
           }
           if (3 == var4) {
-            if (aj.field_J != -1 &&
-              0 != aj.field_J) {
-              aj.field_J = -1;
+            if (DraggableWidgetContainer.field_J != -1 &&
+              0 != DraggableWidgetContainer.field_J) {
+              DraggableWidgetContainer.field_J = -1;
               jl.b((byte) 106);
             }
             if (!param1) {

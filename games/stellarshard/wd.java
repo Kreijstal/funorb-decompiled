@@ -26,7 +26,7 @@ final class wd {
             return false;
           }
           var8 = new AccountCreationResultPanel(IsaacRandom.field_d, param6);
-          IsaacRandom.field_d.a((byte) 84, (UiWidget) (var8));
+          IsaacRandom.field_d.showDialog((byte) 84, (UiWidget) (var8));
           if (param2 != 5) {
             field_d = -43;
           }

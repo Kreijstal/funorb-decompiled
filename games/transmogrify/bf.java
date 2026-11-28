@@ -5,7 +5,7 @@ final class bf extends InteractiveWidget {
     static pe field_C;
     static int field_B;
 
-    private bf(String param0, WidgetRenderer param1, ma param2) {
+    private bf(String param0, WidgetRenderer param1, WidgetEventListener param2) {
         super(param0, param1, param2);
         try {
           this.field_q = IterableNodeHashTable.field_e.field_b;
@@ -68,7 +68,7 @@ final class bf extends InteractiveWidget {
         }
     }
 
-    private bf(String param0, ma param1) {
+    private bf(String param0, WidgetEventListener param1) {
         this(param0, IterableNodeHashTable.field_e.field_d, param1);
         try {
           this.field_q = IterableNodeHashTable.field_e.field_b;
@@ -84,7 +84,7 @@ final class bf extends InteractiveWidget {
         }
     }
 
-    bf(String param0, ma param1, boolean param2) {
+    bf(String param0, WidgetEventListener param1, boolean param2) {
         this(param0, param1);
         try {
           this.field_y = param2 ? true : false;

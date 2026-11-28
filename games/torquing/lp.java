@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class lp {
-    static aj field_d;
+    static DraggableWidgetContainer field_d;
     static boolean[] field_e;
     static int[] field_g;
     static int field_c;
@@ -15,7 +15,7 @@ final class lp {
           return (java.awt.Container) ((Object) un.field_b);
         }
         if (param0 != 20) {
-          field_d = (aj) null;
+          field_d = (DraggableWidgetContainer) null;
         }
         return (java.awt.Container) ((Object) ip.a(9));
     }
@@ -38,7 +38,7 @@ final class lp {
         try {
           var2_int = param0.length();
           if (param1 < 97) {
-            field_d = (aj) null;
+            field_d = (DraggableWidgetContainer) null;
           }
           if (var2_int > 20) {
             var2_int = 20;

@@ -107,7 +107,7 @@ final class SceneWidgetPart007 extends SceneWidget {
                   integerLocal26 = 256 * (integerLocal1 - integerLocal13) / (integerLocal13 * integerLocal12);
                   integerLocal27 = MixedSupport042.computeInteger0536(integerArgument2, integerLocal26, 256, integerArgument1, 124);
                   for (integerLocal2 = integerLocal32; integerLocal33 > integerLocal2; integerLocal2++) {
-                    rgbSpriteLocal19.integerArrayState0024[integerLocal2 + rgbSpriteLocal19.integerState0258 * integerLocal1] = UiComponentPart006.bitwiseOr(-16777216, integerLocal27);
+                    rgbSpriteLocal19.integerArrayState0024[integerLocal2 + rgbSpriteLocal19.integerState0258 * integerLocal1] = LabeledWidgetContainer.bitwiseOr(-16777216, integerLocal27);
                   }
                 }
               }

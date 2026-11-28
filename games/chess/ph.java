@@ -43,7 +43,7 @@ class ph extends dm {
         if (param0 <= 27) {
           return (ug) null;
         }
-        return kn.field_H;
+        return SingleChildWidgetContainer.field_H;
     }
 
     final static boolean a(int param0, byte param1, String param2, long param3, int[] param4) {
@@ -61,7 +61,7 @@ class ph extends dm {
           }
           boolean decompiledFrameRemainder0 = true;
           if (param4 != null && (param0 != 2 ||
-            kn.a(param2, param3, 29712))) {
+            SingleChildWidgetContainer.a(param2, param3, 29712))) {
             stackIn_8_0 = true;
             decompiledFrameRemainder0 = false;
           }
@@ -108,7 +108,7 @@ class ph extends dm {
               od.field_W = false;
               var3_int = 1;
             }
-            wc.a(bb.field_e, var3_int != 0, jd.b(false), lf.i(120), false);
+            wc.a(bb.field_e, var3_int != 0, jd.b(false), AlphaWidgetContainer.i(120), false);
             return;
           }
           if (!mk.b((byte) 109)) {

@@ -143,7 +143,7 @@ final class LevelDecoder {
             for (var9 = 0; var9 < ba.field_i.field_a; var9++) {
               incrementValue$11 = var4_int;
               var4_int++;
-              ic.field_E[var8][var9] = param1[incrementValue$11];
+              SingleChildWidgetContainer.field_E[var8][var9] = param1[incrementValue$11];
             }
           }
           if (param3) {

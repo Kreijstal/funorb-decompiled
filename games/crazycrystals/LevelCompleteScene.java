@@ -388,7 +388,7 @@ final class LevelCompleteScene extends AnimatedResultScene {
         if (var2 == 1) {
           stackIn_18_3 = null;
           stackIn_18_4 = null;
-          stackIn_18_5 = og.field_y;
+          stackIn_18_5 = DequeWidgetContainer.field_y;
         } else {
           stackIn_18_3 = null;
           stackIn_18_4 = null;
@@ -405,7 +405,7 @@ final class LevelCompleteScene extends AnimatedResultScene {
         } else {
           stackIn_21_3 = null;
           stackIn_21_4 = null;
-          stackIn_21_5 = og.field_u;
+          stackIn_21_5 = DequeWidgetContainer.field_u;
         }
         stackIn_17_0[stackIn_20_2] = (ScoreModifier) ((Object) new fn(stackIn_21_5, 50, var2, var3));
         stackIn_23_2 = 5;

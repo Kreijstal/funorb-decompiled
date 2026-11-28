@@ -182,8 +182,8 @@ final class gk {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         try {
-          if (null != mc.field_H) {
-            mc.field_H.field_N.setNameSuggestions(args, (byte) -58);
+          if (null != DropTargetWidgetContainer.field_H) {
+            DropTargetWidgetContainer.field_H.field_N.setNameSuggestions(args, (byte) -58);
           }
           if (param1 >= -24) {
             gk.a(117);

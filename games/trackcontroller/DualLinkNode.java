@@ -17,10 +17,10 @@ class DualLinkNode extends IntrusiveNode {
         RuntimeException var2_ref = null;
         var3 = TrackController.field_F ? 1 : 0;
         try {
-          var4 = (ei) (fj.field_H.first(2));
+          var4 = (ei) (DraggableWidgetContainer.field_H.first(2));
           while (var4 != null) {
             kc.a(param1, (byte) 75, var4);
-            var4 = (ei) (fj.field_H.next(10));
+            var4 = (ei) (DraggableWidgetContainer.field_H.next(10));
           }
           if (param0 != 4) {
             field_n = (aa) null;

@@ -61,10 +61,10 @@ final class hc {
 
     final static wh[] a(byte param0) {
         if (param0 == -116) {
-          return new wh[]{ml.field_F, wd.field_b, bf.field_a};
+          return new wh[]{LabeledWidgetContainer.field_F, wd.field_b, bf.field_a};
         }
         field_j = 101;
-        return new wh[]{ml.field_F, wd.field_b, bf.field_a};
+        return new wh[]{LabeledWidgetContainer.field_F, wd.field_b, bf.field_a};
     }
 
     public static void clearStaticReferences(byte param0) {

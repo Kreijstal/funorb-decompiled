@@ -97,7 +97,7 @@ final class CipherPacketBuffer extends PacketBuffer {
             integerLocal6 = 245 * (integerLocal1 % 2) + (80 + integerArgument1);
             MixedSupport042.performAction0537(integerLocal3 + 14, 256, 16777215, SecondaryNodeHashTable.stringArrayArrayState0006[integerLocal1][0], integerLocal6, SceneWidget.renderingSupport009State0007);
             MixedSupport121.computeRgbSprite1601(true, integerLocal1).drawScaled(integerLocal6 + integerArgument1, 20 + integerLocal3, 18, 18);
-            integerLocal7 = MixedSupport045.computeInteger0552(211, 0, integerLocal3 + 20, SecondaryNodeHashTable.stringArrayArrayState0006[integerLocal1][1], 16, 64, 16777215, UiComponentPart029.renderingSupport009State0005, (byte) -128, 0, integerLocal6 + 24);
+            integerLocal7 = MixedSupport045.computeInteger0552(211, 0, integerLocal3 + 20, SecondaryNodeHashTable.stringArrayArrayState0006[integerLocal1][1], 16, 64, 16777215, DraggableWidgetContainer.renderingSupport009State0005, (byte) -128, 0, integerLocal6 + 24);
             if (integerLocal5 < integerLocal7) {
               integerLocal5 = integerLocal7;
             }

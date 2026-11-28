@@ -61,10 +61,10 @@ final class MixedSupport023 {
         boolean stackBooleanLocal3 = false;
         if (UiComponentPart023.computeBoolean1242(-30146) && (AccountRegistrationPanel.computeBoolean1586((byte) 38, MixedSupport063.integerArrayState0111) ||
           MixedSupport048.mixedSupport072State0001 != null ||
-          !(UiComponentPart015.integerState0319 <= 0))) {
+          !(DropTargetWidgetContainer.integerState0319 <= 0))) {
           DebouncedFieldValidator.booleanState0006 = true;
           stackBooleanLocal1 = true;
-          stackBooleanLocal2 = !(UiComponentPart015.integerState0319 <= 0);
+          stackBooleanLocal2 = !(DropTargetWidgetContainer.integerState0319 <= 0);
           stackBooleanLocal3 = (null != MixedSupport048.mixedSupport072State0001);
           MixedSupport097.renderingSupport007State0007 = PcmPlayerService.computeRenderingSupport0071410(stackBooleanLocal1, stackBooleanLocal2, stackBooleanLocal3, (byte) -61, booleanArgument1);
           return;
@@ -102,7 +102,7 @@ final class MixedSupport023 {
             return false;
           }
           for (integerLocal1 = 0; charSequenceArgument1.length() > integerLocal1; integerLocal1++) {
-            if (!UiComponentPart020.computeBoolean1153(charSequenceArgument1.charAt(integerLocal1), -6237)) {
+            if (!ArrayWidgetContainer.computeBoolean1153(charSequenceArgument1.charAt(integerLocal1), -6237)) {
               return false;
             }
           }
@@ -156,7 +156,7 @@ final class MixedSupport023 {
               integerArrayLocal2 = integerArrayLocal7;
               integerArrayLocal14 = MixedSupport025.mixedSupport033State0001.integerArrayState0042;
               for (integerLocal5 = 0; integerLocal5 < 8; integerLocal5++) {
-                integerArrayLocal7[integerLocal5] = UiComponentPart006.bitwiseOr(integerArrayLocal12[integerLocal5], integerArrayLocal14[integerLocal5]);
+                integerArrayLocal7[integerLocal5] = LabeledWidgetContainer.bitwiseOr(integerArrayLocal12[integerLocal5], integerArrayLocal14[integerLocal5]);
               }
               integerArrayLocal13 = MixedSupport063.integerArrayState0111;
               integerArrayLocal11 = integerArrayLocal13;
@@ -181,8 +181,8 @@ final class MixedSupport023 {
               integerLocal3 = UiComponentPart019.mixedSupport113State0001.integerArrayState0202[0];
               UiComponentPart019.mixedSupport113State0001 = null;
               MixedSupport105.booleanState0153 = true;
-              if (UiComponentPart015.integerState0319 < integerLocal3) {
-                UiComponentPart015.integerState0319 = integerLocal3;
+              if (DropTargetWidgetContainer.integerState0319 < integerLocal3) {
+                DropTargetWidgetContainer.integerState0319 = integerLocal3;
               }
             }
           }

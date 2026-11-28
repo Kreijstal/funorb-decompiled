@@ -208,7 +208,7 @@ final class gf {
                   var14 = var14 - 0.05;
                 }
                 this.field_c = var6 * ji.a(65535, var14);
-                this.field_z = pj.a(var14, 32768) * var6;
+                this.field_z = DequeWidgetContainer.a(var14, 32768) * var6;
                 this.field_j[0].a((int)this.field_m + this.field_u, 7, 6291456, 120, 1, (int)this.field_i + this.field_q);
                 this.field_j[1].a(this.field_u + (int)this.field_m + 2, 7, 48, -120, 1, (int)this.field_i + this.field_q);
                 this.field_j[2].a(this.field_u + (int)this.field_m, 7, 6291456, param0 - 16395, 1, this.field_q + ((int)this.field_i + 2));
@@ -267,13 +267,13 @@ final class gf {
           field_s = (String) null;
         }
         ih.field_O[10] = 56;
-        dl.a(new int[]{5}, 390, 275, 4, 455, 30, (byte) 123);
+        AlphaWidgetContainer.a(new int[]{5}, 390, 275, 4, 455, 30, (byte) 123);
         th.field_a[4] = new ld(4);
         ul.field_j[9] = new int[]{2, 5};
         th.field_a[9] = new ld(9);
-        dl.a(new int[]{35, 36, 37, 6}, 385, 200, 2, 540, 30, (byte) 124);
+        AlphaWidgetContainer.a(new int[]{35, 36, 37, 6}, 385, 200, 2, 540, 30, (byte) 124);
         th.field_a[2] = new ld(2);
-        dl.a(new int[]{5}, 390, 200, 12, 455, 30, (byte) 119);
+        AlphaWidgetContainer.a(new int[]{5}, 390, 200, 12, 455, 30, (byte) 119);
         th.field_a[12] = new ld(12);
         ul.field_b[10] = ul.field_b[4];
         ul.field_j[10] = new int[]{5, 26, 27, 28, 29, 30, 31, 32, 33, 34};
@@ -281,7 +281,7 @@ final class gf {
         th.field_a[10] = new ld(10);
         if (0 < hb.field_g &&
           ea.a(sb.field_d, 0)) {
-          dl.a(new int[]{1, 3, 10, 11, 4, 19, 7}, 200, 200, 1, 540, 30, (byte) 122);
+          AlphaWidgetContainer.a(new int[]{1, 3, 10, 11, 4, 19, 7}, 200, 200, 1, 540, 30, (byte) 122);
           th.field_a[1] = new ld(1);
         }
     }
@@ -349,7 +349,7 @@ final class gf {
           if (var17 == 28) {
             var7 = -this.field_F + this.field_m;
             var5 = -this.field_d + this.field_i;
-            var9 = (int)dl.a(true, var5, var7) / 4;
+            var9 = (int)AlphaWidgetContainer.a(true, var5, var7) / 4;
             if (var9 > 64) {
               var9 = 64;
             }

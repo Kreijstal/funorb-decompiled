@@ -119,7 +119,7 @@ abstract class ArchiveRequest extends DualLinkNode {
               }
               if (param3) {
                 BoundedRandomAccessFile.field_d[var23] = var27 >> DebouncedFieldValidator.field_c;
-                qm.field_q[var23] = var28 >> DebouncedFieldValidator.field_c;
+                UiWidget.field_q[var23] = var28 >> DebouncedFieldValidator.field_c;
                 AnimatedResultScene.field_b[var23] = var29;
               }
               var23++;
@@ -146,9 +146,9 @@ abstract class ArchiveRequest extends DualLinkNode {
                 var24 = param1.field_q[var23];
                 var25 = param1.field_d[var23];
                 var26 = param1.field_M[var23];
-                ol.field_C[var23] = (var15 * var25 + (var12 * var24 + var26 * var18) >> 16) + var9;
+                ModalDialogHost.field_C[var23] = (var15 * var25 + (var12 * var24 + var26 * var18) >> 16) + var9;
                 ud.field_bb[var23] = (var24 * var13 + var16 * var25 + var26 * var19 >> 16) + var10;
-                ol.field_y[var23] = var11 + (var26 * var20 + var14 * var24 + var17 * var25 >> 16);
+                ModalDialogHost.field_y[var23] = var11 + (var26 * var20 + var14 * var24 + var17 * var25 >> 16);
                 var24 = param1.field_z[var23];
                 var25 = param1.field_m[var23];
                 var26 = param1.field_y[var23];

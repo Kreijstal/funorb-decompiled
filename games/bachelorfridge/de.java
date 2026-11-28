@@ -196,8 +196,8 @@ final class de extends UiWidget {
         return var14;
     }
 
-    final void a(int param0, int param1, byte param2, int param3, int param4) {
-        super.a(param0, param1, param2, param3, param4);
+    final void setBounds(int param0, int param1, byte param2, int param3, int param4) {
+        super.setBounds(param0, param1, param2, param3, param4);
         this.h(117);
     }
 
@@ -232,7 +232,7 @@ final class de extends UiWidget {
         this.field_J = param4;
         this.field_G = param7;
         this.field_y = param6;
-        this.a(param0, param3, (byte) 59, param2, param1);
+        this.setBounds(param0, param3, (byte) 59, param2, param1);
     }
 
     final static int d(int param0, int param1, int param2) {

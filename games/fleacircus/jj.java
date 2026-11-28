@@ -3,7 +3,7 @@
  */
 import java.util.*;
 
-abstract class jj extends db {
+abstract class jj extends ModalDialog {
     private int field_T;
     static Random field_R;
     private int field_N;
@@ -35,7 +35,7 @@ abstract class jj extends db {
 
     final static void a(float param0, String param1, boolean param2) {
         try {
-          qj.field_I = param1;
+          DropTargetWidgetContainer.field_I = param1;
           if (!param2) {
             jj.clearStaticReferences(true);
           }
@@ -45,21 +45,21 @@ abstract class jj extends db {
         }
     }
 
-    jj(f param0, int param1, int param2) {
+    jj(ModalDialogHost param0, int param1, int param2) {
         super(param0, param1, param2);
         this.field_U = 0;
         this.field_Q = 0;
     }
 
-    boolean j(int param0) {
+    boolean snapDialogAnimation(int param0) {
         if (param0 < 70) {
           return false;
         }
         this.l(-1);
-        return super.j(122);
+        return super.snapDialogAnimation(122);
     }
 
-    boolean a(int param0) {
+    boolean advanceDialogAnimation(int param0) {
         int var3 = 0;
         int var4 = 0;
         int fieldTemp$0 = 0;
@@ -76,17 +76,17 @@ abstract class jj extends db {
           if (fieldTemp$0 >= this.field_U) {
             this.field_U = 0;
             this.m(-120);
-            this.a(var4, (byte) -127, var3);
-            return super.a(89);
+            this.setCenteredSize(var4, (byte) -127, var3);
+            return super.advanceDialogAnimation(89);
           }
           var5 = (this.field_U * 2 - this.field_Q) * this.field_Q;
           var6 = this.field_U * this.field_U;
           var3Lifetime1 = (this.field_O - this.field_T) * var5 / var6 + this.field_T;
           var4Lifetime1 = this.field_N + var5 * (-this.field_N + this.field_W) / var6;
-          this.a(var4Lifetime1, (byte) -127, var3Lifetime1);
-          return super.a(89);
+          this.setCenteredSize(var4Lifetime1, (byte) -127, var3Lifetime1);
+          return super.advanceDialogAnimation(89);
         }
-        return super.a(89);
+        return super.advanceDialogAnimation(89);
     }
 
     void b(int param0, int param1, int param2) {
@@ -215,7 +215,7 @@ abstract class jj extends db {
         if (~this.field_U >= param0) {
           return;
         }
-        this.a(this.field_W, (byte) -128, this.field_O);
+        this.setCenteredSize(this.field_W, (byte) -128, this.field_O);
         this.field_U = 0;
         this.m(param0 - 123);
     }
@@ -231,7 +231,7 @@ abstract class jj extends db {
           this.field_Q = 0;
           return;
         }
-        this.a(param2, (byte) -127, param1);
+        this.setCenteredSize(param2, (byte) -127, param1);
     }
 
     static {

@@ -233,7 +233,7 @@ final class jb {
         if (param0 < 76) {
           return;
         }
-        fj.a(this.field_q, -126);
+        UiWidget.a(this.field_q, -126);
     }
 
     final void f(byte param0) {

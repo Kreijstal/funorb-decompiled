@@ -6,7 +6,7 @@ final class AccountCreationResultPanel extends mn implements WidgetActivationLis
     private boolean field_hb;
     private AccountRegistrationPanel field_ib;
 
-    AccountCreationResultPanel(ln param0, AccountRegistrationPanel param1) {
+    AccountCreationResultPanel(ModalDialogHost param0, AccountRegistrationPanel param1) {
         super(param0, LoginPanel.field_E, po.field_y, false, false);
         try {
           this.field_ib = param1;
@@ -39,43 +39,43 @@ final class AccountCreationResultPanel extends mn implements WidgetActivationLis
         this.showAccountCreationResult(true, pg.createAccountErrorResult(248, a.field_a, -1), (byte) -117);
     }
 
-    final boolean h(int param0) {
+    final boolean advanceDialogAnimation(int param0) {
         AccountServiceResult var3 = null;
         AccountServiceResult var3Lifetime1;
         AccountServiceResult var3Lifetime2;
         AccountServiceResult var3Lifetime3;
         if (!this.field_D) {
           if (param0 == -7) {
-            return super.h(-7);
+            return super.advanceDialogAnimation(-7);
           }
           var3 = (AccountServiceResult) null;
           this.showAccountCreationResult(true, (AccountServiceResult) null, (byte) 100);
-          return super.h(-7);
+          return super.advanceDialogAnimation(-7);
         }
         if (this.field_hb) {
           if (param0 == -7) {
-            return super.h(-7);
+            return super.advanceDialogAnimation(-7);
           }
           var3Lifetime1 = (AccountServiceResult) null;
           this.showAccountCreationResult(true, (AccountServiceResult) null, (byte) 100);
-          return super.h(-7);
+          return super.advanceDialogAnimation(-7);
         }
         AccountServiceResult var2 = ji.pollAccountCreationResult(false);
         if (var2 == null) {
           if (param0 == -7) {
-            return super.h(-7);
+            return super.advanceDialogAnimation(-7);
           }
           var3Lifetime2 = (AccountServiceResult) null;
           this.showAccountCreationResult(true, (AccountServiceResult) null, (byte) 100);
-          return super.h(-7);
+          return super.advanceDialogAnimation(-7);
         }
         this.showAccountCreationResult(false, var2, (byte) -110);
         if (param0 == -7) {
-          return super.h(-7);
+          return super.advanceDialogAnimation(-7);
         }
         var3Lifetime3 = (AccountServiceResult) null;
         this.showAccountCreationResult(true, (AccountServiceResult) null, (byte) 100);
-        return super.h(-7);
+        return super.advanceDialogAnimation(-7);
     }
 
     private final void showAccountCreationResult(boolean param0, AccountServiceResult param1, byte param2) {
@@ -121,7 +121,7 @@ final class AccountCreationResultPanel extends mn implements WidgetActivationLis
               this.c(new sc(this), 33);
               return;
             }
-            var5.a(0, vd.field_d, (ca) (this));
+            var5.a(0, vd.field_d, (WidgetEventListener) (this));
           } else {
             if (!this.field_gb) {
               if (param1.statusCode == 5) {
@@ -131,7 +131,7 @@ final class AccountCreationResultPanel extends mn implements WidgetActivationLis
                 var5.a(qh.field_a, 5177, -1);
               }
             } else {
-              var5.a(0, vd.field_d, (ca) (this));
+              var5.a(0, vd.field_d, (WidgetEventListener) (this));
             }
             if (param1.statusCode != 3) {
               if (param1.statusCode == 6) {

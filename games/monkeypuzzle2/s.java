@@ -9,7 +9,7 @@ final class s extends nf implements WidgetActivationListener {
     static int field_T;
     static int field_O;
 
-    s(kj param0, kg param1) {
+    s(ModalDialogHost param0, kg param1) {
         super(param0, 200, 150);
         Object var3 = null;
         UiWidget var4 = null;
@@ -38,14 +38,14 @@ final class s extends nf implements WidgetActivationListener {
           } else {
             var3 = ld.field_b;
           }
-          var4 = new UiWidget((String) (var3), (of) null);
+          var4 = new UiWidget((String) (var3), (WidgetEventListener) null);
           var4.field_e = 50;
           var4.field_l = this.field_l;
           var4.field_p = 80;
           var4.field_r = 0;
-          var4.field_h = (ml) ((Object) new DefaultTextWidgetRenderer(pf.field_c, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true));
-          this.b((byte) -75, var4);
-          this.field_P = this.a(false, (of) (this), db.field_e);
+          var4.field_h = (WidgetRenderer) ((Object) new DefaultTextWidgetRenderer(pf.field_c, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true));
+          this.addChild((byte) -75, var4);
+          this.field_P = this.a(false, (WidgetEventListener) (this), db.field_e);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -75,7 +75,7 @@ final class s extends nf implements WidgetActivationListener {
         }
     }
 
-    private final ButtonWidget a(boolean param0, of param1, String param2) {
+    private final ButtonWidget a(boolean param0, WidgetEventListener param1, String param2) {
         ButtonWidget var4 = null;
         RuntimeException var4_ref = null;
         int var5 = 0;
@@ -88,15 +88,15 @@ final class s extends nf implements WidgetActivationListener {
         RuntimeException decompiledCaughtException = null;
         try {
           var4 = new ButtonWidget(param2, param1);
-          var4.field_h = (ml) ((Object) new hd());
+          var4.field_h = (WidgetRenderer) ((Object) new hd());
           var5 = this.field_p - 6;
           this.field_p = this.field_p + 38;
-          var4.a(30, 13361, 15, -30 + this.field_l, var5);
-          this.b((byte) -98, var4);
+          var4.setBounds(30, 13361, 15, -30 + this.field_l, var5);
+          this.addChild((byte) -98, var4);
           if (param0) {
             s.releaseDeclaredStaticReferences(-59);
           }
-          this.g(-1);
+          this.refreshLayout(-1);
           stackIn_3_0 = var4;
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

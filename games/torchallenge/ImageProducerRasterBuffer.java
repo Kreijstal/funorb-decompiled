@@ -95,8 +95,8 @@ final class ImageProducerRasterBuffer extends RasterBuffer implements java.awt.i
         int var7 = 0;
         try {
           ConfirmedEmailAvailabilityValidator.field_s[PcmOutputWorker.field_c] = param1;
-          hi.field_G[PcmOutputWorker.field_c] = PcmOutputWorker.field_c;
-          bg.field_Q[PcmOutputWorker.field_c] = param3;
+          AlphaWidgetContainer.field_G[PcmOutputWorker.field_c] = PcmOutputWorker.field_c;
+          LabeledWidgetContainer.field_Q[PcmOutputWorker.field_c] = param3;
           if (param3 > TextHotspotBounds.field_q) {
             v.field_Z = param3;
           }

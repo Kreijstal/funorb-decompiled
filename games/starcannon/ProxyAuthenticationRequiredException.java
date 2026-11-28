@@ -134,7 +134,7 @@ final class ProxyAuthenticationRequiredException extends IOException {
         pk.field_c = param4;
         LoginPanel.field_D = param3;
         sg.field_e = param1;
-        kf.field_v = param2;
+        SingleChildWidgetContainer.field_v = param2;
     }
 
     final static Sprite[] a(int param0, int param1, byte param2, ResourceArchive param3) {

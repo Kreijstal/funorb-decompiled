@@ -27,9 +27,9 @@ final class hh {
             !(param2 <= ConfirmedEmailAvailabilityValidator.field_s.length)) {
             ConfirmedEmailAvailabilityValidator.field_s = new int[2 * param2];
           }
-          if (null == bg.field_Q ||
-            !(param2 <= bg.field_Q.length)) {
-            bg.field_Q = new int[param2 * 2];
+          if (null == LabeledWidgetContainer.field_Q ||
+            !(param2 <= LabeledWidgetContainer.field_Q.length)) {
+            LabeledWidgetContainer.field_Q = new int[param2 * 2];
           }
           if (BufferedCacheFile.field_p == null ||
             !(BufferedCacheFile.field_p.length >= param2)) {
@@ -43,9 +43,9 @@ final class hh {
                 !(param2 <= ProxyAuthenticationRequiredException.field_b.length)) {
                 ProxyAuthenticationRequiredException.field_b = new int[param2 * 2];
               }
-              if (null == hi.field_G ||
-                !(param1 + param2 <= hi.field_G.length)) {
-                hi.field_G = new int[(param1 + param2) * 2];
+              if (null == AlphaWidgetContainer.field_G ||
+                !(param1 + param2 <= AlphaWidgetContainer.field_G.length)) {
+                AlphaWidgetContainer.field_G = new int[(param1 + param2) * 2];
               }
               if (null == qa.field_i ||
                 !(qa.field_i.length >= param2)) {
@@ -58,9 +58,9 @@ final class hh {
                   !(param2 <= ProxyAuthenticationRequiredException.field_b.length)) {
                   ProxyAuthenticationRequiredException.field_b = new int[param2 * 2];
                 }
-                if (null == hi.field_G ||
-                  !(param1 + param2 <= hi.field_G.length)) {
-                  hi.field_G = new int[(param1 + param2) * 2];
+                if (null == AlphaWidgetContainer.field_G ||
+                  !(param1 + param2 <= AlphaWidgetContainer.field_G.length)) {
+                  AlphaWidgetContainer.field_G = new int[(param1 + param2) * 2];
                 }
                 if (null == qa.field_i ||
                   !(qa.field_i.length >= param2)) {
@@ -71,15 +71,15 @@ final class hh {
                   !(param2 <= ProxyAuthenticationRequiredException.field_b.length)) {
                   ProxyAuthenticationRequiredException.field_b = new int[param2 * 2];
                 }
-                if (null == hi.field_G) {
-                  hi.field_G = new int[(param1 + param2) * 2];
+                if (null == AlphaWidgetContainer.field_G) {
+                  AlphaWidgetContainer.field_G = new int[(param1 + param2) * 2];
                   if (null == qa.field_i ||
                     !(qa.field_i.length >= param2)) {
                     qa.field_i = new boolean[param2 * 2];
                   }
                 } else {
-                  if (param1 + param2 > hi.field_G.length) {
-                    hi.field_G = new int[(param1 + param2) * 2];
+                  if (param1 + param2 > AlphaWidgetContainer.field_G.length) {
+                    AlphaWidgetContainer.field_G = new int[(param1 + param2) * 2];
                     if (null == qa.field_i ||
                       !(qa.field_i.length >= param2)) {
                       qa.field_i = new boolean[param2 * 2];
@@ -112,9 +112,9 @@ final class hh {
             !(param2 <= ProxyAuthenticationRequiredException.field_b.length)) {
             ProxyAuthenticationRequiredException.field_b = new int[param2 * 2];
           }
-          if (null == hi.field_G ||
-            !(param1 + param2 <= hi.field_G.length)) {
-            hi.field_G = new int[(param1 + param2) * 2];
+          if (null == AlphaWidgetContainer.field_G ||
+            !(param1 + param2 <= AlphaWidgetContainer.field_G.length)) {
+            AlphaWidgetContainer.field_G = new int[(param1 + param2) * 2];
           }
           if (null == qa.field_i ||
             !(qa.field_i.length >= param2)) {
@@ -126,8 +126,8 @@ final class hh {
             !(param2 <= ConfirmedEmailAvailabilityValidator.field_s.length)) {
             ConfirmedEmailAvailabilityValidator.field_s = new int[2 * param2];
           }
-          if (null == bg.field_Q) {
-            bg.field_Q = new int[param2 * 2];
+          if (null == LabeledWidgetContainer.field_Q) {
+            LabeledWidgetContainer.field_Q = new int[param2 * 2];
             if (BufferedCacheFile.field_p == null ||
               !(BufferedCacheFile.field_p.length >= param2)) {
               BufferedCacheFile.field_p = new int[2 * param2];
@@ -140,9 +140,9 @@ final class hh {
                   !(param2 <= ProxyAuthenticationRequiredException.field_b.length)) {
                   ProxyAuthenticationRequiredException.field_b = new int[param2 * 2];
                 }
-                if (null == hi.field_G ||
-                  !(param1 + param2 <= hi.field_G.length)) {
-                  hi.field_G = new int[(param1 + param2) * 2];
+                if (null == AlphaWidgetContainer.field_G ||
+                  !(param1 + param2 <= AlphaWidgetContainer.field_G.length)) {
+                  AlphaWidgetContainer.field_G = new int[(param1 + param2) * 2];
                 }
                 if (null == qa.field_i ||
                   !(qa.field_i.length >= param2)) {
@@ -155,9 +155,9 @@ final class hh {
                     !(param2 <= ProxyAuthenticationRequiredException.field_b.length)) {
                     ProxyAuthenticationRequiredException.field_b = new int[param2 * 2];
                   }
-                  if (null == hi.field_G ||
-                    !(param1 + param2 <= hi.field_G.length)) {
-                    hi.field_G = new int[(param1 + param2) * 2];
+                  if (null == AlphaWidgetContainer.field_G ||
+                    !(param1 + param2 <= AlphaWidgetContainer.field_G.length)) {
+                    AlphaWidgetContainer.field_G = new int[(param1 + param2) * 2];
                   }
                   if (null == qa.field_i ||
                     !(qa.field_i.length >= param2)) {
@@ -168,15 +168,15 @@ final class hh {
                     !(param2 <= ProxyAuthenticationRequiredException.field_b.length)) {
                     ProxyAuthenticationRequiredException.field_b = new int[param2 * 2];
                   }
-                  if (null == hi.field_G) {
-                    hi.field_G = new int[(param1 + param2) * 2];
+                  if (null == AlphaWidgetContainer.field_G) {
+                    AlphaWidgetContainer.field_G = new int[(param1 + param2) * 2];
                     if (null == qa.field_i ||
                       !(qa.field_i.length >= param2)) {
                       qa.field_i = new boolean[param2 * 2];
                     }
                   } else {
-                    if (param1 + param2 > hi.field_G.length) {
-                      hi.field_G = new int[(param1 + param2) * 2];
+                    if (param1 + param2 > AlphaWidgetContainer.field_G.length) {
+                      AlphaWidgetContainer.field_G = new int[(param1 + param2) * 2];
                       if (null == qa.field_i ||
                         !(qa.field_i.length >= param2)) {
                         qa.field_i = new boolean[param2 * 2];
@@ -209,17 +209,17 @@ final class hh {
               !(param2 <= ProxyAuthenticationRequiredException.field_b.length)) {
               ProxyAuthenticationRequiredException.field_b = new int[param2 * 2];
             }
-            if (null == hi.field_G ||
-              !(param1 + param2 <= hi.field_G.length)) {
-              hi.field_G = new int[(param1 + param2) * 2];
+            if (null == AlphaWidgetContainer.field_G ||
+              !(param1 + param2 <= AlphaWidgetContainer.field_G.length)) {
+              AlphaWidgetContainer.field_G = new int[(param1 + param2) * 2];
             }
             if (null == qa.field_i ||
               !(qa.field_i.length >= param2)) {
               qa.field_i = new boolean[param2 * 2];
             }
           } else {
-            if (param2 > bg.field_Q.length) {
-              bg.field_Q = new int[param2 * 2];
+            if (param2 > LabeledWidgetContainer.field_Q.length) {
+              LabeledWidgetContainer.field_Q = new int[param2 * 2];
             }
             if (BufferedCacheFile.field_p == null ||
               !(BufferedCacheFile.field_p.length >= param2)) {
@@ -233,15 +233,15 @@ final class hh {
                   !(param2 <= ProxyAuthenticationRequiredException.field_b.length)) {
                   ProxyAuthenticationRequiredException.field_b = new int[param2 * 2];
                 }
-                if (null == hi.field_G) {
-                  hi.field_G = new int[(param1 + param2) * 2];
+                if (null == AlphaWidgetContainer.field_G) {
+                  AlphaWidgetContainer.field_G = new int[(param1 + param2) * 2];
                   if (null == qa.field_i ||
                     !(qa.field_i.length >= param2)) {
                     qa.field_i = new boolean[param2 * 2];
                   }
                 } else {
-                  if (param1 + param2 > hi.field_G.length) {
-                    hi.field_G = new int[(param1 + param2) * 2];
+                  if (param1 + param2 > AlphaWidgetContainer.field_G.length) {
+                    AlphaWidgetContainer.field_G = new int[(param1 + param2) * 2];
                     if (null == qa.field_i ||
                       !(qa.field_i.length >= param2)) {
                       qa.field_i = new boolean[param2 * 2];
@@ -263,20 +263,20 @@ final class hh {
                     !(param2 <= ProxyAuthenticationRequiredException.field_b.length)) {
                     ProxyAuthenticationRequiredException.field_b = new int[param2 * 2];
                   }
-                  if (null == hi.field_G ||
-                    !(param1 + param2 <= hi.field_G.length)) {
-                    hi.field_G = new int[(param1 + param2) * 2];
+                  if (null == AlphaWidgetContainer.field_G ||
+                    !(param1 + param2 <= AlphaWidgetContainer.field_G.length)) {
+                    AlphaWidgetContainer.field_G = new int[(param1 + param2) * 2];
                   }
                 } else {
                   if (ProxyAuthenticationRequiredException.field_b == null ||
                     !(param2 <= ProxyAuthenticationRequiredException.field_b.length)) {
                     ProxyAuthenticationRequiredException.field_b = new int[param2 * 2];
                   }
-                  if (null == hi.field_G) {
-                    hi.field_G = new int[(param1 + param2) * 2];
+                  if (null == AlphaWidgetContainer.field_G) {
+                    AlphaWidgetContainer.field_G = new int[(param1 + param2) * 2];
                   } else {
-                    if (param1 + param2 > hi.field_G.length) {
-                      hi.field_G = new int[(param1 + param2) * 2];
+                    if (param1 + param2 > AlphaWidgetContainer.field_G.length) {
+                      AlphaWidgetContainer.field_G = new int[(param1 + param2) * 2];
                     }
                   }
                 }
@@ -304,9 +304,9 @@ final class hh {
               !(param2 <= ProxyAuthenticationRequiredException.field_b.length)) {
               ProxyAuthenticationRequiredException.field_b = new int[param2 * 2];
             }
-            if (null == hi.field_G ||
-              !(param1 + param2 <= hi.field_G.length)) {
-              hi.field_G = new int[(param1 + param2) * 2];
+            if (null == AlphaWidgetContainer.field_G ||
+              !(param1 + param2 <= AlphaWidgetContainer.field_G.length)) {
+              AlphaWidgetContainer.field_G = new int[(param1 + param2) * 2];
             }
             if (null != qa.field_i &&
               qa.field_i.length >= param2) {

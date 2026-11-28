@@ -91,9 +91,9 @@ final class vl {
                 !(hm.field_A.length >= param1)) {
                 hm.field_A = new int[param1 * 2];
               }
-              if (null == ac.field_I ||
-                !(param1 + param0 <= ac.field_I.length)) {
-                ac.field_I = new int[2 * (param0 + param1)];
+              if (null == DropTargetWidgetContainer.field_I ||
+                !(param1 + param0 <= DropTargetWidgetContainer.field_I.length)) {
+                DropTargetWidgetContainer.field_I = new int[2 * (param0 + param1)];
               }
               if (null == RichTextLayout.field_m ||
                 !(param1 <= RichTextLayout.field_m.length)) {
@@ -106,9 +106,9 @@ final class vl {
                   !(hm.field_A.length >= param1)) {
                   hm.field_A = new int[param1 * 2];
                 }
-                if (null == ac.field_I ||
-                  !(param1 + param0 <= ac.field_I.length)) {
-                  ac.field_I = new int[2 * (param0 + param1)];
+                if (null == DropTargetWidgetContainer.field_I ||
+                  !(param1 + param0 <= DropTargetWidgetContainer.field_I.length)) {
+                  DropTargetWidgetContainer.field_I = new int[2 * (param0 + param1)];
                 }
                 if (null == RichTextLayout.field_m ||
                   !(param1 <= RichTextLayout.field_m.length)) {
@@ -117,9 +117,9 @@ final class vl {
               } else {
                 if (null == hm.field_A) {
                   hm.field_A = new int[param1 * 2];
-                  if (null == ac.field_I ||
-                    !(param1 + param0 <= ac.field_I.length)) {
-                    ac.field_I = new int[2 * (param0 + param1)];
+                  if (null == DropTargetWidgetContainer.field_I ||
+                    !(param1 + param0 <= DropTargetWidgetContainer.field_I.length)) {
+                    DropTargetWidgetContainer.field_I = new int[2 * (param0 + param1)];
                   }
                   if (null == RichTextLayout.field_m ||
                     !(param1 <= RichTextLayout.field_m.length)) {
@@ -128,18 +128,18 @@ final class vl {
                 } else {
                   if (hm.field_A.length < param1) {
                     hm.field_A = new int[param1 * 2];
-                    if (null == ac.field_I ||
-                      !(param1 + param0 <= ac.field_I.length)) {
-                      ac.field_I = new int[2 * (param0 + param1)];
+                    if (null == DropTargetWidgetContainer.field_I ||
+                      !(param1 + param0 <= DropTargetWidgetContainer.field_I.length)) {
+                      DropTargetWidgetContainer.field_I = new int[2 * (param0 + param1)];
                     }
                     if (null == RichTextLayout.field_m ||
                       !(param1 <= RichTextLayout.field_m.length)) {
                       RichTextLayout.field_m = new boolean[2 * param1];
                     }
                   } else {
-                    if (null == ac.field_I ||
-                      !(param1 + param0 <= ac.field_I.length)) {
-                      ac.field_I = new int[2 * (param0 + param1)];
+                    if (null == DropTargetWidgetContainer.field_I ||
+                      !(param1 + param0 <= DropTargetWidgetContainer.field_I.length)) {
+                      DropTargetWidgetContainer.field_I = new int[2 * (param0 + param1)];
                     }
                     if (null == RichTextLayout.field_m) {
                       RichTextLayout.field_m = new boolean[2 * param1];
@@ -168,9 +168,9 @@ final class vl {
             !(hm.field_A.length >= param1)) {
             hm.field_A = new int[param1 * 2];
           }
-          if (null == ac.field_I ||
-            !(param1 + param0 <= ac.field_I.length)) {
-            ac.field_I = new int[2 * (param0 + param1)];
+          if (null == DropTargetWidgetContainer.field_I ||
+            !(param1 + param0 <= DropTargetWidgetContainer.field_I.length)) {
+            DropTargetWidgetContainer.field_I = new int[2 * (param0 + param1)];
           }
           if (null == RichTextLayout.field_m ||
             !(param1 <= RichTextLayout.field_m.length)) {
@@ -190,9 +190,9 @@ final class vl {
                   !(hm.field_A.length >= param1)) {
                   hm.field_A = new int[param1 * 2];
                 }
-                if (null == ac.field_I ||
-                  !(param1 + param0 <= ac.field_I.length)) {
-                  ac.field_I = new int[2 * (param0 + param1)];
+                if (null == DropTargetWidgetContainer.field_I ||
+                  !(param1 + param0 <= DropTargetWidgetContainer.field_I.length)) {
+                  DropTargetWidgetContainer.field_I = new int[2 * (param0 + param1)];
                 }
                 if (null == RichTextLayout.field_m ||
                   !(param1 <= RichTextLayout.field_m.length)) {
@@ -205,9 +205,9 @@ final class vl {
                     !(hm.field_A.length >= param1)) {
                     hm.field_A = new int[param1 * 2];
                   }
-                  if (null == ac.field_I ||
-                    !(param1 + param0 <= ac.field_I.length)) {
-                    ac.field_I = new int[2 * (param0 + param1)];
+                  if (null == DropTargetWidgetContainer.field_I ||
+                    !(param1 + param0 <= DropTargetWidgetContainer.field_I.length)) {
+                    DropTargetWidgetContainer.field_I = new int[2 * (param0 + param1)];
                   }
                   if (null == RichTextLayout.field_m ||
                     !(param1 <= RichTextLayout.field_m.length)) {
@@ -216,9 +216,9 @@ final class vl {
                 } else {
                   if (null == hm.field_A) {
                     hm.field_A = new int[param1 * 2];
-                    if (null == ac.field_I ||
-                      !(param1 + param0 <= ac.field_I.length)) {
-                      ac.field_I = new int[2 * (param0 + param1)];
+                    if (null == DropTargetWidgetContainer.field_I ||
+                      !(param1 + param0 <= DropTargetWidgetContainer.field_I.length)) {
+                      DropTargetWidgetContainer.field_I = new int[2 * (param0 + param1)];
                     }
                     if (null == RichTextLayout.field_m ||
                       !(param1 <= RichTextLayout.field_m.length)) {
@@ -227,18 +227,18 @@ final class vl {
                   } else {
                     if (hm.field_A.length < param1) {
                       hm.field_A = new int[param1 * 2];
-                      if (null == ac.field_I ||
-                        !(param1 + param0 <= ac.field_I.length)) {
-                        ac.field_I = new int[2 * (param0 + param1)];
+                      if (null == DropTargetWidgetContainer.field_I ||
+                        !(param1 + param0 <= DropTargetWidgetContainer.field_I.length)) {
+                        DropTargetWidgetContainer.field_I = new int[2 * (param0 + param1)];
                       }
                       if (null == RichTextLayout.field_m ||
                         !(param1 <= RichTextLayout.field_m.length)) {
                         RichTextLayout.field_m = new boolean[2 * param1];
                       }
                     } else {
-                      if (null == ac.field_I ||
-                        !(param1 + param0 <= ac.field_I.length)) {
-                        ac.field_I = new int[2 * (param0 + param1)];
+                      if (null == DropTargetWidgetContainer.field_I ||
+                        !(param1 + param0 <= DropTargetWidgetContainer.field_I.length)) {
+                        DropTargetWidgetContainer.field_I = new int[2 * (param0 + param1)];
                       }
                       if (null == RichTextLayout.field_m) {
                         RichTextLayout.field_m = new boolean[2 * param1];
@@ -267,9 +267,9 @@ final class vl {
               !(hm.field_A.length >= param1)) {
               hm.field_A = new int[param1 * 2];
             }
-            if (null == ac.field_I ||
-              !(param1 + param0 <= ac.field_I.length)) {
-              ac.field_I = new int[2 * (param0 + param1)];
+            if (null == DropTargetWidgetContainer.field_I ||
+              !(param1 + param0 <= DropTargetWidgetContainer.field_I.length)) {
+              DropTargetWidgetContainer.field_I = new int[2 * (param0 + param1)];
             }
             if (null == RichTextLayout.field_m ||
               !(param1 <= RichTextLayout.field_m.length)) {
@@ -287,9 +287,9 @@ final class vl {
                 jf.field_N = new int[param1 * 2];
                 if (null == hm.field_A) {
                   hm.field_A = new int[param1 * 2];
-                  if (null == ac.field_I ||
-                    !(param1 + param0 <= ac.field_I.length)) {
-                    ac.field_I = new int[2 * (param0 + param1)];
+                  if (null == DropTargetWidgetContainer.field_I ||
+                    !(param1 + param0 <= DropTargetWidgetContainer.field_I.length)) {
+                    DropTargetWidgetContainer.field_I = new int[2 * (param0 + param1)];
                   }
                   if (null == RichTextLayout.field_m ||
                     !(param1 <= RichTextLayout.field_m.length)) {
@@ -298,18 +298,18 @@ final class vl {
                 } else {
                   if (hm.field_A.length < param1) {
                     hm.field_A = new int[param1 * 2];
-                    if (null == ac.field_I ||
-                      !(param1 + param0 <= ac.field_I.length)) {
-                      ac.field_I = new int[2 * (param0 + param1)];
+                    if (null == DropTargetWidgetContainer.field_I ||
+                      !(param1 + param0 <= DropTargetWidgetContainer.field_I.length)) {
+                      DropTargetWidgetContainer.field_I = new int[2 * (param0 + param1)];
                     }
                     if (null == RichTextLayout.field_m ||
                       !(param1 <= RichTextLayout.field_m.length)) {
                       RichTextLayout.field_m = new boolean[2 * param1];
                     }
                   } else {
-                    if (null == ac.field_I ||
-                      !(param1 + param0 <= ac.field_I.length)) {
-                      ac.field_I = new int[2 * (param0 + param1)];
+                    if (null == DropTargetWidgetContainer.field_I ||
+                      !(param1 + param0 <= DropTargetWidgetContainer.field_I.length)) {
+                      DropTargetWidgetContainer.field_I = new int[2 * (param0 + param1)];
                     }
                     if (null == RichTextLayout.field_m) {
                       RichTextLayout.field_m = new boolean[2 * param1];
@@ -327,28 +327,28 @@ final class vl {
                     !(hm.field_A.length >= param1)) {
                     hm.field_A = new int[param1 * 2];
                   }
-                  if (null == ac.field_I ||
-                    !(param1 + param0 <= ac.field_I.length)) {
-                    ac.field_I = new int[2 * (param0 + param1)];
+                  if (null == DropTargetWidgetContainer.field_I ||
+                    !(param1 + param0 <= DropTargetWidgetContainer.field_I.length)) {
+                    DropTargetWidgetContainer.field_I = new int[2 * (param0 + param1)];
                   }
                 } else {
                   if (null == hm.field_A) {
                     hm.field_A = new int[param1 * 2];
-                    if (null == ac.field_I ||
-                      !(param1 + param0 <= ac.field_I.length)) {
-                      ac.field_I = new int[2 * (param0 + param1)];
+                    if (null == DropTargetWidgetContainer.field_I ||
+                      !(param1 + param0 <= DropTargetWidgetContainer.field_I.length)) {
+                      DropTargetWidgetContainer.field_I = new int[2 * (param0 + param1)];
                     }
                   } else {
                     if (hm.field_A.length >= param1) {
-                      if (null == ac.field_I ||
-                        !(param1 + param0 <= ac.field_I.length)) {
-                        ac.field_I = new int[2 * (param0 + param1)];
+                      if (null == DropTargetWidgetContainer.field_I ||
+                        !(param1 + param0 <= DropTargetWidgetContainer.field_I.length)) {
+                        DropTargetWidgetContainer.field_I = new int[2 * (param0 + param1)];
                       }
                     } else {
                       hm.field_A = new int[param1 * 2];
-                      if (null == ac.field_I ||
-                        !(param1 + param0 <= ac.field_I.length)) {
-                        ac.field_I = new int[2 * (param0 + param1)];
+                      if (null == DropTargetWidgetContainer.field_I ||
+                        !(param1 + param0 <= DropTargetWidgetContainer.field_I.length)) {
+                        DropTargetWidgetContainer.field_I = new int[2 * (param0 + param1)];
                       }
                     }
                   }
@@ -377,9 +377,9 @@ final class vl {
               !(hm.field_A.length >= param1)) {
               hm.field_A = new int[param1 * 2];
             }
-            if (null == ac.field_I ||
-              !(param1 + param0 <= ac.field_I.length)) {
-              ac.field_I = new int[2 * (param0 + param1)];
+            if (null == DropTargetWidgetContainer.field_I ||
+              !(param1 + param0 <= DropTargetWidgetContainer.field_I.length)) {
+              DropTargetWidgetContainer.field_I = new int[2 * (param0 + param1)];
             }
             if (null != RichTextLayout.field_m &&
               param1 <= RichTextLayout.field_m.length) {

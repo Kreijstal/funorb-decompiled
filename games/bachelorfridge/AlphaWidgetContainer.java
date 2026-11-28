@@ -1,0 +1,248 @@
+/*
+ * Decompiled by CFR-JS 0.4.0.
+ */
+final class AlphaWidgetContainer extends WidgetWrapper {
+    static BinaryBitmapFont field_H;
+    static Sprite[] field_D;
+    static PalettedBitmapFont field_C;
+    static String[] field_G;
+    static String field_E;
+    static boolean field_I;
+    int field_F;
+
+    final static PalettedBitmapFont a(int param0, byte param1, IndexedSprite[] param2, int param3, byte[] param4) {
+        int var11_int = 0;
+        byte[] array$0 = null;
+        int incrementValue$2 = 0;
+        PalettedBitmapFont stackIn_28_0 = null;
+        RuntimeException stackIn_31_0 = null;
+        StringBuilder stackIn_31_1 = null;
+        String stackIn_32_2 = null;
+        StringBuilder stackIn_34_1 = null;
+        String stackIn_35_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        int[] var5 = null;
+        RuntimeException var5_ref = null;
+        int[] var6 = null;
+        int[] var7 = null;
+        int[] var8 = null;
+        int[] var9 = null;
+        byte[][] var10 = null;
+        PalettedBitmapFont var11 = null;
+        byte[] var12 = null;
+        byte[] var13 = null;
+        int var14 = 0;
+        int var15 = 0;
+        int var16 = 0;
+        int var17 = 0;
+        int var18 = 0;
+        int var19 = 0;
+        int var20 = 0;
+        int var21 = 0;
+        byte[] var22 = null;
+        int var23 = 0;
+        byte[] var24 = null;
+        int var25 = 0;
+        byte[] var26 = null;
+        int var27 = 0;
+        int var28 = 0;
+        byte[] var29 = null;
+        int[] var30 = null;
+        int[] var31 = null;
+        int[] var32 = null;
+        int[] var33 = null;
+        byte[][] var34 = null;
+        int[] var35 = null;
+        int[] var36 = null;
+        int[] var37 = null;
+        int[] var38 = null;
+        byte[][] var39 = null;
+        int var18Lifetime1;
+        int var19Lifetime1;
+        int var20Lifetime1;
+        int var21Lifetime1;
+        var28 = BachelorFridge.field_y;
+        try {
+          if (param1 != 107) {
+            var29 = (byte[]) null;
+            AlphaWidgetContainer.a(120, (byte) -3, (IndexedSprite[]) null, 68, (byte[]) null);
+          }
+          if (param2.length != 256) {
+            throw new IllegalArgumentException();
+          }
+          var37 = new int[256];
+          var32 = var37;
+          var5 = var32;
+          var38 = new int[256];
+          var33 = var38;
+          var6 = var33;
+          var35 = new int[256];
+          var30 = var35;
+          var7 = var30;
+          var36 = new int[256];
+          var31 = var36;
+          var8 = var31;
+          var9 = new int[]{0, param0, param3};
+          var39 = new byte[256][];
+          var34 = var39;
+          var10 = var34;
+          for (var11_int = 0; var11_int < 256; var11_int++) {
+            var5[var11_int] = -1 + param2[var11_int].field_f;
+            var6[var11_int] = -1 + param2[var11_int].field_c;
+            var7[var11_int] = param2[var11_int].field_d + 2;
+            var8[var11_int] = param2[var11_int].field_e + 2;
+            array$0 = new byte[var35[var11_int] * var36[var11_int]];
+            var10[var11_int] = array$0;
+            var12 = array$0;
+            var13 = param2[var11_int].field_g;
+            var14 = param2[var11_int].field_d;
+            var15 = param2[var11_int].field_e;
+            var16 = var35[var11_int];
+            var17 = var16 - var14;
+            var18 = 0;
+            var19 = var35[var11_int] + 1;
+            for (var20 = 0; var20 < var15; var20++) {
+              for (var21 = 0; var14 > var21; var21++) {
+                if (var13[var18++] != 0) {
+                  var22 = var12;
+                  var23 = -var16 + var19;
+                  var24 = var12;
+                  var25 = -1 + var19;
+                  var26 = var12;
+                  var27 = var19 + 1;
+                  var12[var19 + var16] = (byte) 2;
+                  var26[var27] = (byte) 2;
+                  var24[var25] = (byte) 2;
+                  var22[var23] = (byte) 2;
+                }
+                var19++;
+              }
+              var19 = var19 + var17;
+            }
+            var18Lifetime1 = 0;
+            var19Lifetime1 = var35[var11_int] + 1;
+            for (var20Lifetime1 = 0; var20Lifetime1 < var15; var20Lifetime1++) {
+              for (var21Lifetime1 = 0; var14 > var21Lifetime1; var21Lifetime1++) {
+                if (var13[var18Lifetime1++] == 0) {
+                  var19Lifetime1++;
+                } else {
+                  incrementValue$2 = var19Lifetime1;
+                  var19Lifetime1++;
+                  var12[incrementValue$2] = (byte) 1;
+                }
+              }
+              var19Lifetime1 = var19Lifetime1 + var17;
+            }
+          }
+          var11 = new PalettedBitmapFont(param4, var37, var38, var35, var36, var9, var39);
+          var11.field_B = var11.field_B - 1;
+          var11.field_v = var11.field_v - 1;
+          var11.field_u = var11.field_u - 1;
+          stackIn_28_0 = var11;
+          return stackIn_28_0;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var5_ref = decompiledCaughtException;
+          stackIn_31_0 = var5_ref;
+          stackIn_31_1 = new StringBuilder().append("hl.BA(").append(param0).append(',').append(param1).append(',');
+          if (param2 == null) {
+            stackIn_32_2 = "null";
+          } else {
+            stackIn_32_2 = "{...}";
+          }
+          stackIn_34_1 = ((StringBuilder) (Object) stackIn_31_1).append(stackIn_32_2).append(',').append(param3).append(',');
+          if (param4 == null) {
+            stackIn_35_2 = "null";
+          } else {
+            stackIn_35_2 = "{...}";
+          }
+          throw pe.wrapException((Throwable) ((Object) stackIn_31_0), ((StringBuilder) (Object) stackIn_34_1).append(stackIn_35_2).append(')').toString());
+        }
+    }
+
+    final static boolean a(byte param0, int param1) {
+        int var2;
+        boolean stackIn_6_0 = false;
+        var2 = 84 / ((param0 - 27) / 55);
+        stackIn_6_0 = (param1 == 1) || (param1 == 2) || (param1 == 3);
+        return stackIn_6_0;
+    }
+
+    AlphaWidgetContainer(UiWidget param0) {
+        super(param0.x, param0.y, param0.width, param0.height, (WidgetRenderer) null, (WidgetListener) null);
+        try {
+          param0.setBounds(0, this.height, (byte) 59, this.width, 0);
+          this.field_F = 256;
+          this.child = param0;
+        } catch (RuntimeException runtimeException) {
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "hl.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+        }
+    }
+
+    final void draw(byte param0, int param1, int param2, int param3) {
+        if (param2 != 0) {
+          return;
+        }
+        if (this.child == null) {
+          return;
+        }
+        if (this.field_F == 0) {
+          return;
+        }
+        if (this.field_F == 256) {
+          this.child.draw((byte) 93, this.y + param1, param2, param3 + this.x);
+          return;
+        }
+        Sprite var7 = new Sprite(this.child.width, this.child.height);
+        int var6 = 59 % ((param0 + 20) / 54);
+        bu.a(0, var7);
+        this.child.draw((byte) -85, 0, param2, 0);
+        db.b(111);
+        var7.drawWithOpacity(param3 + this.x, param1 + this.y, this.field_F);
+    }
+
+    public AlphaWidgetContainer() {
+        super(0, 0, 0, 0, (WidgetRenderer) null, (WidgetListener) null);
+        this.field_F = 256;
+    }
+
+    final static void a(int param0, boolean param1) {
+        i.field_a.a(param1, 7802);
+        if (param0 != 0) {
+          return;
+        }
+        d var2 = ao.field_d;
+        if (var2 != null) {
+          var2.drawAllLayers(i.field_a.field_D, i.field_a.field_M, 20077);
+        }
+    }
+
+    public static void h(int param0) {
+        field_H = null;
+        field_E = null;
+        field_C = null;
+        field_G = null;
+        if (param0 != 2) {
+          AlphaWidgetContainer.a((byte) 76, 20);
+        }
+        field_D = null;
+    }
+
+    final static void a(byte param0, java.awt.Component param1) {
+        try {
+          param1.removeKeyListener(TextLayout.field_e);
+          param1.removeFocusListener(TextLayout.field_e);
+          gfa.field_c = -1;
+          if (param0 > -46) {
+            field_D = (Sprite[]) null;
+          }
+        } catch (RuntimeException runtimeException) {
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "hl.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+        }
+    }
+
+    static {
+        field_I = true;
+        field_E = "Waiting for savegame";
+    }
+}

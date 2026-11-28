@@ -12,10 +12,10 @@ final class gm extends InteractiveWidget {
     static int field_J;
     static boolean field_M;
 
-    final void a(vg param0, int param1, int param2, byte param3) {
+    final void updatePointer(UiWidget param0, int param1, int param2, byte param3) {
         try {
           this.field_N = this.field_N + 1;
-          super.a(param0, param1, param2, (byte) -128);
+          super.updatePointer(param0, param1, param2, (byte) -128);
           if (param3 >= -127) {
             gm.releaseDeclaredStaticReferences(-80);
           }
@@ -31,7 +31,7 @@ final class gm extends InteractiveWidget {
           }
           if (af.field_g == null) {
             af.field_g = new tf(PcmResampler.field_c, SpriteGeometry.field_u);
-            PcmResampler.field_c.a((byte) -111, (vg) (af.field_g));
+            PcmResampler.field_c.showDialog((byte) -111, (UiWidget) (af.field_g));
           }
           af.field_g.a(param2, param3, 6, param1);
           SoftwareRasterizer.clearRaster();
@@ -41,7 +41,7 @@ final class gm extends InteractiveWidget {
         }
     }
 
-    final boolean a(boolean param0, vg param1) {
+    final boolean takeFocus(boolean param0, UiWidget param1) {
         RuntimeException var3 = null;
         PacketBuffer var4 = null;
         RuntimeException stackIn_6_0 = null;
@@ -124,7 +124,7 @@ final class gm extends InteractiveWidget {
         return this.field_I.getValidationMessage(-16034);
     }
 
-    final void a(int param0, int param1, byte param2, int param3) {
+    final void drawWidget(int param0, int param1, byte param2, int param3) {
         int var5;
         int var6;
         vh var8;
@@ -135,7 +135,7 @@ final class gm extends InteractiveWidget {
         RgbSprite var13;
         RgbSprite var14;
         var11 = DrPhlogistonSavesTheEarth.field_D ? 1 : 0;
-        super.a(param0, param1, param2, param3);
+        super.drawWidget(param0, param1, param2, param3);
         if (param1 != 0) {
           return;
         }

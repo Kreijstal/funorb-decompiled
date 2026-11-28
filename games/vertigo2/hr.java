@@ -57,7 +57,7 @@ final class hr extends TextureOperator {
         if (bf.field_b == un.field_Hb) {
           return wn.field_d;
         }
-        if (um.field_F == bf.field_b) {
+        if (ArrayWidgetContainer.field_F == bf.field_b) {
           return uk.field_u;
         }
         if (param0 > -85) {

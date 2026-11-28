@@ -59,7 +59,7 @@ final class mh {
     }
 
     final static void a(String param0, byte param1, float param2) {
-        bg.field_G = param2;
+        LabeledWidgetContainer.field_G = param2;
         if (param1 != -125) {
           return;
         }

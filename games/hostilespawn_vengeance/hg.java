@@ -138,7 +138,7 @@ final class hg {
           if (var3 > 16.0) {
             return;
           }
-          var5 = nh.a(-12149, param1, var13);
+          var5 = LabeledWidgetContainer.a(-12149, param1, var13);
           var7 = 16.0;
           if (var13.field_t != 0) {
             var9 = (double)var13.field_t * Math.cos(3.141592653589793 * var13.field_K / 128.0);

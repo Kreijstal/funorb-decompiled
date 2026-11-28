@@ -47,7 +47,7 @@ final class od extends am {
           var7 = new da(param6);
           var8 = -40 / ((param1 - 43) / 58);
           var9 = new da(param3);
-          stackIn_1_0 = na.a(var9, param2, -25978, var7, param5, param0, param4);
+          stackIn_1_0 = LabeledWidgetContainer.a(var9, param2, -25978, var7, param5, param0, param4);
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

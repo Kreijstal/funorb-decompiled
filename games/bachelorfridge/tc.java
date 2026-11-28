@@ -16,8 +16,8 @@ final class tc {
           gs var5 = (gs) null;
           tc.a(false, (gs) null);
         }
-        if (hl.field_I) {
-          return ao.field_d.a(dla.field_j, (byte) 7, gf.field_k);
+        if (AlphaWidgetContainer.field_I) {
+          return ao.field_d.processKeyInput(dla.field_j, (byte) 7, gf.field_k);
         }
         if (MoveOrder.field_k) {
           return wi.a(93, param1, param0);
@@ -475,7 +475,7 @@ final class tc {
           var2_int = SlowAllAnimation.field_w;
           if (param1.field_p != 2) {
             if (param1.field_p != 4) {
-              if (ge.field_F == param1.field_a) {
+              if (LabeledWidgetContainer.field_F == param1.field_a) {
                 var2_intLifetime1 = HazmatEvent.field_u[param1.field_p];
               } else {
                 var2_intLifetime1 = wp.field_q[param1.field_p];
@@ -541,10 +541,10 @@ final class tc {
           if (param1 != -16482) {
             return;
           }
-          var5 = (rg) (rp.field_C.beginForward((byte) 90));
+          var5 = (rg) (ModalDialogHost.field_C.beginForward((byte) 90));
           while (var5 != null) {
             kr.a(93, var5, param0);
-            var5 = (rg) (rp.field_C.nextForward(0));
+            var5 = (rg) (ModalDialogHost.field_C.nextForward(0));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

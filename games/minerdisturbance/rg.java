@@ -74,7 +74,7 @@ class rg extends jk implements WidgetActivationListener {
         }
     }
 
-    rg(hm param0, BitmapFont param1, String param2, boolean param3, boolean param4) {
+    rg(ModalDialogHost param0, BitmapFont param1, String param2, boolean param3, boolean param4) {
         super(param0, new fm((rg) null, param1, param2), 77, 10, 10);
         try {
           this.field_qb = false;
@@ -84,7 +84,7 @@ class rg extends jk implements WidgetActivationListener {
           this.field_nb = param3 ? true : false;
           this.field_pb = new oi(13, 50, 274, 30, 15, 2113632, 4210752);
           this.field_pb.field_O = true;
-          this.a(-1, this.field_pb);
+          this.addChild(-1, this.field_pb);
         } catch (RuntimeException runtimeException) {
           throw lj.wrapClientException((Throwable) ((Object) runtimeException), "rg.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ')');
         }
@@ -97,7 +97,7 @@ class rg extends jk implements WidgetActivationListener {
         }
         fm var2 = new fm(this, this.field_vb, pn.field_f);
         var2.a(15, NetworkArchiveRequest.field_K, param0 ^ 54);
-        this.a((byte) -56, (fe) (var2));
+        this.a((byte) -56, (UiWidget) (var2));
     }
 
     public void onWidgetActivated(int param0, byte param1, InteractiveWidget param2, int param3, int param4) {
@@ -109,7 +109,7 @@ class rg extends jk implements WidgetActivationListener {
         RuntimeException var6 = null;
         try {
           if (this.field_qb) {
-            oj.a(3, 3);
+            AlphaWidgetContainer.a(3, 3);
             this.s(2121792);
           } else {
             jk.a(RichTextLayout.c(-121), 78, "tochangedisplayname.ws");
@@ -171,7 +171,7 @@ class rg extends jk implements WidgetActivationListener {
               }
               ((fm) (Object) stackIn_15_0).a(stackIn_15_1, stackIn_16_2, -89);
             } else {
-              var6.a(af.field_s, 95, (rm) (this));
+              var6.a(af.field_s, 95, (WidgetEventListener) (this));
             }
           } else {
             var6.a(11, pc.field_i, -89);
@@ -185,14 +185,14 @@ class rg extends jk implements WidgetActivationListener {
             } else {
               if (param1 != 6) {
                 if (param1 == 9) {
-                  var6.a(RichTextLayout.field_k, 66, (rm) (this));
+                  var6.a(RichTextLayout.field_k, 66, (WidgetEventListener) (this));
                 }
               } else {
                 var6.a(9, gj.field_b, -98);
               }
             }
           }
-          this.a((byte) -62, (fe) (var6));
+          this.a((byte) -62, (UiWidget) (var6));
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -208,7 +208,7 @@ class rg extends jk implements WidgetActivationListener {
         }
     }
 
-    final boolean a(char param0, fe param1, byte param2, int param3) {
+    final boolean handleKey(char param0, UiWidget param1, byte param2, int param3) {
         RuntimeException var5 = null;
         InteractiveWidget var6 = null;
         boolean stackIn_7_0 = false;
@@ -222,7 +222,7 @@ class rg extends jk implements WidgetActivationListener {
             this.onWidgetActivated(3, (byte) 82, (InteractiveWidget) null, -71, 108);
           }
           if (param3 != 13) {
-            stackIn_7_0 = super.a(param0, param1, (byte) -79, param3);
+            stackIn_7_0 = super.handleKey(param0, param1, (byte) -79, param3);
             return stackIn_7_0;
           }
           this.s(2121792);

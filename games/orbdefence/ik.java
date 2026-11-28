@@ -38,7 +38,7 @@ final class ik extends IntrusiveNode {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw dd.wrapClientException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
+          throw DraggableWidgetContainer.wrapClientException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -85,7 +85,7 @@ final class ik extends IntrusiveNode {
             } else {
               stackIn_11_2 = "{...}";
             }
-            throw dd.wrapClientException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param8).append(',').append(param9).append(')').toString());
+            throw DraggableWidgetContainer.wrapClientException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param8).append(',').append(param9).append(')').toString());
           }
           param0--;
         }
@@ -115,7 +115,7 @@ final class ik extends IntrusiveNode {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw dd.wrapClientException((Throwable) ((Object) var2_ref), "ik.B(" + param0 + ',' + param1 + ')');
+          throw DraggableWidgetContainer.wrapClientException((Throwable) ((Object) var2_ref), "ik.B(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -152,7 +152,7 @@ final class ik extends IntrusiveNode {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw dd.wrapClientException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param2).append(')').toString());
+          throw DraggableWidgetContainer.wrapClientException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -235,7 +235,7 @@ final class ik extends IntrusiveNode {
           } else {
             stackIn_31_2 = "{...}";
           }
-          throw dd.wrapClientException((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_30_1).append(stackIn_31_2).append(')').toString());
+          throw DraggableWidgetContainer.wrapClientException((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_30_1).append(stackIn_31_2).append(')').toString());
         }
     }
 
@@ -638,7 +638,7 @@ final class ik extends IntrusiveNode {
               var31 = var15[1 + var29Lifetime3Lifetime1];
               var32 = var28 * (-var27Lifetime6Lifetime1 + var30) + (var30 - var27Lifetime6Lifetime1) / 2;
               for (var33 = var27Lifetime6Lifetime1; var30 > var33; var33++) {
-                var34 = dd.a(-1, var32, var30 - var27Lifetime6Lifetime1);
+                var34 = DraggableWidgetContainer.a(-1, var32, var30 - var27Lifetime6Lifetime1);
                 this.field_j[var33] = (byte)(32 + var34 * this.field_j[var33] >> 6);
                 var32 = var32 + (var31 - var28);
               }
@@ -678,7 +678,7 @@ final class ik extends IntrusiveNode {
               var37 = var27Lifetime7Lifetime1;
               var33Lifetime1 = var37;
               while (var37 < var30Lifetime1Lifetime1) {
-                var34Lifetime1 = dd.a(-1, var32Lifetime1, var30Lifetime1Lifetime1 - var27Lifetime7Lifetime1);
+                var34Lifetime1 = DraggableWidgetContainer.a(-1, var32Lifetime1, var30Lifetime1Lifetime1 - var27Lifetime7Lifetime1);
                 var35 = var34Lifetime1 + (255 & this.field_k[var37]);
                 if (0 > var35) {
                   var35 = 0;
@@ -747,7 +747,7 @@ final class ik extends IntrusiveNode {
           } else {
             stackIn_207_2 = "{...}";
           }
-          throw dd.wrapClientException((Throwable) ((Object) stackIn_206_0), ((StringBuilder) (Object) stackIn_206_1).append(stackIn_207_2).append(')').toString());
+          throw DraggableWidgetContainer.wrapClientException((Throwable) ((Object) stackIn_206_0), ((StringBuilder) (Object) stackIn_206_1).append(stackIn_207_2).append(')').toString());
         }
     }
 

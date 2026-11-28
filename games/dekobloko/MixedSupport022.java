@@ -54,7 +54,7 @@ final class MixedSupport022 {
           if (integerArgument2 != -2734) {
             MixedSupport022.clearStaticReferences((byte) 4);
           }
-          stackEmailValidationErrorLocal13 = UiComponentPart020.computeEmailValidationError1152((byte) 86, stringArrayLocal4[stringArrayLocal4.length - 1]);
+          stackEmailValidationErrorLocal13 = ArrayWidgetContainer.computeEmailValidationError1152((byte) 86, stringArrayLocal4[stringArrayLocal4.length - 1]);
           return stackEmailValidationErrorLocal13;
         } catch (java.lang.RuntimeException caughtParameterLocal18) {
           caughtExceptionLocal17 = caughtParameterLocal18;
@@ -86,30 +86,30 @@ final class MixedSupport022 {
         MixedSupport042.performAction0537(130, 256, 16694016, MixedSupport068.stringState0302, 82 + integerArgument1, SceneWidget.renderingSupport009State0007);
         int integerLocal2 = 145;
         MixedSupport035.rgbSpriteArrayArrayState0006[0][0].drawScaled(82 + integerArgument1, integerLocal2, 18, 18);
-        integerLocal2 = integerLocal2 + (MixedSupport045.computeInteger0552(188, 0, integerLocal2, NineSliceSprite.stringState0072, 16, 64, 16777215, UiComponentPart029.renderingSupport009State0005, (byte) -124, 0, 110 + integerArgument1) * 16 + 16);
+        integerLocal2 = integerLocal2 + (MixedSupport045.computeInteger0552(188, 0, integerLocal2, NineSliceSprite.stringState0072, 16, 64, 16777215, DraggableWidgetContainer.renderingSupport009State0005, (byte) -124, 0, 110 + integerArgument1) * 16 + 16);
         MixedSupport035.rgbSpriteArrayArrayState0006[1][3].drawScaled(integerArgument1 + 82, integerLocal2, 18, 18);
-        integerLocal2 = integerLocal2 + (16 + MixedSupport045.computeInteger0552(188, 0, integerLocal2, NanoFrameTimer.stringState0129, 16, 64, 16777215, UiComponentPart029.renderingSupport009State0005, (byte) -125, 0, 110 + integerArgument1) * 16);
+        integerLocal2 = integerLocal2 + (16 + MixedSupport045.computeInteger0552(188, 0, integerLocal2, NanoFrameTimer.stringState0129, 16, 64, 16777215, DraggableWidgetContainer.renderingSupport009State0005, (byte) -125, 0, 110 + integerArgument1) * 16);
         DisplayModeController.performAction1439(integerLocal2, MixedSupport070.integerState0396, MixedSupport049.integerState0264, -115, 190 + integerArgument1, TextLineMetrics.integerState0534, 0);
         SoftwareRaster.drawVerticalLine(309 + integerArgument1, 117, 242, 263172);
         integerLocal1 = 116;
         SoftwareRaster.drawVerticalLine(integerArgument1 + 310, 117, 242, 6316128);
         MixedSupport042.performAction0537(integerLocal1 + 14, 256, 16694016, MixedSupport129.stringState0559, 322 + integerArgument1, SceneWidget.renderingSupport009State0007);
         integerLocal1 += 29;
-        MixedSupport042.performAction0537(13 + integerLocal1, 256, 16777215, GameplayControls.stringArrayState0056[0], integerArgument1 + 322, UiComponentPart029.renderingSupport009State0005);
+        MixedSupport042.performAction0537(13 + integerLocal1, 256, 16777215, GameplayControls.stringArrayState0056[0], integerArgument1 + 322, DraggableWidgetContainer.renderingSupport009State0005);
         UiComponentPart023.rgbSpriteArrayState0021[0].draw(integerArgument1 + 480, integerLocal1 + 1);
         integerLocal1 += 18;
-        MixedSupport042.performAction0537(13 + integerLocal1, 256, 16777215, GameplayControls.stringArrayState0056[1], 322 + integerArgument1, UiComponentPart029.renderingSupport009State0005);
+        MixedSupport042.performAction0537(13 + integerLocal1, 256, 16777215, GameplayControls.stringArrayState0056[1], 322 + integerArgument1, DraggableWidgetContainer.renderingSupport009State0005);
         UiComponentPart023.rgbSpriteArrayState0021[1].draw(integerArgument1 + 480, integerLocal1 + 1);
         integerLocal1 += 34;
-        MixedSupport042.performAction0537(integerLocal1 + 13, 256, 16777215, GameplayControls.stringArrayState0056[2], integerArgument1 + 322, UiComponentPart029.renderingSupport009State0005);
+        MixedSupport042.performAction0537(integerLocal1 + 13, 256, 16777215, GameplayControls.stringArrayState0056[2], integerArgument1 + 322, DraggableWidgetContainer.renderingSupport009State0005);
         UiComponentPart023.rgbSpriteArrayState0021[3].draw(480 + integerArgument1, integerLocal1 + 1);
         integerLocal1 += 18;
-        MixedSupport042.performAction0537(integerLocal1 + 13, 256, 16777215, GameplayControls.stringArrayState0056[3], integerArgument1 + 322, UiComponentPart029.renderingSupport009State0005);
+        MixedSupport042.performAction0537(integerLocal1 + 13, 256, 16777215, GameplayControls.stringArrayState0056[3], integerArgument1 + 322, DraggableWidgetContainer.renderingSupport009State0005);
         UiComponentPart023.rgbSpriteArrayState0021[4].draw(integerArgument1 + 480, integerLocal1 + 1);
-        MixedSupport029.performAction0407(16777215, 506 + integerArgument1, GameplayControls.stringArrayState0056[4], integerLocal1 + 13, (byte) 75, UiComponentPart029.renderingSupport009State0005);
+        MixedSupport029.performAction0407(16777215, 506 + integerArgument1, GameplayControls.stringArrayState0056[4], integerLocal1 + 13, (byte) 75, DraggableWidgetContainer.renderingSupport009State0005);
         UiComponentPart023.rgbSpriteArrayState0021[2].draw(516 + integerArgument1, integerLocal1 + 1);
         integerLocal1 += 34;
-        MixedSupport042.performAction0537(integerLocal1 + 13, 256, 16777215, GameplayControls.stringArrayState0056[5], 322 + integerArgument1, UiComponentPart029.renderingSupport009State0005);
+        MixedSupport042.performAction0537(integerLocal1 + 13, 256, 16777215, GameplayControls.stringArrayState0056[5], 322 + integerArgument1, DraggableWidgetContainer.renderingSupport009State0005);
         if (!booleanArgument2) {
           return;
         }
@@ -117,7 +117,7 @@ final class MixedSupport022 {
         integerLocal1 += 34;
         MixedSupport042.performAction0537(14 + integerLocal1, 256, 16694016, MixedSupport068.stringState0303, integerArgument1 + 322, SceneWidget.renderingSupport009State0007);
         integerLocal1 += 29;
-        MixedSupport042.performAction0537(13 + integerLocal1, 256, 16777215, GameplayControls.stringArrayState0056[6], 322 + integerArgument1, UiComponentPart029.renderingSupport009State0005);
+        MixedSupport042.performAction0537(13 + integerLocal1, 256, 16777215, GameplayControls.stringArrayState0056[6], 322 + integerArgument1, DraggableWidgetContainer.renderingSupport009State0005);
         UiComponentPart023.rgbSpriteArrayState0021[6].draw(480 + integerArgument1, 1 + integerLocal1);
     }
 

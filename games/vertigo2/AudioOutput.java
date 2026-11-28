@@ -410,7 +410,7 @@ class AudioOutput {
           if (var1 != 0) {
             field_j.field_a = true;
             while (field_j.field_b) {
-              um.sleepMillis(true, 50L);
+              ArrayWidgetContainer.sleepMillis(true, 50L);
             }
             field_j = null;
           }

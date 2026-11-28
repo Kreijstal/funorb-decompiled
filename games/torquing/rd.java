@@ -228,7 +228,7 @@ final class rd extends am {
             var9 = va.a(ci.field_c, (byte) 123, var6);
             var10 = va.a(MatchingFieldValidator.field_o, (byte) 127, var6);
             var11 = (this.field_u * de.field_d[var8] >> 12) + var9;
-            var12 = var10 + (this.field_u * jh.field_x[var8] >> 12);
+            var12 = var10 + (this.field_u * SingleChildWidgetContainer.field_x[var8] >> 12);
             var13 = var12 - var10;
             var14 = var11 - var9;
             if (0 != var14 ||
@@ -270,7 +270,7 @@ final class rd extends am {
               var22 = stackIn_31_0;
               for (var23 = var9; var11 > var23; var23++) {
                 var24 = var20 * (-var9 + var23) + (1024 + var21);
-                var25 = jh.field_A & var23;
+                var25 = SingleChildWidgetContainer.field_A & var23;
                 var26 = var16Lifetime2 & NameSuggestionsPanel.field_I;
                 if (var15 == 0) {
                   var31[var25][var26] = var24;

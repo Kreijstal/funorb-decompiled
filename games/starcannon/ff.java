@@ -15,7 +15,7 @@ final class ff extends DualLinkNode {
         if (jl.field_a == DualLinkNode.field_k) {
           return jl.field_c;
         }
-        if (jl.field_a == ie.field_x) {
+        if (jl.field_a == AlphaWidgetContainer.field_x) {
           return te.field_a;
         }
         if (!qa.field_a.b(false)) {

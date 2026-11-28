@@ -173,7 +173,7 @@ final class SceneWidgetPart010 extends SceneWidget {
 
     final static void performAction1467(byte byteArgument1) {
         if (MixedSupport005.uiComponentPart016State0001 != null) {
-          MixedSupport005.uiComponentPart016State0001.performAction0835((byte) -66);
+          MixedSupport005.uiComponentPart016State0001.snapAndPruneDialogs((byte) -66);
         }
         if (null != TextHotspotBounds.uiComponentPart026State0001) {
           TextHotspotBounds.uiComponentPart026State0001.performAction1394((byte) 114);
@@ -246,7 +246,7 @@ final class SceneWidgetPart010 extends SceneWidget {
             integerArrayLocal3[integerLocal4] = 0;
             integerLocal4++;
           }
-          UiComponentPart015.integerState0319 = 0;
+          DropTargetWidgetContainer.integerState0319 = 0;
         } catch (RuntimeException runtimeException) {
           throw ClientException.computeDiagnosticSupport0020365((Throwable) ((Object) runtimeException), "s.A(" + booleanArgument1 + ')');
         }

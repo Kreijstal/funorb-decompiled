@@ -389,17 +389,17 @@ final class ri {
             if (IntrusiveNode.field_h[param2] > IntrusiveNode.field_h[param3]) {
               return false;
             }
-            if (cc.field_L[param3] > cc.field_L[param2]) {
+            if (ModalDialog.field_L[param3] > ModalDialog.field_L[param2]) {
               return true;
             }
-            if (cc.field_L[param3] < cc.field_L[param2]) {
+            if (ModalDialog.field_L[param3] < ModalDialog.field_L[param2]) {
               return false;
             }
           } else {
-            if (cc.field_L[param2] < cc.field_L[param3]) {
+            if (ModalDialog.field_L[param2] < ModalDialog.field_L[param3]) {
               return true;
             }
-            if (cc.field_L[param3] < cc.field_L[param2]) {
+            if (ModalDialog.field_L[param3] < ModalDialog.field_L[param2]) {
               return false;
             }
             if (IntrusiveNode.field_h[param2] < IntrusiveNode.field_h[param3]) {

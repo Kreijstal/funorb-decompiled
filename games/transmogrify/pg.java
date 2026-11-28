@@ -15,7 +15,7 @@ final class pg {
         if (param0 != 0) {
           pg.clearStaticReferences((byte) -65);
           if (null != ResourceArchive.field_f) {
-            ResourceArchive.field_f.j(param0 + 127);
+            ResourceArchive.field_f.snapAndPruneDialogs(param0 + 127);
             if (gh.field_m != null) {
               gh.field_m.r(-96);
             }
@@ -35,7 +35,7 @@ final class pg {
           FullscreenFocusCanvas.c(-1);
           return;
         }
-        ResourceArchive.field_f.j(param0 + 127);
+        ResourceArchive.field_f.snapAndPruneDialogs(param0 + 127);
         if (gh.field_m != null) {
           gh.field_m.r(-96);
         }

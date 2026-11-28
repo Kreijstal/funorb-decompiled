@@ -142,9 +142,9 @@ final class bg extends DungeonAssaultScreen {
         if (fb.field_d == null) {
           fb.field_d = new di[10];
         }
-        bj.field_G = false;
+        DropTargetWidgetContainer.field_G = false;
         if (ed.c(true)) {
-          oi.f((byte) 100);
+          DraggableWidgetContainer.f((byte) 100);
         } else {
           ri.a(CrossfadingMidiPcmStream.field_u, -113);
         }
@@ -341,7 +341,7 @@ final class bg extends DungeonAssaultScreen {
           bg.b(s.field_b[var3], 85, -2 + (s.field_b[1 + var3] - s.field_b[var3]), 25, 0, 48, 128);
           bg.b(s.field_b[var3], 112, -2 - s.field_b[var3] + s.field_b[1 + var3], 256, 0, 48, 128);
         }
-        if (!bj.field_G) {
+        if (!DropTargetWidgetContainer.field_G) {
           var3Lifetime1 = 4 + param0;
           if (ao.field_o > 10 + vd.field_a) {
             stackIn_8_0 = 10;
@@ -800,7 +800,7 @@ final class bg extends DungeonAssaultScreen {
         }
         if (vd.field_a != hi.field_c.field_z) {
           this.a((byte) -104, hi.field_c.field_z);
-          oi.f((byte) 100);
+          DraggableWidgetContainer.f((byte) 100);
         }
         var2 = this.b(-73, eh.field_h, hj.field_S);
         var3 = -1;

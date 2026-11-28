@@ -144,7 +144,7 @@ final class vj extends kc implements WidgetActivationListener {
         }
     }
 
-    vj(tc param0, ae param1) {
+    vj(ModalDialogHost param0, ae param1) {
         super(param0, 200, 150);
         Object var3 = null;
         Object stackIn_12_0 = null;
@@ -173,14 +173,14 @@ final class vj extends kc implements WidgetActivationListener {
               }
             }
           }
-          var4 = new UiWidget((String) (var3), (qg) null);
+          var4 = new UiWidget((String) (var3), (WidgetEventListener) null);
           var4.field_s = 0;
           var4.field_f = 80;
           var4.field_j = 50;
           var4.field_i = this.field_i;
-          var4.field_o = (de) ((Object) new DefaultTextWidgetRenderer(nb.field_b, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true));
-          this.a(true, var4);
-          this.field_Z = this.a(mc.field_e, (qg) (this), true);
+          var4.field_o = (WidgetRenderer) ((Object) new DefaultTextWidgetRenderer(nb.field_b, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true));
+          this.addChild(true, var4);
+          this.field_Z = this.a(mc.field_e, (WidgetEventListener) (this), true);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -202,7 +202,7 @@ final class vj extends kc implements WidgetActivationListener {
         }
     }
 
-    private final InteractiveWidget a(String param0, qg param1, boolean param2) {
+    private final InteractiveWidget a(String param0, WidgetEventListener param1, boolean param2) {
         InteractiveWidget var4 = null;
         RuntimeException var4_ref = null;
         int var5 = 0;
@@ -215,12 +215,12 @@ final class vj extends kc implements WidgetActivationListener {
         RuntimeException decompiledCaughtException = null;
         try {
           var4 = new InteractiveWidget(param0, param1);
-          var4.field_o = (de) ((Object) new gb());
+          var4.field_o = (WidgetRenderer) ((Object) new gb());
           var5 = -6 + this.field_f;
           this.field_f = this.field_f + 38;
-          var4.a(15, -16 + (this.field_i - 14), (byte) 124, 30, var5);
-          this.a(param2, var4);
-          this.d((byte) -30);
+          var4.setBounds(15, -16 + (this.field_i - 14), (byte) 124, 30, var5);
+          this.addChild(param2, var4);
+          this.refreshLayout((byte) -30);
           stackIn_1_0 = var4;
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

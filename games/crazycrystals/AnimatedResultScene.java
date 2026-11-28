@@ -14,7 +14,7 @@ abstract class AnimatedResultScene extends ResultScene {
           this.updateResultScene((byte) 13);
         }
         SoftwareRasterizer.fillRectangleAlpha(0, 0, 480, 480, 0, kb.field_g);
-        oj.a(false, FloatingScoreLabel.field_a, 480, 480, (double)(-jj.field_b) + (double)FloatingScoreLabel.field_a.length * param0, 0, param0, 0, (byte) -32, param0 * (double)FloatingScoreLabel.field_a[0].length);
+        DraggableWidgetContainer.a(false, FloatingScoreLabel.field_a, 480, 480, (double)(-jj.field_b) + (double)FloatingScoreLabel.field_a.length * param0, 0, param0, 0, (byte) -32, param0 * (double)FloatingScoreLabel.field_a[0].length);
     }
 
     public static void clearDeclaredStaticReferences(int param0) {

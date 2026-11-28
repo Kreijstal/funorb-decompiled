@@ -37,9 +37,9 @@ final class ph {
 
     final static void a(java.awt.Component param0, int param1) {
         try {
-          param0.removeMouseListener(hh.field_M);
-          param0.removeMouseMotionListener(hh.field_M);
-          param0.removeFocusListener(hh.field_M);
+          param0.removeMouseListener(DraggableWidgetContainer.field_M);
+          param0.removeMouseMotionListener(DraggableWidgetContainer.field_M);
+          param0.removeFocusListener(DraggableWidgetContainer.field_M);
           NameSuggestionsPanel.field_I = 0;
           int var2_int = 102 / ((param1 - 71) / 52);
         } catch (RuntimeException runtimeException) {

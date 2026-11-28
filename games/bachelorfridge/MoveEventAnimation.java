@@ -198,7 +198,7 @@ final class MoveEventAnimation extends MovementAnimation {
           this.field_B = false;
         }
         var3.field_s.field_s = this.field_k;
-        if (!hl.a((byte) -124, this.field_C)) {
+        if (!AlphaWidgetContainer.a((byte) -124, this.field_C)) {
           return;
         }
         if (var3.field_s.isCarryingFlag((byte) 85)) {
@@ -243,7 +243,7 @@ final class MoveEventAnimation extends MovementAnimation {
           if (this.field_C == 0) {
             this.field_t = 1;
           } else {
-            if (hl.a((byte) -49, this.field_C)) {
+            if (AlphaWidgetContainer.a((byte) -49, this.field_C)) {
               this.field_t = 3;
             } else {
               this.field_B = true;

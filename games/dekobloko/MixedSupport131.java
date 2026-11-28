@@ -37,12 +37,12 @@ final class MixedSupport131 {
         int integerLocal22;
         integerLocal16 = DekoBlokoClient.obfuscationControl ? 1 : 0;
         try {
-          cipherPacketBufferLocal18 = UiComponentPart006.cipherPacketBufferState0001;
+          cipherPacketBufferLocal18 = LabeledWidgetContainer.cipherPacketBufferState0001;
           integerLocal5 = cipherPacketBufferLocal18.readUnsignedByte((byte) -110);
-          mixedSupport020Local6 = (MixedSupport020) (UiComponentPart020.nodeDequeState0022.beginBackward((byte) -54));
+          mixedSupport020Local6 = (MixedSupport020) (ArrayWidgetContainer.nodeDequeState0022.beginBackward((byte) -54));
           while (mixedSupport020Local6 != null) {
             if (integerLocal5 != mixedSupport020Local6.integerState0115) {
-              mixedSupport020Local6 = (MixedSupport020) (UiComponentPart020.nodeDequeState0022.nextBackward(true));
+              mixedSupport020Local6 = (MixedSupport020) (ArrayWidgetContainer.nodeDequeState0022.nextBackward(true));
               continue;
             }
             break;

@@ -34,17 +34,17 @@ final class ConfirmedEmailAvailabilityValidator extends TextFieldValidator {
             if (ph.field_E != null &&
               ph.field_E.focusLost) {
               AccountNameAvailabilityValidator.e((byte) -23);
-              kf.field_h.b(-3264, new gn(kf.field_h, ab.field_A));
+              kf.field_h.showDialog(-3264, new gn(kf.field_h, ModalDialog.field_A));
             }
             return;
           }
           if (param0 != 3) {
             return;
           }
-          kf.field_h.a(NetworkGameClient.field_l, false, true, vl.field_a);
-          kf.field_h.b(false);
+          kf.field_h.processPointerInput(NetworkGameClient.field_l, false, true, vl.field_a);
+          kf.field_h.advanceDialogs(false);
           while (ge.b(-65)) {
-            kf.field_h.a(WallTile.field_q, false, LaserHubTile.field_p);
+            kf.field_h.processKeyInput(WallTile.field_q, false, LaserHubTile.field_p);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

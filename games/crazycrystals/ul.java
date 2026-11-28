@@ -93,7 +93,7 @@ final class ul extends um {
     final static boolean a(boolean param0) {
         if (!param0) {
           ul.clearStaticReferences(false);
-          if (ol.field_z[0 >= mo.field_l ? 1 : 2] == null) {
+          if (ModalDialogHost.field_z[0 >= mo.field_l ? 1 : 2] == null) {
             return false;
           }
           if (!jc.field_b) {
@@ -104,7 +104,7 @@ final class ul extends um {
           }
           return true;
         }
-        if (ol.field_z[0 >= mo.field_l ? 1 : 2] == null) {
+        if (ModalDialogHost.field_z[0 >= mo.field_l ? 1 : 2] == null) {
           return false;
         }
         if (jc.field_b) {

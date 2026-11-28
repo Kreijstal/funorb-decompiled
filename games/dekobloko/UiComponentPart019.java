@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class UiComponentPart019 extends UiComponentPart020 implements WidgetActivationListener {
+final class UiComponentPart019 extends ArrayWidgetContainer implements WidgetActivationListener {
     static String stringState0348;
     static String stringState0349;
     static int integerState0504;
@@ -12,12 +12,12 @@ final class UiComponentPart019 extends UiComponentPart020 implements WidgetActiv
     static int integerState0505;
     static String stringState0350;
 
-    final void performAction0218(UiComponent uiComponentArgument1, int integerArgument2, int integerArgument3, int integerArgument4) {
+    final void updatePointer(UiComponent uiComponentArgument1, int integerArgument2, int integerArgument3, int integerArgument4) {
         try {
           if (integerArgument2 < 38) {
             stringState0349 = (String) null;
           }
-          super.performAction0218(uiComponentArgument1, 98, integerArgument3, integerArgument4);
+          super.updatePointer(uiComponentArgument1, 98, integerArgument3, integerArgument4);
           this.interactiveComponentState0011.booleanState0035 = this.uiComponentPart024State0001.getFieldValidator(-128).getValidationStatus(20350) == MixedSupport023.validationStatusState0001 ? true : false;
         } catch (RuntimeException runtimeException) {
           throw ClientException.computeDiagnosticSupport0020365((Throwable) ((Object) runtimeException), "mf.A(" + (uiComponentArgument1 != null ? "{...}" : "null") + ',' + integerArgument2 + ',' + integerArgument3 + ',' + integerArgument4 + ')');
@@ -99,7 +99,7 @@ final class UiComponentPart019 extends UiComponentPart020 implements WidgetActiv
         if (!MixedSupport097.booleanState0133) {
           integerLocal3 = 0;
         }
-        UiComponentPart029.sceneWidgetState0109.performAction1764(TextFieldValidator.sceneWidgetState0151.integerState0896 - integerLocal3, 0, TextFieldValidator.sceneWidgetState0151.integerState0915 - 40, 40, integerLocal3);
+        DraggableWidgetContainer.sceneWidgetState0109.performAction1764(TextFieldValidator.sceneWidgetState0151.integerState0896 - integerLocal3, 0, TextFieldValidator.sceneWidgetState0151.integerState0915 - 40, 40, integerLocal3);
     }
 
     final static void performAction1046(int integerArgument1, String[] stringArrayArgument2, byte[] byteArrayArgument3, ResourceArchive resourceArchiveArgument4, int integerArgument5, String[][] stringArrayArrayArgument6, RgbSprite[][] rgbSpriteArrayArrayArgument7, int integerArgument8, String[][] stringArrayArrayArgument9, String[] stringArrayArgument10, String[] stringArrayArgument11, RgbSprite[][] rgbSpriteArrayArrayArgument12, int integerArgument13, byte[] byteArrayArgument14, int[] integerArrayArgument15) {
@@ -198,10 +198,10 @@ final class UiComponentPart019 extends UiComponentPart020 implements WidgetActiv
           MixedSupport095.sceneWidgetState0095 = new SceneWidget(0L, TranslatedUiText.sceneWidgetState0086, RenderingSupport006.stringState0267.toUpperCase());
           MixedSupport077.sceneWidgetState0074 = new SceneWidget(0L, RenderingSupport001.sceneWidgetState0005);
           MixedSupport033.sceneWidgetState0025 = new SceneWidget(0L, MixedSupport039.sceneWidgetState0029, MixedSupport077.stringState0333);
-          MixedSupport021.sceneWidgetState0016 = new SceneWidget(0L, UiComponentPart003.sceneWidgetState0008, TranslatedUiText.stringState0352);
-          MixedSupport121.sceneWidgetState0118 = new SceneWidget(0L, UiComponentPart003.sceneWidgetState0008, DebouncedFieldValidator.stringState0038);
-          UiComponentPart018.sceneWidgetState0079 = new SceneWidget(0L, UiComponentPart003.sceneWidgetState0008, DualNode.stringState0044);
-          EmailValidationError.sceneWidgetState0058 = new SceneWidget(0L, UiComponentPart003.sceneWidgetState0008, UiComponentPart012.stringState0206);
+          MixedSupport021.sceneWidgetState0016 = new SceneWidget(0L, ModalDialog.sceneWidgetState0008, TranslatedUiText.stringState0352);
+          MixedSupport121.sceneWidgetState0118 = new SceneWidget(0L, ModalDialog.sceneWidgetState0008, DebouncedFieldValidator.stringState0038);
+          UiComponentPart018.sceneWidgetState0079 = new SceneWidget(0L, ModalDialog.sceneWidgetState0008, DualNode.stringState0044);
+          EmailValidationError.sceneWidgetState0058 = new SceneWidget(0L, ModalDialog.sceneWidgetState0008, UiComponentPart012.stringState0206);
           SceneWidgetPart001.sceneWidgetState0006 = new SceneWidget(0L, NetworkSupport003.sceneWidgetState0018, SceneWidgetPart001.stringState0057);
           MixedSupport047.sceneWidgetPart008State0003 = new SceneWidgetPart008(0L, new SceneWidget(0L, (SceneWidget) null), MixedSupport047.sceneWidgetState0038, MixedSupport123.sceneWidgetPart006State0002);
           MixedSupport088.sceneWidgetState0092 = new SceneWidget(0L, MixedSupport021.sceneWidgetState0015, RenderingSupport012.stringState0442.toUpperCase());
@@ -219,7 +219,7 @@ final class UiComponentPart019 extends UiComponentPart020 implements WidgetActiv
             stackSceneWidgetLocal10 = null;
             stackStringLocal11 = NetworkSupport011.stringState0430;
           }
-          UiComponentPart029.sceneWidgetState0109 = new SceneWidget(stackLongLocal7, stackSceneWidgetLocal8, ((String) (Object) stackStringLocal11).toUpperCase());
+          DraggableWidgetContainer.sceneWidgetState0109 = new SceneWidget(stackLongLocal7, stackSceneWidgetLocal8, ((String) (Object) stackStringLocal11).toUpperCase());
           TextFieldValidator.sceneWidgetState0151 = new SceneWidget(0L, (SceneWidget) null);
           TextFieldValidator.sceneWidgetState0151.performAction1768(MixedSupport095.sceneWidgetState0095, -16834);
           TextFieldValidator.sceneWidgetState0151.performAction1768(MixedSupport077.sceneWidgetState0074, -16834);
@@ -235,7 +235,7 @@ final class UiComponentPart019 extends UiComponentPart020 implements WidgetActiv
           if (MixedSupport097.booleanState0133) {
             TextFieldValidator.sceneWidgetState0151.performAction1768(MixedSupport088.sceneWidgetState0092, -16834);
           }
-          TextFieldValidator.sceneWidgetState0151.performAction1768(UiComponentPart029.sceneWidgetState0109, -16834);
+          TextFieldValidator.sceneWidgetState0151.performAction1768(DraggableWidgetContainer.sceneWidgetState0109, -16834);
           MixedSupport033.sceneWidgetState0024 = new SceneWidget(0L, MixedSupport125.sceneWidgetState0125);
           MixedSupport033.sceneWidgetState0024.integerState0885 = 0;
           MixedSupport033.sceneWidgetState0024.integerState0916 = 1;
@@ -439,8 +439,8 @@ final class UiComponentPart019 extends UiComponentPart020 implements WidgetActiv
 
     final void performAction1047(int integerArgument1) {
         int integerLocal1 = 250;
-        this.uiComponentPart024State0001.performAction0222(25, 140, -integerLocal1 + this.integerState0107 >> 1, this.integerState0108 - 5 >> 1, -16555);
-        this.interactiveComponentState0011.performAction0222(30, 100, 10 + (140 + (-integerLocal1 + this.integerState0107 >> 1)), 2 + (20 + (this.integerState0108 - integerArgument1) >> 1), integerArgument1 ^ -16565);
+        this.uiComponentPart024State0001.setBounds(25, 140, -integerLocal1 + this.integerState0107 >> 1, this.integerState0108 - 5 >> 1, -16555);
+        this.interactiveComponentState0011.setBounds(30, 100, 10 + (140 + (-integerLocal1 + this.integerState0107 >> 1)), 2 + (20 + (this.integerState0108 - integerArgument1) >> 1), integerArgument1 ^ -16565);
     }
 
     final static void performAction1044(byte byteArgument1, int integerArgument2) {
@@ -465,8 +465,8 @@ final class UiComponentPart019 extends UiComponentPart020 implements WidgetActiv
         }
     }
 
-    final void performAction0162(int integerArgument1, int integerArgument2, int integerArgument3, int integerArgument4) {
-        super.performAction0162(integerArgument1, -106, integerArgument3, integerArgument4);
+    final void drawWidget(int integerArgument1, int integerArgument2, int integerArgument3, int integerArgument4) {
+        super.drawWidget(integerArgument1, -106, integerArgument3, integerArgument4);
         MixedSupport011.bitmapFontState0006.drawString(MixedSupport137.stringState0589, 4 + integerArgument1 + this.integerState0110, 4 + MixedSupport011.bitmapFontState0006.integerState0518 + integerArgument4 + this.integerState0104, 16777215, -1);
         if (integerArgument2 >= -103) {
           InteractiveComponent interactiveComponentLocal1 = (InteractiveComponent) null;
@@ -475,13 +475,13 @@ final class UiComponentPart019 extends UiComponentPart020 implements WidgetActiv
     }
 
     UiComponentPart019(int integerArgument1, int integerArgument2, int integerArgument3, int integerArgument4) {
-        super(integerArgument1, integerArgument2, integerArgument3, integerArgument4, (CallbackContract004) null);
+        super(integerArgument1, integerArgument2, integerArgument3, integerArgument4, (WidgetRenderer) null);
         this.uiComponentPart024State0001 = new BirthDateTextFields(new MixedSupport024(10000536), MixedSupport047.booleanState0057, 0, 0, 140, 25);
         this.uiComponentPart024State0001.attachDateValidator((byte) 79, new BirthDateValidator());
-        this.interactiveComponentState0011 = new InteractiveComponent(MixedSupport034.stringState0163, (CallbackContract006) (this));
+        this.interactiveComponentState0011 = new InteractiveComponent(MixedSupport034.stringState0163, (WidgetEventListener) (this));
         this.uiComponentArrayState0001 = new UiComponent[]{(UiComponent) ((Object) this.uiComponentPart024State0001), (UiComponent) ((Object) this.interactiveComponentState0011)};
-        this.interactiveComponentState0011.callbackContract004State0006 = (CallbackContract004) ((Object) new MixedSupport041());
-        this.performAction0228(119);
+        this.interactiveComponentState0011.callbackContract004State0006 = (WidgetRenderer) ((Object) new MixedSupport041());
+        this.refreshLayout(119);
     }
 
     static {

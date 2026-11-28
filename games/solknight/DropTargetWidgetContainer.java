@@ -1,0 +1,91 @@
+/*
+ * Decompiled by CFR-JS 0.4.0.
+ */
+final class DropTargetWidgetContainer extends SingleChildWidgetContainer {
+    static int field_I;
+    static int field_J;
+    static int field_K;
+    static Sprite field_H;
+    static String field_L;
+
+    final static void a(byte param0, java.awt.Canvas param1) {
+        RuntimeException var2 = null;
+        java.awt.Canvas var3 = null;
+        RuntimeException stackIn_8_0 = null;
+        StringBuilder stackIn_8_1 = null;
+        String stackIn_9_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        try {
+          DirectByteStorage.a(0, (java.awt.Component) ((Object) param1));
+          ch.a((java.awt.Component) ((Object) param1), 122);
+          if (null != ah.field_d) {
+            ah.field_d.attach((java.awt.Component) ((Object) param1), true);
+          }
+          if (param0 < -33) {
+            return;
+          }
+          var3 = (java.awt.Canvas) null;
+          DropTargetWidgetContainer.a((byte) 120, (java.awt.Canvas) null);
+          return;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var2 = decompiledCaughtException;
+          stackIn_8_0 = var2;
+          stackIn_8_1 = new StringBuilder().append("th.M(").append(param0).append(',');
+          if (param1 == null) {
+            stackIn_9_2 = "null";
+          } else {
+            stackIn_9_2 = "{...}";
+          }
+          throw fc.wrapClientException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
+        }
+    }
+
+    final void pointerReleased(int param0, int param1, UiWidget param2, int param3, int param4, int param5) {
+        DraggableWidgetContainer var7 = null;
+        try {
+          super.pointerReleased(param0, param1 ^ param1, param2, param3, param4, param5);
+          var7 = TextLayout.field_a;
+          if (var7 != null) {
+            if (!this.containsPointer(param0, param4, param5, param3, -110)) {
+              return;
+            }
+            if (this.field_n instanceof WidgetDropListener) {
+              ((WidgetDropListener) (this.field_n)).widgetDropped(this, -7935, var7);
+              TextLayout.field_a = null;
+              return;
+            }
+            if (!(var7.field_n instanceof WidgetDropListener)) {
+              return;
+            }
+            ((WidgetDropListener) (var7.field_n)).widgetDropped(this, -7935, var7);
+            TextLayout.field_a = null;
+          }
+        } catch (RuntimeException runtimeException) {
+          throw fc.wrapClientException((Throwable) ((Object) runtimeException), "th.O(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ',' + param5 + ')');
+        }
+    }
+
+    private DropTargetWidgetContainer(int param0, int param1, int param2, int param3, WidgetRenderer param4, WidgetEventListener param5, UiWidget param6) {
+        super(param0, param1, param2, param3, param4, param5);
+        try {
+          this.field_G = param6;
+        } catch (RuntimeException runtimeException) {
+          throw fc.wrapClientException((Throwable) ((Object) runtimeException), "th.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + (param5 != null ? "{...}" : "null") + ',' + (param6 != null ? "{...}" : "null") + ')');
+        }
+    }
+
+    public static void clearDeclaredStaticReferences(int param0) {
+        field_L = null;
+        if (param0 <= 105) {
+          DropTargetWidgetContainer.clearDeclaredStaticReferences(-122);
+          field_H = null;
+          return;
+        }
+        field_H = null;
+    }
+
+    static {
+        field_L = "Loading music";
+    }
+}

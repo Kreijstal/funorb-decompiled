@@ -329,7 +329,7 @@ final class m {
               param0 <= 105) {
               var4 = param3;
               ae.a((byte) 61, var4);
-              MatchingFieldValidator.field_w = wk.createAccountSuggestionsResult(param3, -1);
+              MatchingFieldValidator.field_w = DropTargetWidgetContainer.createAccountSuggestionsResult(param3, -1);
               return;
             }
             MatchingFieldValidator.field_w = mg.createAccountErrorResult((byte) 15, param1, param0);

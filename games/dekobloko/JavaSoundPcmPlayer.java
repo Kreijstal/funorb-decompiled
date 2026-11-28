@@ -52,7 +52,7 @@ final class JavaSoundPcmPlayer extends PcmPlayer {
           this.integerState0355 = integerArgument1;
         } catch (javax.sound.sampled.LineUnavailableException lineUnavailableException) {
           if (MixedSupport051.countSetBits(integerArgument1, 101) != 1) {
-            this.openDevice(UiComponentPart020.roundUpPowerOfTwo(-10498, integerArgument1));
+            this.openDevice(ArrayWidgetContainer.roundUpPowerOfTwo(-10498, integerArgument1));
             return;
           }
           this.sourceDataLineState0001 = null;

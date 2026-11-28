@@ -185,7 +185,7 @@ final class ProjectileRay extends dc {
     }
 
     final static void a(byte param0, boolean param1) {
-        TunnelCamera.field_Z.a((byte) -47, 0, 0);
+        TunnelCamera.field_Z.drawAllLayers((byte) -47, 0, 0);
         if (param0 != 35) {
           ProjectileRay.a((byte) -77, false);
         }

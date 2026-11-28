@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ph extends og implements TextHotspotListener, WidgetActivationListener {
+final class ph extends DequeWidgetContainer implements TextHotspotListener, WidgetActivationListener {
     static FullscreenFocusCanvas field_E;
     private AccountCreationResultPanel field_z;
     private RichTextWidget field_B;
@@ -54,7 +54,7 @@ final class ph extends og implements TextHotspotListener, WidgetActivationListen
         return "<u=2164A2><col=2164A2>";
     }
 
-    final boolean a(int param0, int param1, qm param2, char param3) {
+    final boolean handleKey(int param0, int param1, UiWidget param2, char param3) {
         RuntimeException var5 = null;
         boolean stackIn_6_0 = false;
         boolean stackIn_9_0 = false;
@@ -63,17 +63,17 @@ final class ph extends og implements TextHotspotListener, WidgetActivationListen
         String stackIn_15_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (super.a(param0, param1, param2, param3)) {
+          if (super.handleKey(param0, param1, param2, param3)) {
             return true;
           }
           if (param0 == 98) {
-            stackIn_6_0 = this.a((byte) -89, param2);
+            stackIn_6_0 = this.focusPreviousChild((byte) -89, param2);
             return stackIn_6_0;
           }
           if (99 != param0) {
             return false;
           }
-          stackIn_9_0 = this.a(param2, -25911);
+          stackIn_9_0 = this.focusNextChild(param2, -25911);
           return stackIn_9_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -90,7 +90,7 @@ final class ph extends og implements TextHotspotListener, WidgetActivationListen
     }
 
     ph(AccountCreationResultPanel param0) {
-        super(0, 0, 288, 0, (wo) null);
+        super(0, 0, 288, 0, (WidgetRenderer) null);
         String var7 = null;
         int var3 = 0;
         DefaultTextWidgetRenderer var4 = null;
@@ -98,8 +98,8 @@ final class ph extends og implements TextHotspotListener, WidgetActivationListen
         int var6 = 0;
         try {
           this.field_z = param0;
-          this.field_C = new InteractiveWidget(go.field_j, (bi) null);
-          this.field_C.field_i = (wo) ((Object) new ve());
+          this.field_C = new InteractiveWidget(go.field_j, (WidgetEventListener) null);
+          this.field_C.field_i = (WidgetRenderer) ((Object) new ve());
           var7 = AgeValidator.a(new String[]{this.a(106), this.i(64)}, cc.field_d, 3);
           var3 = 20;
           var4 = new DefaultTextWidgetRenderer(ai.field_h, 0, 0, 0, 0, 16777215, -1, 3, 0, ai.field_h.field_o, -1, 2147483647, true);
@@ -107,17 +107,17 @@ final class ph extends og implements TextHotspotListener, WidgetActivationListen
           this.field_B.field_t = "";
           this.field_B.a(47, hp.field_r, 0);
           this.field_B.a(47, hp.field_r, 1);
-          this.field_B.field_l = (bi) (this);
+          this.field_B.field_l = (WidgetEventListener) (this);
           this.field_B.field_g = this.field_g - 40;
           this.field_B.b(var3, 47, 26, -40 + this.field_g);
           var3 = var3 + (this.field_B.field_f + 15);
-          this.b(this.field_B, -119);
+          this.addChild(this.field_B, -119);
           var5 = 4;
           var6 = 200;
-          this.field_C.a(40, -var6 + 300 >> 1, var3, var6, (byte) -52);
-          this.field_C.field_l = (bi) (this);
-          this.b(this.field_C, 94);
-          this.a(var3 + (55 + var5), 0, 0, 300, (byte) -52);
+          this.field_C.setBounds(40, -var6 + 300 >> 1, var3, var6, (byte) -52);
+          this.field_C.field_l = (WidgetEventListener) (this);
+          this.addChild(this.field_C, 94);
+          this.setBounds(var3 + (55 + var5), 0, 0, 300, (byte) -52);
         } catch (RuntimeException runtimeException) {
           throw dn.wrapClientException((Throwable) ((Object) runtimeException), "ph.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }

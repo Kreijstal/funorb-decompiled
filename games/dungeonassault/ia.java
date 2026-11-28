@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ia extends ii implements WidgetActivationListener {
+final class ia extends DequeWidgetContainer implements WidgetActivationListener {
     private InteractiveWidget field_T;
     static boolean field_O;
     static int[] field_S;
@@ -19,34 +19,34 @@ final class ia extends ii implements WidgetActivationListener {
     private InteractiveWidget field_V;
 
     public ia() {
-        super(0, 0, 476, 225, (ca) null);
-        this.field_V = new InteractiveWidget(BoundedRandomAccessFile.field_c, (pg) null);
-        this.field_Z = new InteractiveWidget(pp.field_I, (pg) null);
-        this.field_T = new InteractiveWidget(kd.field_b, (pg) null);
+        super(0, 0, 476, 225, (WidgetRenderer) null);
+        this.field_V = new InteractiveWidget(BoundedRandomAccessFile.field_c, (WidgetEventListener) null);
+        this.field_Z = new InteractiveWidget(pp.field_I, (WidgetEventListener) null);
+        this.field_T = new InteractiveWidget(kd.field_b, (WidgetEventListener) null);
         na var1 = new na();
-        this.field_V.field_o = (ca) ((Object) var1);
-        this.field_Z.field_o = (ca) ((Object) var1);
-        this.field_T.field_o = (ca) ((Object) var1);
+        this.field_V.field_o = (WidgetRenderer) ((Object) var1);
+        this.field_Z.field_o = (WidgetRenderer) ((Object) var1);
+        this.field_T.field_o = (WidgetRenderer) ((Object) var1);
         int var2 = 4;
         int var3 = 326;
         int var4 = -var2 + var3 >> 1;
-        this.field_Z.b(0, var4, -var2 + (-48 + this.field_s), -var3 + this.field_x >> 1, 30);
-        this.field_T.b(0, var4, -48 + (this.field_s - var2), (this.field_x - var3 >> 1) - (-var4 - var2), 30);
-        this.field_V.b(0, var3, this.field_s - 78 - 2 * var2, this.field_x - var3 >> 1, 30);
-        this.field_Z.field_n = (pg) (this);
-        this.field_V.field_n = (pg) (this);
-        this.field_T.field_n = (pg) (this);
+        this.field_Z.setBounds(0, var4, -var2 + (-48 + this.field_s), -var3 + this.field_x >> 1, 30);
+        this.field_T.setBounds(0, var4, -48 + (this.field_s - var2), (this.field_x - var3 >> 1) - (-var4 - var2), 30);
+        this.field_V.setBounds(0, var3, this.field_s - 78 - 2 * var2, this.field_x - var3 >> 1, 30);
+        this.field_Z.field_n = (WidgetEventListener) (this);
+        this.field_V.field_n = (WidgetEventListener) (this);
+        this.field_T.field_n = (WidgetEventListener) (this);
         this.field_V.field_i = hj.field_U;
         this.field_T.field_i = oh.field_n;
-        this.b((byte) -69, this.field_Z);
-        this.b((byte) -75, this.field_V);
-        this.b((byte) -120, this.field_T);
+        this.addChild((byte) -69, this.field_Z);
+        this.addChild((byte) -75, this.field_V);
+        this.addChild((byte) -120, this.field_T);
     }
 
     public final void onWidgetActivated(InteractiveWidget param0, byte param1, int param2, int param3, int param4) {
         RuntimeException var6 = null;
         int var7 = 0;
-        lm var8 = null;
+        UiWidget var8 = null;
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
         String stackIn_14_2 = null;
@@ -54,8 +54,8 @@ final class ia extends ii implements WidgetActivationListener {
         var7 = DungeonAssault.field_K;
         try {
           if (param1 != 98) {
-            var8 = (lm) null;
-            this.a((lm) null, 'ﾀ', -77, (byte) 92);
+            var8 = (UiWidget) null;
+            this.handleKey((UiWidget) null, 'ﾀ', -77, (byte) 92);
           }
           if (this.field_Z == param0) {
             rc.b(112);
@@ -84,11 +84,11 @@ final class ia extends ii implements WidgetActivationListener {
         }
     }
 
-    final void a(int param0, int param1, int param2, int param3) {
+    final void drawWidget(int param0, int param1, int param2, int param3) {
         int var5 = param1 + this.field_q;
         int var6 = param3 + this.field_v;
         lp.field_C.drawParagraph(AgeValidator.field_q, var5 + 20, 20 + var6, this.field_x - 40, this.field_s - 50, 16777215, -1, 1, 0, lp.field_C.field_H);
-        super.a(param0, param1, param2, param3);
+        super.drawWidget(param0, param1, param2, param3);
     }
 
     final static RgbSprite a(String param0, int param1, String param2, int param3, int param4, String param5, ResourceArchive param6) {
@@ -229,7 +229,7 @@ final class ia extends ii implements WidgetActivationListener {
         }
     }
 
-    final boolean a(lm param0, char param1, int param2, byte param3) {
+    final boolean handleKey(UiWidget param0, char param1, int param2, byte param3) {
         RuntimeException var5 = null;
         boolean stackIn_6_0 = false;
         boolean stackIn_11_0 = false;
@@ -238,11 +238,11 @@ final class ia extends ii implements WidgetActivationListener {
         String stackIn_17_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (super.a(param0, param1, param2, (byte) 126)) {
+          if (super.handleKey(param0, param1, param2, (byte) 126)) {
             return true;
           }
           if (98 == param2) {
-            stackIn_6_0 = this.a(param0, (byte) 71);
+            stackIn_6_0 = this.focusPreviousChild(param0, (byte) 71);
             return stackIn_6_0;
           }
           if (param3 < 55) {
@@ -251,7 +251,7 @@ final class ia extends ii implements WidgetActivationListener {
           if (param2 != 99) {
             return false;
           }
-          stackIn_11_0 = this.a((byte) -5, param0);
+          stackIn_11_0 = this.focusNextChild((byte) -5, param0);
           return stackIn_11_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

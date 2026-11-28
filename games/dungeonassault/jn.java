@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class jn implements ca {
+final class jn implements WidgetRenderer {
     private BitmapFont field_g;
     static int[] field_k;
     static int field_d;
@@ -17,7 +17,7 @@ final class jn implements ca {
     private int field_h;
     static lg field_n;
 
-    public final void a(byte param0, lm param1, int param2, int param3, boolean param4) {
+    public final void paintWidget(byte param0, UiWidget param1, int param2, int param3, boolean param4) {
         int var13 = 0;
         double var9 = 0.0;
         int var11 = 0;

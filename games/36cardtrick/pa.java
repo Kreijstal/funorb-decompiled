@@ -58,10 +58,10 @@ final class pa extends RichTextWidget {
         }
     }
 
-    final void a(int param0, int param1, lk param2, int param3) {
+    final void updatePointer(int param0, int param1, UiWidget param2, int param3) {
         try {
           this.field_R = this.field_R + 1;
-          super.a(param0, param1, param2, param3);
+          super.updatePointer(param0, param1, param2, param3);
         } catch (RuntimeException runtimeException) {
           throw ma.wrapException((Throwable) ((Object) runtimeException), "pa.E(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
@@ -182,7 +182,7 @@ final class pa extends RichTextWidget {
                 wf.a((byte) -83, PasswordValidator.g(-126));
                 e.field_a = ResourceArchive.field_i;
                 mc.a((byte) -127);
-                lk.field_w = false;
+                UiWidget.field_w = false;
                 stackIn_34_0 = var9Lifetime1;
                 return stackIn_34_0;
               }
@@ -208,7 +208,7 @@ final class pa extends RichTextWidget {
                   ll.field_f[var12] = EmailFormatValidator.field_j.readPrefixedString(-74);
                 }
                 mc.a((byte) -125);
-                lk.field_w = false;
+                UiWidget.field_w = false;
                 stackIn_43_0 = 100 + var11;
                 return stackIn_43_0;
               }
@@ -221,29 +221,29 @@ final class pa extends RichTextWidget {
             } else {
               var9_ref_String = EmailFormatValidator.field_j.readNullableString((byte) 29);
               if (var9_ref_String != null) {
-                lk.a(PasswordValidator.g(param5 - 146), 0, var9_ref_String);
+                UiWidget.a(PasswordValidator.g(param5 - 146), 0, var9_ref_String);
               }
             }
             mc.a((byte) -128);
-            lk.field_w = false;
+            UiWidget.field_w = false;
             stackIn_52_0 = pd.field_l;
             return stackIn_52_0;
           }
           if (cb.field_j == null) {
-            if (lk.field_w) {
+            if (UiWidget.field_w) {
               if (we.a((byte) 79) > 30000L) {
                 e.field_a = ImageProducerRasterBuffer.field_k;
               } else {
                 e.field_a = e.field_f;
               }
-              lk.field_w = false;
+              UiWidget.field_w = false;
               stackIn_60_0 = 249;
               return stackIn_60_0;
             }
             var9Lifetime3 = MouseInputHandler.field_e;
             MouseInputHandler.field_e = AccountNameAvailabilityValidator.field_l;
             AccountNameAvailabilityValidator.field_l = var9Lifetime3;
-            lk.field_w = true;
+            UiWidget.field_w = true;
           }
           if (param5 != 18) {
             field_N = (String) null;
@@ -316,7 +316,7 @@ final class pa extends RichTextWidget {
         try {
           this.field_O = param0;
           this.field_P = param1;
-          this.a(param5, param3, param4, param2, true);
+          this.setBounds(param5, param3, param4, param2, true);
         } catch (RuntimeException runtimeException) {
           throw ma.wrapException((Throwable) ((Object) runtimeException), "pa.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }
@@ -329,7 +329,7 @@ final class pa extends RichTextWidget {
         return (String) null;
     }
 
-    final boolean a(int param0, lk param1) {
+    final boolean takeFocus(int param0, UiWidget param1) {
         RuntimeException var3 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -438,7 +438,7 @@ final class pa extends RichTextWidget {
         field_N = null;
     }
 
-    final void a(int param0, int param1, int param2, int param3) {
+    final void drawWidget(int param0, int param1, int param2, int param3) {
         String var5;
         sg var6;
         TextWidgetRenderer var8;
@@ -447,7 +447,7 @@ final class pa extends RichTextWidget {
         int var11;
         int var12;
         int var13;
-        lk var14;
+        UiWidget var14;
         RgbSprite var15;
         RgbSprite var16;
         RgbSprite var17;
@@ -461,20 +461,20 @@ final class pa extends RichTextWidget {
             var5 = this.field_P;
           }
         } else {
-          var5 = n.field_C;
+          var5 = AlphaWidgetContainer.field_C;
         }
         if (!var5.equals(this.field_r)) {
           this.field_r = var5;
           this.rebuildHotspotBounds((byte) 5);
         }
-        super.a(param0, param1, param2 ^ 0, param3);
+        super.drawWidget(param0, param1, param2 ^ 0, param3);
         var6Lifetime1 = this.field_O.getValidationStatus(true);
         var8 = (TextWidgetRenderer) ((Object) this.field_v);
         var9 = this.field_o + param0;
-        var10 = var8.getTextOriginY((lk) (this), -1815612287, param1) + (var8.getTextLayout((byte) 92, (lk) (this)).getLayoutHeight(0) >> 1);
+        var10 = var8.getTextOriginY((UiWidget) (this), -1815612287, param1) + (var8.getTextLayout((byte) 92, (UiWidget) (this)).getLayoutHeight(0) >> 1);
         if (param2 != -1) {
-          var14 = (lk) null;
-          this.a(-10, (lk) null);
+          var14 = (UiWidget) null;
+          this.takeFocus(-10, (UiWidget) null);
         }
         if (tb.field_b != var6Lifetime1 &&
           a.field_n != var6Lifetime1) {

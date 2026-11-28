@@ -1,0 +1,224 @@
+/*
+ * Decompiled by CFR-JS 0.4.0.
+ */
+final class ModalDialogHost extends SingleChildWidgetContainer {
+    static String field_B;
+    private IntrusiveDeque field_D;
+    static String field_A;
+    static String field_z;
+    static int field_C;
+    static int field_y;
+
+    public static void clearStaticReferences(int param0) {
+        field_z = null;
+        if (param0 != 0) {
+          return;
+        }
+        field_A = null;
+        field_B = null;
+    }
+
+    final static void a(boolean param0, byte param1, java.awt.Canvas param2) {
+        int var3_int = 0;
+        int var4 = 0;
+        RuntimeException stackIn_15_0 = null;
+        StringBuilder stackIn_15_1 = null;
+        String stackIn_16_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException var3 = null;
+        java.awt.Canvas var5 = null;
+        var4 = Transmogrify.field_A ? 1 : 0;
+        try {
+          if (bi.field_L >= 10) {
+            if (!ki.b(true)) {
+              SoftwareRasterizer.clearRaster();
+              ub.a(320, 240, (byte) 116);
+              DelegatingCanvas.a(0, 0, (byte) 110, param2);
+            } else {
+              if (AlphaWidgetContainer.field_y == 0) {
+                SocketConnector.a(false, param0, -124);
+                DelegatingCanvas.a(0, 0, (byte) 104, param2);
+              } else {
+                ng.a(false, param2);
+              }
+            }
+          } else {
+            var3_int = 0;
+            if (kb.field_l) {
+              kb.field_l = false;
+              var3_int = 1;
+            }
+            jk.a(BufferedSocket.field_a, (byte) -119, be.b(71), mh.b(100), var3_int != 0);
+          }
+          if (param1 <= 63) {
+            var5 = (java.awt.Canvas) null;
+            ModalDialogHost.a(false, (byte) -103, (java.awt.Canvas) null);
+          }
+          return;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var3 = decompiledCaughtException;
+          stackIn_15_0 = var3;
+          stackIn_15_1 = new StringBuilder().append("da.GA(").append(param0).append(',').append(param1).append(',');
+          if (param2 == null) {
+            stackIn_16_2 = "null";
+          } else {
+            stackIn_16_2 = "{...}";
+          }
+          throw ch.wrapClientException((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
+        }
+    }
+
+    public ModalDialogHost() {
+        super(0, 0, DiskCacheWorker.field_b, wj.field_h, (WidgetRenderer) null, (WidgetEventListener) null);
+        this.field_D = new IntrusiveDeque();
+    }
+
+    final ModalDialog getTopOpenDialog(byte param0) {
+        int var2;
+        tl var3;
+        ModalDialog var4;
+        int var5;
+        var5 = Transmogrify.field_A ? 1 : 0;
+        var2 = -31 % ((param0 + 59) / 47);
+        var3 = new tl(this.field_D);
+        var4 = (ModalDialog) (var3.c(-101));
+        while (var4 != null) {
+          if (var4.field_A) {
+            return var4;
+          }
+          var4 = (ModalDialog) (var3.a(405142401));
+        }
+        return null;
+    }
+
+    final void closeAllDialogs(int param0) {
+        int var4 = Transmogrify.field_A ? 1 : 0;
+        tl var2 = new tl(this.field_D);
+        if (param0 != 31410) {
+          field_B = (String) null;
+        }
+        ModalDialog var3 = (ModalDialog) (var2.c(-121));
+        while (var3 != null) {
+          var3.field_A = false;
+          var3 = (ModalDialog) (var2.a(param0 ^ 405111091));
+        }
+        this.field_v = null;
+    }
+
+    final UiWidget getFocusedChild(byte param0) {
+        tl var2;
+        ModalDialog var3;
+        int var4;
+        int var5;
+        var5 = Transmogrify.field_A ? 1 : 0;
+        var2 = new tl(this.field_D);
+        var4 = 71 % ((51 - param0) / 48);
+        var3 = (ModalDialog) (var2.c(-116));
+        while (var3 != null) {
+          if (var3.field_A) {
+            return var3.getFocusedChild(-116);
+          }
+          var3 = (ModalDialog) (var2.a(405142401));
+        }
+        return null;
+    }
+
+    final void advanceDialogs(int param0) {
+        int var4 = Transmogrify.field_A ? 1 : 0;
+        tl var2 = new tl(this.field_D);
+        ModalDialog var3 = (ModalDialog) (var2.c(-116));
+        if (param0 != 0) {
+          field_A = (String) null;
+        }
+        while (var3 != null) {
+          if (var3.advanceDialogAnimation(0)) {
+            var3.unlink(param0 ^ 5);
+          }
+          var3 = (ModalDialog) (var2.a(param0 ^ 405142401));
+        }
+        this.field_v = (UiWidget) ((Object) this.getTopOpenDialog((byte) -107));
+    }
+
+    final static String a(boolean param0, CharSequence param1) {
+        RuntimeException var2 = null;
+        String stackIn_3_0 = null;
+        RuntimeException stackIn_6_0 = null;
+        StringBuilder stackIn_6_1 = null;
+        String stackIn_7_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        try {
+          if (!param0) {
+            field_B = (String) null;
+          }
+          stackIn_3_0 = tg.a(-54, false, param1);
+          return stackIn_3_0;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var2 = decompiledCaughtException;
+          stackIn_6_0 = var2;
+          stackIn_6_1 = new StringBuilder().append("da.D(").append(param0).append(',');
+          if (param1 == null) {
+            stackIn_7_2 = "null";
+          } else {
+            stackIn_7_2 = "{...}";
+          }
+          throw ch.wrapClientException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+        }
+    }
+
+    final void drawWidget(int param0, int param1, int param2, byte param3) {
+        int var8 = Transmogrify.field_A ? 1 : 0;
+        if (this.field_q != null) {
+          this.field_q.paintWidget(param0, param1, true, (byte) 126, (UiWidget) (this));
+        }
+        tl var5 = new tl(this.field_D);
+        UiWidget var6 = (UiWidget) (var5.a((byte) 62));
+        int var7 = -24 % ((param3 - 77) / 34);
+        while (var6 != null) {
+          var6.drawWidget(param0 + this.field_p, this.field_n + param1, param2, (byte) -95);
+          var6 = (UiWidget) (var5.b(-29339));
+        }
+    }
+
+    final void snapAndPruneDialogs(int param0) {
+        int var4 = Transmogrify.field_A ? 1 : 0;
+        if (param0 <= 124) {
+          field_y = -112;
+        }
+        tl var2 = new tl(this.field_D);
+        ModalDialog var3 = (ModalDialog) (var2.c(-120));
+        while (var3 != null) {
+          if (var3.snapDialogAnimation((byte) -97)) {
+            var3.unlink(5);
+          }
+          var3 = (ModalDialog) (var2.a(405142401));
+        }
+    }
+
+    final void showDialog(UiWidget param0, byte param1) {
+        ModalDialog var3 = null;
+        try {
+          if (!(param0 instanceof ModalDialog)) {
+            throw new IllegalArgumentException();
+          }
+          var3 = (ModalDialog) (param0);
+          if (param1 != -71) {
+            field_C = 1;
+          }
+          this.field_D.addFirst((IntrusiveNode) (var3), (byte) 33);
+          var3.field_A = true;
+          var3.takeFocus((UiWidget) (this), param1 + 51);
+        } catch (RuntimeException runtimeException) {
+          throw ch.wrapClientException((Throwable) ((Object) runtimeException), "da.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+        }
+    }
+
+    static {
+        field_A = "Create";
+        field_C = 0;
+        field_B = "Log in";
+        field_z = "Submit";
+        field_y = 0;
+    }
+}

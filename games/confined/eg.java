@@ -151,7 +151,7 @@ final class eg {
                                       if (decompiledFrameRemainder0) {
                                         if (101 != param1) {
                                           if (param1 == 102) {
-                                            var16 = ij.a(0, '#', oe.field_S);
+                                            var16 = ij.a(0, '#', ModalDialog.field_S);
                                             this.a(var16[2], 0, 320, 0, var16[0], var16[1]);
                                             this.a(0, 700, (RgbSprite) null, 0, 0);
                                             decompiledFrameRemainder0 = (var5 != 0);
@@ -873,7 +873,7 @@ final class eg {
                   if (var35 == 0) {
                     boolean decompiledFrameRemainder0 = true;
                     if (stackIn_22_0 < stackIn_22_1) {
-                      var15_ref_nf = qe.field_O[this.field_a >> 2 & 3];
+                      var15_ref_nf = DraggableWidgetContainer.field_O[this.field_a >> 2 & 3];
                       var20 = -(var10 * 20) + 45;
                       var16 = var12 + var20 * (var11_int - this.field_a);
                       var21 = 40 - var10 * 5;
@@ -1015,13 +1015,13 @@ final class eg {
           var11 = var9;
           var13Lifetime1 = 1.5079644737231006 * Math.pow(0.996, (double)this.field_a);
           var15 = var9 * Math.cos(var13Lifetime1);
-          var17 = (double)this.field_a * 0.6 / (double)ga.field_I[4] + d.field_c[4];
+          var17 = (double)this.field_a * 0.6 / (double)DequeWidgetContainer.field_I[4] + d.field_c[4];
           var17 = var17 * (-Math.pow(0.98, (double)this.field_a) + 1.0);
-          var19 = -((double)ga.field_I[4] * var11) + 110.0;
+          var19 = -((double)DequeWidgetContainer.field_I[4] * var11) + 110.0;
           var21Lifetime1 = 0;
           scanLoop1: while (true) {
             if (var21Lifetime1 < 7) {
-              var22 = (int)((double)ga.field_I[var21Lifetime1] * var11 + var19);
+              var22 = (int)((double)DequeWidgetContainer.field_I[var21Lifetime1] * var11 + var19);
               var23 = 52;
               stackIn_68_0 = 127;
               if (var35 != 0) {
@@ -1032,8 +1032,8 @@ final class eg {
                 var25Lifetime1 = var22;
                 var26_intLifetime1 = var23;
                 var27 = 0.04908738521234052 * (double)var24Lifetime1;
-                var22 = (int)(var19 + var11 * (Math.cos(var27) * (double)ga.field_I[var21Lifetime1]));
-                var23 = (int)(52.0 + Math.sin(var27) * (double)ga.field_I[var21Lifetime1] * var15);
+                var22 = (int)(var19 + var11 * (Math.cos(var27) * (double)DequeWidgetContainer.field_I[var21Lifetime1]));
+                var23 = (int)(52.0 + Math.sin(var27) * (double)DequeWidgetContainer.field_I[var21Lifetime1] * var15);
                 SoftwareRasterizer.drawLine(var25Lifetime1, var26_intLifetime1, var22, var23, 2121792);
                 var24Lifetime1--;
               }
@@ -1047,13 +1047,13 @@ final class eg {
             break;
           }
           var24Lifetime2 = stackIn_68_0;
-          s.field_M[2].drawDownscaledAreaAveraged(var21Lifetime1, var22, -var21Lifetime1 + var23, var24Lifetime2 - var22);
+          DropTargetWidgetContainer.field_M[2].drawDownscaledAreaAveraged(var21Lifetime1, var22, -var21Lifetime1 + var23, var24Lifetime2 - var22);
           SoftwareRasterizer.addRadialGlow((int)(var19 * 16.0), 832, (int)(var9 * 5.0 * 16.0), 255, mm.field_cb);
           var25Lifetime2 = 0;
           while (var25Lifetime2 < 7) {
-            var26 = (double)this.field_a * 0.6 / (double)ga.field_I[var25Lifetime2] + d.field_c[var25Lifetime2] - var17;
-            var28 = var19 + var11 * (Math.cos(var26) * (double)ga.field_I[var25Lifetime2]);
-            var30 = Math.sin(var26) * (double)ga.field_I[var25Lifetime2] * var15 + 52.0;
+            var26 = (double)this.field_a * 0.6 / (double)DequeWidgetContainer.field_I[var25Lifetime2] + d.field_c[var25Lifetime2] - var17;
+            var28 = var19 + var11 * (Math.cos(var26) * (double)DequeWidgetContainer.field_I[var25Lifetime2]);
+            var30 = Math.sin(var26) * (double)DequeWidgetContainer.field_I[var25Lifetime2] * var15 + 52.0;
             var32 = (double)of.field_b[var25Lifetime2] * var9;
             var22Lifetime1 = (int)(-var32 + var30);
             var21Lifetime2 = (int)(var28 - var32);

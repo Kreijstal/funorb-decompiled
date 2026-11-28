@@ -44,11 +44,11 @@ class cf extends DualLinkNode {
         int var1Lifetime1;
         if (uh.field_m == null) {
           var1 = -33 % ((param0 + 22) / 61);
-          ul.field_P = qm.b(1, 1);
+          ModalDialog.field_P = qm.b(1, 1);
           InteractiveWidget.field_F = qm.b(1, 2);
           ej.field_h = qm.b(1, 7);
           tk.field_a = qm.b(1, 3);
-          vd.field_C = qm.b(1, 4);
+          DequeWidgetContainer.field_C = qm.b(1, 4);
           IsaacGenerator.field_h = qm.b(1, 5);
           bi.field_h = qm.b(1, 6);
           he.field_t = qm.b(1, 12);
@@ -65,11 +65,11 @@ class cf extends DualLinkNode {
         uh.field_m = null;
         ql.f(8036);
         var1Lifetime1 = -33 % ((param0 + 22) / 61);
-        ul.field_P = qm.b(1, 1);
+        ModalDialog.field_P = qm.b(1, 1);
         InteractiveWidget.field_F = qm.b(1, 2);
         ej.field_h = qm.b(1, 7);
         tk.field_a = qm.b(1, 3);
-        vd.field_C = qm.b(1, 4);
+        DequeWidgetContainer.field_C = qm.b(1, 4);
         IsaacGenerator.field_h = qm.b(1, 5);
         bi.field_h = qm.b(1, 6);
         he.field_t = qm.b(1, 12);

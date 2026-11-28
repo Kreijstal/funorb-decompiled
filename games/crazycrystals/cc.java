@@ -47,7 +47,7 @@ final class cc {
             v.field_d = 2;
           }
           pb.field_a = param3;
-          qm.field_n = param0;
+          UiWidget.field_n = param0;
           mg.field_e = param5;
           NetworkArchiveRequest.field_v = new RgbSprite[param4.length];
           for (var7 = 0; var7 < param4.length; var7++) {

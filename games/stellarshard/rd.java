@@ -43,7 +43,7 @@ final class rd {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 != null &&
-            param0.length() >= dl.field_G) {
+            param0.length() >= DraggableWidgetContainer.field_G) {
             if (param0.length() > ce.field_d) {
               return true;
             }

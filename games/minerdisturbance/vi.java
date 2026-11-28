@@ -8,18 +8,18 @@ final class vi {
     static String[][] field_c;
     private int field_f;
     int field_i;
-    ad field_m;
-    ad field_e;
+    WidgetRenderer field_m;
+    WidgetRenderer field_e;
     static int field_q;
     int field_l;
     private boolean field_j;
     int field_n;
     static boolean field_h;
-    ad field_a;
-    ad field_b;
+    WidgetRenderer field_a;
+    WidgetRenderer field_b;
     int field_d;
     int field_r;
-    ad field_o;
+    WidgetRenderer field_o;
 
     final void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {
         if (param1 != 0) {
@@ -53,7 +53,7 @@ final class vi {
         on var14Lifetime2;
         try {
           var17 = new DefaultTextWidgetRenderer(param1, 2, 2, 2236962, 1, 1, 1, 2 + (param1.field_E + param1.field_I));
-          this.field_b = (ad) ((Object) var17);
+          this.field_b = (WidgetRenderer) ((Object) var17);
           var17.field_q = 16777215;
           var4 = new on();
           var17.a(102, var4);
@@ -80,21 +80,21 @@ final class vi {
           var5[4] = (Sprite) ((Object) var18);
           var4.a((byte) -103, 4).a(-13903, true).a(var5, 7392);
           var4.a((byte) -119, 5).a(r.a((byte) 93, 0, 0, param0, 0), 7392).a(-13903, true).a(116, -1);
-          this.field_m = (ad) ((Object) var4);
+          this.field_m = (WidgetRenderer) ((Object) var4);
           var6 = new on(var4, true);
           var6.field_j = 0;
           var7 = new on(var4, true);
           var7.field_j = 0;
           var7.a(ck.a((byte) 126, 8947848), true);
           var7.a((byte) -99, 1).a(ck.a((byte) 126, 11184810), 7392).a(param0 ^ 65917, 2236962);
-          this.field_e = (ad) ((Object) new mk(param1, 2, 2, 16777215, -1, 5, 5, 15, 15, 4473924));
+          this.field_e = (WidgetRenderer) ((Object) new mk(param1, 2, 2, 16777215, -1, 5, 5, 15, 15, 4473924));
           discarded$0 = new qg(param1, 2, 2, 16777215, -1, 16777215, 16729156, 4473924);
           discarded$1 = new fl(param1, 16777215, -1, 125269879, 4473924, 3, 268435455);
           var8 = new on();
           var17.a(28, var8);
           var8.a((byte) -120, 0).a(gn.a(10066329, 7829367, 15658734, false), 7392).a(101, 1118481).b(-1, true);
           var8.a((byte) -112, 4).a(-13903, true).a(var5, 7392);
-          this.field_a = (ad) ((Object) var8);
+          this.field_a = (WidgetRenderer) ((Object) var8);
           var9 = new Sprite[9];
           var9[4] = new Sprite(2, 1);
           var10 = new Sprite[9];

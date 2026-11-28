@@ -23,10 +23,10 @@ final class fb {
         int var1_intLifetime1;
         var2 = fleas.field_A ? 1 : 0;
         try {
-          nb.field_a.a(PasswordValidator.field_p, 91, true, AccountServiceResult.field_h);
-          nb.field_a.d(true);
+          nb.field_a.processPointerInput(PasswordValidator.field_p, 91, true, AccountServiceResult.field_h);
+          nb.field_a.advanceDialogs(true);
           while (SecondaryNodeDeque.b(-111)) {
-            nb.field_a.a(id.field_b, (byte) -37, ji.field_a);
+            nb.field_a.processKeyInput(id.field_b, (byte) -37, ji.field_a);
           }
           if (-1 != cl.field_b) {
             var1_int = cl.field_b;

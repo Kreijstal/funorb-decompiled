@@ -96,10 +96,10 @@ abstract class FrameTimer {
         RuntimeException var6 = null;
         var11 = Torquing.field_u;
         try {
-          var6_int = ln.a(LevelCompletionUpdate.field_p, Bzip2State.field_q, param4, 91);
-          var7 = ln.a(LevelCompletionUpdate.field_p, Bzip2State.field_q, param5, 97);
-          var8 = ln.a(qg.field_z, RasterBuffer.field_e, param0, 81);
-          var9 = ln.a(qg.field_z, RasterBuffer.field_e, param3, 81);
+          var6_int = ModalDialogHost.a(LevelCompletionUpdate.field_p, Bzip2State.field_q, param4, 91);
+          var7 = ModalDialogHost.a(LevelCompletionUpdate.field_p, Bzip2State.field_q, param5, 97);
+          var8 = ModalDialogHost.a(qg.field_z, RasterBuffer.field_e, param0, 81);
+          var9 = ModalDialogHost.a(qg.field_z, RasterBuffer.field_e, param3, 81);
           if (param2 > -45) {
             field_c = (String) null;
           }

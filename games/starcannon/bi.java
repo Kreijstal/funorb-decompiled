@@ -17,7 +17,7 @@ final class bi {
         try {
           var1 = hj.field_c;
           synchronized (var1) {
-            ie.field_D = ie.field_D + 1;
+            AlphaWidgetContainer.field_D = AlphaWidgetContainer.field_D + 1;
             wg.field_b = hc.field_b;
             if (ah.field_c < 0) {
               for (var2 = 0; var2 < 112; var2++) {

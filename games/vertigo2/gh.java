@@ -154,7 +154,7 @@ final class gh {
             var18.field_n.a(var19, var20Lifetime1, 11, -126);
             var21 = un.field_Lb;
             var23 = kb.field_d[1];
-            var22 = um.field_D;
+            var22 = ArrayWidgetContainer.field_D;
             var21.field_n.a(var22, var23, 12, param1 - 122);
             var24 = un.field_Lb;
             var26 = kb.field_d[2];

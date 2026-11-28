@@ -22,65 +22,65 @@ final class ConfirmedEmailAvailabilityValidator extends TextFieldValidator {
         if (param0 <= -9) {
           if (MatchingFieldValidator.field_p.field_m) {
             if ((1 << MatchingFieldValidator.field_p.field_a & MatchingFieldValidator.field_p.field_B.field_c) != 0) {
-              fm.field_R[36] = dj.field_w;
+              ModalDialogHost.field_R[36] = dj.field_w;
               return;
             }
             if (MatchingFieldValidator.field_p.field_B.field_c != 0) {
-              fm.field_R[36] = ig.field_e;
+              ModalDialogHost.field_R[36] = ig.field_e;
               return;
             }
             if ((MatchingFieldValidator.field_p.field_A | 1 << MatchingFieldValidator.field_p.field_a) == -1 + (1 << MatchingFieldValidator.field_p.field_B.field_h)) {
-              fm.field_R[36] = IntrusiveDeque.field_c;
+              ModalDialogHost.field_R[36] = IntrusiveDeque.field_c;
               return;
             }
-            fm.field_R[36] = hk.field_J;
+            ModalDialogHost.field_R[36] = hk.field_J;
             return;
           }
           if ((MatchingFieldValidator.field_p.field_B.field_c & 1 << MatchingFieldValidator.field_p.field_a) != 0) {
-            fm.field_R[36] = jh.field_d;
+            ModalDialogHost.field_R[36] = jh.field_d;
             return;
           }
           if (MatchingFieldValidator.field_p.field_B.field_c != 0) {
-            fm.field_R[36] = qa.field_d;
+            ModalDialogHost.field_R[36] = qa.field_d;
             return;
           }
           if ((1 << MatchingFieldValidator.field_p.field_B.field_h) - 1 == (MatchingFieldValidator.field_p.field_A | 1 << MatchingFieldValidator.field_p.field_a)) {
-            fm.field_R[36] = vh.field_h;
+            ModalDialogHost.field_R[36] = vh.field_h;
             return;
           }
-          fm.field_R[36] = od.field_U;
+          ModalDialogHost.field_R[36] = od.field_U;
           return;
         }
         ConfirmedEmailAvailabilityValidator.clearStaticReferences(false);
         if (MatchingFieldValidator.field_p.field_m) {
           if ((1 << MatchingFieldValidator.field_p.field_a & MatchingFieldValidator.field_p.field_B.field_c) != 0) {
-            fm.field_R[36] = dj.field_w;
+            ModalDialogHost.field_R[36] = dj.field_w;
             return;
           }
           if (MatchingFieldValidator.field_p.field_B.field_c != 0) {
-            fm.field_R[36] = ig.field_e;
+            ModalDialogHost.field_R[36] = ig.field_e;
             return;
           }
           if ((MatchingFieldValidator.field_p.field_A | 1 << MatchingFieldValidator.field_p.field_a) == -1 + (1 << MatchingFieldValidator.field_p.field_B.field_h)) {
-            fm.field_R[36] = IntrusiveDeque.field_c;
+            ModalDialogHost.field_R[36] = IntrusiveDeque.field_c;
             return;
           }
-          fm.field_R[36] = hk.field_J;
+          ModalDialogHost.field_R[36] = hk.field_J;
           return;
         }
         if ((MatchingFieldValidator.field_p.field_B.field_c & 1 << MatchingFieldValidator.field_p.field_a) != 0) {
-          fm.field_R[36] = jh.field_d;
+          ModalDialogHost.field_R[36] = jh.field_d;
           return;
         }
         if (MatchingFieldValidator.field_p.field_B.field_c != 0) {
-          fm.field_R[36] = qa.field_d;
+          ModalDialogHost.field_R[36] = qa.field_d;
           return;
         }
         if ((1 << MatchingFieldValidator.field_p.field_B.field_h) - 1 == (MatchingFieldValidator.field_p.field_A | 1 << MatchingFieldValidator.field_p.field_a)) {
-          fm.field_R[36] = vh.field_h;
+          ModalDialogHost.field_R[36] = vh.field_h;
           return;
         }
-        fm.field_R[36] = od.field_U;
+        ModalDialogHost.field_R[36] = od.field_U;
     }
 
     final static void h(int param0) {

@@ -14,26 +14,26 @@ final class AirstrikeEvent extends SpecialEvent {
         int var1Lifetime1;
         int var1Lifetime2;
         if (null != cr.field_c) {
-          rp.a(true, cr.field_c);
+          ModalDialogHost.a(true, cr.field_c);
           if (sla.field_a != null) {
-            rp.a(true, sla.field_a);
+            ModalDialogHost.a(true, sla.field_a);
           }
           if (null != m.field_b) {
-            rp.a(true, m.field_b);
+            ModalDialogHost.a(true, m.field_b);
           }
           var1 = -27 % ((param0 + 33) / 39);
           return;
         }
         if (sla.field_a == null) {
           if (null != m.field_b) {
-            rp.a(true, m.field_b);
+            ModalDialogHost.a(true, m.field_b);
           }
           var1Lifetime1 = -27 % ((param0 + 33) / 39);
           return;
         }
-        rp.a(true, sla.field_a);
+        ModalDialogHost.a(true, sla.field_a);
         if (null != m.field_b) {
-          rp.a(true, m.field_b);
+          ModalDialogHost.a(true, m.field_b);
         }
         var1Lifetime2 = -27 % ((param0 + 33) / 39);
         return;

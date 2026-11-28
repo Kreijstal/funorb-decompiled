@@ -9,13 +9,13 @@ final class jn extends InteractiveWidget {
     private int field_N;
     static byte[] field_P;
 
-    final void a(int param0, int param1, mf param2, int param3) {
+    final void updatePointer(int param0, int param1, UiWidget param2, int param3) {
         try {
           if (param1 >= -6) {
             this.getTooltipText(110);
           }
           this.field_N = this.field_N + 1;
-          super.a(param0, -10, param2, param3);
+          super.updatePointer(param0, -10, param2, param3);
         } catch (RuntimeException runtimeException) {
           throw SpriteGeometry.wrapClientException((Throwable) ((Object) runtimeException), "jn.G(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
@@ -91,7 +91,7 @@ final class jn extends InteractiveWidget {
         }
     }
 
-    final void a(int param0, int param1, int param2, int param3) {
+    final void drawWidget(int param0, int param1, int param2, int param3) {
         int var5;
         int var6;
         mk var8;
@@ -117,7 +117,7 @@ final class jn extends InteractiveWidget {
         mk var8Lifetime1;
         var11 = Chess.field_G;
         if (param2 < -80) {
-          super.a(param0, param1, -109, param3);
+          super.drawWidget(param0, param1, -109, param3);
           if (param1 != 0) {
             return;
           }
@@ -180,8 +180,8 @@ final class jn extends InteractiveWidget {
           ca.field_a.drawAdditive(var5 - var15.field_v, var6 - var15.field_u, 256);
           return;
         }
-        this.a(-42, 127, 34, -25);
-        super.a(param0, param1, -109, param3);
+        this.drawWidget(-42, 127, 34, -25);
+        super.drawWidget(param0, param1, -109, param3);
         if (param1 != 0) {
           return;
         }
@@ -310,7 +310,7 @@ final class jn extends InteractiveWidget {
         }
     }
 
-    final boolean a(int param0, mf param1) {
+    final boolean takeFocus(int param0, UiWidget param1) {
         RuntimeException var3 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -358,7 +358,7 @@ final class jn extends InteractiveWidget {
         if (param0 != 32359) {
           return false;
         }
-        return of.a(bh.i(81), (byte) 95);
+        return of.a(ArrayWidgetContainer.i(81), (byte) 95);
     }
 
     public static void clearStaticReferences(byte param0) {

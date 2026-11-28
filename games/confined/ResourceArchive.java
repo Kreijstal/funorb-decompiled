@@ -24,7 +24,7 @@ final class ResourceArchive {
         if (param0 < 0 ||
           param0 >= this.field_j.field_q.length ||
           this.field_j.field_q[param0] == 0) {
-          if (!oe.field_P) {
+          if (!ModalDialog.field_P) {
             return false;
           }
           throw new IllegalArgumentException(Integer.toString(param0));
@@ -443,7 +443,7 @@ final class ResourceArchive {
           this.field_j.field_q[param1] > param0) {
           return true;
         }
-        if (oe.field_P) {
+        if (ModalDialog.field_P) {
           throw new IllegalArgumentException(param1 + " " + param0);
         }
         return false;

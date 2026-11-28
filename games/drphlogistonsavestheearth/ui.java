@@ -64,7 +64,7 @@ final class ui {
                   }
                   if (var5 >= 2 &&
                     !param0) {
-                    stackIn_30_0 = pi.field_R;
+                    stackIn_30_0 = DraggableWidgetContainer.field_R;
                     return stackIn_30_0;
                   }
                 }
@@ -101,7 +101,7 @@ final class ui {
           wk.field_i = AccountNameAvailabilityValidator.d((byte) 9) * param2 / 1000;
           c.a(false, param3);
           int var4_int = 17 / ((28 - param1) / 32);
-          vg.a(param3, false);
+          UiWidget.a(param3, false);
           ea.a(0, param3);
           cf.a(false);
           s.b((byte) 104);

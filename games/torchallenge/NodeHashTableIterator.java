@@ -176,19 +176,19 @@ final class NodeHashTableIterator implements Iterator {
             if (var20 == 0) {
               if (stackIn_10_0) {
                 var13 = tj.field_a[var10];
-                var14 = si.field_K[var10];
+                var14 = ModalDialogHost.field_K[var10];
                 var15 = -var13 + tj.field_a[var11];
                 var16 = -var13 + tj.field_a[var12];
-                var17 = si.field_K[var11] - var14;
-                var18 = si.field_K[var12] - var14;
+                var17 = ModalDialogHost.field_K[var11] - var14;
+                var18 = ModalDialogHost.field_K[var12] - var14;
               }
               if (!stackIn_10_0 ||
                 !(-(var16 * var17) + var15 * var18 >= 0)) {
-                var13Lifetime1 = bg.field_O[var10];
+                var13Lifetime1 = LabeledWidgetContainer.field_O[var10];
                 if (var13Lifetime1 != -2147483648) {
-                  var14Lifetime1 = bg.field_O[var11];
+                  var14Lifetime1 = LabeledWidgetContainer.field_O[var11];
                   if (-2147483648 != var14Lifetime1) {
-                    var15 = bg.field_O[var12];
+                    var15 = LabeledWidgetContainer.field_O[var12];
                     if (var15 != -2147483648) {
                       var16 = -var6 + (var15 + var14Lifetime1 + var13Lifetime1);
                       stackIn_23_0 = MouseInputHandler.field_b.length;

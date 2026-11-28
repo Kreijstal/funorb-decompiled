@@ -132,7 +132,7 @@ final class mg {
           if (var6Lifetime1 < 20) {
             var7Lifetime1 = 256 * var6Lifetime1 / 20;
           }
-          qg.field_z.drawWithOpacity(15 + var3, 10 + var4, var7Lifetime1 * var5 >> 8);
+          SingleChildWidgetContainer.field_z.drawWithOpacity(15 + var3, 10 + var4, var7Lifetime1 * var5 >> 8);
         }
         return;
     }

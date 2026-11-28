@@ -47,7 +47,7 @@ final class nj {
     final static void b(int param0) {
         int var1 = -127 % ((42 - param0) / 60);
         if (null != t.field_b) {
-          t.field_b.g((byte) -37);
+          t.field_b.snapAndPruneDialogs((byte) -37);
         }
         if (oa.field_k == null) {
           ValidatedTextField.n(19630);

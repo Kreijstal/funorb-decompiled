@@ -15,7 +15,7 @@ class oka extends DefaultWidgetRenderer {
         super(param0, 4, 2, 2, 2, param1, -1, 0, 1, param0.field_u, -1, 2147483647, false);
     }
 
-    public final void a(int param0, UiWidget param1, int param2, int param3, boolean param4) {
+    public final void paintWidget(int param0, UiWidget param1, int param2, int param3, boolean param4) {
         RuntimeException var6 = null;
         UiWidget var7 = null;
         RuntimeException stackIn_8_0 = null;
@@ -26,12 +26,12 @@ class oka extends DefaultWidgetRenderer {
           if (param4) {
             oka.a(param1.x + param0, param1.width, param1.y + param3, false, param1.height);
           }
-          super.a(param0, param1, param2 + 0, param3, param4);
+          super.paintWidget(param0, param1, param2 + 0, param3, param4);
           if (param2 == 32679) {
             return;
           }
           var7 = (UiWidget) null;
-          this.a(-73, (UiWidget) null, 81, 95, false);
+          this.paintWidget(-73, (UiWidget) null, 81, 95, false);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

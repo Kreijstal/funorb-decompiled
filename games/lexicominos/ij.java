@@ -264,7 +264,7 @@ final class ij extends IntrusiveNode {
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (!nb.a(param3, param0, (byte) 126, param2)) {
+          if (!DequeWidgetContainer.a(param3, param0, (byte) 126, param2)) {
             return null;
           }
           var4_int = 19 / ((-51 - param1) / 53);

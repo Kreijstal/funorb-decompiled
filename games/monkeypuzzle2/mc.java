@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class mc implements ml {
+final class mc implements WidgetRenderer {
     private int field_h;
     private int field_d;
     private int field_c;
@@ -14,7 +14,7 @@ final class mc implements ml {
     private BitmapFont field_f;
     private int field_g;
 
-    public final void a(boolean param0, UiWidget param1, int param2, int param3, int param4) {
+    public final void paintWidget(boolean param0, UiWidget param1, int param2, int param3, int param4) {
         int var10 = 0;
         UiWidget stackIn_4_0 = null;
         RuntimeException stackIn_16_0 = null;
@@ -38,7 +38,7 @@ final class mc implements ml {
           var13 = (qj) (stackIn_4_0);
           if (param4 < 19) {
             var12 = (UiWidget) null;
-            this.a(false, (UiWidget) null, 106, 30, 56);
+            this.paintWidget(false, (UiWidget) null, 106, 30, 56);
           }
           SoftwareRasterizer.fillRectangle(param3 + param1.field_r, param1.field_e + param2, param1.field_l, param1.field_p, this.field_g);
           if (var13 == null) {

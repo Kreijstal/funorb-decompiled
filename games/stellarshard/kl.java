@@ -281,7 +281,7 @@ final class kl extends IntrusiveNode {
           kl.a((byte) 55);
         }
         if (var1.length() == 0) {
-          var1 = of.i(195);
+          var1 = DropTargetWidgetContainer.i(195);
         }
         if (var1.length() == 0) {
           var1 = Bzip2State.field_k;
