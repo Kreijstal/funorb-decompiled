@@ -130,7 +130,7 @@ final class cw extends UiComponent {
             cw.a((String) null, (String) null, false);
           }
           param1 = BoardChange.a((byte) 75, param1, '_', "");
-          var3 = vm.a(param0, (byte) 117);
+          var3 = ArchiveNetworkClient.a(param0, (byte) 117);
           stackIn_7_0 = (param1.indexOf(param0) != -1) || (-1 != param1.indexOf(var3));
           return stackIn_7_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

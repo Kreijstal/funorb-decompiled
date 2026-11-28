@@ -188,7 +188,7 @@ final class nd extends InteractiveWidget {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         try {
-          DualLinkNode.a((java.awt.Component) ((Object) param1), false);
+          DualLinkNode.detachKeyboardListeners((java.awt.Component) ((Object) param1), false);
           GzipDecompressor.detachMouseInput((java.awt.Component) ((Object) param1), (byte) 103);
           if (param0 != -26621) {
             var3 = (CharSequence) null;

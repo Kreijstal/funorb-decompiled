@@ -45,7 +45,7 @@ final class ka {
           ug.field_A.processPointerInput(NanoFrameTimer.field_g, true, mk.field_m, (byte) 124);
           ug.field_A.advanceDialogs(true);
           while (IterableNodeHashTable.a((byte) -72)) {
-            ug.field_A.processKeyInput((byte) 86, IsaacRandom.field_b, da.field_b);
+            ug.field_A.processKeyInput((byte) 86, IsaacRandom.field_b, MouseInputHandler.field_b);
           }
           if (param0 != 2) {
             field_a = (String) null;

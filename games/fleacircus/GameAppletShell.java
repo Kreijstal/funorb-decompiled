@@ -691,12 +691,12 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
                     }
                   }
                   if (decompiledFrameRemainder0) {
-                    w.field_r = l.field_b.waitAndCountTicks(0, NodeHashTableIterator.field_f);
+                    ArchiveNetworkClient.field_r = l.field_b.waitAndCountTicks(0, NodeHashTableIterator.field_f);
                     stackIn_101_0 = 0;
                   }
                   var3 = stackIn_101_0;
                   do {
-                    if (!(w.field_r > var3)) {
+                    if (!(ArchiveNetworkClient.field_r > var3)) {
                       this.renderAppletFrame(-11);
                       aj.a((byte) -60, ol.field_e, fg.field_q);
                       break;

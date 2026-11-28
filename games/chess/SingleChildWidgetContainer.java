@@ -445,7 +445,7 @@ abstract class SingleChildWidgetContainer extends UiWidget implements WidgetCont
           if (param2 != 29712) {
             return false;
           }
-          var4 = mn.a(param2 ^ -29713, param0);
+          var4 = ProxySocketConnector.a(param2 ^ -29713, param0);
           if (var4 != null &&
             var4.field_Lb != null) {
             return true;

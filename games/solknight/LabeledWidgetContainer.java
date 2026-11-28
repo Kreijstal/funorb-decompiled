@@ -30,9 +30,9 @@ final class LabeledWidgetContainer extends SingleChildWidgetContainer {
     }
 
     final static int a(byte param0) {
-        d.field_b.a(24561);
+        d.field_b.pollArchiveSources(24561);
         int var1 = 17 / ((40 - param0) / 47);
-        if (!il.field_c.d((byte) 0)) {
+        if (!il.field_c.pollNetwork((byte) 0)) {
           return pg.a((byte) 83);
         }
         return 0;

@@ -26,13 +26,13 @@ final class TextHotspotBounds extends IntrusiveNode {
         }
     }
 
-    final static void a(java.awt.Component param0, int param1) {
+    final static void attachMouseListeners(java.awt.Component param0, int param1) {
         try {
           param0.addMouseListener(rc.field_d);
           param0.addMouseMotionListener(rc.field_d);
           if (param1 != 0) {
             java.awt.Component var3 = (java.awt.Component) null;
-            TextHotspotBounds.a((java.awt.Component) null, -115);
+            TextHotspotBounds.attachMouseListeners((java.awt.Component) null, -115);
           }
           param0.addFocusListener(rc.field_d);
         } catch (RuntimeException runtimeException) {
@@ -54,7 +54,7 @@ final class TextHotspotBounds extends IntrusiveNode {
         field_j = null;
         if (param0) {
           java.awt.Component var2 = (java.awt.Component) null;
-          TextHotspotBounds.a((java.awt.Component) null, 26);
+          TextHotspotBounds.attachMouseListeners((java.awt.Component) null, 26);
         }
     }
 

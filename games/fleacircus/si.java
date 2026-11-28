@@ -212,7 +212,7 @@ final class si {
           if (null != MouseWheelInput.field_f) {
             var3 = -(MouseWheelInput.field_f.field_r / 2) + 357;
             var4 = 0;
-            if (jk.field_r != 0 &&
+            if (ProxySocketConnector.field_r != 0 &&
               var3 < ob.field_e &&
               var3 + MouseWheelInput.field_f.field_t > ob.field_e) {
               if (269 - MouseWheelInput.field_f.field_w < pb.field_d &&

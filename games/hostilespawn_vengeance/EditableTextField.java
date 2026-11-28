@@ -4,7 +4,7 @@
 class EditableTextField extends InteractiveWidget {
     private int field_P;
     private boolean field_G;
-    static ej field_N;
+    static ArchiveNetworkClient field_N;
     private int field_J;
     static String field_H;
     private int field_O;

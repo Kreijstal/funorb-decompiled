@@ -145,7 +145,7 @@ final class HailAnimation extends EventAnimation {
         }
     }
 
-    final static void a(int param0, java.awt.Component param1) {
+    final static void attachMouseListeners(int param0, java.awt.Component param1) {
         try {
           param1.addMouseListener(uc.field_m);
           if (param0 != -30229) {

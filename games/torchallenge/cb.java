@@ -21,7 +21,7 @@ final class cb {
           ph.field_d = qb.mouseY;
           StripedProgressWidget.field_P = ua.field_c;
           ua.field_c = false;
-          vb.field_n = e.field_o;
+          ArchiveNetworkClient.field_n = e.field_o;
           ik.field_a = aa.pressX;
           if (param0 != 30210) {
             cb.a(71, 118, (byte) -25, 29);

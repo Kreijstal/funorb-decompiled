@@ -602,7 +602,7 @@ final class wc extends id {
           this.field_Gb = new gk((TunnelEntity) (this), ne.field_b, 0);
           this.field_Gb.field_m = 192;
           this.field_Gb.field_w = this.field_C * 2.0;
-          this.field_Kb = new gk((TunnelEntity) (this), ja.field_b[this.field_Zb], 0);
+          this.field_Kb = new gk((TunnelEntity) (this), ArchiveSourceManager.field_b[this.field_Zb], 0);
           this.field_Kb.field_w = 2.0 * this.field_C;
           this.field_Kb.field_m = 192;
           if (null != WingPod.field_R) {

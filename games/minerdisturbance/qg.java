@@ -146,7 +146,7 @@ final class qg implements WidgetRenderer {
           try {
             kj.field_a = new CipherPacketBuffer(param9);
             sn.field_c = new CipherPacketBuffer(param12);
-            ic.field_h = param6;
+            ProxySocketConnector.field_h = param6;
             cm.field_q = param3;
             NameSuggestionsPanel.field_L = param11;
             sj.field_c = param13;

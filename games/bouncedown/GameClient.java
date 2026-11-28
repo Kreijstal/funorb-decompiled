@@ -84,7 +84,7 @@ abstract class GameClient extends AppletShell {
                         this.readSessionCookieUpdate((byte) 101);
                       }
                     } else {
-                      he.a(1);
+                      LeaderboardSubmission.handleMultiplayerLeaderboardPacket(1);
                     }
                   } else {
                     ld.b((byte) 120);
@@ -123,7 +123,7 @@ abstract class GameClient extends AppletShell {
         int var3 = (var2 & 1) != 0 ? 1 : 0;
         int var4 = pe.field_d - 1;
         byte[] var5 = new byte[var4];
-        jc.field_g.a(var4, 8, 0, var5);
+        jc.field_g.readCipheredBytes(var4, 8, 0, var5);
         if (param0 <= 42) {
           this.a(false);
         }
@@ -154,13 +154,13 @@ abstract class GameClient extends AppletShell {
         var5 = Bounce.field_N;
         if (vd.field_b != null) {
           if (null == sj.field_f) {
-            var6 = oa.a((byte) 126);
+            var6 = SocketConnector.a((byte) 126);
             var4 = var6.getSize();
             vd.field_b.a((byte) 13, var4.height, var4.width);
           }
           vd.field_b.d((byte) -84);
         }
-        ra.c(28282);
+        ProxySocketConnector.c(28282);
         ve.b((byte) -91);
         if (!LoginPanel.k(-31077) &&
           ContentTransitionDialog.field_U != 11) {
@@ -191,7 +191,7 @@ abstract class GameClient extends AppletShell {
           if (var3Lifetime1 != 0 &&
             cf.field_e == 0 &&
             ContentTransitionDialog.field_U == 11 &&
-            !tb.e(-11)) {
+            !SocketArchiveNetworkClient.e(-11)) {
             ta.b(102);
           }
           if (cf.field_e != -1 &&
@@ -245,7 +245,7 @@ abstract class GameClient extends AppletShell {
         }
         if ((cf.field_e != -1 &&
           0 != cf.field_e ||
-          tb.e(-11)) &&
+          SocketArchiveNetworkClient.e(-11)) &&
           EmailFormatValidator.field_n <= fa.correctedCurrentTimeMillis(116)) {
           dl.field_b = false;
           if (cf.field_e != -1 &&
@@ -255,7 +255,7 @@ abstract class GameClient extends AppletShell {
           }
         }
         if (cf.field_e == 0 &&
-          !tb.e(-11)) {
+          !SocketArchiveNetworkClient.e(-11)) {
           ProxyAuthenticationRequiredException.field_a = false;
         }
         if (sa.field_k == 0 &&
@@ -298,9 +298,9 @@ abstract class GameClient extends AppletShell {
           ea.field_c = NodeHashTableIterator.field_d;
           td.a(1, ea.field_e, pa.field_i, kg.field_b, EditableTextField.field_B);
           if (qd.field_a ||
-            mj.field_k != null) {
+            BouncedownMenu.field_k != null) {
             stackIn_98_0 = 4;
-            stackIn_98_1 = mj.field_k;
+            stackIn_98_1 = BouncedownMenu.field_k;
             stackIn_99_2 = !(qd.field_a);
             stackIn_102_3 = !(qd.field_a);
             rk.a(stackIn_98_0, stackIn_98_1, stackIn_99_2, stackIn_102_3);
@@ -375,7 +375,7 @@ abstract class GameClient extends AppletShell {
         if (this.field_e) {
           return -1;
         }
-        if (!tb.e(-11)) {
+        if (!SocketArchiveNetworkClient.e(-11)) {
           return -1;
         }
         if (dl.field_b) {
@@ -569,7 +569,7 @@ abstract class GameClient extends AppletShell {
             LabeledWidgetContainer.a((byte) -117, DiskCacheWorker.b(0));
           }
           if (var4 == 10) {
-            hh.field_p.a(true, 17);
+            hh.field_p.writeCipheredByte(true, 17);
           }
           if (11 == var4) {
             FullscreenNoticeType.a(0, DiskCacheWorker.b(0));
@@ -732,7 +732,7 @@ abstract class GameClient extends AppletShell {
           if (sa.field_k < 10) {
           } else {
             if (!ProxyAuthenticationRequiredException.c(param0 ^ 250)) {
-              ij.a((byte) -105);
+              BouncedownClientSupport.advanceLoginLogoAnimation((byte) -105);
             } else {
               if (0 != ContentTransitionDialog.field_U) {
                 qe.a((byte) -76, va.field_a);

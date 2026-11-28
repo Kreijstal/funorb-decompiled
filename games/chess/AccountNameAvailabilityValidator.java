@@ -51,7 +51,7 @@ final class AccountNameAvailabilityValidator extends TextFieldValidator {
             return stackIn_12_0;
           }
           if (param1 == -9316) {
-            stackIn_17_0 = rl.field_c;
+            stackIn_17_0 = MouseInputHandler.field_c;
             return stackIn_17_0;
           }
           stackIn_15_0 = (String) null;

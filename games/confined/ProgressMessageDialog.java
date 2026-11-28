@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 class ProgressMessageDialog extends ContentTransitionDialog implements WidgetActivationListener {
-    static ja field_vb;
+    static ArchiveSourceManager field_vb;
     private boolean field_zb;
     static double field_sb;
     private boolean field_tb;
@@ -103,7 +103,7 @@ class ProgressMessageDialog extends ContentTransitionDialog implements WidgetAct
 
     final static void a(int param0, qn param1, int param2) {
         CipherPacketBuffer var3 = vh.field_a;
-        var3.b(true, param0);
+        var3.writeCipheredByte(true, param0);
         var3.writeByte(118, 5);
         var3.writeByte(115, 0);
         var3.writeShort(param1.field_w, 8);

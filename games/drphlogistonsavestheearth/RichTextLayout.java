@@ -25,7 +25,7 @@ final class RichTextLayout extends TextLayout {
         RuntimeException var3 = null;
         var4 = DrPhlogistonSavesTheEarth.field_D ? 1 : 0;
         try {
-          if (hj.field_f < 10) {
+          if (SocketConnector.field_f < 10) {
             var3_int = 0;
             if (eh.field_a) {
               var3_int = 1;

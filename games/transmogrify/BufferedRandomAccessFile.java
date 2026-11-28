@@ -13,7 +13,7 @@ final class BufferedRandomAccessFile {
     static String field_b;
     private int field_m;
     private long field_f;
-    static dk field_j;
+    static ArchiveSourceManager field_j;
     private long field_n;
     static WordLanguage[] field_l;
     private byte[] field_d;

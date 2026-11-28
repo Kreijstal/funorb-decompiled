@@ -154,8 +154,8 @@ final class AccountCreationResultPanel extends ProgressMessageDialog implements 
     }
 
     final static void a(java.awt.Canvas param0, byte param1) {
-        pk.a((byte) -107, (java.awt.Component) ((Object) param0));
-        d.a((java.awt.Component) ((Object) param0), 0);
+        pk.detachKeyboardListeners((byte) -107, (java.awt.Component) ((Object) param0));
+        d.detachMouseListeners((java.awt.Component) ((Object) param0), 0);
         if (param1 >= -52) {
           return;
         }
@@ -202,7 +202,7 @@ final class AccountCreationResultPanel extends ProgressMessageDialog implements 
 
     final static de[] v(int param0) {
         int var1 = 5 / ((param0 - 40) / 58);
-        return new de[]{uh.field_n, eb.field_l, NetworkGameClient.field_k, kg.field_b, RegistrationAgreementPane.field_H, RegistrationAgreementPane.field_J, nf.field_d, DraggableWidgetContainer.field_A, rc.field_g, lh.field_a, ra.field_a, vk.field_e, RichTextWidget.field_G, jl.field_g};
+        return new de[]{uh.field_n, ArchiveSourceManager.field_l, NetworkGameClient.field_k, kg.field_b, RegistrationAgreementPane.field_H, RegistrationAgreementPane.field_J, nf.field_d, DraggableWidgetContainer.field_A, rc.field_g, lh.field_a, ra.field_a, vk.field_e, RichTextWidget.field_G, jl.field_g};
     }
 
     final static int a(int param0, int param1, IsaacRandom param2) {

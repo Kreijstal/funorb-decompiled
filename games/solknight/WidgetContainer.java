@@ -568,11 +568,11 @@ class WidgetContainer extends UiWidget implements WidgetContainerMarker {
     }
 
     final static void a(int param0) {
-        ne.field_g = AlphaWidgetContainer.field_N.readString(92);
+        ArchiveSourceManager.field_g = AlphaWidgetContainer.field_N.readString(92);
         if (param0 > -100) {
           return;
         }
-        CharSequence var2 = (CharSequence) ((Object) ne.field_g);
+        CharSequence var2 = (CharSequence) ((Object) ArchiveSourceManager.field_g);
         ModalDialog.field_D = FullscreenFocusCanvas.a(var2, -2);
     }
 

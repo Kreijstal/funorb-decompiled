@@ -49,13 +49,13 @@ final class fb extends ih {
         field_jb = null;
         if (param0 != 4) {
           java.awt.Component var2 = (java.awt.Component) null;
-          fb.a((java.awt.Component) null, (byte) 105);
+          fb.attachMouseListeners((java.awt.Component) null, (byte) 105);
         }
         field_pb = null;
         field_lb = null;
     }
 
-    final static void a(java.awt.Component param0, byte param1) {
+    final static void attachMouseListeners(java.awt.Component param0, byte param1) {
         try {
           if (param1 >= -26) {
             fb.d(35);

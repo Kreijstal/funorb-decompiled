@@ -12,7 +12,7 @@ final class fk extends IntrusiveNode {
     int field_s;
     int field_o;
 
-    final static void a(int param0, java.awt.Component param1) {
+    final static void attachKeyboardListeners(int param0, java.awt.Component param1) {
         if (param0 != -28092) {
           return;
         }

@@ -55,9 +55,9 @@ abstract class pb {
           if (param4 != 1843275042) {
             field_b = (String) null;
           }
-          oi.field_d = (ob) ((Object) new ap());
+          oi.field_d = (ArchiveNetworkClient) ((Object) new SocketArchiveNetworkClient());
           hc.field_a = new DiskCacheWorker(param1);
-          GrowableIntArray.field_d = new pk(oi.field_d, hc.field_a);
+          GrowableIntArray.field_d = new ArchiveSourceManager(oi.field_d, hc.field_a);
         } catch (RuntimeException runtimeException) {
           throw dn.wrapClientException((Throwable) ((Object) runtimeException), "pb.S(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + (param6 != null ? "{...}" : "null") + ',' + param7 + ',' + param8 + ')');
         }

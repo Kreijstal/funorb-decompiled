@@ -83,7 +83,7 @@ final class ab implements WidgetRenderer {
           var1_int = -43 % ((-78 - param0) / 46);
           var2 = ad.field_b;
           synchronized (var2) {
-            md.field_g = LoginPanel.field_H;
+            ProxySocketConnector.field_g = LoginPanel.field_H;
             ji.field_c = ji.field_c + 1;
             if (EmailFormatValidator.field_p < 0) {
               for (var3 = 0; 112 > var3; var3++) {

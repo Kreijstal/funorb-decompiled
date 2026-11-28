@@ -55,9 +55,9 @@ final class wl {
           if (null == var7) {
             var7 = "";
           }
-          uh.field_Wb.a((byte) 0, var7);
+          uh.field_Wb.writeString((byte) 0, var7);
           if (go.field_g != null) {
-            uh.field_Wb.a(684868900, go.field_g);
+            uh.field_Wb.writeCircumfixedString(684868900, go.field_g);
           }
           var8 = -1 % ((param2 - 22) / 34);
           mq.a(jm.field_H, uh.field_Wb, lp.field_E, 12, UiWidget.field_x);

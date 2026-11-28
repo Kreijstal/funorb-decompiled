@@ -127,7 +127,7 @@ final class PlatformTaskDispatcher implements Runnable {
         return this.requestSocketConnection(param1, param0, false, (byte) -2);
     }
 
-    private final static RandomAccessCacheFile a(String param0, int param1, String param2, int param3) {
+    private final static RandomAccessCacheFile openPreferencesFile(String param0, int param1, String param2, int param3) {
         try {
           int var6 = 0;
           RandomAccessCacheFile stackIn_13_0 = null;
@@ -308,7 +308,7 @@ final class PlatformTaskDispatcher implements Runnable {
                         }
                         break;
                       case 13:
-                        var3_ref = PlatformTaskDispatcher.a("", 0, (String) (var8.objectArgument), field_e);
+                        var3_ref = PlatformTaskDispatcher.openPreferencesFile("", 0, (String) (var8.objectArgument), field_e);
                         var8.result = var3_ref;
                         break;
                       case 16:
@@ -370,7 +370,7 @@ final class PlatformTaskDispatcher implements Runnable {
                         }
                         break;
                       case 12:
-                        var3_ref = PlatformTaskDispatcher.a(field_t, 0, (String) (var8.objectArgument), field_e);
+                        var3_ref = PlatformTaskDispatcher.openPreferencesFile(field_t, 0, (String) (var8.objectArgument), field_e);
                         var8.result = var3_ref;
                         break;
                       case 7:

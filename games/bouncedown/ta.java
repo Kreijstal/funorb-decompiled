@@ -18,7 +18,7 @@ final class ta {
           kh.a(var1, param0 + 1);
           qk.c();
           SoftwareRasterizer.clearRaster();
-          oa.field_a = 0;
+          SocketConnector.field_a = 0;
           BufferedRandomAccessFile.c(param0);
           var2 = var1.copy();
           for (var3 = 0; var3 < 15; var3++) {
@@ -70,7 +70,7 @@ final class ta {
           ta.a((byte) -73, (java.applet.Applet) null);
         }
         if (fe.field_g) {
-          nk.field_a.showConnectionFailure(1);
+          BouncedownMenuEntry.field_a.showConnectionFailure(1);
         } else {
           var1 = nb.field_d;
           if (var1 > 0) {
@@ -81,7 +81,7 @@ final class ta {
             }
             ej.field_c = rk.a(true, new CharSequence[]{(CharSequence) ((Object) ej.field_c), (CharSequence) ((Object) "<br>"), (CharSequence) ((Object) NameSuggestionsPanel.field_G)});
           }
-          nk.field_a.closeDialog(true);
+          BouncedownMenuEntry.field_a.closeDialog(true);
           kb.b(808);
         }
     }

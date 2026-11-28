@@ -143,16 +143,16 @@ final class me implements ComponentLayout {
           var5 = of.field_d[var3];
           var6 = new int[var4];
           for (var7 = 0; var4 > var7; var7++) {
-            var6[var7] = rd.field_d[sc.bitwiseAnd((int) var5[var7], 255)];
+            var6[var7] = MouseInputHandler.field_d[sc.bitwiseAnd((int) var5[var7], 255)];
           }
-          var2[var3] = new RgbSprite(DefaultTextWidgetRenderer.field_e, uf.field_k, vg.field_I[var3], b.field_b[var3], NameSuggestionsPanel.field_H[var3], ob.field_a[var3], var6);
+          var2[var3] = new RgbSprite(DefaultTextWidgetRenderer.field_e, ArchiveSourceManager.field_k, vg.field_I[var3], b.field_b[var3], NameSuggestionsPanel.field_H[var3], ob.field_a[var3], var6);
         }
         EditableTextField.o(-28210);
         return var2;
     }
 
     final static void a(int param0, int param1, boolean param2) {
-        w.field_l = param0;
+        ArchiveNetworkClient.field_l = param0;
         mf.field_c = param1;
         vk.field_L = 1;
         if (param2) {

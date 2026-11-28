@@ -25,7 +25,7 @@ final class ca {
     final static void a(ResourceArchive param0, PcmStreamMixer param1, int param2, int param3) {
         try {
           vb.field_b = SecondaryNodeDeque.a(22018) * param2 / 1000;
-          ch.a(-114, param0);
+          ArchiveNetworkClient.a(-114, param0);
           kk.a(-16998, param0);
           DiskArchiveRequest.a(param0, 0);
           pf.d(260);
@@ -88,7 +88,7 @@ final class ca {
             var14 = var6[var9];
             wb[] var10 = var14;
             for (var11_int = 0; var14.length > var11_int; var11_int++) {
-              var14[var11_int] = a.a(var5[var9], var19[var11_int], -88);
+              var14[var11_int] = SocketArchiveNetworkClient.a(var5[var9], var19[var11_int], -88);
             }
           }
           var9Lifetime1 = var17.field_o;

@@ -96,7 +96,7 @@ final class cf extends ci {
           sc.field_f.a(0, BirthDateValidator.field_k.field_M, -2147483648, 30, 0);
           ce.field_d.a(0, BirthDateValidator.field_k.field_M, -2147483648, -2 + (-40 + BirthDateValidator.field_k.field_pb - 30), 30);
           var2_int = 3 + qa.field_e;
-          if (wn.field_d.length < 2) {
+          if (SocketConnector.field_d.length < 2) {
             var2_int--;
           }
           if (param1) {
@@ -114,7 +114,7 @@ final class cf extends ci {
           var5 = 2 + (var4 + 5);
           for (var6 = 0; 4 + qa.field_e > var6; var6++) {
             if ((var6 != 1 ||
-              !(2 > wn.field_d.length)) && (3 != var6 ||
+              !(2 > SocketConnector.field_d.length)) && (3 != var6 ||
               !(1 >= ChessMatchSession.field_q))) {
               if (!param1 &&
                 var6 == 3) {

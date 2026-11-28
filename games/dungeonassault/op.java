@@ -17,7 +17,7 @@ final class op {
             pd.field_A == qa.field_c)) {
             if (param0 == ac.field_B.position &&
               kd.correctedCurrentTimeMillis(-2456) > 10000L + wh.field_e) {
-              ac.field_B.d((byte) -91, param1);
+              ac.field_B.writeCipheredByte((byte) -91, param1);
             }
             if (0 < ac.field_B.position) {
               try {
@@ -164,7 +164,7 @@ final class op {
             } else {
               if (248 == var9Lifetime1) {
                 np.a((byte) -126, DebouncedFieldValidator.c(true));
-                tp.field_v = DebouncedFieldValidator.field_f;
+                SocketArchiveNetworkClient.field_v = DebouncedFieldValidator.field_f;
                 tl.a(-84);
                 ResourceArchive.field_e = false;
                 stackIn_34_0 = var9Lifetime1;
@@ -201,7 +201,7 @@ final class op {
           if (pd.field_A == AlphaWidgetContainer.field_G &&
             AccountNameAvailabilityValidator.d((byte) -75)) {
             if (hc.field_c != 255) {
-              tp.field_v = ra.field_c.readString(-101);
+              SocketArchiveNetworkClient.field_v = ra.field_c.readString(-101);
             } else {
               var9_ref_String = ra.field_c.readNullableString(true);
               if (var9_ref_String != null) {
@@ -216,9 +216,9 @@ final class op {
           if (null == sp.field_c) {
             if (ResourceArchive.field_e) {
               if (30000L >= ClientException.a(119)) {
-                tp.field_v = fc.field_l;
+                SocketArchiveNetworkClient.field_v = fc.field_l;
               } else {
-                tp.field_v = lh.field_r;
+                SocketArchiveNetworkClient.field_v = lh.field_r;
               }
               ResourceArchive.field_e = false;
               stackIn_61_0 = 249;

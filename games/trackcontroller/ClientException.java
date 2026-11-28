@@ -134,8 +134,8 @@ final class ClientException extends RuntimeException {
     }
 
     final static int b(byte param0) {
-        ij.field_d.a((byte) 95);
-        if (!SecondaryNodeDeque.field_d.b(29166)) {
+        ij.field_d.pollArchiveSources((byte) 95);
+        if (!SecondaryNodeDeque.field_d.pollNetwork(29166)) {
           return bl.a((byte) -124);
         }
         if (param0 <= 71) {

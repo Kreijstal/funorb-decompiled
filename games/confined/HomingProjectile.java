@@ -113,7 +113,7 @@ abstract class HomingProjectile extends MovingTunnelEntity {
             field_S = (String) null;
           }
           if (mc.a(param3, param1, param0, (byte) 119)) {
-            stackIn_6_0 = ja.a(-122);
+            stackIn_6_0 = ArchiveSourceManager.a(-122);
             return stackIn_6_0;
           }
           stackIn_4_0 = null;

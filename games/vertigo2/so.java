@@ -28,7 +28,7 @@ final class so extends TextureOperator {
         var12 = Vertigo2.field_L ? 1 : 0;
         try {
           FullscreenStatusDialog.field_Z = param1;
-          kr.field_c = param5;
+          ArchiveSourceManager.field_c = param5;
           ao.field_N = -1L;
           ol.field_A = param5.length;
           gd.field_j = null;
@@ -36,8 +36,8 @@ final class so extends TextureOperator {
           qn.field_q = false;
           sj.field_d = null;
           var10_int = 0;
-          for (var11 = 0; kr.field_c.length > var11; var11++) {
-            var10_int = var10_int + (255 & kr.field_c[var11]);
+          for (var11 = 0; ArchiveSourceManager.field_c.length > var11; var11++) {
+            var10_int = var10_int + (255 & ArchiveSourceManager.field_c[var11]);
           }
           if (param8 <= 34) {
             field_z = (String) null;

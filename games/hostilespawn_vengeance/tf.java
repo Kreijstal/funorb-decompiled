@@ -35,14 +35,14 @@ final class tf {
         int var8 = 0;
         var8 = HostileSpawn.field_I ? 1 : 0;
         try {
-          var2_int = param1.a(8, true);
+          var2_int = param1.readBits(8, true);
           if (var2_int > 0) {
             throw new IllegalStateException("" + var2_int);
           }
-          var3 = PacketBuffer.a((byte) 122, param1) ? 1 : 0;
-          var4 = PacketBuffer.a((byte) 126, param1) ? 1 : 0;
+          var3 = PacketBuffer.readBooleanBit((byte) 122, param1) ? 1 : 0;
+          var4 = PacketBuffer.readBooleanBit((byte) 126, param1) ? 1 : 0;
           var5 = new pf();
-          var5.field_c = (short)param1.a(16, true);
+          var5.field_c = (short)param1.readBits(16, true);
           var5.field_n = pa.a((byte) 87, var5.field_n, 16, param1);
           var5.field_E = pa.a((byte) 87, var5.field_E, 16, param1);
           if (param0 != 4) {
@@ -50,12 +50,12 @@ final class tf {
             return stackIn_5_0;
           }
           var5.field_H = pa.a((byte) 87, var5.field_H, 16, param1);
-          var5.field_k = (short)param1.a(16, true);
+          var5.field_k = (short)param1.readBits(16, true);
           var5.field_i = pa.a((byte) 87, var5.field_i, 16, param1);
           var5.field_P = pa.a((byte) 87, var5.field_P, 16, param1);
           var5.field_z = pa.a((byte) 87, var5.field_z, 16, param1);
           if (var3 != 0) {
-            var5.field_L = (short)param1.a(16, true);
+            var5.field_L = (short)param1.readBits(16, true);
             var5.field_u = pa.a((byte) 87, var5.field_u, 16, param1);
             var5.field_w = pa.a((byte) 87, var5.field_w, 16, param1);
             var5.field_r = pa.a((byte) 87, var5.field_r, 16, param1);
@@ -64,17 +64,17 @@ final class tf {
             var5.field_q = pa.a((byte) 87, var5.field_q, 16, param1);
           }
           if (var4 != 0) {
-            param1.a(16, true);
+            param1.readBits(16, true);
             var5.field_b = pa.a((byte) 87, var5.field_b, 16, param1);
             var5.field_K = pa.a((byte) 87, var5.field_K, 16, param1);
             var5.field_O = pa.a((byte) 87, var5.field_O, 16, param1);
             var5.field_s = pa.a((byte) 87, var5.field_s, 16, param1);
             var5.field_G = pa.a((byte) 87, var5.field_G, 16, param1);
           }
-          if (PacketBuffer.a((byte) 105, param1)) {
+          if (PacketBuffer.readBooleanBit((byte) 105, param1)) {
             var5.field_g = pa.a((byte) 87, var5.field_g, 16, param1);
           }
-          if (PacketBuffer.a((byte) 104, param1)) {
+          if (PacketBuffer.readBooleanBit((byte) 104, param1)) {
             var5.field_x = ga.a(104, param1, var5.field_x, 16);
             var6 = 0;
             for (var7 = 0; var5.field_x.length > var7; var7++) {

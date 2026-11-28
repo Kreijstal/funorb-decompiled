@@ -9,7 +9,7 @@ final class uj extends IntrusiveNode {
     static int field_n;
     static int[][] field_k;
 
-    final static void a(int param0, java.awt.Component param1) {
+    final static void detachMouseListeners(int param0, java.awt.Component param1) {
         try {
           param1.removeMouseListener(ContentTransitionDialog.field_cb);
           param1.removeMouseMotionListener(ContentTransitionDialog.field_cb);

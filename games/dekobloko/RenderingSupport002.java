@@ -416,7 +416,7 @@ final class RenderingSupport002 {
         if (byteArgument2 != -9) {
           nodeDequeState0004 = (NodeDeque) null;
         }
-        cipherPacketBufferLocal1.performAction1641(integerArgument3, -4);
+        cipherPacketBufferLocal1.writeCipheredByte(integerArgument3, -4);
         cipherPacketBufferLocal1.writeByte(true, 3);
         cipherPacketBufferLocal1.writeByte(true, 8);
         cipherPacketBufferLocal1.writeShort(-1, integerArgument1);

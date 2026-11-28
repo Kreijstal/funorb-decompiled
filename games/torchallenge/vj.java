@@ -37,7 +37,7 @@ final class vj {
         int var8Lifetime1;
         int var9Lifetime1;
         try {
-          fl.field_s = SpriteLoader.a(-128, "frame_top", "commonui", param3);
+          SocketArchiveNetworkClient.field_s = SpriteLoader.a(-128, "frame_top", "commonui", param3);
           qa.field_e = SpriteLoader.a(-127, "frame_bottom", "commonui", param3);
           rj.field_a = qk.a("commonui", "jagex_logo_grey", param3, 0);
           ae.field_v = SpriteLoader.a(param2 ^ -23127, "button", "commonui", param3);

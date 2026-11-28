@@ -46,10 +46,10 @@ final class DiskArchiveRequest extends ArchiveRequest {
         NetworkGameClient.field_z = var8.readLong(66);
         if (2 == lf.field_c) {
           sd.field_b = var8.readUnsignedShort(param1 + 17277);
-          c.field_b = var8.readUnsignedMedium((byte) 115);
+          ArchiveSourceManager.field_b = var8.readUnsignedMedium((byte) 115);
         } else {
           sd.field_b = 0;
-          c.field_b = 0;
+          ArchiveSourceManager.field_b = 0;
         }
         stackIn_11_0 = (var8.readUnsignedByte((byte) 114) != 1) ? 0 : 1;
         var4 = stackIn_11_0;

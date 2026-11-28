@@ -23,7 +23,7 @@ final class PasswordValidator extends TextFieldValidator {
           if (param0 < 44) {
             return;
           }
-          je.a((byte) -96, param1, param2, bf.field_d, param4, param3);
+          ArchiveSourceManager.a((byte) -96, param1, param2, bf.field_d, param4, param3);
           var5_int = param4 + SoftwareRasterizer.field_i * param2;
           var6 = -param3 + SoftwareRasterizer.field_i;
           for (var7 = -param1; var7 < 0; var7++) {
@@ -88,7 +88,7 @@ final class PasswordValidator extends TextFieldValidator {
             return stackIn_14_0;
           }
           if (this.containsEmailComponent(param1, (byte) -106)) {
-            stackIn_18_0 = tp.field_x;
+            stackIn_18_0 = SocketArchiveNetworkClient.field_x;
             return stackIn_18_0;
           }
           if (var6.length() <= 0) {

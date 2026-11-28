@@ -274,16 +274,16 @@ final class fc {
               this.field_w[0][6] = LabeledWidgetContainer.field_G.charAt(3);
               this.field_w[0][7] = LabeledWidgetContainer.field_G.charAt(4);
               this.field_w[1][3] = LabeledWidgetContainer.field_G.charAt(0);
-              this.field_w[1][4] = ch.field_d.charAt(0);
+              this.field_w[1][4] = ProxySocketConnector.field_d.charAt(0);
               if (DebouncedFieldValidator.field_e != 2) {
-                this.field_w[1][6] = ch.field_d.charAt(2);
+                this.field_w[1][6] = ProxySocketConnector.field_d.charAt(2);
               }
-              this.field_w[1][7] = ch.field_d.charAt(3);
-              this.field_w[1][8] = ch.field_d.charAt(4);
+              this.field_w[1][7] = ProxySocketConnector.field_d.charAt(3);
+              this.field_w[1][8] = ProxySocketConnector.field_d.charAt(4);
               this.field_w[2][3] = (char)70;
-              this.field_w[2][5] = ch.field_d.charAt(1);
+              this.field_w[2][5] = ProxySocketConnector.field_d.charAt(1);
               if (2 == DebouncedFieldValidator.field_e) {
-                this.field_w[2][6] = ch.field_d.charAt(2);
+                this.field_w[2][6] = ProxySocketConnector.field_d.charAt(2);
               }
               this.field_w[3][3] = c.field_n.charAt(0);
               this.field_w[3][4] = c.field_n.charAt(1);
@@ -1053,14 +1053,14 @@ final class fc {
           var6 = (-var4 + 311) / 2;
           var7 = (450 - var5) / 2;
           SoftwareRasterizer.fillRectangle(var6, var7, var4, var5, 0);
-          eh.a(0, lg.field_c, 8 + var6 + 48, 0, var13, var7 + 8);
-          eh.a(0, lg.field_c, var6 + 8, 0, var3_ref_String, 24 + (8 + var7));
+          eh.a(0, SocketConnector.field_c, 8 + var6 + 48, 0, var13, var7 + 8);
+          eh.a(0, SocketConnector.field_c, var6 + 8, 0, var3_ref_String, 24 + (8 + var7));
           return;
         }
         if (4 != this.field_K) {
           stackIn_5_0 = AlphaWidgetContainer.field_H;
         } else {
-          stackIn_5_0 = lg.field_c;
+          stackIn_5_0 = SocketConnector.field_c;
         }
         var14 = stackIn_5_0;
         var2 = var14;
@@ -1112,7 +1112,7 @@ final class fc {
           var6Lifetime2 = 200;
           var7Lifetime2 = 4 * this.field_n - 832;
           if (255 <= var7Lifetime2) {
-            eh.a(0, lg.field_c, var5Lifetime2, 0, var15, var6Lifetime2);
+            eh.a(0, SocketConnector.field_c, var5Lifetime2, 0, var15, var6Lifetime2);
           } else {
             if (var7Lifetime2 > 0) {
               for (var8 = 0; var8 < var15.length(); var8++) {
@@ -1121,8 +1121,8 @@ final class fc {
                 stackIn_38_1 = stackOut_32_1;
                 stackIn_33_1 = stackOut_32_1;
                 if (stackIn_38_0 != stackIn_33_1) {
-                  lg.field_c.drawWithOpacity(var5Lifetime2, var6Lifetime2, var7Lifetime2);
-                  bi.field_a.drawCentredCharacterAlpha(var15.charAt(var8), var5Lifetime2 + lg.field_c.field_p / 2, (lg.field_c.field_u + pa.field_d) / 2 + var6Lifetime2, 0, var7Lifetime2);
+                  SocketConnector.field_c.drawWithOpacity(var5Lifetime2, var6Lifetime2, var7Lifetime2);
+                  KeyboardInputHandler.field_a.drawCentredCharacterAlpha(var15.charAt(var8), var5Lifetime2 + SocketConnector.field_c.field_p / 2, (SocketConnector.field_c.field_u + pa.field_d) / 2 + var6Lifetime2, 0, var7Lifetime2);
                 }
                 var5Lifetime2 += 24;
               }
@@ -1165,8 +1165,8 @@ final class fc {
         }
         SoftwareRasterizer.resetClip();
         if (this.field_D) {
-          bi.field_a.drawString("FPS: " + TextFieldValidator.field_i, 10, 3 * pa.field_d + 20, 0, -1);
-          bi.field_a.drawString("LPS: " + ij.field_j, 10, pa.field_d * 4 + 25, 0, -1);
+          KeyboardInputHandler.field_a.drawString("FPS: " + TextFieldValidator.field_i, 10, 3 * pa.field_d + 20, 0, -1);
+          KeyboardInputHandler.field_a.drawString("LPS: " + ij.field_j, 10, pa.field_d * 4 + 25, 0, -1);
         }
         return;
     }
@@ -1302,13 +1302,13 @@ final class fc {
           var9Lifetime1.draw(0, 0);
         }
         SoftwareRasterizer.resetClip();
-        oh.a(183, lg.field_c, false, Integer.toString(Math.abs(this.field_r)), 0, 230);
+        oh.a(183, SocketConnector.field_c, false, Integer.toString(Math.abs(this.field_r)), 0, 230);
         if (this.field_s > 0 &&
           this.field_s < 30 &&
           5 > this.field_s % 10) {
           SoftwareRasterizer.fillRectangle(53, 183, 48, 24, 16777215);
         }
-        oh.a(183, lg.field_c, false, Integer.toString(this.field_d), 0, 77);
+        oh.a(183, SocketConnector.field_c, false, Integer.toString(this.field_d), 0, 77);
         var10 = (bd) (this.field_G.beginForward(true));
         if (var10 != null) {
           var4 = 0;
@@ -1331,7 +1331,7 @@ final class fc {
           }
           if (var4 == 0) {
             ef.field_d[var10.field_h].drawQuarterSizeAveraged(265, var3Lifetime2);
-            bi.field_a.drawRightAligned(df.field_d[var10.field_h], 260, var3Lifetime2 + bi.field_a.field_E, 0, -1);
+            KeyboardInputHandler.field_a.drawRightAligned(df.field_d[var10.field_h], 260, var3Lifetime2 + KeyboardInputHandler.field_a.field_E, 0, -1);
           }
         }
     }

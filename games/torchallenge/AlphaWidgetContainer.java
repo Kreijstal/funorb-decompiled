@@ -76,7 +76,7 @@ final class AlphaWidgetContainer extends SingleChildWidgetContainer {
           }
           if (var5_int >= 3) {
           }
-          var7Lifetime1 = vb.field_a[param3][param0];
+          var7Lifetime1 = ArchiveNetworkClient.field_a[param3][param0];
           var8 = 1 + var7Lifetime1;
           var9 = -1 + var7Lifetime1;
           var10 = SocketConnector.field_l[param3][param0][1][0];

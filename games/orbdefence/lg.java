@@ -106,7 +106,7 @@ final class lg {
         if (param0 != -2) {
           return false;
         }
-        return TextLineMetrics.field_b.a(param0 + 2);
+        return TextLineMetrics.field_b.loadMasterIndex(param0 + 2);
     }
 
     static {

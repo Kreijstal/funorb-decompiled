@@ -49,28 +49,28 @@ final class lb {
         RuntimeException var2 = null;
         var7 = Bounce.field_N;
         try {
-          var2_int = param1.f(7, 8);
+          var2_int = param1.readBits(7, 8);
           if (param0 < 42) {
             lb.resetStaticState((byte) 78);
           }
           if (0 < var2_int) {
             return null;
           }
-          var3 = param1.f(7, 12);
+          var3 = param1.readBits(7, 12);
           var4 = new a[var3];
           for (var5 = 0; var3 > var5; var5++) {
             if (!re.a(101, param1)) {
-              var6 = param1.f(7, InteractiveWidget.a(var5 - 1, -95));
+              var6 = param1.readBits(7, InteractiveWidget.a(var5 - 1, -95));
               var4[var5] = var4[var6];
             } else {
               var6_ref_a = new a();
-              param1.f(7, 24);
-              param1.f(7, 24);
-              var6_ref_a.field_d = param1.f(7, 24);
-              param1.f(7, 9);
-              param1.f(7, 12);
-              param1.f(7, 12);
-              param1.f(7, 12);
+              param1.readBits(7, 24);
+              param1.readBits(7, 24);
+              var6_ref_a.field_d = param1.readBits(7, 24);
+              param1.readBits(7, 9);
+              param1.readBits(7, 12);
+              param1.readBits(7, 12);
+              param1.readBits(7, 12);
               var4[var5] = var6_ref_a;
             }
           }

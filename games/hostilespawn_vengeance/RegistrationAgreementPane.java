@@ -12,7 +12,7 @@ final class RegistrationAgreementPane extends DequeWidgetContainer implements Te
     private InteractiveWidget field_I;
     static int[] field_F;
 
-    final static void a(java.awt.Component param0, int param1) {
+    final static void detachMouseListeners(java.awt.Component param0, int param1) {
         try {
           param0.removeMouseListener(jc.field_b);
           param0.removeMouseMotionListener(jc.field_b);
@@ -79,7 +79,7 @@ final class RegistrationAgreementPane extends DequeWidgetContainer implements Te
           return;
         }
         java.awt.Component var2 = (java.awt.Component) null;
-        RegistrationAgreementPane.a((java.awt.Component) null, -11);
+        RegistrationAgreementPane.detachMouseListeners((java.awt.Component) null, -11);
         field_M = null;
         field_J = null;
     }

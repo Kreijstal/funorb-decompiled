@@ -104,7 +104,7 @@ final class vg implements WidgetRenderer {
             vg.a((byte) -35);
           }
           while (fb.e((byte) 102)) {
-            var1.a(true, 8);
+            var1.writeCipheredByte(true, 8);
             fieldTemp$0 = var1.position + 1;
             var1.position = var1.position + 1;
             var2 = fieldTemp$0;

@@ -100,7 +100,7 @@ class PacketBuffer extends IntrusiveNode {
             this.backpatchByteLength(-72, 103);
           }
           var4 = (CharSequence) ((Object) param1);
-          this.position = this.position + wm.encodeCp1252Subsequence(param1.length(), 0, var4, this.position, this.data, (byte) -122);
+          this.position = this.position + ArchiveNetworkClient.encodeCp1252Subsequence(param1.length(), 0, var4, this.position, this.data, (byte) -122);
           fieldTemp$0 = this.position;
           this.position = this.position + 1;
           this.data[fieldTemp$0] = (byte) 0;
@@ -232,7 +232,7 @@ class PacketBuffer extends IntrusiveNode {
           this.position = this.position + 1;
           this.data[fieldTemp$2] = (byte) 0;
           var4 = (CharSequence) ((Object) param1);
-          this.position = this.position + wm.encodeCp1252Subsequence(param1.length(), 0, var4, this.position, this.data, (byte) -122);
+          this.position = this.position + ArchiveNetworkClient.encodeCp1252Subsequence(param1.length(), 0, var4, this.position, this.data, (byte) -122);
           fieldTemp$3 = this.position;
           this.position = this.position + 1;
           this.data[fieldTemp$3] = (byte) 0;

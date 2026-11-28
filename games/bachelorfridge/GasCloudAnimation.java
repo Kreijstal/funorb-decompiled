@@ -639,7 +639,7 @@ final class GasCloudAnimation extends EventAnimation {
                 var32 = var32 + rg.field_h;
               }
             }
-            var34 = qfa.a(var13.field_ec, var33, -83);
+            var34 = NetworkArchiveRequest.a(var13.field_ec, var33, -83);
             if (var34 != null) {
               var35_intLifetime1 = var13.field_ac.field_jb.lineCount(var34, -gba.field_Bb + (var13.field_sb - gba.field_Bb));
               var13.field_ac.field_Z = var34;

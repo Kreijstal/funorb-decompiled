@@ -157,7 +157,7 @@ final class re implements uj {
               sn.field_c.position = 0;
               sn.field_c.writeByte(14, 25564);
               sn.field_c.writeByte(tb.field_d.b(0).field_a, 25564);
-              bk.a((byte) -104, -1);
+              ArchiveSourceManager.a((byte) -104, -1);
               GuestPlayConfirmationForm.field_Q = ra.field_c;
             }
             if (GuestPlayConfirmationForm.field_Q == ra.field_c &&
@@ -269,11 +269,11 @@ final class re implements uj {
               if (pj.field_a > 0) {
                 v.field_e = true;
               }
-              sn.field_c.b(v.field_b, -97);
+              sn.field_c.setCipherSeed(v.field_b, -97);
               for (var8Lifetime1 = 0; 4 > var8Lifetime1; var8Lifetime1++) {
                 v.field_b[var8Lifetime1] = v.field_b[var8Lifetime1] + 50;
               }
-              kj.field_a.b(v.field_b, 107);
+              kj.field_a.setCipherSeed(v.field_b, 107);
               stackIn_72_0 = AlphaWidgetContainer.field_K;
               return stackIn_72_0;
             }
@@ -310,9 +310,9 @@ final class re implements uj {
                 return stackIn_94_0;
               }
               var6_intLifetime2 = SingleChildWidgetContainer.field_E;
-              SingleChildWidgetContainer.field_E = ic.field_h;
+              SingleChildWidgetContainer.field_E = ProxySocketConnector.field_h;
               FrameTimer.field_c = true;
-              ic.field_h = var6_intLifetime2;
+              ProxySocketConnector.field_h = var6_intLifetime2;
             }
             stackIn_97_0 = -1;
             return stackIn_97_0;

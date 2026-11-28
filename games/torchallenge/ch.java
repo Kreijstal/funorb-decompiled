@@ -56,7 +56,7 @@ final class ch {
           ResourceArchive.field_n = null;
           kd.field_m = null;
           stackIn_29_0 = param0;
-          vb.field_q = stackIn_29_0;
+          ArchiveNetworkClient.field_q = stackIn_29_0;
           if (null != ResourceArchive.field_g) {
             for (var1_intLifetime2 = 0; var1_intLifetime2 < ResourceArchive.field_g.length; var1_intLifetime2++) {
               if (ResourceArchive.field_g[var1_intLifetime2] != null) {

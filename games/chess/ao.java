@@ -84,7 +84,7 @@ final class ao {
         if (DirectByteStorage.field_h != null) {
           kl.a(DirectByteStorage.field_h, (byte) -114);
         }
-        rl.a(76);
+        MouseInputHandler.a(76);
         if (param0 != -25220) {
           field_i = (String) null;
           uc.a((byte) -72);

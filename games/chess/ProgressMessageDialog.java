@@ -24,7 +24,7 @@ class ProgressMessageDialog extends ContentTransitionDialog implements WidgetAct
         MusicPatchPcmStream.field_t[11] = GuestPlayConfirmationForm.field_N;
         MusicPatchPcmStream.field_t[17] = fl.field_s;
         MusicPatchPcmStream.field_t[6] = SingleChildWidgetContainer.field_E;
-        MusicPatchPcmStream.field_t[20] = mn.field_j;
+        MusicPatchPcmStream.field_t[20] = ProxySocketConnector.field_j;
         MusicPatchPcmStream.field_t[9] = sj.field_f;
         MusicPatchPcmStream.field_t[4] = BirthDateValidator.field_h;
         MusicPatchPcmStream.field_t[19] = SingleChildWidgetContainer.field_K;

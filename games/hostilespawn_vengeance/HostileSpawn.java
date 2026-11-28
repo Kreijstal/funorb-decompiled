@@ -91,18 +91,18 @@ public final class HostileSpawn extends NetworkGameClient {
             var4_array[var5_int] = var3;
             var5_int++;
           } while (var7 == 0);
-          var2_array = sg.a(true, "", DequeWidgetContainer.field_C, "wall_hammerhead");
+          var2_array = ArchiveSourceManager.a(true, "", DequeWidgetContainer.field_C, "wall_hammerhead");
           ArrayBlockSupport.copyObjectRange(var2_array, 0, ak.field_b, 0, 256);
           ArrayBlockSupport.copyObjectRange(var4_array, 0, ak.field_b, 256, 256);
-          var2_arrayLifetime1 = sg.a(true, "", DequeWidgetContainer.field_C, "wall_normal_kerrus");
+          var2_arrayLifetime1 = ArchiveSourceManager.a(true, "", DequeWidgetContainer.field_C, "wall_normal_kerrus");
           ArrayBlockSupport.copyObjectRange(var2_arrayLifetime1, 0, ak.field_b, 512, 256);
-          var2_arrayLifetime2 = sg.a(true, "", DequeWidgetContainer.field_C, "wall_station");
+          var2_arrayLifetime2 = ArchiveSourceManager.a(true, "", DequeWidgetContainer.field_C, "wall_station");
           ArrayBlockSupport.copyObjectRange(var2_arrayLifetime2, 0, ak.field_b, 768, 256);
-          var2_arrayLifetime3 = sg.a(true, "", DequeWidgetContainer.field_C, "wall_hive");
+          var2_arrayLifetime3 = ArchiveSourceManager.a(true, "", DequeWidgetContainer.field_C, "wall_hive");
           ArrayBlockSupport.copyObjectRange(var2_arrayLifetime3, 0, ak.field_b, 1024, 256);
           ArrayBlockSupport.copyObjectRange(var4_array, 0, ak.field_b, 1280, 256);
           ArrayBlockSupport.copyObjectRange(var4_array, 0, ak.field_b, 1536, 256);
-          var2_arrayLifetime4 = sg.a(true, "", DequeWidgetContainer.field_C, "wall_office");
+          var2_arrayLifetime4 = ArchiveSourceManager.a(true, "", DequeWidgetContainer.field_C, "wall_office");
           ArrayBlockSupport.copyObjectRange(var2_arrayLifetime4, 0, ak.field_b, 1792, 256);
           var4_array = null;
           ValidationStatusWidget.field_Z = th.a(DequeWidgetContainer.field_C, -124, "digitalserial_10", RegistrationAgreementPane.field_J, "");
@@ -122,10 +122,10 @@ public final class HostileSpawn extends NetworkGameClient {
           ln.field_m = DelayedPacket.loadNamedRgbSprites(DequeWidgetContainer.field_C, 105, "", "newexplosion");
           ContentTransitionDialog.field_ib = ln.field_m;
           if (!ib.a((byte) -72)) {
-            var5 = sg.a(true, "", DequeWidgetContainer.field_C, "member_benefits");
+            var5 = ArchiveSourceManager.a(true, "", DequeWidgetContainer.field_C, "member_benefits");
             DiskCacheWorker.field_a = new e(ni.field_g, SpriteBase.field_g, var5, MouseInput.field_i);
           }
-          var5 = sg.a(true, "", DequeWidgetContainer.field_C, "keys");
+          var5 = ArchiveSourceManager.a(true, "", DequeWidgetContainer.field_C, "keys");
           var6 = 0;
           do {
             if (var5.length <= var6) {
@@ -137,7 +137,7 @@ public final class HostileSpawn extends NetworkGameClient {
               fj.field_Kb = jd.a((byte) 33, "", DequeWidgetContainer.field_C, "achievements_lrg");
               SpriteGeometry.field_v = qm.a("", 0, "hs_unachieved", DequeWidgetContainer.field_C);
               de.field_i = MouseInput.a("basic", param0 + 222, "locked", wd.field_a);
-              ob.field_B = sg.a(true, "", DequeWidgetContainer.field_C, "hs_coins");
+              ob.field_B = ArchiveSourceManager.a(true, "", DequeWidgetContainer.field_C, "hs_coins");
               PcmResampler.field_f = MouseInput.a("", -100, "sliderbutton", DequeWidgetContainer.field_C);
               oa.field_m = new RgbSprite[9];
               oa.field_m[0] = new RgbSprite(4, 4);
@@ -415,7 +415,7 @@ public final class HostileSpawn extends NetworkGameClient {
           ia.field_l[85] = bl.field_c;
           ia.field_l[90] = NodeHashTableIterator.field_d;
           ia.field_l[194] = uj.field_r;
-          ia.field_l[36] = ih.field_v;
+          ia.field_l[36] = SocketArchiveNetworkClient.field_v;
           ia.field_l[143] = kc.field_d;
           ia.field_l[160] = ln.field_j;
           ia.field_l[67] = MusicPatchEnvelope.field_j;
@@ -431,7 +431,7 @@ public final class HostileSpawn extends NetworkGameClient {
           ia.field_l[200] = sd.field_t;
           ia.field_l[196] = ByteArrayPoolSupport.field_j;
           ia.field_l[98] = sj.field_g;
-          ia.field_l[122] = ej.field_d;
+          ia.field_l[122] = ArchiveNetworkClient.field_d;
           ia.field_l[216] = gf.field_d;
           ia.field_l[87] = vj.field_p;
           ia.field_l[188] = qg.field_i;
@@ -1055,18 +1055,18 @@ public final class HostileSpawn extends NetworkGameClient {
           InteractiveWidget.field_F = null;
           ModalDialog.field_P = null;
           tk.field_a = null;
-          ha.field_w.field_F.prepareTrackSamples(0, vg.field_h, ej.field_h, nd.field_e, false);
-          ha.field_w.field_F.prepareTrackSamples(0, rb.field_s, ej.field_h, nd.field_e, false);
-          ha.field_w.field_F.prepareTrackSamples(0, ProgressMessageDialog.field_tb, ej.field_h, nd.field_e, false);
-          ha.field_w.field_F.prepareTrackSamples(0, ProgressDialog.field_ab, ej.field_h, nd.field_e, false);
-          ha.field_w.field_F.prepareTrackSamples(0, cl.field_o, ej.field_h, nd.field_e, false);
-          ha.field_w.field_F.prepareTrackSamples(0, bb.field_b, ej.field_h, nd.field_e, false);
-          ha.field_w.field_F.prepareTrackSamples(0, ArchiveProvider.field_d, ej.field_h, nd.field_e, false);
-          ha.field_w.field_F.prepareTrackSamples(0, bb.field_e, ej.field_h, nd.field_e, false);
-          ha.field_w.field_F.prepareTrackSamples(0, CipherPacketBuffer.field_u, ej.field_h, nd.field_e, false);
-          ha.field_w.field_F.prepareTrackSamples(0, PcmOutputWorker.field_f, ej.field_h, nd.field_e, false);
+          ha.field_w.field_F.prepareTrackSamples(0, vg.field_h, ArchiveNetworkClient.field_h, nd.field_e, false);
+          ha.field_w.field_F.prepareTrackSamples(0, rb.field_s, ArchiveNetworkClient.field_h, nd.field_e, false);
+          ha.field_w.field_F.prepareTrackSamples(0, ProgressMessageDialog.field_tb, ArchiveNetworkClient.field_h, nd.field_e, false);
+          ha.field_w.field_F.prepareTrackSamples(0, ProgressDialog.field_ab, ArchiveNetworkClient.field_h, nd.field_e, false);
+          ha.field_w.field_F.prepareTrackSamples(0, cl.field_o, ArchiveNetworkClient.field_h, nd.field_e, false);
+          ha.field_w.field_F.prepareTrackSamples(0, bb.field_b, ArchiveNetworkClient.field_h, nd.field_e, false);
+          ha.field_w.field_F.prepareTrackSamples(0, ArchiveProvider.field_d, ArchiveNetworkClient.field_h, nd.field_e, false);
+          ha.field_w.field_F.prepareTrackSamples(0, bb.field_e, ArchiveNetworkClient.field_h, nd.field_e, false);
+          ha.field_w.field_F.prepareTrackSamples(0, CipherPacketBuffer.field_u, ArchiveNetworkClient.field_h, nd.field_e, false);
+          ha.field_w.field_F.prepareTrackSamples(0, PcmOutputWorker.field_f, ArchiveNetworkClient.field_h, nd.field_e, false);
           nd.field_e = null;
-          ej.field_h = null;
+          ArchiveNetworkClient.field_h = null;
         } catch (RuntimeException runtimeException) {
           throw AccountCreationResultPanel.wrapClientException((Throwable) ((Object) runtimeException), "HostileSpawn.DA(" + param0 + ')');
         }
@@ -1107,7 +1107,7 @@ public final class HostileSpawn extends NetworkGameClient {
           ResourceArchive.clearStaticReferences(-16199);
           gf.clearStaticReferences((byte) -105);
           il.clearStaticReferences(-91);
-          PacketBuffer.g(255);
+          PacketBuffer.clearPacketBufferStatics(255);
           hn.a(false);
           ie.clearStaticReferences((byte) 4);
           vg.a(param0 - 26);
@@ -1134,9 +1134,9 @@ public final class HostileSpawn extends NetworkGameClient {
           bi.clearStaticReferences(true);
           PcmResampler.resetStaticState((byte) 76);
           IntrusiveNode.clearStaticReferences((byte) -50);
-          ej.clearStaticReferences(-21742);
+          ArchiveNetworkClient.clearStaticReferences(-21742);
           DiskCacheWorker.clearStaticReferences(-3);
-          sg.b(-106);
+          ArchiveSourceManager.b(-106);
           BufferedRandomAccessFile.clearStaticReferences(false);
           BufferedSocket.clearStaticReferences(200);
           im.clearStaticReferences(-14986);
@@ -1210,7 +1210,7 @@ public final class HostileSpawn extends NetworkGameClient {
           eb.b(param0 + 32);
           lc.a(param0 ^ 63);
           qg.clearStaticReferences(true);
-          ih.clearDeclaredStaticReferences(param0 ^ 212);
+          SocketArchiveNetworkClient.clearDeclaredStaticReferences(param0 ^ 212);
           bh.clearStaticReferences(-4);
           NetworkArchiveRequest.b(true);
           SectorCacheStore.clearStaticReferences(255);
@@ -1582,13 +1582,13 @@ public final class HostileSpawn extends NetworkGameClient {
               decompiledFrameRemainder0 = (var4 != 0);
             }
             if (decompiledFrameRemainder0) {
-              if ((null != sg.field_j) &&
-                (decompiledFrameRemainder0 = !(!sg.field_j.field_l))) {
-                var2_int = sg.field_j.field_j.length;
+              if ((null != ArchiveSourceManager.field_j) &&
+                (decompiledFrameRemainder0 = !(!ArchiveSourceManager.field_j.field_l))) {
+                var2_int = ArchiveSourceManager.field_j.field_j.length;
                 var3_int = 0;
                 scanLoop1: while (true) {
                   if (var2_int > var3_int) {
-                    pb.field_Ob[var3_int] = sg.field_j.field_j[var3_int];
+                    pb.field_Ob[var3_int] = ArchiveSourceManager.field_j.field_j[var3_int];
                     ArchiveProvider.field_c[var3_int] = ll.bitwiseOr(ArchiveProvider.field_c[var3_int], pb.field_Ob[var3_int]);
                     var3_int++;
                     if (var4 == 0) {
@@ -1602,7 +1602,7 @@ public final class HostileSpawn extends NetworkGameClient {
                   bh.field_g[18] = vg.a(new String[]{il.field_b[18]}, 91, TextInputField.field_Y);
                   break;
                 }
-                sg.field_j = null;
+                ArchiveSourceManager.field_j = null;
                 MouseWheelInput.b((byte) -43);
                 var3 = (hm) (IntrusiveDeque.field_c.beginForward(param0 - 68));
                 while (var3 != null) {
@@ -1855,7 +1855,7 @@ public final class HostileSpawn extends NetworkGameClient {
             this.configureInterfaceThemeAndCursor(300);
             ClientLookupTables.field_h = new re(true);
             if (!StandardContentDialog.p(3)) {
-              sg.field_j = wk.a(4, -2178);
+              ArchiveSourceManager.field_j = wk.a(4, -2178);
               ClientLookupTables.field_h.f(-121);
             }
             ModalDialog.field_N = true;
@@ -1866,8 +1866,8 @@ public final class HostileSpawn extends NetworkGameClient {
             ModalDialog.field_P.tryLoadAllGroups(param0 ^ 4)) {
             if (InteractiveWidget.field_F.ensureIndexLoaded(param0 - 15883) &&
               InteractiveWidget.field_F.tryLoadAllGroups(0)) {
-              if (ej.field_h.ensureIndexLoaded(-15879) &&
-                ej.field_h.tryLoadAllGroups(0)) {
+              if (ArchiveNetworkClient.field_h.ensureIndexLoaded(-15879) &&
+                ArchiveNetworkClient.field_h.tryLoadAllGroups(0)) {
                 if (tk.field_a.ensureIndexLoaded(param0 ^ -15875) &&
                   tk.field_a.tryLoadAllGroups(0)) {
                   if (DequeWidgetContainer.field_C.ensureIndexLoaded(-15879) &&
@@ -1932,7 +1932,7 @@ public final class HostileSpawn extends NetworkGameClient {
                 gj.a(param0 ^ 16, DirectByteStorage.a(GzipDecompressor.field_i, tk.field_a, SoundCache.field_g, (byte) 79), 20.0f);
                 return false;
               }
-              gj.a(20, DirectByteStorage.a(GzipDecompressor.field_i, ej.field_h, SoundCache.field_g, (byte) 102), 15.0f);
+              gj.a(20, DirectByteStorage.a(GzipDecompressor.field_i, ArchiveNetworkClient.field_h, SoundCache.field_g, (byte) 102), 15.0f);
               return false;
             }
             gj.a(param0 ^ 16, DirectByteStorage.a(sd.field_v, InteractiveWidget.field_F, hn.field_c, (byte) 84), 10.0f);
@@ -2411,7 +2411,7 @@ public final class HostileSpawn extends NetworkGameClient {
           c.field_f = DelayedPacket.loadNamedRgbSprites(DequeWidgetContainer.field_C, 97, "", "Scenery_2");
           jd.field_h = fg.a("", "Scenery_3", DequeWidgetContainer.field_C, false);
           om.field_c = fg.a("", "Scenery_4", DequeWidgetContainer.field_C, false);
-          ih.field_v = fg.a("", "Scenery_5", DequeWidgetContainer.field_C, false);
+          SocketArchiveNetworkClient.field_v = fg.a("", "Scenery_5", DequeWidgetContainer.field_C, false);
           ValidationStatusIcon.field_L = fg.a("", "Scenery_6", DequeWidgetContainer.field_C, false);
           GridPoint.field_d = fg.a("", "Scenery_7", DequeWidgetContainer.field_C, false);
           hg.field_a = fg.a("", "Scenery_8", DequeWidgetContainer.field_C, false);
@@ -2496,7 +2496,7 @@ public final class HostileSpawn extends NetworkGameClient {
           wd.field_b = fg.a("", "Scenery_73", DequeWidgetContainer.field_C, false);
           ub.field_c = fg.a("", "Scenery_74", DequeWidgetContainer.field_C, false);
           fa.field_e = fg.a("", "Scenery_75", DequeWidgetContainer.field_C, false);
-          ej.field_d = fg.a("", "Scenery_76", DequeWidgetContainer.field_C, false);
+          ArchiveNetworkClient.field_d = fg.a("", "Scenery_76", DequeWidgetContainer.field_C, false);
           MouseInput.field_l = fg.a("", "Scenery_77", DequeWidgetContainer.field_C, false);
           ng.field_i = fg.a("", "Scenery_78", DequeWidgetContainer.field_C, false);
           mn.field_b = fg.a("", "Scenery_79", DequeWidgetContainer.field_C, false);

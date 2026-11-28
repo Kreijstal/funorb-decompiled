@@ -16,8 +16,8 @@ final class DropTargetWidgetContainer extends SingleChildWidgetContainer {
         String stackIn_9_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          DirectByteStorage.a(0, (java.awt.Component) ((Object) param1));
-          ch.a((java.awt.Component) ((Object) param1), 122);
+          DirectByteStorage.attachKeyboardListeners(0, (java.awt.Component) ((Object) param1));
+          ch.attachMouseListeners((java.awt.Component) ((Object) param1), 122);
           if (null != ah.field_d) {
             ah.field_d.attach((java.awt.Component) ((Object) param1), true);
           }

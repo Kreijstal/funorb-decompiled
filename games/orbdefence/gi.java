@@ -26,7 +26,7 @@ final class gi {
         RuntimeException var2 = null;
         var6 = OrbDefence.field_D ? 1 : 0;
         try {
-          if (null == ge.field_c) {
+          if (null == ArchiveNetworkClient.field_c) {
             return null;
           }
           if (param0 == null) {
@@ -42,7 +42,7 @@ final class gi {
             stackIn_10_0 = null;
             return (ti) (stackIn_10_0);
           }
-          var4 = (ti) (ge.field_c.a((byte) 125, (long)var3.hashCode()));
+          var4 = (ti) (ArchiveNetworkClient.field_c.a((byte) 125, (long)var3.hashCode()));
           while (true) {
             if (var4 == null) {
               return null;
@@ -50,7 +50,7 @@ final class gi {
             var8 = (CharSequence) ((Object) var4.field_db);
             var5 = ua.a(-102, var8);
             if (!var5.equals(var3)) {
-              var4 = (ti) (ge.field_c.c((byte) -33));
+              var4 = (ti) (ArchiveNetworkClient.field_c.c((byte) -33));
               continue;
             }
             break;

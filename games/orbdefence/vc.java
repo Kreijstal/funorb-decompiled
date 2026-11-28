@@ -63,7 +63,7 @@ final class vc {
                 }
                 if (stackIn_27_0 >= 0 &&
                   var8 < 256) {
-                  this.field_h[this.field_d] = (byte)ge.bitwiseOr((int) this.field_h[this.field_d], var8 >>> var7);
+                  this.field_h[this.field_d] = (byte)ArchiveNetworkClient.bitwiseOr((int) this.field_h[this.field_d], var8 >>> var7);
                   this.field_d = this.field_d + 1;
                   this.field_e = this.field_e + (8 - var7);
                   if (this.field_e == 512) {
@@ -85,7 +85,7 @@ final class vc {
           }
           if (stackIn_27_0 > 0) {
             var8 = 255 & param1[var5_int] << var6;
-            this.field_h[this.field_d] = (byte)ge.bitwiseOr((int) this.field_h[this.field_d], var8 >>> var7);
+            this.field_h[this.field_d] = (byte)ArchiveNetworkClient.bitwiseOr((int) this.field_h[this.field_d], var8 >>> var7);
           }
           if (stackIn_27_0 <= 0 ||
             var13 != 0) {
@@ -211,8 +211,8 @@ final class vc {
             lb.a(true, var5);
             return;
           }
-          if (null == ge.field_c) {
-            ge.field_c = new k(128);
+          if (null == ArchiveNetworkClient.field_c) {
+            ArchiveNetworkClient.field_c = new k(128);
             tl.field_a = 0;
           }
           var4Lifetime1 = var1.readString(2);
@@ -225,12 +225,12 @@ final class vc {
           if (null == var7_ref) {
             var7_ref = gi.a(var6_ref, -71);
             if (null != var7_ref) {
-              ge.field_c.a(-1, var7_ref, (long)ua.a(-92, (CharSequence) ((Object) var5_ref_StringLifetime1)).hashCode());
+              ArchiveNetworkClient.field_c.a(-1, var7_ref, (long)ua.a(-92, (CharSequence) ((Object) var5_ref_StringLifetime1)).hashCode());
             }
           }
           if (null == var7_ref) {
             var7_ref = new ti();
-            ge.field_c.a(-1, var7_ref, (long)ua.a(-94, (CharSequence) ((Object) var5_ref_StringLifetime1)).hashCode());
+            ArchiveNetworkClient.field_c.a(-1, var7_ref, (long)ua.a(-94, (CharSequence) ((Object) var5_ref_StringLifetime1)).hashCode());
             fieldTemp$1 = tl.field_a;
             tl.field_a = tl.field_a + 1;
             var7_ref.field_ab = fieldTemp$1;
@@ -720,7 +720,7 @@ final class vc {
         int var8 = 0;
         var8 = OrbDefence.field_D ? 1 : 0;
         try {
-          this.field_h[this.field_d] = (byte)ge.bitwiseOr((int) this.field_h[this.field_d], 128 >>> EditableTextField.bitwiseAnd(7, this.field_e));
+          this.field_h[this.field_d] = (byte)ArchiveNetworkClient.bitwiseOr((int) this.field_h[this.field_d], 128 >>> EditableTextField.bitwiseAnd(7, this.field_e));
           this.field_d = this.field_d + 1;
           if (this.field_d > 32) {
             while (true) {

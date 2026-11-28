@@ -216,7 +216,7 @@ final class mh {
               }
               var7 = new SectorCacheStore(param5, kk.field_b, PacketBuffer.field_m[param5], 2097152);
             }
-            var8 = BufferedRandomAccessFile.field_j.a(param5, param3, 24108, (SectorCacheStore) (var6), (SectorCacheStore) (var7));
+            var8 = BufferedRandomAccessFile.field_j.getOrCreateArchiveSource(param5, param3, 24108, (SectorCacheStore) (var6), (SectorCacheStore) (var7));
             if (param1) {
               var8.a(true);
             }

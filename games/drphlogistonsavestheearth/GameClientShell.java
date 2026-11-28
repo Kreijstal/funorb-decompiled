@@ -33,7 +33,7 @@ abstract class GameClientShell extends GameAppletShell {
         int var3Lifetime2;
         var5 = DrPhlogistonSavesTheEarth.field_D ? 1 : 0;
         if (null != DraggableWidgetContainer.field_V) {
-          if (null == df.field_l) {
+          if (null == ArchiveSourceManager.field_l) {
             var6 = MatchingFieldValidator.b(false);
             var4 = var6.getSize();
             DraggableWidgetContainer.field_V.a(var4.height, var4.width, 2);
@@ -84,7 +84,7 @@ abstract class GameClientShell extends GameAppletShell {
         }
         if (mh.field_d != -1 &&
           mh.field_d != 0) {
-          if (10 > hj.field_f) {
+          if (10 > SocketConnector.field_f) {
             if (3 == mh.field_d) {
               this.showErrorPage(-51, "js5crc");
             } else {
@@ -134,18 +134,18 @@ abstract class GameClientShell extends GameAppletShell {
           if (mh.field_d != -1 &&
             mh.field_d != 0) {
             mh.field_d = -1;
-            df.a((byte) 112);
+            ArchiveSourceManager.a((byte) 112);
           }
         }
         if (mh.field_d == 0 &&
           !sb.b(-11)) {
           EditableTextField.field_S = false;
         }
-        if (0 == hj.field_f &&
+        if (0 == SocketConnector.field_f &&
           jj.b(-98)) {
-          hj.field_f = 1;
+          SocketConnector.field_f = 1;
         }
-        if (hj.field_f == 1) {
+        if (SocketConnector.field_f == 1) {
           if (0 != ob.field_c) {
             DiskArchiveRequest.field_I = al.a(3, md.field_d);
           }
@@ -153,10 +153,10 @@ abstract class GameClientShell extends GameAppletShell {
           sb.field_i = lk.a(false, true, field_q, 1, 8);
           MusicPatch.field_t = lk.a(false, true, NameSuggestionsPanel.field_O, 1, 8);
           SingleChildWidgetContainer.field_E = sb.field_i;
-          hj.field_f = 2;
+          SocketConnector.field_f = 2;
           ph.field_b = AccountCreationResultPanel.field_Jb;
         }
-        if (hj.field_f == 2) {
+        if (SocketConnector.field_f == 2) {
           if (null != DiskArchiveRequest.field_I &&
             DiskArchiveRequest.field_I.ensureIndexLoaded(0)) {
             if (DiskArchiveRequest.field_I.hasGroupName((byte) 12, "")) {
@@ -170,10 +170,10 @@ abstract class GameClientShell extends GameAppletShell {
             }
           }
           if (DiskArchiveRequest.field_I == null) {
-            hj.field_f = 3;
+            SocketConnector.field_f = 3;
           }
         }
-        if (hj.field_f == 3 &&
+        if (SocketConnector.field_f == 3 &&
           PasswordValidator.a(MusicPatch.field_t, (byte) -91, sb.field_i, AccountCreationResultPanel.field_Jb) &&
           pa.a((byte) 64, MusicPatch.field_t)) {
           dm.c((byte) 94);
@@ -189,7 +189,7 @@ abstract class GameClientShell extends GameAppletShell {
             eb.a(stackIn_101_0, stackIn_102_1, stackIn_105_2, 10);
           }
           if (TextLayout.field_b) {
-            ka.a((byte) -87);
+            ProxySocketConnector.a((byte) -87);
           }
           if (ac.field_b == null) {
             ac.field_b = ai.g(-29132);
@@ -201,31 +201,31 @@ abstract class GameClientShell extends GameAppletShell {
           AccountCreationResultPanel.field_Jb = null;
           DirectByteStorage.a(79, (java.applet.Applet) (this));
           IterableNodeHashTable.a((byte) 86);
-          hj.field_f = 10;
+          SocketConnector.field_f = 10;
         }
-        if (10 == hj.field_f) {
+        if (10 == SocketConnector.field_f) {
           if (ob.field_c != 0) {
-            df.field_m = al.a(3, p.field_f);
+            ArchiveSourceManager.field_m = al.a(3, p.field_f);
           }
-          hj.field_f = 11;
+          SocketConnector.field_f = 11;
         }
         boolean decompiledFrameRemainder0 = true;
-        if (hj.field_f == 11) {
-          if (df.field_m != null && (!df.field_m.ensureIndexLoaded(0) ||
-            !df.field_m.tryLoadAllGroups((byte) 126))) {
-            we.a(EditableTextField.a(TextLineMetrics.field_d, df.field_m, 27867, LabeledWidgetContainer.field_J), -125, 0.0f);
+        if (SocketConnector.field_f == 11) {
+          if (ArchiveSourceManager.field_m != null && (!ArchiveSourceManager.field_m.ensureIndexLoaded(0) ||
+            !ArchiveSourceManager.field_m.tryLoadAllGroups((byte) 126))) {
+            we.a(EditableTextField.a(TextLineMetrics.field_d, ArchiveSourceManager.field_m, 27867, LabeledWidgetContainer.field_J), -125, 0.0f);
             decompiledFrameRemainder0 = false;
           }
           else {
             nd.field_Q = true;
-            hj.field_f = 12;
+            SocketConnector.field_f = 12;
           }
         }
-        if (12 == hj.field_f &&
+        if (12 == SocketConnector.field_f &&
           !nd.field_Q) {
-          hj.field_f = 13;
+          SocketConnector.field_f = 13;
         }
-        if (hj.field_f == 13) {
+        if (SocketConnector.field_f == 13) {
           var3Lifetime2 = 1;
           if (null != jl.field_k) {
             stackIn_134_0 = (!jl.field_k.a(-11255)) ? 0 : 1;
@@ -233,7 +233,7 @@ abstract class GameClientShell extends GameAppletShell {
             we.a(jl.field_k.field_h, -111, jl.field_k.field_a);
           }
           if (var3Lifetime2 != 0) {
-            hj.field_f = 20;
+            SocketConnector.field_f = 20;
           }
         }
         if (!param0 &&
@@ -434,7 +434,7 @@ abstract class GameClientShell extends GameAppletShell {
                                 lc.a((byte) -127);
                                 return;
                               }
-                              gb.a((Throwable) null, "MGS1: " + al.a(-64), 10);
+                              ArchiveNetworkClient.a((Throwable) null, "MGS1: " + al.a(-64), 10);
                               eg.a((byte) 126);
                               return;
                             }
@@ -466,7 +466,7 @@ abstract class GameClientShell extends GameAppletShell {
           }
           return;
         }
-        gb.a((Throwable) null, "MGS2: " + al.a(-77), 10);
+        ArchiveNetworkClient.a((Throwable) null, "MGS2: " + al.a(-77), 10);
         eg.a((byte) 126);
     }
 
@@ -519,7 +519,7 @@ abstract class GameClientShell extends GameAppletShell {
           } catch (java.lang.Exception decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
             var6_ref = (Exception) (Object) decompiledCaughtException;
-            gb.a((Throwable) ((Object) var6_ref), (String) null, param3 + 5385);
+            ArchiveNetworkClient.a((Throwable) ((Object) var6_ref), (String) null, param3 + 5385);
             this.showErrorPage(param3 ^ 5324, "crash");
           }
           return;
@@ -566,7 +566,7 @@ abstract class GameClientShell extends GameAppletShell {
           return;
         }
         if (!bj.a(13)) {
-          if (hj.field_f >= 10) {
+          if (SocketConnector.field_f >= 10) {
             if (!s.a((byte) -81)) {
               sa.b(0);
             } else {
@@ -578,7 +578,7 @@ abstract class GameClientShell extends GameAppletShell {
             }
           }
         } else {
-          stackIn_5_1 = (null != df.field_l);
+          stackIn_5_1 = (null != ArchiveSourceManager.field_l);
           discarded$1 = this.processAccountUiActions(stackIn_5_1, false, 10);
         }
     }
@@ -681,7 +681,7 @@ abstract class GameClientShell extends GameAppletShell {
             if (mh.field_d != -1 &&
               mh.field_d != 0) {
               mh.field_d = -1;
-              df.a((byte) 101);
+              ArchiveSourceManager.a((byte) 101);
             }
             if (param1) {
               dd.field_j = false;
@@ -752,7 +752,7 @@ abstract class GameClientShell extends GameAppletShell {
             } catch (java.lang.Exception decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var5 = (Exception) (Object) decompiledCaughtException;
-              gb.a((Throwable) ((Object) var5), "S1", param2 ^ 0);
+              ArchiveNetworkClient.a((Throwable) ((Object) var5), "S1", param2 ^ 0);
               var10 = (String) null;
               cb.a((String) null, true);
               al.field_e = null;

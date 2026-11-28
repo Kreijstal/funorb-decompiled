@@ -117,11 +117,11 @@ final class AccountRegistrationPanel extends DequeWidgetContainer implements Tex
         String var2 = CrossfadingMidiPcmStream.a(-415993727, new String[]{this.getLinkOpenMarkup((byte) 105), this.getLinkCloseMarkup((byte) -128)}, AgeValidator.field_n);
         int var3 = 20;
         var3 = var3 + this.addLabeledField(var3, this.field_O, 170, (byte) -82, ef.field_h);
-        var3 = var3 + (this.addLabeledFieldWithValidationMessage(20, var3, "", 170, a.field_u, (byte) -81, this.field_G) + 5);
+        var3 = var3 + (this.addLabeledFieldWithValidationMessage(20, var3, "", 170, SocketArchiveNetworkClient.field_u, (byte) -81, this.field_G) + 5);
         var3 = var3 + this.addLabeledField(var3, this.field_D, 170, (byte) -82, TextFieldValidator.field_h);
         var3 = var3 + (this.addLabeledFieldWithDefaultValidationMessage(170, var3, pf.field_c, lm.field_b, this.field_J, false) + 5);
         var3 = var3 + (this.addLabeledFieldWithDefaultValidationMessage(170, var3, bh.field_a, ja.field_b, this.field_B, false) + 5);
-        var3 = var3 + this.addLabeledFieldWithValidationIcon(var3, 170, pi.field_c, this.field_E, 25);
+        var3 = var3 + this.addLabeledFieldWithValidationIcon(var3, 170, ArchiveSourceManager.field_c, this.field_E, 25);
         LabeledWidgetContainer var4 = new LabeledWidgetContainer(46, var3, -90 + this.field_m, 25, this.field_P, true, this.field_m - 120, 5, StandardContentDialog.field_bb, 11579568, rh.field_d);
         this.addChild(var4, (byte) 74);
         var3 = var3 + var4.field_r;

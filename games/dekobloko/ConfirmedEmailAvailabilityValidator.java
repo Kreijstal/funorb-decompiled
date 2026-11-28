@@ -121,7 +121,7 @@ final class ConfirmedEmailAvailabilityValidator extends TextFieldValidator {
           if (this.getValidationStatus(stringArgument1, (byte) -40) != ReturnedShapeUpdate.validationStatusState0005) {
             return MixedSupport077.stringState0331;
           }
-          stackStringLocal3 = NetworkSupport003.stringState0107;
+          stackStringLocal3 = ArchiveNetworkClient.stringState0107;
           return stackStringLocal3;
         } catch (java.lang.RuntimeException caughtParameterLocal8) {
           caughtExceptionLocal7 = caughtParameterLocal8;

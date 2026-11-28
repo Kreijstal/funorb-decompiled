@@ -228,7 +228,7 @@ final class AlphaWidgetContainer extends WidgetWrapper {
         field_D = null;
     }
 
-    final static void a(byte param0, java.awt.Component param1) {
+    final static void detachKeyboardListeners(byte param0, java.awt.Component param1) {
         try {
           param1.removeKeyListener(TextLayout.field_e);
           param1.removeFocusListener(TextLayout.field_e);

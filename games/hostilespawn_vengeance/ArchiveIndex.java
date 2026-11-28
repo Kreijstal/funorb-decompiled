@@ -137,7 +137,7 @@ final class ArchiveIndex {
           if (5 <= var4 &&
             var4 <= 7) {
             if (6 <= var4) {
-              this.field_n = var17.d(8195);
+              this.field_n = var17.readInt(8195);
             } else {
               this.field_n = 0;
             }
@@ -147,7 +147,7 @@ final class ArchiveIndex {
             stackIn_14_0 = ((2 & var5) == 0) ? 0 : 1;
             var7 = stackIn_14_0;
             if (var4 >= 7) {
-              this.field_j = var17.a(true);
+              this.field_j = var17.readLargeSmart(true);
             } else {
               this.field_j = var17.readUnsignedShort(8);
             }
@@ -168,7 +168,7 @@ final class ArchiveIndex {
               }
             } else {
               for (var10 = 0; var10 < this.field_j; var10++) {
-                dupTemp$1 = var8 + var17.a(true);
+                dupTemp$1 = var8 + var17.readLargeSmart(true);
                 var8 = dupTemp$1;
                 this.field_t[var10] = dupTemp$1;
                 if (this.field_t[var10] > var9) {
@@ -191,30 +191,30 @@ final class ArchiveIndex {
                 this.field_r[var10Lifetime1] = -1;
               }
               for (var10Lifetime1Lifetime1 = 0; this.field_j > var10Lifetime1Lifetime1; var10Lifetime1Lifetime1++) {
-                this.field_r[this.field_t[var10Lifetime1Lifetime1]] = var17.d(8195);
+                this.field_r[this.field_t[var10Lifetime1Lifetime1]] = var17.readInt(8195);
               }
               this.field_l = new rg(this.field_r);
             }
             for (var10Lifetime2 = 0; this.field_j > var10Lifetime2; var10Lifetime2++) {
-              this.field_v[this.field_t[var10Lifetime2]] = var17.d(8195);
+              this.field_v[this.field_t[var10Lifetime2]] = var17.readInt(8195);
             }
             if (var7 == 0) {
               for (var10Lifetime3 = 0; this.field_j > var10Lifetime3; var10Lifetime3++) {
-                this.field_i[this.field_t[var10Lifetime3]] = var17.d(8195);
+                this.field_i[this.field_t[var10Lifetime3]] = var17.readInt(8195);
               }
             } else {
               for (var10Lifetime3 = 0; var10Lifetime3 < this.field_j; var10Lifetime3++) {
                 var21 = new byte[64];
-                var17.a(64, 0, var21, -18181);
+                var17.readBytes(64, 0, var21, -18181);
                 this.field_w[this.field_t[var10Lifetime3]] = var21;
               }
               for (var10Lifetime3 = 0; this.field_j > var10Lifetime3; var10Lifetime3++) {
-                this.field_i[this.field_t[var10Lifetime3]] = var17.d(8195);
+                this.field_i[this.field_t[var10Lifetime3]] = var17.readInt(8195);
               }
             }
             if (var4 >= 7) {
               for (var10Lifetime4 = 0; var10Lifetime4 < this.field_j; var10Lifetime4++) {
-                this.field_o[this.field_t[var10Lifetime4]] = var17.a(true);
+                this.field_o[this.field_t[var10Lifetime4]] = var17.readLargeSmart(true);
               }
               for (var10Lifetime4 = 0; var10Lifetime4 < this.field_j; var10Lifetime4++) {
                 var11 = this.field_t[var10Lifetime4];
@@ -224,7 +224,7 @@ final class ArchiveIndex {
                 array$2 = new int[var12];
                 this.field_b[var11] = array$2;
                 for (var14 = 0; var14 < var12; var14++) {
-                  dupTemp$3 = var8Lifetime1 + var17.a(true);
+                  dupTemp$3 = var8Lifetime1 + var17.readLargeSmart(true);
                   var8Lifetime1 = dupTemp$3;
                   dupTemp$4 = this.field_b[var11];
                   dupTemp$4[var14] = dupTemp$3;
@@ -282,7 +282,7 @@ final class ArchiveIndex {
                   } else {
                     var14Lifetime1 = var13Lifetime1Lifetime1;
                   }
-                  this.field_q[var11Lifetime1][var14Lifetime1] = var17.d(8195);
+                  this.field_q[var11Lifetime1][var14Lifetime1] = var17.readInt(8195);
                 }
                 this.field_h[var11Lifetime1] = new rg(this.field_q[var11Lifetime1]);
               }

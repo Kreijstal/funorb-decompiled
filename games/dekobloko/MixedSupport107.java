@@ -219,7 +219,7 @@ final class MixedSupport107 {
             return stackStringLocal11;
           }
           cipherPacketBufferLocal3 = SocketFactory.cipherPacketBufferState0002;
-          cipherPacketBufferLocal3.performAction1641(integerArgument1, -4);
+          cipherPacketBufferLocal3.writeCipheredByte(integerArgument1, -4);
           cipherPacketBufferLocal3.position = cipherPacketBufferLocal3.position + 1;
           integerLocal2 = cipherPacketBufferLocal3.position;
           cipherPacketBufferLocal3.writeByte(true, 0);

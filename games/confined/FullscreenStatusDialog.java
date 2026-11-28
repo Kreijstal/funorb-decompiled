@@ -83,7 +83,7 @@ final class FullscreenStatusDialog extends ResizableModalDialog implements Widge
         RuntimeException decompiledCaughtException = null;
         try {
           var3 = null;
-          if (kd.field_t != param1) {
+          if (SocketArchiveNetworkClient.field_t != param1) {
             if (GrowableIntArray.field_f == param1) {
               var3 = sf.field_s;
               this.field_z = this.field_z + 10;

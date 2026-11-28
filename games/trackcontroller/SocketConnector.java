@@ -43,7 +43,7 @@ abstract class SocketConnector {
         }
     }
 
-    final java.net.Socket b(int param0) throws IOException {
+    final java.net.Socket openDirectSocket(int param0) throws IOException {
         if (param0 == 0) {
           return new java.net.Socket(this.field_b, this.field_c);
         }
@@ -59,7 +59,7 @@ abstract class SocketConnector {
         }
     }
 
-    abstract java.net.Socket c(int param0) throws IOException;
+    abstract java.net.Socket openSocket(int param0) throws IOException;
 
     static {
     }

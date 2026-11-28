@@ -118,7 +118,7 @@ final class dp extends lw {
     final static void a(java.applet.Applet param0, int param1) {
         try {
           jia.a("", -76, param0);
-          qfa.a(param0, -118);
+          NetworkArchiveRequest.a(param0, -118);
           if (param1 >= -78) {
             java.applet.Applet var3 = (java.applet.Applet) null;
             dp.a((java.applet.Applet) null, 36);

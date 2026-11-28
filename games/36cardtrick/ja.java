@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ja {
-    static eb field_b;
+    static ArchiveSourceManager field_b;
     static String field_d;
     private ResourceArchive field_e;
     static String field_a;

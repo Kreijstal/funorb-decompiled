@@ -118,7 +118,7 @@ final class PasswordValidator extends TextFieldValidator {
     final static void a(int param0, java.awt.Canvas param1) {
         try {
           if (TextFieldValidator.field_k == 11) {
-            md.c(32);
+            ProxySocketConnector.c(32);
           }
           ih.a(tl.field_e, 0, ByteArrayPoolSupport.field_b, mf.field_d);
           kg.a(0, (byte) -83, param0, param1);
@@ -219,7 +219,7 @@ final class PasswordValidator extends TextFieldValidator {
             stackIn_8_0 = ModalDialog.field_F;
             return stackIn_8_0;
           }
-          if (md.a(-20767, var5)) {
+          if (ProxySocketConnector.a(-20767, var5)) {
             stackIn_11_0 = DialogMessagePane.field_H;
             return stackIn_11_0;
           }

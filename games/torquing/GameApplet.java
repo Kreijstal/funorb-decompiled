@@ -361,12 +361,12 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
         Object var6 = null;
         try {
           var2_long = km.correctedCurrentTimeMillis(-1);
-          var4 = jl.field_V[bo.field_k];
-          jl.field_V[bo.field_k] = var2_long;
+          var4 = jl.field_V[ArchiveSourceManager.field_k];
+          jl.field_V[ArchiveSourceManager.field_k] = var2_long;
           if (0L != var4 &&
             var4 < var2_long) {
           }
-          bo.field_k = 31 & bo.field_k - param0;
+          ArchiveSourceManager.field_k = 31 & ArchiveSourceManager.field_k - param0;
           var6 = this;
           synchronized (var6) {
             ae.field_ib = SpriteBase.field_b;

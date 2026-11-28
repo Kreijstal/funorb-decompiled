@@ -141,7 +141,7 @@ public final class Lexicominos extends NetworkGameClient {
                           ModalDialog.a(16, rh.a(ci.field_e, (byte) 113, "", v.field_t, ValidationStatusWidget.field_P), 10.0f);
                           return false;
                         }
-                        ModalDialog.a(16, rh.a(SectorCacheStore.field_d, (byte) 98, "", IsaacRandom.field_e, qf.field_s), 9.0f);
+                        ModalDialog.a(16, rh.a(SectorCacheStore.field_d, (byte) 98, "", IsaacRandom.field_e, SocketArchiveNetworkClient.field_s), 9.0f);
                         return false;
                       }
                       ModalDialog.a(16, rh.a(SecondaryNodeDequeIterator.field_b, (byte) 42, "", ni.field_d, DiskArchiveRequest.field_y), 6.0f);
@@ -159,7 +159,7 @@ public final class Lexicominos extends NetworkGameClient {
               ModalDialog.a(16, rh.a(gg.field_d, (byte) 37, "roman20", v.field_t, ValidationStatusWidget.field_P), 0.0f);
               return false;
             }
-            ModalDialog.a(16, rh.a(BitPacketBuffer.field_p, (byte) 55, "basic", IsaacRandom.field_e, qf.field_s), 0.0f);
+            ModalDialog.a(16, rh.a(BitPacketBuffer.field_p, (byte) 55, "basic", IsaacRandom.field_e, SocketArchiveNetworkClient.field_s), 0.0f);
             return false;
           }
           if (SecondaryNodeDequeIterator.field_b != null) {
@@ -199,7 +199,7 @@ public final class Lexicominos extends NetworkGameClient {
           if (null != BitPacketBuffer.field_p) {
             ob.field_e = df.a("basic", "orbcoin", BitPacketBuffer.field_p, (byte) -70);
             e.field_u = df.a("basic", "unachieved", BitPacketBuffer.field_p, (byte) -41);
-            bi.field_a = hb.a(gg.field_d, 246, "roman20", "", BitPacketBuffer.field_p);
+            KeyboardInputHandler.field_a = hb.a(gg.field_d, 246, "roman20", "", BitPacketBuffer.field_p);
             mk.field_h = hb.a(gg.field_d, 246, "roman12", "", BitPacketBuffer.field_p);
             FrameTimer.field_a = hb.a(SectorCacheStore.field_d, "scorefont", "", ci.field_e, -2569);
             jh.field_d = hb.a(ci.field_e, 246, "", "lexfont", SectorCacheStore.field_d);
@@ -224,7 +224,7 @@ public final class Lexicominos extends NetworkGameClient {
                 return false;
               }
               if (null == ne.field_b) {
-                ne.field_b = el.a(0, lg.field_c);
+                ne.field_b = el.a(0, SocketConnector.field_c);
                 v.field_B.setAsRasterTarget(1);
                 SectorCacheStore.b(param0 ^ -81);
                 return false;
@@ -475,7 +475,7 @@ public final class Lexicominos extends NetworkGameClient {
               if (!(var7_int < fg.field_e.length)) {
                 v.field_B.setAsRasterTarget(1);
                 AlphaWidgetContainer.field_H = df.a("", "letterBkgnd", SectorCacheStore.field_d, (byte) -47);
-                lg.field_c = df.a("", "letterBkgndGrey", SectorCacheStore.field_d, (byte) -56);
+                SocketConnector.field_c = df.a("", "letterBkgndGrey", SectorCacheStore.field_d, (byte) -56);
                 jj.field_f = td.a("", "highlight", SectorCacheStore.field_d, 22306);
                 BitPacketBuffer.field_l = td.a("", "multipliers", SectorCacheStore.field_d, 22306);
                 ob.field_d = df.a("", "ingameleft", SectorCacheStore.field_d, (byte) -108);
@@ -921,14 +921,14 @@ public final class Lexicominos extends NetworkGameClient {
           eb.b((byte) -100);
           hb.clearStaticReferences((byte) 76);
           CrossfadingMidiPcmStream.a((byte) 120);
-          bi.a(-1);
+          KeyboardInputHandler.a(-1);
           of.clearStaticReferences(param0 ^ -80);
           ka.clearStaticReferences((byte) -81);
           NetworkGameClient.clearStaticReferences((byte) 89);
           de.clearStaticReferences(param0 ^ 73);
           GameAppletShell.e(439);
           wg.resetStaticState(param0 + 37);
-          da.a((byte) 123);
+          MouseInputHandler.a((byte) 123);
           MouseWheelInput.clearStaticReferences(param0 + 35);
           SoftwareRasterizer.clearStaticReferences();
           ResourceArchive.clearStaticReferences(1);
@@ -957,8 +957,8 @@ public final class Lexicominos extends NetworkGameClient {
           oj.b((byte) -26);
           fc.clearStaticReferences(-265);
           sg.b(0);
-          wb.clearStaticReferences(5);
-          pg.resetStaticState(-8413);
+          ArchiveNetworkClient.clearStaticReferences(5);
+          ArchiveSourceManager.resetStaticState(-8413);
           BufferedRandomAccessFile.clearStaticReferences((byte) -116);
           BufferedSocket.clearStaticReferences((byte) -59);
           SpriteGeometry.resetStaticState(-43);
@@ -1011,7 +1011,7 @@ public final class Lexicominos extends NetworkGameClient {
           q.clearStaticReferences((byte) 70);
           ByteArrayPoolSupport.a(87);
           IsaacRandom.clearStaticReferences((byte) -81);
-          qf.e((byte) -15);
+          SocketArchiveNetworkClient.e((byte) -15);
           ci.clearStaticReferences((byte) -127);
           NetworkArchiveRequest.clearStaticReferences((byte) -63);
           SectorCacheStore.resetStaticState(param0 ^ 72);
@@ -1061,7 +1061,7 @@ public final class Lexicominos extends NetworkGameClient {
           qa.clearStaticReferences(param0 + 48);
           vl.clearStaticReferences(96);
           ni.clearStaticReferences((byte) 65);
-          lg.clearStaticReferences(21745);
+          SocketConnector.clearStaticReferences(21745);
           ProxyAuthenticationRequiredException.clearStaticReferences((byte) -18);
           NanoFrameTimer.clearStaticReferences(true);
           ImageProducerRasterBuffer.clearStaticReferences((byte) -126);
@@ -1096,7 +1096,7 @@ public final class Lexicominos extends NetworkGameClient {
           SecondaryNodeDeque.clearStaticReferences((byte) 70);
           rh.clearStaticReferences(-119);
           gj.releaseDeclaredStaticReferences(-8601);
-          ch.clearDeclaredStaticReferences(-123);
+          ProxySocketConnector.clearDeclaredStaticReferences(-123);
           sb.resetStaticState(16478);
           NodeHashTableIterator.a(param0 ^ -30299);
           SecondaryNodeDequeIterator.clearStaticReferences(true);
@@ -1251,7 +1251,7 @@ public final class Lexicominos extends NetworkGameClient {
             }
           }
           if (var2_int != 0) {
-            wi.a(12, bi.field_a.field_E * 3 >> 1, (byte) -123, bi.field_a, 4, 4, bi.field_a.field_E + 1, 240, 320, jh.field_b, nh.field_c);
+            wi.a(12, KeyboardInputHandler.field_a.field_E * 3 >> 1, (byte) -123, KeyboardInputHandler.field_a, 4, 4, KeyboardInputHandler.field_a.field_E + 1, 240, 320, jh.field_b, nh.field_c);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -1438,7 +1438,7 @@ public final class Lexicominos extends NetworkGameClient {
             ib.field_a[var3].draw(0, 0);
           }
           if (2 <= vb.field_i) {
-            bi.field_a.drawRightAligned(Integer.toString(TextFieldValidator.field_i), 630, 25, 16711680, -1);
+            KeyboardInputHandler.field_a.drawRightAligned(Integer.toString(TextFieldValidator.field_i), 630, 25, 16711680, -1);
           }
           if (FullscreenFocusCanvas.a(-17977)) {
             SoftwareRasterizer.darkenRectangleHalf(0, 0, SoftwareRasterizer.field_f, SoftwareRasterizer.field_a);
@@ -1563,7 +1563,7 @@ public final class Lexicominos extends NetworkGameClient {
                 MouseWheelInput.field_a = MouseWheelInput.field_a & ~DialogMessagePane.field_D.field_i;
                 DialogMessagePane.field_D = null;
                 MusicPatchPcmStream.c(!param0);
-                qf.a(this, 117);
+                SocketArchiveNetworkClient.a(this, 117);
                 decompiledFrameRemainder0 = (ImageProducerRasterBuffer.field_j == 7);
                 if ((decompiledFrameRemainder0) &&
                   (decompiledFrameRemainder0 = (MouseWheelInput.field_a == 0))) {
@@ -1600,7 +1600,7 @@ public final class Lexicominos extends NetworkGameClient {
                         break;
                       }
                     case 3:
-                      DiskCacheWorker.a(bi.field_a.field_E * 3 >> 1, 4, 320, jh.field_b, 12, bi.field_a, 4, (byte) -103, nh.field_c, true, 1 + bi.field_a.field_E, 240);
+                      DiskCacheWorker.a(KeyboardInputHandler.field_a.field_E * 3 >> 1, 4, 320, jh.field_b, 12, KeyboardInputHandler.field_a, 4, (byte) -103, nh.field_c, true, 1 + KeyboardInputHandler.field_a.field_E, 240);
                       break;
                   }
                   if (!FullscreenFocusCanvas.a(-17977)) {
@@ -1714,7 +1714,7 @@ public final class Lexicominos extends NetworkGameClient {
                 }
                 if (ImageProducerRasterBuffer.field_j == -3) {
                   ImageProducerRasterBuffer.field_j = 0;
-                  DiskCacheWorker.a(3 * bi.field_a.field_E >> 1, 4, 320, jh.field_b, 12, bi.field_a, 4, (byte) 86, nh.field_c, false, 1 + bi.field_a.field_E, 240);
+                  DiskCacheWorker.a(3 * KeyboardInputHandler.field_a.field_E >> 1, 4, 320, jh.field_b, 12, KeyboardInputHandler.field_a, 4, (byte) 86, nh.field_c, false, 1 + KeyboardInputHandler.field_a.field_E, 240);
                 }
                 je.field_a = 3;
                 BitPacketBuffer.field_r = ImageProducerRasterBuffer.field_j;
@@ -1735,7 +1735,7 @@ public final class Lexicominos extends NetworkGameClient {
                 }
                 boolean decompiledNaturalLoopExit0 = false;
                 while (!(decompiledNaturalLoopExit0 = (!IterableNodeHashTable.a((byte) -72)))) {
-                  if (da.field_b == 13) {
+                  if (MouseInputHandler.field_b == 13) {
                     if (vb.field_i >= 2) {
                       ob.a(0, sk.field_a, (byte) 22, ' ');
                     }
@@ -1747,7 +1747,7 @@ public final class Lexicominos extends NetworkGameClient {
                   if (2 > vb.field_i) {
                     continue;
                   }
-                  stackIn_336_0 = da.field_b;
+                  stackIn_336_0 = MouseInputHandler.field_b;
                   stackIn_336_1 = 84;
                   if (var4 == 0) {
                     if (stackIn_336_0 == stackIn_336_1) {
@@ -1768,7 +1768,7 @@ public final class Lexicominos extends NetworkGameClient {
                       }
                     }
                     if (null != el.field_c &&
-                      da.field_b == 50 &&
+                      MouseInputHandler.field_b == 50 &&
                       el.field_c.field_d < 16) {
                       el.field_c.field_t = el.field_c.field_t + 8;
                       var3 = (el.field_c.field_t >> 3) + 1;
@@ -1783,7 +1783,7 @@ public final class Lexicominos extends NetworkGameClient {
                     if (null != el.field_c &&
                       el.field_c.field_T) {
                       stackIn_296_0 = System.out;
-                      stackIn_296_1 = new StringBuilder().append("keycode=").append(da.field_b).append("; keychar=");
+                      stackIn_296_1 = new StringBuilder().append("keycode=").append(MouseInputHandler.field_b).append("; keychar=");
                       stackIn_296_2 = IsaacRandom.field_b;
                       stackIn_297_3 = !(param0);
                       ((PrintStream) (Object) stackIn_296_0).println(((StringBuilder) (Object) stackIn_296_1).append(PasswordValidator.a(stackIn_296_2, stackIn_297_3)).toString());
@@ -2243,10 +2243,10 @@ public final class Lexicominos extends NetworkGameClient {
             if ((decompiledFrameRemainder0) &&
               (BitPacketBuffer.field_r == 6)) {
               var6Lifetime1 = 50;
-              var7 = 4 + bi.field_a.field_t + bi.field_a.field_G;
-              var6Lifetime1 = var6Lifetime1 + bi.field_a.lineCount(me.field_u, 254) * var7;
+              var7 = 4 + KeyboardInputHandler.field_a.field_t + KeyboardInputHandler.field_a.field_G;
+              var6Lifetime1 = var6Lifetime1 + KeyboardInputHandler.field_a.lineCount(me.field_u, 254) * var7;
               stackIn_42_0 = var6Lifetime1;
-              stackIn_42_1 = bi.field_a;
+              stackIn_42_1 = KeyboardInputHandler.field_a;
               stackIn_43_2 = (0 != MouseWheelInput.field_a);
               stackIn_46_3 = false;
               stackIn_46_4 = 52;
@@ -2257,7 +2257,7 @@ public final class Lexicominos extends NetworkGameClient {
               stackIn_50_1 = 6;
               stackIn_50_2 = 2 * gg.field_a[0].field_x;
               stackIn_50_3 = var7;
-              stackIn_50_4 = bi.field_a;
+              stackIn_50_4 = KeyboardInputHandler.field_a;
               stackIn_50_5 = false;
               stackIn_50_6 = -95;
               stackIn_51_7 = (MouseWheelInput.field_a != 0);

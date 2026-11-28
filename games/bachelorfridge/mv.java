@@ -459,7 +459,7 @@ class mv extends AnimationNode {
           if (!var4.field_s.isDown(-120)) {
             this.field_j = 100;
             if (this.field_k.field_s) {
-              var4.a(16777152, 72, qfa.field_w);
+              var4.a(16777152, 72, NetworkArchiveRequest.field_w);
             } else {
               if (!this.field_k.field_r) {
                 if (!this.field_k.field_n) {

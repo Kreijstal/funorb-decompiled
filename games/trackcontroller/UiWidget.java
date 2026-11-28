@@ -145,7 +145,7 @@ class UiWidget extends IntrusiveNode {
             this.handleWheel(kf.mouseX, param3, NodeHashTableIterator.field_c, param0, fg.mouseY, this, (byte) 127);
           }
           if (uk.clickButton != 0) {
-            if (!this.pointerPressed(this, wg.clickY, ContentTransitionDialog.clickX, uk.clickButton, 0, param0, param3)) {
+            if (!this.pointerPressed(this, ArchiveSourceManager.clickY, ContentTransitionDialog.clickX, uk.clickButton, 0, param0, param3)) {
               if (var5 != 0) {
                 this.blur(-24174);
               }

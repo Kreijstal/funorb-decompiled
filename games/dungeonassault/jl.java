@@ -61,7 +61,7 @@ final class jl {
         RuntimeException decompiledCaughtException = null;
         try {
           var2_int = 56 / ((param1 + 57) / 60);
-          stackIn_3_0 = (param0.j(-55, 1) == 1);
+          stackIn_3_0 = (param0.readBits(-55, 1) == 1);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

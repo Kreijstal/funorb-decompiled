@@ -60,12 +60,12 @@ final class ra {
         if (1 == no.field_d) {
           var2 = SoundCache.findAchievementIconAt(SoundCache.field_c, (byte) -94, AchievementIconEntry.field_k);
           if (var2 == GameAppletShell.field_f) {
-            um.field_g = null;
+            SocketConnector.field_g = null;
             GameAppletShell.field_f = -1;
           } else {
             if (var2 != -1) {
               GameAppletShell.field_f = var2;
-              um.field_g = new rh(0, 0, 40, 80, 16711680, 768, 224);
+              SocketConnector.field_g = new rh(0, 0, 40, 80, 16711680, 768, 224);
             }
           }
         }
@@ -175,7 +175,7 @@ final class ra {
     }
 
     final static void b(int param0) {
-        ha.field_k = new SoundCache(GuestPlayConfirmationForm.field_W, DualLinkNode.field_r);
+        ProxySocketConnector.field_k = new SoundCache(GuestPlayConfirmationForm.field_W, DualLinkNode.field_r);
         BufferedRandomAccessFile.a(false, 30, "menu_select");
         sa.field_v = sh.a(-77, "da_ambience_drip", new int[]{110, 110, 110, 110, 140});
         hp.field_c = sh.a(-95, "da_ambience_insect", new int[]{256, 256, 168});

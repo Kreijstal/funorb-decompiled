@@ -18,16 +18,16 @@ final class StandardContentDialog extends ContentTransitionDialog {
         field_nb = null;
         if (param0) {
           java.awt.Component var2 = (java.awt.Component) null;
-          StandardContentDialog.a((java.awt.Component) null, 22);
+          StandardContentDialog.detachMouseListeners((java.awt.Component) null, 22);
         }
     }
 
-    final static void a(java.awt.Component param0, int param1) {
+    final static void detachMouseListeners(java.awt.Component param0, int param1) {
         try {
           param0.removeMouseListener(sg.field_i);
           if (param1 < 106) {
             java.awt.Component var3 = (java.awt.Component) null;
-            StandardContentDialog.a((java.awt.Component) null, -120);
+            StandardContentDialog.detachMouseListeners((java.awt.Component) null, -120);
           }
           param0.removeMouseMotionListener(sg.field_i);
           param0.removeFocusListener(sg.field_i);

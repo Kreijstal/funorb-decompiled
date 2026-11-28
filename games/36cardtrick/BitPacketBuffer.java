@@ -154,14 +154,14 @@ final class BitPacketBuffer extends PacketBuffer {
                         var18 = -var17 + (TriangleRasterizer.field_i - 1);
                       }
                       if (var17 >= 0) {
-                        a.a(var16Lifetime2 + var17, param1, var18, param0, -1483723263);
+                        SocketArchiveNetworkClient.a(var16Lifetime2 + var17, param1, var18, param0, -1483723263);
                       } else {
-                        a.a(var16Lifetime2, param1, var17 + var18, param0, -1483723263);
+                        SocketArchiveNetworkClient.a(var16Lifetime2, param1, var17 + var18, param0, -1483723263);
                       }
                     } else {
                       if (var17 >= 0 &&
                         var17 < TriangleRasterizer.field_i) {
-                        a.a(var16Lifetime2 + var17, param1, var18, param0, -1483723263);
+                        SocketArchiveNetworkClient.a(var16Lifetime2 + var17, param1, var18, param0, -1483723263);
                       }
                     }
                   }
@@ -235,14 +235,14 @@ final class BitPacketBuffer extends PacketBuffer {
                     var17Lifetime1 = -1 + (TriangleRasterizer.field_i - var16Lifetime1);
                   }
                   if (0 <= var16Lifetime1) {
-                    a.a(var15Lifetime1 + var16Lifetime1, param1, var17Lifetime1, param0, -1483723263);
+                    SocketArchiveNetworkClient.a(var15Lifetime1 + var16Lifetime1, param1, var17Lifetime1, param0, -1483723263);
                   } else {
-                    a.a(var15Lifetime1, param1, var17Lifetime1 + var16Lifetime1, param0, -1483723263);
+                    SocketArchiveNetworkClient.a(var15Lifetime1, param1, var17Lifetime1 + var16Lifetime1, param0, -1483723263);
                   }
                 } else {
                   if (var16Lifetime1 >= 0 &&
                     var16Lifetime1 < TriangleRasterizer.field_i) {
-                    a.a(var16Lifetime1 + var15Lifetime1, param1, var17Lifetime1, param0, -1483723263);
+                    SocketArchiveNetworkClient.a(var16Lifetime1 + var15Lifetime1, param1, var17Lifetime1, param0, -1483723263);
                   }
                 }
               }

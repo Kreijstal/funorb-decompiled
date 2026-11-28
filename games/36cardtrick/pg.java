@@ -28,10 +28,10 @@ final class pg {
             aa.a(var4, 3298, param1);
             var4 = (ad) (od.field_b.nextForward((byte) -103));
           }
-          var5 = (uh) (tl.field_a.beginForward((byte) 74));
+          var5 = (uh) (SocketConnector.field_a.beginForward((byte) 74));
           while (var5 != null) {
             DirectByteArrayStore.a(-64, var5, param1);
-            var5 = (uh) (tl.field_a.nextForward((byte) -113));
+            var5 = (uh) (SocketConnector.field_a.nextForward((byte) -113));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

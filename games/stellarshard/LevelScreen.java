@@ -18,7 +18,7 @@ final class LevelScreen extends ib {
         int var4 = 0;
         var4 = stellarshard.field_B;
         try {
-          if (fb.field_n > 0) {
+          if (ArchiveNetworkClient.field_n > 0) {
             return;
           }
           var2_int = 0;
@@ -419,7 +419,7 @@ final class LevelScreen extends ib {
             this.a(true, 82);
           }
           if (ProxyAuthenticationRequiredException.field_c != 8) {
-            if (ProxyAuthenticationRequiredException.field_c == 3 && (fb.field_n == 0 ||
+            if (ProxyAuthenticationRequiredException.field_c == 3 && (ArchiveNetworkClient.field_n == 0 ||
               1 == gh.field_c)) {
               if (param1 == 8 &&
                 DualLinkNode.a(param0 ^ -425)) {
@@ -560,7 +560,7 @@ final class LevelScreen extends ib {
               }
               boolean decompiledFrameRemainder0 = true;
               if (param1 != 8 ||
-                fb.field_n != 0 &&
+                ArchiveNetworkClient.field_n != 0 &&
                 gh.field_c != 1) {
                 if (param1 == 0 &&
                   a.entities[0] != null &&
@@ -1120,7 +1120,7 @@ final class LevelScreen extends ib {
           }
           l.field_f.drawRightAligned(param5, param0 - 2, param1 + param3, param6, -1);
           if (param6 == 16777215 &&
-            0 != fb.field_n &&
+            0 != ArchiveNetworkClient.field_n &&
             param4) {
             return true;
           }
@@ -1285,7 +1285,7 @@ final class LevelScreen extends ib {
         var14 = stellarshard.field_B;
         try {
           if (ProxyAuthenticationRequiredException.field_c == 8) {
-            wj.c((byte) 57);
+            SocketArchiveNetworkClient.c((byte) 57);
           }
           boolean decompiledFrameRemainder3 = true;
           if (ProxyAuthenticationRequiredException.field_c == 6) {

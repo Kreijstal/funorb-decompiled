@@ -66,10 +66,10 @@ final class km extends sd {
         RuntimeException var3_ref = null;
         try {
           var3 = s.field_b;
-          var3.i(19319, param2);
-          var3.d(96, 2);
-          var3.d(param1 ^ -19825, 0);
-          var3.d(param1 ^ -19780, param0.field_l);
+          var3.writeCipheredByte(19319, param2);
+          var3.writeByte(96, 2);
+          var3.writeByte(param1 ^ -19825, 0);
+          var3.writeByte(param1 ^ -19780, param0.field_l);
           if (param1 != -19746) {
             var4 = (String) null;
             km.a((String) null, true, -0.6628716588020325f, (byte) -73);

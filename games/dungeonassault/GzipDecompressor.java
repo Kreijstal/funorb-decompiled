@@ -178,11 +178,11 @@ final class GzipDecompressor {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         try {
-          lj.a((java.awt.Component) ((Object) param0), (byte) 70);
+          lj.attachKeyboardListeners((java.awt.Component) ((Object) param0), (byte) 70);
           if (param1 >= -119) {
             field_c = 72;
           }
-          im.a((java.awt.Component) ((Object) param0), (byte) 94);
+          im.attachMouseListeners((java.awt.Component) ((Object) param0), (byte) 94);
           if (bn.field_j != null) {
             bn.field_j.attach((byte) 123, (java.awt.Component) ((Object) param0));
           }

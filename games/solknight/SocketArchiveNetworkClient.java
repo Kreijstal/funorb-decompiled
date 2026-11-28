@@ -1,0 +1,448 @@
+/*
+ * Decompiled by CFR-JS 0.4.0.
+ */
+import java.io.*;
+
+final class SocketArchiveNetworkClient extends ArchiveNetworkClient {
+    private BufferedSocket field_r;
+    static String field_q;
+    static int[] field_p;
+    static int field_o;
+
+    final void attachSocket(boolean param0, byte param1, Object param2) {
+        try {
+          RuntimeException stackIn_28_0 = null;
+          StringBuilder stackIn_28_1 = null;
+          String stackIn_29_2 = null;
+          Throwable decompiledCaughtException = null;
+          Exception var4 = null;
+          NetworkArchiveRequest var4_ref = null;
+          IOException var4_ref2 = null;
+          RuntimeException var4_ref3 = null;
+          Exception var5 = null;
+          int var6 = 0;
+          NetworkArchiveRequest var4_refLifetime1;
+          var6 = SolKnight.field_L ? 1 : 0;
+          try {
+            if (this.field_r != null) {
+              try {
+                this.field_r.close(param1 - 104);
+              } catch (java.lang.Exception decompiledCaughtParameter0) {
+                decompiledCaughtException = decompiledCaughtParameter0;
+                var4 = (Exception) (Object) decompiledCaughtException;
+              }
+              this.field_r = null;
+            }
+            this.field_r = (BufferedSocket) (param2);
+            if (param1 != 106) {
+              this.sendProtocolSetup(false);
+            }
+            this.sendProtocolSetup(true);
+            this.sendConnectionState(param0, false);
+            this.field_a = null;
+            this.field_h.position = 0;
+            while (true) {
+              var4_ref = (NetworkArchiveRequest) (this.field_i.c(param1 ^ 106));
+              if (var4_ref != null) {
+                this.field_m.a(var4_ref, 0);
+                continue;
+              }
+              break;
+            }
+            while (true) {
+              var4_refLifetime1 = (NetworkArchiveRequest) (this.field_k.c(0));
+              if (var4_refLifetime1 != null) {
+                this.field_d.a(var4_refLifetime1, 0);
+                continue;
+              }
+              break;
+            }
+            if (this.field_n != 0) {
+              try {
+                this.field_e.position = 0;
+                this.field_e.writeByte(95, 4);
+                this.field_e.writeByte(7, (int) this.field_n);
+                this.field_e.writeInt(0, false);
+                this.field_r.enqueueWrite(-28748, 0, this.field_e.payload.length, this.field_e.payload);
+              } catch (java.io.IOException decompiledCaughtParameter1) {
+                decompiledCaughtException = decompiledCaughtParameter1;
+                var4_ref2 = (IOException) (Object) decompiledCaughtException;
+                try {
+                  this.field_r.close(2);
+                } catch (java.lang.Exception decompiledCaughtParameter2) {
+                  decompiledCaughtException = decompiledCaughtParameter2;
+                  var5 = (Exception) (Object) decompiledCaughtException;
+                }
+                this.field_l = this.field_l + 1;
+                this.field_r = null;
+                this.field_c = -2;
+              }
+            }
+            this.field_j = 0;
+            this.field_b = je.correctedCurrentTimeMillis(1);
+            return;
+          } catch (java.lang.RuntimeException decompiledCaughtParameter3) {
+            decompiledCaughtException = decompiledCaughtParameter3;
+            var4_ref3 = (RuntimeException) (Object) decompiledCaughtException;
+            stackIn_28_0 = var4_ref3;
+            stackIn_28_1 = new StringBuilder().append("ea.K(").append(param0).append(',').append(param1).append(',');
+            if (param2 == null) {
+              stackIn_29_2 = "null";
+            } else {
+              stackIn_29_2 = "{...}";
+            }
+            throw MusicPatch.wrapClientException((Throwable) ((Object) stackIn_28_0), ((StringBuilder) (Object) stackIn_28_1).append(stackIn_29_2).append(')').toString());
+          }
+        } catch (RuntimeException | Error decompiledUncheckedException) {
+          throw decompiledUncheckedException;
+        } catch (Throwable decompiledCheckedException) {
+          throw new RuntimeException(decompiledCheckedException);
+        }
+    }
+
+    final static od e(byte param0) {
+        int var1 = -72 / ((param0 - 13) / 63);
+        od var2 = new od(MouseInputHandler.field_a, we.field_e, ph.field_h[0], qf.field_d[0], sa.field_l[0], uj.field_b[0], jc.field_c[0], GuestPlayConfirmationForm.field_H);
+        og.a((byte) -97);
+        return var2;
+    }
+
+    public static void d(boolean param0) {
+        field_p = null;
+        if (param0) {
+          SocketArchiveNetworkClient.e((byte) 96);
+        }
+        field_q = null;
+    }
+
+    private final void sendConnectionState(boolean param0, boolean param1) {
+        try {
+          IOException iOException = null;
+          PacketBuffer stackIn_5_0 = null;
+          int stackIn_5_1 = 0;
+          int stackIn_6_2 = 0;
+          Throwable decompiledCaughtException = null;
+          Exception var4 = null;
+          if (this.field_r == null) {
+            return;
+          }
+          try {
+            this.field_e.position = 0;
+            stackIn_5_0 = this.field_e;
+            stackIn_5_1 = 31;
+            if (param0) {
+              stackIn_6_2 = 2;
+            } else {
+              stackIn_6_2 = 3;
+            }
+            ((PacketBuffer) (Object) stackIn_5_0).writeByte(stackIn_5_1, stackIn_6_2);
+            if (param1) {
+              SocketArchiveNetworkClient.d(false);
+            }
+            this.field_e.writeLong40(0L, 25576);
+            this.field_r.enqueueWrite(-28748, 0, this.field_e.payload.length, this.field_e.payload);
+          } catch (java.io.IOException decompiledCaughtParameter0) {
+            decompiledCaughtException = decompiledCaughtParameter0;
+            iOException = (IOException) (Object) decompiledCaughtException;
+            try {
+              this.field_r.close(2);
+            } catch (java.lang.Exception decompiledCaughtParameter1) {
+              decompiledCaughtException = decompiledCaughtParameter1;
+              var4 = (Exception) (Object) decompiledCaughtException;
+            }
+            this.field_l = this.field_l + 1;
+            this.field_c = -2;
+            this.field_r = null;
+          }
+        } catch (RuntimeException | Error decompiledUncheckedException) {
+          throw decompiledUncheckedException;
+        } catch (Throwable decompiledCheckedException) {
+          throw new RuntimeException(decompiledCheckedException);
+        }
+    }
+
+    final boolean pollNetwork(byte param0) {
+        try {
+          int var2_int = 0;
+          int stackIn_48_0 = 0;
+          int stackIn_63_0 = 0;
+          Throwable decompiledCaughtException = null;
+          long var2_long = 0L;
+          NetworkArchiveRequest var2 = null;
+          IOException var2_ref = null;
+          int var3_int = 0;
+          Exception var3 = null;
+          int var4 = 0;
+          Exception var5_ref_Exception = null;
+          int var5 = 0;
+          int var6 = 0;
+          int var7 = 0;
+          int var8 = 0;
+          int var9 = 0;
+          int var10 = 0;
+          int var11 = 0;
+          long var12 = 0L;
+          Object var14 = null;
+          NetworkArchiveRequest var14_ref = null;
+          int var15 = 0;
+          int var16 = 0;
+          int var17 = 0;
+          NetworkArchiveRequest var2Lifetime1;
+          var16 = SolKnight.field_L ? 1 : 0;
+          if (null != this.field_r) {
+            var2_long = je.correctedCurrentTimeMillis(1);
+            var4 = (int)(-this.field_b + var2_long);
+            this.field_b = var2_long;
+            if (var4 > 200) {
+              var4 = 200;
+            }
+            this.field_j = this.field_j + var4;
+            if (this.field_j > 30000) {
+              try {
+                this.field_r.close(2);
+              } catch (java.lang.Exception decompiledCaughtParameter0) {
+                decompiledCaughtException = decompiledCaughtParameter0;
+                var5_ref_Exception = (Exception) (Object) decompiledCaughtException;
+              }
+              this.field_r = null;
+            }
+          }
+          if (null == this.field_r) {
+            if (0 == this.getPriorityRequestCount(false) &&
+              this.getPrefetchRequestCount(param0 ^ -25) == 0) {
+              return true;
+            }
+            return false;
+          }
+          try {
+            this.field_r.checkWriteError(true);
+            var2 = (NetworkArchiveRequest) (this.field_m.d(122));
+            while (var2 != null) {
+              this.field_e.position = 0;
+              this.field_e.writeByte(param0 ^ 71, 1);
+              this.field_e.writeLong40(var2.secondaryKey, param0 ^ 25576);
+              this.field_r.enqueueWrite(-28748, 0, this.field_e.payload.length, this.field_e.payload);
+              this.field_i.a(var2, 0);
+              var2 = (NetworkArchiveRequest) (this.field_m.b(~param0));
+            }
+            if (param0 != 0) {
+              SocketArchiveNetworkClient.d(false);
+            }
+            var2Lifetime1 = (NetworkArchiveRequest) (this.field_d.d(123));
+            while (var2Lifetime1 != null) {
+              this.field_e.position = 0;
+              this.field_e.writeByte(117, 0);
+              this.field_e.writeLong40(var2Lifetime1.secondaryKey, 25576);
+              this.field_r.enqueueWrite(param0 ^ -28748, 0, this.field_e.payload.length, this.field_e.payload);
+              this.field_k.a(var2Lifetime1, 0);
+              var2Lifetime1 = (NetworkArchiveRequest) (this.field_d.b(-1));
+            }
+            for (var2_int = 0; var2_int < 100; var2_int++) {
+              var3_int = this.field_r.availableBytes(-30119);
+              if (0 > var3_int) {
+                throw new IOException();
+              }
+              if (var3_int == 0) {
+                return true;
+              }
+              this.field_j = 0;
+              var4 = 0;
+              if (null == this.field_a) {
+                var4 = 10;
+              } else {
+                if (0 == this.field_a.field_s) {
+                  var4 = 1;
+                }
+              }
+              if (var4 <= 0) {
+                var5 = -this.field_a.field_y + this.field_a.field_v.payload.length;
+                var6 = -this.field_a.field_s + 512;
+                if (-this.field_a.field_v.position + var5 < var6) {
+                  var6 = -this.field_a.field_v.position + var5;
+                }
+                if (var6 > var3_int) {
+                  var6 = var3_int;
+                }
+                this.field_r.readFully((byte) 44, this.field_a.field_v.position, var6, this.field_a.field_v.payload);
+                if (this.field_n != 0) {
+                  var17 = 0;
+                  var7 = var17;
+                  while (var6 > var17) {
+                    this.field_a.field_v.payload[this.field_a.field_v.position + var17] = (byte)wa.bitwiseXor((int) this.field_a.field_v.payload[this.field_a.field_v.position + var17], (int) this.field_n);
+                    var17++;
+                  }
+                }
+                this.field_a.field_v.position = this.field_a.field_v.position + var6;
+                this.field_a.field_s = this.field_a.field_s + var6;
+                if (var5 != this.field_a.field_v.position) {
+                  if (this.field_a.field_s == 512) {
+                    this.field_a.field_s = 0;
+                  }
+                } else {
+                  this.field_a.unlinkSecondary(97);
+                  this.field_a.field_m = false;
+                  this.field_a = null;
+                }
+              } else {
+                var5 = -this.field_h.position + var4;
+                if (var5 > var3_int) {
+                  var5 = var3_int;
+                }
+                this.field_r.readFully((byte) 39, this.field_h.position, var5, this.field_h.payload);
+                if (this.field_n != 0) {
+                  for (var6 = 0; var6 < var5; var6++) {
+                    this.field_h.payload[var6 + this.field_h.position] = (byte)wa.bitwiseXor((int) this.field_h.payload[var6 + this.field_h.position], (int) this.field_n);
+                  }
+                }
+                this.field_h.position = this.field_h.position + var5;
+                if (this.field_h.position >= var4) {
+                  if (this.field_a != null) {
+                    if (this.field_a.field_s != 0) {
+                      throw new IOException();
+                    }
+                    if (this.field_h.payload[0] != -1) {
+                      this.field_a = null;
+                    } else {
+                      this.field_h.position = 0;
+                      this.field_a.field_s = 1;
+                    }
+                  } else {
+                    this.field_h.position = 0;
+                    var6 = this.field_h.readUnsignedByte(255);
+                    var7 = this.field_h.readInt(true);
+                    var8 = this.field_h.readUnsignedByte(255);
+                    var9 = this.field_h.readInt(true);
+                    var10 = var8 & 127;
+                    stackIn_48_0 = ((128 & var8) == 0) ? 0 : 1;
+                    boolean decompiledFrameRemainder0 = true;
+                    boolean decompiledFrameCompleted0 = true;
+                    var11 = stackIn_48_0;
+                    var12 = (long)var7 + ((long)var6 << 32);
+                    var14 = null;
+                    if (var11 == 0) {
+                      var14_ref = (NetworkArchiveRequest) (this.field_i.d(124));
+                      while (var14_ref != null) {
+                        if (~var14_ref.secondaryKey == ~var12) {
+                          decompiledFrameCompleted0 = false;
+                          break;
+                        }
+                        var14_ref = (NetworkArchiveRequest) (this.field_i.b(-1));
+                      }
+                      decompiledFrameRemainder0 = !(decompiledFrameCompleted0);
+                    }
+                    if ((decompiledFrameRemainder0) &&
+                      (decompiledFrameCompleted0)) {
+                      var14_ref = (NetworkArchiveRequest) (this.field_k.d(122));
+                      while (var14_ref != null) {
+                        if (~var12 == ~var14_ref.secondaryKey) {
+                          break;
+                        }
+                        var14_ref = (NetworkArchiveRequest) (this.field_k.b(-1));
+                      }
+                    }
+                    if (var14_ref == null) {
+                      throw new IOException();
+                    }
+                    stackIn_63_0 = (0 != var10) ? 9 : 5;
+                    var15 = stackIn_63_0;
+                    this.field_a = var14_ref;
+                    this.field_a.field_v = new PacketBuffer(var9 + (var15 + this.field_a.field_y));
+                    this.field_a.field_v.writeByte(param0 + 53, var10);
+                    this.field_a.field_v.writeInt(var9, false);
+                    this.field_h.position = 0;
+                    this.field_a.field_s = 10;
+                  }
+                }
+              }
+            }
+            return true;
+          } catch (java.io.IOException decompiledCaughtParameter1) {
+            decompiledCaughtException = decompiledCaughtParameter1;
+            var2_ref = (IOException) (Object) decompiledCaughtException;
+            try {
+              this.field_r.close(param0 + 2);
+            } catch (java.lang.Exception decompiledCaughtParameter2) {
+              decompiledCaughtException = decompiledCaughtParameter2;
+              var3 = (Exception) (Object) decompiledCaughtException;
+            }
+            this.field_r = null;
+            this.field_c = -2;
+            this.field_l = this.field_l + 1;
+            if (0 == this.getPriorityRequestCount(false) &&
+              this.getPrefetchRequestCount(param0 ^ -128) == 0) {
+              return true;
+            }
+            return false;
+          }
+        } catch (RuntimeException | Error decompiledUncheckedException) {
+          throw decompiledUncheckedException;
+        } catch (Throwable decompiledCheckedException) {
+          throw new RuntimeException(decompiledCheckedException);
+        }
+    }
+
+    private final void sendProtocolSetup(boolean param0) {
+        try {
+          IOException iOException = null;
+          Throwable decompiledCaughtException = null;
+          Exception var3 = null;
+          if (this.field_r == null) {
+            return;
+          }
+          try {
+            this.field_e.position = 0;
+            this.field_e.writeByte(-128, 6);
+            this.field_e.writeMedium(3, 2132504424);
+            this.field_e.writeShort(param0, 0);
+            this.field_r.enqueueWrite(-28748, 0, this.field_e.payload.length, this.field_e.payload);
+          } catch (java.io.IOException decompiledCaughtParameter0) {
+            decompiledCaughtException = decompiledCaughtParameter0;
+            iOException = (IOException) (Object) decompiledCaughtException;
+            try {
+              this.field_r.close(2);
+            } catch (java.lang.Exception decompiledCaughtParameter1) {
+              decompiledCaughtException = decompiledCaughtParameter1;
+              var3 = (Exception) (Object) decompiledCaughtException;
+            }
+            this.field_l = this.field_l + 1;
+            this.field_r = null;
+            this.field_c = -2;
+          }
+        } catch (RuntimeException | Error decompiledUncheckedException) {
+          throw decompiledUncheckedException;
+        } catch (Throwable decompiledCheckedException) {
+          throw new RuntimeException(decompiledCheckedException);
+        }
+    }
+
+    final void resetAfterValidationFailure(byte param0) {
+        try {
+          this.field_r.close(2);
+        } catch (Exception exception) {
+        }
+        this.field_l = this.field_l + 1;
+        this.field_r = null;
+        if (param0 != 59) {
+          return;
+        }
+        this.field_c = -1;
+        this.field_n = (byte)(int)(255.0 * Math.random() + 1.0);
+    }
+
+    public SocketArchiveNetworkClient() {
+    }
+
+    final void close(byte param0) {
+        if (param0 != 92) {
+          field_q = (String) null;
+        }
+        if (null != this.field_r) {
+          this.field_r.close(2);
+        }
+    }
+
+    static {
+        field_q = "Instructions";
+        field_p = new int[]{96, 96, 96, 112, 124, 192, 96, 96};
+    }
+}

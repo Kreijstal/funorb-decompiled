@@ -36,7 +36,7 @@ final class MidiNoteMask extends IntrusiveNode {
           while (var5 < var3) {
             boolean decompiledFrameRemainder0 = true;
             if (!eg.a(param1, 26678)) {
-              var6_int = param1.readBits(ge.a(false, var5 - 1), 8);
+              var6_int = param1.readBits(ArchiveNetworkClient.a(false, var5 - 1), 8);
               var4[var5] = var4[var6_int];
               decompiledFrameRemainder0 = (var7 != 0);
             }
@@ -209,10 +209,10 @@ final class MidiNoteMask extends IntrusiveNode {
             stackIn_13_0 = stackOut_12_0;
             if (var19 == 0) {
               if (stackIn_13_0) {
-                var12 = a.field_t[var9];
+                var12 = SocketArchiveNetworkClient.field_t[var9];
                 var13 = NetworkGameClient.field_x[var9];
-                var14 = -var12 + a.field_t[var10];
-                var15 = -var12 + a.field_t[var11];
+                var14 = -var12 + SocketArchiveNetworkClient.field_t[var10];
+                var15 = -var12 + SocketArchiveNetworkClient.field_t[var11];
                 var16 = NetworkGameClient.field_x[var10] - var13;
                 var17 = NetworkGameClient.field_x[var11] - var13;
               }

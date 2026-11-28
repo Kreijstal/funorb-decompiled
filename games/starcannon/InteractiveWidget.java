@@ -83,7 +83,7 @@ class InteractiveWidget extends UiWidget {
     }
 
     InteractiveWidget(String param0, WidgetEventListener param1) {
-        this(param0, eh.field_j.field_d, param1);
+        this(param0, ArchiveNetworkClient.field_j.field_d, param1);
     }
 
     boolean takeFocus(int param0, UiWidget param1) {
@@ -396,7 +396,7 @@ class InteractiveWidget extends UiWidget {
         this.field_y = true;
         this.field_v = false;
         this.field_u = true;
-        this.field_o = eh.field_j.field_t;
+        this.field_o = ArchiveNetworkClient.field_j.field_t;
     }
 
     static {

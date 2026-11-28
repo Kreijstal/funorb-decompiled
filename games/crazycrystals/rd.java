@@ -120,25 +120,25 @@ abstract class rd extends oh {
         int var7 = 0;
         var7 = CrazyCrystals.field_B;
         try {
-          var2_int = param0.d((byte) -125, 8);
+          var2_int = param0.readBits((byte) -125, 8);
           if (0 < var2_int) {
             return null;
           }
-          var3 = param0.d((byte) -62, 12);
+          var3 = param0.readBits((byte) -62, 12);
           var4 = new hm[var3];
           for (var5 = 0; var3 > var5; var5++) {
             if (fn.a(1, param0)) {
               var6 = new hm();
-              param0.d((byte) -56, 24);
-              param0.d((byte) -103, 24);
-              var6.field_b = param0.d((byte) -95, 24);
-              param0.d((byte) -98, 9);
-              param0.d((byte) -114, 12);
-              param0.d((byte) -87, 12);
-              param0.d((byte) -70, 12);
+              param0.readBits((byte) -56, 24);
+              param0.readBits((byte) -103, 24);
+              var6.field_b = param0.readBits((byte) -95, 24);
+              param0.readBits((byte) -98, 9);
+              param0.readBits((byte) -114, 12);
+              param0.readBits((byte) -87, 12);
+              param0.readBits((byte) -70, 12);
               var4[var5] = var6;
             } else {
-              var6_int = param0.d((byte) -61, bd.a(-1 + var5, (byte) 62));
+              var6_int = param0.readBits((byte) -61, bd.a(-1 + var5, (byte) 62));
               var4[var5] = var4[var6_int];
             }
           }

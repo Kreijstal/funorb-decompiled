@@ -9,9 +9,9 @@ final class uf {
     final static boolean a(int param0) {
         if (param0 <= 89) {
           uf.a(-98);
-          return ga.field_c.a((byte) 11);
+          return ga.field_c.loadMasterIndex((byte) 11);
         }
-        return ga.field_c.a((byte) 11);
+        return ga.field_c.loadMasterIndex((byte) 11);
     }
 
     public static void releaseStatics(byte param0) {

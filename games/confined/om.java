@@ -11,7 +11,7 @@ final class om extends IntrusiveNode {
     int field_u;
     static String field_o;
     int field_n;
-    static jf field_s;
+    static ArchiveNetworkClient field_s;
 
     public static void clearStaticReferences(byte param0) {
         field_p = null;
@@ -70,7 +70,7 @@ final class om extends IntrusiveNode {
 
     final static void b(boolean param0) {
         if (!param0) {
-          field_s = (jf) null;
+          field_s = (ArchiveNetworkClient) null;
           gb.a((byte) -94, ii.b(false));
           return;
         }

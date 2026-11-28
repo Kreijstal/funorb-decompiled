@@ -51,8 +51,8 @@ public final class MinerDisturbance extends NetworkGameClient {
           try {
             var5_int = -3 % ((-40 - param1) / 54);
             var6 = ef.field_c.getGraphics();
-            if (null == kh.field_a) {
-              kh.field_a = new java.awt.Font("Helvetica", 1, 13);
+            if (null == MouseInputHandler.field_a) {
+              MouseInputHandler.field_a = new java.awt.Font("Helvetica", 1, 13);
             }
             if (param3) {
               var6.setColor(java.awt.Color.black);
@@ -72,7 +72,7 @@ public final class MinerDisturbance extends NetworkGameClient {
               var7.setColor(java.awt.Color.black);
               var7.drawRect(1, 1, 301, 31);
               var7.fillRect(3 * param4 + 2, 2, -(3 * param4) + 300, 30);
-              var7.setFont(kh.field_a);
+              var7.setFont(MouseInputHandler.field_a);
               var7.setColor(java.awt.Color.white);
               var7.drawString(param2, (-(6 * param2.length()) + 304) / 2, 22);
               var6.drawImage(pk.field_a, -152 + nk.field_x / 2, -18 + ml.field_a / 2, (java.awt.image.ImageObserver) null);
@@ -87,12 +87,12 @@ public final class MinerDisturbance extends NetworkGameClient {
               var6.setColor(java.awt.Color.black);
               var6.drawRect(var8 + 1, var9 + 1, 301, 31);
               var6.fillRect(var8 + (2 + 3 * param4), var9 + 2, 300 - 3 * param4, 30);
-              var6.setFont(kh.field_a);
+              var6.setFont(MouseInputHandler.field_a);
               var6.setColor(java.awt.Color.white);
               var6.drawString(param2, var8 + (304 - 6 * param2.length()) / 2, 22 + var9);
             }
             if (null != ab.field_c) {
-              var6.setFont(kh.field_a);
+              var6.setFont(MouseInputHandler.field_a);
               var6.setColor(java.awt.Color.white);
               var6.drawString(ab.field_c, nk.field_x / 2 - ab.field_c.length() * 6 / 2, ml.field_a / 2 - 26);
             }
@@ -503,8 +503,8 @@ public final class MinerDisturbance extends NetworkGameClient {
           if (50 < fieldTemp$0) {
             this.field_P = this.field_P - 50;
           }
-          if (gi.field_c > 0) {
-            gi.field_c = gi.field_c - 1;
+          if (KeyboardInputHandler.field_c > 0) {
+            KeyboardInputHandler.field_c = KeyboardInputHandler.field_c - 1;
           }
           if (pa.field_d >= 65536) {
             pa.field_d = pa.field_d - 65536;
@@ -592,7 +592,7 @@ public final class MinerDisturbance extends NetworkGameClient {
               }
               if (stackIn_99_0 != stackIn_103_1) {
                 if (!this.field_K) {
-                  kh.a((byte) 92);
+                  MouseInputHandler.a((byte) 92);
                   if (var5 != 0) {
                     DualLinkNode.e(param0 + 82);
                   }
@@ -830,11 +830,11 @@ public final class MinerDisturbance extends NetworkGameClient {
             boolean decompiledFrameCompleted0 = true;
             if (1000 > var4Lifetime2) {
               stackIn_92_0 = null;
-              stackIn_92_1 = uf.field_p[var4Lifetime2];
+              stackIn_92_1 = SocketArchiveNetworkClient.field_p[var4Lifetime2];
               if (var8 == 0) {
                 if (stackIn_92_0 != stackIn_92_1 &&
-                  uf.field_p[var4Lifetime2].a(false)) {
-                  uf.field_p[var4Lifetime2].b(-12);
+                  SocketArchiveNetworkClient.field_p[var4Lifetime2].a(false)) {
+                  SocketArchiveNetworkClient.field_p[var4Lifetime2].b(-12);
                 }
                 var4Lifetime2++;
                 continue;
@@ -845,15 +845,15 @@ public final class MinerDisturbance extends NetworkGameClient {
               var4Lifetime2 = 0;
               while (var4Lifetime2 < 1000) {
                 stackIn_92_0 = null;
-                stackIn_92_1 = uf.field_p[var4Lifetime2];
+                stackIn_92_1 = SocketArchiveNetworkClient.field_p[var4Lifetime2];
                 if (var8 != 0) {
                   decompiledFrameCompleted1 = false;
                   break;
                 }
                 if (stackIn_92_0 != stackIn_92_1 &&
-                  !uf.field_p[var4Lifetime2].a(false) &&
-                  uf.field_p[var4Lifetime2].field_h < 12) {
-                  uf.field_p[var4Lifetime2].b(-12);
+                  !SocketArchiveNetworkClient.field_p[var4Lifetime2].a(false) &&
+                  SocketArchiveNetworkClient.field_p[var4Lifetime2].field_h < 12) {
+                  SocketArchiveNetworkClient.field_p[var4Lifetime2].b(-12);
                 }
                 var4Lifetime2++;
               }
@@ -861,15 +861,15 @@ public final class MinerDisturbance extends NetworkGameClient {
                 var4Lifetime2 = 0;
                 while (var4Lifetime2 < 1000) {
                   stackIn_92_0 = null;
-                  stackIn_92_1 = uf.field_p[var4Lifetime2];
+                  stackIn_92_1 = SocketArchiveNetworkClient.field_p[var4Lifetime2];
                   if (var8 != 0) {
                     decompiledFrameCompleted0 = false;
                     break;
                   }
                   if (stackIn_92_0 != stackIn_92_1 &&
-                    uf.field_p[var4Lifetime2].field_h >= 12 &&
-                    !uf.field_p[var4Lifetime2].a(false)) {
-                    uf.field_p[var4Lifetime2].b(-12);
+                    SocketArchiveNetworkClient.field_p[var4Lifetime2].field_h >= 12 &&
+                    !SocketArchiveNetworkClient.field_p[var4Lifetime2].a(false)) {
+                    SocketArchiveNetworkClient.field_p[var4Lifetime2].b(-12);
                   }
                   var4Lifetime2++;
                 }
@@ -881,10 +881,10 @@ public final class MinerDisturbance extends NetworkGameClient {
                         break scanLoop1;
                       }
                       stackIn_92_0 = null;
-                      stackIn_92_1 = uf.field_p[var4Lifetime2];
+                      stackIn_92_1 = SocketArchiveNetworkClient.field_p[var4Lifetime2];
                       if (stackIn_92_0 != stackIn_92_1 &&
-                        uf.field_p[var4Lifetime2].a(false)) {
-                        uf.field_p[var4Lifetime2].b(false);
+                        SocketArchiveNetworkClient.field_p[var4Lifetime2].a(false)) {
+                        SocketArchiveNetworkClient.field_p[var4Lifetime2].b(false);
                       }
                       var4Lifetime2++;
                     }
@@ -896,8 +896,8 @@ public final class MinerDisturbance extends NetworkGameClient {
             if (decompiledFrameRemainder2) {
               while (true) {
                 if (stackIn_92_0 != stackIn_92_1 &&
-                  uf.field_p[var4Lifetime2].a(false)) {
-                  uf.field_p[var4Lifetime2].b(false);
+                  SocketArchiveNetworkClient.field_p[var4Lifetime2].a(false)) {
+                  SocketArchiveNetworkClient.field_p[var4Lifetime2].b(false);
                 }
                 var4Lifetime2++;
                 if (var8 != 0) {
@@ -907,7 +907,7 @@ public final class MinerDisturbance extends NetworkGameClient {
                   break;
                 }
                 stackIn_92_0 = null;
-                stackIn_92_1 = uf.field_p[var4Lifetime2];
+                stackIn_92_1 = SocketArchiveNetworkClient.field_p[var4Lifetime2];
               }
             }
             var4Lifetime2 = 0;
@@ -923,9 +923,9 @@ public final class MinerDisturbance extends NetworkGameClient {
               break;
             }
             if (var8 == 0) {
-              if (uf.field_p[var4Lifetime2] != null &&
-                uf.field_p[var4Lifetime2].a(false)) {
-                uf.field_p[var4Lifetime2].c(-86);
+              if (SocketArchiveNetworkClient.field_p[var4Lifetime2] != null &&
+                SocketArchiveNetworkClient.field_p[var4Lifetime2].a(false)) {
+                SocketArchiveNetworkClient.field_p[var4Lifetime2].c(-86);
               }
               var4Lifetime2++;
               continue;
@@ -1300,15 +1300,15 @@ public final class MinerDisturbance extends NetworkGameClient {
           if (je.field_N[cm.field_o] > je.field_u &&
             hf.field_t > (-24 + je.field_t)) {
             je.k();
-            ic.field_k = ic.field_k + 6000;
-            if (ic.field_k > 6000) {
-              ic.field_k = 6000;
+            ProxySocketConnector.field_k = ProxySocketConnector.field_k + 6000;
+            if (ProxySocketConnector.field_k > 6000) {
+              ProxySocketConnector.field_k = 6000;
             }
           }
           if (je.field_N[cm.field_o] > je.field_u) {
             if (ProgressMessageDialog.field_sb > 0) {
-              if (!(ic.field_k <= 0)) {
-                ic.field_k = ic.field_k - 1;
+              if (!(ProxySocketConnector.field_k <= 0)) {
+                ProxySocketConnector.field_k = ProxySocketConnector.field_k - 1;
                 if (var21 != 0) {
                   je.field_u = je.field_N[cm.field_o];
                   je.k();
@@ -1371,13 +1371,13 @@ public final class MinerDisturbance extends NetworkGameClient {
           boolean decompiledFrameRemainder9 = true;
           var3 = this.v(-1);
           if (!MouseWheelInput.field_b) {
-            fieldTemp$0 = jh.field_a;
-            jh.field_a = jh.field_a + 1;
+            fieldTemp$0 = SocketConnector.field_a;
+            SocketConnector.field_a = SocketConnector.field_a + 1;
             decompiledFrameRemainder9 = !(7 < fieldTemp$0);
           }
           if (decompiledFrameRemainder9) {
             if (MouseWheelInput.field_b) {
-              jh.field_a = 0;
+              SocketConnector.field_a = 0;
             }
             var3++;
             decompiledFrameRemainder10 = (var21 != 0);
@@ -1395,8 +1395,8 @@ public final class MinerDisturbance extends NetworkGameClient {
           scanLoop1: while (true) {
             if (var4Lifetime1 < 1000) {
               if (var21 == 0) {
-                if (uf.field_p[var4Lifetime1] != null) {
-                  uf.field_p[var4Lifetime1] = uf.field_p[var4Lifetime1].d(true);
+                if (SocketArchiveNetworkClient.field_p[var4Lifetime1] != null) {
+                  SocketArchiveNetworkClient.field_p[var4Lifetime1] = SocketArchiveNetworkClient.field_p[var4Lifetime1].d(true);
                 }
                 var4Lifetime1++;
                 continue;
@@ -1758,7 +1758,7 @@ public final class MinerDisturbance extends NetworkGameClient {
                   decompiledFrameRemainder7 = !(stackIn_517_0 ^ !stackIn_518_1);
                   if ((decompiledFrameRemainder7) &&
                     (decompiledFrameRemainder7 = !(mh.field_e[1 + NanoFrameTimer.field_k][hf.field_t].field_a))) {
-                    uf.field_p[jf.b((byte) 108)] = new gf(NanoFrameTimer.field_k, hf.field_t, 6);
+                    SocketArchiveNetworkClient.field_p[jf.b((byte) 108)] = new gf(NanoFrameTimer.field_k, hf.field_t, 6);
                     decompiledFrameRemainder7 = (var21 != 0);
                   }
                 }
@@ -1868,7 +1868,7 @@ public final class MinerDisturbance extends NetworkGameClient {
                   }
                   if (je.d(NanoFrameTimer.field_k, hf.field_t, 1, 1)) {
                     je.field_O.a(NanoFrameTimer.field_k, -4, hf.field_t);
-                    uf.field_p[jf.b((byte) 108)] = new gf(NanoFrameTimer.field_k, hf.field_t, 16);
+                    SocketArchiveNetworkClient.field_p[jf.b((byte) 108)] = new gf(NanoFrameTimer.field_k, hf.field_t, 16);
                   }
                   if (d.field_b &&
                     GuestPlayConfirmationForm.field_O[96]) {
@@ -1887,7 +1887,7 @@ public final class MinerDisturbance extends NetworkGameClient {
                     var13_ref_gf = new gf(NanoFrameTimer.field_k, hf.field_t, 16);
                     var13_ref_gf.field_g = 0;
                     var13_ref_gf.field_b = 240;
-                    uf.field_p[jf.b((byte) 61)] = var13_ref_gf;
+                    SocketArchiveNetworkClient.field_p[jf.b((byte) 61)] = var13_ref_gf;
                     AccountRequestState.field_k = -160;
                   }
                   IsaacRandom.field_i = IsaacRandom.field_i + AccountRequestState.field_k;
@@ -3106,10 +3106,10 @@ public final class MinerDisturbance extends NetworkGameClient {
               }
               if (kj.field_d == 16) {
                 var13Lifetime2 = jf.b((byte) 52);
-                uf.field_p[var13Lifetime2] = new gf(NanoFrameTimer.field_k, hf.field_t, 11);
-                uf.field_p[var13Lifetime2].field_i = MidiPcmStream.field_K;
+                SocketArchiveNetworkClient.field_p[var13Lifetime2] = new gf(NanoFrameTimer.field_k, hf.field_t, 11);
+                SocketArchiveNetworkClient.field_p[var13Lifetime2].field_i = MidiPcmStream.field_K;
                 if (je.c(NanoFrameTimer.field_k, hf.field_t, 1, 1)) {
-                  uf.field_p[var13Lifetime2].field_g = -1;
+                  SocketArchiveNetworkClient.field_p[var13Lifetime2].field_g = -1;
                 }
                 ne.a(0, param0 + 16391);
               }
@@ -3177,7 +3177,7 @@ public final class MinerDisturbance extends NetworkGameClient {
                     mh.field_e[MidiPcmStream.field_K * 1 + NanoFrameTimer.field_k][hf.field_t].field_U = -1;
                     mh.field_e[MidiPcmStream.field_K * 2 + NanoFrameTimer.field_k][hf.field_t].field_S = mh.field_e[1 * MidiPcmStream.field_K + NanoFrameTimer.field_k][hf.field_t].field_S;
                     mh.field_e[NanoFrameTimer.field_k + MidiPcmStream.field_K * 2][hf.field_t].field_r = 1000;
-                    uf.field_p[jf.b((byte) 108)] = new gf(MidiPcmStream.field_K * 1 + NanoFrameTimer.field_k, hf.field_t, 8);
+                    SocketArchiveNetworkClient.field_p[jf.b((byte) 108)] = new gf(MidiPcmStream.field_K * 1 + NanoFrameTimer.field_k, hf.field_t, 8);
                     decompiledSharedTail0 = (var21 != 0);
                   }
                   if (decompiledSharedTail0) {
@@ -3192,7 +3192,7 @@ public final class MinerDisturbance extends NetworkGameClient {
                   mh.field_e[NanoFrameTimer.field_k + MidiPcmStream.field_K][hf.field_t].field_S = true;
                   mh.field_e[NanoFrameTimer.field_k + MidiPcmStream.field_K][hf.field_t].field_r = 1000;
                 }
-                uf.field_p[jf.b((byte) 60)] = new gf(MidiPcmStream.field_K * 1 + NanoFrameTimer.field_k, hf.field_t, 8);
+                SocketArchiveNetworkClient.field_p[jf.b((byte) 60)] = new gf(MidiPcmStream.field_K * 1 + NanoFrameTimer.field_k, hf.field_t, 8);
               }
               if (kj.field_d <= 20) {
                 break regionExit2;
@@ -3270,7 +3270,7 @@ public final class MinerDisturbance extends NetworkGameClient {
               je.field_O.a(NanoFrameTimer.field_k, param0 ^ 16506, hf.field_t);
               dupTemp$2 = jf.b((byte) 73);
               dupTemp$3 = new gf(NanoFrameTimer.field_k, hf.field_t, 16);
-              uf.field_p[dupTemp$2] = dupTemp$3;
+              SocketArchiveNetworkClient.field_p[dupTemp$2] = dupTemp$3;
               var13_ref_gfLifetime1 = dupTemp$3;
               var13_ref_gfLifetime1.field_b = 250;
             }
@@ -3581,7 +3581,7 @@ public final class MinerDisturbance extends NetworkGameClient {
               var7Lifetime5 != 0) {
               var8_ref_gf = new gf(NanoFrameTimer.field_k, hf.field_t, 16);
               var8_ref_gf.field_b = 250;
-              uf.field_p[jf.b((byte) 53)] = var8_ref_gf;
+              SocketArchiveNetworkClient.field_p[jf.b((byte) 53)] = var8_ref_gf;
               ul.field_b = 1;
             }
             fieldTemp$4 = ul.field_b - 1;
@@ -3595,12 +3595,12 @@ public final class MinerDisturbance extends NetworkGameClient {
             !qe.field_b[7]) {
             rj.a((byte) -38, 4);
           }
-          if (ch.field_h != -1) {
-            tb.field_c = ch.field_h;
+          if (ArchiveNetworkClient.field_h != -1) {
+            tb.field_c = ArchiveNetworkClient.field_h;
             LoginPanel.field_I = LoginPanel.field_I + 1;
-            if (ch.field_h < 5 &&
-              ch.field_h >= 0) {
-              tb.field_c = 4 * ch.field_h + 64;
+            if (ArchiveNetworkClient.field_h < 5 &&
+              ArchiveNetworkClient.field_h >= 0) {
+              tb.field_c = 4 * ArchiveNetworkClient.field_h + 64;
               if (LoginPanel.field_I > 5) {
                 tb.field_c = tb.field_c + 1;
               }
@@ -3608,7 +3608,7 @@ public final class MinerDisturbance extends NetworkGameClient {
                 tb.field_c = tb.field_c + 1;
               }
             }
-            if (ch.field_h == 5) {
+            if (ArchiveNetworkClient.field_h == 5) {
               tb.field_c = 0;
               if (5 < LoginPanel.field_I) {
                 tb.field_c = tb.field_c + 1;
@@ -3617,8 +3617,8 @@ public final class MinerDisturbance extends NetworkGameClient {
                 tb.field_c = tb.field_c + 1;
               }
             }
-            if (-1 > ch.field_h) {
-              tb.field_c = 3 + ch.field_h;
+            if (-1 > ArchiveNetworkClient.field_h) {
+              tb.field_c = 3 + ArchiveNetworkClient.field_h;
               if (5 < LoginPanel.field_I) {
                 tb.field_c = tb.field_c - 1;
               }
@@ -3628,7 +3628,7 @@ public final class MinerDisturbance extends NetworkGameClient {
             }
             if (50 < LoginPanel.field_I) {
               LoginPanel.field_I = 0;
-              ch.field_h = -1;
+              ArchiveNetworkClient.field_h = -1;
             }
           }
           stackIn_2601_0 = mh.field_e[NanoFrameTimer.field_k][hf.field_t];
@@ -4013,7 +4013,7 @@ public final class MinerDisturbance extends NetworkGameClient {
           GameAppletShell.field_m = jn.a("title1", -29553, "", fl.field_f);
           FullscreenFocusCanvas.field_c = jn.a("title_dwarf", -29553, "", fl.field_f);
           ak.field_c = bb.a("iphone_ad", fl.field_f, -127, "");
-          gi.field_a = bb.a("iphone_ad_mouseover", fl.field_f, -120, "");
+          KeyboardInputHandler.field_a = bb.a("iphone_ad_mouseover", fl.field_f, -120, "");
           jn.a("locked_option", -29553, "", fl.field_f);
           jn.a("locked_option_end", -29553, "", fl.field_f);
           pk.field_d = jn.a("gold", -29553, "shop", fl.field_f);
@@ -4692,11 +4692,11 @@ public final class MinerDisturbance extends NetworkGameClient {
 
     final void clearClientResources(int param0) {
         try {
-          gi.clearStaticReferences(0);
+          KeyboardInputHandler.clearStaticReferences(0);
           df.clearStaticReferences((byte) 125);
           im.clearStaticReferences(param0 ^ 6777);
           GameAppletShell.f(-1);
-          kh.a(true);
+          MouseInputHandler.a(true);
           SoftwareRasterizer.clearStaticReferences();
           kk.a((byte) 75);
           ResourceArchive.clearStaticReferences((byte) -125);
@@ -4758,9 +4758,9 @@ public final class MinerDisturbance extends NetworkGameClient {
           AudioOutput.clearStaticReferences();
           CrossfadingMidiPcmStream.clearDeclaredStaticReferences(98);
           qk.clearStaticReferences(-1003);
-          ch.resetStaticState(-104);
+          ArchiveNetworkClient.resetStaticState(-104);
           DiskCacheWorker.a(false);
-          bk.clearStaticReferences((byte) -113);
+          ArchiveSourceManager.clearStaticReferences((byte) -113);
           BufferedRandomAccessFile.clearStaticReferences((byte) -83);
           BufferedSocket.b((byte) -121);
           ha.a((byte) 28);
@@ -4803,7 +4803,7 @@ public final class MinerDisturbance extends NetworkGameClient {
           ff.clearStaticReferences(-12);
           tf.resetStaticState(24044);
           SpriteState.clearStaticReferences(true);
-          uf.clearStaticReferences(param0 ^ 201);
+          SocketArchiveNetworkClient.clearStaticReferences(param0 ^ 201);
           wa.clearStaticReferences(112);
           NetworkArchiveRequest.releaseDeclaredStaticReferences(256);
           SectorCacheStore.a((byte) -116);
@@ -4875,7 +4875,7 @@ public final class MinerDisturbance extends NetworkGameClient {
           ul.resetStaticState((byte) 14);
           sn.clearStaticReferences((byte) -18);
           a.clearStaticReferences(0);
-          jh.clearStaticReferences((byte) 39);
+          SocketConnector.clearStaticReferences((byte) 39);
           ProxyAuthenticationRequiredException.clearStaticReferences(92);
           NanoFrameTimer.b(param0 ^ 11);
           ImageProducerRasterBuffer.d(16711680);
@@ -4900,7 +4900,7 @@ public final class MinerDisturbance extends NetworkGameClient {
           SecondaryNodeDeque.clearStaticReferences(2207);
           bl.clearStaticReferences((byte) 79);
           oh.releaseDeclaredStaticReferences(-116);
-          ic.b(29);
+          ProxySocketConnector.b(29);
           NodeHashTableIterator.a(-102);
           SecondaryNodeDequeIterator.clearStaticReferences(35);
           sl.clearDeclaredStaticReferences(param0 ^ -3036);
@@ -6222,7 +6222,7 @@ public final class MinerDisturbance extends NetworkGameClient {
                             ResourceArchive.playMusicTrack(-6358, ph.field_a);
                             StripedProgressWidget.a(mm.field_a, ce.field_d, 97, 300);
                             ud.a(new ac(hd.field_d), 30, 30, 88);
-                            ic.a(113, 4473924, 15885602, 16502531);
+                            ProxySocketConnector.a(113, 4473924, 15885602, 16502531);
                             GrowableIntArray.a(6, new ac(MusicPatch.field_p), -1, 6, new ac(MusicPatch.field_p), 6);
                             ResourceArchive.field_e.setAsRasterTarget((byte) -45);
                             GuestPlayConfirmationForm.n(21);
@@ -6331,7 +6331,7 @@ public final class MinerDisturbance extends NetworkGameClient {
             GrowableIntArray.field_b = 32424;
             vh.field_g = 1235;
           }
-          ic.field_k = 1500;
+          ProxySocketConnector.field_k = 1500;
           var2_intLifetime1 = -102 / ((param0 + 1) / 60);
           ProgressMessageDialog.field_sb = 6000;
           this.field_R = 300;
@@ -6345,7 +6345,7 @@ public final class MinerDisturbance extends NetworkGameClient {
             ProgressMessageDialog.field_sb = ProgressMessageDialog.field_sb + ProgressMessageDialog.field_sb / 2;
           }
           SingleChildWidgetContainer.field_H = 0;
-          ch.field_h = -1;
+          ArchiveNetworkClient.field_h = -1;
           LoginPanel.field_I = 0;
           IntrusiveNode.field_a = 0;
           eb.field_e = 0;
@@ -6392,7 +6392,7 @@ public final class MinerDisturbance extends NetworkGameClient {
               rj.field_f = 0;
               break;
             }
-            uf.field_p[var3] = null;
+            SocketArchiveNetworkClient.field_p[var3] = null;
             var3++;
           } while (var4 == 0);
           if (sc.field_b) {
@@ -6580,7 +6580,7 @@ public final class MinerDisturbance extends NetworkGameClient {
                       kf.field_d = null;
                     }
                     if (2 == var3) {
-                      uf.a(13, RichTextLayout.c(-101));
+                      SocketArchiveNetworkClient.a(13, RichTextLayout.c(-101));
                     }
                   }
                 }
@@ -6593,7 +6593,7 @@ public final class MinerDisturbance extends NetworkGameClient {
                   continue;
                 }
               } else {
-                bk.a((byte) -69, 0);
+                ArchiveSourceManager.a((byte) -69, 0);
               }
               break;
             }
@@ -6859,15 +6859,15 @@ public final class MinerDisturbance extends NetworkGameClient {
               }
               if (ConfirmedEmailAvailabilityValidator.field_i.equalsIgnoreCase("hamyths")) {
                 qm.field_f = true;
-                uf.field_p[jf.b((byte) 123)] = new gf(16, 4, 9);
+                SocketArchiveNetworkClient.field_p[jf.b((byte) 123)] = new gf(16, 4, 9);
               }
               if (ConfirmedEmailAvailabilityValidator.field_i.equalsIgnoreCase("owalrus")) {
                 qm.field_f = true;
-                uf.field_p[jf.b((byte) 92)] = new gf(16, 4, 19);
+                SocketArchiveNetworkClient.field_p[jf.b((byte) 92)] = new gf(16, 4, 19);
               }
               if (ConfirmedEmailAvailabilityValidator.field_i.equalsIgnoreCase("bigloot")) {
                 qm.field_f = true;
-                uf.field_p[jf.b((byte) 66)] = new gf(16, 4, 12);
+                SocketArchiveNetworkClient.field_p[jf.b((byte) 66)] = new gf(16, 4, 12);
               }
               if (ConfirmedEmailAvailabilityValidator.field_i.equalsIgnoreCase("imgreat")) {
                 qm.field_f = true;
@@ -6953,33 +6953,33 @@ public final class MinerDisturbance extends NetworkGameClient {
             }
             if (d.field_b &&
               lj.field_t == 82 &&
-              0 >= gi.field_c && (qe.field_b[1] ||
+              0 >= KeyboardInputHandler.field_c && (qe.field_b[1] ||
               qe.field_b[0]) && ValidatedTextField.field_V) {
-              gi.field_c = 25;
+              KeyboardInputHandler.field_c = 25;
               if (sc.field_b) {
                 ag.a(true, 10, 32 * hf.field_t, NanoFrameTimer.field_k * 32);
               }
               if (qe.field_b[1]) {
                 var6Lifetime1Lifetime3 = jf.b((byte) 110);
-                uf.field_p[var6Lifetime1Lifetime3] = new gf(NanoFrameTimer.field_k, hf.field_t, 7);
+                SocketArchiveNetworkClient.field_p[var6Lifetime1Lifetime3] = new gf(NanoFrameTimer.field_k, hf.field_t, 7);
                 ModalDialog.a(var6Lifetime1Lifetime3, 136989569);
               } else {
                 var6Lifetime1Lifetime3 = jf.b((byte) 101);
-                uf.field_p[var6Lifetime1Lifetime3] = new gf(NanoFrameTimer.field_k, hf.field_t, 6);
+                SocketArchiveNetworkClient.field_p[var6Lifetime1Lifetime3] = new gf(NanoFrameTimer.field_k, hf.field_t, 6);
                 fn.b(var6Lifetime1Lifetime3, 100);
               }
             }
             if (d.field_b &&
               lj.field_t == 86 &&
-              gi.field_c <= 0 &&
+              KeyboardInputHandler.field_c <= 0 &&
               qe.field_b[17] &&
               ValidatedTextField.field_V) {
-              gi.field_c = 25;
+              KeyboardInputHandler.field_c = 25;
               if (sc.field_b) {
                 ag.a(true, 26, 32 * hf.field_t, NanoFrameTimer.field_k * 32);
               }
               var6Lifetime1Lifetime4 = jf.b((byte) 88);
-              uf.field_p[var6Lifetime1Lifetime4] = new gf(NanoFrameTimer.field_k, hf.field_t, 20);
+              SocketArchiveNetworkClient.field_p[var6Lifetime1Lifetime4] = new gf(NanoFrameTimer.field_k, hf.field_t, 20);
               ModalDialog.a(var6Lifetime1Lifetime4, 136989569);
             }
             stackIn_402_0 = (rj.field_f > 1) ? 0 : 1;
@@ -6999,32 +6999,32 @@ public final class MinerDisturbance extends NetworkGameClient {
             if (2 <= AgeValidator.field_j) {
               if (d.field_b &&
                 86 == lj.field_t &&
-                gi.field_c <= 0 &&
+                KeyboardInputHandler.field_c <= 0 &&
                 ValidatedTextField.field_V) {
-                gi.field_c = 25;
+                KeyboardInputHandler.field_c = 25;
                 if (dg.field_b) {
                   ne.a(17, -126);
-                  uf.field_p[jf.b((byte) 78)] = new gf(NanoFrameTimer.field_k, hf.field_t, 15);
+                  SocketArchiveNetworkClient.field_p[jf.b((byte) 78)] = new gf(NanoFrameTimer.field_k, hf.field_t, 15);
                 }
               }
               if (d.field_b &&
                 lj.field_t == 80 &&
-                gi.field_c <= 0 &&
+                KeyboardInputHandler.field_c <= 0 &&
                 ValidatedTextField.field_V) {
-                gi.field_c = 25;
+                KeyboardInputHandler.field_c = 25;
                 if (rj.field_b) {
                   ne.a(17, 115);
-                  uf.field_p[jf.b((byte) 49)] = new gf(NanoFrameTimer.field_k, hf.field_t, 18);
+                  SocketArchiveNetworkClient.field_p[jf.b((byte) 49)] = new gf(NanoFrameTimer.field_k, hf.field_t, 18);
                 }
               }
               if (d.field_b &&
                 1 == lj.field_t &&
-                gi.field_c <= 0 &&
+                KeyboardInputHandler.field_c <= 0 &&
                 ValidatedTextField.field_V) {
-                gi.field_c = 25;
+                KeyboardInputHandler.field_c = 25;
                 if (nk.field_p) {
                   ne.a(17, 93);
-                  uf.field_p[jf.b((byte) 52)] = new gf(NanoFrameTimer.field_k, hf.field_t, 22);
+                  SocketArchiveNetworkClient.field_p[jf.b((byte) 52)] = new gf(NanoFrameTimer.field_k, hf.field_t, 22);
                 }
               }
               if (~ByteStorage.field_a == ~lj.field_t) {
@@ -7466,7 +7466,7 @@ public final class MinerDisturbance extends NetworkGameClient {
                   return;
                 }
               }
-              bb.a(gi.field_b, 0, ce.field_d, 16513123, -6);
+              bb.a(KeyboardInputHandler.field_b, 0, ce.field_d, 16513123, -6);
               if (var10 == 0) {
                 return;
               }

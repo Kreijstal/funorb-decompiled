@@ -286,7 +286,7 @@ public final class Chess extends NetworkGameClient {
                     var2 = LabeledWidgetContainer.b(true);
                     if (var2 == 1) {
                       Bzip2State.field_l = true;
-                      hj.a(0, -2, false);
+                      ArchiveSourceManager.a(0, -2, false);
                     }
                     this.updateScreensAndMatchInput(true, 12);
                   } else {
@@ -317,7 +317,7 @@ public final class Chess extends NetworkGameClient {
                   if (var2 != 3) {
                     if (var2 == 4) {
                       FullscreenFocusCanvas.field_d = true;
-                      hj.a(0, -6, false);
+                      ArchiveSourceManager.a(0, -6, false);
                     }
                   } else {
                     SpriteGeometry.a(true, 15);
@@ -351,7 +351,7 @@ public final class Chess extends NetworkGameClient {
         while (true) {
           if (!EmailFormatValidator.a((byte) 103, sk.field_r)) {
             vh.a(0, (byte) 93);
-            if (wn.field_f) {
+            if (SocketConnector.field_f) {
               DisplayNameSelectionPanel.field_O = 0;
             }
             if (nc.j(124)) {
@@ -369,7 +369,7 @@ public final class Chess extends NetworkGameClient {
                     BufferedRandomAccessFile.field_q = true;
                     DequeWidgetContainer.field_D = false;
                     DropTargetWidgetContainer.field_P = true;
-                    if (hj.field_i) {
+                    if (ArchiveSourceManager.field_i) {
                       ad.field_d = id.field_b;
                       ChessBoardState.a(qk.field_h, false, 28333, 8);
                     } else {
@@ -379,7 +379,7 @@ public final class Chess extends NetworkGameClient {
                     ae.field_e[IntrusiveDeque.field_f].a((byte) 122, false, 0);
                     pk.field_j = false;
                     DefaultTextWidgetRenderer.field_h = false;
-                    hj.field_i = false;
+                    ArchiveSourceManager.field_i = false;
                   }
                   fi.field_a = false;
                   r.field_bc = false;
@@ -412,9 +412,9 @@ public final class Chess extends NetworkGameClient {
           }
           if (wg.field_B == 14) {
             de.a(-31645);
-            hg.a(rl.field_a.length, 1024, AccountServiceResult.a(false), ak.roundUpPowerOfTwo(8, 1045), IntrusiveNode.b((byte) 19), ak.roundUpPowerOfTwo(2000, 1045), true, 150, SecondaryNodeDeque.a(11520), ai.field_h);
-            il.a(hj.b(63910), sj.a((byte) -57), (byte) 15);
-            wn.field_f = true;
+            hg.a(MouseInputHandler.field_a.length, 1024, AccountServiceResult.a(false), ak.roundUpPowerOfTwo(8, 1045), IntrusiveNode.b((byte) 19), ak.roundUpPowerOfTwo(2000, 1045), true, 150, SecondaryNodeDeque.a(11520), ai.field_h);
+            il.a(ArchiveSourceManager.b(63910), sj.a((byte) -57), (byte) 15);
+            SocketConnector.field_f = true;
             qk.field_h = -2;
             DisplayNameSelectionPanel.field_O = 0;
             DequeWidgetContainer.field_D = false;
@@ -432,7 +432,7 @@ public final class Chess extends NetworkGameClient {
               BufferedRandomAccessFile.field_q = true;
               DropTargetWidgetContainer.field_P = true;
               DefaultTextWidgetRenderer.field_h = false;
-              hj.field_i = false;
+              ArchiveSourceManager.field_i = false;
               qk.field_h = 0;
             }
             fi.field_a = false;
@@ -455,10 +455,10 @@ public final class Chess extends NetworkGameClient {
           if (wg.field_B != 57 &&
             wg.field_B != 58) {
             if (59 == wg.field_B) {
-              if (hj.field_i ||
+              if (ArchiveSourceManager.field_i ||
                 DefaultTextWidgetRenderer.field_h) {
                 de.a(-31645);
-                if (hj.field_i) {
+                if (ArchiveSourceManager.field_i) {
                   MatchingFieldValidator.field_p.a(71, false);
                 }
                 DequeWidgetContainer.field_D = false;
@@ -466,14 +466,14 @@ public final class Chess extends NetworkGameClient {
                 DisplayNameSelectionPanel.field_O = 0;
                 qk.field_h = -2;
                 DefaultTextWidgetRenderer.field_h = false;
-                wn.field_f = true;
-                hj.field_i = false;
+                SocketConnector.field_f = true;
+                ArchiveSourceManager.field_i = false;
               }
               fi.field_a = false;
               continue;
             }
             var2_ref = null;
-            if (hj.field_i) {
+            if (ArchiveSourceManager.field_i) {
               var2_ref = MatchingFieldValidator.field_p;
             } else {
               if (DefaultTextWidgetRenderer.field_h) {
@@ -581,7 +581,7 @@ public final class Chess extends NetworkGameClient {
           }
           if (wg.field_B == 57) {
             MatchingFieldValidator.field_p = var8;
-            hj.field_i = true;
+            ArchiveSourceManager.field_i = true;
             pd.field_Lb = null;
             rf.b(-111);
             ConfirmedEmailAvailabilityValidator.i(-39);
@@ -681,21 +681,21 @@ public final class Chess extends NetworkGameClient {
           return;
         }
         if (!ArrayWidgetContainer.e((byte) 55)) {
-          nj.a(-20, wn.field_g, 100.0f);
+          nj.a(-20, SocketConnector.field_g, 100.0f);
           cg.a(-12, (java.awt.Canvas) (var6));
           return;
         }
         if (qk.field_h == IntrusiveDeque.field_f) {
-          DualLinkNode.a(wn.field_e, IntrusiveDeque.field_f, (byte) -86, true);
+          DualLinkNode.a(SocketConnector.field_e, IntrusiveDeque.field_f, (byte) -86, true);
         } else {
           MusicPatchNode.field_w.setCameraOrbit(-0.1, (double)r.field_Eb / 300.0, true);
           if (nc.field_T < 16) {
-            DualLinkNode.a(wn.field_e, IntrusiveDeque.field_f, (byte) -86, false);
+            DualLinkNode.a(SocketConnector.field_e, IntrusiveDeque.field_f, (byte) -86, false);
           } else {
             DualLinkNode.a(DequeWidgetContainer.field_D, qk.field_h, (byte) -86, false);
           }
         }
-        if (!wn.field_e ||
+        if (!SocketConnector.field_e ||
           !DequeWidgetContainer.field_D) {
           DebouncedFieldValidator.a(-7093, ak.a(true));
         }
@@ -992,7 +992,7 @@ public final class Chess extends NetworkGameClient {
         if (MidiNoteMask.field_o != null) {
           q.a(5, MidiNoteMask.field_o);
           MidiNoteMask.field_o = null;
-          ob.f(0);
+          SocketArchiveNetworkClient.f(0);
         }
         if (param0 < 43) {
           this.field_F = 37;
@@ -1066,8 +1066,8 @@ public final class Chess extends NetworkGameClient {
         var5 = (int)(Math.sin(0.39269908169872414) * 65536.0);
         var6 = (int)(Math.cos(0.39269908169872414) * 65536.0);
         var7 = new int[]{0, 0, 0, var6, 0, var5, 0, 65536, 0, -var5, 0, var6};
-        rl.field_d[0][0] = new RgbSprite(0, 0);
-        rl.field_d[1][0] = new RgbSprite(0, 0);
+        MouseInputHandler.field_d[0][0] = new RgbSprite(0, 0);
+        MouseInputHandler.field_d[1][0] = new RgbSprite(0, 0);
         hb.field_b[0][0] = new RgbSprite(0, 0);
         hb.field_b[1][0] = new RgbSprite(0, 0);
         TextLayout.field_d[0][0] = new RgbSprite(0, 0);
@@ -1095,7 +1095,7 @@ public final class Chess extends NetworkGameClient {
               }
             }
             var9_ref_dd__[var10].projectAndDrawWithTransforms(var15, var11_ref_int__);
-            rl.field_d[var8_int][var10] = tg.field_r[-var10 + 6 + 6 * var8_int];
+            MouseInputHandler.field_d[var8_int][var10] = tg.field_r[-var10 + 6 + 6 * var8_int];
           }
         }
         dj.field_t = TextLayout.field_d[1][1].copy();
@@ -1109,11 +1109,11 @@ public final class Chess extends NetworkGameClient {
           var9 = (var8_intLifetime2 != 0) ? 1 : 16777215;
           for (var10Lifetime1 = 1; var10Lifetime1 < 7; var10Lifetime1++) {
             for (var11 = 0; var11 < 2; var11++) {
-              rl.field_d[var8_intLifetime2][var10Lifetime1].addOutline(var9);
+              MouseInputHandler.field_d[var8_intLifetime2][var10Lifetime1].addOutline(var9);
             }
             hb.field_b[var8_intLifetime2][var10Lifetime1] = new RgbSprite(45, 45);
             hb.field_b[var8_intLifetime2][var10Lifetime1].bindAsRenderTarget();
-            rl.field_d[var8_intLifetime2][var10Lifetime1].a(23, 1024, 23, 0, (byte) 94);
+            MouseInputHandler.field_d[var8_intLifetime2][var10Lifetime1].a(23, 1024, 23, 0, (byte) 94);
             hb.field_b[var8_intLifetime2][var10Lifetime1].addOutline(var9);
             for (var11Lifetime2 = 0; var11Lifetime2 < 2; var11Lifetime2++) {
               TextLayout.field_d[var8_intLifetime2][var10Lifetime1].addOutline(var9);
@@ -1147,7 +1147,7 @@ public final class Chess extends NetworkGameClient {
                 var8 = new RgbSprite(45, 45);
                 var8.bindAsRenderTarget();
                 SoftwareRasterizer.fillRectangle(0, 0, 45, 45, var9Lifetime1);
-                rl.field_d[var12][var13].drawQuarterSizeAveraged(0, 0);
+                MouseInputHandler.field_d[var12][var13].drawQuarterSizeAveraged(0, 0);
                 cl.field_c[var10Lifetime2][var11Lifetime1][var12][var13] = var8;
               }
             }
@@ -1203,18 +1203,18 @@ public final class Chess extends NetworkGameClient {
             stackIn_15_8 = !(fl.field_n <= 50);
             stackIn_18_9 = var3;
             stackIn_18_10 = true;
-            stackIn_20_11 = (hj.field_i) || (DefaultTextWidgetRenderer.field_h);
+            stackIn_20_11 = (ArchiveSourceManager.field_i) || (DefaultTextWidgetRenderer.field_h);
             ArrayWidgetContainer.a(stackIn_14_0, stackIn_14_1, stackIn_14_2, stackIn_14_3, stackIn_14_4 != 0, stackIn_14_5, stackIn_14_6, stackIn_14_7, stackIn_15_8, stackIn_18_9 != 0, stackIn_18_10, stackIn_20_11);
           }
           while (MusicPatch.d(18954)) {
-            if (wn.field_f) {
+            if (SocketConnector.field_f) {
               tl.a(12, 13, param0 + 17, 15);
             }
             if (DefaultTextWidgetRenderer.field_h &&
               pd.field_Lb.f(89)) {
               continue;
             }
-            if (hj.field_i &&
+            if (ArchiveSourceManager.field_i &&
               MatchingFieldValidator.field_p.f(-110)) {
               continue;
             }
@@ -1328,7 +1328,7 @@ public final class Chess extends NetworkGameClient {
               if (PcmOutputWorker.a(-3)) {
                 IntrusiveDeque.field_f = NetworkArchiveRequest.field_z;
               } else {
-                gf.field_d = vc.a(-127, 4);
+                gf.field_d = KeyboardInputHandler.a(-127, 4);
                 if (cb.field_e != null) {
                   RegistrationAgreementPane.a(cb.field_e, -102, 3);
                 }
@@ -1417,17 +1417,17 @@ public final class Chess extends NetworkGameClient {
             if (DefaultTextWidgetRenderer.field_h) {
               pd.field_Lb.a((byte) -37, var4 != 0);
             }
-            if (hj.field_i) {
+            if (ArchiveSourceManager.field_i) {
               MatchingFieldValidator.field_p.a((byte) -65, var4 != 0);
             }
             while (MusicPatch.d(18954)) {
-              if (wn.field_f) {
+              if (SocketConnector.field_f) {
                 tl.a(12, 13, 94, 15);
               }
               if (DefaultTextWidgetRenderer.field_h) {
                 pd.field_Lb.f(26);
               }
-              if (!hj.field_i) {
+              if (!ArchiveSourceManager.field_i) {
                 continue;
               }
               MatchingFieldValidator.field_p.f(57);
@@ -1436,7 +1436,7 @@ public final class Chess extends NetworkGameClient {
           if (!pk.field_j) {
             id.a((byte) 29);
           }
-          if (wn.field_f) {
+          if (SocketConnector.field_f) {
             if (aa.field_f >= ug.field_b) {
               var5 = ug.field_b * ug.field_b;
               var6 = var5 - aa.field_f * aa.field_f;
@@ -1520,9 +1520,9 @@ public final class Chess extends NetworkGameClient {
         ph.field_j.setAsRasterTarget(48);
         var3Lifetime1 = qm.field_g;
         if (var3Lifetime1 != 1) {
-          ob.field_B = ValidationStatusIcon.a("scenery_2d_grass", 8221, "", mm.field_d);
+          SocketArchiveNetworkClient.field_B = ValidationStatusIcon.a("scenery_2d_grass", 8221, "", mm.field_d);
         } else {
-          ob.field_B = ValidationStatusIcon.a("scenery_2d_mud", 8221, "halloween_chess_background", mm.field_d);
+          SocketArchiveNetworkClient.field_B = ValidationStatusIcon.a("scenery_2d_mud", 8221, "halloween_chess_background", mm.field_d);
         }
         if (param0 > -120) {
           return;
@@ -1551,7 +1551,7 @@ public final class Chess extends NetworkGameClient {
         me.a(18854);
         SoftwareModelMesh.clearStaticReferences();
         TriangleRasterizer.clearStaticReferences();
-        vc.a(0);
+        KeyboardInputHandler.a(0);
         fi.clearStaticReferences(124);
         q.a(5);
         i.a(0);
@@ -1560,7 +1560,7 @@ public final class Chess extends NetworkGameClient {
         ae.clearStaticReferences(122);
         GameAppletShell.a((byte) -53);
         qk.clearStaticReferences(true);
-        rl.b(1);
+        MouseInputHandler.b(1);
         MouseWheelInput.clearStaticReferences((byte) 30);
         SoftwareRasterizer.clearStaticReferences();
         ResourceArchive.clearStaticReferences((byte) 73);
@@ -1590,8 +1590,8 @@ public final class Chess extends NetworkGameClient {
         ChessMatchSession.a((byte) 123);
         oh.clearStaticReferences(-16534);
         eb.clearStaticReferences(-29115);
-        wm.clearStaticReferences((byte) -108);
-        hj.clearStaticReferences(64655);
+        ArchiveNetworkClient.clearStaticReferences((byte) -108);
+        ArchiveSourceManager.clearStaticReferences(64655);
         BufferedRandomAccessFile.resetStaticState((byte) -9);
         BufferedSocket.clearStaticReferences(false);
         IntrusiveNode.a((byte) -91);
@@ -1685,7 +1685,7 @@ public final class Chess extends NetworkGameClient {
         va.clearStaticReferences((byte) 121);
         pe.clearStaticReferences((byte) 71);
         ig.clearStaticReferences(-49);
-        ob.clearStaticReferences(false);
+        SocketArchiveNetworkClient.clearStaticReferences(false);
         ad.clearStaticReferences(-82);
         NetworkArchiveRequest.resetStaticState((byte) 109);
         SectorCacheStore.clearStaticReferences((byte) 84);
@@ -1736,7 +1736,7 @@ public final class Chess extends NetworkGameClient {
         j.clearStaticReferences((byte) -84);
         dj.d((byte) -114);
         v.clearStaticReferences((byte) -117);
-        wn.clearStaticReferences(false);
+        SocketConnector.clearStaticReferences(false);
         ProxyAuthenticationRequiredException.a(17);
         NanoFrameTimer.clearStaticReferences(64);
         ImageProducerRasterBuffer.clearDeclaredStaticReferences(23);
@@ -1783,7 +1783,7 @@ public final class Chess extends NetworkGameClient {
         cm.clearStaticReferences(false);
         hg.clearStaticReferences((byte) -76);
         el.clearStaticReferences((byte) 125);
-        mn.a(32768);
+        ProxySocketConnector.a(32768);
         SoundFilter.clearStaticReferences();
         bd.clearStaticReferences(-40);
         NodeHashTableIterator.clearStaticReferences((byte) -120);
@@ -1850,7 +1850,7 @@ public final class Chess extends NetworkGameClient {
             this.renderFrame(true);
             this.loadInterfaceAndPieceSoundEffects(33);
             tk.field_g = null;
-            ob.f(0);
+            SocketArchiveNetworkClient.f(0);
             return false;
           }
           if (param0 != 19763) {
@@ -1876,14 +1876,14 @@ public final class Chess extends NetworkGameClient {
             DisplayNameSelectionPanel.field_S = null;
             li.field_g = null;
             pg.field_o = null;
-            ob.f(0);
+            SocketArchiveNetworkClient.f(0);
             return false;
           }
           if (null == mm.field_d) {
             if (wg.field_q != null) {
               kd.a((byte) -90, new HuffmanCodec(wg.field_q.getFileByName("", 30045, "huffman")));
               wg.field_q = null;
-              ob.f(param0 ^ 19763);
+              SocketArchiveNetworkClient.f(param0 ^ 19763);
               return false;
             }
             if (null != lg.field_b) {
@@ -1891,7 +1891,7 @@ public final class Chess extends NetworkGameClient {
               this.renderFrame(true);
               this.loadChessBoardAndPieceModels(-21);
               lg.field_b = null;
-              ob.f(0);
+              SocketArchiveNetworkClient.f(0);
               return false;
             }
             ResourceArchive.initializeChessWidgets(param0 - 19123);
@@ -1904,7 +1904,7 @@ public final class Chess extends NetworkGameClient {
             if (PcmOutputWorker.a(-3)) {
               return true;
             }
-            gf.field_d = vc.a(param0 - 19841, 4);
+            gf.field_d = KeyboardInputHandler.a(param0 - 19841, 4);
             return true;
           }
           if (this.field_F == 0) {
@@ -1931,11 +1931,11 @@ public final class Chess extends NetworkGameClient {
             mm.field_d = null;
           }
           var6 = (RgbSprite[][]) null;
-          BoundedRandomAccessFile.a(rl.field_a, MouseWheelInput.field_f, -109, true, ByteStorage.field_b, new RgbSprite[][]{IsaacCipher.field_g}, wh.field_g, hm.field_e, ai.field_h, 2, ca.field_b, wh.field_g, NumericDateInputWidget.field_S, 1, (RgbSprite[][]) null);
+          BoundedRandomAccessFile.a(MouseInputHandler.field_a, MouseWheelInput.field_f, -109, true, ByteStorage.field_b, new RgbSprite[][]{IsaacCipher.field_g}, wh.field_g, hm.field_e, ai.field_h, 2, ca.field_b, wh.field_g, NumericDateInputWidget.field_S, 1, (RgbSprite[][]) null);
           ig.field_h = LoginPanel.field_Q;
           tk.b(200, 93);
           hm.field_e = null;
-          ob.f(0);
+          SocketArchiveNetworkClient.f(0);
           return false;
         }
         if (BufferedRandomAccessFile.field_m.ensureIndexLoaded((byte) 118) &&
@@ -1980,10 +1980,10 @@ public final class Chess extends NetworkGameClient {
                                       this.renderFrame(true);
                                       DisplayNameSelectionPanel.field_S = new SoundCache(BufferedRandomAccessFile.field_m, tk.field_g);
                                       BufferedRandomAccessFile.field_m = null;
-                                      ob.f(0);
+                                      SocketArchiveNetworkClient.f(0);
                                       return false;
                                     }
-                                    nj.a(-20, da.a(ld.field_a, wn.field_g, ca.field_b, -62), 80.0f);
+                                    nj.a(-20, da.a(ld.field_a, SocketConnector.field_g, ca.field_b, -62), 80.0f);
                                     return false;
                                   }
                                   nj.a(param0 ^ -19745, DropTargetWidgetContainer.a(HuffmanCodec.field_d, "lobby", nc.field_P, ByteStorage.field_b, (byte) 126), 17.0f);
@@ -2010,7 +2010,7 @@ public final class Chess extends NetworkGameClient {
                     nj.a(param0 - 19783, DropTargetWidgetContainer.a(HuffmanCodec.field_d, "", nc.field_P, bo.field_d, (byte) 49), 63.0f);
                     return false;
                   }
-                  nj.a(-20, DropTargetWidgetContainer.a(ld.field_a, "", wn.field_g, wg.field_q, (byte) 31), 55.0f);
+                  nj.a(-20, DropTargetWidgetContainer.a(ld.field_a, "", SocketConnector.field_g, wg.field_q, (byte) 31), 55.0f);
                   return false;
                 }
                 nj.a(-20, DropTargetWidgetContainer.a(NetworkGameClient.field_o, "", ResizableModalDialog.field_V, mm.field_d, (byte) 113), 35.0f);

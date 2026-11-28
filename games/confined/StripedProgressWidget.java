@@ -363,7 +363,7 @@ final class StripedProgressWidget extends UiWidget {
         var0 = var15;
         while (var15 <= 10) {
             var1 = 8 * (-1 + var15);
-            field_V[var15] = pa.bitwiseXor(kd.bitwiseAnd(field_T[7][var1 + 7], 255L), pa.bitwiseXor(kd.bitwiseAnd(65280L, field_T[6][6 + var1]), pa.bitwiseXor(kd.bitwiseAnd(field_T[5][5 + var1], 16711680L), pa.bitwiseXor(pa.bitwiseXor(kd.bitwiseAnd(1095216660480L, field_T[3][var1 + 3]), pa.bitwiseXor(kd.bitwiseAnd(field_T[2][var1 + 2], 280375465082880L), pa.bitwiseXor(kd.bitwiseAnd(71776119061217280L, field_T[1][var1 + 1]), kd.bitwiseAnd(field_T[0][var1], -72057594037927936L)))), kd.bitwiseAnd(field_T[4][var1 + 4], 4278190080L)))));
+            field_V[var15] = pa.bitwiseXor(SocketArchiveNetworkClient.bitwiseAnd(field_T[7][var1 + 7], 255L), pa.bitwiseXor(SocketArchiveNetworkClient.bitwiseAnd(65280L, field_T[6][6 + var1]), pa.bitwiseXor(SocketArchiveNetworkClient.bitwiseAnd(field_T[5][5 + var1], 16711680L), pa.bitwiseXor(pa.bitwiseXor(SocketArchiveNetworkClient.bitwiseAnd(1095216660480L, field_T[3][var1 + 3]), pa.bitwiseXor(SocketArchiveNetworkClient.bitwiseAnd(field_T[2][var1 + 2], 280375465082880L), pa.bitwiseXor(SocketArchiveNetworkClient.bitwiseAnd(71776119061217280L, field_T[1][var1 + 1]), SocketArchiveNetworkClient.bitwiseAnd(field_T[0][var1], -72057594037927936L)))), SocketArchiveNetworkClient.bitwiseAnd(field_T[4][var1 + 4], 4278190080L)))));
             var15++;
         }
         field_W = 49;

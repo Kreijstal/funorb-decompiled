@@ -37,7 +37,7 @@ final class FullscreenStatusDialog extends ResizableModalDialog implements Widge
 
     final static void a(int param0, int param1, hm param2) {
         try {
-          ih.field_x.addLast(param2, 98);
+          SocketArchiveNetworkClient.field_x.addLast(param2, 98);
           int var3_int = -116 / ((param0 - 59) / 53);
           MouseInput.a(param1, 2, param2);
         } catch (RuntimeException runtimeException) {
@@ -164,7 +164,7 @@ final class FullscreenStatusDialog extends ResizableModalDialog implements Widge
           var18.field_i = 3 - var3 * 3 + param1.length - (7 + 8 * sc.field_c);
           bf.field_d = new int[var3];
           for (var4Lifetime4 = 1; var4Lifetime4 < var3; var4Lifetime4++) {
-            bf.field_d[var4Lifetime4] = var18.h(92);
+            bf.field_d[var4Lifetime4] = var18.readUnsignedMedium(92);
             if (0 == bf.field_d[var4Lifetime4]) {
               bf.field_d[var4Lifetime4] = 1;
             }
@@ -186,11 +186,11 @@ final class FullscreenStatusDialog extends ResizableModalDialog implements Widge
             var11 = var18.readUnsignedByte(32270);
             if ((1 & var11) == 0) {
               for (var12 = 0; var7 > var12; var12++) {
-                var8[var12] = var18.j(0);
+                var8[var12] = var18.readSignedByte(0);
               }
               if ((2 & var11) != 0) {
                 for (var12 = 0; var7 > var12; var12++) {
-                  dupTemp$0 = var18.j(0);
+                  dupTemp$0 = var18.readSignedByte(0);
                   var9[var12] = dupTemp$0;
                   var13 = dupTemp$0;
                   stackIn_48_0 = var10;
@@ -205,13 +205,13 @@ final class FullscreenStatusDialog extends ResizableModalDialog implements Widge
             } else {
               for (var12 = 0; var5 > var12; var12++) {
                 for (var13 = 0; var13 < var6; var13++) {
-                  var8[var5 * var13 + var12] = var18.j(0);
+                  var8[var5 * var13 + var12] = var18.readSignedByte(0);
                 }
               }
               if ((2 & var11) != 0) {
                 for (var12 = 0; var5 > var12; var12++) {
                   for (var13 = 0; var6 > var13; var13++) {
-                    dupTemp$1 = var18.j(0);
+                    dupTemp$1 = var18.readSignedByte(0);
                     var9[var5 * var13 + var12] = dupTemp$1;
                     var14 = dupTemp$1;
                     stackIn_36_0 = var10;

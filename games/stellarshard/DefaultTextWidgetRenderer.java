@@ -470,7 +470,7 @@ class DefaultTextWidgetRenderer implements WidgetRenderer, TextWidgetRenderer {
           var3 = stellarshard.field_B;
           try {
             if (od.field_v != null) {
-              od.field_v.a((byte) 112);
+              od.field_v.close((byte) 112);
             }
             if (ib.field_k != null) {
               ib.field_k.shutdown((byte) -103);

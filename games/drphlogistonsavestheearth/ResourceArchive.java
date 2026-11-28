@@ -996,7 +996,7 @@ final class ResourceArchive {
             if (InteractiveWidget.field_C != 4) {
               return -1;
             }
-            p.field_a.a(ea.field_a, uf.field_i, (byte) -102);
+            p.field_a.attachSocket(ea.field_a, uf.field_i, (byte) -102);
             ea.field_a = null;
             InteractiveWidget.field_C = 0;
             IterableNodeHashTable.field_e = null;

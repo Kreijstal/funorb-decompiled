@@ -133,7 +133,7 @@ final class PlatformTaskDispatcher implements Runnable {
         return this.enqueueTask(7, param1, false, 0, 0);
     }
 
-    private final static BoundedRandomAccessFile a(int param0, String param1, String param2, int param3) {
+    private final static BoundedRandomAccessFile openPreferencesFile(int param0, String param1, String param2, int param3) {
         try {
           int var6 = 0;
           BoundedRandomAccessFile stackIn_15_0 = null;
@@ -338,7 +338,7 @@ final class PlatformTaskDispatcher implements Runnable {
                         }
                         break;
                       case 12:
-                        var3_ref2 = PlatformTaskDispatcher.a(field_t, (String) (var8.objectArgument), field_m, -7);
+                        var3_ref2 = PlatformTaskDispatcher.openPreferencesFile(field_t, (String) (var8.objectArgument), field_m, -7);
                         var8.result = var3_ref2;
                         break;
                       case 16:
@@ -400,7 +400,7 @@ final class PlatformTaskDispatcher implements Runnable {
                         }
                         break;
                       case 13:
-                        var3_ref2 = PlatformTaskDispatcher.a(field_t, (String) (var8.objectArgument), "", -7);
+                        var3_ref2 = PlatformTaskDispatcher.openPreferencesFile(field_t, (String) (var8.objectArgument), "", -7);
                         var8.result = var3_ref2;
                         break;
                     }

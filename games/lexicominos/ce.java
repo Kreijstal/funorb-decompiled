@@ -421,7 +421,7 @@ final class ce {
           }
           var2Lifetime60 = e.a("tutorialp3_word2", true);
           if (var2Lifetime60 != null) {
-            ch.field_d = ni.a((byte) -55, var2Lifetime60);
+            ProxySocketConnector.field_d = ni.a((byte) -55, var2Lifetime60);
           }
           var2Lifetime61 = e.a("tutorialp3_word3", true);
           if (var2Lifetime61 != null) {

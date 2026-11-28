@@ -15,14 +15,14 @@ final class a {
           }
           return null;
         }
-        if (pe.field_pb < ch.field_f) {
+        if (pe.field_pb < ArchiveNetworkClient.field_f) {
           if (!param0) {
             field_d = -59;
             return null;
           }
           return null;
         }
-        if (pe.field_pb < ConfirmedEmailAvailabilityValidator.field_o + ch.field_f) {
+        if (pe.field_pb < ConfirmedEmailAvailabilityValidator.field_o + ArchiveNetworkClient.field_f) {
           return fa.field_c;
         }
         if (!param0) {

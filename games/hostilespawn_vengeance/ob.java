@@ -66,7 +66,7 @@ final class ob extends ql {
           if (VolumeRampingMidiPcmStream.field_Q[5]) {
             this.field_D.field_a = 2;
           } else {
-            if (ih.a(var4, (byte) -97, this.field_l) < 2) {
+            if (SocketArchiveNetworkClient.a(var4, (byte) -97, this.field_l) < 2) {
               this.field_D.field_a = 1;
             }
           }
@@ -82,19 +82,19 @@ final class ob extends ql {
           this.field_H.field_a = 1;
         }
         if (this.field_q.field_a == 0 &&
-          ih.a(var4, (byte) -117, this.field_F) < 2) {
+          SocketArchiveNetworkClient.a(var4, (byte) -117, this.field_F) < 2) {
           this.field_q.field_a = 1;
         }
         if (this.field_v.field_a == 0 &&
-          ih.a(var4, (byte) -76, this.field_j) < 2) {
+          SocketArchiveNetworkClient.a(var4, (byte) -76, this.field_j) < 2) {
           this.field_v.field_a = 1;
         }
         if (this.field_m.field_a == 0 &&
-          ih.a(var4, (byte) -97, this.field_z) < 2) {
+          SocketArchiveNetworkClient.a(var4, (byte) -97, this.field_z) < 2) {
           this.field_m.field_a = 1;
         }
         if (this.field_t.field_a == 0 &&
-          2 > ih.a(var4, (byte) -125, this.field_u)) {
+          2 > SocketArchiveNetworkClient.a(var4, (byte) -125, this.field_u)) {
           this.field_t.field_a = 1;
           this.field_p.field_a = 1;
           if (!VolumeRampingMidiPcmStream.field_Q[5] &&
@@ -105,16 +105,16 @@ final class ob extends ql {
           }
         }
         if (this.field_w.field_a == 0 &&
-          ih.a(var4, (byte) -73, this.field_g) < 2) {
+          SocketArchiveNetworkClient.a(var4, (byte) -73, this.field_g) < 2) {
           this.field_w.field_a = 1;
         }
         if (this.field_k.field_a == 0) {
-          if (2 > ih.a(var4, (byte) -127, this.field_r[0])) {
+          if (2 > SocketArchiveNetworkClient.a(var4, (byte) -127, this.field_r[0])) {
             this.field_k.field_a = 1;
             this.field_k.field_d = this.field_r[0].field_g * 24;
             this.field_k.field_l = 24 * (this.field_r[0].field_e + 2);
           } else {
-            if (2 > ih.a(var4, (byte) -107, this.field_r[1])) {
+            if (2 > SocketArchiveNetworkClient.a(var4, (byte) -107, this.field_r[1])) {
               this.field_k.field_l = -this.field_k.field_m + 24 * (-2 + this.field_r[1].field_e);
               this.field_k.field_a = 1;
               this.field_k.field_d = (this.field_r[1].field_g - 2) * 24 - this.field_k.field_h;
@@ -122,11 +122,11 @@ final class ob extends ql {
           }
         }
         if (this.field_i.field_a == 0 &&
-          2 > ih.a(var4, (byte) -110, this.field_G)) {
+          2 > SocketArchiveNetworkClient.a(var4, (byte) -110, this.field_G)) {
           this.field_i.field_a = 1;
         }
         if (this.field_y.field_a == 0 &&
-          ih.a(var4, (byte) -88, this.field_h) < 2) {
+          SocketArchiveNetworkClient.a(var4, (byte) -88, this.field_h) < 2) {
           this.field_y.field_a = 1;
         }
         if ((ng.field_u & 15) == 0 &&
@@ -261,7 +261,7 @@ final class ob extends ql {
         while (ProxySocketFactory.field_j > var6) {
           if (null != TextHotspotBounds.field_m[var6] &&
             TextHotspotBounds.field_m[var6].field_i == 20 &&
-            ih.a(TextHotspotBounds.field_m[var6].field_j, (byte) -87, this.field_l) < 8) {
+            SocketArchiveNetworkClient.a(TextHotspotBounds.field_m[var6].field_j, (byte) -87, this.field_l) < 8) {
             this.field_x = TextHotspotBounds.field_m[var6];
           } else {
             var6++;

@@ -97,26 +97,26 @@ final class NameSuggestionsPanel extends DequeWidgetContainer implements WidgetA
         int var8 = 0;
         var8 = CrazyCrystals.field_B;
         try {
-          var2_int = param1.d((byte) -79, 8);
+          var2_int = param1.readBits((byte) -79, 8);
           if (var2_int > 0) {
             throw new IllegalStateException("" + var2_int);
           }
           var3 = fn.a(1, param1) ? 1 : 0;
           var4 = fn.a(param0 ^ -31742, param1) ? 1 : 0;
           var5 = new ModelMesh();
-          var5.field_n = (short)param1.d((byte) -87, 16);
+          var5.field_n = (short)param1.readBits((byte) -87, 16);
           var5.field_L = mh.a((byte) -2, param1, 16, var5.field_L);
           if (param0 != -31741) {
             field_z = (String) null;
           }
           var5.field_G = mh.a((byte) -2, param1, 16, var5.field_G);
           var5.field_b = mh.a((byte) -2, param1, 16, var5.field_b);
-          var5.field_I = (short)param1.d((byte) -56, 16);
+          var5.field_I = (short)param1.readBits((byte) -56, 16);
           var5.field_K = mh.a((byte) -2, param1, 16, var5.field_K);
           var5.field_g = mh.a((byte) -2, param1, 16, var5.field_g);
           var5.field_c = mh.a((byte) -2, param1, 16, var5.field_c);
           if (var3 != 0) {
-            var5.field_D = (short)param1.d((byte) -73, 16);
+            var5.field_D = (short)param1.readBits((byte) -73, 16);
             var5.field_a = mh.a((byte) -2, param1, 16, var5.field_a);
             var5.field_N = mh.a((byte) -2, param1, 16, var5.field_N);
             var5.field_u = mh.a((byte) -2, param1, 16, var5.field_u);
@@ -125,7 +125,7 @@ final class NameSuggestionsPanel extends DequeWidgetContainer implements WidgetA
             var5.field_R = mh.a((byte) -2, param1, 16, var5.field_R);
           }
           if (var4 != 0) {
-            param1.d((byte) -94, 16);
+            param1.readBits((byte) -94, 16);
             var5.field_l = mh.a((byte) -2, param1, 16, var5.field_l);
             var5.field_r = mh.a((byte) -2, param1, 16, var5.field_r);
             var5.field_J = mh.a((byte) -2, param1, 16, var5.field_J);
@@ -237,7 +237,7 @@ final class NameSuggestionsPanel extends DequeWidgetContainer implements WidgetA
         }
         try {
           var5 = tp.field_f;
-          var5.d(8, param0);
+          var5.writeCipheredByte(8, param0);
           var5.position = var5.position + 1;
           var4 = var5.position;
           var5.writeByte(true, 1);

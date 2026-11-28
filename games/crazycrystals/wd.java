@@ -9,7 +9,7 @@ final class wd extends ik {
     final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {
         int var7 = param2 - param3;
         int var8 = var7 + (param2 + param4 * 100) * 100;
-        lo.field_b = new hp(param6, param1, fn.field_j, mb.field_g, field_j, ob.field_l, new int[]{var8});
+        lo.field_b = new hp(param6, param1, fn.field_j, mb.field_g, field_j, ArchiveNetworkClient.field_l, new int[]{var8});
         if (param0 > -74) {
           field_h = (String) null;
         }

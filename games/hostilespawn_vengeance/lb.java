@@ -37,7 +37,7 @@ final class lb {
             var5 = var14;
             var6 = ((PacketBuffer) ((Object) var5)).readUnsignedByte(32270);
             for (var7 = 0; var7 < var6; var7++) {
-              var10[var7] = ((PacketBuffer) ((Object) var5)).d(8195);
+              var10[var7] = ((PacketBuffer) ((Object) var5)).readInt(8195);
             }
             var13 = (ri) (DelayedPacket.field_h.beginForward(-63));
             if (var13 == null) {
@@ -64,7 +64,7 @@ final class lb {
               le.c((byte) 78);
             }
           } else {
-            var12 = (hm) (ih.field_x.beginForward(-117));
+            var12 = (hm) (SocketArchiveNetworkClient.field_x.beginForward(-117));
             if (var12 == null) {
               le.c((byte) 81);
               return;
@@ -152,29 +152,29 @@ final class lb {
               if (param3) {
                 var9 = var9 | 1;
               }
-              ob.field_s.b(jk.field_b.nextInt(), 25251);
-              ob.field_s.b(jk.field_b.nextInt(), 25251);
-              ob.field_s.a(110, var14);
-              ob.field_s.a(110, var8);
+              ob.field_s.writeInt(jk.field_b.nextInt(), 25251);
+              ob.field_s.writeInt(jk.field_b.nextInt(), 25251);
+              ob.field_s.writeCircumfixedString(110, var14);
+              ob.field_s.writeCircumfixedString(110, var8);
               var15 = (CharSequence) ((Object) param5);
-              ob.field_s.a(83, jk.a((byte) 104, var15));
-              ob.field_s.a((byte) -121, param0);
-              ob.field_s.d(81, param6);
-              ob.field_s.d(88, var9);
-              s.field_b.d(94, 18);
+              ob.field_s.writeCircumfixedString(83, jk.a((byte) 104, var15));
+              ob.field_s.writeShort((byte) -121, param0);
+              ob.field_s.writeByte(81, param6);
+              ob.field_s.writeByte(88, var9);
+              s.field_b.writeByte(94, 18);
               s.field_b.field_i = s.field_b.field_i + 2;
               var10 = s.field_b.field_i;
               var11_ref_StringLifetime3 = de.a(-120, BufferedRandomAccessFile.c(-1));
               if (var11_ref_StringLifetime3 == null) {
                 var11_ref_StringLifetime3 = "";
               }
-              s.field_b.a(var11_ref_StringLifetime3, 0);
+              s.field_b.writeString(var11_ref_StringLifetime3, 0);
               ml.a(s.field_b, GuestPlayConfirmationForm.field_L, 0, NetworkArchiveRequest.field_z, ob.field_s);
-              s.field_b.a(true, s.field_b.field_i - var10);
+              s.field_b.patchShortLength(true, s.field_b.field_i - var10);
             } else {
               ob.field_s.field_i = 0;
-              ob.field_s.b(jk.field_b.nextInt(), 25251);
-              ob.field_s.b(jk.field_b.nextInt(), 25251);
+              ob.field_s.writeInt(jk.field_b.nextInt(), 25251);
+              ob.field_s.writeInt(jk.field_b.nextInt(), 25251);
               stackIn_14_0 = ob.field_s;
               stackIn_14_1 = 124;
               if (param2.a((byte) -80)) {
@@ -182,7 +182,7 @@ final class lb {
               } else {
                 stackIn_15_2 = "";
               }
-              ((PacketBuffer) (Object) stackIn_14_0).a(stackIn_14_1, stackIn_15_2);
+              ((PacketBuffer) (Object) stackIn_14_0).writeCircumfixedString(stackIn_14_1, stackIn_15_2);
               stackIn_17_0 = ob.field_s;
               stackIn_17_1 = 36;
               if (param4.a((byte) -80)) {
@@ -190,12 +190,12 @@ final class lb {
               } else {
                 stackIn_18_2 = "";
               }
-              ((PacketBuffer) (Object) stackIn_17_0).a(stackIn_17_1, stackIn_18_2);
-              s.field_b.d(86, 16);
+              ((PacketBuffer) (Object) stackIn_17_0).writeCircumfixedString(stackIn_17_1, stackIn_18_2);
+              s.field_b.writeByte(86, 16);
               s.field_b.field_i = s.field_b.field_i + 1;
               var9 = s.field_b.field_i;
               ml.a(s.field_b, GuestPlayConfirmationForm.field_L, 0, NetworkArchiveRequest.field_z, ob.field_s);
-              s.field_b.a(-var9 + s.field_b.field_i, -19720);
+              s.field_b.patchByteLength(-var9 + s.field_b.field_i, -19720);
             }
             RichTextLayout.d(-1, -22370);
             rc.field_a = re.field_r;
@@ -211,7 +211,7 @@ final class lb {
             } else {
               if (var9Lifetime1 == 248) {
                 RichTextWidget.a(BufferedRandomAccessFile.c(-1), 0);
-                km.field_x = sg.field_g;
+                km.field_x = ArchiveSourceManager.field_g;
                 le.c((byte) 119);
                 AlphaWidgetContainer.field_C = false;
                 stackIn_36_0 = var9Lifetime1;
@@ -236,7 +236,7 @@ final class lb {
               if (re.c((byte) 33, var10Lifetime1)) {
                 var11 = ea.field_a.length;
                 for (var12 = 0; var12 < var11; var12++) {
-                  ea.field_a[var12] = sc.field_g.n(-31298);
+                  ea.field_a[var12] = sc.field_g.readCircumfixedString(-31298);
                 }
                 le.c((byte) 98);
                 AlphaWidgetContainer.field_C = false;
@@ -248,12 +248,12 @@ final class lb {
           if (rc.field_a == sj.field_c &&
             eb.a(13372)) {
             if (255 == ImageProducerRasterBuffer.field_k) {
-              var9_ref_String = sc.field_g.a((byte) 28);
+              var9_ref_String = sc.field_g.readNullableString((byte) 28);
               if (var9_ref_String != null) {
                 ResourceArchive.writeSettingsCookie((byte) 98, BufferedRandomAccessFile.c(-1), var9_ref_String);
               }
             } else {
-              km.field_x = sc.field_g.o(32);
+              km.field_x = sc.field_g.readString(32);
             }
             le.c((byte) 84);
             AlphaWidgetContainer.field_C = false;

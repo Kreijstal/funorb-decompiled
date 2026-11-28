@@ -262,8 +262,8 @@ final class ProxySocketFactory extends SocketFactory {
             field_h = (de[]) null;
           }
           var23Lifetime1 = param0[2] - param1[2];
-          var9 = param1[3] * var21Lifetime1 - (-(var22Lifetime1 * param1[4]) - param1[5] * var23Lifetime1) >> -ih.field_w + 16;
-          var10 = var22Lifetime1 * param1[7] + (param1[6] * var21Lifetime1 + param1[8] * var23Lifetime1) >> 16 - ih.field_w;
+          var9 = param1[3] * var21Lifetime1 - (-(var22Lifetime1 * param1[4]) - param1[5] * var23Lifetime1) >> -SocketArchiveNetworkClient.field_w + 16;
+          var10 = var22Lifetime1 * param1[7] + (param1[6] * var21Lifetime1 + param1[8] * var23Lifetime1) >> 16 - SocketArchiveNetworkClient.field_w;
           var11 = param1[11] * var23Lifetime1 + param1[9] * var21Lifetime1 + param1[10] * var22Lifetime1 >> 16;
           var21Lifetime2 = ge.field_c;
           var22Lifetime2 = ge.field_b;
@@ -273,8 +273,8 @@ final class ProxySocketFactory extends SocketFactory {
               var24Lifetime1 = param4.field_n[var23Lifetime2];
               var25Lifetime1 = param4.field_E[var23Lifetime2];
               var26Lifetime1 = param4.field_H[var23Lifetime2];
-              var27Lifetime1 = (var12 * var24Lifetime1 + var25Lifetime1 * var15 + var26Lifetime1 * var18 >> -ih.field_w + 16) + var9;
-              var28Lifetime1 = (var19 * var26Lifetime1 + (var13 * var24Lifetime1 + var25Lifetime1 * var16) >> -ih.field_w + 16) + var10;
+              var27Lifetime1 = (var12 * var24Lifetime1 + var25Lifetime1 * var15 + var26Lifetime1 * var18 >> -SocketArchiveNetworkClient.field_w + 16) + var9;
+              var28Lifetime1 = (var19 * var26Lifetime1 + (var13 * var24Lifetime1 + var25Lifetime1 * var16) >> -SocketArchiveNetworkClient.field_w + 16) + var10;
               var29Lifetime1 = (var26Lifetime1 * var20 + (var25Lifetime1 * var17 + var14 * var24Lifetime1) >> 16) + var11;
               stackIn_69_0 = var29Lifetime1;
               stackIn_69_1 = 50;
@@ -293,8 +293,8 @@ final class ProxySocketFactory extends SocketFactory {
                   rb.field_p[var23Lifetime2] = -2147483648;
                 }
                 if (param5) {
-                  DualLinkNode.field_m[var23Lifetime2] = var27Lifetime1 >> ih.field_w;
-                  sj.field_f[var23Lifetime2] = var28Lifetime1 >> ih.field_w;
+                  DualLinkNode.field_m[var23Lifetime2] = var27Lifetime1 >> SocketArchiveNetworkClient.field_w;
+                  sj.field_f[var23Lifetime2] = var28Lifetime1 >> SocketArchiveNetworkClient.field_w;
                   ii.field_c[var23Lifetime2] = var29Lifetime1;
                 }
                 var23Lifetime2++;

@@ -333,7 +333,7 @@ final class MixedSupport099 {
                 return;
               }
               if (longArgument3 >= 0L) {
-                stringLocal17 = stringLocal13 + "; Expires=" + CipherPacketBuffer.computeString1636((byte) 60, longArgument3 * 1000L + MixedSupport062.correctedCurrentTimeMillis(4)) + "; Max-Age=" + longArgument3;
+                stringLocal17 = stringLocal13 + "; Expires=" + CipherPacketBuffer.formatGmtTimestamp((byte) 60, longArgument3 * 1000L + MixedSupport062.correctedCurrentTimeMillis(4)) + "; Max-Age=" + longArgument3;
               } else {
                 stringLocal17 = stringLocal13 + "; Discard;";
               }
@@ -496,7 +496,7 @@ final class MixedSupport099 {
             if (sceneWidgetPart014Local7 == null &&
               integerLocal8 == 0) {
               this.sceneWidgetPart002State0002.performAction0560(NodeHashTableIterator.substituteIndexedPlaceholders(93, SoundCache.stringState0431, new String[]{stringLocal10}), 4, byteArgument2 - 60);
-              this.sceneWidgetPart002State0002.performAction0560(NodeHashTableIterator.substituteIndexedPlaceholders(122, ResourceSupport004.stringState0427, new String[]{stringLocal10}), 6, byteArgument2 ^ 12);
+              this.sceneWidgetPart002State0002.performAction0560(NodeHashTableIterator.substituteIndexedPlaceholders(122, NetworkArchiveRequest.stringState0427, new String[]{stringLocal10}), 6, byteArgument2 ^ 12);
               if (integerArrayArgument3 != null &&
                 integerArgument1 != 2 &&
                 !MixedSupport144.booleanState0221) {
@@ -578,7 +578,7 @@ final class MixedSupport099 {
         }
         if (integerArgument2 != 5) {
           if (integerArgument2 == 6) {
-            stringLocal3 = NetworkSupport003.computeString0351(this.stringState0418, 127, integerArgument1);
+            stringLocal3 = ArchiveNetworkClient.computeString0351(this.stringState0418, 127, integerArgument1);
             if (stringLocal3 != null) {
               stringLocal5 = (String) null;
               ContentTransitionDialog.performAction0184(this.stringState0418, (String) null, stringLocal3, (byte) -79, 2, 0);

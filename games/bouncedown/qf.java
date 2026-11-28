@@ -36,7 +36,7 @@ final class qf {
           }
           var3 = (byte[]) (param2);
           if (param1) {
-            stackIn_12_0 = rd.copyBytes((byte) -82, var3);
+            stackIn_12_0 = MouseInputHandler.copyBytes((byte) -82, var3);
             return stackIn_12_0;
           }
           stackIn_10_0 = var3;
@@ -65,8 +65,8 @@ final class qf {
     }
 
     final static void a(int param0) {
-        if (nk.field_a != null) {
-          nk.field_a.closeDialog(true);
+        if (BouncedownMenuEntry.field_a != null) {
+          BouncedownMenuEntry.field_a.closeDialog(true);
           il.field_b = new DisplayNameSelectionPanel();
           TextLayout.field_c.replaceContent(10768, il.field_b);
           if (param0 != 0) {

@@ -386,8 +386,8 @@ abstract class wc extends DualLinkNode {
     }
 
     final static int c(int param0) {
-        i.field_a.a(param0);
-        if (!StandardContentDialog.field_kb.c(true)) {
+        i.field_a.pollArchiveSources(param0);
+        if (!StandardContentDialog.field_kb.pollNetwork(true)) {
           return ga.a(param0 ^ -108);
         }
         return 0;

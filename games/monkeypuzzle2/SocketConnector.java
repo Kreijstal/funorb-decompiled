@@ -34,7 +34,7 @@ abstract class SocketConnector {
         }
     }
 
-    abstract java.net.Socket a(int param0) throws IOException;
+    abstract java.net.Socket openSocket(int param0) throws IOException;
 
     final static void a(int param0, byte param1) {
         int var2;
@@ -132,7 +132,7 @@ abstract class SocketConnector {
         }
     }
 
-    final java.net.Socket b(byte param0) throws IOException {
+    final java.net.Socket openDirectSocket(byte param0) throws IOException {
         if (param0 >= 120) {
           return new java.net.Socket(this.field_b, this.field_a);
         }

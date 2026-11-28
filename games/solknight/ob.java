@@ -9,7 +9,7 @@ final class ob extends IntrusiveNode {
     static int[] field_m;
     static int field_j;
 
-    final static void a(int param0, java.awt.Component param1) {
+    final static void detachKeyboardListeners(int param0, java.awt.Component param1) {
         try {
           param1.removeKeyListener(ModalDialogHost.field_J);
           param1.removeFocusListener(ModalDialogHost.field_J);

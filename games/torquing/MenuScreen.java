@@ -1439,7 +1439,7 @@ final class MenuScreen {
             stackIn_7_0 = ProgressDialog.field_Q.stringWidth(param2);
             return stackIn_7_0;
           }
-          stackIn_5_0 = bo.field_e.stringWidth(param2);
+          stackIn_5_0 = ArchiveSourceManager.field_e.stringWidth(param2);
           return stackIn_5_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

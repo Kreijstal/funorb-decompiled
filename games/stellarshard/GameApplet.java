@@ -47,13 +47,13 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
               dd.field_d = param2;
               ProxySocketConnector.field_j = this;
               df.field_c = 0;
-              fb.field_f = 0;
+              ArchiveNetworkClient.field_f = 0;
               TextFieldValidator.field_j = param5;
               LabeledWidgetContainer.field_H = param5;
               tc.field_u = hf.a((byte) -96);
               dupTemp$0 = new PlatformTaskDispatcher(param0, param6, param1, true);
               DebouncedFieldValidator.field_d = dupTemp$0;
-              fb.field_d = dupTemp$0;
+              ArchiveNetworkClient.field_d = dupTemp$0;
               var9 = DebouncedFieldValidator.field_d.requestThreadStart((Runnable) (this), 1, 0);
               while (true) {
                 if (var9.status == 0) {
@@ -600,12 +600,12 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
           qd.field_j.setVisible(true);
           if (DualLinkNode.field_q == var2) {
             var3 = DualLinkNode.field_q.getInsets();
-            qd.field_j.setLocation(fb.field_f + var3.left, df.field_c + var3.top);
+            qd.field_j.setLocation(ArchiveNetworkClient.field_f + var3.left, df.field_c + var3.top);
             if (var4 != 0) {
-              qd.field_j.setLocation(fb.field_f, df.field_c);
+              qd.field_j.setLocation(ArchiveNetworkClient.field_f, df.field_c);
             }
           } else {
-            qd.field_j.setLocation(fb.field_f, df.field_c);
+            qd.field_j.setLocation(ArchiveNetworkClient.field_f, df.field_c);
           }
           qd.field_j.addFocusListener((java.awt.event.FocusListener) (this));
           qd.field_j.requestFocus();
@@ -843,12 +843,12 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
             boolean decompiledSharedTail0 = (null != DualLinkNode.field_q &&
               LoginPanel.field_L == null);
             if (!decompiledSharedTail0) {
-              qd.field_j.setLocation(fb.field_f, df.field_c);
+              qd.field_j.setLocation(ArchiveNetworkClient.field_f, df.field_c);
               decompiledSharedTail0 = (stellarshard.field_B != 0);
             }
             if (decompiledSharedTail0) {
               var6 = DualLinkNode.field_q.getInsets();
-              qd.field_j.setLocation(var6.left + fb.field_f, var6.top + df.field_c);
+              qd.field_j.setLocation(var6.left + ArchiveNetworkClient.field_f, var6.top + df.field_c);
             }
           }
           this.renderClientFrame(-20880);
@@ -868,7 +868,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
             !qc.field_b) {
             SoundCache.field_h = ih.correctedCurrentTimeMillis((byte) -98);
             jj.sleepMillis((byte) -127, 5000L);
-            fb.field_d = null;
+            ArchiveNetworkClient.field_d = null;
             this.shutdownApplet(-1, false);
             return;
           }

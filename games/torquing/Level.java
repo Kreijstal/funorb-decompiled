@@ -1074,7 +1074,7 @@ final class Level {
               }
               var7 = new SectorCacheStore(param2, DropTargetWidgetContainer.field_F, TextLayout.field_b[param2], 2097152);
             }
-            var8 = BufferedSocket.field_n.a((SectorCacheStore) (var7), (byte) 101, param2, (SectorCacheStore) (var6), param0);
+            var8 = BufferedSocket.field_n.getOrCreateArchiveSource((SectorCacheStore) (var7), (byte) 101, param2, (SectorCacheStore) (var6), param0);
             if (param4) {
               var8.d(-118);
             }

@@ -393,7 +393,7 @@ final class SectorCacheStore {
             field_c = true;
           }
           if (AccountNameAvailabilityValidator.c((byte) -5)) {
-            GzipDecompressor.field_a.processPointerInput(hm.field_d, param0 + 41, true, bk.field_b);
+            GzipDecompressor.field_a.processPointerInput(SocketConnector.field_d, param0 + 41, true, bk.field_b);
             GzipDecompressor.field_a.advanceDialogs(true);
             while (SecondaryNodeDeque.b(-113)) {
               GzipDecompressor.field_a.processKeyInput(GrowableIntArray.field_b, (byte) -105, ji.field_a);

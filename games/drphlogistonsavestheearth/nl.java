@@ -22,14 +22,14 @@ final class nl extends IntrusiveNode {
         if (param0 == -1321745375) {
           var1 = ie.a(false);
           var2 = MusicPatch.a((byte) 115);
-          cb.field_a.a(var2 + (di.field_d << 1), -df.field_h + SingleChildWidgetContainer.field_B, var1 + (df.field_h << 1), NameSuggestionsPanel.field_N - di.field_d, 7453);
+          cb.field_a.a(var2 + (di.field_d << 1), -ArchiveSourceManager.field_h + SingleChildWidgetContainer.field_B, var1 + (ArchiveSourceManager.field_h << 1), NameSuggestionsPanel.field_N - di.field_d, 7453);
           ProgressDialog.n(17077);
           return;
         }
         nl.resetStaticState((byte) -105);
         var1Lifetime1 = ie.a(false);
         var2Lifetime1 = MusicPatch.a((byte) 115);
-        cb.field_a.a(var2Lifetime1 + (di.field_d << 1), -df.field_h + SingleChildWidgetContainer.field_B, var1Lifetime1 + (df.field_h << 1), NameSuggestionsPanel.field_N - di.field_d, 7453);
+        cb.field_a.a(var2Lifetime1 + (di.field_d << 1), -ArchiveSourceManager.field_h + SingleChildWidgetContainer.field_B, var1Lifetime1 + (ArchiveSourceManager.field_h << 1), NameSuggestionsPanel.field_N - di.field_d, 7453);
         ProgressDialog.n(17077);
     }
 

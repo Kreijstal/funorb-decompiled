@@ -78,7 +78,7 @@ final class ValidationStatusWidget extends RichTextWidget {
         var29 = null;
         var13 = Vertigo2.field_L ? 1 : 0;
         var6 = this.field_J.getValidationStatus(-23996);
-        if (var6 == tk.field_n) {
+        if (var6 == ArchiveNetworkClient.field_n) {
           var17 = ValidationStatusIcon.field_L;
           if (!var17.equals(this.text)) {
             this.text = var17;
@@ -89,7 +89,7 @@ final class ValidationStatusWidget extends RichTextWidget {
           var34 = (TextWidgetRenderer) ((Object) this.listener);
           var9 = this.x + param2;
           var10 = var34.getTextOriginY((UiWidget) (this), 1, param3) + (var34.getTextLayout((UiWidget) (this), 110).getLayoutHeight((byte) 91) >> 1);
-          if (tk.field_n == var6) {
+          if (ArchiveNetworkClient.field_n == var6) {
             var20 = jn.field_b[0];
             var11 = var20.field_x << 1;
             var12 = var20.field_B << 1;
@@ -156,7 +156,7 @@ final class ValidationStatusWidget extends RichTextWidget {
           var35 = (TextWidgetRenderer) ((Object) this.listener);
           var9Lifetime1 = this.x + param2;
           var10Lifetime1 = var35.getTextOriginY((UiWidget) (this), 1, param3) + (var35.getTextLayout((UiWidget) (this), 110).getLayoutHeight((byte) 91) >> 1);
-          if (tk.field_n == var6) {
+          if (ArchiveNetworkClient.field_n == var6) {
             var26 = jn.field_b[0];
             var11Lifetime1 = var26.field_x << 1;
             var12Lifetime1 = var26.field_B << 1;
@@ -225,7 +225,7 @@ final class ValidationStatusWidget extends RichTextWidget {
         var36 = (TextWidgetRenderer) ((Object) this.listener);
         var9Lifetime2 = this.x + param2;
         var10Lifetime2 = var36.getTextOriginY((UiWidget) (this), 1, param3) + (var36.getTextLayout((UiWidget) (this), 110).getLayoutHeight((byte) 91) >> 1);
-        if (tk.field_n == var6Lifetime1) {
+        if (ArchiveNetworkClient.field_n == var6Lifetime1) {
           var31 = jn.field_b[0];
           var11Lifetime2 = var31.field_x << 1;
           var12Lifetime2 = var31.field_B << 1;

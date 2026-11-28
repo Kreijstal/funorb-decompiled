@@ -30,18 +30,18 @@ final class FullscreenNoticeType {
             var9 = new int[var3];
             var21 = var9;
             for (var6_int = 0; var6_int < var3; var6_int++) {
-              var9[var6_int] = rd.field_d[sc.bitwiseAnd((int) var20[var6_int], 255)];
+              var9[var6_int] = MouseInputHandler.field_d[sc.bitwiseAnd((int) var20[var6_int], 255)];
             }
-            var1[var2] = new RgbSprite(DefaultTextWidgetRenderer.field_e, uf.field_k, vg.field_I[var2], b.field_b[var2], NameSuggestionsPanel.field_H[var2], ob.field_a[var2], var21);
+            var1[var2] = new RgbSprite(DefaultTextWidgetRenderer.field_e, ArchiveSourceManager.field_k, vg.field_I[var2], b.field_b[var2], NameSuggestionsPanel.field_H[var2], ob.field_a[var2], var21);
           } else {
             var22 = NetworkGameClient.field_t[var2];
             var16 = new int[var3];
             var13 = var16;
             var6 = var13;
             for (var7 = 0; var3 > var7; var7++) {
-              var6[var7] = TextLayout.bitwiseOr(rd.field_d[sc.bitwiseAnd(255, (int) var20[var7])], sc.bitwiseAnd((int) var22[var7], 255) << 24);
+              var6[var7] = TextLayout.bitwiseOr(MouseInputHandler.field_d[sc.bitwiseAnd(255, (int) var20[var7])], sc.bitwiseAnd((int) var22[var7], 255) << 24);
             }
-            var1[var2] = (RgbSprite) ((Object) new ArgbSprite(DefaultTextWidgetRenderer.field_e, uf.field_k, vg.field_I[var2], b.field_b[var2], NameSuggestionsPanel.field_H[var2], ob.field_a[var2], var16));
+            var1[var2] = (RgbSprite) ((Object) new ArgbSprite(DefaultTextWidgetRenderer.field_e, ArchiveSourceManager.field_k, vg.field_I[var2], b.field_b[var2], NameSuggestionsPanel.field_H[var2], ob.field_a[var2], var16));
           }
         }
         if (param0 >= -127) {
@@ -276,7 +276,7 @@ final class FullscreenNoticeType {
               }
             }
           }
-          for (var9Lifetime5 = 0; uf.field_h > var9Lifetime5; var9Lifetime5++) {
+          for (var9Lifetime5 = 0; ArchiveSourceManager.field_h > var9Lifetime5; var9Lifetime5++) {
             var10_intLifetime1 = -(4 * (PacketBuffer.field_j - nc.field_a[var9Lifetime5])) + 256;
             if (0 <= var10_intLifetime1 &&
               var10_intLifetime1 <= 255) {
@@ -356,7 +356,7 @@ final class FullscreenNoticeType {
           var10 = ModalDialog.a(DraggableWidgetContainer.field_G, new String[]{FrameTimer.field_c[fleas.field_E][var1_int]}, true);
           var12 = ModalDialog.a(fb.field_f, new String[]{Integer.toString(DiskArchiveRequest.field_z), Integer.toString((int) ia.field_m[fleas.field_E][var1_int].field_f)}, true);
           var13 = ModalDialog.a(va.field_s, new String[]{Integer.toString(pl.field_f), Integer.toString((int) ia.field_m[fleas.field_E][var1_int].field_e)}, true);
-          var14 = ModalDialog.a(hm.field_h, new String[]{Integer.toString(wi.field_b)}, true);
+          var14 = ModalDialog.a(SocketConnector.field_h, new String[]{Integer.toString(wi.field_b)}, true);
           var15 = ModalDialog.a(pd.field_i, new String[]{Integer.toString(RichTextLayout.field_f ^ wi.field_p.field_b)}, true);
           var16 = ve.field_d;
           var17 = 3 + (int)(1.5 * (double)var16.field_H);

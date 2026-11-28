@@ -61,7 +61,7 @@ final class vb extends pn implements Cloneable {
           if (param4 >= -87) {
             field_m = 115L;
           }
-          mb.field_g = mb.field_g - ob.field_l;
+          mb.field_g = mb.field_g - ArchiveNetworkClient.field_l;
           wd.field_j = wd.field_j - 1;
           fn.field_h.a(256, 12 * (param5 + param2), (param0 + param3) * 12, 0, (byte) -111);
           this.field_l.copyTileAttribution((byte) 92, param1);

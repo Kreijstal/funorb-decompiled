@@ -26,7 +26,7 @@ class UiWidget extends IntrusiveNode {
     }
 
     UiWidget(String param0, WidgetEventListener param1) {
-        this(param0, eh.field_j.field_j, param1);
+        this(param0, ArchiveNetworkClient.field_j.field_j, param1);
     }
 
     void drawWidget(int param0, int param1, byte param2, int param3) {
@@ -552,7 +552,7 @@ class UiWidget extends IntrusiveNode {
         }
         String var5 = lb.a(-110);
         if (var5 != null) {
-          eh.field_j.b(ua.field_a, -128, var5, ti.field_c);
+          ArchiveNetworkClient.field_j.b(ua.field_a, -128, var5, ti.field_c);
         }
     }
 

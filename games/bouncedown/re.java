@@ -17,7 +17,7 @@ final class re {
             var3 = (CipherPacketBuffer) null;
             re.a(-18, (CipherPacketBuffer) null);
           }
-          stackIn_5_0 = (1 == param1.f(7, 1));
+          stackIn_5_0 = (1 == param1.readBits(7, 1));
           return stackIn_5_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

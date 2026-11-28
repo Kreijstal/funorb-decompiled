@@ -328,7 +328,7 @@ class UiWidget extends IntrusiveNode {
             kc.a(false, 194, 16, 96);
             lb.a(259, 42, 128, 76, 0.2, DiskArchiveRequest.field_A);
             pn.field_a.drawParagraph(b.a(new String[]{r.field_b}, qm.field_A, 1177), 152, 58, 412, 60, 4243584, -1, 3, 1, 20);
-            pn.field_a.drawParagraph(kd.field_q, 132, 123, 412, 40, 4243584, -1, 3, 1, 20);
+            pn.field_a.drawParagraph(SocketArchiveNetworkClient.field_q, 132, 123, 412, 40, 4243584, -1, 3, 1, 20);
             pn.field_a.drawParagraph(DisplayNameSelectionPanel.field_S, 152, 168, 412, 80, 4243584, -1, 3, 1, 20);
             pn.field_a.drawParagraph(GameAppletShell.field_g, 132, 253, 412, 60, 4243584, -1, 3, 1, 20);
           }

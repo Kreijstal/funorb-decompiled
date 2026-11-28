@@ -447,7 +447,7 @@ final class wn {
               } else {
                 stackIn_17_2 = var14;
               }
-              ((PacketBuffer) (Object) stackIn_16_0).a(stackIn_16_1, stackIn_17_2);
+              ((PacketBuffer) (Object) stackIn_16_0).writeCircumfixedString(stackIn_16_1, stackIn_17_2);
               stackIn_19_0 = UiWidget.field_x;
               stackIn_19_1 = 684868900;
               if (param6.a(75)) {
@@ -455,7 +455,7 @@ final class wn {
               } else {
                 stackIn_20_2 = "";
               }
-              ((PacketBuffer) (Object) stackIn_19_0).a(stackIn_19_1, stackIn_20_2);
+              ((PacketBuffer) (Object) stackIn_19_0).writeCircumfixedString(stackIn_19_1, stackIn_20_2);
               uh.field_Wb.writeByte(16, -53);
               uh.field_Wb.position = uh.field_Wb.position + 1;
               var9 = uh.field_Wb.position;
@@ -469,10 +469,10 @@ final class wn {
               UiWidget.field_x.position = 0;
               UiWidget.field_x.writeInt(j.field_r.nextInt(), 0);
               UiWidget.field_x.writeInt(j.field_r.nextInt(), 0);
-              UiWidget.field_x.a(684868900, var14);
-              UiWidget.field_x.a(684868900, var8);
+              UiWidget.field_x.writeCircumfixedString(684868900, var14);
+              UiWidget.field_x.writeCircumfixedString(684868900, var8);
               var15 = (CharSequence) ((Object) param4);
-              UiWidget.field_x.a(684868900, rr.a(-99, var15));
+              UiWidget.field_x.writeCircumfixedString(684868900, rr.a(-99, var15));
               UiWidget.field_x.writeShort(param1, -1783);
               UiWidget.field_x.writeByte(param3, 80);
               UiWidget.field_x.writeByte(var9, 100);
@@ -483,7 +483,7 @@ final class wn {
               if (var11_ref_String == null) {
                 var11_ref_String = "";
               }
-              uh.field_Wb.a((byte) 0, var11_ref_String);
+              uh.field_Wb.writeString((byte) 0, var11_ref_String);
               mq.a(jm.field_H, uh.field_Wb, lp.field_E, 12, UiWidget.field_x);
               uh.field_Wb.patchShortLength((byte) -120, -var10 + uh.field_Wb.position);
             }
@@ -512,7 +512,7 @@ final class wn {
                 ProxyAuthenticationRequiredException.field_d = NumericDateInputWidget.field_O;
                 ca.field_b = -1;
               } else {
-                c.a(tk.c(1), (byte) -104);
+                c.a(ArchiveNetworkClient.c(1), (byte) -104);
                 mr.field_a = new Boolean(nr.a(SoundCache.field_f, 67));
                 SoundCache.field_f.position = 0;
               }
@@ -526,7 +526,7 @@ final class wn {
               if (c.a(var10Lifetime1, (byte) -104)) {
                 var11 = AgeValidator.field_m.length;
                 for (var12 = 0; var12 < var11; var12++) {
-                  AgeValidator.field_m[var12] = SoundCache.field_f.c(true);
+                  AgeValidator.field_m[var12] = SoundCache.field_f.readCircumfixedString(true);
                 }
                 rm.b((byte) -106);
                 gn.field_d = false;

@@ -12,9 +12,9 @@ final class bb {
     final static String b(byte param0) {
         if (param0 != 99) {
           bb.clearStaticReferences((byte) 82);
-          return sc.field_g.o(32);
+          return sc.field_g.readString(32);
         }
-        return sc.field_g.o(32);
+        return sc.field_g.readString(32);
     }
 
     public static void clearStaticReferences(byte param0) {

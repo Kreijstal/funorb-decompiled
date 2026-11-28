@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class be extends ih {
-    private uh field_t;
+    private ArchiveNetworkClient field_t;
     private ArchiveRequest field_f;
     private int field_o;
     private fl field_m;
@@ -77,10 +77,10 @@ final class be extends ih {
               if (this.field_k[param0] != -1) {
                 throw new RuntimeException();
               }
-              if (this.field_t.b((byte) 95)) {
+              if (this.field_t.isPrefetchQueueFull((byte) 95)) {
                 return null;
               }
-              var4 = this.field_t.a(this.field_r, false, false, (byte) 2, param0);
+              var4 = this.field_t.enqueueRequest(this.field_r, false, false, (byte) 2, param0);
             } else {
               if (this.field_p == null) {
                 throw new RuntimeException();
@@ -92,10 +92,10 @@ final class be extends ih {
               this.field_k[param0] != -1) {
               var4 = this.field_g.readNow(this.field_p, param0, true);
             } else {
-              if (this.field_t.b(6)) {
+              if (this.field_t.isPriorityQueueFull(6)) {
                 return null;
               }
-              var4 = this.field_t.a(this.field_r, false, true, (byte) 2, param0);
+              var4 = this.field_t.enqueueRequest(this.field_r, false, true, (byte) 2, param0);
             }
           }
           this.field_m.a((long)param0, (byte) -98, (IntrusiveNode) (var4));
@@ -154,10 +154,10 @@ final class be extends ih {
             this.field_k[param0] = (byte)-1;
             ((ArchiveRequest) (var4)).unlink(param1 ^ 7);
             if (((ArchiveRequest) (var4)).field_p) {
-              if (this.field_t.b(6)) {
+              if (this.field_t.isPriorityQueueFull(6)) {
                 return null;
               }
-              var4 = this.field_t.a(this.field_r, false, true, (byte) 2, param0);
+              var4 = this.field_t.enqueueRequest(this.field_r, false, true, (byte) 2, param0);
               this.field_m.a((long)param0, (byte) 98, (IntrusiveNode) (var4));
             }
             return null;
@@ -190,15 +190,15 @@ final class be extends ih {
         } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
           decompiledCaughtException = decompiledCaughtParameter1;
           var6_ref = (RuntimeException) (Object) decompiledCaughtException;
-          this.field_t.d(126);
+          this.field_t.resetAfterValidationFailure(126);
           ((ArchiveRequest) (var4)).unlink(5);
           if (!((ArchiveRequest) (var4)).field_p) {
             return null;
           }
-          if (this.field_t.b(6)) {
+          if (this.field_t.isPriorityQueueFull(6)) {
             return null;
           }
-          var4 = this.field_t.a(this.field_r, false, true, (byte) 2, param0);
+          var4 = this.field_t.enqueueRequest(this.field_r, false, true, (byte) 2, param0);
           this.field_m.a((long)param0, (byte) -102, (IntrusiveNode) (var4));
           return null;
         }
@@ -234,10 +234,10 @@ final class be extends ih {
           return (el) null;
         }
         if (null == this.field_f) {
-          if (this.field_t.b(6)) {
+          if (this.field_t.isPriorityQueueFull(6)) {
             return null;
           }
-          this.field_f = (ArchiveRequest) ((Object) this.field_t.a(255, false, true, (byte) 0, this.field_r));
+          this.field_f = (ArchiveRequest) ((Object) this.field_t.enqueueRequest(255, false, true, (byte) 0, this.field_r));
         }
         if (this.field_f.field_m) {
           return null;
@@ -255,10 +255,10 @@ final class be extends ih {
           } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
             var3 = decompiledCaughtException;
-            this.field_t.d(121);
+            this.field_t.resetAfterValidationFailure(121);
             this.field_v = null;
-            if (!this.field_t.b(6)) {
-              this.field_f = (ArchiveRequest) ((Object) this.field_t.a(255, false, true, (byte) 0, this.field_r));
+            if (!this.field_t.isPriorityQueueFull(6)) {
+              this.field_f = (ArchiveRequest) ((Object) this.field_t.enqueueRequest(255, false, true, (byte) 0, this.field_r));
             } else {
               this.field_f = null;
             }
@@ -280,10 +280,10 @@ final class be extends ih {
             decompiledCaughtException = decompiledCaughtParameter1;
             var3 = decompiledCaughtException;
             this.field_v = null;
-            if (this.field_t.b(6)) {
+            if (this.field_t.isPriorityQueueFull(6)) {
               this.field_f = null;
             } else {
-              this.field_f = (ArchiveRequest) ((Object) this.field_t.a(255, false, true, (byte) 0, this.field_r));
+              this.field_f = (ArchiveRequest) ((Object) this.field_t.enqueueRequest(255, false, true, (byte) 0, this.field_r));
             }
             return null;
           }
@@ -543,7 +543,7 @@ final class be extends ih {
                   this.field_e = this.field_e + 1;
                   continue;
                 }
-                if (!this.field_t.b((byte) 122)) {
+                if (!this.field_t.isPrefetchQueueFull((byte) 122)) {
                   if (this.field_k[this.field_e] != 1) {
                     discarded$2 = this.a(this.field_e, (byte) 2, 2);
                   }
@@ -628,7 +628,7 @@ final class be extends ih {
         return 0;
     }
 
-    be(int param0, SectorCacheStore param1, SectorCacheStore param2, uh param3, DiskCacheWorker param4, int param5, byte[] param6, int param7, boolean param8) {
+    be(int param0, SectorCacheStore param1, SectorCacheStore param2, ArchiveNetworkClient param3, DiskCacheWorker param4, int param5, byte[] param6, int param7, boolean param8) {
         boolean stackIn_7_1 = false;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;

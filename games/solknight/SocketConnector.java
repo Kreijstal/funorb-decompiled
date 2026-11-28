@@ -12,7 +12,7 @@ abstract class SocketConnector {
     static BinaryBitmapFont field_g;
     int field_b;
 
-    final java.net.Socket a(int param0) throws IOException {
+    final java.net.Socket openDirectSocket(int param0) throws IOException {
         int var2 = 75 / ((param0 - 58) / 57);
         return new java.net.Socket(this.field_c, this.field_b);
     }
@@ -81,7 +81,7 @@ abstract class SocketConnector {
         field_g = null;
     }
 
-    abstract java.net.Socket a(byte param0) throws IOException;
+    abstract java.net.Socket openSocket(byte param0) throws IOException;
 
     final static void a(hi param0, int param1, int param2, int param3, byte param4, hi param5) {
         try {

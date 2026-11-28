@@ -5,7 +5,7 @@ import java.util.*;
 
 final class od extends DualLinkNode {
     private int[] field_t;
-    static fb field_v;
+    static ArchiveNetworkClient field_v;
     static int field_r;
     static long field_z;
     private String[] field_u;

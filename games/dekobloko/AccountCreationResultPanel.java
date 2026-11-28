@@ -40,7 +40,7 @@ final class AccountCreationResultPanel extends ProgressMessageDialog implements 
 
     public final void onWidgetActivated(byte byteArgument1, int integerArgument2, InteractiveComponent interactiveComponentArgument3, int integerArgument4, int integerArgument5) {
         if (this.booleanState0226) {
-          NetworkSupport003.performAction0348(false, true, (byte) 66);
+          ArchiveNetworkClient.performAction0348(false, true, (byte) 66);
           return;
         }
         try {
@@ -141,7 +141,7 @@ final class AccountCreationResultPanel extends ProgressMessageDialog implements 
             StandardContentDialog.mixedSupport132State0009 == SoftwareFramebuffer.mixedSupport132State0012)) {
             if (SocketFactory.cipherPacketBufferState0002.position == 0 &&
               MixedSupport062.correctedCurrentTimeMillis(4) > 10000L + ArchiveRequestManager.longState0011) {
-              SocketFactory.cipherPacketBufferState0002.performAction1641(integerArgument2, -4);
+              SocketFactory.cipherPacketBufferState0002.writeCipheredByte(integerArgument2, -4);
             }
             if (integerArgument1 != 4792) {
               stringState0623 = (String) null;

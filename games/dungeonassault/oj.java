@@ -92,7 +92,7 @@ final class oj {
         int var4 = 0;
         try {
           var5 = ac.field_B;
-          var5.d((byte) -112, param0);
+          var5.writeCipheredByte((byte) -112, param0);
           var5.position = var5.position + 1;
           var4 = var5.position;
           var5.writeByte(6, 1);

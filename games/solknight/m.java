@@ -80,7 +80,7 @@ final class m extends IntrusiveNode {
           var3 = SolKnight.field_L ? 1 : 0;
           try {
             if (il.field_c != null) {
-              il.field_c.a((byte) 92);
+              il.field_c.close((byte) 92);
             }
             if (param0) {
               return;

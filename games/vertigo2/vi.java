@@ -46,9 +46,9 @@ final class vi extends IntrusiveNode {
           or.field_f = param6;
           MatchingFieldValidator.field_l = param2;
           od.field_Kb = param4;
-          kb.field_e = (tk) ((Object) new eg());
+          kb.field_e = (ArchiveNetworkClient) ((Object) new SocketArchiveNetworkClient());
           ap.field_a = new DiskCacheWorker(param6);
-          pd.field_c = new kr(kb.field_e, ap.field_a);
+          pd.field_c = new ArchiveSourceManager(kb.field_e, ap.field_a);
         } catch (RuntimeException runtimeException) {
           throw wn.wrapClientException((Throwable) ((Object) runtimeException), "vi.C(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + param5 + ',' + (param6 != null ? "{...}" : "null") + ',' + param7 + ',' + param8 + ')');
         }

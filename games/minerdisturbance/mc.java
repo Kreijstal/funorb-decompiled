@@ -343,18 +343,18 @@ final class mc {
           return;
         }
         wc.field_b = false;
-        ic.field_i = null;
+        ProxySocketConnector.field_i = null;
         if (MusicPatchPcmStream.field_B) {
           sj.field_h.showConnectionFailure((byte) -97);
         } else {
           var1 = a.field_d;
           if (var1 > 0) {
             if (1 != var1) {
-              ic.field_i = oa.a((byte) -99, pb.field_A, new String[]{Integer.toString(var1)});
+              ProxySocketConnector.field_i = oa.a((byte) -99, pb.field_A, new String[]{Integer.toString(var1)});
             } else {
-              ic.field_i = qg.field_g;
+              ProxySocketConnector.field_i = qg.field_g;
             }
-            ic.field_i = in.a(new CharSequence[]{(CharSequence) ((Object) ic.field_i), (CharSequence) ((Object) "<br>"), (CharSequence) ((Object) eb.field_a)}, -1);
+            ProxySocketConnector.field_i = in.a(new CharSequence[]{(CharSequence) ((Object) ProxySocketConnector.field_i), (CharSequence) ((Object) "<br>"), (CharSequence) ((Object) eb.field_a)}, -1);
           }
           sj.field_h.closeDialog(2121792);
           pb.a(53);
@@ -1072,7 +1072,7 @@ final class mc {
                               if (10 != var12) {
                                 if (var12 == 5) {
                                   RichTextWidget.field_K[5].drawOpaque(487, 326);
-                                  var13_ref = uf.field_u;
+                                  var13_ref = SocketArchiveNetworkClient.field_u;
                                 } else {
                                   if (var12 != 12) {
                                     if (var12 != 13) {

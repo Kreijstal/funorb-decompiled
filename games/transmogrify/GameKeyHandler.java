@@ -18,8 +18,8 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
             vd.field_a = 0;
             var2_int = param0.getKeyCode();
             if (var2_int >= 0 &&
-              tj.field_w.length > var2_int) {
-              var2_int = tj.field_w[var2_int] & -129;
+              SocketArchiveNetworkClient.field_w.length > var2_int) {
+              var2_int = SocketArchiveNetworkClient.field_w[var2_int] & -129;
             } else {
               var2_int = -1;
             }
@@ -88,11 +88,11 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
             var2_int = param0.getKeyChar();
             if (var2_int != 0 && 65535 != var2_int &&
               el.isSupportedCp1252KeyCharacter(-9904, (char) var2_int)) {
-              var3 = 127 & dk.field_i + 1;
+              var3 = 127 & ArchiveSourceManager.field_i + 1;
               if (PasswordValidator.field_l != var3) {
-                GrowableIntArray.field_c[dk.field_i] = -1;
-                DirectByteStorage.field_h[dk.field_i] = (char)var2_int;
-                dk.field_i = var3;
+                GrowableIntArray.field_c[ArchiveSourceManager.field_i] = -1;
+                DirectByteStorage.field_h[ArchiveSourceManager.field_i] = (char)var2_int;
+                ArchiveSourceManager.field_i = var3;
               }
             }
           }
@@ -119,8 +119,8 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
             vd.field_a = 0;
             var2_int = param0.getKeyCode();
             if (0 <= var2_int &&
-              tj.field_w.length > var2_int) {
-              var2_int = tj.field_w[var2_int];
+              SocketArchiveNetworkClient.field_w.length > var2_int) {
+              var2_int = SocketArchiveNetworkClient.field_w[var2_int];
               if (0 != (128 & var2_int)) {
                 var2_int = -1;
               }
@@ -136,11 +136,11 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
               }
             }
             if (var2_int >= 0) {
-              var3 = 1 + dk.field_i & 127;
+              var3 = 1 + ArchiveSourceManager.field_i & 127;
               if (PasswordValidator.field_l != var3) {
-                GrowableIntArray.field_c[dk.field_i] = var2_int;
-                DirectByteStorage.field_h[dk.field_i] = (char)0;
-                dk.field_i = var3;
+                GrowableIntArray.field_c[ArchiveSourceManager.field_i] = var2_int;
+                DirectByteStorage.field_h[ArchiveSourceManager.field_i] = (char)0;
+                ArchiveSourceManager.field_i = var3;
               }
             }
             var3Lifetime1 = param0.getModifiers();

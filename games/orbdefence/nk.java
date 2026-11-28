@@ -383,11 +383,11 @@ final class nk {
               if ((-(var4 / 2) + 640) < wl.field_a) {
                 wl.field_a = -(var4 / 2) + 640;
               }
-              SoftwareRasterizer.drawRectangleOutlineAlpha(-8 + wl.field_a - var4 / 2, md.field_f - 16, 16 + var4, 24, 16777215, 192);
-              SoftwareRasterizer.fillRectangleAlpha(wl.field_a - (var4 / 2 + 8), md.field_f - 16, var4 + 16, 24, 0, 192);
-              jd.field_c.drawCentred(hd.field_j, -1 + wl.field_a, md.field_f, 0, 0);
-              jd.field_c.drawCentred(hd.field_j, wl.field_a, md.field_f - 1, 0, 0);
-              jd.field_c.drawCentred(hd.field_j, wl.field_a, md.field_f, var3_int, -1);
+              SoftwareRasterizer.drawRectangleOutlineAlpha(-8 + wl.field_a - var4 / 2, ProxySocketConnector.field_f - 16, 16 + var4, 24, 16777215, 192);
+              SoftwareRasterizer.fillRectangleAlpha(wl.field_a - (var4 / 2 + 8), ProxySocketConnector.field_f - 16, var4 + 16, 24, 0, 192);
+              jd.field_c.drawCentred(hd.field_j, -1 + wl.field_a, ProxySocketConnector.field_f, 0, 0);
+              jd.field_c.drawCentred(hd.field_j, wl.field_a, ProxySocketConnector.field_f - 1, 0, 0);
+              jd.field_c.drawCentred(hd.field_j, wl.field_a, ProxySocketConnector.field_f, var3_int, -1);
               break;
             }
           }
@@ -2339,7 +2339,7 @@ final class nk {
             this.field_d[-1 + this.field_d.length] = var3Lifetime2;
             this.field_x = this.field_x - 1;
             AccountNameAvailabilityValidator.field_r = AccountNameAvailabilityValidator.field_r + this.field_x;
-            a.field_r = a.field_r + this.field_x;
+            SocketArchiveNetworkClient.field_r = SocketArchiveNetworkClient.field_r + this.field_x;
             stackIn_291_0 = -1;
             stackIn_291_1 = ~(wf.field_c.field_x % 11);
             break;
@@ -2393,7 +2393,7 @@ final class nk {
         }
         DropTargetWidgetContainer.field_C = DropTargetWidgetContainer.field_C - (DiskCacheWorker.field_d - ua.field_a);
         AccountNameAvailabilityValidator.field_r = AccountNameAvailabilityValidator.field_r - ua.field_a;
-        a.field_r = a.field_r - DiskCacheWorker.field_d;
+        SocketArchiveNetworkClient.field_r = SocketArchiveNetworkClient.field_r - DiskCacheWorker.field_d;
         if (param1) {
           while (nf.e(32722)) {
             this.a(true);
@@ -2511,7 +2511,7 @@ final class nk {
                           } else {
                             hd.field_j = ue.field_J;
                           }
-                          md.field_f = DiskCacheWorker.field_d;
+                          ProxySocketConnector.field_f = DiskCacheWorker.field_d;
                           if (wl.field_a < 128) {
                             wl.field_a = 128;
                           }
@@ -2524,7 +2524,7 @@ final class nk {
                         if (decompiledFrameRemainder0) {
                           if ((var5Lifetime1Lifetime1 < var6Lifetime1) &&
                             (decompiledFrameRemainder0 = (gi.field_e == 1))) {
-                            md.field_f = DiskCacheWorker.field_d;
+                            ProxySocketConnector.field_f = DiskCacheWorker.field_d;
                             wl.field_a = ua.field_a;
                             hd.field_j = ih.field_b;
                             if (wl.field_a < 128) {
@@ -3021,22 +3021,22 @@ final class nk {
           wf.field_c.field_e[0].field_d > 0 &&
           !DirectByteStorage.field_d) {
           if (0 == this.field_b) {
-            DropTargetWidgetContainer.field_A = new vg(0, 65535, AccountNameAvailabilityValidator.field_r, DropTargetWidgetContainer.field_C, a.field_r, nh.field_b, new int[]{wf.field_c.field_x + wf.field_c.field_e[0].field_d * 105});
+            DropTargetWidgetContainer.field_A = new vg(0, 65535, AccountNameAvailabilityValidator.field_r, DropTargetWidgetContainer.field_C, SocketArchiveNetworkClient.field_r, nh.field_b, new int[]{wf.field_c.field_x + wf.field_c.field_e[0].field_d * 105});
           }
           if (1 == this.field_b) {
-            DropTargetWidgetContainer.field_A = new vg(1, 65534, AccountNameAvailabilityValidator.field_r, DropTargetWidgetContainer.field_C, a.field_r, nh.field_b, new int[]{105 * wf.field_c.field_e[0].field_d + wf.field_c.field_x});
+            DropTargetWidgetContainer.field_A = new vg(1, 65534, AccountNameAvailabilityValidator.field_r, DropTargetWidgetContainer.field_C, SocketArchiveNetworkClient.field_r, nh.field_b, new int[]{105 * wf.field_c.field_e[0].field_d + wf.field_c.field_x});
           }
           if (this.field_b == 2) {
-            DropTargetWidgetContainer.field_A = new vg(2, 65533, AccountNameAvailabilityValidator.field_r, DropTargetWidgetContainer.field_C, a.field_r, nh.field_b, new int[]{wf.field_c.field_e[0].field_d * 105 + wf.field_c.field_x});
+            DropTargetWidgetContainer.field_A = new vg(2, 65533, AccountNameAvailabilityValidator.field_r, DropTargetWidgetContainer.field_C, SocketArchiveNetworkClient.field_r, nh.field_b, new int[]{wf.field_c.field_e[0].field_d * 105 + wf.field_c.field_x});
           }
           if (this.field_b == 3) {
-            DropTargetWidgetContainer.field_A = new vg(3, 65532, AccountNameAvailabilityValidator.field_r, DropTargetWidgetContainer.field_C, a.field_r, nh.field_b, new int[]{wf.field_c.field_x + wf.field_c.field_e[0].field_d * 105});
+            DropTargetWidgetContainer.field_A = new vg(3, 65532, AccountNameAvailabilityValidator.field_r, DropTargetWidgetContainer.field_C, SocketArchiveNetworkClient.field_r, nh.field_b, new int[]{wf.field_c.field_x + wf.field_c.field_e[0].field_d * 105});
           }
           if (this.field_b == 4) {
-            DropTargetWidgetContainer.field_A = new vg(4, 65531, AccountNameAvailabilityValidator.field_r, DropTargetWidgetContainer.field_C, a.field_r, nh.field_b, new int[]{wf.field_c.field_e[0].field_d * 105 + wf.field_c.field_x});
+            DropTargetWidgetContainer.field_A = new vg(4, 65531, AccountNameAvailabilityValidator.field_r, DropTargetWidgetContainer.field_C, SocketArchiveNetworkClient.field_r, nh.field_b, new int[]{wf.field_c.field_e[0].field_d * 105 + wf.field_c.field_x});
           }
           if (5 == this.field_b) {
-            DropTargetWidgetContainer.field_A = new vg(5, 65530, AccountNameAvailabilityValidator.field_r, DropTargetWidgetContainer.field_C, a.field_r, nh.field_b, new int[]{wf.field_c.field_e[0].field_d * 105 + wf.field_c.field_x});
+            DropTargetWidgetContainer.field_A = new vg(5, 65530, AccountNameAvailabilityValidator.field_r, DropTargetWidgetContainer.field_C, SocketArchiveNetworkClient.field_r, nh.field_b, new int[]{wf.field_c.field_e[0].field_d * 105 + wf.field_c.field_x});
           }
           if (!n.b((byte) 31)) {
             DiskCacheWorker.a(3, 10, DropTargetWidgetContainer.field_A);
@@ -3200,7 +3200,7 @@ final class nk {
         TextLayout.field_f = 0;
         DropTargetWidgetContainer.field_C = 0;
         jk.field_j = new int[]{2, 2, -1, -1, -1, -1, 0};
-        a.field_r = 0;
+        SocketArchiveNetworkClient.field_r = 0;
         nh.field_b = 0;
         this.field_c = 0;
         df.field_g = 1000;

@@ -15,11 +15,11 @@ final class un {
     short field_d;
 
     final static int a(int param0) {
-        BufferedSocket.field_n.a(false);
+        BufferedSocket.field_n.pollArchiveSources(false);
         if (param0 != 0) {
           return -2;
         }
-        if (!nn.field_c.b(20)) {
+        if (!nn.field_c.pollNetwork(20)) {
           return hm.c(3);
         }
         return 0;

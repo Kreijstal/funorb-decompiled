@@ -1,0 +1,328 @@
+/*
+ * Decompiled by CFR-JS 0.4.0.
+ */
+abstract class ArchiveNetworkClient {
+    static ba field_n;
+    static BitmapFont field_c;
+    ak field_b;
+    static boolean field_e;
+    ak field_a;
+    static String field_p;
+    ak field_d;
+    ak field_g;
+    PacketBuffer field_f;
+    int field_o;
+    long field_k;
+    volatile int field_j;
+    byte field_l;
+    PacketBuffer field_i;
+    volatile int field_m;
+    NetworkArchiveRequest field_h;
+
+    final static int c(int param0) {
+        if (param0 != 1) {
+          field_e = false;
+          return 1;
+        }
+        return 1;
+    }
+
+    abstract void attachSocket(Object param0, boolean param1, int param2);
+
+    final static void a(int param0, int param1, int param2, double param3, double param4) {
+        IntrusiveDeque discarded$20 = null;
+        IntrusiveDeque discarded$19 = null;
+        IntrusiveDeque discarded$18 = null;
+        IntrusiveDeque discarded$12 = null;
+        IntrusiveDeque discarded$13 = null;
+        IntrusiveDeque discarded$17 = null;
+        IntrusiveDeque discarded$16 = null;
+        IntrusiveDeque discarded$14 = null;
+        IntrusiveDeque discarded$15 = null;
+        int var8;
+        var8 = Vertigo2.field_L ? 1 : 0;
+        if (ir.field_d != 0) {
+          if (param2 == 0) {
+            s.field_t = null;
+            if (param0 != -1) {
+              field_p = (String) null;
+            }
+            ir.field_d = param2;
+            MouseWheelInput.field_e = param3;
+            if (0 == bq.field_E &&
+              param1 > 0) {
+              discarded$20 = new IntrusiveDeque();
+            } else {
+              if (param1 != 0) {
+              }
+            }
+          } else {
+            if (param0 != -1) {
+              field_p = (String) null;
+              ir.field_d = param2;
+              MouseWheelInput.field_e = param3;
+              if (0 == bq.field_E &&
+                param1 > 0) {
+                discarded$19 = new IntrusiveDeque();
+              } else {
+                if (param1 != 0) {
+                }
+              }
+            } else {
+              ir.field_d = param2;
+              MouseWheelInput.field_e = param3;
+              if (0 == bq.field_E &&
+                param1 > 0) {
+                discarded$18 = new IntrusiveDeque();
+                bq.field_E = param1;
+                PlayerState.field_S = param4;
+                return;
+              }
+              if (param1 == 0) {
+              }
+            }
+          }
+        } else {
+          if (param2 > 0) {
+            s.field_t = new IntrusiveDeque();
+            if (param0 == -1) {
+              ir.field_d = param2;
+              MouseWheelInput.field_e = param3;
+              if (0 == bq.field_E &&
+                param1 > 0) {
+                discarded$12 = new IntrusiveDeque();
+                bq.field_E = param1;
+                PlayerState.field_S = param4;
+                return;
+              }
+            } else {
+              field_p = (String) null;
+              ir.field_d = param2;
+              MouseWheelInput.field_e = param3;
+              if (0 == bq.field_E &&
+                param1 > 0) {
+                discarded$13 = new IntrusiveDeque();
+                bq.field_E = param1;
+                PlayerState.field_S = param4;
+                return;
+              }
+            }
+            if (param1 != 0) {
+            }
+          } else {
+            if (param2 == 0) {
+              s.field_t = null;
+              if (param0 != -1) {
+                field_p = (String) null;
+                ir.field_d = param2;
+                MouseWheelInput.field_e = param3;
+                if (0 == bq.field_E &&
+                  param1 > 0) {
+                  discarded$17 = new IntrusiveDeque();
+                } else {
+                  if (param1 != 0) {
+                  }
+                }
+              } else {
+                ir.field_d = param2;
+                MouseWheelInput.field_e = param3;
+                if (0 == bq.field_E &&
+                  param1 > 0) {
+                  discarded$16 = new IntrusiveDeque();
+                  bq.field_E = param1;
+                  PlayerState.field_S = param4;
+                  return;
+                }
+                if (param1 == 0) {
+                }
+              }
+            } else {
+              if (param0 == -1) {
+                ir.field_d = param2;
+                MouseWheelInput.field_e = param3;
+                if (0 == bq.field_E &&
+                  param1 > 0) {
+                  discarded$14 = new IntrusiveDeque();
+                  bq.field_E = param1;
+                  PlayerState.field_S = param4;
+                  return;
+                }
+              } else {
+                field_p = (String) null;
+                ir.field_d = param2;
+                MouseWheelInput.field_e = param3;
+                if (0 == bq.field_E &&
+                  param1 > 0) {
+                  discarded$15 = new IntrusiveDeque();
+                  bq.field_E = param1;
+                  PlayerState.field_S = param4;
+                  return;
+                }
+              }
+              if (param1 != 0) {
+              }
+            }
+          }
+        }
+        bq.field_E = param1;
+        PlayerState.field_S = param4;
+    }
+
+    final static boolean c(byte param0) {
+        if (param0 >= -28) {
+          return false;
+        }
+        if (hn.field_w < 10) {
+          return false;
+        }
+        if (qc.field_A >= 13) {
+          return true;
+        }
+        return false;
+    }
+
+    public static void clearStaticReferences(byte param0) {
+        field_n = null;
+        if (param0 <= 46) {
+          field_n = (ba) null;
+          field_p = null;
+          field_c = null;
+          return;
+        }
+        field_p = null;
+        field_c = null;
+    }
+
+    final static byte[] a(String param0, boolean param1) {
+        RuntimeException var2 = null;
+        byte[] stackIn_3_0 = null;
+        RuntimeException stackIn_6_0 = null;
+        StringBuilder stackIn_6_1 = null;
+        String stackIn_7_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        try {
+          if (param1) {
+            field_p = (String) null;
+          }
+          stackIn_3_0 = GrowableIntArray.field_a.getFileByName("", param0, 0);
+          return stackIn_3_0;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var2 = decompiledCaughtException;
+          stackIn_6_0 = var2;
+          stackIn_6_1 = new StringBuilder().append("tk.N(");
+          if (param0 == null) {
+            stackIn_7_2 = "null";
+          } else {
+            stackIn_7_2 = "{...}";
+          }
+          throw wn.wrapClientException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
+        }
+    }
+
+    static int bitwiseXor(int param0, int param1) {
+        return param0 ^ param1;
+    }
+
+    final NetworkArchiveRequest enqueueRequest(int param0, int param1, boolean param2, byte param3, boolean param4) {
+        NetworkArchiveRequest stackIn_3_0 = null;
+        boolean stackIn_4_1 = false;
+        NetworkArchiveRequest stackIn_16_0 = null;
+        boolean stackIn_17_1 = false;
+        long var6;
+        NetworkArchiveRequest var8;
+        long var6Lifetime1;
+        NetworkArchiveRequest var8Lifetime1;
+        if (!param4) {
+          var6 = ((long)param1 << 32) + (long)param0;
+          var8 = new NetworkArchiveRequest();
+          var8.field_B = param3;
+          var8.secondaryKey = var6;
+          stackIn_16_0 = var8;
+          stackIn_17_1 = (!param2) ? false : true;
+          stackIn_16_0.field_u = stackIn_17_1;
+          if (!param2) {
+            if (this.getPrefetchRequestCount(-1) >= 20) {
+              throw new RuntimeException();
+            }
+            this.field_d.a(param4, var8);
+            return var8;
+          }
+          if (this.getPriorityRequestCount((byte) -70) >= 20) {
+            throw new RuntimeException();
+          }
+          this.field_b.a(false, var8);
+          return var8;
+        }
+        field_c = (BitmapFont) null;
+        var6Lifetime1 = ((long)param1 << 32) + (long)param0;
+        var8Lifetime1 = new NetworkArchiveRequest();
+        var8Lifetime1.field_B = param3;
+        var8Lifetime1.secondaryKey = var6Lifetime1;
+        stackIn_3_0 = var8Lifetime1;
+        stackIn_4_1 = (!param2) ? false : true;
+        stackIn_3_0.field_u = stackIn_4_1;
+        if (!param2) {
+          if (this.getPrefetchRequestCount(-1) >= 20) {
+            throw new RuntimeException();
+          }
+          this.field_d.a(param4, var8Lifetime1);
+          return var8Lifetime1;
+        }
+        if (this.getPriorityRequestCount((byte) -70) >= 20) {
+          throw new RuntimeException();
+        }
+        this.field_b.a(false, var8Lifetime1);
+        return var8Lifetime1;
+    }
+
+    abstract void resetAfterValidationFailure(int param0);
+
+    abstract boolean pollNetwork(int param0);
+
+    final int getPrefetchRequestCount(int param0) {
+        if (param0 != -1) {
+          return -12;
+        }
+        return this.field_d.a((byte) 82) + this.field_g.a((byte) 89);
+    }
+
+    final int getPriorityRequestCount(byte param0) {
+        int var2 = -71 / ((-5 - param0) / 62);
+        return this.field_b.a((byte) 78) + this.field_a.a((byte) 60);
+    }
+
+    abstract void close(byte param0);
+
+    final boolean isPriorityQueueFull(int param0) {
+        if (param0 == 20) {
+          return this.getPriorityRequestCount((byte) -127) >= 20 ? true : false;
+        }
+        ArchiveNetworkClient.clearStaticReferences((byte) 29);
+        return this.getPriorityRequestCount((byte) -127) >= 20 ? true : false;
+    }
+
+    final boolean isPrefetchQueueFull(int param0) {
+        if (param0 != 6) {
+          return true;
+        }
+        return this.getPrefetchRequestCount(-1) >= 20 ? true : false;
+    }
+
+    ArchiveNetworkClient() {
+        this.field_b = new ak();
+        this.field_a = new ak();
+        this.field_d = new ak();
+        this.field_g = new ak();
+        this.field_f = new PacketBuffer(6);
+        this.field_l = (byte) 0;
+        this.field_m = 0;
+        this.field_j = 0;
+        this.field_i = new PacketBuffer(10);
+    }
+
+    static {
+        field_n = new ba();
+        field_p = "Unfortunately your configuration doesn't support fullscreen mode.";
+    }
+}

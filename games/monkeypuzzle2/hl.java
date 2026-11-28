@@ -112,7 +112,7 @@ final class hl {
 
     hl(boolean param0) {
         this.field_e = PcmResampler.field_c;
-        this.field_k = c.field_b;
+        this.field_k = ArchiveSourceManager.field_b;
         this.field_g = sd.field_b;
         if (!param0) {
           this.field_l = null;

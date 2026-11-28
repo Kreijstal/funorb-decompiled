@@ -29,7 +29,7 @@ final class DisplayNameSelectionPanel extends DequeWidgetContainer implements Na
         int var5 = 200;
         var3 += 50;
         this.addChild(var2, (byte) 119);
-        var3 = var3 + (this.addLabeledFieldWithDefaultValidationMessage(737797090, var3, hj.field_h, 170, this.field_M, vh.field_b) + 5);
+        var3 = var3 + (this.addLabeledFieldWithDefaultValidationMessage(737797090, var3, SocketConnector.field_h, 170, this.field_M, vh.field_b) + 5);
         this.field_P.setBounds(var3, 40, 496 - var5 >> 1, 16535, var5);
         this.field_N.setBounds(15 + var3, 40, var4 + 3, 16535, 60);
         this.field_N.field_u = (WidgetEventListener) (this);

@@ -60,18 +60,18 @@ final class pj extends cb {
           }
           var4 = var15.readUnsignedByte(false);
           if (var4 != 0) {
-            hm.field_c[0] = b.field_e;
+            SocketConnector.field_c[0] = b.field_e;
             var5 = var3.field_j;
             for (var6_int = 1; var4 > var6_int; var6_int++) {
-              hm.field_c[var6_int] = var13.readString(0);
+              SocketConnector.field_c[var6_int] = var13.readString(0);
             }
             kh.a(var5, var4, 26721);
             for (var6_intLifetime1 = 0; var6_intLifetime1 < var4; var6_intLifetime1++) {
               BufferedSocket.a((byte) -107, var15);
               if (var6_intLifetime1 == 0) {
-                lg.a(rf.field_l, var6_intLifetime1, w.field_a, wd.field_c, -103, SingleChildWidgetContainer.field_B);
+                lg.a(rf.field_l, var6_intLifetime1, ArchiveNetworkClient.field_a, wd.field_c, -103, SingleChildWidgetContainer.field_B);
               } else {
-                lg.a(rf.field_l, var6_intLifetime1, w.field_a, wd.field_c, -113, SingleChildWidgetContainer.field_B);
+                lg.a(rf.field_l, var6_intLifetime1, ArchiveNetworkClient.field_a, wd.field_c, -113, SingleChildWidgetContainer.field_B);
               }
             }
             cm.a(var5, (byte) 118);
@@ -82,12 +82,12 @@ final class pj extends cb {
             var10 = 0;
             while (var8 > var9) {
               var11 = mh.field_y[var9];
-              var6[0][var10] = hm.field_c[var11];
+              var6[0][var10] = SocketConnector.field_c[var11];
               var19[0][var10 * 4] = jl.field_b[var11];
               var19[0][1 + var10 * 4] = kk.field_b[var11];
               var19[0][4 * var10 + 2] = hg.field_q[var11];
               var19[0][4 * var10 + 3] = vh.field_i[var11];
-              if (SoundCache.a(hm.field_c[var11], (byte) 7) &&
+              if (SoundCache.a(SocketConnector.field_c[var11], (byte) 7) &&
                 kk.field_b[var11] + hg.field_q[var11] + vh.field_i[var11] == 0) {
                 var6[0][var10] = null;
                 var10--;
@@ -100,12 +100,12 @@ final class pj extends cb {
             var10Lifetime1 = var14;
             while (var9Lifetime1 < var8) {
               var11Lifetime1 = mh.field_y[var5 + var9Lifetime1];
-              var6[1][var14] = hm.field_c[var11Lifetime1];
+              var6[1][var14] = SocketConnector.field_c[var11Lifetime1];
               var19[1][var14 * 4] = jl.field_b[var11Lifetime1];
               var19[1][var14 * 4 + 1] = kk.field_b[var11Lifetime1];
               var19[1][4 * var14 + 2] = hg.field_q[var11Lifetime1];
               var19[1][3 + 4 * var14] = vh.field_i[var11Lifetime1];
-              if (SoundCache.a(hm.field_c[var11Lifetime1], (byte) 7) &&
+              if (SoundCache.a(SocketConnector.field_c[var11Lifetime1], (byte) 7) &&
                 0 == vh.field_i[var11Lifetime1] + (hg.field_q[var11Lifetime1] + kk.field_b[var11Lifetime1])) {
                 var6[1][var14] = null;
                 var14--;
@@ -193,14 +193,14 @@ final class pj extends cb {
               field_y = (String) null;
             }
             if (BufferedSocket.field_k != null) {
-              BufferedSocket.field_k.d(param0 - 14895);
+              BufferedSocket.field_k.close(param0 - 14895);
             }
             if (null != vg.field_r) {
               vg.field_r.shutdown(true);
             }
-            if (rd.field_c != null) {
+            if (MouseInputHandler.field_c != null) {
               try {
-                rd.field_c.close((byte) -70);
+                MouseInputHandler.field_c.close((byte) -70);
               } catch (java.io.IOException decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;
                 iOException = (IOException) (Object) decompiledCaughtException;

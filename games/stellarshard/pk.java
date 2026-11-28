@@ -45,14 +45,14 @@ final class pk {
             return;
           }
           if (param2 < 100) {
-            DelegatingCanvas.field_d = fb.createAccountErrorResult(param2, true, param0);
+            DelegatingCanvas.field_d = ArchiveNetworkClient.createAccountErrorResult(param2, true, param0);
             return;
           }
           if (105 >= param2) {
             DelegatingCanvas.field_d = gj.createAccountSuggestionsResult(true, param1);
             return;
           }
-          DelegatingCanvas.field_d = fb.createAccountErrorResult(param2, true, param0);
+          DelegatingCanvas.field_d = ArchiveNetworkClient.createAccountErrorResult(param2, true, param0);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

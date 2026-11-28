@@ -5,7 +5,7 @@ final class ch {
     static Archive field_a;
     static int field_b;
 
-    final static void a(java.awt.Component param0, int param1) {
+    final static void attachMouseListeners(java.awt.Component param0, int param1) {
         try {
           param0.addMouseListener(MidiNoteMask.field_j);
           param0.addMouseMotionListener(MidiNoteMask.field_j);

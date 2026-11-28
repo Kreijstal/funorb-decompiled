@@ -94,8 +94,8 @@ final class ByteArrayPoolSupport {
           return var2_ref_byte__Lifetime2;
         }
         if (null != ResizableModalDialog.field_O) {
-          for (var2 = 0; var2 < fl.field_e.length; var2++) {
-            if (fl.field_e[var2] == param1 &&
+          for (var2 = 0; var2 < ProxySocketConnector.field_e.length; var2++) {
+            if (ProxySocketConnector.field_e[var2] == param1 &&
               nf.field_i[var2] > 0) {
               dupTemp$6 = nf.field_i[var2] - 1;
               arrayValue$7 = ResizableModalDialog.field_O[var2];

@@ -60,7 +60,7 @@ final class em extends ButtonWidget {
               }
               var7 = new SectorCacheStore(param1, ah.field_f, TextHotspotBounds.field_o[param1], 2097152);
             }
-            var8 = c.field_h.a(-24559, (SectorCacheStore) (var6), param1, (SectorCacheStore) (var7), param0);
+            var8 = ArchiveSourceManager.field_h.getOrCreateArchiveSource(-24559, (SectorCacheStore) (var6), param1, (SectorCacheStore) (var7), param0);
             if (param5 != 50) {
               stackIn_12_0 = (ResourceArchive) null;
               return stackIn_12_0;

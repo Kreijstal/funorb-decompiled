@@ -69,7 +69,7 @@ final class im {
               if (!IntrusiveDeque.a(param1 ^ 0, 1)) {
                 return false;
               }
-              qh.field_a = kj.field_a.e((byte) 0);
+              qh.field_a = kj.field_a.readCipheredByte((byte) 0);
               kj.field_a.position = 0;
               rj.field_d = param0[qh.field_a];
             }

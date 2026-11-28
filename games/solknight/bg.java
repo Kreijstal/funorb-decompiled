@@ -72,7 +72,7 @@ final class bg extends uf {
           if (param0.length() == 0) {
             return true;
           }
-          if (ne.a(param2, false, param0)) {
+          if (ArchiveSourceManager.a(param2, false, param0)) {
             return false;
           }
           if (gl.a(param2, 80, param0)) {

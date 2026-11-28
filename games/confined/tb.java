@@ -83,12 +83,12 @@ final class tb {
               decompiledFrameRemainder0 = (wd.field_f == lk.field_d);
               if ((decompiledFrameRemainder0) && (0 == vh.field_a.position &&
                 (DiskCacheWorker.field_a + 10000L) < ri.correctedCurrentTimeMillis(-3))) {
-                vh.field_a.b(true, param0);
+                vh.field_a.writeCipheredByte(true, param0);
               }
             } else {
               if (0 == vh.field_a.position &&
                 (DiskCacheWorker.field_a + 10000L) < ri.correctedCurrentTimeMillis(-3)) {
-                vh.field_a.b(true, param0);
+                vh.field_a.writeCipheredByte(true, param0);
               }
             }
             if (decompiledFrameRemainder0) {
@@ -223,7 +223,7 @@ final class tb {
             if (var4 >= param1.length()) {
               return null;
             }
-            if (og.a(-96, param1.charAt(var4))) {
+            if (ProxySocketConnector.a(-96, param1.charAt(var4))) {
               var4++;
               continue;
             }

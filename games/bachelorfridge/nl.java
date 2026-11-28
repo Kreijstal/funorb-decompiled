@@ -11,8 +11,8 @@ final class nl {
         String stackIn_9_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          CreatureEvent.a(-104, (java.awt.Component) ((Object) param0));
-          HailAnimation.a(-30229, (java.awt.Component) ((Object) param0));
+          CreatureEvent.attachKeyboardListeners(-104, (java.awt.Component) ((Object) param0));
+          HailAnimation.attachMouseListeners(-30229, (java.awt.Component) ((Object) param0));
           if (null != ByteArrayPoolSupport.field_c) {
             ByteArrayPoolSupport.field_c.attach((java.awt.Component) ((Object) param0), (byte) -126);
           }

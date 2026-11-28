@@ -51,7 +51,7 @@ final class MixedSupport069 {
           MixedSupport140.packetBufferState0008.writeByte(true, integerArgument4);
           MixedSupport140.packetBufferState0008.writeShort(-1, integerArgument3);
           MixedSupport140.packetBufferState0008.rsaEncrypt(RichTextLayout.bigIntegerState0001, AnimatedTileRegion.bigIntegerState0004, true);
-          SocketFactory.cipherPacketBufferState0002.performAction1641(18, -4);
+          SocketFactory.cipherPacketBufferState0002.writeCipheredByte(18, -4);
           integerLocal1 = SocketFactory.cipherPacketBufferState0002.position + 1;
           SocketFactory.cipherPacketBufferState0002.position = SocketFactory.cipherPacketBufferState0002.position + 1;
           integerLocal2 = integerLocal1;

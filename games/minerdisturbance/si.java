@@ -28,14 +28,14 @@ final class si {
     final static int a(byte param0) {
         if (param0 >= -28) {
           field_d = 17;
-          ValidatedTextField.field_U.a(0);
-          if (!aj.field_c.a((byte) -53)) {
+          ValidatedTextField.field_U.pollArchiveSources(0);
+          if (!aj.field_c.pollNetwork((byte) -53)) {
             return fn.b(true);
           }
           return 0;
         }
-        ValidatedTextField.field_U.a(0);
-        if (!aj.field_c.a((byte) -53)) {
+        ValidatedTextField.field_U.pollArchiveSources(0);
+        if (!aj.field_c.pollNetwork((byte) -53)) {
           return fn.b(true);
         }
         return 0;

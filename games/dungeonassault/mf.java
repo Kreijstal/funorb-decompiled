@@ -118,7 +118,7 @@ final class mf {
         try {
           var1_int = 0;
           var2 = 0;
-          while (ha.b((byte) 47)) {
+          while (ProxySocketConnector.b((byte) 47)) {
             d.field_g.d(0);
             if (d.field_g.c(-94)) {
               var1_int = 1;

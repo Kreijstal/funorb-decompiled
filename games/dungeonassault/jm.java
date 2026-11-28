@@ -129,7 +129,7 @@ final class jm {
     }
 
     final static void a(boolean param0) {
-        bb.field_e = null;
+        ArchiveNetworkClient.field_e = null;
         td.field_a = null;
         if (param0) {
           la var2 = (la) null;
@@ -245,11 +245,11 @@ final class jm {
           return;
         }
         if (!jn.field_c) {
-          ac.field_B.d((byte) -80, 70);
+          ac.field_B.writeCipheredByte((byte) -80, 70);
           ac.field_B.writeMedium((byte) -106, ke.field_b);
           ac.field_B.writeByte(6, oh.field_s);
         } else {
-          ac.field_B.d((byte) -113, 71);
+          ac.field_B.writeCipheredByte((byte) -113, 71);
           ac.field_B.position = ac.field_B.position + 1;
           var1 = ac.field_B.position;
           ac.field_B.writePrefixedString(2, TextFieldValidator.field_j);

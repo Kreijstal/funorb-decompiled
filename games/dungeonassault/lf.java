@@ -87,7 +87,7 @@ final class lf extends kl {
           this.a(param2, 0, var4_int);
           this.field_d = false;
           this.field_o = ValidationStatusWidget.a(this.field_k + (-jm.field_i.field_y + this.field_a >> 1), this.field_i + (this.field_j - 24 - jm.field_i.field_v * 2), IntrusiveNode.field_c, jm.field_i, -81, mp.field_e);
-          this.field_s = ValidationStatusWidget.a(this.field_k + (-jm.field_i.field_y + this.field_a >> 1), -16 + this.field_j - (-this.field_i + jm.field_i.field_v), IntrusiveNode.field_c, jm.field_i, -111, um.field_d);
+          this.field_s = ValidationStatusWidget.a(this.field_k + (-jm.field_i.field_y + this.field_a >> 1), -16 + this.field_j - (-this.field_i + jm.field_i.field_v), IntrusiveNode.field_c, jm.field_i, -111, SocketConnector.field_d);
           this.field_f.addFirst(this.field_o, false);
           this.field_f.addFirst(this.field_s, false);
           return;

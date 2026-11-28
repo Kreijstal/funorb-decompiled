@@ -47,9 +47,9 @@ final class ai {
             if (DiskArchiveRequest.field_A == param0) {
               Bzip2State.field_y = new BufferedSocket((java.net.Socket) (wj.field_j.result), MouseInputHandler.field_a);
               var2 = new PacketBuffer(13);
-              qb.a(116, of.field_c, var2, uh.field_f, tl.field_c);
+              qb.a(116, of.field_c, var2, ArchiveNetworkClient.field_f, tl.field_c);
               var2.writeByte(param0 + 6387, 15);
-              var2.writeInt(-109, dk.field_h);
+              var2.writeInt(-109, ArchiveSourceManager.field_h);
               Bzip2State.field_y.enqueueWrite((byte) 9, var2.payload, 13, 0);
               DiskArchiveRequest.field_A = DiskArchiveRequest.field_A + 1;
               ValidationStatusWidget.field_G = 30000L + lk.correctedCurrentTimeMillis(param0 ^ 2);
@@ -73,7 +73,7 @@ final class ai {
               stackIn_37_0 = -1;
               return stackIn_37_0;
             }
-            oh.field_h.a(DisplayNameSelectionPanel.field_A, Bzip2State.field_y, param0 + 18);
+            oh.field_h.attachSocket(DisplayNameSelectionPanel.field_A, Bzip2State.field_y, param0 + 18);
             Bzip2State.field_y = null;
             DiskArchiveRequest.field_A = 0;
             wj.field_j = null;

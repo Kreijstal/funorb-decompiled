@@ -126,7 +126,7 @@ final class StripedProgressWidget extends UiWidget {
             if (jh.field_e != 4) {
               return -1;
             }
-            oi.field_d.a(MidiNoteMask.field_h, so.field_c, false);
+            oi.field_d.attachSocket(MidiNoteMask.field_h, so.field_c, false);
             jh.field_e = 0;
             so.field_c = null;
             AgeValidator.field_k = null;
@@ -302,7 +302,7 @@ final class StripedProgressWidget extends UiWidget {
           if (uo.field_o == 1) {
             ah.a(ma.field_o, var4, 1, (byte) -53, 1);
             ah.a(dn.field_b, var4, 9, (byte) 89, 9);
-            aj.a(32293, CipherPacketBuffer.field_k[1], var4, 12, 9, wf.field_f);
+            aj.a(32293, CipherPacketBuffer.field_k[1], var4, 12, 9, ProxySocketConnector.field_f);
             ah.a(fn.field_g, var4, 14, (byte) 116, 14);
           } else {
             if (uo.field_o != 2) {

@@ -336,7 +336,7 @@ public final class TrackController extends GameShell {
         LevelData.clearStaticReferences((byte) 96);
         md.a(false);
         DiskCacheWorker.resetStaticState((byte) -108);
-        wg.c(param0 + 6778);
+        ArchiveSourceManager.c(param0 + 6778);
         BufferedCacheFile.clearStaticReferences(-1);
         BufferedSocket.clearStaticReferences(32);
         IntrusiveNode.resetStaticState((byte) 118);

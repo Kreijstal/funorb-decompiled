@@ -88,19 +88,19 @@ class DualLinkNode extends IntrusiveNode {
         le.field_b[0] = SoundCache.a(-27711, new String[][]{RichTextWidget.field_J, nf.field_C});
         le.field_b[1] = SoundCache.a(-27711, new String[][]{rl.field_e, DiskArchiveRequest.field_J});
         int var1 = -50 % ((30 - param0) / 40);
-        le.field_b[2] = SoundCache.a(-27711, new String[][]{DungeonBuilderScreen.field_J, je.field_f, KeyboardInput.field_a, RaiderDefinition.field_y});
+        le.field_b[2] = SoundCache.a(-27711, new String[][]{DungeonBuilderScreen.field_J, ArchiveSourceManager.field_f, KeyboardInput.field_a, RaiderDefinition.field_y});
         le.field_b[3] = SoundCache.a(-27711, new String[][]{pp.field_E, np.field_C});
         le.field_b[4] = SoundCache.a(-27711, new String[][]{eg.field_b, MusicPatchNode.field_q, PlayerDungeonProfile.field_d, le.field_c});
         le.field_b[5] = SoundCache.a(-27711, new String[][]{bn.field_m, MusicPatchNode.field_q, ka.field_d});
         le.field_b[6] = SoundCache.a(-27711, new String[][]{rl.field_i, PlayerDungeonProfile.field_d, le.field_c});
-        le.field_b[7] = SoundCache.a(-27711, new String[][]{tp.field_C, MusicPatchNode.field_F, MouseWheelInput.field_f, field_j});
-        le.field_b[8] = SoundCache.a(-27711, new String[][]{bb.field_t, ka.field_d});
+        le.field_b[7] = SoundCache.a(-27711, new String[][]{SocketArchiveNetworkClient.field_C, MusicPatchNode.field_F, MouseWheelInput.field_f, field_j});
+        le.field_b[8] = SoundCache.a(-27711, new String[][]{ArchiveNetworkClient.field_t, ka.field_d});
         le.field_b[9] = SoundCache.a(-27711, new String[][]{eh.field_e, PcmOutputWorker.field_f});
         le.field_b[10] = SoundCache.a(-27711, new String[][]{hj.field_O});
         le.field_b[11] = SoundCache.a(-27711, new String[][]{FullscreenFocusCanvas.field_j});
         le.field_b[12] = SoundCache.a(-27711, new String[][]{EditableTextField.field_S});
         le.field_b[13] = SoundCache.a(-27711, new String[][]{ProxyAuthenticationRequiredException.field_c});
-        le.field_b[14] = SoundCache.a(-27711, new String[][]{ha.field_j});
+        le.field_b[14] = SoundCache.a(-27711, new String[][]{ProxySocketConnector.field_j});
         le.field_b[15] = SoundCache.a(-27711, new String[][]{qa.field_e});
         le.field_b[16] = SoundCache.a(-27711, new String[][]{tl.field_m});
         le.field_b[17] = SoundCache.a(-27711, new String[][]{MidiPcmStream.field_M});
@@ -110,7 +110,7 @@ class DualLinkNode extends IntrusiveNode {
         le.field_b[21] = SoundCache.a(-27711, new String[][]{rn.field_g});
         le.field_b[22] = SoundCache.a(-27711, new String[][]{GameAppletShell.field_e});
         le.field_b[23] = SoundCache.a(-27711, new String[][]{ArchiveRequest.field_A, qd.field_e, BufferedSocket.field_k, ByteStorage.field_b});
-        le.field_b[24] = SoundCache.a(-27711, new String[][]{tp.field_A});
+        le.field_b[24] = SoundCache.a(-27711, new String[][]{SocketArchiveNetworkClient.field_A});
         if (!(kd.field_c <= 25)) {
           kd.field_c = 0;
         }

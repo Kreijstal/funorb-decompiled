@@ -29,12 +29,12 @@ abstract class lo {
         MusicTrack var8 = null;
         var7 = DungeonAssault.field_K;
         try {
-          var2_int = param0.j(76, 8);
+          var2_int = param0.readBits(76, 8);
           if (var2_int > 0) {
             stackIn_3_0 = null;
             return (sm[]) (stackIn_3_0);
           }
-          var3 = param0.j(-80, 12);
+          var3 = param0.readBits(-80, 12);
           var4 = new sm[var3];
           if (param1 >= -109) {
             var8 = (MusicTrack) null;
@@ -43,16 +43,16 @@ abstract class lo {
           for (var5 = 0; var3 > var5; var5++) {
             if (jl.a(param0, -125)) {
               var6 = new sm();
-              param0.j(74, 24);
-              param0.j(110, 24);
-              var6.field_d = param0.j(-66, 24);
-              param0.j(-79, 9);
-              param0.j(-75, 12);
-              param0.j(83, 12);
-              param0.j(-66, 12);
+              param0.readBits(74, 24);
+              param0.readBits(110, 24);
+              var6.field_d = param0.readBits(-66, 24);
+              param0.readBits(-79, 9);
+              param0.readBits(-75, 12);
+              param0.readBits(83, 12);
+              param0.readBits(-66, 12);
               var4[var5] = var6;
             } else {
-              var6_int = param0.j(-117, DefaultTextWidgetRenderer.a(1, -1 + var5));
+              var6_int = param0.readBits(-117, DefaultTextWidgetRenderer.a(1, -1 + var5));
               var4[var5] = var4[var6_int];
             }
           }

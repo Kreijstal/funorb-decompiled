@@ -79,22 +79,22 @@ final class vg {
             var7 = (2 + BirthDateValidator.field_k.field_M) / 2;
             tn.field_j.a(0, -2 + var7, -2147483648, 40, BirthDateValidator.field_k.field_pb - 40);
             aa.field_g.a(var7, BirthDateValidator.field_k.field_M - var7, -2147483648, 40, -40 + BirthDateValidator.field_k.field_pb);
-            if (wn.field_d.length == 1 &&
-              2 == wn.field_d[0]) {
+            if (SocketConnector.field_d.length == 1 &&
+              2 == SocketConnector.field_d[0]) {
               var8 = 0;
             } else {
               var8 = 0;
               var9_int = 0;
               var10 = 0;
               while (true) {
-                if (var10 < wn.field_d.length) {
+                if (var10 < SocketConnector.field_d.length) {
                   stackIn_11_0 = ((DelegatingCanvas.field_f[var10 / 8] & 1 << (var10 & 7)) == 0) ? 0 : 1;
                   var11_int = stackIn_11_0;
                   if (var11_int != 0) {
                     var9_int++;
                   }
                   if (var11_int != 0 &&
-                    wn.field_d[var10] != 2) {
+                    SocketConnector.field_d[var10] != 2) {
                     var8 = 1;
                   } else {
                     var10++;

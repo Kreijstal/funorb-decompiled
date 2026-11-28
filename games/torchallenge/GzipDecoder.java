@@ -328,20 +328,20 @@ final class GzipDecoder {
 
     final static void a(int param0, String param1, int param2, int param3, int param4, int param5, int param6, int param7, PlatformTaskDispatcher param8) {
         rc.field_t = param8;
-        vb.field_r = param6;
+        ArchiveNetworkClient.field_r = param6;
         mg.field_e = param3;
         vk.field_j = param5;
         MusicPatchPcmStream.field_m = param2;
         mc.field_o = param1;
         MouseInputHandler.field_d = param7;
         BufferedSocket.field_d = param4;
-        gb.field_d = (vb) ((Object) new fl());
+        gb.field_d = (ArchiveNetworkClient) ((Object) new SocketArchiveNetworkClient());
         if (param0 != 7) {
           return;
         }
         try {
           gi.field_a = new DiskCacheWorker(param8);
-          wf.field_i = new oa(gb.field_d, gi.field_a);
+          wf.field_i = new ArchiveSourceManager(gb.field_d, gi.field_a);
         } catch (RuntimeException runtimeException) {
           throw oj.wrapException((Throwable) ((Object) runtimeException), "hd.E(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + (param8 != null ? "{...}" : "null") + ')');
         }

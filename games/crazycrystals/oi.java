@@ -5,7 +5,7 @@ final class oi {
     static String field_b;
     static IntrusiveDeque field_a;
     static BufferedSocket field_c;
-    static ob field_d;
+    static ArchiveNetworkClient field_d;
 
     public static void clearStaticReferences(byte param0) {
         int var1 = -48 % ((49 - param0) / 41);

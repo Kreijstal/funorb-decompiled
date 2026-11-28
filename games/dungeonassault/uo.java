@@ -169,7 +169,7 @@ final class uo {
               }
               var7 = new SectorCacheStore(param3, sa.field_x, cf.field_c[param3], 2097152);
             }
-            var8 = bl.field_r.a(param5, 4210752, param3, (SectorCacheStore) (var6), (SectorCacheStore) (var7));
+            var8 = bl.field_r.getOrCreateArchiveSource(param5, 4210752, param3, (SectorCacheStore) (var6), (SectorCacheStore) (var7));
             if (param4 != 27847) {
               stackIn_12_0 = (ResourceArchive) null;
               return stackIn_12_0;

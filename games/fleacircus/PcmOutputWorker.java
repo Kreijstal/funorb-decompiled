@@ -72,7 +72,7 @@ final class PcmOutputWorker implements Runnable {
           var22 = null;
           var12 = fleas.field_A ? 1 : 0;
           try {
-            var13 = (fg) (jk.field_m.beginForward((byte) 47));
+            var13 = (fg) (ProxySocketConnector.field_m.beginForward((byte) 47));
             var17 = var13;
             if (var17 == null) {
               return;

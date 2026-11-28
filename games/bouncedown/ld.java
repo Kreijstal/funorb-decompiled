@@ -104,12 +104,12 @@ final class ld extends IntrusiveNode {
         if (param1) {
           var4++;
           if (param0 >= 36) {
-            return tb.field_r[var4];
+            return SocketArchiveNetworkClient.field_r[var4];
           }
           return (String) null;
         }
         if (param0 >= 36) {
-          return tb.field_r[var4];
+          return SocketArchiveNetworkClient.field_r[var4];
         }
         return (String) null;
     }
@@ -130,12 +130,12 @@ final class ld extends IntrusiveNode {
         if (param1) {
           var4++;
           if (param0 >= 36) {
-            return tb.field_r[var4];
+            return SocketArchiveNetworkClient.field_r[var4];
           }
           return (String) null;
         }
         if (param0 >= 36) {
-          return tb.field_r[var4];
+          return SocketArchiveNetworkClient.field_r[var4];
         }
         return (String) null;
     }

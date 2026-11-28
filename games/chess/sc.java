@@ -124,7 +124,7 @@ final class sc {
     }
 
     final static void a(int param0, boolean param1) {
-        ob.field_z = wm.field_n[param0];
+        SocketArchiveNetworkClient.field_z = ArchiveNetworkClient.field_n[param0];
         ChessBoardState.field_a = bi.field_c[param0];
         if (param1) {
           return;

@@ -260,10 +260,10 @@ final class BufferedSocket implements Runnable {
                     var17 = 0;
                     var13Lifetime1 = var17;
                     while (var9 > var17) {
-                      var12[var17] = qf.a(-4174, var10[var17]);
+                      var12[var17] = SocketArchiveNetworkClient.a(-4174, var10[var17]);
                       var17++;
                     }
-                    var18.field_i[var5] = param3.requestDeclaredMethod(var8, qf.a(-4174, var20), var12, (byte) 113);
+                    var18.field_i[var5] = param3.requestDeclaredMethod(var8, SocketArchiveNetworkClient.a(-4174, var20), var12, (byte) 113);
                     var18.field_o[var5] = var21;
                   }
                 } else {
@@ -277,7 +277,7 @@ final class BufferedSocket implements Runnable {
                   }
                   var18.field_m[var5] = var6_int;
                   var18.field_h[var5] = var9;
-                  var18.field_k[var5] = param3.requestDeclaredField(var15, 2, qf.a(-4174, var16));
+                  var18.field_k[var5] = param3.requestDeclaredField(var15, 2, SocketArchiveNetworkClient.a(-4174, var16));
                 }
               } catch (java.lang.ClassNotFoundException decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;

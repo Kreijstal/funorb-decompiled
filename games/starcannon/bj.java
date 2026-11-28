@@ -22,7 +22,7 @@ final class bj {
             bj.resetStaticState(-127);
           }
           param1 = s.a(param1, '_', "", (byte) -10);
-          var3 = vh.a(param1, 0);
+          var3 = SocketArchiveNetworkClient.a(param1, 0);
           stackIn_7_0 = (param0.indexOf(param1) != -1) || (param0.indexOf(var3) != -1);
           return stackIn_7_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

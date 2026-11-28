@@ -179,7 +179,7 @@ final class tq {
               }
               var8_ref_bs.field_Jb = gk.correctedCurrentTimeMillis(53) - (long)((PacketBuffer) ((Object) var1)).readInt(true);
               var8_ref_bs.field_Rb = ((PacketBuffer) ((Object) var1)).readUnsignedShort((byte) -11);
-              var10 = ((PacketBuffer) ((Object) var1)).a(false);
+              var10 = ((PacketBuffer) ((Object) var1)).readVarInt(false);
               var8_ref_bs.field_Mb = var10 >> 1;
               stackIn_53_0 = var8_ref_bs;
               stackIn_54_1 = ((var10 & 1) != 0);
@@ -290,7 +290,7 @@ final class tq {
                       gd.field_j.field_Qb = gd.field_j.field_Qb + 1;
                     }
                     var7.field_Rb = ((PacketBuffer) ((Object) var1)).readUnsignedShort((byte) -11);
-                    var8 = ((PacketBuffer) ((Object) var1)).a(false);
+                    var8 = ((PacketBuffer) ((Object) var1)).readVarInt(false);
                     stackIn_102_0 = var7;
                     stackIn_103_1 = ((var8 & 1) != 0);
                     stackIn_102_0.field_Zb = stackIn_103_1;
@@ -333,7 +333,7 @@ final class tq {
                   }
                   if (var2 == 22) {
                     rp.field_a = ((PacketBuffer) ((Object) var1)).readUnsignedShort((byte) -11);
-                    qn.field_w = ((PacketBuffer) ((Object) var1)).a(false);
+                    qn.field_w = ((PacketBuffer) ((Object) var1)).readVarInt(false);
                     return;
                   }
                   if (var2 == 23) {

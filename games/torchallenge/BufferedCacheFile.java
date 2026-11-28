@@ -413,8 +413,8 @@ final class BufferedCacheFile {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         try {
-          sd.a((byte) 69, (java.awt.Component) ((Object) param1));
-          MidiPcmStream.a((byte) -25, (java.awt.Component) ((Object) param1));
+          sd.detachKeyboardListeners((byte) 69, (java.awt.Component) ((Object) param1));
+          MidiPcmStream.detachMouseListeners((byte) -25, (java.awt.Component) ((Object) param1));
           var2_int = 59 / ((24 - param0) / 36);
           if (AccountServiceResult.field_l != null) {
             AccountServiceResult.field_l.detach((byte) 118, (java.awt.Component) ((Object) param1));

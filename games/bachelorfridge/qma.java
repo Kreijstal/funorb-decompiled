@@ -37,7 +37,7 @@ final class qma extends pu {
                 }
                 var7 = new SectorCacheStore(param5, f.field_a, fr.field_m[param5], 2097152);
               }
-              var8 = ga.field_c.a(param2, param5, (SectorCacheStore) (var7), (SectorCacheStore) (var6), 64);
+              var8 = ga.field_c.getOrCreateArchiveSource(param2, param5, (SectorCacheStore) (var7), (SectorCacheStore) (var6), 64);
               if (param4) {
                 var8.a((byte) 90);
               }

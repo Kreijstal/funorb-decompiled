@@ -94,7 +94,7 @@ final class DiskCacheWorker implements Runnable {
         long var4 = 0L;
         sa var4_ref_sa = null;
         int var5 = 0;
-        he var6 = null;
+        LeaderboardSubmission var6 = null;
         int var6_int = 0;
         int var7 = 0;
         String[][] var8 = null;
@@ -142,17 +142,17 @@ final class DiskCacheWorker implements Runnable {
             var5 = var27.readUnsignedByte((byte) -105);
             if (var5 != 0) {
               var6_int = var4_ref_sa.field_g;
-              v.field_f[0].field_b = ja.field_b;
+              ArchiveNetworkClient.field_f[0].field_b = ja.field_b;
               var7 = var4_ref_sa.field_m;
-              v.field_f[0].field_a = null;
-              v.field_f[0].field_e = false;
+              ArchiveNetworkClient.field_f[0].field_a = null;
+              ArchiveNetworkClient.field_f[0].field_e = false;
               for (var8_int = 1; var5 > var8_int; var8_int++) {
-                v.field_f[var8_int].field_b = var27.readString(true);
-                v.field_f[var8_int].field_e = false;
+                ArchiveNetworkClient.field_f[var8_int].field_b = var27.readString(true);
+                ArchiveNetworkClient.field_f[var8_int].field_e = false;
                 if (var27.readUnsignedByte((byte) -99) != 1) {
-                  v.field_f[var8_int].field_a = null;
+                  ArchiveNetworkClient.field_f[var8_int].field_a = null;
                 } else {
-                  v.field_f[var8_int].field_a = var27.readString(true);
+                  ArchiveNetworkClient.field_f[var8_int].field_a = var27.readString(true);
                 }
               }
               dupTemp$0 = new String[3][var6_int];
@@ -175,12 +175,12 @@ final class DiskCacheWorker implements Runnable {
               if (var18 > 0) {
                 for (var19 = 0; var18 > var19; var19++) {
                   var20 = var27.readUnsignedByte((byte) -74);
-                  var21 = v.field_f[var20].field_b;
+                  var21 = ArchiveNetworkClient.field_f[var20].field_b;
                   var22 = var27.readLong((byte) -121);
                   var24 = var27.position;
                   if (var6_int > var19) {
                     var8[0][var12] = var21;
-                    var9[0][var12] = v.field_f[var20].field_a;
+                    var9[0][var12] = ArchiveNetworkClient.field_f[var20].field_a;
                     var10[0][var12] = var22;
                     var12++;
                     for (var25 = 0; var25 < var7; var25++) {
@@ -203,10 +203,10 @@ final class DiskCacheWorker implements Runnable {
                     }
                   }
                   if (var14 < var6_int &&
-                    !v.field_f[var20].field_e) {
-                    v.field_f[var20].field_e = true;
+                    !ArchiveNetworkClient.field_f[var20].field_e) {
+                    ArchiveNetworkClient.field_f[var20].field_e = true;
                     var8[2][var14] = var21;
-                    var9[2][var14] = v.field_f[var20].field_a;
+                    var9[2][var14] = ArchiveNetworkClient.field_f[var20].field_a;
                     var10[2][var14] = var22;
                     var27.position = var24;
                     var14++;
@@ -226,10 +226,10 @@ final class DiskCacheWorker implements Runnable {
           if (var2 == 1) {
             var3Lifetime1 = var27.readUnsignedShort(-1640531527);
             var4 = var27.readLong((byte) -121);
-            var6 = (he) (of.field_b.beginForward((byte) -92));
+            var6 = (LeaderboardSubmission) (of.field_b.beginForward((byte) -92));
             while (var6 != null) {
               if (var6.field_j != var3Lifetime1) {
-                var6 = (he) (of.field_b.nextForward((byte) -42));
+                var6 = (LeaderboardSubmission) (of.field_b.nextForward((byte) -42));
                 continue;
               }
               break;

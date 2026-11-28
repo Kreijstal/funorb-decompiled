@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class p {
-    static gb field_a;
+    static ArchiveNetworkClient field_a;
     static String field_b;
     static int[] field_c;
     static sd field_d;
@@ -33,7 +33,7 @@ final class p {
           var5 = 0;
           var6 = 0;
           if (param1 != 79) {
-            field_a = (gb) null;
+            field_a = (ArchiveNetworkClient) null;
           }
           while (param0 > var6) {
             var7 = param2[param3 + var6] & 255;

@@ -8,7 +8,7 @@ class RichTextWidget extends InteractiveWidget {
     private String[] field_K;
     static de field_G;
     static String field_E;
-    static ch field_H;
+    static ArchiveNetworkClient field_H;
     static String[] field_I;
     static int field_J;
 

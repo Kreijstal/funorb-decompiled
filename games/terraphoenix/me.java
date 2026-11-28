@@ -11,7 +11,7 @@ final class me extends IntrusiveNode {
     int field_j;
     static String field_n;
 
-    final static void a(java.awt.Component param0, byte param1) {
+    final static void detachKeyboardListeners(java.awt.Component param0, byte param1) {
         try {
           param0.removeKeyListener(th.field_g);
           param0.removeFocusListener(th.field_g);

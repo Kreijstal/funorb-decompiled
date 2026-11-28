@@ -1047,13 +1047,13 @@ final class MenuScreen {
                 }
                 if (SectorCacheStore.field_b != null &&
                   var7 == -1) {
-                  var3.drawString(ne.field_g, 73, var8, 16776960, -1);
+                  var3.drawString(ArchiveSourceManager.field_g, 73, var8, 16776960, -1);
                   var3.drawRightAligned(LoginPanel.a("<%0>%", new String[]{Integer.toString(SectorCacheStore.field_b.field_r[0] % 101)}, -63), 380, var8, 16776960, -1);
                   var3.drawRightAligned(Integer.toString(SectorCacheStore.field_b.field_r[0] / 101), 582, var8, 16776960, -1);
                 }
                 if ((var2.length() == 0)) {
                   var8Lifetime1 = 106 + var3.field_F;
-                  var3.drawRightAligned(ne.field_a, 380, var8Lifetime1, 1134591, -1);
+                  var3.drawRightAligned(ArchiveSourceManager.field_a, 380, var8Lifetime1, 1134591, -1);
                   var3.drawRightAligned(MidiPcmStream.field_K, 582, var8Lifetime1, 1134591, -1);
                 }
                 break regionExit1;

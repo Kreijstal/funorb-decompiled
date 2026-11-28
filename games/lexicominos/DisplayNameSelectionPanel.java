@@ -188,7 +188,7 @@ final class DisplayNameSelectionPanel extends DequeWidgetContainer implements Na
         }
     }
 
-    final static void a(java.awt.Component param0, int param1) {
+    final static void detachKeyboardListeners(java.awt.Component param0, int param1) {
         try {
           param0.removeKeyListener(AccountNameAvailabilityValidator.field_l);
           param0.removeFocusListener(AccountNameAvailabilityValidator.field_l);

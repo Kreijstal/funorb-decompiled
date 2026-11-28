@@ -81,14 +81,14 @@ final class hj {
           var8 = new CipherPacketBuffer(param0.getFileByName("", 0, "logo.fo3d"));
           var10 = var8;
           var3 = var10.readUnsignedByte((byte) -54);
-          var10.f((byte) 16);
+          var10.beginBitAccess((byte) 16);
           bl.field_v = tk.a(-123, var10);
           aj.field_b = new pb[var3];
           pa.field_b = new int[var3][];
           for (var4 = 0; var4 < var3; var4++) {
             aj.field_b[var4] = lj.a(var8, (byte) -62);
           }
-          var10.o(-98);
+          var10.endBitAccess(-98);
           var9 = 0;
           var4Lifetime1 = var9;
           while (var3 > var9) {

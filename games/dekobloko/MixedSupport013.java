@@ -168,7 +168,7 @@ final class MixedSupport013 {
         int integerLocal4;
         if (byteArgument3 == -84) {
           cipherPacketBufferLocal1 = SocketFactory.cipherPacketBufferState0002;
-          cipherPacketBufferLocal1.performAction1641(integerArgument2, -4);
+          cipherPacketBufferLocal1.writeCipheredByte(integerArgument2, -4);
           cipherPacketBufferLocal1.position = cipherPacketBufferLocal1.position + 1;
           integerLocal2 = cipherPacketBufferLocal1.position;
           cipherPacketBufferLocal1.writeByte(true, 6);
@@ -178,7 +178,7 @@ final class MixedSupport013 {
         }
         booleanArrayState0003 = (boolean[]) null;
         cipherPacketBufferLocal3 = SocketFactory.cipherPacketBufferState0002;
-        cipherPacketBufferLocal3.performAction1641(integerArgument2, -4);
+        cipherPacketBufferLocal3.writeCipheredByte(integerArgument2, -4);
         cipherPacketBufferLocal3.position = cipherPacketBufferLocal3.position + 1;
         integerLocal4 = cipherPacketBufferLocal3.position;
         cipherPacketBufferLocal3.writeByte(true, 6);

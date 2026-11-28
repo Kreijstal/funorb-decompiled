@@ -148,7 +148,7 @@ final class TextLineMetrics {
           var11Lifetime2 = -var10 + SoftwareRasterizer.field_l;
           var12 = -var10 + param0.field_g;
           var13 = param5 * SoftwareRasterizer.field_l + param2;
-          q.a(SoftwareRasterizer.field_j, (byte) 122, param3, var13, var6_intLifetime1, var10, var8, var7, param0.field_i, var9, var11Lifetime2, var12, param1);
+          ProxySocketConnector.a(SoftwareRasterizer.field_j, (byte) 122, param3, var13, var6_intLifetime1, var10, var8, var7, param0.field_i, var9, var11Lifetime2, var12, param1);
           if (param4 != 13449) {
             field_d = (rf) null;
           }

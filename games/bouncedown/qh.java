@@ -44,7 +44,7 @@ final class qh {
         int var4 = 0;
         try {
           var5 = hh.field_p;
-          var5.a(true, param1);
+          var5.writeCipheredByte(true, param1);
           var5.position = var5.position + 1;
           var4 = var5.position;
           var5.writeByte(1, (byte) 107);

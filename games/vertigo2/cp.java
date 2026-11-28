@@ -11,7 +11,7 @@ final class cp {
         if (qc.field_A < 20) {
           return true;
         }
-        if (!tk.c((byte) -38)) {
+        if (!ArchiveNetworkClient.c((byte) -38)) {
           return true;
         }
         if (0 >= rc.field_b) {

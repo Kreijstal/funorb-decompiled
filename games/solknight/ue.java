@@ -469,7 +469,7 @@ final class ue {
           }
           var2Lifetime88 = Bzip2State.a((byte) -2, "hs_destroyed");
           if (null != var2Lifetime88) {
-            ne.field_a = Archive.decodeCp1252(true, var2Lifetime88);
+            ArchiveSourceManager.field_a = Archive.decodeCp1252(true, var2Lifetime88);
           }
           var2Lifetime89 = Bzip2State.a((byte) -2, "instructiontext");
           if (null != var2Lifetime89) {

@@ -9,7 +9,7 @@ final class DraggableWidgetContainer extends SingleChildWidgetContainer {
     static int field_I;
     private int field_J;
     private int field_C;
-    static da field_M;
+    static MouseInputHandler field_M;
     private boolean field_F;
     static sj field_N;
     static ResourceArchive field_L;
@@ -336,7 +336,7 @@ final class DraggableWidgetContainer extends SingleChildWidgetContainer {
           }
           return SecondaryNodeDeque.field_d;
         }
-        field_M = (da) null;
+        field_M = (MouseInputHandler) null;
         if (null == SecondaryNodeDeque.field_d) {
           SecondaryNodeDeque.field_d = new fh();
           SecondaryNodeDeque.field_d.a(ResizableModalDialog.field_Q, 48);
@@ -427,7 +427,7 @@ final class DraggableWidgetContainer extends SingleChildWidgetContainer {
     }
 
     static {
-        field_M = new da();
+        field_M = new MouseInputHandler();
         field_N = null;
     }
 }

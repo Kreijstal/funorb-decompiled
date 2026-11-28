@@ -98,7 +98,7 @@ final class MixedSupport134 {
           if (!booleanArgument2) {
             MixedSupport134.computeBoolean1682('\016', -20);
           }
-          integerLocal1 = cipherPacketBufferArgument1.computeInteger1637(integerArgument4, (byte) 110);
+          integerLocal1 = cipherPacketBufferArgument1.readBits(integerArgument4, (byte) 110);
           if (integerLocal1 == 0) {
             stackObjectLocal6 = null;
             return (short[]) (stackObjectLocal6);
@@ -107,11 +107,11 @@ final class MixedSupport134 {
             shortArrayArgument3.length != integerLocal1) {
             shortArrayArgument3 = new short[integerLocal1];
           }
-          integerLocal2 = cipherPacketBufferArgument1.computeInteger1637(4, (byte) 123);
-          integerLocal3 = (short)cipherPacketBufferArgument1.computeInteger1637(16, (byte) 46);
+          integerLocal2 = cipherPacketBufferArgument1.readBits(4, (byte) 123);
+          integerLocal3 = (short)cipherPacketBufferArgument1.readBits(16, (byte) 46);
           if (integerLocal2 > 0) {
             for (integerLocal4 = 0; integerLocal1 > integerLocal4; integerLocal4++) {
-              shortArrayArgument3[integerLocal4] = (short)(cipherPacketBufferArgument1.computeInteger1637(integerLocal2, (byte) 99) + integerLocal3);
+              shortArrayArgument3[integerLocal4] = (short)(cipherPacketBufferArgument1.readBits(integerLocal2, (byte) 99) + integerLocal3);
             }
           } else {
             for (integerLocal4 = 0; integerLocal1 > integerLocal4; integerLocal4++) {

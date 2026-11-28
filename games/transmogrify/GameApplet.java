@@ -275,7 +275,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
                 if (ch.field_b > var2.width) {
                   return;
                 }
-                if (uh.field_j > var2.height) {
+                if (ArchiveNetworkClient.field_j > var2.height) {
                   return;
                 }
               }
@@ -838,7 +838,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
               AlphaWidgetContainer.field_D = 0;
               uc.field_a = 0;
               ModalDialog.field_x = param1;
-              uh.field_j = param1;
+              ArchiveNetworkClient.field_j = param1;
               fk.field_E = param6;
               ch.field_b = param6;
               gh.field_h = param3;

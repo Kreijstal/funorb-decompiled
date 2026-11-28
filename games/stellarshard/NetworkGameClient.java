@@ -115,7 +115,7 @@ abstract class NetworkGameClient extends GameApplet {
               fc.field_b = null;
               NodeHashTableIterator.field_a = null;
             }
-            var11 = wj.g(-117);
+            var11 = SocketArchiveNetworkClient.g(-117);
             if (var11 != null) {
               TextLayout.a((byte) -122, var11.booleanValue());
             }
@@ -135,7 +135,7 @@ abstract class NetworkGameClient extends GameApplet {
               ByteArrayPoolSupport.a(112);
             }
             if (!param1) {
-              var5_intLifetime2 = wj.a(wh.a((byte) 97), this.field_v, this.field_x, tc.c(-5), (byte) 74, false);
+              var5_intLifetime2 = SocketArchiveNetworkClient.a(wh.a((byte) 97), this.field_v, this.field_x, tc.c(-5), (byte) 74, false);
               if (var5_intLifetime2 != -1) {
                 if (0 == var5_intLifetime2) {
                   al.field_b = we.field_a;
@@ -735,7 +735,7 @@ abstract class NetworkGameClient extends GameApplet {
                             ok.a((byte) -54, var3);
                           }
                         } else {
-                          fb.a(EditableTextField.field_N, ue.field_b, DebouncedFieldValidator.field_d, 20);
+                          ArchiveNetworkClient.a(EditableTextField.field_N, ue.field_b, DebouncedFieldValidator.field_d, 20);
                         }
                       } else {
                         this.readSessionCookieUpdate(false);
@@ -825,7 +825,7 @@ abstract class NetworkGameClient extends GameApplet {
         if (BufferedRandomAccessFile.field_m) {
           return -1;
         }
-        var2 = wj.a(wh.a((byte) 116), this.field_v, this.field_x, tc.c(-5), (byte) 71, true);
+        var2 = SocketArchiveNetworkClient.a(wh.a((byte) 116), this.field_v, this.field_x, tc.c(-5), (byte) 71, true);
         if (-1 == var2) {
           return -1;
         }

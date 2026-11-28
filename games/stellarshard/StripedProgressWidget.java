@@ -153,11 +153,11 @@ final class StripedProgressWidget extends UiWidget {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         try {
-          fk.a(-28092, (java.awt.Component) ((Object) param0));
+          fk.attachKeyboardListeners(-28092, (java.awt.Component) ((Object) param0));
           if (param1 <= 84) {
             return;
           }
-          AccountNameAvailabilityValidator.a((java.awt.Component) ((Object) param0), (byte) -41);
+          AccountNameAvailabilityValidator.attachMouseListeners((java.awt.Component) ((Object) param0), (byte) -41);
           if (null != og.field_c) {
             og.field_c.attach((byte) -93, (java.awt.Component) ((Object) param0));
           }

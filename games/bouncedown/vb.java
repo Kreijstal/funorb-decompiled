@@ -306,7 +306,7 @@ final class vb implements WidgetRenderer {
         if (param0 != 122) {
           vb.clearStaticReferences(75);
         }
-        he.field_k = null;
+        LeaderboardSubmission.field_k = null;
         ae.field_c = null;
         qh.field_i = null;
     }

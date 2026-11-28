@@ -7,7 +7,7 @@ final class ValidatedTextField extends EditableTextField implements FieldValidat
     static ag field_W;
     static boolean field_V;
     static boolean[] field_X;
-    static bk field_U;
+    static ArchiveSourceManager field_U;
     private int field_T;
     private FieldValidator field_S;
 
@@ -152,7 +152,7 @@ final class ValidatedTextField extends EditableTextField implements FieldValidat
         try {
           var4_int = param2.length();
           if (param1 != 75) {
-            field_U = (bk) null;
+            field_U = (ArchiveSourceManager) null;
           }
           var5 = param3.length();
           var6 = var4_int;

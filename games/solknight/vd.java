@@ -91,7 +91,7 @@ final class vd {
           try {
             var9 = bf.field_f.a((byte) -109, var5);
             ek.field_a = var9.a((byte) 100);
-            if (!field_a.equals(ne.field_g)) {
+            if (!field_a.equals(ArchiveSourceManager.field_g)) {
               stackIn_22_0 = var9.field_n;
             } else {
               stackIn_22_0 = null;

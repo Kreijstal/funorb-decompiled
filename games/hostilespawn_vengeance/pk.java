@@ -71,14 +71,14 @@ final class pk extends ql {
         GridPoint var2 = TextHotspotBounds.field_m[0].field_j;
         if (param0 == -1) {
           TextLineMetrics.field_d = (ln.field_a.field_d - var2.field_e) * 26 / ln.field_a.field_d;
-          if (!(ih.a(var2, (byte) -109, LabeledWidgetContainer.field_E) >= 2)) {
+          if (!(SocketArchiveNetworkClient.a(var2, (byte) -109, LabeledWidgetContainer.field_E) >= 2)) {
             mf.a(false, 2);
           }
           return;
         }
         field_i = (int[]) null;
         TextLineMetrics.field_d = (ln.field_a.field_d - var2.field_e) * 26 / ln.field_a.field_d;
-        if (!(ih.a(var2, (byte) -109, LabeledWidgetContainer.field_E) >= 2)) {
+        if (!(SocketArchiveNetworkClient.a(var2, (byte) -109, LabeledWidgetContainer.field_E) >= 2)) {
           mf.a(false, 2);
         }
     }
@@ -108,7 +108,7 @@ final class pk extends ql {
         Throwable decompiledCaughtException = null;
         try {
           try {
-            var3_int = param2.f(255);
+            var3_int = param2.readSmart(255);
             if (param0 < var3_int) {
               var3_int = param0;
             }

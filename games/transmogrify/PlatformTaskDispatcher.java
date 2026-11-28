@@ -178,7 +178,7 @@ final class PlatformTaskDispatcher implements Runnable {
                     }
                     try {
                       if (false) throw (ProxyAuthenticationRequiredException) null;
-                      var8.result = AccountNameAvailabilityValidator.a(false, (String) (var8.objectArgument), var8.intArgument).a(-70);
+                      var8.result = AccountNameAvailabilityValidator.a(false, (String) (var8.objectArgument), var8.intArgument).openSocket(-70);
                     } catch (ProxyAuthenticationRequiredException decompiledCaughtParameter1) {
                       decompiledCaughtException = decompiledCaughtParameter1;
                       var3_ref = (ProxyAuthenticationRequiredException) (Object) decompiledCaughtException;
@@ -227,7 +227,7 @@ final class PlatformTaskDispatcher implements Runnable {
                         }
                         break;
                       case 13:
-                        var3_ref2 = PlatformTaskDispatcher.a("", (String) (var8.objectArgument), field_g, -7);
+                        var3_ref2 = PlatformTaskDispatcher.openPreferencesFile("", (String) (var8.objectArgument), field_g, -7);
                         var8.result = var3_ref2;
                         break;
                       case 16:
@@ -289,7 +289,7 @@ final class PlatformTaskDispatcher implements Runnable {
                         }
                         break;
                       case 12:
-                        var3_ref2 = PlatformTaskDispatcher.a(field_u, (String) (var8.objectArgument), field_g, -7);
+                        var3_ref2 = PlatformTaskDispatcher.openPreferencesFile(field_u, (String) (var8.objectArgument), field_g, -7);
                         var8.result = var3_ref2;
                         break;
                       case 7:
@@ -403,7 +403,7 @@ final class PlatformTaskDispatcher implements Runnable {
         return this.enqueueTask(5, 0, (byte) -79, 0, (Object) null);
     }
 
-    private final static BoundedRandomAccessFile a(String param0, String param1, int param2, int param3) {
+    private final static BoundedRandomAccessFile openPreferencesFile(String param0, String param1, int param2, int param3) {
         try {
           int var6 = 0;
           BoundedRandomAccessFile stackIn_15_0 = null;

@@ -183,7 +183,7 @@ final class StickyEvent extends SpecialEvent {
                 }
                 var2 = qba.a(17602, "login_gameupdated");
                 if (var2 != null) {
-                  cl.field_o = ChangeCreatureStatOrHealthEffect.a(var2, false);
+                  SocketArchiveNetworkClient.field_o = ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "create_unable");
                 if (null != var2) {
@@ -2950,7 +2950,7 @@ final class StickyEvent extends SpecialEvent {
                 }
                 var2 = qba.a(17602, "DEFAULT_PLAYER_NAME");
                 if (null != var2) {
-                  qfa.field_t = ChangeCreatureStatOrHealthEffect.a(var2, param0);
+                  NetworkArchiveRequest.field_t = ChangeCreatureStatOrHealthEffect.a(var2, param0);
                 }
                 var2 = qba.a(17602, "mustlogin1");
             }

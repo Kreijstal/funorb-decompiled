@@ -19,7 +19,7 @@ final class AgeValidator extends TextFieldValidator {
           if (this.getValidationStatus(95, param1) != SocketConnector.field_d) {
             return null;
           }
-          stackIn_5_0 = tj.field_A;
+          stackIn_5_0 = SocketArchiveNetworkClient.field_A;
           return stackIn_5_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

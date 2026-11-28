@@ -82,7 +82,7 @@ final class PlayerNameAvailabilityValidator extends TextFieldValidator {
           String stringLocal1 = (String) null;
           PlayerNameAvailabilityValidator.replaceCharacter('_', (String) null, (String) null, -55);
           if (!StandardContentDialog.computeBoolean1242(-30146)) {
-            SocketFactory.cipherPacketBufferState0002.performAction1641(9, -4);
+            SocketFactory.cipherPacketBufferState0002.writeCipheredByte(9, -4);
             MixedSupport083.booleanState0118 = true;
             AlphaWidgetContainer.integerState0188 = UiComponentPart009.integerState0149;
             return;
@@ -91,7 +91,7 @@ final class PlayerNameAvailabilityValidator extends TextFieldValidator {
           return;
         }
         if (!StandardContentDialog.computeBoolean1242(-30146)) {
-          SocketFactory.cipherPacketBufferState0002.performAction1641(9, -4);
+          SocketFactory.cipherPacketBufferState0002.writeCipheredByte(9, -4);
           MixedSupport083.booleanState0118 = true;
           AlphaWidgetContainer.integerState0188 = UiComponentPart009.integerState0149;
           return;

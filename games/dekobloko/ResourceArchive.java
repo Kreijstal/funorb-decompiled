@@ -728,7 +728,7 @@ final class ResourceArchive {
 
     final static void writeTwoByteCommand(int integerArgument1, int integerArgument2) {
         CipherPacketBuffer cipherPacketBufferLocal1 = SocketFactory.cipherPacketBufferState0002;
-        cipherPacketBufferLocal1.performAction1641(integerArgument1, integerArgument2 ^ -3);
+        cipherPacketBufferLocal1.writeCipheredByte(integerArgument1, integerArgument2 ^ -3);
         cipherPacketBufferLocal1.writeByte(true, integerArgument2);
         cipherPacketBufferLocal1.writeByte(true, 3);
     }

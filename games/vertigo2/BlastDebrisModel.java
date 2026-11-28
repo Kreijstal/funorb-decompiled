@@ -221,7 +221,7 @@ final class BlastDebrisModel extends LevelRenderable {
         if (param0 != 6) {
           return false;
         }
-        return tk.field_e;
+        return ArchiveNetworkClient.field_e;
     }
 
     final void checkDebrisTickGuard(byte param0) {

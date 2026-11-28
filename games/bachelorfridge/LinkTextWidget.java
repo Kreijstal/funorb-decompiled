@@ -1075,7 +1075,7 @@ class LinkTextWidget extends InteractiveWidget {
                 }
                 var2 = BuffVendorAnimation.a("ignored", (byte) 120);
                 if (var2 != null) {
-                  qfa.field_w = ChangeCreatureStatOrHealthEffect.a(var2, false);
+                  NetworkArchiveRequest.field_w = ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = BuffVendorAnimation.a("target_blocked", (byte) 98);
                 if (var2 != null) {
@@ -1127,7 +1127,7 @@ class LinkTextWidget extends InteractiveWidget {
                 }
                 var2 = BuffVendorAnimation.a("ATTACK", (byte) 107);
                 if (var2 != null) {
-                  vm.field_g = ChangeCreatureStatOrHealthEffect.a(var2, false);
+                  ArchiveNetworkClient.field_g = ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = BuffVendorAnimation.a("SPATTACK", (byte) 76);
                 if (null != var2) {

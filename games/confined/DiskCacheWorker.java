@@ -88,7 +88,7 @@ final class DiskCacheWorker implements Runnable {
         RuntimeException var4 = null;
         var8 = Confined.field_J ? 1 : 0;
         try {
-          var4_int = param2.g(param3, 0);
+          var4_int = param2.readBits(param3, 0);
           if (param1 != -126) {
             DiskCacheWorker.clearStaticReferences((byte) 7);
           }
@@ -99,11 +99,11 @@ final class DiskCacheWorker implements Runnable {
             var4_int != param0.length) {
             param0 = new byte[var4_int];
           }
-          var5 = param2.g(3, param1 + 126);
-          var6 = (byte)param2.g(8, 0);
+          var5 = param2.readBits(3, param1 + 126);
+          var6 = (byte)param2.readBits(8, 0);
           if (var5 > 0) {
             for (var7 = 0; var4_int > var7; var7++) {
-              param0[var7] = (byte)(var6 + param2.g(var5, 0));
+              param0[var7] = (byte)(var6 + param2.readBits(var5, 0));
             }
           } else {
             for (var7 = 0; var4_int > var7; var7++) {

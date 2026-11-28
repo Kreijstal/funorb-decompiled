@@ -79,7 +79,7 @@ final class db {
         RuntimeException var3_ref = null;
         try {
           param0 = BoardChange.a((byte) 75, param0, '_', "");
-          var3 = vm.a(param0, (byte) 106);
+          var3 = ArchiveNetworkClient.a(param0, (byte) 106);
           if (param2) {
             var4 = (String) null;
             db.a((String) null, (String) null, false);

@@ -75,7 +75,7 @@ final class IsaacRandom {
               }
             }
             if (decompiledFrameRemainder0) {
-              gb.a((Throwable) null, "A1: " + al.a(-46), 10);
+              ArchiveNetworkClient.a((Throwable) null, "A1: " + al.a(-46), 10);
               eg.a((byte) 126);
             }
           }

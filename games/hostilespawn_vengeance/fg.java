@@ -159,7 +159,7 @@ final class fg {
         if (param0 != 32) {
           fg.clearStaticReferences((byte) 107);
         }
-        return sj.field_a.a(-26720);
+        return sj.field_a.loadMasterIndex(-26720);
     }
 
     static {

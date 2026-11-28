@@ -82,14 +82,14 @@ final class ConfirmedEmailAvailabilityValidator extends TextFieldValidator {
           if (!param1.equals(this.field_s)) {
             var3 = aj.a(param1, -1);
             if (!var3.a(param0 - 282)) {
-              stackIn_7_0 = w.field_e;
+              stackIn_7_0 = ArchiveNetworkClient.field_e;
               return stackIn_7_0;
             }
             this.field_s = param1;
             this.field_r = var3.b(param0 ^ 28033);
           }
           if (this.field_r) {
-            stackIn_12_0 = hm.field_b;
+            stackIn_12_0 = SocketConnector.field_b;
           } else {
             stackIn_12_0 = LabeledWidgetContainer.field_K;
           }

@@ -29,7 +29,7 @@ final class sd {
         lh.field_s = -1;
         if (param0 <= 120) {
           java.awt.Component var2 = (java.awt.Component) null;
-          sd.a((byte) -66, (java.awt.Component) null);
+          sd.detachKeyboardListeners((byte) -66, (java.awt.Component) null);
           if (null != ki.field_d) {
             je.a((byte) 15, ki.field_d);
             ub.field_n = -1;
@@ -63,12 +63,12 @@ final class sd {
         ok.field_a = null;
     }
 
-    final static void a(byte param0, java.awt.Component param1) {
+    final static void detachKeyboardListeners(byte param0, java.awt.Component param1) {
         try {
           param1.removeKeyListener(hl.field_d);
           if (param0 != 69) {
             java.awt.Component var3 = (java.awt.Component) null;
-            sd.a((byte) 28, (java.awt.Component) null);
+            sd.detachKeyboardListeners((byte) 28, (java.awt.Component) null);
           }
           param1.removeFocusListener(hl.field_d);
           RichTextWidget.field_Q = -1;

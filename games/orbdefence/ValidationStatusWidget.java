@@ -126,7 +126,7 @@ final class ValidationStatusWidget extends RichTextWidget {
               }
               break regionExit1;
             }
-            var5 = pi.field_g;
+            var5 = ArchiveSourceManager.field_g;
           }
           if (!var5.equals(this.field_l)) {
             this.field_l = var5;
@@ -246,7 +246,7 @@ final class ValidationStatusWidget extends RichTextWidget {
         String stackIn_32_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (md.a(-20767, param1)) {
+          if (ProxySocketConnector.a(-20767, param1)) {
             return false;
           }
           if (me.a(param1, (byte) -44)) {

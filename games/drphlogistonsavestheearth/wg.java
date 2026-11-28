@@ -52,7 +52,7 @@ final class wg {
 
     final void a(byte param0) {
         int fieldTemp$0 = 0;
-        if (df.field_l != null) {
+        if (ArchiveSourceManager.field_l != null) {
           return;
         }
         if (0 >= hb.field_g) {

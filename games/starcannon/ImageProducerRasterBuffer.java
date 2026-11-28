@@ -63,7 +63,7 @@ final class ImageProducerRasterBuffer extends AwtRasterBuffer implements java.aw
             boolean decompiledFrameRemainder0 = true;
             if (param1.field_q == ProgressDialog.field_bb[var3].field_q) {
               var4 = ProgressDialog.field_bb[var3].b(-126);
-              if (vh.field_q < ByteStorage.field_b[var4]) {
+              if (SocketArchiveNetworkClient.field_q < ByteStorage.field_b[var4]) {
                 ByteStorage.field_b[var4] = ByteStorage.field_b[var4] - 1;
                 decompiledFrameRemainder0 = false;
               }

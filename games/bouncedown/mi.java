@@ -15,9 +15,9 @@ final class mi {
     static RgbSprite field_k;
 
     final void a(int param0, int param1, int param2) {
-        he var5;
-        he var5Lifetime1;
-        he var5Lifetime2;
+        LeaderboardSubmission var5;
+        LeaderboardSubmission var5Lifetime1;
+        LeaderboardSubmission var5Lifetime2;
         if (param0 >= this.field_f) {
           throw new IllegalArgumentException();
         }
@@ -35,8 +35,8 @@ final class mi {
         }
         if (this.field_i == 0) {
           if (param2 != -798) {
-            var5 = (he) null;
-            mi.a(-29, -13, (he) null);
+            var5 = (LeaderboardSubmission) null;
+            mi.writeLeaderboardSubmissionPacket(-29, -13, (LeaderboardSubmission) null);
             if (0 == SectorCacheStore.field_e &&
               n.field_m == 0) {
               this.field_i = 0;
@@ -122,8 +122,8 @@ final class mi {
         }
         if (n.field_m == 0) {
           if (param2 != -798) {
-            var5Lifetime1 = (he) null;
-            mi.a(-29, -13, (he) null);
+            var5Lifetime1 = (LeaderboardSubmission) null;
+            mi.writeLeaderboardSubmissionPacket(-29, -13, (LeaderboardSubmission) null);
             if (0 == SectorCacheStore.field_e &&
               n.field_m == 0) {
               this.field_i = 0;
@@ -271,8 +271,8 @@ final class mi {
           }
           return;
         }
-        var5Lifetime2 = (he) null;
-        mi.a(-29, -13, (he) null);
+        var5Lifetime2 = (LeaderboardSubmission) null;
+        mi.writeLeaderboardSubmissionPacket(-29, -13, (LeaderboardSubmission) null);
         if (0 != SectorCacheStore.field_e) {
           if (this.field_i != 0) {
             return;
@@ -394,7 +394,7 @@ final class mi {
         field_c = null;
     }
 
-    final static void a(int param0, int param1, he param2) {
+    final static void writeLeaderboardSubmissionPacket(int param0, int param1, LeaderboardSubmission param2) {
         CipherPacketBuffer var7 = null;
         CipherPacketBuffer var8 = null;
         int var4 = 0;
@@ -403,7 +403,7 @@ final class mi {
         try {
           var7 = hh.field_p;
           var8 = var7;
-          var8.a(true, param0);
+          var8.writeCipheredByte(true, param0);
           var8.position = var8.position + 1;
           var4 = var8.position;
           var8.writeByte(1, (byte) 126);

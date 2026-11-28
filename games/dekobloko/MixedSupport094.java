@@ -160,7 +160,7 @@ final class MixedSupport094 implements WidgetRenderer {
                 MixedSupport138.integerArrayState0248[integerLocal28] = -2147483648;
               }
               if (booleanArgument6) {
-                NetworkSupport003.integerArrayState0031[integerLocal28] = integerLocal32 >> NetworkSupport007.integerState0503;
+                ArchiveNetworkClient.integerArrayState0031[integerLocal28] = integerLocal32 >> NetworkSupport007.integerState0503;
                 AnimatedTileRegion.integerArrayState0233[integerLocal28] = integerLocal33 >> NetworkSupport007.integerState0503;
                 NodeDeque.integerArrayState0250[integerLocal28] = integerLocal34;
               }

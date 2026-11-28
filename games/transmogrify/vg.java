@@ -241,7 +241,7 @@ final class vg {
           var5Lifetime1 = var5Lifetime1 + var9Lifetime1 * IntrusiveNode.field_d.drawParagraph(DequeWidgetContainer.field_v, 283, var5Lifetime1, 310, 1000, 0, -1, 1, 0, var9Lifetime1);
           var5Lifetime1 = var5Lifetime1 + var9Lifetime1;
           if (IntrusiveDeque.b((byte) 95)) {
-            IntrusiveNode.field_d.drawParagraph(tj.field_t, 283, var5Lifetime1, 310, 1000, 0, -1, 1, 0, var9Lifetime1);
+            IntrusiveNode.field_d.drawParagraph(SocketArchiveNetworkClient.field_t, 283, var5Lifetime1, 310, 1000, 0, -1, 1, 0, var9Lifetime1);
           }
         }
     }
@@ -809,7 +809,7 @@ final class vg {
           var19 = Transmogrify.field_A ? 1 : 0;
           var4 = -66 / ((param0 - 41) / 60);
           if (IntrusiveDeque.b((byte) 93)) {
-            var3 = tj.field_t;
+            var3 = SocketArchiveNetworkClient.field_t;
           } else {
             if (FullscreenNoticeType.field_c == null) {
               FullscreenNoticeType.field_c = NetworkArchiveRequest.a(29, (byte) -10, 3, 10, 1);
@@ -1092,7 +1092,7 @@ final class vg {
             for (var11 = param5; var11 < param1; var11++) {
               var12 = lk.field_d[var11];
               if (param3) {
-                stackIn_24_0 = dk.field_k[var12];
+                stackIn_24_0 = ArchiveSourceManager.field_k[var12];
               } else {
                 stackIn_24_0 = tb.field_d[var12];
               }

@@ -47,7 +47,7 @@ final class LoginPanel extends DequeWidgetContainer implements TextFieldListener
     final static void a(byte param0, ResourceArchive param1) {
         int var3 = 0;
         int var4 = 0;
-        jk var5 = null;
+        LogoMesh var5 = null;
         int[] var6 = null;
         int var7 = 0;
         CipherPacketBuffer var8 = null;
@@ -64,23 +64,23 @@ final class LoginPanel extends DequeWidgetContainer implements TextFieldListener
           var8 = new CipherPacketBuffer(param1.getFileByName("logo.fo3d", "", -88));
           var10 = var8;
           var3 = var10.readUnsignedByte((byte) -124);
-          var10.o(8);
+          var10.beginBitAccess(8);
           PacketBuffer.field_g = lb.a(98, var10);
           li.field_e = new int[var3][];
-          DisplayNameSelectionPanel.field_G = new jk[var3];
+          DisplayNameSelectionPanel.field_G = new LogoMesh[var3];
           for (var4 = 0; var3 > var4; var4++) {
-            DisplayNameSelectionPanel.field_G[var4] = NetworkArchiveRequest.a(var8, (byte) -111);
+            DisplayNameSelectionPanel.field_G[var4] = NetworkArchiveRequest.decodeLogoMesh(var8, (byte) -111);
           }
-          var10.m(-91);
+          var10.endBitAccess(-91);
           var9 = 0;
           var4Lifetime1 = var9;
           while (var3 > var9) {
             var5 = DisplayNameSelectionPanel.field_G[var9];
-            var5.a((byte) -26, 6, 6, 6, 1);
-            var5.a(true);
+            var5.scaleVertices((byte) -26, 6, 6, 6, 1);
+            var5.computeVertexBounds(true);
             var6 = new int[]{var5.field_n + var5.field_e >> 1, var5.field_N + var5.field_H >> 1, var5.field_D + var5.field_R >> 1};
             li.field_e[var9] = var6;
-            var5.a(-var6[1], 126, -var6[2], -var6[0]);
+            var5.translateVertices(-var6[1], 126, -var6[2], -var6[0]);
             var9++;
           }
           if (param0 != -116) {
@@ -129,7 +129,7 @@ final class LoginPanel extends DequeWidgetContainer implements TextFieldListener
                 }
               }
             } else {
-              CipherPacketBuffer.n(8);
+              CipherPacketBuffer.openAccountRegistrationPanel(8);
             }
           }
           return;
@@ -247,7 +247,7 @@ final class LoginPanel extends DequeWidgetContainer implements TextFieldListener
             if (!this.field_B) {
               this.field_K.field_j = (WidgetRenderer) ((Object) new r());
             } else {
-              this.field_K.field_q = nf.field_a;
+              this.field_K.field_q = KeyboardInputHandler.field_a;
               this.field_K.field_j = (WidgetRenderer) ((Object) new r());
             }
           }

@@ -25,7 +25,7 @@ final class eh {
           for (var7 = param3; var6_int > var7; var7++) {
             var8 = param4.charAt(var7);
             if (var8 != 32) {
-              cg.a(bi.field_a, param1, param0, param5, (byte) -98, pa.field_d, param2, (char) var8);
+              cg.a(KeyboardInputHandler.field_a, param1, param0, param5, (byte) -98, pa.field_d, param2, (char) var8);
             }
             param2 = param2 + param1.field_p;
           }

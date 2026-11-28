@@ -86,7 +86,7 @@ final class DirectByteStorage extends ByteStorage {
           var3 = HostileSpawn.field_I ? 1 : 0;
           try {
             if (null != EditableTextField.field_N) {
-              EditableTextField.field_N.a((byte) -128);
+              EditableTextField.field_N.close((byte) -128);
             }
             if (GameCanvas.field_c != null) {
               GameCanvas.field_c.shutdown(3);

@@ -8,7 +8,7 @@ final class TextHotspotBounds extends IntrusiveNode {
     int field_s;
     int field_p;
     TextHotspotBounds field_v;
-    static kh field_y;
+    static MouseInputHandler field_y;
     static boolean field_q;
     int field_o;
     static int field_r;
@@ -55,7 +55,7 @@ final class TextHotspotBounds extends IntrusiveNode {
         field_t = "Torch: Illuminates the caves and shafts around you.";
         field_q = false;
         field_r = 0;
-        field_y = new kh();
+        field_y = new MouseInputHandler();
         field_w = 33;
     }
 }

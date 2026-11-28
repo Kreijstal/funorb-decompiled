@@ -256,7 +256,7 @@ final class el extends wi {
           } else {
             var2 = this.field_y.field_t / 4;
           }
-          if (0 == jk.field_r &&
+          if (0 == ProxySocketConnector.field_r &&
             kc.field_f == 0) {
             this.field_g = false;
             this.field_x = false;
@@ -332,7 +332,7 @@ final class el extends wi {
         }
         if (!this.field_r) {
           var2Lifetime1 = this.field_y.field_t / 4;
-          if (0 == jk.field_r &&
+          if (0 == ProxySocketConnector.field_r &&
             kc.field_f == 0) {
             this.field_g = false;
             this.field_x = false;
@@ -405,7 +405,7 @@ final class el extends wi {
         } else {
           var2Lifetime2 = this.field_w.field_t;
         }
-        if (0 == jk.field_r &&
+        if (0 == ProxySocketConnector.field_r &&
           kc.field_f == 0) {
           this.field_g = false;
           this.field_x = false;

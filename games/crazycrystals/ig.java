@@ -98,12 +98,12 @@ class ig extends pn {
         try {
           var5_int = -128 / ((-43 - param2) / 51);
           wd.field_j = wd.field_j - 1;
-          fn.field_j = fn.field_j + ob.field_l;
+          fn.field_j = fn.field_j + ArchiveNetworkClient.field_l;
           this.field_n = this.field_n + 1;
           if (this.field_n < 24) {
             return (PuzzleTile) (this);
           }
-          ob.field_l = ob.field_l + 1;
+          ArchiveNetworkClient.field_l = ArchiveNetworkClient.field_l + 1;
           fn.field_j = fn.field_j - wd.field_j;
           if (this.field_r) {
             this.field_l.copyTileAttribution((byte) 81, (PuzzleTile) (this));

@@ -56,13 +56,13 @@ final class NodeHashTableIterator implements Iterator {
           }
           ac.field_s = 0;
           for (var1_int = 0; var1_int < 8; var1_int++) {
-            if (um.field_i[var1_int] != null &&
-              um.field_i[var1_int] != gm.field_d.field_a[var1_int]) {
+            if (SocketConnector.field_i[var1_int] != null &&
+              SocketConnector.field_i[var1_int] != gm.field_d.field_a[var1_int]) {
               if (gm.field_d.field_a[var1_int] != null &&
-                gm.field_d.field_a[var1_int].field_c == um.field_i[var1_int].field_c) {
-                ac.field_s = ac.field_s + FrameTimer.a(-1704798751, um.field_i[var1_int].field_n);
+                gm.field_d.field_a[var1_int].field_c == SocketConnector.field_i[var1_int].field_c) {
+                ac.field_s = ac.field_s + FrameTimer.a(-1704798751, SocketConnector.field_i[var1_int].field_n);
               } else {
-                ac.field_s = ac.field_s + ib.a(um.field_i[var1_int].field_n, 918);
+                ac.field_s = ac.field_s + ib.a(SocketConnector.field_i[var1_int].field_n, 918);
               }
             }
           }

@@ -40,11 +40,11 @@ final class ca {
         String stackIn_9_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          FullscreenFocusCanvas.a(102, (java.awt.Component) ((Object) param1));
+          FullscreenFocusCanvas.attachKeyboardListeners(102, (java.awt.Component) ((Object) param1));
           if (param0 != 13369344) {
             return;
           }
-          he.a(-108, (java.awt.Component) ((Object) param1));
+          he.attachMouseListeners(-108, (java.awt.Component) ((Object) param1));
           if (null != GuestPlayConfirmationForm.field_L) {
             GuestPlayConfirmationForm.field_L.attach((byte) 123, (java.awt.Component) ((Object) param1));
           }

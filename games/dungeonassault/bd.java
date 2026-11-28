@@ -118,7 +118,7 @@ final class bd extends en {
           bd.a(123, (byte) 56);
         }
         CipherPacketBuffer var2 = ac.field_B;
-        var2.d((byte) -82, param0);
+        var2.writeCipheredByte((byte) -82, param0);
         var2.writeByte(6, 1);
         var2.writeByte(6, 2);
     }

@@ -83,15 +83,15 @@ final class rl {
         CipherPacketBuffer var3 = null;
         try {
           var3 = s.field_b;
-          var3.i(19319, param0);
+          var3.writeCipheredByte(19319, param0);
           if (param2 != 746037954) {
             rl.clearStaticReferences(40);
           }
-          var3.d(103, 5);
-          var3.d(122, 0);
-          var3.a((byte) -118, param1.field_j);
-          var3.d(param2 - 746037849, param1.field_q);
-          var3.d(80, param1.field_h);
+          var3.writeByte(103, 5);
+          var3.writeByte(122, 0);
+          var3.writeShort((byte) -118, param1.field_j);
+          var3.writeByte(param2 - 746037849, param1.field_q);
+          var3.writeByte(80, param1.field_h);
         } catch (RuntimeException runtimeException) {
           throw AccountCreationResultPanel.wrapClientException((Throwable) ((Object) runtimeException), "rl.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }

@@ -32,7 +32,7 @@ final class ke extends IntrusiveNode {
               ae.field_b = false;
               var3_int = 1;
             }
-            IntrusiveNode.a(var3_int != 0, da.field_d, -24, mj.b((byte) -26), jk.a((byte) -105));
+            IntrusiveNode.a(var3_int != 0, da.field_d, -24, BouncedownMenu.getClientLoadingStatusText((byte) -26), LogoMesh.getClientLoadingProgressPercent((byte) -105));
             return;
           }
           if (!ProxyAuthenticationRequiredException.c(250)) {

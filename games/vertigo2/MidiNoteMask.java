@@ -75,7 +75,7 @@ final class MidiNoteMask extends IntrusiveNode {
           stackIn_24_0.field_kc = stackIn_25_1;
           stackIn_28_0 = ((4 & var4_int) == 0) ? 0 : 1;
           var5 = stackIn_28_0;
-          param2.a(0, param0.field_fc, param0.field_fc.length, 61);
+          param2.readBytes(0, param0.field_fc, param0.field_fc.length, 61);
           stackIn_31_0 = ((2 & var4_int) == 0) ? 0 : 1;
           var6 = stackIn_31_0;
           param0.field_tc = param2.readUnsignedShort((byte) -11);

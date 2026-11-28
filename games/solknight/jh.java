@@ -252,7 +252,7 @@ final class jh {
           cf.field_e = cf.field_e + 1;
           PacketBuffer.field_j = TextLineMetrics.field_f;
           BufferedSocket.field_m = StripedProgressWidget.field_J;
-          ne.field_d = pe.field_n;
+          ArchiveSourceManager.field_d = pe.field_n;
           pe.field_n = false;
           MusicPatchNode.field_F = SolKnight.field_G;
           SpriteState.field_o = SocketConnector.field_a;

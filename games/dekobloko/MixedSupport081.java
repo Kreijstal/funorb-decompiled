@@ -14,7 +14,7 @@ final class MixedSupport081 {
         int integerLocal2 = 0;
         try {
           cipherPacketBufferLocal1 = SocketFactory.cipherPacketBufferState0002;
-          cipherPacketBufferLocal1.performAction1641(integerArgument3, -4);
+          cipherPacketBufferLocal1.writeCipheredByte(integerArgument3, -4);
           cipherPacketBufferLocal1.position = cipherPacketBufferLocal1.position + 1;
           integerLocal2 = cipherPacketBufferLocal1.position;
           cipherPacketBufferLocal1.writeByte(true, 1);
@@ -524,7 +524,7 @@ final class MixedSupport081 {
                   objectLocal81 = objectLocal84;
                 } else {
                   if (integerLocal68 != 0) {
-                    objectLocal80 = ResourceSupport004.stringState0428;
+                    objectLocal80 = NetworkArchiveRequest.stringState0428;
                   } else {
                     if (integerLocal69 != 0) {
                       integerLocal82 = -ReturnedShape.integerState0693 + MixedSupport062.integerArrayArrayState0012[integerLocal63][integerLocal67];

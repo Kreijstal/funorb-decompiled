@@ -21,7 +21,7 @@ final class te extends TileEffect {
           var3 = BachelorFridge.field_y;
           try {
             if (HomingMissileAnimation.field_G != null) {
-              HomingMissileAnimation.field_G.c(20);
+              HomingMissileAnimation.field_G.close(20);
             }
             if (param0 <= 39) {
               te.c(26);

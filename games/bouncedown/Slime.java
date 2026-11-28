@@ -139,7 +139,7 @@ final class Slime {
             var15.drawWithIntensity(0, 1, 0);
             var15.draw(0, 0);
           }
-          ca.field_d.setAsRasterTarget(64);
+          SlimeCollisionSupport.field_d.setAsRasterTarget(64);
           var4 = var4 - var6.field_s / 2;
           var5 -= 32;
           var6.trimTransparentBorders();

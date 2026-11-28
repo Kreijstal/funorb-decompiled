@@ -64,10 +64,10 @@ final class tg {
           return;
         }
         CipherPacketBuffer var2 = sc.field_g;
-        var2.d(8195);
-        var2.d(8195);
-        var2.d(8195);
-        var2.d(8195);
+        var2.readInt(8195);
+        var2.readInt(8195);
+        var2.readInt(8195);
+        var2.readInt(8195);
         var1.unlink(-96);
     }
 
@@ -420,7 +420,7 @@ final class tg {
           lj.d((byte) 114);
           DirectByteStorage.b(51);
           if (DebouncedFieldValidator.c((byte) -29)) {
-            s.field_b.i(19319, 1);
+            s.field_b.writeCipheredByte(19319, 1);
             RichTextLayout.d(0, -22370);
           }
           le.c((byte) 99);

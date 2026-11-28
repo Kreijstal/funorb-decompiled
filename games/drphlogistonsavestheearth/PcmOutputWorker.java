@@ -32,7 +32,7 @@ final class PcmOutputWorker implements Runnable {
           }
         } catch (Exception exception) {
           String var6 = (String) null;
-          gb.a((Throwable) ((Object) exception), (String) null, 10);
+          ArchiveNetworkClient.a((Throwable) ((Object) exception), (String) null, 10);
         } finally {
           this.field_f = false;
         }

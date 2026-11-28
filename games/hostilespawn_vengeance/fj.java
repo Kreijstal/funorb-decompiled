@@ -349,20 +349,20 @@ final class fj extends le {
           }
           var6 = s.field_b;
           CipherPacketBuffer var3 = var6;
-          var6.i(19319, param0);
+          var6.writeCipheredByte(19319, param0);
           var6.field_i = var6.field_i + 1;
           var4 = var6.field_i;
-          var6.d(106, 1);
+          var6.writeByte(106, 1);
           if (param1.field_i != null) {
-            var6.d(114, param1.field_i.length);
-            var6.a(param1.field_i.length, param1.field_i, true, 0);
+            var6.writeByte(114, param1.field_i.length);
+            var6.writeBytes(param1.field_i.length, param1.field_i, true, 0);
           } else {
-            var6.d(80, 0);
+            var6.writeByte(80, 0);
           }
-          var6.f(var4, -90);
+          var6.appendCrc32(var4, -90);
           var6.field_i = var6.field_i - 4;
-          param1.field_o = var6.d(8195);
-          var6.a(var6.field_i - var4, -19720);
+          param1.field_o = var6.readInt(8195);
+          var6.patchByteLength(var6.field_i - var4, -19720);
         } catch (RuntimeException runtimeException) {
           throw AccountCreationResultPanel.wrapClientException((Throwable) ((Object) runtimeException), "fj.S(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }

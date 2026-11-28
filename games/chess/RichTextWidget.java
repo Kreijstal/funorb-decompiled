@@ -296,7 +296,7 @@ class RichTextWidget extends InteractiveWidget {
           if (param3 <= 26) {
             field_M = (java.math.BigInteger) null;
           }
-          var15 = var11 * mn.a(var9, 2278);
+          var15 = var11 * ProxySocketConnector.a(var9, 2278);
           for (var17 = 0; var17 < param1.length; var17 += 2) {
             var8 = param1[var17 + 1];
             var7_int = param1[var17];

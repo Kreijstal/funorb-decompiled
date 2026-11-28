@@ -16,7 +16,7 @@ final class kp {
           fd.a(52);
           UiWidget.b((byte) -99);
           if (ef.b(0)) {
-            ac.field_B.d((byte) -87, 1);
+            ac.field_B.writeCipheredByte((byte) -87, 1);
             op.a(0, 0);
           }
           tl.a(param0 - 72);
@@ -30,7 +30,7 @@ final class kp {
         fd.a(52);
         UiWidget.b((byte) -99);
         if (ef.b(0)) {
-          ac.field_B.d((byte) -87, 1);
+          ac.field_B.writeCipheredByte((byte) -87, 1);
           op.a(0, 0);
         }
         tl.a(param0 - 72);

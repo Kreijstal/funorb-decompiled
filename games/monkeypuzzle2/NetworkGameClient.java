@@ -516,9 +516,9 @@ abstract class NetworkGameClient extends GameApplet {
           }
           if (null == dk.field_e) {
             dk.field_e = vd.a(false);
-            fa.field_p = ne.a(param0 ^ -100);
+            SocketArchiveNetworkClient.field_p = ne.a(param0 ^ -100);
           }
-          GameApplet.a(dk.field_e, (byte) 111, ii.field_m, fa.field_p);
+          GameApplet.a(dk.field_e, (byte) 111, ii.field_m, SocketArchiveNetworkClient.field_p);
           ii.field_m = null;
           fj.field_B = null;
           DebouncedFieldValidator.field_a = null;
@@ -536,7 +536,7 @@ abstract class NetworkGameClient extends GameApplet {
         if (mc.field_a == 11) {
           if (BufferedRandomAccessFile.field_j != null && (!BufferedRandomAccessFile.field_j.ensureIndexLoaded(-124) ||
             !BufferedRandomAccessFile.field_j.tryLoadAllGroups(0))) {
-            ResourceArchive.setLoadingStatus(ec.a(BufferedRandomAccessFile.field_j, IntrusiveNode.field_b, tk.field_a, 0), param0 ^ -24150, 0.0f);
+            ResourceArchive.setLoadingStatus(ec.a(BufferedRandomAccessFile.field_j, IntrusiveNode.field_b, KeyboardInputHandler.field_a, 0), param0 ^ -24150, 0.0f);
             decompiledFrameRemainder0 = false;
           }
           else {

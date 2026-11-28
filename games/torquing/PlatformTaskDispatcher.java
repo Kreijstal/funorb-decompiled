@@ -206,7 +206,7 @@ final class PlatformTaskDispatcher implements Runnable {
                     }
                     try {
                       if (false) throw (ProxyAuthenticationRequiredException) null;
-                      var8.result = UiWidget.a(true, var8.intArgument, (String) (var8.objectArgument)).a(-2049);
+                      var8.result = UiWidget.a(true, var8.intArgument, (String) (var8.objectArgument)).openSocket(-2049);
                     } catch (ProxyAuthenticationRequiredException decompiledCaughtParameter1) {
                       decompiledCaughtException = decompiledCaughtParameter1;
                       var3_ref = (ProxyAuthenticationRequiredException) (Object) decompiledCaughtException;
@@ -260,7 +260,7 @@ final class PlatformTaskDispatcher implements Runnable {
                         }
                         break;
                       case 12:
-                        var3_ref2 = PlatformTaskDispatcher.a(field_r, (String) (var8.objectArgument), field_f, (byte) 95);
+                        var3_ref2 = PlatformTaskDispatcher.openPreferencesFile(field_r, (String) (var8.objectArgument), field_f, (byte) 95);
                         var8.result = var3_ref2;
                         break;
                       case 16:
@@ -322,7 +322,7 @@ final class PlatformTaskDispatcher implements Runnable {
                         }
                         break;
                       case 13:
-                        var3_ref2 = PlatformTaskDispatcher.a("", (String) (var8.objectArgument), field_f, (byte) 101);
+                        var3_ref2 = PlatformTaskDispatcher.openPreferencesFile("", (String) (var8.objectArgument), field_f, (byte) 101);
                         var8.result = var3_ref2;
                         break;
                       case 6:
@@ -422,7 +422,7 @@ final class PlatformTaskDispatcher implements Runnable {
         return var6;
     }
 
-    private final static RandomAccessCacheFile a(String param0, String param1, int param2, byte param3) {
+    private final static RandomAccessCacheFile openPreferencesFile(String param0, String param1, int param2, byte param3) {
         try {
           int var6 = 0;
           RandomAccessCacheFile stackIn_15_0 = null;

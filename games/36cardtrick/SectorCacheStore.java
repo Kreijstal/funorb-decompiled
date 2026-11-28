@@ -34,7 +34,7 @@ final class SectorCacheStore {
           IntrusiveDeque.field_c[13] = dd.field_e;
           IntrusiveDeque.field_c[1] = sg.field_e;
           IntrusiveDeque.field_c[14] = gg.field_c;
-          IntrusiveDeque.field_c[16] = q.field_f;
+          IntrusiveDeque.field_c[16] = ProxySocketConnector.field_f;
           IntrusiveDeque.field_c[17] = db.field_b;
           IntrusiveDeque.field_c[10] = tf.field_m;
           if (!param0) {

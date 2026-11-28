@@ -1263,7 +1263,7 @@ final class lm {
                 }
                 var2 = CrossfadingMidiPcmStream.a(15136, "checking");
                 if (var2 != null) {
-                  pi.field_g = ProxyAuthenticationRequiredException.a(var2, -12465);
+                  ArchiveSourceManager.field_g = ProxyAuthenticationRequiredException.a(var2, -12465);
                 }
                 var2 = CrossfadingMidiPcmStream.a(15136, "create_namealreadytaken");
                 if (var2 != null) {
@@ -1446,11 +1446,11 @@ final class lm {
                 }
                 var2 = CrossfadingMidiPcmStream.a(15136, "create_email_confirm");
                 if (null != var2) {
-                  a.field_u = ProxyAuthenticationRequiredException.a(var2, -12465);
+                  SocketArchiveNetworkClient.field_u = ProxyAuthenticationRequiredException.a(var2, -12465);
                 }
                 var2 = CrossfadingMidiPcmStream.a(param0 ^ 15188, "create_age");
                 if (var2 != null) {
-                  pi.field_c = ProxyAuthenticationRequiredException.a(var2, -12465);
+                  ArchiveSourceManager.field_c = ProxyAuthenticationRequiredException.a(var2, -12465);
                 }
                 var2 = CrossfadingMidiPcmStream.a(15136, "create_u13_email");
                 if (var2 != null) {
@@ -1818,7 +1818,7 @@ final class lm {
                 }
                 var2 = CrossfadingMidiPcmStream.a(15136, "waitingfor_extradata");
                 if (null != var2) {
-                  ge.field_i = ProxyAuthenticationRequiredException.a(var2, -12465);
+                  ArchiveNetworkClient.field_i = ProxyAuthenticationRequiredException.a(var2, -12465);
                 }
                 var2 = CrossfadingMidiPcmStream.a(15136, "waitingfor_languages");
                 if (var2 != null) {
@@ -2592,15 +2592,15 @@ final class lm {
                 }
                 var2 = CrossfadingMidiPcmStream.a(15136, "members_expansion_benefits,0");
                 if (var2 != null) {
-                  a.field_v[0] = ProxyAuthenticationRequiredException.a(var2, -12465);
+                  SocketArchiveNetworkClient.field_v[0] = ProxyAuthenticationRequiredException.a(var2, -12465);
                 }
                 var2 = CrossfadingMidiPcmStream.a(15136, "members_expansion_benefits,1");
                 if (var2 != null) {
-                  a.field_v[1] = ProxyAuthenticationRequiredException.a(var2, -12465);
+                  SocketArchiveNetworkClient.field_v[1] = ProxyAuthenticationRequiredException.a(var2, -12465);
                 }
                 var2 = CrossfadingMidiPcmStream.a(param0 ^ 15188, "members_expansion_benefits,2");
                 if (null != var2) {
-                  a.field_v[2] = ProxyAuthenticationRequiredException.a(var2, param0 - 12581);
+                  SocketArchiveNetworkClient.field_v[2] = ProxyAuthenticationRequiredException.a(var2, param0 - 12581);
                 }
                 var2 = CrossfadingMidiPcmStream.a(15136, "members_expansion_price_top");
                 if (null != var2) {
@@ -2736,7 +2736,7 @@ final class lm {
                 }
                 var2 = CrossfadingMidiPcmStream.a(15136, "fs_button_tryagain");
                 if (null != var2) {
-                  ge.field_o = ProxyAuthenticationRequiredException.a(var2, -12465);
+                  ArchiveNetworkClient.field_o = ProxyAuthenticationRequiredException.a(var2, -12465);
                 }
                 var2 = CrossfadingMidiPcmStream.a(15136, "graphics_ui_fs_countdown");
                 if (var2 != null) {
@@ -3127,7 +3127,7 @@ final class lm {
             stackIn_15_0 = -125;
             break;
           }
-          md.clearIndexedSpriteDecodeBuffersWithIntGuard(stackIn_15_0);
+          ProxySocketConnector.clearIndexedSpriteDecodeBuffersWithIntGuard(stackIn_15_0);
           stackIn_16_0 = var1;
           return stackIn_16_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

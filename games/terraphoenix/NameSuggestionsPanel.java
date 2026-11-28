@@ -121,8 +121,8 @@ final class NameSuggestionsPanel extends WidgetContainer implements WidgetActiva
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         try {
-          hk.a((java.awt.Component) ((Object) param1), (byte) 93);
-          ResizableModalDialog.a((java.awt.Component) ((Object) param1), -24289);
+          hk.attachKeyboardListeners((java.awt.Component) ((Object) param1), (byte) 93);
+          ResizableModalDialog.attachMouseListeners((java.awt.Component) ((Object) param1), -24289);
           var2_int = -55 / ((param0 + 23) / 48);
           if (null != lk.field_d) {
             lk.field_d.register(0, (java.awt.Component) ((Object) param1));

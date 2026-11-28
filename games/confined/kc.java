@@ -43,23 +43,23 @@ final class kc {
         int var8 = 0;
         var8 = Confined.field_J ? 1 : 0;
         try {
-          var2_int = param1.g(8, param0 ^ 30035);
+          var2_int = param1.readBits(8, param0 ^ 30035);
           if (var2_int > 0) {
             throw new IllegalStateException("" + var2_int);
           }
           var3 = DiskArchiveRequest.a(37, param1) ? 1 : 0;
           var4 = DiskArchiveRequest.a(-128, param1) ? 1 : 0;
           var5 = new rm();
-          var5.field_b = (short)param1.g(16, 0);
+          var5.field_b = (short)param1.readBits(16, 0);
           var5.field_x = bn.a(param0 ^ 30035, param1, var5.field_x, 16);
           var5.field_v = bn.a(0, param1, var5.field_v, 16);
           var5.field_F = bn.a(0, param1, var5.field_F, 16);
-          var5.field_w = (short)param1.g(16, 0);
+          var5.field_w = (short)param1.readBits(16, 0);
           var5.field_z = bn.a(0, param1, var5.field_z, 16);
           var5.field_m = bn.a(param0 - 30035, param1, var5.field_m, 16);
           var5.field_J = bn.a(0, param1, var5.field_J, 16);
           if (var3 != 0) {
-            var5.field_g = (short)param1.g(16, 0);
+            var5.field_g = (short)param1.readBits(16, 0);
             var5.field_E = bn.a(0, param1, var5.field_E, 16);
             var5.field_y = bn.a(param0 ^ 30035, param1, var5.field_y, 16);
             var5.field_r = bn.a(0, param1, var5.field_r, 16);
@@ -68,7 +68,7 @@ final class kc {
             var5.field_o = bn.a(0, param1, var5.field_o, 16);
           }
           if (var4 != 0) {
-            param1.g(16, 0);
+            param1.readBits(16, 0);
             var5.field_h = bn.a(0, param1, var5.field_h, 16);
             var5.field_u = bn.a(param0 ^ 30035, param1, var5.field_u, 16);
             var5.field_k = bn.a(0, param1, var5.field_k, 16);
@@ -169,8 +169,8 @@ final class kc {
           var6.field_p = 0;
           var7 = new qh(var4, true);
           var7.field_p = 0;
-          var7.a((byte) -86, jf.a(8947848, (byte) 99));
-          var7.b(1, -93).a(-1, jf.a(11184810, (byte) 86)).a(1918, 2236962);
+          var7.a((byte) -86, ArchiveNetworkClient.a(8947848, (byte) 99));
+          var7.b(1, -93).a(-1, ArchiveNetworkClient.a(11184810, (byte) 86)).a(1918, 2236962);
           this.field_j = (WidgetRenderer) ((Object) new b(param1, 2, 2, 16777215, -1, 5, 5, 15, 15, 4473924));
           discarded$0 = new li(param1, 2, 2, 16777215, -1, 16777215, 16729156, 4473924);
           discarded$1 = new rc(param1, 16777215, -1, 125269879, 4473924, 3, 268435455);

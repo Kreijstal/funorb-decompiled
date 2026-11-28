@@ -30,15 +30,15 @@ final class fa extends IntrusiveNode {
     }
 
     final static int d(int param0) {
-        mc.field_c.a((byte) -123);
+        mc.field_c.pollArchiveSources((byte) -123);
         if (param0 != 0) {
           field_p = (PlatformTaskDispatcher) null;
-          if (!od.field_v.f(26348)) {
+          if (!od.field_v.pollNetwork(26348)) {
             return vc.a((byte) 35);
           }
           return 0;
         }
-        if (!od.field_v.f(26348)) {
+        if (!od.field_v.pollNetwork(26348)) {
           return vc.a((byte) 35);
         }
         return 0;

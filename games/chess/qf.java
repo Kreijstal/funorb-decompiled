@@ -99,7 +99,7 @@ final class qf {
             var26 = el.field_z[1];
             var32Lifetime1Lifetime2 = var26;
             var32Lifetime1Lifetime3 = var26;
-            var25 = mn.field_l;
+            var25 = ProxySocketConnector.field_l;
             var24.field_b.a((byte) -110, var25, var26, 12);
             var27 = pi.field_d;
             var29 = el.field_z[2];

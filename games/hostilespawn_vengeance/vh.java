@@ -223,10 +223,10 @@ final class vh {
         RuntimeException var2 = null;
         var4 = HostileSpawn.field_I ? 1 : 0;
         try {
-          var5 = (hm) (ih.field_x.beginForward(-77));
+          var5 = (hm) (SocketArchiveNetworkClient.field_x.beginForward(-77));
           while (var5 != null) {
             MouseInput.a(param1, 2, var5);
-            var5 = (hm) (ih.field_x.nextForward(12684));
+            var5 = (hm) (SocketArchiveNetworkClient.field_x.nextForward(12684));
           }
           var2_int = 109 / ((param0 + 73) / 52);
           var3 = DelayedPacket.field_h.beginForward(-79);

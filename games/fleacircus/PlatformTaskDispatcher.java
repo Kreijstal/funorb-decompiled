@@ -126,7 +126,7 @@ final class PlatformTaskDispatcher implements Runnable {
                     }
                     try {
                       if (false) throw (ProxyAuthenticationRequiredException) null;
-                      var8.result = ol.a((String) (var8.objectArgument), 89, var8.intArgument).a(true);
+                      var8.result = ol.a((String) (var8.objectArgument), 89, var8.intArgument).openSocket(true);
                     } catch (ProxyAuthenticationRequiredException decompiledCaughtParameter1) {
                       decompiledCaughtException = decompiledCaughtParameter1;
                       var3_ref = (ProxyAuthenticationRequiredException) (Object) decompiledCaughtException;
@@ -177,11 +177,11 @@ final class PlatformTaskDispatcher implements Runnable {
                         }
                         break;
                       case 12:
-                        var3_ref2 = PlatformTaskDispatcher.a((String) (var8.objectArgument), field_p, 18933, field_w);
+                        var3_ref2 = PlatformTaskDispatcher.openPreferencesFile((String) (var8.objectArgument), field_p, 18933, field_w);
                         var8.result = var3_ref2;
                         break;
                       case 13:
-                        var3_ref2 = PlatformTaskDispatcher.a((String) (var8.objectArgument), field_p, 18933, "");
+                        var3_ref2 = PlatformTaskDispatcher.openPreferencesFile((String) (var8.objectArgument), field_p, 18933, "");
                         var8.result = var3_ref2;
                         break;
                       case 16:
@@ -407,7 +407,7 @@ final class PlatformTaskDispatcher implements Runnable {
         return this.enqueueTask(param0, -125, !param1 ? 1 : 22, param2, 0);
     }
 
-    private final static BoundedRandomAccessFile a(String param0, int param1, int param2, String param3) {
+    private final static BoundedRandomAccessFile openPreferencesFile(String param0, int param1, int param2, String param3) {
         try {
           BoundedRandomAccessFile stackIn_14_0 = null;
           int decompiledRegionSelector0 = 0;
@@ -432,7 +432,7 @@ final class PlatformTaskDispatcher implements Runnable {
           var6 = 0;
           if (param2 != 18933) {
             var9 = (String) null;
-            PlatformTaskDispatcher.a((String) null, 43, 59, (String) null);
+            PlatformTaskDispatcher.openPreferencesFile((String) null, 43, 59, (String) null);
           }
           while (var5.length > var6) {
             var7 = var5[var6];

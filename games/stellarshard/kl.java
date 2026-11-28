@@ -78,8 +78,8 @@ final class kl extends IntrusiveNode {
                 stackIn_19_0 = RichTextLayout.field_g.length;
               }
               var7 = stackIn_19_0;
-              if (o.field_g.length <= fb.field_e.length) {
-                stackIn_22_0 = fb.field_e.length;
+              if (o.field_g.length <= ArchiveNetworkClient.field_e.length) {
+                stackIn_22_0 = ArchiveNetworkClient.field_e.length;
               } else {
                 stackIn_22_0 = o.field_g.length;
               }
@@ -95,10 +95,10 @@ final class kl extends IntrusiveNode {
               }
               if (7 + var7 <= var3 &&
                 var8 + var7 + 7 > var3) {
-                if (fb.field_e.length <= var3 + (-7 - var7)) {
+                if (ArchiveNetworkClient.field_e.length <= var3 + (-7 - var7)) {
                   stackIn_34_0 = "";
                 } else {
-                  stackIn_34_0 = fb.field_e[-var7 - 7 + var3];
+                  stackIn_34_0 = ArchiveNetworkClient.field_e[-var7 - 7 + var3];
                 }
                 var6 = stackIn_34_0;
               }

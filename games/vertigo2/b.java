@@ -560,7 +560,7 @@ final class b {
           return true;
         }
         if (1 == param0) {
-          PacketBuffer.a(this.field_o, param1, (byte) -96);
+          PacketBuffer.writeLongPayloadPacket(this.field_o, param1, (byte) -96);
           return true;
         }
         if (param0 == 2) {

@@ -1861,7 +1861,7 @@ final class oj {
                 }
                 var2 = MusicPatchNode.a("unpacking_graphics", false);
                 if (var2 != null) {
-                  vb.field_e = re.a(18990, var2);
+                  ArchiveNetworkClient.field_e = re.a(18990, var2);
                 }
                 var2 = MusicPatchNode.a("unpacking_models", false);
                 if (null != var2) {

@@ -36,7 +36,7 @@ final class ub {
     final boolean a(boolean param0) {
         if (!param0) {
           field_a = (int[][]) null;
-          if (ej.field_q == this) {
+          if (ArchiveNetworkClient.field_q == this) {
             return true;
           }
           if (this != ValidationStatusIcon.field_N) {
@@ -44,7 +44,7 @@ final class ub {
           }
           return true;
         }
-        if (ej.field_q == this) {
+        if (ArchiveNetworkClient.field_q == this) {
           return true;
         }
         if (this == ValidationStatusIcon.field_N) {

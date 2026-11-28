@@ -219,7 +219,7 @@ final class ch extends DefaultTextWidgetRenderer {
             var10 = (RgbSprite[]) null;
             this.a((RgbSprite[]) null, -43, 125);
           }
-          cl.d((byte) -110);
+          SocketArchiveNetworkClient.d((byte) -110);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

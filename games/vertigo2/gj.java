@@ -587,7 +587,7 @@ final class gj extends TextureOperator {
                     decompiledSharedTail0 = (var19 != 0);
                   }
                   if (decompiledSharedTail0) {
-                    var14 = Vertigo2.a(new String[]{(String) (var11)}, eg.field_q, -123);
+                    var14 = Vertigo2.a(new String[]{(String) (var11)}, SocketArchiveNetworkClient.field_q, -123);
                   }
                 } else {
                   var13_ref = MovingLevelTile.field_y;

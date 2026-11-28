@@ -42,10 +42,10 @@ final class CachedArchiveSource extends ArchiveSource {
           this.field_s = (IntrusiveDeque) null;
         }
         if (null == this.field_i) {
-          if (this.field_j.a(20)) {
+          if (this.field_j.isPriorityQueueFull(20)) {
             return null;
           }
-          this.field_i = (ArchiveRequest) ((Object) this.field_j.a((byte) 0, 255, true, (byte) -51, this.field_c));
+          this.field_i = (ArchiveRequest) ((Object) this.field_j.enqueueRequest((byte) 0, 255, true, (byte) -51, this.field_c));
         }
         if (this.field_i.field_r) {
           return null;
@@ -69,10 +69,10 @@ final class CachedArchiveSource extends ArchiveSource {
             decompiledCaughtException = decompiledCaughtParameter0;
             var3 = decompiledCaughtException;
             this.field_v = null;
-            if (this.field_j.a(20)) {
+            if (this.field_j.isPriorityQueueFull(20)) {
               this.field_i = null;
             } else {
-              this.field_i = (ArchiveRequest) ((Object) this.field_j.a((byte) 0, 255, true, (byte) -51, this.field_c));
+              this.field_i = (ArchiveRequest) ((Object) this.field_j.enqueueRequest((byte) 0, 255, true, (byte) -51, this.field_c));
             }
             return null;
           }
@@ -85,10 +85,10 @@ final class CachedArchiveSource extends ArchiveSource {
           } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
             decompiledCaughtException = decompiledCaughtParameter1;
             var3 = decompiledCaughtException;
-            this.field_j.e((byte) -127);
+            this.field_j.resetAfterValidationFailure((byte) -127);
             this.field_v = null;
-            if (!this.field_j.a(param0 ^ -106)) {
-              this.field_i = (ArchiveRequest) ((Object) this.field_j.a((byte) 0, 255, true, (byte) -51, this.field_c));
+            if (!this.field_j.isPriorityQueueFull(param0 ^ -106)) {
+              this.field_i = (ArchiveRequest) ((Object) this.field_j.enqueueRequest((byte) 0, 255, true, (byte) -51, this.field_c));
             } else {
               this.field_i = null;
             }
@@ -238,20 +238,20 @@ final class CachedArchiveSource extends ArchiveSource {
               if (this.field_f[param0] != -1) {
                 throw new RuntimeException();
               }
-              if (this.field_j.a((byte) 105)) {
+              if (this.field_j.isPrefetchQueueFull((byte) 105)) {
                 return null;
               }
-              var4 = this.field_j.a((byte) 2, this.field_c, false, (byte) -51, param0);
+              var4 = this.field_j.enqueueRequest((byte) 2, this.field_c, false, (byte) -51, param0);
             }
           } else {
             if (this.field_k != null &&
               this.field_f[param0] != -1) {
               var4 = this.field_u.readNow(param0, 23538, this.field_k);
             } else {
-              if (this.field_j.a(20)) {
+              if (this.field_j.isPriorityQueueFull(20)) {
                 return null;
               }
-              var4 = this.field_j.a((byte) 2, this.field_c, true, (byte) -51, param0);
+              var4 = this.field_j.enqueueRequest((byte) 2, this.field_c, true, (byte) -51, param0);
             }
           }
           this.field_t.a(false, (long)param0, (IntrusiveNode) (var4));
@@ -304,10 +304,10 @@ final class CachedArchiveSource extends ArchiveSource {
             this.field_f[param0] = (byte)-1;
             ((ArchiveRequest) (var4)).unlink(0);
             if (((ArchiveRequest) (var4)).field_w) {
-              if (this.field_j.a(20)) {
+              if (this.field_j.isPriorityQueueFull(20)) {
                 return null;
               }
-              var4 = this.field_j.a((byte) 2, this.field_c, true, (byte) -51, param0);
+              var4 = this.field_j.enqueueRequest((byte) 2, this.field_c, true, (byte) -51, param0);
               this.field_t.a(false, (long)param0, (IntrusiveNode) (var4));
             }
             return null;
@@ -343,15 +343,15 @@ final class CachedArchiveSource extends ArchiveSource {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6 = (RuntimeException) (Object) decompiledCaughtException;
-          this.field_j.e((byte) -58);
+          this.field_j.resetAfterValidationFailure((byte) -58);
           ((ArchiveRequest) (var4)).unlink(0);
           if (!((ArchiveRequest) (var4)).field_w) {
             return null;
           }
-          if (this.field_j.a(20)) {
+          if (this.field_j.isPriorityQueueFull(20)) {
             return null;
           }
-          var4 = this.field_j.a((byte) 2, this.field_c, true, (byte) -51, param0);
+          var4 = this.field_j.enqueueRequest((byte) 2, this.field_c, true, (byte) -51, param0);
           this.field_t.a(false, (long)param0, (IntrusiveNode) (var4));
           return null;
         }
@@ -457,7 +457,7 @@ final class CachedArchiveSource extends ArchiveSource {
                   this.field_n = this.field_n + 1;
                   continue;
                 }
-                if (!this.field_j.a((byte) 101)) {
+                if (!this.field_j.isPrefetchQueueFull((byte) 101)) {
                   if (this.field_f[this.field_n] != 1) {
                     discarded$2 = this.a(this.field_n, 101, 2);
                   }

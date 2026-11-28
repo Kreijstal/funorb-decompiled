@@ -11,7 +11,7 @@ final class GzipDecompressor {
     }
 
     final static int getAssetLoadingProgress(boolean param0) {
-        if (hj.field_f < 2) {
+        if (SocketConnector.field_f < 2) {
           return 0;
         }
         if (ob.field_c == 0) {

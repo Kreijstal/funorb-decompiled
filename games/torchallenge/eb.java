@@ -50,7 +50,7 @@ final class eb extends IntrusiveNode {
           cj.field_d = param1;
           GameScreen.field_h = null;
           gj.field_a = qc.field_i;
-          vb.field_m = param0;
+          ArchiveNetworkClient.field_m = param0;
           return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

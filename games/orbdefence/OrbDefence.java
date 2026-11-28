@@ -117,7 +117,7 @@ public final class OrbDefence extends NetworkGameClient {
         if (ModalDialog.c(true)) {
           var3 = this.reconnectAndResendRequests(7);
           if (2 == var3) {
-            md.b((byte) -121);
+            ProxySocketConnector.b((byte) -121);
           }
         }
     }
@@ -232,7 +232,7 @@ public final class OrbDefence extends NetworkGameClient {
           jd.field_g = new int[DialogMessagePane.field_K];
           m.field_a = new int[DialogMessagePane.field_K];
           wh.field_b = new int[DialogMessagePane.field_K];
-          md.field_i = new byte[DialogMessagePane.field_K][];
+          ProxySocketConnector.field_i = new byte[DialogMessagePane.field_K][];
           fl.field_a = new byte[DialogMessagePane.field_K][];
           wc.field_a = new int[DialogMessagePane.field_K];
           var18.position = param0.length - (7 + 8 * DialogMessagePane.field_K);
@@ -283,7 +283,7 @@ public final class OrbDefence extends NetworkGameClient {
               var22 = new byte[var8];
               var20 = var22;
               var10 = var20;
-              md.field_i[var5Lifetime5] = var22;
+              ProxySocketConnector.field_i[var5Lifetime5] = var22;
               var11 = 0;
               var12 = var18.readUnsignedByte((byte) 90);
               if ((1 & var12) == 0) {
@@ -410,9 +410,9 @@ public final class OrbDefence extends NetworkGameClient {
         ja.clearStaticReferences(-92);
         nk.clearStaticReferences((byte) 15);
         ql.clearStaticReferences((byte) 50);
-        ge.clearStaticReferences(1);
+        ArchiveNetworkClient.clearStaticReferences(1);
         DiskCacheWorker.b(-122);
-        pi.clearStaticReferences(param0);
+        ArchiveSourceManager.clearStaticReferences(param0);
         BufferedRandomAccessFile.c((byte) 78);
         BufferedSocket.clearStaticReferences((byte) -95);
         IntrusiveNode.clearStaticReferences(40);
@@ -473,7 +473,7 @@ public final class OrbDefence extends NetworkGameClient {
         IsaacRandom.clearStaticReferences((byte) -77);
         nd.clearStaticReferences(-16996);
         PcmOutputWorker.clearStaticReferences((byte) 90);
-        a.clearStaticReferences((byte) 29);
+        SocketArchiveNetworkClient.clearStaticReferences((byte) 29);
         il.resetStaticState(0);
         NetworkArchiveRequest.clearStaticReferences((byte) 61);
         DiskArchiveRequest.clearStaticReferences((byte) -99);
@@ -568,7 +568,7 @@ public final class OrbDefence extends NetworkGameClient {
         DualLinkDeque.clearStaticReferences(param0);
         nf.clearDeclaredStaticReferences(127);
         lc.releaseDeclaredStaticReferences(96);
-        md.clearStaticReferences(-77);
+        ProxySocketConnector.clearStaticReferences(-77);
         ih.clearStaticReferences(-127);
         NodeHashTableIterator.clearStaticReferences(-1);
         DualLinkDequeIterator.resetStaticState(false);
@@ -638,7 +638,7 @@ public final class OrbDefence extends NetworkGameClient {
           return;
         }
         if (!ad.a((byte) -72)) {
-          j.a(100.0f, ge.field_i, (byte) 113);
+          j.a(100.0f, ArchiveNetworkClient.field_i, (byte) 113);
           PasswordValidator.a(0, var7);
           return;
         }

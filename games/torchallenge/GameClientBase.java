@@ -365,7 +365,7 @@ abstract class GameClientBase extends GameApplet {
                               return;
                             }
                             stackIn_33_0 = (var2 == 12);
-                            var3 = oa.a(stackIn_33_0, true);
+                            var3 = ArchiveSourceManager.a(stackIn_33_0, true);
                             kf.a(param0 ^ 5001, var3);
                           } else {
                             pi.a((byte) 7);

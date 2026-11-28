@@ -246,7 +246,7 @@ final class gb {
                 FullscreenFocusCanvas.field_d[var5] = li.field_c[var5];
               }
               FullscreenFocusCanvas.field_d[var4 - 3] = "";
-              FullscreenFocusCanvas.field_d[var4 - 2] = ge.field_o;
+              FullscreenFocusCanvas.field_d[var4 - 2] = ArchiveNetworkClient.field_o;
               DraggableWidgetContainer.field_B[-2 + var4] = 0;
               FullscreenStatusDialog.field_O[0] = 3;
               FullscreenFocusCanvas.field_d[var4 - 1] = th.field_d;

@@ -61,7 +61,7 @@ abstract class AwtRasterBuffer {
               stackIn_13_0 = 32;
             }
             var5 = stackIn_13_0;
-            var6 = var5 - 1 & sg.field_i;
+            var6 = var5 - 1 & ArchiveSourceManager.field_i;
             if (var5 / 2 <= var6) {
               var6 = var5 - var6;
             }

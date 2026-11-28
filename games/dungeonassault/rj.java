@@ -38,7 +38,7 @@ abstract class rj extends IntrusiveNode {
         RuntimeException var4 = null;
         var8 = DungeonAssault.field_K;
         try {
-          var4_int = param0.j(-106, param2);
+          var4_int = param0.readBits(-106, param2);
           if (var4_int == 0) {
             return null;
           }
@@ -46,8 +46,8 @@ abstract class rj extends IntrusiveNode {
             param3.length != var4_int) {
             param3 = new byte[var4_int];
           }
-          var5 = param0.j(-122, 3);
-          var6 = (byte)param0.j(119, 8);
+          var5 = param0.readBits(-122, 3);
+          var6 = (byte)param0.readBits(119, 8);
           if (param1) {
             field_j = (String[]) null;
           }
@@ -57,7 +57,7 @@ abstract class rj extends IntrusiveNode {
             }
           } else {
             for (var7 = 0; var7 < var4_int; var7++) {
-              param3[var7] = (byte)(var6 + param0.j(-73, var5));
+              param3[var7] = (byte)(var6 + param0.readBits(-73, var5));
             }
           }
           stackIn_18_0 = (byte[]) (param3);
@@ -274,7 +274,7 @@ abstract class rj extends IntrusiveNode {
           wh.field_e = dupTemp$0;
           EmailFormatValidator.field_o = dupTemp$0;
           if (ImageProducerRasterBuffer.field_m.status != 1) {
-            pd.field_A = tp.field_B;
+            pd.field_A = SocketArchiveNetworkClient.field_B;
           } else {
             try {
               sp.field_c = new BufferedSocket((java.net.Socket) (ImageProducerRasterBuffer.field_m.result), sc.field_q);
@@ -289,7 +289,7 @@ abstract class rj extends IntrusiveNode {
               AccountRegistrationPanel.a(MouseInput.field_g, ac.field_B, ByteArrayPoolSupport.field_b, 119, SpriteGeometry.field_D);
               op.a(0, -1);
             } catch (IOException iOException) {
-              pd.field_A = tp.field_B;
+              pd.field_A = SocketArchiveNetworkClient.field_B;
             }
           }
           ImageProducerRasterBuffer.field_m = null;

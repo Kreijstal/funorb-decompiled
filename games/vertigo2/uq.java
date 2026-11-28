@@ -147,7 +147,7 @@ final class uq {
                   var9 = 0;
                   break;
                 }
-                param3 = param3 + (255 & kr.field_c[param4]);
+                param3 = param3 + (255 & ArchiveSourceManager.field_c[param4]);
               }
             }
             var10Lifetime1 = 0;

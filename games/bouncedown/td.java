@@ -44,7 +44,7 @@ abstract class td {
           kc.a(param0);
           return;
         }
-        hh.field_p.a(true, 1);
+        hh.field_p.writeCipheredByte(true, 1);
         ByteArrayPoolSupport.a(0, true);
         kc.a(param0);
     }

@@ -11,11 +11,11 @@ final class sj {
     static java.util.zip.CRC32 field_b;
     static int field_f;
 
-    final static tl a(int param0, String param1, byte param2) {
-        wf var3 = null;
+    final static SocketConnector a(int param0, String param1, byte param2) {
+        ProxySocketConnector var3 = null;
         RuntimeException var3_ref = null;
         ResourceArchive var4 = null;
-        wf stackIn_3_0 = null;
+        ProxySocketConnector stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -25,11 +25,11 @@ final class sj {
             var4 = (ResourceArchive) null;
             sj.a(42, -122, (ResourceArchive) null, 40);
           }
-          var3 = new wf();
-          ((tl) ((Object) var3)).field_d = param0;
-          ((tl) ((Object) var3)).field_c = param1;
+          var3 = new ProxySocketConnector();
+          ((SocketConnector) ((Object) var3)).field_d = param0;
+          ((SocketConnector) ((Object) var3)).field_c = param1;
           stackIn_3_0 = var3;
-          return (tl) ((Object) stackIn_3_0);
+          return (SocketConnector) ((Object) stackIn_3_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3_ref = decompiledCaughtException;

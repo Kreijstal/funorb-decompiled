@@ -10,7 +10,7 @@ final class hf extends IntrusiveNode {
     RawPcmStream field_h;
     static int field_k;
 
-    final static void a(boolean param0, java.awt.Component param1) {
+    final static void attachKeyboardListeners(boolean param0, java.awt.Component param1) {
         try {
           param1.setFocusTraversalKeysEnabled(param0);
           param1.addKeyListener(ad.field_b);

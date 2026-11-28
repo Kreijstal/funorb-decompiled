@@ -64,9 +64,9 @@ final class tf {
             db.field_w[param1].draw(256, param2 + 44);
           }
           if ((32800 & ~param3 & 1 << param1) != 0) {
-            var4 = n.field_e;
+            var4 = SocketConnector.field_e;
           } else {
-            var4 = jf.field_c[param1];
+            var4 = ArchiveNetworkClient.field_c[param1];
           }
           var5 = pn.field_a.lineCount(var4, 171);
           pn.field_a.drawParagraph(var4, 80, -166 - pn.field_a.field_C + (-(var5 * 10) + 274 + param2), 171, 1000, 4243584, -1, 0, 0, 20);

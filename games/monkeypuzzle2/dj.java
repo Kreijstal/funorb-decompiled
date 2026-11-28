@@ -21,7 +21,7 @@ final class dj {
           if (!ec.field_a.ensureIndexLoaded(71)) {
             return IntrusiveNode.field_b;
           }
-          return tk.field_a;
+          return KeyboardInputHandler.field_a;
         }
         if (!fj.field_B.ensureIndexLoaded(116)) {
           return vb.field_i;

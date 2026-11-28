@@ -100,7 +100,7 @@ class pv extends IntrusiveNode {
           SnowEvent.field_q.a((byte) -58, -2 + (ByteStorage.field_f.field_p - (rg.field_h + 20)), 0, 22 + rg.field_h, ByteStorage.field_f.field_sb, rj.field_j, 2);
           jj.field_wb.a(40, 31407, DisableMoveSlotEffect.field_i.field_sb, 0, -40 + DisableMoveSlotEffect.field_i.field_p);
           GzipDecompressor.field_a.a(30, 31407, ho.field_g.field_sb, 0, 0);
-          vm.field_i.a(-40 + (ho.field_g.field_p - 32), 31407, ho.field_g.field_sb, 0, 30);
+          ArchiveNetworkClient.field_i.a(-40 + (ho.field_g.field_p - 32), 31407, ho.field_g.field_sb, 0, 30);
           var2_int = 3 + ld.field_q;
           if (qha.field_c.length < 2) {
             var2_int--;
@@ -108,15 +108,15 @@ class pv extends IntrusiveNode {
           if (param0) {
             var2_int--;
           }
-          var3 = (-10 + (vm.field_i.field_p - 5) + (-5 - (-2 - (1 + var2_int) / 2))) / (1 + var2_int) - 2;
+          var3 = (-10 + (ArchiveNetworkClient.field_i.field_p - 5) + (-5 - (-2 - (1 + var2_int) / 2))) / (1 + var2_int) - 2;
           if (var3 > 30) {
             var3 = 30;
           }
-          var4 = -5 + vm.field_i.field_p - 5 - (var3 + 2) * var2_int;
+          var4 = -5 + ArchiveNetworkClient.field_i.field_p - 5 - (var3 + 2) * var2_int;
           if (var4 > 40) {
             var4 = 40;
           }
-          CreaturePoseEffect.field_j.a(var4, 31407, -5 + (vm.field_i.field_sb - 5), 5, 5);
+          CreaturePoseEffect.field_j.a(var4, 31407, -5 + (ArchiveNetworkClient.field_i.field_sb - 5), 5, 5);
           var5 = var4 + 5 + 2;
           for (var6 = 0; 4 + ld.field_q > var6; var6++) {
             if ((1 != var6 ||

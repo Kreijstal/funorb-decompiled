@@ -36,14 +36,14 @@ final class ConfirmedEmailAvailabilityValidator extends TextFieldValidator {
           var8 = new CipherPacketBuffer(param0.getFileByName("", "logo.fo3d", 0));
           var10 = var8;
           var3 = var10.readUnsignedByte(32270);
-          var10.c(false);
+          var10.beginBitAccess(false);
           TextLayout.field_f = gj.a(param1, var10);
           ValidationStatusIcon.field_J = new pf[var3];
           ClientLookupTables.field_f = new int[var3][];
           for (var4 = 0; var4 < var3; var4++) {
             ValidationStatusIcon.field_J[var4] = tf.a(4, var8);
           }
-          var10.q(-28);
+          var10.endBitAccess(-28);
           var9 = 0;
           var4Lifetime1 = var9;
           while (var3 > var9) {

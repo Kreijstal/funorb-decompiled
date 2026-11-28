@@ -132,7 +132,7 @@ final class mi {
           gl.field_Ib = dk.a(200, 1, "da_stressing_music");
           dd.field_B = dk.a(100, 1, "da_defeat_monster");
           FullscreenFocusCanvas.field_b.field_A.releasePatchSampleIds(-50);
-          ha.field_k = null;
+          ProxySocketConnector.field_k = null;
           return;
         }
         g.field_Lb = dk.a(180, 1, "da_ingame_stealth");
@@ -141,16 +141,16 @@ final class mi {
         gl.field_Ib = dk.a(200, 1, "da_stressing_music");
         dd.field_B = dk.a(100, 1, "da_defeat_monster");
         FullscreenFocusCanvas.field_b.field_A.releasePatchSampleIds(-50);
-        ha.field_k = null;
+        ProxySocketConnector.field_k = null;
     }
 
     final static void b(int param0) {
         int var1 = 0;
         if (DelegatingCanvas.field_d >= 224) {
-          um.a(256, false);
+          SocketConnector.a(256, false);
         } else {
           var1 = DelegatingCanvas.field_d % 32;
-          um.a(-var1 + (DelegatingCanvas.field_d + 32), false);
+          SocketConnector.a(-var1 + (DelegatingCanvas.field_d + 32), false);
         }
         if (param0 == 210041889) {
           return;

@@ -30,14 +30,14 @@ final class qd {
           this.field_c = gh.field_c;
         }
         if (this.field_d != 0 &&
-          fb.field_n != 0) {
+          ArchiveNetworkClient.field_n != 0) {
           if (this.field_a <= 0) {
             this.field_a = NanoFrameTimer.field_m;
           }
           this.field_a = this.field_a - 1;
         }
         if (0 == gh.field_c &&
-          fb.field_n == 0) {
+          ArchiveNetworkClient.field_n == 0) {
           this.field_d = 0;
         }
         if (~this.field_d == param2 && (this.field_g ||

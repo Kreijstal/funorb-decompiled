@@ -35,19 +35,19 @@ final class DialogMessagePane extends DequeWidgetContainer implements WidgetActi
     }
 
     final static AccountServiceResult pollAccountCreationResult(byte param0) {
-        if (lc.field_c == tl.field_e) {
+        if (lc.field_c == SocketConnector.field_e) {
           throw new IllegalStateException();
         }
         if (param0 != 93) {
           DialogMessagePane.e((byte) -51);
           if (lc.field_c == ValidationStatusWidget.field_P) {
-            lc.field_c = tl.field_e;
+            lc.field_c = SocketConnector.field_e;
             return qc.field_i;
           }
           return null;
         }
         if (lc.field_c == ValidationStatusWidget.field_P) {
-          lc.field_c = tl.field_e;
+          lc.field_c = SocketConnector.field_e;
           return qc.field_i;
         }
         return null;

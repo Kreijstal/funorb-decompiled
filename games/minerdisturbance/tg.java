@@ -70,8 +70,8 @@ final class tg {
           }
           if (decompiledFrameRemainder0) {
             if (!il.field_n) {
-              if (pe.field_pb >= ch.field_f) {
-                stackIn_20_0 = (ConfirmedEmailAvailabilityValidator.field_o + ch.field_f > pe.field_pb) ? 1 : 0;
+              if (pe.field_pb >= ArchiveNetworkClient.field_f) {
+                stackIn_20_0 = (ConfirmedEmailAvailabilityValidator.field_o + ArchiveNetworkClient.field_f > pe.field_pb) ? 1 : 0;
               } else {
                 stackIn_20_0 = 0;
               }
@@ -83,12 +83,12 @@ final class tg {
               pe.field_pb = 0;
             } else {
               if (il.field_n) {
-                pe.field_pb = ch.field_f;
+                pe.field_pb = ArchiveNetworkClient.field_f;
               } else {
                 if (var2_int == 0) {
                   pe.field_pb = 0;
                 } else {
-                  pe.field_pb = ch.field_f;
+                  pe.field_pb = ArchiveNetworkClient.field_f;
                 }
               }
             }
@@ -103,7 +103,7 @@ final class tg {
             }
           }
           if (!il.field_n &&
-            ch.field_f > pe.field_pb &&
+            ArchiveNetworkClient.field_f > pe.field_pb &&
             EmailFormatValidator.field_i) {
             lj.field_q = CrossfadingMidiPcmStream.field_y;
             pe.field_pb = 0;

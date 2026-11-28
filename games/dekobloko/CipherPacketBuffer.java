@@ -18,28 +18,28 @@ final class CipherPacketBuffer extends PacketBuffer {
         super(byteArrayArgument1);
     }
 
-    final int computeInteger1644(byte byteArgument1) {
+    final int readCipheredByte(byte byteArgument1) {
         int integerLocal1 = -7 / ((byteArgument1 + 78) / 33);
         int integerLocal2 = this.position;
         this.position = this.position + 1;
         return this.payload[integerLocal2] - this.mixedSupport030State0002.nextInt(false) & 255;
     }
 
-    final void performAction1649(int integerArgument1) {
+    final void beginBitWrite(int integerArgument1) {
         this.payload[this.position] = (byte) 0;
         this.integerState0797 = 8;
         if (integerArgument1 <= 44) {
-          CipherPacketBuffer.computeString1636((byte) 40, -33L);
+          CipherPacketBuffer.formatGmtTimestamp((byte) 40, -33L);
         }
     }
 
-    final void performAction1646(int integerArgument1) {
+    final void finishBitWrite(int integerArgument1) {
         if (this.integerState0797 < 8) {
           this.position = this.position + 1;
           this.integerState0797 = 8;
         }
         if (integerArgument1 != 20) {
-          this.computeInteger1644((byte) -104);
+          this.readCipheredByte((byte) -104);
         }
     }
 
@@ -47,7 +47,7 @@ final class CipherPacketBuffer extends PacketBuffer {
         super(integerArgument1);
     }
 
-    final void performAction1638(int integerArgument1, int integerArgument2, int integerArgument3) {
+    final void writeBits(int integerArgument1, int integerArgument2, int integerArgument3) {
         int integerLocal1 = 0;
         int integerLocal2 = 0;
         int integerLocal3;
@@ -118,10 +118,10 @@ final class CipherPacketBuffer extends PacketBuffer {
         }
     }
 
-    final void performAction1645(byte byteArgument1) {
+    final void beginBitAccess(byte byteArgument1) {
         this.integerState0798 = 8 * this.position;
         if (byteArgument1 != -108) {
-          this.performAction1646(119);
+          this.finishBitWrite(119);
         }
     }
 
@@ -152,7 +152,7 @@ final class CipherPacketBuffer extends PacketBuffer {
         }
     }
 
-    final void performAction1639(int integerArgument1, byte[] byteArrayArgument2, int integerArgument3, int integerArgument4) {
+    final void readCipheredBytes(int integerArgument1, byte[] byteArrayArgument2, int integerArgument3, int integerArgument4) {
         int integerLocal1 = 0;
         int integerLocal2 = 0;
         RuntimeException stackRuntimeExceptionLocal3 = null;
@@ -185,7 +185,7 @@ final class CipherPacketBuffer extends PacketBuffer {
         }
     }
 
-    final void performAction1647(byte byteArgument1) {
+    final void endBitAccess(byte byteArgument1) {
         this.position = (7 + this.integerState0798) / 8;
         if (byteArgument1 >= -97) {
           rgbSpriteState0061 = (RgbSprite) null;
@@ -203,7 +203,7 @@ final class CipherPacketBuffer extends PacketBuffer {
         stringArrayState0049 = null;
     }
 
-    final void performAction1641(int integerArgument1, int integerArgument2) {
+    final void writeCipheredByte(int integerArgument1, int integerArgument2) {
         int integerLocal1 = this.position;
         this.position = this.position + 1;
         this.payload[integerLocal1] = (byte)(integerArgument1 + this.mixedSupport030State0002.nextInt(false));
@@ -212,7 +212,7 @@ final class CipherPacketBuffer extends PacketBuffer {
         }
     }
 
-    final int computeInteger1637(int integerArgument1, byte byteArgument2) {
+    final int readBits(int integerArgument1, byte byteArgument2) {
         int previousIntegerLocal1 = 0;
         int integerLocal2 = DekoBlokoClient.obfuscationControl ? 1 : 0;
         if (byteArgument2 <= 39) {
@@ -237,7 +237,7 @@ final class CipherPacketBuffer extends PacketBuffer {
         return integerLocal5;
     }
 
-    final static String computeString1636(byte byteArgument1, long longArgument2) {
+    final static String formatGmtTimestamp(byte byteArgument1, long longArgument2) {
         MixedSupport029.calendarState0001.setTime(new Date(longArgument2));
         int integerLocal1 = MixedSupport029.calendarState0001.get(7);
         int integerLocal2 = MixedSupport029.calendarState0001.get(5);
@@ -245,18 +245,18 @@ final class CipherPacketBuffer extends PacketBuffer {
         int integerLocal4 = MixedSupport029.calendarState0001.get(1);
         int integerLocal5 = MixedSupport029.calendarState0001.get(11);
         if (byteArgument1 != 60) {
-          CipherPacketBuffer.computeString1636((byte) -1, 45L);
+          CipherPacketBuffer.formatGmtTimestamp((byte) -1, 45L);
         }
         int integerLocal6 = MixedSupport029.calendarState0001.get(12);
         int integerLocal7 = MixedSupport029.calendarState0001.get(13);
         return MixedSupport123.stringArrayState0048[-1 + integerLocal1] + ", " + integerLocal2 / 10 + integerLocal2 % 10 + "-" + ProxyAuthenticationRequiredException.stringArrayState0004[integerLocal3] + "-" + integerLocal4 + " " + integerLocal5 / 10 + integerLocal5 % 10 + ":" + integerLocal6 / 10 + integerLocal6 % 10 + ":" + integerLocal7 / 10 + integerLocal7 % 10 + " GMT";
     }
 
-    final void performAction1640(int[] integerArrayArgument1, byte byteArgument2) {
+    final void setCipherSeed(int[] integerArrayArgument1, byte byteArgument2) {
         try {
           this.mixedSupport030State0002 = new IsaacRandom(integerArrayArgument1);
           if (byteArgument2 <= 61) {
-            this.computeInteger1644((byte) -25);
+            this.readCipheredByte((byte) -25);
           }
         } catch (RuntimeException runtimeException) {
           throw ClientException.computeDiagnosticSupport0020365((Throwable) ((Object) runtimeException), "uf.RA(" + (integerArrayArgument1 != null ? "{...}" : "null") + ',' + byteArgument2 + ')');

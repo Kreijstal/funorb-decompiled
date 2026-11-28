@@ -2717,8 +2717,8 @@ final class re {
         if (MidiPcmStream.field_r > 0) {
           var5Lifetime3 = var5Lifetime3 + "<br>" + vg.a(new String[]{Integer.toString(MidiPcmStream.field_r)}, 99, hj.field_s);
         }
-        if (50 <= sg.field_i) {
-          var6_ref_String = sg.d(24);
+        if (50 <= ArchiveSourceManager.field_i) {
+          var6_ref_String = ArchiveSourceManager.d(24);
           var5Lifetime3 = var6_ref_String;
           var5Lifetime3 = var6_ref_String;
           if (var6_ref_String != null) {
@@ -3671,24 +3671,24 @@ final class re {
         var5Lifetime2 = var12;
         if (0 < MidiPcmStream.field_r) {
           if (hh.field_d >= rl.field_c) {
-            var4 = sg.field_i / 50;
+            var4 = ArchiveSourceManager.field_i / 50;
             var5Lifetime2 = var12 + "<br>" + oa.field_j + FullscreenStatusDialog.a((byte) -80, var4);
             if (HostileSpawn.field_I) {
               var13 = var5Lifetime2 + "<br>" + vg.a(new String[]{Integer.toString(rl.field_c - hh.field_d)}, 50, GameCanvas.field_f);
-              var4 = sg.field_i / 50;
+              var4 = ArchiveSourceManager.field_i / 50;
               var5Lifetime2 = var13 + "<br>" + oa.field_j + FullscreenStatusDialog.a((byte) -128, var4);
             }
           } else {
             var13 = var5Lifetime2 + "<br>" + vg.a(new String[]{Integer.toString(rl.field_c - hh.field_d)}, 50, GameCanvas.field_f);
-            var4 = sg.field_i / 50;
+            var4 = ArchiveSourceManager.field_i / 50;
             var5Lifetime2 = var13 + "<br>" + oa.field_j + FullscreenStatusDialog.a((byte) -128, var4);
           }
         }
         if (MidiPcmStream.field_r > 0) {
           var5Lifetime2 = var5Lifetime2 + "<br>" + vg.a(new String[]{"<col=ffffff>" + MidiPcmStream.field_r + "</col>"}, 84, o.field_j);
         }
-        if (sg.field_i >= 50) {
-          var11 = sg.d(24);
+        if (ArchiveSourceManager.field_i >= 50) {
+          var11 = ArchiveSourceManager.d(24);
           var6_ref_String = var11;
           if (var6_ref_String != null) {
             var5Lifetime2 = var5Lifetime2 + "<br>" + vg.a(new String[]{var11}, 95, UiWidget.field_j);
@@ -4106,7 +4106,7 @@ final class re {
           var18 = vg.a(new String[]{Integer.toString(10 - hh.field_d)}, 28, GameCanvas.field_f).toUpperCase();
           var10 += 26;
           ((BitmapFont) ((Object) var12)).drawCentred(var18, var9, var10, var13, -1);
-          var19 = DirectByteStorage.field_m + FullscreenStatusDialog.a((byte) -67, sg.field_i / 50);
+          var19 = DirectByteStorage.field_m + FullscreenStatusDialog.a((byte) -67, ArchiveSourceManager.field_i / 50);
           var10 += 26;
           var20 = var19.toUpperCase();
           var11 = var20;
@@ -4128,7 +4128,7 @@ final class re {
               var23 = vg.a(new String[]{"<col=ffffff>" + MidiPcmStream.field_r + "</col>"}, 67, o.field_j.toUpperCase());
               var10 += 36;
               AccountRegistrationPanel.field_L.drawCentred(var23, var9, var10, var13, -1);
-              var11 = sg.d(24);
+              var11 = ArchiveSourceManager.d(24);
               var10 += 36;
             }
             if (var11 != null) {
@@ -4948,7 +4948,7 @@ final class re {
           dd.field_o[4] = oj.field_y;
         }
         this.field_C.field_b = dd.field_o[this.field_d].length;
-        sg.field_j = wk.a(4, -2178);
+        ArchiveSourceManager.field_j = wk.a(4, -2178);
         vf.k(-8255);
         sa.a(5);
         if (9 == this.field_d) {

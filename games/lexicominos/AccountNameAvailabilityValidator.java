@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class AccountNameAvailabilityValidator extends TextFieldValidator {
-    static bi field_l;
+    static KeyboardInputHandler field_l;
     private boolean nameAvailable;
     static String field_n;
     private String checkedName;
@@ -138,7 +138,7 @@ final class AccountNameAvailabilityValidator extends TextFieldValidator {
     }
 
     static {
-        field_l = new bi();
+        field_l = new KeyboardInputHandler();
         field_p = "As you are under 13, we won't save your email address on our systems. Your email address will still be used to log in, but you won't recieve any emails from Jagex. For more information, please check the relevant parts of our <%0><hotspot=0>Terms and Conditions</hotspot><%1> and <%0><hotspot=1>Privacy Policy</hotspot><%1>.";
     }
 }

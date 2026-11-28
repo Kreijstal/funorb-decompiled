@@ -45,24 +45,24 @@ final class af {
     final static void b(int param0) {
         if (param0 != 6) {
           af.clearStaticReferences(-44);
-          if (null == df.field_l) {
+          if (null == ArchiveSourceManager.field_l) {
             return;
           }
-          hb.a(-5, df.field_l);
-          df.field_l.exitFullscreen(sb.field_d, true);
-          df.field_l = null;
+          hb.a(-5, ArchiveSourceManager.field_l);
+          ArchiveSourceManager.field_l.exitFullscreen(sb.field_d, true);
+          ArchiveSourceManager.field_l = null;
           if (null != DraggableWidgetContainer.field_V) {
             DraggableWidgetContainer.field_V.b((byte) -7);
           }
           DiskCacheWorker.field_g.requestFocus();
           return;
         }
-        if (null == df.field_l) {
+        if (null == ArchiveSourceManager.field_l) {
           return;
         }
-        hb.a(-5, df.field_l);
-        df.field_l.exitFullscreen(sb.field_d, true);
-        df.field_l = null;
+        hb.a(-5, ArchiveSourceManager.field_l);
+        ArchiveSourceManager.field_l.exitFullscreen(sb.field_d, true);
+        ArchiveSourceManager.field_l = null;
         if (null != DraggableWidgetContainer.field_V) {
           DraggableWidgetContainer.field_V.b((byte) -7);
         }

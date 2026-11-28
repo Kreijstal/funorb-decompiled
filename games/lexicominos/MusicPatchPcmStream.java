@@ -251,7 +251,7 @@ final class MusicPatchPcmStream extends PcmStream {
         if (!param0) {
           return;
         }
-        qf.f(-28390);
+        SocketArchiveNetworkClient.f(-28390);
     }
 
     final static void a(byte param0) {
@@ -274,7 +274,7 @@ final class MusicPatchPcmStream extends PcmStream {
           LoginPanel.field_L.processPointerInput(ha.field_d, true, wc.field_a, (byte) 124);
           LoginPanel.field_L.advanceDialogs(true);
           while (IterableNodeHashTable.a((byte) -72)) {
-            LoginPanel.field_L.processKeyInput((byte) 86, IsaacRandom.field_b, da.field_b);
+            LoginPanel.field_L.processKeyInput((byte) 86, IsaacRandom.field_b, MouseInputHandler.field_b);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

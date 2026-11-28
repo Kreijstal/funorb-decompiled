@@ -302,7 +302,7 @@ final class PasswordValidator extends TextFieldValidator {
             return stackIn_7_0;
           }
           if (!this.containsEmailComponent(0, param1)) {
-            return hm.field_b;
+            return SocketConnector.field_b;
           }
           stackIn_11_0 = LabeledWidgetContainer.field_K;
           return stackIn_11_0;

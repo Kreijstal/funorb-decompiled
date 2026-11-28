@@ -20,7 +20,7 @@ final class SceneWidgetPart014 extends SceneWidget {
         CipherPacketBuffer cipherPacketBufferLocal1 = null;
         try {
           cipherPacketBufferLocal1 = SocketFactory.cipherPacketBufferState0002;
-          cipherPacketBufferLocal1.performAction1641(integerArgument2, integerArgument3 - 64);
+          cipherPacketBufferLocal1.writeCipheredByte(integerArgument2, integerArgument3 - 64);
           if (integerArgument3 != 60) {
             mixedSupport043State0001 = (MixedSupport043) null;
           }

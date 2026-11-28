@@ -66,8 +66,8 @@ public final class MonkeyPuzzle2 extends NetworkGameClient {
           NetworkGameClient.clearStaticReferences((byte) -35);
           ClientException.clearStaticReferences((byte) -123);
           qa.a((byte) 115);
-          tk.clearStaticReferences(119);
-          qh.clearStaticReferences(8);
+          KeyboardInputHandler.clearStaticReferences(119);
+          MouseInputHandler.clearStaticReferences(8);
           MouseWheelInput.clearStaticReferences(256);
           SoftwareRasterizer.clearStaticReferences();
           ResourceArchive.clearStaticReferences((byte) 123);
@@ -92,9 +92,9 @@ public final class MonkeyPuzzle2 extends NetworkGameClient {
           oe.resetStaticState(-12248);
           kk.clearStaticReferences((byte) -104);
           hj.c(1903697041);
-          wl.clearStaticReferences((byte) 126);
+          ArchiveNetworkClient.clearStaticReferences((byte) 126);
           DiskCacheWorker.resetStaticState(10);
-          c.clearStaticReferences(true);
+          ArchiveSourceManager.clearStaticReferences(true);
           BufferedRandomAccessFile.clearStaticReferences((byte) -73);
           BufferedSocket.clearStaticReferences(1);
           IntrusiveDeque.resetStaticState(83);
@@ -356,10 +356,10 @@ public final class MonkeyPuzzle2 extends NetworkGameClient {
             }
           }
           boolean decompiledFrameRemainder0 = true;
-          if (Bzip2State.field_f != qh.field_b && (-1 == qh.field_b ||
+          if (Bzip2State.field_f != MouseInputHandler.field_b && (-1 == MouseInputHandler.field_b ||
             Bzip2State.field_f == -1)) {
-            if (qh.field_b != -1) {
-              ProxyAuthenticationRequiredException.field_d[qh.field_b].b((byte) 124);
+            if (MouseInputHandler.field_b != -1) {
+              ProxyAuthenticationRequiredException.field_d[MouseInputHandler.field_b].b((byte) 124);
             } else {
               if (-1 != Bzip2State.field_f) {
                 ProxyAuthenticationRequiredException.field_d[Bzip2State.field_f].b((byte) 125);
@@ -374,8 +374,8 @@ public final class MonkeyPuzzle2 extends NetworkGameClient {
             if (re.field_f) {
               e.b((byte) 117);
             } else {
-              if (qh.field_b != -1) {
-                ProxyAuthenticationRequiredException.field_d[qh.field_b].b((byte) 122);
+              if (MouseInputHandler.field_b != -1) {
+                ProxyAuthenticationRequiredException.field_d[MouseInputHandler.field_b].b((byte) 122);
               } else {
                 DebouncedFieldValidator.field_f.b(-106);
               }
@@ -478,7 +478,7 @@ public final class MonkeyPuzzle2 extends NetworkGameClient {
               else {
                 if (sc.field_e == 0) {
                   boolean decompiledFrameRemainder0 = true;
-                  if (qh.field_b != Bzip2State.field_f && (qh.field_b == -1 ||
+                  if (MouseInputHandler.field_b != Bzip2State.field_f && (MouseInputHandler.field_b == -1 ||
                     Bzip2State.field_f == -1)) {
                     if (-1 == Bzip2State.field_f) {
                       if (ej.field_b == 50) {
@@ -487,7 +487,7 @@ public final class MonkeyPuzzle2 extends NetworkGameClient {
                       ej.field_b = ej.field_b - 1;
                       if ((ej.field_b == 0)) {
                         ej.field_b = 0;
-                        qh.field_b = Bzip2State.field_f;
+                        MouseInputHandler.field_b = Bzip2State.field_f;
                       }
                     } else {
                       if (ej.field_b == 0) {
@@ -495,13 +495,13 @@ public final class MonkeyPuzzle2 extends NetworkGameClient {
                       }
                       ej.field_b = ej.field_b + 1;
                       if ((ej.field_b == 50)) {
-                        if (qh.field_b == 2) {
+                        if (MouseInputHandler.field_b == 2) {
                           FullscreenStatusDialog.field_S = null;
                         }
-                        qh.field_b = Bzip2State.field_f;
-                        if ((qh.field_b == 2 ||
-                          qh.field_b == 6 ||
-                          qh.field_b == 10)) {
+                        MouseInputHandler.field_b = Bzip2State.field_f;
+                        if ((MouseInputHandler.field_b == 2 ||
+                          MouseInputHandler.field_b == 6 ||
+                          MouseInputHandler.field_b == 10)) {
                           vl.field_g = 0;
                         }
                       }
@@ -518,15 +518,15 @@ public final class MonkeyPuzzle2 extends NetworkGameClient {
                     } else {
                       if (!ResourceArchive.isMessageDialogActive(false) &&
                         !ek.a((byte) -126)) {
-                        if (qh.field_b != -1) {
-                          ProxyAuthenticationRequiredException.field_d[qh.field_b].a(-23);
+                        if (MouseInputHandler.field_b != -1) {
+                          ProxyAuthenticationRequiredException.field_d[MouseInputHandler.field_b].a(-23);
                         } else {
                           DebouncedFieldValidator.field_f.e((byte) 85);
                         }
                       }
                     }
                   }
-                  if (!re.field_f && (-1 != qh.field_b ||
+                  if (!re.field_f && (-1 != MouseInputHandler.field_b ||
                     Bzip2State.field_f != -1)) {
                     vb.f(param0 ^ 15323);
                   }
@@ -544,7 +544,7 @@ public final class MonkeyPuzzle2 extends NetworkGameClient {
                   } else {
                     if (sc.field_e == 2) {
                       if (ok.a(false)) {
-                        qh.field_b = di.field_c;
+                        MouseInputHandler.field_b = di.field_c;
                       } else {
                         cg.a(false);
                         if (null != DebouncedFieldValidator.field_f) {
@@ -554,14 +554,14 @@ public final class MonkeyPuzzle2 extends NetworkGameClient {
                         stackIn_61_1 = !(af.field_c <= 0);
                         RichTextLayout.configureMenuActionIdsWithIntGuard(stackIn_60_0, stackIn_61_1);
                         ProxyAuthenticationRequiredException.field_d[1] = new kk(1);
-                        qh.field_b = dh.field_c;
-                        uh.a((byte) -101, qh.field_b);
+                        MouseInputHandler.field_b = dh.field_c;
+                        uh.a((byte) -101, MouseInputHandler.field_b);
                         if (ResourceArchive.isMessageDialogActive(false)) {
                           AlphaWidgetContainer.a((byte) 122, false);
                         }
                       }
                       sc.field_e = 3;
-                      Bzip2State.field_f = qh.field_b;
+                      Bzip2State.field_f = MouseInputHandler.field_b;
                     } else {
                       ej.field_b = ej.field_b - 1;
                       if (ej.field_b == 0) {
@@ -586,7 +586,7 @@ public final class MonkeyPuzzle2 extends NetworkGameClient {
               }
             }
           }
-          stackIn_130_0 = (qh.field_b == 6) || (qh.field_b == 10);
+          stackIn_130_0 = (MouseInputHandler.field_b == 6) || (MouseInputHandler.field_b == 10);
           IntrusiveDeque.a(stackIn_130_0, 31645);
           if (ResourceArchive.isMessageDialogActive(false)) {
             var2_intLifetime1 = j.a(5);
@@ -602,7 +602,7 @@ public final class MonkeyPuzzle2 extends NetworkGameClient {
               }
             }
             if (!ResourceArchive.isMessageDialogActive(false)) {
-              ProxyAuthenticationRequiredException.field_d[qh.field_b].a(true, false);
+              ProxyAuthenticationRequiredException.field_d[MouseInputHandler.field_b].a(true, false);
             }
           }
           if (param0 != 15245) {
@@ -703,47 +703,47 @@ public final class MonkeyPuzzle2 extends NetworkGameClient {
                               return false;
                             }
                             if (decompiledFrameRemainder0) {
-                              ResourceArchive.setLoadingStatus(tk.a(TextFieldValidator.field_j, "basic", ed.field_a, 1, vb.field_i), -24119, 59.0f);
+                              ResourceArchive.setLoadingStatus(KeyboardInputHandler.a(TextFieldValidator.field_j, "basic", ed.field_a, 1, vb.field_i), -24119, 59.0f);
                               return false;
                             }
                           }
                           if (decompiledFrameRemainder0) {
-                            ResourceArchive.setLoadingStatus(tk.a(TextFieldValidator.field_j, "basic", ed.field_a, param0 - 35, vb.field_i), -24119, 58.0f);
+                            ResourceArchive.setLoadingStatus(KeyboardInputHandler.a(TextFieldValidator.field_j, "basic", ed.field_a, param0 - 35, vb.field_i), -24119, 58.0f);
                             return false;
                           }
                         }
                         if (decompiledFrameRemainder0) {
-                          ResourceArchive.setLoadingStatus(tk.a(TextFieldValidator.field_j, "basic", ed.field_a, 1, vb.field_i), -24119, 56.0f);
+                          ResourceArchive.setLoadingStatus(KeyboardInputHandler.a(TextFieldValidator.field_j, "basic", ed.field_a, 1, vb.field_i), -24119, 56.0f);
                           return false;
                         }
                       }
                       if (decompiledFrameRemainder0) {
-                        ResourceArchive.setLoadingStatus(tk.a(hk.field_k, "", PacketBuffer.field_f, param0 ^ 37, tl.field_a), param0 - 24155, 55.0f);
+                        ResourceArchive.setLoadingStatus(KeyboardInputHandler.a(hk.field_k, "", PacketBuffer.field_f, param0 ^ 37, tl.field_a), param0 - 24155, 55.0f);
                         return false;
                       }
                     }
                     if (decompiledFrameRemainder0) {
-                      ResourceArchive.setLoadingStatus(tk.a(ProgressMessageDialog.field_fb, "", ek.field_e, 1, DiskCacheWorker.field_b), param0 - 24155, 51.0f);
+                      ResourceArchive.setLoadingStatus(KeyboardInputHandler.a(ProgressMessageDialog.field_fb, "", ek.field_e, 1, DiskCacheWorker.field_b), param0 - 24155, 51.0f);
                       return false;
                     }
                   }
                   if (decompiledFrameRemainder0) {
-                    ResourceArchive.setLoadingStatus(tk.a(hk.field_k, "", ed.field_a, 1, vb.field_i), param0 - 24155, 50.0f);
+                    ResourceArchive.setLoadingStatus(KeyboardInputHandler.a(hk.field_k, "", ed.field_a, 1, vb.field_i), param0 - 24155, 50.0f);
                     return false;
                   }
                 }
                 if (decompiledFrameRemainder0) {
-                  ResourceArchive.setLoadingStatus(tk.a(fi.field_b, "", oh.field_a, 1, NodeHashTableIterator.field_a), -24119, 35.0f);
+                  ResourceArchive.setLoadingStatus(KeyboardInputHandler.a(fi.field_b, "", oh.field_a, 1, NodeHashTableIterator.field_a), -24119, 35.0f);
                   return false;
                 }
               }
               if (decompiledFrameRemainder0) {
-                ResourceArchive.setLoadingStatus(tk.a(wi.field_d, "", fe.field_b, 1, ButtonWidget.field_y), -24119, 25.0f);
+                ResourceArchive.setLoadingStatus(KeyboardInputHandler.a(wi.field_d, "", fe.field_b, 1, ButtonWidget.field_y), -24119, 25.0f);
                 return false;
               }
             }
             if (decompiledFrameRemainder0) {
-              ResourceArchive.setLoadingStatus(tk.a(cl.field_a, "", fe.field_b, 1, ButtonWidget.field_y), param0 ^ -24083, 15.0f);
+              ResourceArchive.setLoadingStatus(KeyboardInputHandler.a(cl.field_a, "", fe.field_b, 1, ButtonWidget.field_y), param0 ^ -24083, 15.0f);
               return false;
             }
           }
@@ -789,8 +789,8 @@ public final class MonkeyPuzzle2 extends NetworkGameClient {
           for (var3_int = 0; var3_int < 11; var3_int++) {
             ProxyAuthenticationRequiredException.field_d[var3_int] = new kk(var3_int);
           }
-          qh.field_b = 0;
-          tk.a(50, true);
+          MouseInputHandler.field_b = 0;
+          KeyboardInputHandler.a(50, true);
           RichTextWidget.c((byte) 60);
           wg.a(-106);
           gj.a((byte) -31);

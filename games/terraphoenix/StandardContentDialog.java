@@ -5,7 +5,7 @@ import java.io.*;
 
 final class StandardContentDialog extends ContentTransitionDialog {
     static Sprite field_ib;
-    static h field_kb;
+    static ArchiveNetworkClient field_kb;
     static String[] field_jb;
     static Sprite field_hb;
     static int field_gb;
@@ -19,7 +19,7 @@ final class StandardContentDialog extends ContentTransitionDialog {
           Throwable decompiledCaughtException = null;
           try {
             if (param0 != 30) {
-              field_kb = (h) null;
+              field_kb = (ArchiveNetworkClient) null;
             }
             var6 = null;
             var7 = null;
@@ -38,7 +38,7 @@ final class StandardContentDialog extends ContentTransitionDialog {
               }
               var7 = new SectorCacheStore(param4, TutorialController.field_x, ProxyAuthenticationRequiredException.field_b[param4], 2097152);
             }
-            var8 = i.field_a.a(param2, param4, (SectorCacheStore) (var6), (SectorCacheStore) (var7), 115);
+            var8 = i.field_a.getOrCreateArchiveSource(param2, param4, (SectorCacheStore) (var6), (SectorCacheStore) (var7), 115);
             if (param3) {
               var8.c((byte) 2);
             }
@@ -64,7 +64,7 @@ final class StandardContentDialog extends ContentTransitionDialog {
           field_ib = null;
           return;
         }
-        field_kb = (h) null;
+        field_kb = (ArchiveNetworkClient) null;
         field_kb = null;
         field_jb = null;
         field_hb = null;

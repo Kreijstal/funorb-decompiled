@@ -155,7 +155,7 @@ final class NameSuggestionsPanel extends DequeWidgetContainer implements WidgetA
               }
             }
           }
-          if (wn.field_d.length >= 2) {
+          if (SocketConnector.field_d.length >= 2) {
             if (param1) {
               stackIn_43_0 = (MusicPatchEnvelope.field_n != -1) ? 1 : 0;
             } else {
@@ -170,7 +170,7 @@ final class NameSuggestionsPanel extends DequeWidgetContainer implements WidgetA
               DelegatingCanvas.field_f[var7 / 8] = (byte)DisplayNameSelectionPanel.bitwiseOr((int) DelegatingCanvas.field_f[var7 / 8], 1 << var7 % 8);
             }
             stackIn_51_0 = (!param1) ? 0 : -1;
-            for (var7 = stackIn_51_0; wn.field_d.length > var7; var7++) {
+            for (var7 = stackIn_51_0; SocketConnector.field_d.length > var7; var7++) {
               if (var6Lifetime1 != 0) {
                 stackIn_59_0 = (MusicPatchEnvelope.field_n != var7) ? 1 : 0;
               } else {
@@ -190,7 +190,7 @@ final class NameSuggestionsPanel extends DequeWidgetContainer implements WidgetA
                     }
                   }
                 } else {
-                  var9 = wn.field_d[var7];
+                  var9 = SocketConnector.field_d[var7];
                   if (param0.field_hc != var9) {
                     param0.field_hc = var9;
                     var5 = 1;
@@ -198,14 +198,14 @@ final class NameSuggestionsPanel extends DequeWidgetContainer implements WidgetA
                 }
               }
               if (!param1) {
-                var9 = wn.field_d[var7];
+                var9 = SocketConnector.field_d[var7];
                 stackIn_85_0 = RegistrationAgreementPane.field_P[1][var7 + 1];
                 stackIn_86_1 = (param0.field_hc == var9);
                 stackIn_85_0.field_gb = stackIn_86_1;
               } else {
                 if (var7 == -1) {
                   RegistrationAgreementPane.field_P[1][var7 + 1].field_gb = true;
-                  for (var9 = 0; var9 < wn.field_d.length; var9++) {
+                  for (var9 = 0; var9 < SocketConnector.field_d.length; var9++) {
                     dupTemp$0 = RegistrationAgreementPane.field_P[1][var7 + 1];
                     stackIn_76_0 = dupTemp$0;
                     stackIn_76_1 = dupTemp$0.field_gb;
@@ -644,7 +644,7 @@ final class NameSuggestionsPanel extends DequeWidgetContainer implements WidgetA
             var3_int = param0.length;
             this.field_O = new String[var3_int];
             for (var4_int = 0; var3_int > var4_int; var4_int++) {
-              this.field_O[var4_int] = rl.a((CharSequence) ((Object) param0[var4_int]), (byte) -70).replace(' ', ' ');
+              this.field_O[var4_int] = MouseInputHandler.a((CharSequence) ((Object) param0[var4_int]), (byte) -70).replace(' ', ' ');
             }
             if (param1 != -1) {
               field_P = (int[]) null;

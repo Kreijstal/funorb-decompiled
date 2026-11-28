@@ -178,7 +178,7 @@ final class eb {
             var9.draw(0, 0);
             lh.field_N = new Sprite(640, 480);
             lh.field_N.bindAsRenderTarget();
-            re.field_l.drawRotated((re.field_l.field_x >> 1) + w.field_v, (re.field_l.field_q >> 1) + gi.field_e, eh.field_h, 4096);
+            re.field_l.drawRotated((re.field_l.field_x >> 1) + w.field_v, (re.field_l.field_q >> 1) + gi.field_e, ArchiveNetworkClient.field_h, 4096);
             re.field_l = null;
             lh.field_N.trimTransparentBorders();
             SoftwareRasterizer.setRasterBuffer(var29, var2Lifetime1, var3Lifetime1);

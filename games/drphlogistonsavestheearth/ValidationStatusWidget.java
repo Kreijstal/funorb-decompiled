@@ -146,7 +146,7 @@ final class ValidationStatusWidget extends RichTextWidget {
             }
           }
           var21.drawRotatedAboutBilinear(112, 144, var21.field_z << 4, var21.field_C << 4, -this.field_X << 10, 4096);
-          cl.d((byte) -94);
+          SocketArchiveNetworkClient.d((byte) -94);
           this.field_Z.drawAdditive(-(var21.field_z >> 1) + var9, -var21.field_C + var10, 256);
           return;
         }
@@ -196,7 +196,7 @@ final class ValidationStatusWidget extends RichTextWidget {
             }
           }
           var26.drawRotatedAboutBilinear(112, 144, var26.field_z << 4, var26.field_C << 4, -this.field_X << 10, 4096);
-          cl.d((byte) -94);
+          SocketArchiveNetworkClient.d((byte) -94);
           this.field_Z.drawAdditive(-(var26.field_z >> 1) + var9Lifetime1, -var26.field_C + var10Lifetime1, 256);
           return;
         }
@@ -244,7 +244,7 @@ final class ValidationStatusWidget extends RichTextWidget {
             MouseInput.a(this.field_Z, (byte) 85);
           }
           var36.drawRotatedAboutBilinear(112, 144, var36.field_z << 4, var36.field_C << 4, -this.field_X << 10, 4096);
-          cl.d((byte) -94);
+          SocketArchiveNetworkClient.d((byte) -94);
           this.field_Z.drawAdditive(-(var36.field_z >> 1) + var9Lifetime2, -var36.field_C + var10Lifetime2, 256);
           return;
         }
@@ -292,7 +292,7 @@ final class ValidationStatusWidget extends RichTextWidget {
           }
         }
         var31.drawRotatedAboutBilinear(112, 144, var31.field_z << 4, var31.field_C << 4, -this.field_X << 10, 4096);
-        cl.d((byte) -94);
+        SocketArchiveNetworkClient.d((byte) -94);
         this.field_Z.drawAdditive(-(var31.field_z >> 1) + var9Lifetime3, -var31.field_C + var10Lifetime3, 256);
     }
 

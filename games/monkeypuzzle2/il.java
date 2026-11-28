@@ -396,7 +396,7 @@ final class il extends IntrusiveNode {
 
     final static void a(boolean param0) {
         hl.b(-16);
-        qh.a(4, param0);
+        MouseInputHandler.a(4, param0);
     }
 
     final static FrameTimer a(int param0) {

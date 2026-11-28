@@ -109,7 +109,7 @@ class DualLinkNode extends IntrusiveNode {
             if (!param0) {
               if (0 > param1) {
                 if (param1 == 3) {
-                  if (hj.field_i) {
+                  if (ArchiveSourceManager.field_i) {
                     stackIn_77_0 = (!SingleChildWidgetContainer.field_L) ? 0 : 1;
                   } else {
                     stackIn_77_0 = 0;
@@ -122,7 +122,7 @@ class DualLinkNode extends IntrusiveNode {
               } else {
                 if (ae.field_e.length <= param1) {
                   if (param1 == 3) {
-                    if (hj.field_i) {
+                    if (ArchiveSourceManager.field_i) {
                       stackIn_95_0 = (!SingleChildWidgetContainer.field_L) ? 0 : 1;
                     } else {
                       stackIn_95_0 = 0;
@@ -135,7 +135,7 @@ class DualLinkNode extends IntrusiveNode {
                 } else {
                   ae.field_e[param1].d((byte) 59);
                   if (param1 == 3) {
-                    if (hj.field_i) {
+                    if (ArchiveSourceManager.field_i) {
                       stackIn_112_0 = (!SingleChildWidgetContainer.field_L) ? 0 : 1;
                     } else {
                       stackIn_112_0 = 0;
@@ -152,7 +152,7 @@ class DualLinkNode extends IntrusiveNode {
               SoftwareRasterizer.darkenRectangleHalf(0, 0, 640, 480);
               if (0 > param1) {
                 if (param1 == 3) {
-                  if (!hj.field_i) {
+                  if (!ArchiveSourceManager.field_i) {
                     var4 = 0;
                     stackIn_14_0 = -7093;
                     stackIn_15_1 = (param3) && (ak.a(true)) && (var4 == 0);
@@ -174,7 +174,7 @@ class DualLinkNode extends IntrusiveNode {
                     DualLinkNode.a(true, -111, (byte) 19, true);
                     return;
                   }
-                  if (hj.field_i) {
+                  if (ArchiveSourceManager.field_i) {
                     stackIn_39_0 = (SingleChildWidgetContainer.field_L) ? 1 : 0;
                   } else {
                     stackIn_39_0 = 0;
@@ -190,7 +190,7 @@ class DualLinkNode extends IntrusiveNode {
                 }
                 ae.field_e[param1].d((byte) 59);
                 if (param1 == 3) {
-                  if (hj.field_i) {
+                  if (ArchiveSourceManager.field_i) {
                     stackIn_58_0 = (!SingleChildWidgetContainer.field_L) ? 0 : 1;
                   } else {
                     stackIn_58_0 = 0;

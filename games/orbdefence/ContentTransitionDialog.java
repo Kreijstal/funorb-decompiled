@@ -262,11 +262,11 @@ abstract class ContentTransitionDialog extends ResizableModalDialog {
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          fg.a((byte) 51, (java.awt.Component) ((Object) param0));
+          fg.detachKeyboardListeners((byte) 51, (java.awt.Component) ((Object) param0));
           if (param1 < 104) {
             field_N = (ResourceArchive) null;
           }
-          BufferedSocket.a(5000, (java.awt.Component) ((Object) param0));
+          BufferedSocket.detachMouseListeners(5000, (java.awt.Component) ((Object) param0));
           if (mj.field_i == null) {
             return;
           }

@@ -122,7 +122,7 @@ final class SceneWidgetPart010 extends SceneWidget {
         ReturnedShape.performAction1428((byte) 0);
         MixedSupport036.performAction0503((byte) 67);
         if (MixedSupport024.computeBoolean0367(false)) {
-          SocketFactory.cipherPacketBufferState0002.performAction1641(1, -4);
+          SocketFactory.cipherPacketBufferState0002.writeCipheredByte(1, -4);
           AccountCreationResultPanel.performAction1818(4792, 0);
         }
         NodeHashTable.performAction1498(80);

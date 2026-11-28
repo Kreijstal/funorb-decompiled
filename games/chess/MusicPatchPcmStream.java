@@ -272,7 +272,7 @@ final class MusicPatchPcmStream extends PcmStream {
           stackIn_6_8 = (50 >= fl.field_n) ? false : true;
           stackIn_9_9 = var2;
           stackIn_9_10 = true;
-          stackIn_11_11 = (hj.field_i) || (DefaultTextWidgetRenderer.field_h);
+          stackIn_11_11 = (ArchiveSourceManager.field_i) || (DefaultTextWidgetRenderer.field_h);
           ArrayWidgetContainer.a(stackIn_5_0, stackIn_5_1, stackIn_5_2, stackIn_5_3, stackIn_5_4, stackIn_5_5, stackIn_5_6, stackIn_5_7, stackIn_6_8, stackIn_9_9 != 0, stackIn_9_10, stackIn_11_11);
         } else {
           if (DelegatingCanvas.a(param0 + 77, pd.field_Rb.field_Xb)) {
@@ -288,11 +288,11 @@ final class MusicPatchPcmStream extends PcmStream {
             stackIn_37_8 = (50 >= fl.field_n) ? false : true;
             stackIn_40_9 = var2;
             stackIn_40_10 = true;
-            stackIn_42_11 = (hj.field_i) || (DefaultTextWidgetRenderer.field_h);
+            stackIn_42_11 = (ArchiveSourceManager.field_i) || (DefaultTextWidgetRenderer.field_h);
             ArrayWidgetContainer.a(stackIn_36_0, stackIn_36_1, stackIn_36_2, stackIn_36_3, stackIn_36_4, stackIn_36_5, stackIn_36_6, stackIn_36_7, stackIn_37_8, stackIn_40_9 != 0, stackIn_40_10, stackIn_42_11);
-            if (ob.field_w) {
+            if (SocketArchiveNetworkClient.field_w) {
               EditableTextField.field_U.writeCipheredByte(57, param0 ^ 28);
-              ob.field_w = false;
+              SocketArchiveNetworkClient.field_w = false;
             }
             if (!tg.field_p) {
               return;
@@ -313,12 +313,12 @@ final class MusicPatchPcmStream extends PcmStream {
           stackIn_22_8 = (50 >= fl.field_n) ? false : true;
           stackIn_25_9 = var2;
           stackIn_25_10 = true;
-          stackIn_27_11 = (hj.field_i) || (DefaultTextWidgetRenderer.field_h);
+          stackIn_27_11 = (ArchiveSourceManager.field_i) || (DefaultTextWidgetRenderer.field_h);
           ArrayWidgetContainer.a(stackIn_21_0, stackIn_21_1, stackIn_21_2, stackIn_21_3, stackIn_21_4, stackIn_21_5, stackIn_21_6, stackIn_21_7, stackIn_22_8, stackIn_25_9 != 0, stackIn_25_10, stackIn_27_11);
         }
-        if (ob.field_w) {
+        if (SocketArchiveNetworkClient.field_w) {
           EditableTextField.field_U.writeCipheredByte(57, param0 ^ 28);
-          ob.field_w = false;
+          SocketArchiveNetworkClient.field_w = false;
         }
         if (!tg.field_p) {
           return;

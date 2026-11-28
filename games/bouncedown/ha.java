@@ -195,7 +195,7 @@ final class ha implements Runnable {
         RuntimeException decompiledCaughtException = null;
         try {
           var3 = hh.field_p;
-          var3.a(true, param2);
+          var3.writeCipheredByte(true, param2);
           var3.writeByte(5, (byte) 98);
           var3.writeByte(0, (byte) 65);
           var3.writeShort(param0 ^ 750670611, param1.field_n);

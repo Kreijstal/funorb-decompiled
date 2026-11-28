@@ -14,15 +14,15 @@ abstract class nf extends DualLinkNode {
         Throwable decompiledCaughtException = null;
         var1 = ad.field_b;
         synchronized (var1) {
-          if (md.field_g == LoginPanel.field_H) {
+          if (ProxySocketConnector.field_g == LoginPanel.field_H) {
             return false;
           }
           if (param0 != 32722) {
             field_l = (String) null;
           }
-          RegistrationAgreementPane.field_K = NanoFrameTimer.field_g[md.field_g];
-          od.field_k = ByteStorage.field_b[md.field_g];
-          md.field_g = 1 + md.field_g & 127;
+          RegistrationAgreementPane.field_K = NanoFrameTimer.field_g[ProxySocketConnector.field_g];
+          od.field_k = ByteStorage.field_b[ProxySocketConnector.field_g];
+          ProxySocketConnector.field_g = 1 + ProxySocketConnector.field_g & 127;
           stackIn_8_0 = true;
         }
         return stackIn_8_0;

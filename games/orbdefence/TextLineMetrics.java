@@ -5,7 +5,7 @@ final class TextLineMetrics {
     static bl field_h;
     int[] field_g;
     int field_f;
-    static pi field_b;
+    static ArchiveSourceManager field_b;
     static String field_e;
     static int field_a;
     static String field_d;

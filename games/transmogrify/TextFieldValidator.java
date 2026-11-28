@@ -144,11 +144,11 @@ abstract class TextFieldValidator extends DebouncedFieldValidator implements Tex
           }
           of.field_c = param1;
           tl.field_c = param4;
-          dk.field_h = param5;
-          uh.field_f = param7;
-          oh.field_h = (uh) ((Object) new tj());
+          ArchiveSourceManager.field_h = param5;
+          ArchiveNetworkClient.field_f = param7;
+          oh.field_h = (ArchiveNetworkClient) ((Object) new SocketArchiveNetworkClient());
           fd.field_d = new DiskCacheWorker(param8);
-          BufferedRandomAccessFile.field_j = new dk(oh.field_h, fd.field_d);
+          BufferedRandomAccessFile.field_j = new ArchiveSourceManager(oh.field_h, fd.field_d);
         } catch (RuntimeException runtimeException) {
           throw ch.wrapClientException((Throwable) ((Object) runtimeException), "me.U(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + (param8 != null ? "{...}" : "null") + ')');
         }

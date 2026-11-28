@@ -93,7 +93,7 @@ abstract class RasterBuffer {
           }
           if (!NetworkGameClient.field_u &&
             GzipDecompressor.field_e > kk.field_d &&
-            ne.field_d) {
+            ArchiveSourceManager.field_d) {
             kd.field_c = ql.field_v;
             bf.field_a = ch.field_b;
             kk.field_d = 0;

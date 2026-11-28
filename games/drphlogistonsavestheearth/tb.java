@@ -7,7 +7,7 @@ final class tb {
     static he[] field_b;
     static int field_a;
 
-    final static void a(int param0, java.awt.Component param1) {
+    final static void detachKeyboardListeners(int param0, java.awt.Component param1) {
         try {
           param1.removeKeyListener(ji.field_c);
           param1.removeFocusListener(ji.field_c);
@@ -18,7 +18,7 @@ final class tb {
     }
 
     final static String b(byte param0) {
-        if (hj.field_f < 2) {
+        if (SocketConnector.field_f < 2) {
           return a.field_c;
         }
         if (DiskArchiveRequest.field_I != null) {

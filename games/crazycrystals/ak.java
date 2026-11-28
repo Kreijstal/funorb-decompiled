@@ -29,7 +29,7 @@ final class ak extends IntrusiveNode {
             LevelCompleteEntrancePhase.field_h == gj.field_k)) {
             if (tp.field_f.position == 0 &&
               (10000L + mp.field_p) < lo.correctedCurrentTimeMillis((byte) -118)) {
-              tp.field_f.d(8, param0);
+              tp.field_f.writeCipheredByte(8, param0);
             }
             if (tp.field_f.position > 0) {
               try {

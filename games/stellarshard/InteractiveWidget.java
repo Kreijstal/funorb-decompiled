@@ -223,9 +223,9 @@ class InteractiveWidget extends UiWidget {
             this.field_E = false;
           }
           if (this.field_o != 0 &&
-            fb.field_n != this.field_o) {
+            ArchiveNetworkClient.field_n != this.field_o) {
             if (this.containsPointer((byte) 126, param0, KeyHandler.field_a, ni.field_e, param2) &&
-              fb.field_n == 0) {
+              ArchiveNetworkClient.field_n == 0) {
               this.activateFromInput(KeyHandler.field_a - param0, ni.field_e - param2, this.field_o, 119);
             }
             this.pointerReleased(KeyHandler.field_a, -128, param3, param2, param0, ni.field_e);

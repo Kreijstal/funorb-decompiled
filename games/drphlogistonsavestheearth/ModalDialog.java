@@ -80,7 +80,7 @@ abstract class ModalDialog extends DequeWidgetContainer {
           SoftwareRasterizer.clearRaster();
           this.drawDialogBackground(0, param2 ^ -68, 0);
           super.drawWidget(-param0 - this.field_o, param1, param2, -this.field_m - param3);
-          cl.d((byte) -106);
+          SocketArchiveNetworkClient.d((byte) -106);
           uk.field_f.drawWithOpacity(param0 + this.field_o, param3 + this.field_m, this.field_J);
           return;
         }
@@ -90,7 +90,7 @@ abstract class ModalDialog extends DequeWidgetContainer {
           SoftwareRasterizer.clearRaster();
           this.drawDialogBackground(0, param2 ^ -68, 0);
           super.drawWidget(-param0 - this.field_o, param1, param2, -this.field_m - param3);
-          cl.d((byte) -106);
+          SocketArchiveNetworkClient.d((byte) -106);
           uk.field_f.drawWithOpacity(param0 + this.field_o, param3 + this.field_m, this.field_J);
           return;
         }
@@ -100,7 +100,7 @@ abstract class ModalDialog extends DequeWidgetContainer {
           SoftwareRasterizer.clearRaster();
           this.drawDialogBackground(0, param2 ^ -68, 0);
           super.drawWidget(-param0 - this.field_o, param1, param2, -this.field_m - param3);
-          cl.d((byte) -106);
+          SocketArchiveNetworkClient.d((byte) -106);
           uk.field_f.drawWithOpacity(param0 + this.field_o, param3 + this.field_m, this.field_J);
           return;
         }
@@ -108,7 +108,7 @@ abstract class ModalDialog extends DequeWidgetContainer {
         SoftwareRasterizer.clearRaster();
         this.drawDialogBackground(0, param2 ^ -68, 0);
         super.drawWidget(-param0 - this.field_o, param1, param2, -this.field_m - param3);
-        cl.d((byte) -106);
+        SocketArchiveNetworkClient.d((byte) -106);
         uk.field_f.drawWithOpacity(param0 + this.field_o, param3 + this.field_m, this.field_J);
     }
 

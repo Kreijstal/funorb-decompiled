@@ -72,8 +72,8 @@ final class Bzip2Decompressor {
         var24 = null;
         var25 = null;
         param0.field_g = 1;
-        if (oe.field_b == null) {
-          oe.field_b = new int[param0.field_g * 100000];
+        if (SocketConnector.field_b == null) {
+          SocketConnector.field_b = new int[param0.field_g * 100000];
         }
         var26 = 1;
         while (true) {
@@ -244,14 +244,14 @@ final class Bzip2Decompressor {
                 param0.field_n[var4] = param0.field_n[var4] + param0.field_n[var4 - 1];
               }
               for (var4 = 0; var4 < var14; var4++) {
-                var1 = (byte)(oe.field_b[var4] & 255);
+                var1 = (byte)(SocketConnector.field_b[var4] & 255);
                 dupTemp$1 = param0.field_n[var1 & 255];
-                oe.field_b[dupTemp$1] = oe.field_b[dupTemp$1] | var4 << 8;
+                SocketConnector.field_b[dupTemp$1] = SocketConnector.field_b[dupTemp$1] | var4 << 8;
                 param0.field_n[var1 & 255] = param0.field_n[var1 & 255] + 1;
               }
-              param0.field_z = oe.field_b[param0.field_i] >> 8;
+              param0.field_z = SocketConnector.field_b[param0.field_i] >> 8;
               param0.field_t = 0;
-              param0.field_z = oe.field_b[param0.field_z];
+              param0.field_z = SocketConnector.field_b[param0.field_z];
               param0.field_l = (byte)(param0.field_z & 255);
               param0.field_z = param0.field_z >> 8;
               param0.field_t = param0.field_t + 1;
@@ -315,7 +315,7 @@ final class Bzip2Decompressor {
               }
               dupTemp$0 = param0.field_I[var1 & 255] & 255;
               param0.field_e[dupTemp$0] = param0.field_e[dupTemp$0] + 1;
-              oe.field_b[var14] = param0.field_I[var1 & 255] & 255;
+              SocketConnector.field_b[var14] = param0.field_I[var1 & 255] & 255;
               var14++;
               if (var12 == 0) {
                 var11++;
@@ -372,7 +372,7 @@ final class Bzip2Decompressor {
             var1 = param0.field_I[param0.field_D[param0.field_u[0]] & 255];
             param0.field_e[var1 & 255] = param0.field_e[var1 & 255] + var15;
             while (var15 > 0) {
-              oe.field_b[var14] = var1 & 255;
+              SocketConnector.field_b[var14] = var1 & 255;
               var14++;
               var15--;
             }
@@ -440,7 +440,7 @@ final class Bzip2Decompressor {
         var3 = param0.field_b;
         var4 = param0.field_t;
         var5 = param0.field_l;
-        var15 = oe.field_b;
+        var15 = SocketConnector.field_b;
         var14 = var15;
         var6 = var14;
         var7 = param0.field_z;
@@ -542,7 +542,7 @@ final class Bzip2Decompressor {
         param0.field_b = var3;
         param0.field_t = var4;
         param0.field_l = var5;
-        oe.field_b = var6;
+        SocketConnector.field_b = var6;
         param0.field_z = var7;
         param0.field_G = var8;
         param0.field_j = var9;

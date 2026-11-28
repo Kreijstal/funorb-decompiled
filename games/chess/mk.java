@@ -184,7 +184,7 @@ final class mk {
                 var12.field_fc.a((byte) 125, var12.field_Eb);
               }
               var12.field_Ib = new ci(0L, (ci) null);
-              if ((1 << ob.field_t & var14) != 0) {
+              if ((1 << SocketArchiveNetworkClient.field_t & var14) != 0) {
                 var12.field_fc.a((byte) 125, var12.field_Ib);
               }
               var12.field_Wb = new ci(0L, (ci) null);
@@ -394,7 +394,7 @@ final class mk {
                 var12.field_Eb.a(var34_int, var51_ref.field_v, -2147483648, var12.field_fc.field_pb, 0);
                 var34_int = var34_int + (qc.field_e + var51_ref.field_v);
               }
-              if ((1 << ob.field_t & var14Lifetime1) != 0) {
+              if ((1 << SocketArchiveNetworkClient.field_t & var14Lifetime1) != 0) {
                 var52_ref = gi.field_c[-1 + var12.field_Mb];
                 var12.field_Ib.field_jb = var52_ref;
                 var12.field_Ib.a(var34_int, var52_ref.field_v, -2147483648, var12.field_fc.field_pb, 0);

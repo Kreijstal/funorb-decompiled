@@ -82,7 +82,7 @@ final class rm extends TextureOperator {
         }
     }
 
-    final static void a(byte param0, java.awt.Component param1) {
+    final static void detachKeyboardListeners(byte param0, java.awt.Component param1) {
         param1.removeKeyListener(kb.field_a);
         if (param0 >= -73) {
           return;

@@ -153,7 +153,7 @@ final class ContextualRuntimeException extends RuntimeException {
                 }
                 var2 = kb.a("ticketing_xunread", (byte) 122);
                 if (null != var2) {
-                  uh.field_d = eg.a(103, var2);
+                  ArchiveNetworkClient.field_d = eg.a(103, var2);
                 }
                 var2 = kb.a("ticketing_gotowebsite", (byte) 116);
                 if (null != var2) {
@@ -1506,7 +1506,7 @@ final class ContextualRuntimeException extends RuntimeException {
                 }
                 var2 = kb.a("create_optin_news", (byte) 111);
                 if (null != var2) {
-                  uh.field_o = eg.a(120, var2);
+                  ArchiveNetworkClient.field_o = eg.a(120, var2);
                 }
                 var2 = kb.a("create_agreeterms", (byte) 106);
                 if (null != var2) {
@@ -1690,7 +1690,7 @@ final class ContextualRuntimeException extends RuntimeException {
                 }
                 var2 = kb.a("create_alert_invalidage", (byte) 123);
                 if (null != var2) {
-                  tj.field_A = eg.a(84, var2);
+                  SocketArchiveNetworkClient.field_A = eg.a(84, var2);
                 }
                 var2 = kb.a("create_alert_yearrange", (byte) 111);
                 if (null != var2) {
@@ -2092,7 +2092,7 @@ final class ContextualRuntimeException extends RuntimeException {
                 }
                 var2 = kb.a("next", (byte) 117);
                 if (null != var2) {
-                  dk.field_a = eg.a(114, var2);
+                  ArchiveSourceManager.field_a = eg.a(114, var2);
                 }
                 var2 = kb.a("graphics_colon", (byte) 119);
                 if (var2 != null) {
@@ -2872,7 +2872,7 @@ final class ContextualRuntimeException extends RuntimeException {
                 }
                 var2 = kb.a("createtouse", (byte) 121);
                 if (var2 != null) {
-                  tj.field_t = eg.a(param0 + 82, var2);
+                  SocketArchiveNetworkClient.field_t = eg.a(param0 + 82, var2);
                 }
                 var2 = kb.a("achievementsoffline", (byte) 127);
                 if (null != var2) {

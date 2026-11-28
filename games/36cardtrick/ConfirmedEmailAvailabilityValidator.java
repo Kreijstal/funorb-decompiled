@@ -104,7 +104,7 @@ final class ConfirmedEmailAvailabilityValidator extends TextFieldValidator {
           if (!param0.equals(this.field_j)) {
             var3 = IsaacRandom.a(param0, (byte) -125);
             if (!var3.a(640)) {
-              stackIn_11_0 = a.field_n;
+              stackIn_11_0 = SocketArchiveNetworkClient.field_n;
               return stackIn_11_0;
             }
             this.field_j = param0;

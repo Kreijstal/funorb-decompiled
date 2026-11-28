@@ -722,7 +722,7 @@ final class tm extends IntrusiveNode {
             break;
           }
           if (decompiledNaturalLoopExit0) {
-            this.field_A = this.field_A + ce.field_d.lineCount(uf.field_v, var6);
+            this.field_A = this.field_A + ce.field_d.lineCount(SocketArchiveNetworkClient.field_v, var6);
             this.field_A = this.field_A * var5_int;
             this.field_A = this.field_A + 10;
             if (this.field_B) {

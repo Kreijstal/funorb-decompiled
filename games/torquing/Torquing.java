@@ -146,7 +146,7 @@ public final class Torquing extends NetworkGameClient {
           hj.clearStaticReferences((byte) 114);
           Js5Transport.clearStaticReferences((byte) -77);
           DiskCacheWorker.a(param0 ^ 6);
-          bo.clearStaticReferences(21384);
+          ArchiveSourceManager.clearStaticReferences(21384);
           BufferedRandomAccessFile.clearStaticReferences(-1);
           BufferedSocket.clearStaticReferences(param0 - 4);
           SpriteState.clearStaticReferences(false);
@@ -434,10 +434,10 @@ public final class Torquing extends NetworkGameClient {
             wc.a(var4, (byte) 99, 4);
             var4 = (AchievementProgressUpdate) (SingleChildWidgetContainer.field_y.nextBackward(-24059));
           }
-          var5 = (LevelCompletionUpdate) (bo.field_l.beginBackward(0));
+          var5 = (LevelCompletionUpdate) (ArchiveSourceManager.field_l.beginBackward(0));
           while (var5 != null) {
             le.a((byte) 126, 5, var5);
-            var5 = (LevelCompletionUpdate) (bo.field_l.nextBackward(-24059));
+            var5 = (LevelCompletionUpdate) (ArchiveSourceManager.field_l.nextBackward(-24059));
           }
           kg.field_c = ip.a(4, -127);
           kb.field_f = tl.a(5, 0, 1, 0);
@@ -630,7 +630,7 @@ public final class Torquing extends NetworkGameClient {
               if (rp.field_d.ensureIndexLoaded(-12749) &&
                 rp.field_d.tryLoadGroupByName(true, "basic")) {
                 if (!rp.field_d.tryLoadGroupByName(true, "benefits")) {
-                  IsaacPacketBuffer.a(1.0f, -93, c.a(param1 ^ -117, bo.field_i, "basic", db.field_d, rp.field_d));
+                  IsaacPacketBuffer.a(1.0f, -93, c.a(param1 ^ -117, ArchiveSourceManager.field_i, "basic", db.field_d, rp.field_d));
                   return false;
                 }
                 if (!rp.field_d.tryLoadGroupByName(true, "kartika13")) {
@@ -693,7 +693,7 @@ public final class Torquing extends NetworkGameClient {
                       IsaacPacketBuffer.a(19.0f, 28, c.a(param1 + 119, ol.field_e, "", l.field_c, TooltipPanel.field_l));
                       return false;
                     }
-                    IsaacPacketBuffer.a(10.0f, -99, c.a(17, bo.field_i, "", db.field_d, rg.field_v));
+                    IsaacPacketBuffer.a(10.0f, -99, c.a(17, ArchiveSourceManager.field_i, "", db.field_d, rg.field_v));
                     return false;
                   }
                   IsaacPacketBuffer.a(3.0f, -102, c.a(17, vf.field_g, "", kb.field_c, rl.field_a));
@@ -702,7 +702,7 @@ public final class Torquing extends NetworkGameClient {
                 IsaacPacketBuffer.a(2.0f, -80, c.a(17, ol.field_e, "kartika13", l.field_c, rp.field_d));
                 return false;
               }
-              IsaacPacketBuffer.a(1.0f, 84, c.a(17, bo.field_i, "basic", db.field_d, rp.field_d));
+              IsaacPacketBuffer.a(1.0f, 84, c.a(17, ArchiveSourceManager.field_i, "basic", db.field_d, rp.field_d));
               return false;
             }
             if (MouseWheelInput.field_c == null) {
@@ -1551,7 +1551,7 @@ public final class Torquing extends NetworkGameClient {
                     nh.field_k = 0;
                     fa.field_b = 0;
                     SocketConnector.field_f = 0;
-                    bo.field_l.clear(param0 ^ -108);
+                    ArchiveSourceManager.field_l.clear(param0 ^ -108);
                   }
                   SpriteBase.field_h = -1;
                   fn.field_c = GzipDecompressor.field_c;

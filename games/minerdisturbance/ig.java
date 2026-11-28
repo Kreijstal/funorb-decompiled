@@ -33,7 +33,7 @@ final class ig {
         int var4 = 0;
         try {
           var3 = sn.field_c;
-          var3.d((byte) -77, param0);
+          var3.writeCipheredByte((byte) -77, param0);
           var3.position = var3.position + 1;
           var4 = var3.position;
           var3.writeByte(param1, 25564);

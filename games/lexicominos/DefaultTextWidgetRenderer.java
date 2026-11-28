@@ -35,7 +35,7 @@ class DefaultTextWidgetRenderer implements WidgetRenderer, TextWidgetRenderer {
           return we.field_c;
         }
         if (!we.field_h.ensureIndexLoaded(83)) {
-          return qf.field_s;
+          return SocketArchiveNetworkClient.field_s;
         }
         if (param0 < 63) {
           DefaultTextWidgetRenderer.b((byte) -17);

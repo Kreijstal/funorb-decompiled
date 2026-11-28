@@ -18,7 +18,7 @@ final class FullscreenFocusCanvas extends java.awt.Canvas implements java.awt.ev
     }
 
     final static void c(int param0) {
-        tj.field_v = null;
+        SocketArchiveNetworkClient.field_v = null;
         ModalDialogHost.field_y = 0;
         MouseInputHandler.field_d = -1;
         og.field_e = param0;

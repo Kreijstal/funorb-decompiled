@@ -479,7 +479,7 @@ final class DiskCacheWorker implements Runnable {
             field_b = 37;
           }
           aa.field_s = param2;
-          jk.field_j = param0;
+          ProxySocketConnector.field_j = param0;
           SecondaryNodeDeque.a(ll.field_o, false, param1);
         } catch (RuntimeException runtimeException) {
           throw pf.wrapClientException((Throwable) ((Object) runtimeException), "af.I(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');

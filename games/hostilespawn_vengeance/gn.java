@@ -87,10 +87,10 @@ final class gn {
         }
         if (ByteArrayPoolSupport.field_h >= this.field_c) {
           if (0 < this.field_c) {
-            sg.field_a = 0;
+            ArchiveSourceManager.field_a = 0;
           }
         } else {
-          sg.field_a = (this.field_c - ByteArrayPoolSupport.field_h) / 2;
+          ArchiveSourceManager.field_a = (this.field_c - ByteArrayPoolSupport.field_h) / 2;
         }
         if (ByteArrayPoolSupport.field_h != this.field_i ||
           SpriteGeometry.field_s != this.field_u) {
@@ -138,7 +138,7 @@ final class gn {
           this.d(47);
         }
         this.field_h.a((byte) -125, this.field_p, this.field_s);
-        ih.field_s = false;
+        SocketArchiveNetworkClient.field_s = false;
         FullscreenFocusCanvas var2 = KeyboardInput.createFullscreenCanvas(this.field_s, (byte) -61, gf.field_b, 0, this.field_p, 0);
         if (var2 == null) {
           this.c(115);
@@ -392,7 +392,7 @@ final class gn {
           this.field_h.a((byte) -120, var3, var2);
         }
         if (this.field_c > 0) {
-          sg.field_a = (-ByteArrayPoolSupport.field_h + this.field_c) / 2;
+          ArchiveSourceManager.field_a = (-ByteArrayPoolSupport.field_h + this.field_c) / 2;
         }
     }
 

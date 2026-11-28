@@ -29,7 +29,7 @@ final class PlatformTaskDispatcher implements Runnable {
     RandomAccessCacheFile field_r;
     private static String field_h;
 
-    private final static RandomAccessCacheFile a(int param0, int param1, String param2, String param3) {
+    private final static RandomAccessCacheFile openPreferencesFile(int param0, int param1, String param2, String param3) {
         try {
           int var6 = 0;
           RandomAccessCacheFile stackIn_13_0 = null;
@@ -352,11 +352,11 @@ final class PlatformTaskDispatcher implements Runnable {
                         }
                         break;
                       case 13:
-                        var3_ref2 = PlatformTaskDispatcher.a(0, field_f, "", (String) (var8.objectArgument));
+                        var3_ref2 = PlatformTaskDispatcher.openPreferencesFile(0, field_f, "", (String) (var8.objectArgument));
                         var8.result = var3_ref2;
                         break;
                       case 12:
-                        var3_ref2 = PlatformTaskDispatcher.a(0, field_f, field_h, (String) (var8.objectArgument));
+                        var3_ref2 = PlatformTaskDispatcher.openPreferencesFile(0, field_f, field_h, (String) (var8.objectArgument));
                         var8.result = var3_ref2;
                         break;
                       case 7:
@@ -392,7 +392,7 @@ final class PlatformTaskDispatcher implements Runnable {
                     }
                     try {
                       if (false) throw (ProxyAuthenticationRequiredException) null;
-                      var8.result = wp.a((String) (var8.objectArgument), (byte) -109, var8.intArgument).b(640);
+                      var8.result = wp.a((String) (var8.objectArgument), (byte) -109, var8.intArgument).openSocket(640);
                     } catch (ProxyAuthenticationRequiredException decompiledCaughtParameter2) {
                       decompiledCaughtException = decompiledCaughtParameter2;
                       var3_ref3 = (ProxyAuthenticationRequiredException) (Object) decompiledCaughtException;

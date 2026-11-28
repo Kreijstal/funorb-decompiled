@@ -436,7 +436,7 @@ final class MidiPcmStream extends PcmStream {
             MidiPcmStream.a((String) null, -50);
           }
           cb.field_a = new gk(param2);
-          df.field_h = param0;
+          ArchiveSourceManager.field_h = param0;
           di.field_d = param1;
           nl.d(-1321745375);
         } catch (RuntimeException runtimeException) {

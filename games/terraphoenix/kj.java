@@ -56,7 +56,7 @@ final class kj implements WidgetActionListener {
         if (param0 == 95) {
           PcmResampler.field_e = null;
           DefaultTextWidgetRenderer.field_k = false;
-          if (qi.field_b) {
+          if (ArchiveSourceManager.field_b) {
             nb.field_b.showConnectionFailure(54);
             return;
           }
@@ -76,7 +76,7 @@ final class kj implements WidgetActionListener {
         field_b = (PcmStreamMixer) null;
         PcmResampler.field_e = null;
         DefaultTextWidgetRenderer.field_k = false;
-        if (qi.field_b) {
+        if (ArchiveSourceManager.field_b) {
           nb.field_b.showConnectionFailure(54);
         } else {
           var1 = MouseInputHandler.field_b;

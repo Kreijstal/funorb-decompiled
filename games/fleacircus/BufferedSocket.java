@@ -19,7 +19,7 @@ final class BufferedSocket implements Runnable {
     private int field_e;
     static RgbSprite field_m;
     static PcmStreamMixer field_g;
-    static w field_k;
+    static ArchiveNetworkClient field_k;
     static MusicTrack field_j;
     private java.net.Socket field_o;
 
@@ -85,7 +85,7 @@ final class BufferedSocket implements Runnable {
               hj.field_a[fleas.field_E] = Math.max(tj.field_a, hj.field_a[fleas.field_E]);
               var3 = new ql(fleas.field_E, -1 + hj.field_a[fleas.field_E], 0, 0, 0, 0);
               if (!DiskArchiveRequest.c((byte) 38)) {
-                rd.a(var3, 79, 5);
+                MouseInputHandler.a(var3, 79, 5);
                 ej.a((byte) -39);
               } else {
                 TextHotspotBounds.field_r.addLast(false, var3);
@@ -278,9 +278,9 @@ final class BufferedSocket implements Runnable {
           SingleChildWidgetContainer.field_B = 2064384 & var2_intLifetime1 << 15;
           SingleChildWidgetContainer.field_B = SingleChildWidgetContainer.field_B + (param1.readUnsignedByte(false) << 7);
           var2_intLifetime2 = param1.readUnsignedByte(false);
-          w.field_a = var2_intLifetime2 << 16 & 65536;
+          ArchiveNetworkClient.field_a = var2_intLifetime2 << 16 & 65536;
           SingleChildWidgetContainer.field_B = SingleChildWidgetContainer.field_B + (var2_intLifetime2 >> 1);
-          w.field_a = w.field_a + param1.readUnsignedShort((byte) -88);
+          ArchiveNetworkClient.field_a = ArchiveNetworkClient.field_a + param1.readUnsignedShort((byte) -88);
           if (param0 != -107) {
             BufferedSocket.b(13);
           }
@@ -423,7 +423,7 @@ final class BufferedSocket implements Runnable {
             BufferedSocket.g(-22);
           }
           while (var5 != null) {
-            rd.a(param0, var5, (byte) -118);
+            MouseInputHandler.a(param0, var5, (byte) -118);
             var5 = (fi) (StripedProgressWidget.field_O.nextForward((byte) -105));
           }
           return;

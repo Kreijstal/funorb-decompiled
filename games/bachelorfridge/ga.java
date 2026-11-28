@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ga {
-    static kb field_c;
+    static ArchiveSourceManager field_c;
     static char[] field_a;
     static int[][] field_b;
     private static String field_z;

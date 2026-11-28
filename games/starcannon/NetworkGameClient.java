@@ -190,7 +190,7 @@ abstract class NetworkGameClient extends GameApplet {
         if (param0 != -28050) {
           return false;
         }
-        return bl.field_b.a(-6);
+        return bl.field_b.loadMasterIndex(-6);
     }
 
     final void dispatchCommonPacket(boolean param0) {
@@ -200,7 +200,7 @@ abstract class NetworkGameClient extends GameApplet {
         fb var3;
         int var4;
         var4 = StarCannon.field_A;
-        var2 = vh.field_t;
+        var2 = SocketArchiveNetworkClient.field_t;
         if (64 > var2 &&
           el.field_D[var2]) {
           if (!param0) {
@@ -244,7 +244,7 @@ abstract class NetworkGameClient extends GameApplet {
                                 ca.f(0);
                                 return;
                               }
-                              hc.a((Throwable) null, "MGS1: " + oe.a(46), (byte) 108);
+                              hc.a((Throwable) null, "MGS1: " + SocketConnector.a(46), (byte) 108);
                               ec.a((byte) 27);
                               return;
                             }
@@ -269,7 +269,7 @@ abstract class NetworkGameClient extends GameApplet {
           }
           return;
         }
-        hc.a((Throwable) null, "MGS2: " + oe.a(-62), (byte) 84);
+        hc.a((Throwable) null, "MGS2: " + SocketConnector.a(-62), (byte) 84);
         ec.a((byte) 27);
     }
 
@@ -313,7 +313,7 @@ abstract class NetworkGameClient extends GameApplet {
             ec.a((byte) 27);
             SecondaryNodeDequeIterator.a(-121);
             pd.a(sc.field_e, 2, (byte) -77);
-            jc.b(0);
+            ArchiveSourceManager.b(0);
             FrameTimer.field_h = true;
             wa.field_a = 15000L + dd.correctedCurrentTimeMillis(56);
           }
@@ -413,7 +413,7 @@ abstract class NetworkGameClient extends GameApplet {
             kl.field_b.ensureIndexLoaded((byte) 95)) {
             if (kl.field_b.hasGroupName(-20955, "")) {
               if (kl.field_b.tryLoadGroupByName("", param1 ^ 9882)) {
-                eh.loadSharedInterfaceText((byte) 63, kl.field_b);
+                ArchiveNetworkClient.loadSharedInterfaceText((byte) 63, kl.field_b);
                 kl.field_b = null;
                 ModalDialogHost.j(32);
               }

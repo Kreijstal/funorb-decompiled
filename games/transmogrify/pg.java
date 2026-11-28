@@ -7,7 +7,7 @@ final class pg {
     static PacketBuffer field_b;
 
     final void a(int param0, int param1, int param2, byte param3, int param4) {
-        dk.a(param4, this.field_c, -28018, param2, param1, param0);
+        ArchiveSourceManager.a(param4, this.field_c, -28018, param2, param1, param0);
         int var6 = 110 / ((-9 - param3) / 42);
     }
 

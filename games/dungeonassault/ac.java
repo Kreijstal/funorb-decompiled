@@ -78,9 +78,9 @@ final class ac {
             field_n = (DungeonTileState) null;
           }
           if (!gm.field_d.field_H) {
-            field_B.d((byte) -99, 58);
+            field_B.writeCipheredByte((byte) -99, 58);
           }
-          field_B.d((byte) -114, 60);
+          field_B.writeCipheredByte((byte) -114, 60);
           field_B.position = field_B.position + 1;
           var2_int = field_B.position;
           field_B.writePrefixedString(param1 ^ 2, param0);

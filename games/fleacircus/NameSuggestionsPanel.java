@@ -126,7 +126,7 @@ final class NameSuggestionsPanel extends DequeWidgetContainer implements WidgetA
             if (lc.field_r != 4) {
               return -1;
             }
-            BufferedSocket.field_k.a(ResizableModalDialog.field_M, md.field_S, (byte) 105);
+            BufferedSocket.field_k.attachSocket(ResizableModalDialog.field_M, md.field_S, (byte) 105);
             lc.field_r = 0;
             ResizableModalDialog.field_M = null;
             nj.field_a = null;

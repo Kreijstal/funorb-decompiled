@@ -205,7 +205,7 @@ final class ma {
         if (param3) {
           var4++;
         }
-        return qh.field_c[var4];
+        return MouseInputHandler.field_c[var4];
     }
 
     final static Sprite a(ResourceArchive param0, String param1, int param2, String param3) {
@@ -523,6 +523,6 @@ final class ma {
         if (param3) {
           var4++;
         }
-        return qh.field_c[var4];
+        return MouseInputHandler.field_c[var4];
     }
 }

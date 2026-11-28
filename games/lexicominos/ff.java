@@ -90,7 +90,7 @@ final class ff {
           var41 = var50;
           var8 = var41;
           var65 = new int[param7.field_A];
-          var63 = qf.field_q;
+          var63 = SocketArchiveNetworkClient.field_q;
           var62 = MouseWheelInput.field_b;
           var64 = wh.field_e;
           for (var13 = 0; var13 < param7.field_A; var13++) {
@@ -122,24 +122,24 @@ final class ff {
           }
           var44 = 0;
           var13Lifetime1 = var44;
-          while (wb.field_i > var44) {
+          while (ArchiveNetworkClient.field_i > var44) {
             var14Lifetime1 = bf.field_a[var44];
             var15Lifetime1 = param7.field_a[var14Lifetime1];
             var16 = param7.field_k[var14Lifetime1];
             var17 = param7.field_B[var14Lifetime1];
-            if (param7.field_j[var14Lifetime1] < qf.field_q.length) {
+            if (param7.field_j[var14Lifetime1] < SocketArchiveNetworkClient.field_q.length) {
               stackIn_26_0 = param7.field_j[var14Lifetime1];
             } else {
               stackIn_26_0 = -1;
             }
             var18 = stackIn_26_0;
-            if (param7.field_K[var14Lifetime1] >= qf.field_q.length) {
+            if (param7.field_K[var14Lifetime1] >= SocketArchiveNetworkClient.field_q.length) {
               stackIn_29_0 = -1;
             } else {
               stackIn_29_0 = param7.field_K[var14Lifetime1];
             }
             var19 = stackIn_29_0;
-            if (qf.field_q.length > param7.field_E[var14Lifetime1]) {
+            if (SocketArchiveNetworkClient.field_q.length > param7.field_E[var14Lifetime1]) {
               stackIn_32_0 = param7.field_E[var14Lifetime1];
             } else {
               stackIn_32_0 = -1;

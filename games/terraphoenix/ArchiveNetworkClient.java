@@ -1,0 +1,118 @@
+/*
+ * Decompiled by CFR-JS 0.4.0.
+ */
+abstract class ArchiveNetworkClient {
+    static Archive field_j;
+    static AccountServiceResult field_c;
+    static String field_d;
+    hl field_b;
+    hl field_m;
+    hl field_a;
+    hl field_g;
+    PacketBuffer field_e;
+    int field_h;
+    long field_f;
+    byte field_n;
+    PacketBuffer field_o;
+    volatile int field_i;
+    volatile int field_l;
+    NetworkArchiveRequest field_k;
+
+    abstract void resetAfterValidationFailure(int param0);
+
+    final int getPrefetchRequestCount(byte param0) {
+        if (param0 == -103) {
+          return this.field_a.a(false) + this.field_g.a(false);
+        }
+        this.resetAfterValidationFailure(109);
+        return this.field_a.a(false) + this.field_g.a(false);
+    }
+
+    final boolean isPriorityQueueFull(int param0) {
+        if (param0 == -21) {
+          return this.getPriorityRequestCount(-115) >= 20 ? true : false;
+        }
+        this.field_g = (hl) null;
+        return this.getPriorityRequestCount(-115) >= 20 ? true : false;
+    }
+
+    final NetworkArchiveRequest enqueueRequest(int param0, boolean param1, int param2, byte param3, byte param4) {
+        long var6 = (long)param0 + ((long)param2 << 32);
+        NetworkArchiveRequest var8 = new NetworkArchiveRequest();
+        var8.field_G = param4;
+        var8.secondaryKey = var6;
+        if (param3 < 55) {
+          ArchiveNetworkClient.clearStaticReferences(false);
+          var8.field_x = param1 ? true : false;
+          if (param1) {
+            if (this.getPriorityRequestCount(118) >= 20) {
+              throw new RuntimeException();
+            }
+            this.field_b.a(11152, var8);
+          } else {
+            if (!(this.getPrefetchRequestCount((byte) -103) < 20)) {
+              throw new RuntimeException();
+            }
+            this.field_a.a(11152, var8);
+          }
+          return var8;
+        }
+        var8.field_x = param1 ? true : false;
+        if (param1) {
+          if (this.getPriorityRequestCount(118) >= 20) {
+            throw new RuntimeException();
+          }
+          this.field_b.a(11152, var8);
+        } else {
+          if (!(this.getPrefetchRequestCount((byte) -103) < 20)) {
+            throw new RuntimeException();
+          }
+          this.field_a.a(11152, var8);
+        }
+        return var8;
+    }
+
+    abstract boolean pollNetwork(boolean param0);
+
+    public static void clearStaticReferences(boolean param0) {
+        field_d = null;
+        field_c = null;
+        field_j = null;
+        if (!param0) {
+          field_c = (AccountServiceResult) null;
+        }
+    }
+
+    abstract void close(int param0);
+
+    final boolean isPrefetchQueueFull(boolean param0) {
+        if (param0) {
+          return this.getPrefetchRequestCount((byte) -103) >= 20 ? true : false;
+        }
+        this.isPrefetchQueueFull(false);
+        return this.getPrefetchRequestCount((byte) -103) >= 20 ? true : false;
+    }
+
+    abstract void attachSocket(int param0, Object param1, boolean param2);
+
+    final int getPriorityRequestCount(int param0) {
+        int var2 = -120 / ((-29 - param0) / 59);
+        return this.field_b.a(false) + this.field_m.a(false);
+    }
+
+    ArchiveNetworkClient() {
+        this.field_b = new hl();
+        this.field_m = new hl();
+        this.field_a = new hl();
+        this.field_g = new hl();
+        this.field_e = new PacketBuffer(6);
+        this.field_n = (byte) 0;
+        this.field_i = 0;
+        this.field_l = 0;
+        this.field_o = new PacketBuffer(10);
+    }
+
+    static {
+        field_d = "By clicking Create, you agree to the <%0><hotspot=0>Terms of Use</hotspot><%1> and <%0><hotspot=1>Privacy Policy</hotspot><%1>.";
+    }
+}

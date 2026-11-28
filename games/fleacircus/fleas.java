@@ -80,10 +80,10 @@ public final class fleas extends NetworkGameClient {
           boolean decompiledFrameCompleted4 = true;
           if (10 == fl.field_c[param3][param0]) {
             fh.startPcmSamplePlaybackWithIntGuard(105, ab.field_a, 100, 63);
-            lj.field_c[uf.field_h] = param3;
-            fb.field_e[uf.field_h] = param0;
-            nc.field_a[uf.field_h] = PacketBuffer.field_j;
-            uf.field_h = uf.field_h + 1;
+            lj.field_c[ArchiveSourceManager.field_h] = param3;
+            fb.field_e[ArchiveSourceManager.field_h] = param0;
+            nc.field_a[ArchiveSourceManager.field_h] = PacketBuffer.field_j;
+            ArchiveSourceManager.field_h = ArchiveSourceManager.field_h + 1;
             var6_int = param3 - 1;
             while (true) {
               stackIn_4_0 = param3 + 1;
@@ -187,8 +187,8 @@ public final class fleas extends NetworkGameClient {
                 stackIn_74_1 = ~pl.field_g;
               }
               if (stackIn_74_0 == stackIn_74_1 ||
-                uf.field_b[var7Lifetime1] != 4) {
-                uf.field_b[var7Lifetime1] = 4;
+                ArchiveSourceManager.field_b[var7Lifetime1] != 4) {
+                ArchiveSourceManager.field_b[var7Lifetime1] = 4;
                 fh.startPcmSamplePlaybackWithIntGuard(-91, hi.field_p, 100, 63);
               }
               if (~pl.field_g != ~var7Lifetime1) {
@@ -489,10 +489,10 @@ public final class fleas extends NetworkGameClient {
         int var6Lifetime1;
         var17 = field_A ? 1 : 0;
         try {
-          aj.field_t = of.a("blocks", "", hm.field_g, 89);
-          el.field_s = of.a("fleas", "", hm.field_g, 67);
+          aj.field_t = of.a("blocks", "", SocketConnector.field_g, 89);
+          el.field_s = of.a("fleas", "", SocketConnector.field_g, 67);
           var3 = -24 % ((-43 - param0) / 62);
-          IntrusiveNode.field_b = (BitmapFont) ((Object) tc.a(MusicPatchEnvelope.field_h, "squarish16", hm.field_g, (byte) 120, ""));
+          IntrusiveNode.field_b = (BitmapFont) ((Object) tc.a(MusicPatchEnvelope.field_h, "squarish16", SocketConnector.field_g, (byte) 120, ""));
           var2 = new int[2][];
           var2[0] = ((PalettedBitmapFont) (IntrusiveNode.field_b)).field_P[0];
           array$0 = new int[var2[0].length];
@@ -520,7 +520,7 @@ public final class fleas extends NetworkGameClient {
               }
             } else {
               ((PalettedBitmapFont) (IntrusiveNode.field_b)).field_P = var2;
-              MatchingFieldValidator.field_p = (BitmapFont) ((Object) tc.a(MusicPatchEnvelope.field_h, "fleafont_filled", hm.field_g, (byte) 115, ""));
+              MatchingFieldValidator.field_p = (BitmapFont) ((Object) tc.a(MusicPatchEnvelope.field_h, "fleafont_filled", SocketConnector.field_g, (byte) 115, ""));
               var2 = new int[4][];
               var2[0] = ((PalettedBitmapFont) (MatchingFieldValidator.field_p)).field_P[0];
               array$1 = new int[var2[0].length];
@@ -560,52 +560,52 @@ public final class fleas extends NetworkGameClient {
               } else {
                 se.field_a = new RgbSprite[3];
                 ((PalettedBitmapFont) (MatchingFieldValidator.field_p)).field_P = var2;
-                se.field_a[0] = kl.a(252, hm.field_g, "", "texture_1");
-                se.field_a[1] = kl.a(252, hm.field_g, "", "texture_3");
-                se.field_a[2] = kl.a(252, hm.field_g, "", "texture_5");
-                si.field_C = kl.a(252, hm.field_g, "", "main_background");
-                qi.field_c = kl.a(252, hm.field_g, "", "back_background");
-                nc.field_d = kl.a(252, hm.field_g, "", "ingame_back");
-                kl.a(252, hm.field_g, "", "ingame_banner");
-                ResizableModalDialog.field_P = kl.a(252, hm.field_g, "", "ingame_title");
+                se.field_a[0] = kl.a(252, SocketConnector.field_g, "", "texture_1");
+                se.field_a[1] = kl.a(252, SocketConnector.field_g, "", "texture_3");
+                se.field_a[2] = kl.a(252, SocketConnector.field_g, "", "texture_5");
+                si.field_C = kl.a(252, SocketConnector.field_g, "", "main_background");
+                qi.field_c = kl.a(252, SocketConnector.field_g, "", "back_background");
+                nc.field_d = kl.a(252, SocketConnector.field_g, "", "ingame_back");
+                kl.a(252, SocketConnector.field_g, "", "ingame_banner");
+                ResizableModalDialog.field_P = kl.a(252, SocketConnector.field_g, "", "ingame_title");
                 stackIn_40_0 = aj.field_t.length + 1;
               }
               var4 = new RgbSprite[stackIn_40_0];
               var5 = 0;
               do {
                 if (!(aj.field_t.length > var5)) {
-                  var4[32] = kl.a(252, hm.field_g, "", "block_water");
+                  var4[32] = kl.a(252, SocketConnector.field_g, "", "block_water");
                   aj.field_t = var4;
-                  be.field_c = kl.a(252, hm.field_g, "", "level_select_arrow");
-                  MusicPatchNode.field_m = kl.a(252, hm.field_g, "", "level_select_arrow_pressed");
-                  ad.field_b = FullscreenNoticeType.a(hm.field_g, "level_select_frame", "", (byte) 61);
-                  pf.field_a = kl.a(252, hm.field_g, "", "level_select_preview_frame");
-                  DualLinkNode.field_n = kl.a(252, hm.field_g, "", "level_select_slider_tab");
-                  rd.field_e = kl.a(252, hm.field_g, "", "level_select_bracket");
-                  GuestPlayConfirmationForm.field_G = kl.a(252, hm.field_g, "", "level_select_scroll_bg");
-                  MusicPatchEnvelope.field_a = kl.a(252, hm.field_g, "", "main_title");
-                  fg.field_j = kl.a(252, hm.field_g, "", "achievements_title");
-                  aj.field_v = kl.a(252, hm.field_g, "", "instructions_title");
-                  va.field_g = kl.a(252, hm.field_g, "", "highscores_title");
-                  a.field_f = kl.a(252, hm.field_g, "", "selectlevel_title");
-                  uh.field_k = kl.a(252, hm.field_g, "", "menu_box_420");
-                  ek.field_c = kl.a(252, hm.field_g, "", "menu_box_480");
-                  ModalDialog.field_I = kl.a(252, hm.field_g, "", "level_complete_congratulations");
-                  ModalDialogHost.field_E = kl.a(252, hm.field_g, "", "level_complete_1");
-                  me.field_g = kl.a(252, hm.field_g, "", "level_complete_2");
-                  MusicPatchNode.field_s = kl.a(252, hm.field_g, "", "level_complete_3");
-                  kl.a(252, hm.field_g, "", "game_complete_backdrop");
-                  this.field_C = kl.a(252, hm.field_g, "", "mb_price_background");
-                  this.field_N = of.a("mb_screenshots", "", hm.field_g, 92);
-                  this.field_D = kl.a(252, hm.field_g, "", "mb_foreground");
-                  lc.field_t = kl.a(252, hm.field_g, "", "game_complete_title");
-                  sd.field_e = hm.a("slider_back", hm.field_g, (byte) 127, "");
-                  q.field_c = hm.a("slider_left", hm.field_g, (byte) -71, "");
-                  lj.field_f = hm.a("slider_right", hm.field_g, (byte) -79, "");
-                  tb.field_f = kl.a(252, hm.field_g, "", "slider_tab");
-                  MusicPatchPcmStream.field_m = hm.a("checkbox_value_0", hm.field_g, (byte) -88, "");
-                  UiComponent.field_l = hm.a("checkbox_value_1", hm.field_g, (byte) -13, "");
-                  EmailFormatValidator.field_n = of.a("countdown", "", hm.field_g, 103);
+                  be.field_c = kl.a(252, SocketConnector.field_g, "", "level_select_arrow");
+                  MusicPatchNode.field_m = kl.a(252, SocketConnector.field_g, "", "level_select_arrow_pressed");
+                  ad.field_b = FullscreenNoticeType.a(SocketConnector.field_g, "level_select_frame", "", (byte) 61);
+                  pf.field_a = kl.a(252, SocketConnector.field_g, "", "level_select_preview_frame");
+                  DualLinkNode.field_n = kl.a(252, SocketConnector.field_g, "", "level_select_slider_tab");
+                  MouseInputHandler.field_e = kl.a(252, SocketConnector.field_g, "", "level_select_bracket");
+                  GuestPlayConfirmationForm.field_G = kl.a(252, SocketConnector.field_g, "", "level_select_scroll_bg");
+                  MusicPatchEnvelope.field_a = kl.a(252, SocketConnector.field_g, "", "main_title");
+                  fg.field_j = kl.a(252, SocketConnector.field_g, "", "achievements_title");
+                  aj.field_v = kl.a(252, SocketConnector.field_g, "", "instructions_title");
+                  va.field_g = kl.a(252, SocketConnector.field_g, "", "highscores_title");
+                  a.field_f = kl.a(252, SocketConnector.field_g, "", "selectlevel_title");
+                  uh.field_k = kl.a(252, SocketConnector.field_g, "", "menu_box_420");
+                  ek.field_c = kl.a(252, SocketConnector.field_g, "", "menu_box_480");
+                  ModalDialog.field_I = kl.a(252, SocketConnector.field_g, "", "level_complete_congratulations");
+                  ModalDialogHost.field_E = kl.a(252, SocketConnector.field_g, "", "level_complete_1");
+                  me.field_g = kl.a(252, SocketConnector.field_g, "", "level_complete_2");
+                  MusicPatchNode.field_s = kl.a(252, SocketConnector.field_g, "", "level_complete_3");
+                  kl.a(252, SocketConnector.field_g, "", "game_complete_backdrop");
+                  this.field_C = kl.a(252, SocketConnector.field_g, "", "mb_price_background");
+                  this.field_N = of.a("mb_screenshots", "", SocketConnector.field_g, 92);
+                  this.field_D = kl.a(252, SocketConnector.field_g, "", "mb_foreground");
+                  lc.field_t = kl.a(252, SocketConnector.field_g, "", "game_complete_title");
+                  sd.field_e = SocketConnector.a("slider_back", SocketConnector.field_g, (byte) 127, "");
+                  q.field_c = SocketConnector.a("slider_left", SocketConnector.field_g, (byte) -71, "");
+                  lj.field_f = SocketConnector.a("slider_right", SocketConnector.field_g, (byte) -79, "");
+                  tb.field_f = kl.a(252, SocketConnector.field_g, "", "slider_tab");
+                  MusicPatchPcmStream.field_m = SocketConnector.a("checkbox_value_0", SocketConnector.field_g, (byte) -88, "");
+                  UiComponent.field_l = SocketConnector.a("checkbox_value_1", SocketConnector.field_g, (byte) -13, "");
+                  EmailFormatValidator.field_n = of.a("countdown", "", SocketConnector.field_g, 103);
                   ji.field_f = new RgbSprite[EmailFormatValidator.field_n.length];
                   break;
                 }
@@ -633,13 +633,13 @@ public final class fleas extends NetworkGameClient {
               SoftwareRasterizer.blurRectangle(5, 5, 0, 0, SoftwareRasterizer.field_d, SoftwareRasterizer.field_k);
               qi.field_c = var8;
               SoftwareRasterizer.setRasterBuffer(var7, var5, var6Lifetime1);
-              AccountRegistrationPanel.field_P = kl.a(252, hm.field_g, "", "explosion");
-              il.field_d = of.a("achievementicons", "", hm.field_g, 103);
+              AccountRegistrationPanel.field_P = kl.a(252, SocketConnector.field_g, "", "explosion");
+              il.field_d = of.a("achievementicons", "", SocketConnector.field_g, 103);
               var9 = new RgbSprite[3];
               var10 = new RgbSprite[3];
-              var9[0] = kl.a(252, hm.field_g, "", "ingame_background_1");
-              var9[1] = kl.a(252, hm.field_g, "", "ingame_background_2");
-              var9[2] = kl.a(252, hm.field_g, "", "ingame_background_3");
+              var9[0] = kl.a(252, SocketConnector.field_g, "", "ingame_background_1");
+              var9[1] = kl.a(252, SocketConnector.field_g, "", "ingame_background_2");
+              var9[2] = kl.a(252, SocketConnector.field_g, "", "ingame_background_3");
               var11 = 0;
               do {
                 if (var11 >= 3) {
@@ -702,20 +702,20 @@ public final class fleas extends NetworkGameClient {
               do {
                 if (!(var11 < nl.field_c[0].length)) {
                   ValidationStatusIcon.field_O = new RgbSprite[6];
-                  ValidationStatusIcon.field_O[0] = kl.a(252, hm.field_g, "", "menu_character_1");
-                  ValidationStatusIcon.field_O[1] = kl.a(252, hm.field_g, "", "menu_character_2");
-                  ValidationStatusIcon.field_O[2] = kl.a(252, hm.field_g, "", "menu_character_3");
-                  ValidationStatusIcon.field_O[3] = kl.a(252, hm.field_g, "", "menu_character_4");
-                  ValidationStatusIcon.field_O[4] = kl.a(252, hm.field_g, "", "menu_character_5");
-                  ValidationStatusIcon.field_O[5] = kl.a(252, hm.field_g, "", "menu_character_6");
+                  ValidationStatusIcon.field_O[0] = kl.a(252, SocketConnector.field_g, "", "menu_character_1");
+                  ValidationStatusIcon.field_O[1] = kl.a(252, SocketConnector.field_g, "", "menu_character_2");
+                  ValidationStatusIcon.field_O[2] = kl.a(252, SocketConnector.field_g, "", "menu_character_3");
+                  ValidationStatusIcon.field_O[3] = kl.a(252, SocketConnector.field_g, "", "menu_character_4");
+                  ValidationStatusIcon.field_O[4] = kl.a(252, SocketConnector.field_g, "", "menu_character_5");
+                  ValidationStatusIcon.field_O[5] = kl.a(252, SocketConnector.field_g, "", "menu_character_6");
                   dupTemp$5 = ValidationStatusIcon.field_O[0];
                   dupTemp$5.field_v = dupTemp$5.field_v - 200;
                   dupTemp$6 = ValidationStatusIcon.field_O[1];
                   dupTemp$6.field_v = dupTemp$6.field_v - 200;
-                  pd.field_k = FullscreenNoticeType.a(hm.field_g, "frame", "", (byte) 61);
-                  DequeWidgetContainer.field_E = FullscreenNoticeType.a(hm.field_g, "frame_bright", "", (byte) 61);
-                  SpriteGeometry.field_z = FullscreenNoticeType.a(hm.field_g, "button_frame", "", (byte) 61);
-                  a.field_b = FullscreenNoticeType.a(hm.field_g, "button_raised", "", (byte) 61);
+                  pd.field_k = FullscreenNoticeType.a(SocketConnector.field_g, "frame", "", (byte) 61);
+                  DequeWidgetContainer.field_E = FullscreenNoticeType.a(SocketConnector.field_g, "frame_bright", "", (byte) 61);
+                  SpriteGeometry.field_z = FullscreenNoticeType.a(SocketConnector.field_g, "button_frame", "", (byte) 61);
+                  a.field_b = FullscreenNoticeType.a(SocketConnector.field_g, "button_raised", "", (byte) 61);
                   ud.b((byte) 47);
                   var11 = MatchingFieldValidator.field_p.field_N;
                   FullscreenFocusCanvas.field_a = new RgbSprite(var11, var11);
@@ -801,7 +801,7 @@ public final class fleas extends NetworkGameClient {
               cb.field_w.field_A = 256;
               var16.field_t = 256;
               ModalDialogHost.field_G.field_r = true;
-              hm.field_g = null;
+              SocketConnector.field_g = null;
               cb.field_w.field_r = true;
               return;
             }
@@ -962,7 +962,7 @@ public final class fleas extends NetworkGameClient {
           NetworkGameClient.i(param0 + 0);
           ContextualRuntimeException.clearStaticReferences(param0 ^ 55);
           GameAppletShell.c(true);
-          rd.clearStaticReferences((byte) -19);
+          MouseInputHandler.clearStaticReferences((byte) -19);
           MouseWheelInput.clearStaticReferences(param0 ^ 107);
           SoftwareRasterizer.clearStaticReferences();
           ResourceArchive.clearStaticReferences((byte) -110);
@@ -986,9 +986,9 @@ public final class fleas extends NetworkGameClient {
           FullscreenFocusCanvas.a(-29039);
           va.b((byte) 126);
           SoundCache.clearStaticReferences(0);
-          w.clearStaticReferences(5);
+          ArchiveNetworkClient.clearStaticReferences(5);
           DiskCacheWorker.a(105);
-          uf.resetStaticState(true);
+          ArchiveSourceManager.resetStaticState(true);
           BufferedRandomAccessFile.a(-40);
           BufferedSocket.clearStaticReferences(123167272);
           kh.clearStaticReferences((byte) -97);
@@ -1060,7 +1060,7 @@ public final class fleas extends NetworkGameClient {
           MidiNoteMask.clearDeclaredStaticReferences(param0 ^ -100);
           MusicPatch.a(-24464);
           MusicPatchEnvelope.clearStaticReferences(0);
-          g.resetStaticState(false);
+          SocketArchiveNetworkClient.resetStaticState(false);
           bf.a(false);
           NetworkArchiveRequest.i(105);
           SectorCacheStore.a(true);
@@ -1113,7 +1113,7 @@ public final class fleas extends NetworkGameClient {
           kk.clearStaticReferences(4);
           oc.clearStaticReferences((byte) -40);
           lg.clearStaticReferences(-106);
-          hm.clearStaticReferences(2067);
+          SocketConnector.clearStaticReferences(2067);
           ProxyAuthenticationRequiredException.clearStaticReferences(3505);
           NanoFrameTimer.clearStaticReferences((byte) 82);
           ImageProducerRasterBuffer.clearStaticReferences(0);
@@ -1144,7 +1144,7 @@ public final class fleas extends NetworkGameClient {
           SecondaryNodeDeque.clearStaticReferences(0);
           cb.releaseDeclaredStaticReferences(param0 ^ 67);
           pj.discardDeclaredStaticReferences(-103);
-          jk.clearDeclaredStaticReferences(28);
+          ProxySocketConnector.clearDeclaredStaticReferences(28);
           a.a((byte) 126);
           NodeHashTableIterator.clearStaticReferences(105);
           SecondaryNodeDequeIterator.clearStaticReferences((byte) 58);
@@ -1231,7 +1231,7 @@ public final class fleas extends NetworkGameClient {
               return;
             }
           }
-          w.field_r = 0;
+          ArchiveNetworkClient.field_r = 0;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -1280,8 +1280,8 @@ public final class fleas extends NetworkGameClient {
                       ob.field_d.tryLoadAllGroups(-72)) {
                       if (jc.field_e.ensureIndexLoaded((byte) -104) &&
                         jc.field_e.tryLoadAllGroups(-36)) {
-                        if (hm.field_g.ensureIndexLoaded((byte) -124) &&
-                          hm.field_g.tryLoadAllGroups(-76)) {
+                        if (SocketConnector.field_g.ensureIndexLoaded((byte) -124) &&
+                          SocketConnector.field_g.tryLoadAllGroups(-76)) {
                           if (MusicPatchEnvelope.field_h.ensureIndexLoaded((byte) -122) &&
                             MusicPatchEnvelope.field_h.tryLoadAllGroups(-54)) {
                             if (pf.field_b.ensureIndexLoaded((byte) -106) &&
@@ -1307,7 +1307,7 @@ public final class fleas extends NetworkGameClient {
                           ResizableModalDialog.a(30.0f, sa.a(MusicPatchEnvelope.field_h, "", MusicPatchEnvelope.field_j, rg.field_q, (byte) 46), true);
                           return false;
                         }
-                        ResizableModalDialog.a(25.0f, sa.a(hm.field_g, "", bf.field_f, IterableNodeHashTable.field_e, (byte) 46), true);
+                        ResizableModalDialog.a(25.0f, sa.a(SocketConnector.field_g, "", bf.field_f, IterableNodeHashTable.field_e, (byte) 46), true);
                         return false;
                       }
                       ResizableModalDialog.a(20.0f, sa.a(jc.field_e, "", tj.field_b, TextHotspotBounds.field_p, (byte) 46), true);
@@ -1371,12 +1371,12 @@ public final class fleas extends NetworkGameClient {
             fleas.h((byte) 33);
             return false;
           }
-          if (hm.field_g != null) {
+          if (SocketConnector.field_g != null) {
             ResizableModalDialog.a(72.0f, ModalDialogHost.field_H, true);
             this.renderClientFrame(true);
             this.g((byte) -111);
             MusicPatchEnvelope.field_h = null;
-            hm.field_g = null;
+            SocketConnector.field_g = null;
             fleas.h((byte) -116);
             return false;
           }
@@ -1479,7 +1479,7 @@ public final class fleas extends NetworkGameClient {
               stackIn_137_0 = null;
             }
             DualLinkNode.field_l = (ResourceArchive) (stackIn_137_0);
-            jk.field_l = 2;
+            ProxySocketConnector.field_l = 2;
             tj.field_a = 0;
             fleas.h((byte) -72);
             break;
@@ -1789,7 +1789,7 @@ public final class fleas extends NetworkGameClient {
                   if (null != wi.field_p) {
                     wi.field_p.a(param0 + 84);
                   }
-                  ab.field_b = w.field_l;
+                  ab.field_b = ArchiveNetworkClient.field_l;
                   LabeledWidgetContainer.i(param0 + 14);
                   if (ab.field_b == -2) {
                     ab.field_b = 0;
@@ -1826,7 +1826,7 @@ public final class fleas extends NetworkGameClient {
             TextLayout.field_a = null;
             fleas.h((byte) 79);
           }
-          hm.field_g = q.a(8192, 1);
+          SocketConnector.field_g = q.a(8192, 1);
           pb.field_a = q.a(8192, 2);
           if (!param0) {
             return;
@@ -2262,7 +2262,7 @@ public final class fleas extends NetworkGameClient {
               }
               if (ji.field_a == 85 &&
                 AwtRasterBuffer.field_a.length() > 0) {
-                uf.a(-1 + AwtRasterBuffer.field_a.length(), AwtRasterBuffer.field_a, ' ', -120);
+                ArchiveSourceManager.a(-1 + AwtRasterBuffer.field_a.length(), AwtRasterBuffer.field_a, ' ', -120);
               }
               if (ji.field_a == 84) {
               }
@@ -2282,7 +2282,7 @@ public final class fleas extends NetworkGameClient {
             ik.field_R = true;
           }
           ee.field_h = ee.field_h - (ee.field_h + 1 >> 3);
-          if (10 == jk.field_l) {
+          if (10 == ProxySocketConnector.field_l) {
           }
           if (DualLinkNode.field_o == 1) {
             return;
@@ -2332,7 +2332,7 @@ public final class fleas extends NetworkGameClient {
           }
           boolean decompiledFrameRemainder0 = true;
           var16 = ia.field_m[field_E][var2_int];
-          if (jk.field_l != 10 &&
+          if (ProxySocketConnector.field_l != 10 &&
             pl.field_f < var16.field_e && (!(DirectByteStorage.field_k >= 2) ||
             ji.field_a != 2)) {
             stackIn_100_0 = 0;
@@ -2475,7 +2475,7 @@ public final class fleas extends NetworkGameClient {
             if (120 > pg.field_f) {
               pg.field_f = pg.field_f + 1;
             }
-            if (jk.field_l == 10 &&
+            if (ProxySocketConnector.field_l == 10 &&
               pg.field_f < 360 &&
               ProxyAuthenticationRequiredException.field_b == 0 &&
               DiskArchiveRequest.field_y == 0) {
@@ -2489,7 +2489,7 @@ public final class fleas extends NetworkGameClient {
           var3Lifetime2 = 0;
           boolean decompiledNaturalLoopExit0 = false;
           while (!(decompiledNaturalLoopExit0 = (!(var3Lifetime2 < oe.field_a)))) {
-            var4 = fl.field_c[GrowableIntArray.field_h[var3Lifetime2]][uf.field_e[var3Lifetime2]];
+            var4 = fl.field_c[GrowableIntArray.field_h[var3Lifetime2]][ArchiveSourceManager.field_e[var3Lifetime2]];
             stackIn_314_0 = var4;
             stackIn_314_1 = PcmResampler.field_c[var3Lifetime2];
             if (var24 == 0) {
@@ -2500,7 +2500,7 @@ public final class fleas extends NetworkGameClient {
                   if ((PcmResampler.field_c[var3Lifetime2] == 8)) {
                     var7 = GrowableIntArray.field_h[var3Lifetime2] * 16;
                     var13 = 0;
-                    var8 = uf.field_e[var3Lifetime2] * 16;
+                    var8 = ArchiveSourceManager.field_e[var3Lifetime2] * 16;
                     var4 = 0;
                     while (var4 < nb.field_b) {
                       stackIn_292_0 = 0;
@@ -2517,22 +2517,22 @@ public final class fleas extends NetworkGameClient {
                     stackIn_292_0Lifetime1 = 1;
                     stackIn_292_1Lifetime1 = var13;
                     if (stackIn_292_0Lifetime1 != stackIn_292_1Lifetime1) {
-                      fl.field_c[GrowableIntArray.field_h[var3Lifetime2]][uf.field_e[var3Lifetime2]] = '\b';
+                      fl.field_c[GrowableIntArray.field_h[var3Lifetime2]][ArchiveSourceManager.field_e[var3Lifetime2]] = '\b';
                     } else {
-                      if (fl.field_c[GrowableIntArray.field_h[var3Lifetime2]][uf.field_e[var3Lifetime2]] == 8) {
+                      if (fl.field_c[GrowableIntArray.field_h[var3Lifetime2]][ArchiveSourceManager.field_e[var3Lifetime2]] == 8) {
                         fh.startPcmSamplePlaybackWithIntGuard(-91, bf.field_d, 100, 63);
                       }
-                      fl.field_c[GrowableIntArray.field_h[var3Lifetime2]][uf.field_e[var3Lifetime2]] = '\t';
+                      fl.field_c[GrowableIntArray.field_h[var3Lifetime2]][ArchiveSourceManager.field_e[var3Lifetime2]] = '\t';
                     }
                   }
                   decompiledFrameRemainder4 = false;
                 }
                 else {
                   if (kb.field_i == 0) {
-                    fl.field_c[GrowableIntArray.field_h[var3Lifetime2]][uf.field_e[var3Lifetime2]] = (char)PcmResampler.field_c[var3Lifetime2];
+                    fl.field_c[GrowableIntArray.field_h[var3Lifetime2]][ArchiveSourceManager.field_e[var3Lifetime2]] = (char)PcmResampler.field_c[var3Lifetime2];
                   }
                   if (kb.field_i == 4) {
-                    fl.field_c[GrowableIntArray.field_h[var3Lifetime2]][uf.field_e[var3Lifetime2]] = (char)fg.field_u[var3Lifetime2];
+                    fl.field_c[GrowableIntArray.field_h[var3Lifetime2]][ArchiveSourceManager.field_e[var3Lifetime2]] = (char)fg.field_u[var3Lifetime2];
                   }
                 }
               }
@@ -2802,12 +2802,12 @@ public final class fleas extends NetworkGameClient {
                   }
                   var4Lifetime2Lifetime1++;
                 }
-                hl.field_C[var3Lifetime4] = hl.field_C[var3Lifetime4] + uf.field_b[var3Lifetime4];
+                hl.field_C[var3Lifetime4] = hl.field_C[var3Lifetime4] + ArchiveSourceManager.field_b[var3Lifetime4];
                 stackIn_521_0Lifetime1 = hl.field_C[var3Lifetime4];
                 stackIn_521_1Lifetime1 = 16;
                 if (stackIn_521_0Lifetime1 >= stackIn_521_1Lifetime1) {
                   hl.field_C[var3Lifetime4] = 16;
-                  uf.field_b[var3Lifetime4] = -4;
+                  ArchiveSourceManager.field_b[var3Lifetime4] = -4;
                 }
                 if (0 == hl.field_C[var3Lifetime4]) {
                   fl.field_c[var5Lifetime1Lifetime1][-2 + var6Lifetime1Lifetime1] = '\017';
@@ -2817,7 +2817,7 @@ public final class fleas extends NetworkGameClient {
                     ModalDialogHost.field_F[var4Lifetime2Lifetime1] = ModalDialogHost.field_F[1 + var4Lifetime2Lifetime1];
                     ek.field_b[var4Lifetime2Lifetime1] = ek.field_b[1 + var4Lifetime2Lifetime1];
                     hl.field_C[var4Lifetime2Lifetime1] = hl.field_C[1 + var4Lifetime2Lifetime1];
-                    uf.field_b[var4Lifetime2Lifetime1] = uf.field_b[var4Lifetime2Lifetime1 + 1];
+                    ArchiveSourceManager.field_b[var4Lifetime2Lifetime1] = ArchiveSourceManager.field_b[var4Lifetime2Lifetime1 + 1];
                     var4Lifetime2Lifetime1++;
                   }
                   pl.field_g = pl.field_g - 1;

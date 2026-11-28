@@ -42,7 +42,7 @@ final class or {
 
     final static void b(int param0) {
         kh.a((byte) -32);
-        tk.field_e = true;
+        ArchiveNetworkClient.field_e = true;
         if (param0 == 4) {
           un.field_Ib = true;
           AccountServiceResult.field_e.closeAllDialogs(0);
@@ -174,7 +174,7 @@ final class or {
           }
           kh.a((byte) -32);
           AccountServiceResult.field_e.closeAllDialogs(param2 - 65536);
-          eb.field_d = new LoginPanel(ff.field_u, (String) null, tk.field_e, param3, param1);
+          eb.field_d = new LoginPanel(ff.field_u, (String) null, ArchiveNetworkClient.field_e, param3, param1);
           n.field_b = new StandardContentDialog(AccountServiceResult.field_e, eb.field_d);
           AccountServiceResult.field_e.showDialog(n.field_b, 0);
         } catch (RuntimeException runtimeException) {

@@ -64,7 +64,7 @@ final class SocketJs5Transport extends Js5Transport {
         }
     }
 
-    final boolean b(int param0) {
+    final boolean pollNetwork(int param0) {
         try {
           int stackIn_97_0 = 0;
           int stackIn_125_0 = 0;
@@ -117,8 +117,8 @@ final class SocketJs5Transport extends Js5Transport {
               }
             }
             if (this.field_q == null) {
-              if (this.c((byte) 0) == 0 &&
-                this.c(param0 ^ -6280) == 0) {
+              if (this.getPriorityRequestCount((byte) 0) == 0 &&
+                this.getPrefetchRequestCount(param0 ^ -6280) == 0) {
                 return true;
               }
               return false;
@@ -367,8 +367,8 @@ final class SocketJs5Transport extends Js5Transport {
               this.field_g = this.field_g + 1;
               this.field_q = null;
               this.field_k = -2;
-              if (this.c((byte) 0) == 0 &&
-                this.c(param0 ^ -6280) == 0) {
+              if (this.getPriorityRequestCount((byte) 0) == 0 &&
+                this.getPrefetchRequestCount(param0 ^ -6280) == 0) {
                 return true;
               }
               return false;
@@ -385,7 +385,7 @@ final class SocketJs5Transport extends Js5Transport {
         }
     }
 
-    final void e(byte param0) {
+    final void resetAfterValidationFailure(byte param0) {
         Throwable decompiledCaughtException = null;
         Exception var2 = null;
         RuntimeException var2_ref = null;
@@ -411,7 +411,7 @@ final class SocketJs5Transport extends Js5Transport {
         }
     }
 
-    final void a(Object param0, boolean param1, byte param2) {
+    final void attachSocket(Object param0, boolean param1, byte param2) {
         try {
           RuntimeException stackIn_38_0 = null;
           StringBuilder stackIn_38_1 = null;
@@ -436,8 +436,8 @@ final class SocketJs5Transport extends Js5Transport {
               this.field_q = null;
             }
             this.field_q = (BufferedSocket) (param0);
-            this.f((byte) 35);
-            this.a(param1, 127);
+            this.sendProtocolSetup((byte) 35);
+            this.sendConnectionState(param1, 127);
             this.field_j = null;
             this.field_c.position = 0;
             scanLoop1: while (true) {
@@ -2262,7 +2262,7 @@ final class SocketJs5Transport extends Js5Transport {
                 }
                 var2 = se.a((byte) -33, "waitingfor_graphics");
                 if (var2 != null) {
-                  bo.field_i = SecondaryNodeDeque.a(var2, false);
+                  ArchiveSourceManager.field_i = SecondaryNodeDeque.a(var2, false);
                 }
                 var2 = se.a((byte) -33, "waitingfor_models");
                 if (var2 != null) {
@@ -3559,7 +3559,7 @@ final class SocketJs5Transport extends Js5Transport {
         decompiledBody.run();
     }
 
-    final void b(byte param0) {
+    final void close(byte param0) {
         int var2_int = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
@@ -3593,7 +3593,7 @@ final class SocketJs5Transport extends Js5Transport {
         }
     }
 
-    private final void f(byte param0) {
+    private final void sendProtocolSetup(byte param0) {
         try {
           Throwable decompiledCaughtException = null;
           IOException var2 = null;
@@ -3623,7 +3623,7 @@ final class SocketJs5Transport extends Js5Transport {
               this.field_q = null;
             }
             if (param0 < 19) {
-              this.b(103);
+              this.pollNetwork(103);
             }
             return;
           } catch (java.lang.RuntimeException decompiledCaughtParameter2) {
@@ -3638,7 +3638,7 @@ final class SocketJs5Transport extends Js5Transport {
         }
     }
 
-    private final void a(boolean param0, int param1) {
+    private final void sendConnectionState(boolean param0, int param1) {
         try {
           PacketBuffer stackIn_6_0 = null;
           int stackIn_6_1 = 0;

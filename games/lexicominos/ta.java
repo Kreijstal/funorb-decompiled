@@ -182,7 +182,7 @@ final class ta {
     final static void a(int param0, int param1, int param2) {
         fk.field_e = param0;
         int var3 = 21 % ((param1 - 14) / 53);
-        ch.field_e = param2;
+        ProxySocketConnector.field_e = param2;
     }
 
     ta(IntrusiveDeque param0) {

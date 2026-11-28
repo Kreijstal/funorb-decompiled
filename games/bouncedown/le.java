@@ -4,7 +4,7 @@
 final class le {
     static oh field_a;
 
-    final static void a(int param0, java.awt.Component param1) {
+    final static void detachKeyboardListeners(int param0, java.awt.Component param1) {
         try {
           param1.removeKeyListener(GzipDecompressor.field_c);
           param1.removeFocusListener(GzipDecompressor.field_c);

@@ -1553,7 +1553,7 @@ final class hj {
           }
           ll.a(24733);
           ci.a(-2865);
-          DequeCursor.field_a[1].draw(20 + this.field_M, -wl.field_f[0].field_n + (this.field_k - 13));
+          DequeCursor.field_a[1].draw(20 + this.field_M, -ArchiveNetworkClient.field_f[0].field_n + (this.field_k - 13));
           if (!wd.field_h.isEmpty(11253)) {
             var22_ref = (ki) (wd.field_h.beginBackward((byte) -117));
             if (var22_ref != null) {
@@ -1669,7 +1669,7 @@ final class hj {
           SoftwareRasterizer.fillRectangleAlpha(70, var5Lifetime3, 10, -var5Lifetime3 + 480, var3Lifetime4, 120);
           SoftwareRasterizer.fillRectangleAlpha(560, var6Lifetime1, 10, -var6Lifetime1 + 480, var3Lifetime4, 120);
           ByteStorage.b(0);
-          var7 = qh.field_a[this.field_ab];
+          var7 = MouseInputHandler.field_a[this.field_ab];
           var7.drawRotatedAboutBilinear(var7.field_m << 3, var7.field_n << 3, (int)this.field_B << 4, (int)this.field_Z << 4, this.field_g, 4096);
           GuestPlayConfirmationForm.field_E[0].draw(0, 0);
           GuestPlayConfirmationForm.field_E[1].draw(640 - GuestPlayConfirmationForm.field_E[1].field_m, 0);
@@ -1747,11 +1747,11 @@ final class hj {
             var10_ref_leLifetime1Lifetime1.draw(-100 + this.field_M, -var25.field_n + this.field_k - 13);
           }
           boolean decompiledFrameRemainder1 = true;
-          wl.field_f[this.field_U].draw(-70 + this.field_M, this.field_k + (-13 - wl.field_f[0].field_n));
+          ArchiveNetworkClient.field_f[this.field_U].draw(-70 + this.field_M, this.field_k + (-13 - ArchiveNetworkClient.field_f[0].field_n));
           var10Lifetime3 = -this.field_z;
           ci.field_d.drawRotatedAboutNearest(0, ci.field_d.field_n << 3, this.field_M << 4, this.field_k - 48 << 4, var10Lifetime3, 4096);
-          DequeCursor.field_a[0].draw(20 + this.field_M, this.field_k - 13 - wl.field_f[0].field_n);
-          fa.f(1);
+          DequeCursor.field_a[0].draw(20 + this.field_M, this.field_k - 13 - ArchiveNetworkClient.field_f[0].field_n);
+          SocketArchiveNetworkClient.f(1);
           BoundedRandomAccessFile.field_e.drawCentred(this.field_j.toString(), 40, 124, 16777215, -1);
           BoundedRandomAccessFile.field_e.drawCentred(Integer.toString(1 + IterableNodeHashTable.field_c % 5), 40, 208, 16777215, -1);
           var11Lifetime4 = -48 / ((param0 - 56) / 43);

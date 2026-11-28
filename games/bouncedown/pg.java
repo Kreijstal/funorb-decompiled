@@ -62,7 +62,7 @@ final class pg {
           LoginPanel.field_L = null;
           fh.field_B = qg.field_g;
           ej.field_b = param5;
-          ij.field_a = param6;
+          BouncedownClientSupport.field_a = param6;
           RegistrationAgreementPane.field_z = param4;
           return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

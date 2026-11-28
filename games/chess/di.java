@@ -89,8 +89,8 @@ final class di extends ci {
             var6 = ka.field_g[var3];
             if (FrameTimer.field_f == 2 &&
               1 == var2) {
-              if (hj.field_l.length > NodeHashTableIterator.field_a.length) {
-                stackIn_17_0 = hj.field_l.length;
+              if (ArchiveSourceManager.field_l.length > NodeHashTableIterator.field_a.length) {
+                stackIn_17_0 = ArchiveSourceManager.field_l.length;
               } else {
                 stackIn_17_0 = NodeHashTableIterator.field_a.length;
               }
@@ -124,7 +124,7 @@ final class di extends ci {
               var6 = Integer.toString(var2);
             }
             var7Lifetime1 = SingleChildWidgetContainer.a(!(0 > var4), false, var6);
-            var8Lifetime1 = -(var7Lifetime1 >> 1) + ob.field_C;
+            var8Lifetime1 = -(var7Lifetime1 >> 1) + SocketArchiveNetworkClient.field_C;
             if (0 <= var4) {
               if (var4 != AccountRegistrationPanel.field_R.field_h) {
                 stackIn_45_0 = ie.field_b;
@@ -272,7 +272,7 @@ final class di extends ci {
 
     final static void a(int param0, int param1, int param2) {
         int var3 = -41 % ((param1 - 13) / 48);
-        ob.field_C = param0;
+        SocketArchiveNetworkClient.field_C = param0;
         kd.field_Hb = param2;
     }
 

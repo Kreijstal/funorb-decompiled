@@ -12,7 +12,7 @@ final class eh {
         throw new IllegalStateException();
     }
 
-    final static void a(jk param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
+    final static void a(LogoMesh param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
         int stackIn_15_0 = 0;
         int[] stackIn_17_0 = null;
         int stackIn_18_1 = 0;
@@ -56,10 +56,10 @@ final class eh {
         int var38 = 0;
         int var39 = 0;
         int var40 = 0;
-        jk var41 = null;
+        LogoMesh var41 = null;
         int[] var42 = null;
         int var45 = 0;
-        jk var46 = null;
+        LogoMesh var46 = null;
         int[] var51 = null;
         int[] var56 = null;
         byte[] var62 = null;
@@ -89,7 +89,7 @@ final class eh {
           var66 = new int[param0.field_d];
           var63 = DialogMessagePane.field_D;
           var64 = ih.field_db;
-          var65 = nk.field_b;
+          var65 = BouncedownMenuEntry.field_b;
           for (var13 = 0; var13 < param0.field_d; var13++) {
             var14 = param3 * var63[var13] + var64[var13] * param6 + var65[var13] * param4 >> 8;
             if (var14 < 0) {
@@ -118,8 +118,8 @@ final class eh {
             var66[var13] = var15Lifetime2;
           }
           if (param7 >= -77) {
-            var41 = (jk) null;
-            eh.a((jk) null, 9, 103, 78, 54, -25, 73, 112);
+            var41 = (LogoMesh) null;
+            eh.a((LogoMesh) null, 9, 103, 78, 54, -25, 73, 112);
           }
           var45 = 0;
           var13Lifetime1 = var45;
@@ -156,11 +156,11 @@ final class eh {
               stackIn_39_0 = null;
             }
             var21 = stackIn_39_0;
-            var22 = ca.field_c[var15Lifetime1];
+            var22 = SlimeCollisionSupport.field_c[var15Lifetime1];
             var23 = kg.field_g[var15Lifetime1];
-            var24 = ca.field_c[var16];
+            var24 = SlimeCollisionSupport.field_c[var16];
             var25 = kg.field_g[var16];
-            var26 = ca.field_c[var17];
+            var26 = SlimeCollisionSupport.field_c[var17];
             var27 = kg.field_g[var17];
             if (var19 == var18 &&
               var20 == var19) {
@@ -240,8 +240,8 @@ final class eh {
           vd.field_b.a((byte) -84);
         }
         if (!param0) {
-          jk var2 = (jk) null;
-          eh.a((jk) null, 33, -117, 56, -22, 94, 101, 77);
+          LogoMesh var2 = (LogoMesh) null;
+          eh.a((LogoMesh) null, 33, -117, 56, -22, 94, 101, 77);
         }
         MusicPatchEnvelope.field_h.requestFocus();
     }

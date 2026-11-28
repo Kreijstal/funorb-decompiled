@@ -648,7 +648,7 @@ final class ResourceArchive {
               for (var17 = 0; var13 > var17; var17++) {
                 var18 = 0;
                 for (var19 = 0; var5_int > var19; var19++) {
-                  var18 = var18 + var30.d(8195);
+                  var18 = var18 + var30.readInt(8195);
                   if (var6 != null) {
                     var20 = var35[var19];
                   } else {
@@ -670,7 +670,7 @@ final class ResourceArchive {
               for (var19 = 0; var19 < var13; var19++) {
                 var20 = 0;
                 for (var21 = 0; var21 < var5_int; var21++) {
-                  var20 = var20 + var30.d(8195);
+                  var20 = var20 + var30.readInt(8195);
                   if (var6 != null) {
                     var22 = var35[var21];
                   } else {
@@ -697,7 +697,7 @@ final class ResourceArchive {
               for (var16_int = 0; var16_int < var13; var16_int++) {
                 var17 = 0;
                 for (var18 = 0; var18 < var5_int; var18++) {
-                  var17 = var17 + var32.d(8195);
+                  var17 = var17 + var32.readInt(8195);
                   var15[var18] = var15[var18] + var17;
                 }
               }
@@ -714,7 +714,7 @@ final class ResourceArchive {
               for (var18 = 0; var13 > var18; var18++) {
                 var19 = 0;
                 for (var20 = 0; var20 < var5_int; var20++) {
-                  var19 = var19 + var32.d(8195);
+                  var19 = var19 + var32.readInt(8195);
                   ArrayBlockSupport.copyByteRange(var44, var17, var41[var20], var40[var20], var19);
                   var15[var20] = var15[var20] + var19;
                   var17 = var17 + var19;
@@ -727,7 +727,7 @@ final class ResourceArchive {
                   var19 = var35[var18];
                 }
                 if (this.field_m == 0) {
-                  var7[var19] = ej.storeBytes(false, var41[var18], 117);
+                  var7[var19] = ArchiveNetworkClient.storeBytes(false, var41[var18], 117);
                 } else {
                   var7[var19] = var41[var18];
                 }
@@ -743,7 +743,7 @@ final class ResourceArchive {
               var7[var12] = var37;
               return true;
             }
-            var7[var12] = ej.storeBytes(false, var44, 112);
+            var7[var12] = ArchiveNetworkClient.storeBytes(false, var44, 112);
           }
           return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
@@ -847,7 +847,7 @@ final class ResourceArchive {
           this.getGroupIdByName((byte) -10, (String) (this.field_d[0]));
         }
         if (!this.field_i) {
-          this.field_d[param1] = ej.storeBytes(false, this.field_c.a((byte) -50, param1), param0 - 20418);
+          this.field_d[param1] = ArchiveNetworkClient.storeBytes(false, this.field_c.a((byte) -50, param1), param0 - 20418);
         } else {
           this.field_d[param1] = this.field_c.a((byte) -50, param1);
         }

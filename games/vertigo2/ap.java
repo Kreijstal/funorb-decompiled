@@ -17,11 +17,11 @@ final class ap {
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          vm.a((java.awt.Component) ((Object) param0), 11631);
+          vm.attachKeyboardListeners((java.awt.Component) ((Object) param0), 11631);
           if (param1 != -8228) {
             ap.a((byte) -14);
           }
-          AccountNameAvailabilityValidator.a(3, (java.awt.Component) ((Object) param0));
+          AccountNameAvailabilityValidator.attachMouseListeners(3, (java.awt.Component) ((Object) param0));
           if (null == th.field_g) {
             return;
           }

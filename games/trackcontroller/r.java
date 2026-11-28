@@ -121,8 +121,8 @@ final class r extends IntrusiveNode {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         try {
-          j.a((java.awt.Component) ((Object) param1), 103);
-          fb.a(param0 + 32539, (java.awt.Component) ((Object) param1));
+          j.detachKeyboardListeners((java.awt.Component) ((Object) param1), 103);
+          fb.detachMouseListeners(param0 + 32539, (java.awt.Component) ((Object) param1));
           if (param0 != -32652) {
             field_i = (BufferedSocket) null;
           }

@@ -18,7 +18,7 @@ abstract class ng {
           var4 = ph.field_c[var2];
           var5 = new int[var3];
           for (var6 = 0; var3 > var6; var6++) {
-            var5[var6] = he.field_k[da.bitwiseAnd((int) var4[var6], 255)];
+            var5[var6] = LeaderboardSubmission.field_k[da.bitwiseAnd((int) var4[var6], 255)];
           }
           var1[var2] = new RgbSprite(DropTargetWidgetContainer.field_C, fk.field_e, ConfirmedEmailAvailabilityValidator.field_n[var2], ae.field_c[var2], ih.field_V[var2], qh.field_i[var2], var5);
         }
@@ -64,9 +64,9 @@ abstract class ng {
           !(DelegatingCanvas.field_c.length >= param2)) {
           DelegatingCanvas.field_c = new int[2 * param2];
         }
-        if (null == ij.field_b ||
-          !(param2 <= ij.field_b.length)) {
-          ij.field_b = new int[2 * param2];
+        if (null == BouncedownClientSupport.field_b ||
+          !(param2 <= BouncedownClientSupport.field_b.length)) {
+          BouncedownClientSupport.field_b = new int[2 * param2];
         }
         if (w.field_f == null ||
           !(param1 + param2 <= w.field_f.length)) {

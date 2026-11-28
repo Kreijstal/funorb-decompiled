@@ -213,7 +213,7 @@ final class MixedSupport133 {
         CipherPacketBuffer cipherPacketBufferLocal14 = null;
         integerLocal13 = DekoBlokoClient.obfuscationControl ? 1 : 0;
         try {
-          integerLocal7 = cipherPacketBufferArgument2.computeInteger1637(8, (byte) 87);
+          integerLocal7 = cipherPacketBufferArgument2.readBits(8, (byte) 87);
           if (integerLocal7 > 0) {
             throw new IllegalStateException("" + integerLocal7);
           }
@@ -224,16 +224,16 @@ final class MixedSupport133 {
           }
           integerLocal10 = MouseInput.computeBoolean1804(cipherPacketBufferArgument2, (byte) -112) ? 1 : 0;
           mixedSupport138Local11 = new MixedSupport138();
-          mixedSupport138Local11.shortState0003 = (short)cipherPacketBufferArgument2.computeInteger1637(16, (byte) 103);
+          mixedSupport138Local11.shortState0003 = (short)cipherPacketBufferArgument2.readBits(16, (byte) 103);
           mixedSupport138Local11.shortArrayState0001 = MixedSupport134.computeShortArray1684(cipherPacketBufferArgument2, true, mixedSupport138Local11.shortArrayState0001, 16);
           mixedSupport138Local11.shortArrayState0004 = MixedSupport134.computeShortArray1684(cipherPacketBufferArgument2, true, mixedSupport138Local11.shortArrayState0004, 16);
           mixedSupport138Local11.shortArrayState0009 = MixedSupport134.computeShortArray1684(cipherPacketBufferArgument2, true, mixedSupport138Local11.shortArrayState0009, 16);
-          mixedSupport138Local11.shortState0001 = (short)cipherPacketBufferArgument2.computeInteger1637(16, (byte) 55);
+          mixedSupport138Local11.shortState0001 = (short)cipherPacketBufferArgument2.readBits(16, (byte) 55);
           mixedSupport138Local11.shortArrayState0002 = MixedSupport134.computeShortArray1684(cipherPacketBufferArgument2, true, mixedSupport138Local11.shortArrayState0002, 16);
           mixedSupport138Local11.shortArrayState0015 = MixedSupport134.computeShortArray1684(cipherPacketBufferArgument2, true, mixedSupport138Local11.shortArrayState0015, 16);
           mixedSupport138Local11.shortArrayState0008 = MixedSupport134.computeShortArray1684(cipherPacketBufferArgument2, true, mixedSupport138Local11.shortArrayState0008, 16);
           if (integerLocal9 != 0) {
-            mixedSupport138Local11.shortState0002 = (short)cipherPacketBufferArgument2.computeInteger1637(16, (byte) 90);
+            mixedSupport138Local11.shortState0002 = (short)cipherPacketBufferArgument2.readBits(16, (byte) 90);
             mixedSupport138Local11.shortArrayState0013 = MixedSupport134.computeShortArray1684(cipherPacketBufferArgument2, true, mixedSupport138Local11.shortArrayState0013, 16);
             mixedSupport138Local11.shortArrayState0011 = MixedSupport134.computeShortArray1684(cipherPacketBufferArgument2, true, mixedSupport138Local11.shortArrayState0011, 16);
             mixedSupport138Local11.shortArrayState0007 = MixedSupport134.computeShortArray1684(cipherPacketBufferArgument2, true, mixedSupport138Local11.shortArrayState0007, 16);
@@ -242,7 +242,7 @@ final class MixedSupport133 {
             mixedSupport138Local11.shortArrayState0006 = MixedSupport134.computeShortArray1684(cipherPacketBufferArgument2, true, mixedSupport138Local11.shortArrayState0006, 16);
           }
           if (integerLocal10 != 0) {
-            cipherPacketBufferArgument2.computeInteger1637(16, (byte) 125);
+            cipherPacketBufferArgument2.readBits(16, (byte) 125);
             mixedSupport138Local11.shortArrayState0018 = MixedSupport134.computeShortArray1684(cipherPacketBufferArgument2, true, mixedSupport138Local11.shortArrayState0018, 16);
             mixedSupport138Local11.shortArrayState0010 = MixedSupport134.computeShortArray1684(cipherPacketBufferArgument2, true, mixedSupport138Local11.shortArrayState0010, 16);
             mixedSupport138Local11.shortArrayState0017 = MixedSupport134.computeShortArray1684(cipherPacketBufferArgument2, true, mixedSupport138Local11.shortArrayState0017, 16);

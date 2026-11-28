@@ -143,7 +143,7 @@ final class StandardContentDialog extends ContentTransitionDialog {
           if (hh.field_d == rl.field_c) {
             ImageProducerRasterBuffer.field_p = 0;
             ArrayBlockSupport.clearInts(ValidationStatusWidget.field_U, 0, 6);
-            sg.field_i = 0;
+            ArchiveSourceManager.field_i = 0;
           }
           ad.field_a = ng.field_u;
           ng.field_u = 0;

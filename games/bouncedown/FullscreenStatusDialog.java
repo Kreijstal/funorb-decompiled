@@ -23,7 +23,7 @@ final class FullscreenStatusDialog extends ResizableModalDialog implements Widge
           var3 = null;
           if (nb.field_c != param1) {
             if (param1 != FullscreenFocusCanvas.field_c) {
-              if (param1 == jk.field_a) {
+              if (param1 == LogoMesh.field_a) {
                 var3 = pe.field_g;
                 this.field_m = this.field_m + 30;
               }
@@ -36,7 +36,7 @@ final class FullscreenStatusDialog extends ResizableModalDialog implements Widge
               }
             }
           } else {
-            var3 = ra.field_f;
+            var3 = ProxySocketConnector.field_f;
           }
           var4 = new UiWidget((String) (var3), (WidgetEventListener) null);
           var4.field_k = this.field_k;
@@ -142,7 +142,7 @@ final class FullscreenStatusDialog extends ResizableModalDialog implements Widge
             return stackIn_7_0;
           }
           if (param0) {
-            stackIn_12_0 = rd.copyBytes((byte) -91, param2);
+            stackIn_12_0 = MouseInputHandler.copyBytes((byte) -91, param2);
             return stackIn_12_0;
           }
           stackIn_10_0 = (byte[]) (param2);

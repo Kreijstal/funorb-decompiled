@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class nh {
-    static pg field_a;
+    static ArchiveSourceManager field_a;
     static String field_b;
     static RgbSprite[] field_c;
 
@@ -21,7 +21,7 @@ final class nh {
         field_c = null;
         field_b = null;
         if (param0 != 60) {
-          field_a = (pg) null;
+          field_a = (ArchiveSourceManager) null;
         }
         field_a = null;
     }

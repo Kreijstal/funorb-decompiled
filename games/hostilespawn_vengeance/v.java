@@ -50,9 +50,9 @@ final class v {
         String stackIn_6_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          ea.a(1, (java.awt.Component) ((Object) param1));
+          ea.detachKeyboardListeners(1, (java.awt.Component) ((Object) param1));
           var2_int = 111 / ((param0 + 52) / 39);
-          RegistrationAgreementPane.a((java.awt.Component) ((Object) param1), -100);
+          RegistrationAgreementPane.detachMouseListeners((java.awt.Component) ((Object) param1), -100);
           if (null == h.field_b) {
             return;
           }

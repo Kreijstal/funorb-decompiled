@@ -68,7 +68,7 @@ final class cm extends IntrusiveNode {
           }
           MatchingFieldValidator.a(kc.field_b, param0 - 108, rf.field_c, ph.field_g, sn.field_c);
           sn.field_c.backpatchShortLength(sn.field_c.position - var5_int, param0 - 506270862);
-          bk.a((byte) -64, -1);
+          ArchiveSourceManager.a((byte) -64, -1);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -110,7 +110,7 @@ final class cm extends IntrusiveNode {
           }
           var1 = sn.field_c;
           while (ub.a(14921)) {
-            var1.d((byte) -51, 8);
+            var1.writeCipheredByte((byte) -51, 8);
             fieldTemp$0 = var1.position + 1;
             var1.position = var1.position + 1;
             var2 = fieldTemp$0;

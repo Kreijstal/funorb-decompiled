@@ -14,9 +14,9 @@ final class eh extends IntrusiveNode {
     final static boolean a(int param0) {
         if (param0 != 37) {
           field_l = 28;
-          return ja.field_b.a(2);
+          return ja.field_b.loadMasterIndex(2);
         }
-        return ja.field_b.a(2);
+        return ja.field_b.loadMasterIndex(2);
     }
 
     final void a(int param0, int param1, int param2, int param3, int param4, int param5, int[] param6, int param7) {

@@ -37,7 +37,7 @@ final class SocketArchiveRequestConnection extends ArchiveRequestConnection {
         }
     }
 
-    final void c(byte param0) {
+    final void close(byte param0) {
         if (this.field_q != null) {
           this.field_q.close(param0 ^ 16777114);
         }
@@ -277,7 +277,7 @@ final class SocketArchiveRequestConnection extends ArchiveRequestConnection {
         }
     }
 
-    final void b(byte param0) {
+    final void resetAfterValidationFailure(byte param0) {
         try {
           this.field_q.close(16777215);
         } catch (Exception exception) {
@@ -299,7 +299,7 @@ final class SocketArchiveRequestConnection extends ArchiveRequestConnection {
         }
     }
 
-    private final void a(boolean param0, int param1) {
+    private final void sendConnectionState(boolean param0, int param1) {
         try {
           IOException iOException = null;
           PacketBuffer stackIn_4_0 = null;
@@ -386,7 +386,7 @@ final class SocketArchiveRequestConnection extends ArchiveRequestConnection {
     public SocketArchiveRequestConnection() {
     }
 
-    private final void d(byte param0) {
+    private final void sendProtocolSetup(byte param0) {
         try {
           Throwable decompiledCaughtException = null;
           IOException var2 = null;
@@ -423,7 +423,7 @@ final class SocketArchiveRequestConnection extends ArchiveRequestConnection {
         }
     }
 
-    final void a(byte param0, boolean param1, Object param2) {
+    final void attachSocket(byte param0, boolean param1, Object param2) {
         try {
           RuntimeException stackIn_28_0 = null;
           StringBuilder stackIn_28_1 = null;
@@ -448,8 +448,8 @@ final class SocketArchiveRequestConnection extends ArchiveRequestConnection {
               this.field_q = null;
             }
             this.field_q = (BufferedSocket) (param2);
-            this.d((byte) -42);
-            this.a(param1, 0);
+            this.sendProtocolSetup((byte) -42);
+            this.sendConnectionState(param1, 0);
             this.field_l = null;
             this.field_a.position = 0;
             while (true) {
@@ -469,7 +469,7 @@ final class SocketArchiveRequestConnection extends ArchiveRequestConnection {
               break;
             }
             if (param0 != 121) {
-              this.c((byte) 104);
+              this.close((byte) 104);
             }
             if (this.field_i != 0) {
               try {
@@ -514,7 +514,7 @@ final class SocketArchiveRequestConnection extends ArchiveRequestConnection {
         }
     }
 
-    final boolean b(int param0) {
+    final boolean pollNetwork(int param0) {
         try {
           int var2_int = 0;
           int stackIn_62_0 = 0;
@@ -560,10 +560,10 @@ final class SocketArchiveRequestConnection extends ArchiveRequestConnection {
             }
           }
           if (null == this.field_q) {
-            if (0 != this.a((byte) 105)) {
+            if (0 != this.getPriorityRequestCount((byte) 105)) {
               return false;
             }
-            if (0 == this.a(param0 ^ 29161)) {
+            if (0 == this.getPrefetchRequestCount(param0 ^ 29161)) {
               return true;
             }
             return false;
@@ -720,8 +720,8 @@ final class SocketArchiveRequestConnection extends ArchiveRequestConnection {
             this.field_q = null;
             this.field_b = -2;
             this.field_e = this.field_e + 1;
-            if (this.a((byte) 105) == 0 &&
-              0 == this.a(7)) {
+            if (this.getPriorityRequestCount((byte) 105) == 0 &&
+              0 == this.getPrefetchRequestCount(7)) {
               return true;
             }
             return false;

@@ -62,8 +62,8 @@ final class GameCanvas extends java.awt.Canvas {
           gk.field_e.a(106, false);
           e.a(4, param1, param4, param3);
           hm.a(-3121);
-          sg.field_b = tl.field_e;
-          lc.field_c = tl.field_e;
+          sg.field_b = SocketConnector.field_e;
+          lc.field_c = SocketConnector.field_e;
         } catch (RuntimeException runtimeException) {
           throw dn.wrapClientException((Throwable) ((Object) runtimeException), "pg.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + (param4 != null ? "{...}" : "null") + ')');
         }

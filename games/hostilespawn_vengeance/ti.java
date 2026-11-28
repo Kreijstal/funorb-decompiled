@@ -66,7 +66,7 @@ final class ti implements WidgetRenderer {
         ac.field_i.addLast(new AchievementNotification(param2), 90);
         if (!StandardContentDialog.p(3)) {
           ec.a(FrameTimer.field_b, fa.field_a, true, 4, NanoFrameTimer.field_m, param0, q.field_n, param2);
-          sg.field_j = wk.a(4, -2178);
+          ArchiveSourceManager.field_j = wk.a(4, -2178);
           return;
         }
         IntrusiveDeque.field_c.addLast(new hm(param2, param0, q.field_n, FrameTimer.field_b, NanoFrameTimer.field_m, fa.field_a), 89);

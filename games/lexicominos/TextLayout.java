@@ -125,7 +125,7 @@ abstract class TextLayout {
               if (var6_int == 0) {
                 AgeValidator.field_m = InteractiveWidget.field_z;
               } else {
-                pg.field_d = var6_int;
+                ArchiveSourceManager.field_d = var6_int;
                 a.field_c = -1;
                 AgeValidator.field_m = CrossfadingMidiPcmStream.field_l;
               }
@@ -146,7 +146,7 @@ abstract class TextLayout {
               a.b(1, 10343)) {
               var6_intLifetime1 = ig.field_a.readUnsignedByte(true);
               ig.field_a.position = 0;
-              pg.field_d = var6_intLifetime1;
+              ArchiveSourceManager.field_d = var6_intLifetime1;
               og.field_b = null;
               if (0 != var6_intLifetime1 &&
                 var6_intLifetime1 != 1) {
@@ -236,24 +236,24 @@ abstract class TextLayout {
                 DropTargetWidgetContainer.field_F[var8Lifetime1] = DropTargetWidgetContainer.field_F[var8Lifetime1] + 50;
               }
               ig.field_a.setCipherSeed(DropTargetWidgetContainer.field_F, 16);
-              stackIn_73_0 = pg.field_d;
+              stackIn_73_0 = ArchiveSourceManager.field_d;
               return stackIn_73_0;
             }
             if (AgeValidator.field_m == CrossfadingMidiPcmStream.field_l &&
               NetworkArchiveRequest.d(param1 + 27)) {
               ProxyAuthenticationRequiredException.closeBufferedSocketWithIntGuard(-96);
-              if (7 == pg.field_d &&
+              if (7 == ArchiveSourceManager.field_d &&
                 !fb.field_p) {
                 fb.field_p = true;
                 stackIn_86_0 = -1;
                 return stackIn_86_0;
               }
-              if (pg.field_d == 7) {
-                pg.field_d = 3;
+              if (ArchiveSourceManager.field_d == 7) {
+                ArchiveSourceManager.field_d = 3;
               }
               MusicPatch.field_p = ig.field_a.readString(false);
               fb.field_p = false;
-              stackIn_84_0 = pg.field_d;
+              stackIn_84_0 = ArchiveSourceManager.field_d;
               return stackIn_84_0;
             }
             if (DelegatingCanvas.field_b == null) {

@@ -106,12 +106,12 @@ final class GridPoint {
             }
             stackIn_14_0 = (var1.readUnsignedByte(32270) != 1) ? 0 : 1;
             var3_int = stackIn_14_0;
-            var4_ref_String = var1.o(32);
+            var4_ref_String = var1.readString(32);
             if (var3_int != 0) {
-              var1.o(32);
+              var1.readString(32);
             }
             var5 = oa.a((byte) 117, var4_ref_String);
-            var6 = var1.o(32);
+            var6 = var1.readString(32);
             var7 = mf.a(false, (CharSequence) ((Object) var4_ref_String));
             if (null == var7) {
               var7 = var4_ref_String;
@@ -152,7 +152,7 @@ final class GridPoint {
               return;
             }
             DebouncedFieldValidator.field_b = 1;
-            var3 = var1.o(32);
+            var3 = var1.readString(32);
             eg.field_w = ((String) (var3)).intern();
             var4 = var1.readUnsignedByte(32270);
             FullscreenNoticeType.a(-1631279870, var4);
@@ -162,12 +162,12 @@ final class GridPoint {
             SecondaryNodeDequeIterator.field_g = new cb(128);
             rc.field_d = 0;
           }
-          var3Lifetime1 = var1.o(32);
+          var3Lifetime1 = var1.readString(32);
           if (((String) (var3Lifetime1)).equals("")) {
             var3Lifetime1 = null;
           }
-          var4_ref_StringLifetime1 = var1.o(32);
-          var5_ref = var1.o(32);
+          var4_ref_StringLifetime1 = var1.readString(32);
+          var5_ref = var1.readString(32);
           var6_ref = pb.b(var4_ref_StringLifetime1, (byte) -122);
           if (var6_ref == null) {
             var6_ref = pb.b(var5_ref, (byte) -120);

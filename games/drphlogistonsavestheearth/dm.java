@@ -91,11 +91,11 @@ final class dm extends mj {
     }
 
     final static int d(int param0) {
-        fl.field_a.a(64);
+        fl.field_a.pollArchiveSources(64);
         if (param0 >= -18) {
           return -62;
         }
-        if (!p.field_a.b(false)) {
+        if (!p.field_a.pollNetwork(false)) {
           return ResourceArchive.pollArchiveConnection((byte) -95);
         }
         return 0;

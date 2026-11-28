@@ -87,10 +87,10 @@ final class kk {
         int var9Lifetime1;
         int var11Lifetime1;
         try {
-          ob.field_f = cl.a("commonui", param1, -125, "frame_top");
-          kc.field_i = cl.a("commonui", param1, -115, "frame_bottom");
+          ob.field_f = SocketArchiveNetworkClient.a("commonui", param1, -125, "frame_top");
+          kc.field_i = SocketArchiveNetworkClient.a("commonui", param1, -115, "frame_bottom");
           ck.field_l = ProxyAuthenticationRequiredException.a("commonui", param1, "jagex_logo_grey", true);
-          rk.field_d = cl.a("commonui", param1, -120, "button");
+          rk.field_d = SocketArchiveNetworkClient.a("commonui", param1, -120, "button");
           ja.field_n = ea.a("validation", "commonui", 0, param1);
           u.field_d = (BitmapFont) ((Object) ValidatedTextField.a(param2, "arezzo12", "commonui", param1, 126));
           DualLinkNode.field_i = (BitmapFont) ((Object) ValidatedTextField.a(param2, "arezzo14", "commonui", param1, -100));
@@ -135,7 +135,7 @@ final class kk {
           var13 = new RgbSprite(var18.field_y - var9Lifetime1 * 2, var9Lifetime1);
           var13.bindAsRenderTarget();
           var18.drawOpaque(-var9Lifetime1, 0);
-          cl.d((byte) -73);
+          SocketArchiveNetworkClient.d((byte) -73);
           rk.field_d = new RgbSprite[]{var16, var13, var12};
         } catch (RuntimeException runtimeException) {
           throw ie.wrapClientException((Throwable) ((Object) runtimeException), "kk.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ')');

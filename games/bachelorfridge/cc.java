@@ -295,9 +295,9 @@ final class cc {
           bd.field_m = param8;
           uea.field_i = param7;
           DreamsAnimation.field_x = param3;
-          HomingMissileAnimation.field_G = (vm) ((Object) new cl());
+          HomingMissileAnimation.field_G = (ArchiveNetworkClient) ((Object) new SocketArchiveNetworkClient());
           oea.field_q = new DiskCacheWorker(param5);
-          ga.field_c = new kb(HomingMissileAnimation.field_G, oea.field_q);
+          ga.field_c = new ArchiveSourceManager(HomingMissileAnimation.field_G, oea.field_q);
         } catch (RuntimeException runtimeException) {
           throw pe.wrapException((Throwable) ((Object) runtimeException), "cc.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ',' + param6 + ',' + param7 + ',' + param8 + ')');
         }

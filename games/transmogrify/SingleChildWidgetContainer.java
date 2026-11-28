@@ -451,7 +451,7 @@ abstract class SingleChildWidgetContainer extends UiWidget implements WidgetCont
         if (IntrusiveDeque.b((byte) 78)) {
           ArchiveRequest.unlockedAchievementMask = ArchiveRequest.unlockedAchievementMask | var3;
         }
-        if (dk.field_b) {
+        if (ArchiveSourceManager.field_b) {
           return true;
         }
         if (!IntrusiveDeque.b((byte) 74)) {

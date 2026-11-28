@@ -3,7 +3,7 @@
  */
 final class d {
     static String field_a;
-    static ne field_b;
+    static ArchiveSourceManager field_b;
     static long field_c;
 
     final static void a(boolean param0, byte param1) {

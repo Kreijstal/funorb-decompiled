@@ -78,7 +78,7 @@ final class NumericDateInputWidget extends DateInputWidget {
           param3 = param3 + this.field_u;
           param0 = param0 + this.field_r;
           this.drawDateFieldLabel(this.field_R, param3, fn.field_f, -2200, param0);
-          this.drawDateFieldLabel(this.field_P, param3, mn.field_i, -2200, param0);
+          this.drawDateFieldLabel(this.field_P, param3, ProxySocketConnector.field_i, -2200, param0);
           this.drawDateFieldLabel(this.field_W, param3, AccountServiceResult.field_d, -2200, param0);
           return;
         }

@@ -12,19 +12,19 @@ final class hm {
 
     final static tg a(int param0) {
         if (param0 <= -54) {
-          if (wn.field_b == null) {
-            wn.field_b = new tg();
-            wn.field_b.a(rb.field_b, 7829367);
-            wn.field_b.field_n = 6;
-            wn.field_b.field_h = rc.field_a;
-            wn.field_b.field_l = 0;
-            wn.field_b.field_v = 4;
-            wn.field_b.field_s = 14;
-            wn.field_b.field_q = 5;
-            wn.field_b.field_m = 2763306;
-            wn.field_b.field_j = 7697781;
+          if (SocketConnector.field_b == null) {
+            SocketConnector.field_b = new tg();
+            SocketConnector.field_b.a(rb.field_b, 7829367);
+            SocketConnector.field_b.field_n = 6;
+            SocketConnector.field_b.field_h = rc.field_a;
+            SocketConnector.field_b.field_l = 0;
+            SocketConnector.field_b.field_v = 4;
+            SocketConnector.field_b.field_s = 14;
+            SocketConnector.field_b.field_q = 5;
+            SocketConnector.field_b.field_m = 2763306;
+            SocketConnector.field_b.field_j = 7697781;
           }
-          return wn.field_b;
+          return SocketConnector.field_b;
         }
         return (tg) null;
     }

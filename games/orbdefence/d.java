@@ -90,7 +90,7 @@ final class d extends IntrusiveNode {
               stackIn_36_0 = -1;
               return stackIn_36_0;
             }
-            kg.field_h.a(DraggableWidgetContainer.field_A, 20, il.field_a);
+            kg.field_h.attachSocket(DraggableWidgetContainer.field_A, 20, il.field_a);
             DraggableWidgetContainer.field_A = null;
             cf.field_a = null;
             MidiNoteMask.field_j = 0;

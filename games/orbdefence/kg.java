@@ -3,7 +3,7 @@
  */
 final class kg extends IntrusiveNode {
     static String field_g;
-    static ge field_h;
+    static ArchiveNetworkClient field_h;
     static StandardContentDialog field_j;
     static int field_m;
     static int[] field_i;
@@ -25,7 +25,7 @@ final class kg extends IntrusiveNode {
     final static void a(int param0, int param1, int param2, byte param3, int[] param4, int param5, int param6) {
         try {
           if (param3 >= -73) {
-            field_h = (ge) null;
+            field_h = (ArchiveNetworkClient) null;
           }
           vh.field_q[param5] = param4;
           IntrusiveDeque.field_a[param5] = param0;

@@ -279,9 +279,9 @@ final class am {
           }
           var4_ref_StringLifetime1 = var1.readString(param0 ^ 115);
           var5Lifetime1 = var1.readString(param0 - 115);
-          var6Lifetime1 = mn.a(-1, var4_ref_StringLifetime1);
+          var6Lifetime1 = ProxySocketConnector.a(-1, var4_ref_StringLifetime1);
           if (null == var6Lifetime1) {
-            var6Lifetime1 = mn.a(-1, var5Lifetime1);
+            var6Lifetime1 = ProxySocketConnector.a(-1, var5Lifetime1);
             if (null != var6Lifetime1) {
               DateInputWidget.field_M.put(true, var6Lifetime1, (long)ad.a((CharSequence) ((Object) var4_ref_StringLifetime1), -2).hashCode());
             }

@@ -225,7 +225,7 @@ final class we implements WidgetRenderer {
             SoftwareRasterizer.saveClip(DialogMessagePane.field_D);
             var11 = new Sprite(RichTextWidget.field_S.field_p + 4, 4 + RichTextWidget.field_S.field_t);
             var11.bindAsRenderTarget();
-            RichTextWidget.field_S.drawGrayModulated(2, 2, ea.field_o);
+            RichTextWidget.field_S.drawGrayModulated(2, 2, SocketArchiveNetworkClient.field_o);
             UiWidget.a(var11.field_p, 0, var11.field_t, 2, var11, 0, 1, (byte) 21);
             RichTextWidget.field_S = var11;
             fh.field_f = RichTextWidget.field_S.copyMirroredHorizontally();
@@ -243,7 +243,7 @@ final class we implements WidgetRenderer {
             var12.draw(18 - pf.field_b.field_s, 241 - pf.field_b.field_n);
             for (var7 = 0; ba.field_s.length > var7; var7++) {
               qd.field_e[var7].bindAsRenderTarget();
-              ArchiveRequest.field_n.drawParagraph(ba.field_s[var7], 3, 3, qd.field_e[var7].field_p - 6, -6 + qd.field_e[var7].field_t, ea.field_o, -1, 1, 1, ArchiveRequest.field_n.field_F + ArchiveRequest.field_n.field_s);
+              ArchiveRequest.field_n.drawParagraph(ba.field_s[var7], 3, 3, qd.field_e[var7].field_p - 6, -6 + qd.field_e[var7].field_t, SocketArchiveNetworkClient.field_o, -1, 1, 1, ArchiveRequest.field_n.field_F + ArchiveRequest.field_n.field_s);
               UiWidget.a(qd.field_e[var7].field_p, 0, qd.field_e[var7].field_t, 3, qd.field_e[var7], 0, 1, (byte) 21);
             }
             ba.field_s = null;
@@ -261,7 +261,7 @@ final class we implements WidgetRenderer {
           if (!param0) {
             field_e = 49;
           }
-          if (va.field_g == null) {
+          if (ArchiveNetworkClient.field_g == null) {
             return;
           }
           if (ja.field_a != null &&
@@ -342,8 +342,8 @@ final class we implements WidgetRenderer {
             var16.bindAsRenderTarget();
             ArchiveRequest.field_n.drawParagraph(var17, 3, 3, var16.field_p - 6, -6 + var16.field_t, 16777215, -1, 0, 1, ArchiveRequest.field_n.field_F + ArchiveRequest.field_n.field_s);
             UiWidget.a(var16.field_p, 0, var16.field_t, 3, var16, 0, 1, (byte) 21);
-            va.field_g.bindAsRenderTarget();
-            var16.draw(199 - va.field_g.field_s, -va.field_g.field_n + 83);
+            ArchiveNetworkClient.field_g.bindAsRenderTarget();
+            var16.draw(199 - ArchiveNetworkClient.field_g.field_s, -ArchiveNetworkClient.field_g.field_n + 83);
             SoftwareRasterizer.setRasterBuffer(var30, var2Lifetime2, var3Lifetime2);
             SoftwareRasterizer.restoreClip(DialogMessagePane.field_D);
           }
@@ -357,11 +357,11 @@ final class we implements WidgetRenderer {
             var5Lifetime1 = EmailFormatValidator.field_j.field_q + var4 + 20;
             var6Lifetime2 = -(var5Lifetime1 / 2) + 427;
             var7Lifetime2 = 20 + (EmailFormatValidator.field_j.field_q + var6Lifetime2);
-            va.field_g.bindAsRenderTarget();
-            ArchiveRequest.field_n.drawString(EmailFormatValidator.field_p, -va.field_g.field_s + var7Lifetime2, ArchiveRequest.field_n.field_s + (ArchiveRequest.field_n.field_F + (-va.field_g.field_n + 155)), 16777215, -1);
-            UiWidget.a(var4, var7Lifetime2 - va.field_g.field_s - 4, 50, 3, va.field_g, 155 - va.field_g.field_n, 1, (byte) 21);
-            var8Lifetime1 = -va.field_g.field_n + 155 - (-ArchiveRequest.field_n.field_F - 3 + EmailFormatValidator.field_j.field_r - ArchiveRequest.field_n.field_s) / 2;
-            EmailFormatValidator.field_j.draw(var6Lifetime2 - va.field_g.field_s, var8Lifetime1);
+            ArchiveNetworkClient.field_g.bindAsRenderTarget();
+            ArchiveRequest.field_n.drawString(EmailFormatValidator.field_p, -ArchiveNetworkClient.field_g.field_s + var7Lifetime2, ArchiveRequest.field_n.field_s + (ArchiveRequest.field_n.field_F + (-ArchiveNetworkClient.field_g.field_n + 155)), 16777215, -1);
+            UiWidget.a(var4, var7Lifetime2 - ArchiveNetworkClient.field_g.field_s - 4, 50, 3, ArchiveNetworkClient.field_g, 155 - ArchiveNetworkClient.field_g.field_n, 1, (byte) 21);
+            var8Lifetime1 = -ArchiveNetworkClient.field_g.field_n + 155 - (-ArchiveRequest.field_n.field_F - 3 + EmailFormatValidator.field_j.field_r - ArchiveRequest.field_n.field_s) / 2;
+            EmailFormatValidator.field_j.draw(var6Lifetime2 - ArchiveNetworkClient.field_g.field_s, var8Lifetime1);
             SoftwareRasterizer.setRasterBuffer(var31, var2Lifetime3, var3Lifetime3);
             SoftwareRasterizer.restoreClip(DialogMessagePane.field_D);
             EmailFormatValidator.field_j = null;
@@ -375,7 +375,7 @@ final class we implements WidgetRenderer {
           if (pf.field_b != null) {
             pf.field_b.draw(0, 0);
           }
-          va.field_g.draw(0, 0);
+          ArchiveNetworkClient.field_g.draw(0, 0);
           if (rh.field_g != null) {
             rh.field_g.draw(0, 0);
           }

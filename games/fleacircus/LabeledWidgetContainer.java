@@ -151,7 +151,7 @@ final class LabeledWidgetContainer extends SingleChildWidgetContainer {
             field_N = (String[]) null;
           }
           while (var3 != null) {
-            rd.a(var3, 115, 5);
+            MouseInputHandler.a(var3, 115, 5);
             var3 = (ql) (TextHotspotBounds.field_r.nextForward((byte) -105));
           }
           return;

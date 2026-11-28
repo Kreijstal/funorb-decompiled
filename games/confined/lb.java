@@ -72,7 +72,7 @@ final class lb extends DualLinkNode {
               this.field_t = new int[var4_int][];
               for (var5 = 0; var4_int > var5; var5++) {
                 var6 = param1.readUnsignedShort((byte) 25);
-                var7 = jf.a((byte) 126, var6);
+                var7 = ArchiveNetworkClient.a((byte) 126, var6);
                 if (var7 != null) {
                   this.field_v[var5] = var6;
                   array$0 = new int[var7.field_b];

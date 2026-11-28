@@ -61,7 +61,7 @@ class ProgressMessageDialog extends ContentTransitionDialog implements WidgetAct
             k.a(ii.a(false), (byte) -31, "tochangedisplayname.ws");
             return;
           }
-          qh.a(3, true);
+          MouseInputHandler.a(3, true);
           this.closeDialog((byte) -75);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

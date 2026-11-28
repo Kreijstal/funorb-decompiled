@@ -13,7 +13,7 @@ final class hc {
         }
         fn.field_j = TextLineMetrics.field_c;
         wd.field_j = df.field_c;
-        ob.field_l = AccountNameAvailabilityValidator.field_k;
+        ArchiveNetworkClient.field_l = AccountNameAvailabilityValidator.field_k;
         mb.field_g = LoginPanel.field_I;
         LevelProgressUpdate.field_h = sm.field_e;
         b.field_a = ValidationStatusIcon.field_F;

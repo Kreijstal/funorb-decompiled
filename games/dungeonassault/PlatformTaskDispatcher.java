@@ -29,7 +29,7 @@ final class PlatformTaskDispatcher implements Runnable {
     private boolean microsoftJvm;
     private PlatformTask queueHead;
 
-    private final static BoundedRandomAccessFile a(String param0, String param1, int param2, int param3) {
+    private final static BoundedRandomAccessFile openPreferencesFile(String param0, String param1, int param2, int param3) {
         try {
           BoundedRandomAccessFile stackIn_14_0 = null;
           int decompiledRegionSelector0 = 0;
@@ -54,7 +54,7 @@ final class PlatformTaskDispatcher implements Runnable {
           var6 = 0;
           if (param2 != -35) {
             var9 = (String) null;
-            PlatformTaskDispatcher.a((String) null, (String) null, -3, -52);
+            PlatformTaskDispatcher.openPreferencesFile((String) null, (String) null, -3, -52);
           }
           while (var6 < var5.length) {
             var7 = var5[var6];
@@ -169,7 +169,7 @@ final class PlatformTaskDispatcher implements Runnable {
                     }
                     try {
                       if (false) throw (ProxyAuthenticationRequiredException) null;
-                      var8.result = GrowableIntArray.a(var8.intArgument, (byte) 127, (String) (var8.objectArgument)).b(13905);
+                      var8.result = GrowableIntArray.a(var8.intArgument, (byte) 127, (String) (var8.objectArgument)).openSocket(13905);
                     } catch (ProxyAuthenticationRequiredException decompiledCaughtParameter1) {
                       decompiledCaughtException = decompiledCaughtParameter1;
                       var3_ref = (ProxyAuthenticationRequiredException) (Object) decompiledCaughtException;
@@ -230,7 +230,7 @@ final class PlatformTaskDispatcher implements Runnable {
                         }
                         break;
                       case 13:
-                        var3_ref2 = PlatformTaskDispatcher.a((String) (var8.objectArgument), "", -35, field_t);
+                        var3_ref2 = PlatformTaskDispatcher.openPreferencesFile((String) (var8.objectArgument), "", -35, field_t);
                         var8.result = var3_ref2;
                         break;
                       case 16:
@@ -292,7 +292,7 @@ final class PlatformTaskDispatcher implements Runnable {
                         }
                         break;
                       case 12:
-                        var3_ref2 = PlatformTaskDispatcher.a((String) (var8.objectArgument), field_k, -35, field_t);
+                        var3_ref2 = PlatformTaskDispatcher.openPreferencesFile((String) (var8.objectArgument), field_k, -35, field_t);
                         var8.result = var3_ref2;
                         break;
                       case 6:

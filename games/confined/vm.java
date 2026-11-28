@@ -75,7 +75,7 @@ final class vm extends HomingProjectile {
           var3 = Confined.field_J ? 1 : 0;
           try {
             if (om.field_s != null) {
-              om.field_s.d(-121);
+              om.field_s.close(-121);
             }
             if (null != oc.field_l) {
               oc.field_l.shutdown((byte) -104);

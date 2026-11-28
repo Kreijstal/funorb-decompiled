@@ -46,7 +46,7 @@ final class AccountCreationResultPanel extends ProgressMessageDialog implements 
     }
 
     final void showAccountCreationConnectionFailure(int param0) {
-        this.showAccountCreationResult(true, wg.createAccountErrorResult((byte) -123, 248, DirectByteStorage.field_h), 7);
+        this.showAccountCreationResult(true, ArchiveSourceManager.createAccountErrorResult((byte) -123, 248, DirectByteStorage.field_h), 7);
         int var2 = 58 % ((param0 + 61) / 57);
     }
 

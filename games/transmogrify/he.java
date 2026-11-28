@@ -78,8 +78,8 @@ final class he extends IntrusiveNode {
           !(ba.field_q.length >= param1)) {
           ba.field_q = new int[2 * param1];
         }
-        if (null == dk.field_k) {
-          dk.field_k = new int[param1 * 2];
+        if (null == ArchiveSourceManager.field_k) {
+          ArchiveSourceManager.field_k = new int[param1 * 2];
           if (null == bh.field_a ||
             !(param1 <= bh.field_a.length)) {
             bh.field_a = new int[param1 * 2];
@@ -174,8 +174,8 @@ final class he extends IntrusiveNode {
             pa.field_h = new boolean[2 * param1];
           }
         } else {
-          if (dk.field_k.length < param1) {
-            dk.field_k = new int[param1 * 2];
+          if (ArchiveSourceManager.field_k.length < param1) {
+            ArchiveSourceManager.field_k = new int[param1 * 2];
             if (null == bh.field_a ||
               !(param1 <= bh.field_a.length)) {
               bh.field_a = new int[param1 * 2];

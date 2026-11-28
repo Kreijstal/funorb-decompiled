@@ -181,7 +181,7 @@ final class ep extends PuzzleTile implements Cloneable {
             LevelProgressUpdate.field_h = LevelProgressUpdate.field_h + 2;
             je.field_j = je.field_j + 1;
             b.field_a = b.field_a + 1;
-            fn.field_j = fn.field_j + ob.field_l;
+            fn.field_j = fn.field_j + ArchiveNetworkClient.field_l;
             wd.field_j = wd.field_j - 1;
             pm.field_b.a(128, param1 * 12, 12 * param2, 0, (byte) -111);
             this.field_i = 1;

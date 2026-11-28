@@ -366,7 +366,7 @@ final class ClientException extends RuntimeException {
               !var13.k(15)) {
               if (var13.field_Tb.field_tb == 0) {
                 if (var13.field_Lb.field_tb != 0) {
-                  PacketBuffer.a(var13.field_Pb, param4, (byte) -128);
+                  PacketBuffer.writeLongPayloadPacket(var13.field_Pb, param4, (byte) -128);
                 } else {
                   tj.a(ModalDialogHost.field_N, 0, param1, var13, false, 0, no.field_e);
                 }

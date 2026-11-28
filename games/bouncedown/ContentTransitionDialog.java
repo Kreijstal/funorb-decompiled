@@ -256,8 +256,8 @@ abstract class ContentTransitionDialog extends ResizableModalDialog {
           return;
         }
         try {
-          le.a(-1, (java.awt.Component) ((Object) param0));
-          MusicPatchPcmStream.a((java.awt.Component) ((Object) param0), (byte) -80);
+          le.detachKeyboardListeners(-1, (java.awt.Component) ((Object) param0));
+          MusicPatchPcmStream.detachMouseListeners((java.awt.Component) ((Object) param0), (byte) -80);
           if (null != AgeValidator.field_k) {
             AgeValidator.field_k.detach(55, (java.awt.Component) ((Object) param0));
           }

@@ -78,8 +78,8 @@ final class mn extends pd {
         }
         SecondaryNodeDeque.field_d.a((byte) -21);
         SecondaryNodeDeque.field_d = null;
-        tl.field_a.a((byte) -87);
-        tl.field_a = null;
+        SocketConnector.field_a.a((byte) -87);
+        SocketConnector.field_a = null;
         CrystalTile.field_p.a((byte) -96);
         CrystalTile.field_p = null;
         AccountCreationResultPanel.field_mb.a((byte) -54);

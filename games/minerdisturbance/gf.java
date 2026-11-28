@@ -424,13 +424,13 @@ final class gf {
                 }
                 if (stackIn_14_0 == stackIn_15_1) {
                   q.field_b[this.field_n + 1][1 + this.field_p].field_a = false;
-                  uf.field_p[jf.b((byte) 97)] = new gf(this.field_n + 1, this.field_p + 1, 8);
+                  SocketArchiveNetworkClient.field_p[jf.b((byte) 97)] = new gf(this.field_n + 1, this.field_p + 1, 8);
                 }
               }
               if (100.0 * Math.random() < 50.0 &&
                 !q.field_b[1 + this.field_n][this.field_p - 1].field_b) {
                 q.field_b[1 + this.field_n][-1 + this.field_p].field_a = false;
-                uf.field_p[jf.b((byte) 59)] = new gf(this.field_n + 1, this.field_p - 1, 8);
+                SocketArchiveNetworkClient.field_p[jf.b((byte) 59)] = new gf(this.field_n + 1, this.field_p - 1, 8);
               }
               if (100.0 * Math.random() < 50.0 &&
                 this.field_n < 30) {
@@ -444,7 +444,7 @@ final class gf {
                   this.field_m = -40;
                 } else {
                   q.field_b[1 + this.field_n][this.field_p].field_a = false;
-                  uf.field_p[jf.b((byte) 95)] = new gf(this.field_n + 1, this.field_p, 8);
+                  SocketArchiveNetworkClient.field_p[jf.b((byte) 95)] = new gf(this.field_n + 1, this.field_p, 8);
                 }
               }
             }
@@ -455,12 +455,12 @@ final class gf {
               if (50.0 > 100.0 * Math.random() &&
                 !q.field_b[-1 + this.field_n][this.field_p + 1].field_b) {
                 q.field_b[this.field_n - 1][1 + this.field_p].field_a = false;
-                uf.field_p[jf.b((byte) 114)] = new gf(this.field_n + 1, this.field_p + 1, 8);
+                SocketArchiveNetworkClient.field_p[jf.b((byte) 114)] = new gf(this.field_n + 1, this.field_p + 1, 8);
               }
               if (50.0 > Math.random() * 100.0 &&
                 !q.field_b[this.field_n - 1][this.field_p - 1].field_b) {
                 q.field_b[this.field_n - 1][this.field_p - 1].field_a = false;
-                uf.field_p[jf.b((byte) 76)] = new gf(1 + this.field_n, this.field_p - 1, 8);
+                SocketArchiveNetworkClient.field_p[jf.b((byte) 76)] = new gf(1 + this.field_n, this.field_p - 1, 8);
               }
               if (50.0 > 100.0 * Math.random() &&
                 this.field_n > 1) {
@@ -468,7 +468,7 @@ final class gf {
                   this.field_m = -40;
                 } else {
                   q.field_b[-1 + this.field_n][this.field_p].field_a = false;
-                  uf.field_p[jf.b((byte) 64)] = new gf(this.field_n - 1, this.field_p, 8);
+                  SocketArchiveNetworkClient.field_p[jf.b((byte) 64)] = new gf(this.field_n - 1, this.field_p, 8);
                 }
               }
             }
@@ -492,14 +492,14 @@ final class gf {
             var3_int = 0;
             var4 = 0;
             scanLoop1: while (true) {
-              if (var4 < uf.field_p.length) {
-                if (null != uf.field_p[var4] &&
-                  uf.field_p[var4].field_h == 10) {
-                  var5 = -this.field_n + uf.field_p[var4].field_n;
-                  var6 = uf.field_p[var4].field_p - this.field_p;
+              if (var4 < SocketArchiveNetworkClient.field_p.length) {
+                if (null != SocketArchiveNetworkClient.field_p[var4] &&
+                  SocketArchiveNetworkClient.field_p[var4].field_h == 10) {
+                  var5 = -this.field_n + SocketArchiveNetworkClient.field_p[var4].field_n;
+                  var6 = SocketArchiveNetworkClient.field_p[var4].field_p - this.field_p;
                   if (var5 * var5 + var6 * var6 < 36) {
-                    uf.field_p[var4].field_n = this.field_n;
-                    uf.field_p[var4].field_p = this.field_p;
+                    SocketArchiveNetworkClient.field_p[var4].field_n = this.field_n;
+                    SocketArchiveNetworkClient.field_p[var4].field_p = this.field_p;
                     var3_int = 1;
                     break scanLoop1;
                   }
@@ -510,7 +510,7 @@ final class gf {
               break;
             }
             if (var3_int == 0) {
-              uf.field_p[jf.b((byte) 117)] = new gf(this.field_n, this.field_p, 10);
+              SocketArchiveNetworkClient.field_p[jf.b((byte) 117)] = new gf(this.field_n, this.field_p, 10);
             }
             this.field_o = 0;
           }
@@ -644,7 +644,7 @@ final class gf {
               this.field_n < 30 &&
               !q.field_b[1 + this.field_n][this.field_p].field_b) {
               q.field_b[1 + this.field_n][this.field_p].field_a = false;
-              uf.field_p[jf.b((byte) 71)] = new gf(this.field_n + 1, this.field_p, 8);
+              SocketArchiveNetworkClient.field_p[jf.b((byte) 71)] = new gf(this.field_n + 1, this.field_p, 8);
             }
           } else {
             if (var3 != 0 &&
@@ -661,7 +661,7 @@ final class gf {
                 }
                 if (stackIn_40_0 == stackIn_41_1) {
                   q.field_b[1 + this.field_n][this.field_p + 1].field_a = false;
-                  uf.field_p[jf.b((byte) 95)] = new gf(this.field_n + 1, this.field_p + 1, 8);
+                  SocketArchiveNetworkClient.field_p[jf.b((byte) 95)] = new gf(this.field_n + 1, this.field_p + 1, 8);
                 }
               }
             }
@@ -673,7 +673,7 @@ final class gf {
               this.field_n > 1 &&
               !q.field_b[-1 + this.field_n][this.field_p].field_b) {
               q.field_b[-1 + this.field_n][this.field_p].field_a = false;
-              uf.field_p[jf.b((byte) 63)] = new gf(this.field_n - 1, this.field_p, 8);
+              SocketArchiveNetworkClient.field_p[jf.b((byte) 63)] = new gf(this.field_n - 1, this.field_p, 8);
             }
           } else {
             if (var3 != 0 &&
@@ -684,7 +684,7 @@ final class gf {
                 this.field_n < 30 &&
                 !q.field_b[this.field_n - 1][1 + this.field_p].field_b) {
                 q.field_b[this.field_n - 1][1 + this.field_p].field_a = false;
-                uf.field_p[jf.b((byte) 111)] = new gf(-1 + this.field_n, 1 + this.field_p, 8);
+                SocketArchiveNetworkClient.field_p[jf.b((byte) 111)] = new gf(-1 + this.field_n, 1 + this.field_p, 8);
               }
             }
           }
@@ -707,15 +707,15 @@ final class gf {
             var4 = 0;
             var5 = 0;
             scanLoop1: while (true) {
-              if (var5 < uf.field_p.length) {
-                if (null != uf.field_p[var5] &&
-                  10 == uf.field_p[var5].field_h) {
-                  var6 = uf.field_p[var5].field_n - this.field_n;
-                  var7 = uf.field_p[var5].field_p - this.field_p;
+              if (var5 < SocketArchiveNetworkClient.field_p.length) {
+                if (null != SocketArchiveNetworkClient.field_p[var5] &&
+                  10 == SocketArchiveNetworkClient.field_p[var5].field_h) {
+                  var6 = SocketArchiveNetworkClient.field_p[var5].field_n - this.field_n;
+                  var7 = SocketArchiveNetworkClient.field_p[var5].field_p - this.field_p;
                   if (var6 * var6 + var7 * var7 < 36) {
-                    uf.field_p[var5].field_n = this.field_n;
+                    SocketArchiveNetworkClient.field_p[var5].field_n = this.field_n;
                     var4 = 1;
-                    uf.field_p[var5].field_p = this.field_p;
+                    SocketArchiveNetworkClient.field_p[var5].field_p = this.field_p;
                     break scanLoop1;
                   }
                 }
@@ -725,7 +725,7 @@ final class gf {
               break;
             }
             if (var4 == 0) {
-              uf.field_p[jf.b((byte) 93)] = new gf(this.field_n, this.field_p, 10);
+              SocketArchiveNetworkClient.field_p[jf.b((byte) 93)] = new gf(this.field_n, this.field_p, 10);
             }
             this.field_o = 0;
           }
@@ -1031,20 +1031,20 @@ final class gf {
                   continue;
                 }
                 for (var4 = 0; var4 < 1000; var4++) {
-                  if (null != uf.field_p[var4]) {
-                    stackIn_42_0 = uf.field_p[var4];
+                  if (null != SocketArchiveNetworkClient.field_p[var4]) {
+                    stackIn_42_0 = SocketArchiveNetworkClient.field_p[var4];
                     stackIn_43_1 = !(param0);
                     if (((gf) (Object) stackIn_42_0).a(stackIn_43_1) &&
-                      uf.field_p[var4].field_n >= this.field_n - 1 &&
-                      this.field_p - 1 <= uf.field_p[var4].field_p &&
-                      uf.field_p[var4].field_n <= 1 + this.field_n &&
-                      this.field_p + 1 >= uf.field_p[var4].field_p) {
+                      SocketArchiveNetworkClient.field_p[var4].field_n >= this.field_n - 1 &&
+                      this.field_p - 1 <= SocketArchiveNetworkClient.field_p[var4].field_p &&
+                      SocketArchiveNetworkClient.field_p[var4].field_n <= 1 + this.field_n &&
+                      this.field_p + 1 >= SocketArchiveNetworkClient.field_p[var4].field_p) {
                       var3 = 1;
-                      if (uf.field_p[var4].field_h == 19) {
+                      if (SocketArchiveNetworkClient.field_p[var4].field_h == 19) {
                         hn.field_c = true;
                       }
-                      uf.field_p[var4].field_h = 6;
-                      uf.field_p[var4].field_b = 250;
+                      SocketArchiveNetworkClient.field_p[var4].field_h = 6;
+                      SocketArchiveNetworkClient.field_p[var4].field_b = 250;
                     }
                   }
                 }
@@ -1111,7 +1111,7 @@ final class gf {
                     100.0 * Math.random() < 25.0)) {
                     qe.field_b[var5Lifetime8] = true;
                     bf.field_d = 0;
-                    ch.field_h = -var5Lifetime8 * 3 - 3;
+                    ArchiveNetworkClient.field_h = -var5Lifetime8 * 3 - 3;
                     pa.field_c = var5Lifetime8;
                     stackIn_220_0 = null;
                     return (gf) (stackIn_220_0);
@@ -1119,8 +1119,8 @@ final class gf {
                 }
                 return this;
               }
-              if (ch.field_h >= -1) {
-                ch.field_h = this.field_h;
+              if (ArchiveNetworkClient.field_h >= -1) {
+                ArchiveNetworkClient.field_h = this.field_h;
               }
               var4Lifetime1Lifetime1 = 0;
               if (0 == this.field_h) {
@@ -1416,8 +1416,8 @@ final class gf {
               this.field_b < 250) {
               this.field_h = 17;
               for (var4Lifetime3 = 0; var4Lifetime3 < 1000; var4Lifetime3++) {
-                if (null != uf.field_p[var4Lifetime3] &&
-                  uf.field_p[var4Lifetime3] == this) {
+                if (null != SocketArchiveNetworkClient.field_p[var4Lifetime3] &&
+                  SocketArchiveNetworkClient.field_p[var4Lifetime3] == this) {
                   ge.a(var4Lifetime3, (byte) 85, true);
                   break;
                 }
@@ -1439,44 +1439,44 @@ final class gf {
               this.field_g = 1;
               ProgressMessageDialog.field_sb = ProgressMessageDialog.field_sb - 40;
               for (var4Lifetime3Lifetime1 = 0; var4Lifetime3Lifetime1 < 1000; var4Lifetime3Lifetime1++) {
-                if (null != uf.field_p[var4Lifetime3Lifetime1]) {
-                  if (uf.field_p[var4Lifetime3Lifetime1].a(false)) {
-                    if (-1 + this.field_n <= uf.field_p[var4Lifetime3Lifetime1].field_n &&
-                      this.field_p - 1 <= uf.field_p[var4Lifetime3Lifetime1].field_p &&
-                      uf.field_p[var4Lifetime3Lifetime1].field_n <= this.field_n + 1 &&
-                      uf.field_p[var4Lifetime3Lifetime1].field_p <= this.field_p + 1) {
-                      if (19 == uf.field_p[var4Lifetime3Lifetime1].field_h) {
+                if (null != SocketArchiveNetworkClient.field_p[var4Lifetime3Lifetime1]) {
+                  if (SocketArchiveNetworkClient.field_p[var4Lifetime3Lifetime1].a(false)) {
+                    if (-1 + this.field_n <= SocketArchiveNetworkClient.field_p[var4Lifetime3Lifetime1].field_n &&
+                      this.field_p - 1 <= SocketArchiveNetworkClient.field_p[var4Lifetime3Lifetime1].field_p &&
+                      SocketArchiveNetworkClient.field_p[var4Lifetime3Lifetime1].field_n <= this.field_n + 1 &&
+                      SocketArchiveNetworkClient.field_p[var4Lifetime3Lifetime1].field_p <= this.field_p + 1) {
+                      if (19 == SocketArchiveNetworkClient.field_p[var4Lifetime3Lifetime1].field_h) {
                         hn.field_c = true;
                       }
-                      uf.field_p[var4Lifetime3Lifetime1].field_h = 16;
-                      uf.field_p[var4Lifetime3Lifetime1].field_b = 250;
+                      SocketArchiveNetworkClient.field_p[var4Lifetime3Lifetime1].field_h = 16;
+                      SocketArchiveNetworkClient.field_p[var4Lifetime3Lifetime1].field_b = 250;
                     }
                   } else {
-                    if (7 == uf.field_p[var4Lifetime3Lifetime1].field_h) {
-                      if (uf.field_p[var4Lifetime3Lifetime1].field_n >= this.field_n - 1 &&
-                        uf.field_p[var4Lifetime3Lifetime1].field_p >= -1 + this.field_p &&
-                        uf.field_p[var4Lifetime3Lifetime1].field_n <= this.field_n + 1 &&
-                        this.field_p + 1 >= uf.field_p[var4Lifetime3Lifetime1].field_p) {
-                        uf.field_p[var4Lifetime3Lifetime1].field_b = 250;
+                    if (7 == SocketArchiveNetworkClient.field_p[var4Lifetime3Lifetime1].field_h) {
+                      if (SocketArchiveNetworkClient.field_p[var4Lifetime3Lifetime1].field_n >= this.field_n - 1 &&
+                        SocketArchiveNetworkClient.field_p[var4Lifetime3Lifetime1].field_p >= -1 + this.field_p &&
+                        SocketArchiveNetworkClient.field_p[var4Lifetime3Lifetime1].field_n <= this.field_n + 1 &&
+                        this.field_p + 1 >= SocketArchiveNetworkClient.field_p[var4Lifetime3Lifetime1].field_p) {
+                        SocketArchiveNetworkClient.field_p[var4Lifetime3Lifetime1].field_b = 250;
                         ge.a(var4Lifetime3Lifetime1, (byte) 85, false);
                       }
                     } else {
-                      if (uf.field_p[var4Lifetime3Lifetime1].field_h == 6) {
-                        if (uf.field_p[var4Lifetime3Lifetime1].field_n >= -1 + this.field_n &&
-                          uf.field_p[var4Lifetime3Lifetime1].field_p >= this.field_p - 1 &&
-                          uf.field_p[var4Lifetime3Lifetime1].field_n <= this.field_n + 1 &&
-                          uf.field_p[var4Lifetime3Lifetime1].field_p <= this.field_p + 1) {
-                          uf.field_p[var4Lifetime3Lifetime1].field_b = 250;
+                      if (SocketArchiveNetworkClient.field_p[var4Lifetime3Lifetime1].field_h == 6) {
+                        if (SocketArchiveNetworkClient.field_p[var4Lifetime3Lifetime1].field_n >= -1 + this.field_n &&
+                          SocketArchiveNetworkClient.field_p[var4Lifetime3Lifetime1].field_p >= this.field_p - 1 &&
+                          SocketArchiveNetworkClient.field_p[var4Lifetime3Lifetime1].field_n <= this.field_n + 1 &&
+                          SocketArchiveNetworkClient.field_p[var4Lifetime3Lifetime1].field_p <= this.field_p + 1) {
+                          SocketArchiveNetworkClient.field_p[var4Lifetime3Lifetime1].field_b = 250;
                           ge.a(var4Lifetime3Lifetime1, (byte) 85, true);
                         }
                       } else {
-                        if (uf.field_p[var4Lifetime3Lifetime1].field_h == 17 &&
-                          uf.field_p[var4Lifetime3Lifetime1].field_n >= this.field_n - 1 &&
-                          uf.field_p[var4Lifetime3Lifetime1].field_p >= this.field_p - 1 &&
-                          uf.field_p[var4Lifetime3Lifetime1].field_n <= this.field_n + 1 &&
-                          uf.field_p[var4Lifetime3Lifetime1].field_p <= 1 + this.field_p) {
-                          uf.field_p[var4Lifetime3Lifetime1].field_h = 6;
-                          uf.field_p[var4Lifetime3Lifetime1].field_b = 250;
+                        if (SocketArchiveNetworkClient.field_p[var4Lifetime3Lifetime1].field_h == 17 &&
+                          SocketArchiveNetworkClient.field_p[var4Lifetime3Lifetime1].field_n >= this.field_n - 1 &&
+                          SocketArchiveNetworkClient.field_p[var4Lifetime3Lifetime1].field_p >= this.field_p - 1 &&
+                          SocketArchiveNetworkClient.field_p[var4Lifetime3Lifetime1].field_n <= this.field_n + 1 &&
+                          SocketArchiveNetworkClient.field_p[var4Lifetime3Lifetime1].field_p <= 1 + this.field_p) {
+                          SocketArchiveNetworkClient.field_p[var4Lifetime3Lifetime1].field_h = 6;
+                          SocketArchiveNetworkClient.field_p[var4Lifetime3Lifetime1].field_b = 250;
                         }
                       }
                     }
@@ -1572,9 +1572,9 @@ final class gf {
                       1 == (3 & var10Lifetime1)) {
                       ProgressMessageDialog.field_sb = ProgressMessageDialog.field_sb - 15;
                       var11_intLifetime1 = jf.b((byte) 114);
-                      uf.field_p[var11_intLifetime1] = new gf(var9Lifetime1 / 4, var10Lifetime1 / 4, 16);
-                      uf.field_p[var11_intLifetime1].field_g = 0;
-                      uf.field_p[var11_intLifetime1].field_b = 244;
+                      SocketArchiveNetworkClient.field_p[var11_intLifetime1] = new gf(var9Lifetime1 / 4, var10Lifetime1 / 4, 16);
+                      SocketArchiveNetworkClient.field_p[var11_intLifetime1].field_g = 0;
+                      SocketArchiveNetworkClient.field_p[var11_intLifetime1].field_b = 244;
                     }
                     je.field_O.b(117, false, var9Lifetime1, var10Lifetime1);
                     je.field_O.a(-122, var10Lifetime1, 0, var9Lifetime1);
@@ -1733,7 +1733,7 @@ final class gf {
               }
               var6Lifetime6 = 0;
               for (var7Lifetime6 = 0; var7Lifetime6 < 1000; var7Lifetime6++) {
-                var8_ref_gf = uf.field_p[var7Lifetime6];
+                var8_ref_gf = SocketArchiveNetworkClient.field_p[var7Lifetime6];
                 if (null != var8_ref_gf) {
                   stackIn_675_0 = var8_ref_gf;
                   stackIn_676_1 = !(param0);
@@ -1748,7 +1748,7 @@ final class gf {
                         }
                         var9_ref_je.field_a = true;
                         var9_ref_je.field_E = true;
-                        uf.field_p[var7Lifetime6] = null;
+                        SocketArchiveNetworkClient.field_p[var7Lifetime6] = null;
                         re.field_d = re.field_d + 1;
                         var6Lifetime6++;
                       }

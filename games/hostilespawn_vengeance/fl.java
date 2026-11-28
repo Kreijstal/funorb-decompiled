@@ -67,7 +67,7 @@ final class fl {
         RuntimeException decompiledCaughtException = null;
         var2 = HostileSpawn.field_I ? 1 : 0;
         try {
-          if (sg.field_i < 50) {
+          if (ArchiveSourceManager.field_i < 50) {
             stackIn_4_0 = 0;
             return stackIn_4_0;
           }

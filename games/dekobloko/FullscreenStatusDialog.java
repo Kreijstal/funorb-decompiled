@@ -363,7 +363,7 @@ final class FullscreenStatusDialog extends ResizableModalDialog implements Widge
         if (integerArgument1 <= 65) {
           rawSoundState0010 = (RawSound) null;
         }
-        if (MixedSupport119.networkSupport003State0003.computeBoolean0342((byte) -56)) {
+        if (MixedSupport119.networkSupport003State0003.pollNetwork((byte) -56)) {
           return 0;
         }
         return NetworkSupport009.computeInteger1184(0);

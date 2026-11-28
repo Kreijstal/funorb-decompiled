@@ -39,8 +39,8 @@ final class wd {
           !(ConfirmedEmailAvailabilityValidator.field_n.length >= param2)) {
           ConfirmedEmailAvailabilityValidator.field_n = new int[param2 * 2];
         }
-        if (q.field_h == null) {
-          q.field_h = new int[2 * param2];
+        if (ProxySocketConnector.field_h == null) {
+          ProxySocketConnector.field_h = new int[2 * param2];
           if (TextLayout.field_b == null ||
             !(TextLayout.field_b.length >= param2)) {
             TextLayout.field_b = new int[param2 * 2];
@@ -74,8 +74,8 @@ final class wd {
             }
           }
         } else {
-          if (q.field_h.length < param2) {
-            q.field_h = new int[2 * param2];
+          if (ProxySocketConnector.field_h.length < param2) {
+            ProxySocketConnector.field_h = new int[2 * param2];
             if (TextLayout.field_b == null) {
               TextLayout.field_b = new int[param2 * 2];
               if (null == ij.field_c ||

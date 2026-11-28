@@ -128,7 +128,7 @@ final class ProgressDialog extends ResizableModalDialog {
           AccountNameAvailabilityValidator.field_r = null;
           be.field_a = null;
           FullscreenFocusCanvas.field_c = null;
-          wm.field_b = null;
+          ArchiveNetworkClient.field_b = null;
           return;
         }
         field_eb = (String) null;
@@ -136,7 +136,7 @@ final class ProgressDialog extends ResizableModalDialog {
         AccountNameAvailabilityValidator.field_r = null;
         be.field_a = null;
         FullscreenFocusCanvas.field_c = null;
-        wm.field_b = null;
+        ArchiveNetworkClient.field_b = null;
     }
 
     final void freezeNormalProgressAnimation(int param0) {

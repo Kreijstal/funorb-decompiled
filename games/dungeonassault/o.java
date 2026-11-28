@@ -16,7 +16,7 @@ final class o extends IntrusiveNode {
         CipherPacketBuffer var3 = null;
         try {
           var3 = ac.field_B;
-          var3.d((byte) -122, param0);
+          var3.writeCipheredByte((byte) -122, param0);
           int var4 = -95 % ((-66 - param1) / 54);
           var3.writeByte(6, param2.field_m);
           var3.writeShort(param2.field_k, -128);
@@ -72,9 +72,9 @@ final class o extends IntrusiveNode {
           return;
         }
         try {
-          var3.field_d = tp.a(ImageProducerRasterBuffer.field_p, "idle", param1, param0 ^ -11074);
-          var3.field_u = tp.a(ImageProducerRasterBuffer.field_p, "victory", param1, -1998);
-          var3.field_m = tp.a(ImageProducerRasterBuffer.field_p, "defeat", param1, -1998);
+          var3.field_d = SocketArchiveNetworkClient.a(ImageProducerRasterBuffer.field_p, "idle", param1, param0 ^ -11074);
+          var3.field_u = SocketArchiveNetworkClient.a(ImageProducerRasterBuffer.field_p, "victory", param1, -1998);
+          var3.field_m = SocketArchiveNetworkClient.a(ImageProducerRasterBuffer.field_p, "defeat", param1, -1998);
         } catch (RuntimeException runtimeException) {
           throw AccountServiceResult.wrapClientException((Throwable) ((Object) runtimeException), "o.G(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }

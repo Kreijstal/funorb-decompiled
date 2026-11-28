@@ -31,7 +31,7 @@ final class ProxyAuthenticationRequiredException extends IOException {
           SceneWidgetPart011.stringState0525 = stringArgument3;
           if (integerArgument1 >= -125) {
             java.awt.Component componentLocal1 = (java.awt.Component) null;
-            ProxyAuthenticationRequiredException.performAction0333((java.awt.Component) null, true);
+            ProxyAuthenticationRequiredException.attachKeyboardListeners((java.awt.Component) null, true);
           }
           PlayerNamePrompt.stringState0217 = stringArgument2;
           MixedSupport147.performAction1811(booleanArgument4, -83, EmailValidationError.stringState0273);
@@ -40,7 +40,7 @@ final class ProxyAuthenticationRequiredException extends IOException {
         }
     }
 
-    final static void performAction0333(java.awt.Component componentArgument1, boolean booleanArgument2) {
+    final static void attachKeyboardListeners(java.awt.Component componentArgument1, boolean booleanArgument2) {
         try {
           componentArgument1.setFocusTraversalKeysEnabled(booleanArgument2);
           componentArgument1.addKeyListener(MixedSupport033.keyboardInputHandlerState0001);

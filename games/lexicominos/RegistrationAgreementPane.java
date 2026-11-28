@@ -50,7 +50,7 @@ final class RegistrationAgreementPane extends DequeWidgetContainer implements Te
           this.field_F = param0;
           this.field_E = new InteractiveWidget(n.field_h, (WidgetEventListener) null);
           this.field_E.field_i = (WidgetRenderer) ((Object) new v());
-          var7 = da.a(new String[]{this.getAgreementLinkOpeningTag(true), this.getAgreementLinkClosingTag(-6724)}, AccountNameAvailabilityValidator.field_p, false);
+          var7 = MouseInputHandler.a(new String[]{this.getAgreementLinkOpeningTag(true), this.getAgreementLinkClosingTag(-6724)}, AccountNameAvailabilityValidator.field_p, false);
           var3 = 20;
           var4 = new DefaultTextWidgetRenderer(ResizableModalDialog.field_Q, 0, 0, 0, 0, 16777215, -1, 3, 0, ResizableModalDialog.field_Q.field_E, -1, 2147483647, true);
           this.field_B = new RichTextWidget(var7, var4);

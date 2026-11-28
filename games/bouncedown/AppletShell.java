@@ -170,7 +170,7 @@ public abstract class AppletShell extends java.applet.Applet implements Runnable
           return;
         }
         try {
-          ua.field_d = 0L;
+          PlayfieldPlatforms.field_d = 0L;
         } catch (RuntimeException runtimeException) {
           throw CipherPacketBuffer.wrapClientException((Throwable) ((Object) runtimeException), "fj.start()");
         }
@@ -488,11 +488,11 @@ public abstract class AppletShell extends java.applet.Applet implements Runnable
         try {
           va.field_f = param0;
           ng.field_b = true;
-          nk.field_a = new ProgressMessageDialog(DisplayNameSelectionPanel.field_N, ne.field_v, param1, fe.field_g, va.field_f);
+          BouncedownMenuEntry.field_a = new ProgressMessageDialog(DisplayNameSelectionPanel.field_N, ne.field_v, param1, fe.field_g, va.field_f);
           if (param2 != -1) {
             return;
           }
-          DisplayNameSelectionPanel.field_N.showDialog(nk.field_a, false);
+          DisplayNameSelectionPanel.field_N.showDialog(BouncedownMenuEntry.field_a, false);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -703,13 +703,13 @@ public abstract class AppletShell extends java.applet.Applet implements Runnable
                 }
                 oh.a(-117);
                 this.d(12955);
-                ca.field_d = w.a(MidiNoteMask.field_i, (java.awt.Component) ((Object) MusicPatchEnvelope.field_h), jc.field_i, (byte) 41);
+                SlimeCollisionSupport.field_d = w.a(MidiNoteMask.field_i, (java.awt.Component) ((Object) MusicPatchEnvelope.field_h), jc.field_i, (byte) 41);
                 this.initializeClient((byte) -6);
                 ff.field_D = ByteArrayPoolSupport.a(10000);
                 do {
                   boolean decompiledFrameRemainder0 = true;
-                  if (ua.field_d != 0L) {
-                    stackIn_103_0 = compareLongs(ua.field_d, fa.correctedCurrentTimeMillis(-42));
+                  if (PlayfieldPlatforms.field_d != 0L) {
+                    stackIn_103_0 = compareLongs(PlayfieldPlatforms.field_d, fa.correctedCurrentTimeMillis(-42));
                     decompiledFrameRemainder0 = (var5 == 0);
                     if ((decompiledFrameRemainder0) &&
                       (stackIn_103_0 <= 0)) {
@@ -819,7 +819,7 @@ public abstract class AppletShell extends java.applet.Applet implements Runnable
           return;
         }
         try {
-          ua.field_d = 4000L + fa.correctedCurrentTimeMillis(-81);
+          PlayfieldPlatforms.field_d = 4000L + fa.correctedCurrentTimeMillis(-81);
         } catch (RuntimeException runtimeException) {
           throw CipherPacketBuffer.wrapClientException((Throwable) ((Object) runtimeException), "fj.stop()");
         }
@@ -941,7 +941,7 @@ public abstract class AppletShell extends java.applet.Applet implements Runnable
         try {
           if (this == og.field_c &&
             !FullscreenFocusCanvas.field_d) {
-            ua.field_d = fa.correctedCurrentTimeMillis(112);
+            PlayfieldPlatforms.field_d = fa.correctedCurrentTimeMillis(112);
             SecondaryNodeDeque.sleepMillis(5000L, 19406);
             ByteArrayPoolSupport.field_a = null;
             this.shutdownApplet(false, (byte) -57);

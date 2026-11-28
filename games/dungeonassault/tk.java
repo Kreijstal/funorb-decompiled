@@ -48,7 +48,7 @@ final class tk {
         AgeValidator.field_s = true;
         MenuScreen.field_t = true;
         lg.field_w.closeAllDialogs(1);
-        gh.a(23321, ha.field_o, false);
+        gh.a(23321, ProxySocketConnector.field_o, false);
     }
 
     private final int a(RgbSprite[] param0, RgbSprite[] param1, int[] param2, BitmapFont param3, int param4, String[] param5, int param6) {

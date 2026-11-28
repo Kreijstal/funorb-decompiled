@@ -80,7 +80,7 @@ final class ByteArrayPoolSupport {
           }
           var7 = new aj(param3);
           var8 = new aj(param6);
-          stackIn_3_0 = qh.a(param5, var8, -1, param0, var7, param1, param2);
+          stackIn_3_0 = MouseInputHandler.a(param5, var8, -1, param0, var7, param1, param2);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

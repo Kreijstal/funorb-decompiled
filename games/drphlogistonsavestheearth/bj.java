@@ -42,7 +42,7 @@ final class bj {
           if (af.field_b < 10) {
             return false;
           }
-          if (hj.field_f >= 13) {
+          if (SocketConnector.field_f >= 13) {
             return true;
           }
           return false;
@@ -50,7 +50,7 @@ final class bj {
         if (af.field_b < 10) {
           return false;
         }
-        if (hj.field_f >= 13) {
+        if (SocketConnector.field_f >= 13) {
           return true;
         }
         return false;

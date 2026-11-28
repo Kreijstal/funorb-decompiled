@@ -1,0 +1,25 @@
+/*
+ * Decompiled by CFR-JS 0.4.0.
+ */
+final class PlayfieldPlatforms {
+    static long field_d;
+    static int field_b;
+    static Platform[] field_c;
+    static int field_a;
+    private static String field_z;
+
+    public static void clearStaticReferences(int param0) {
+        if (param0 != -24750) {
+          return;
+        }
+        field_c = null;
+    }
+
+    static {
+        field_z = "ua.A(";
+        field_b = 50;
+        field_d = 0L;
+        field_c = new Platform[field_b];
+        field_a = -1;
+    }
+}

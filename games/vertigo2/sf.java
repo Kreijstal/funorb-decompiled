@@ -20,11 +20,11 @@ final class sf {
 
     final static boolean a(int param0) {
         if (param0 == 1) {
-          return pd.field_c.b(-83);
+          return pd.field_c.loadMasterIndex(-83);
         }
         int[] var2 = (int[]) null;
         sf.a((int[]) null, (byte) -70, 6, -67, (int[]) null);
-        return pd.field_c.b(-83);
+        return pd.field_c.loadMasterIndex(-83);
     }
 
     final static void a(java.applet.Applet param0, int param1) {

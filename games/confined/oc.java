@@ -64,7 +64,7 @@ final class oc {
         RuntimeException decompiledCaughtException = null;
         var2 = Confined.field_J ? 1 : 0;
         try {
-          TunnelCamera.field_Z.processPointerInput(true, true, ih.field_b, jf.field_k);
+          TunnelCamera.field_Z.processPointerInput(true, true, ih.field_b, ArchiveNetworkClient.field_k);
           TunnelCamera.field_Z.advanceDialogs((byte) 70);
           while (nm.e((byte) -96)) {
             TunnelCamera.field_Z.processKeyInput((byte) 101, ad.field_h, gk.field_r);

@@ -72,7 +72,7 @@ abstract class SocketConnector {
         }
     }
 
-    abstract java.net.Socket a(byte param0) throws IOException;
+    abstract java.net.Socket openSocket(byte param0) throws IOException;
 
     final static BinaryBitmapFont a(byte[] param0, byte param1) {
         BinaryBitmapFont var2 = null;
@@ -109,7 +109,7 @@ abstract class SocketConnector {
         }
     }
 
-    final java.net.Socket b(int param0) throws IOException {
+    final java.net.Socket openDirectSocket(int param0) throws IOException {
         if (param0 != 1) {
           return (java.net.Socket) null;
         }

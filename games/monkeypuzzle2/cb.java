@@ -125,7 +125,7 @@ final class cb {
           if (param2 > -66) {
             cb.a(false);
           }
-          stackIn_3_0 = wl.a(param1, -26348, param3, var6, var5_int);
+          stackIn_3_0 = ArchiveNetworkClient.a(param1, -26348, param3, var6, var5_int);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

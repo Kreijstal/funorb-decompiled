@@ -161,9 +161,9 @@ final class wi {
           if (param8 < 48) {
             wi.a(88, 114, -72);
           }
-          p.field_a = (gb) ((Object) new cl());
+          p.field_a = (ArchiveNetworkClient) ((Object) new SocketArchiveNetworkClient());
           pd.field_d = new DiskCacheWorker(param6);
-          fl.field_a = new df(p.field_a, pd.field_d);
+          fl.field_a = new ArchiveSourceManager(p.field_a, pd.field_d);
         } catch (RuntimeException runtimeException) {
           throw ie.wrapClientException((Throwable) ((Object) runtimeException), "wi.D(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ',' + (param6 != null ? "{...}" : "null") + ',' + param7 + ',' + param8 + ')');
         }

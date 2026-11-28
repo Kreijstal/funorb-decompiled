@@ -25,7 +25,7 @@ final class IsaacRandom {
           FullscreenNoticeType.field_c = null;
           return;
         }
-        if (dk.field_b) {
+        if (ArchiveSourceManager.field_b) {
           FullscreenNoticeType.field_c = null;
           return;
         }

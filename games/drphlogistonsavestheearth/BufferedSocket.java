@@ -175,7 +175,7 @@ final class BufferedSocket implements Runnable {
             decompiledCaughtException = decompiledCaughtParameter4;
             var1_ref = (Exception) (Object) decompiledCaughtException;
             var7 = (String) null;
-            gb.a((Throwable) ((Object) var1_ref), (String) null, 10);
+            ArchiveNetworkClient.a((Throwable) ((Object) var1_ref), (String) null, 10);
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;

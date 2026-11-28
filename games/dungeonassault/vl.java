@@ -73,7 +73,7 @@ final class vl extends hl {
             return;
           }
           gm.field_d.field_K = param0;
-          ac.field_B.d((byte) -78, 72);
+          ac.field_B.writeCipheredByte((byte) -78, 72);
           ac.field_B.writeByte(6, gm.field_d.field_K);
         }
         if (param1 == -49) {

@@ -60,7 +60,7 @@ final class l {
           b.field_b = new int[ef.field_l];
           var17.position = -(ef.field_l * 8) + (-7 + param0.length);
           DefaultTextWidgetRenderer.field_e = var17.readUnsignedShort((byte) 75);
-          uf.field_k = var17.readUnsignedShort((byte) -49);
+          ArchiveSourceManager.field_k = var17.readUnsignedShort((byte) -49);
           var3 = 1 + (255 & var17.readUnsignedByte(false));
           for (var4 = 0; ef.field_l > var4; var4++) {
             vg.field_I[var4] = var16.readUnsignedShort((byte) 62);
@@ -75,11 +75,11 @@ final class l {
             ob.field_a[var4Lifetime3] = var17.readUnsignedShort((byte) -74);
           }
           var17.position = -(ef.field_l * 8) + param0.length - (7 + (-1 + var3) * 3);
-          rd.field_d = new int[var3];
+          MouseInputHandler.field_d = new int[var3];
           for (var4Lifetime4 = 1; var3 > var4Lifetime4; var4Lifetime4++) {
-            rd.field_d[var4Lifetime4] = var17.readUnsignedMedium(true);
-            if (0 == rd.field_d[var4Lifetime4]) {
-              rd.field_d[var4Lifetime4] = 1;
+            MouseInputHandler.field_d[var4Lifetime4] = var17.readUnsignedMedium(true);
+            if (0 == MouseInputHandler.field_d[var4Lifetime4]) {
+              MouseInputHandler.field_d[var4Lifetime4] = 1;
             }
           }
           var17.position = 0;

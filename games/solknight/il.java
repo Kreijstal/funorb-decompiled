@@ -3,7 +3,7 @@
  */
 class il extends aa {
     private long field_a;
-    static va field_c;
+    static ArchiveNetworkClient field_c;
     static String field_d;
     static int[] field_e;
     private String field_b;

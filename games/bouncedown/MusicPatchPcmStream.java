@@ -4,7 +4,7 @@
 final class MusicPatchPcmStream extends PcmStream {
     static String field_k;
     private MidiPcmStream field_p;
-    static mj field_o;
+    static BouncedownMenu field_o;
     static int field_n;
     IntrusiveDeque field_m;
     PcmStreamMixer field_l;
@@ -222,7 +222,7 @@ final class MusicPatchPcmStream extends PcmStream {
         }
     }
 
-    final static void a(java.awt.Component param0, byte param1) {
+    final static void detachMouseListeners(java.awt.Component param0, byte param1) {
         try {
           param0.removeMouseListener(EmailFormatValidator.field_o);
           if (param1 > -72) {

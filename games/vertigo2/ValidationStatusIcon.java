@@ -112,7 +112,7 @@ final class ValidationStatusIcon extends InteractiveWidget {
         int var5 = this.x + param2 + (this.width >> 1);
         int var6 = this.y + (param3 + (this.height >> 1));
         ba var8 = this.field_R.getValidationStatus(-23996);
-        if (tk.field_n == var8) {
+        if (ArchiveNetworkClient.field_n == var8) {
           var15 = jn.field_b[0];
           var9 = var15.field_x << 1;
           var10 = var15.field_B << 1;

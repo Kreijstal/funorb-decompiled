@@ -276,23 +276,23 @@ final class pb {
         return;
     }
 
-    final static he a(int[] param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, byte param8) {
-        he var9 = null;
+    final static LeaderboardSubmission a(int[] param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, byte param8) {
+        LeaderboardSubmission var9 = null;
         RuntimeException var9_ref = null;
-        he stackIn_2_0 = null;
-        he stackIn_4_0 = null;
+        LeaderboardSubmission stackIn_2_0 = null;
+        LeaderboardSubmission stackIn_4_0 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var9 = new he(param6, param7, param1, param4, param2, param3, param0);
+          var9 = new LeaderboardSubmission(param6, param7, param1, param4, param2, param3, param0);
           if (param8 <= 56) {
-            stackIn_2_0 = (he) null;
+            stackIn_2_0 = (LeaderboardSubmission) null;
             return stackIn_2_0;
           }
           of.field_b.addLast(1, var9);
-          mi.a(param5, -99, var9);
+          mi.writeLeaderboardSubmissionPacket(param5, -99, var9);
           stackIn_4_0 = var9;
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

@@ -39,7 +39,7 @@ final class rf {
         var8 = Chess.field_G;
         var1 = new RgbSprite[h.field_n];
         for (var2 = 0; var2 < h.field_n; var2++) {
-          var3 = b.field_c[var2] * wm.field_b[var2];
+          var3 = b.field_c[var2] * ArchiveNetworkClient.field_b[var2];
           var21 = vk.field_d[var2];
           if (!in.field_c[var2]) {
             var10 = new int[var3];
@@ -47,7 +47,7 @@ final class rf {
             for (var6 = 0; var3 > var6; var6++) {
               var10[var6] = AccountNameAvailabilityValidator.field_r[ce.bitwiseAnd((int) var21[var6], 255)];
             }
-            var1[var2] = new RgbSprite(cd.field_p, MouseWheelInput.field_a, be.field_a[var2], FullscreenFocusCanvas.field_c[var2], wm.field_b[var2], b.field_c[var2], var22);
+            var1[var2] = new RgbSprite(cd.field_p, MouseWheelInput.field_a, be.field_a[var2], FullscreenFocusCanvas.field_c[var2], ArchiveNetworkClient.field_b[var2], b.field_c[var2], var22);
           } else {
             var15 = gg.field_y[var2];
             var11 = var15;
@@ -59,7 +59,7 @@ final class rf {
             for (var7 = 0; var3 > var7; var7++) {
               var6_ref_int__[var7] = DisplayNameSelectionPanel.bitwiseOr(ce.bitwiseAnd((int) var15[var7], 255) << 24, AccountNameAvailabilityValidator.field_r[ce.bitwiseAnd((int) var21[var7], 255)]);
             }
-            var1[var2] = (RgbSprite) ((Object) new ArgbSprite(cd.field_p, MouseWheelInput.field_a, be.field_a[var2], FullscreenFocusCanvas.field_c[var2], wm.field_b[var2], b.field_c[var2], var17));
+            var1[var2] = (RgbSprite) ((Object) new ArgbSprite(cd.field_p, MouseWheelInput.field_a, be.field_a[var2], FullscreenFocusCanvas.field_c[var2], ArchiveNetworkClient.field_b[var2], b.field_c[var2], var17));
           }
         }
         if (param0 != 8) {
@@ -95,9 +95,9 @@ final class rf {
         }
         param0 = param0 & 8191;
         if (4096 > param0) {
-          return param0 >= 2048 ? -hj.field_b[-2048 + param0] : hj.field_b[-param0 + 2048];
+          return param0 >= 2048 ? -ArchiveSourceManager.field_b[-2048 + param0] : ArchiveSourceManager.field_b[-param0 + 2048];
         }
-        return param0 < 6144 ? -hj.field_b[-param0 + 6144] : hj.field_b[param0 - 6144];
+        return param0 < 6144 ? -ArchiveSourceManager.field_b[-param0 + 6144] : ArchiveSourceManager.field_b[param0 - 6144];
     }
 
     final static void a(byte param0, boolean param1) {

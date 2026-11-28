@@ -38,13 +38,13 @@ class UiComponent extends IntrusiveNode {
         var5 = this.isFocused(94) ? 1 : 0;
         if (!param3) {
           if (var5 != 0 &&
-            vb.field_n != 0) {
+            ArchiveNetworkClient.field_n != 0) {
             this.blur(6064);
           }
         } else {
           if (bl.field_X != 0) {
             if (var5 == 0) {
-              if (vb.field_n == 0) {
+              if (ArchiveNetworkClient.field_n == 0) {
                 if (0 != wh.field_e) {
                   ok.field_f = wh.field_e;
                   je.a((byte) -109, this.getTooltipText(param1));
@@ -65,14 +65,14 @@ class UiComponent extends IntrusiveNode {
                 }
                 if (var7 != 0 &&
                   var5 != 0 &&
-                  vb.field_n != 0) {
+                  ArchiveNetworkClient.field_n != 0) {
                   this.blur(6064);
                 }
                 ok.field_f = wh.field_e;
                 je.a((byte) -109, this.getTooltipText(param1));
                 return param3;
               }
-              if (this.pointerPressed(AgeValidator.field_m, ik.field_a, -81, param2, param0, vb.field_n, this)) {
+              if (this.pointerPressed(AgeValidator.field_m, ik.field_a, -81, param2, param0, ArchiveNetworkClient.field_n, this)) {
                 param3 = false;
                 if (var7 == 0) {
                   if (0 != wh.field_e) {
@@ -95,7 +95,7 @@ class UiComponent extends IntrusiveNode {
                   }
                   if (var7 != 0 &&
                     var5 != 0 &&
-                    vb.field_n != 0) {
+                    ArchiveNetworkClient.field_n != 0) {
                     this.blur(6064);
                   }
                   ok.field_f = wh.field_e;
@@ -123,7 +123,7 @@ class UiComponent extends IntrusiveNode {
               }
               if (var7 != 0 &&
                 var5 != 0 &&
-                vb.field_n != 0) {
+                ArchiveNetworkClient.field_n != 0) {
                 this.blur(6064);
               }
               ok.field_f = wh.field_e;
@@ -132,7 +132,7 @@ class UiComponent extends IntrusiveNode {
             }
             this.handleWheel(0, bl.field_X, param0, ConfirmedEmailAvailabilityValidator.field_u, this, ph.field_d, param2);
           }
-          if (vb.field_n == 0) {
+          if (ArchiveNetworkClient.field_n == 0) {
             if (0 != wh.field_e) {
               ok.field_f = wh.field_e;
               je.a((byte) -109, this.getTooltipText(param1));
@@ -153,14 +153,14 @@ class UiComponent extends IntrusiveNode {
             }
             if (var7 != 0 &&
               var5 != 0 &&
-              vb.field_n != 0) {
+              ArchiveNetworkClient.field_n != 0) {
               this.blur(6064);
             }
             ok.field_f = wh.field_e;
             je.a((byte) -109, this.getTooltipText(param1));
             return param3;
           }
-          if (this.pointerPressed(AgeValidator.field_m, ik.field_a, -81, param2, param0, vb.field_n, this)) {
+          if (this.pointerPressed(AgeValidator.field_m, ik.field_a, -81, param2, param0, ArchiveNetworkClient.field_n, this)) {
             param3 = false;
             if (var7 == 0) {
               if (0 != wh.field_e) {
@@ -183,7 +183,7 @@ class UiComponent extends IntrusiveNode {
               }
               if (var7 != 0 &&
                 var5 != 0 &&
-                vb.field_n != 0) {
+                ArchiveNetworkClient.field_n != 0) {
                 this.blur(6064);
               }
               ok.field_f = wh.field_e;
@@ -212,7 +212,7 @@ class UiComponent extends IntrusiveNode {
               SocketConnector.field_b = null;
             }
             if (var7 != 0 &&
-              vb.field_n != 0) {
+              ArchiveNetworkClient.field_n != 0) {
               this.blur(6064);
             }
             ok.field_f = wh.field_e;
@@ -230,7 +230,7 @@ class UiComponent extends IntrusiveNode {
               SocketConnector.field_b = null;
               if (var7 != 0 &&
                 var5 != 0 &&
-                vb.field_n != 0) {
+                ArchiveNetworkClient.field_n != 0) {
                 this.blur(6064);
               }
               ok.field_f = wh.field_e;
@@ -239,7 +239,7 @@ class UiComponent extends IntrusiveNode {
             }
             if (var7 != 0 &&
               var5 != 0 &&
-              vb.field_n != 0) {
+              ArchiveNetworkClient.field_n != 0) {
               this.blur(6064);
               ok.field_f = wh.field_e;
               je.a((byte) -109, this.getTooltipText(param1));

@@ -37,12 +37,12 @@ final class NodeHashTableIterator implements Iterator {
 
     final static uh a(int param0, int param1, int param2, int param3, int param4) {
         int var6 = Main.field_T;
-        uh var5 = (uh) (tl.field_a.beginForward((byte) 74));
+        uh var5 = (uh) (SocketConnector.field_a.beginForward((byte) 74));
         while (var5 != null) {
           if (var5.field_g == param3) {
             return var5;
           }
-          var5 = (uh) (tl.field_a.nextForward((byte) -123));
+          var5 = (uh) (SocketConnector.field_a.nextForward((byte) -123));
         }
         uh var7 = new uh();
         var5 = var7;
@@ -50,12 +50,12 @@ final class NodeHashTableIterator implements Iterator {
         var7.field_h = param4;
         var7.field_k = param0;
         if (param2 == 25404) {
-          tl.field_a.addLast(var5, 27362);
+          SocketConnector.field_a.addLast(var5, 27362);
           DirectByteArrayStore.a(-91, var5, param1);
           return var5;
         }
         field_f = (char[]) null;
-        tl.field_a.addLast(var5, 27362);
+        SocketConnector.field_a.addLast(var5, 27362);
         DirectByteArrayStore.a(-91, var5, param1);
         return var5;
     }

@@ -15,7 +15,7 @@ final class pk {
         }
     }
 
-    final static void a(byte param0, java.awt.Component param1) {
+    final static void detachKeyboardListeners(byte param0, java.awt.Component param1) {
         try {
           param1.removeKeyListener(sj.field_d);
           param1.removeFocusListener(sj.field_d);

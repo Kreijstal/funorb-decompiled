@@ -145,7 +145,7 @@ final class hb {
               }
               if (param0) {
                 ve.field_Gb[var23] = var27 >> pd.field_Tb;
-                ob.field_u[var23] = var28 >> pd.field_Tb;
+                SocketArchiveNetworkClient.field_u[var23] = var28 >> pd.field_Tb;
                 AgeValidator.field_p[var23] = var29;
               }
               var23++;

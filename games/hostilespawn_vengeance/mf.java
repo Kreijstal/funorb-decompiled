@@ -179,7 +179,7 @@ final class mf {
           if (param0 != 36) {
             field_a = (String) null;
           }
-          stackIn_4_0 = sg.field_o;
+          stackIn_4_0 = ArchiveSourceManager.field_o;
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -288,7 +288,7 @@ final class mf {
             boolean decompiledNaturalLoopExit0 = false;
             while (!(decompiledNaturalLoopExit0 = (var3 <= var6))) {
               var7 = param1.charAt(var6);
-              stackOut_33_0 = sg.a((char) var7, true);
+              stackOut_33_0 = ArchiveSourceManager.a((char) var7, true);
               stackIn_42_0 = stackOut_33_0 ? 1 : 0;
               stackIn_34_0 = stackOut_33_0;
               if (var9 == 0) {

@@ -37,7 +37,7 @@ final class ValidationStatusWidget extends RichTextWidget {
                 }
                 break regionExit1;
               }
-              var5 = he.field_l;
+              var5 = LeaderboardSubmission.field_l;
             }
             if (var5.equals(this.field_h)) {
               break regionExit1;
@@ -128,7 +128,7 @@ final class ValidationStatusWidget extends RichTextWidget {
               if (!IsaacRandom.a(1, 3)) {
                 return false;
               }
-              TextLineMetrics.field_c = jc.field_g.h((byte) 43);
+              TextLineMetrics.field_c = jc.field_g.readCipheredByte((byte) 43);
               jc.field_g.position = 0;
               pe.field_d = param1[TextLineMetrics.field_c];
             }
@@ -144,8 +144,8 @@ final class ValidationStatusWidget extends RichTextWidget {
               return true;
             }
             var4 = DiskCacheWorker.field_c;
-            if (oj.field_c != 0.0) {
-              var4 = (int)((double)var4 + ValidationStatusIcon.field_C.nextGaussian() * oj.field_c);
+            if (ArchiveSourceManager.field_c != 0.0) {
+              var4 = (int)((double)var4 + ValidationStatusIcon.field_C.nextGaussian() * ArchiveSourceManager.field_c);
               if (var4 < 0) {
                 var4 = 0;
               }

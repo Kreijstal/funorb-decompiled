@@ -223,7 +223,7 @@ final class ProgressDialog extends ResizableModalDialog {
             }
             var2 = 1;
           }
-          GzipDecompressor.field_f.a(-123, GameScreen.b(fg.mouseY, param0 ^ param0, kf.mouseX), GameScreen.b(wg.clickY, 0, ContentTransitionDialog.clickX));
+          GzipDecompressor.field_f.a(-123, GameScreen.b(fg.mouseY, param0 ^ param0, kf.mouseX), GameScreen.b(ArchiveSourceManager.clickY, 0, ContentTransitionDialog.clickX));
           if (GzipDecompressor.field_f.d(0)) {
             var1_int = 1;
           }

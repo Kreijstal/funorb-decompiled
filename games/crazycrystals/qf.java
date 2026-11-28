@@ -121,7 +121,7 @@ abstract class qf extends ea {
             LevelProgressUpdate.field_h = LevelProgressUpdate.field_h - 2;
             fp.field_a = fp.field_a - 2;
             b.field_a = b.field_a - 1;
-            mb.field_g = mb.field_g - ob.field_l;
+            mb.field_g = mb.field_g - ArchiveNetworkClient.field_l;
             wd.field_j = wd.field_j - 1;
             if (var6 != 0) {
               return;
@@ -369,7 +369,7 @@ abstract class qf extends ea {
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          mb.field_g = mb.field_g + ob.field_l;
+          mb.field_g = mb.field_g + ArchiveNetworkClient.field_l;
           wd.field_j = wd.field_j + 1;
           b.field_a = b.field_a - 2;
           je.field_j = je.field_j - 2;

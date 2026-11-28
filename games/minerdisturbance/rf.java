@@ -25,12 +25,12 @@ final class rf {
             return (AccountServiceResult) (stackIn_4_0);
           }
           if (AccountRequestState.field_h == kd.field_p &&
-            param1.equals(ic.field_m)) {
+            param1.equals(ProxySocketConnector.field_m)) {
             AccountRequestState.field_h = mc.field_t;
             stackIn_11_0 = IterableNodeHashTable.field_d;
             return stackIn_11_0;
           }
-          ic.field_m = param1;
+          ProxySocketConnector.field_m = param1;
           IterableNodeHashTable.field_d = null;
           AccountRequestState.field_h = AwtRasterBuffer.field_e;
           stackIn_9_0 = null;

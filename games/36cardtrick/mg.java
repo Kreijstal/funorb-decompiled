@@ -174,7 +174,7 @@ final class mg {
               4 == var1_intLifetime1) {
               var4 = -var3 + t.field_i;
             }
-            a.a(16777214, var6, -1, var4, 16777215, 23);
+            SocketArchiveNetworkClient.a(16777214, var6, -1, var4, 16777215, 23);
           }
           if (param0 != 96) {
             mg.a(-44, 89, -75);
@@ -188,7 +188,7 @@ final class mg {
             var7 = IntrusiveDeque.field_c[var1_intLifetime2];
             var3Lifetime1 = qa.field_b.stringWidth(var7);
             var4Lifetime1 = 120 - var3Lifetime1 >> 1;
-            a.a(16777214, var7, param0 ^ -97, var4Lifetime1, 16777215, 23);
+            SocketArchiveNetworkClient.a(16777214, var7, param0 ^ -97, var4Lifetime1, 16777215, 23);
           }
           gf.field_e.setAsRasterTarget(200);
         } catch (RuntimeException runtimeException) {
@@ -245,10 +245,10 @@ final class mg {
           var2 = var27.readUnsignedByte(-121);
           if (var2 == 0) {
             var3 = var27.readUnsignedShort((byte) 72);
-            var4_ref_uh = (uh) (tl.field_a.beginForward((byte) 74));
+            var4_ref_uh = (uh) (SocketConnector.field_a.beginForward((byte) 74));
             while (var4_ref_uh != null) {
               if (var3 != var4_ref_uh.field_g) {
-                var4_ref_uh = (uh) (tl.field_a.nextForward((byte) -119));
+                var4_ref_uh = (uh) (SocketConnector.field_a.nextForward((byte) -119));
                 continue;
               }
               break;

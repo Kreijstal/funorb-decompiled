@@ -20,7 +20,7 @@ final class la {
         try {
           for (var2_int = 0; var2_int < param1.length(); var2_int++) {
             var3 = param1.charAt(var2_int);
-            if (!eh.a((char) var3, false) &&
+            if (!ArchiveNetworkClient.a((char) var3, false) &&
               !wc.a(48, (char) var3)) {
               return true;
             }

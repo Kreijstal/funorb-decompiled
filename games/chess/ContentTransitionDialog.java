@@ -3,7 +3,7 @@
  */
 abstract class ContentTransitionDialog extends ResizableModalDialog {
     private int field_fb;
-    static rl field_cb;
+    static MouseInputHandler field_cb;
     private int field_hb;
     static ci field_jb;
     private int field_qb;
@@ -301,6 +301,6 @@ abstract class ContentTransitionDialog extends ResizableModalDialog {
     }
 
     static {
-        field_cb = new rl();
+        field_cb = new MouseInputHandler();
     }
 }

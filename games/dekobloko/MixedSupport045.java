@@ -89,7 +89,7 @@ final class MixedSupport045 implements CallbackContract007 {
           stringState0190 = (String) null;
         }
         CipherPacketBuffer cipherPacketBufferLocal1 = SocketFactory.cipherPacketBufferState0002;
-        cipherPacketBufferLocal1.performAction1641(integerArgument3, -4);
+        cipherPacketBufferLocal1.writeCipheredByte(integerArgument3, -4);
         cipherPacketBufferLocal1.writeByte(true, 3);
         cipherPacketBufferLocal1.writeByte(true, 10);
         cipherPacketBufferLocal1.writeShort(-1, integerArgument2);

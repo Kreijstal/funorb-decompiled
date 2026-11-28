@@ -83,7 +83,7 @@ final class GuestPlayConfirmationForm extends DequeWidgetContainer implements Wi
     }
 
     final static void a(int param0) {
-        oa.field_g = 0;
+        ArchiveSourceManager.field_g = 0;
         ha.field_d = 0;
         jj.field_d = false;
         cl.field_z = false;

@@ -94,7 +94,7 @@ final class fg {
           return;
         }
         try {
-          var5.d((byte) -81, param2);
+          var5.writeCipheredByte((byte) -81, param2);
           var5.position = var5.position + 1;
           var4 = var5.position;
           var5.writeByte(1, param0 ^ 25561);

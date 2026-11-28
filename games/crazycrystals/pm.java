@@ -26,7 +26,7 @@ final class pm {
 
     final static void a(int param0, LevelProgressUpdate param1, byte param2) {
         CipherPacketBuffer var5 = tp.field_f;
-        var5.d(8, param0);
+        var5.writeCipheredByte(8, param0);
         var5.position = var5.position + 1;
         int var4 = var5.position;
         var5.writeByte(true, 1);

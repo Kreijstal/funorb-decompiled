@@ -27,7 +27,7 @@ final class ByteArrayPoolSupport {
           SoftwareRasterizer.clearRaster();
           if (!param1) {
             var4 = (java.awt.Component) null;
-            ByteArrayPoolSupport.a((java.awt.Component) null, (byte) 72);
+            ByteArrayPoolSupport.detachKeyboardListeners((java.awt.Component) null, (byte) 72);
             ProjectileRay.a((byte) 35, param2);
             return;
           }
@@ -37,7 +37,7 @@ final class ByteArrayPoolSupport {
         SoftwareRasterizer.fillRectangleAlpha(0, 0, SoftwareRasterizer.field_g, SoftwareRasterizer.field_l, 0, 192);
         if (!param1) {
           var4Lifetime1 = (java.awt.Component) null;
-          ByteArrayPoolSupport.a((java.awt.Component) null, (byte) 72);
+          ByteArrayPoolSupport.detachKeyboardListeners((java.awt.Component) null, (byte) 72);
           ProjectileRay.a((byte) 35, param2);
           return;
         }
@@ -354,7 +354,7 @@ final class ByteArrayPoolSupport {
         return new byte[param0];
     }
 
-    final static void a(java.awt.Component param0, byte param1) {
+    final static void detachKeyboardListeners(java.awt.Component param0, byte param1) {
         try {
           param0.removeKeyListener(tf.field_p);
           param0.removeFocusListener(tf.field_p);

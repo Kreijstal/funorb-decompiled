@@ -117,7 +117,7 @@ final class f implements WidgetRenderer {
                 }
               }
             }
-            param1.a(24, var2, true, 0);
+            param1.writeBytes(24, var2, true, 0);
             return;
           } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
             decompiledCaughtException = decompiledCaughtParameter1;

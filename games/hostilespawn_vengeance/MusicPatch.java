@@ -321,7 +321,7 @@ final class MusicPatch extends IntrusiveNode {
           var42 = var55;
           var4 = var42;
           for (var5 = 0; var3 > var5; var5++) {
-            var4[var5] = var38.j(0);
+            var4[var5] = var38.readSignedByte(0);
           }
           var3++;
           var38.field_i = var38.field_i + 1;
@@ -333,7 +333,7 @@ final class MusicPatch extends IntrusiveNode {
           var43 = var56;
           var7 = var43;
           for (var8 = 0; var8 < var6; var8++) {
-            var7[var8] = var38.j(0);
+            var7[var8] = var38.readSignedByte(0);
           }
           var38.field_i = var38.field_i + 1;
           var6++;
@@ -345,7 +345,7 @@ final class MusicPatch extends IntrusiveNode {
           var44 = var57;
           var10 = var44;
           for (var11_int = 0; var11_int < var9; var11_int++) {
-            var10[var11_int] = var38.j(0);
+            var10[var11_int] = var38.readSignedByte(0);
           }
           var9++;
           var38.field_i = var38.field_i + 1;
@@ -411,7 +411,7 @@ final class MusicPatch extends IntrusiveNode {
           var41 = var54;
           var18 = var41;
           for (var19 = 0; var19 < var17; var19++) {
-            var18[var19] = var38.j(0);
+            var18[var19] = var38.readSignedByte(0);
           }
           var17++;
           var38.field_i = var38.field_i + 1;
@@ -435,7 +435,7 @@ final class MusicPatch extends IntrusiveNode {
               } else {
                 var20Lifetime2 = -1;
               }
-              var22 = var38.m(127);
+              var22 = var38.readVarInt(127);
             }
             this.field_r[var23] = (short)(this.field_r[var23] + (PcmOutputWorker.bitwiseAnd(2, -1 + var22) << 14));
             var20Lifetime2--;
@@ -518,23 +518,23 @@ final class MusicPatch extends IntrusiveNode {
             var45 = var13[var27Lifetime1];
             if (null != var45.field_n) {
               for (var29 = 1; var45.field_n.length > var29; var29 += 2) {
-                var45.field_n[var29] = var38.j(0);
+                var45.field_n[var29] = var38.readSignedByte(0);
               }
             }
             if (var45.field_m != null) {
               for (var29Lifetime5 = 3; -2 + var45.field_m.length > var29Lifetime5; var29Lifetime5 += 2) {
-                var45.field_m[var29Lifetime5] = var38.j(0);
+                var45.field_m[var29Lifetime5] = var38.readSignedByte(0);
               }
             }
           }
           if (var15 != null) {
             for (var27Lifetime2 = 1; var27Lifetime2 < var46.length; var27Lifetime2 += 2) {
-              var15[var27Lifetime2] = var38.j(0);
+              var15[var27Lifetime2] = var38.readSignedByte(0);
             }
           }
           if (var16 != null) {
             for (var27Lifetime3 = 1; var47.length > var27Lifetime3; var27Lifetime3 += 2) {
-              var16[var27Lifetime3] = var38.j(0);
+              var16[var27Lifetime3] = var38.readSignedByte(0);
             }
           }
           for (var27Lifetime4 = 0; var12 > var27Lifetime4; var27Lifetime4++) {

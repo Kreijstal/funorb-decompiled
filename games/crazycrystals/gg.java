@@ -54,7 +54,7 @@ final class gg {
             return (fb) ((Object) stackIn_6_0);
           }
           if (param2 instanceof mi) {
-            tl.field_a.a(128, param0.field_m * param0.field_o + 12 * param0.field_A, param0.field_m * param0.field_s + param0.field_t * 12, 0, (byte) -111);
+            SocketConnector.field_a.a(128, param0.field_m * param0.field_o + 12 * param0.field_A, param0.field_m * param0.field_s + param0.field_t * 12, 0, (byte) -111);
             stackIn_9_0 = new qo(param0, (mi) (param2));
             return (fb) ((Object) stackIn_9_0);
           }

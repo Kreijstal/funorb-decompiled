@@ -26,7 +26,7 @@ final class InputAdapter001 implements WidgetRenderer {
         stringState0034 = null;
     }
 
-    final static void performAction0069(int integerArgument1, java.awt.Component componentArgument2) {
+    final static void attachMouseListeners(int integerArgument1, java.awt.Component componentArgument2) {
         try {
           if (integerArgument1 != -2204) {
             InputAdapter001.clearStaticReferences((byte) 21);

@@ -31,8 +31,8 @@ final class oa {
           if (param0 != -29680) {
             field_a = (int[]) null;
           }
-          var4 = ij.field_c[param1] + (q.field_h[param1] + TextLayout.field_b[param1]);
-          var5 = ij.field_c[param3] + TextLayout.field_b[param3] + q.field_h[param3];
+          var4 = ij.field_c[param1] + (ProxySocketConnector.field_h[param1] + TextLayout.field_b[param1]);
+          var5 = ij.field_c[param3] + TextLayout.field_b[param3] + ProxySocketConnector.field_h[param3];
           if (var4 < var5) {
             return true;
           }
@@ -54,8 +54,8 @@ final class oa {
           return false;
         }
         if (param0 == -29680) {
-          var4Lifetime1 = ij.field_c[param1] + (q.field_h[param1] + TextLayout.field_b[param1]);
-          var5Lifetime1 = ij.field_c[param3] + TextLayout.field_b[param3] + q.field_h[param3];
+          var4Lifetime1 = ij.field_c[param1] + (ProxySocketConnector.field_h[param1] + TextLayout.field_b[param1]);
+          var5Lifetime1 = ij.field_c[param3] + TextLayout.field_b[param3] + ProxySocketConnector.field_h[param3];
           if (var4Lifetime1 < var5Lifetime1) {
             return true;
           }
@@ -65,8 +65,8 @@ final class oa {
           return !(param3 <= param1);
         }
         field_a = (int[]) null;
-        var4Lifetime2 = ij.field_c[param1] + (q.field_h[param1] + TextLayout.field_b[param1]);
-        var5Lifetime2 = ij.field_c[param3] + TextLayout.field_b[param3] + q.field_h[param3];
+        var4Lifetime2 = ij.field_c[param1] + (ProxySocketConnector.field_h[param1] + TextLayout.field_b[param1]);
+        var5Lifetime2 = ij.field_c[param3] + TextLayout.field_b[param3] + ProxySocketConnector.field_h[param3];
         if (var4Lifetime2 < var5Lifetime2) {
           return true;
         }

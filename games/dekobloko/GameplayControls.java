@@ -10,7 +10,7 @@ final class GameplayControls {
     static String[] stringArrayState0056;
 
     final static void performAction1753(boolean booleanArgument1, int integerArgument2) {
-        NetworkSupport003.performAction0348(booleanArgument1, false, (byte) 66);
+        ArchiveNetworkClient.performAction0348(booleanArgument1, false, (byte) 66);
         if (integerArgument2 != 841566312) {
           integerState0859 = 7;
         }

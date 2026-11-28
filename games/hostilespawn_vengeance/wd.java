@@ -59,7 +59,7 @@ final class wd {
               if (!re.c((byte) 33, 1)) {
                 return false;
               }
-              tc.field_a = sc.field_g.p(param0 - 23214);
+              tc.field_a = sc.field_g.readCipheredByte(param0 - 23214);
               sc.field_g.field_i = 0;
               jd.field_q = param1[tc.field_a];
             }

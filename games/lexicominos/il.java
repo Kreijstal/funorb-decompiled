@@ -80,7 +80,7 @@ final class il {
               }
               var7 = new SectorCacheStore(param3, MusicPatch.field_s, bd.field_i[param3], 2097152);
             }
-            var8 = nh.field_a.a(param3, 3510, (SectorCacheStore) (var7), (SectorCacheStore) (var6), param2);
+            var8 = nh.field_a.getOrCreateArchiveSource(param3, 3510, (SectorCacheStore) (var7), (SectorCacheStore) (var6), param2);
             if (param1 != 12317) {
               il.a(false, -117, false, -23, true, 38);
             }

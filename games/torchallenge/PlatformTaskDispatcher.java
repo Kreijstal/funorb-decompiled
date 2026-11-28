@@ -208,7 +208,7 @@ final class PlatformTaskDispatcher implements Runnable {
                         }
                         break;
                       case 12:
-                        var3_ref = PlatformTaskDispatcher.a((String) (var8.argument), field_c, field_h, (byte) 106);
+                        var3_ref = PlatformTaskDispatcher.openPreferencesFile((String) (var8.argument), field_c, field_h, (byte) 106);
                         var8.result = var3_ref;
                         break;
                       case 16:
@@ -270,7 +270,7 @@ final class PlatformTaskDispatcher implements Runnable {
                         }
                         break;
                       case 13:
-                        var3_ref = PlatformTaskDispatcher.a((String) (var8.argument), "", field_h, (byte) -97);
+                        var3_ref = PlatformTaskDispatcher.openPreferencesFile((String) (var8.argument), "", field_h, (byte) -97);
                         var8.result = var3_ref;
                         break;
                       case 7:
@@ -314,7 +314,7 @@ final class PlatformTaskDispatcher implements Runnable {
                     }
                     try {
                       if (false) throw (ProxyAuthenticationRequiredException) null;
-                      var8.result = MusicPatchPcmStream.a(var8.firstInt, (String) (var8.argument), -111).a((byte) 112);
+                      var8.result = MusicPatchPcmStream.a(var8.firstInt, (String) (var8.argument), -111).openSocket((byte) 112);
                     } catch (ProxyAuthenticationRequiredException decompiledCaughtParameter2) {
                       decompiledCaughtException = decompiledCaughtParameter2;
                       var3_ref3 = (ProxyAuthenticationRequiredException) (Object) decompiledCaughtException;
@@ -366,7 +366,7 @@ final class PlatformTaskDispatcher implements Runnable {
         return this.enqueueTask(6, param3 + (param2 << 16), (param0 << 16) + param1, (Object) null, -27024);
     }
 
-    private final static RandomAccessCacheFile a(String param0, String param1, int param2, byte param3) {
+    private final static RandomAccessCacheFile openPreferencesFile(String param0, String param1, int param2, byte param3) {
         try {
           int var7 = 0;
           RandomAccessCacheFile stackIn_13_0 = null;

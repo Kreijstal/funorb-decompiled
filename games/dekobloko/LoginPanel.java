@@ -233,7 +233,7 @@ final class LoginPanel extends ComponentContainer implements TextFieldListener, 
         RuntimeException runtimeExceptionLocal14 = null;
         integerLocal5 = DekoBlokoClient.obfuscationControl ? 1 : 0;
         try {
-          integerLocal1 = cipherPacketBufferArgument4.computeInteger1637(integerArgument3, (byte) 81);
+          integerLocal1 = cipherPacketBufferArgument4.readBits(integerArgument3, (byte) 81);
           if (integerLocal1 == 0) {
             return null;
           }
@@ -241,19 +241,19 @@ final class LoginPanel extends ComponentContainer implements TextFieldListener, 
             byteArrayArgument2.length != integerLocal1) {
             byteArrayArgument2 = new byte[integerLocal1];
           }
-          integerLocal2 = cipherPacketBufferArgument4.computeInteger1637(3, (byte) 52);
+          integerLocal2 = cipherPacketBufferArgument4.readBits(3, (byte) 52);
           if (byteArgument1 != 5) {
             stackByteArrayLocal6 = (byte[]) null;
             return stackByteArrayLocal6;
           }
-          integerLocal3 = (byte)cipherPacketBufferArgument4.computeInteger1637(8, (byte) 58);
+          integerLocal3 = (byte)cipherPacketBufferArgument4.readBits(8, (byte) 58);
           if (integerLocal2 <= 0) {
             for (integerLocal4 = 0; integerLocal4 < integerLocal1; integerLocal4++) {
               byteArrayArgument2[integerLocal4] = (byte)integerLocal3;
             }
           } else {
             for (integerLocal4 = 0; integerLocal1 > integerLocal4; integerLocal4++) {
-              byteArrayArgument2[integerLocal4] = (byte)(integerLocal3 + cipherPacketBufferArgument4.computeInteger1637(integerLocal2, (byte) 117));
+              byteArrayArgument2[integerLocal4] = (byte)(integerLocal3 + cipherPacketBufferArgument4.readBits(integerLocal2, (byte) 117));
             }
           }
           stackByteArrayLocal7 = (byte[]) (byteArrayArgument2);
@@ -409,7 +409,7 @@ final class LoginPanel extends ComponentContainer implements TextFieldListener, 
               sceneWidgetPart014Local14 = (SceneWidgetPart014) (nodeDequeLocal12.nextBackward(booleanArgument1));
             }
             if (RenderingSupport003.sceneWidgetPart010State0001.sceneWidgetState0106.integerState0891 != 0) {
-              MixedSupport139.sceneWidgetPart004State0001 = new PlayerNamePrompt(RenderingSupport003.sceneWidgetPart010State0001.sceneWidgetState0106.integerState0892, RenderingSupport003.sceneWidgetPart010State0001.sceneWidgetState0106.integerState0886, RenderingSupport003.sceneWidgetPart010State0001.sceneWidgetState0106.integerState0896, RenderingSupport003.sceneWidgetPart010State0001.sceneWidgetState0106.integerState0915, ResourceSupport004.stringState0429, MixedSupport005.sceneWidgetState0002, MixedSupport125.sceneWidgetState0125, MixedSupport125.sceneWidgetState0125);
+              MixedSupport139.sceneWidgetPart004State0001 = new PlayerNamePrompt(RenderingSupport003.sceneWidgetPart010State0001.sceneWidgetState0106.integerState0892, RenderingSupport003.sceneWidgetPart010State0001.sceneWidgetState0106.integerState0886, RenderingSupport003.sceneWidgetPart010State0001.sceneWidgetState0106.integerState0896, RenderingSupport003.sceneWidgetPart010State0001.sceneWidgetState0106.integerState0915, NetworkArchiveRequest.stringState0429, MixedSupport005.sceneWidgetState0002, MixedSupport125.sceneWidgetState0125, MixedSupport125.sceneWidgetState0125);
               ResourceSupport003.integerState0555 = 2;
             }
             if (RenderingSupport003.sceneWidgetPart010State0001.sceneWidgetState0107.integerState0891 != 0) {

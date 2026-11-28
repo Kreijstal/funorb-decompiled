@@ -21,7 +21,7 @@ final class oc {
         return this;
     }
 
-    final static void a(java.awt.Component param0, byte param1) {
+    final static void attachKeyboardListeners(java.awt.Component param0, byte param1) {
         try {
           if (param1 != 6) {
             field_h = (int[]) null;

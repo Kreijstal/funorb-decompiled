@@ -131,7 +131,7 @@ final class ik {
           if (le.field_e != null) {
             var3 = -(le.field_e.fullHeight / 2) + 357;
             var4 = 0;
-            if (vb.field_n != 0 &&
+            if (ArchiveNetworkClient.field_n != 0 &&
               var3 < AgeValidator.field_m &&
               le.field_e.storedHeight + var3 > AgeValidator.field_m) {
               if (field_a > 269 - le.field_e.storedWidth &&
@@ -278,7 +278,7 @@ final class ik {
           if (le.field_e != null) {
             var3 = -(le.field_e.fullHeight / 2) + 357;
             var4 = 0;
-            if (vb.field_n != 0 &&
+            if (ArchiveNetworkClient.field_n != 0 &&
               var3 < AgeValidator.field_m &&
               le.field_e.storedHeight + var3 > AgeValidator.field_m) {
               if (field_a > 269 - le.field_e.storedWidth &&

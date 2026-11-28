@@ -84,7 +84,7 @@ final class PasswordValidator extends TextFieldValidator {
             stackIn_22_0 = GameAppletShell.field_a;
             return stackIn_22_0;
           }
-          if (bi.a((byte) -124, var7, var5)) {
+          if (KeyboardInputHandler.a((byte) -124, var7, var5)) {
             stackIn_25_0 = AgeValidator.field_l;
             return stackIn_25_0;
           }

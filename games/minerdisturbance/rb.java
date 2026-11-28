@@ -271,9 +271,9 @@ final class rb {
                         if ((var8 & 3) == 1 &&
                           (3 & var6) == 1) {
                           var17 = jf.b((byte) 100);
-                          uf.field_p[var17] = new gf(var14Lifetime1 / 4, var15 / 4, 16);
-                          uf.field_p[var17].field_g = 0;
-                          uf.field_p[var17].field_b = 250;
+                          SocketArchiveNetworkClient.field_p[var17] = new gf(var14Lifetime1 / 4, var15 / 4, 16);
+                          SocketArchiveNetworkClient.field_p[var17].field_g = 0;
+                          SocketArchiveNetworkClient.field_p[var17].field_b = 250;
                         }
                         if (!MouseWheelInput.field_b) {
                           this.field_m[var9] = false;
@@ -1254,7 +1254,7 @@ final class rb {
                       if (!MouseWheelInput.field_b &&
                         this.field_m[var13]) {
                         this.a(var12 >> 2, -4, var9Lifetime1 >> 2);
-                        uf.field_p[jf.b((byte) 56)] = new gf(var12 >> 2, var9Lifetime1 >> 2, 16);
+                        SocketArchiveNetworkClient.field_p[jf.b((byte) 56)] = new gf(var12 >> 2, var9Lifetime1 >> 2, 16);
                       }
                       stackIn_88_0 = ((15 & (this.field_n >> 2) + var13) != 0) ? 0 : 1;
                       var17Lifetime1 = stackIn_88_0;

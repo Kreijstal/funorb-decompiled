@@ -137,7 +137,7 @@ final class AccountNameAvailabilityValidator extends TextFieldValidator {
         this.checkedName = null;
         if (param0 != -1) {
           java.awt.Component var3 = (java.awt.Component) null;
-          AccountNameAvailabilityValidator.a(-74, (java.awt.Component) null);
+          AccountNameAvailabilityValidator.attachMouseListeners(-74, (java.awt.Component) null);
         }
     }
 
@@ -165,7 +165,7 @@ final class AccountNameAvailabilityValidator extends TextFieldValidator {
         field_q = null;
     }
 
-    final static void a(int param0, java.awt.Component param1) {
+    final static void attachMouseListeners(int param0, java.awt.Component param1) {
         try {
           if (param0 != 3) {
             AccountNameAvailabilityValidator.g(98);

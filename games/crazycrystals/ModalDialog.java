@@ -156,14 +156,14 @@ abstract class ModalDialog extends DequeWidgetContainer {
     }
 
     final void setCenteredSize(int param0, byte param1, int param2) {
-        this.setBounds(param0, DraggableWidgetContainer.field_y - param2 >> 1, -param0 + pk.field_c >> 1, param2, (byte) -52);
+        this.setBounds(param0, DraggableWidgetContainer.field_y - param2 >> 1, -param0 + ArchiveSourceManager.field_c >> 1, param2, (byte) -52);
         int var4 = -89 % ((76 - param1) / 37);
     }
 
     abstract void drawDialogBackground(int param0, int param1, int param2);
 
     ModalDialog(ModalDialogHost param0, int param1, int param2) {
-        super(-param1 + DraggableWidgetContainer.field_y >> 1, pk.field_c - param2 >> 1, param1, param2, (WidgetRenderer) null);
+        super(-param1 + DraggableWidgetContainer.field_y >> 1, ArchiveSourceManager.field_c - param2 >> 1, param1, param2, (WidgetRenderer) null);
         try {
           this.field_C = false;
           this.field_E = param0;

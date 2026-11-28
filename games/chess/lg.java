@@ -6,7 +6,7 @@ final class lg {
     static int field_f;
     static ci field_c;
     static String field_e;
-    static vc field_d;
+    static KeyboardInputHandler field_d;
     static ResourceArchive field_b;
 
     final static int a(int param0, int param1) {
@@ -404,6 +404,6 @@ final class lg {
 
     static {
         field_e = "white";
-        field_d = new vc();
+        field_d = new KeyboardInputHandler();
     }
 }

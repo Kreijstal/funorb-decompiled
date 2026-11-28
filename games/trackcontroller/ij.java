@@ -15,7 +15,7 @@ final class ij implements WidgetRenderer {
     private int field_e;
     private int field_m;
     private int field_g;
-    static wg field_d;
+    static ArchiveSourceManager field_d;
 
     final static void a(byte param0, int param1, int param2, int param3, int param4, boolean param5, int param6) {
         int var11 = 0;
@@ -133,7 +133,7 @@ final class ij implements WidgetRenderer {
         field_j = null;
         field_d = null;
         if (param0 != -18515) {
-          field_d = (wg) null;
+          field_d = (ArchiveSourceManager) null;
         }
     }
 

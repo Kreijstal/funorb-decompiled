@@ -142,7 +142,7 @@ final class en {
           var5.position = var5.position + 1;
           var7 = var5.position;
           var5.writeByte(3, 81);
-          var5.a((byte) 0, param0);
+          var5.writeString((byte) 0, param0);
           var5.patchByteLength((byte) -96, -var7 + var5.position);
           stackIn_13_0 = null;
           return (String) (stackIn_13_0);

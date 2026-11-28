@@ -51,7 +51,7 @@ final class de {
             for (var11 = param0; param3 > var11; var11++) {
               var12 = fj.field_b[var11];
               if (!param5) {
-                stackIn_23_0 = vh.field_h[var12];
+                stackIn_23_0 = ArchiveSourceManager.field_h[var12];
               } else {
                 stackIn_23_0 = GuestPlayConfirmationForm.field_B[var12];
               }

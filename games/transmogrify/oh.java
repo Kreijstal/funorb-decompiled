@@ -3,7 +3,7 @@
  */
 final class oh extends IntrusiveNode {
     int field_k;
-    static uh field_h;
+    static ArchiveNetworkClient field_h;
     boolean field_i;
     int[] field_g;
     static int field_j;

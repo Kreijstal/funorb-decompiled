@@ -70,7 +70,7 @@ final class uk implements WidgetRenderer {
               decompiledFrameRemainder0 = false;
             }
             else {
-              gb.a((Throwable) null, "LR1: " + al.a(param0 ^ 31183), 10);
+              ArchiveNetworkClient.a((Throwable) null, "LR1: " + al.a(param0 ^ 31183), 10);
               eg.a((byte) 126);
             }
           }

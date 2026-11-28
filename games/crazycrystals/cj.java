@@ -1013,7 +1013,7 @@ final class cj extends qf implements Cloneable {
           if (param1 != 2048) {
             cj.releaseDeclaredStaticReferences((byte) 73);
           }
-          var4_int = param2.d((byte) -61, param0);
+          var4_int = param2.readBits((byte) -61, param0);
           if (var4_int == 0) {
             stackIn_5_0 = null;
             return (byte[]) (stackIn_5_0);
@@ -1022,15 +1022,15 @@ final class cj extends qf implements Cloneable {
             param3.length != var4_int) {
             param3 = new byte[var4_int];
           }
-          var5 = param2.d((byte) -58, 3);
-          var6 = (byte)param2.d((byte) -104, 8);
+          var5 = param2.readBits((byte) -58, 3);
+          var6 = (byte)param2.readBits((byte) -104, 8);
           if (var5 <= 0) {
             for (var7 = 0; var7 < var4_int; var7++) {
               param3[var7] = (byte)var6;
             }
           } else {
             for (var7 = 0; var7 < var4_int; var7++) {
-              param3[var7] = (byte)(param2.d((byte) -69, var5) + var6);
+              param3[var7] = (byte)(param2.readBits((byte) -69, var5) + var6);
             }
           }
           stackIn_18_0 = (byte[]) (param3);
@@ -1215,7 +1215,7 @@ final class cj extends qf implements Cloneable {
           LevelProgressUpdate.field_h = LevelProgressUpdate.field_h - 8;
           fp.field_a = fp.field_a - 8;
           je.field_j = je.field_j - 4;
-          fn.field_j = fn.field_j - ob.field_l;
+          fn.field_j = fn.field_j - ArchiveNetworkClient.field_l;
           wd.field_j = wd.field_j + 1;
           return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -1256,7 +1256,7 @@ final class cj extends qf implements Cloneable {
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          fn.field_j = fn.field_j + ob.field_l;
+          fn.field_j = fn.field_j + ArchiveNetworkClient.field_l;
           wd.field_j = wd.field_j - 1;
           LevelProgressUpdate.field_h = LevelProgressUpdate.field_h + 20;
           fp.field_a = fp.field_a + 20;
@@ -1267,7 +1267,7 @@ final class cj extends qf implements Cloneable {
           }
           this.field_B = true;
           wd.field_j = wd.field_j + 1;
-          mb.field_g = mb.field_g + ob.field_l;
+          mb.field_g = mb.field_g + ArchiveNetworkClient.field_l;
           return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -1357,7 +1357,7 @@ final class cj extends qf implements Cloneable {
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          ob.field_l = ob.field_l + 1;
+          ArchiveNetworkClient.field_l = ArchiveNetworkClient.field_l + 1;
           var6_int = -110 / ((73 - param4) / 42);
           fn.field_j = fn.field_j - wd.field_j;
           this.field_B = true;

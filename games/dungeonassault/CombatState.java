@@ -1027,7 +1027,7 @@ final class CombatState {
         if (param2 != 36864) {
           this.applyRoomFailureEffects((byte) 20, -103, true);
         }
-        stackIn_7_0 = !(param4 >= param1) || ((ha.a((byte) -21) < this.calculateAdjustedDragonWakeRisk(param3, param0, param1, 2, param4)));
+        stackIn_7_0 = !(param4 >= param1) || ((ProxySocketConnector.a((byte) -21) < this.calculateAdjustedDragonWakeRisk(param3, param0, param1, 2, param4)));
         return stackIn_7_0;
     }
 

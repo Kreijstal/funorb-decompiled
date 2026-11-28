@@ -374,7 +374,7 @@ final class AccountRegistrationPanel extends DequeWidgetContainer implements Tex
         this.field_M.field_n = lg.field_b;
         this.field_J.field_n = UiWidget.field_C;
         this.field_O.field_n = sl.field_v;
-        this.field_Q.field_n = uf.field_t;
+        this.field_Q.field_n = SocketArchiveNetworkClient.field_t;
         this.field_V.field_n = ig.field_a;
         this.field_I.setFieldValidator(new AccountNameAvailabilityValidator(this.field_I), 1048576);
         this.field_P.setFieldValidator(new EmailFormatValidator(this.field_P), 1048576);

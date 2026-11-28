@@ -99,8 +99,8 @@ final class td {
               }
               vh.field_b = df.field_a;
               df.field_a = TextHotspotBounds.field_i;
-              TextHotspotBounds.field_i = pg.field_d;
-              pg.field_d = var4_ref_c.field_k;
+              TextHotspotBounds.field_i = ArchiveSourceManager.field_d;
+              ArchiveSourceManager.field_d = var4_ref_c.field_k;
               return true;
             }
           }
@@ -120,8 +120,8 @@ final class td {
             if (sc.field_f == 0) {
               vh.field_b = df.field_a;
               df.field_a = TextHotspotBounds.field_i;
-              TextHotspotBounds.field_i = pg.field_d;
-              pg.field_d = RichTextLayout.field_r;
+              TextHotspotBounds.field_i = ArchiveSourceManager.field_d;
+              ArchiveSourceManager.field_d = RichTextLayout.field_r;
               RichTextLayout.field_r = -1;
               return true;
             }

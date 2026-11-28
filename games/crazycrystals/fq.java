@@ -22,8 +22,8 @@ final class fq extends ea implements Cloneable {
     private transient mi field_H;
 
     final static void a(int param0, java.awt.Canvas param1) {
-        rh.a(-1, (java.awt.Component) ((Object) param1));
-        ji.a(-110, (java.awt.Component) ((Object) param1));
+        rh.detachKeyboardListeners(-1, (java.awt.Component) ((Object) param1));
+        ji.detachMouseListeners(-110, (java.awt.Component) ((Object) param1));
         if (param0 >= -29) {
           return;
         }
@@ -350,7 +350,7 @@ final class fq extends ea implements Cloneable {
             mb.field_g = mb.field_g + 11;
             fn.field_j = fn.field_j + 11;
             wd.field_j = wd.field_j - 1;
-            mb.field_g = mb.field_g - ob.field_l;
+            mb.field_g = mb.field_g - ArchiveNetworkClient.field_l;
             LevelProgressUpdate.field_h = LevelProgressUpdate.field_h + 28;
             fp.field_a = fp.field_a + 28;
             je.field_j = je.field_j + 14;
@@ -726,11 +726,11 @@ final class fq extends ea implements Cloneable {
             stackIn_2_0 = (PuzzleTile) null;
             return stackIn_2_0;
           }
-          fn.field_j = fn.field_j + ob.field_l;
+          fn.field_j = fn.field_j + ArchiveNetworkClient.field_l;
           this.field_A = param6;
           this.field_t = param3;
           fn.field_j = fn.field_j + wd.field_j;
-          ob.field_l = ob.field_l - 1;
+          ArchiveNetworkClient.field_l = ArchiveNetworkClient.field_l - 1;
           stackIn_4_0 = super.a(param0, param1, param2, param3, 17512, param5, param6);
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

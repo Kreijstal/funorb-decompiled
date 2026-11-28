@@ -55,7 +55,7 @@ final class s {
           if (param0 <= 38) {
             field_c = -37L;
           }
-          cl.d((byte) -91);
+          SocketArchiveNetworkClient.d((byte) -91);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -73,10 +73,10 @@ final class s {
         try {
           boolean decompiledFrameRemainder0 = true;
           if (hb.field_g > 0) {
-            df.field_l = DiskCacheWorker.createFullscreenCanvas(0, sb.field_d, 640, 9764, 480, 0);
-            if (df.field_l != null) {
+            ArchiveSourceManager.field_l = DiskCacheWorker.createFullscreenCanvas(0, sb.field_d, 640, 9764, 480, 0);
+            if (ArchiveSourceManager.field_l != null) {
               var2_int = 2;
-              ej.a(df.field_l, (byte) 57);
+              ej.a(ArchiveSourceManager.field_l, (byte) 57);
               decompiledFrameRemainder0 = (var3 != 0);
             }
             if (decompiledFrameRemainder0) {
@@ -259,7 +259,7 @@ final class s {
                   var25Lifetime1Lifetime1 = param5.field_r[var23Lifetime2];
                   var26Lifetime1Lifetime1 = param5.field_o[var23Lifetime2];
                   ii.field_a[var23Lifetime2] = (var25Lifetime1Lifetime1 * var15 + (var24Lifetime1Lifetime1 * var12 + var18 * var26Lifetime1Lifetime1) >> 16) + var9;
-                  ka.field_m[var23Lifetime2] = (var13 * var24Lifetime1Lifetime1 + (var16 * var25Lifetime1Lifetime1 + var26Lifetime1Lifetime1 * var19) >> 16) + var10;
+                  ProxySocketConnector.field_m[var23Lifetime2] = (var13 * var24Lifetime1Lifetime1 + (var16 * var25Lifetime1Lifetime1 + var26Lifetime1Lifetime1 * var19) >> 16) + var10;
                   InteractiveWidget.field_G[var23Lifetime2] = var11 + (var26Lifetime1Lifetime1 * var20 + (var24Lifetime1Lifetime1 * var14 + var17 * var25Lifetime1Lifetime1) >> 16);
                   var24Lifetime1Lifetime1 = param5.field_u[var23Lifetime2];
                   var25Lifetime1Lifetime1 = param5.field_y[var23Lifetime2];
@@ -371,7 +371,7 @@ final class s {
         hg.field_ob[19] = ea.field_b;
         hg.field_ob[1] = DrPhlogistonSavesTheEarth.field_L;
         hg.field_ob[16] = db.field_g;
-        hg.field_ob[11] = hj.field_a;
+        hg.field_ob[11] = SocketConnector.field_a;
         hg.field_ob[18] = vi.field_d;
         hg.field_ob[6] = rk.field_c;
         hg.field_ob[17] = DualLinkNode.field_q;

@@ -115,10 +115,10 @@ final class hf extends sk {
           if (GuestPlayConfirmationForm.field_B[param2] > GuestPlayConfirmationForm.field_B[param0]) {
             return false;
           }
-          if (vh.field_h[param0] > vh.field_h[param2]) {
+          if (ArchiveSourceManager.field_h[param0] > ArchiveSourceManager.field_h[param2]) {
             return true;
           }
-          if (vh.field_h[param2] > vh.field_h[param0]) {
+          if (ArchiveSourceManager.field_h[param2] > ArchiveSourceManager.field_h[param0]) {
             return false;
           }
           var4 = PcmOutputWorker.field_g[param2] + wb.field_e[param2] + vc.field_f[param2];
@@ -142,10 +142,10 @@ final class hf extends sk {
           }
           return !(param0 <= param2);
         }
-        if (vh.field_h[param0] > vh.field_h[param2]) {
+        if (ArchiveSourceManager.field_h[param0] > ArchiveSourceManager.field_h[param2]) {
           return true;
         }
-        if (vh.field_h[param0] < vh.field_h[param2]) {
+        if (ArchiveSourceManager.field_h[param0] < ArchiveSourceManager.field_h[param2]) {
           return false;
         }
         if (GuestPlayConfirmationForm.field_B[param0] > GuestPlayConfirmationForm.field_B[param2]) {

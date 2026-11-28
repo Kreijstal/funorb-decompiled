@@ -57,7 +57,7 @@ final class oc extends hn {
                   tb.field_e = true;
                   if (null != GzipDecompressor.field_b) {
                     GzipDecompressor.field_b.field_K = false;
-                    kh.a((byte) 92);
+                    MouseInputHandler.a((byte) 92);
                   }
                   return;
                 }

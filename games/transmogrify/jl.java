@@ -29,7 +29,7 @@ final class jl extends IntrusiveNode {
           var5_int = 1;
           if (param2 != 13612) {
             var11 = (java.awt.Component) null;
-            jl.a((java.awt.Component) null, 106);
+            jl.attachMouseListeners((java.awt.Component) null, 106);
           }
           var6 = param4;
           if (SoftwareRasterizer.field_e > param1 + var5_int) {
@@ -136,7 +136,7 @@ final class jl extends IntrusiveNode {
         throw new Error();
     }
 
-    final static void a(java.awt.Component param0, int param1) {
+    final static void attachMouseListeners(java.awt.Component param0, int param1) {
         try {
           param0.addMouseListener(hi.field_e);
           param0.addMouseMotionListener(hi.field_e);

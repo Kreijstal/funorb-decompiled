@@ -105,7 +105,7 @@ final class cf extends HomingProjectile {
     final void handleDestruction(int param0) {
         this.field_C = !this.field_gb ? 0.1 : 0.2;
         if (param0 == 26402) {
-          this.a((byte) -95, !this.field_gb ? og.field_f : DequeCursor.field_f, 3.0);
+          this.a((byte) -95, !this.field_gb ? ProxySocketConnector.field_f : DequeCursor.field_f, 3.0);
           return;
         }
     }

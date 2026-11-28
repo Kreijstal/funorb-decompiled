@@ -139,7 +139,7 @@ final class rg {
             for (var18 = 0; var18 < 3; var18++) {
               oj.field_l[var18] = oj.field_l[var18] + uj.field_f[var15][var18];
             }
-            da.a(oj.field_l, true, ae.field_M, false, false, var17, (byte) -58);
+            MouseInputHandler.a(oj.field_l, true, ae.field_M, false, false, var17, (byte) -58);
             ff.a(var13Lifetime1, var7Lifetime1, var8Lifetime1, var12Lifetime1, var14, var9Lifetime1, (byte) -116, var17);
           }
           return;

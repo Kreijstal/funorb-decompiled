@@ -35,7 +35,7 @@ final class nh {
         RuntimeException decompiledCaughtException = null;
         try {
           var6 = vh.field_a;
-          var6.b(true, param2);
+          var6.writeCipheredByte(true, param2);
           var6.position = var6.position + 1;
           var4 = var6.position;
           var6.writeByte(100, 1);

@@ -78,7 +78,7 @@ final class BufferedSocket implements Runnable {
           return;
         }
         try {
-          var3.d(8, param1);
+          var3.writeCipheredByte(8, param1);
           var3.writeByte(true, 5);
           var3.writeByte(!param2 ? true : false, 0);
           var3.writeShort(-161478600, param0.field_g);

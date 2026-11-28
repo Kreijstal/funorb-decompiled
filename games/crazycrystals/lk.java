@@ -39,14 +39,14 @@ abstract class lk {
           var8 = new CipherPacketBuffer(param0.getFileByName(7693, "", "logo.fo3d"));
           var10 = var8;
           var3 = var10.readUnsignedByte(255);
-          var10.f((byte) 50);
+          var10.beginBitAccess((byte) 50);
           ContentTransitionDialog.field_S = rd.a(var10, -95);
           je.field_d = new int[var3][];
           rn.field_o = new ModelMesh[var3];
           for (var4 = 0; var3 > var4; var4++) {
             rn.field_o[var4] = NameSuggestionsPanel.a(-31741, var8);
           }
-          var10.k(-2321);
+          var10.endBitAccess(-2321);
           var9 = 0;
           var4Lifetime1 = var9;
           while (var3 > var9) {

@@ -64,27 +64,27 @@ final class p {
         SocketConnector.field_l[param3][param2][1][1] = 320 + var11 * (CrossfadingMidiPcmStream.a(1870096848, var13, 19398656) >> 16);
         SocketConnector.field_l[param3][param2][2][0] = (CrossfadingMidiPcmStream.a(1870096848, var12, 18874368) >> 16) * var10 + 320;
         SocketConnector.field_l[param3][param2][2][1] = 320 + var11 * (CrossfadingMidiPcmStream.a(1870096848, var13, 18874368) >> 16);
-        vb.field_a[param3][param2] = param4 + param1 / 32;
+        ArchiveNetworkClient.field_a[param3][param2] = param4 + param1 / 32;
         if (param6 > -5) {
           return;
         }
-        if (0 > vb.field_a[param3][param2]) {
-          dupTemp$0 = vb.field_a[param3];
+        if (0 > ArchiveNetworkClient.field_a[param3][param2]) {
+          dupTemp$0 = ArchiveNetworkClient.field_a[param3];
           dupTemp$0[param2] = dupTemp$0[param2] + 64;
         }
-        if (vb.field_a[param3][param2] >= 64) {
-          dupTemp$1 = vb.field_a[param3];
+        if (ArchiveNetworkClient.field_a[param3][param2] >= 64) {
+          dupTemp$1 = ArchiveNetworkClient.field_a[param3];
           dupTemp$1[param2] = dupTemp$1[param2] - 64;
         }
         if ((param4 < 0 ||
           param4 > 64) &&
           (param4 > 0 ||
           param4 < -64)) {
-          nj.field_b[vb.field_a[param3][param2]][0] = 360 + (CrossfadingMidiPcmStream.a(1870096848, CrossfadingMidiPcmStream.field_m[16 + var8], 23592960) >> 16);
-          nj.field_b[vb.field_a[param3][param2]][1] = 296 + (CrossfadingMidiPcmStream.a(1870096848, CrossfadingMidiPcmStream.field_m[var8 + 16], 19398656) >> 16);
+          nj.field_b[ArchiveNetworkClient.field_a[param3][param2]][0] = 360 + (CrossfadingMidiPcmStream.a(1870096848, CrossfadingMidiPcmStream.field_m[16 + var8], 23592960) >> 16);
+          nj.field_b[ArchiveNetworkClient.field_a[param3][param2]][1] = 296 + (CrossfadingMidiPcmStream.a(1870096848, CrossfadingMidiPcmStream.field_m[var8 + 16], 19398656) >> 16);
         } else {
-          nj.field_b[vb.field_a[param3][param2]][0] = -(CrossfadingMidiPcmStream.a(1870096848, CrossfadingMidiPcmStream.field_m[16 + var8], 23592960) >> 16) + 360;
-          nj.field_b[vb.field_a[param3][param2]][1] = -(CrossfadingMidiPcmStream.a(1870096848, CrossfadingMidiPcmStream.field_m[var8 + 16], 19398656) >> 16) + 296;
+          nj.field_b[ArchiveNetworkClient.field_a[param3][param2]][0] = -(CrossfadingMidiPcmStream.a(1870096848, CrossfadingMidiPcmStream.field_m[16 + var8], 23592960) >> 16) + 360;
+          nj.field_b[ArchiveNetworkClient.field_a[param3][param2]][1] = -(CrossfadingMidiPcmStream.a(1870096848, CrossfadingMidiPcmStream.field_m[var8 + 16], 19398656) >> 16) + 296;
         }
     }
 

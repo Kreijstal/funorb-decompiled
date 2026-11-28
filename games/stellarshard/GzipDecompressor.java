@@ -35,7 +35,7 @@ final class GzipDecompressor {
         try {
           var5 = (ta) (eg.field_b.beginForward(-86));
           while (var5 != null) {
-            fb.a(param0, (byte) -118, var5);
+            ArchiveNetworkClient.a(param0, (byte) -118, var5);
             var5 = (ta) (eg.field_b.nextForward((byte) 55));
           }
           int var3 = -66 % ((param1 - 25) / 54);
@@ -142,11 +142,11 @@ final class GzipDecompressor {
             return;
           }
           if (param1 < 100) {
-            ed.field_d = fb.createAccountErrorResult(param1, true, param0);
+            ed.field_d = ArchiveNetworkClient.createAccountErrorResult(param1, true, param0);
             return;
           }
           if (param1 > 105) {
-            ed.field_d = fb.createAccountErrorResult(param1, true, param0);
+            ed.field_d = ArchiveNetworkClient.createAccountErrorResult(param1, true, param0);
             return;
           }
           var4 = param3;

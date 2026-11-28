@@ -5,7 +5,7 @@ abstract class TextFieldValidator extends DebouncedFieldValidator implements Tex
     static String field_h;
     private EditableTextField field_m;
     static String field_l;
-    static tk field_k;
+    static KeyboardInputHandler field_k;
     static na field_i;
     static ResourceArchive field_j;
 
@@ -160,7 +160,7 @@ abstract class TextFieldValidator extends DebouncedFieldValidator implements Tex
 
     public final boolean hasMissingInput(boolean param0) {
         if (!param0) {
-          field_k = (tk) null;
+          field_k = (KeyboardInputHandler) null;
           if (this.field_m.field_s != null) {
             return 0 == this.field_m.field_s.length() ? true : false;
           }
@@ -214,7 +214,7 @@ abstract class TextFieldValidator extends DebouncedFieldValidator implements Tex
     static {
         field_h = "Well done!";
         field_l = "Player names can be up to 12 letters, numbers and underscores";
-        field_k = new tk();
+        field_k = new KeyboardInputHandler();
         field_i = new na();
     }
 }

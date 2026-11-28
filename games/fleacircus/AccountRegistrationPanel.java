@@ -396,7 +396,7 @@ final class AccountRegistrationPanel extends DequeWidgetContainer implements Tex
         }
     }
 
-    final static void a(java.awt.Component param0, byte param1) {
+    final static void detachKeyboardListeners(java.awt.Component param0, byte param1) {
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         String stackIn_9_2 = null;
@@ -748,7 +748,7 @@ final class AccountRegistrationPanel extends DequeWidgetContainer implements Tex
             }
           }
           if (param3 != 248) {
-            AccountRegistrationPanel.a((java.awt.Component) null, (byte) 78);
+            AccountRegistrationPanel.detachKeyboardListeners((java.awt.Component) null, (byte) 78);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

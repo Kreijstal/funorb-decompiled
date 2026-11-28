@@ -29,7 +29,7 @@ final class MoveCreatureEffect extends EventEffect {
             var3 = vc.a(var2_int, 0, -16306);
             var4 = new int[15];
             for (var5 = 0; var4.length > var5; var5++) {
-              var4[var5] = cl.a(var5 + 2, (byte) 107, var2_int);
+              var4[var5] = SocketArchiveNetworkClient.a(var5 + 2, (byte) 107, var2_int);
             }
             HailSpecial.a(var4, var3, 0);
           }

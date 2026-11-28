@@ -1548,7 +1548,7 @@ final class BattleState {
             param1 == 36 &&
             mm.field_e >= 2) {
             this.field_q.field_jb = this.field_q.field_v;
-            kg.field_q = true;
+            SocketArchiveNetworkClient.field_q = true;
           }
           if (this.field_J &&
             param1 == 56) {

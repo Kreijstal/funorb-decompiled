@@ -29,7 +29,7 @@ final class sj {
         try {
           PacketBuffer.g((byte) -124);
           AlphaWidgetContainer.field_I.closeAllDialogs(false);
-          mb.field_s = new LoginPanel(ol.field_Hb, (String) null, qi.field_b, param2, param0);
+          mb.field_s = new LoginPanel(ol.field_Hb, (String) null, ArchiveSourceManager.field_b, param2, param0);
           bj.field_f = new StandardContentDialog(AlphaWidgetContainer.field_I, mb.field_s);
           AlphaWidgetContainer.field_I.showDialog((UiWidget) (bj.field_f), (byte) -1);
           if (param1 != 68) {
@@ -81,7 +81,7 @@ final class sj {
         try {
           PacketBuffer.g((byte) -124);
           AlphaWidgetContainer.field_I.closeAllDialogs(false);
-          mb.field_s = new LoginPanel(ol.field_Hb, (String) null, qi.field_b, param2, param0);
+          mb.field_s = new LoginPanel(ol.field_Hb, (String) null, ArchiveSourceManager.field_b, param2, param0);
           bj.field_f = new StandardContentDialog(AlphaWidgetContainer.field_I, mb.field_s);
           AlphaWidgetContainer.field_I.showDialog((UiWidget) (bj.field_f), (byte) -1);
           if (param1 != 68) {

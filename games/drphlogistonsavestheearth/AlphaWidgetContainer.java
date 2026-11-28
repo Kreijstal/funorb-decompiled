@@ -142,7 +142,7 @@ final class AlphaWidgetContainer extends SingleChildWidgetContainer {
         } catch (java.lang.Exception decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var7 = (Exception) (Object) decompiledCaughtException;
-          gb.a((Throwable) ((Object) var7), "CC1", 10);
+          ArchiveNetworkClient.a((Throwable) ((Object) var7), "CC1", 10);
           SpriteGeometry.field_x = null;
           MusicPatchPcmStream.field_m = null;
           return new fg(param0);
@@ -170,7 +170,7 @@ final class AlphaWidgetContainer extends SingleChildWidgetContainer {
           var5 = new RgbSprite(this.field_z.field_w, this.field_z.field_k);
           MouseInput.a(var5, (byte) 47);
           this.field_z.drawWidget(0, param1, param2, 0);
-          cl.d((byte) -81);
+          SocketArchiveNetworkClient.d((byte) -81);
           var5.drawWithOpacity(this.field_o + param0, this.field_m + param3, this.field_K);
           return;
         }

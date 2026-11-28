@@ -166,7 +166,7 @@ final class ji extends pn {
         return 3;
     }
 
-    final static void a(int param0, java.awt.Component param1) {
+    final static void detachMouseListeners(int param0, java.awt.Component param1) {
         try {
           int var2_int = -94 / ((param0 - 43) / 35);
           param1.removeMouseListener(tm.field_b);

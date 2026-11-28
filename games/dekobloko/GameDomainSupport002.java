@@ -48,7 +48,7 @@ final class GameDomainSupport002 {
         try {
           cipherPacketBufferLocal3 = SocketFactory.cipherPacketBufferState0002;
           while (ProxySocketFactory.computeBoolean1478((byte) -104)) {
-            cipherPacketBufferLocal3.performAction1641(8, -4);
+            cipherPacketBufferLocal3.writeCipheredByte(8, -4);
             integerLocal1 = cipherPacketBufferLocal3.position + 1;
             cipherPacketBufferLocal3.position = cipherPacketBufferLocal3.position + 1;
             integerLocal5 = integerLocal1;

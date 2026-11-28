@@ -20,7 +20,7 @@ final class jna extends IntrusiveNode {
             }
           }
           if (lna.field_q) {
-            qfa.a(param0, param6, param7, (byte) -115, param6, param4, param5, param1, 20);
+            NetworkArchiveRequest.a(param0, param6, param7, (byte) -115, param6, param4, param5, param1, 20);
             bi.field_h.a(19842, param3);
             if (param3) {
               if (BoardChangeAnimation.field_k.field_R != 0) {

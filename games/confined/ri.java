@@ -54,7 +54,7 @@ final class ri {
           return;
         }
         if (pa.a(false)) {
-          vh.field_a.b(true, 1);
+          vh.field_a.writeCipheredByte(true, 1);
           tb.a(0, 125);
         }
         dc.d(115);

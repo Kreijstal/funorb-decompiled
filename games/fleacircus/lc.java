@@ -91,7 +91,7 @@ class lc extends DualLinkNode {
         if (param0 != 0) {
           return (String) null;
         }
-        return jk.field_j;
+        return ProxySocketConnector.field_j;
     }
 
     public static void clearStaticReferences(byte param0) {

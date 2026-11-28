@@ -543,7 +543,7 @@ final class GameScreen {
             vc.field_a < 32) {
             vc.field_a = vc.field_a + 1;
           }
-          if (0 != vb.field_n) {
+          if (0 != ArchiveNetworkClient.field_n) {
             this.field_j = AgeValidator.field_m;
             this.field_g = ik.field_a;
             DelegatingCanvas.field_f = false;
@@ -2794,7 +2794,7 @@ final class GameScreen {
                       stackIn_109_1 = false;
                       stackIn_110_2 = (0 != tf.field_o);
                       stackIn_114_3 = (eh.field_l != 0);
-                      var3_intLifetime4 = ((BitmapFont) (Object) stackIn_109_0).stringWidth(vb.a(stackIn_109_1, stackIn_110_2, stackIn_114_3, false));
+                      var3_intLifetime4 = ((BitmapFont) (Object) stackIn_109_0).stringWidth(ArchiveNetworkClient.a(stackIn_109_1, stackIn_110_2, stackIn_114_3, false));
                       if (var3_intLifetime4 > var2_intLifetime2) {
                         var2_intLifetime2 = var3_intLifetime4;
                       }
@@ -2826,7 +2826,7 @@ final class GameScreen {
                       stackIn_137_1 = false;
                       stackIn_138_2 = (tf.field_o != 0);
                       stackIn_142_3 = (0 != eh.field_l);
-                      ((BitmapFont) (Object) stackIn_137_0).drawCentred(vb.a(stackIn_137_1, stackIn_138_2, stackIn_142_3, false), 320, 108 + var9 * 2 + (var8 + 18), var10, -1);
+                      ((BitmapFont) (Object) stackIn_137_0).drawCentred(ArchiveNetworkClient.a(stackIn_137_1, stackIn_138_2, stackIn_142_3, false), 320, 108 + var9 * 2 + (var8 + 18), var10, -1);
                       decompiledFrameRemainder1 = (var11 != 0);
                     }
                   }
@@ -5196,16 +5196,16 @@ final class GameScreen {
               var14 = (25 + RichTextLayout.field_j) * 255 / 25;
             }
           }
-          if (!vb.field_q) {
+          if (!ArchiveNetworkClient.field_q) {
             if (null != ba.field_i) {
               kd.field_m = ba.field_i;
               if (TorChallenge.field_F) {
                 ah.b(var13, -22081);
-                vb.field_q = true;
+                ArchiveNetworkClient.field_q = true;
               }
             } else {
               ah.b(var13, -22081);
-              vb.field_q = true;
+              ArchiveNetworkClient.field_q = true;
             }
           }
           DialogMessagePane.field_N = DialogMessagePane.field_N + 1;
@@ -5931,8 +5931,8 @@ final class GameScreen {
           var8 = AccountServiceResult.field_j[1];
           var9 = TextLayout.field_d;
           if (kf.field_b == 1 &&
-            null != fl.field_t[this.screenId]) {
-            var9 = fl.field_t;
+            null != SocketArchiveNetworkClient.field_t[this.screenId]) {
+            var9 = SocketArchiveNetworkClient.field_t;
           }
           if (kf.field_b == 3 &&
             wj.field_c[this.screenId] != null) {

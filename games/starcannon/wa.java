@@ -202,7 +202,7 @@ final class wa implements WidgetRenderer {
               decompiledFrameRemainder0 = false;
             }
             else {
-              hc.a((Throwable) null, "LR1: " + oe.a(59), (byte) 85);
+              hc.a((Throwable) null, "LR1: " + SocketConnector.a(59), (byte) 85);
               ec.a((byte) 27);
             }
           }

@@ -18,7 +18,7 @@ final class AccountServiceResult {
         field_g = null;
         if (param0 != 122) {
           java.awt.Component var2 = (java.awt.Component) null;
-          AccountServiceResult.a(-110, (java.awt.Component) null);
+          AccountServiceResult.detachMouseListeners(-110, (java.awt.Component) null);
         }
     }
 
@@ -192,7 +192,7 @@ final class AccountServiceResult {
         this.success = param0 ? true : false;
     }
 
-    final static void a(int param0, java.awt.Component param1) {
+    final static void detachMouseListeners(int param0, java.awt.Component param1) {
         param1.removeMouseListener(a.mouseHandler);
         if (param0 > -2) {
           return;

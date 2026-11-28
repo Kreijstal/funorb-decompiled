@@ -22,7 +22,7 @@ final class jj {
 
     final static boolean b(int param0) {
         int var1 = -2 % ((param0 - 72) / 39);
-        return fl.field_a.b(64);
+        return fl.field_a.loadMasterIndex(64);
     }
 
     final static int c(int param0) {

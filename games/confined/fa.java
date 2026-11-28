@@ -127,8 +127,8 @@ final class fa extends InteractiveWidget {
         RuntimeException var2 = null;
         try {
           var2_int = -20 / ((-7 - param1) / 57);
-          ByteArrayPoolSupport.a((java.awt.Component) ((Object) param0), (byte) -112);
-          NameSuggestionsPanel.a(0, (java.awt.Component) ((Object) param0));
+          ByteArrayPoolSupport.detachKeyboardListeners((java.awt.Component) ((Object) param0), (byte) -112);
+          NameSuggestionsPanel.detachMouseListeners(0, (java.awt.Component) ((Object) param0));
           if (null != jc.field_c) {
             jc.field_c.detach((java.awt.Component) ((Object) param0), (byte) -30);
           }
@@ -154,7 +154,7 @@ final class fa extends InteractiveWidget {
         return !fb.field_a.c(17237) ? true : false;
     }
 
-    final static void a(boolean param0, java.awt.Component param1) {
+    final static void attachMouseListeners(boolean param0, java.awt.Component param1) {
         try {
           param1.addMouseListener(tf.field_a);
           param1.addMouseMotionListener(tf.field_a);

@@ -369,7 +369,7 @@ final class Asteroid {
                                           if (!pg.field_e ||
                                             kd.currentScreenIndex != -1) {
                                             var4 = this.field_a >> 4;
-                                            var5 = ea.field_p[kb.field_b] + ((this.field_b >> 4) - 720);
+                                            var5 = SocketArchiveNetworkClient.field_p[kb.field_b] + ((this.field_b >> 4) - 720);
                                             var6 = (int)Math.sqrt((double)(var5 * var5 + var4 * var4));
                                             if (var6 < this.field_g + kd.field_b[kb.field_b]) {
                                               if (!pg.field_e) {
@@ -421,7 +421,7 @@ final class Asteroid {
                                             if (!pg.field_e ||
                                               kd.currentScreenIndex != -1) {
                                               var4 = this.field_a >> 4;
-                                              var5 = -720 + ((this.field_b >> 4) + ea.field_p[kb.field_b]);
+                                              var5 = -720 + ((this.field_b >> 4) + SocketArchiveNetworkClient.field_p[kb.field_b]);
                                               var6 = (int)Math.sqrt((double)(var5 * var5 + var4 * var4));
                                               if (this.field_g + kd.field_b[kb.field_b] > var6) {
                                                 if (!pg.field_e) {
@@ -477,7 +477,7 @@ final class Asteroid {
                                               if (!pg.field_e ||
                                                 kd.currentScreenIndex != -1) {
                                                 var4 = this.field_a >> 4;
-                                                var5 = -720 + (this.field_b >> 4) + ea.field_p[kb.field_b];
+                                                var5 = -720 + (this.field_b >> 4) + SocketArchiveNetworkClient.field_p[kb.field_b];
                                                 var6 = (int)Math.sqrt((double)(var4 * var4 + var5 * var5));
                                                 if (var6 < kd.field_b[kb.field_b] + this.field_g) {
                                                   if (!pg.field_e) {
@@ -533,7 +533,7 @@ final class Asteroid {
                                                 if (!pg.field_e ||
                                                   kd.currentScreenIndex != -1) {
                                                   var4 = this.field_a >> 4;
-                                                  var5 = ea.field_p[kb.field_b] + ((this.field_b >> 4) - 720);
+                                                  var5 = SocketArchiveNetworkClient.field_p[kb.field_b] + ((this.field_b >> 4) - 720);
                                                   var6 = (int)Math.sqrt((double)(var4 * var4 + var5 * var5));
                                                   if (var6 < kd.field_b[kb.field_b] + this.field_g) {
                                                     if (!pg.field_e) {
@@ -589,7 +589,7 @@ final class Asteroid {
                                                   if (!pg.field_e ||
                                                     -1 != kd.currentScreenIndex) {
                                                     var4 = this.field_a >> 4;
-                                                    var5 = (this.field_b >> 4) - 720 + ea.field_p[kb.field_b];
+                                                    var5 = (this.field_b >> 4) - 720 + SocketArchiveNetworkClient.field_p[kb.field_b];
                                                     var6 = (int)Math.sqrt((double)(var5 * var5 + var4 * var4));
                                                     if (kd.field_b[kb.field_b] + this.field_g > var6) {
                                                       if (!pg.field_e) {
@@ -667,7 +667,7 @@ final class Asteroid {
                                                   if (!pg.field_e ||
                                                     kd.currentScreenIndex != -1) {
                                                     var4 = this.field_a >> 4;
-                                                    var5 = (this.field_b >> 4) - (720 - ea.field_p[kb.field_b]);
+                                                    var5 = (this.field_b >> 4) - (720 - SocketArchiveNetworkClient.field_p[kb.field_b]);
                                                     var6 = (int)Math.sqrt((double)(var4 * var4 + var5 * var5));
                                                     if (kd.field_b[kb.field_b] + this.field_g > var6) {
                                                       if (!pg.field_e) {

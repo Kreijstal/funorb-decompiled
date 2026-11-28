@@ -18,7 +18,7 @@ final class MatchingFieldValidator extends TextFieldValidator {
         try {
           var8 = vh.field_a;
           var9 = var8;
-          var9.b(true, param0);
+          var9.writeCipheredByte(true, param0);
           var9.position = var9.position + 1;
           var4 = var9.position;
           var9.writeByte(96, 1);

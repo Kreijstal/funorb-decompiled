@@ -445,7 +445,7 @@ final class qm {
           return;
         }
         if (null == gf.field_d) {
-          gf.field_d = vc.a(-122, 4);
+          gf.field_d = KeyboardInputHandler.a(-122, 4);
         }
         if (gf.field_d.field_m) {
           vk.field_b = vk.field_b & ~gf.field_d.field_j;

@@ -116,7 +116,7 @@ final class pj extends ql {
               if (this.field_o) {
                 break;
               }
-              if (ih.a(this.field_g[var3], (byte) -106, var10) <= 2) {
+              if (SocketArchiveNetworkClient.a(this.field_g[var3], (byte) -106, var10) <= 2) {
                 this.field_o = true;
                 this.field_x[1 - var3].field_l = -1;
               }
@@ -139,7 +139,7 @@ final class pj extends ql {
             var5_intLifetime1 = var9;
             while (var9 < 2) {
               if (!this.field_A[var9] &&
-                ih.a(var10, (byte) -93, this.field_m[var9]) < 2) {
+                SocketArchiveNetworkClient.a(var10, (byte) -93, this.field_m[var9]) < 2) {
                 if (1 == var9) {
                   ca.a((double)this.field_m[var9].field_e + 1.5, 1, 1.0 + (double)this.field_m[var9].field_g, true, 192);
                 } else {
@@ -207,7 +207,7 @@ final class pj extends ql {
           if (!this.field_n &&
             0 <= this.field_k.field_l &&
             ha.field_t == 4 &&
-            ih.a(var10, (byte) -93, this.field_j) <= 2) {
+            SocketArchiveNetworkClient.a(var10, (byte) -93, this.field_j) <= 2) {
             this.field_n = true;
           }
           if (0 == (ng.field_u & 15)) {
@@ -355,7 +355,7 @@ final class pj extends ql {
             var4Lifetime1 = 1000;
             var5_int = -1;
             for (var6_int = var3Lifetime3; var6_int < 3; var6_int++) {
-              var7 = ih.a(this.field_m[var3Lifetime3], (byte) -76, this.field_t[var6_int].field_j);
+              var7 = SocketArchiveNetworkClient.a(this.field_m[var3Lifetime3], (byte) -76, this.field_t[var6_int].field_j);
               if (var7 < var4Lifetime1) {
                 var5_int = var6_int;
                 var4Lifetime1 = var7;

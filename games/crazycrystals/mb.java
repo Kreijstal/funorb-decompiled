@@ -23,7 +23,7 @@ final class mb {
         throw new IllegalStateException();
     }
 
-    final static void a(boolean param0, java.awt.Component param1) {
+    final static void attachKeyboardListeners(boolean param0, java.awt.Component param1) {
         try {
           param1.setFocusTraversalKeysEnabled(param0);
           param1.addKeyListener(uf.field_c);
@@ -76,7 +76,7 @@ final class mb {
         field_a = null;
         if (param0 != 11458) {
           java.awt.Component var2 = (java.awt.Component) null;
-          mb.a(false, (java.awt.Component) null);
+          mb.attachKeyboardListeners(false, (java.awt.Component) null);
         }
     }
 

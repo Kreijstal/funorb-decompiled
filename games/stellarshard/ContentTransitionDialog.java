@@ -68,12 +68,12 @@ abstract class ContentTransitionDialog extends ResizableModalDialog {
         PcmResampler.field_g = false;
         if (param0 == -12128) {
           bb.field_k = null;
-          fb.field_e = null;
+          ArchiveNetworkClient.field_e = null;
           return;
         }
         field_ab = false;
         bb.field_k = null;
-        fb.field_e = null;
+        ArchiveNetworkClient.field_e = null;
     }
 
     final void resizeCompleted(int param0) {

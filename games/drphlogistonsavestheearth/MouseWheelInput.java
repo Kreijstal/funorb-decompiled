@@ -94,7 +94,7 @@ abstract class MouseWheelInput {
           var4 = DrPhlogistonSavesTheEarth.field_D ? 1 : 0;
           try {
             if (p.field_a != null) {
-              p.field_a.a((byte) -82);
+              p.field_a.close((byte) -82);
             }
             if (pd.field_d != null) {
               pd.field_d.shutdown((byte) 104);

@@ -5,7 +5,7 @@ final class MouseInput implements java.awt.event.MouseListener, java.awt.event.M
     static FullscreenNoticeType field_b;
     static String field_a;
 
-    final static void a(java.awt.Component param0, byte param1) {
+    final static void detachMouseListeners(java.awt.Component param0, byte param1) {
         try {
           param0.removeMouseListener(rc.field_d);
           param0.removeMouseMotionListener(rc.field_d);
@@ -219,10 +219,10 @@ final class MouseInput implements java.awt.event.MouseListener, java.awt.event.M
                     var17 = 0;
                     var13Lifetime1 = var17;
                     while (var17 < var9) {
-                      var12[var17] = oe.a(var10[var17], param3);
+                      var12[var17] = SocketConnector.a(var10[var17], param3);
                       var17++;
                     }
-                    var18.field_i[var5] = param2.requestDeclaredMethod(oe.a(var20, false), var21, var12, 29389);
+                    var18.field_i[var5] = param2.requestDeclaredMethod(SocketConnector.a(var20, false), var21, var12, 29389);
                     var18.field_l[var5] = var22;
                   }
                 } else {
@@ -234,7 +234,7 @@ final class MouseInput implements java.awt.event.MouseListener, java.awt.event.M
                   }
                   var18.field_r[var5] = var6_int;
                   var18.field_q[var5] = var9;
-                  var18.field_p[var5] = param2.requestDeclaredField(oe.a(var15, false), -92, var16);
+                  var18.field_p[var5] = param2.requestDeclaredField(SocketConnector.a(var15, false), -92, var16);
                 }
               } catch (java.lang.ClassNotFoundException decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;

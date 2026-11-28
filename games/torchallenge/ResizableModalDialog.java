@@ -126,7 +126,7 @@ abstract class ResizableModalDialog extends ModalDialog {
           var8Lifetime1++;
         }
         rj.field_a.drawTransparent(-90 + (this.field_p + param2), 10 + param1);
-        SecondaryNodeDeque.a(5 + param2, this.field_p - 10, param1 + 35, param0 ^ -30, fl.field_s);
+        SecondaryNodeDeque.a(5 + param2, this.field_p - 10, param1 + 35, param0 ^ -30, SocketArchiveNetworkClient.field_s);
         SecondaryNodeDeque.a(param2, this.field_p, -22 + param1 + this.field_l, param0 ^ -30, qa.field_e);
         var4Lifetime2 = this.field_l - 79;
         var6Lifetime2 = 127;

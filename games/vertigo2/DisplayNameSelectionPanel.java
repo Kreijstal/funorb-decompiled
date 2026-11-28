@@ -28,13 +28,13 @@ final class DisplayNameSelectionPanel extends WidgetContainer implements NameSug
           if (!this.canSubmitDisplayName(-76)) {
             return;
           }
-          kr.a(this.field_H.text, (byte) -70);
+          ArchiveSourceManager.a(this.field_H.text, (byte) -70);
           return;
         }
         if (!this.canSubmitDisplayName(-76)) {
           return;
         }
-        kr.a(this.field_H.text, (byte) -70);
+        ArchiveSourceManager.a(this.field_H.text, (byte) -70);
     }
 
     final static void c(boolean param0) {

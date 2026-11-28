@@ -354,7 +354,7 @@ final class TranslatedUiText {
                 }
                 byteArrayState0015 = NetworkSupport008.computeByteArray1172("add_x_to_ignore", -15192);
                 if (null != byteArrayState0015) {
-                  ResourceSupport004.stringState0427 = MixedSupport105.computeString1370(byteArrayState0015, 2);
+                  NetworkArchiveRequest.stringState0427 = MixedSupport105.computeString1370(byteArrayState0015, 2);
                 }
                 byteArrayState0015 = NetworkSupport008.computeByteArray1172("rm_x_from_friends", -15192);
                 if (null != byteArrayState0015) {
@@ -790,7 +790,7 @@ final class TranslatedUiText {
                 }
                 byteArrayState0015 = NetworkSupport008.computeByteArray1172("gameopt_membersonly", -15192);
                 if (null != byteArrayState0015) {
-                  ResourceSupport004.stringState0428 = MixedSupport105.computeString1370(byteArrayState0015, 2);
+                  NetworkArchiveRequest.stringState0428 = MixedSupport105.computeString1370(byteArrayState0015, 2);
                 }
                 byteArrayState0015 = NetworkSupport008.computeByteArray1172("gameopt_1moreratedgame", -15192);
                 if (null != byteArrayState0015) {
@@ -1648,7 +1648,7 @@ final class TranslatedUiText {
                 }
                 byteArrayState0015 = NetworkSupport008.computeByteArray1172("create_alert_email_unavailable", -15192);
                 if (byteArrayState0015 != null) {
-                  NetworkSupport003.stringState0107 = MixedSupport105.computeString1370(byteArrayState0015, 2);
+                  ArchiveNetworkClient.stringState0107 = MixedSupport105.computeString1370(byteArrayState0015, 2);
                 }
                 byteArrayState0015 = NetworkSupport008.computeByteArray1172("create_alert_invaliddate", -15192);
                 if (null != byteArrayState0015) {
@@ -1744,7 +1744,7 @@ final class TranslatedUiText {
                 }
                 byteArrayState0015 = NetworkSupport008.computeByteArray1172("enterignore_add", -15192);
                 if (null != byteArrayState0015) {
-                  ResourceSupport004.stringState0429 = MixedSupport105.computeString1370(byteArrayState0015, 2);
+                  NetworkArchiveRequest.stringState0429 = MixedSupport105.computeString1370(byteArrayState0015, 2);
                 }
                 byteArrayState0015 = NetworkSupport008.computeByteArray1172("enterignore_del", -15192);
                 if (byteArrayState0015 != null) {

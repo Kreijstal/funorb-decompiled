@@ -63,7 +63,7 @@ final class StripedProgressWidget extends UiWidget {
           SoftwareRasterizer.drawHorizontalLine(var7 + this.field_J, var6, this.field_J, var12Lifetime1);
           SoftwareRasterizer.drawHorizontalLine(var7 - this.field_J, var6, this.field_J, var12Lifetime1);
         }
-        cl.d((byte) -115);
+        SocketArchiveNetworkClient.d((byte) -115);
         return var14;
     }
 
@@ -89,7 +89,7 @@ final class StripedProgressWidget extends UiWidget {
         if (this.field_I < 65536) {
           ib.a(var6, this.field_k + var6, (byte) 124, this.field_w + var5, (this.field_w * this.field_I >> 16) + var5);
           this.drawStripeTexture((byte) -112, var5, this.field_D[1], var6);
-          cl.d((byte) -117);
+          SocketArchiveNetworkClient.d((byte) -117);
         }
     }
 
@@ -305,7 +305,7 @@ final class StripedProgressWidget extends UiWidget {
         if (param0 != 101) {
           discarded$0 = this.createStripeTexture(-23, (byte) -84, -68);
         }
-        cl.d((byte) -80);
+        SocketArchiveNetworkClient.d((byte) -80);
         return var3;
     }
 
@@ -363,13 +363,13 @@ final class StripedProgressWidget extends UiWidget {
           for (var6 = param1 - this.field_z; var5_int > var6; var6 = var6 + param2.field_y) {
             param2.draw(var6, param3);
           }
-          cl.d((byte) -67);
+          SocketArchiveNetworkClient.d((byte) -67);
           if (this.field_C.field_y + param1 >= SoftwareRasterizer.field_g) {
             MouseInput.a(this.field_F, (byte) 84);
             param2.draw(-this.field_z, 0);
             param2.draw(2 * this.field_J - this.field_z, 0);
             this.field_H.drawMultiply(0, 0);
-            cl.d((byte) -120);
+            SocketArchiveNetworkClient.d((byte) -120);
             this.field_F.draw(param1, param3);
           }
           if (-this.field_C.field_y + var5_int <= SoftwareRasterizer.field_b) {
@@ -379,7 +379,7 @@ final class StripedProgressWidget extends UiWidget {
             param2.draw(-var7, 0);
             param2.draw(this.field_J * 2 - var7, 0);
             this.field_C.drawMultiply(0, 0);
-            cl.d((byte) -85);
+            SocketArchiveNetworkClient.d((byte) -85);
             this.field_F.draw(var5_int - this.field_C.field_y, param3);
             return;
           }

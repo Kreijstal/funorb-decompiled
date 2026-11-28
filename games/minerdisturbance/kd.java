@@ -23,7 +23,7 @@ final class kd {
     static String[] field_k;
     private int field_t;
 
-    final static void a(java.awt.Component param0, boolean param1) {
+    final static void attachKeyboardListeners(java.awt.Component param0, boolean param1) {
         try {
           if (!param1) {
             field_k = (String[]) null;
@@ -388,7 +388,7 @@ final class kd {
           tk.b(true);
           if (param3 <= 113) {
             var13 = (java.awt.Component) null;
-            kd.a((java.awt.Component) null, true);
+            kd.attachKeyboardListeners((java.awt.Component) null, true);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -491,7 +491,7 @@ final class kd {
         field_k = null;
         if (param0 <= 67) {
           java.awt.Component var2 = (java.awt.Component) null;
-          kd.a((java.awt.Component) null, true);
+          kd.attachKeyboardListeners((java.awt.Component) null, true);
         }
         field_r = null;
         field_e = null;

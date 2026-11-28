@@ -180,7 +180,7 @@ final class BirthDateChatEnableForm extends ArrayWidgetContainer implements Widg
           MixedSupport029.stringArrayState0011[0] = DelegatingCanvas.stringState0124;
           RenderingSupport004.sceneWidgetState0039 = new SceneWidget(0L, (SceneWidget) null);
           MixedSupport048.sceneWidgetState0041 = new SceneWidget(0L, MixedSupport039.sceneWidgetState0029, MixedSupport014.stringState0069);
-          MixedSupport072.sceneWidgetState0071 = new SceneWidget(0L, NetworkSupport003.sceneWidgetState0018, MixedSupport006.stringState0031);
+          MixedSupport072.sceneWidgetState0071 = new SceneWidget(0L, ArchiveNetworkClient.sceneWidgetState0018, MixedSupport006.stringState0031);
           GameDomainSupport002.sceneWidgetPart008State0002 = new SceneWidgetPart008(0L, new SceneWidget(0L, (SceneWidget) null), MixedSupport047.sceneWidgetState0038, MixedSupport123.sceneWidgetPart006State0002);
           RenderingSupport004.sceneWidgetState0039.performAction1768(MixedSupport048.sceneWidgetState0041, -16834);
           if (MixedSupport097.booleanState0133) {
@@ -202,7 +202,7 @@ final class BirthDateChatEnableForm extends ArrayWidgetContainer implements Widg
           MixedSupport121.sceneWidgetState0118 = new SceneWidget(0L, ModalDialog.sceneWidgetState0008, DebouncedFieldValidator.stringState0038);
           RegistrationAgreementPane.sceneWidgetState0079 = new SceneWidget(0L, ModalDialog.sceneWidgetState0008, DualNode.stringState0044);
           EmailValidationError.sceneWidgetState0058 = new SceneWidget(0L, ModalDialog.sceneWidgetState0008, ProgressMessageDialog.stringState0206);
-          SceneWidgetPart001.sceneWidgetState0006 = new SceneWidget(0L, NetworkSupport003.sceneWidgetState0018, SceneWidgetPart001.stringState0057);
+          SceneWidgetPart001.sceneWidgetState0006 = new SceneWidget(0L, ArchiveNetworkClient.sceneWidgetState0018, SceneWidgetPart001.stringState0057);
           MixedSupport047.sceneWidgetPart008State0003 = new SceneWidgetPart008(0L, new SceneWidget(0L, (SceneWidget) null), MixedSupport047.sceneWidgetState0038, MixedSupport123.sceneWidgetPart006State0002);
           MixedSupport088.sceneWidgetState0092 = new SceneWidget(0L, MixedSupport021.sceneWidgetState0015, RenderingSupport012.stringState0442.toUpperCase());
           MixedSupport088.sceneWidgetState0092.booleanState0212 = MixedSupport097.booleanState0133;
@@ -255,7 +255,7 @@ final class BirthDateChatEnableForm extends ArrayWidgetContainer implements Widg
           LoginPanel.sceneWidgetState0048 = new SceneWidget(0L, MixedSupport125.sceneWidgetState0125);
           LoginPanel.sceneWidgetState0048.integerState0916 = 1;
           MixedSupport071.sceneWidgetState0070 = new SceneWidget(0L, MixedSupport039.sceneWidgetState0029, MixedSupport014.stringState0069);
-          RichTextLayout.sceneWidgetState0020 = new SceneWidget(0L, NetworkSupport003.sceneWidgetState0018, MixedSupport006.stringState0031);
+          RichTextLayout.sceneWidgetState0020 = new SceneWidget(0L, ArchiveNetworkClient.sceneWidgetState0018, MixedSupport006.stringState0031);
           ValidationStatus.sceneWidgetPart008State0006 = new SceneWidgetPart008(0L, new SceneWidget(0L, (SceneWidget) null), MixedSupport047.sceneWidgetState0038, MixedSupport123.sceneWidgetPart006State0002);
           RenderingSupport006.sceneWidgetState0056.performAction1768(LoginPanel.sceneWidgetState0048, -16834);
           RenderingSupport006.sceneWidgetState0056.performAction1768(MixedSupport071.sceneWidgetState0070, -16834);
@@ -448,7 +448,7 @@ final class BirthDateChatEnableForm extends ArrayWidgetContainer implements Widg
           stringState0348 = (String) null;
         }
         CipherPacketBuffer cipherPacketBufferLocal1 = SocketFactory.cipherPacketBufferState0002;
-        cipherPacketBufferLocal1.performAction1641(integerArgument2, -4);
+        cipherPacketBufferLocal1.writeCipheredByte(integerArgument2, -4);
         cipherPacketBufferLocal1.writeByte(true, 2);
         cipherPacketBufferLocal1.writeByte(true, 4);
         cipherPacketBufferLocal1.writeByte(true, MixedSupport007.computeInteger0071(112));

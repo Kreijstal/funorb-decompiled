@@ -51,7 +51,7 @@ final class PcmOutputWorker implements Runnable {
               }
               var7 = new SectorCacheStore(param0, jj.field_b, ij.field_y[param0], 2097152);
             }
-            var8 = wf.field_i.a(param0, (SectorCacheStore) (var7), param4, (byte) 15, (SectorCacheStore) (var6));
+            var8 = wf.field_i.getOrCreateArchiveSource(param0, (SectorCacheStore) (var7), param4, (byte) 15, (SectorCacheStore) (var6));
             if (param5) {
               var8.d(14);
             }

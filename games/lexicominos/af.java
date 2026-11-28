@@ -21,8 +21,8 @@ final class af {
           jd.a(ff.field_b, 160);
           ff.field_b.exitFullscreen(false, jh.field_a);
           ff.field_b = null;
-          if (null != da.field_a) {
-            da.field_a.a((byte) -110);
+          if (null != MouseInputHandler.field_a) {
+            MouseInputHandler.field_a.a((byte) -110);
             ug.field_y.requestFocus();
             return;
           }
@@ -32,11 +32,11 @@ final class af {
         jd.a(ff.field_b, 160);
         ff.field_b.exitFullscreen(false, jh.field_a);
         ff.field_b = null;
-        if (null == da.field_a) {
+        if (null == MouseInputHandler.field_a) {
           ug.field_y.requestFocus();
           return;
         }
-        da.field_a.a((byte) -110);
+        MouseInputHandler.field_a.a((byte) -110);
         ug.field_y.requestFocus();
     }
 

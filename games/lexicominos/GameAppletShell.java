@@ -45,9 +45,9 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
             stackIn_2_0 = null;
             return (java.applet.AppletContext) (stackIn_2_0);
           }
-          if (pg.field_b != null &&
-            pg.field_b != this) {
-            stackIn_8_0 = pg.field_b.getAppletContext();
+          if (ArchiveSourceManager.field_b != null &&
+            ArchiveSourceManager.field_b != this) {
+            stackIn_8_0 = ArchiveSourceManager.field_b.getAppletContext();
             return stackIn_8_0;
           }
           stackIn_10_0 = super.getAppletContext();
@@ -252,8 +252,8 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
             }
             MouseWheelInput.field_d = true;
           }
-          if (pg.field_b != null) {
-            pg.field_b.destroy();
+          if (ArchiveSourceManager.field_b != null) {
+            ArchiveSourceManager.field_b.destroy();
           }
           try {
             this.disposeClient((byte) 40);
@@ -389,21 +389,21 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
             if (null != ProxyAuthenticationRequiredException.field_d) {
               var2 = ProxyAuthenticationRequiredException.field_d;
               if (var4 != 0) {
-                if (pg.field_b == null) {
+                if (ArchiveSourceManager.field_b == null) {
                   var2 = c.field_j;
-                  var2 = pg.field_b;
+                  var2 = ArchiveSourceManager.field_b;
                 } else {
-                  var2 = pg.field_b;
+                  var2 = ArchiveSourceManager.field_b;
                 }
               }
             } else {
-              if (pg.field_b == null) {
+              if (ArchiveSourceManager.field_b == null) {
                 var2 = c.field_j;
                 if (var4 != 0) {
-                  var2 = pg.field_b;
+                  var2 = ArchiveSourceManager.field_b;
                 }
               } else {
-                var2 = pg.field_b;
+                var2 = ArchiveSourceManager.field_b;
               }
             }
           }
@@ -464,9 +464,9 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
         if (ProxyAuthenticationRequiredException.field_d != null) {
           return null;
         }
-        if (pg.field_b != null &&
-          pg.field_b != this) {
-          return pg.field_b.getCodeBase();
+        if (ArchiveSourceManager.field_b != null &&
+          ArchiveSourceManager.field_b != this) {
+          return ArchiveSourceManager.field_b.getCodeBase();
         }
         return super.getCodeBase();
     }
@@ -489,9 +489,9 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
             stackIn_4_0 = null;
             return (String) (stackIn_4_0);
           }
-          if (pg.field_b != null &&
-            pg.field_b != this) {
-            stackIn_12_0 = pg.field_b.getParameter(param0);
+          if (ArchiveSourceManager.field_b != null &&
+            ArchiveSourceManager.field_b != this) {
+            stackIn_12_0 = ArchiveSourceManager.field_b.getParameter(param0);
             return stackIn_12_0;
           }
           stackIn_14_0 = super.getParameter(param0);
@@ -521,9 +521,9 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
             stackIn_2_0 = null;
             return (java.net.URL) (stackIn_2_0);
           }
-          if (pg.field_b != null &&
-            pg.field_b != this) {
-            stackIn_8_0 = pg.field_b.getDocumentBase();
+          if (ArchiveSourceManager.field_b != null &&
+            ArchiveSourceManager.field_b != this) {
+            stackIn_8_0 = ArchiveSourceManager.field_b.getDocumentBase();
             return stackIn_8_0;
           }
           stackIn_10_0 = super.getDocumentBase();
@@ -662,8 +662,8 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
               }
               if (decompiledFrameRemainder3) {
                 var1 = c.field_j;
-                if (null != pg.field_b) {
-                  var1 = pg.field_b;
+                if (null != ArchiveSourceManager.field_b) {
+                  var1 = ArchiveSourceManager.field_b;
                 }
                 var2_ref = PlatformTaskDispatcher.field_x;
                 if (var2_ref != null) {
@@ -813,7 +813,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
         String stackIn_6_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          pg.field_b = param0;
+          ArchiveSourceManager.field_b = param0;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

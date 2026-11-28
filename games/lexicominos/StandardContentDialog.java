@@ -30,7 +30,7 @@ final class StandardContentDialog extends ContentTransitionDialog {
         String var7;
         String var8;
         var5 = Lexicominos.field_L ? 1 : 0;
-        var6 = "(" + vh.field_b + " " + df.field_a + " " + TextHotspotBounds.field_i + ") " + pg.field_d;
+        var6 = "(" + vh.field_b + " " + df.field_a + " " + TextHotspotBounds.field_i + ") " + ArchiveSourceManager.field_d;
         var1 = var6;
         if (param0 > -83) {
           return (String) null;

@@ -4,7 +4,7 @@
 final class pd {
     static String field_b;
     static int[] field_a;
-    static kr field_c;
+    static ArchiveSourceManager field_c;
 
     final static void a(int param0, int param1, int param2, boolean param3, MusicTrack param4) {
         RuntimeException var5 = null;

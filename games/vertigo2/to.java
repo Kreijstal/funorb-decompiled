@@ -37,12 +37,12 @@ final class to {
             var4_int = var8.readUnsignedByte(-11);
             if (var4_int != 0) {
               var12 = new byte[var4_int];
-              var8.a(0, var12, var4_int, -89);
+              var8.readBytes(0, var12, var4_int, -89);
             } else {
               var5 = null;
             }
             var8.position = var8.position + 4;
-            if (!var8.o(-4111)) {
+            if (!var8.verifyTrailingCrc32(-4111)) {
               rm.b((byte) 94);
               return;
             }

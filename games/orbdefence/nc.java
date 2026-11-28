@@ -29,9 +29,9 @@ final class nc extends sf {
             nc.a(13, 122, -103, (String) null, (byte) 38, 59, -112, (PlatformTaskDispatcher) null, -9);
           }
           hf.field_k = param8;
-          kg.field_h = (ge) ((Object) new a());
+          kg.field_h = (ArchiveNetworkClient) ((Object) new SocketArchiveNetworkClient());
           ArchiveRequest.field_o = new DiskCacheWorker(param7);
-          TextLineMetrics.field_b = new pi(kg.field_h, ArchiveRequest.field_o);
+          TextLineMetrics.field_b = new ArchiveSourceManager(kg.field_h, ArchiveRequest.field_o);
         } catch (RuntimeException runtimeException) {
           throw DraggableWidgetContainer.wrapClientException((Throwable) ((Object) runtimeException), "nc.C(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + param5 + ',' + param6 + ',' + (param7 != null ? "{...}" : "null") + ',' + param8 + ')');
         }

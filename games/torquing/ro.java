@@ -84,7 +84,7 @@ class ro extends am {
           return DelegatingCanvas.field_b;
         }
         if (!lp.field_a.ensureIndexLoaded(-12749)) {
-          return bo.field_i;
+          return ArchiveSourceManager.field_i;
         }
         if (!lp.field_a.tryLoadGroupByName(true, "commonui")) {
           return db.field_d + " - " + lp.field_a.getGroupLoadPercentByName((byte) 102, "commonui") + "%";

@@ -206,7 +206,7 @@ final class bf {
               }
               var7 = new SectorCacheStore(param2, AccountRegistrationPanel.field_K, NodeHashTableIterator.field_a[param2], 2097152);
             }
-            var9 = sj.field_a.a(param0, param2, (SectorCacheStore) (var6), (SectorCacheStore) (var7), 0);
+            var9 = sj.field_a.getOrCreateArchiveSource(param0, param2, (SectorCacheStore) (var6), (SectorCacheStore) (var7), 0);
             if (param4) {
               var9.a((byte) -50);
             }

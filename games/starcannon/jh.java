@@ -10,7 +10,7 @@ final class jh {
     static Sprite field_a;
     static int[][] field_c;
     private DualLinkNode field_i;
-    static eh field_b;
+    static ArchiveNetworkClient field_b;
     private DualLinkNode field_g;
     static String field_e;
 
@@ -90,7 +90,7 @@ final class jh {
               SecondaryNodeDeque.field_d = stackIn_11_0;
               var5.position = 0;
               r.field_c = ua.field_b;
-              oe.a(r.field_d, 32, d.field_b, bf.field_s, ValidationStatusIcon.field_A);
+              SocketConnector.a(r.field_d, 32, d.field_b, bf.field_s, ValidationStatusIcon.field_A);
               nf.a(-1, (byte) 95);
             } catch (java.io.IOException decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;

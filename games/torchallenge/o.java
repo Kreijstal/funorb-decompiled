@@ -453,7 +453,7 @@ final class o extends IntrusiveNode {
             }
             if (param2) {
               var9.setColor(java.awt.Color.black);
-              var9.fillRect(0, 0, sd.field_c, fl.field_v);
+              var9.fillRect(0, 0, sd.field_c, SocketArchiveNetworkClient.field_v);
             }
             if (param3 == null) {
               param3 = new java.awt.Color(140, 17, 17);
@@ -472,12 +472,12 @@ final class o extends IntrusiveNode {
               var10.setFont(hh.field_a);
               var10.setColor(java.awt.Color.white);
               var10.drawString(param4, (304 - param4.length() * 6) / 2, 22);
-              var9.drawImage(PacketBuffer.field_i, sd.field_c / 2 - 152, fl.field_v / 2 - 18, (java.awt.image.ImageObserver) null);
+              var9.drawImage(PacketBuffer.field_i, sd.field_c / 2 - 152, SocketArchiveNetworkClient.field_v / 2 - 18, (java.awt.image.ImageObserver) null);
             } catch (java.lang.Exception decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var6 = (Exception) (Object) decompiledCaughtException;
               var7 = sd.field_c / 2 - 152;
-              var8 = fl.field_v / 2 - 18;
+              var8 = SocketArchiveNetworkClient.field_v / 2 - 18;
               var9.setColor(param3);
               var9.drawRect(var7, var8, 303, 33);
               var9.fillRect(var7 + 2, 2 + var8, 3 * param0, 30);
@@ -491,7 +491,7 @@ final class o extends IntrusiveNode {
             if (dk.field_d != null) {
               var9.setFont(hh.field_a);
               var9.setColor(java.awt.Color.white);
-              var9.drawString(dk.field_d, sd.field_c / 2 - dk.field_d.length() * 6 / 2, fl.field_v / 2 - 26);
+              var9.drawString(dk.field_d, sd.field_c / 2 - dk.field_d.length() * 6 / 2, SocketArchiveNetworkClient.field_v / 2 - 26);
             }
           } catch (java.lang.Exception decompiledCaughtParameter1) {
             decompiledCaughtException = decompiledCaughtParameter1;

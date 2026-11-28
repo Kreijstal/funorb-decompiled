@@ -41,7 +41,7 @@ final class wa extends IntrusiveNode {
           var3 = Lexicominos.field_L ? 1 : 0;
           try {
             if (kb.field_b != null) {
-              kb.field_b.b(0);
+              kb.field_b.close(0);
             }
             if (param0 > 0) {
               field_k = (String) null;

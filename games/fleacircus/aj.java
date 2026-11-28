@@ -82,8 +82,8 @@ final class aj extends DualLinkNode {
           return;
         }
         try {
-          ea.a(120, (java.awt.Component) ((Object) param1));
-          il.a(false, (java.awt.Component) ((Object) param1));
+          ea.attachKeyboardListeners(120, (java.awt.Component) ((Object) param1));
+          il.attachMouseListeners(false, (java.awt.Component) ((Object) param1));
           if (null != StandardContentDialog.field_pb) {
             StandardContentDialog.field_pb.attach(0, (java.awt.Component) ((Object) param1));
           }
@@ -180,7 +180,7 @@ final class aj extends DualLinkNode {
           kc.field_b = AccountNameAvailabilityValidator.field_p;
           pl.field_c = ag.field_a;
           ag.field_a = false;
-          jk.field_r = vk.field_O;
+          ProxySocketConnector.field_r = vk.field_O;
           pb.field_d = fb.field_b;
           ob.field_e = CrossfadingMidiPcmStream.field_s;
           vk.field_O = 0;

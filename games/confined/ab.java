@@ -28,11 +28,11 @@ final class ab {
               var6 = PowerUpPickup.a(param0 ^ -3, ByteArrayPoolSupport.field_c[var3_int], true);
               var4 = var4 + kb.field_b;
               var7 = StandardContentDialog.field_vb - (var6 >> 1);
-              if (qd.a(param1, var4, (jd.field_g << 1) + var6, param2, true, -jd.field_g + var7, (n.field_d << 1) + af.field_Z)) {
+              if (qd.a(param1, var4, (jd.field_g << 1) + var6, param2, true, -jd.field_g + var7, (SocketConnector.field_d << 1) + af.field_Z)) {
                 stackIn_7_0 = var5;
                 return stackIn_7_0;
               }
-              var4 = var4 + (kb.field_b + (n.field_d << 1) + af.field_Z);
+              var4 = var4 + (kb.field_b + (SocketConnector.field_d << 1) + af.field_Z);
             }
             var3_int++;
           }

@@ -105,7 +105,7 @@ final class ValidationStatusIcon extends InteractiveWidget {
                 }
                 var2 = ad.a("error_js5connect_full", 0);
                 if (null != var2) {
-                  w.field_j = ab.a(0, var2);
+                  ArchiveNetworkClient.field_j = ab.a(0, var2);
                 }
                 var2 = ad.a("error_js5connect", 0);
                 if (null != var2) {
@@ -153,7 +153,7 @@ final class ValidationStatusIcon extends InteractiveWidget {
                 }
                 var2 = ad.a("ticketing_gotowebsite", 0);
                 if (null != var2) {
-                  jk.field_p = ab.a(0, var2);
+                  ProxySocketConnector.field_p = ab.a(0, var2);
                 }
                 var2 = ad.a("ticketing_waitingformessages", 0);
                 if (null != var2) {
@@ -1423,7 +1423,7 @@ final class ValidationStatusIcon extends InteractiveWidget {
                 }
                 var2 = ad.a("create_welcome", 0);
                 if (null != var2) {
-                  rd.field_b = ab.a(0, var2);
+                  MouseInputHandler.field_b = ab.a(0, var2);
                 }
                 var2 = ad.a("create_u13_welcome", 0);
                 if (null != var2) {
@@ -1523,7 +1523,7 @@ final class ValidationStatusIcon extends InteractiveWidget {
                 }
                 var2 = ad.a("login_username_tooltip", 0);
                 if (null != var2) {
-                  uf.field_l = ab.a(0, var2);
+                  ArchiveSourceManager.field_l = ab.a(0, var2);
                 }
                 var2 = ad.a("login_password_tooltip", 0);
                 if (var2 != null) {
@@ -2301,7 +2301,7 @@ final class ValidationStatusIcon extends InteractiveWidget {
                 }
                 var2 = ad.a("notyetachieved", 0);
                 if (null != var2) {
-                  jk.field_i = ab.a(0, var2);
+                  ProxySocketConnector.field_i = ab.a(0, var2);
                 }
                 var2 = ad.a("achieved", 0);
                 if (null != var2) {
@@ -3140,7 +3140,7 @@ final class ValidationStatusIcon extends InteractiveWidget {
           var6 = param0 + (this.field_z + (this.field_j >> 1));
           var8 = this.field_K.getValidationStatus(false);
           if (ea.field_b == var8 ||
-            var8 == w.field_e) {
+            var8 == ArchiveNetworkClient.field_e) {
             var7 = t.field_h[0];
             var9 = var7.field_x << 1;
             var10 = var7.field_r << 1;
@@ -3165,7 +3165,7 @@ final class ValidationStatusIcon extends InteractiveWidget {
             }
           }
           if (LabeledWidgetContainer.field_K != var8) {
-            if (var8 != hm.field_b) {
+            if (var8 != SocketConnector.field_b) {
               return;
             }
             var7Lifetime1 = t.field_h[1];

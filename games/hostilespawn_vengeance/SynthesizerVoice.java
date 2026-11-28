@@ -301,16 +301,16 @@ final class SynthesizerVoice {
           this.field_f.decode(param0);
         }
         for (var3 = 0; var3 < 10; var3++) {
-          var4 = param0.f(255);
+          var4 = param0.readSmart(255);
           if (var4 == 0) {
             break;
           }
           this.field_w[var3] = var4;
-          this.field_h[var3] = param0.i(64);
-          this.field_d[var3] = param0.f(255);
+          this.field_h[var3] = param0.readSignedSmart(64);
+          this.field_d[var3] = param0.readSmart(255);
         }
-        this.field_o = param0.f(255);
-        this.field_e = param0.f(255);
+        this.field_o = param0.readSmart(255);
+        this.field_e = param0.readSmart(255);
         this.field_g = param0.readUnsignedShort(8);
         this.field_y = param0.readUnsignedShort(8);
         this.field_q = new SoundFilter();

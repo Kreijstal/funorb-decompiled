@@ -66,7 +66,7 @@ public final class DrPhlogistonSavesTheEarth extends GameClientShell {
           qf.field_b = ProxyAuthenticationRequiredException.a("", kf.field_d, "weapongattlinggun3", param0);
           BitPacketBuffer.field_p = ProxyAuthenticationRequiredException.a("", kf.field_d, "weaponhomingmissile", true);
           nc.field_K = ProxyAuthenticationRequiredException.a("", kf.field_d, "weaponbomb", true);
-          f.field_i = cl.a("", kf.field_d, -116, "weaponmegacannonshot");
+          f.field_i = SocketArchiveNetworkClient.a("", kf.field_d, -116, "weaponmegacannonshot");
           oj.field_c = ij.a("bulletspark", (byte) 96, kf.field_d, "");
           hb.field_a = new RgbSprite(15, 15);
           hb.field_a.bindAsRenderTarget();
@@ -224,15 +224,15 @@ public final class DrPhlogistonSavesTheEarth extends GameClientShell {
             !s.field_a.hasMidiData(16)) {
             ByteArrayPoolSupport.a(-1, true, PasswordValidator.field_q);
           }
-          if (df.field_l != null &&
-            df.field_l.focusLost) {
+          if (ArchiveSourceManager.field_l != null &&
+            ArchiveSourceManager.field_l.focusLost) {
             ProxyAuthenticationRequiredException.a(true);
             ResourceArchive.showFullscreenFocusWarningIfDialogActive((byte) 72);
           }
           if (param0 != 35) {
             this.a((he[]) null, 93, (he[]) null);
           }
-          stackIn_21_1 = (df.field_l != null);
+          stackIn_21_1 = (ArchiveSourceManager.field_l != null);
           this.serviceFramework(stackIn_21_1, 55);
           if (nd.field_Q) {
             this.p(-119);
@@ -301,14 +301,14 @@ public final class DrPhlogistonSavesTheEarth extends GameClientShell {
                 }
                 if (decompiledFrameRemainder0) {
                   stackIn_82_1 = 5017;
-                  stackIn_83_2 = (null != df.field_l);
+                  stackIn_83_2 = (null != ArchiveSourceManager.field_l);
                   var2_int = this.pollAccountUiActions(stackIn_82_1, stackIn_83_2);
                   if (var2_int == 1 ||
                     var2_int == 2) {
-                    if (null != df.field_l) {
-                      hb.a(-5, df.field_l);
-                      df.field_l.exitFullscreen(sb.field_d, true);
-                      df.field_l = null;
+                    if (null != ArchiveSourceManager.field_l) {
+                      hb.a(-5, ArchiveSourceManager.field_l);
+                      ArchiveSourceManager.field_l.exitFullscreen(sb.field_d, true);
+                      ArchiveSourceManager.field_l = null;
                     }
                     if (var2_int == 2) {
                       DrPhlogistonSavesTheEarth.a(nb.a(-106), -117);
@@ -364,7 +364,7 @@ public final class DrPhlogistonSavesTheEarth extends GameClientShell {
             if (var2_int == 0 ||
               var2_int == 1) {
               StandardContentDialog.a(false, 2);
-              ka.a(3, (byte) -40);
+              ProxySocketConnector.a(3, (byte) -40);
               i.a(4, 0);
               DialogMessagePane.a(false, 5);
             }
@@ -523,9 +523,9 @@ public final class DrPhlogistonSavesTheEarth extends GameClientShell {
           LevelSession.clearStaticReferences(24342);
           nb.clearStaticReferences((byte) 76);
           i.clearStaticReferences((byte) -118);
-          gb.clearStaticReferences(6);
+          ArchiveNetworkClient.clearStaticReferences(6);
           DiskCacheWorker.b(-31553);
-          df.clearStaticReferences(110);
+          ArchiveSourceManager.clearStaticReferences(110);
           BufferedRandomAccessFile.clearStaticReferences(false);
           BufferedSocket.clearStaticReferences(0);
           oj.clearStaticReferences(false);
@@ -592,7 +592,7 @@ public final class DrPhlogistonSavesTheEarth extends GameClientShell {
           u.clearStaticReferences((byte) 50);
           t.a((byte) -114);
           IsaacRandom.clearStaticReferences(1441320386);
-          cl.clearDeclaredStaticReferences(0);
+          SocketArchiveNetworkClient.clearDeclaredStaticReferences(0);
           hl.e(108);
           NetworkArchiveRequest.clearStaticReferences((byte) -113);
           SectorCacheStore.a(0);
@@ -647,7 +647,7 @@ public final class DrPhlogistonSavesTheEarth extends GameClientShell {
           wi.clearStaticReferences(2);
           ji.clearStaticReferences(true);
           ph.clearStaticReferences(1);
-          hj.clearStaticReferences(-20385);
+          SocketConnector.clearStaticReferences(-20385);
           ProxyAuthenticationRequiredException.clearStaticReferences(65280);
           NanoFrameTimer.clearStaticReferences(66);
           ImageProducerRasterBuffer.clearStaticReferences(-57);
@@ -684,7 +684,7 @@ public final class DrPhlogistonSavesTheEarth extends GameClientShell {
           SecondaryNodeDeque.a(true);
           wh.c((byte) -86);
           rd.g(-125);
-          ka.clearDeclaredStaticReferences(26713);
+          ProxySocketConnector.clearDeclaredStaticReferences(26713);
           pa.resetStaticState(-1);
           NodeHashTableIterator.clearStaticReferences(967);
           SecondaryNodeDequeIterator.a(71);
@@ -759,16 +759,16 @@ public final class DrPhlogistonSavesTheEarth extends GameClientShell {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         try {
-          if (null != df.field_m) {
-            FullscreenFocusCanvas.a(df.field_m, 255);
-            df.field_m = null;
+          if (null != ArchiveSourceManager.field_m) {
+            FullscreenFocusCanvas.a(ArchiveSourceManager.field_m, 255);
+            ArchiveSourceManager.field_m = null;
             IterableNodeHashTable.a((byte) 86);
           }
           kf.field_d = al.a(3, 1);
           aa.field_b = al.a(3, 2);
           DelegatingCanvas.field_b = al.a(3, 3);
           ui.field_a = al.a(3, 4);
-          df.field_a = al.a(3, 5);
+          ArchiveSourceManager.field_a = al.a(3, 5);
           mh.field_a = al.a(3, 6);
           GuestPlayConfirmationForm.field_P = al.a(3, 7);
           s.c((byte) 126);
@@ -900,14 +900,14 @@ public final class DrPhlogistonSavesTheEarth extends GameClientShell {
         int var4 = 0;
         var4 = field_D ? 1 : 0;
         try {
-          if (df.field_l != null) {
-            stackIn_5_0 = df.field_l;
+          if (ArchiveSourceManager.field_l != null) {
+            stackIn_5_0 = ArchiveSourceManager.field_l;
           } else {
             stackIn_5_0 = DiskCacheWorker.field_g;
           }
           var2 = stackIn_5_0;
           if (kh.a(false)) {
-            if (null == df.field_l) {
+            if (null == ArchiveSourceManager.field_l) {
               stackIn_12_0 = DequeWidgetContainer.field_C;
             } else {
               stackIn_12_0 = true;
@@ -994,7 +994,7 @@ public final class DrPhlogistonSavesTheEarth extends GameClientShell {
               BufferedSocket.a(ResizableModalDialog.field_W[0].field_y, ResizableModalDialog.field_W[0].field_w, ResizableModalDialog.field_W, (byte) -76);
               if (var4 != 0) {
                 stackIn_86_0 = 91;
-                if (df.field_l != null) {
+                if (ArchiveSourceManager.field_l != null) {
                   stackIn_87_1 = true;
                 } else {
                   stackIn_87_1 = DequeWidgetContainer.field_C;
@@ -1004,7 +1004,7 @@ public final class DrPhlogistonSavesTheEarth extends GameClientShell {
             }
           } else {
             stackIn_86_0 = 91;
-            if (df.field_l != null) {
+            if (ArchiveSourceManager.field_l != null) {
               stackIn_87_1 = true;
             } else {
               stackIn_87_1 = DequeWidgetContainer.field_C;
@@ -1673,9 +1673,9 @@ public final class DrPhlogistonSavesTheEarth extends GameClientShell {
         RuntimeException var2 = null;
         try {
           ek.d(-2);
-          if (null != df.field_l) {
-            hb.a(-5, df.field_l);
-            df.field_l.exitFullscreen(sb.field_d, true);
+          if (null != ArchiveSourceManager.field_l) {
+            hb.a(-5, ArchiveSourceManager.field_l);
+            ArchiveSourceManager.field_l.exitFullscreen(sb.field_d, true);
           }
           sb.b((byte) 67);
           if (param0 > -120) {
@@ -1800,8 +1800,8 @@ public final class DrPhlogistonSavesTheEarth extends GameClientShell {
           MusicPatchEnvelope.field_o = bb.field_b.e();
           MusicPatchEnvelope.field_o.f();
           ek.field_m = eh.a("", (byte) -115, kf.field_d, "claw_h_bar");
-          cl.field_t = eh.a("", (byte) -57, kf.field_d, "claw_v_bar");
-          tb.field_d = cl.field_t.e();
+          SocketArchiveNetworkClient.field_t = eh.a("", (byte) -57, kf.field_d, "claw_v_bar");
+          tb.field_d = SocketArchiveNetworkClient.field_t.e();
           tb.field_d.g();
           jl.field_h = eh.a("", (byte) -89, kf.field_d, "help_key_shift");
           wg.field_c = eh.a("", (byte) -49, kf.field_d, "help_key_ctrl");
@@ -2047,8 +2047,8 @@ public final class DrPhlogistonSavesTheEarth extends GameClientShell {
                 DelegatingCanvas.field_b.tryLoadAllGroups((byte) 21)) {
                 if (ui.field_a.ensureIndexLoaded(0) &&
                   ui.field_a.tryLoadAllGroups((byte) 56)) {
-                  if (df.field_a.ensureIndexLoaded(0) &&
-                    df.field_a.tryLoadAllGroups((byte) 53)) {
+                  if (ArchiveSourceManager.field_a.ensureIndexLoaded(0) &&
+                    ArchiveSourceManager.field_a.tryLoadAllGroups((byte) 53)) {
                     if (kf.field_d.ensureIndexLoaded(0) &&
                       kf.field_d.tryLoadAllGroups((byte) 84)) {
                       if (mh.field_a.ensureIndexLoaded(0) &&
@@ -2079,10 +2079,10 @@ public final class DrPhlogistonSavesTheEarth extends GameClientShell {
                     we.a(ValidatedTextField.a(td.field_o, sa.field_b, 34, "", kf.field_d), -118, 18.0f);
                     return false;
                   }
-                  we.a(ValidatedTextField.a(AccountCreationResultPanel.field_Fb, r.field_a, 34, "", df.field_a), -105, 13.0f);
+                  we.a(ValidatedTextField.a(AccountCreationResultPanel.field_Fb, r.field_a, 34, "", ArchiveSourceManager.field_a), -105, 13.0f);
                   return false;
                 }
-                we.a(hj.a(AccountCreationResultPanel.field_Fb, ui.field_a, r.field_a, 0, 17733), -83, 10.0f);
+                we.a(SocketConnector.a(AccountCreationResultPanel.field_Fb, ui.field_a, r.field_a, 0, 17733), -83, 10.0f);
                 return false;
               }
               we.a(ValidatedTextField.a(wi.field_h, MusicPatch.field_o, 34, "", DelegatingCanvas.field_b), -105, 8.0f);
@@ -2097,25 +2097,25 @@ public final class DrPhlogistonSavesTheEarth extends GameClientShell {
             IterableNodeHashTable.a((byte) 86);
             return false;
           }
-          if (null != df.field_a) {
+          if (null != ArchiveSourceManager.field_a) {
             we.a(ai.field_x, -83, 55.0f);
             this.renderClientFrame(0);
-            PasswordValidator.field_q = MusicTrack.load(df.field_a, "", "Dr_Phlogiston_Title");
+            PasswordValidator.field_q = MusicTrack.load(ArchiveSourceManager.field_a, "", "Dr_Phlogiston_Title");
             s.field_a.prepareTrackSamples(0, ui.field_a, 0, PasswordValidator.field_q, SoundCache.field_c);
-            ki.field_c = MusicTrack.load(df.field_a, "", "Dr_Phlogiston_Earth");
+            ki.field_c = MusicTrack.load(ArchiveSourceManager.field_a, "", "Dr_Phlogiston_Earth");
             s.field_a.prepareTrackSamples(0, ui.field_a, 0, ki.field_c, SoundCache.field_c);
-            hi.field_l = MusicTrack.load(df.field_a, "", "Dr_Phlogiston_Space");
+            hi.field_l = MusicTrack.load(ArchiveSourceManager.field_a, "", "Dr_Phlogiston_Space");
             s.field_a.prepareTrackSamples(0, ui.field_a, 0, hi.field_l, SoundCache.field_c);
-            le.field_e = MusicTrack.load(df.field_a, "", "Dr_Phlogiston_Alien");
+            le.field_e = MusicTrack.load(ArchiveSourceManager.field_a, "", "Dr_Phlogiston_Alien");
             s.field_a.prepareTrackSamples(0, ui.field_a, 0, le.field_e, SoundCache.field_c);
-            BitPacketBuffer.field_l = MusicTrack.load(df.field_a, "", "Dr_Phlogiston_Boss_Break");
-            dm.field_x = MusicTrack.load(df.field_a, "", "Dr_Phlogiston_GameOver_jingle");
+            BitPacketBuffer.field_l = MusicTrack.load(ArchiveSourceManager.field_a, "", "Dr_Phlogiston_Boss_Break");
+            dm.field_x = MusicTrack.load(ArchiveSourceManager.field_a, "", "Dr_Phlogiston_GameOver_jingle");
             s.field_a.prepareTrackSamples(0, ui.field_a, 0, dm.field_x, SoundCache.field_c);
-            ml.field_l = MusicTrack.load(df.field_a, "", "Dr_Phlogiston_GameComplete_jingle");
+            ml.field_l = MusicTrack.load(ArchiveSourceManager.field_a, "", "Dr_Phlogiston_GameComplete_jingle");
             s.field_a.prepareTrackSamples(0, ui.field_a, 0, ml.field_l, SoundCache.field_c);
             s.field_a.releasePatchSampleIds((byte) 47);
             SoundCache.field_c = null;
-            df.field_a = null;
+            ArchiveSourceManager.field_a = null;
             ui.field_a = null;
             IterableNodeHashTable.a((byte) 86);
             return false;
@@ -2275,7 +2275,7 @@ public final class DrPhlogistonSavesTheEarth extends GameClientShell {
               uk.field_h = eh.a("", (byte) -52, kf.field_d, "background_london");
               MouseWheelInput.field_f = eh.a("", (byte) -121, kf.field_d, "background_brighton");
               nj.field_o = eh.a("", (byte) -97, kf.field_d, "midground_earth");
-              hc.field_K = cl.a("", kf.field_d, -116, "background_space");
+              hc.field_K = SocketArchiveNetworkClient.a("", kf.field_d, -116, "background_space");
               dupTemp$1 = hc.field_K[1];
               dupTemp$1.field_D = dupTemp$1.field_D + 800;
               break;
@@ -2288,7 +2288,7 @@ public final class DrPhlogistonSavesTheEarth extends GameClientShell {
           }
           sh.field_b = ProxyAuthenticationRequiredException.a("", kf.field_d, "midground_space", true);
           vi.field_g = eh.a("", (byte) -111, kf.field_d, "background_alien");
-          gb.field_e = eh.a("", (byte) -79, kf.field_d, "background_alien_8");
+          ArchiveNetworkClient.field_e = eh.a("", (byte) -79, kf.field_d, "background_alien_8");
           ha.field_b = eh.a("", (byte) -112, kf.field_d, "background_alien_9");
           FullscreenFocusCanvas.field_e = ProxyAuthenticationRequiredException.a("", kf.field_d, "scenery_earth_background_clouds_lit", true);
           EditableTextField.field_R[0] = ProxyAuthenticationRequiredException.a("", kf.field_d, "scenery_space_background_asteroid_1", true);
@@ -2306,7 +2306,7 @@ public final class DrPhlogistonSavesTheEarth extends GameClientShell {
           MusicPatchPcmStream.field_l = kh.field_e.field_d;
           MusicPatchPcmStream.field_p = MusicPatchPcmStream.field_l / 2;
           MusicPatchEnvelope.field_q = MusicPatchEnvelope.field_e / 2;
-          df.field_f = this.a(eh.a("", (byte) -85, kf.field_d, "scenery_tile_earth_1"), (byte) 88);
+          ArchiveSourceManager.field_f = this.a(eh.a("", (byte) -85, kf.field_d, "scenery_tile_earth_1"), (byte) 88);
           DisplayNameSelectionPanel.field_L = this.a(eh.a("", (byte) -118, kf.field_d, "scenery_tile_earth_2"), (byte) 103);
           mk.field_f = this.a(eh.a("", (byte) -120, kf.field_d, "scenery_tile_earth_3"), (byte) -60);
           ValidatedTextField.field_U = this.a(eh.a("", (byte) -126, kf.field_d, "scenery_tile_earth_4"), (byte) 24);
@@ -2375,7 +2375,7 @@ public final class DrPhlogistonSavesTheEarth extends GameClientShell {
           ResizableModalDialog.field_V[0].c();
           ac.field_g = ij.a("scenery_tile_earth_bath_04_broken", (byte) 109, kf.field_d, "");
           ac.field_g[0].c();
-          df.field_k = this.a(eh.a("", (byte) -59, kf.field_d, "scenery_tile_earth_bath_05_broken"), (byte) -88);
+          ArchiveSourceManager.field_k = this.a(eh.a("", (byte) -59, kf.field_d, "scenery_tile_earth_bath_05_broken"), (byte) -88);
           GameClientShell.field_x = ij.a("scenery_tile_earth_bath_06_broken", (byte) 80, kf.field_d, "");
           GameClientShell.field_x[0].c();
           qj.field_a = this.a(eh.a("", (byte) -81, kf.field_d, "scenery_tile_earth_bath_07_broken"), (byte) 102);
@@ -2404,8 +2404,8 @@ public final class DrPhlogistonSavesTheEarth extends GameClientShell {
           SoundCache.field_g[0].c();
           MusicPatchEnvelope.field_r = ij.a("scenery_tile_earth_bath_08_fire_mask", (byte) 62, kf.field_d, "");
           MusicPatchEnvelope.field_r[0].c();
-          cl.field_n = ij.a("scenery_tile_earth_bath_09_fire_mask", (byte) 102, kf.field_d, "");
-          cl.field_n[0].c();
+          SocketArchiveNetworkClient.field_n = ij.a("scenery_tile_earth_bath_09_fire_mask", (byte) 102, kf.field_d, "");
+          SocketArchiveNetworkClient.field_n[0].c();
           kj.field_g = ij.a("scenery_tile_earth_bath_10_fire_mask", (byte) 120, kf.field_d, "");
           kj.field_g[0].c();
           TextFieldValidator.field_k = ij.a("scenery_tile_earth_bath_11_fire_mask", (byte) 125, kf.field_d, "");

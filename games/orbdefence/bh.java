@@ -43,9 +43,9 @@ final class bh {
     }
 
     final static int a(byte param0) {
-        TextLineMetrics.field_b.b(0);
+        TextLineMetrics.field_b.pollArchiveSources(0);
         int var1 = -118 / ((param0 - 30) / 59);
-        if (!kg.field_h.e(255)) {
+        if (!kg.field_h.pollNetwork(255)) {
           return d.d((byte) -123);
         }
         return 0;

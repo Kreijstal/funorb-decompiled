@@ -138,7 +138,7 @@ final class ValidationStatusIcon extends InteractiveWidget {
         Object var1_ref = null;
         var1_ref = sf.field_c;
         synchronized (var1_ref) {
-          fb.field_n = ib.field_g;
+          ArchiveNetworkClient.field_n = ib.field_g;
           if (param0 != 256) {
             return;
           }

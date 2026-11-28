@@ -66,7 +66,7 @@ final class PasswordValidator extends TextFieldValidator {
             return stackIn_6_0;
           }
           if (bi.a(0, var5)) {
-            stackIn_9_0 = bk.field_b;
+            stackIn_9_0 = ArchiveSourceManager.field_b;
             return stackIn_9_0;
           }
           if (nj.a(var5, (byte) 126)) {
@@ -120,7 +120,7 @@ final class PasswordValidator extends TextFieldValidator {
         int var8 = fg.field_h.get(12);
         if (param1 <= -123) {
           var9 = fg.field_h.get(13);
-          return ValidationStatusWidget.field_P[var3 - 1] + ", " + var4 / 10 + var4 % 10 + "-" + uf.field_w[var5] + "-" + var6 + " " + var7 / 10 + var7 % 10 + ":" + var8 / 10 + var8 % 10 + ":" + var9 / 10 + var9 % 10 + " GMT";
+          return ValidationStatusWidget.field_P[var3 - 1] + ", " + var4 / 10 + var4 % 10 + "-" + SocketArchiveNetworkClient.field_w[var5] + "-" + var6 + " " + var7 / 10 + var7 % 10 + ":" + var8 / 10 + var8 % 10 + ":" + var9 / 10 + var9 % 10 + " GMT";
         }
         return (String) null;
     }

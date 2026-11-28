@@ -23,7 +23,7 @@ class DualLinkNode extends IntrusiveNode {
         this.field_l = null;
     }
 
-    final static void a(java.awt.Component param0, boolean param1) {
+    final static void detachKeyboardListeners(java.awt.Component param0, boolean param1) {
         param0.removeKeyListener(pk.field_e);
         param0.removeFocusListener(pk.field_e);
         if (param1) {
@@ -57,9 +57,9 @@ class DualLinkNode extends IntrusiveNode {
     final static boolean d(int param0) {
         if (param0 != -12171) {
           field_q = (java.awt.Frame) null;
-          return vh.a(true, hf.a((byte) -6));
+          return ArchiveSourceManager.a(true, hf.a((byte) -6));
         }
-        return vh.a(true, hf.a((byte) -6));
+        return ArchiveSourceManager.a(true, hf.a((byte) -6));
     }
 
     protected DualLinkNode() {

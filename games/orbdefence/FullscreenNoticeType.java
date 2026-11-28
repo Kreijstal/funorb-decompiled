@@ -88,7 +88,7 @@ final class FullscreenNoticeType {
             return null;
           }
           var2 = new PalettedBitmapFont(param1, jd.field_g, wc.field_a, wh.field_b, m.field_a, vc.field_g, fl.field_a);
-          md.clearIndexedSpriteDecodeBuffersWithIntGuard(-118);
+          ProxySocketConnector.clearIndexedSpriteDecodeBuffersWithIntGuard(-118);
           if (param0) {
             var3 = (byte[]) null;
             FullscreenNoticeType.a(true, (byte[]) null);

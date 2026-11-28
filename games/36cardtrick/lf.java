@@ -72,7 +72,7 @@ final class lf {
               }
               var7 = new SectorCacheStore(param3, ni.field_c, ProgressDialog.field_Z[param3], 2097152);
             }
-            var8 = ja.field_b.a(param3, 72, param5, (SectorCacheStore) (var6), (SectorCacheStore) (var7));
+            var8 = ja.field_b.getOrCreateArchiveSource(param3, 72, param5, (SectorCacheStore) (var6), (SectorCacheStore) (var7));
             if (param1) {
               var8.a(param4 ^ 25408);
             }

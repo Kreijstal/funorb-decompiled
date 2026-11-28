@@ -38,7 +38,7 @@ final class DialogMessagePane extends WidgetContainer implements WidgetActivatio
             if (var7 == -1) {
               this.field_H.closeDialog((byte) -75);
             } else {
-              qh.a(this.field_z[var6_int], true);
+              MouseInputHandler.a(this.field_z[var6_int], true);
             }
             break;
           }

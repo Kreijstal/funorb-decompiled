@@ -38,7 +38,7 @@ final class Platform {
             var5_int -= 64;
             var6 = od.field_f.stringWidth(hf.field_c);
             var7 = od.field_f.field_s;
-            CipherPacketBuffer.a(var4, hf.field_c, var5_int, 16744512, param0 + 7);
+            CipherPacketBuffer.drawCenteredTextWithShadow(var4, hf.field_c, var5_int, 16744512, param0 + 7);
             ve.a(8 + (var7 + 16), var5_int - 27, ig.field_d, (byte) -82, 8 + (var6 + 8), -8 + var4 - var6 / 2);
           } else {
             kc.field_c.draw((int)((double)param1 + this.field_c - 64.0), (int)this.field_h);
@@ -51,7 +51,7 @@ final class Platform {
                 if ((5 == var4)) {
                   if (this.field_b == 2) {
                     var3 = this.field_g * 4 / 256;
-                    nk.field_h[var3].draw((int)(-64.0 + (this.field_c + (double)param1)), (int)this.field_h);
+                    BouncedownMenuEntry.field_h[var3].draw((int)(-64.0 + (this.field_c + (double)param1)), (int)this.field_h);
                     var3Lifetime4 = this.field_g * 16 / 256 % 20;
                     if (var3Lifetime4 > 1) {
                       var3Lifetime4 = 0;

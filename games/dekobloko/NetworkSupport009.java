@@ -405,7 +405,7 @@ final class NetworkSupport009 {
               stackIntegerLocal5 = -1;
               return stackIntegerLocal5;
             }
-            MixedSupport119.networkSupport003State0003.performAction0344(EditableTextField.bufferedSocketState0003, (byte) -128, MixedSupport119.booleanState0182);
+            MixedSupport119.networkSupport003State0003.attachSocket(EditableTextField.bufferedSocketState0003, (byte) -128, MixedSupport119.booleanState0182);
             EditableTextField.bufferedSocketState0003 = null;
             MixedSupport021.asyncTaskState0001 = null;
             MixedSupport053.integerState0273 = 0;

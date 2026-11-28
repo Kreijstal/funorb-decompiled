@@ -68,7 +68,7 @@ final class DiskCacheWorker implements Runnable {
               } catch (java.lang.Exception decompiledCaughtParameter1) {
                 decompiledCaughtException = decompiledCaughtParameter1;
                 var2_ref2 = (Exception) (Object) decompiledCaughtException;
-                gb.a((Throwable) ((Object) var2_ref2), (String) null, 10);
+                ArchiveNetworkClient.a((Throwable) ((Object) var2_ref2), (String) null, 10);
               }
               var6.field_u = false;
               if (var5 == 0) {

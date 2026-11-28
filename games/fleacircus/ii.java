@@ -181,7 +181,7 @@ final class ii {
             } else {
               ResourceArchive.field_e = ModalDialog.a(rg.field_r, new String[]{Integer.toString(var1)}, true);
             }
-            ResourceArchive.field_e = DequeWidgetContainer.a(0, new CharSequence[]{(CharSequence) ((Object) ResourceArchive.field_e), (CharSequence) ((Object) "<br>"), (CharSequence) ((Object) jk.field_p)});
+            ResourceArchive.field_e = DequeWidgetContainer.a(0, new CharSequence[]{(CharSequence) ((Object) ResourceArchive.field_e), (CharSequence) ((Object) "<br>"), (CharSequence) ((Object) ProxySocketConnector.field_p)});
             ok.field_x.closeDialog(-22645);
             FullscreenStatusDialog.n(-128);
             if (param0 == -88) {

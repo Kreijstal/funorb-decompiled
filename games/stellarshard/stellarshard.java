@@ -440,7 +440,7 @@ public final class stellarshard extends NetworkGameClient implements TextureProv
                     this.l((byte) -110);
                   }
                   if (4 == var2_int) {
-                    wj.h(-128);
+                    SocketArchiveNetworkClient.h(-128);
                     fd.field_mb = true;
                   }
                   if (var3 != 0) {
@@ -694,7 +694,7 @@ public final class stellarshard extends NetworkGameClient implements TextureProv
           if (param0 != 127) {
             this.initializeClient(false);
           }
-          vh.field_e = 0;
+          ArchiveSourceManager.field_e = 0;
           ta.field_p = 0;
           StripedProgressWidget.field_H = 3;
           te.field_c = 0;
@@ -2496,7 +2496,7 @@ public final class stellarshard extends NetworkGameClient implements TextureProv
                 }
               }
             }
-            fb.field_b = fb.field_b - var2_int;
+            ArchiveNetworkClient.field_b = ArchiveNetworkClient.field_b - var2_int;
             tk.field_b = tk.field_b - var3;
             sg.field_a.setAxisAngle(1.0, 0.0, 0.0, (byte) -20, 0.001 * (double)var3);
             this.field_H.a(sg.field_a, -125);
@@ -2886,9 +2886,9 @@ public final class stellarshard extends NetworkGameClient implements TextureProv
           AudioMixer.clearStaticReferences();
           ag.resetStaticState((byte) 126);
           IntrusiveNode.resetStaticState((byte) -127);
-          fb.c(-2918);
+          ArchiveNetworkClient.c(-2918);
           DiskCacheWorker.clearStaticReferences(true);
-          vh.resetStaticState((byte) 48);
+          ArchiveSourceManager.resetStaticState((byte) 48);
           BufferedSocket.clearStaticReferences((byte) 89);
           jf.a(-15917);
           ha.clearStaticReferences(param0 + 244);
@@ -2948,7 +2948,7 @@ public final class stellarshard extends NetworkGameClient implements TextureProv
           qa.clearStaticReferences();
           vd.clearStaticReferences(94);
           kc.clearStaticReferences(true);
-          wj.clearStaticReferences((byte) 92);
+          SocketArchiveNetworkClient.clearStaticReferences((byte) 92);
           al.clearStaticReferences(param0 + 128);
           NetworkArchiveRequest.clearStaticReferences(param0 ^ -15);
           DiskArchiveRequest.clearStaticReferences(param0 + 186);
@@ -3589,7 +3589,7 @@ public final class stellarshard extends NetworkGameClient implements TextureProv
           te.a(8, 129, 1500, 0, qd.a(bh.field_a, "mbpb", "", (byte) 124), 40, 134, 97, 0);
           q.a(118, (Sprite[]) (var3));
           SpriteState.field_u = null;
-          fb.a(192, sg.field_c, 0, (java.applet.Applet) (this), -1, 16777215);
+          ArchiveNetworkClient.a(192, sg.field_c, 0, (java.applet.Applet) (this), -1, 16777215);
           var4_ref = new Sprite(128, 128);
           mf.field_a = new Sprite[64];
           var5 = 0;
@@ -3708,8 +3708,8 @@ public final class stellarshard extends NetworkGameClient implements TextureProv
           lg.field_f = lg.field_f - 127;
           hk.field_p = hk.field_p + 127;
           if (7 == e.field_e) {
-            fieldTemp$0 = vh.field_e;
-            vh.field_e = vh.field_e + 1;
+            fieldTemp$0 = ArchiveSourceManager.field_e;
+            ArchiveSourceManager.field_e = ArchiveSourceManager.field_e + 1;
             if (fieldTemp$0 == 5) {
               hj.a(255, 0, 1);
             }
@@ -4103,14 +4103,14 @@ public final class stellarshard extends NetworkGameClient implements TextureProv
             }
             ni.field_a = false;
           }
-          if (0 > fb.field_b) {
-            fb.field_b = fb.field_b + 640;
+          if (0 > ArchiveNetworkClient.field_b) {
+            ArchiveNetworkClient.field_b = ArchiveNetworkClient.field_b + 640;
           }
           if (0 > tk.field_b) {
             tk.field_b = tk.field_b + 480;
           }
-          if (fb.field_b >= 640) {
-            fb.field_b = fb.field_b - 640;
+          if (ArchiveNetworkClient.field_b >= 640) {
+            ArchiveNetworkClient.field_b = ArchiveNetworkClient.field_b - 640;
           }
           if (tk.field_b >= 480) {
             tk.field_b = tk.field_b - 480;

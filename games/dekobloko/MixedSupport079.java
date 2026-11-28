@@ -53,7 +53,7 @@ final class MixedSupport079 {
           objectLocal6 = RegistrationAgreementPane.computeString1033(integerArgument3, stringLocal2, false);
         }
         if (ResourceSupport003.integerState0555 == 2) {
-          objectLocal6 = NetworkSupport003.computeString0351(stringLocal2, 127, integerArgument3);
+          objectLocal6 = ArchiveNetworkClient.computeString0351(stringLocal2, 127, integerArgument3);
         }
         if (ResourceSupport003.integerState0555 == 3) {
           objectLocal6 = InputAdapter003.computeString1491(stringLocal2, stringLocal2, integerArgument3, (byte) 125);

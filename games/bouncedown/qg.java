@@ -23,26 +23,26 @@ final class qg extends IntrusiveNode {
         AccountRequestState.field_a = null;
         int var2 = a.field_a;
         a.field_a = fk.field_d;
-        tb.field_p.field_l = tb.field_p.field_l + 1;
+        SocketArchiveNetworkClient.field_p.field_l = SocketArchiveNetworkClient.field_p.field_l + 1;
         if (param1 == 51) {
-          tb.field_p.field_d = 2;
+          SocketArchiveNetworkClient.field_p.field_d = 2;
         } else {
           if (param1 == 50) {
-            tb.field_p.field_d = 5;
+            SocketArchiveNetworkClient.field_p.field_d = 5;
           } else {
-            tb.field_p.field_d = 1;
+            SocketArchiveNetworkClient.field_p.field_d = 1;
           }
         }
         fk.field_d = var2;
-        if (tb.field_p.field_l >= 2 &&
+        if (SocketArchiveNetworkClient.field_p.field_l >= 2 &&
           51 == param1) {
           return 2;
         }
-        if (tb.field_p.field_l >= 2 &&
+        if (SocketArchiveNetworkClient.field_p.field_l >= 2 &&
           param1 == 50) {
           return 5;
         }
-        if (!(tb.field_p.field_l < 4)) {
+        if (!(SocketArchiveNetworkClient.field_p.field_l < 4)) {
           return 1;
         }
         return -1;
@@ -69,7 +69,7 @@ final class qg extends IntrusiveNode {
             stackIn_3_0 = (byte[]) null;
             return stackIn_3_0;
           }
-          var4_int = param3.f(7, param2);
+          var4_int = param3.readBits(7, param2);
           if (var4_int == 0) {
             return null;
           }
@@ -77,11 +77,11 @@ final class qg extends IntrusiveNode {
             var4_int != param1.length) {
             param1 = new byte[var4_int];
           }
-          var5 = param3.f(7, 3);
-          var6 = (byte)param3.f(7, 8);
+          var5 = param3.readBits(7, 3);
+          var6 = (byte)param3.readBits(7, 8);
           if (var5 > 0) {
             for (var7 = 0; var7 < var4_int; var7++) {
-              param1[var7] = (byte)(param3.f(7, var5) + var6);
+              param1[var7] = (byte)(param3.readBits(7, var5) + var6);
             }
           } else {
             for (var7 = 0; var7 < var4_int; var7++) {

@@ -877,7 +877,7 @@ final class MapTile {
               !this.field_d) &&
               this.field_v == 1) {
               if (this.field_j != 7) {
-                kg.field_r[this.field_j].drawWithOpacity(-32 + param0, var8 - 64, 128);
+                SocketArchiveNetworkClient.field_r[this.field_j].drawWithOpacity(-32 + param0, var8 - 64, 128);
               } else {
                 se.field_c[(this.field_n * 3 + this.field_A) % se.field_c.length].drawWithOpacity(-32 + param0, -112 + var8, 128);
               }
@@ -1313,7 +1313,7 @@ final class MapTile {
                 stackIn_443_0 = this;
                 stackIn_443_1 = -32 + param0;
                 stackIn_443_2 = var8Lifetime1 - 64;
-                stackIn_443_3 = kg.field_r[this.field_j];
+                stackIn_443_3 = SocketArchiveNetworkClient.field_r[this.field_j];
                 stackIn_443_4 = 17335;
                 if (this.field_a) {
                   stackIn_444_0 = this;
@@ -1333,7 +1333,7 @@ final class MapTile {
                 ((Sprite) (var9Lifetime1)).bindAsRenderTarget();
                 stackIn_435_1 = 32;
                 stackIn_435_2 = 60;
-                stackIn_435_3 = kg.field_r[this.field_j];
+                stackIn_435_3 = SocketArchiveNetworkClient.field_r[this.field_j];
                 stackIn_435_4 = 17335;
                 if (!this.field_a) {
                   stackIn_437_0 = this;
@@ -1355,10 +1355,10 @@ final class MapTile {
               if (this.field_j != 7) {
                 if (var9Lifetime1 != null) {
                   ((Sprite) (var9Lifetime1)).bindAsRenderTarget();
-                  kg.field_r[this.field_j].draw(32, 60);
+                  SocketArchiveNetworkClient.field_r[this.field_j].draw(32, 60);
                   k.field_f.setAsRasterTarget(0);
                 } else {
-                  kg.field_r[this.field_j].draw(param0 - 32, -64 + var8Lifetime1);
+                  SocketArchiveNetworkClient.field_r[this.field_j].draw(param0 - 32, -64 + var8Lifetime1);
                 }
               } else {
                 if (var9Lifetime1 != null) {
@@ -1387,7 +1387,7 @@ final class MapTile {
               if (7 == this.field_j) {
                 this.map.state.a((byte) -101, var8Lifetime1 - 112, param0 - 32, se.field_c[(this.field_n * 3 + this.field_A) % se.field_c.length]);
               } else {
-                this.map.state.a(this.field_r, -32 + param0, (byte) -118, var11_intLifetime2, -64 + var8Lifetime1, kg.field_r[this.field_j]);
+                this.map.state.a(this.field_r, -32 + param0, (byte) -118, var11_intLifetime2, -64 + var8Lifetime1, SocketArchiveNetworkClient.field_r[this.field_j]);
               }
             }
           }

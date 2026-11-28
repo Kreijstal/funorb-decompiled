@@ -46,16 +46,16 @@ final class th {
         int var4 = 0;
         int var5 = MinerDisturbance.field_ab;
         try {
-          param1.f((byte) 16);
+          param1.beginBitAccess((byte) 16);
           for (var3_int = 0; var3_int < 35; var3_int++) {
             for (var4 = 0; 2 > var4; var4++) {
-              this.field_c[var3_int][var4] = param1.c((byte) -107, 1) == 1 ? true : false;
+              this.field_c[var3_int][var4] = param1.readBits((byte) -107, 1) == 1 ? true : false;
             }
           }
           if (param0 != 33) {
             this.a((byte) 67);
           }
-          param1.o(param0 + 72);
+          param1.endBitAccess(param0 + 72);
         } catch (RuntimeException runtimeException) {
           throw lj.wrapClientException((Throwable) ((Object) runtimeException), "th.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
@@ -83,7 +83,7 @@ final class th {
         RuntimeException var3 = null;
         var5 = MinerDisturbance.field_ab;
         try {
-          param1.c(true);
+          param1.beginBitWrite(true);
           for (var3_int = 0; var3_int < 35; var3_int++) {
             for (var4 = 0; var4 < 2; var4++) {
               stackIn_7_0 = (CipherPacketBuffer) (param1);
@@ -92,10 +92,10 @@ final class th {
               } else {
                 stackIn_8_1 = 0;
               }
-              ((CipherPacketBuffer) (Object) stackIn_7_0).a(stackIn_8_1, (byte) 14, 1);
+              ((CipherPacketBuffer) (Object) stackIn_7_0).writeBits(stackIn_8_1, (byte) 14, 1);
             }
           }
-          param1.n(98);
+          param1.finishBitWrite(98);
           if (param0 != 27437) {
             this.a(-96, 39, -5);
           }

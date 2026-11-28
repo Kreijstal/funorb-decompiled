@@ -23,7 +23,7 @@ final class bn {
         RuntimeException var4 = null;
         var8 = Confined.field_J ? 1 : 0;
         try {
-          var4_int = param1.g(param3, 0);
+          var4_int = param1.readBits(param3, 0);
           if (var4_int == 0) {
             return null;
           }
@@ -31,11 +31,11 @@ final class bn {
             param2.length != var4_int) {
             param2 = new short[var4_int];
           }
-          var5 = param1.g(4, param0);
-          var6 = (short)param1.g(16, param0 + 0);
+          var5 = param1.readBits(4, param0);
+          var6 = (short)param1.readBits(16, param0 + 0);
           if (var5 > 0) {
             for (var7 = 0; var7 < var4_int; var7++) {
-              param2[var7] = (short)(var6 + param1.g(var5, param0 + 0));
+              param2[var7] = (short)(var6 + param1.readBits(var5, param0 + 0));
             }
           } else {
             for (var7 = 0; var4_int > var7; var7++) {

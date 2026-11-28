@@ -15,7 +15,7 @@ final class jk {
     static int field_j;
     static String field_a;
 
-    final static void a(boolean param0, java.awt.Component param1) {
+    final static void detachKeyboardListeners(boolean param0, java.awt.Component param1) {
         param1.removeKeyListener(hj.field_c);
         if (param0) {
           return;

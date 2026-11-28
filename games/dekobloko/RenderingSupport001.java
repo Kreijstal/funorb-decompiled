@@ -200,7 +200,7 @@ final class RenderingSupport001 extends HashNode {
           return;
         }
         CipherPacketBuffer cipherPacketBufferLocal1 = SocketFactory.cipherPacketBufferState0002;
-        cipherPacketBufferLocal1.performAction1641(integerArgument2, -4);
+        cipherPacketBufferLocal1.writeCipheredByte(integerArgument2, -4);
         cipherPacketBufferLocal1.writeByte(true, 1);
         cipherPacketBufferLocal1.writeByte(true, 0);
     }

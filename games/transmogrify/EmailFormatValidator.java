@@ -144,7 +144,7 @@ final class EmailFormatValidator extends TextFieldValidator {
     final static void a(int param0, int param1, int param2, int param3, int param4, boolean param5) {
         ba.field_q[MatchingFieldValidator.field_l] = param4;
         lk.field_d[MatchingFieldValidator.field_l] = MatchingFieldValidator.field_l;
-        dk.field_k[MatchingFieldValidator.field_l] = param0;
+        ArchiveSourceManager.field_k[MatchingFieldValidator.field_l] = param0;
         if (param0 < ua.field_d) {
           TextLayout.field_a = param0;
         }

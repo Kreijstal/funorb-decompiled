@@ -19,11 +19,11 @@ final class t {
         int var4;
         if (3 == this.field_i) {
           if (0 == param1 &&
-            g.field_s == 0) {
+            SocketArchiveNetworkClient.field_s == 0) {
             return false;
           }
           if (param1 == 2 &&
-            g.field_s == -1 + kb.field_k.length) {
+            SocketArchiveNetworkClient.field_s == -1 + kb.field_k.length) {
             return false;
           }
         }
@@ -55,7 +55,7 @@ final class t {
         var2 += 90;
         MatchingFieldValidator.field_p.drawCentred(ModalDialog.a(va.field_s, new String[]{Integer.toString(pl.field_f), Integer.toString((int) ia.field_m[fleas.field_E][var5].field_f)}, true), 320, var2, var3, var4);
         var2 += 40;
-        MatchingFieldValidator.field_p.drawCentred(ModalDialog.a(hm.field_h, new String[]{Integer.toString(wi.field_b)}, true), 320, var2, var3, var4);
+        MatchingFieldValidator.field_p.drawCentred(ModalDialog.a(SocketConnector.field_h, new String[]{Integer.toString(wi.field_b)}, true), 320, var2, var3, var4);
         int var7 = -113 % ((param0 - 12) / 34);
         String var6 = ModalDialog.a(fleas.field_I, new String[]{wa.a(false)}, true);
         MatchingFieldValidator.field_p.drawCentred(ModalDialog.a(var6, new String[]{"0"}, true), 320, var2 + MatchingFieldValidator.field_p.field_N, var3, var4);
@@ -228,7 +228,7 @@ final class t {
         MatchingFieldValidator.field_p.drawWaveText(bh.field_u[0], 320, var2 + 2 * MatchingFieldValidator.field_p.field_N, 0, -1, PacketBuffer.field_j / 3);
         MatchingFieldValidator.field_p.drawWaveText(DiskArchiveRequest.c((byte) 111) ? nc.field_b : bh.field_u[1], 320, var2 + (int)((double)MatchingFieldValidator.field_p.field_N * 3.5), 0, -1, PacketBuffer.field_j / 3);
         ResizableModalDialog.field_P.draw((640 - ResizableModalDialog.field_P.field_w) / 2, var2 + MatchingFieldValidator.field_p.field_N * 4);
-        MatchingFieldValidator.field_p.drawCentred(hm.field_h + wi.field_b, 320, 200 + var2, 0, -1);
+        MatchingFieldValidator.field_p.drawCentred(SocketConnector.field_h + wi.field_b, 320, 200 + var2, 0, -1);
         AccountRegistrationPanel.field_L.a(50, 100, 0, -4575, 380);
         fb.field_a.a(50, 100, 0, -4575, 380);
         GzipDecompressor.field_b.a(50, 100, 0, -4575, 380);
@@ -407,7 +407,7 @@ final class t {
           if (var10 != 0) {
             stackIn_57_1 = vk.field_M;
           } else {
-            stackIn_57_1 = jk.field_i;
+            stackIn_57_1 = ProxySocketConnector.field_i;
           }
           stackIn_59_2 = 320;
           stackIn_59_3 = StripedProgressWidget.field_Q.field_N + 225;
@@ -661,9 +661,9 @@ final class t {
         var6Lifetime1 = pf.field_a.field_w;
         var5 += 15;
         var8 = ia.field_m[fleas.field_E][ResourceArchive.field_c.field_x];
-        rd.field_e.draw(-(rd.field_e.field_x / 2) + (var6Lifetime1 / 2 + var4), var5);
+        MouseInputHandler.field_e.draw(-(MouseInputHandler.field_e.field_x / 2) + (var6Lifetime1 / 2 + var4), var5);
         if (ResourceArchive.field_c.field_d + ResourceArchive.field_c.field_a >= 397) {
-          rd.field_e.drawFlippedVertical(var6Lifetime1 / 2 + (var4 - rd.field_e.field_x / 2), -20 + (ResourceArchive.field_c.field_d + ResourceArchive.field_c.field_a));
+          MouseInputHandler.field_e.drawFlippedVertical(var6Lifetime1 / 2 + (var4 - MouseInputHandler.field_e.field_x / 2), -20 + (ResourceArchive.field_c.field_d + ResourceArchive.field_c.field_a));
         }
         var9 = StripedProgressWidget.field_Q;
         var5 = var5 + (20 + var9.field_N);
@@ -847,7 +847,7 @@ final class t {
                   } else {
                     if (var6 == 3) {
                       if (!(!this.field_b.b(103))) {
-                        g.field_s = 0;
+                        SocketArchiveNetworkClient.field_s = 0;
                         oa.a(3, param0, 75);
                         ImageProducerRasterBuffer.field_m = this.field_i;
                       }
@@ -1017,7 +1017,7 @@ final class t {
                                 case 18:
                                   if (this.field_b.b(125)) {
                                     if (!(!this.a((byte) -94, param2))) {
-                                      g.field_s = g.field_s + 1;
+                                      SocketArchiveNetworkClient.field_s = SocketArchiveNetworkClient.field_s + 1;
                                     }
                                     break regionExit1;
                                   }
@@ -1025,7 +1025,7 @@ final class t {
                                 case 17:
                                   if (this.field_b.b(-23)) {
                                     if (!(!this.a((byte) -97, param2))) {
-                                      g.field_s = g.field_s - 1;
+                                      SocketArchiveNetworkClient.field_s = SocketArchiveNetworkClient.field_s - 1;
                                     }
                                     break regionExit1;
                                   }
@@ -1233,7 +1233,7 @@ final class t {
         if (this.field_b.field_k != -1) {
           this.a(true, (byte) -99, this.field_b.field_k);
         }
-        if (jk.field_r != 0) {
+        if (ProxySocketConnector.field_r != 0) {
           this.field_g = pb.field_d;
           this.field_e = ob.field_e;
         }
@@ -1313,9 +1313,9 @@ final class t {
           }
           return;
         }
-        stackIn_30_0 = (g.field_s != 0) ? 0 : 1;
+        stackIn_30_0 = (SocketArchiveNetworkClient.field_s != 0) ? 0 : 1;
         var2 = stackIn_30_0;
-        stackIn_33_0 = (kb.field_k.length - 1 != g.field_s) ? 0 : 1;
+        stackIn_33_0 = (kb.field_k.length - 1 != SocketArchiveNetworkClient.field_s) ? 0 : 1;
         var3 = stackIn_33_0;
         if ((var2 != 0 ||
           var3 != 0) && (96 == ji.field_a ||
@@ -1363,12 +1363,12 @@ final class t {
         var8 = fleas.field_A ? 1 : 0;
         var9 = ve.field_d;
         var10 = var9;
-        this.b(2, g.field_s);
-        var10.drawRightAligned(NanoFrameTimer.a((byte) 85, 1 + g.field_s, kb.field_k.length), 530, 110, 1, 16777215);
+        this.b(2, SocketArchiveNetworkClient.field_s);
+        var10.drawRightAligned(NanoFrameTimer.a((byte) 85, 1 + SocketArchiveNetworkClient.field_s, kb.field_k.length), 530, 110, 1, 16777215);
         AgeValidator.field_s[6][3] = 310;
-        MatchingFieldValidator.field_p.drawString(ValidationStatusWidget.field_R[g.field_s], 95, 145, 0, -1);
-        for (var3 = 0; var3 < kb.field_k[g.field_s].length; var3++) {
-          var9.drawParagraph(kb.field_k[g.field_s][var3], 95 + ib.field_a[g.field_s][var3], AgeValidator.field_s[g.field_s][var3], -ib.field_a[g.field_s][var3] + 450, 50, 2105392, -1, 0, 0, var10.field_N);
+        MatchingFieldValidator.field_p.drawString(ValidationStatusWidget.field_R[SocketArchiveNetworkClient.field_s], 95, 145, 0, -1);
+        for (var3 = 0; var3 < kb.field_k[SocketArchiveNetworkClient.field_s].length; var3++) {
+          var9.drawParagraph(kb.field_k[SocketArchiveNetworkClient.field_s][var3], 95 + ib.field_a[SocketArchiveNetworkClient.field_s][var3], AgeValidator.field_s[SocketArchiveNetworkClient.field_s][var3], -ib.field_a[SocketArchiveNetworkClient.field_s][var3] + 450, 50, 2105392, -1, 0, 0, var10.field_N);
         }
         stackIn_6_0 = ((19 & PacketBuffer.field_j) >>> 4 != 0) ? 0 : 1;
         var3Lifetime1 = stackIn_6_0;
@@ -1376,103 +1376,103 @@ final class t {
         if (param0 > -82) {
           discarded$0 = this.a(-42, 28);
         }
-        if (g.field_s == 0) {
+        if (SocketArchiveNetworkClient.field_s == 0) {
           DequeWidgetContainer.field_A.field_l = 265;
           DequeWidgetContainer.field_A.field_a = 320;
           DequeWidgetContainer.field_A.b((byte) -107);
         } else {
           boolean decompiledFrameRemainder0 = true;
-          if (g.field_s == 1) {
-            aj.field_t[2].draw(105, AgeValidator.field_s[g.field_s][1] - 2);
-            MidiNoteMask.a(AgeValidator.field_s[g.field_s][1] + 2, 0, 109, var4);
-            aj.field_t[3].draw(95, AgeValidator.field_s[g.field_s][2] + 1);
-            aj.field_t[4].draw(116, 1 + AgeValidator.field_s[g.field_s][2]);
+          if (SocketArchiveNetworkClient.field_s == 1) {
+            aj.field_t[2].draw(105, AgeValidator.field_s[SocketArchiveNetworkClient.field_s][1] - 2);
+            MidiNoteMask.a(AgeValidator.field_s[SocketArchiveNetworkClient.field_s][1] + 2, 0, 109, var4);
+            aj.field_t[3].draw(95, AgeValidator.field_s[SocketArchiveNetworkClient.field_s][2] + 1);
+            aj.field_t[4].draw(116, 1 + AgeValidator.field_s[SocketArchiveNetworkClient.field_s][2]);
             for (var5 = 4; var5 <= 6; var5++) {
-              var6 = 88 + ib.field_a[g.field_s][var5];
-              var7 = AgeValidator.field_s[g.field_s][var5] + 7;
+              var6 = 88 + ib.field_a[SocketArchiveNetworkClient.field_s][var5];
+              var7 = AgeValidator.field_s[SocketArchiveNetworkClient.field_s][var5] + 7;
               SoftwareRasterizer.fillCircle(var6, var7, 3, 1);
             }
           } else {
-            if (2 == g.field_s) {
-              aj.field_t[1].draw(95, AgeValidator.field_s[g.field_s][1] + 3);
-              aj.field_t[2].draw(95, AgeValidator.field_s[g.field_s][2] + 3);
-              MidiNoteMask.a(AgeValidator.field_s[g.field_s][2] + 7, 0, 99, var4);
-              aj.field_t[3].draw(95, AgeValidator.field_s[g.field_s][3] + 3);
-              aj.field_t[11].draw(95, AgeValidator.field_s[g.field_s][4] + 12);
-              aj.field_t[5].draw(95, 3 + AgeValidator.field_s[g.field_s][4]);
-              aj.field_t[6].draw(95, AgeValidator.field_s[g.field_s][5] + 6);
+            if (2 == SocketArchiveNetworkClient.field_s) {
+              aj.field_t[1].draw(95, AgeValidator.field_s[SocketArchiveNetworkClient.field_s][1] + 3);
+              aj.field_t[2].draw(95, AgeValidator.field_s[SocketArchiveNetworkClient.field_s][2] + 3);
+              MidiNoteMask.a(AgeValidator.field_s[SocketArchiveNetworkClient.field_s][2] + 7, 0, 99, var4);
+              aj.field_t[3].draw(95, AgeValidator.field_s[SocketArchiveNetworkClient.field_s][3] + 3);
+              aj.field_t[11].draw(95, AgeValidator.field_s[SocketArchiveNetworkClient.field_s][4] + 12);
+              aj.field_t[5].draw(95, 3 + AgeValidator.field_s[SocketArchiveNetworkClient.field_s][4]);
+              aj.field_t[6].draw(95, AgeValidator.field_s[SocketArchiveNetworkClient.field_s][5] + 6);
               stackIn_41_0 = aj.field_t;
               if (var3Lifetime1 != 0) {
                 stackIn_42_1 = 8;
               } else {
                 stackIn_42_1 = 9;
               }
-              ((RgbSprite) (Object) stackIn_41_0[stackIn_42_1]).draw(95, 6 + AgeValidator.field_s[g.field_s][6]);
+              ((RgbSprite) (Object) stackIn_41_0[stackIn_42_1]).draw(95, 6 + AgeValidator.field_s[SocketArchiveNetworkClient.field_s][6]);
             } else {
-              if (g.field_s != 3) {
-                if (g.field_s != 4) {
-                  if ((g.field_s == 5 ||
-                    g.field_s == 6)) {
-                    for (var5 = 0; var5 < AgeValidator.field_s[g.field_s].length; var5++) {
-                      var6 = ib.field_a[g.field_s][var5] + 88;
-                      var7 = 7 + AgeValidator.field_s[g.field_s][var5];
+              if (SocketArchiveNetworkClient.field_s != 3) {
+                if (SocketArchiveNetworkClient.field_s != 4) {
+                  if ((SocketArchiveNetworkClient.field_s == 5 ||
+                    SocketArchiveNetworkClient.field_s == 6)) {
+                    for (var5 = 0; var5 < AgeValidator.field_s[SocketArchiveNetworkClient.field_s].length; var5++) {
+                      var6 = ib.field_a[SocketArchiveNetworkClient.field_s][var5] + 88;
+                      var7 = 7 + AgeValidator.field_s[SocketArchiveNetworkClient.field_s][var5];
                       SoftwareRasterizer.fillCircle(var6, var7, 3, 1);
                     }
                   }
                   decompiledFrameRemainder0 = false;
                 }
                 else {
-                  aj.field_t[19].draw(95, 3 + AgeValidator.field_s[g.field_s][1]);
-                  aj.field_t[20].draw(111, 3 + AgeValidator.field_s[g.field_s][2]);
-                  aj.field_t[23].draw(95, 3 + AgeValidator.field_s[g.field_s][2]);
-                  aj.field_t[21].draw(95, AgeValidator.field_s[g.field_s][3] + 3);
+                  aj.field_t[19].draw(95, 3 + AgeValidator.field_s[SocketArchiveNetworkClient.field_s][1]);
+                  aj.field_t[20].draw(111, 3 + AgeValidator.field_s[SocketArchiveNetworkClient.field_s][2]);
+                  aj.field_t[23].draw(95, 3 + AgeValidator.field_s[SocketArchiveNetworkClient.field_s][2]);
+                  aj.field_t[21].draw(95, AgeValidator.field_s[SocketArchiveNetworkClient.field_s][3] + 3);
                   stackIn_31_0 = aj.field_t;
                   if (var3Lifetime1 == 0) {
                     stackIn_32_1 = 26;
                   } else {
                     stackIn_32_1 = 22;
                   }
-                  ((RgbSprite) (Object) stackIn_31_0[stackIn_32_1]).draw(95, 6 + AgeValidator.field_s[g.field_s][4]);
-                  aj.field_t[24].draw(95, AgeValidator.field_s[g.field_s][5] + 3);
-                  aj.field_t[25].draw(95, 3 + AgeValidator.field_s[g.field_s][6]);
+                  ((RgbSprite) (Object) stackIn_31_0[stackIn_32_1]).draw(95, 6 + AgeValidator.field_s[SocketArchiveNetworkClient.field_s][4]);
+                  aj.field_t[24].draw(95, AgeValidator.field_s[SocketArchiveNetworkClient.field_s][5] + 3);
+                  aj.field_t[25].draw(95, 3 + AgeValidator.field_s[SocketArchiveNetworkClient.field_s][6]);
                 }
               } else {
-                aj.field_t[10].draw(95, AgeValidator.field_s[g.field_s][1] + 3);
+                aj.field_t[10].draw(95, AgeValidator.field_s[SocketArchiveNetworkClient.field_s][1] + 3);
                 stackIn_14_0 = aj.field_t;
                 if (var3Lifetime1 != 0) {
                   stackIn_15_1 = 13;
                 } else {
                   stackIn_15_1 = 27;
                 }
-                ((RgbSprite) (Object) stackIn_14_0[stackIn_15_1]).draw(95, -5 + AgeValidator.field_s[g.field_s][2]);
+                ((RgbSprite) (Object) stackIn_14_0[stackIn_15_1]).draw(95, -5 + AgeValidator.field_s[SocketArchiveNetworkClient.field_s][2]);
                 stackIn_17_0 = aj.field_t;
                 if (var3Lifetime1 != 0) {
                   stackIn_18_1 = 14;
                 } else {
                   stackIn_18_1 = 28;
                 }
-                ((RgbSprite) (Object) stackIn_17_0[stackIn_18_1]).draw(95, AgeValidator.field_s[g.field_s][3] + 3);
-                aj.field_t[30].draw(95, AgeValidator.field_s[g.field_s][4] + 3);
+                ((RgbSprite) (Object) stackIn_17_0[stackIn_18_1]).draw(95, AgeValidator.field_s[SocketArchiveNetworkClient.field_s][3] + 3);
+                aj.field_t[30].draw(95, AgeValidator.field_s[SocketArchiveNetworkClient.field_s][4] + 3);
                 var5 = (int)((double)PacketBuffer.field_j / 2.0 % 16.0 * 2.0);
                 if (var5 > 16) {
                   var5 = -var5 + 32;
                 }
-                aj.field_t[15].draw(95, AgeValidator.field_s[g.field_s][4] + (3 + var5));
+                aj.field_t[15].draw(95, AgeValidator.field_s[SocketArchiveNetworkClient.field_s][4] + (3 + var5));
                 stackIn_23_0 = aj.field_t;
                 if (var3Lifetime1 != 0) {
                   stackIn_24_1 = 16;
                 } else {
                   stackIn_24_1 = 29;
                 }
-                ((RgbSprite) (Object) stackIn_23_0[stackIn_24_1]).draw(95, 3 + AgeValidator.field_s[g.field_s][5]);
+                ((RgbSprite) (Object) stackIn_23_0[stackIn_24_1]).draw(95, 3 + AgeValidator.field_s[SocketArchiveNetworkClient.field_s][5]);
                 stackIn_26_0 = aj.field_t;
                 if (var3Lifetime1 != 0) {
                   stackIn_27_1 = 17;
                 } else {
                   stackIn_27_1 = 31;
                 }
-                ((RgbSprite) (Object) stackIn_26_0[stackIn_27_1]).draw(95, 3 + AgeValidator.field_s[g.field_s][6]);
-                ql.a(var4, -121, AgeValidator.field_s[g.field_s][7] + 3, 95);
+                ((RgbSprite) (Object) stackIn_26_0[stackIn_27_1]).draw(95, 3 + AgeValidator.field_s[SocketArchiveNetworkClient.field_s][6]);
+                ql.a(var4, -121, AgeValidator.field_s[SocketArchiveNetworkClient.field_s][7] + 3, 95);
               }
             }
           }

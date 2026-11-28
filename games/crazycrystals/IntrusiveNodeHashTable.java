@@ -22,7 +22,7 @@ final class IntrusiveNodeHashTable implements Iterable {
           var3 = CrazyCrystals.field_B;
           try {
             if (null != oi.field_d) {
-              oi.field_d.a((byte) 43);
+              oi.field_d.close((byte) 43);
             }
             if (null != hc.field_a) {
               hc.field_a.shutdown(-3);

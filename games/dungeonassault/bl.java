@@ -21,7 +21,7 @@ final class bl {
     static rj field_l;
     static RgbSprite field_e;
     static int field_c;
-    static je field_r;
+    static ArchiveSourceManager field_r;
     static String field_a;
     static ResourceArchive field_t;
 
@@ -395,7 +395,7 @@ final class bl {
             var13[var14Lifetime2] = 16776960 + (-192 + var14Lifetime2) * 4;
           }
           jn.field_n.field_v.field_i = var13;
-          fp.field_d = new tf(IntrusiveNode.field_c, tp.field_u, RegistrationAgreementPane.field_M);
+          fp.field_d = new tf(IntrusiveNode.field_c, SocketArchiveNetworkClient.field_u, RegistrationAgreementPane.field_M);
           na.field_w = new tf(IntrusiveNode.field_c, bn.field_q, RegistrationAgreementPane.field_M);
           cg.field_a = new tf(IntrusiveNode.field_c, vd.field_c, RegistrationAgreementPane.field_M);
           RaiderRecruitmentScreen.field_x = new tf(IntrusiveNode.field_c, AwtRasterBuffer.field_e.toUpperCase(), RegistrationAgreementPane.field_M);

@@ -43,7 +43,7 @@ final class ValidationStatusIcon extends InteractiveWidget {
         int var13Lifetime1;
         int var14Lifetime1;
         int var19Lifetime1;
-        var5 = vb.field_a[param3][param0];
+        var5 = ArchiveNetworkClient.field_a[param3][param0];
         var6 = 1 + var5;
         var7 = var5 - 1;
         var8 = SocketConnector.field_l[param3][param0][1][0];
@@ -52,7 +52,7 @@ final class ValidationStatusIcon extends InteractiveWidget {
         if (var10 <= 0) {
           return;
         }
-        var11 = SingleChildWidgetContainer.field_E[vb.field_a[param3][param0]][param2];
+        var11 = SingleChildWidgetContainer.field_E[ArchiveNetworkClient.field_a[param3][param0]][param2];
         stackIn_5_0 = ((var11 & 32) <= 0) ? 0 : 1;
         var12 = stackIn_5_0;
         var13 = 0;

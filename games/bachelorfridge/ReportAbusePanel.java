@@ -56,7 +56,7 @@ final class ReportAbusePanel extends WidgetContainer implements WidgetActionList
         try {
           if (this.field_C != param1) {
             if (this.field_E == param1) {
-              qfa.f(114);
+              NetworkArchiveRequest.f(114);
             } else {
               if (this.field_F == param1) {
                 SuperSpeedAllAnimation.e((byte) 123);

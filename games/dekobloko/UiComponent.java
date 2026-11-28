@@ -231,7 +231,7 @@ class UiComponent extends HashNode {
         RuntimeException runtimeExceptionLocal9 = null;
         try {
           cipherPacketBufferLocal2 = SocketFactory.cipherPacketBufferState0002;
-          cipherPacketBufferLocal2.performAction1641(integerArgument1, -4);
+          cipherPacketBufferLocal2.writeCipheredByte(integerArgument1, -4);
           cipherPacketBufferLocal2.position = cipherPacketBufferLocal2.position + 1;
           integerLocal1 = cipherPacketBufferLocal2.position;
           cipherPacketBufferLocal2.writeByte(true, integerArgument3);
@@ -307,7 +307,7 @@ class UiComponent extends HashNode {
         }
         try {
           ReturnedShapeUpdate.integerState0880 = integerArgument2;
-          MixedSupport119.networkSupport003State0003 = (NetworkSupport003) ((Object) new NetworkArchiveRequestManager());
+          MixedSupport119.networkSupport003State0003 = (ArchiveNetworkClient) ((Object) new NetworkArchiveRequestManager());
           NetworkArchiveRequestManager.cacheWorkQueueState0003 = new CacheWorkQueue(platformServiceArgument7);
           ProxySocketFactory.js5ArchiveManagerState0001 = new Js5ArchiveManager(MixedSupport119.networkSupport003State0003, NetworkArchiveRequestManager.cacheWorkQueueState0003);
         } catch (RuntimeException runtimeException) {

@@ -35,7 +35,7 @@ final class jc {
 
     final static void a(String param0, int param1, float param2) {
         try {
-          og.field_h = param2;
+          ProxySocketConnector.field_h = param2;
           ui.field_b = param0;
           if (param1 != 10265) {
             field_d = (String[]) null;

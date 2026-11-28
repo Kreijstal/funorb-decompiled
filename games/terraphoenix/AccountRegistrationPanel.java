@@ -138,7 +138,7 @@ final class AccountRegistrationPanel extends WidgetContainer implements TextHots
         ah dupTemp$1 = new ah(10000536);
         this.field_U.listener = (WidgetActionListener) ((Object) dupTemp$1);
         this.field_H.listener = (WidgetActionListener) ((Object) dupTemp$1);
-        String var2 = MessageKeys.a(new String[]{this.getLinkOpenMarkup(46), this.getLinkCloseMarkup((byte) 9)}, -1, h.field_d);
+        String var2 = MessageKeys.a(new String[]{this.getLinkOpenMarkup(46), this.getLinkCloseMarkup((byte) 9)}, -1, ArchiveNetworkClient.field_d);
         int var3 = 20;
         var3 = var3 + this.addLabeledField(g.field_nb, this.field_S, 170, 16777215, var3);
         var3 = var3 + (5 + this.addLabeledFieldWithValidationMessage(false, 20, "", this.field_I, bh.field_h, var3, 170));

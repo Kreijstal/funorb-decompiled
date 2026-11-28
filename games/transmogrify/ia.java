@@ -582,10 +582,10 @@ final class ia extends IntrusiveNode {
                   0 < SessionGameApplet.field_l &&
                   sg.field_d != null) {
                   sg.field_d.letter = (char)SessionGameApplet.field_l;
-                  if (!dk.field_b) {
+                  if (!ArchiveSourceManager.field_b) {
                     DirectByteStorage.field_j = DirectByteStorage.field_j + 1;
                     nc.field_t = nc.field_t + 1;
-                    dk.field_b = true;
+                    ArchiveSourceManager.field_b = true;
                   }
                   sg.field_d.baseValue = MouseInputHandler.field_c.field_p[255 & sg.field_d.letter];
                   var4_ref_sj = sg.field_d;

@@ -15,7 +15,7 @@ final class k {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3_ref = null;
         try {
-          var3 = vh.a(param2, 0);
+          var3 = SocketArchiveNetworkClient.a(param2, 0);
           if (param1.indexOf(param2) == -1 &&
             param1.indexOf(var3) == -1) {
             if (param0 != 19272) {

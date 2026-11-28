@@ -6,7 +6,7 @@ final class vm {
     static int field_c;
     static int[] field_a;
 
-    final static void a(java.awt.Component param0, int param1) {
+    final static void attachKeyboardListeners(java.awt.Component param0, int param1) {
         try {
           param0.setFocusTraversalKeysEnabled(false);
           if (param1 != 11631) {

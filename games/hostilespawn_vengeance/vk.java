@@ -22,12 +22,12 @@ final class vk extends uh {
           }
           var1 = s.field_b;
           while (ac.a(24501)) {
-            var1.i(19319, 8);
+            var1.writeCipheredByte(19319, 8);
             fieldTemp$0 = var1.field_i + 1;
             var1.field_i = var1.field_i + 1;
             var2 = fieldTemp$0;
             ln.a(var1, (byte) -111);
-            s.field_b.a(-var2 + var1.field_i, -19720);
+            s.field_b.patchByteLength(-var2 + var1.field_i, -19720);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

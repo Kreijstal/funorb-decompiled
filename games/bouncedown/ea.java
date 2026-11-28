@@ -107,7 +107,7 @@ final class ea {
 
     final static void a(int param0, int param1) {
         CipherPacketBuffer var2 = hh.field_p;
-        var2.a(true, param1);
+        var2.writeCipheredByte(true, param1);
         var2.writeByte(1, (byte) 65);
         var2.writeByte(param0, (byte) 71);
     }
@@ -180,8 +180,8 @@ final class ea {
     }
 
     final static void d(int param0) {
-        tb.field_p.field_l = 0;
-        tb.field_p.field_d = param0;
+        SocketArchiveNetworkClient.field_p.field_l = 0;
+        SocketArchiveNetworkClient.field_p.field_d = param0;
     }
 
     final static BinaryBitmapFont a(byte[] param0, byte param1) {

@@ -26,10 +26,10 @@ class ProgressMessageDialog extends ContentTransitionDialog implements WidgetAct
             return;
           }
           if (!MouseInput.a(112)) {
-            rh.a(param0, rj.field_h, SoundCache.field_d, il.field_i, oe.field_a, -1893600464, 4, param2);
+            rh.a(param0, rj.field_h, SoundCache.field_d, il.field_i, SocketConnector.field_a, -1893600464, 4, param2);
             return;
           }
-          SecondaryNodeDeque.field_e.addLast(86, new hb(param2, param0, SoundCache.field_d, oe.field_a, il.field_i, rj.field_h));
+          SecondaryNodeDeque.field_e.addLast(86, new hb(param2, param0, SoundCache.field_d, SocketConnector.field_a, il.field_i, rj.field_h));
           return;
         }
         ValidationStatusIcon.field_H = ValidationStatusIcon.field_H | var3;
@@ -38,10 +38,10 @@ class ProgressMessageDialog extends ContentTransitionDialog implements WidgetAct
           return;
         }
         if (!MouseInput.a(112)) {
-          rh.a(param0, rj.field_h, SoundCache.field_d, il.field_i, oe.field_a, -1893600464, 4, param2);
+          rh.a(param0, rj.field_h, SoundCache.field_d, il.field_i, SocketConnector.field_a, -1893600464, 4, param2);
           return;
         }
-        SecondaryNodeDeque.field_e.addLast(86, new hb(param2, param0, SoundCache.field_d, oe.field_a, il.field_i, rj.field_h));
+        SecondaryNodeDeque.field_e.addLast(86, new hb(param2, param0, SoundCache.field_d, SocketConnector.field_a, il.field_i, rj.field_h));
     }
 
     final void showConnectionFailure(int param0) {

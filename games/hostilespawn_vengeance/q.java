@@ -37,13 +37,13 @@ final class q {
               }
               var1 = (qb) (AlphaWidgetContainer.field_H.nextForward(12684));
             }
-            if (ej.field_g != null) {
-              var1Lifetime1 = (qb) (ej.field_g.beginForward(-27));
+            if (ArchiveNetworkClient.field_g != null) {
+              var1Lifetime1 = (qb) (ArchiveNetworkClient.field_g.beginForward(-27));
               while (var1Lifetime1 != null) {
                 if (!var1Lifetime1.field_j.isLinked(param0 - 11470)) {
                   var1Lifetime1.unlink(-17);
                 }
-                var1Lifetime1 = (qb) (ej.field_g.nextForward(12684));
+                var1Lifetime1 = (qb) (ArchiveNetworkClient.field_g.nextForward(12684));
               }
             }
           }

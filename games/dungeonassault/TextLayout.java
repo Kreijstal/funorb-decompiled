@@ -302,7 +302,7 @@ abstract class TextLayout {
             return stackIn_3_0;
           }
           var1_int = 0;
-          while (ha.b((byte) 47)) {
+          while (ProxySocketConnector.b((byte) 47)) {
             RaiderDefinition.field_h.d(param0 - 4570);
             if (!RaiderDefinition.field_h.c(param0 - 4670)) {
               continue;

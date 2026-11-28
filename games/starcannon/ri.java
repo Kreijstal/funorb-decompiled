@@ -47,7 +47,7 @@ final class ri {
               stackIn_11_0 = (ResourceArchive) null;
               return stackIn_11_0;
             }
-            var8 = bl.field_b.a(param4, -72, (SectorCacheStore) (var7), param3, (SectorCacheStore) (var6));
+            var8 = bl.field_b.getOrCreateArchiveSource(param4, -72, (SectorCacheStore) (var7), param3, (SectorCacheStore) (var6));
             if (param1) {
               var8.a(-126);
             }

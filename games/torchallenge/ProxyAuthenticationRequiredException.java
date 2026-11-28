@@ -10,7 +10,7 @@ final class ProxyAuthenticationRequiredException extends IOException {
     static int[] field_a;
 
     final static void a(int param0) {
-        fl.a(-128, true, GameKeyHandler.field_d, PacketBuffer.field_j);
+        SocketArchiveNetworkClient.a(-128, true, GameKeyHandler.field_d, PacketBuffer.field_j);
         int var1 = 25 / ((param0 + 28) / 48);
         ae.field_C = true;
     }

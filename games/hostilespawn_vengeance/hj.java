@@ -83,7 +83,7 @@ final class hj extends DualLinkNode {
             this.field_v = (String[]) null;
           }
           if (1 == param0) {
-            this.field_v = RichTextWidget.a(param2.o(32), -14, '<');
+            this.field_v = RichTextWidget.a(param2.readString(32), -14, '<');
           } else {
             if (param0 == 2) {
               var4_int = param2.readUnsignedByte(param1 ^ 13041);
@@ -165,7 +165,7 @@ final class hj extends DualLinkNode {
             stackIn_15_0 = var5;
             return stackIn_15_0;
           }
-          stackIn_7_0 = sg.field_d;
+          stackIn_7_0 = ArchiveSourceManager.field_d;
           return stackIn_7_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

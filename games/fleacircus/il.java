@@ -100,7 +100,7 @@ final class il {
         }
     }
 
-    final static void a(boolean param0, java.awt.Component param1) {
+    final static void attachMouseListeners(boolean param0, java.awt.Component param1) {
         if (param0) {
           return;
         }

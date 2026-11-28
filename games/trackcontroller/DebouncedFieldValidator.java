@@ -16,7 +16,7 @@ abstract class DebouncedFieldValidator implements FieldValidator {
         }
         BufferedSocket.field_d = true;
         if (param0 == 6) {
-          wg.a(param0 - 107, true);
+          ArchiveSourceManager.a(param0 - 107, true);
           LoginPanel.field_N = 0;
           return;
         }

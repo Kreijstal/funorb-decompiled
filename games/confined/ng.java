@@ -18,9 +18,9 @@ final class ng {
             ResourceArchive var10 = (ResourceArchive) null;
             ng.a((ResourceArchive) null, 105, (ResourceArchive) null);
           }
-          om.field_s = (jf) ((Object) new kd());
+          om.field_s = (ArchiveNetworkClient) ((Object) new SocketArchiveNetworkClient());
           oc.field_l = new DiskCacheWorker(param6);
-          ProgressMessageDialog.field_vb = new ja(om.field_s, oc.field_l);
+          ProgressMessageDialog.field_vb = new ArchiveSourceManager(om.field_s, oc.field_l);
         } catch (RuntimeException runtimeException) {
           throw TextLineMetrics.a((Throwable) ((Object) runtimeException), "ng.B(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + (param6 != null ? "{...}" : "null") + ',' + (param7 != null ? "{...}" : "null") + ',' + param8 + ')');
         }

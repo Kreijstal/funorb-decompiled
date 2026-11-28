@@ -148,7 +148,7 @@ final class MixedSupport118 {
     final static void performAction1544(long longArgument1, int integerArgument2, String stringArgument3, int integerArgument4, boolean booleanArgument5, int integerArgument6) {
         int integerLocal1 = 0;
         try {
-          SocketFactory.cipherPacketBufferState0002.performAction1641(integerArgument2, -4);
+          SocketFactory.cipherPacketBufferState0002.writeCipheredByte(integerArgument2, -4);
           SocketFactory.cipherPacketBufferState0002.position = SocketFactory.cipherPacketBufferState0002.position + 1;
           if (integerArgument4 <= 34) {
             nodeDequeState0032 = (NodeDeque) null;
@@ -362,11 +362,11 @@ final class MixedSupport118 {
               if (Framebuffer.integerState0192 > 0) {
                 UiComponent.booleanState0017 = true;
               }
-              SocketFactory.cipherPacketBufferState0002.performAction1640(MixedSupport097.integerArrayState0179, (byte) 63);
+              SocketFactory.cipherPacketBufferState0002.setCipherSeed(MixedSupport097.integerArrayState0179, (byte) 63);
               for (integerLocal30 = 0; integerLocal30 < 4; integerLocal30++) {
                 MixedSupport097.integerArrayState0179[integerLocal30] = MixedSupport097.integerArrayState0179[integerLocal30] + 50;
               }
-              LabeledWidgetContainer.cipherPacketBufferState0001.performAction1640(MixedSupport097.integerArrayState0179, (byte) 123);
+              LabeledWidgetContainer.cipherPacketBufferState0001.setCipherSeed(MixedSupport097.integerArrayState0179, (byte) 123);
               stackIntegerLocal8 = HashNode.integerState0070;
               return stackIntegerLocal8;
             }

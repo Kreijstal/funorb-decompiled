@@ -61,7 +61,7 @@ final class SecondaryNodeDeque implements Iterable {
         return (DualLinkNode) null;
     }
 
-    final static void a(byte param0, java.awt.Component param1) {
+    final static void attachMouseListeners(byte param0, java.awt.Component param1) {
         try {
           param1.addMouseListener(DequeWidgetContainer.field_G);
           param1.addMouseMotionListener(DequeWidgetContainer.field_G);

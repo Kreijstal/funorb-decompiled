@@ -46,7 +46,7 @@ final class bf extends InteractiveWidget {
             var7 = (String) null;
             bf.a((String) null, (byte) -101, true, (String) null);
           }
-          stackIn_6_0 = dk.a((String) (var6), var4_long, param2, param3, 103);
+          stackIn_6_0 = ArchiveSourceManager.a((String) (var6), var4_long, param2, param3, 103);
           return stackIn_6_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

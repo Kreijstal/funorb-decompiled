@@ -157,7 +157,7 @@ final class RegistrationAgreementPane extends DequeWidgetContainer implements Te
         var19 = var17;
         if (2 == vk.field_g) {
           var33 = (CharSequence) ((Object) FullscreenNoticeType.field_c);
-          var21 = MatchingFieldValidator.a(vf.field_d, new String[]{rl.a(var33, (byte) -70)}, (byte) -80);
+          var21 = MatchingFieldValidator.a(vf.field_d, new String[]{MouseInputHandler.a(var33, (byte) -70)}, (byte) -80);
           var9 = MatchingFieldValidator.a(sa.field_d, new String[]{var17}, (byte) -74);
           var10 = sc.field_a.stringWidth(var21);
           var11 = sc.field_a.stringWidth(var9);

@@ -85,7 +85,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
         java.applet.AppletContext stackIn_14_0 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (null != q.field_g) {
+          if (null != ProxySocketConnector.field_g) {
             stackIn_4_0 = null;
             return (java.applet.AppletContext) (stackIn_4_0);
           }
@@ -148,7 +148,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
             }
           }
           this.clearClientResources(0);
-          if (q.field_g != null) {
+          if (ProxySocketConnector.field_g != null) {
             try {
               System.exit(0);
             } catch (java.lang.Throwable decompiledCaughtParameter3) {
@@ -359,7 +359,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
         String stackIn_19_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (q.field_g != null) {
+          if (ProxySocketConnector.field_g != null) {
             stackIn_4_0 = null;
             return (String) (stackIn_4_0);
           }
@@ -450,8 +450,8 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
           }
           boolean decompiledFrameRemainder0 = true;
           if (MatchingFieldValidator.field_n == null) {
-            if (q.field_g != null) {
-              var2 = q.field_g;
+            if (ProxySocketConnector.field_g != null) {
+              var2 = ProxySocketConnector.field_g;
               decompiledFrameRemainder0 = (var4 != 0);
             }
             if (decompiledFrameRemainder0) {
@@ -479,13 +479,13 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
           ((java.awt.Container) (var2)).add((java.awt.Component) ((Object) tb.field_c));
           tb.field_c.setSize(gg.field_d, AccountNameAvailabilityValidator.field_j);
           tb.field_c.setVisible(true);
-          boolean decompiledSharedTail0 = (var2 == q.field_g);
+          boolean decompiledSharedTail0 = (var2 == ProxySocketConnector.field_g);
           if (!decompiledSharedTail0) {
             tb.field_c.setLocation(sk.field_d, rh.field_k);
             decompiledSharedTail0 = (var4 != 0);
           }
           if (decompiledSharedTail0) {
-            var3 = q.field_g.getInsets();
+            var3 = ProxySocketConnector.field_g.getInsets();
             tb.field_c.setLocation(var3.left + sk.field_d, var3.top + rh.field_k);
           }
           tb.field_c.addFocusListener((java.awt.event.FocusListener) (this));
@@ -536,9 +536,9 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
             ii.field_a = true;
             tb.field_c.setSize(gg.field_d, AccountNameAvailabilityValidator.field_j);
             tb.field_c.setVisible(true);
-            if (q.field_g != null &&
+            if (ProxySocketConnector.field_g != null &&
               MatchingFieldValidator.field_n == null) {
-              var6 = q.field_g.getInsets();
+              var6 = ProxySocketConnector.field_g.getInsets();
               tb.field_c.setLocation(var6.left + sk.field_d, rh.field_k + var6.top);
               if (Main.field_T != 0) {
                 tb.field_c.setLocation(sk.field_d, rh.field_k);
@@ -585,7 +585,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
 
     public final java.net.URL getCodeBase() {
         RuntimeException var1;
-        if (q.field_g != null) {
+        if (ProxySocketConnector.field_g != null) {
           return null;
         }
         if (null != uh.field_i &&
@@ -767,7 +767,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
         java.net.URL stackIn_12_0 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (q.field_g != null) {
+          if (ProxySocketConnector.field_g != null) {
             stackIn_4_0 = null;
             return (java.net.URL) (stackIn_4_0);
           }

@@ -104,7 +104,7 @@ public final class Vertigo2 extends GameShell {
           if (cp.a(-109)) {
             this.updateLoginFlow(-105);
             if (cp.a(-1)) {
-              if (tk.c((byte) -94)) {
+              if (ArchiveNetworkClient.c((byte) -94)) {
                 discarded$0 = this.a(16777215, false);
               }
               return;
@@ -656,20 +656,20 @@ public final class Vertigo2 extends GameShell {
         int var4_intLifetime5;
         var9 = field_L ? 1 : 0;
         try {
-          tk.field_c = (BitmapFont) ((Object) w.a(DropTargetWidgetContainer.field_G, ml.field_y, "", "kartika13", 119));
+          ArchiveNetworkClient.field_c = (BitmapFont) ((Object) w.a(DropTargetWidgetContainer.field_G, ml.field_y, "", "kartika13", 119));
           vj.field_b = BitPacketBuffer.a("achievementsgame", MovingLevelTile.field_u, (byte) 34, "");
           var11 = new u[19];
           var2 = var11;
           var11[0] = vl.a(0, "", MovingLevelTile.field_u, "keys_esc");
           var11[1] = vl.a(0, "", MovingLevelTile.field_u, "keys_right");
-          var2[2] = vl.a(tk.bitwiseXor((int) param0, 31), "", MovingLevelTile.field_u, "keys_left");
+          var2[2] = vl.a(ArchiveNetworkClient.bitwiseXor((int) param0, 31), "", MovingLevelTile.field_u, "keys_left");
           var11[3] = vl.a(0, "", MovingLevelTile.field_u, "keys_down");
           var11[4] = vl.a(0, "", MovingLevelTile.field_u, "keys_up");
           var11[5] = vl.a(0, "", MovingLevelTile.field_u, "keys_space");
           var11[6] = vl.a(0, "", MovingLevelTile.field_u, "keys_ctrl");
           var11[7] = vl.a(0, "", MovingLevelTile.field_u, "keys_enter");
           var11[8] = vl.a(0, "", MovingLevelTile.field_u, "keys_shift");
-          var2[9] = vl.a(tk.bitwiseXor((int) param0, 31), "", MovingLevelTile.field_u, "keys_w");
+          var2[9] = vl.a(ArchiveNetworkClient.bitwiseXor((int) param0, 31), "", MovingLevelTile.field_u, "keys_w");
           var11[10] = vl.a(0, "", MovingLevelTile.field_u, "keys_a");
           var11[11] = vl.a(0, "", MovingLevelTile.field_u, "keys_s");
           var11[12] = vl.a(0, "", MovingLevelTile.field_u, "keys_d");
@@ -678,14 +678,14 @@ public final class Vertigo2 extends GameShell {
           var11[15] = vl.a(0, "", MovingLevelTile.field_u, "keys_e");
           var11[16] = vl.a(0, "", MovingLevelTile.field_u, "keys_lt");
           var2[17] = vl.a(param0 - 31, "", MovingLevelTile.field_u, "keys_gt");
-          var2[18] = vl.a(tk.bitwiseXor((int) param0, 31), "", MovingLevelTile.field_u, "keys_f12");
-          tk.field_c.setInlineSprites(var2, (int[]) null);
+          var2[18] = vl.a(ArchiveNetworkClient.bitwiseXor((int) param0, 31), "", MovingLevelTile.field_u, "keys_f12");
+          ArchiveNetworkClient.field_c.setInlineSprites(var2, (int[]) null);
           fa.field_s = lm.a("", param0 + 23078, "button_purple_frame", MovingLevelTile.field_u);
           uk.field_r = lm.a("", 23109, "button_blue_frame", MovingLevelTile.field_u);
           mn.field_o = new Sprite[3];
           mn.field_o[0] = tn.a("button_start_blue", MovingLevelTile.field_u, -117, "");
           mn.field_o[1] = tn.a("button_middle_blue", MovingLevelTile.field_u, -108, "");
-          mn.field_o[2] = tn.a("button_end_blue", MovingLevelTile.field_u, tk.bitwiseXor((int) param0, -102), "");
+          mn.field_o[2] = tn.a("button_end_blue", MovingLevelTile.field_u, ArchiveNetworkClient.bitwiseXor((int) param0, -102), "");
           if (param0 != 31) {
             field_I = (String[]) null;
           }
@@ -695,8 +695,8 @@ public final class Vertigo2 extends GameShell {
           sq.field_a[2] = tn.a("button_end_grey", MovingLevelTile.field_u, -128, "");
           ln.field_b = new Sprite[3];
           ln.field_b[0] = tn.a("button_start_purple", MovingLevelTile.field_u, -126, "");
-          ln.field_b[1] = tn.a("button_middle_purple", MovingLevelTile.field_u, tk.bitwiseXor((int) param0, -83), "");
-          ln.field_b[2] = tn.a("button_end_purple", MovingLevelTile.field_u, tk.bitwiseXor((int) param0, -84), "");
+          ln.field_b[1] = tn.a("button_middle_purple", MovingLevelTile.field_u, ArchiveNetworkClient.bitwiseXor((int) param0, -83), "");
+          ln.field_b[2] = tn.a("button_end_purple", MovingLevelTile.field_u, ArchiveNetworkClient.bitwiseXor((int) param0, -84), "");
           IntrusiveDequeCursor.field_b = tn.a("unachieved", ml.field_y, -94, "basic");
           IsaacCipher.field_f = tn.a("orbcoin", ml.field_y, -83, "basic");
           uh.a(false, IntrusiveDequeCursor.field_b);
@@ -714,7 +714,7 @@ public final class Vertigo2 extends GameShell {
           qp.field_h = (ArgbSprite) (MusicPatchPcmStream.a(MovingLevelTile.field_u, "interface_box_mid", "", (byte) 98));
           ValidationStatusWidget.field_W = (ArgbSprite) (MusicPatchPcmStream.a(MovingLevelTile.field_u, "interface_box_end", "", (byte) 98));
           ln.field_f = (ArgbSprite) (MusicPatchPcmStream.a(MovingLevelTile.field_u, "interface_box_rend", "", (byte) 98));
-          var3 = tk.field_c.field_z + tk.field_c.field_M;
+          var3 = ArchiveNetworkClient.field_c.field_z + ArchiveNetworkClient.field_c.field_M;
           GzipDecompressor.field_c = new Sprite(var3, var3);
           GzipDecompressor.field_c.bindAsRenderTarget();
           IsaacCipher.field_f.drawDownscaledAreaAveraged(0, 0, var3, var3);
@@ -765,15 +765,15 @@ public final class Vertigo2 extends GameShell {
           jl.field_g = (Sprite) ((Object) NameSuggestionsPanel.field_L);
           FullscreenNoticeType.a((byte) -111, 200);
           DirectByteStorage.field_g = true;
-          FullscreenStatusDialog.field_W = eg.field_s;
+          FullscreenStatusDialog.field_W = SocketArchiveNetworkClient.field_s;
           dl.field_b = vg.field_c;
           be.a(-103, uk.field_r, 320, 20, 16766751, 10, 5, 16777215, (Sprite[]) null, 8, fa.field_s, 8, DefaultTextWidgetRenderer.field_s.field_f, 280, 16777215);
-          var5 = tk.field_c.field_t + tk.field_c.field_M;
-          var6 = tk.field_c.field_t;
+          var5 = ArchiveNetworkClient.field_c.field_t + ArchiveNetworkClient.field_c.field_M;
+          var6 = ArchiveNetworkClient.field_c.field_t;
           var7 = DefaultTextWidgetRenderer.field_s.field_f.field_t + DefaultTextWidgetRenderer.field_s.field_f.field_M;
           var8 = DefaultTextWidgetRenderer.field_s.field_f.field_t;
           var10 = (Sprite[]) null;
-          ua.a(12, uk.field_r, 320, var7, 480, 240, 10, fa.field_s, 12, DefaultTextWidgetRenderer.field_s.field_f, 0, var5, 16777215, 16777215, 16777215, var6, (Sprite[]) null, 0, var8, (byte) 92, tk.field_c);
+          ua.a(12, uk.field_r, 320, var7, 480, 240, 10, fa.field_s, 12, DefaultTextWidgetRenderer.field_s.field_f, 0, var5, 16777215, 16777215, 16777215, var6, (Sprite[]) null, 0, var8, (byte) 92, ArchiveNetworkClient.field_c);
           di.b((byte) -90);
           MovingLevelTile.field_u = null;
           this.renderClientFrame(param0 - 48);
@@ -878,9 +878,9 @@ public final class Vertigo2 extends GameShell {
           bs.b((byte) 100);
           BitPacketBuffer.releaseDeclaredStaticReferences(116);
           jd.clearStaticReferences(-109);
-          tk.clearStaticReferences((byte) 95);
+          ArchiveNetworkClient.clearStaticReferences((byte) 95);
           DiskCacheWorker.a(false);
-          kr.c(5);
+          ArchiveSourceManager.c(5);
           BufferedRandomAccessFile.clearStaticReferences(33);
           ff.resetStaticState((byte) 120);
           GzipDecompressor.clearStaticReferences(-102);
@@ -954,7 +954,7 @@ public final class Vertigo2 extends GameShell {
           MovingLevelTile.clearStaticReferences(107);
           p.clearStaticReferences(0);
           tm.clearStaticReferences(127);
-          eg.clearStaticReferences(3);
+          SocketArchiveNetworkClient.clearStaticReferences(3);
           ak.clearStaticReferences(-56);
           NetworkArchiveRequest.resetStaticState(-20657);
           SectorCacheStore.clearStaticReferences(115);
@@ -1501,7 +1501,7 @@ public final class Vertigo2 extends GameShell {
               di.b((byte) 126);
               return false;
             }
-            kr.a(-3645);
+            ArchiveSourceManager.a(-3645);
             if (param0 != 16777215) {
               this.loadBackgroundImages((byte) 93);
             }
@@ -2053,8 +2053,8 @@ public final class Vertigo2 extends GameShell {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         try {
-          rm.a((byte) -89, (java.awt.Component) ((Object) param0));
-          AccountRequestState.a((java.awt.Component) ((Object) param0), param1 + 140);
+          rm.detachKeyboardListeners((byte) -89, (java.awt.Component) ((Object) param0));
+          AccountRequestState.detachMouseListeners((java.awt.Component) ((Object) param0), param1 + 140);
           if (param1 != -35) {
             var3 = (java.awt.Canvas) null;
             Vertigo2.a((java.awt.Canvas) null, (byte) 15);

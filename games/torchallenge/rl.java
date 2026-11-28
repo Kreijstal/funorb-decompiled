@@ -297,7 +297,7 @@ final class rl {
         }
         this.field_d = 0;
         this.field_a = 0;
-        if (vb.field_n == 0) {
+        if (ArchiveNetworkClient.field_n == 0) {
           if (this.field_i != 0 &&
             0 != wh.field_e) {
             if (0 >= this.field_g) {
@@ -305,7 +305,7 @@ final class rl {
             }
             this.field_g = this.field_g - 1;
           }
-          if (0 == vb.field_n &&
+          if (0 == ArchiveNetworkClient.field_n &&
             wh.field_e == 0) {
             this.field_i = 0;
             if (param0 <= 1) {
@@ -375,13 +375,13 @@ final class rl {
           }
           return;
         }
-        this.field_d = vb.field_n;
-        this.field_i = vb.field_n;
+        this.field_d = ArchiveNetworkClient.field_n;
+        this.field_i = ArchiveNetworkClient.field_n;
         this.field_e = true;
         this.field_j = param2;
         this.field_g = pl.field_a;
         if (this.field_i == 0) {
-          if (0 == vb.field_n &&
+          if (0 == ArchiveNetworkClient.field_n &&
             wh.field_e == 0) {
             this.field_i = 0;
             if (param0 <= 1) {
@@ -438,7 +438,7 @@ final class rl {
             }
             this.field_g = this.field_g - 1;
           }
-          if (0 == vb.field_n &&
+          if (0 == ArchiveNetworkClient.field_n &&
             wh.field_e == 0) {
             this.field_i = 0;
             if (param0 <= 1) {

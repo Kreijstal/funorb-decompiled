@@ -587,8 +587,8 @@ public final class CrazyCrystals extends NetworkGameClient {
           nj.clearStaticReferences(12);
           ResultScene.clearPlatformServicesReference((byte) -77);
           MenuOverlay.clearStaticReferences(0);
-          ob.resetStaticState(12554);
-          pk.clearStaticReferences(120);
+          ArchiveNetworkClient.resetStaticState(12554);
+          ArchiveSourceManager.clearStaticReferences(120);
           BufferedRandomAccessFile.a(param0 - 6231);
           BufferedSocket.clearStaticReferences((byte) 45);
           SoundCache.clearStaticReferences((byte) -3);
@@ -734,7 +734,7 @@ public final class CrazyCrystals extends NetworkGameClient {
           ra.clearStaticReferences(true);
           jj.clearStaticReferences((byte) 65);
           wp.clearStaticReferences((byte) -98);
-          tl.b(2);
+          SocketConnector.b(2);
           ProxyAuthenticationRequiredException.clearStaticReferences(true);
           NanoFrameTimer.b((byte) 118);
           ImageProducerRasterBuffer.clearStaticReferences((byte) -125);
@@ -781,7 +781,7 @@ public final class CrazyCrystals extends NetworkGameClient {
           SecondaryNodeDeque.clearStaticReferences((byte) -48);
           ib.releaseDeclaredStaticReferences(31438);
           qd.resetStaticState(400);
-          wf.clearStaticReferences(0);
+          ProxySocketConnector.clearStaticReferences(0);
           la.a(16777215);
           NodeHashTableIterator.clearStaticReferences(param0 - 179);
           SecondaryNodeDequeIterator.a(false);
@@ -1040,7 +1040,7 @@ public final class CrazyCrystals extends NetworkGameClient {
         RuntimeException var2 = null;
         try {
           if (ak.field_f != null) {
-            tl.a(121, ak.field_f);
+            SocketConnector.a(121, ak.field_f);
             ak.field_f = null;
             vp.a(103);
           }
@@ -1401,7 +1401,7 @@ public final class CrazyCrystals extends NetworkGameClient {
             mk.field_a = var3_array[2];
             ScoreModifier.field_d = var3_array[7];
             vp.field_d = var3_array[0];
-            tl.field_b = var3_array[3];
+            SocketConnector.field_b = var3_array[3];
             RichTextWidget.field_C = var3_array[4];
             ba.field_j = var3_array[6];
             ag.field_c = new RgbSprite[12];

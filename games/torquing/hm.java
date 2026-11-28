@@ -343,7 +343,7 @@ final class hm extends am {
               stackIn_35_0 = -1;
               return stackIn_35_0;
             }
-            nn.field_c.a(up.field_a, am.field_n, (byte) 124);
+            nn.field_c.attachSocket(up.field_a, am.field_n, (byte) 124);
             pd.field_c = 0;
             up.field_a = null;
             rd.field_x = null;

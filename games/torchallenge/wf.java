@@ -9,7 +9,7 @@ final class wf {
     static int[] field_d;
     static int[][] field_h;
     static String field_f;
-    static oa field_i;
+    static ArchiveSourceManager field_i;
     static int[][] field_c;
 
     public static void clearStaticReferences(byte param0) {
@@ -210,7 +210,7 @@ final class wf {
           }
           return (byte) var2Lifetime4;
         }
-        field_i = (oa) null;
+        field_i = (ArchiveSourceManager) null;
         if (param1 > 0) {
           if (param1 < 128) {
             var2Lifetime1 = (byte)param1;

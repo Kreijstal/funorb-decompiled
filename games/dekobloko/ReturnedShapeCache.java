@@ -79,11 +79,11 @@ final class ReturnedShapeCache {
           returnedShapeLocal10.width = cipherPacketBufferArgument3.readUnsignedByte((byte) -102);
           returnedShapeLocal10.height = cipherPacketBufferArgument3.readUnsignedByte((byte) -79);
           returnedShapeLocal10.packedCells = new byte[returnedShapeLocal10.width * returnedShapeLocal10.height];
-          cipherPacketBufferArgument3.performAction1645((byte) -108);
+          cipherPacketBufferArgument3.beginBitAccess((byte) -108);
           for (integerLocal1 = 0; returnedShapeLocal10.packedCells.length > integerLocal1; integerLocal1++) {
-            returnedShapeLocal10.packedCells[integerLocal1] = (byte)cipherPacketBufferArgument3.computeInteger1637(5, (byte) 75);
+            returnedShapeLocal10.packedCells[integerLocal1] = (byte)cipherPacketBufferArgument3.readBits(5, (byte) 75);
           }
-          cipherPacketBufferArgument3.performAction1647((byte) -128);
+          cipherPacketBufferArgument3.endBitAccess((byte) -128);
           if (booleanArgument2) {
             this.returnedShapeArrayState0002[integerLocal8 % this.returnedShapeArrayState0002.length] = returnedShapeLocal10;
           }
@@ -183,7 +183,7 @@ final class ReturnedShapeCache {
         CipherPacketBuffer cipherPacketBufferLocal1 = null;
         try {
           cipherPacketBufferLocal1 = SocketFactory.cipherPacketBufferState0002;
-          cipherPacketBufferLocal1.performAction1641(integerArgument2, -4);
+          cipherPacketBufferLocal1.writeCipheredByte(integerArgument2, -4);
           cipherPacketBufferLocal1.writeByte(true, 2);
           cipherPacketBufferLocal1.writeByte(true, 0);
           if (integerArgument1 > -57) {

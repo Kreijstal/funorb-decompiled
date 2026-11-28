@@ -53,7 +53,7 @@ final class KeyboardInput implements java.awt.event.KeyListener, java.awt.event.
               var2_int != 65535 &&
               oh.isSupportedCp1252KeyCharacter(-161, (char) var2_int)) {
               var3 = 127 & ka.field_c + 1;
-              if (var3 != je.field_i) {
+              if (var3 != ArchiveSourceManager.field_i) {
                 StandardContentDialog.field_Db[ka.field_c] = -1;
                 ClientException.field_a[ka.field_c] = (char)var2_int;
                 ka.field_c = var3;
@@ -319,7 +319,7 @@ final class KeyboardInput implements java.awt.event.KeyListener, java.awt.event.
             }
             if (var2_int >= 0) {
               var3 = 127 & 1 + ka.field_c;
-              if (var3 != je.field_i) {
+              if (var3 != ArchiveSourceManager.field_i) {
                 StandardContentDialog.field_Db[ka.field_c] = var2_int;
                 ClientException.field_a[ka.field_c] = (char)0;
                 ka.field_c = var3;

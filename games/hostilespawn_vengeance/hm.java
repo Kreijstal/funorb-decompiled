@@ -204,15 +204,15 @@ final class hm extends IntrusiveNode {
 
     final static void a(int param0, int param1, PacketBuffer param2, int param3, int param4) {
         try {
-          param2.d(param4 - 4023, 12);
-          param2.a((byte) -113, 17);
-          param2.a((byte) -110, param0);
+          param2.writeByte(param4 - 4023, 12);
+          param2.writeShort((byte) -113, 17);
+          param2.writeShort((byte) -110, param0);
           if (param4 != 4122) {
             RgbSprite[] var6 = (RgbSprite[]) null;
             hm.a(84, (RgbSprite[]) null, false, 109, 3, -79);
           }
-          param2.a((byte) -128, param1);
-          param2.d(122, param3);
+          param2.writeShort((byte) -128, param1);
+          param2.writeByte(122, param3);
         } catch (RuntimeException runtimeException) {
           throw AccountCreationResultPanel.wrapClientException((Throwable) ((Object) runtimeException), "hm.B(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ')');
         }

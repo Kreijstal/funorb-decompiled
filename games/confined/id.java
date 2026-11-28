@@ -151,14 +151,14 @@ abstract class id extends MovingTunnelEntity {
           for (var9 = 0; var9 < 4; var9++) {
             var8[var9] = on.field_d.nextInt();
           }
-          if (null == jf.field_b ||
-            !(var7_int <= jf.field_b.payload.length)) {
-            jf.field_b = new PacketBuffer(var7_int);
+          if (null == ArchiveNetworkClient.field_b ||
+            !(var7_int <= ArchiveNetworkClient.field_b.payload.length)) {
+            ArchiveNetworkClient.field_b = new PacketBuffer(var7_int);
           }
-          jf.field_b.position = 0;
-          jf.field_b.writeBytes(param6, param3, param4, 109);
-          jf.field_b.padZerosTo(var7_int, (byte) 25);
-          jf.field_b.encryptXtea(65280, var13);
+          ArchiveNetworkClient.field_b.position = 0;
+          ArchiveNetworkClient.field_b.writeBytes(param6, param3, param4, 109);
+          ArchiveNetworkClient.field_b.padZerosTo(var7_int, (byte) 25);
+          ArchiveNetworkClient.field_b.encryptXtea(65280, var13);
           if (null == DiskCacheWorker.field_j ||
             !(100 <= DiskCacheWorker.field_j.payload.length)) {
             DiskCacheWorker.field_j = new PacketBuffer(100);
@@ -177,7 +177,7 @@ abstract class id extends MovingTunnelEntity {
             field_rb = 41;
           }
           param0.writeBytes(DiskCacheWorker.field_j.position, 0, DiskCacheWorker.field_j.payload, 93);
-          param0.writeBytes(jf.field_b.position, 0, jf.field_b.payload, 127);
+          param0.writeBytes(ArchiveNetworkClient.field_b.position, 0, ArchiveNetworkClient.field_b.payload, 127);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

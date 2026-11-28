@@ -47,7 +47,7 @@ final class lc extends IntrusiveNode {
         CipherPacketBuffer var3 = null;
         try {
           var3 = sn.field_c;
-          var3.d((byte) -111, param1);
+          var3.writeCipheredByte((byte) -111, param1);
           var3.writeByte(5, param0 + 25438);
           var3.writeByte(0, 25564);
           var3.writeShort(param0, param2.field_q);

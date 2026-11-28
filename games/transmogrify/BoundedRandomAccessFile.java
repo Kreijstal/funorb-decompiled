@@ -140,7 +140,7 @@ final class BoundedRandomAccessFile {
         var1 = db.field_d;
         if (var1 > 0) {
           if (var1 != 1) {
-            tg.field_c = ij.a(uh.field_d, new String[]{Integer.toString(var1)}, (byte) -78);
+            tg.field_c = ij.a(ArchiveNetworkClient.field_d, new String[]{Integer.toString(var1)}, (byte) -78);
           } else {
             tg.field_c = hg.field_d;
           }

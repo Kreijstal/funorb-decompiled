@@ -211,7 +211,7 @@ final class ml {
                                                       if (!(!this.field_o.a((byte) -45))) {
                                                         MusicPatchEnvelope.a((byte) 73);
                                                         try {
-                                                          uf.a(13, RichTextLayout.c(param0 - 555));
+                                                          SocketArchiveNetworkClient.a(13, RichTextLayout.c(param0 - 555));
                                                         } catch (java.lang.Exception decompiledCaughtParameter0) {
                                                           decompiledCaughtException = decompiledCaughtParameter0;
                                                           var5_ref_Exception = (Exception) (Object) decompiledCaughtException;
@@ -839,9 +839,9 @@ final class ml {
                           if (!fa.field_e) {
                             ak.field_c.draw(-param2 + 640 - ak.field_c.field_x, -ak.field_c.field_A + 480);
                           } else {
-                            var5 = -gi.field_a.field_A + 480;
-                            var6 = -param2 + (-gi.field_a.field_x + 640);
-                            gi.field_a.draw(var6, 10 * (GuestPlayConfirmationForm.field_R / 20) + var5);
+                            var5 = -KeyboardInputHandler.field_a.field_A + 480;
+                            var6 = -param2 + (-KeyboardInputHandler.field_a.field_x + 640);
+                            KeyboardInputHandler.field_a.draw(var6, 10 * (GuestPlayConfirmationForm.field_R / 20) + var5);
                           }
                         }
                       }

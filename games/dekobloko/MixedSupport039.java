@@ -72,7 +72,7 @@ final class MixedSupport039 {
         try {
           cipherPacketBufferLocal1 = SocketFactory.cipherPacketBufferState0002;
           int integerLocal2 = -58 / ((byteArgument1 - 59) / 33);
-          cipherPacketBufferLocal1.performAction1641(integerArgument3, -4);
+          cipherPacketBufferLocal1.writeCipheredByte(integerArgument3, -4);
           cipherPacketBufferLocal1.writeByte(true, mixedSupport020Argument2.integerState0115);
           cipherPacketBufferLocal1.writeByte(true, mixedSupport020Argument2.integerState0116);
         } catch (RuntimeException runtimeException) {

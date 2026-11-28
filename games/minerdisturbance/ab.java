@@ -11,7 +11,7 @@ final class ab {
         int var6 = MinerDisturbance.field_ab;
         CipherPacketBuffer var7 = sn.field_c;
         CipherPacketBuffer var8 = var7;
-        var8.d((byte) -82, param1);
+        var8.writeCipheredByte((byte) -82, param1);
         var8.position = var8.position + 1;
         int var4 = var8.position;
         var8.writeByte(1, 25564);
@@ -195,11 +195,11 @@ final class ab {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         try {
-          kd.a((java.awt.Component) ((Object) param1), true);
+          kd.attachKeyboardListeners((java.awt.Component) ((Object) param1), true);
           if (param0 != -13) {
             return;
           }
-          dl.a((java.awt.Component) ((Object) param1), (byte) 73);
+          dl.attachMouseListeners((java.awt.Component) ((Object) param1), (byte) 73);
           if (null != pf.field_e) {
             pf.field_e.attach((java.awt.Component) ((Object) param1), 0);
           }

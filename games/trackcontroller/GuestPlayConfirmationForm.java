@@ -1187,7 +1187,7 @@ final class GuestPlayConfirmationForm extends DequeWidgetContainer implements Bu
                 }
                 var2 = TextLineMetrics.a(0, "playfreeversion");
                 if (var2 != null) {
-                  wg.field_h = ta.a(32200, var2);
+                  ArchiveSourceManager.field_h = ta.a(32200, var2);
                 }
                 var2 = TextLineMetrics.a(0, "reloadgame");
                 if (null != var2) {

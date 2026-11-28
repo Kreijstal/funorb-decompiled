@@ -153,7 +153,7 @@ final class oc extends kl {
         oe.field_m.j(-63 + this.field_a, 21);
         ad.field_e.i(23, this.field_i - 38);
         ad.field_e.f(-39 + this.field_a, -38 + this.field_i);
-        SingleChildWidgetContainer.a(bb.field_q, RegistrationAgreementPane.field_M, this.field_a >> 1, param0 + 1917623580, 14 + (IntrusiveNode.field_c.field_H + 36 >> 1), IntrusiveNode.field_c);
+        SingleChildWidgetContainer.a(ArchiveNetworkClient.field_q, RegistrationAgreementPane.field_M, this.field_a >> 1, param0 + 1917623580, 14 + (IntrusiveNode.field_c.field_H + 36 >> 1), IntrusiveNode.field_c);
         jh.b();
     }
 

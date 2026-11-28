@@ -22,7 +22,7 @@ final class MidiPcmStream extends PcmStream {
     private int[] field_R;
     private int[] field_y;
     private int[] field_B;
-    static gi field_O;
+    static KeyboardInputHandler field_O;
     static int field_Z;
     int[] field_Y;
     private int[] field_T;
@@ -1002,10 +1002,10 @@ final class MidiPcmStream extends PcmStream {
               var3 = var3 + param2;
             }
             ImageProducerRasterBuffer.a(var3, param1);
-            var3 = CipherPacketBuffer.a("%3a", -1, var3, ":");
-            var3 = CipherPacketBuffer.a("%40", -1, var3, "@");
-            var3 = CipherPacketBuffer.a("%26", -1, var3, "&");
-            var7 = CipherPacketBuffer.a("%23", param1 ^ -2, var3, "#");
+            var3 = CipherPacketBuffer.replaceAllLiteral("%3a", -1, var3, ":");
+            var3 = CipherPacketBuffer.replaceAllLiteral("%40", -1, var3, "@");
+            var3 = CipherPacketBuffer.replaceAllLiteral("%26", -1, var3, "&");
+            var7 = CipherPacketBuffer.replaceAllLiteral("%23", param1 ^ -2, var3, "#");
             if (null == aj.field_d) {
               return;
             }
@@ -1466,6 +1466,6 @@ final class MidiPcmStream extends PcmStream {
         field_V = new int[128];
         field_Z = 0;
         field_E = "Passwords must be between 5 and 20 letters and numbers";
-        field_O = new gi();
+        field_O = new KeyboardInputHandler();
     }
 }

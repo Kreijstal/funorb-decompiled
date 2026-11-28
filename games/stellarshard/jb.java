@@ -101,10 +101,10 @@ final class jb {
           }
           if (this.field_m <= TextFieldValidator.field_j) {
             if (this.field_m > 0) {
-              fb.field_f = 0;
+              ArchiveNetworkClient.field_f = 0;
             }
           } else {
-            fb.field_f = (this.field_m - TextFieldValidator.field_j) / 2;
+            ArchiveNetworkClient.field_f = (this.field_m - TextFieldValidator.field_j) / 2;
           }
         } else {
           if (mk.field_k <= 0) {
@@ -125,10 +125,10 @@ final class jb {
             return;
           }
           if (this.field_m > TextFieldValidator.field_j) {
-            fb.field_f = (this.field_m - TextFieldValidator.field_j) / 2;
+            ArchiveNetworkClient.field_f = (this.field_m - TextFieldValidator.field_j) / 2;
           } else {
             if (this.field_m > 0) {
-              fb.field_f = 0;
+              ArchiveNetworkClient.field_f = 0;
             }
           }
         }
@@ -174,7 +174,7 @@ final class jb {
             this.field_e = -87;
           }
           if (this.field_m > 0) {
-            fb.field_f = (-TextFieldValidator.field_j + this.field_m) / 2;
+            ArchiveNetworkClient.field_f = (-TextFieldValidator.field_j + this.field_m) / 2;
           }
           return;
         }
@@ -197,7 +197,7 @@ final class jb {
           this.field_e = -87;
         }
         if (this.field_m > 0) {
-          fb.field_f = (-TextFieldValidator.field_j + this.field_m) / 2;
+          ArchiveNetworkClient.field_f = (-TextFieldValidator.field_j + this.field_m) / 2;
         }
         return;
     }

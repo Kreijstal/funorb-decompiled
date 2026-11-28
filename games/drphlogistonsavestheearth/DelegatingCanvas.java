@@ -12,8 +12,8 @@ final class DelegatingCanvas extends java.awt.Canvas {
         if (DualLinkNode.field_r == null) {
           return -1;
         }
-        if (param2 >= ka.field_o &&
-          param2 < ka.field_o + DualLinkNode.field_r.field_y &&
+        if (param2 >= ProxySocketConnector.field_o &&
+          param2 < ProxySocketConnector.field_o + DualLinkNode.field_r.field_y &&
           tb.field_c <= param0 &&
           DualLinkNode.field_r.field_w + tb.field_c > param0) {
           return 0;

@@ -406,7 +406,7 @@ final class ak {
             var7_ref_re.unlink(4);
             return;
           }
-          hc.a((Throwable) null, "HS1: " + oe.a(-109), (byte) 70);
+          hc.a((Throwable) null, "HS1: " + SocketConnector.a(-109), (byte) 70);
           ec.a((byte) 27);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

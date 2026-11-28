@@ -55,12 +55,12 @@ final class MixedSupport056 {
         RuntimeException caughtExceptionLocal5 = null;
         RuntimeException runtimeExceptionLocal6 = null;
         try {
-          ProxyAuthenticationRequiredException.performAction0333((java.awt.Component) ((Object) canvasArgument1), false);
+          ProxyAuthenticationRequiredException.attachKeyboardListeners((java.awt.Component) ((Object) canvasArgument1), false);
           if (byteArgument2 >= -29) {
             canvasLocal1 = (java.awt.Canvas) null;
             MixedSupport056.performAction0668((java.awt.Canvas) null, (byte) -79);
           }
-          InputAdapter001.performAction0069(-2204, (java.awt.Component) ((Object) canvasArgument1));
+          InputAdapter001.attachMouseListeners(-2204, (java.awt.Component) ((Object) canvasArgument1));
           if (MixedSupport127.mouseWheelInputState0001 != null) {
             MixedSupport127.mouseWheelInputState0001.attachToComponent((java.awt.Component) ((Object) canvasArgument1), -63);
           }

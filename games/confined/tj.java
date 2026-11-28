@@ -19,7 +19,7 @@ final class tj extends tk {
     private int field_D;
     static int[] field_A;
     private we field_h;
-    private jf field_q;
+    private ArchiveNetworkClient field_q;
     private boolean field_m;
     private PrimaryNodeDeque field_r;
     private int field_j;
@@ -96,10 +96,10 @@ final class tj extends tk {
               if (-1 != this.field_p[param2]) {
                 throw new RuntimeException();
               }
-              if (this.field_q.b(-125)) {
+              if (this.field_q.isPrefetchQueueFull(-125)) {
                 return null;
               }
-              var4 = this.field_q.a(this.field_u, false, -1911606496, param2, (byte) 2);
+              var4 = this.field_q.enqueueRequest(this.field_u, false, -1911606496, param2, (byte) 2);
             } else {
               if (null == this.field_s) {
                 throw new RuntimeException();
@@ -111,10 +111,10 @@ final class tj extends tk {
               -1 != this.field_p[param2]) {
               var4 = this.field_o.readNow(param2, this.field_s, (byte) 53);
             } else {
-              if (this.field_q.c(93)) {
+              if (this.field_q.isPriorityQueueFull(93)) {
                 return null;
               }
-              var4 = this.field_q.a(this.field_u, true, -1911606496, param2, (byte) 2);
+              var4 = this.field_q.enqueueRequest(this.field_u, true, -1911606496, param2, (byte) 2);
             }
           }
           this.field_i.a((IntrusiveNode) (var4), param0 ^ 13871, (long)param2);
@@ -173,10 +173,10 @@ final class tj extends tk {
             this.field_p[param2] = (byte)-1;
             ((ArchiveRequest) (var4)).unlink(true);
             if (((ArchiveRequest) (var4)).field_t) {
-              if (this.field_q.c(92)) {
+              if (this.field_q.isPriorityQueueFull(92)) {
                 return null;
               }
-              var4 = this.field_q.a(this.field_u, true, -1911606496, param2, (byte) 2);
+              var4 = this.field_q.enqueueRequest(this.field_u, true, -1911606496, param2, (byte) 2);
               this.field_i.a((IntrusiveNode) (var4), 11, (long)param2);
             }
             return null;
@@ -209,13 +209,13 @@ final class tj extends tk {
         } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
           decompiledCaughtException = decompiledCaughtParameter1;
           var6_ref = (RuntimeException) (Object) decompiledCaughtException;
-          this.field_q.a(true);
+          this.field_q.resetAfterValidationFailure(true);
           ((ArchiveRequest) (var4)).unlink(true);
           if (!((ArchiveRequest) (var4)).field_t) {
             return null;
           }
-          if (!this.field_q.c(param0 - 13755)) {
-            var4 = this.field_q.a(this.field_u, true, -1911606496, param2, (byte) 2);
+          if (!this.field_q.isPriorityQueueFull(param0 - 13755)) {
+            var4 = this.field_q.enqueueRequest(this.field_u, true, -1911606496, param2, (byte) 2);
             this.field_i.a((IntrusiveNode) (var4), 11, (long)param2);
           }
           return null;
@@ -451,7 +451,7 @@ final class tj extends tk {
               scanLoop2: while (true) {
                 if (this.field_j < this.field_h.field_t.length) {
                   if (this.field_h.field_t[this.field_j] != 0) {
-                    if (this.field_q.b(-124)) {
+                    if (this.field_q.isPrefetchQueueFull(-124)) {
                       var2Lifetime2 = 0;
                       break scanLoop2;
                     }
@@ -544,10 +544,10 @@ final class tj extends tk {
           return this.field_h;
         }
         if (null == this.field_y) {
-          if (this.field_q.c(91)) {
+          if (this.field_q.isPriorityQueueFull(91)) {
             return null;
           }
-          this.field_y = (ArchiveRequest) ((Object) this.field_q.a(255, true, -1911606496, this.field_u, (byte) 0));
+          this.field_y = (ArchiveRequest) ((Object) this.field_q.enqueueRequest(255, true, -1911606496, this.field_u, (byte) 0));
         }
         if (param0 >= -26) {
           return (we) null;
@@ -568,12 +568,12 @@ final class tj extends tk {
           } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
             var3 = decompiledCaughtException;
-            this.field_q.a(true);
+            this.field_q.resetAfterValidationFailure(true);
             this.field_h = null;
-            if (this.field_q.c(-45)) {
+            if (this.field_q.isPriorityQueueFull(-45)) {
               this.field_y = null;
             } else {
-              this.field_y = (ArchiveRequest) ((Object) this.field_q.a(255, true, -1911606496, this.field_u, (byte) 0));
+              this.field_y = (ArchiveRequest) ((Object) this.field_q.enqueueRequest(255, true, -1911606496, this.field_u, (byte) 0));
             }
             return null;
           }
@@ -593,8 +593,8 @@ final class tj extends tk {
             decompiledCaughtException = decompiledCaughtParameter1;
             var3 = decompiledCaughtException;
             this.field_h = null;
-            if (!this.field_q.c(-69)) {
-              this.field_y = (ArchiveRequest) ((Object) this.field_q.a(255, true, -1911606496, this.field_u, (byte) 0));
+            if (!this.field_q.isPriorityQueueFull(-69)) {
+              this.field_y = (ArchiveRequest) ((Object) this.field_q.enqueueRequest(255, true, -1911606496, this.field_u, (byte) 0));
             } else {
               this.field_y = null;
             }
@@ -680,7 +680,7 @@ final class tj extends tk {
         return fd.field_j;
     }
 
-    tj(int param0, SectorCacheStore param1, SectorCacheStore param2, jf param3, DiskCacheWorker param4, int param5, byte[] param6, int param7, boolean param8) {
+    tj(int param0, SectorCacheStore param1, SectorCacheStore param2, ArchiveNetworkClient param3, DiskCacheWorker param4, int param5, byte[] param6, int param7, boolean param8) {
         boolean stackIn_7_1 = false;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;

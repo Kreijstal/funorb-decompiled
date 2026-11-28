@@ -17,7 +17,7 @@ final class e extends IntrusiveNode {
         if (param0 != 57) {
           e.b((byte) -85);
         }
-        return oa.a((byte) -126, param1, pl.field_d);
+        return ArchiveSourceManager.a((byte) -126, param1, pl.field_d);
     }
 
     final static Sprite a(int param0, int param1, byte param2) {

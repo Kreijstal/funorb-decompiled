@@ -114,7 +114,7 @@ final class SpriteAnimationPlayer {
         try {
           var6 = ac.field_B;
           CipherPacketBuffer var3 = var6;
-          var6.d((byte) -126, param1);
+          var6.writeCipheredByte((byte) -126, param1);
           var6.position = var6.position + 1;
           var4 = var6.position;
           var6.writeByte(6, 1);

@@ -53,7 +53,7 @@ final class IterableNodeHashTable implements Iterable {
           if (param0 != -72) {
             IterableNodeHashTable.a((byte) 25);
           }
-          da.field_b = gj.field_x[TextFieldValidator.field_h];
+          MouseInputHandler.field_b = gj.field_x[TextFieldValidator.field_h];
           IsaacRandom.field_b = Bzip2State.field_q[TextFieldValidator.field_h];
           TextFieldValidator.field_h = 127 & TextFieldValidator.field_h + 1;
           stackIn_7_0 = true;

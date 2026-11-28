@@ -68,7 +68,7 @@ final class jk {
             var3 = (ee) null;
             jk.a(91, -71, (ee) null, (String) null, (ee) null, true, -102);
           }
-          stackIn_3_0 = md.field_d.getFileByName(param1, 1, "");
+          stackIn_3_0 = ProxySocketConnector.field_d.getFileByName(param1, 1, "");
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

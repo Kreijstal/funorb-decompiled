@@ -70,7 +70,7 @@ final class GuestPlayConfirmationForm extends DequeWidgetContainer implements Wi
     public GuestPlayConfirmationForm() {
         super(0, 0, 476, 225, (WidgetRenderer) null);
         this.field_E = new InteractiveWidget(DebouncedFieldValidator.field_d, (WidgetEventListener) null);
-        this.field_G = new InteractiveWidget(ch.field_g, (WidgetEventListener) null);
+        this.field_G = new InteractiveWidget(ProxySocketConnector.field_g, (WidgetEventListener) null);
         this.field_C = new InteractiveWidget(a.field_f, (WidgetEventListener) null);
         v var1 = new v();
         this.field_E.field_i = (WidgetRenderer) ((Object) var1);

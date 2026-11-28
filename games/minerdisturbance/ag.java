@@ -72,7 +72,7 @@ final class ag {
             java.applet.Applet var5 = (java.applet.Applet) null;
             ag.a((java.applet.Applet) null, false);
           }
-          var6.d((byte) -46, param1);
+          var6.writeCipheredByte((byte) -46, param1);
           var6.position = var6.position + 1;
           var4 = var6.position;
           var6.writeByte(1, 25564);

@@ -41,7 +41,7 @@ final class lc {
             param0.field_i = 126;
             param0.field_u = ia.field_l[129];
             if (uj.field_l == 1 &&
-              ej.d((byte) 115)) {
+              ArchiveNetworkClient.d((byte) 115)) {
               eh.field_c.playSample(NetworkArchiveRequest.field_A[17], 100, uh.field_i);
             }
             boolean decompiledFrameCompleted0 = true;

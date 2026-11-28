@@ -26,7 +26,7 @@ final class vs {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3_ref = null;
         try {
-          var3 = vm.a(param1, (byte) 113);
+          var3 = ArchiveNetworkClient.a(param1, (byte) 113);
           if (param0 > -23) {
             vs.a(69);
           }

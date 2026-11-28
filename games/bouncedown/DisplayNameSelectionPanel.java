@@ -12,7 +12,7 @@ final class DisplayNameSelectionPanel extends DequeWidgetContainer implements Na
     static String field_J;
     static ModalDialogHost field_N;
     static int field_M;
-    static jk[] field_G;
+    static LogoMesh[] field_G;
     private ValidatedTextField field_E;
     static volatile int field_H;
 

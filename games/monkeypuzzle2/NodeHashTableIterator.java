@@ -47,7 +47,7 @@ final class NodeHashTableIterator implements Iterator {
     final static void a(String param0, boolean param1) {
         try {
           DebouncedFieldValidator.field_b = param0;
-          qh.a(12, true);
+          MouseInputHandler.a(12, true);
           if (param1) {
             field_e = (Sprite[]) null;
           }

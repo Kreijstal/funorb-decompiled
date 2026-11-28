@@ -41,7 +41,7 @@ final class AccountNameAvailabilityValidator extends TextFieldValidator {
         String stackIn_27_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (mc.field_t != ic.field_l) {
+          if (mc.field_t != ProxySocketConnector.field_l) {
             return false;
           }
           if (param4 > -81) {
@@ -56,7 +56,7 @@ final class AccountNameAvailabilityValidator extends TextFieldValidator {
           MidiNoteMask.field_r = param5;
           km.field_b = param6;
           PcmResampler.field_d = param0;
-          ic.field_l = AwtRasterBuffer.field_e;
+          ProxySocketConnector.field_l = AwtRasterBuffer.field_e;
           ArchiveIndex.field_o = param3;
           vk.field_g = null;
           BufferedRandomAccessFile.field_j = param1;

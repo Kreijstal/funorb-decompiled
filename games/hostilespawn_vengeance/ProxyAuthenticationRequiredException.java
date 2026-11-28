@@ -114,7 +114,7 @@ final class ProxyAuthenticationRequiredException extends IOException {
             if (param7.field_I <= 0) {
               return;
             }
-            if ((sg.field_i & 3) == 0 &&
+            if ((ArchiveSourceManager.field_i & 3) == 0 &&
               20 > param7.field_I) {
               param7.field_I = param7.field_I + 1;
             }
@@ -405,7 +405,7 @@ final class ProxyAuthenticationRequiredException extends IOException {
           ProgressDialog.field_eb = (BitmapFont) ((Object) th.a(param3, 9, "arezzo14bold", param1, "commonui"));
           var17 = new RgbSprite(param2.getFileByName("", "button.gif", param0 ^ 0), (java.awt.Component) ((Object) GameAppletShell.field_h));
           qm.a("commonui", 0, "dropdown", param3);
-          var5 = sg.a(true, "commonui", param3, "screen_options");
+          var5 = ArchiveSourceManager.a(true, "commonui", param3, "screen_options");
           ak.field_h = new IndexedSprite[4];
           nl.field_e = new IndexedSprite[4];
           dd.field_n = new IndexedSprite[4];

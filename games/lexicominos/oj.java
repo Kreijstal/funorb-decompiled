@@ -293,7 +293,7 @@ final class oj {
           var13 = (CharSequence) ((Object) ("flag_" + (String) (var5)));
           this.field_h = df.a("", ef.a(var13, (byte) -14), param0, (byte) -92);
           if (var6 == null) {
-            stackIn_21_1 = bi.field_a;
+            stackIn_21_1 = KeyboardInputHandler.field_a;
           } else {
             stackIn_21_1 = hb.a(param1, 246, "", ef.a((CharSequence) (var6), (byte) -82), param0);
           }

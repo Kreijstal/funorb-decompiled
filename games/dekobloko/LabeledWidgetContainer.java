@@ -132,7 +132,7 @@ final class LabeledWidgetContainer extends ComponentDecorator {
           }
           stringLocal12 = stackStringLocal1;
           if (MixedSupport070.integerState0395 == 0) {
-            integerLocal13 = PasswordValidator.wrapBalancedText(stringLocal17, 116, 480, ResourceSupport004.stringArrayState0031, SoftwareFramebuffer.bitmapFontState0021);
+            integerLocal13 = PasswordValidator.wrapBalancedText(stringLocal17, 116, 480, NetworkArchiveRequest.stringArrayState0031, SoftwareFramebuffer.bitmapFontState0021);
             integerLocal14 = integerLocal13 + 3;
             MixedSupport129.integerArrayState0211 = new int[integerLocal14];
             AlphaWidgetContainer.stringArrayState0012 = new String[integerLocal14];
@@ -141,7 +141,7 @@ final class LabeledWidgetContainer extends ComponentDecorator {
             }
             AlphaWidgetContainer.integerArrayState0039 = new int[2];
             for (integerLocal15 = 0; integerLocal15 < integerLocal13; integerLocal15++) {
-              AlphaWidgetContainer.stringArrayState0012[integerLocal15] = ResourceSupport004.stringArrayState0031[integerLocal15];
+              AlphaWidgetContainer.stringArrayState0012[integerLocal15] = NetworkArchiveRequest.stringArrayState0031[integerLocal15];
             }
             AlphaWidgetContainer.stringArrayState0012[-3 + integerLocal14] = "";
             AlphaWidgetContainer.stringArrayState0012[integerLocal14 - 2] = stringLocal12;
@@ -154,7 +154,7 @@ final class LabeledWidgetContainer extends ComponentDecorator {
             if (MixedSupport070.integerState0395 != 1) {
               throw new IllegalArgumentException();
             }
-            integerLocal13 = PasswordValidator.wrapBalancedText(stringLocal17, 104, 480, ResourceSupport004.stringArrayState0031, SoftwareFramebuffer.bitmapFontState0021);
+            integerLocal13 = PasswordValidator.wrapBalancedText(stringLocal17, 104, 480, NetworkArchiveRequest.stringArrayState0031, SoftwareFramebuffer.bitmapFontState0021);
             integerLocal14 = 2 + integerLocal13;
             MixedSupport129.integerArrayState0211 = new int[integerLocal14];
             AlphaWidgetContainer.stringArrayState0012 = new String[integerLocal14];
@@ -163,7 +163,7 @@ final class LabeledWidgetContainer extends ComponentDecorator {
             }
             AlphaWidgetContainer.integerArrayState0039 = new int[1];
             for (integerLocal15 = 0; integerLocal15 < integerLocal13; integerLocal15++) {
-              AlphaWidgetContainer.stringArrayState0012[integerLocal15] = ResourceSupport004.stringArrayState0031[integerLocal15];
+              AlphaWidgetContainer.stringArrayState0012[integerLocal15] = NetworkArchiveRequest.stringArrayState0031[integerLocal15];
             }
             AlphaWidgetContainer.stringArrayState0012[integerLocal14 - 2] = "";
             AlphaWidgetContainer.stringArrayState0012[-1 + integerLocal14] = ValidatedTextField.stringState0383;

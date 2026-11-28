@@ -82,7 +82,7 @@ final class eg {
           return;
         }
         try {
-          je.field_b = param1;
+          ArchiveSourceManager.field_b = param1;
           MenuScreen.field_z = param5;
           lj.field_m = param7;
         } catch (RuntimeException runtimeException) {
@@ -330,11 +330,11 @@ final class eg {
           boolean decompiledSharedTail0 = (no.field_d == 1);
           if (!decompiledSharedTail0) {
             if (la.field_g == 1) {
-              um.field_h = um.field_h + 1;
+              SocketConnector.field_h = SocketConnector.field_h + 1;
               if (np.field_M == null) {
                 var3 = (rn.field_a - eh.field_h) * (rn.field_a - eh.field_h) + (-hj.field_S + kp.field_c) * (-hj.field_S + kp.field_c);
                 if (var3 > 5 &&
-                  5 < um.field_h) {
+                  5 < SocketConnector.field_h) {
                   np.field_M = pa.field_c;
                 }
               }
@@ -346,7 +346,7 @@ final class eg {
             }
             if (decompiledFrameRemainder0) {
               if (np.field_M != null &&
-                um.field_h >= 5) {
+                SocketConnector.field_h >= 5) {
                 DefaultTextWidgetRenderer.field_s = null;
               } else {
                 DefaultTextWidgetRenderer.field_s = pa.field_c;
@@ -364,7 +364,7 @@ final class eg {
           }
           if ((decompiledFrameRemainder0) &&
             (decompiledSharedTail0)) {
-            um.field_h = 0;
+            SocketConnector.field_h = 0;
             kp.field_c = SoundCache.field_c;
             rn.field_a = AchievementIconEntry.field_k;
             pa.field_c = to.a(SoundCache.field_c, AchievementIconEntry.field_k, param0, 0);

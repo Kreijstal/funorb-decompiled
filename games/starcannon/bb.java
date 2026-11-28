@@ -53,20 +53,20 @@ final class bb {
           if (var4 <= var2) {
             if (var2 <= var4) {
               if (param0 == 2) {
-                if (var2 != eh.field_n) {
+                if (var2 != ArchiveNetworkClient.field_n) {
                   this.field_s.a((byte) 61, var2, var3);
                 } else {
                   if (DiskCacheWorker.field_d != var3) {
                     this.field_s.a((byte) 61, var2, var3);
                     if (this.field_b > 0) {
-                      k.field_a = (this.field_b - eh.field_n) / 2;
+                      k.field_a = (this.field_b - ArchiveNetworkClient.field_n) / 2;
                     }
                     return;
                   }
                 }
               } else {
                 field_j = (o) null;
-                if (var2 != eh.field_n) {
+                if (var2 != ArchiveNetworkClient.field_n) {
                   this.field_s.a((byte) 61, var2, var3);
                 } else {
                   if (DiskCacheWorker.field_d != var3) {
@@ -79,7 +79,7 @@ final class bb {
               if (param0 != 2) {
                 field_j = (o) null;
               }
-              if (var2 != eh.field_n) {
+              if (var2 != ArchiveNetworkClient.field_n) {
                 this.field_s.a((byte) 61, var2, var3);
               } else {
                 if (DiskCacheWorker.field_d != var3) {
@@ -90,7 +90,7 @@ final class bb {
             if (this.field_b <= 0) {
               return;
             }
-            k.field_a = (this.field_b - eh.field_n) / 2;
+            k.field_a = (this.field_b - ArchiveNetworkClient.field_n) / 2;
             return;
           }
           var3 = (int)((float)var2 / this.field_d);
@@ -98,7 +98,7 @@ final class bb {
         if (param0 != 2) {
           field_j = (o) null;
         }
-        if (var2 != eh.field_n) {
+        if (var2 != ArchiveNetworkClient.field_n) {
           this.field_s.a((byte) 61, var2, var3);
         } else {
           if (DiskCacheWorker.field_d != var3) {
@@ -108,7 +108,7 @@ final class bb {
         if (this.field_b <= 0) {
           return;
         }
-        k.field_a = (this.field_b - eh.field_n) / 2;
+        k.field_a = (this.field_b - ArchiveNetworkClient.field_n) / 2;
     }
 
     final boolean c(int param0) {
@@ -156,14 +156,14 @@ final class bb {
           }
           return;
         }
-        if (eh.field_n < this.field_b) {
-          k.field_a = (this.field_b - eh.field_n) / 2;
+        if (ArchiveNetworkClient.field_n < this.field_b) {
+          k.field_a = (this.field_b - ArchiveNetworkClient.field_n) / 2;
         } else {
           if (this.field_b > 0) {
             k.field_a = 0;
           }
         }
-        if (this.field_g == eh.field_n &&
+        if (this.field_g == ArchiveNetworkClient.field_n &&
           DiskCacheWorker.field_d == this.field_h) {
           return;
         }
@@ -227,7 +227,7 @@ final class bb {
         if (param0 != 2) {
           return (FullscreenFocusCanvas) null;
         }
-        this.field_n = eh.field_n;
+        this.field_n = ArchiveNetworkClient.field_n;
         this.field_o = DiskCacheWorker.field_d;
         this.field_s.a((byte) 61, this.field_p, this.field_f);
         RegistrationAgreementPane.field_E = false;

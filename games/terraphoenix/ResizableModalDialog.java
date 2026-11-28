@@ -340,7 +340,7 @@ abstract class ResizableModalDialog extends ModalDialog {
         }
     }
 
-    final static void a(java.awt.Component param0, int param1) {
+    final static void attachMouseListeners(java.awt.Component param0, int param1) {
         try {
           param0.addMouseListener(a.mouseHandler);
           if (param1 != -24289) {
@@ -357,7 +357,7 @@ abstract class ResizableModalDialog extends ModalDialog {
     void finishResize(int param0) {
         if (param0 != -2065096856) {
           java.awt.Component var3 = (java.awt.Component) null;
-          ResizableModalDialog.a((java.awt.Component) null, -28);
+          ResizableModalDialog.attachMouseListeners((java.awt.Component) null, -28);
         }
         if (0 >= this.field_T) {
           return;

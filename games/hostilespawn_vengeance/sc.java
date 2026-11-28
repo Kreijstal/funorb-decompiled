@@ -198,13 +198,13 @@ final class sc implements Runnable {
         u.field_f[12] = na.field_q;
         u.field_f[0] = NanoFrameTimer.field_l;
         u.field_f[2] = NanoFrameTimer.field_h;
-        u.field_f[6] = ej.field_o;
+        u.field_f[6] = ArchiveNetworkClient.field_o;
         u.field_f[3] = il.field_d;
         u.field_f[7] = FullscreenStatusDialog.field_bb;
         u.field_f[15] = IntrusiveNodeHashTable.field_d;
         u.field_f[13] = ArchiveIndex.field_s;
         u.field_f[11] = TextHotspotBounds.field_h;
-        u.field_f[5] = ej.field_o;
+        u.field_f[5] = ArchiveNetworkClient.field_o;
         u.field_f[18] = field_p;
         u.field_f[28] = ia.field_k;
         u.field_f[29] = SpriteBase.field_g;

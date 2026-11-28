@@ -29,8 +29,8 @@ final class af {
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          LabeledWidgetContainer.a(-104, (java.awt.Component) ((Object) param1));
-          PcmResampler.a((java.awt.Component) ((Object) param1), true);
+          LabeledWidgetContainer.attachKeyboardListeners(-104, (java.awt.Component) ((Object) param1));
+          PcmResampler.attachMouseListeners((java.awt.Component) ((Object) param1), true);
           if (DisplayNameSelectionPanel.field_A != null) {
             DisplayNameSelectionPanel.field_A.attach((java.awt.Component) ((Object) param1), -8206);
           }

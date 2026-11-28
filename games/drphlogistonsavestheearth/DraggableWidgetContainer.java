@@ -73,7 +73,7 @@ final class DraggableWidgetContainer extends SingleChildWidgetContainer {
         this.field_K = this.field_m;
     }
 
-    final static void a(java.awt.Component param0, int param1) {
+    final static void detachMouseListeners(java.awt.Component param0, int param1) {
         param0.removeMouseListener(DequeWidgetContainer.field_G);
         param0.removeMouseMotionListener(DequeWidgetContainer.field_G);
         if (param1 != 1) {

@@ -72,7 +72,7 @@ final class AlphaWidgetContainer extends SingleChildWidgetContainer {
               return stackIn_17_0;
             }
           }
-          stackIn_20_0 = eb.a(-3124, var3[var3.length - 1]);
+          stackIn_20_0 = ArchiveSourceManager.a(-3124, var3[var3.length - 1]);
           return stackIn_20_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

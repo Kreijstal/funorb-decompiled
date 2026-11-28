@@ -612,7 +612,7 @@ final class pc extends ci {
               if (cb.field_f > 0) {
                 boolean decompiledSharedTail2 = (1 != cb.field_f);
                 if (!decompiledSharedTail2) {
-                  var10_ref_String = ob.field_A;
+                  var10_ref_String = SocketArchiveNetworkClient.field_A;
                   decompiledSharedTail2 = (var19 != 0);
                 }
                 if (decompiledSharedTail2) {
@@ -868,7 +868,7 @@ final class pc extends ci {
                       decompiledSharedTail1 = (var19 != 0);
                     }
                     if (decompiledSharedTail1) {
-                      field_Mb = MatchingFieldValidator.a(wm.field_j, new String[]{sg.field_b}, (byte) -119);
+                      field_Mb = MatchingFieldValidator.a(ArchiveNetworkClient.field_j, new String[]{sg.field_b}, (byte) -119);
                     }
                   }
                   decompiledFrameRemainder0 = (var19 != 0);
@@ -973,7 +973,7 @@ final class pc extends ci {
               ConfirmedEmailAvailabilityValidator.a(param4, pd.field_Rb.g((byte) -80), 28113);
             }
             if (aa.field_g.field_L != 0) {
-              ob.field_w = true;
+              SocketArchiveNetworkClient.field_w = true;
             }
             if (uj.field_j.field_L != 0) {
               jh.field_a = true;

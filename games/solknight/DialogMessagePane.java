@@ -2012,7 +2012,7 @@ final class DialogMessagePane extends WidgetContainer implements WidgetActivatio
                 }
                 var2 = vd.a("instructions", 4);
                 if (var2 != null) {
-                  ea.field_q = Archive.decodeCp1252(true, var2);
+                  SocketArchiveNetworkClient.field_q = Archive.decodeCp1252(true, var2);
                 }
                 var2 = vd.a("tutorial", 4);
                 if (null != var2) {
@@ -3195,7 +3195,7 @@ final class DialogMessagePane extends WidgetContainer implements WidgetActivatio
             if (null != dj.field_k &&
               dj.field_k.field_a) {
               ProxySocketConnector.d(14995);
-              EditableTextField.field_J.showDialog(new FullscreenStatusDialog(EditableTextField.field_J, ne.field_i), 100);
+              EditableTextField.field_J.showDialog(new FullscreenStatusDialog(EditableTextField.field_J, ArchiveSourceManager.field_i), 100);
             }
             return;
           }

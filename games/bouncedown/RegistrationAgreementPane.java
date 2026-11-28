@@ -145,7 +145,7 @@ final class RegistrationAgreementPane extends DequeWidgetContainer implements Te
         }
     }
 
-    final static void a(java.awt.Component param0, byte param1) {
+    final static void attachKeyboardListeners(java.awt.Component param0, byte param1) {
         try {
           param0.setFocusTraversalKeysEnabled(false);
           param0.addKeyListener(GzipDecompressor.field_c);

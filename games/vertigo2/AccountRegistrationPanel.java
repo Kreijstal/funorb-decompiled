@@ -56,7 +56,7 @@ final class AccountRegistrationPanel extends WidgetContainer implements TextHots
           if (var5 == ir.field_a) {
             return false;
           }
-          if (var5 == tk.field_n) {
+          if (var5 == ArchiveNetworkClient.field_n) {
             return false;
           }
           if (var5 != nh.field_r) {
@@ -383,17 +383,17 @@ final class AccountRegistrationPanel extends WidgetContainer implements TextHots
         var2.position = var2.position + 1;
         int var3 = var2.position;
         var2.writeByte(2, 87);
-        var2.a(0, -10140, qc.field_w, qc.field_w.length);
+        var2.writeBytes(0, -10140, qc.field_w, qc.field_w.length);
         var2.writeByte(ua.field_a, 103);
         if (param0 < -76) {
           var2.writeByte(kg.field_y, 106);
-          var2.a(0, -10140, dj.field_a, dj.field_a.length);
+          var2.writeBytes(0, -10140, dj.field_a, dj.field_a.length);
           var2.patchByteLength((byte) 24, var2.position - var3);
           return;
         }
         AccountRegistrationPanel.b(102, 66);
         var2.writeByte(kg.field_y, 106);
-        var2.a(0, -10140, dj.field_a, dj.field_a.length);
+        var2.writeBytes(0, -10140, dj.field_a, dj.field_a.length);
         var2.patchByteLength((byte) 24, var2.position - var3);
     }
 

@@ -260,7 +260,7 @@ final class BufferedRandomAccessFile {
     }
 
     final static void b(int param0) {
-        eh.field_j = oe.c(param0 - 35671);
+        ArchiveNetworkClient.field_j = SocketConnector.c(param0 - 35671);
         ti.field_b = new ModalDialogHost();
         ba.a(true, true, 2);
         if (param0 != 30000) {

@@ -470,7 +470,7 @@ abstract class NetworkGameClient extends GameAppletShell {
             !(var3 >= pb.a(-16733))) {
             this.field_r = false;
             th.a(111);
-            md.b((byte) 42);
+            ProxySocketConnector.b((byte) 42);
             BitPacketBuffer.showLobbyDialog(oe.field_m, (byte) -79, 2);
             ke.a(-92);
             fa.field_a = true;
@@ -497,7 +497,7 @@ abstract class NetworkGameClient extends GameAppletShell {
           DualLinkNode.field_j != 0) {
           if (10 <= vh.field_n) {
             if (TextFieldValidator.field_k >= 10) {
-              md.b((byte) -86);
+              ProxySocketConnector.b((byte) -86);
               if (DualLinkNode.field_j != 3) {
                 if (DualLinkNode.field_j == 4) {
                   BitPacketBuffer.showLobbyDialog(cg.field_h, (byte) 109, 256);
@@ -781,7 +781,7 @@ abstract class NetworkGameClient extends GameAppletShell {
             if (!StandardContentDialog.field_Y) {
               this.showErrorPage(111, "reconnect");
             }
-            md.b((byte) -111);
+            ProxySocketConnector.b((byte) -111);
             BitPacketBuffer.showLobbyDialog(ValidationStatusWidget.field_Y, (byte) -81, var2);
             fa.field_a = true;
             if (param0 != -10125) {

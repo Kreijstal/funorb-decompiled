@@ -35,7 +35,7 @@ final class DiskArchiveRequest extends ArchiveRequest {
           var5 = SocketConnector.field_a;
           Sprite[] var4 = var5;
           var5[param3] = null;
-          bo.field_d = param0;
+          ArchiveSourceManager.field_d = param0;
         } catch (RuntimeException runtimeException) {
           throw RichTextWidget.wrapThrowable((Throwable) ((Object) runtimeException), "lb.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }

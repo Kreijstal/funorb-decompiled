@@ -269,7 +269,7 @@ final class MusicPatchPcmStream extends PcmStream {
                 }
                 var2 = vj.a("create_unable", 24);
                 if (var2 != null) {
-                  sg.field_g = PcmResampler.a(127, var2);
+                  ArchiveSourceManager.field_g = PcmResampler.a(127, var2);
                 }
                 var2 = vj.a("create_ineligible", 24);
                 if (null != var2) {
@@ -1252,7 +1252,7 @@ final class MusicPatchPcmStream extends PcmStream {
                 }
                 var2 = vj.a("justplay", 24);
                 if (null != var2) {
-                  ej.field_n = PcmResampler.a(123, var2);
+                  ArchiveNetworkClient.field_n = PcmResampler.a(123, var2);
                 }
                 var2 = vj.a("justplay_excl", 24);
                 if (var2 != null) {
@@ -2162,7 +2162,7 @@ final class MusicPatchPcmStream extends PcmStream {
                 }
                 var2 = vj.a("menu", 24);
                 if (null != var2) {
-                  ej.field_o = PcmResampler.a(122, var2);
+                  ArchiveNetworkClient.field_o = PcmResampler.a(122, var2);
                 }
                 var2 = vj.a("selectlevel", 24);
                 if (null != var2) {
@@ -2772,7 +2772,7 @@ final class MusicPatchPcmStream extends PcmStream {
                 }
                 var2 = vj.a("members_expansion_price_bottom", 24);
                 if (null != var2) {
-                  sg.field_m = PcmResampler.a(123, var2);
+                  ArchiveSourceManager.field_m = PcmResampler.a(123, var2);
                 }
                 var2 = vj.a("reconnect_lost_seq,0", 24);
                 if (var2 != null) {
@@ -2840,7 +2840,7 @@ final class MusicPatchPcmStream extends PcmStream {
                 }
                 var2 = vj.a("fs_accept_beforeaccept", 24);
                 if (var2 != null) {
-                  sg.field_e = PcmResampler.a(124, var2);
+                  ArchiveSourceManager.field_e = PcmResampler.a(124, var2);
                 }
                 var2 = vj.a("fs_button_accept", 24);
                 if (null != var2) {

@@ -74,7 +74,7 @@ final class pb {
 
     final static void a(ji param0, byte param1, ji param2, int param3, int param4, int param5) {
         try {
-          n.field_d = param3;
+          SocketConnector.field_d = param3;
           if (param1 >= -63) {
             ji var7 = (ji) null;
             pb.a((ji) null, (byte) -101, (ji) null, 96, -46, -6);

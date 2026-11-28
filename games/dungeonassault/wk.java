@@ -165,7 +165,7 @@ final class wk {
         try {
           lg.field_w.processPointerInput(wo.field_b, (byte) 66, TextHotspotBounds.field_m, true);
           lg.field_w.advanceDialogs(true);
-          while (ha.b((byte) 47)) {
+          while (ProxySocketConnector.b((byte) 47)) {
             lg.field_w.processKeyInput(126, mm.field_t, ob.field_Yb);
           }
           if (param0) {

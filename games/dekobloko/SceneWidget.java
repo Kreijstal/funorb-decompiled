@@ -73,7 +73,7 @@ class SceneWidget extends SceneWidgetNode {
         int integerLocal2 = 0;
         try {
           cipherPacketBufferLocal1 = SocketFactory.cipherPacketBufferState0002;
-          cipherPacketBufferLocal1.performAction1641(integerArgument2, -4);
+          cipherPacketBufferLocal1.writeCipheredByte(integerArgument2, -4);
           cipherPacketBufferLocal1.position = cipherPacketBufferLocal1.position + 1;
           integerLocal2 = cipherPacketBufferLocal1.position;
           cipherPacketBufferLocal1.writeByte(true, 1);

@@ -175,24 +175,24 @@ final class u extends gd {
         RuntimeException var2 = null;
         var4 = DungeonAssault.field_K;
         try {
-          if (um.field_i == null) {
-            um.field_i = new Raider[8];
+          if (SocketConnector.field_i == null) {
+            SocketConnector.field_i = new Raider[8];
           }
           if (param0 != 1) {
             return;
           }
           for (var2_int = 0; 8 > var2_int; var2_int++) {
             if (param1 == null ||
-              um.field_i[var2_int] == param1.field_a[var2_int]) {
-              um.field_i[var2_int] = gm.field_d.field_a[var2_int];
-              if (null != um.field_i[var2_int]) {
-                if (255 != um.field_i[var2_int].field_p) {
-                  stackIn_15_0 = um.field_i[var2_int].field_n.field_e;
+              SocketConnector.field_i[var2_int] == param1.field_a[var2_int]) {
+              SocketConnector.field_i[var2_int] = gm.field_d.field_a[var2_int];
+              if (null != SocketConnector.field_i[var2_int]) {
+                if (255 != SocketConnector.field_i[var2_int].field_p) {
+                  stackIn_15_0 = SocketConnector.field_i[var2_int].field_n.field_e;
                 } else {
                   stackIn_15_0 = k.field_c;
                 }
                 var3 = stackIn_15_0;
-                um.field_i[var2_int].field_b = new SpriteAnimationPlayer(var3);
+                SocketConnector.field_i[var2_int].field_b = new SpriteAnimationPlayer(var3);
               }
             }
           }

@@ -78,7 +78,7 @@ final class cm {
             if (var3 != null &&
               var3.field_i >= 145 &&
               var3.field_i <= 150 &&
-              ih.a(var3.field_j, (byte) -103, param0) < 3) {
+              SocketArchiveNetworkClient.a(var3.field_j, (byte) -103, param0) < 3) {
               vj.field_w[var2_int] = null;
               return;
             }

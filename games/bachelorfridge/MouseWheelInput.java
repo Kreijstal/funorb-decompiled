@@ -72,7 +72,7 @@ abstract class MouseWheelInput {
               stackIn_32_0 = -1;
               return stackIn_32_0;
             }
-            HomingMissileAnimation.field_G.a(ValidationStatusWidget.field_M, RaiseEvent.field_s, 16008);
+            HomingMissileAnimation.field_G.attachSocket(ValidationStatusWidget.field_M, RaiseEvent.field_s, 16008);
             BagpipeSpecial.field_p = null;
             RaiseEvent.field_s = null;
             ds.field_m = 0;

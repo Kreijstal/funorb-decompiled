@@ -126,7 +126,7 @@ final class PowerUpPickup extends MovingTunnelEntity {
             if (we.field_k != 4) {
               return -1;
             }
-            om.field_s.a(Confined.field_L, gk.field_u, (byte) -65);
+            om.field_s.attachSocket(Confined.field_L, gk.field_u, (byte) -65);
             gk.field_u = null;
             ol.field_a = null;
             we.field_k = 0;
@@ -589,7 +589,7 @@ final class PowerUpPickup extends MovingTunnelEntity {
           } else {
             if (!param1.field_mb) {
               param1.field_mb = true;
-              kc.a(kd.field_s, (TunnelEntity) (this), 126, param1.field_T);
+              kc.a(SocketArchiveNetworkClient.field_s, (TunnelEntity) (this), 126, param1.field_T);
               param1.field_T = false;
               this.d(10797);
             } else {

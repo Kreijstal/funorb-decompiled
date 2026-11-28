@@ -116,7 +116,7 @@ final class DisplayNameSelectionPanel extends DequeWidgetContainer implements Na
               }
               var7 = new SectorCacheStore(param0, fj.field_c, DebouncedFieldValidator.field_d[param0], 2097152);
             }
-            var9 = GrowableIntArray.field_d.a(64, (SectorCacheStore) (var6), param4, param0, (SectorCacheStore) (var7));
+            var9 = GrowableIntArray.field_d.getOrCreateArchiveSource(64, (SectorCacheStore) (var6), param4, param0, (SectorCacheStore) (var7));
             if (param2) {
               var9.b((byte) 125);
             }

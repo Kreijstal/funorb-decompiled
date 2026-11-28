@@ -271,7 +271,7 @@ class DequeWidgetContainer extends UiComponent implements WidgetContainerMarker 
         return null != this.getFocusedChild((byte) 107) ? true : false;
     }
 
-    final static void a(byte param0, java.awt.Component param1) {
+    final static void attachMouseListeners(byte param0, java.awt.Component param1) {
         try {
           param1.addMouseListener(te.field_b);
           param1.addMouseMotionListener(te.field_b);

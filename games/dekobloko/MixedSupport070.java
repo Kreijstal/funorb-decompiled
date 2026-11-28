@@ -54,7 +54,7 @@ final class MixedSupport070 implements WidgetRenderer {
 
     final static void performAction0912(int integerArgument1, int integerArgument2, NetworkSupport005 networkSupport005Argument3) {
         CipherPacketBuffer cipherPacketBufferLocal1 = SocketFactory.cipherPacketBufferState0002;
-        cipherPacketBufferLocal1.performAction1641(integerArgument1, -4);
+        cipherPacketBufferLocal1.writeCipheredByte(integerArgument1, -4);
         cipherPacketBufferLocal1.position = cipherPacketBufferLocal1.position + 1;
         int integerLocal2 = cipherPacketBufferLocal1.position;
         cipherPacketBufferLocal1.writeByte(true, 1);

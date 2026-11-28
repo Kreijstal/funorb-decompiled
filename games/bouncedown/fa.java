@@ -13,12 +13,12 @@ final class fa {
         if (var1 >= jl.field_g) {
           var3 = 26 % ((26 - param0) / 45);
           jl.field_g = var1;
-          return var1 + tb.field_n;
+          return var1 + SocketArchiveNetworkClient.field_n;
         }
-        tb.field_n = tb.field_n + (-var1 + jl.field_g);
+        SocketArchiveNetworkClient.field_n = SocketArchiveNetworkClient.field_n + (-var1 + jl.field_g);
         var3Lifetime1 = 26 % ((26 - param0) / 45);
         jl.field_g = var1;
-        return var1 + tb.field_n;
+        return var1 + SocketArchiveNetworkClient.field_n;
     }
 
     final static Boolean b(int param0) {

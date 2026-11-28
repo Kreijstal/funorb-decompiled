@@ -16,7 +16,7 @@ final class mh {
           EmailFormatValidator.field_p = null;
           em.field_m = null;
           NodeHashTableIterator.field_a = null;
-          hj.field_l = null;
+          ArchiveSourceManager.field_l = null;
           DraggableWidgetContainer.field_S = false;
           return;
         }
@@ -24,7 +24,7 @@ final class mh {
         EmailFormatValidator.field_p = null;
         em.field_m = null;
         NodeHashTableIterator.field_a = null;
-        hj.field_l = null;
+        ArchiveSourceManager.field_l = null;
         DraggableWidgetContainer.field_S = false;
     }
 

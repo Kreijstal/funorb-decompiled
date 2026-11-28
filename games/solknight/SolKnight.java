@@ -232,9 +232,9 @@ public final class SolKnight extends NetworkGameClient {
           MenuScreen.clearStaticReferences((byte) 101);
           ek.clearStaticReferences(117);
           IntrusiveDeque.resetStaticState((byte) -128);
-          va.clearStaticReferences((byte) 0);
+          ArchiveNetworkClient.clearStaticReferences((byte) 0);
           DiskCacheWorker.clearStaticReferences(3);
-          ne.clearStaticReferences(30731);
+          ArchiveSourceManager.clearStaticReferences(30731);
           BufferedCacheFile.clearStaticReferences(true);
           BufferedSocket.clearStaticReferences((byte) 84);
           PcmPlayerService.clearStaticReferences();
@@ -289,7 +289,7 @@ public final class SolKnight extends NetworkGameClient {
           IsaacRandom.clearStaticReferences(-122);
           ti.clearStaticReferences(103);
           PcmOutputWorker.clearStaticReferences((byte) -90);
-          ea.d(false);
+          SocketArchiveNetworkClient.d(false);
           hl.a((byte) -113);
           NetworkArchiveRequest.resetStaticState(-74);
           SectorCacheStore.resetStaticState((byte) 102);

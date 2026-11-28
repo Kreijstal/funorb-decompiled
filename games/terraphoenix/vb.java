@@ -86,7 +86,7 @@ final class vb {
         if (param0 != -353) {
           return false;
         }
-        return i.field_a.a(true);
+        return i.field_a.loadMasterIndex(true);
     }
 
     final DualLinkNode a(int param0, long param1) {

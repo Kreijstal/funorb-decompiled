@@ -22,7 +22,7 @@ abstract class FrameTimer {
           IterableNodeHashTable.field_e = param0;
           SecondaryNodeDeque.field_d = (ArchiveRequestConnection) ((Object) new SocketArchiveRequestConnection());
           TextLayout.field_a = new DiskCacheWorker(param1);
-          ij.field_d = new wg(SecondaryNodeDeque.field_d, TextLayout.field_a);
+          ij.field_d = new ArchiveSourceManager(SecondaryNodeDeque.field_d, TextLayout.field_a);
         } catch (RuntimeException runtimeException) {
           throw LevelGrid.toClientException((Throwable) ((Object) runtimeException), "wj.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ')');
         }

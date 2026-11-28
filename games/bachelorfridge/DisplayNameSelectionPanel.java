@@ -128,7 +128,7 @@ final class DisplayNameSelectionPanel extends WidgetContainer implements NameSug
     final static void sleepMillis(boolean param0, long param1) {
         if (param0) {
           java.awt.Component var4 = (java.awt.Component) null;
-          DisplayNameSelectionPanel.a(67, (java.awt.Component) null);
+          DisplayNameSelectionPanel.detachMouseListeners(67, (java.awt.Component) null);
           if (param1 <= 0L) {
             return;
           }
@@ -248,7 +248,7 @@ final class DisplayNameSelectionPanel extends WidgetContainer implements NameSug
         return param0 & param1;
     }
 
-    final static void a(int param0, java.awt.Component param1) {
+    final static void detachMouseListeners(int param0, java.awt.Component param1) {
         try {
           param1.removeMouseListener(uc.field_m);
           param1.removeMouseMotionListener(uc.field_m);
@@ -256,7 +256,7 @@ final class DisplayNameSelectionPanel extends WidgetContainer implements NameSug
           FlirtEvent.field_q = 0;
           if (param0 > -14) {
             java.awt.Component var3 = (java.awt.Component) null;
-            DisplayNameSelectionPanel.a(-19, (java.awt.Component) null);
+            DisplayNameSelectionPanel.detachMouseListeners(-19, (java.awt.Component) null);
           }
         } catch (RuntimeException runtimeException) {
           throw pe.wrapException((Throwable) ((Object) runtimeException), "gda.T(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');

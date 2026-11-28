@@ -337,7 +337,7 @@ final class LoginPanel extends DequeWidgetContainer implements TextFieldListener
             if (this.field_J) {
               stackIn_19_1 = null;
               stackIn_19_2 = null;
-              stackIn_19_3 = ej.field_n;
+              stackIn_19_3 = ArchiveNetworkClient.field_n;
             } else {
               stackIn_19_1 = null;
               stackIn_19_2 = null;

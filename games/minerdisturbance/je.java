@@ -379,7 +379,7 @@ final class je {
         int var2 = (int)(Math.random() * 19.0) + param0 + 2;
         field_I[var1][var2].field_a = false;
         field_I[var1][var2].field_b = false;
-        uf.field_p[jf.b((byte) 95)] = new gf(var1, var2, 10);
+        SocketArchiveNetworkClient.field_p[jf.b((byte) 95)] = new gf(var1, var2, 10);
     }
 
     private final static void a(int param0, int param1, je param2) {
@@ -896,7 +896,7 @@ final class je {
           param2.field_r = param2.field_r - 1;
           if (param2.field_r == 999) {
             ne.a(20, -101);
-            uf.field_p[jf.b((byte) 96)] = new gf(param0, param1, 8);
+            SocketArchiveNetworkClient.field_p[jf.b((byte) 96)] = new gf(param0, param1, 8);
             lj.field_r = lj.field_r + 10;
             ProgressMessageDialog.field_sb = ProgressMessageDialog.field_sb - 10;
           }
@@ -926,12 +926,12 @@ final class je {
                 param2.field_U = -1;
                 field_I[param0][param1 + 1].field_r = 1000;
                 for (var4 = 0; var4 < 1000; var4++) {
-                  if (uf.field_p[var4] != null &&
-                    uf.field_p[var4].field_n == param0 &&
-                    uf.field_p[var4].field_p == param1 &&
-                    uf.field_p[var4].field_h != 16 &&
-                    uf.field_p[var4].field_h != 8) {
-                    uf.field_p[var4].field_p = param1 + 1;
+                  if (SocketArchiveNetworkClient.field_p[var4] != null &&
+                    SocketArchiveNetworkClient.field_p[var4].field_n == param0 &&
+                    SocketArchiveNetworkClient.field_p[var4].field_p == param1 &&
+                    SocketArchiveNetworkClient.field_p[var4].field_h != 16 &&
+                    SocketArchiveNetworkClient.field_p[var4].field_h != 8) {
+                    SocketArchiveNetworkClient.field_p[var4].field_p = param1 + 1;
                   }
                 }
                 if (param0 != NanoFrameTimer.field_k) {
@@ -1178,7 +1178,7 @@ final class je {
               }
             }
           } else {
-            if (ch.field_h == 5) {
+            if (ArchiveNetworkClient.field_h == 5) {
               var7 = NetworkGameClient.field_w[tb.field_c];
               var12 = var7;
               var7 = var12;
@@ -1208,7 +1208,7 @@ final class je {
                   fg.field_c[-tb.field_c].drawHorizontalFlip(var3 + param0 / 2 - 4, var4 + param1 / 2 - 4);
                 }
               } else {
-                if (ch.field_h == 5) {
+                if (ArchiveNetworkClient.field_h == 5) {
                   tf.field_c[tb.field_c].drawHorizontalFlip(var3 + param0 / 2 - 4, var4 + param1 / 2 - 4);
                 } else {
                   rd.field_b[tb.field_c].drawHorizontalFlip(var3 + param0 / 2 - 4, var4 + param1 / 2 - 4);
@@ -1237,7 +1237,7 @@ final class je {
                   fg.field_c[-tb.field_c].draw(var3 + param0 / 2 - 4, var4 + param1 / 2 - 4);
                 }
               } else {
-                if (ch.field_h == 5) {
+                if (ArchiveNetworkClient.field_h == 5) {
                   tf.field_c[tb.field_c].draw(var3 + param0 / 2 - 4, var4 + param1 / 2 - 4);
                 } else {
                   rd.field_b[tb.field_c].draw(var3 + param0 / 2 - 4, var4 + param1 / 2 - 4);
@@ -1709,7 +1709,7 @@ final class je {
             var9 = hf.field_t * 4 + IsaacRandom.field_i / 80 - 1;
             var10 = var8 * 8 - li.field_c;
             var11 = var9 * 8 - ClientException.field_d;
-            if (ch.field_h != 5) {
+            if (ArchiveNetworkClient.field_h != 5) {
               if (var5 == 0) {
                 var12_ref_ea = DefaultTextWidgetRenderer.field_m[-tb.field_c];
               } else {
@@ -1740,10 +1740,10 @@ final class je {
             }
             SoftwareRasterizer.resetClip();
           } else {
-            if (ch.field_h != 5 &&
+            if (ArchiveNetworkClient.field_h != 5 &&
               var5 != 0 &&
               field_I[NanoFrameTimer.field_k][hf.field_t].field_A) {
-              if (ch.field_h != 5) {
+              if (ArchiveNetworkClient.field_h != 5) {
                 var8_ref_ea = pk.field_h[tb.field_c];
               } else {
                 var8_ref_ea = TextHotspotBounds.field_x[tb.field_c];
@@ -2890,7 +2890,7 @@ final class je {
                   field_I[var3_intLifetime2][var2Lifetime2].field_S = false;
                 }
                 if (field_I[var3_intLifetime2][var2Lifetime2].field_U >= 0) {
-                  uf.field_p[jf.b((byte) 63)] = new gf(var3_intLifetime2, var2Lifetime2, field_I[var3_intLifetime2][var2Lifetime2].field_U);
+                  SocketArchiveNetworkClient.field_p[jf.b((byte) 63)] = new gf(var3_intLifetime2, var2Lifetime2, field_I[var3_intLifetime2][var2Lifetime2].field_U);
                   field_I[var3_intLifetime2][var2Lifetime2].field_U = -1;
                 }
               }
@@ -3144,14 +3144,14 @@ final class je {
           var4 = 19;
           field_O.h(var1, 4, var2);
         }
-        uf.field_p[jf.b((byte) 64)] = new gf(var1, var2, var4);
-        uf.field_p[jf.b((byte) 62)] = new gf(var1, var2, (int)(12.0 + Math.random() * 3.0));
+        SocketArchiveNetworkClient.field_p[jf.b((byte) 64)] = new gf(var1, var2, var4);
+        SocketArchiveNetworkClient.field_p[jf.b((byte) 62)] = new gf(var1, var2, (int)(12.0 + Math.random() * 3.0));
         if (var3.field_g) {
           var1Lifetime1 = (int)(Math.random() * 27.0) + 2;
           var2Lifetime1 = (int)(Math.random() * 19.0) + param0 + 2;
           var5 = jf.b((byte) 107);
-          if (uf.field_p[var5] == null) {
-            uf.field_p[var5] = new gf(var1Lifetime1, var2Lifetime1, 21);
+          if (SocketArchiveNetworkClient.field_p[var5] == null) {
+            SocketArchiveNetworkClient.field_p[var5] = new gf(var1Lifetime1, var2Lifetime1, 21);
           }
           field_I[var1Lifetime1][var2Lifetime1].field_a = false;
           field_I[var1Lifetime1][var2Lifetime1].field_b = false;

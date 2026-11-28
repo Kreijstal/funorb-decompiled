@@ -9,7 +9,7 @@ final class sg {
     static String field_a;
     int field_j;
     int[] field_c;
-    static rd field_i;
+    static MouseInputHandler field_i;
     private boolean field_k;
     int field_e;
     int field_b;
@@ -215,6 +215,6 @@ final class sg {
     }
 
     static {
-        field_i = new rd();
+        field_i = new MouseInputHandler();
     }
 }

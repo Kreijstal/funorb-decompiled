@@ -343,7 +343,7 @@ abstract class FrameTimer {
                 }
                 var2 = cd.a("mu_lobby_name_rm", -107);
                 if (null != var2) {
-                  vc.field_b = ad.a(-29410, var2);
+                  KeyboardInputHandler.field_b = ad.a(-29410, var2);
                 }
                 var2 = cd.a("mu_lobby_location", -89);
                 if (var2 != null) {
@@ -387,7 +387,7 @@ abstract class FrameTimer {
                 }
                 var2 = cd.a("mu_options", -119);
                 if (var2 != null) {
-                  ob.field_r = ad.a(-29410, var2);
+                  SocketArchiveNetworkClient.field_r = ad.a(-29410, var2);
                 }
                 var2 = cd.a("mu_options_whocanjoin", -119);
                 if (var2 != null) {
@@ -531,7 +531,7 @@ abstract class FrameTimer {
                 }
                 var2 = cd.a("mu_chat_game_friends", -95);
                 if (null != var2) {
-                  mn.field_l = ad.a(-29410, var2);
+                  ProxySocketConnector.field_l = ad.a(-29410, var2);
                 }
                 var2 = cd.a("mu_chat_game_hide", -122);
                 if (var2 != null) {
@@ -615,7 +615,7 @@ abstract class FrameTimer {
                 }
                 var2 = cd.a("join_requests_one", -114);
                 if (null != var2) {
-                  ob.field_A = ad.a(-29410, var2);
+                  SocketArchiveNetworkClient.field_A = ad.a(-29410, var2);
                 }
                 var2 = cd.a("join_requests_many", -123);
                 if (null != var2) {
@@ -919,7 +919,7 @@ abstract class FrameTimer {
                 }
                 var2 = cd.a("gameopt_youneedratedgames", -92);
                 if (var2 != null) {
-                  hj.field_j = ad.a(-29410, var2);
+                  ArchiveSourceManager.field_j = ad.a(-29410, var2);
                 }
                 var2 = cd.a("gameopt_playerneeds1ratedgame", -75);
                 if (null != var2) {
@@ -935,7 +935,7 @@ abstract class FrameTimer {
                 }
                 var2 = cd.a("gameopt_youhaventunlocked", -101);
                 if (null != var2) {
-                  ob.field_x = ad.a(-29410, var2);
+                  SocketArchiveNetworkClient.field_x = ad.a(-29410, var2);
                 }
                 var2 = cd.a("gameopt_trychanging1", -100);
                 if (null != var2) {
@@ -963,7 +963,7 @@ abstract class FrameTimer {
                 }
                 var2 = cd.a("gameopt_playersdontqualify_selectgametab", -91);
                 if (null != var2) {
-                  wm.field_j = ad.a(-29410, var2);
+                  ArchiveNetworkClient.field_j = ad.a(-29410, var2);
                 }
                 var2 = cd.a("gameopt_unselectedoptions", -102);
                 if (null != var2) {
@@ -1073,7 +1073,7 @@ abstract class FrameTimer {
                 }
                 var2 = cd.a("rule_1_4", -124);
                 if (null != var2) {
-                  mn.field_j = ad.a(-29410, var2);
+                  ProxySocketConnector.field_j = ad.a(-29410, var2);
                 }
                 var2 = cd.a("rule_pillar_2", -86);
                 if (var2 != null) {
@@ -1417,7 +1417,7 @@ abstract class FrameTimer {
                 }
                 var2 = cd.a("month", -118);
                 if (null != var2) {
-                  mn.field_i = ad.a(-29410, var2);
+                  ProxySocketConnector.field_i = ad.a(-29410, var2);
                 }
                 var2 = cd.a("year", -115);
                 if (null != var2) {
@@ -1609,7 +1609,7 @@ abstract class FrameTimer {
                 }
                 var2 = cd.a("create_displayname_tooltip", -78);
                 if (null != var2) {
-                  vc.field_a = ad.a(-29410, var2);
+                  KeyboardInputHandler.field_a = ad.a(-29410, var2);
                 }
                 var2 = cd.a("create_displayname_hint", -74);
                 if (null != var2) {
@@ -1673,7 +1673,7 @@ abstract class FrameTimer {
                 }
                 var2 = cd.a("create_username_available", -97);
                 if (var2 != null) {
-                  rl.field_c = ad.a(-29410, var2);
+                  MouseInputHandler.field_c = ad.a(-29410, var2);
                 }
                 var2 = cd.a("create_alert_namelength", -89);
                 if (null != var2) {
@@ -1924,7 +1924,7 @@ abstract class FrameTimer {
                 }
                 var2 = cd.a("loading_extradata", -81);
                 if (var2 != null) {
-                  wn.field_g = ad.a(-29410, var2);
+                  SocketConnector.field_g = ad.a(-29410, var2);
                 }
                 var2 = cd.a("loading_languages", -90);
                 if (null != var2) {
@@ -1992,7 +1992,7 @@ abstract class FrameTimer {
                 }
                 var2 = cd.a("fullscreen", -112);
                 if (null != var2) {
-                  vc.field_c = ad.a(-29410, var2);
+                  KeyboardInputHandler.field_c = ad.a(-29410, var2);
                 }
                 var2 = cd.a("screensize", -83);
                 if (var2 != null) {
@@ -2558,7 +2558,7 @@ abstract class FrameTimer {
                 }
                 var2 = cd.a("quickchat_help", -84);
                 if (var2 != null) {
-                  ob.field_y = ad.a(-29410, var2);
+                  SocketArchiveNetworkClient.field_y = ad.a(-29410, var2);
                 }
                 var2 = cd.a("quickchat_help_title", -115);
                 if (var2 != null) {

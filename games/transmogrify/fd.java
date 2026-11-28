@@ -69,7 +69,7 @@ final class fd {
                 ValidationStatusIcon.field_B[var2] = true;
               }
             }
-            bf.field_B = dk.field_i;
+            bf.field_B = ArchiveSourceManager.field_i;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

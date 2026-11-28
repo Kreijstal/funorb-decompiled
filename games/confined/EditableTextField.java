@@ -618,26 +618,26 @@ class EditableTextField extends InteractiveWidget {
         RuntimeException decompiledCaughtException = null;
         var7 = Confined.field_J ? 1 : 0;
         try {
-          var2_int = param0.g(8, 0);
+          var2_int = param0.readBits(8, 0);
           if (var2_int > 0) {
             stackIn_3_0 = null;
             return (he[]) (stackIn_3_0);
           }
-          var3 = param0.g(12, param1 ^ param1);
+          var3 = param0.readBits(12, param1 ^ param1);
           var4 = new he[var3];
           for (var5 = 0; var5 < var3; var5++) {
             if (!DiskArchiveRequest.a(param1 - 31570, param0)) {
-              var6 = param0.g(ic.a(var5 - 1, (byte) 68), 0);
+              var6 = param0.readBits(ic.a(var5 - 1, (byte) 68), 0);
               var4[var5] = var4[var6];
             } else {
               var6_ref_he = new he();
-              param0.g(24, 0);
-              param0.g(24, param1 - 31662);
-              var6_ref_he.field_a = param0.g(24, param1 - 31662);
-              param0.g(9, 0);
-              param0.g(12, 0);
-              param0.g(12, 0);
-              param0.g(12, 0);
+              param0.readBits(24, 0);
+              param0.readBits(24, param1 - 31662);
+              var6_ref_he.field_a = param0.readBits(24, param1 - 31662);
+              param0.readBits(9, 0);
+              param0.readBits(12, 0);
+              param0.readBits(12, 0);
+              param0.readBits(12, 0);
               var4[var5] = var6_ref_he;
             }
           }

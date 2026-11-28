@@ -124,7 +124,7 @@ final class rp {
           if (param1 < 39) {
             rp.a(-93, 97, (byte) -14, 21, 98, (int[][]) null, 14);
           }
-          stackIn_3_0 = bb.field_b.getFileByName("", param0, (byte) -113);
+          stackIn_3_0 = ArchiveNetworkClient.field_b.getFileByName("", param0, (byte) -113);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

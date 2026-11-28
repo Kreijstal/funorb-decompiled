@@ -13,7 +13,7 @@ final class pk extends kl {
     static int field_t;
 
     pk(String param0, String param1, int param2) {
-        this(param0, param1, mp.field_e.toUpperCase(), um.field_d.toUpperCase(), param2);
+        this(param0, param1, mp.field_e.toUpperCase(), SocketConnector.field_d.toUpperCase(), param2);
     }
 
     public static void e(int param0) {

@@ -112,8 +112,8 @@ final class l {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         try {
-          RegistrationAgreementPane.a((java.awt.Component) ((Object) param1), (byte) -105);
-          fb.a((java.awt.Component) ((Object) param1), (byte) -42);
+          RegistrationAgreementPane.attachKeyboardListeners((java.awt.Component) ((Object) param1), (byte) -105);
+          fb.attachMouseListeners((java.awt.Component) ((Object) param1), (byte) -42);
           if (null != AgeValidator.field_k) {
             AgeValidator.field_k.attach((java.awt.Component) ((Object) param1), false);
           }

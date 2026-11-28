@@ -74,10 +74,10 @@ final class rb extends ue {
           boolean decompiledFrameRemainder0 = true;
           if (!tf.field_c) {
             if (!EditableTextField.field_L.tryLoadGroupByName(param0 ^ -20410, "benefits")) {
-              if (!ob.field_o &&
+              if (!ArchiveNetworkClient.field_o &&
                 EditableTextField.field_L.tryLoadGroupByName(param0 ^ -20410, "screenshots")) {
                 IsaacRandom.a(6437, FullscreenNoticeType.a(-1, "screenshots", "screenshots", EditableTextField.field_L));
-                ob.field_o = true;
+                ArchiveNetworkClient.field_o = true;
                 vp.a(127);
               }
               decompiledFrameRemainder0 = false;
@@ -95,14 +95,14 @@ final class rb extends ue {
               vp.a(107);
             }
           }
-          if ((decompiledFrameRemainder0) && (!ob.field_o &&
+          if ((decompiledFrameRemainder0) && (!ArchiveNetworkClient.field_o &&
             EditableTextField.field_L.tryLoadGroupByName(param0 ^ -20410, "screenshots"))) {
             IsaacRandom.a(6437, FullscreenNoticeType.a(-1, "screenshots", "screenshots", EditableTextField.field_L));
-            ob.field_o = true;
+            ArchiveNetworkClient.field_o = true;
             vp.a(127);
           }
           if (tf.field_c &&
-            ob.field_o) {
+            ArchiveNetworkClient.field_o) {
             EditableTextField.field_L = null;
           }
         }

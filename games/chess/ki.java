@@ -31,7 +31,7 @@ final class ki extends InteractiveWidget {
         }
         if (pd.field_Lb == null) {
           if (param0 == 0) {
-            if (wn.field_e &&
+            if (SocketConnector.field_e &&
               DequeWidgetContainer.field_D) {
               stackIn_29_0 = -7093;
               stackIn_30_1 = (param1) && (ak.a(true));
@@ -40,7 +40,7 @@ final class ki extends InteractiveWidget {
             return;
           }
           ki.b(false);
-          if (wn.field_e &&
+          if (SocketConnector.field_e &&
             DequeWidgetContainer.field_D) {
             stackIn_37_0 = -7093;
             stackIn_38_1 = (param1) && (ak.a(true));
@@ -50,7 +50,7 @@ final class ki extends InteractiveWidget {
         }
         pd.field_Lb.b(16777215, param1);
         if (param0 == 0) {
-          if (wn.field_e &&
+          if (SocketConnector.field_e &&
             DequeWidgetContainer.field_D) {
             stackIn_10_0 = -7093;
             stackIn_11_1 = (param1) && (ak.a(true));
@@ -59,7 +59,7 @@ final class ki extends InteractiveWidget {
           return;
         }
         ki.b(false);
-        if (!wn.field_e) {
+        if (!SocketConnector.field_e) {
           return;
         }
         if (!DequeWidgetContainer.field_D) {

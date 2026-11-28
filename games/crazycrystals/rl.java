@@ -23,7 +23,7 @@ abstract class rl extends oh {
         try {
           var1 = tp.field_f;
           while (cn.b(114)) {
-            var1.d(param0 ^ 8, 8);
+            var1.writeCipheredByte(param0 ^ 8, 8);
             fieldTemp$0 = var1.position + 1;
             var1.position = var1.position + 1;
             var2 = fieldTemp$0;
@@ -108,7 +108,7 @@ abstract class rl extends oh {
         uo.field_o = param2;
         MusicPatch.field_h = param2;
         mb.field_g = 25;
-        ob.field_l = 10;
+        ArchiveNetworkClient.field_l = 10;
         wd.field_j = 60;
         fn.field_j = 8;
         if (param0 == 26) {

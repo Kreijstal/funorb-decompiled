@@ -163,7 +163,7 @@ final class fb extends ql {
         if (ha.field_t == 16 &&
           null == this.field_o &&
           0 > this.field_g) {
-          var4Lifetime2 = ih.a(var3, (byte) -90, this.field_p);
+          var4Lifetime2 = SocketArchiveNetworkClient.a(var3, (byte) -90, this.field_p);
           if (4 > var4Lifetime2) {
             ca.a((double)(this.field_p.field_e + 1), 0, (double)(this.field_p.field_g + 3), true, 0);
             this.field_o = new qm(ln.field_a, var3, 230, rl.field_c, 0, false);
@@ -195,7 +195,7 @@ final class fb extends ql {
             ln.field_a.field_c[var4Lifetime3 - ln.field_a.field_d] = 0;
             ln.field_a.field_c[-ln.field_a.field_d + var4Lifetime3 + 1] = 0;
             if (uj.field_l == 1 &&
-              ej.d((byte) 86)) {
+              ArchiveNetworkClient.d((byte) 86)) {
               eh.field_c.playSample(NetworkArchiveRequest.field_A[17], 100, uh.field_i);
             }
             for (var5Lifetime2 = 1; var5Lifetime2 < 5; var5Lifetime2++) {
@@ -282,7 +282,7 @@ final class fb extends ql {
               uj.field_p.field_e = var4Lifetime5;
             }
           }
-          var4Lifetime5Lifetime1 = ih.a(this.field_q, (byte) -127, var3);
+          var4Lifetime5Lifetime1 = SocketArchiveNetworkClient.a(this.field_q, (byte) -127, var3);
           if (var4Lifetime5Lifetime1 < 3) {
             ng.field_k = true;
             mf.a(false, 3);

@@ -117,7 +117,7 @@ abstract class DebouncedFieldValidator implements FieldValidator {
           field_d = (int[]) null;
         }
         if (gk.correctedCurrentTimeMillis(54) < (350L + this.field_e)) {
-          return tk.field_n;
+          return ArchiveNetworkClient.field_n;
         }
         return this.evaluateValidationStatus((byte) 76);
     }

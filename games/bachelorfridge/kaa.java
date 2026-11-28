@@ -41,14 +41,14 @@ final class kaa extends pu {
         }
         if (param0 > 14) {
           if (var1.length() == 0) {
-            var1 = qfa.field_t;
+            var1 = NetworkArchiveRequest.field_t;
           }
           return var1;
         }
         String var2 = (String) null;
         kaa.a((String) null, (byte) -3);
         if (var1.length() == 0) {
-          var1 = qfa.field_t;
+          var1 = NetworkArchiveRequest.field_t;
         }
         return var1;
     }

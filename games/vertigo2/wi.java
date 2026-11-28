@@ -30,8 +30,8 @@ final class wi extends v {
           if (param1 != 47) {
             this.a((byte) -76);
           }
-          param0.a(684868900, this.field_e);
-          param0.b(0, this.field_i);
+          param0.writeCircumfixedString(684868900, this.field_e);
+          param0.writeBase38Name(0, this.field_i);
         } catch (RuntimeException runtimeException) {
           throw wn.wrapClientException((Throwable) ((Object) runtimeException), "wi.H(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }

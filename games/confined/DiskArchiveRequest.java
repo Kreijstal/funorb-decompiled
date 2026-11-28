@@ -18,7 +18,7 @@ final class DiskArchiveRequest extends ArchiveRequest {
         RuntimeException decompiledCaughtException = null;
         try {
           var2_int = -87 / ((param0 + 63) / 59);
-          stackIn_3_0 = (1 == param1.g(1, 0));
+          stackIn_3_0 = (1 == param1.readBits(1, 0));
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

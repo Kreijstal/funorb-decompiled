@@ -274,7 +274,7 @@ final class pna extends UiComponent {
           ByteStorage.field_f.a(-1, SnowEvent.field_q);
           jj.field_wb = new UiComponent(0L, iw.field_a, ArmPetAttackEffect.field_i.toUpperCase());
           GzipDecompressor.field_a = new UiComponent(0L, p.field_o);
-          vm.field_i = new UiComponent(0L, SlowAllAnimation.field_v);
+          ArchiveNetworkClient.field_i = new UiComponent(0L, SlowAllAnimation.field_v);
           CreaturePoseEffect.field_j = new UiComponent(0L, rda.field_a, IterableDualLinkDeque.field_c.toUpperCase());
           pka.field_b = new UiComponent[param3 + 4];
           gd.field_n = new gna[4 + param3][];
@@ -352,16 +352,16 @@ final class pna extends UiComponent {
           var17.field_N = 1;
           ho.field_g = new UiComponent(0L, (UiComponent) null);
           ho.field_g.a(-1, GzipDecompressor.field_a);
-          ho.field_g.a(-1, vm.field_i);
-          vm.field_i.a(-1, CreaturePoseEffect.field_j);
+          ho.field_g.a(-1, ArchiveNetworkClient.field_i);
+          ArchiveNetworkClient.field_i.a(-1, CreaturePoseEffect.field_j);
           for (var18Lifetime2 = 0; var18Lifetime2 < 4 + param3; var18Lifetime2++) {
             if ((var18Lifetime2 != 1 ||
               !(qha.field_c.length < 2)) && (var18Lifetime2 != 3 ||
               !(bma.field_u <= 1))) {
-              vm.field_i.a(-1, pka.field_b[var18Lifetime2]);
+              ArchiveNetworkClient.field_i.a(-1, pka.field_b[var18Lifetime2]);
               for (var19 = 0; gd.field_n[var18Lifetime2].length > var19; var19++) {
                 if (null != gd.field_n[var18Lifetime2][var19]) {
-                  vm.field_i.a(-1, gd.field_n[var18Lifetime2][var19]);
+                  ArchiveNetworkClient.field_i.a(-1, gd.field_n[var18Lifetime2][var19]);
                 }
               }
             }

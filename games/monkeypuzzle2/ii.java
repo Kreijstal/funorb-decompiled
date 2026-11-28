@@ -50,19 +50,19 @@ class ii extends vb {
     final static void a(PlatformTaskDispatcher param0, String param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
         try {
           rk.field_g = param0;
-          fa.field_q = param5;
+          SocketArchiveNetworkClient.field_q = param5;
           fl.field_d = param7;
           fi.field_d = param1;
           pi.field_o = param2;
           oh.field_c = param4;
           rb.field_eb = param3;
           mk.field_f = param6;
-          lg.field_n = (wl) ((Object) new fa());
+          lg.field_n = (ArchiveNetworkClient) ((Object) new SocketArchiveNetworkClient());
           jc.field_c = new DiskCacheWorker(param0);
           if (param8 != -2045) {
             ii.clearStaticReferences((byte) 62);
           }
-          c.field_h = new c(lg.field_n, jc.field_c);
+          ArchiveSourceManager.field_h = new ArchiveSourceManager(lg.field_n, jc.field_c);
         } catch (RuntimeException runtimeException) {
           throw la.a((Throwable) ((Object) runtimeException), "ii.L(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ')');
         }

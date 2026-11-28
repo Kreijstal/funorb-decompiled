@@ -382,7 +382,7 @@ class DequeWidgetContainer extends UiWidget implements WidgetContainerMarker {
         boolean decompiledFrameRemainder0 = true;
         if (we.field_c >= 20 &&
           dc.f(-14) && (!(DynamicLight.field_q > 0) ||
-          ja.c((byte) -77))) {
+          ArchiveSourceManager.c((byte) -77))) {
           stackIn_9_0 = false;
           decompiledFrameRemainder0 = false;
         }

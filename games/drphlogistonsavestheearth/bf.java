@@ -1994,7 +1994,7 @@ final class bf {
             bf.a(29, (java.applet.Applet) null);
           }
           var9 = FullscreenStatusDialog.field_ib.get(13);
-          stackIn_4_0 = MatchingFieldValidator.field_q[var3_int - 1] + ", " + var4 / 10 + var4 % 10 + "-" + ka.field_j[var5] + "-" + var6 + " " + var7 / 10 + var7 % 10 + ":" + var8 / 10 + var8 % 10 + ":" + var9 / 10 + var9 % 10 + " GMT";
+          stackIn_4_0 = MatchingFieldValidator.field_q[var3_int - 1] + ", " + var4 / 10 + var4 % 10 + "-" + ProxySocketConnector.field_j[var5] + "-" + var6 + " " + var7 / 10 + var7 % 10 + ":" + var8 / 10 + var8 % 10 + ":" + var9 / 10 + var9 % 10 + " GMT";
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

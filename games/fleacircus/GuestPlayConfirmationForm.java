@@ -296,7 +296,7 @@ final class GuestPlayConfirmationForm extends DequeWidgetContainer implements Wi
     final void drawWidget(int param0, int param1, boolean param2, int param3) {
         int var5 = this.field_y + param1;
         int var6 = this.field_z + param0;
-        ug.field_e.drawParagraph(rd.field_b, var5 + 20, var6 + 20, this.field_u - 40, this.field_j - 50, 16777215, -1, 1, 0, ug.field_e.field_H);
+        ug.field_e.drawParagraph(MouseInputHandler.field_b, var5 + 20, var6 + 20, this.field_u - 40, this.field_j - 50, 16777215, -1, 1, 0, ug.field_e.field_H);
         super.drawWidget(param0, param1, param2, param3);
     }
 

@@ -42,7 +42,7 @@ final class m {
             return (java.awt.Frame) (stackIn_3_0);
           }
           if (~param1 == param3) {
-            var10 = a.a(param5, -119);
+            var10 = SocketArchiveNetworkClient.a(param5, -119);
             var6 = var10;
             if (var6 == null) {
               stackIn_8_0 = null;

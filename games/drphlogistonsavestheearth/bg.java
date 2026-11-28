@@ -122,7 +122,7 @@ final class bg extends IntrusiveNode {
             SoftwareRasterizer.setRasterBuffer(var28, var2, var3);
             SoftwareRasterizer.restoreClip(ha.field_d);
             ch.field_A = (r.field_b.field_y - DualLinkNode.field_r.field_y) / 2 + 434;
-            ka.field_o = 231 + (-DualLinkNode.field_r.field_y + r.field_b.field_y) / 2;
+            ProxySocketConnector.field_o = 231 + (-DualLinkNode.field_r.field_y + r.field_b.field_y) / 2;
             ce.field_a = null;
             AccountRegistrationPanel.field_N = 390 + (r.field_b.field_w - DualLinkNode.field_r.field_w) / 2;
             tb.field_c = 390 + (r.field_b.field_w - DualLinkNode.field_r.field_w) / 2;
@@ -136,7 +136,7 @@ final class bg extends IntrusiveNode {
             var2Lifetime1 = SoftwareRasterizer.field_k;
             var3Lifetime1 = SoftwareRasterizer.field_c;
             SoftwareRasterizer.saveClip(ha.field_d);
-            var14 = a.a(5044, rg.field_d, new String[]{ka.field_p[gd.field_a]});
+            var14 = a.a(5044, rg.field_d, new String[]{ProxySocketConnector.field_p[gd.field_a]});
             var5 = md.field_a.maxLineWidth(var14, ResizableModalDialog.field_db);
             var6Lifetime1 = md.field_a.textHeight(var14, ResizableModalDialog.field_db, md.field_a.field_S + md.field_a.field_x);
             var7Lifetime1 = (ResizableModalDialog.field_db - var5) / 2 + KeyboardInput.field_a;
@@ -199,15 +199,15 @@ final class bg extends IntrusiveNode {
           if (param0 != -11133) {
             field_r = 6;
           }
-          if (df.field_b != null &&
+          if (ArchiveSourceManager.field_b != null &&
             null != ByteArrayPoolSupport.field_f) {
             var30 = SoftwareRasterizer.field_l;
             var2Lifetime2 = SoftwareRasterizer.field_k;
             var3Lifetime2 = SoftwareRasterizer.field_c;
             SoftwareRasterizer.saveClip(ha.field_d);
             var16 = new RgbSprite(412, 43);
-            var17 = a.a(5044, jl.field_i, new String[]{df.field_b});
-            df.field_b = null;
+            var17 = a.a(5044, jl.field_i, new String[]{ArchiveSourceManager.field_b});
+            ArchiveSourceManager.field_b = null;
             var16.bindAsRenderTarget();
             ByteArrayPoolSupport.field_f.drawParagraph(var17, 3, 3, -6 + var16.field_y, var16.field_w - 6, 16777215, -1, 0, 1, ByteArrayPoolSupport.field_f.field_S + ByteArrayPoolSupport.field_f.field_x);
             p.a(var16.field_y, 3, 0, var16.field_w, 1, 0, 0, var16);
@@ -276,7 +276,7 @@ final class bg extends IntrusiveNode {
               var1.drawAdditive(-1, -1, var2Lifetime4);
             }
             stackIn_58_0 = (ArchiveRequest.field_w.field_f == 0);
-            qj.a(stackIn_58_0, tb.field_c, ka.field_o, true);
+            qj.a(stackIn_58_0, tb.field_c, ProxySocketConnector.field_o, true);
           }
           if (null != r.field_b &&
             DualLinkNode.field_r != null) {

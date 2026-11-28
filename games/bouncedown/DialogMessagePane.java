@@ -212,7 +212,7 @@ final class DialogMessagePane extends DequeWidgetContainer implements WidgetActi
         int var8Lifetime1;
         int var9Lifetime1;
         try {
-          ij.field_c = SectorCacheStore.a(param0, "commonui", (byte) -38, "frame_top");
+          BouncedownClientSupport.field_c = SectorCacheStore.a(param0, "commonui", (byte) -38, "frame_top");
           DirectByteStorage.field_d = SectorCacheStore.a(param0, "commonui", (byte) 114, "frame_bottom");
           fd.field_m = nc.a("jagex_logo_grey", param0, "commonui", 0);
           ih.field_T = SectorCacheStore.a(param0, "commonui", (byte) 111, "button");

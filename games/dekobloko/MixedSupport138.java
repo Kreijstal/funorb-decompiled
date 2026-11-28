@@ -121,7 +121,7 @@ final class MixedSupport138 {
           }
           MixedSupport119.integerState0772 = integerArgument3;
           cipherPacketBufferLocal3 = SocketFactory.cipherPacketBufferState0002;
-          cipherPacketBufferLocal3.performAction1641(integerArgument2, -4);
+          cipherPacketBufferLocal3.writeCipheredByte(integerArgument2, -4);
           cipherPacketBufferLocal3.writeByte(true, 3);
           cipherPacketBufferLocal3.writeByte(true, 11);
           cipherPacketBufferLocal3.writeShort(-1, integerArgument3);

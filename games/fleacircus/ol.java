@@ -28,11 +28,11 @@ final class ol {
         field_f = null;
     }
 
-    final static hm a(String param0, int param1, int param2) {
-        jk var3 = null;
+    final static SocketConnector a(String param0, int param1, int param2) {
+        ProxySocketConnector var3 = null;
         RuntimeException var3_ref = null;
         String var4 = null;
-        jk stackIn_3_0 = null;
+        ProxySocketConnector stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -42,11 +42,11 @@ final class ol {
             var4 = (String) null;
             ol.a((String) null, 81, 32);
           }
-          var3 = new jk();
-          ((hm) ((Object) var3)).field_a = param0;
-          ((hm) ((Object) var3)).field_e = param2;
+          var3 = new ProxySocketConnector();
+          ((SocketConnector) ((Object) var3)).field_a = param0;
+          ((SocketConnector) ((Object) var3)).field_e = param2;
           stackIn_3_0 = var3;
-          return (hm) ((Object) stackIn_3_0);
+          return (SocketConnector) ((Object) stackIn_3_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3_ref = decompiledCaughtException;

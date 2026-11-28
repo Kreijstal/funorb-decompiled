@@ -170,7 +170,7 @@ final class ModalDialogHost extends SingleChildWidgetContainer {
 
     final static String h(int param0) {
         if (qc.field_i == gj.field_a) {
-          return vb.field_m;
+          return ArchiveNetworkClient.field_m;
         }
         if (eh.field_p == qc.field_i) {
           return AccountCreationResultPanel.field_zb;

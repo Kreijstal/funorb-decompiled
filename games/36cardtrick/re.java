@@ -202,8 +202,8 @@ final class re {
                     var2 = ModalDialogHost.field_F;
                     var7 = wh.a(var3, var4, -122, this.field_d.field_P);
                     var8 = 115;
-                    var9 = eb.field_c.field_J[0][2];
-                    eb.field_c.field_J[0][2] = 16777215;
+                    var9 = ArchiveSourceManager.field_c.field_J[0][2];
+                    ArchiveSourceManager.field_c.field_J[0][2] = 16777215;
                     var10 = 0;
                     scanLoop3: while (true) {
                       if (8 >= var10) {
@@ -242,18 +242,18 @@ final class re {
                           } else {
                             var12 = 1782271;
                           }
-                          eb.field_c.field_J[0][1] = var12;
+                          ArchiveSourceManager.field_c.field_J[0][1] = var12;
                           if (8 != var10) {
-                            eb.field_c.drawRightAligned(var10 + 1 + ". ", 231, var8, 0, -1);
+                            ArchiveSourceManager.field_c.drawRightAligned(var10 + 1 + ". ", 231, var8, 0, -1);
                           }
                           if (var11_ref != null) {
                             var15 = qa.field_b.charWidth('W') * 12;
                             var18 = BitmapFont.truncateWithEllipsis(qa.field_b, var11_ref, var15);
-                            eb.field_c.drawString(var18, 231, var8, 0, -1);
+                            ArchiveSourceManager.field_c.drawString(var18, 231, var8, 0, -1);
                           }
-                          eb.field_c.drawRightAligned(Integer.toString(var13), 560, var8, 0, -1);
+                          ArchiveSourceManager.field_c.drawRightAligned(Integer.toString(var13), 560, var8, 0, -1);
                           var2 = "";
-                          eb.field_c.drawRightAligned(Integer.toString(var14), 479, var8, 0, -1);
+                          ArchiveSourceManager.field_c.drawRightAligned(Integer.toString(var14), 479, var8, 0, -1);
                           var8 = var8 + (qa.field_b.field_s + qa.field_b.field_x);
                         }
                         var10++;
@@ -261,7 +261,7 @@ final class re {
                       }
                       break;
                     }
-                    eb.field_c.field_J[0][2] = var9;
+                    ArchiveSourceManager.field_c.field_J[0][2] = var9;
                   }
                   break regionExit2;
                 }
@@ -270,19 +270,19 @@ final class re {
                 var2 = t.field_f;
               }
             }
-            eb.field_c.field_J[0][1] = 6697779;
-            eb.field_c.field_J[0][2] = 16777215;
-            eb.field_c.drawParagraph(ij.field_d, 211, 106 + 9 * (qa.field_b.field_s + qa.field_b.field_x), 389, 8 * qa.field_b.field_s, 0, -1, 1, 0, qa.field_b.field_s + qa.field_b.field_x);
-            eb.field_c.field_J[0][2] = 1;
+            ArchiveSourceManager.field_c.field_J[0][1] = 6697779;
+            ArchiveSourceManager.field_c.field_J[0][2] = 16777215;
+            ArchiveSourceManager.field_c.drawParagraph(ij.field_d, 211, 106 + 9 * (qa.field_b.field_s + qa.field_b.field_x), 389, 8 * qa.field_b.field_s, 0, -1, 1, 0, qa.field_b.field_s + qa.field_b.field_x);
+            ArchiveSourceManager.field_c.field_J[0][2] = 1;
           }
         }
-        eb.field_c.field_J[0][2] = 16777215;
-        eb.field_c.field_J[0][1] = 6697779;
+        ArchiveSourceManager.field_c.field_J[0][2] = 16777215;
+        ArchiveSourceManager.field_c.field_J[0][1] = 6697779;
         if (param0 < 82) {
           this.a(-8, -35, -46);
         }
-        eb.field_c.drawParagraph(var2, 211, 166, 389, qa.field_b.field_s * 8, 0, -1, 1, 1, qa.field_b.field_s + qa.field_b.field_x);
-        eb.field_c.field_J[0][2] = 1;
+        ArchiveSourceManager.field_c.drawParagraph(var2, 211, 166, 389, qa.field_b.field_s * 8, 0, -1, 1, 1, qa.field_b.field_s + qa.field_b.field_x);
+        ArchiveSourceManager.field_c.field_J[0][2] = 1;
     }
 
     private final int a(byte param0, int param1, int param2) {
@@ -1206,12 +1206,12 @@ final class re {
                   ((BinaryBitmapFont) (Object) stackIn_62_0).drawString(stackIn_63_1, 388, var7Lifetime2, 16711680, -1);
                   var7Lifetime2 = var7Lifetime2 + (5 + var6);
                   var7Lifetime2 = var7Lifetime2 + var6 * qa.field_b.drawParagraph(UiWidget.field_u[var4Lifetime1], 388, var7Lifetime2 - qa.field_b.field_s, 179, 480, 0, -1, 0, 0, var6);
-                  qa.field_b.drawString(eg.field_a + 100 * eb.field_i[var4Lifetime1], 388, var7Lifetime2, 0, -1);
+                  qa.field_b.drawString(eg.field_a + 100 * ArchiveSourceManager.field_i[var4Lifetime1], 388, var7Lifetime2, 0, -1);
                   var7Lifetime2 = var7Lifetime2 + var6;
                   var9Lifetime2 = 388;
                   qa.field_b.drawString(nl.field_a, var9Lifetime2, var7Lifetime2, 0, -1);
                   var9Lifetime2 = var9Lifetime2 + qa.field_b.stringWidth(nl.field_a);
-                  for (var10 = 0; eb.field_i[var4Lifetime1] > var10; var10++) {
+                  for (var10 = 0; ArchiveSourceManager.field_i[var4Lifetime1] > var10; var10++) {
                     sk.field_c.draw(var9Lifetime2, -qa.field_b.field_s + var7Lifetime2);
                     var9Lifetime2 = var9Lifetime2 + sk.field_c.field_l / 3;
                   }
@@ -1396,12 +1396,12 @@ final class re {
                   qa.field_b.drawString(pk.field_b, var15, var14Lifetime2, 16711680, -1);
                   var14Lifetime2 = var14Lifetime2 + (5 + var13Lifetime2);
                   var14Lifetime2 = var14Lifetime2 + qa.field_b.drawParagraph(UiWidget.field_u[var10Lifetime1Lifetime1], var15, -qa.field_b.field_s + var14Lifetime2, -var15 + 588, 480, 0, -1, 0, 0, var13Lifetime2) * var13Lifetime2;
-                  qa.field_b.drawString(eg.field_a + 100 * eb.field_i[var10Lifetime1Lifetime1], var15, var14Lifetime2, 0, -1);
+                  qa.field_b.drawString(eg.field_a + 100 * ArchiveSourceManager.field_i[var10Lifetime1Lifetime1], var15, var14Lifetime2, 0, -1);
                   var8Lifetime1Lifetime3 = var15;
                   var14Lifetime2 = var14Lifetime2 + var13Lifetime2;
                   qa.field_b.drawString(nl.field_a, var8Lifetime1Lifetime3, var14Lifetime2, 0, -1);
                   var8Lifetime1Lifetime3 = var8Lifetime1Lifetime3 + qa.field_b.stringWidth(nl.field_a);
-                  for (var16 = 0; var16 < eb.field_i[var10Lifetime1Lifetime1]; var16++) {
+                  for (var16 = 0; var16 < ArchiveSourceManager.field_i[var10Lifetime1Lifetime1]; var16++) {
                     sk.field_c.draw(var8Lifetime1Lifetime3, -qa.field_b.field_s + var14Lifetime2);
                     var8Lifetime1Lifetime3 = var8Lifetime1Lifetime3 + sk.field_c.field_l / 3;
                   }

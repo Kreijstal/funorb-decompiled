@@ -23,7 +23,7 @@ abstract class hl {
         RuntimeException decompiledCaughtException = null;
         try {
           var3 = ac.field_B;
-          var3.d((byte) -118, param0);
+          var3.writeCipheredByte((byte) -118, param0);
           var3.writeByte(6, 5);
           var3.writeByte(6, 0);
           var3.writeShort(param2.field_k, -125);

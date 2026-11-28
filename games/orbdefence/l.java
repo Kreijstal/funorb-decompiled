@@ -108,8 +108,8 @@ final class l {
         RuntimeException decompiledCaughtException = null;
         try {
           var2_int = 47 % ((param1 + 27) / 42);
-          hf.a(false, (java.awt.Component) ((Object) param0));
-          FullscreenStatusDialog.a((byte) -56, (java.awt.Component) ((Object) param0));
+          hf.attachKeyboardListeners(false, (java.awt.Component) ((Object) param0));
+          FullscreenStatusDialog.attachMouseListeners((byte) -56, (java.awt.Component) ((Object) param0));
           if (mj.field_i == null) {
             return;
           }

@@ -135,16 +135,16 @@ final class il extends ResultScenePhase {
           !(CrystalTile.field_o < 1)) {
           var3 = q.field_a[ma.field_n[param1]].field_i;
           if (1000 <= var3) {
-            rc.a(1, fn.field_j, mb.field_g, 247, wd.field_j, 8, ob.field_l);
+            rc.a(1, fn.field_j, mb.field_g, 247, wd.field_j, 8, ArchiveNetworkClient.field_l);
           }
           if (5000 <= var3) {
-            rc.a(1, fn.field_j, mb.field_g, 246, wd.field_j, 9, ob.field_l);
+            rc.a(1, fn.field_j, mb.field_g, 246, wd.field_j, 9, ArchiveNetworkClient.field_l);
           }
           if (var3 >= 20000) {
-            rc.a(1, fn.field_j, mb.field_g, 245, wd.field_j, 10, ob.field_l);
+            rc.a(1, fn.field_j, mb.field_g, 245, wd.field_j, 10, ArchiveNetworkClient.field_l);
           }
           if (50000 <= var3) {
-            rc.a(1, fn.field_j, mb.field_g, 244, wd.field_j, 11, ob.field_l);
+            rc.a(1, fn.field_j, mb.field_g, 244, wd.field_j, 11, ArchiveNetworkClient.field_l);
           }
           gh.j(-10935);
         }

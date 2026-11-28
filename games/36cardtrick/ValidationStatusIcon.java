@@ -225,7 +225,7 @@ final class ValidationStatusIcon extends InteractiveWidget {
           hb.field_c.drawAdditive(var5 - var15.field_l, -var15.field_k + var6, 256);
           return;
         }
-        if (a.field_n == var8) {
+        if (SocketArchiveNetworkClient.field_n == var8) {
           var16 = gh.field_n[0];
           var9Lifetime1 = var16.field_l << 1;
           var10Lifetime1 = var16.field_k << 1;

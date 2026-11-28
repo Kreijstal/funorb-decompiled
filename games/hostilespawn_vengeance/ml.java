@@ -177,7 +177,7 @@ final class ml {
         try {
           var10 = new PacketBuffer(param0);
           var3 = var10.readUnsignedByte(param1 ^ -32326);
-          var4 = var10.d(8195);
+          var4 = var10.readInt(8195);
           if (param1 != -76) {
             var9 = (CharSequence) null;
             ml.a((byte) -45, (CharSequence) null);
@@ -188,11 +188,11 @@ final class ml {
               var14 = new byte[var4];
               var12 = var14;
               var5 = var12;
-              var10.a(var4, 0, var14, -18181);
+              var10.readBytes(var4, 0, var14, -18181);
               stackIn_23_0 = var5;
               return stackIn_23_0;
             }
-            var5_int = var10.d(8195);
+            var5_int = var10.readInt(8195);
             if (var5_int >= 0 && (AccountRegistrationPanel.field_H == 0 ||
               !(var5_int > AccountRegistrationPanel.field_H))) {
               var13 = new byte[var5_int];

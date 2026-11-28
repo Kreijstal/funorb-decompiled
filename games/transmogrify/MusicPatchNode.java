@@ -53,7 +53,7 @@ final class MusicPatchNode extends IntrusiveNode {
         }
     }
 
-    final static void a(byte param0, java.awt.Component param1) {
+    final static void detachMouseListeners(byte param0, java.awt.Component param1) {
         try {
           if (param0 != 104) {
             field_D = false;

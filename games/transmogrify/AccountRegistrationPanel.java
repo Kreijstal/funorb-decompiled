@@ -61,7 +61,7 @@ final class AccountRegistrationPanel extends DequeWidgetContainer implements Tex
         var3 = var3 + (5 + this.addLabeledFieldWithDefaultValidationMessage(this.field_x, 170, 35, ContextualRuntimeException.field_d, var3, BoundedRandomAccessFile.field_a));
         var3 = var3 + (5 + this.addLabeledFieldWithDefaultValidationMessage(this.field_J, 170, 35, ResizableModalDialog.field_O, var3, rd.field_b));
         var3 = var3 + this.addLabeledFieldWithValidationIcon(170, 818340513, StripedProgressWidget.field_A, var3, this.field_C);
-        LabeledWidgetContainer var4 = new LabeledWidgetContainer(46, var3, -90 + this.field_l, 25, this.field_w, true, -120 + this.field_l, 5, al.field_i, 11579568, uh.field_o);
+        LabeledWidgetContainer var4 = new LabeledWidgetContainer(46, var3, -90 + this.field_l, 25, this.field_w, true, -120 + this.field_l, 5, al.field_i, 11579568, ArchiveNetworkClient.field_o);
         this.addChild((UiWidget) (var4), (byte) -105);
         var3 = var3 + var4.field_h;
         DefaultTextWidgetRenderer var5 = new DefaultTextWidgetRenderer(vd.field_h, 0, 0, 0, 0, 16777215, -1, 0, 0, vd.field_h.field_y, -1, 2147483647, true);

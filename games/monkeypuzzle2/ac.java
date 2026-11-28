@@ -57,7 +57,7 @@ final class ac {
         }
     }
 
-    final static void a(int param0, java.awt.Component param1) {
+    final static void detachMouseListeners(int param0, java.awt.Component param1) {
         try {
           param1.removeMouseListener(UiWidget.field_n);
           param1.removeMouseMotionListener(UiWidget.field_n);

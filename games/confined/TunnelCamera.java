@@ -84,7 +84,7 @@ final class TunnelCamera extends TunnelEntity {
         int var4 = 0;
         try {
           var6 = vh.field_a;
-          var6.b(true, param1);
+          var6.writeCipheredByte(true, param1);
           var6.position = var6.position + 1;
           var4 = var6.position;
           var6.writeByte(param0 - 7830, 1);

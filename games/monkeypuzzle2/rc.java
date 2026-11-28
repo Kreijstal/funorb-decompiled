@@ -84,8 +84,8 @@ final class rc extends kc {
             field_i = (String) null;
           }
           var4 = var9.readInt(127);
-          if (var4 >= 0 && (fa.field_r == 0 ||
-            !(fa.field_r < var4))) {
+          if (var4 >= 0 && (SocketArchiveNetworkClient.field_r == 0 ||
+            !(SocketArchiveNetworkClient.field_r < var4))) {
             if (var3 == 0) {
               var13 = new byte[var4];
               var11 = var13;
@@ -95,8 +95,8 @@ final class rc extends kc {
               return stackIn_23_0;
             }
             var5_int = var9.readInt(-80);
-            if (var5_int >= 0 && (fa.field_r == 0 ||
-              !(fa.field_r < var5_int))) {
+            if (var5_int >= 0 && (SocketArchiveNetworkClient.field_r == 0 ||
+              !(SocketArchiveNetworkClient.field_r < var5_int))) {
               var12 = new byte[var5_int];
               var10 = var12;
               var6 = var10;

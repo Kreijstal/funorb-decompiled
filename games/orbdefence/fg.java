@@ -92,7 +92,7 @@ class fg extends DefaultTextWidgetRenderer {
         }
     }
 
-    final static void a(byte param0, java.awt.Component param1) {
+    final static void detachKeyboardListeners(byte param0, java.awt.Component param1) {
         try {
           param1.removeKeyListener(ad.field_b);
           param1.removeFocusListener(ad.field_b);

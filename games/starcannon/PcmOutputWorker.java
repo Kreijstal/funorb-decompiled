@@ -77,7 +77,7 @@ final class PcmOutputWorker implements Runnable {
             if (KeyboardInput.field_a == 2) {
               AccountCreationResultPanel.field_sb = new BufferedSocket((java.net.Socket) (bj.field_d.result), DirectByteStorage.field_f);
               var2 = new PacketBuffer(13);
-              oe.a(wj.field_b, 32, var2, ResizableModalDialog.field_M, ld.field_fb);
+              SocketConnector.a(wj.field_b, 32, var2, ResizableModalDialog.field_M, ld.field_fb);
               var2.writeByte(15, -122);
               var2.writeInt((byte) -113, ac.field_e);
               AccountCreationResultPanel.field_sb.enqueueWrite(0, var2.payload, (byte) 87, 13);
@@ -103,7 +103,7 @@ final class PcmOutputWorker implements Runnable {
               stackIn_38_0 = -1;
               return stackIn_38_0;
             }
-            jh.field_b.a(AccountCreationResultPanel.field_sb, 65, SecondaryNodeDeque.field_g);
+            jh.field_b.attachSocket(AccountCreationResultPanel.field_sb, 65, SecondaryNodeDeque.field_g);
             KeyboardInput.field_a = 0;
             bj.field_d = null;
             AccountCreationResultPanel.field_sb = null;

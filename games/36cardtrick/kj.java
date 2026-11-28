@@ -50,7 +50,7 @@ class kj extends cj {
         if (param3 > -79) {
           return;
         }
-        tl.field_b = param2;
+        SocketConnector.field_b = param2;
         sj.field_c = param0;
     }
 

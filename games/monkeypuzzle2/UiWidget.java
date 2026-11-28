@@ -15,7 +15,7 @@ class UiWidget extends IntrusiveNode {
     int field_t;
     String field_m;
     int field_p;
-    static qh field_n;
+    static MouseInputHandler field_n;
     int field_k;
     int field_e;
     boolean field_g;
@@ -896,6 +896,6 @@ class UiWidget extends IntrusiveNode {
 
     static {
         field_j = 0;
-        field_n = new qh();
+        field_n = new MouseInputHandler();
     }
 }

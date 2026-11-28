@@ -52,23 +52,23 @@ final class fb {
         AcceleratingProjectile.field_Q = param0;
     }
 
-    final static n a(int param0, int param1, String param2) {
-        og var3 = null;
+    final static SocketConnector a(int param0, int param1, String param2) {
+        ProxySocketConnector var3 = null;
         RuntimeException var3_ref = null;
-        og stackIn_3_0 = null;
+        ProxySocketConnector stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var3 = new og();
+          var3 = new ProxySocketConnector();
           if (param0 != 12) {
             field_d = (String[]) null;
           }
-          ((n) ((Object) var3)).field_b = param2;
-          ((n) ((Object) var3)).field_c = param1;
+          ((SocketConnector) ((Object) var3)).field_b = param2;
+          ((SocketConnector) ((Object) var3)).field_c = param1;
           stackIn_3_0 = var3;
-          return (n) ((Object) stackIn_3_0);
+          return (SocketConnector) ((Object) stackIn_3_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3_ref = decompiledCaughtException;

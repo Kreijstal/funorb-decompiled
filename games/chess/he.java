@@ -48,7 +48,7 @@ final class he extends ci {
         this.field_Kb.a(var3Lifetime1, -var3Lifetime1 + this.field_M, param1 - 2147483645, this.field_pb, 0);
     }
 
-    final static void a(int param0, java.awt.Component param1) {
+    final static void attachMouseListeners(int param0, java.awt.Component param1) {
         try {
           param1.addMouseListener(ContentTransitionDialog.field_cb);
           param1.addMouseMotionListener(ContentTransitionDialog.field_cb);
@@ -80,7 +80,7 @@ final class he extends ci {
           return param1 + (this.field_Ib.e((byte) 118) + this.field_Kb.e((byte) 76));
         }
         java.awt.Component var4 = (java.awt.Component) null;
-        he.a(-34, (java.awt.Component) null);
+        he.attachMouseListeners(-34, (java.awt.Component) null);
         return param1 + (this.field_Ib.e((byte) 118) + this.field_Kb.e((byte) 76));
     }
 

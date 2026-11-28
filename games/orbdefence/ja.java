@@ -1143,7 +1143,7 @@ final class ja {
             if (this.field_a == 4 ||
               2 == this.field_a ||
               this.field_a == 8) {
-              pi.a(this.field_a, 19741, this.field_a);
+              ArchiveSourceManager.a(this.field_a, 19741, this.field_a);
               if (var9 == 0) {
                 break regionExit1;
               }
@@ -1152,7 +1152,7 @@ final class ja {
               break regionExit1;
             }
             stackIn_204_0 = (TextLayout.field_f == 0) ? 2 : 5;
-            pi.a(stackIn_204_0, 19741, 6);
+            ArchiveSourceManager.a(stackIn_204_0, 19741, 6);
             if (var9 == 0) {
               break regionExit1;
             }

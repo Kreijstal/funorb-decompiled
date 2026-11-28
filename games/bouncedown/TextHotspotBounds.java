@@ -24,7 +24,7 @@ final class TextHotspotBounds extends IntrusiveNode {
         }
     }
 
-    final static void a(int param0, boolean param1, boolean param2, int[] param3, int[] param4, boolean param5, jk param6) {
+    final static void a(int param0, boolean param1, boolean param2, int[] param3, int[] param4, boolean param5, LogoMesh param6) {
         int stackIn_62_0 = 0;
         int stackIn_62_1 = 0;
         RuntimeException stackIn_67_0 = null;
@@ -117,7 +117,7 @@ final class TextHotspotBounds extends IntrusiveNode {
               stackIn_62_1 = ~var29Lifetime1;
               if (var31 == 0) {
                 if (stackIn_62_0 >= stackIn_62_1) {
-                  ca.field_c[var23Lifetime2] = var27Lifetime1 / var29Lifetime1 + var21Lifetime2;
+                  SlimeCollisionSupport.field_c[var23Lifetime2] = var27Lifetime1 / var29Lifetime1 + var21Lifetime2;
                   kg.field_g[var23Lifetime2] = var22Lifetime2 + var28Lifetime1 / var29Lifetime1;
                   r.field_c[var23Lifetime2] = var29Lifetime1;
                   if (var29Lifetime1 < var7_int) {
@@ -198,7 +198,7 @@ final class TextHotspotBounds extends IntrusiveNode {
                   var21Lifetime2 = param6.field_x[var18];
                   DialogMessagePane.field_D[var18] = var9 * var19 - (-(var20 * var12) - var15 * var21Lifetime2) >> 16;
                   ih.field_db[var18] = var20 * var13 + (var19 * var10 + var21Lifetime2 * var16) >> 16;
-                  nk.field_b[var18] = var11 * var19 + var14 * var20 + var21Lifetime2 * var17 >> 16;
+                  BouncedownMenuEntry.field_b[var18] = var11 * var19 + var14 * var20 + var21Lifetime2 * var17 >> 16;
                   var18++;
                 }
               }

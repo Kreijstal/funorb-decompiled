@@ -36,7 +36,7 @@ final class ql {
           if (param1 != 100) {
             field_m = (BinaryBitmapFont) null;
           }
-          stackIn_5_0 = (param0.c((byte) -119, 1) == 1);
+          stackIn_5_0 = (param0.readBits((byte) -119, 1) == 1);
           return stackIn_5_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

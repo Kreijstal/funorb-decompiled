@@ -148,7 +148,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
                 }
                 lc.b(24536);
                 this.b(-42);
-                MusicPatch.field_o = DraggableWidgetContainer.a(ap.field_r, 6641, (java.awt.Component) ((Object) DialogMessagePane.field_D), rh.field_f);
+                MusicPatch.field_o = DraggableWidgetContainer.a(SocketArchiveNetworkClient.field_r, 6641, (java.awt.Component) ((Object) DialogMessagePane.field_D), rh.field_f);
                 this.initializeClient((byte) -82);
                 MouseWheelInput.field_h = sn.a(27801);
                 do {
@@ -286,12 +286,12 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
             PauseMenu.field_j = (32000 + (var6_int >> 1)) / var6_int;
           }
           ne.field_c = ne.field_c + 1 & 31;
-          fieldTemp$1 = wf.field_h;
-          wf.field_h = wf.field_h + 1;
+          fieldTemp$1 = ProxySocketConnector.field_h;
+          ProxySocketConnector.field_h = ProxySocketConnector.field_h + 1;
           if (fieldTemp$1 > 50) {
             al.field_f = true;
-            wf.field_h = wf.field_h - 50;
-            DialogMessagePane.field_D.setSize(ap.field_r, rh.field_f);
+            ProxySocketConnector.field_h = ProxySocketConnector.field_h - 50;
+            DialogMessagePane.field_D.setSize(SocketArchiveNetworkClient.field_r, rh.field_f);
             DialogMessagePane.field_D.setVisible(true);
             if (MenuOverlay.field_d != null &&
               null == LoginPanel.field_F) {
@@ -484,7 +484,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
           ((java.awt.Container) (var2)).setLayout((java.awt.LayoutManager) null);
           DialogMessagePane.field_D = (java.awt.Canvas) ((Object) new GameCanvas((java.awt.Component) (this)));
           ((java.awt.Container) (var2)).add((java.awt.Component) ((Object) DialogMessagePane.field_D));
-          DialogMessagePane.field_D.setSize(ap.field_r, rh.field_f);
+          DialogMessagePane.field_D.setSize(SocketArchiveNetworkClient.field_r, rh.field_f);
           if (param0 >= -38) {
             return;
           }
@@ -669,7 +669,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
               }
               rh.field_f = param5;
               SecondaryNodeDequeIterator.field_b = param5;
-              ap.field_r = param6;
+              SocketArchiveNetworkClient.field_r = param6;
               MouseWheelInput.field_c = param6;
               WallTile.field_w = le.b((byte) -20);
               dupTemp$0 = new PlatformTaskDispatcher(param1, param3, param2, true);

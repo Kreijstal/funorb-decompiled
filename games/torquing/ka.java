@@ -56,7 +56,7 @@ final class ka extends IntrusiveNode {
           FullscreenStatusDialog.field_R = true;
           go.field_x = param0;
           if (go.field_x == 0) {
-            var3_int = rf.a(dd.field_e, bo.field_e, field_j, 87, DefaultTextWidgetRenderer.field_i);
+            var3_int = rf.a(dd.field_e, ArchiveSourceManager.field_e, field_j, 87, DefaultTextWidgetRenderer.field_i);
             var4 = var3_int + 3;
             ProgressMessageDialog.field_Z = new int[var4];
             wh.field_z = new String[var4];
@@ -75,7 +75,7 @@ final class ka extends IntrusiveNode {
             ProgressMessageDialog.field_Z[-1 + var4] = 1;
             IndexedSpriteLayer.field_e[1] = 5;
           } else if (go.field_x == 1) {
-            var3_int = rf.a(dd.field_e, bo.field_e, field_j, 74, DefaultTextWidgetRenderer.field_i);
+            var3_int = rf.a(dd.field_e, ArchiveSourceManager.field_e, field_j, 74, DefaultTextWidgetRenderer.field_i);
             var4 = var3_int + 2;
             ProgressMessageDialog.field_Z = new int[var4];
             wh.field_z = new String[var4];
@@ -93,9 +93,9 @@ final class ka extends IntrusiveNode {
           } else if (go.field_x != 2) {
             if (go.field_x == 3) {
               if (!ArchiveRequest.field_u.privilegedTasksEnabled) {
-                var3_int = rf.a(dd.field_e, bo.field_e, field_j, 115, ak.field_h);
+                var3_int = rf.a(dd.field_e, ArchiveSourceManager.field_e, field_j, 115, ak.field_h);
               } else {
-                var3_int = rf.a(dd.field_e, bo.field_e, field_j, 84, hj.field_a);
+                var3_int = rf.a(dd.field_e, ArchiveSourceManager.field_e, field_j, 84, hj.field_a);
               }
               var4 = 2 + var3_int;
               wh.field_z = new String[var4];
@@ -112,7 +112,7 @@ final class ka extends IntrusiveNode {
               ProgressMessageDialog.field_Z[-1 + var4] = 0;
               IndexedSpriteLayer.field_e[0] = 5;
             } else if (go.field_x == 4) {
-              var3_int = rf.a(dd.field_e, bo.field_e, field_j, 75, wj.field_j);
+              var3_int = rf.a(dd.field_e, ArchiveSourceManager.field_e, field_j, 75, wj.field_j);
               var4 = 2 + var3_int;
               ProgressMessageDialog.field_Z = new int[var4];
               wh.field_z = new String[var4];
@@ -131,7 +131,7 @@ final class ka extends IntrusiveNode {
               if (go.field_x != 5) {
                 throw new IllegalArgumentException();
               }
-              var3_int = rf.a(dd.field_e, bo.field_e, field_j, 74, AccountServiceResult.field_c);
+              var3_int = rf.a(dd.field_e, ArchiveSourceManager.field_e, field_j, 74, AccountServiceResult.field_c);
               var4 = var3_int + 3;
               ProgressMessageDialog.field_Z = new int[var4];
               wh.field_z = new String[var4];
@@ -151,7 +151,7 @@ final class ka extends IntrusiveNode {
               IndexedSpriteLayer.field_e[1] = 5;
             }
           } else {
-            var3_int = rf.a(dd.field_e, bo.field_e, field_j, 99, ff.a(new String[]{"<br><%0><br>"}, 0, SoundCache.field_c));
+            var3_int = rf.a(dd.field_e, ArchiveSourceManager.field_e, field_j, 99, ff.a(new String[]{"<br><%0><br>"}, 0, SoundCache.field_c));
             var4 = -1;
             for (var5 = 0; var3_int > var5; var5++) {
               if (!"<%0>".equals(dd.field_e[var5])) {
@@ -167,7 +167,7 @@ final class ka extends IntrusiveNode {
             ArrayBlockSupport.copyObjectRange(dd.field_e, 0, ArchiveIndex.field_k, 0, var4);
             ib.field_c = new String[-1 - var4 + var3_int];
             ArrayBlockSupport.copyObjectRange(dd.field_e, var4 + 1, ib.field_c, 0, -1 + var3_int - var4);
-            var3_int = rf.a(dd.field_e, bo.field_e, field_j, 122, ff.a(new String[]{"<br><%0><br>"}, 0, k.field_f));
+            var3_int = rf.a(dd.field_e, ArchiveSourceManager.field_e, field_j, 122, ff.a(new String[]{"<br><%0><br>"}, 0, k.field_f));
             var4 = -1;
             for (var5 = 0; var3_int > var5; var5++) {
               if (!"<%0>".equals(dd.field_e[var5])) {

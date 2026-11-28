@@ -133,7 +133,7 @@ final class RichTextLayout extends TextLayout {
           ug.field_e = (BitmapFont) ((Object) fi.a(param0, param1, "commonui", "arezzo14", (byte) 82));
           rg.field_o = (BitmapFont) ((Object) fi.a(param0, param1, "commonui", "arezzo14bold", (byte) 82));
           var17 = new RgbSprite(param3.getFileByName(0, "", "button.gif"), (java.awt.Component) ((Object) ol.field_e));
-          hm.a("dropdown", param0, (byte) -42, "commonui");
+          SocketConnector.a("dropdown", param0, (byte) -42, "commonui");
           var5 = fb.a(param0, (byte) 45, "commonui", "screen_options");
           BufferedRandomAccessFile.field_c = new bi[4];
           lg.field_c = new bi[4];

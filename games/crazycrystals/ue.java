@@ -79,7 +79,7 @@ abstract class ue {
         ub.b(0);
         IntrusiveNodeHashTable.a((byte) -127);
         if (b.b(0)) {
-          tp.field_f.d(8, 1);
+          tp.field_f.writeCipheredByte(8, 1);
           ak.a(0, (byte) -48);
         }
         jj.a(4);

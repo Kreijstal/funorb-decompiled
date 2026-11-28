@@ -177,11 +177,11 @@ final class ed {
             rg.a(0, var9, var9.field_x, var9.field_r, 1, -14, 3, 0);
             pb.field_g.bindAsRenderTarget();
             var9.draw(0, 0);
-            uf.field_f = new RgbSprite(640, 480);
-            uf.field_f.bindAsRenderTarget();
+            ArchiveSourceManager.field_f = new RgbSprite(640, 480);
+            ArchiveSourceManager.field_f.bindAsRenderTarget();
             pb.field_g.drawRotated(aj.field_q + (pb.field_g.field_x >> 1), (pb.field_g.field_r >> 1) + t.field_d, kh.field_d, 4096);
             pb.field_g = null;
-            uf.field_f.trimTransparentBorders();
+            ArchiveSourceManager.field_f.trimTransparentBorders();
             SoftwareRasterizer.setRasterBuffer(var28, var2Lifetime1, var3Lifetime1);
             SoftwareRasterizer.restoreClip(ab.field_c);
           }
@@ -231,8 +231,8 @@ final class ed {
             wh.field_b.draw(0, 0);
           }
           GameAppletShell.field_b.draw(0, 0);
-          if (null != uf.field_f) {
-            uf.field_f.draw(0, 0);
+          if (null != ArchiveSourceManager.field_f) {
+            ArchiveSourceManager.field_f.draw(0, 0);
           }
           if (null != vj.field_c &&
             df.field_b != null) {

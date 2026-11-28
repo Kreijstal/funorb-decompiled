@@ -208,8 +208,8 @@ final class SectorCacheStore {
 
     final static int b(int param0) {
         int var1 = 15 / ((-32 - param0) / 63);
-        pd.field_c.d(115);
-        if (kb.field_e.d(-3599)) {
+        pd.field_c.pollArchiveSources(115);
+        if (kb.field_e.pollNetwork(-3599)) {
           return 0;
         }
         return f.g(0);

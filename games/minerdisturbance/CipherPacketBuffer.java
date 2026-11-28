@@ -10,7 +10,7 @@ final class CipherPacketBuffer extends PacketBuffer {
     private int field_y;
     static String[] field_A;
 
-    final void b(int[] param0, int param1) {
+    final void setCipherSeed(int[] param0, int param1) {
         try {
           this.field_v = new IsaacRandom(param0);
           int var3_int = -24 % ((param1 - 64) / 40);
@@ -19,7 +19,7 @@ final class CipherPacketBuffer extends PacketBuffer {
         }
     }
 
-    final static String a(String param0, int param1, String param2, String param3) {
+    final static String replaceAllLiteral(String param0, int param1, String param2, String param3) {
         int var4 = 0;
         int var5 = 0;
         String stackIn_7_0 = null;
@@ -61,17 +61,17 @@ final class CipherPacketBuffer extends PacketBuffer {
         return stackIn_13_0;
     }
 
-    final void c(boolean param0) {
+    final void beginBitWrite(boolean param0) {
         this.payload[this.position] = (byte) 0;
         if (param0) {
           this.field_z = 8;
           return;
         }
-        this.f((byte) 79);
+        this.beginBitAccess((byte) 79);
         this.field_z = 8;
     }
 
-    final void n(int param0) {
+    final void finishBitWrite(int param0) {
         if (8 > this.field_z) {
           this.field_z = 8;
           this.position = this.position + 1;
@@ -83,7 +83,7 @@ final class CipherPacketBuffer extends PacketBuffer {
         super(param0);
     }
 
-    final int e(byte param0) {
+    final int readCipheredByte(byte param0) {
         int fieldTemp$0 = 0;
         if (param0 == 0) {
           fieldTemp$0 = this.position;
@@ -93,7 +93,7 @@ final class CipherPacketBuffer extends PacketBuffer {
         return -16;
     }
 
-    final int c(byte param0, int param1) {
+    final int readBits(byte param0, int param1) {
         int incrementValue$2 = 0;
         int incrementValue$3 = 0;
         int var3 = 0;
@@ -159,7 +159,7 @@ final class CipherPacketBuffer extends PacketBuffer {
         }
     }
 
-    final void d(byte param0, int param1) {
+    final void writeCipheredByte(byte param0, int param1) {
         int fieldTemp$0 = 0;
         if (param0 < -42) {
           fieldTemp$0 = this.position;
@@ -173,12 +173,12 @@ final class CipherPacketBuffer extends PacketBuffer {
         this.payload[fieldTemp$1] = (byte)(param1 + this.field_v.nextInt(4));
     }
 
-    final void o(int param0) {
+    final void endBitAccess(int param0) {
         this.position = (7 + this.field_y) / 8;
         int var2 = -128 % ((param0 + 39) / 54);
     }
 
-    final void f(byte param0) {
+    final void beginBitAccess(byte param0) {
         if (param0 == 16) {
           this.field_y = 8 * this.position;
           return;
@@ -187,7 +187,7 @@ final class CipherPacketBuffer extends PacketBuffer {
         this.field_y = 8 * this.position;
     }
 
-    final void a(byte[] param0, int param1, int param2, int param3) {
+    final void readCipheredBytes(byte[] param0, int param1, int param2, int param3) {
         int fieldTemp$0 = 0;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
@@ -237,7 +237,7 @@ final class CipherPacketBuffer extends PacketBuffer {
         field_x = null;
     }
 
-    final void a(int param0, byte param1, int param2) {
+    final void writeBits(int param0, byte param1, int param2) {
         int fieldTemp$0 = 0;
         int fieldTemp$1 = 0;
         int fieldTemp$2 = 0;

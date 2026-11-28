@@ -97,7 +97,7 @@ final class LabeledWidgetContainer extends WidgetWrapper {
 
     final static void a(int param0, boolean param1, float param2, String param3) {
         if (null == bb.field_F) {
-          bb.field_F = new ProgressDialog(AccountServiceResult.field_e, eg.field_t);
+          bb.field_F = new ProgressDialog(AccountServiceResult.field_e, SocketArchiveNetworkClient.field_t);
           AccountServiceResult.field_e.showDialog(bb.field_F, 0);
         }
         bb.field_F.setProgress(param2, 4210752, param1, param3);
@@ -285,7 +285,7 @@ final class LabeledWidgetContainer extends WidgetWrapper {
                         qc.field_w[var9] = (byte) 0;
                       }
                     } else {
-                      qc.field_w[var7 / 8] = (byte)tk.bitwiseXor((int) qc.field_w[var7 / 8], 1 << b.bitwiseAnd(var7, 7));
+                      qc.field_w[var7 / 8] = (byte)ArchiveNetworkClient.bitwiseXor((int) qc.field_w[var7 / 8], 1 << b.bitwiseAnd(var7, 7));
                     }
                   }
                 } else {
@@ -515,7 +515,7 @@ final class LabeledWidgetContainer extends WidgetWrapper {
                       dj.field_a[var18 / 8] = (byte)b.bitwiseAnd((int) dj.field_a[var18 / 8], ~(1 << b.bitwiseAnd(7, var18)));
                     }
                   } else {
-                    dj.field_a[(var9 + var6Lifetime4) / 8] = (byte)tk.bitwiseXor((int) dj.field_a[(var9 + var6Lifetime4) / 8], 1 << b.bitwiseAnd(7, var9 + var6Lifetime4));
+                    dj.field_a[(var9 + var6Lifetime4) / 8] = (byte)ArchiveNetworkClient.bitwiseXor((int) dj.field_a[(var9 + var6Lifetime4) / 8], 1 << b.bitwiseAnd(7, var9 + var6Lifetime4));
                   }
                 }
               }
@@ -665,7 +665,7 @@ final class LabeledWidgetContainer extends WidgetWrapper {
               stackIn_334_1 = (var4_int != 0) && (var16Lifetime1 == 0);
               stackIn_333_0.field_lb = stackIn_334_1;
             }
-            var6Lifetime4 = var6Lifetime4 + (kr.field_c[var7] & 255);
+            var6Lifetime4 = var6Lifetime4 + (ArchiveSourceManager.field_c[var7] & 255);
           }
           if (var5 != 0 &&
             !param2) {

@@ -60,7 +60,7 @@ abstract class NetworkGameClient extends GameAppletShell {
               if (3 != var2) {
                 if (4 != var2) {
                   if (var2 == 5) {
-                    pk.a(-128);
+                    ArchiveSourceManager.a(-128);
                   } else {
                     if (var2 != 6) {
                       if (var2 == 7) {
@@ -75,7 +75,7 @@ abstract class NetworkGameClient extends GameAppletShell {
                             if (var2 != 11 &&
                               var2 != 12) {
                               if (13 == var2) {
-                                ap.a(false);
+                                SocketArchiveNetworkClient.a(false);
                                 return;
                               }
                               if (var2 == 17) {
@@ -209,7 +209,7 @@ abstract class NetworkGameClient extends GameAppletShell {
             vn.a(le.b((byte) -20), (byte) 87);
           }
           if (10 == var4) {
-            tp.field_f.d(param1 + 102, 17);
+            tp.field_f.writeCipheredByte(param1 + 102, 17);
           }
           if (var4 == 11) {
             qe.a(param1 ^ -94, le.b((byte) -20));
@@ -299,7 +299,7 @@ abstract class NetworkGameClient extends GameAppletShell {
         int var3 = 0 != (1 & var2) ? 1 : 0;
         int var4 = -1 + rk.field_b;
         byte[] var5 = new byte[var4];
-        ConfirmedEmailAvailabilityValidator.field_n.b(var4, 0, 29712, var5);
+        ConfirmedEmailAvailabilityValidator.field_n.readCipheredBytes(var4, 0, 29712, var5);
         ec.a(var3 != 0, fa.a((byte) -70, var5), le.b((byte) -20), (byte) -17);
     }
 
@@ -575,7 +575,7 @@ abstract class NetworkGameClient extends GameAppletShell {
           nf.field_f = false;
         }
         if (eq.field_j == 0 &&
-          pk.a((byte) -56)) {
+          ArchiveSourceManager.a((byte) -56)) {
           eq.field_j = 1;
         }
         if (eq.field_j == 1) {

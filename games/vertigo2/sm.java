@@ -67,7 +67,7 @@ final class sm extends UiPanel {
     }
 
     final static void k(int param0) {
-        if (!tk.field_e) {
+        if (!ArchiveNetworkClient.field_e) {
           throw new IllegalStateException();
         }
         if (BirthDateValidator.field_l != null) {

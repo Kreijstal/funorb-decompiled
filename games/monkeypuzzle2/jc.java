@@ -11,7 +11,7 @@ final class jc {
 
     final static Sprite[] a(int param0, int param1, int param2, int param3, int param4) {
         int var5 = -68 / ((-34 - param2) / 37);
-        return c.a(param0, 3, param3, 1, param4, param1, 1, 1, true);
+        return ArchiveSourceManager.a(param0, 3, param3, 1, param4, param1, 1, 1, true);
     }
 
     final static h a(int param0, String param1) {

@@ -227,7 +227,7 @@ abstract class ContentTransitionDialog extends ResizableModalDialog {
             }
             if (param4) {
               var9.setColor(java.awt.Color.black);
-              var9.fillRect(0, 0, ap.field_r, rh.field_f);
+              var9.fillRect(0, 0, SocketArchiveNetworkClient.field_r, rh.field_f);
             }
             if (param3 == null) {
               param3 = new java.awt.Color(140, 17, 17);
@@ -246,11 +246,11 @@ abstract class ContentTransitionDialog extends ResizableModalDialog {
               var10.setFont(fg.field_i);
               var10.setColor(java.awt.Color.white);
               var10.drawString(param0, (304 - param0.length() * 6) / 2, 22);
-              var9.drawImage(ba.field_h, ap.field_r / 2 - 152, -18 + rh.field_f / 2, (java.awt.image.ImageObserver) null);
+              var9.drawImage(ba.field_h, SocketArchiveNetworkClient.field_r / 2 - 152, -18 + rh.field_f / 2, (java.awt.image.ImageObserver) null);
             } catch (java.lang.Exception decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               exception = (Exception) (Object) decompiledCaughtException;
-              var7 = -152 + ap.field_r / 2;
+              var7 = -152 + SocketArchiveNetworkClient.field_r / 2;
               var8 = -18 + rh.field_f / 2;
               var9.setColor(param3);
               var9.drawRect(var7, var8, 303, 33);
@@ -267,7 +267,7 @@ abstract class ContentTransitionDialog extends ResizableModalDialog {
             }
             var9.setFont(fg.field_i);
             var9.setColor(java.awt.Color.white);
-            var9.drawString(nd.field_o, ap.field_r / 2 - 6 * nd.field_o.length() / 2, rh.field_f / 2 - 26);
+            var9.drawString(nd.field_o, SocketArchiveNetworkClient.field_r / 2 - 6 * nd.field_o.length() / 2, rh.field_f / 2 - 26);
             return;
           } catch (java.lang.Exception decompiledCaughtParameter1) {
             decompiledCaughtException = decompiledCaughtParameter1;

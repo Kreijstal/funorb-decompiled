@@ -158,7 +158,7 @@ abstract class NetworkGameClient extends GameAppletShell {
         if (ValidatedTextField.field_ab) {
           return -1;
         }
-        var2 = DropTargetWidgetContainer.a(this.field_y, true, ImageProducerRasterBuffer.f(1633075718), ob.d((byte) -99), (byte) 113, this.field_z);
+        var2 = DropTargetWidgetContainer.a(this.field_y, true, ImageProducerRasterBuffer.f(1633075718), SocketArchiveNetworkClient.d((byte) -99), (byte) 113, this.field_z);
         if (var2 == -1) {
           return -1;
         }
@@ -534,7 +534,7 @@ abstract class NetworkGameClient extends GameAppletShell {
               if (qa.field_c.tryLoadGroupByName("", 100)) {
                 FrameTimer.loadSharedInterfaceText(qa.field_c, -44);
                 qa.field_c = null;
-                ob.f(0);
+                SocketArchiveNetworkClient.f(0);
               }
             }
           }
@@ -570,7 +570,7 @@ abstract class NetworkGameClient extends GameAppletShell {
           Chess.field_B = null;
           fl.field_m = null;
           GrowableIntArray.a((java.applet.Applet) (this), (byte) -43);
-          ob.f(0);
+          SocketArchiveNetworkClient.f(0);
           il.field_a = 10;
         }
         if (10 == il.field_a) {
@@ -691,7 +691,7 @@ abstract class NetworkGameClient extends GameAppletShell {
             }
           }
           if (var4 == 2) {
-            var5_intLifetime1 = nj.a(true, ob.d((byte) -126), this.field_y, od.a(-5), DebouncedFieldValidator.f(-127), Chess.getRegistrationAge(0), ImageProducerRasterBuffer.f(1633075718));
+            var5_intLifetime1 = nj.a(true, SocketArchiveNetworkClient.d((byte) -126), this.field_y, od.a(-5), DebouncedFieldValidator.f(-127), Chess.getRegistrationAge(0), ImageProducerRasterBuffer.f(1633075718));
             if (var5_intLifetime1 != -1) {
               lk.a(sa.field_b, 255, var5_intLifetime1, n.field_c);
               n.field_c = null;
@@ -707,7 +707,7 @@ abstract class NetworkGameClient extends GameAppletShell {
             if (param2) {
               ValidatedTextField.field_ab = false;
             } else {
-              var5_intLifetime2 = DropTargetWidgetContainer.a(this.field_y, false, ImageProducerRasterBuffer.f(1633075718), ob.d((byte) -119), (byte) 82, this.field_z);
+              var5_intLifetime2 = DropTargetWidgetContainer.a(this.field_y, false, ImageProducerRasterBuffer.f(1633075718), SocketArchiveNetworkClient.d((byte) -119), (byte) 82, this.field_z);
               if (var5_intLifetime2 != -1) {
                 if (0 != var5_intLifetime2) {
                   IntrusiveDeque.a(var5_intLifetime2, n.field_c, (byte) 81);

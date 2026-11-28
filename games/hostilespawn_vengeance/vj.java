@@ -327,7 +327,7 @@ final class vj extends ql {
           var5_intLifetime1 = var8;
           while (this.field_k.length > var8) {
             if (!this.field_t[var8]) {
-              var4 = ih.a(var3, (byte) -102, this.field_k[var8]);
+              var4 = SocketArchiveNetworkClient.a(var3, (byte) -102, this.field_k[var8]);
               if (var4 < 2) {
                 var6_int = (int)ProxySocketFactory.a((double)var3.field_e, (double)this.field_k[var8].field_e, param0 + 17, (double)var3.field_g, (double)this.field_k[var8].field_g);
                 this.field_n = var8;

@@ -74,8 +74,8 @@ final class RichTextLayout extends TextLayout {
     }
 
     final static java.applet.Applet c(int param0) {
-        if (pg.field_b != null) {
-          return pg.field_b;
+        if (ArchiveSourceManager.field_b != null) {
+          return ArchiveSourceManager.field_b;
         }
         if (param0 != -14047) {
           RichTextLayout.c(7);

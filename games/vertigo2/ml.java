@@ -222,7 +222,7 @@ class ml extends DefaultTextWidgetRenderer {
                       param0.writeByte(4, -112);
                     } else {
                       param0.writeByte(2, -65);
-                      param0.a((byte) 0, (String) (var10));
+                      param0.writeString((byte) 0, (String) (var10));
                     }
                   } else {
                     if (var6_int == 4) {
@@ -283,7 +283,7 @@ class ml extends DefaultTextWidgetRenderer {
                 }
               }
             }
-            param0.c(var4, -123);
+            param0.appendCrc32(var4, -123);
             var17.unlink(2);
             return;
           } catch (java.lang.RuntimeException decompiledCaughtParameter12) {

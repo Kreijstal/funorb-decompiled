@@ -545,7 +545,7 @@ final class kk {
             if (this.field_e == 2) {
               FullscreenStatusDialog.field_S = null;
             }
-            var3 = qh.field_b;
+            var3 = MouseInputHandler.field_b;
             if (this.field_g != 1 ||
               this.field_e == 6 ||
               this.field_e == 10 ||
@@ -564,7 +564,7 @@ final class kk {
               vl.field_g = this.field_g;
             }
             Bzip2State.field_f = this.field_e;
-            qh.field_b = this.field_e;
+            MouseInputHandler.field_b = this.field_e;
           }
           return;
         }
@@ -642,7 +642,7 @@ final class kk {
           if (this.field_c.field_a != -1) {
             this.a(this.field_c.field_a, true, 59);
           }
-          if (this.field_e != qh.field_b) {
+          if (this.field_e != MouseInputHandler.field_b) {
             this.field_i = 20;
             if (this.field_e != -1) {
               ProxyAuthenticationRequiredException.field_d[this.field_e].a(true, false);

@@ -192,7 +192,7 @@ final class hb extends PacketBuffer {
             field_l = (int[]) null;
           }
           var4 = (String) null;
-          stackIn_3_0 = qh.a(0, param1, -1, false, param2, 0, (String) null);
+          stackIn_3_0 = MouseInputHandler.a(0, param1, -1, false, param2, 0, (String) null);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

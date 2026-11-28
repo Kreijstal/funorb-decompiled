@@ -56,7 +56,7 @@ final class jd {
           var3 = Chess.field_G;
           try {
             if (qh.field_c != null) {
-              qh.field_c.a((byte) -103);
+              qh.field_c.close((byte) -103);
             }
             if (null != RegistrationAgreementPane.field_O) {
               RegistrationAgreementPane.field_O.shutdown(3);
@@ -72,11 +72,11 @@ final class jd {
                 var1 = (IOException) (Object) decompiledCaughtException;
               }
             }
-            if (null != hj.field_n) {
-              for (var1_int = 0; hj.field_n.length > var1_int; var1_int++) {
-                if (hj.field_n[var1_int] != null) {
+            if (null != ArchiveSourceManager.field_n) {
+              for (var1_int = 0; ArchiveSourceManager.field_n.length > var1_int; var1_int++) {
+                if (ArchiveSourceManager.field_n[var1_int] != null) {
                   try {
-                    hj.field_n[var1_int].close((byte) -87);
+                    ArchiveSourceManager.field_n[var1_int].close((byte) -87);
                   } catch (java.io.IOException decompiledCaughtParameter1) {
                     decompiledCaughtException = decompiledCaughtParameter1;
                     var2 = (IOException) (Object) decompiledCaughtException;
@@ -104,7 +104,7 @@ final class jd {
 
     final static String b(boolean param0) {
         if (il.field_a < 2) {
-          return ob.field_z;
+          return SocketArchiveNetworkClient.field_z;
         }
         if (qa.field_c != null) {
           if (qa.field_c.ensureIndexLoaded((byte) 122)) {
@@ -128,7 +128,7 @@ final class jd {
           return ld.field_a;
         }
         if (!bi.field_a.tryLoadAllGroups((byte) -40)) {
-          return wn.field_g + " - " + bi.field_a.getArchiveLoadPercent((byte) -91) + "%";
+          return SocketConnector.field_g + " - " + bi.field_a.getArchiveLoadPercent((byte) -91) + "%";
         }
         if (!param0) {
           return m.field_c;

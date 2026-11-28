@@ -145,7 +145,7 @@ final class AccountRegistrationPanel extends DequeWidgetContainer implements Tex
     private final boolean canSubmitRegistration(byte param0) {
         if (param0 > -110) {
           java.awt.Component var3 = (java.awt.Component) null;
-          AccountRegistrationPanel.a((java.awt.Component) null, 116);
+          AccountRegistrationPanel.detachKeyboardListeners((java.awt.Component) null, 116);
           if (!this.isFieldReadyForRegistration((FieldValidatorProvider) (this.field_T), -127)) {
             return false;
           }
@@ -458,7 +458,7 @@ final class AccountRegistrationPanel extends DequeWidgetContainer implements Tex
         this.field_P = new ki("", (WidgetEventListener) null, var1 != 0);
         this.field_V = new InteractiveWidget(ei.field_r, (WidgetEventListener) null);
         this.field_M = new InteractiveWidget(vf.field_c, (WidgetEventListener) null);
-        this.field_T.field_j = vc.field_a;
+        this.field_T.field_j = KeyboardInputHandler.field_a;
         this.field_Q.field_j = MusicPatchPcmStream.field_o;
         this.field_L.field_j = DefaultTextWidgetRenderer.field_q;
         this.field_U.field_j = DiskArchiveRequest.field_A;
@@ -613,7 +613,7 @@ final class AccountRegistrationPanel extends DequeWidgetContainer implements Tex
         }
     }
 
-    final static void a(java.awt.Component param0, int param1) {
+    final static void detachKeyboardListeners(java.awt.Component param0, int param1) {
         try {
           param0.removeKeyListener(lg.field_d);
           param0.removeFocusListener(lg.field_d);

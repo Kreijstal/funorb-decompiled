@@ -103,7 +103,7 @@ abstract class SocketConnector {
         }
     }
 
-    abstract java.net.Socket a(int param0) throws IOException;
+    abstract java.net.Socket openSocket(int param0) throws IOException;
 
     final static ResourceArchive a(boolean param0, byte param1, int param2, int param3, boolean param4) {
         if (param1 == 77) {
@@ -126,7 +126,7 @@ abstract class SocketConnector {
         }
     }
 
-    final java.net.Socket b(int param0) throws IOException {
+    final java.net.Socket openDirectSocket(int param0) throws IOException {
         if (param0 == -9008) {
           return new java.net.Socket(this.field_a, this.field_e);
         }

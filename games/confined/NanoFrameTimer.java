@@ -339,7 +339,7 @@ final class NanoFrameTimer extends FrameTimer {
           if (param2 >= -94) {
             return;
           }
-          nh.field_b = ij.field_q.field_k * (n.field_d + kb.field_b << 1);
+          nh.field_b = ij.field_q.field_k * (SocketConnector.field_d + kb.field_b << 1);
           StandardContentDialog.field_sb = -(var3_intLifetime1 >> 1) + StandardContentDialog.field_vb;
           for (var4Lifetime2 = 0; var4Lifetime2 < ByteArrayPoolSupport.field_c.length; var4Lifetime2++) {
             stackIn_113_0 = nh.field_b;
@@ -366,8 +366,8 @@ final class NanoFrameTimer extends FrameTimer {
               tj.field_l[var4Lifetime3][0] = var8Lifetime1 - jd.field_g;
               tj.field_l[var4Lifetime3][1] = var5Lifetime3;
               tj.field_l[var4Lifetime3][2] = (jd.field_g << 1) + var7Lifetime2;
-              var5Lifetime3 = var5Lifetime3 + (af.field_Z + kb.field_b + (n.field_d << 1));
-              tj.field_l[var4Lifetime3][3] = (n.field_d << 1) + af.field_Z;
+              var5Lifetime3 = var5Lifetime3 + (af.field_Z + kb.field_b + (SocketConnector.field_d << 1));
+              tj.field_l[var4Lifetime3][3] = (SocketConnector.field_d << 1) + af.field_Z;
             }
             var4Lifetime3++;
           }

@@ -595,16 +595,16 @@ final class aa {
           stackIn_52_0 = (0 != MatchingFieldValidator.field_p.field_C) ? 0 : 1;
           var13Lifetime1 = stackIn_52_0;
           if (var7 == 29) {
-            rl.field_d[var13Lifetime1][3].drawHalfSize(var12Lifetime1, var11Lifetime2);
+            MouseInputHandler.field_d[var13Lifetime1][3].drawHalfSize(var12Lifetime1, var11Lifetime2);
           }
           if (var7 == 28) {
-            rl.field_d[var13Lifetime1][2].drawHalfSize(var12Lifetime1, var11Lifetime2);
+            MouseInputHandler.field_d[var13Lifetime1][2].drawHalfSize(var12Lifetime1, var11Lifetime2);
           }
           if (var7 == 30) {
-            rl.field_d[var13Lifetime1][5].drawHalfSize(var12Lifetime1, var11Lifetime2);
+            MouseInputHandler.field_d[var13Lifetime1][5].drawHalfSize(var12Lifetime1, var11Lifetime2);
           }
           if (var7 == 27) {
-            rl.field_d[var13Lifetime1][4].drawHalfSize(var12Lifetime1, var11Lifetime2);
+            MouseInputHandler.field_d[var13Lifetime1][4].drawHalfSize(var12Lifetime1, var11Lifetime2);
             return;
           }
         }
@@ -664,7 +664,7 @@ final class aa {
             var5 = -1;
         }
         if (-1 == var5) {
-          var3 = wm.field_i;
+          var3 = ArchiveNetworkClient.field_i;
           var4 = sg.field_a;
           if (var9 != 0) {
             var4 = IntrusiveNode.field_i[var5];
@@ -813,7 +813,7 @@ final class aa {
 
     private final void a(int param0, boolean param1) {
         int var3 = 0;
-        if (hj.field_i) {
+        if (ArchiveSourceManager.field_i) {
           var3 = param1 ? 1 : 0;
           ChessBoardState.a(qk.field_h, var3 != 0, 28333, -5);
         }
@@ -1554,12 +1554,12 @@ final class aa {
                       4 != IntrusiveDeque.field_f) {
                       break regionExit2;
                     }
-                    hj.a(this.field_c, this.field_c, false);
+                    ArchiveSourceManager.a(this.field_c, this.field_c, false);
                     if (var11 == 0) {
                       break regionExit2;
                     }
                   }
-                  hj.a(this.field_c, this.field_c, false);
+                  ArchiveSourceManager.a(this.field_c, this.field_c, false);
                   if (var11 == 0) {
                     break regionExit2;
                   }

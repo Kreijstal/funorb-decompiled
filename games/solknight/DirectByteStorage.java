@@ -6,13 +6,13 @@ final class DirectByteStorage extends ByteStorage {
     static int field_d;
     static java.security.SecureRandom field_e;
 
-    final static void a(int param0, java.awt.Component param1) {
+    final static void attachKeyboardListeners(int param0, java.awt.Component param1) {
         try {
           param1.setFocusTraversalKeysEnabled(false);
           param1.addKeyListener(ModalDialogHost.field_J);
           if (param0 != 0) {
             java.awt.Component var3 = (java.awt.Component) null;
-            DirectByteStorage.a(24, (java.awt.Component) null);
+            DirectByteStorage.attachKeyboardListeners(24, (java.awt.Component) null);
           }
           param1.addFocusListener(ModalDialogHost.field_J);
         } catch (RuntimeException runtimeException) {

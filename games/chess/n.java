@@ -15,20 +15,20 @@ final class n {
         String var1 = null;
         String var1Lifetime1;
         if (param0 > 18) {
-          var1 = ob.d((byte) -108);
+          var1 = SocketArchiveNetworkClient.d((byte) -108);
           if (var1 != null &&
             0 <= var1.indexOf('@')) {
             var1 = "";
           }
-          return new vg(ob.d((byte) -124), hh.d((byte) -122));
+          return new vg(SocketArchiveNetworkClient.d((byte) -124), hh.d((byte) -122));
         }
         field_d = (String[]) null;
-        var1Lifetime1 = ob.d((byte) -108);
+        var1Lifetime1 = SocketArchiveNetworkClient.d((byte) -108);
         if (var1Lifetime1 != null &&
           0 <= var1Lifetime1.indexOf('@')) {
           var1Lifetime1 = "";
         }
-        return new vg(ob.d((byte) -124), hh.d((byte) -122));
+        return new vg(SocketArchiveNetworkClient.d((byte) -124), hh.d((byte) -122));
     }
 
     final static void a(BitmapFont param0, int param1, boolean param2, RgbSprite[] param3, int param4, int param5, int param6, int param7, int param8, BitmapFont param9, int param10, int param11, int param12, int param13, RgbSprite[] param14) {

@@ -19,7 +19,7 @@ public final class Bounce extends GameClient {
         RuntimeException var2 = null;
         try {
           if (AccountCreationResultPanel.field_pb != null) {
-            ij.a(AccountCreationResultPanel.field_pb, (byte) -123);
+            BouncedownClientSupport.loadLocalizedGameTextAndKeys(AccountCreationResultPanel.field_pb, (byte) -123);
             AccountCreationResultPanel.field_pb = null;
             RichTextWidget.e((byte) -44);
           }
@@ -29,7 +29,7 @@ public final class Bounce extends GameClient {
             this.renderClientFrame(-122);
           }
           MidiPcmStream.field_D = fa.a((byte) -76, 5);
-          ca.field_e = fa.a((byte) -76, 3);
+          SlimeCollisionSupport.field_e = fa.a((byte) -76, 3);
           ub.field_a = fa.a((byte) -76, 4);
           va.field_c = fa.a((byte) -76, 6);
           return;
@@ -97,10 +97,10 @@ public final class Bounce extends GameClient {
         try {
           Bounce.clearBouncedownGlobals((byte) -99);
           kc.clearStaticReferences(17345);
-          nf.clearStaticReferences(-60);
+          KeyboardInputHandler.clearStaticReferences(-60);
           ab.clearStaticReferences((byte) -104);
           hi.a(false);
-          ua.clearStaticReferences(-24750);
+          PlayfieldPlatforms.clearStaticReferences(-24750);
           jl.resetStaticState(87);
           GameClient.clearStaticReferences((byte) 115);
           ClientException.clearStaticReferences((byte) 72);
@@ -129,7 +129,7 @@ public final class Bounce extends GameClient {
           FullscreenFocusCanvas.clearStaticReferences(false);
           pb.clearDeclaredStaticReferences(-19);
           MidiPcmStream.clearStaticReferences(-112);
-          v.clearStaticReferences(-8217);
+          ArchiveNetworkClient.clearStaticReferences(-8217);
           DiskCacheWorker.clearStaticReferences((byte) 74);
           BufferedRandomAccessFile.e(-18695);
           BufferedSocket.clearStaticReferences(-14582);
@@ -138,7 +138,7 @@ public final class Bounce extends GameClient {
           qf.clearStaticReferences(-107);
           SoundCache.clearStaticReferences(118);
           AudioOutput.clearStaticReferences();
-          mj.c(4);
+          BouncedownMenu.clearStaticReferences(4);
           IntrusiveNode.a((byte) 110);
           CipherPacketBuffer.clearStaticReferences(0);
           og.clearStaticReferences((byte) 106);
@@ -177,7 +177,7 @@ public final class Bounce extends GameClient {
           BitmapFont.clearStaticReferences();
           DualLinkNode.clearStaticReferences((byte) 115);
           li.clearStaticReferences(111);
-          nk.clearStaticReferences(-74);
+          BouncedownMenuEntry.clearStaticReferences(-74);
           bk.clearStaticReferences(-23);
           ag.a(-1);
           hd.clearStaticReferences(233);
@@ -186,7 +186,7 @@ public final class Bounce extends GameClient {
           ng.clearStaticReferences(2);
           SpriteGeometry.clearStaticReferences(65);
           IsaacRandom.a((byte) -30);
-          tb.clearStaticReferences((byte) 68);
+          SocketArchiveNetworkClient.clearStaticReferences((byte) 68);
           ml.clearStaticReferences(-1);
           NetworkArchiveRequest.a(false);
           SectorCacheStore.resetStaticState(11826);
@@ -200,13 +200,13 @@ public final class Bounce extends GameClient {
           qk.clearStaticReferences();
           ig.clearStaticReferences(1);
           a.clearStaticReferences(249);
-          jk.a(-19800);
+          LogoMesh.clearStaticReferences(-19800);
           if (param0 >= -98) {
             this.field_H = 17;
           }
           wj.resetStaticState(0);
-          ij.a(true);
-          ca.clearStaticReferences((byte) -86);
+          BouncedownClientSupport.clearStaticReferences(true);
+          SlimeCollisionSupport.clearStaticReferences((byte) -86);
           ge.clearStaticReferences(-120);
           pe.clearStaticReferences(0);
           ih.clearDeclaredStaticReferences((byte) -58);
@@ -238,7 +238,7 @@ public final class Bounce extends GameClient {
           ae.clearStaticReferences((byte) -119);
           fl.clearStaticReferences(8192);
           ta.resetStaticState(0);
-          oa.clearStaticReferences(22085);
+          SocketConnector.clearStaticReferences(22085);
           ProxyAuthenticationRequiredException.resetStaticState(8191);
           ImageProducerRasterBuffer.resetStaticState(true);
           lb.resetStaticState((byte) -83);
@@ -271,12 +271,12 @@ public final class Bounce extends GameClient {
           SecondaryNodeDeque.clearStaticReferences((byte) -53);
           eg.clearDeclaredStaticReferences(54);
           t.clearStaticReferences(-32504);
-          ra.clearStaticReferences((byte) 120);
+          ProxySocketConnector.clearStaticReferences((byte) 120);
           ja.a(false);
           NodeHashTableIterator.clearStaticReferences(8832);
           SecondaryNodeDequeIterator.clearStaticReferences(true);
           sa.clearCp1252ExtensionTable(true);
-          he.b((byte) -53);
+          LeaderboardSubmission.clearStaticReferences((byte) -53);
           w.resetStaticState(62771140);
           qa.a(19108);
           jh.clearStaticReferences(-1);
@@ -409,16 +409,16 @@ public final class Bounce extends GameClient {
           if (hi.field_c >= 2) {
             if (ng.field_a[32] &&
               fa.field_c < 6000) {
-              he.field_n[0].field_j = 300.0;
-              he.field_n[0].field_q = 0.0;
+              LeaderboardSubmission.field_n[0].field_j = 300.0;
+              LeaderboardSubmission.field_n[0].field_q = 0.0;
               fa.field_c = fa.field_c + 10;
               ta.field_c = ta.field_c + 0.01;
             }
             if (ng.field_a[33] &&
               fa.field_c > 0) {
-              he.field_n[0].field_q = 0.0;
+              LeaderboardSubmission.field_n[0].field_q = 0.0;
               fa.field_c = fa.field_c - 10;
-              he.field_n[0].field_j = 300.0;
+              LeaderboardSubmission.field_n[0].field_j = 300.0;
               ta.field_c = ta.field_c - 0.01;
             }
           }
@@ -460,7 +460,7 @@ public final class Bounce extends GameClient {
           }
           if (1 == vk.field_b) {
             ta.field_c = ta.field_c + 0.001;
-            if (he.field_n[0].field_n > 0) {
+            if (LeaderboardSubmission.field_n[0].field_n > 0) {
               if (null == MusicPatchPcmStream.field_o ||
                 !(0 >= fa.field_c)) {
                 qf.field_c = qf.field_c + 1;
@@ -489,17 +489,17 @@ public final class Bounce extends GameClient {
                   SectorCacheStore.a(0, (byte) 88)) {
                   dk.a(false, 9, 246);
                 }
-                if (he.field_n[0].field_o < 95.0 &&
+                if (LeaderboardSubmission.field_n[0].field_o < 95.0 &&
                   kg.field_f < 1000) {
                   kg.field_f = kg.field_f + 1;
                   vg.field_j = vg.field_j + 1;
                 }
-                if (he.field_n[0].field_o > 97.0 &&
+                if (LeaderboardSubmission.field_n[0].field_o > 97.0 &&
                   1000 > AgeValidator.field_l) {
                   AgeValidator.field_l = AgeValidator.field_l + 1;
                   nb.field_a = nb.field_a + 1;
                 }
-                if (he.field_n[0].field_d > 0.0 &&
+                if (LeaderboardSubmission.field_n[0].field_d > 0.0 &&
                   qe.field_f < 1000) {
                   qe.field_f = qe.field_f + 1;
                   ve.field_a = ve.field_a + 1;
@@ -547,7 +547,7 @@ public final class Bounce extends GameClient {
           }
           if (null != MusicPatchPcmStream.field_o &&
             MusicPatch.field_j == -1) {
-            MusicPatchPcmStream.field_o = MusicPatchPcmStream.field_o.a((byte) -77);
+            MusicPatchPcmStream.field_o = MusicPatchPcmStream.field_o.updateMenu((byte) -77);
           }
           if (MusicPatch.field_j != -1 &&
             MusicPatch.field_j == 0) {
@@ -591,11 +591,11 @@ public final class Bounce extends GameClient {
               InteractiveWidget.field_x = stackIn_225_0;
             }
             if (lh.field_f == 70) {
-              stackIn_233_0 = !(rd.field_a);
-              rd.field_a = stackIn_233_0;
+              stackIn_233_0 = !(MouseInputHandler.field_a);
+              MouseInputHandler.field_a = stackIn_233_0;
               var2_ref = jl.field_d;
               synchronized (var2_ref) {
-                boolean decompiledSharedTail0 = !(!rd.field_a);
+                boolean decompiledSharedTail0 = !(!MouseInputHandler.field_a);
                 if (!decompiledSharedTail0) {
                   ld.field_l.stop(-22719);
                   decompiledSharedTail0 = (var10 != 0);
@@ -616,31 +616,31 @@ public final class Bounce extends GameClient {
               MusicPatch.field_j == -1) {
               if (n.field_m == 0) {
                 if (lh.field_f == 98) {
-                  MusicPatchPcmStream.field_o.a(-1, 12011);
+                  MusicPatchPcmStream.field_o.moveKeyboardSelection(-1, 12011);
                 }
                 if (lh.field_f == 99) {
-                  MusicPatchPcmStream.field_o.a(1, 12011);
+                  MusicPatchPcmStream.field_o.moveKeyboardSelection(1, 12011);
                 }
                 if (lh.field_f == 96) {
-                  MusicPatchPcmStream.field_o.a(false, -31729, -1);
+                  MusicPatchPcmStream.field_o.activateSelectedEntry(false, -31729, -1);
                 }
                 if (lh.field_f == 97) {
-                  MusicPatchPcmStream.field_o.a(false, -31729, 1);
+                  MusicPatchPcmStream.field_o.activateSelectedEntry(false, -31729, 1);
                 }
                 if (lh.field_f == 102 &&
                   !MusicPatchPcmStream.field_o.field_e) {
-                  MusicPatchPcmStream.field_o.a(false, -31729, -16);
+                  MusicPatchPcmStream.field_o.activateSelectedEntry(false, -31729, -16);
                 }
                 if (lh.field_f == 103 &&
                   !MusicPatchPcmStream.field_o.field_e) {
-                  MusicPatchPcmStream.field_o.a(false, -31729, 16);
+                  MusicPatchPcmStream.field_o.activateSelectedEntry(false, -31729, 16);
                 }
                 if (lh.field_f == 84) {
-                  MusicPatchPcmStream.field_o.a(false, -31729, 0);
+                  MusicPatchPcmStream.field_o.activateSelectedEntry(false, -31729, 0);
                 }
               }
               if (lh.field_f == 13) {
-                MusicPatchPcmStream.field_o.b(-1);
+                MusicPatchPcmStream.field_o.closeActiveSubmenu(-1);
               }
             }
             if (84 != lh.field_f) {
@@ -678,14 +678,14 @@ public final class Bounce extends GameClient {
           if ((stackIn_307_0 < stackIn_307_1 ||
             !(vk.field_b <= 1)) &&
             (ng.field_a[13] ||
-            jk.field_q != -1 &&
+            LogoMesh.field_q != -1 &&
             (SectorCacheStore.field_e != 0 ||
             ng.field_a[83] ||
             ng.field_a[84])) && (PcmResampler.field_g &&
             MusicPatchPcmStream.field_o == null)) {
             PcmResampler.field_g = false;
             if (null == MusicPatchPcmStream.field_o) {
-              MusicPatchPcmStream.field_o = new mj();
+              MusicPatchPcmStream.field_o = new BouncedownMenu();
               if (var10 != 0) {
                 MusicPatchPcmStream.field_o.field_b = true;
               }
@@ -694,7 +694,7 @@ public final class Bounce extends GameClient {
             }
             MusicPatchPcmStream.field_o.field_n = -1 + vk.field_b;
             if (vk.field_b == 1) {
-              he.field_n[0].field_n = 0;
+              LeaderboardSubmission.field_n[0].field_n = 0;
               this.prepareSinglePlayerScoreSubmission(false, fa.field_c);
               if (kb.field_a <= 0) {
                 MusicPatchPcmStream.field_o.field_n = 11;
@@ -705,11 +705,11 @@ public final class Bounce extends GameClient {
               } else {
                 MusicPatchPcmStream.field_o.field_l = true;
               }
-              jk.field_q = -1;
+              LogoMesh.field_q = -1;
             }
             ta.field_c = 1.0;
             vk.field_b = 3;
-            if (rd.field_a) {
+            if (MouseInputHandler.field_a) {
               var2_ref = jl.field_d;
               synchronized (var2_ref) {
                 ld.field_l.playTrack(AccountCreationResultPanel.field_mb, true, 124);
@@ -721,105 +721,105 @@ public final class Bounce extends GameClient {
             if (vk.field_b == 1) {
               if (ng.field_a[96] ||
                 ng.field_a[EmailFormatValidator.field_m]) {
-                dupTemp$1 = he.field_n[0];
+                dupTemp$1 = LeaderboardSubmission.field_n[0];
                 dupTemp$1.field_c = dupTemp$1.field_c - 0.35;
               }
               if (ng.field_a[97] ||
                 ng.field_a[ee.field_a]) {
-                dupTemp$2 = he.field_n[0];
+                dupTemp$2 = LeaderboardSubmission.field_n[0];
                 dupTemp$2.field_c = dupTemp$2.field_c + 0.35;
               }
             }
             if (vk.field_b == 2) {
               if (ng.field_a[EmailFormatValidator.field_m]) {
-                dupTemp$3 = he.field_n[0];
+                dupTemp$3 = LeaderboardSubmission.field_n[0];
                 dupTemp$3.field_c = dupTemp$3.field_c - 0.35;
               }
               if (ng.field_a[ee.field_a]) {
-                dupTemp$4 = he.field_n[0];
+                dupTemp$4 = LeaderboardSubmission.field_n[0];
                 dupTemp$4.field_c = dupTemp$4.field_c + 0.35;
               }
               if (ng.field_a[96]) {
-                dupTemp$5 = he.field_n[1];
+                dupTemp$5 = LeaderboardSubmission.field_n[1];
                 dupTemp$5.field_c = dupTemp$5.field_c - 0.35;
               }
               if (ng.field_a[97]) {
-                dupTemp$6 = he.field_n[1];
+                dupTemp$6 = LeaderboardSubmission.field_n[1];
                 dupTemp$6.field_c = dupTemp$6.field_c + 0.35;
               }
             }
             if (3 <= vk.field_b) {
               if (ng.field_a[EmailFormatValidator.field_m]) {
-                dupTemp$7 = he.field_n[0];
+                dupTemp$7 = LeaderboardSubmission.field_n[0];
                 dupTemp$7.field_c = dupTemp$7.field_c - 0.35;
               }
               if (ng.field_a[ee.field_a]) {
-                dupTemp$8 = he.field_n[0];
+                dupTemp$8 = LeaderboardSubmission.field_n[0];
                 dupTemp$8.field_c = dupTemp$8.field_c + 0.35;
               }
               if (ng.field_a[nb.field_g]) {
-                dupTemp$9 = he.field_n[2];
+                dupTemp$9 = LeaderboardSubmission.field_n[2];
                 dupTemp$9.field_c = dupTemp$9.field_c - 0.35;
               }
               if (ng.field_a[ProgressDialog.field_S]) {
-                dupTemp$10 = he.field_n[2];
+                dupTemp$10 = LeaderboardSubmission.field_n[2];
                 dupTemp$10.field_c = dupTemp$10.field_c + 0.35;
               }
               if (ng.field_a[96]) {
-                dupTemp$11 = he.field_n[1];
+                dupTemp$11 = LeaderboardSubmission.field_n[1];
                 dupTemp$11.field_c = dupTemp$11.field_c - 0.35;
               }
               if (ng.field_a[97]) {
-                dupTemp$12 = he.field_n[1];
+                dupTemp$12 = LeaderboardSubmission.field_n[1];
                 dupTemp$12.field_c = dupTemp$12.field_c + 0.35;
               }
             }
           }
-          ua.field_c[ua.field_b - 1].field_d = 6;
-          ua.field_c[-2 + ua.field_b].field_d = 6;
-          ua.field_c[ua.field_b - 3].field_d = 6;
+          PlayfieldPlatforms.field_c[PlayfieldPlatforms.field_b - 1].field_d = 6;
+          PlayfieldPlatforms.field_c[-2 + PlayfieldPlatforms.field_b].field_d = 6;
+          PlayfieldPlatforms.field_c[PlayfieldPlatforms.field_b - 3].field_d = 6;
           if (null == MusicPatchPcmStream.field_o ||
             !PcmResampler.field_g) {
-            ca.a(false);
+            SlimeCollisionSupport.resolveSlimeCollisions(false);
           }
           var2_int = 0;
           scanLoop1: while (true) {
             boolean decompiledFrameRemainder0 = true;
             if (var2_int < vk.field_b) {
-              stackIn_464_0 = ~he.field_n[var2_int].field_n;
+              stackIn_464_0 = ~LeaderboardSubmission.field_n[var2_int].field_n;
               stackIn_464_1 = -1;
               if (var10 != 0) {
                 if (stackIn_464_0 < stackIn_464_1) {
-                  dupTemp$13 = ua.field_c[var2_int];
+                  dupTemp$13 = PlayfieldPlatforms.field_c[var2_int];
                   dupTemp$13.field_h = dupTemp$13.field_h - ta.field_c;
-                  stackIn_478_0 = compareDoublesNaNResultNegative(-16.0, ua.field_c[var2_int].field_h);
+                  stackIn_478_0 = compareDoublesNaNResultNegative(-16.0, PlayfieldPlatforms.field_c[var2_int].field_h);
                   break scanLoop1;
                 }
                 decompiledFrameRemainder0 = false;
               }
               else {
                 if (stackIn_464_0 >= stackIn_464_1 &&
-                  he.field_n[var2_int].field_p <= 0) {
-                  he.field_n[var2_int].fadeOutGrowthSound(il.field_a, false);
-                  he.field_n[var2_int].fadeOutShrinkSound(il.field_a, (byte) 106);
+                  LeaderboardSubmission.field_n[var2_int].field_p <= 0) {
+                  LeaderboardSubmission.field_n[var2_int].fadeOutGrowthSound(il.field_a, false);
+                  LeaderboardSubmission.field_n[var2_int].fadeOutShrinkSound(il.field_a, (byte) 106);
                 } else {
                   if (null == MusicPatchPcmStream.field_o ||
                     !PcmResampler.field_g) {
-                    he.field_n[var2_int].updateSlimePhysics(ua.field_c, EmailFormatValidator.field_l, ua.field_b, il.field_a, ta.field_c, (byte) 90);
+                    LeaderboardSubmission.field_n[var2_int].updateSlimePhysics(PlayfieldPlatforms.field_c, EmailFormatValidator.field_l, PlayfieldPlatforms.field_b, il.field_a, ta.field_c, (byte) 90);
                   }
                   if (!PcmResampler.field_g) {
-                    if (he.field_n[var2_int].field_h != 0) {
-                      dupTemp$14 = he.field_n[var2_int];
+                    if (LeaderboardSubmission.field_n[var2_int].field_h != 0) {
+                      dupTemp$14 = LeaderboardSubmission.field_n[var2_int];
                       dupTemp$14.field_c = dupTemp$14.field_c - 0.35;
                     } else {
-                      dupTemp$15 = he.field_n[var2_int];
+                      dupTemp$15 = LeaderboardSubmission.field_n[var2_int];
                       dupTemp$15.field_c = dupTemp$15.field_c + 0.35;
                     }
-                    if (50.0 > he.field_n[var2_int].field_u) {
-                      he.field_n[var2_int].field_h = 0;
+                    if (50.0 > LeaderboardSubmission.field_n[var2_int].field_u) {
+                      LeaderboardSubmission.field_n[var2_int].field_h = 0;
                     }
-                    if (462.0 < he.field_n[var2_int].field_u) {
-                      he.field_n[var2_int].field_h = 1;
+                    if (462.0 < LeaderboardSubmission.field_n[var2_int].field_u) {
+                      LeaderboardSubmission.field_n[var2_int].field_h = 1;
                     }
                   }
                 }
@@ -830,25 +830,25 @@ public final class Bounce extends GameClient {
             if (decompiledFrameRemainder0) {
               var2_int = 0;
               while (true) {
-                stackIn_464_0Lifetime1 = ~ua.field_b;
+                stackIn_464_0Lifetime1 = ~PlayfieldPlatforms.field_b;
                 stackIn_464_1Lifetime1 = ~var2_int;
                 if (stackIn_464_0Lifetime1 >= stackIn_464_1Lifetime1) {
                   break;
                 }
-                dupTemp$13Lifetime1 = ua.field_c[var2_int];
+                dupTemp$13Lifetime1 = PlayfieldPlatforms.field_c[var2_int];
                 dupTemp$13Lifetime1.field_h = dupTemp$13Lifetime1.field_h - ta.field_c;
-                stackIn_478_0 = compareDoublesNaNResultNegative(-16.0, ua.field_c[var2_int].field_h);
+                stackIn_478_0 = compareDoublesNaNResultNegative(-16.0, PlayfieldPlatforms.field_c[var2_int].field_h);
                 if (var10 != 0) {
                   break scanLoop1;
                 }
                 if (stackIn_478_0 > 0) {
-                  ua.field_c[var2_int].respawnPlatform(116, IsaacRandom.a(true), (double)(int)(Math.random() * 384.0 + 64.0));
+                  PlayfieldPlatforms.field_c[var2_int].respawnPlatform(116, IsaacRandom.a(true), (double)(int)(Math.random() * 384.0 + 64.0));
                   var3 = Math.random() * 32.0;
-                  if (ua.field_c[(-4 + ua.field_b + var2_int) % (-3 + ua.field_b)].field_h + 32.0 + var3 > ua.field_c[var2_int].field_h) {
-                    ua.field_c[var2_int].field_h = ua.field_c[(var2_int - (-ua.field_b + 4)) % (-3 + ua.field_b)].field_h + 32.0 + var3;
+                  if (PlayfieldPlatforms.field_c[(-4 + PlayfieldPlatforms.field_b + var2_int) % (-3 + PlayfieldPlatforms.field_b)].field_h + 32.0 + var3 > PlayfieldPlatforms.field_c[var2_int].field_h) {
+                    PlayfieldPlatforms.field_c[var2_int].field_h = PlayfieldPlatforms.field_c[(var2_int - (-PlayfieldPlatforms.field_b + 4)) % (-3 + PlayfieldPlatforms.field_b)].field_h + 32.0 + var3;
                   }
                 }
-                ua.field_c[var2_int].updatePlatform(-64);
+                PlayfieldPlatforms.field_c[var2_int].updatePlatform(-64);
                 var2_int++;
               }
             }
@@ -892,7 +892,7 @@ public final class Bounce extends GameClient {
           }
           if (sj.field_f != null &&
             sj.field_f.focusLost) {
-            v.d((byte) 121);
+            ArchiveNetworkClient.d((byte) 121);
             ContentTransitionDialog.a(sj.field_f, (byte) 80);
             sj.field_f.exitFullscreen((byte) -121, DebouncedFieldValidator.field_e);
             sj.field_f = null;
@@ -961,7 +961,7 @@ public final class Bounce extends GameClient {
               if (decompiledFrameRemainder0) {
                 stackIn_71_1 = -119;
                 stackIn_72_2 = (null != sj.field_f);
-                var2_intLifetime2 = oj.a((GameClient) (this), stackIn_71_1, stackIn_72_2);
+                var2_intLifetime2 = ArchiveSourceManager.a((GameClient) (this), stackIn_71_1, stackIn_72_2);
                 if (1 != var2_intLifetime2) {
                   if (2 == var2_intLifetime2) {
                     if (null != sj.field_f) {
@@ -1002,13 +1002,13 @@ public final class Bounce extends GameClient {
             }
             this.dispatchCommonPacket(-4);
           } while (var3 == 0);
-          if (!tb.e(-11)) {
+          if (!SocketArchiveNetworkClient.e(-11)) {
             return;
           }
           var2_intLifetime1 = this.attemptReconnect(param0 ^ 36);
           if (var2_intLifetime1 == 0 ||
             var2_intLifetime1 == 1) {
-            rk.a(3, (byte) -29);
+            rk.resendPendingPlayerData(3, (byte) -29);
             ih.a(4, -1);
           }
           if (var2_intLifetime1 != 2) {
@@ -1071,7 +1071,7 @@ public final class Bounce extends GameClient {
                 if (stackIn_25_0) {
                   stackIn_31_0 = sj.field_j[var12];
                 } else {
-                  stackIn_31_0 = ij.field_b[var12];
+                  stackIn_31_0 = BouncedownClientSupport.field_b[var12];
                 }
                 var13 = stackIn_31_0;
                 if (var7_int < var13) {
@@ -1193,7 +1193,7 @@ public final class Bounce extends GameClient {
         try {
           SectorCacheStore.a(32459);
           qe.a((byte) -37, va.field_a);
-          if (ca.field_e != null) {
+          if (SlimeCollisionSupport.field_e != null) {
             if (null != pa.field_c && (!pa.field_c.ensureIndexLoaded(-79) ||
               !pa.field_c.tryLoadAllGroups((byte) -41))) {
               AgeValidator.a(AgeValidator.a(nl.field_a, pa.field_c, 130, AppletShell.field_k), -99, 10.0f);
@@ -1209,9 +1209,9 @@ public final class Bounce extends GameClient {
               AgeValidator.a(AgeValidator.a(ke.field_n, MidiPcmStream.field_D, param1 ^ 3260, vk.field_e), -120, 30.0f);
               return;
             }
-            if (ca.field_e != null && (!ca.field_e.ensureIndexLoaded(param1 - 3027) ||
-              !ca.field_e.tryLoadAllGroups((byte) -113))) {
-              AgeValidator.a(AgeValidator.a(ke.field_n, ca.field_e, 130, vk.field_e), param1 - 3156, 40.0f);
+            if (SlimeCollisionSupport.field_e != null && (!SlimeCollisionSupport.field_e.ensureIndexLoaded(param1 - 3027) ||
+              !SlimeCollisionSupport.field_e.tryLoadAllGroups((byte) -113))) {
+              AgeValidator.a(AgeValidator.a(ke.field_n, SlimeCollisionSupport.field_e, 130, vk.field_e), param1 - 3156, 40.0f);
               return;
             }
             if (null != ub.field_a && (!ub.field_a.ensureIndexLoaded(94) ||
@@ -1254,9 +1254,9 @@ public final class Bounce extends GameClient {
             AgeValidator.a(va.field_g, -125, 95.0f);
             var3_ref = null;
             this.renderClientFrame(4);
-            AccountCreationResultPanel.field_mb = MusicTrack.load(ca.field_e, "", "bounce down title screen");
-            wj.field_c = MusicTrack.load(ca.field_e, "", "bounce");
-            ca.field_e = null;
+            AccountCreationResultPanel.field_mb = MusicTrack.load(SlimeCollisionSupport.field_e, "", "bounce down title screen");
+            wj.field_c = MusicTrack.load(SlimeCollisionSupport.field_e, "", "bounce");
+            SlimeCollisionSupport.field_e = null;
             cf.field_d = new SoundCache(pa.field_c, IntrusiveNode.field_e);
             IntrusiveNode.field_e = null;
             pa.field_c = null;
@@ -1280,38 +1280,38 @@ public final class Bounce extends GameClient {
             PcmResampler.field_g = false;
             var3_int = 0;
             do {
-              if (!(var3_int < ua.field_b)) {
-                ua.field_b = 0;
+              if (!(var3_int < PlayfieldPlatforms.field_b)) {
+                PlayfieldPlatforms.field_b = 0;
                 break;
               }
-              ua.field_c[var3_int] = new Platform();
+              PlayfieldPlatforms.field_c[var3_int] = new Platform();
               var3_int++;
             } while (var5 == 0);
             var3_int = 0;
             do {
               if (var3_int >= 480) {
-                ua.field_c[ua.field_b].respawnPlatform(81, 6, (double)(int)(64.0 + Math.random() * 384.0));
-                ua.field_b = ua.field_b + 1;
-                ua.field_c[ua.field_b].respawnPlatform(89, 6, (double)(int)(Math.random() * 384.0 + 64.0));
-                ua.field_b = ua.field_b + 1;
-                ua.field_c[ua.field_b].respawnPlatform(60, 6, (double)(int)(384.0 * Math.random() + 64.0));
-                ua.field_b = ua.field_b + 1;
-                he.field_n[0] = new Slime();
-                he.field_n[1] = new Slime();
-                he.field_n[2] = new Slime();
+                PlayfieldPlatforms.field_c[PlayfieldPlatforms.field_b].respawnPlatform(81, 6, (double)(int)(64.0 + Math.random() * 384.0));
+                PlayfieldPlatforms.field_b = PlayfieldPlatforms.field_b + 1;
+                PlayfieldPlatforms.field_c[PlayfieldPlatforms.field_b].respawnPlatform(89, 6, (double)(int)(Math.random() * 384.0 + 64.0));
+                PlayfieldPlatforms.field_b = PlayfieldPlatforms.field_b + 1;
+                PlayfieldPlatforms.field_c[PlayfieldPlatforms.field_b].respawnPlatform(60, 6, (double)(int)(384.0 * Math.random() + 64.0));
+                PlayfieldPlatforms.field_b = PlayfieldPlatforms.field_b + 1;
+                LeaderboardSubmission.field_n[0] = new Slime();
+                LeaderboardSubmission.field_n[1] = new Slime();
+                LeaderboardSubmission.field_n[2] = new Slime();
                 TextHotspotBounds.a(50, (byte) 127);
                 jl.field_h = this;
                 break;
               }
-              ua.field_c[ua.field_b].respawnPlatform(42, 0, (double)(int)(Math.random() * 384.0 + 64.0));
-              ua.field_c[ua.field_b].field_h = (double)var3_int;
-              ua.field_b = ua.field_b + 1;
+              PlayfieldPlatforms.field_c[PlayfieldPlatforms.field_b].respawnPlatform(42, 0, (double)(int)(Math.random() * 384.0 + 64.0));
+              PlayfieldPlatforms.field_c[PlayfieldPlatforms.field_b].field_h = (double)var3_int;
+              PlayfieldPlatforms.field_b = PlayfieldPlatforms.field_b + 1;
               var3_int += 64;
             } while (var5 == 0);
             if (param1 != 3134) {
               this.field_E = true;
             }
-            MusicPatchPcmStream.field_o = new mj();
+            MusicPatchPcmStream.field_o = new BouncedownMenu();
             var3_ref2 = jl.field_d;
             synchronized (var3_ref2) {
               ld.field_l.setMasterVolume(DefaultTextWidgetRenderer.field_a / 2, 100);
@@ -1325,7 +1325,7 @@ public final class Bounce extends GameClient {
             RichTextWidget.e((byte) -44);
             return;
           }
-          AgeValidator.a(he.field_i, -75, 99.0f);
+          AgeValidator.a(LeaderboardSubmission.field_i, -75, 99.0f);
           this.renderClientFrame(4);
           ResourceArchive.field_e = DisplayNameSelectionPanel.a(param1 ^ -3135, va.field_c, "b12", ub.field_a, "");
           jh.field_s = DisplayNameSelectionPanel.a(-1, va.field_c, "comic20", ub.field_a, "");
@@ -1365,7 +1365,7 @@ public final class Bounce extends GameClient {
           w.field_c = SectorCacheStore.a(ub.field_a, "", (byte) -81, "burns");
           kc.field_c = nc.a("plat0", ub.field_a, "", 0);
           fd.field_n = SectorCacheStore.a(ub.field_a, "", (byte) 125, "plat3");
-          nk.field_h = SectorCacheStore.a(ub.field_a, "", (byte) 117, "plat4");
+          BouncedownMenuEntry.field_h = SectorCacheStore.a(ub.field_a, "", (byte) 117, "plat4");
           MatchingFieldValidator.field_j = SectorCacheStore.a(ub.field_a, "", (byte) 120, "plat4grw");
           wb.field_e = SectorCacheStore.a(ub.field_a, "", (byte) 10, "plat4shr");
           nl.field_d = SectorCacheStore.a(ub.field_a, "", (byte) -15, "plat4spi");
@@ -1410,7 +1410,7 @@ public final class Bounce extends GameClient {
         EmailFormatValidator.field_l = new PcmStreamMixer();
         f.field_a.setRootStream(EmailFormatValidator.field_l);
         bk.field_c = 1;
-        ca.field_a = new int[1];
+        SlimeCollisionSupport.field_a = new int[1];
         eh.field_b = null;
         ld.field_l = new MidiPcmStream();
         if (param0 != -6) {
@@ -1551,16 +1551,16 @@ public final class Bounce extends GameClient {
           } while (var9 == 0);
           var5_int = 0;
           do {
-            if (!(ua.field_b > var5_int)) {
+            if (!(PlayfieldPlatforms.field_b > var5_int)) {
               var5_int = 0;
               break;
             }
-            ua.field_c[var5_int].drawPlatform(1, var3);
+            PlayfieldPlatforms.field_c[var5_int].drawPlatform(1, var3);
             var5_int++;
           } while (var9 == 0);
           scanLoop1: while (true) {
             if (vk.field_b > var5_int) {
-              he.field_n[var5_int].drawSlimeAndPlayerHud(var5_int, false, var3);
+              LeaderboardSubmission.field_n[var5_int].drawSlimeAndPlayerHud(var5_int, false, var3);
               var5_int++;
               if (var9 == 0) {
                 continue;
@@ -1569,10 +1569,10 @@ public final class Bounce extends GameClient {
               if (MusicPatchPcmStream.field_o == null) {
                 break scanLoop1;
               }
-              he.field_n[0].field_n = 3;
-              he.field_n[1].field_n = 3;
+              LeaderboardSubmission.field_n[0].field_n = 3;
+              LeaderboardSubmission.field_n[1].field_n = 3;
             }
-            he.field_n[2].field_n = 3;
+            LeaderboardSubmission.field_n[2].field_n = 3;
             break;
           }
           if (null != MusicPatchPcmStream.field_o &&
@@ -1585,14 +1585,14 @@ public final class Bounce extends GameClient {
             SoftwareRasterizer.resetClip();
             if (PcmResampler.field_g) {
               if (vk.field_b == 1 &&
-                he.field_n[0].field_n > 1) {
-                he.field_n[0].field_n = 1;
+                LeaderboardSubmission.field_n[0].field_n > 1) {
+                LeaderboardSubmission.field_n[0].field_n = 1;
               }
               boolean decompiledFrameCompleted2 = true;
               if (vk.field_b > 0) {
                 var5_int = 1;
-                while (!(he.field_n[0].field_n <= var5_int)) {
-                  Platform.field_a[0].b(8 * (var5_int * 2 - he.field_n[0].field_n) + var3 / 2, 0, param0 - 741572383, 32, var3 / 2 + 16);
+                while (!(LeaderboardSubmission.field_n[0].field_n <= var5_int)) {
+                  Platform.field_a[0].b(8 * (var5_int * 2 - LeaderboardSubmission.field_n[0].field_n) + var3 / 2, 0, param0 - 741572383, 32, var3 / 2 + 16);
                   var5_int++;
                   if (var9 != 0) {
                     decompiledFrameCompleted2 = false;
@@ -1603,8 +1603,8 @@ public final class Bounce extends GameClient {
               if ((decompiledFrameCompleted2) &&
                 (vk.field_b > 1)) {
                 var5_int = 1;
-                while (!(var5_int >= he.field_n[1].field_n)) {
-                  Platform.field_a[1].b(640 - var3 / 2 + (-he.field_n[1].field_n + 2 * var5_int) * 8, 0, -741572379, 32, var3 / 2 + 16);
+                while (!(var5_int >= LeaderboardSubmission.field_n[1].field_n)) {
+                  Platform.field_a[1].b(640 - var3 / 2 + (-LeaderboardSubmission.field_n[1].field_n + 2 * var5_int) * 8, 0, -741572379, 32, var3 / 2 + 16);
                   var5_int++;
                   if (var9 != 0) {
                     decompiledFrameCompleted1 = false;
@@ -1615,8 +1615,8 @@ public final class Bounce extends GameClient {
               if ((decompiledFrameCompleted1) &&
                 (2 < vk.field_b)) {
                 var5_int = 1;
-                while (!(he.field_n[2].field_n <= var5_int)) {
-                  Platform.field_a[2].b(8 * (var5_int * 2 - he.field_n[2].field_n) + var3 / 2, 0, -741572379, 32, 16 + var3 / 2 + 240);
+                while (!(LeaderboardSubmission.field_n[2].field_n <= var5_int)) {
+                  Platform.field_a[2].b(8 * (var5_int * 2 - LeaderboardSubmission.field_n[2].field_n) + var3 / 2, 0, -741572379, 32, 16 + var3 / 2 + 240);
                   var5_int++;
                   if (var9 != 0) {
                     decompiledFrameCompleted0 = false;
@@ -1625,62 +1625,62 @@ public final class Bounce extends GameClient {
                 }
               }
             }
-            if ((decompiledFrameCompleted0) && (he.field_n[0].field_n > 0 &&
-              he.field_n[1].field_n > 0 &&
-              he.field_n[2].field_n > 0)) {
+            if ((decompiledFrameCompleted0) && (LeaderboardSubmission.field_n[0].field_n > 0 &&
+              LeaderboardSubmission.field_n[1].field_n > 0 &&
+              LeaderboardSubmission.field_n[2].field_n > 0)) {
               break regionExit2;
             }
-            if (-1 == jk.field_q) {
+            if (-1 == LogoMesh.field_q) {
               var5_int = -1;
-              if (he.field_n[0].field_n > 0) {
+              if (LeaderboardSubmission.field_n[0].field_n > 0) {
                 var5_int = 0;
               }
               if (vk.field_b > 1) {
-                if (he.field_n[1].field_n > 0 &&
+                if (LeaderboardSubmission.field_n[1].field_n > 0 &&
                   var5_int == -1) {
                   var5_int = 1;
                 }
-                if (he.field_n[1].field_n > 0 &&
+                if (LeaderboardSubmission.field_n[1].field_n > 0 &&
                   var5_int != 1) {
                   var5_int = -1;
                 }
               }
               if (vk.field_b > 2) {
-                if (he.field_n[2].field_n > 0 &&
+                if (LeaderboardSubmission.field_n[2].field_n > 0 &&
                   var5_int == -1) {
                   var5_int = 2;
                 }
-                if (he.field_n[2].field_n > 0 &&
+                if (LeaderboardSubmission.field_n[2].field_n > 0 &&
                   var5_int != 2) {
                   var5_int = -1;
                 }
               }
               if (var5_int != -1) {
                 wj.field_e = 1;
-                jk.field_q = var5_int;
+                LogoMesh.field_q = var5_int;
               }
               if (3 == vk.field_b &&
-                he.field_n[0].field_n <= 0 &&
-                he.field_n[1].field_n <= 0 &&
-                he.field_n[2].field_n <= 0) {
+                LeaderboardSubmission.field_n[0].field_n <= 0 &&
+                LeaderboardSubmission.field_n[1].field_n <= 0 &&
+                LeaderboardSubmission.field_n[2].field_n <= 0) {
                 wj.field_e = 1;
-                jk.field_q = 3;
+                LogoMesh.field_q = 3;
               }
               if (2 == vk.field_b &&
-                he.field_n[0].field_n <= 0 &&
-                he.field_n[1].field_n <= 0) {
-                jk.field_q = 3;
+                LeaderboardSubmission.field_n[0].field_n <= 0 &&
+                LeaderboardSubmission.field_n[1].field_n <= 0) {
+                LogoMesh.field_q = 3;
                 wj.field_e = 1;
               }
               if (vk.field_b == 1 &&
-                0 >= he.field_n[0].field_n) {
+                0 >= LeaderboardSubmission.field_n[0].field_n) {
                 wj.field_e = 1;
-                jk.field_q = 4;
-                if (ca.field_a[0] / 2 > fa.field_c) {
-                  jk.field_q = 6;
+                LogoMesh.field_q = 4;
+                if (SlimeCollisionSupport.field_a[0] / 2 > fa.field_c) {
+                  LogoMesh.field_q = 6;
                 }
-                if (ca.field_a[0] < fa.field_c) {
-                  jk.field_q = 5;
+                if (SlimeCollisionSupport.field_a[0] < fa.field_c) {
+                  LogoMesh.field_q = 5;
                 }
               }
               if (var9 == 0) {
@@ -1688,17 +1688,17 @@ public final class Bounce extends GameClient {
               }
             }
             if (wj.field_e > 255) {
-              if (4 == jk.field_q ||
-                5 == jk.field_q ||
-                6 == jk.field_q) {
+              if (4 == LogoMesh.field_q ||
+                5 == LogoMesh.field_q ||
+                6 == LogoMesh.field_q) {
                 eh.field_b = null;
                 this.prepareSinglePlayerScoreSubmission(false, fa.field_c);
               }
-              jk.field_q = -1;
+              LogoMesh.field_q = -1;
               var5_int = 0;
               scanLoop3: while (true) {
                 if (3 > var5_int) {
-                  he.field_n[var5_int].resetSlime(true);
+                  LeaderboardSubmission.field_n[var5_int].resetSlime(true);
                   var5_int++;
                   if (var9 == 0) {
                     continue;
@@ -1712,10 +1712,10 @@ public final class Bounce extends GameClient {
                 if (null != MusicPatchPcmStream.field_o) {
                   MusicPatchPcmStream.field_o.field_b = true;
                   if (var9 != 0) {
-                    MusicPatchPcmStream.field_o = new mj();
+                    MusicPatchPcmStream.field_o = new BouncedownMenu();
                   }
                 } else {
-                  MusicPatchPcmStream.field_o = new mj();
+                  MusicPatchPcmStream.field_o = new BouncedownMenu();
                 }
                 if (vk.field_b == 1) {
                   if (kb.field_a <= 0) {
@@ -1728,7 +1728,7 @@ public final class Bounce extends GameClient {
                     MusicPatchPcmStream.field_o.field_l = true;
                   }
                 }
-                if (rd.field_a) {
+                if (MouseInputHandler.field_a) {
                   var5 = jl.field_d;
                   synchronized (var5) {
                     ld.field_l.playTrack(AccountCreationResultPanel.field_mb, true, param0 ^ 98);
@@ -1741,27 +1741,27 @@ public final class Bounce extends GameClient {
               ta.field_c = 1.0;
             }
           }
-          if (-1 != jk.field_q &&
+          if (-1 != LogoMesh.field_q &&
             PcmResampler.field_g) {
             SoftwareRasterizer.fillRectangleAlpha(64, 0, 512, 480, 0, 64);
-            if (jk.field_q == 0 ||
-              jk.field_q == 1 ||
-              jk.field_q == 2) {
-              var5_int = wj.field_e / 5 % 5 + jk.field_q * 6;
+            if (LogoMesh.field_q == 0 ||
+              LogoMesh.field_q == 1 ||
+              LogoMesh.field_q == 2) {
+              var5_int = wj.field_e / 5 % 5 + LogoMesh.field_q * 6;
               pe.field_a[var5_int].b(320, 0, -741572379, 128, 240);
             }
-            if (jk.field_q == 3) {
+            if (LogoMesh.field_q == 3) {
               var5_int = wj.field_e / 20 % 8;
               mc.field_b[var5_int].b(320, 0, -741572379, 128, 240);
             }
-            if (jk.field_q == 4) {
+            if (LogoMesh.field_q == 4) {
               jc.field_n.b(320, 0, -741572379, 128, 240);
             }
-            if (jk.field_q == 5) {
+            if (LogoMesh.field_q == 5) {
               var5_int = wj.field_e / 5 % 5;
               va.field_d[var5_int].b(320, 0, -741572379, 128, 240);
             }
-            if (6 == jk.field_q) {
+            if (6 == LogoMesh.field_q) {
               ph.field_b.b(320, 0, -741572379, 128, 240);
             }
           }
@@ -1769,7 +1769,7 @@ public final class Bounce extends GameClient {
           if ((PcmResampler.field_g) &&
             (decompiledFrameRemainder1 = (null != MusicPatchPcmStream.field_o)) &&
             (decompiledFrameRemainder1 = (MusicPatch.field_j == -1))) {
-            MusicPatchPcmStream.field_o.a(23417);
+            MusicPatchPcmStream.field_o.drawMenu(23417);
             decompiledFrameRemainder1 = (var9 != 0);
           }
           if (decompiledFrameRemainder1) {
@@ -1783,13 +1783,13 @@ public final class Bounce extends GameClient {
             SoftwareRasterizer.resetClip();
             if (null != MusicPatchPcmStream.field_o &&
               MusicPatch.field_j == -1) {
-              MusicPatchPcmStream.field_o.a(23417);
+              MusicPatchPcmStream.field_o.drawMenu(23417);
             }
           }
           if (vk.field_b == 1 ||
             !PcmResampler.field_g) {
-            if (he.field_n[0].field_n > 1) {
-              he.field_n[0].field_n = 1;
+            if (LeaderboardSubmission.field_n[0].field_n > 1) {
+              LeaderboardSubmission.field_n[0].field_n = 1;
             }
             if (PcmResampler.field_g) {
               var5_int = od.field_f.stringWidth(TextHotspotBounds.field_j + "100000");
@@ -1867,7 +1867,7 @@ public final class Bounce extends GameClient {
               stackIn_320_2 = false;
               stackIn_321_3 = (kb.field_a != 0);
               stackIn_325_4 = (fa.field_c != 0);
-              ((BinaryBitmapFont) (Object) stackIn_320_0).drawCentred(he.a(stackIn_320_1, stackIn_320_2, stackIn_321_3, stackIn_325_4), 320, var7Lifetime2 + var8, 16777088, -1);
+              ((BinaryBitmapFont) (Object) stackIn_320_0).drawCentred(LeaderboardSubmission.getPlayerCombinationLabel(stackIn_320_1, stackIn_320_2, stackIn_321_3, stackIn_325_4), 320, var7Lifetime2 + var8, 16777088, -1);
               stackIn_328_0 = this;
               stackIn_328_1 = qe.field_c;
               stackIn_328_2 = this.field_L;

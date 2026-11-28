@@ -30,21 +30,21 @@ final class ej {
         RuntimeException decompiledCaughtException = null;
         var5 = Bounce.field_N;
         try {
-          RichTextWidget.field_F = he.field_p;
+          RichTextWidget.field_F = LeaderboardSubmission.field_p;
           if (param0 != param3) {
             if (100 <= param0 &&
               param0 <= 105) {
               var4 = param1;
               oh.a((byte) -29, var4);
-              oa.field_c = GzipDecompressor.createAccountSuggestionsResult(false, param1);
+              SocketConnector.field_c = GzipDecompressor.createAccountSuggestionsResult(false, param1);
               return;
             }
-            oa.field_c = wb.createAccountErrorResult(param0, param3 - 254, param2);
+            SocketConnector.field_c = wb.createAccountErrorResult(param0, param3 - 254, param2);
             return;
           }
           stackIn_8_0 = 5579;
           stackIn_9_1 = !(13 <= cg.field_a);
-          oa.field_c = r.createAccountSuccessResult(stackIn_8_0, stackIn_9_1);
+          SocketConnector.field_c = r.createAccountSuccessResult(stackIn_8_0, stackIn_9_1);
           var6 = (String[]) null;
           oh.a((byte) -29, (String[]) null);
           return;

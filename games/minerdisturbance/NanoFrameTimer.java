@@ -15,7 +15,7 @@ final class NanoFrameTimer extends FrameTimer {
 
     final static void a(int param0, int param1) {
         CipherPacketBuffer var2 = sn.field_c;
-        var2.d((byte) -112, param0);
+        var2.writeCipheredByte((byte) -112, param0);
         var2.writeByte(param1, 25564);
         var2.writeByte(0, 25564);
     }

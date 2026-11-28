@@ -265,7 +265,7 @@ final class de {
           BufferedRandomAccessFile.field_q = false;
         }
         nc.field_T = 0;
-        wn.field_e = DequeWidgetContainer.field_D;
+        SocketConnector.field_e = DequeWidgetContainer.field_D;
         if (UiWidget.field_o) {
           cb.field_e = null;
           tg.field_e = new IntrusiveDeque();

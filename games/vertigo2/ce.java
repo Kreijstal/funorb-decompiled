@@ -53,7 +53,7 @@ final class ce {
         long dupTemp$2 = 0L;
         int var2;
         if (null == PlayerAvatarRenderer.field_q) {
-          PlayerAvatarRenderer.field_q = kr.field_g.requestSocket(-121, cl.field_d, nb.field_y);
+          PlayerAvatarRenderer.field_q = ArchiveSourceManager.field_g.requestSocket(-121, cl.field_d, nb.field_y);
         }
         if (PlayerAvatarRenderer.field_q.status == 0) {
           return false;

@@ -762,7 +762,7 @@ final class uh extends IntrusiveNode {
           }
           var2Lifetime112 = AlphaWidgetContainer.a(0, "ENTRANCE_TIP");
           if (null != var2Lifetime112) {
-            jk.field_o = ab.a(0, var2Lifetime112);
+            ProxySocketConnector.field_o = ab.a(0, var2Lifetime112);
           }
           var2Lifetime113 = AlphaWidgetContainer.a(0, "WALL_TIP");
           if (null != var2Lifetime113) {
@@ -782,7 +782,7 @@ final class uh extends IntrusiveNode {
           }
           var2Lifetime117 = AlphaWidgetContainer.a(0, "WATER_TIP");
           if (var2Lifetime117 != null) {
-            jk.field_q = ab.a(0, var2Lifetime117);
+            ProxySocketConnector.field_q = ab.a(0, var2Lifetime117);
           }
           var2Lifetime118 = AlphaWidgetContainer.a(0, "FAN_TIP");
           if (var2Lifetime118 != null) {
@@ -1010,7 +1010,7 @@ final class uh extends IntrusiveNode {
           }
           var2Lifetime174 = AlphaWidgetContainer.a(0, "INSTRUCTIONS_BODIES_3_6");
           if (null != var2Lifetime174) {
-            w.field_i = ab.a(0, var2Lifetime174);
+            ArchiveNetworkClient.field_i = ab.a(0, var2Lifetime174);
           }
           var2Lifetime175 = AlphaWidgetContainer.a(0, "INSTRUCTIONS_BODIES_4_1");
           if (null != var2Lifetime175) {
@@ -1046,7 +1046,7 @@ final class uh extends IntrusiveNode {
           }
           var2Lifetime183 = AlphaWidgetContainer.a(0, "INSTRUCTIONS_BODIES_5_2");
           if (null != var2Lifetime183) {
-            hm.field_f = ab.a(0, var2Lifetime183);
+            SocketConnector.field_f = ab.a(0, var2Lifetime183);
           }
           var2Lifetime184 = AlphaWidgetContainer.a(0, "INSTRUCTIONS_BODIES_5_3");
           if (var2Lifetime184 != null) {
@@ -1070,7 +1070,7 @@ final class uh extends IntrusiveNode {
           }
           var2Lifetime189 = AlphaWidgetContainer.a(0, "INSTRUCTIONS_BODIES_6_2");
           if (null != var2Lifetime189) {
-            g.field_t = ab.a(0, var2Lifetime189);
+            SocketArchiveNetworkClient.field_t = ab.a(0, var2Lifetime189);
           }
           var2Lifetime190 = AlphaWidgetContainer.a(0, "INSTRUCTIONS_BODIES_6_3");
           if (null != var2Lifetime190) {
@@ -1147,7 +1147,7 @@ final class uh extends IntrusiveNode {
           }
           var2Lifetime208 = AlphaWidgetContainer.a(0, "LABEL_SCORE");
           if (null != var2Lifetime208) {
-            hm.field_h = ab.a(0, var2Lifetime208);
+            SocketConnector.field_h = ab.a(0, var2Lifetime208);
           }
           var2Lifetime209 = AlphaWidgetContainer.a(0, "LABEL_SCORE_THIS_LEVEL");
           if (null != var2Lifetime209) {

@@ -100,7 +100,7 @@ final class AccountRegistrationPanel extends DequeWidgetContainer implements Tex
         var3 = var3 + this.addLabeledField(var3, 170, vm.field_h, this.field_A, 25406);
         var3 = var3 + (this.addLabeledFieldWithValidationMessage(170, 20, var3, 0, sh.field_m, "", this.field_K) + 5);
         var3 = var3 + this.addLabeledField(var3, 170, fh.field_h, this.field_M, 25406);
-        var3 = var3 + (this.addLabeledFieldWithDefaultValidationMessage(pk.field_f, var3, this.field_I, true, AccountServiceResult.field_c, 170) + 5);
+        var3 = var3 + (this.addLabeledFieldWithDefaultValidationMessage(ArchiveSourceManager.field_f, var3, this.field_I, true, AccountServiceResult.field_c, 170) + 5);
         var3 = var3 + (5 + this.addLabeledFieldWithDefaultValidationMessage(fh.field_g, var3, this.field_N, true, TextLayout.field_c, 170));
         var3 = var3 + this.addLabeledFieldWithValidationIcon(170, -81, ui.field_b, var3, this.field_z);
         LabeledWidgetContainer var4 = new LabeledWidgetContainer(46, var3, -90 + this.field_g, 25, this.field_F, true, -120 + this.field_g, 5, ba.field_i, 11579568, Bzip2State.field_j);

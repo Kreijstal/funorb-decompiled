@@ -287,11 +287,11 @@ final class db extends DungeonAssaultScreen {
               var7 = (int[]) null;
               if (o.a(FrameTimer.field_c, (int[]) null, var2_int, gm.field_d, true)) {
                 gm.field_d.field_w = var2_int;
-                ac.field_B.d((byte) -106, 59);
+                ac.field_B.writeCipheredByte((byte) -106, 59);
                 ac.field_B.writeByte(6, var2_int);
               }
             }
-            while (ha.b((byte) 47)) {
+            while (ProxySocketConnector.b((byte) 47)) {
               this.handleScreenKeyPress();
               if (var6 != 0) {
                 break scanLoop1;
@@ -653,7 +653,7 @@ final class db extends DungeonAssaultScreen {
           if (gm.field_d.field_A != -1) {
             gm.field_d.field_A = fm.field_i + (int)(-16912800L + kd.correctedCurrentTimeMillis(-2456) / 60000L);
           }
-          ac.field_B.d((byte) -79, 73);
+          ac.field_B.writeCipheredByte((byte) -79, 73);
           ac.field_B.writeByte(6, param1);
           hi.b(1);
           return;

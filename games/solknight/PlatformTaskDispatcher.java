@@ -167,7 +167,7 @@ final class PlatformTaskDispatcher implements Runnable {
         return this.enqueueTask(0, param1, 0, 7, -19);
     }
 
-    private final static RandomAccessCacheFile a(int param0, String param1, int param2, String param3) {
+    private final static RandomAccessCacheFile openPreferencesFile(int param0, String param1, int param2, String param3) {
         try {
           int var6 = 0;
           RandomAccessCacheFile stackIn_15_0 = null;
@@ -316,11 +316,11 @@ final class PlatformTaskDispatcher implements Runnable {
                         }
                         break;
                       case 12:
-                        var3_ref = PlatformTaskDispatcher.a(92, field_i, field_o, (String) (var8.objectArgument));
+                        var3_ref = PlatformTaskDispatcher.openPreferencesFile(92, field_i, field_o, (String) (var8.objectArgument));
                         var8.result = var3_ref;
                         break;
                       case 13:
-                        var3_ref = PlatformTaskDispatcher.a(93, "", field_o, (String) (var8.objectArgument));
+                        var3_ref = PlatformTaskDispatcher.openPreferencesFile(93, "", field_o, (String) (var8.objectArgument));
                         var8.result = var3_ref;
                         break;
                       case 16:
@@ -446,7 +446,7 @@ final class PlatformTaskDispatcher implements Runnable {
                     }
                     try {
                       if (false) throw (ProxyAuthenticationRequiredException) null;
-                      var8.result = rg.a((String) (var8.objectArgument), var8.intArgument, 2525).a((byte) -93);
+                      var8.result = rg.a((String) (var8.objectArgument), var8.intArgument, 2525).openSocket((byte) -93);
                     } catch (ProxyAuthenticationRequiredException decompiledCaughtParameter2) {
                       decompiledCaughtException = decompiledCaughtParameter2;
                       var3_ref3 = (ProxyAuthenticationRequiredException) (Object) decompiledCaughtException;

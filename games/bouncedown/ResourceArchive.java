@@ -86,7 +86,7 @@ final class ResourceArchive {
         if (param0 < 110) {
           field_g = (byte[][]) null;
         }
-        return ih.field_Q.a(-125);
+        return ih.field_Q.loadMasterIndex(-125);
     }
 
     final int getFileCapacity(byte param0, int param1) {
@@ -165,7 +165,7 @@ final class ResourceArchive {
             ResourceArchive.clearStaticReferences(false);
           }
           if (FullscreenStatusDialog.field_P &&
-            jk.field_K == ge.field_c) {
+            LogoMesh.field_K == ge.field_c) {
             FullscreenStatusDialog.field_P = false;
             ge.field_c = 0;
           }
@@ -575,7 +575,7 @@ final class ResourceArchive {
         int var6;
         var6 = Bounce.field_N;
         var2 = 0;
-        var3 = oa.field_a;
+        var3 = SocketConnector.field_a;
         if (var3 < 5) {
           var2 = var3 * var3 * 8192 / 1100;
         } else {

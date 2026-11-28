@@ -23,7 +23,7 @@ final class kh {
     }
 
     final static void a(byte param0) {
-        tk.field_e = false;
+        ArchiveNetworkClient.field_e = false;
         PacketBuffer.field_t = false;
         DialogMessagePane.b(-14, -1);
         if (param0 != -32) {

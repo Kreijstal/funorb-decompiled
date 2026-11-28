@@ -195,7 +195,7 @@ final class ha extends DefaultTextWidgetRenderer {
         try {
           ge.b();
           pk.field_i = new int[260];
-          ih.field_w = 11;
+          SocketArchiveNetworkClient.field_w = 11;
           var1_int = 0;
           if (param0 != 255) {
             return;

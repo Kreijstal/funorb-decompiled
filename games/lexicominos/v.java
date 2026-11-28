@@ -78,25 +78,25 @@ final class v extends DefaultTextWidgetRenderer {
         return (FrameTimer) ((Object) new NanoFrameTimer());
     }
 
-    final static lg a(String param0, int param1, byte param2) {
-        ch var3 = null;
+    final static SocketConnector a(String param0, int param1, byte param2) {
+        ProxySocketConnector var3 = null;
         RuntimeException var3_ref = null;
-        lg stackIn_2_0 = null;
-        ch stackIn_4_0 = null;
+        SocketConnector stackIn_2_0 = null;
+        ProxySocketConnector stackIn_4_0 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
           if (param2 != 127) {
-            stackIn_2_0 = (lg) null;
+            stackIn_2_0 = (SocketConnector) null;
             return stackIn_2_0;
           }
-          var3 = new ch();
-          ((lg) ((Object) var3)).field_a = param0;
-          ((lg) ((Object) var3)).field_b = param1;
+          var3 = new ProxySocketConnector();
+          ((SocketConnector) ((Object) var3)).field_a = param0;
+          ((SocketConnector) ((Object) var3)).field_b = param1;
           stackIn_4_0 = var3;
-          return (lg) ((Object) stackIn_4_0);
+          return (SocketConnector) ((Object) stackIn_4_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3_ref = decompiledCaughtException;

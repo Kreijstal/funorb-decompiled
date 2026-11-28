@@ -35,7 +35,7 @@ final class mp extends DualLinkNode {
         String stackIn_25_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (lc.field_c != tl.field_e) {
+          if (lc.field_c != SocketConnector.field_e) {
             return false;
           }
           var8 = new AccountCreationResultPanel(qe.field_g, param2);

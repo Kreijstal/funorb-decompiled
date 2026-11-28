@@ -52,7 +52,7 @@ final class te {
 
     final static void a(int param0, int param1, int param2, int param3, Sprite param4, int param5, int param6, int param7, int param8) {
         try {
-          vh.field_i = param1;
+          ArchiveSourceManager.field_i = param1;
           ByteStorage.field_a = param6;
           AgeValidator.field_o = param8;
           t.field_a = param0;

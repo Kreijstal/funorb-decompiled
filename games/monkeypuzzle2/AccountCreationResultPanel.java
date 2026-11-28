@@ -11,7 +11,7 @@ final class AccountCreationResultPanel extends ProgressMessageDialog implements 
     static int field_lb;
 
     AccountCreationResultPanel(ModalDialogHost param0, AccountRegistrationPanel param1) {
-        super(param0, IntrusiveDeque.field_c, c.field_j, false, false);
+        super(param0, IntrusiveDeque.field_c, ArchiveSourceManager.field_j, false, false);
         try {
           this.field_jb = param1;
         } catch (RuntimeException runtimeException) {
@@ -163,12 +163,12 @@ final class AccountCreationResultPanel extends ProgressMessageDialog implements 
         MonkeyPuzzle2.field_E = d.field_h[param1];
         if (param0 == 3860) {
           IntrusiveNode.field_b = he.field_f[param1];
-          tk.field_a = EmailFormatValidator.field_o[param1];
+          KeyboardInputHandler.field_a = EmailFormatValidator.field_o[param1];
           return;
         }
         AccountCreationResultPanel.a(103, 94);
         IntrusiveNode.field_b = he.field_f[param1];
-        tk.field_a = EmailFormatValidator.field_o[param1];
+        KeyboardInputHandler.field_a = EmailFormatValidator.field_o[param1];
     }
 
     private final static void i(byte param0) {

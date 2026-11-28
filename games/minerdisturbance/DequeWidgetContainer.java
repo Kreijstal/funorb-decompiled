@@ -359,7 +359,7 @@ class DequeWidgetContainer extends UiWidget implements WidgetContainerMarker {
           }
           if (null != param0.field_a) {
           }
-          kh.a(param0, 14288);
+          MouseInputHandler.a(param0, 14288);
           var2_intLifetime1 = 69 % ((param1 - 11) / 53);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

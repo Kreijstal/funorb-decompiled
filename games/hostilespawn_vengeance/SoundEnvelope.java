@@ -16,8 +16,8 @@ final class SoundEnvelope {
 
     final void decode(PacketBuffer param0) {
         this.field_b = param0.readUnsignedByte(32270);
-        this.field_i = param0.d(8195);
-        this.field_f = param0.d(8195);
+        this.field_i = param0.readInt(8195);
+        this.field_f = param0.readInt(8195);
         this.decodeSegments(param0);
     }
 

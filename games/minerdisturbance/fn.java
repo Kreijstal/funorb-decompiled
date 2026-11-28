@@ -76,7 +76,7 @@ final class fn extends IntrusiveNode {
               stackIn_35_0 = -1;
               return stackIn_35_0;
             }
-            aj.field_c.a(mb.field_c, gl.field_o, 24458);
+            aj.field_c.attachSocket(mb.field_c, gl.field_o, 24458);
             tl.field_m = 0;
             ArchiveRequest.field_B = null;
             mb.field_c = null;

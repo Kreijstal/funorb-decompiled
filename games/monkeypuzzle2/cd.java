@@ -60,7 +60,7 @@ final class cd {
           if (!ValidationStatusIcon.c((byte) -93)) {
             if (null != AwtRasterBuffer.field_f &&
               AwtRasterBuffer.field_f.focusLost) {
-              wl.e((byte) 120);
+              ArchiveNetworkClient.e((byte) 120);
               DiskArchiveRequest.field_o.showDialog((byte) -56, new FullscreenStatusDialog(DiskArchiveRequest.field_o, cg.field_c));
             }
             return;
@@ -82,7 +82,7 @@ final class cd {
     final static void a(int param0) {
         fk.field_a = false;
         ah.field_h = false;
-        qh.a(param0, true);
+        MouseInputHandler.a(param0, true);
         ed.field_c = di.field_a;
         BufferedRandomAccessFile.field_d = di.field_a;
     }
@@ -117,7 +117,7 @@ final class cd {
           if (param1 != 20) {
             return;
           }
-          qh.a(param0, 6191);
+          MouseInputHandler.a(param0, 6191);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

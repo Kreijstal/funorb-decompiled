@@ -186,7 +186,7 @@ final class he extends DualLinkNode {
           var5.writeInt(param1.field_o, 0);
           var5.writeInt(param1.field_r, 0);
           var5.writeInt(param1.field_n, 0);
-          var5.c(var4, 85);
+          var5.appendCrc32(var4, 85);
           var5.patchByteLength((byte) 53, var5.position - var4);
         } catch (RuntimeException runtimeException) {
           throw wn.wrapClientException((Throwable) ((Object) runtimeException), "he.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');

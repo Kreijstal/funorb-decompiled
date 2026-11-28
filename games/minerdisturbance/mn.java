@@ -50,7 +50,7 @@ final class mn extends gk {
         RuntimeException decompiledCaughtException = null;
         try {
           if (null == AccountRequestState.field_e) {
-            AccountRequestState.field_e = new ProgressDialog(mb.field_b, ic.field_i);
+            AccountRequestState.field_e = new ProgressDialog(mb.field_b, ProxySocketConnector.field_i);
             mb.field_b.showDialog(1, AccountRequestState.field_e);
           }
           AccountRequestState.field_e.setProgress(param0 ^ 68, param3, param1, param2);

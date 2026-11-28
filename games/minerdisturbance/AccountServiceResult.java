@@ -148,7 +148,7 @@ final class AccountServiceResult {
               ud.field_a = stackIn_9_0;
               GuestPlayConfirmationForm.field_Q = cm.field_p;
               le.a(cm.field_q, sn.field_c, sj.field_c, ii.field_a, -80);
-              bk.a((byte) 124, -1);
+              ArchiveSourceManager.a((byte) 124, -1);
             } catch (java.io.IOException decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var3 = (IOException) (Object) decompiledCaughtException;

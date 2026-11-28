@@ -10,8 +10,8 @@ final class pd {
         if (!fe.field_g) {
           throw new IllegalStateException();
         }
-        if (null != nk.field_a) {
-          nk.field_a.closeDialog(true);
+        if (null != BouncedownMenuEntry.field_a) {
+          BouncedownMenuEntry.field_a.closeDialog(true);
         }
         if (param0 == 11173) {
           var1 = fd.c((byte) 61);
@@ -50,14 +50,14 @@ final class pd {
           if (param0 != 1059) {
             field_b = (String) null;
           }
-          if (he.field_p == RichTextWidget.field_F &&
+          if (LeaderboardSubmission.field_p == RichTextWidget.field_F &&
             param1.equals(t.field_t)) {
             RichTextWidget.field_F = wj.field_a;
-            stackIn_11_0 = oa.field_c;
+            stackIn_11_0 = SocketConnector.field_c;
             return stackIn_11_0;
           }
           RichTextWidget.field_F = qg.field_g;
-          oa.field_c = null;
+          SocketConnector.field_c = null;
           t.field_t = param1;
           stackIn_9_0 = null;
           return (AccountServiceResult) (stackIn_9_0);

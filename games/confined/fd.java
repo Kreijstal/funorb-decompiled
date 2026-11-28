@@ -207,7 +207,7 @@ final class fd {
         var2 = 0;
         var3 = 0;
         while (var2 < 8) {
-          this.field_d[var2] = pa.bitwiseXor(kd.bitwiseAnd((long)this.field_f[var3 + 7], 255L), pa.bitwiseXor(kd.bitwiseAnd(65280L, (long)this.field_f[var3 + 6] << 8), pa.bitwiseXor(pa.bitwiseXor(kd.bitwiseAnd((long)this.field_f[4 + var3], 255L) << 24, pa.bitwiseXor(pa.bitwiseXor(kd.bitwiseAnd(255L, (long)this.field_f[2 + var3]) << 40, pa.bitwiseXor(kd.bitwiseAnd((long)this.field_f[1 + var3], 255L) << 48, (long)this.field_f[var3] << 56)), kd.bitwiseAnd(255L, (long)this.field_f[3 + var3]) << 32)), kd.bitwiseAnd(16711680L, (long)this.field_f[var3 + 5] << 16))));
+          this.field_d[var2] = pa.bitwiseXor(SocketArchiveNetworkClient.bitwiseAnd((long)this.field_f[var3 + 7], 255L), pa.bitwiseXor(SocketArchiveNetworkClient.bitwiseAnd(65280L, (long)this.field_f[var3 + 6] << 8), pa.bitwiseXor(pa.bitwiseXor(SocketArchiveNetworkClient.bitwiseAnd((long)this.field_f[4 + var3], 255L) << 24, pa.bitwiseXor(pa.bitwiseXor(SocketArchiveNetworkClient.bitwiseAnd(255L, (long)this.field_f[2 + var3]) << 40, pa.bitwiseXor(SocketArchiveNetworkClient.bitwiseAnd((long)this.field_f[1 + var3], 255L) << 48, (long)this.field_f[var3] << 56)), SocketArchiveNetworkClient.bitwiseAnd(255L, (long)this.field_f[3 + var3]) << 32)), SocketArchiveNetworkClient.bitwiseAnd(16711680L, (long)this.field_f[var3 + 5] << 16))));
           var2++;
           var3 += 8;
         }

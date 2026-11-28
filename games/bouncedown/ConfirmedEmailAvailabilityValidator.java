@@ -64,8 +64,8 @@ final class ConfirmedEmailAvailabilityValidator extends TextFieldValidator {
             ConfirmedEmailAvailabilityValidator.a((String) null, false, -26);
           }
           ng.field_b = false;
-          if (null != nk.field_a &&
-            nk.field_a.field_D) {
+          if (null != BouncedownMenuEntry.field_a &&
+            BouncedownMenuEntry.field_a.field_D) {
             var3_int = 1;
             if (8 == param2) {
               if (fe.field_g) {
@@ -87,7 +87,7 @@ final class ConfirmedEmailAvailabilityValidator extends TextFieldValidator {
               if (va.field_f) {
                 param0 = ModalDialogHost.field_B;
               }
-              nk.field_a.showResult(param0, 4210752, param2);
+              BouncedownMenuEntry.field_a.showResult(param0, 4210752, param2);
             }
             if (param2 != 256 &&
               10 != param2) {

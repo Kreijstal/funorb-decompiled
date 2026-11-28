@@ -23,9 +23,9 @@ final class ProgressDialog extends ResizableModalDialog {
           wg.field_e = param4;
           fl.field_d = param8;
           MusicPatchEnvelope.field_i = param0;
-          kb.field_b = (wb) ((Object) new qf());
+          kb.field_b = (ArchiveNetworkClient) ((Object) new SocketArchiveNetworkClient());
           AccountCreationResultPanel.field_pb = new DiskCacheWorker(param3);
-          nh.field_a = new pg(kb.field_b, AccountCreationResultPanel.field_pb);
+          nh.field_a = new ArchiveSourceManager(kb.field_b, AccountCreationResultPanel.field_pb);
         } catch (RuntimeException runtimeException) {
           throw ValidationStatusIcon.wrapClientException((Throwable) ((Object) runtimeException), "uk.M(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + (param8 != null ? "{...}" : "null") + ')');
         }

@@ -18,7 +18,7 @@ final class mj extends IntrusiveNode {
           jf.a(param1, param3, (byte) 18, param4);
           im.a((byte) 79);
           AccountRequestState.field_h = mc.field_t;
-          ic.field_l = mc.field_t;
+          ProxySocketConnector.field_l = mc.field_t;
         } catch (RuntimeException runtimeException) {
           throw lj.wrapClientException((Throwable) ((Object) runtimeException), "mj.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + (param4 != null ? "{...}" : "null") + ')');
         }

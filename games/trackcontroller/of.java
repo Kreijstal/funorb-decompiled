@@ -73,7 +73,7 @@ final class of extends ec {
           ConfirmedEmailAvailabilityValidator.inputPending = false;
           uk.clickButton = wf.pendingClick;
           ContentTransitionDialog.clickX = LabeledWidgetContainer.pressX;
-          wg.clickY = GameShell.pressY;
+          ArchiveSourceManager.clickY = GameShell.pressY;
           wf.pendingClick = 0;
         }
     }

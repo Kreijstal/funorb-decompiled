@@ -48,7 +48,7 @@ final class sc {
             stackIn_11_0 = var3;
             return stackIn_11_0;
           }
-          stackIn_9_0 = kh.copyBytes(var3, (byte) -16);
+          stackIn_9_0 = MouseInputHandler.copyBytes(var3, (byte) -16);
           return stackIn_9_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

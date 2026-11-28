@@ -46,11 +46,11 @@ final class ByteArrayPoolSupport {
             return var2;
           }
           if (5000 == param1 &&
-            wm.field_q > 0) {
-            fieldTemp$2 = wm.field_q - 1;
-            wm.field_q = wm.field_q - 1;
+            ArchiveNetworkClient.field_q > 0) {
+            fieldTemp$2 = ArchiveNetworkClient.field_q - 1;
+            ArchiveNetworkClient.field_q = ArchiveNetworkClient.field_q - 1;
             var2 = di.field_Ib[fieldTemp$2];
-            di.field_Ib[wm.field_q] = null;
+            di.field_Ib[ArchiveNetworkClient.field_q] = null;
             return var2;
           }
           if (param1 == 30000 &&
@@ -98,11 +98,11 @@ final class ByteArrayPoolSupport {
               }
             }
           } else {
-            if (wm.field_q > 0) {
-              fieldTemp$11 = wm.field_q - 1;
-              wm.field_q = wm.field_q - 1;
+            if (ArchiveNetworkClient.field_q > 0) {
+              fieldTemp$11 = ArchiveNetworkClient.field_q - 1;
+              ArchiveNetworkClient.field_q = ArchiveNetworkClient.field_q - 1;
               var2 = di.field_Ib[fieldTemp$11];
-              di.field_Ib[wm.field_q] = null;
+              di.field_Ib[ArchiveNetworkClient.field_q] = null;
               return var2;
             }
             if (param1 != 30000) {

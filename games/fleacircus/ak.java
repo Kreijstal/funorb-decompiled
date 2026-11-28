@@ -187,7 +187,7 @@ final class ak {
               ud.field_b.writeByte(-11, 18);
               ud.field_b.position = ud.field_b.position + 2;
               var10 = ud.field_b.position;
-              var11_ref_StringLifetime4 = w.a(0, BoundedRandomAccessFile.getApplet((byte) -62));
+              var11_ref_StringLifetime4 = ArchiveNetworkClient.a(0, BoundedRandomAccessFile.getApplet((byte) -62));
               if (var11_ref_StringLifetime4 == null) {
                 var11_ref_StringLifetime4 = "";
               }

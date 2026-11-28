@@ -24,7 +24,7 @@ final class FullscreenStatusDialog extends ResizableModalDialog implements Widge
           if (AlphaWidgetContainer.field_L == param1) {
             var3 = NetworkArchiveRequest.field_x;
           } else {
-            if (param1 == ne.field_i) {
+            if (param1 == ArchiveSourceManager.field_i) {
               var3 = ak.field_c;
               this.field_x = this.field_x + 10;
               if (pe.a((byte) -108)) {

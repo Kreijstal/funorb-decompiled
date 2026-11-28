@@ -47,7 +47,7 @@ class EditableTextField extends InteractiveWidget {
           field_S = 0;
         }
         vg.field_I = null;
-        rd.field_d = null;
+        MouseInputHandler.field_d = null;
         ob.field_a = null;
         b.field_b = null;
     }

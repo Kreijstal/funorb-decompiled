@@ -91,12 +91,12 @@ abstract class DebouncedFieldValidator implements FieldValidator {
           tg.field_t = param2;
           ue.field_e = param3;
           AccountRegistrationPanel.field_N = param5;
-          qh.field_c = (wm) ((Object) new ob());
+          qh.field_c = (ArchiveNetworkClient) ((Object) new SocketArchiveNetworkClient());
           if (param0 != 350) {
             field_c = (String) null;
           }
           RegistrationAgreementPane.field_O = new DiskCacheWorker(param5);
-          FullscreenStatusDialog.field_fb = new hj(qh.field_c, RegistrationAgreementPane.field_O);
+          FullscreenStatusDialog.field_fb = new ArchiveSourceManager(qh.field_c, RegistrationAgreementPane.field_O);
         } catch (RuntimeException runtimeException) {
           throw SpriteGeometry.wrapClientException((Throwable) ((Object) runtimeException), "jb.H(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ',' + param6 + ',' + param7 + ',' + param8 + ')');
         }

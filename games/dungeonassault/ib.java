@@ -92,11 +92,11 @@ final class ib {
             String var4 = (String) null;
             ib.a((byte) 67, 45, (String) null);
           }
-          var3.field_e = tp.a(ImageProducerRasterBuffer.field_p, "idle", param0, -1998);
-          var3.field_u = tp.a(ImageProducerRasterBuffer.field_p, "select", param0, -1998);
-          var3.field_t = tp.a(ImageProducerRasterBuffer.field_p, "victory", param0, -1998);
-          var3.field_v = tp.a(ImageProducerRasterBuffer.field_p, "defeat", param0, -1998);
-          var3.field_l = tp.a(ImageProducerRasterBuffer.field_p, "death", param0, -1998);
+          var3.field_e = SocketArchiveNetworkClient.a(ImageProducerRasterBuffer.field_p, "idle", param0, -1998);
+          var3.field_u = SocketArchiveNetworkClient.a(ImageProducerRasterBuffer.field_p, "select", param0, -1998);
+          var3.field_t = SocketArchiveNetworkClient.a(ImageProducerRasterBuffer.field_p, "victory", param0, -1998);
+          var3.field_v = SocketArchiveNetworkClient.a(ImageProducerRasterBuffer.field_p, "defeat", param0, -1998);
+          var3.field_l = SocketArchiveNetworkClient.a(ImageProducerRasterBuffer.field_p, "death", param0, -1998);
         } catch (RuntimeException runtimeException) {
           throw AccountServiceResult.wrapClientException((Throwable) ((Object) runtimeException), "ib.F(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }

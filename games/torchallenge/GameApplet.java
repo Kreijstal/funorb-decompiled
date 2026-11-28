@@ -60,7 +60,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
           ((java.awt.Container) (var2)).setLayout((java.awt.LayoutManager) null);
           LabeledWidgetContainer.field_P = (java.awt.Canvas) ((Object) new DelegatingCanvas((java.awt.Component) (this)));
           ((java.awt.Container) (var2)).add((java.awt.Component) ((Object) LabeledWidgetContainer.field_P));
-          LabeledWidgetContainer.field_P.setSize(sd.field_c, fl.field_v);
+          LabeledWidgetContainer.field_P.setSize(sd.field_c, SocketArchiveNetworkClient.field_v);
           LabeledWidgetContainer.field_P.setVisible(true);
           if (var2 == gi.field_b) {
             var3 = gi.field_b.getInsets();
@@ -213,7 +213,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
                 }
                 AccountServiceResult.a((byte) 88);
                 this.e(-87);
-                SectorCacheStore.field_f = dk.a(fl.field_v, (java.awt.Component) ((Object) LabeledWidgetContainer.field_P), -124, sd.field_c);
+                SectorCacheStore.field_f = dk.a(SocketArchiveNetworkClient.field_v, (java.awt.Component) ((Object) LabeledWidgetContainer.field_P), -124, sd.field_c);
                 this.initializeGame(-117);
                 hl.field_b = ac.a(true);
                 do {
@@ -288,7 +288,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
           if (fieldTemp$0 > 50) {
             je.field_f = true;
             TextLayout.field_c = TextLayout.field_c - 50;
-            LabeledWidgetContainer.field_P.setSize(sd.field_c, fl.field_v);
+            LabeledWidgetContainer.field_P.setSize(sd.field_c, SocketArchiveNetworkClient.field_v);
             LabeledWidgetContainer.field_P.setVisible(true);
             if (null != gi.field_b &&
               nk.field_d == null) {
@@ -540,7 +540,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
               }
               ra.field_g = 0;
               ae.field_k = param5;
-              fl.field_v = param0;
+              SocketArchiveNetworkClient.field_v = param0;
               bk.field_i = param0;
               sd.field_c = param3;
               kd.field_r = param3;

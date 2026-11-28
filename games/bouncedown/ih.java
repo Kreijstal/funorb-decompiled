@@ -23,7 +23,7 @@ class ih extends fd {
     private int field_r;
     private RgbSprite[] field_U;
     private int field_E;
-    static oj field_Q;
+    static ArchiveSourceManager field_Q;
     private int field_y;
     private String field_z;
     private int field_R;

@@ -77,10 +77,10 @@ class mc extends DefaultTextWidgetRenderer {
             throw new RuntimeException((String) null);
           }
           if (!gm.field_d.field_H) {
-            ac.field_B.d((byte) -89, 58);
+            ac.field_B.writeCipheredByte((byte) -89, 58);
           }
           o.a(121);
-          ac.field_B.d((byte) -105, 61);
+          ac.field_B.writeCipheredByte((byte) -105, 61);
           var4_int = 0;
           for (var5 = 0; var5 < 8; var5++) {
             if (param3[var5]) {

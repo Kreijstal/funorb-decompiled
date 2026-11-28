@@ -10,11 +10,11 @@ final class CipherPacketBuffer extends PacketBuffer {
     static PcmStreamMixer field_r;
     static String field_t;
 
-    final void i(int param0) {
+    final void beginBitAccess(int param0) {
         this.field_p = this.position * param0;
     }
 
-    final void a(byte[] param0, int param1, int param2, int param3) {
+    final void readCipheredBytes(byte[] param0, int param1, int param2, int param3) {
         int var5_int = 0;
         int fieldTemp$0 = 0;
         RuntimeException stackIn_7_0 = null;
@@ -49,16 +49,16 @@ final class CipherPacketBuffer extends PacketBuffer {
         super(param0);
     }
 
-    final void b(boolean param0, int param1) {
+    final void writeCipheredByte(boolean param0, int param1) {
         int fieldTemp$0 = this.position;
         this.position = this.position + 1;
         this.payload[fieldTemp$0] = (byte)(this.field_q.nextInt(256) + param1);
         if (!param0) {
-          this.j(-107);
+          this.endBitAccess(-107);
         }
     }
 
-    final void a(int[] param0, int param1) {
+    final void setCipherSeed(int[] param0, int param1) {
         try {
           int var3_int = -124 % ((17 - param1) / 51);
           this.field_q = new IsaacRandom(param0);
@@ -157,7 +157,7 @@ final class CipherPacketBuffer extends PacketBuffer {
         }
     }
 
-    final int g(int param0, int param1) {
+    final int readBits(int param0, int param1) {
         int incrementValue$0 = 0;
         int var6 = Confined.field_J ? 1 : 0;
         int var3 = this.field_p >> 3;
@@ -183,7 +183,7 @@ final class CipherPacketBuffer extends PacketBuffer {
         super(param0);
     }
 
-    final int h(int param0) {
+    final int readCipheredByte(int param0) {
         int fieldTemp$0 = 0;
         if (param0 == -1) {
           fieldTemp$0 = this.position;
@@ -196,7 +196,7 @@ final class CipherPacketBuffer extends PacketBuffer {
         return this.payload[fieldTemp$1] - this.field_q.nextInt(param0 ^ -257) & 255;
     }
 
-    final void j(int param0) {
+    final void endBitAccess(int param0) {
         int var2 = 126 % ((77 - param0) / 38);
         this.position = (this.field_p + 7) / 8;
     }

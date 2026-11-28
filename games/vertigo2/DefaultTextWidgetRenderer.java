@@ -52,7 +52,7 @@ class DefaultTextWidgetRenderer implements WidgetListener, TextWidgetRenderer {
           if (param0 <= 14) {
             field_o = (java.applet.Applet) null;
           }
-          tk.field_c.drawString("Press 'H' to close this screen", var3, var2, 16777215, -1);
+          ArchiveNetworkClient.field_c.drawString("Press 'H' to close this screen", var3, var2, 16777215, -1);
           var2 = var2 + var1_int;
           var4 = var2;
           for (var5 = 0; MusicPatch.field_A.length > var5; var5++) {
@@ -103,8 +103,8 @@ class DefaultTextWidgetRenderer implements WidgetListener, TextWidgetRenderer {
               } else {
                 SoftwareRasterizer.fillRectangle(var3 - 10, -10 + var2, 50, 20 + var1_int, var8);
               }
-              tk.field_c.drawParagraph((String) (var6), var3 - 10, -10 + var2, 50, 20 + var1_int, 16777215, 5592405, 1, 1, 0);
-              tk.field_c.drawParagraph(var7, -10 + (var3 + 60), var2 - 10, 140, var1_int + 20, 16777215, -1, 0, 1, 0);
+              ArchiveNetworkClient.field_c.drawParagraph((String) (var6), var3 - 10, -10 + var2, 50, 20 + var1_int, 16777215, 5592405, 1, 1, 0);
+              ArchiveNetworkClient.field_c.drawParagraph(var7, -10 + (var3 + 60), var2 - 10, 140, var1_int + 20, 16777215, -1, 0, 1, 0);
               var2 = var2 + (24 + var1_int);
               if (var2 > 420) {
                 var2 = var4;

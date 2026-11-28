@@ -173,8 +173,8 @@ final class ValidationStatusIcon extends ButtonWidget {
         RuntimeException var2 = null;
         try {
           var2_int = -111 / ((-67 - param1) / 48);
-          SecondaryNodeDeque.a((java.awt.Component) ((Object) param0), (byte) -124);
-          ac.a(-117, (java.awt.Component) ((Object) param0));
+          SecondaryNodeDeque.detachKeyboardListeners((java.awt.Component) ((Object) param0), (byte) -124);
+          ac.detachMouseListeners(-117, (java.awt.Component) ((Object) param0));
           if (null != DisplayNameSelectionPanel.field_A) {
             DisplayNameSelectionPanel.field_A.detach(0, (java.awt.Component) ((Object) param0));
           }

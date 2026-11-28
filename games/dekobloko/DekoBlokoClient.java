@@ -554,7 +554,7 @@ public final class DekoBlokoClient extends FunOrbClient {
                       if (((GameSession) (objectLocal26)).integerState0612 != integerLocal27) {
                         continue scanLoop2;
                       }
-                      SocketFactory.cipherPacketBufferState0002.performAction1641(59, -4);
+                      SocketFactory.cipherPacketBufferState0002.writeCipheredByte(59, -4);
                       SocketFactory.cipherPacketBufferState0002.writeByte(true, ((BucketBoard) (objectLocal29)).pieceAcknowledgement);
                       ((GameSession) (objectLocal26)).integerState0615 = 7 * ((BucketBoard) (objectLocal29)).dominoDescriptor - 4;
                       continue scanLoop2;
@@ -671,7 +671,7 @@ public final class DekoBlokoClient extends FunOrbClient {
                       while (mixedSupport142Local33.isLinked((byte) 58)) {
                         ((GameSession) (objectLocal26)).applyQueuedPlayerBoardUpdate(-118, integerLocal27);
                       }
-                      SocketFactory.cipherPacketBufferState0002.performAction1641(59, -4);
+                      SocketFactory.cipherPacketBufferState0002.writeCipheredByte(59, -4);
                       SocketFactory.cipherPacketBufferState0002.writeByte(true, ((GameSession) (objectLocal26)).mixedSupport028State0001.bucketBoardArrayState0001[integerLocal27].pieceAcknowledgement);
                       ((GameSession) (objectLocal26)).integerState0601 = 0;
                       continue scanLoop2;
@@ -1329,7 +1329,7 @@ public final class DekoBlokoClient extends FunOrbClient {
         MixedSupport014.clearStaticReferences(12623);
         FullscreenCanvas.clearStaticReferences(-100);
         DisplayModeController.clearStaticReferences((byte) -91);
-        NetworkSupport003.clearStaticReferences((byte) 115);
+        ArchiveNetworkClient.clearStaticReferences((byte) 115);
         CacheWorkQueue.clearStaticReferences(0);
         Js5ArchiveManager.clearStaticReferences((byte) 0);
         BufferedFile.clearStaticReferences((byte) -73);
@@ -1436,7 +1436,7 @@ public final class DekoBlokoClient extends FunOrbClient {
         SceneWidgetPart001.discardDeclaredStaticReferences(15338);
         NetworkArchiveRequestManager.clearStaticReferences(112);
         DualNodeDeque.performAction0036(1);
-        ResourceSupport004.performAction1251((byte) 106);
+        NetworkArchiveRequest.performAction1251((byte) 106);
         MixedSupport069.clearStaticReferences(-1643605936);
         ArchiveRequestManager.performAction0468(true);
         MixedSupport076.clearStaticReferences(true);
@@ -1746,8 +1746,8 @@ public final class DekoBlokoClient extends FunOrbClient {
             }
           }
           if (DisplayNameSelectionPanel.computeBoolean0321((byte) 99)) {
-            SoftwareRaster.fillRectangleAlpha(320 - GameDomainSupport006.computeInteger1825(3) / 2 - 34, -(ResourceSupport004.computeInteger1250(20) / 2) + 240 - 24, GameDomainSupport006.computeInteger1825(3) + 68, ResourceSupport004.computeInteger1250(126) + 48, 0, 200);
-            GameplayControls.performAction1749(ResourceSupport004.computeInteger1250(integerArgument1 - 356) + 60, (byte) 50, DefaultTextWidgetRenderer.rgbSpriteArrayState0001, GameDomainSupport006.computeInteger1825(3) + 80, 240 - ResourceSupport004.computeInteger1250(-5) / 2 - 30, 320 - GameDomainSupport006.computeInteger1825(3) / 2 - 40);
+            SoftwareRaster.fillRectangleAlpha(320 - GameDomainSupport006.computeInteger1825(3) / 2 - 34, -(NetworkArchiveRequest.computeInteger1250(20) / 2) + 240 - 24, GameDomainSupport006.computeInteger1825(3) + 68, NetworkArchiveRequest.computeInteger1250(126) + 48, 0, 200);
+            GameplayControls.performAction1749(NetworkArchiveRequest.computeInteger1250(integerArgument1 - 356) + 60, (byte) 50, DefaultTextWidgetRenderer.rgbSpriteArrayState0001, GameDomainSupport006.computeInteger1825(3) + 80, 240 - NetworkArchiveRequest.computeInteger1250(-5) / 2 - 30, 320 - GameDomainSupport006.computeInteger1825(3) / 2 - 40);
             IterableNodeCollection.performAction1660(32659);
           }
           if (!UiComponentPart001.computeBoolean0059((byte) 94)) {

@@ -12,7 +12,7 @@ final class af {
           int var3 = OrbDefence.field_D ? 1 : 0;
           try {
             if (kg.field_h != null) {
-              kg.field_h.c(1);
+              kg.field_h.close(1);
             }
             if (ArchiveRequest.field_o != null) {
               ArchiveRequest.field_o.shutdown(-31973);

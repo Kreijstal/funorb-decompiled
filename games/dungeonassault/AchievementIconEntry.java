@@ -320,7 +320,7 @@ final class AchievementIconEntry extends IntrusiveNode {
             }
           }
           while (true) {
-            if (!ha.b((byte) 47)) {
+            if (!ProxySocketConnector.b((byte) 47)) {
               stackIn_84_0 = 0;
               return stackIn_84_0;
             }

@@ -22,7 +22,7 @@ final class MixedSupport103 extends GameDomainSupport006 {
         int integerLocal1 = 0;
         CipherPacketBuffer cipherPacketBufferLocal2 = SocketFactory.cipherPacketBufferState0002;
         int integerLocal3;
-        cipherPacketBufferLocal2.performAction1641(integerArgument1, -4);
+        cipherPacketBufferLocal2.writeCipheredByte(integerArgument1, -4);
         cipherPacketBufferLocal2.position = cipherPacketBufferLocal2.position + 1;
         int integerLocal4 = cipherPacketBufferLocal2.position;
         cipherPacketBufferLocal2.writeByte(true, 5);

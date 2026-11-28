@@ -31,7 +31,7 @@ final class ec {
           }
           if (-1 != gb.field_f) {
             var1_int = gb.field_f;
-            qh.a(-1, true);
+            MouseInputHandler.a(-1, true);
             stackIn_7_0 = var1_int;
             return stackIn_7_0;
           }

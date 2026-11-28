@@ -514,7 +514,7 @@ final class ValidationStatusIcon extends InteractiveWidget {
                   }
                 }
                 if (uj.field_l == 1 &&
-                  ej.d((byte) 116)) {
+                  ArchiveNetworkClient.d((byte) 116)) {
                   eh.field_c.playSample(em.field_a[var14Lifetime1Lifetime1], 100, uh.field_i * (128 - le.field_D / 4) / 128);
                 }
               }
@@ -538,7 +538,7 @@ final class ValidationStatusIcon extends InteractiveWidget {
             stackIn_162_0Lifetime1 = ~le.field_D;
             if (stackIn_162_0Lifetime1 == -2) {
               if (uj.field_l == 1 &&
-                ej.d((byte) 57)) {
+                ArchiveNetworkClient.d((byte) 57)) {
                 eh.field_c.playSample(NetworkArchiveRequest.field_A[8], 100, uh.field_i);
               }
               mf.a(false, 5);
@@ -546,7 +546,7 @@ final class ValidationStatusIcon extends InteractiveWidget {
           }
           if (le.field_D == 1 &&
             1 == uj.field_l &&
-            ej.d((byte) 102)) {
+            ArchiveNetworkClient.d((byte) 102)) {
             eh.field_c.playSample(em.field_a[0], 100, uh.field_i * 3 / 2);
           }
           var13 = var10.field_f;

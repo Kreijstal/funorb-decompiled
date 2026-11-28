@@ -426,7 +426,7 @@ abstract class GameShell extends GameApplet {
         if (param0 > -72) {
           this.field_o = 1;
         }
-        if (tk.c((byte) -116)) {
+        if (ArchiveNetworkClient.c((byte) -116)) {
           stackIn_12_1 = false;
           stackIn_12_2 = -115;
           if (null == dc.field_L) {

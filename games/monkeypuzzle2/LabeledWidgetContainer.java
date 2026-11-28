@@ -122,12 +122,12 @@ final class LabeledWidgetContainer extends SingleChildWidgetContainer {
         }
     }
 
-    final static void a(int param0, java.awt.Component param1) {
+    final static void attachKeyboardListeners(int param0, java.awt.Component param1) {
         try {
           param1.setFocusTraversalKeysEnabled(false);
           if (param0 > -54) {
             java.awt.Component var3 = (java.awt.Component) null;
-            LabeledWidgetContainer.a(48, (java.awt.Component) null);
+            LabeledWidgetContainer.attachKeyboardListeners(48, (java.awt.Component) null);
           }
           param1.addKeyListener(TextFieldValidator.field_k);
           param1.addFocusListener(TextFieldValidator.field_k);

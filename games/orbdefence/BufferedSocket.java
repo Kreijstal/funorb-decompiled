@@ -52,7 +52,7 @@ final class BufferedSocket implements Runnable {
                   return;
                 }
                 var5 = (java.awt.Component) null;
-                BufferedSocket.a(-74, (java.awt.Component) null);
+                BufferedSocket.detachMouseListeners(-74, (java.awt.Component) null);
                 return;
               }
             }
@@ -62,7 +62,7 @@ final class BufferedSocket implements Runnable {
             return;
           }
           var5 = (java.awt.Component) null;
-          BufferedSocket.a(-74, (java.awt.Component) null);
+          BufferedSocket.detachMouseListeners(-74, (java.awt.Component) null);
           return;
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -71,7 +71,7 @@ final class BufferedSocket implements Runnable {
         }
     }
 
-    final static void a(int param0, java.awt.Component param1) {
+    final static void detachMouseListeners(int param0, java.awt.Component param1) {
         if (param0 != 5000) {
           return;
         }
@@ -258,7 +258,7 @@ final class BufferedSocket implements Runnable {
           return this.field_m.available();
         }
         java.awt.Component var3 = (java.awt.Component) null;
-        BufferedSocket.a(45, (java.awt.Component) null);
+        BufferedSocket.detachMouseListeners(45, (java.awt.Component) null);
         return this.field_m.available();
     }
 

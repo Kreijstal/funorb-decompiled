@@ -258,7 +258,7 @@ final class kh {
         }
         boolean decompiledFrameRemainder1 = true;
         boolean decompiledFrameRemainder0 = true;
-        if (hj.field_f >= 20 &&
+        if (SocketConnector.field_f >= 20 &&
           bj.a(13)) {
           if (rh.field_a > 0) {
             stackIn_8_0 = !param0;

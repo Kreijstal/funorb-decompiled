@@ -39,8 +39,8 @@ final class hh extends IntrusiveNode {
           int var3 = 0;
           var3 = Bounce.field_N;
           try {
-            if (null != tb.field_p) {
-              tb.field_p.a(param0 - 134);
+            if (null != SocketArchiveNetworkClient.field_p) {
+              SocketArchiveNetworkClient.field_p.close(param0 - 134);
             }
             if (LabeledWidgetContainer.field_F != null) {
               LabeledWidgetContainer.field_F.shutdown(-1);

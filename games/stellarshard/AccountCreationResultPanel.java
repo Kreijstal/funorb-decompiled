@@ -9,7 +9,7 @@ final class AccountCreationResultPanel extends ProgressMessageDialog implements 
     private boolean field_mb;
 
     final void showAccountCreationConnectionFailure(int param0) {
-        this.showAccountCreationResult(fb.createAccountErrorResult(248, true, ArchiveRequest.field_r), -8895, true);
+        this.showAccountCreationResult(ArchiveNetworkClient.createAccountErrorResult(248, true, ArchiveRequest.field_r), -8895, true);
         if (param0 < 77) {
           this.field_nb = (AccountRegistrationPanel) null;
         }

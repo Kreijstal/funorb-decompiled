@@ -51,7 +51,7 @@ final class pe {
         int var3 = Bounce.field_N;
         we[] var1 = new we[EmailFormatValidator.field_p];
         for (var2 = param0; EmailFormatValidator.field_p > var2; var2++) {
-          var1[var2] = new we(DropTargetWidgetContainer.field_C, fk.field_e, ConfirmedEmailAvailabilityValidator.field_n[var2], ae.field_c[var2], ih.field_V[var2], qh.field_i[var2], ph.field_c[var2], he.field_k);
+          var1[var2] = new we(DropTargetWidgetContainer.field_C, fk.field_e, ConfirmedEmailAvailabilityValidator.field_n[var2], ae.field_c[var2], ih.field_V[var2], qh.field_i[var2], ph.field_c[var2], LeaderboardSubmission.field_k);
         }
         vb.a((byte) 122);
         return var1;

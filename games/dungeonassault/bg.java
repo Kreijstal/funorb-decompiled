@@ -87,7 +87,7 @@ final class bg extends DungeonAssaultScreen {
         if (!param0) {
           return;
         }
-        while (ha.b((byte) 47)) {
+        while (ProxySocketConnector.b((byte) 47)) {
           if (mm.field_t == 13) {
             gd.a(g.field_Hb, 0, g.field_Hb, false);
             continue;
@@ -829,7 +829,7 @@ final class bg extends DungeonAssaultScreen {
               throw new RuntimeException((String) null);
             }
             if (!gm.field_d.field_H) {
-              ac.field_B.d((byte) -112, 58);
+              ac.field_B.writeCipheredByte((byte) -112, 58);
             }
             ac.a(k.field_b, 0);
           }

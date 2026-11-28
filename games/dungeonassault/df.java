@@ -65,18 +65,18 @@ final class df {
         int var8 = 0;
         var8 = DungeonAssault.field_K;
         try {
-          var2_int = param1.j(114, 8);
+          var2_int = param1.readBits(114, 8);
           if (0 < var2_int) {
             throw new IllegalStateException("" + var2_int);
           }
           var3 = jl.a(param1, -123) ? 1 : 0;
           var4 = jl.a(param1, 90) ? 1 : 0;
           var5 = new qh();
-          var5.field_B = (short)param1.j(-101, 16);
+          var5.field_B = (short)param1.readBits(-101, 16);
           var5.field_L = aj.a(param1, var5.field_L, (byte) 31, 16);
           var5.field_S = aj.a(param1, var5.field_S, (byte) 31, 16);
           var5.field_z = aj.a(param1, var5.field_z, (byte) 31, 16);
-          var5.field_h = (short)param1.j(-43, 16);
+          var5.field_h = (short)param1.readBits(-43, 16);
           var5.field_A = aj.a(param1, var5.field_A, (byte) 31, 16);
           var5.field_x = aj.a(param1, var5.field_x, (byte) 31, 16);
           var5.field_N = aj.a(param1, var5.field_N, (byte) 31, 16);
@@ -84,7 +84,7 @@ final class df {
             field_a = (String) null;
           }
           if (var3 != 0) {
-            var5.field_c = (short)param1.j(-79, 16);
+            var5.field_c = (short)param1.readBits(-79, 16);
             var5.field_d = aj.a(param1, var5.field_d, (byte) 31, 16);
             var5.field_P = aj.a(param1, var5.field_P, (byte) 31, 16);
             var5.field_v = aj.a(param1, var5.field_v, (byte) 31, 16);
@@ -93,7 +93,7 @@ final class df {
             var5.field_F = aj.a(param1, var5.field_F, (byte) 31, 16);
           }
           if (var4 != 0) {
-            param1.j(-97, 16);
+            param1.readBits(-97, 16);
             var5.field_t = aj.a(param1, var5.field_t, (byte) 31, 16);
             var5.field_Q = aj.a(param1, var5.field_Q, (byte) 31, 16);
             var5.field_I = aj.a(param1, var5.field_I, (byte) 31, 16);

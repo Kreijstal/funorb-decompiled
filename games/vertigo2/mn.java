@@ -52,7 +52,7 @@ final class mn extends IntrusiveNode {
               } else {
                 if (ld.field_b > mp.field_b) {
                   if (0 == mp.field_b) {
-                    PacketBuffer.a(false, false);
+                    PacketBuffer.buildLobbyPanels(false, false);
                   }
                   mp.field_b = mp.field_b + 1;
                 }
@@ -68,7 +68,7 @@ final class mn extends IntrusiveNode {
                 } else {
                   if (NumericDateInputWidget.field_P < ld.field_b) {
                     if (NumericDateInputWidget.field_P == 0) {
-                      PacketBuffer.a(true, false);
+                      PacketBuffer.buildLobbyPanels(true, false);
                     }
                     NumericDateInputWidget.field_P = NumericDateInputWidget.field_P + 1;
                   }
@@ -337,7 +337,7 @@ final class mn extends IntrusiveNode {
 
     final static void b(int param0, int param1) {
         if (rr.field_z[param1]) {
-          eg.a(85, rr.field_B[param1]);
+          SocketArchiveNetworkClient.a(85, rr.field_B[param1]);
           rr.field_z[param1] = false;
         }
         if (param0 != 6) {

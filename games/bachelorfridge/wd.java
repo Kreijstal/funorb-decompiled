@@ -298,8 +298,8 @@ final class wd extends DefaultWidgetRenderer {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         try {
-          AlphaWidgetContainer.a((byte) -67, (java.awt.Component) ((Object) param1));
-          DisplayNameSelectionPanel.a(-99, (java.awt.Component) ((Object) param1));
+          AlphaWidgetContainer.detachKeyboardListeners((byte) -67, (java.awt.Component) ((Object) param1));
+          DisplayNameSelectionPanel.detachMouseListeners(-99, (java.awt.Component) ((Object) param1));
           if (param0 != 70) {
             field_w = (Sprite[]) null;
           }

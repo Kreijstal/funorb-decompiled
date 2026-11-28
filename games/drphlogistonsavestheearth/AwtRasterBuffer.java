@@ -102,7 +102,7 @@ abstract class AwtRasterBuffer {
               }
               var7 = new SectorCacheStore(param1, uj.field_h, rc.field_d[param1], 2097152);
             }
-            var8 = fl.field_a.a(param1, param2, (SectorCacheStore) (var6), (SectorCacheStore) (var7), (byte) 75);
+            var8 = fl.field_a.getOrCreateArchiveSource(param1, param2, (SectorCacheStore) (var6), (SectorCacheStore) (var7), (byte) 75);
             if (param3) {
               var8.f(107);
             }

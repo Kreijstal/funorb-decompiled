@@ -27,7 +27,7 @@ final class aj extends ok {
         RuntimeException var4 = null;
         var8 = DungeonAssault.field_K;
         try {
-          var4_int = param0.j(param2 ^ 116, param3);
+          var4_int = param0.readBits(param2 ^ 116, param3);
           if (0 == var4_int) {
             stackIn_3_0 = null;
             return (short[]) (stackIn_3_0);
@@ -36,19 +36,19 @@ final class aj extends ok {
             param1.length != var4_int) {
             param1 = new short[var4_int];
           }
-          var5 = param0.j(84, 4);
+          var5 = param0.readBits(84, 4);
           if (param2 != 31) {
             var9 = (short[]) null;
             aj.a((CipherPacketBuffer) null, (short[]) null, (byte) 18, -27);
           }
-          var6 = (short)param0.j(-93, 16);
+          var6 = (short)param0.readBits(-93, 16);
           if (0 >= var5) {
             for (var7 = 0; var7 < var4_int; var7++) {
               param1[var7] = (short)var6;
             }
           } else {
             for (var7 = 0; var4_int > var7; var7++) {
-              param1[var7] = (short)(param0.j(87, var5) + var6);
+              param1[var7] = (short)(param0.readBits(87, var5) + var6);
             }
           }
           stackIn_18_0 = (short[]) (param1);

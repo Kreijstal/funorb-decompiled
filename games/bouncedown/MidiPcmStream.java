@@ -114,8 +114,8 @@ final class MidiPcmStream extends PcmStream {
 
     final static void a(String param0, String param1, int param2) {
         try {
-          if (null != nk.field_a) {
-            nk.field_a.closeDialog(true);
+          if (null != BouncedownMenuEntry.field_a) {
+            BouncedownMenuEntry.field_a.closeDialog(true);
           }
           if (param2 >= -1) {
             field_D = (ResourceArchive) null;

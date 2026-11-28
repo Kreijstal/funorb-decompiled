@@ -522,7 +522,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
                 this.g(125);
                 RegistrationAgreementPane.field_S = on.a((java.awt.Component) ((Object) fb.field_b), im.field_b, wm.field_ab, 1359);
                 this.initializeClient(-3998);
-                ProjectileRay.field_gb = og.e(1);
+                ProjectileRay.field_gb = ProxySocketConnector.e(1);
                 do {
                   boolean decompiledFrameRemainder0 = true;
                   if (hk.field_d != 0L) {

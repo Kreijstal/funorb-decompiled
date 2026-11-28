@@ -64,7 +64,7 @@ class ProgressMessageDialog extends ContentTransitionDialog implements ButtonLis
                 var6.addListenerButton(param2 - 4, (WidgetEventListener) (this), ByteStorage.field_d);
               }
             } else {
-              var6.addActionButton(-17040, wg.field_h, 8);
+              var6.addActionButton(-17040, ArchiveSourceManager.field_h, 8);
             }
           } else {
             var6.addActionButton(-17040, LevelData.field_y, 7);

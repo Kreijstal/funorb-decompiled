@@ -78,11 +78,11 @@ final class hf {
           int var1_int = 0;
           IOException var1 = null;
           PacketBuffer var2 = null;
-          if (4 <= tb.field_p.field_l) {
-            if (-1 == tb.field_p.field_d) {
+          if (4 <= SocketArchiveNetworkClient.field_p.field_l) {
+            if (-1 == SocketArchiveNetworkClient.field_p.field_d) {
               return 3;
             }
-            if (tb.field_p.field_d != -2) {
+            if (SocketArchiveNetworkClient.field_p.field_d != -2) {
               return 1;
             }
             return 4;
@@ -133,7 +133,7 @@ final class hf {
               stackIn_36_0 = -1;
               return stackIn_36_0;
             }
-            tb.field_p.a((byte) -114, AccountRequestState.field_a, ke.field_p);
+            SocketArchiveNetworkClient.field_p.attachSocket((byte) -114, AccountRequestState.field_a, ke.field_p);
             ih.field_X = 0;
             DiskArchiveRequest.field_q = null;
             AccountRequestState.field_a = null;

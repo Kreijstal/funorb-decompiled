@@ -5,7 +5,7 @@ final class aj implements uj {
     static java.applet.Applet field_d;
     static String field_a;
     static pb[] field_b;
-    static ch field_c;
+    static ArchiveNetworkClient field_c;
 
     public final String a(byte param0) {
         int var2 = -82 % ((-33 - param0) / 62);
@@ -18,7 +18,7 @@ final class aj implements uj {
         field_b = null;
         field_c = null;
         if (param0 < 87) {
-          field_c = (ch) null;
+          field_c = (ArchiveNetworkClient) null;
         }
     }
 

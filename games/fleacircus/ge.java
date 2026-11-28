@@ -15,7 +15,7 @@ final class ge {
         if (param0 <= 118) {
           return;
         }
-        jk.field_m = new IntrusiveDeque();
+        ProxySocketConnector.field_m = new IntrusiveDeque();
     }
 
     public static void clearStaticReferences(byte param0) {

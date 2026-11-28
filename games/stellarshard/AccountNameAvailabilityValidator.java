@@ -13,7 +13,7 @@ final class AccountNameAvailabilityValidator extends TextFieldValidator {
         this.nameAvailable = false;
     }
 
-    final static void a(java.awt.Component param0, byte param1) {
+    final static void attachMouseListeners(java.awt.Component param0, byte param1) {
         param0.addMouseListener(sf.field_c);
         if (param1 > -16) {
           return;

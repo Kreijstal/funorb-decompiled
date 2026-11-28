@@ -130,14 +130,14 @@ final class NanoFrameTimer extends FrameTimer {
     final static int e(int param0) {
         if (param0 != 0) {
           NanoFrameTimer.e(0);
-          wf.field_i.a((byte) -120);
-          if (!gb.field_d.b(-59)) {
+          wf.field_i.pollArchiveSources((byte) -120);
+          if (!gb.field_d.pollNetwork(-59)) {
             return RichTextWidget.c((byte) 35);
           }
           return 0;
         }
-        wf.field_i.a((byte) -120);
-        if (!gb.field_d.b(-59)) {
+        wf.field_i.pollArchiveSources((byte) -120);
+        if (!gb.field_d.pollNetwork(-59)) {
           return RichTextWidget.c((byte) 35);
         }
         return 0;

@@ -25,7 +25,7 @@ final class wf {
           }
           if (!hl.a((byte) 27)) {
             SoftwareRasterizer.clearRaster();
-            jf.a(256, 320, 240);
+            ArchiveNetworkClient.a(256, 320, 240);
             ll.a(0, 0, param1, -96);
             return;
           }

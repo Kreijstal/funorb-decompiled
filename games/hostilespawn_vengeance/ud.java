@@ -7,14 +7,14 @@ final class ud {
     final static int a(int param0) {
         if (param0 != 0) {
           field_a = (String) null;
-          sj.field_a.c(param0 ^ -11);
-          if (EditableTextField.field_N.e(-95)) {
+          sj.field_a.pollArchiveSources(param0 ^ -11);
+          if (EditableTextField.field_N.pollNetwork(-95)) {
             return 0;
           }
           return sj.a(true);
         }
-        sj.field_a.c(param0 ^ -11);
-        if (EditableTextField.field_N.e(-95)) {
+        sj.field_a.pollArchiveSources(param0 ^ -11);
+        if (EditableTextField.field_N.pollNetwork(-95)) {
           return 0;
         }
         return sj.a(true);

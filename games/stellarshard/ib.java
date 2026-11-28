@@ -116,7 +116,7 @@ abstract class ib {
             this.a(gh.field_c, FullscreenNoticeType.field_b, (byte) 8, var2, oc.field_e - this.field_b - var2 * this.field_a, false);
           }
         } else {
-          if (0 == fb.field_n) {
+          if (0 == ArchiveNetworkClient.field_n) {
             this.field_f = false;
             if (qc.field_a) {
               var2 = this.a((byte) 59, KeyHandler.field_a, ni.field_e);
@@ -157,7 +157,7 @@ abstract class ib {
             } else {
               var2 = this.field_l;
               if (var2 != -1) {
-                this.a(fb.field_n, ni.field_e, (byte) 8, var2, -(var2 * this.field_a) + (KeyHandler.field_a - this.field_b), true);
+                this.a(ArchiveNetworkClient.field_n, ni.field_e, (byte) 8, var2, -(var2 * this.field_a) + (KeyHandler.field_a - this.field_b), true);
               }
             }
           }

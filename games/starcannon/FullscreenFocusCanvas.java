@@ -89,7 +89,7 @@ final class FullscreenFocusCanvas extends java.awt.Canvas implements java.awt.ev
         }
     }
 
-    final static void a(java.awt.Component param0, byte param1) {
+    final static void attachKeyboardListeners(java.awt.Component param0, byte param1) {
         try {
           int var2_int = -16 / ((-9 - param1) / 60);
           param0.setFocusTraversalKeysEnabled(false);
@@ -179,7 +179,7 @@ final class FullscreenFocusCanvas extends java.awt.Canvas implements java.awt.ev
               if (var6_int == 0) {
                 r.field_c = od.field_f;
               } else {
-                vh.field_t = var6_int;
+                SocketArchiveNetworkClient.field_t = var6_int;
                 r.field_c = ImageProducerRasterBuffer.field_i;
                 il.field_g = -1;
               }
@@ -196,7 +196,7 @@ final class FullscreenFocusCanvas extends java.awt.Canvas implements java.awt.ev
               NetworkGameClient.a(123, 1)) {
               var6_intLifetime1 = RichTextLayout.field_p.readUnsignedByte(7909);
               lj.field_c = null;
-              vh.field_t = var6_intLifetime1;
+              SocketArchiveNetworkClient.field_t = var6_intLifetime1;
               RichTextLayout.field_p.position = 0;
               if (var6_intLifetime1 != 0 &&
                 1 != var6_intLifetime1) {
@@ -286,24 +286,24 @@ final class FullscreenFocusCanvas extends java.awt.Canvas implements java.awt.ev
                 jl.field_b[var8Lifetime1] = jl.field_b[var8Lifetime1] + 50;
               }
               RichTextLayout.field_p.setCipherSeed(jl.field_b, (byte) -82);
-              stackIn_73_0 = vh.field_t;
+              stackIn_73_0 = SocketArchiveNetworkClient.field_t;
               return stackIn_73_0;
             }
             if (ImageProducerRasterBuffer.field_i == r.field_c &&
               Bzip2State.a(false)) {
               ec.a((byte) 27);
-              if (vh.field_t == 7 &&
+              if (SocketArchiveNetworkClient.field_t == 7 &&
                 !eb.field_f) {
                 eb.field_f = true;
                 stackIn_84_0 = -1;
                 return stackIn_84_0;
               }
-              if (vh.field_t == 7) {
-                vh.field_t = 3;
+              if (SocketArchiveNetworkClient.field_t == 7) {
+                SocketArchiveNetworkClient.field_t = 3;
               }
               UiWidget.field_r = RichTextLayout.field_p.readString(-94);
               eb.field_f = false;
-              stackIn_82_0 = vh.field_t;
+              stackIn_82_0 = SocketArchiveNetworkClient.field_t;
               return stackIn_82_0;
             }
             if (m.field_b == null) {

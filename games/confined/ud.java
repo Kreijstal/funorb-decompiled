@@ -34,7 +34,7 @@ final class ud extends IntrusiveNode {
           }
           var5 = (ca) (ByteArrayPoolSupport.field_b.beginForward(param1 ^ 96));
           while (var5 != null) {
-            kd.a((byte) -115, param0, var5);
+            SocketArchiveNetworkClient.a((byte) -115, param0, var5);
             var5 = (ca) (ByteArrayPoolSupport.field_b.nextForward(2123));
           }
           if (param1 == 118) {

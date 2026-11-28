@@ -16,7 +16,7 @@ final class ag {
     final static void a(int param0) {
         if (param0 == 8468) {
           PacketBuffer.g((byte) -124);
-          qi.field_b = true;
+          ArchiveSourceManager.field_b = true;
           dj.field_d = true;
           AlphaWidgetContainer.field_I.closeAllDialogs(false);
           ta.a(jh.field_o, false, 10);
@@ -24,7 +24,7 @@ final class ag {
         }
         ag.clearStaticReferences((byte) -118);
         PacketBuffer.g((byte) -124);
-        qi.field_b = true;
+        ArchiveSourceManager.field_b = true;
         dj.field_d = true;
         AlphaWidgetContainer.field_I.closeAllDialogs(false);
         ta.a(jh.field_o, false, 10);

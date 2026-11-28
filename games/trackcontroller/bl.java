@@ -249,7 +249,7 @@ final class bl {
               stackIn_40_0 = -1;
               return stackIn_40_0;
             }
-            SecondaryNodeDeque.field_d.a((byte) 121, ai.field_b, ob.field_u);
+            SecondaryNodeDeque.field_d.attachSocket((byte) 121, ai.field_b, ob.field_u);
             ob.field_u = null;
             FullscreenStatusDialog.field_V = null;
             rf.field_c = 0;

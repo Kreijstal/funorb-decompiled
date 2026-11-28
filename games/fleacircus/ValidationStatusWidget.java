@@ -104,13 +104,13 @@ final class ValidationStatusWidget extends RichTextWidget {
             var9 = param1 + this.field_y;
             var10 = var40.getTextOriginY(param0, (UiComponent) (this), (byte) -59) + (var40.getTextLayout((UiComponent) (this), (byte) -35).getLayoutHeight(param2) >> 1);
             if (ea.field_b != var6 &&
-              var6 != w.field_e) {
+              var6 != ArchiveNetworkClient.field_e) {
               if (var6 == LabeledWidgetContainer.field_K) {
                 var19 = t.field_h[2];
                 var19.drawAdditive(var9, var10 - (var19.field_t >> 1), 256);
                 return;
               }
-              if (hm.field_b != var6) {
+              if (SocketConnector.field_b != var6) {
                 return;
               }
               var20 = t.field_h[1];
@@ -140,13 +140,13 @@ final class ValidationStatusWidget extends RichTextWidget {
           var9Lifetime3 = param1 + this.field_y;
           var10Lifetime3 = var41.getTextOriginY(param0, (UiComponent) (this), (byte) -59) + (var41.getTextLayout((UiComponent) (this), (byte) -35).getLayoutHeight(param2) >> 1);
           if (ea.field_b != var6 &&
-            var6 != w.field_e) {
+            var6 != ArchiveNetworkClient.field_e) {
             if (var6 == LabeledWidgetContainer.field_K) {
               var23 = t.field_h[2];
               var23.drawAdditive(var9Lifetime3, var10Lifetime3 - (var23.field_t >> 1), 256);
               return;
             }
-            if (hm.field_b != var6) {
+            if (SocketConnector.field_b != var6) {
               return;
             }
             var24 = t.field_h[1];
@@ -178,7 +178,7 @@ final class ValidationStatusWidget extends RichTextWidget {
           this.field_Q.drawAdditive(var9Lifetime3 - (var25.field_x >> 1), -var25.field_r + var10Lifetime3, 256);
           return;
         }
-        if (var6 != w.field_e) {
+        if (var6 != ArchiveNetworkClient.field_e) {
           var5 = this.field_S.getValidationMessage(-19);
           if (var5 == null) {
             var5 = this.field_V;
@@ -193,13 +193,13 @@ final class ValidationStatusWidget extends RichTextWidget {
           var9Lifetime1 = param1 + this.field_y;
           var10Lifetime1 = var43.getTextOriginY(param0, (UiComponent) (this), (byte) -59) + (var43.getTextLayout((UiComponent) (this), (byte) -35).getLayoutHeight(param2) >> 1);
           if (ea.field_b != var6Lifetime1 &&
-            var6Lifetime1 != w.field_e) {
+            var6Lifetime1 != ArchiveNetworkClient.field_e) {
             if (var6Lifetime1 == LabeledWidgetContainer.field_K) {
               var37 = t.field_h[2];
               var37.drawAdditive(var9Lifetime1, var10Lifetime1 - (var37.field_t >> 1), 256);
               return;
             }
-            if (hm.field_b != var6Lifetime1) {
+            if (SocketConnector.field_b != var6Lifetime1) {
               return;
             }
             var38 = t.field_h[1];
@@ -256,13 +256,13 @@ final class ValidationStatusWidget extends RichTextWidget {
           this.field_Q.drawAdditive(var9Lifetime2 - (var27.field_x >> 1), -var27.field_r + var10Lifetime2, 256);
           return;
         }
-        if (var6Lifetime2 != w.field_e) {
+        if (var6Lifetime2 != ArchiveNetworkClient.field_e) {
           if (var6Lifetime2 == LabeledWidgetContainer.field_K) {
             var28 = t.field_h[2];
             var28.drawAdditive(var9Lifetime2, var10Lifetime2 - (var28.field_t >> 1), 256);
             return;
           }
-          if (hm.field_b != var6Lifetime2) {
+          if (SocketConnector.field_b != var6Lifetime2) {
             return;
           }
           var29 = t.field_h[1];

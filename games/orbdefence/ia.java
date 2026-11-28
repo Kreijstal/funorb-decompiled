@@ -18,7 +18,7 @@ abstract class ia {
         if (param0 != 0) {
           field_j = (int[]) null;
         }
-        stackIn_9_0 = (pi.field_j != null) || (gj.c(1024)) || (am.field_h != null) || (l.a(-1));
+        stackIn_9_0 = (ArchiveSourceManager.field_j != null) || (gj.c(1024)) || (am.field_h != null) || (l.a(-1));
         return stackIn_9_0;
     }
 

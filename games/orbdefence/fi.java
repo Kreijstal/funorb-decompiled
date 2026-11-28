@@ -58,7 +58,7 @@ final class fi implements WidgetRenderer {
         RuntimeException decompiledCaughtException = null;
         var5 = OrbDefence.field_D ? 1 : 0;
         try {
-          var3 = rg.a(param2, param1, 0);
+          var3 = SocketConnector.a(param2, param1, 0);
           if (var3 != null) {
             stackIn_3_0 = var3;
             return stackIn_3_0;

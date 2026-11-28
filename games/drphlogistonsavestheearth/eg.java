@@ -27,10 +27,10 @@ final class eg {
 
     final static sd[] b(byte param0) {
         if (param0 < -103) {
-          return new sd[]{p.field_d, ka.field_q, SpriteGeometry.field_A};
+          return new sd[]{p.field_d, ProxySocketConnector.field_q, SpriteGeometry.field_A};
         }
         eg.a(99, 71);
-        return new sd[]{p.field_d, ka.field_q, SpriteGeometry.field_A};
+        return new sd[]{p.field_d, ProxySocketConnector.field_q, SpriteGeometry.field_A};
     }
 
     final static int a(int param0, int param1, CharSequence param2) {

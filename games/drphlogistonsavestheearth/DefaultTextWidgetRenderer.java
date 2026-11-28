@@ -121,7 +121,7 @@ class DefaultTextWidgetRenderer implements WidgetRenderer, TextWidgetRenderer {
               var15 = stackIn_19_0;
               ja.field_Q.a(false, this.field_b, -var14 + var15, this.field_b >>> 24, param3.field_q + this.field_d + (param3.field_m + param1) + var13.field_e, var13.field_b, this.getUnalignedTextOriginX(param4, var14, param3, 123));
             }
-            cl.d((byte) -68);
+            SocketArchiveNetworkClient.d((byte) -68);
             return;
           }
           return;
@@ -485,7 +485,7 @@ class DefaultTextWidgetRenderer implements WidgetRenderer, TextWidgetRenderer {
           } else {
             this.field_g.drawParagraph(this.resolveDisplayText(-114, param7), this.getUnalignedTextOriginX(param3, param6, param7, 99), this.getUnalignedTextOriginY(param2, param7, param1, (byte) -81), var9_int, var10, param0, param5, this.field_p, this.field_c, this.field_a);
           }
-          cl.d((byte) -80);
+          SocketArchiveNetworkClient.d((byte) -80);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -676,7 +676,7 @@ class DefaultTextWidgetRenderer implements WidgetRenderer, TextWidgetRenderer {
             var12 = stackIn_4_0 + Math.min(stackIn_4_1, Math.min(stackIn_4_2, stackIn_5_3));
             ib.a(param0 + param2.field_m, param0 + param2.field_m + param2.field_k, (byte) 71, param2.field_w + param1 + param2.field_o, param2.field_o + param1);
             ja.field_Q.a((byte) 95, var12, var10, var10, this.field_l, var11);
-            cl.d((byte) -116);
+            SocketArchiveNetworkClient.d((byte) -116);
           }
           if (param4 == -90) {
             return;

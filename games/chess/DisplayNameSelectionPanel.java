@@ -171,19 +171,19 @@ final class DisplayNameSelectionPanel extends DequeWidgetContainer implements Na
     }
 
     final static void b(int param0, int param1, int param2, int param3) {
-        mn.field_h.position = 0;
-        mn.field_h.writeByte(12, (byte) 65);
-        mn.field_h.writeInt(ph.field_d.nextInt(), (byte) -81);
-        mn.field_h.writeInt(ph.field_d.nextInt(), (byte) -81);
-        mn.field_h.writeByte(param0, (byte) 71);
-        mn.field_h.writeByte(param1, (byte) -91);
-        mn.field_h.writeShort(param3, 115);
-        mn.field_h.applyRsa(SecondaryNodeHashTable.field_k, RichTextWidget.field_M, (byte) 86);
+        ProxySocketConnector.field_h.position = 0;
+        ProxySocketConnector.field_h.writeByte(12, (byte) 65);
+        ProxySocketConnector.field_h.writeInt(ph.field_d.nextInt(), (byte) -81);
+        ProxySocketConnector.field_h.writeInt(ph.field_d.nextInt(), (byte) -81);
+        ProxySocketConnector.field_h.writeByte(param0, (byte) 71);
+        ProxySocketConnector.field_h.writeByte(param1, (byte) -91);
+        ProxySocketConnector.field_h.writeShort(param3, 115);
+        ProxySocketConnector.field_h.applyRsa(SecondaryNodeHashTable.field_k, RichTextWidget.field_M, (byte) 86);
         EditableTextField.field_U.writeCipheredByte(18, -116);
         int fieldTemp$0 = EditableTextField.field_U.position + 1;
         EditableTextField.field_U.position = EditableTextField.field_U.position + 1;
         int var4 = fieldTemp$0;
-        EditableTextField.field_U.writeBytes(mn.field_h.data, (byte) -45, param2, mn.field_h.position);
+        EditableTextField.field_U.writeBytes(ProxySocketConnector.field_h.data, (byte) -45, param2, ProxySocketConnector.field_h.position);
         EditableTextField.field_U.backpatchByteLength(EditableTextField.field_U.position - var4, -1);
     }
 
@@ -567,7 +567,7 @@ final class DisplayNameSelectionPanel extends DequeWidgetContainer implements Na
                     } else {
                       if ((~var12.field_Wb & var8) != 0) {
                         var25_int = ie.a(var8 & ~var12.field_Wb, (byte) -59);
-                        var24 = ob.field_x;
+                        var24 = SocketArchiveNetworkClient.field_x;
                         if (0 < var25_int &&
                           null != la.field_b &&
                           la.field_b.length >= var25_int &&
@@ -581,7 +581,7 @@ final class DisplayNameSelectionPanel extends DequeWidgetContainer implements Na
                     if (var25_int == 1) {
                       var24 = MusicPatchNode.field_l;
                     }
-                    var24 = MatchingFieldValidator.a(hj.field_j, new String[]{null, Integer.toString(var25_int)}, (byte) -43);
+                    var24 = MatchingFieldValidator.a(ArchiveSourceManager.field_j, new String[]{null, Integer.toString(var25_int)}, (byte) -43);
                   }
                 }
               }
@@ -736,7 +736,7 @@ final class DisplayNameSelectionPanel extends DequeWidgetContainer implements Na
         UiWidget var2 = new UiWidget(ce.field_c, var1, (WidgetEventListener) null);
         this.field_N = new InteractiveWidget(hg.field_a, (WidgetEventListener) null);
         this.field_P = new InteractiveWidget(ue.field_b, (WidgetEventListener) null);
-        this.field_L.field_j = vc.field_a;
+        this.field_L.field_j = KeyboardInputHandler.field_a;
         this.field_L.setFieldValidator(-107, new AccountNameAvailabilityValidator(this.field_L));
         this.field_N.field_H = false;
         this.field_N.field_n = (WidgetRenderer) ((Object) new sf());

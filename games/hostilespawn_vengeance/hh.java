@@ -203,7 +203,7 @@ final class hh {
             ByteArrayPoolSupport.field_d[1] = ValidationStatusWidget.field_X;
             FullscreenNoticeType.field_b[1] = 0;
             FullscreenFocusCanvas.field_k = new int[2];
-            ByteArrayPoolSupport.field_d[0] = sg.field_e;
+            ByteArrayPoolSupport.field_d[0] = ArchiveSourceManager.field_e;
             ByteArrayPoolSupport.field_d[2] = ve.field_d;
             FullscreenFocusCanvas.field_k[0] = 5;
             FullscreenFocusCanvas.field_k[1] = 2;
@@ -326,9 +326,9 @@ final class hh {
           ByteStorage.field_a = param0;
           ik.field_a = param3;
           TextHotspotBounds.field_s = param5;
-          EditableTextField.field_N = (ej) ((Object) new ih());
+          EditableTextField.field_N = (ArchiveNetworkClient) ((Object) new SocketArchiveNetworkClient());
           GameCanvas.field_c = new DiskCacheWorker(param2);
-          sj.field_a = new sg(EditableTextField.field_N, GameCanvas.field_c);
+          sj.field_a = new ArchiveSourceManager(EditableTextField.field_N, GameCanvas.field_c);
         } catch (RuntimeException runtimeException) {
           throw AccountCreationResultPanel.wrapClientException((Throwable) ((Object) runtimeException), "hh.A(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ')');
         }
@@ -531,7 +531,7 @@ final class hh {
             u.a(-1, param1.field_j, true, 32, param1.field_l, 35);
             param1.field_i = -1;
             if (uj.field_l == 1) {
-              if (!ej.d((byte) 116)) {
+              if (!ArchiveNetworkClient.d((byte) 116)) {
                 return;
               }
               eh.field_c.playSample(em.field_a[0], 50, uh.field_i);

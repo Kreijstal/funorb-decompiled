@@ -455,7 +455,7 @@ final class ValidationStatusWidget extends RichTextWidget {
         var13 = Main.field_T;
         var6 = this.field_O.getValidationStatus(true);
         if (var6 != tb.field_b &&
-          var6 != a.field_n) {
+          var6 != SocketArchiveNetworkClient.field_n) {
           var5 = this.field_O.getValidationMessage(param2 ^ -26767);
           if (var5 == null) {
             var5 = this.field_P;
@@ -477,7 +477,7 @@ final class ValidationStatusWidget extends RichTextWidget {
           this.takeFocus(-10, (UiWidget) null);
         }
         if (tb.field_b != var6Lifetime1 &&
-          a.field_n != var6Lifetime1) {
+          SocketArchiveNetworkClient.field_n != var6Lifetime1) {
           if (pe.field_b == var6Lifetime1) {
             var16 = gh.field_n[2];
             var16.drawAdditive(var9, -(var16.field_o >> 1) + var10, 256);

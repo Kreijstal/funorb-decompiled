@@ -50,14 +50,14 @@ final class aq extends wc {
         }
     }
 
-    final static void a(byte param0, java.awt.Component param1) {
+    final static void attachMouseListeners(byte param0, java.awt.Component param1) {
         try {
           param1.addMouseListener(tm.field_b);
           param1.addMouseMotionListener(tm.field_b);
           param1.addFocusListener(tm.field_b);
           if (param0 < 36) {
             java.awt.Component var3 = (java.awt.Component) null;
-            aq.a((byte) -118, (java.awt.Component) null);
+            aq.attachMouseListeners((byte) -118, (java.awt.Component) null);
           }
         } catch (RuntimeException runtimeException) {
           throw dn.wrapClientException((Throwable) ((Object) runtimeException), "aq.W(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');

@@ -560,10 +560,10 @@ abstract class ea extends pn {
             param0[this.field_s + param1][this.field_o + param3] = this.a(var7, param0, this.field_o, param1 + this.field_s, 17512, this.field_s, param3 + this.field_o);
             this.field_m = 0;
             wd.field_j = wd.field_j - 1;
-            mb.field_g = mb.field_g - ob.field_l;
+            mb.field_g = mb.field_g - ArchiveNetworkClient.field_l;
             this.field_o = 0;
             this.field_s = 0;
-            fn.field_j = fn.field_j - ob.field_l;
+            fn.field_j = fn.field_j - ArchiveNetworkClient.field_l;
             wd.field_j = wd.field_j + 1;
             je.field_j = je.field_j + 15;
             fp.field_a = fp.field_a + 30;
@@ -718,7 +718,7 @@ abstract class ea extends pn {
         var4.field_g = new int[param1];
         var4.field_f = param0;
         NameSuggestionsPanel.field_A.addLast(0, var4);
-        pk.a(param3, var4, (byte) 113);
+        ArchiveSourceManager.a(param3, var4, (byte) 113);
         return var4;
     }
 
@@ -818,14 +818,14 @@ abstract class ea extends pn {
               if (!this.a((byte) 42, param0, var5)) {
                 cn.field_e.a(64, param1 * 12, 12 * param2, 0, (byte) -111);
                 param0[param2][param1] = (PuzzleTile) ((Object) new ig(var5, bd.field_n, this.a(param2, param1, var5, 103, param0), true));
-                ob.field_l = ob.field_l - 1;
+                ArchiveNetworkClient.field_l = ArchiveNetworkClient.field_l - 1;
                 mb.field_g = mb.field_g - wd.field_j;
                 fp.field_a = fp.field_a - 4;
                 je.field_j = je.field_j - 2;
                 b.field_a = b.field_a - 2;
                 LevelProgressUpdate.field_h = LevelProgressUpdate.field_h - 4;
                 wd.field_j = wd.field_j + 1;
-                mb.field_g = mb.field_g + ob.field_l;
+                mb.field_g = mb.field_g + ArchiveNetworkClient.field_l;
                 return;
               }
               break;
@@ -846,8 +846,8 @@ abstract class ea extends pn {
               param0[param2][param1] = this.a(param2, param1, var5, -119, param0);
               param0[this.field_s + param2][this.field_o + param1] = (PuzzleTile) ((Object) new ig(var5, bd.field_n, param0[this.field_s + param2][this.field_o + param1], true));
               mb.field_g = mb.field_g - wd.field_j;
-              ob.field_l = ob.field_l - 1;
-              mb.field_g = mb.field_g + ob.field_l;
+              ArchiveNetworkClient.field_l = ArchiveNetworkClient.field_l - 1;
+              mb.field_g = mb.field_g + ArchiveNetworkClient.field_l;
               wd.field_j = wd.field_j + 1;
               je.field_j = je.field_j - 2;
               fp.field_a = fp.field_a - 4;

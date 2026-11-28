@@ -1116,7 +1116,7 @@ final class ib {
                 }
                 var2 = AccountRegistrationPanel.b("V1_door_locked", (byte) -122);
                 if (var2 != null) {
-                  ih.field_z = PcmResampler.a(127, var2);
+                  SocketArchiveNetworkClient.field_z = PcmResampler.a(127, var2);
                 }
                 var2 = AccountRegistrationPanel.b("V1_lift_fixed", (byte) -119);
                 if (var2 != null) {
@@ -1172,7 +1172,7 @@ final class ib {
                 }
                 var2 = AccountRegistrationPanel.b("oV3_reachconsole", (byte) -127);
                 if (var2 != null) {
-                  ih.field_u = PcmResampler.a(126, var2);
+                  SocketArchiveNetworkClient.field_u = PcmResampler.a(126, var2);
                 }
                 var2 = AccountRegistrationPanel.b("oV3_reachlift", (byte) -128);
                 if (var2 != null) {

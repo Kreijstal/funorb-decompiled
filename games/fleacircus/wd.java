@@ -89,7 +89,7 @@ final class wd {
             var7 = var7 | 16;
           }
           ud.field_b.writeByte(-11, var7);
-          var8 = w.a(0, BoundedRandomAccessFile.getApplet((byte) -75));
+          var8 = ArchiveNetworkClient.a(0, BoundedRandomAccessFile.getApplet((byte) -75));
           if (var8 == null) {
             var8 = "";
           }

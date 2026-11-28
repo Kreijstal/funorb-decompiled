@@ -70,21 +70,21 @@ final class ProxyAuthenticationRequiredException extends IOException {
     final static void a(boolean param0) {
         if (!param0) {
           field_a = (String) null;
-          if (null != df.field_l) {
-            hb.a(-5, df.field_l);
-            df.field_l.exitFullscreen(sb.field_d, true);
-            df.field_l = null;
+          if (null != ArchiveSourceManager.field_l) {
+            hb.a(-5, ArchiveSourceManager.field_l);
+            ArchiveSourceManager.field_l.exitFullscreen(sb.field_d, true);
+            ArchiveSourceManager.field_l = null;
             DiskCacheWorker.field_g.requestFocus();
             return;
           }
           return;
         }
-        if (null == df.field_l) {
+        if (null == ArchiveSourceManager.field_l) {
           return;
         }
-        hb.a(-5, df.field_l);
-        df.field_l.exitFullscreen(sb.field_d, true);
-        df.field_l = null;
+        hb.a(-5, ArchiveSourceManager.field_l);
+        ArchiveSourceManager.field_l.exitFullscreen(sb.field_d, true);
+        ArchiveSourceManager.field_l = null;
         DiskCacheWorker.field_g.requestFocus();
     }
 

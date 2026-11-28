@@ -311,8 +311,8 @@ final class qc {
             }
             RichTextLayout.field_g = new String[var4];
             ArrayBlockSupport.copyObjectRange(hc.field_m, 0, RichTextLayout.field_g, 0, var4);
-            fb.field_e = new String[-var4 + (var3_int - 1)];
-            ArrayBlockSupport.copyObjectRange(hc.field_m, var4 + 1, fb.field_e, 0, var3_int + (-var4 - 1));
+            ArchiveNetworkClient.field_e = new String[-var4 + (var3_int - 1)];
+            ArrayBlockSupport.copyObjectRange(hc.field_m, var4 + 1, ArchiveNetworkClient.field_e, 0, var3_int + (-var4 - 1));
             var3_int = nj.a(IntrusiveNode.field_d, pe.field_c, hc.field_m, (byte) -128, h.a(DraggableWidgetContainer.field_K, 0, new String[]{"<br><%0><br>"}));
             var4 = -1;
             for (var5 = 0; var3_int > var5; var5++) {
@@ -335,8 +335,8 @@ final class qc {
               stackIn_50_0 = RichTextLayout.field_g.length;
             }
             var5 = stackIn_50_0;
-            if (o.field_g.length <= fb.field_e.length) {
-              stackIn_53_0 = fb.field_e.length;
+            if (o.field_g.length <= ArchiveNetworkClient.field_e.length) {
+              stackIn_53_0 = ArchiveNetworkClient.field_e.length;
             } else {
               stackIn_53_0 = o.field_g.length;
             }
@@ -403,7 +403,7 @@ final class qc {
                 var3_intLifetime1 = var7Lifetime1;
               }
             }
-            var4_ref_String__Lifetime1 = fb.field_e;
+            var4_ref_String__Lifetime1 = ArchiveNetworkClient.field_e;
             for (var5Lifetime2Lifetime1 = 0; var5Lifetime2Lifetime1 < var4_ref_String__Lifetime1.length; var5Lifetime2Lifetime1++) {
               var12 = var4_ref_String__Lifetime1[var5Lifetime2Lifetime1];
               var7Lifetime1Lifetime1 = GameEntity.measureSelectedFontTextWidthWithIntGuard(-40, var12, false);

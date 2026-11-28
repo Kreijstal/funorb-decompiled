@@ -57,10 +57,10 @@ final class AlphaWidgetContainer extends SingleChildWidgetContainer {
           IndexedSpriteState.field_h = RichTextLayout.field_e;
           if (param2 != 255) {
             if (param2 < 100) {
-              MouseWheelInput.field_c = wg.createAccountErrorResult((byte) 54, param2, param0);
+              MouseWheelInput.field_c = ArchiveSourceManager.createAccountErrorResult((byte) 54, param2, param0);
             } else {
               if (param2 > 105) {
-                MouseWheelInput.field_c = wg.createAccountErrorResult((byte) 54, param2, param0);
+                MouseWheelInput.field_c = ArchiveSourceManager.createAccountErrorResult((byte) 54, param2, param0);
               } else {
                 MouseWheelInput.field_c = qg.createAccountSuggestionsResult(param1, 91);
               }

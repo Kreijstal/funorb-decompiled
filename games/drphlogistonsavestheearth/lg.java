@@ -31,8 +31,8 @@ final class lg implements WidgetRenderer {
         var2 = DrPhlogistonSavesTheEarth.field_D ? 1 : 0;
         try {
           if (!ImageProducerRasterBuffer.d(0)) {
-            if (null != df.field_l &&
-              df.field_l.focusLost) {
+            if (null != ArchiveSourceManager.field_l &&
+              ArchiveSourceManager.field_l.focusLost) {
               af.b(6);
               hg.field_S.showDialog((byte) -115, (UiWidget) (new FullscreenStatusDialog(hg.field_S, uf.field_a)));
             }

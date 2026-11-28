@@ -127,7 +127,7 @@ abstract class SocketConnector {
         field_d = null;
     }
 
-    abstract java.net.Socket b(int param0) throws IOException;
+    abstract java.net.Socket openSocket(int param0) throws IOException;
 
     final static bk a(String param0, boolean param1) {
         RuntimeException var2 = null;
@@ -162,7 +162,7 @@ abstract class SocketConnector {
         }
     }
 
-    final java.net.Socket a(byte param0) throws IOException {
+    final java.net.Socket openDirectSocket(byte param0) throws IOException {
         if (param0 == -39) {
           return new java.net.Socket(this.host, this.port);
         }

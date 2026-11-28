@@ -143,7 +143,7 @@ abstract class NetworkGameClient extends GameAppletShell {
         if (param0 != 0) {
           this.pollAccountUiActions(true, -29);
         }
-        cl.field_p[1] = true;
+        SocketArchiveNetworkClient.field_p[1] = true;
     }
 
     final void serviceFramework(int param0, boolean param1) {
@@ -239,7 +239,7 @@ abstract class NetworkGameClient extends GameAppletShell {
                     if (AttackUpAllAnimation.field_x != 5) {
                       ns.a(gfa.field_g, -11, 256);
                     } else {
-                      ns.a(cl.field_o, -11, 5);
+                      ns.a(SocketArchiveNetworkClient.field_o, -11, 5);
                     }
                   }
                 }
@@ -369,8 +369,8 @@ abstract class NetworkGameClient extends GameAppletShell {
           this.createCanvas(44);
           nl.a(TBomberAnimation.field_y, (byte) 106);
         }
-        if (cl.field_p[8]) {
-          qfa.i(8);
+        if (SocketArchiveNetworkClient.field_p[8]) {
+          NetworkArchiveRequest.i(8);
         }
     }
 
@@ -398,7 +398,7 @@ abstract class NetworkGameClient extends GameAppletShell {
         var4 = BachelorFridge.field_y;
         var2 = ri.field_a;
         if (64 > var2 &&
-          cl.field_p[var2]) {
+          SocketArchiveNetworkClient.field_p[var2]) {
           if (0 == var2) {
             return;
           }
@@ -441,7 +441,7 @@ abstract class NetworkGameClient extends GameAppletShell {
                 wda.a((byte) 116);
                 break;
               case 5:
-                qfa.h(-63);
+                NetworkArchiveRequest.h(-63);
                 break;
               case 4:
                 InsanoSauceSpecial.c(-64);
@@ -492,16 +492,16 @@ abstract class NetworkGameClient extends GameAppletShell {
     }
 
     private final void enablePacketHandler(int param0) {
-        cl.field_p[param0] = true;
+        SocketArchiveNetworkClient.field_p[param0] = true;
     }
 
     private final void enablePacketsElevenToThirteen(int param0) {
         if (param0 != -2) {
           return;
         }
-        cl.field_p[13] = true;
-        cl.field_p[12] = true;
-        cl.field_p[11] = true;
+        SocketArchiveNetworkClient.field_p[13] = true;
+        SocketArchiveNetworkClient.field_p[12] = true;
+        SocketArchiveNetworkClient.field_p[11] = true;
     }
 
     private final int processAccountUiActions(boolean param0, int param1, boolean param2) {
@@ -595,7 +595,7 @@ abstract class NetworkGameClient extends GameAppletShell {
             StandardContentDialog.field_fb.writeCipheredByte(17, (byte) 127);
           }
           if (var4 == 11) {
-            qfa.a(nia.d(-31768), -61);
+            NetworkArchiveRequest.a(nia.d(-31768), -61);
           }
           if (var4 == 12) {
             eea.a((byte) 127, mg.d(320), nia.d(-31768));
@@ -644,7 +644,7 @@ abstract class NetworkGameClient extends GameAppletShell {
     }
 
     private final void enablePacketSix(int param0) {
-        cl.field_p[6] = true;
+        SocketArchiveNetworkClient.field_p[6] = true;
         if (param0 <= 80) {
           this.dispatchCommonPacket(true);
         }
@@ -654,25 +654,25 @@ abstract class NetworkGameClient extends GameAppletShell {
         int var2 = this.attemptReconnect(11);
         if (var2 == 0 ||
           var2 == 1) {
-          if (cl.field_p[1]) {
+          if (SocketArchiveNetworkClient.field_p[1]) {
             kda.a(-85, 2);
           }
-          if (cl.field_p[2]) {
+          if (SocketArchiveNetworkClient.field_p[2]) {
             BoardChangeAnimation.a(3, 1);
           }
-          if (cl.field_p[3]) {
+          if (SocketArchiveNetworkClient.field_p[3]) {
             rg.a(35, 4);
           }
-          if (cl.field_p[4]) {
+          if (SocketArchiveNetworkClient.field_p[4]) {
             tc.a(5, -16482);
           }
-          if (cl.field_p[5]) {
+          if (SocketArchiveNetworkClient.field_p[5]) {
             HomingMissileEvent.c(-60, 6);
           }
-          if (cl.field_p[6]) {
+          if (SocketArchiveNetworkClient.field_p[6]) {
             ResourceArchive.resendLeaderboardRequests((byte) 75, 7);
           }
-          if (cl.field_p[8]) {
+          if (SocketArchiveNetworkClient.field_p[8]) {
             OneEvent.c(true);
           }
         }
@@ -683,13 +683,13 @@ abstract class NetworkGameClient extends GameAppletShell {
     }
 
     private final void enableDefaultPacketHandlers(boolean param0, boolean param1) {
-        cl.field_p[3] = true;
-        cl.field_p[0] = true;
-        cl.field_p[18] = param1;
-        cl.field_p[8] = param0;
-        cl.field_p[17] = true;
-        cl.field_p[16] = true;
-        cl.field_p[7] = true;
+        SocketArchiveNetworkClient.field_p[3] = true;
+        SocketArchiveNetworkClient.field_p[0] = true;
+        SocketArchiveNetworkClient.field_p[18] = param1;
+        SocketArchiveNetworkClient.field_p[8] = param0;
+        SocketArchiveNetworkClient.field_p[17] = true;
+        SocketArchiveNetworkClient.field_p[16] = true;
+        SocketArchiveNetworkClient.field_p[7] = true;
     }
 
     private final void initializePacketLengths(byte param0) {
@@ -731,7 +731,7 @@ abstract class NetworkGameClient extends GameAppletShell {
         if (param0 != -25800) {
           this.field_k = -74;
         }
-        cl.field_p[5] = true;
+        SocketArchiveNetworkClient.field_p[5] = true;
     }
 
     protected NetworkGameClient() {
@@ -810,7 +810,7 @@ abstract class NetworkGameClient extends GameAppletShell {
 
     private final void enablePacketTwo(int param0) {
         int discarded$0 = 0;
-        cl.field_p[2] = true;
+        SocketArchiveNetworkClient.field_p[2] = true;
         if (param0 > -107) {
           discarded$0 = this.attemptReconnect(108);
         }

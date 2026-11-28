@@ -3621,7 +3621,7 @@ final class LevelEntity {
                 if (var10 != 0 &&
                   9 != var14 &&
                   10 != var14) {
-                  oa.field_e.bindAsRenderTarget();
+                  ArchiveSourceManager.field_e.bindAsRenderTarget();
                   SoftwareRasterizer.clearRaster();
                   c.field_c[var14][var9_int][var15].drawFlippedHorizontal(0, 0);
                   if (var17 != 0) {
@@ -3629,7 +3629,7 @@ final class LevelEntity {
                     SoftwareRasterizer.clearRaster();
                     PacketBuffer.field_o[var14][var9_int][var15].drawFlippedHorizontal(0, 0);
                     if (param7 == 2) {
-                      oa.field_e.bindAsRenderTarget();
+                      ArchiveSourceManager.field_e.bindAsRenderTarget();
                       od.a(0, 0, 0, var16, 0, ByteStorage.field_b);
                     }
                   }
@@ -3676,7 +3676,7 @@ final class LevelEntity {
                             var10 != 0) {
                             param0.bindAsRenderTarget();
                             SoftwareRasterizer.clearRaster();
-                            oa.field_e.drawScaled(var11, param1, var20, var19);
+                            ArchiveSourceManager.field_e.drawScaled(var11, param1, var20, var19);
                             if (var17 != 0) {
                               od.a(param6 + param4, param1, 0, var16, 0, ByteStorage.field_b);
                             }
@@ -3703,7 +3703,7 @@ final class LevelEntity {
                               }
                             }
                             if (var18 != 0) {
-                              oa.field_e.drawScaled(param4 + param6, param1, var20, var19);
+                              ArchiveSourceManager.field_e.drawScaled(param4 + param6, param1, var20, var19);
                             }
                             if (this.field_l > 0 ||
                               !(SocketConnector.field_k > 0)) {
@@ -3777,12 +3777,12 @@ final class LevelEntity {
                       }
                       param0.bindAsRenderTarget();
                       SoftwareRasterizer.clearRaster();
-                      oa.field_e.drawMask(var11, var13, param3[3]);
+                      ArchiveSourceManager.field_e.drawMask(var11, var13, param3[3]);
                       if (var27 == 0) {
                         return;
                       }
                     }
-                    od.a(var11, var13, 0, var16, 0, oa.field_e);
+                    od.a(var11, var13, 0, var16, 0, ArchiveSourceManager.field_e);
                     if (var27 == 0) {
                       return;
                     }
@@ -3832,7 +3832,7 @@ final class LevelEntity {
                   }
                   if (var10 != 0 ||
                     var27 != 0) {
-                    oa.field_e.drawScaled(0, 0, var20, var19);
+                    ArchiveSourceManager.field_e.drawScaled(0, 0, var20, var19);
                   }
                   SectorCacheStore.field_f.bindAsTarget(-72);
                   var11 = param6 + param4;
@@ -4864,7 +4864,7 @@ final class LevelEntity {
                         if ((decompiledFrameRemainder0) &&
                           (decompiledFrameRemainder0 = (this.type == 19))) {
                           this.field_L = 0;
-                          rj.field_d = vb.a(ea.field_e, (byte) 109, this.field_hb);
+                          rj.field_d = ArchiveNetworkClient.a(ea.field_e, (byte) 109, this.field_hb);
                           decompiledFrameRemainder0 = (var5 != 0);
                         }
                       }
@@ -6238,7 +6238,7 @@ final class LevelEntity {
         var4 = TorChallenge.field_F ? 1 : 0;
         try {
           var2_int = -5 / ((param0 - 71) / 49);
-          oa.field_g = 0;
+          ArchiveSourceManager.field_g = 0;
           we.field_j = 0;
           if (fh.field_e != 0) {
             if (1 == fh.field_e) {
@@ -6377,11 +6377,11 @@ final class LevelEntity {
           if (we.field_j != 3) {
             if (we.field_j == 2) {
               if (AccountServiceResult.field_k - this.field_p - TextLineMetrics.field_f[we.field_j][fh.field_e] <= 0) {
-                oa.field_g = 0;
+                ArchiveSourceManager.field_g = 0;
                 decompiledFrameRemainder0 = (var4 != 0);
               }
               if (decompiledFrameRemainder0) {
-                oa.field_g = 1;
+                ArchiveSourceManager.field_g = 1;
                 decompiledFrameRemainder0 = (var4 != 0);
               }
             }
@@ -6389,18 +6389,18 @@ final class LevelEntity {
               if (ja.a((byte) 101, this.field_L) ||
                 0 == this.field_L &&
                 we.field_j == 12) {
-                oa.field_g = this.field_kb;
+                ArchiveSourceManager.field_g = this.field_kb;
                 decompiledFrameRemainder0 = (var4 != 0);
               }
               if (decompiledFrameRemainder0) {
-                oa.field_g = (AccountServiceResult.field_k - this.field_p) / TextLineMetrics.field_f[we.field_j][fh.field_e];
-                if ((-1 + kk.field_h[we.field_j][fh.field_e]) <= oa.field_g &&
+                ArchiveSourceManager.field_g = (AccountServiceResult.field_k - this.field_p) / TextLineMetrics.field_f[we.field_j][fh.field_e];
+                if ((-1 + kk.field_h[we.field_j][fh.field_e]) <= ArchiveSourceManager.field_g &&
                   !jh.field_b[we.field_j][fh.field_e]) {
-                  oa.field_g = kk.field_h[we.field_j][fh.field_e] - 1;
+                  ArchiveSourceManager.field_g = kk.field_h[we.field_j][fh.field_e] - 1;
                   decompiledFrameRemainder0 = (var4 != 0);
                 }
                 if (decompiledFrameRemainder0) {
-                  oa.field_g = oa.field_g % kk.field_h[we.field_j][fh.field_e];
+                  ArchiveSourceManager.field_g = ArchiveSourceManager.field_g % kk.field_h[we.field_j][fh.field_e];
                   decompiledFrameRemainder0 = (var4 != 0);
                 }
               }
@@ -6410,7 +6410,7 @@ final class LevelEntity {
             boolean decompiledSharedTail0 = (this.field_L != 2);
             if (!decompiledSharedTail0) {
               this.field_v = true;
-              oa.field_g = 0;
+              ArchiveSourceManager.field_g = 0;
               decompiledSharedTail0 = (var4 != 0);
             }
             if (decompiledSharedTail0) {
@@ -6421,11 +6421,11 @@ final class LevelEntity {
               if ((AccountServiceResult.field_k - this.field_p) > TextLineMetrics.field_f[we.field_j][fh.field_e]) {
                 this.field_eb = false;
               }
-              oa.field_g = 1;
+              ArchiveSourceManager.field_g = 1;
             }
           }
           if (we.field_j == 1) {
-            var3 = pi.field_g[fh.field_e][oa.field_g] ? 1 : 0;
+            var3 = pi.field_g[fh.field_e][ArchiveSourceManager.field_g] ? 1 : 0;
             if (var3 != 0 &&
               0 == (-this.field_p + AccountServiceResult.field_k) % TextLineMetrics.field_f[we.field_j][fh.field_e]) {
               jc.b(fh.field_e, 1, 3);
@@ -10194,8 +10194,8 @@ final class LevelEntity {
           if (we.field_j < 0) {
             we.field_j = 0;
           }
-          if (oa.field_g < 0) {
-            oa.field_g = 0;
+          if (ArchiveSourceManager.field_g < 0) {
+            ArchiveSourceManager.field_g = 0;
           }
           param0 = -(var8 - this.field_I >> 1);
           var9 = ok.field_c[we.field_j][fh.field_e];
@@ -10237,7 +10237,7 @@ final class LevelEntity {
             SoftwareRasterizer.saveClip(bf.field_l);
             vd.field_d[fh.field_e].bindAsRenderTarget();
             SoftwareRasterizer.clearRaster();
-            g.field_i[we.field_j][fh.field_e][oa.field_g].drawFlippedHorizontal(0, 0);
+            g.field_i[we.field_j][fh.field_e][ArchiveSourceManager.field_g].drawFlippedHorizontal(0, 0);
             SectorCacheStore.field_f.bindAsTarget(123);
             SoftwareRasterizer.restoreClip(bf.field_l);
           }
@@ -10252,7 +10252,7 @@ final class LevelEntity {
               }
               if (var6_int == 0 ||
                 var17 != 0) {
-                g.field_i[we.field_j][fh.field_e][oa.field_g].drawScaled(0, 0, var8, var7);
+                g.field_i[we.field_j][fh.field_e][ArchiveSourceManager.field_g].drawScaled(0, 0, var8, var7);
               }
               SectorCacheStore.field_f.bindAsTarget(124);
               this.a(FrameTimer.field_a[fh.field_e], param1, param0 + param4, 89);
@@ -10264,7 +10264,7 @@ final class LevelEntity {
                 decompiledFrameRemainder0 = (var17 != 0);
               }
               if (decompiledFrameRemainder0) {
-                g.field_i[we.field_j][fh.field_e][oa.field_g].drawScaled(param0 + param4, param1, var8, var7);
+                g.field_i[we.field_j][fh.field_e][ArchiveSourceManager.field_g].drawScaled(param0 + param4, param1, var8, var7);
                 decompiledFrameRemainder0 = (var17 != 0);
               }
             }
@@ -10294,7 +10294,7 @@ final class LevelEntity {
             FrameTimer.field_a[fh.field_e].bindAsRenderTarget();
             SoftwareRasterizer.clearRaster();
             if (var6_int == 0) {
-              g.field_i[we.field_j][fh.field_e][oa.field_g].drawScaled(0, 0, var8, var7);
+              g.field_i[we.field_j][fh.field_e][ArchiveSourceManager.field_g].drawScaled(0, 0, var8, var7);
             }
             if (var6_int != 0 ||
               var17 != 0) {
@@ -10325,21 +10325,21 @@ final class LevelEntity {
                 SoftwareRasterizer.saveClip(bf.field_l);
                 gj.field_b.bindAsRenderTarget();
                 SoftwareRasterizer.clearRaster();
-                ModalDialogHost.field_I[fh.field_e][var9][oa.field_g].drawFlippedHorizontal(0, 0);
+                ModalDialogHost.field_I[fh.field_e][var9][ArchiveSourceManager.field_g].drawFlippedHorizontal(0, 0);
                 SectorCacheStore.field_f.bindAsTarget(-67);
                 SoftwareRasterizer.restoreClip(bf.field_l);
                 gj.field_b.drawScaledAdditive(param0 + param4, param1, var8, var7, var11Lifetime2);
                 if (var17 != 0) {
-                  ModalDialogHost.field_I[fh.field_e][var9][oa.field_g].drawScaledAdditive(param4 + param0, param1, var8, var7, var11Lifetime2);
+                  ModalDialogHost.field_I[fh.field_e][var9][ArchiveSourceManager.field_g].drawScaledAdditive(param4 + param0, param1, var8, var7, var11Lifetime2);
                 }
               } else {
-                ModalDialogHost.field_I[fh.field_e][var9][oa.field_g].drawScaledAdditive(param4 + param0, param1, var8, var7, var11Lifetime2);
+                ModalDialogHost.field_I[fh.field_e][var9][ArchiveSourceManager.field_g].drawScaledAdditive(param4 + param0, param1, var8, var7, var11Lifetime2);
               }
             }
           }
           var11Lifetime3 = 37 % ((param3 - 34) / 35);
           if (we.field_j == 14) {
-            var12 = ca.field_a[oa.field_g];
+            var12 = ca.field_a[ArchiveSourceManager.field_g];
             if (var12 == null) {
               return;
             }

@@ -117,7 +117,7 @@ final class vf extends IntrusiveNode {
               var9 = var9 + var13;
             }
           } else {
-            eh.a(0, lg.field_c, param2 + this.field_i, 0, this.field_l, this.field_n);
+            eh.a(0, SocketConnector.field_c, param2 + this.field_i, 0, this.field_l, this.field_n);
           }
           if (param0 == 17517) {
             return;

@@ -109,7 +109,7 @@ class ai extends em {
               vh.field_a.writeByte(110, 16);
               vh.field_a.position = vh.field_a.position + 1;
               var9 = vh.field_a.position;
-              jf.a(ByteStorage.field_c, hk.field_a, vh.field_a, 0, an.field_r);
+              ArchiveNetworkClient.a(ByteStorage.field_c, hk.field_a, vh.field_a, 0, an.field_r);
               vh.field_a.backpatchByteLength(25859, vh.field_a.position - var9);
             } else {
               var9 = 0;
@@ -134,7 +134,7 @@ class ai extends em {
                 var11_ref_StringLifetime4 = "";
               }
               vh.field_a.writeString(var11_ref_StringLifetime4, 123);
-              jf.a(ByteStorage.field_c, hk.field_a, vh.field_a, 0, an.field_r);
+              ArchiveNetworkClient.a(ByteStorage.field_c, hk.field_a, vh.field_a, 0, an.field_r);
               vh.field_a.backpatchShortLength(-var10 + vh.field_a.position, -109);
             }
             tb.a(-1, 123);

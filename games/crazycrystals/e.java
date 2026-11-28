@@ -27,7 +27,7 @@ final class e {
         if (param0 >= -95) {
           field_a = (String) null;
         }
-        tl.field_a = new am(RawPcmStream.createForPlaybackRate(mo.field_i, 100, 0));
+        SocketConnector.field_a = new am(RawPcmStream.createForPlaybackRate(mo.field_i, 100, 0));
         CrystalTile.field_p = new am(RawPcmStream.createForPlaybackRate(MusicPatchNode.field_h, 100, 0));
         AccountCreationResultPanel.field_mb = new am(RawPcmStream.createForPlaybackRate(sj.field_d, 100, 0));
         ValidationStatusWidget.field_M = new am(RawPcmStream.createForPlaybackRate(PasswordValidator.field_m, 100, 0));

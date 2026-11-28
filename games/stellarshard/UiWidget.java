@@ -218,13 +218,13 @@ class UiWidget extends IntrusiveNode {
                     this.blur(true);
                     if (var7 != 0) {
                       param0 = false;
-                      if (0 != fb.field_n) {
-                        nb.field_H = fb.field_n;
+                      if (0 != ArchiveNetworkClient.field_n) {
+                        nb.field_H = ArchiveNetworkClient.field_n;
                         cl.a(this.getTooltipText(3690), (byte) 96);
                         return param0;
                       }
                       if (nb.field_H == 0) {
-                        nb.field_H = fb.field_n;
+                        nb.field_H = ArchiveNetworkClient.field_n;
                         cl.a(this.getTooltipText(3690), (byte) 96);
                         return param0;
                       }
@@ -241,19 +241,19 @@ class UiWidget extends IntrusiveNode {
                         gh.field_c != 0) {
                         this.blur(true);
                       }
-                      nb.field_H = fb.field_n;
+                      nb.field_H = ArchiveNetworkClient.field_n;
                       cl.a(this.getTooltipText(3690), (byte) 96);
                       return param0;
                     }
                   }
                 }
-                if (0 != fb.field_n) {
-                  nb.field_H = fb.field_n;
+                if (0 != ArchiveNetworkClient.field_n) {
+                  nb.field_H = ArchiveNetworkClient.field_n;
                   cl.a(this.getTooltipText(3690), (byte) 96);
                   return param0;
                 }
                 if (nb.field_H == 0) {
-                  nb.field_H = fb.field_n;
+                  nb.field_H = ArchiveNetworkClient.field_n;
                   cl.a(this.getTooltipText(3690), (byte) 96);
                   return param0;
                 }
@@ -267,22 +267,22 @@ class UiWidget extends IntrusiveNode {
                   TextFieldValidator.field_e = null;
                 }
                 if (var7 == 0) {
-                  nb.field_H = fb.field_n;
+                  nb.field_H = ArchiveNetworkClient.field_n;
                   cl.a(this.getTooltipText(3690), (byte) 96);
                   return param0;
                 }
                 if (var5 == 0) {
-                  nb.field_H = fb.field_n;
+                  nb.field_H = ArchiveNetworkClient.field_n;
                   cl.a(this.getTooltipText(3690), (byte) 96);
                   return param0;
                 }
                 if (gh.field_c == 0) {
-                  nb.field_H = fb.field_n;
+                  nb.field_H = ArchiveNetworkClient.field_n;
                   cl.a(this.getTooltipText(3690), (byte) 96);
                   return param0;
                 }
                 this.blur(true);
-                nb.field_H = fb.field_n;
+                nb.field_H = ArchiveNetworkClient.field_n;
                 cl.a(this.getTooltipText(3690), (byte) 96);
                 return param0;
               }
@@ -294,9 +294,9 @@ class UiWidget extends IntrusiveNode {
                     this.blur(true);
                     if (var7 != 0) {
                       param0 = false;
-                      if (0 == fb.field_n) {
+                      if (0 == ArchiveNetworkClient.field_n) {
                         if (nb.field_H == 0) {
-                          nb.field_H = fb.field_n;
+                          nb.field_H = ArchiveNetworkClient.field_n;
                           cl.a(this.getTooltipText(3690), (byte) 96);
                           return param0;
                         }
@@ -312,23 +312,23 @@ class UiWidget extends IntrusiveNode {
                         if (var5 != 0 &&
                           gh.field_c != 0) {
                           this.blur(true);
-                          nb.field_H = fb.field_n;
+                          nb.field_H = ArchiveNetworkClient.field_n;
                           cl.a(this.getTooltipText(3690), (byte) 96);
                           return param0;
                         }
                       }
-                      nb.field_H = fb.field_n;
+                      nb.field_H = ArchiveNetworkClient.field_n;
                       cl.a(this.getTooltipText(3690), (byte) 96);
                       return param0;
                     }
                   }
                 }
               }
-              if (0 != fb.field_n) {
+              if (0 != ArchiveNetworkClient.field_n) {
                 break regionExit1;
               }
               if (nb.field_H == 0) {
-                nb.field_H = fb.field_n;
+                nb.field_H = ArchiveNetworkClient.field_n;
                 cl.a(this.getTooltipText(3690), (byte) 96);
                 return param0;
               }
@@ -347,7 +347,7 @@ class UiWidget extends IntrusiveNode {
             if (var5 != 0 &&
               gh.field_c != 0) {
               this.blur(true);
-              nb.field_H = fb.field_n;
+              nb.field_H = ArchiveNetworkClient.field_n;
               cl.a(this.getTooltipText(3690), (byte) 96);
               return param0;
             }
@@ -370,13 +370,13 @@ class UiWidget extends IntrusiveNode {
                   param0 = false;
                 }
               }
-              if (0 != fb.field_n) {
-                nb.field_H = fb.field_n;
+              if (0 != ArchiveNetworkClient.field_n) {
+                nb.field_H = ArchiveNetworkClient.field_n;
                 cl.a(this.getTooltipText(3690), (byte) 96);
                 return param0;
               }
               if (nb.field_H == 0) {
-                nb.field_H = fb.field_n;
+                nb.field_H = ArchiveNetworkClient.field_n;
                 cl.a(this.getTooltipText(3690), (byte) 96);
                 return param0;
               }
@@ -394,7 +394,7 @@ class UiWidget extends IntrusiveNode {
                 gh.field_c != 0) {
                 this.blur(true);
               }
-              nb.field_H = fb.field_n;
+              nb.field_H = ArchiveNetworkClient.field_n;
               cl.a(this.getTooltipText(3690), (byte) 96);
               return param0;
             }
@@ -403,13 +403,13 @@ class UiWidget extends IntrusiveNode {
                 this.pointerPressed(this, FullscreenNoticeType.field_b, gh.field_c, oc.field_e, param3, (byte) 88, param2)) {
                 param0 = false;
               }
-              if (0 != fb.field_n) {
-                nb.field_H = fb.field_n;
+              if (0 != ArchiveNetworkClient.field_n) {
+                nb.field_H = ArchiveNetworkClient.field_n;
                 cl.a(this.getTooltipText(3690), (byte) 96);
                 return param0;
               }
               if (nb.field_H == 0) {
-                nb.field_H = fb.field_n;
+                nb.field_H = ArchiveNetworkClient.field_n;
                 cl.a(this.getTooltipText(3690), (byte) 96);
                 return param0;
               }
@@ -427,7 +427,7 @@ class UiWidget extends IntrusiveNode {
                 gh.field_c != 0) {
                 this.blur(true);
               }
-              nb.field_H = fb.field_n;
+              nb.field_H = ArchiveNetworkClient.field_n;
               cl.a(this.getTooltipText(3690), (byte) 96);
               return param0;
             }
@@ -439,13 +439,13 @@ class UiWidget extends IntrusiveNode {
                 this.blur(true);
                 if (var7 != 0) {
                   param0 = false;
-                  if (0 != fb.field_n) {
-                    nb.field_H = fb.field_n;
+                  if (0 != ArchiveNetworkClient.field_n) {
+                    nb.field_H = ArchiveNetworkClient.field_n;
                     cl.a(this.getTooltipText(3690), (byte) 96);
                     return param0;
                   }
                   if (nb.field_H == 0) {
-                    nb.field_H = fb.field_n;
+                    nb.field_H = ArchiveNetworkClient.field_n;
                     cl.a(this.getTooltipText(3690), (byte) 96);
                     return param0;
                   }
@@ -462,19 +462,19 @@ class UiWidget extends IntrusiveNode {
                     gh.field_c != 0) {
                     this.blur(true);
                   }
-                  nb.field_H = fb.field_n;
+                  nb.field_H = ArchiveNetworkClient.field_n;
                   cl.a(this.getTooltipText(3690), (byte) 96);
                   return param0;
                 }
               }
             }
-            if (0 != fb.field_n) {
-              nb.field_H = fb.field_n;
+            if (0 != ArchiveNetworkClient.field_n) {
+              nb.field_H = ArchiveNetworkClient.field_n;
               cl.a(this.getTooltipText(3690), (byte) 96);
               return param0;
             }
             if (nb.field_H == 0) {
-              nb.field_H = fb.field_n;
+              nb.field_H = ArchiveNetworkClient.field_n;
               cl.a(this.getTooltipText(3690), (byte) 96);
               return param0;
             }
@@ -488,7 +488,7 @@ class UiWidget extends IntrusiveNode {
               TextFieldValidator.field_e = null;
             }
             if (var7 == 0) {
-              nb.field_H = fb.field_n;
+              nb.field_H = ArchiveNetworkClient.field_n;
               cl.a(this.getTooltipText(3690), (byte) 96);
               return param0;
             }
@@ -498,7 +498,7 @@ class UiWidget extends IntrusiveNode {
             this.blur(true);
           }
         }
-        nb.field_H = fb.field_n;
+        nb.field_H = ArchiveNetworkClient.field_n;
         cl.a(this.getTooltipText(3690), (byte) 96);
         return param0;
     }
@@ -912,9 +912,9 @@ class UiWidget extends IntrusiveNode {
                 !(param1 <= vc.field_f.length)) {
                 vc.field_f = new int[param1 * 2];
               }
-              if (null == vh.field_h ||
-                !(param1 <= vh.field_h.length)) {
-                vh.field_h = new int[param1 * 2];
+              if (null == ArchiveSourceManager.field_h ||
+                !(param1 <= ArchiveSourceManager.field_h.length)) {
+                ArchiveSourceManager.field_h = new int[param1 * 2];
               }
               if (fj.field_b == null ||
                 !(fj.field_b.length >= param1 + param2)) {
@@ -930,9 +930,9 @@ class UiWidget extends IntrusiveNode {
                   !(param1 <= vc.field_f.length)) {
                   vc.field_f = new int[param1 * 2];
                 }
-                if (null == vh.field_h ||
-                  !(param1 <= vh.field_h.length)) {
-                  vh.field_h = new int[param1 * 2];
+                if (null == ArchiveSourceManager.field_h ||
+                  !(param1 <= ArchiveSourceManager.field_h.length)) {
+                  ArchiveSourceManager.field_h = new int[param1 * 2];
                 }
                 if (fj.field_b == null ||
                   !(fj.field_b.length >= param1 + param2)) {
@@ -948,9 +948,9 @@ class UiWidget extends IntrusiveNode {
                   !(param1 <= vc.field_f.length)) {
                   vc.field_f = new int[param1 * 2];
                 }
-                if (null == vh.field_h ||
-                  !(param1 <= vh.field_h.length)) {
-                  vh.field_h = new int[param1 * 2];
+                if (null == ArchiveSourceManager.field_h ||
+                  !(param1 <= ArchiveSourceManager.field_h.length)) {
+                  ArchiveSourceManager.field_h = new int[param1 * 2];
                 }
                 if (fj.field_b == null ||
                   !(fj.field_b.length >= param1 + param2)) {
@@ -976,9 +976,9 @@ class UiWidget extends IntrusiveNode {
                 !(param1 <= vc.field_f.length)) {
                 vc.field_f = new int[param1 * 2];
               }
-              if (null == vh.field_h ||
-                !(param1 <= vh.field_h.length)) {
-                vh.field_h = new int[param1 * 2];
+              if (null == ArchiveSourceManager.field_h ||
+                !(param1 <= ArchiveSourceManager.field_h.length)) {
+                ArchiveSourceManager.field_h = new int[param1 * 2];
               }
               if (fj.field_b == null ||
                 !(fj.field_b.length >= param1 + param2)) {
@@ -1000,9 +1000,9 @@ class UiWidget extends IntrusiveNode {
                   !(param1 <= vc.field_f.length)) {
                   vc.field_f = new int[param1 * 2];
                 }
-                if (null == vh.field_h ||
-                  !(param1 <= vh.field_h.length)) {
-                  vh.field_h = new int[param1 * 2];
+                if (null == ArchiveSourceManager.field_h ||
+                  !(param1 <= ArchiveSourceManager.field_h.length)) {
+                  ArchiveSourceManager.field_h = new int[param1 * 2];
                 }
                 if (fj.field_b == null ||
                   !(fj.field_b.length >= param1 + param2)) {
@@ -1018,9 +1018,9 @@ class UiWidget extends IntrusiveNode {
                     !(param1 <= vc.field_f.length)) {
                     vc.field_f = new int[param1 * 2];
                   }
-                  if (null == vh.field_h ||
-                    !(param1 <= vh.field_h.length)) {
-                    vh.field_h = new int[param1 * 2];
+                  if (null == ArchiveSourceManager.field_h ||
+                    !(param1 <= ArchiveSourceManager.field_h.length)) {
+                    ArchiveSourceManager.field_h = new int[param1 * 2];
                   }
                   if (fj.field_b == null ||
                     !(fj.field_b.length >= param1 + param2)) {
@@ -1036,9 +1036,9 @@ class UiWidget extends IntrusiveNode {
                     !(param1 <= vc.field_f.length)) {
                     vc.field_f = new int[param1 * 2];
                   }
-                  if (null == vh.field_h ||
-                    !(param1 <= vh.field_h.length)) {
-                    vh.field_h = new int[param1 * 2];
+                  if (null == ArchiveSourceManager.field_h ||
+                    !(param1 <= ArchiveSourceManager.field_h.length)) {
+                    ArchiveSourceManager.field_h = new int[param1 * 2];
                   }
                   if (fj.field_b == null ||
                     !(fj.field_b.length >= param1 + param2)) {
@@ -1079,9 +1079,9 @@ class UiWidget extends IntrusiveNode {
           !(param1 <= vc.field_f.length)) {
           vc.field_f = new int[param1 * 2];
         }
-        if (null == vh.field_h ||
-          !(param1 <= vh.field_h.length)) {
-          vh.field_h = new int[param1 * 2];
+        if (null == ArchiveSourceManager.field_h ||
+          !(param1 <= ArchiveSourceManager.field_h.length)) {
+          ArchiveSourceManager.field_h = new int[param1 * 2];
         }
         if (fj.field_b == null ||
           !(fj.field_b.length >= param1 + param2)) {

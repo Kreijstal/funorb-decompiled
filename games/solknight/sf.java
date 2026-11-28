@@ -169,7 +169,7 @@ final class sf {
           this.field_l = 0;
         }
         if (this.field_l == 0 && (this.field_k ||
-          ne.field_d)) {
+          ArchiveSourceManager.field_d)) {
           if (param1 < 0) {
             if (this.field_k) {
               this.field_f = -1;

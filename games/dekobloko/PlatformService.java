@@ -144,7 +144,7 @@ final class PlatformService implements Runnable {
         return this.enqueueTask(0, integerArgument1 ^ -10961, new Object[]{classArgument3, stringArgument2, classArrayArgument4}, 8, 0);
     }
 
-    private final static BoundedRandomAccessFile computeBoundedRandomAccessFile0511(byte byteArgument1, String stringArgument2, String stringArgument3, int integerArgument4) {
+    private final static BoundedRandomAccessFile openPreferencesFile(byte byteArgument1, String stringArgument2, String stringArgument3, int integerArgument4) {
         try {
           int integerLocal1 = 0;
           BoundedRandomAccessFile stackBoundedRandomAccessFileLocal2 = null;
@@ -289,7 +289,7 @@ final class PlatformService implements Runnable {
                         asyncTaskLocal16.objectState0004 = java.net.InetAddress.getByName((String) (asyncTaskLocal16.objectState0003)).getAddress();
                         break;
                       case 12:
-                        boundedRandomAccessFileLocal9 = PlatformService.computeBoundedRandomAccessFile0511((byte) -32, stringState0173, (String) (asyncTaskLocal16.objectState0003), integerState0223);
+                        boundedRandomAccessFileLocal9 = PlatformService.openPreferencesFile((byte) -32, stringState0173, (String) (asyncTaskLocal16.objectState0003), integerState0223);
                         asyncTaskLocal16.objectState0004 = boundedRandomAccessFileLocal9;
                         break;
                       case 16:
@@ -351,7 +351,7 @@ final class PlatformService implements Runnable {
                         }
                         break;
                       case 13:
-                        boundedRandomAccessFileLocal9 = PlatformService.computeBoundedRandomAccessFile0511((byte) -32, "", (String) (asyncTaskLocal16.objectState0003), integerState0223);
+                        boundedRandomAccessFileLocal9 = PlatformService.openPreferencesFile((byte) -32, "", (String) (asyncTaskLocal16.objectState0003), integerState0223);
                         asyncTaskLocal16.objectState0004 = boundedRandomAccessFileLocal9;
                         break;
                       case 7:
@@ -418,7 +418,7 @@ final class PlatformService implements Runnable {
                     }
                     try {
                       if (false) throw (ProxyAuthenticationRequiredException) null;
-                      asyncTaskLocal16.objectState0004 = BirthDateTextFields.computeSocketFactory1275((String) (asyncTaskLocal16.objectState0003), asyncTaskLocal16.integerState0509, 23155).computeSocket1476(-7);
+                      asyncTaskLocal16.objectState0004 = BirthDateTextFields.computeSocketFactory1275((String) (asyncTaskLocal16.objectState0003), asyncTaskLocal16.integerState0509, 23155).openSocket(-7);
                     } catch (ProxyAuthenticationRequiredException caughtParameterLocal32) {
                       caughtExceptionLocal3 = caughtParameterLocal32;
                       diagnosticSupport001Local12 = (ProxyAuthenticationRequiredException) (Object) caughtExceptionLocal3;

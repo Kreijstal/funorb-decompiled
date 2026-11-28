@@ -263,7 +263,7 @@ final class ul extends IntrusiveNode {
         if (param0 != -1) {
           return false;
         }
-        return wf.field_i.a(-11982);
+        return wf.field_i.loadMasterIndex(-11982);
     }
 
     final static void a(ResourceArchive param0, int param1, ResourceArchive param2) {

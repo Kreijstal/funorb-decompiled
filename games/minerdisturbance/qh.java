@@ -34,7 +34,7 @@ final class qh implements WidgetRenderer {
             return stackIn_8_0;
           }
           if (param1) {
-            stackIn_13_0 = kh.copyBytes(param2, (byte) -16);
+            stackIn_13_0 = MouseInputHandler.copyBytes(param2, (byte) -16);
             return stackIn_13_0;
           }
           stackIn_11_0 = (byte[]) (param2);

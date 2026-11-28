@@ -34,11 +34,11 @@ final class ii {
     }
 
     final static String b(byte param0) {
-        if (ic.field_l == AwtRasterBuffer.field_e) {
+        if (ProxySocketConnector.field_l == AwtRasterBuffer.field_e) {
           return MidiNoteMask.field_r;
         }
         int var1 = -48 / ((param0 - 15) / 47);
-        return ch.field_g;
+        return ArchiveNetworkClient.field_g;
     }
 
     public static void clearStaticReferences(byte param0) {

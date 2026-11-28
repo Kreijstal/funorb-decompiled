@@ -40,7 +40,7 @@ final class vo extends DefaultTextWidgetRenderer {
               }
               var7 = new SectorCacheStore(param3, ad.field_g, ProxyAuthenticationRequiredException.field_g[param3], 2097152);
             }
-            var8 = pd.field_c.a(18162, (SectorCacheStore) (var6), param0, param3, (SectorCacheStore) (var7));
+            var8 = pd.field_c.getOrCreateArchiveSource(18162, (SectorCacheStore) (var6), param0, param3, (SectorCacheStore) (var7));
             if (param4) {
               var8.a((byte) 81);
             }
@@ -146,22 +146,22 @@ final class vo extends DefaultTextWidgetRenderer {
         int var1;
         int var2;
         var2 = Vertigo2.field_L ? 1 : 0;
-        eg.field_t = null;
+        SocketArchiveNetworkClient.field_t = null;
         if (param0 != 117) {
           return;
         }
         PacketBuffer.field_t = false;
-        if (tk.field_e) {
+        if (ArchiveNetworkClient.field_e) {
           BirthDateValidator.field_l.showConnectionFailure(param0 ^ 2121781);
         } else {
           var1 = rc.field_b;
           if (0 < var1) {
             if (1 != var1) {
-              eg.field_t = Vertigo2.a(new String[]{Integer.toString(var1)}, kn.field_a, param0 - 111);
+              SocketArchiveNetworkClient.field_t = Vertigo2.a(new String[]{Integer.toString(var1)}, kn.field_a, param0 - 111);
             } else {
-              eg.field_t = FullscreenNoticeType.field_c;
+              SocketArchiveNetworkClient.field_t = FullscreenNoticeType.field_c;
             }
-            eg.field_t = oq.a(new CharSequence[]{(CharSequence) ((Object) eg.field_t), (CharSequence) ((Object) "<br>"), (CharSequence) ((Object) e.field_j)}, param0 - 31);
+            SocketArchiveNetworkClient.field_t = oq.a(new CharSequence[]{(CharSequence) ((Object) SocketArchiveNetworkClient.field_t), (CharSequence) ((Object) "<br>"), (CharSequence) ((Object) e.field_j)}, param0 - 31);
           }
           BirthDateValidator.field_l.closeDialog((byte) 63);
           p.a(-33);

@@ -46,8 +46,8 @@ final class DirectByteArrayStore extends ByteArrayStore {
         if (param0 != 0) {
           return 57;
         }
-        ja.field_b.a((byte) -50);
-        if (RichTextWidget.field_H.b((byte) -125)) {
+        ja.field_b.pollArchiveSources((byte) -50);
+        if (RichTextWidget.field_H.pollNetwork((byte) -125)) {
           return 0;
         }
         return kf.a(76);

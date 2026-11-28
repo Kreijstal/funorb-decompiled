@@ -203,7 +203,7 @@ final class kl extends TunnelEntity {
           var3 = var3 + TriangleRasterizer.field_j[2047 & this.field_L[9 * param1 + var4]] * MouseInput.field_b[var4];
           var3 = var3 + TriangleRasterizer.field_m[2047 & this.field_L[param1 * 9 + var4]] * MouseInput.field_b[var4 + 9];
         }
-        return (double)var3 * kd.field_r;
+        return (double)var3 * SocketArchiveNetworkClient.field_r;
     }
 
     private final void c(boolean param0) {
@@ -229,7 +229,7 @@ final class kl extends TunnelEntity {
         this.field_N = 0;
         var3 = 1;
         var4 = this.field_Q.length;
-        kd.field_r = (double)var2 * 9.313225746154785e-13;
+        SocketArchiveNetworkClient.field_r = (double)var2 * 9.313225746154785e-13;
         var5 = (double)var2 * 0.5;
         var7 = Math.pow(0.5, (double)var2);
         for (var9 = 0; var4 > var9; var9++) {

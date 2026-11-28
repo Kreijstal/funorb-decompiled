@@ -43,7 +43,7 @@ final class DelayedPcmStream extends PcmStream {
           BoundedRandomAccessFile.field_f = param9;
           gi.field_e = param7;
           BufferedRandomAccessFile.field_p = param1;
-          eh.field_h = param4;
+          ArchiveNetworkClient.field_h = param4;
           re.field_l = param10;
         } catch (RuntimeException runtimeException) {
           throw sd.wrapClientException((Throwable) ((Object) runtimeException), "ed.F(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ',' + param9 + ',' + (param10 != null ? "{...}" : "null") + ')');

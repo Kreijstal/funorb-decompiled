@@ -40,7 +40,7 @@ final class DirectByteStorage extends ByteStorage {
         try {
           wk.field_g = wk.a(param0, 1, "display_name_changed", "basic");
           ValidationStatusWidget.field_bb = new ok(0L, SecondaryNodeDeque.field_b, tn.field_l, AchievementNotification.field_m);
-          fg.field_d = new ok(0L, SecondaryNodeDeque.field_b, d.field_Lb, vc.field_b);
+          fg.field_d = new ok(0L, SecondaryNodeDeque.field_b, d.field_Lb, KeyboardInputHandler.field_b);
           hb.field_a = new ci(0L, (ci) null);
           oj.field_c = new ci(0L, EditableTextField.field_P);
           oj.field_c.field_fb = param1;

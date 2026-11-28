@@ -402,7 +402,7 @@ final class sf {
             var6.unlink(-16175);
             return;
           }
-          gb.a((Throwable) null, "HS1: " + al.a(-71), param0 + 14);
+          ArchiveNetworkClient.a((Throwable) null, "HS1: " + al.a(-71), param0 + 14);
           eg.a((byte) 126);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

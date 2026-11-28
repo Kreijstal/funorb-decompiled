@@ -55,7 +55,7 @@ final class mh {
         ef.field_i = ef.field_i | var3;
         TutorialText.field_a = TutorialText.field_a | var3;
         ga.field_k.addFirst(new hd(param1), -16611);
-        if (!kg.field_q) {
+        if (!SocketArchiveNetworkClient.field_q) {
           if (!bk.c(-25704)) {
             RegistrationAgreementPane.a(4, -ge.field_e + oe.field_c, oh.field_e, param1, ArchiveIndex.field_e, bh.field_a, param2, (byte) 43);
           } else {

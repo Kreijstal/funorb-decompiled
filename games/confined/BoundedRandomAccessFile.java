@@ -20,7 +20,7 @@ final class BoundedRandomAccessFile {
 
     final static void a(int param0, int param1) {
         CipherPacketBuffer var2 = vh.field_a;
-        var2.b(true, param1);
+        var2.writeCipheredByte(true, param1);
         var2.writeByte(87, 1);
         var2.writeByte(115, 2);
         int var3 = 61 / ((param0 - 61) / 46);

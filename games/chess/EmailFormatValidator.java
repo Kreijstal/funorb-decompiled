@@ -217,8 +217,8 @@ final class EmailFormatValidator extends TextFieldValidator {
               return true;
             }
             var4 = fh.field_d;
-            if (0.0 != rl.field_b) {
-              var4 = (int)((double)var4 + ph.field_d.nextGaussian() * rl.field_b);
+            if (0.0 != MouseInputHandler.field_b) {
+              var4 = (int)((double)var4 + ph.field_d.nextGaussian() * MouseInputHandler.field_b);
               if (var4 < 0) {
                 var4 = 0;
               }
@@ -256,7 +256,7 @@ final class EmailFormatValidator extends TextFieldValidator {
         String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          stackIn_3_0 = (null != mn.a(param1, 19525)) ? 0 : 1;
+          stackIn_3_0 = (null != ProxySocketConnector.a(param1, 19525)) ? 0 : 1;
           var3_int = stackIn_3_0;
           var4 = 63 / ((param0 + 49) / 62);
           if (var3_int != 0) {

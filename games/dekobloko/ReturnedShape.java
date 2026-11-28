@@ -36,7 +36,7 @@ final class ReturnedShape {
         RuntimeException caughtExceptionLocal14 = null;
         integerLocal8 = DekoBlokoClient.obfuscationControl ? 1 : 0;
         try {
-          integerLocal2 = cipherPacketBufferArgument2.computeInteger1637(8, (byte) 80);
+          integerLocal2 = cipherPacketBufferArgument2.readBits(8, (byte) 80);
           if (integerLocal2 > 0) {
             stackObjectLocal9 = null;
             return (ClientException[]) (stackObjectLocal9);
@@ -44,21 +44,21 @@ final class ReturnedShape {
           if (integerArgument1 <= 121) {
             stringState0474 = (String) null;
           }
-          integerLocal4 = cipherPacketBufferArgument2.computeInteger1637(12, (byte) 77);
+          integerLocal4 = cipherPacketBufferArgument2.readBits(12, (byte) 77);
           clientExceptionArrayLocal5 = new ClientException[integerLocal4];
           for (integerLocal1 = 0; integerLocal1 < integerLocal4; integerLocal1++) {
             if (MouseInput.computeBoolean1804(cipherPacketBufferArgument2, (byte) 26)) {
               clientExceptionLocal7 = new ClientException();
-              cipherPacketBufferArgument2.computeInteger1637(24, (byte) 40);
-              cipherPacketBufferArgument2.computeInteger1637(24, (byte) 73);
-              clientExceptionLocal7.integerState0139 = cipherPacketBufferArgument2.computeInteger1637(24, (byte) 42);
-              cipherPacketBufferArgument2.computeInteger1637(9, (byte) 98);
-              cipherPacketBufferArgument2.computeInteger1637(12, (byte) 77);
-              cipherPacketBufferArgument2.computeInteger1637(12, (byte) 86);
-              cipherPacketBufferArgument2.computeInteger1637(12, (byte) 108);
+              cipherPacketBufferArgument2.readBits(24, (byte) 40);
+              cipherPacketBufferArgument2.readBits(24, (byte) 73);
+              clientExceptionLocal7.integerState0139 = cipherPacketBufferArgument2.readBits(24, (byte) 42);
+              cipherPacketBufferArgument2.readBits(9, (byte) 98);
+              cipherPacketBufferArgument2.readBits(12, (byte) 77);
+              cipherPacketBufferArgument2.readBits(12, (byte) 86);
+              cipherPacketBufferArgument2.readBits(12, (byte) 108);
               clientExceptionArrayLocal5[integerLocal1] = clientExceptionLocal7;
             } else {
-              integerLocal6 = cipherPacketBufferArgument2.computeInteger1637(ComponentDecorator.computeInteger1011(integerLocal1 - 1, (byte) 49), (byte) 118);
+              integerLocal6 = cipherPacketBufferArgument2.readBits(ComponentDecorator.computeInteger1011(integerLocal1 - 1, (byte) 49), (byte) 118);
               clientExceptionArrayLocal5[integerLocal1] = clientExceptionArrayLocal5[integerLocal6];
             }
           }
@@ -135,7 +135,7 @@ final class ReturnedShape {
         }
     }
 
-    final static void performAction1430(int integerArgument1, java.awt.Component componentArgument2) {
+    final static void detachKeyboardListeners(int integerArgument1, java.awt.Component componentArgument2) {
         try {
           if (integerArgument1 != 12) {
             String stringLocal1 = (String) null;

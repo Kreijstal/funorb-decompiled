@@ -95,8 +95,8 @@ final class MusicPatchNode extends IntrusiveNode {
         dj.field_t = false;
         ne.field_d = false;
         rc.a(-25537, -1);
-        lc.field_c = tl.field_e;
-        sg.field_b = tl.field_e;
+        lc.field_c = SocketConnector.field_e;
+        sg.field_b = SocketConnector.field_e;
         if (param0 >= -116) {
           field_s = (String) null;
         }

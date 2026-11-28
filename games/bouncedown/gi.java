@@ -104,7 +104,7 @@ final class gi {
             return (CoverageBitmapFont) (stackIn_2_0);
           }
           var2_int = -90 % ((param1 + 48) / 34);
-          var3 = new CoverageBitmapFont(param0, ConfirmedEmailAvailabilityValidator.field_n, ae.field_c, ih.field_V, qh.field_i, he.field_k, ph.field_c);
+          var3 = new CoverageBitmapFont(param0, ConfirmedEmailAvailabilityValidator.field_n, ae.field_c, ih.field_V, qh.field_i, LeaderboardSubmission.field_k, ph.field_c);
           vb.a((byte) 122);
           stackIn_4_0 = var3;
           return stackIn_4_0;

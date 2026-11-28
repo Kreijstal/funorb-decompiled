@@ -456,7 +456,7 @@ final class SectorCacheStore {
         if (param0 != 255) {
           return false;
         }
-        return bl.field_r.b((byte) 113);
+        return bl.field_r.loadMasterIndex((byte) 113);
     }
 
     SectorCacheStore(int param0, BufferedRandomAccessFile param1, BufferedRandomAccessFile param2, int param3) {

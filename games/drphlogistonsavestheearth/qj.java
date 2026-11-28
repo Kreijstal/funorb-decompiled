@@ -11,7 +11,7 @@ final class qj {
     static int field_c;
     static he field_f;
 
-    final static void a(int param0, java.awt.Component param1) {
+    final static void attachKeyboardListeners(int param0, java.awt.Component param1) {
         try {
           param1.setFocusTraversalKeysEnabled(false);
           param1.addKeyListener(ji.field_c);

@@ -99,7 +99,7 @@ final class ga {
               stackIn_39_0 = -1;
               return stackIn_39_0;
             }
-            StandardContentDialog.field_kb.a(-1456343840, gi.field_l, dg.field_b);
+            StandardContentDialog.field_kb.attachSocket(-1456343840, gi.field_l, dg.field_b);
             bj.field_c = null;
             gi.field_l = null;
             StripedProgressWidget.field_N = 0;

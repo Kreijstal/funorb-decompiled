@@ -48,7 +48,7 @@ final class DirectByteStorage extends ByteStorage {
           if (param1 >= -19) {
             field_d = false;
           }
-          md.clearIndexedSpriteDecodeBuffersWithIntGuard(-115);
+          ProxySocketConnector.clearIndexedSpriteDecodeBuffersWithIntGuard(-115);
           stackIn_6_0 = var2;
           return stackIn_6_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

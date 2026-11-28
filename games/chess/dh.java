@@ -305,7 +305,7 @@ final class dh {
             param2 == 2) && ld.field_g == 2) {
             var8 = this.a(param0 + 106);
             var4 = var8;
-            var5 = mn.a(param0 - 18, this.field_i);
+            var5 = ProxySocketConnector.a(param0 - 18, this.field_i);
             var6 = va.a(this.field_i, -19554) ? 1 : 0;
             if (var5 == null &&
               var6 == 0) {

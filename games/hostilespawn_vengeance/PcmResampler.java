@@ -302,13 +302,13 @@ final class PcmResampler {
                 } else {
                   if (var8.field_p == 0) {
                     var11Lifetime1 = c.field_f[0].field_A;
-                    var12Lifetime1 = 4 * sg.field_i % var11Lifetime1;
+                    var12Lifetime1 = 4 * ArchiveSourceManager.field_i % var11Lifetime1;
                     var13Lifetime1 = var4 - 12;
                     var14 = 24 * var8.field_z + var4 - 12;
                     var4 = var4 + var12Lifetime1;
                     SoftwareRasterizer.setClip(0, var13Lifetime1, 640, var14);
                     var15 = 2 * c.field_f.length - 2;
-                    var16 = sg.field_i / 2 % var15;
+                    var16 = ArchiveSourceManager.field_i / 2 % var15;
                     if (var16 >= c.field_f.length) {
                       var16 = -var16 + var15;
                     }

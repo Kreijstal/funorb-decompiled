@@ -11,7 +11,7 @@ final class ProxySocketConnector extends SocketConnector {
     static char[] field_d;
     static String field_c;
 
-    final java.net.Socket a(int param0) throws IOException {
+    final java.net.Socket openSocket(int param0) throws IOException {
         int var9 = 0;
         int stackIn_5_0 = 0;
         java.net.ProxySelector stackIn_8_0;
@@ -81,7 +81,7 @@ final class ProxySocketConnector extends SocketConnector {
         } catch (java.net.URISyntaxException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6 = (java.net.URISyntaxException) (Object) decompiledCaughtException;
-          return this.b((byte) 122);
+          return this.openDirectSocket((byte) 122);
         }
         var3.addAll((Collection) ((Object) var4));
         var6_array = var3.toArray();
@@ -92,7 +92,7 @@ final class ProxySocketConnector extends SocketConnector {
           var11 = (java.net.Proxy) (var10);
           try {
             if (false) throw (ProxyAuthenticationRequiredException) null;
-            var12 = this.a((byte) 126, var11);
+            var12 = this.openSocketThroughProxy((byte) 126, var11);
             if (var12 != null) {
               stackIn_22_0 = var12;
               return stackIn_22_0;
@@ -109,7 +109,7 @@ final class ProxySocketConnector extends SocketConnector {
         if (var7 != null) {
           throw ProxySocketConnector.<RuntimeException>throwUnchecked((Throwable) var7);
         }
-        return this.b((byte) 121);
+        return this.openDirectSocket((byte) 121);
     }
 
     final static float a(boolean param0, float param1) {
@@ -124,7 +124,7 @@ final class ProxySocketConnector extends SocketConnector {
         this.field_e = java.net.ProxySelector.getDefault();
     }
 
-    private final java.net.Socket a(String param0, String param1, int param2, int param3) throws IOException {
+    private final java.net.Socket openHttpProxyTunnel(String param0, String param1, int param2, int param3) throws IOException {
         java.net.Socket stackIn_10_0 = null;
         java.net.Socket stackIn_27_0 = null;
         Object stackIn_29_0 = null;
@@ -227,7 +227,7 @@ final class ProxySocketConnector extends SocketConnector {
         field_c = null;
     }
 
-    private final java.net.Socket a(byte param0, java.net.Proxy param1) throws IOException {
+    private final java.net.Socket openSocketThroughProxy(byte param0, java.net.Proxy param1) throws IOException {
         java.net.SocketAddress var3 = null;
         RuntimeException var3_ref = null;
         java.net.InetSocketAddress var4 = null;
@@ -253,7 +253,7 @@ final class ProxySocketConnector extends SocketConnector {
         Exception var7_ref = null;
         try {
           if (param1.type() == java.net.Proxy.Type.DIRECT) {
-            stackIn_2_0 = this.b((byte) 122);
+            stackIn_2_0 = this.openDirectSocket((byte) 122);
             return stackIn_2_0;
           }
           var3 = param1.address();
@@ -296,7 +296,7 @@ final class ProxySocketConnector extends SocketConnector {
             decompiledCaughtException = decompiledCaughtParameter0;
             var7_ref = (Exception) (Object) decompiledCaughtException;
           }
-          stackIn_19_0 = this.a((String) (var6), var4.getHostName(), var4.getPort(), 56);
+          stackIn_19_0 = this.openHttpProxyTunnel((String) (var6), var4.getHostName(), var4.getPort(), 56);
           return stackIn_19_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
           decompiledCaughtException = decompiledCaughtParameter1;

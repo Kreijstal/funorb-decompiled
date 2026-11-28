@@ -124,7 +124,7 @@ class RichTextWidget extends InteractiveWidget {
             if (FullscreenStatusDialog.field_jb == 2) {
               bl.field_V = new BufferedSocket((java.net.Socket) (ContentTransitionDialog.field_cb.result), rc.field_t);
               var2 = new PacketBuffer(13);
-              hl.a(var2, 12, vk.field_j, MouseInputHandler.field_d, vb.field_r);
+              hl.a(var2, 12, vk.field_j, MouseInputHandler.field_d, ArchiveNetworkClient.field_r);
               var2.writeByte(15, (byte) 122);
               var2.writeInt(mg.field_e, false);
               bl.field_V.enqueueWrite(13, 0, (byte) 120, var2.payload);
@@ -153,7 +153,7 @@ class RichTextWidget extends InteractiveWidget {
             if (FullscreenStatusDialog.field_jb != 4) {
               return -1;
             }
-            gb.field_d.a(NodeHashTableIterator.field_f, bl.field_V, (byte) 115);
+            gb.field_d.attachSocket(NodeHashTableIterator.field_f, bl.field_V, (byte) 115);
             bl.field_V = null;
             FullscreenStatusDialog.field_jb = 0;
             ContentTransitionDialog.field_cb = null;

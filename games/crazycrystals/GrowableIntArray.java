@@ -6,7 +6,7 @@ final class GrowableIntArray {
     private int[] field_f;
     private int field_e;
     private boolean field_b;
-    static pk field_d;
+    static ArchiveSourceManager field_d;
     private int field_a;
 
     final void removeAt(int param0, int param1) {

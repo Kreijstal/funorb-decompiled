@@ -704,7 +704,7 @@ abstract class BitmapFont extends DualLinkNode {
         if (param0 == null) {
           return 0;
         }
-        uf.a(0, field_A, ' ', -118);
+        ArchiveSourceManager.a(0, field_A, ' ', -118);
         var4 = 0;
         var5 = 0;
         var6 = -1;

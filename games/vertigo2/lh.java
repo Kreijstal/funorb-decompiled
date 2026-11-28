@@ -21,11 +21,11 @@ final class lh {
           var5.writeByte(1, param2 ^ 57);
           if (null != param1.field_p) {
             var5.writeByte(param1.field_p.length, -47);
-            var5.a(0, -10140, param1.field_p, param1.field_p.length);
+            var5.writeBytes(0, -10140, param1.field_p, param1.field_p.length);
           } else {
             var5.writeByte(0, param2 ^ 36);
           }
-          var5.c(var4, -2);
+          var5.appendCrc32(var4, -2);
           var5.position = var5.position - 4;
           param1.field_q = var5.readInt(true);
           var5.patchByteLength((byte) 20, var5.position - var4);

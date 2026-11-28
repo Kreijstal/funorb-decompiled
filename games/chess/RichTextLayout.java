@@ -91,7 +91,7 @@ final class RichTextLayout extends TextLayout {
         RuntimeException decompiledCaughtException = null;
         try {
           var2_int = -123 / ((param1 - 2) / 50);
-          stackIn_3_0 = (null != mn.a(-1, param0));
+          stackIn_3_0 = (null != ProxySocketConnector.a(-1, param0));
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

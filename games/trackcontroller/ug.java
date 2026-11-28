@@ -43,7 +43,7 @@ class ug extends ii {
     private int field_gb;
     private int field_y;
 
-    final static void a(int param0, java.awt.Component param1) {
+    final static void attachKeyboardListeners(int param0, java.awt.Component param1) {
         try {
           param1.setFocusTraversalKeysEnabled(false);
           int var2_int = -53 / ((-10 - param0) / 37);
@@ -70,7 +70,7 @@ class ug extends ii {
         try {
           if (param2 != 2147483647) {
             var5 = (java.awt.Component) null;
-            ug.a(26, (java.awt.Component) null);
+            ug.attachKeyboardListeners(26, (java.awt.Component) null);
           }
           if (!param1.ensureIndexLoaded(param2 ^ -2147483600)) {
             stackIn_5_0 = (String) (param0);

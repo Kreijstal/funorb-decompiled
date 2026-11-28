@@ -316,7 +316,7 @@ class DefaultTextWidgetRenderer implements WidgetRenderer, TextWidgetRenderer {
               if (stringArgument1.length() == 0) {
                 stringLocal18 = stringLocal4 + "; Expires=Thu, 01-Jan-1970 00:00:00 GMT; Max-Age=0";
               } else {
-                stringLocal18 = stringLocal4 + "; Expires=" + CipherPacketBuffer.computeString1636((byte) 60, MixedSupport062.correctedCurrentTimeMillis(4) + 94608000000L) + "; Max-Age=" + 94608000L;
+                stringLocal18 = stringLocal4 + "; Expires=" + CipherPacketBuffer.formatGmtTimestamp((byte) 60, MixedSupport062.correctedCurrentTimeMillis(4) + 94608000000L) + "; Max-Age=" + 94608000L;
               }
               JavaScriptBridge.evaluate((byte) -51, appletArgument3, "document.cookie=\"" + stringLocal18 + "\"");
             } catch (java.lang.Throwable caughtParameterLocal19) {

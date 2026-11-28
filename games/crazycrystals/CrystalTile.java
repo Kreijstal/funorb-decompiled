@@ -12,7 +12,7 @@ final class CrystalTile extends pn implements Cloneable {
           ResourceArchive var4 = (ResourceArchive) null;
           CrystalTile.loadArchiveSpriteArray(false, -77, (ResourceArchive) null, -90);
           if (!param1) {
-            fn.field_j = fn.field_j - ob.field_l;
+            fn.field_j = fn.field_j - ArchiveNetworkClient.field_l;
             wd.field_j = wd.field_j + 1;
             gm.field_c[this.field_n] = gm.field_c[this.field_n] + 1;
             return;
@@ -20,7 +20,7 @@ final class CrystalTile extends pn implements Cloneable {
           return;
         }
         if (!param1) {
-          fn.field_j = fn.field_j - ob.field_l;
+          fn.field_j = fn.field_j - ArchiveNetworkClient.field_l;
           wd.field_j = wd.field_j + 1;
           gm.field_c[this.field_n] = gm.field_c[this.field_n] + 1;
           return;
@@ -163,7 +163,7 @@ final class CrystalTile extends pn implements Cloneable {
         var9 = CrazyCrystals.field_B;
         try {
           wd.field_j = wd.field_j - 1;
-          mb.field_g = mb.field_g - ob.field_l;
+          mb.field_g = mb.field_g - ArchiveNetworkClient.field_l;
           if (vh.field_a &&
             1 == uo.field_o &&
             param5 + param2 == 6 + w.field_f &&
@@ -177,7 +177,7 @@ final class CrystalTile extends pn implements Cloneable {
           }
           fp.field_a = fp.field_a - 16;
           je.field_j = je.field_j - 8;
-          ob.field_l = ob.field_l - 1;
+          ArchiveNetworkClient.field_l = ArchiveNetworkClient.field_l - 1;
           fn.field_j = fn.field_j + wd.field_j;
           sc.field_i[this.field_n].a(128, 12 * (param5 + param2), 12 * (param3 + param0), 0, (byte) -111);
           gm.field_c[this.field_n] = gm.field_c[this.field_n] - 1;

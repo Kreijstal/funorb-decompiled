@@ -37,7 +37,7 @@ class UiWidget extends IntrusiveNode {
           var4 = DungeonAssault.field_K;
           try {
             if (Raider.field_a != null) {
-              Raider.field_a.a(-1016);
+              Raider.field_a.close(-1016);
             }
             if (null != na.field_y) {
               na.field_y.shutdown(-65);

@@ -19,7 +19,7 @@ final class fi {
         int var2 = -114 / ((38 - param0) / 37);
         this.field_a = 0;
         if (0 == this.field_f &&
-          da.field_b == 98) {
+          MouseInputHandler.field_b == 98) {
           if (this.field_d <= 0) {
             this.field_d = this.field_h;
           }
@@ -27,10 +27,10 @@ final class fi {
           this.field_i = false;
         }
         if (this.field_f == 0) {
-          this.field_a = da.field_b;
+          this.field_a = MouseInputHandler.field_b;
         }
         if (this.field_f == 0 &&
-          da.field_b == 99) {
+          MouseInputHandler.field_b == 99) {
           this.field_d = this.field_d + 1;
           if (this.field_h <= this.field_d) {
             this.field_d = 0;
@@ -299,7 +299,7 @@ final class fi {
         this.field_a = 0;
         this.field_g = 0;
         if (this.field_f == 0) {
-          this.field_a = da.field_b;
+          this.field_a = MouseInputHandler.field_b;
         }
     }
 
@@ -316,10 +316,10 @@ final class fi {
         this.field_e = 0;
         this.field_a = 0;
         if (0 == this.field_f) {
-          this.field_a = da.field_b;
+          this.field_a = MouseInputHandler.field_b;
         }
         if (this.field_f == 0 &&
-          da.field_b == 96) {
+          MouseInputHandler.field_b == 96) {
           if (this.field_d <= 0) {
             this.field_d = this.field_h;
           }
@@ -327,7 +327,7 @@ final class fi {
           this.field_d = this.field_d - 1;
         }
         if (this.field_f == 0 &&
-          da.field_b == 97) {
+          MouseInputHandler.field_b == 97) {
           this.field_d = this.field_d + 1;
           this.field_i = false;
           if (this.field_h <= this.field_d) {

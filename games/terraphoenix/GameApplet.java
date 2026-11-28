@@ -54,7 +54,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
         RuntimeException var2_ref = null;
         try {
           if (MusicPatchEnvelope.field_f == this &&
-            !qi.field_f) {
+            !ArchiveSourceManager.field_f) {
             il.field_e = true;
             if (bh.field_f &&
               ll.correctedCurrentTimeMillis(1000) - SpriteState.field_x > 1000L) {
@@ -448,10 +448,10 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
         try {
           var3_ref = this;
           synchronized (var3_ref) {
-            if (qi.field_f) {
+            if (ArchiveSourceManager.field_f) {
               return;
             }
-            qi.field_f = param0;
+            ArchiveSourceManager.field_f = param0;
           }
           if (AgeValidator.field_r != null) {
             AgeValidator.field_r.destroy();
@@ -579,7 +579,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
 
     public final void destroy() {
         if (MusicPatchEnvelope.field_f != this ||
-          qi.field_f) {
+          ArchiveSourceManager.field_f) {
           return;
         }
         try {
@@ -686,7 +686,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
 
     public final void stop() {
         if (this != MusicPatchEnvelope.field_f ||
-          qi.field_f) {
+          ArchiveSourceManager.field_f) {
           return;
         }
         try {
@@ -706,7 +706,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
 
     public final void start() {
         if (MusicPatchEnvelope.field_f != this ||
-          qi.field_f) {
+          ArchiveSourceManager.field_f) {
           return;
         }
         try {

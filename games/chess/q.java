@@ -139,7 +139,7 @@ final class q {
           }
           var2Lifetime9 = vh.a((byte) 120, "HELP_MAIN");
           if (var2Lifetime9 != null) {
-            wm.field_i = ad.a(-29410, var2Lifetime9);
+            ArchiveNetworkClient.field_i = ad.a(-29410, var2Lifetime9);
           }
           var2Lifetime10 = vh.a((byte) 82, "HELP,0");
           if (null != var2Lifetime10) {
@@ -346,7 +346,7 @@ final class q {
           }
           var2Lifetime60 = vh.a((byte) 96, "MENU_TEXT_MOVES_COLON");
           if (var2Lifetime60 != null) {
-            hj.field_k = ad.a(-29410, var2Lifetime60);
+            ArchiveSourceManager.field_k = ad.a(-29410, var2Lifetime60);
           }
           var2Lifetime61 = vh.a((byte) 77, "MENU_TEXT_GRAPHICS_FASTEST");
           if (var2Lifetime61 != null) {

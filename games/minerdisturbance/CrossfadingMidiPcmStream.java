@@ -164,7 +164,7 @@ final class CrossfadingMidiPcmStream extends PcmStream {
         }
     }
 
-    final static void a(byte param0, java.awt.Component param1) {
+    final static void detachMouseListeners(byte param0, java.awt.Component param1) {
         try {
           param1.removeMouseListener(TextHotspotBounds.field_y);
           param1.removeMouseMotionListener(TextHotspotBounds.field_y);
@@ -471,7 +471,7 @@ final class CrossfadingMidiPcmStream extends PcmStream {
           if (param1 != -3450) {
             field_y = -61;
           }
-          var3.d((byte) -93, param0);
+          var3.writeCipheredByte((byte) -93, param0);
           var3.writeByte(param2.field_r, 25564);
           var3.writeByte(param2.field_q, 25564);
         } catch (RuntimeException runtimeException) {

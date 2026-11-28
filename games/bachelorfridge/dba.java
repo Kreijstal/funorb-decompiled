@@ -14,8 +14,8 @@ final class dba {
     }
 
     final static int b(byte param0) {
-        ga.field_c.b((byte) 102);
-        if (!HomingMissileAnimation.field_G.c((byte) 69)) {
+        ga.field_c.pollArchiveSources((byte) 102);
+        if (!HomingMissileAnimation.field_G.pollNetwork((byte) 69)) {
           return MouseWheelInput.a(param0 ^ 72);
         }
         if (param0 == 72) {

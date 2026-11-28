@@ -3,7 +3,7 @@
  */
 import java.io.*;
 
-final class NetworkArchiveRequestManager extends NetworkSupport003 {
+final class NetworkArchiveRequestManager extends ArchiveNetworkClient {
     static CacheWorkQueue cacheWorkQueueState0003;
     static String stringState0438;
     private BufferedSocket bufferedSocketState0001;
@@ -12,16 +12,16 @@ final class NetworkArchiveRequestManager extends NetworkSupport003 {
     static int integerState0598;
     static SceneWidget sceneWidgetState0098;
 
-    final void performAction0354(byte byteArgument1) {
+    final void close(byte byteArgument1) {
         if (byteArgument1 < 107) {
-          this.performAction0354((byte) 12);
+          this.close((byte) 12);
         }
         if (null != this.bufferedSocketState0001) {
           this.bufferedSocketState0001.close(0);
         }
     }
 
-    final void performAction0344(Object objectArgument1, byte byteArgument2, boolean booleanArgument3) {
+    final void attachSocket(Object objectArgument1, byte byteArgument2, boolean booleanArgument3) {
         try {
           RuntimeException stackRuntimeExceptionLocal1 = null;
           StringBuilder stackStringBuilderLocal2 = null;
@@ -30,11 +30,11 @@ final class NetworkArchiveRequestManager extends NetworkSupport003 {
           Exception exceptionLocal5 = null;
           int integerLocal6 = 0;
           RuntimeException runtimeExceptionLocal7 = null;
-          ResourceSupport004 resourceSupport004Local8 = null;
+          NetworkArchiveRequest resourceSupport004Local8 = null;
           IOException iOExceptionLocal9 = null;
           Exception exceptionLocal10 = null;
           int integerLocal11 = 0;
-          ResourceSupport004 resourceSupport004Local12;
+          NetworkArchiveRequest resourceSupport004Local12;
           integerLocal11 = DekoBlokoClient.obfuscationControl ? 1 : 0;
           try {
             if (null != this.bufferedSocketState0001) {
@@ -47,13 +47,13 @@ final class NetworkArchiveRequestManager extends NetworkSupport003 {
               this.bufferedSocketState0001 = null;
             }
             this.bufferedSocketState0001 = (BufferedSocket) (objectArgument1);
-            this.performAction1292((byte) -15);
-            this.performAction1286((byte) -124, booleanArgument3);
+            this.sendProtocolSetup((byte) -15);
+            this.sendConnectionState((byte) -124, booleanArgument3);
             integerLocal6 = -84 % ((byteArgument2 + 75) / 50);
             this.resourceSupport004State0001 = null;
             this.packetBufferState0003.position = 0;
             while (true) {
-              resourceSupport004Local8 = (ResourceSupport004) (this.dualNodeDequeState0002.removeFirst((byte) -111));
+              resourceSupport004Local8 = (NetworkArchiveRequest) (this.dualNodeDequeState0002.removeFirst((byte) -111));
               if (resourceSupport004Local8 != null) {
                 this.dualNodeDequeState0001.addLast(resourceSupport004Local8, -7267);
                 continue;
@@ -61,7 +61,7 @@ final class NetworkArchiveRequestManager extends NetworkSupport003 {
               break;
             }
             while (true) {
-              resourceSupport004Local12 = (ResourceSupport004) (this.dualNodeDequeState0004.removeFirst((byte) -71));
+              resourceSupport004Local12 = (NetworkArchiveRequest) (this.dualNodeDequeState0004.removeFirst((byte) -71));
               if (resourceSupport004Local12 != null) {
                 this.dualNodeDequeState0003.addLast(resourceSupport004Local12, -7267);
                 continue;
@@ -111,7 +111,7 @@ final class NetworkArchiveRequestManager extends NetworkSupport003 {
         }
     }
 
-    private final void performAction1286(byte byteArgument1, boolean booleanArgument2) {
+    private final void sendConnectionState(byte byteArgument1, boolean booleanArgument2) {
         try {
           IOException iOException = null;
           PacketBuffer stackPacketBufferLocal2 = null;
@@ -375,14 +375,14 @@ final class NetworkArchiveRequestManager extends NetworkSupport003 {
         }
     }
 
-    final boolean computeBoolean0342(byte byteArgument1) {
+    final boolean pollNetwork(byte byteArgument1) {
         try {
           int integerLocal1 = 0;
           int stackIntegerLocal2 = 0;
           int stackIntegerLocal3 = 0;
           Throwable caughtExceptionLocal4 = null;
           long longLocal5 = 0L;
-          ResourceSupport004 resourceSupport004Local6 = null;
+          NetworkArchiveRequest resourceSupport004Local6 = null;
           IOException iOExceptionLocal7 = null;
           int integerLocal8 = 0;
           Exception exceptionLocal9 = null;
@@ -397,10 +397,10 @@ final class NetworkArchiveRequestManager extends NetworkSupport003 {
           int integerLocal18 = 0;
           long longLocal19 = 0L;
           Object objectLocal20 = null;
-          ResourceSupport004 resourceSupport004Local21 = null;
+          NetworkArchiveRequest resourceSupport004Local21 = null;
           int integerLocal22 = 0;
           int integerLocal23 = 0;
-          ResourceSupport004 resourceSupport004Local24;
+          NetworkArchiveRequest resourceSupport004Local24;
           integerLocal23 = DekoBlokoClient.obfuscationControl ? 1 : 0;
           if (null != this.bufferedSocketState0001) {
             longLocal5 = MixedSupport062.correctedCurrentTimeMillis(byteArgument1 ^ -52);
@@ -421,34 +421,34 @@ final class NetworkArchiveRequestManager extends NetworkSupport003 {
             }
           }
           if (null == this.bufferedSocketState0001) {
-            if (this.computeInteger0352((byte) -114) == 0 &&
-              this.computeInteger0353(byteArgument1 ^ -56) == 0) {
+            if (this.getPriorityRequestCount((byte) -114) == 0 &&
+              this.getPrefetchRequestCount(byteArgument1 ^ -56) == 0) {
               return true;
             }
             return false;
           }
           try {
             this.bufferedSocketState0001.checkWriteError((byte) -124);
-            resourceSupport004Local6 = (ResourceSupport004) (this.dualNodeDequeState0001.beginForward(-2198));
+            resourceSupport004Local6 = (NetworkArchiveRequest) (this.dualNodeDequeState0001.beginForward(-2198));
             while (resourceSupport004Local6 != null) {
               this.packetBufferState0002.position = 0;
               this.packetBufferState0002.writeByte(true, 1);
               this.packetBufferState0002.writeLong40(-71, resourceSupport004Local6.longState0003);
               this.bufferedSocketState0001.enqueueWrite(0, this.packetBufferState0002.payload.length, 1, this.packetBufferState0002.payload);
               this.dualNodeDequeState0002.addLast(resourceSupport004Local6, -7267);
-              resourceSupport004Local6 = (ResourceSupport004) (this.dualNodeDequeState0001.nextForward((byte) 20));
+              resourceSupport004Local6 = (NetworkArchiveRequest) (this.dualNodeDequeState0001.nextForward((byte) 20));
             }
             if (byteArgument1 != -56) {
               return false;
             }
-            resourceSupport004Local24 = (ResourceSupport004) (this.dualNodeDequeState0003.beginForward(-2198));
+            resourceSupport004Local24 = (NetworkArchiveRequest) (this.dualNodeDequeState0003.beginForward(-2198));
             while (resourceSupport004Local24 != null) {
               this.packetBufferState0002.position = 0;
               this.packetBufferState0002.writeByte(true, 0);
               this.packetBufferState0002.writeLong40(-98, resourceSupport004Local24.longState0003);
               this.bufferedSocketState0001.enqueueWrite(0, this.packetBufferState0002.payload.length, 1, this.packetBufferState0002.payload);
               this.dualNodeDequeState0004.addLast(resourceSupport004Local24, -7267);
-              resourceSupport004Local24 = (ResourceSupport004) (this.dualNodeDequeState0003.nextForward((byte) 20));
+              resourceSupport004Local24 = (NetworkArchiveRequest) (this.dualNodeDequeState0003.nextForward((byte) 20));
             }
             for (integerLocal1 = 0; integerLocal1 < 100; integerLocal1++) {
               integerLocal8 = this.bufferedSocketState0001.availableBytes(0);
@@ -520,24 +520,24 @@ final class NetworkArchiveRequestManager extends NetworkSupport003 {
                     longLocal19 = (long)integerLocal14 + ((long)integerLocal13 << 32);
                     objectLocal20 = null;
                     if (integerLocal18 == 0) {
-                      resourceSupport004Local21 = (ResourceSupport004) (this.dualNodeDequeState0002.beginForward(-2198));
+                      resourceSupport004Local21 = (NetworkArchiveRequest) (this.dualNodeDequeState0002.beginForward(-2198));
                       while (resourceSupport004Local21 != null) {
                         if (~resourceSupport004Local21.longState0003 == ~longLocal19) {
                           frameCompletedLocal27 = false;
                           break;
                         }
-                        resourceSupport004Local21 = (ResourceSupport004) (this.dualNodeDequeState0002.nextForward((byte) 20));
+                        resourceSupport004Local21 = (NetworkArchiveRequest) (this.dualNodeDequeState0002.nextForward((byte) 20));
                       }
                       frameRemainderLocal26 = !(frameCompletedLocal27);
                     }
                     if ((frameRemainderLocal26) &&
                       (frameCompletedLocal27)) {
-                      resourceSupport004Local21 = (ResourceSupport004) (this.dualNodeDequeState0004.beginForward(byteArgument1 - 2142));
+                      resourceSupport004Local21 = (NetworkArchiveRequest) (this.dualNodeDequeState0004.beginForward(byteArgument1 - 2142));
                       while (resourceSupport004Local21 != null) {
                         if (resourceSupport004Local21.longState0003 == longLocal19) {
                           break;
                         }
-                        resourceSupport004Local21 = (ResourceSupport004) (this.dualNodeDequeState0004.nextForward((byte) 20));
+                        resourceSupport004Local21 = (NetworkArchiveRequest) (this.dualNodeDequeState0004.nextForward((byte) 20));
                       }
                     }
                     if (resourceSupport004Local21 == null) {
@@ -578,8 +578,8 @@ final class NetworkArchiveRequestManager extends NetworkSupport003 {
             this.integerState0132 = this.integerState0132 + 1;
             this.integerState0131 = -2;
             this.bufferedSocketState0001 = null;
-            if (this.computeInteger0352((byte) -115) == 0 &&
-              this.computeInteger0353(0) == 0) {
+            if (this.getPriorityRequestCount((byte) -115) == 0 &&
+              this.getPrefetchRequestCount(0) == 0) {
               return true;
             }
             return false;
@@ -591,13 +591,13 @@ final class NetworkArchiveRequestManager extends NetworkSupport003 {
         }
     }
 
-    final void performAction0343(int integerArgument1) {
+    final void resetAfterValidationFailure(int integerArgument1) {
         Exception exception = null;
         Throwable caughtExceptionLocal2 = null;
         try {
           this.bufferedSocketState0001.close(0);
           if (integerArgument1 != 8192) {
-            this.computeBoolean0342((byte) -2);
+            this.pollNetwork((byte) -2);
           }
         } catch (java.lang.Exception caughtParameterLocal3) {
           caughtExceptionLocal2 = caughtParameterLocal3;
@@ -735,7 +735,7 @@ final class NetworkArchiveRequestManager extends NetworkSupport003 {
         }
     }
 
-    private final void performAction1292(byte byteArgument1) {
+    private final void sendProtocolSetup(byte byteArgument1) {
         try {
           IOException iOException = null;
           Throwable caughtExceptionLocal2 = null;

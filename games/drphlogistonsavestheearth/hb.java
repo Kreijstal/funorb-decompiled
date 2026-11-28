@@ -180,8 +180,8 @@ final class hb implements WidgetRenderer {
     }
 
     final static void a(int param0, java.awt.Canvas param1) {
-        tb.a(param0 ^ 4, (java.awt.Component) ((Object) param1));
-        DraggableWidgetContainer.a((java.awt.Component) ((Object) param1), 1);
+        tb.detachKeyboardListeners(param0 ^ 4, (java.awt.Component) ((Object) param1));
+        DraggableWidgetContainer.detachMouseListeners((java.awt.Component) ((Object) param1), 1);
         if (param0 != -5) {
           return;
         }

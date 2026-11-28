@@ -201,7 +201,7 @@ final class pe extends IntrusiveNode {
               if (!ProgressDialog.a(1, (byte) -113)) {
                 return false;
               }
-              GuestPlayConfirmationForm.field_S = e.field_c.h(-1);
+              GuestPlayConfirmationForm.field_S = e.field_c.readCipheredByte(-1);
               e.field_c.position = 0;
               ai.field_i = param0[GuestPlayConfirmationForm.field_S];
             }

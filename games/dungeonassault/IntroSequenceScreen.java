@@ -175,7 +175,7 @@ final class IntroSequenceScreen extends DungeonAssaultScreen {
           this.finishIntroSequence(true, 4096);
           return;
         }
-        while (ha.b((byte) 47)) {
+        while (ProxySocketConnector.b((byte) 47)) {
           if (mm.field_t != 13) {
             continue;
           }

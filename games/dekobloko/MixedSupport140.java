@@ -131,7 +131,7 @@ abstract class MixedSupport140 extends DualNode {
               if (!MixedSupport098.computeBoolean1219(integerArgument2 + 25973, 1)) {
                 return false;
               }
-              UiComponentPart009.integerState0150 = LabeledWidgetContainer.cipherPacketBufferState0001.computeInteger1644((byte) 81);
+              UiComponentPart009.integerState0150 = LabeledWidgetContainer.cipherPacketBufferState0001.readCipheredByte((byte) 81);
               LabeledWidgetContainer.cipherPacketBufferState0001.position = 0;
               NetworkSupport012.integerState0759 = integerArrayArgument1[UiComponentPart009.integerState0150];
             }

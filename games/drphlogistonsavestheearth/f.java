@@ -129,7 +129,7 @@ final class f extends IntrusiveNode {
                 stackIn_43_0 = (0 != (8 & var8));
                 fl.field_i = stackIn_43_0;
                 stackIn_46_0 = (0 != (var8 & 4));
-                ka.field_r = stackIn_46_0;
+                ProxySocketConnector.field_r = stackIn_46_0;
                 if (!fl.field_i) {
                 }
               }
@@ -137,9 +137,9 @@ final class f extends IntrusiveNode {
                 LabeledWidgetContainer.field_N.readUnsignedByte(31760);
                 LabeledWidgetContainer.field_N.readUnsignedByte(31760);
                 LabeledWidgetContainer.field_N.readInt(-108);
-                ka.field_n = LabeledWidgetContainer.field_N.readUnsignedShort(-788751192);
-                SoundCache.field_b = new byte[ka.field_n];
-                for (var9 = 0; var9 < ka.field_n; var9++) {
+                ProxySocketConnector.field_n = LabeledWidgetContainer.field_N.readUnsignedShort(-788751192);
+                SoundCache.field_b = new byte[ProxySocketConnector.field_n];
+                for (var9 = 0; var9 < ProxySocketConnector.field_n; var9++) {
                   SoundCache.field_b[var9] = LabeledWidgetContainer.field_N.readByte(-82);
                 }
               }
@@ -152,7 +152,7 @@ final class f extends IntrusiveNode {
                 p.field_d.a(nb.a(108), (byte) -50);
               } else {
                 if (AlphaWidgetContainer.field_H.b((byte) -98) == SingleChildWidgetContainer.field_A) {
-                  ka.field_q.a(nb.a(124), (byte) -50);
+                  ProxySocketConnector.field_q.a(nb.a(124), (byte) -50);
                 }
               }
               dk.field_b = false;
@@ -160,7 +160,7 @@ final class f extends IntrusiveNode {
                 MouseInput.a(nb.a(113), 110, var7_ref_String);
               }
               if (hb.field_g <= 0 &&
-                !ka.field_r) {
+                !ProxySocketConnector.field_r) {
                 try {
                   JavaScriptBridge.callWithoutArguments("unzap", nb.a(-114), true);
                 } catch (java.lang.Throwable decompiledCaughtParameter0) {

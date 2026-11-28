@@ -210,7 +210,7 @@ final class qi extends DefaultTextWidgetRenderer {
               var5 = (java.awt.Canvas) null;
               qi.a((java.awt.Canvas) null, 12, -85, -86);
             }
-            ca.field_d.drawImage(param2, param1, var4, -104);
+            SlimeCollisionSupport.field_d.drawImage(param2, param1, var4, -104);
             var4.dispose();
           } catch (java.lang.Exception decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
@@ -464,11 +464,11 @@ final class qi extends DefaultTextWidgetRenderer {
             qh.field_i[var4Lifetime3] = var17.readUnsignedShort(param1 - 1640543433);
           }
           var17.position = -(EmailFormatValidator.field_p * 8) + (param0.length - (7 + (-1 + var3) * 3));
-          he.field_k = new int[var3];
+          LeaderboardSubmission.field_k = new int[var3];
           for (var4Lifetime4 = 1; var4Lifetime4 < var3; var4Lifetime4++) {
-            he.field_k[var4Lifetime4] = var17.readUnsignedMedium((byte) -83);
-            if (0 == he.field_k[var4Lifetime4]) {
-              he.field_k[var4Lifetime4] = 1;
+            LeaderboardSubmission.field_k[var4Lifetime4] = var17.readUnsignedMedium((byte) -83);
+            if (0 == LeaderboardSubmission.field_k[var4Lifetime4]) {
+              LeaderboardSubmission.field_k[var4Lifetime4] = 1;
             }
           }
           var17.position = 0;

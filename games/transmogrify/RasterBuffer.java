@@ -49,7 +49,7 @@ abstract class RasterBuffer {
             RasterBuffer.a((java.awt.Canvas) null, -52);
           }
           BitPacketBuffer.attachKeyboardListeners((java.awt.Component) ((Object) param0), param1 - 13863);
-          jl.a((java.awt.Component) ((Object) param0), 0);
+          jl.attachMouseListeners((java.awt.Component) ((Object) param0), 0);
           if (null == ga.field_a) {
             return;
           }

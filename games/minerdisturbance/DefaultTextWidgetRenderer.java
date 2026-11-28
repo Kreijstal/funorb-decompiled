@@ -142,7 +142,7 @@ class DefaultTextWidgetRenderer implements WidgetRenderer, TextWidgetRenderer {
               }
               var7 = new SectorCacheStore(param1, UiWidget.field_z, GrowableIntArray.field_h[param1], 2097152);
             }
-            var9 = ValidatedTextField.field_U.a(param1, (SectorCacheStore) (var7), param2, 0, (SectorCacheStore) (var6));
+            var9 = ValidatedTextField.field_U.getOrCreateArchiveSource(param1, (SectorCacheStore) (var7), param2, 0, (SectorCacheStore) (var6));
             if (param3) {
               var9.b(-37);
             }

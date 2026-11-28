@@ -10,7 +10,7 @@ final class sj {
     static String field_d;
     static ub field_c;
     static RgbSprite field_b;
-    static sg field_a;
+    static ArchiveSourceManager field_a;
     static RgbSprite field_e;
 
     public static void clearStaticReferences(byte param0) {
@@ -76,8 +76,8 @@ final class sj {
               be.field_g = new BufferedSocket((java.net.Socket) (PasswordValidator.field_o.result), AccountServiceResult.field_k);
               var2 = new PacketBuffer(13);
               hm.a(ProxyAuthenticationRequiredException.field_c, TextHotspotBounds.field_s, var2, ByteStorage.field_a, 4122);
-              var2.d(87, 15);
-              var2.b(ik.field_a, 25251);
+              var2.writeByte(87, 15);
+              var2.writeInt(ik.field_a, 25251);
               be.field_g.queueWrite(13, var2.field_n, (byte) -70, 0);
               TextLayout.field_e = TextLayout.field_e + 1;
               cb.field_e = hn.correctedCurrentTimeMillis((byte) 80) + 30000L;
@@ -100,7 +100,7 @@ final class sj {
             if (TextLayout.field_e != 4) {
               return -1;
             }
-            EditableTextField.field_N.a(CrossfadingMidiPcmStream.field_q, (byte) 75, be.field_g);
+            EditableTextField.field_N.attachSocket(CrossfadingMidiPcmStream.field_q, (byte) 75, be.field_g);
             TextLayout.field_e = 0;
             PasswordValidator.field_o = null;
             be.field_g = null;

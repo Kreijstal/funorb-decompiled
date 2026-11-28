@@ -96,7 +96,7 @@ final class he {
             param1.field_J != null) {
             ug.a((byte) 122);
           }
-          wb.field_i = 0;
+          ArchiveNetworkClient.field_i = 0;
           var8 = 0;
           boolean decompiledNaturalLoopExit0 = false;
           while (!(decompiledNaturalLoopExit0 = (!(param1.field_H > var8)))) {
@@ -153,7 +153,7 @@ final class he {
                           dupTemp$0 = param1.field_J[var8];
                           bd.field_l[dupTemp$0] = bd.field_l[dupTemp$0] + 1;
                         }
-                        wb.field_i = wb.field_i + 1;
+                        ArchiveNetworkClient.field_i = ArchiveNetworkClient.field_i + 1;
                         break;
                       }
                     }

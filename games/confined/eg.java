@@ -190,7 +190,7 @@ final class eg {
                         if (decompiledFrameRemainder0) {
                           var20 = ij.a(0, '#', oh.field_e);
                           this.a(60, var20[1], 398, var20[2], var20[0], 0, -86);
-                          this.a(20, kd.field_s, 478, (String) null, (String) null, 1, -76);
+                          this.a(20, SocketArchiveNetworkClient.field_s, 478, (String) null, (String) null, 1, -76);
                           this.a(396, 500, new RgbSprite(64, 64), 0, 406);
                           decompiledFrameRemainder0 = (var5 != 0);
                         }

@@ -416,7 +416,7 @@ class EditableTextField extends InteractiveWidget {
         this.field_C = -1;
         try {
           this.field_A = param2;
-          this.field_o = eh.field_j.field_c;
+          this.field_o = ArchiveNetworkClient.field_j.field_c;
           this.setText((byte) -91, true, param0);
           this.field_I = true;
           this.field_F = dd.correctedCurrentTimeMillis(84);

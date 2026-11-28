@@ -1092,7 +1092,7 @@ final class DungeonBuilderScreen extends DungeonAssaultScreen {
           return;
         }
         while (true) {
-          if (!ha.b((byte) 47)) {
+          if (!ProxySocketConnector.b((byte) 47)) {
             if (null != this.field_b &&
               this.field_b.field_d) {
               var7 = (lf) (this.field_b);
@@ -1246,7 +1246,7 @@ final class DungeonBuilderScreen extends DungeonAssaultScreen {
           if (var3 == 49) {
             if (!ed.c(true) &&
               !gm.field_d.field_H) {
-              ac.field_B.d((byte) -106, 58);
+              ac.field_B.writeCipheredByte((byte) -106, 58);
             }
             if (ByteArrayPoolSupport.field_g) {
               gd.a(g.field_Hb, 0, 5, param0);
@@ -1313,11 +1313,11 @@ final class DungeonBuilderScreen extends DungeonAssaultScreen {
         this.field_p.addFirst(this.field_C, false);
         this.field_p.addFirst(this.field_P, false);
         this.field_p.addFirst(this.field_y, false);
-        this.field_A.field_n = (en) ((Object) new e(StandardContentDialog.a(new String[]{ValidationStatusWidget.field_U}, tp.field_w, 30496)));
-        this.field_L.field_n = (en) ((Object) new e(StandardContentDialog.a(new String[]{qk.field_d}, tp.field_w, param0 + 12257)));
-        this.field_C.field_n = (en) ((Object) new e(StandardContentDialog.a(new String[]{dj.field_c}, tp.field_w, param0 + 12257)));
-        this.field_P.field_n = (en) ((Object) new e(StandardContentDialog.a(new String[]{BufferedSocket.field_a}, tp.field_w, 30496)));
-        this.field_y.field_n = (en) ((Object) new e(StandardContentDialog.a(new String[]{eg.field_f}, tp.field_w, 30496)));
+        this.field_A.field_n = (en) ((Object) new e(StandardContentDialog.a(new String[]{ValidationStatusWidget.field_U}, SocketArchiveNetworkClient.field_w, 30496)));
+        this.field_L.field_n = (en) ((Object) new e(StandardContentDialog.a(new String[]{qk.field_d}, SocketArchiveNetworkClient.field_w, param0 + 12257)));
+        this.field_C.field_n = (en) ((Object) new e(StandardContentDialog.a(new String[]{dj.field_c}, SocketArchiveNetworkClient.field_w, param0 + 12257)));
+        this.field_P.field_n = (en) ((Object) new e(StandardContentDialog.a(new String[]{BufferedSocket.field_a}, SocketArchiveNetworkClient.field_w, 30496)));
+        this.field_y.field_n = (en) ((Object) new e(StandardContentDialog.a(new String[]{eg.field_f}, SocketArchiveNetworkClient.field_w, 30496)));
         this.field_O.field_n = (en) ((Object) new e((String) null, pm.field_o, ProgressMessageDialog.field_Lb));
         this.field_Q.field_n = (en) ((Object) new e((String) null, IntroSequenceScreen.field_u, DraggableWidgetContainer.field_M));
         this.b((byte) 26);
@@ -1391,7 +1391,7 @@ final class DungeonBuilderScreen extends DungeonAssaultScreen {
           boolean decompiledFrameCompleted0 = true;
           boolean decompiledFrameCompleted2 = true;
           if (!ed.c(true)) {
-            ac.field_B.d((byte) -127, 57);
+            ac.field_B.writeCipheredByte((byte) -127, 57);
             var2 = 0;
             while (var2 < 49) {
               stackIn_23_0 = 0;

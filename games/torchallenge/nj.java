@@ -49,11 +49,11 @@ final class nj {
         if (null != t.field_b) {
           t.field_b.snapAndPruneDialogs((byte) -37);
         }
-        if (oa.field_k == null) {
+        if (ArchiveSourceManager.field_k == null) {
           ValidatedTextField.n(19630);
           return;
         }
-        oa.field_k.freezeNormalProgressAnimation(100);
+        ArchiveSourceManager.field_k.freezeNormalProgressAnimation(100);
         ValidatedTextField.n(19630);
     }
 

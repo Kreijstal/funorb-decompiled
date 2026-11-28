@@ -241,7 +241,7 @@ final class sh extends fh {
             stackIn_69_1 = param1 ? 1 : 0;
             break;
           }
-          vh.a(stackIn_69_0, stackIn_69_1 != 0, param4, -6787, var8);
+          SocketArchiveNetworkClient.a(stackIn_69_0, stackIn_69_1 != 0, param4, -6787, var8);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -303,7 +303,7 @@ final class sh extends fh {
         RuntimeException var2 = null;
         try {
           var2_int = -20 / ((param0 + 78) / 48);
-          stackIn_1_0 = eh.a(2, GzipDecompressor.field_c, param1);
+          stackIn_1_0 = ArchiveNetworkClient.a(2, GzipDecompressor.field_c, param1);
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

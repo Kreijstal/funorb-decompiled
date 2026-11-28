@@ -53,23 +53,23 @@ final class IterableNodeHashTable implements Iterable {
         return (Iterator) ((Object) new NodeHashTableIterator(this));
     }
 
-    final static wn a(int param0, int param1, String param2) {
-        mn var3 = null;
+    final static SocketConnector a(int param0, int param1, String param2) {
+        ProxySocketConnector var3 = null;
         RuntimeException var3_ref = null;
-        mn stackIn_3_0 = null;
+        ProxySocketConnector stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var3 = new mn();
+          var3 = new ProxySocketConnector();
           if (param0 != 0) {
             IterableNodeHashTable.clearStaticReferences(-105);
           }
-          ((wn) ((Object) var3)).field_c = param1;
-          ((wn) ((Object) var3)).field_a = param2;
+          ((SocketConnector) ((Object) var3)).field_c = param1;
+          ((SocketConnector) ((Object) var3)).field_a = param2;
           stackIn_3_0 = var3;
-          return (wn) ((Object) stackIn_3_0);
+          return (SocketConnector) ((Object) stackIn_3_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3_ref = decompiledCaughtException;
@@ -136,7 +136,7 @@ final class IterableNodeHashTable implements Iterable {
         try {
           bb.a(param16, param10, param18, (byte) -105, param4);
           DirectByteStorage.a(param16, 1);
-          wm.a(args, param11, 0, param6, param17, param16, param3, param14, param15, param19, param12, param1, param7, param8, param13);
+          ArchiveNetworkClient.a(args, param11, 0, param6, param17, param16, param3, param14, param15, param19, param12, param1, param7, param8, param13);
           FullscreenNoticeType.a(param5, param9, param16, (byte) 91);
           if (param2 != 31) {
             return;

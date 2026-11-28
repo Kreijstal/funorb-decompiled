@@ -54,22 +54,22 @@ final class GrowableIntArray {
         this.field_f = var5;
     }
 
-    final static um a(int param0, byte param1, String param2) {
+    final static SocketConnector a(int param0, byte param1, String param2) {
         int var3_int = 0;
         RuntimeException var3 = null;
-        ha var4 = null;
-        ha stackIn_1_0 = null;
+        ProxySocketConnector var4 = null;
+        ProxySocketConnector stackIn_1_0 = null;
         RuntimeException stackIn_4_0 = null;
         StringBuilder stackIn_4_1 = null;
         String stackIn_5_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
           var3_int = -123 % ((-9 - param1) / 37);
-          var4 = new ha();
-          ((um) ((Object) var4)).field_f = param0;
-          ((um) ((Object) var4)).field_a = param2;
+          var4 = new ProxySocketConnector();
+          ((SocketConnector) ((Object) var4)).field_f = param0;
+          ((SocketConnector) ((Object) var4)).field_a = param2;
           stackIn_1_0 = var4;
-          return (um) ((Object) stackIn_1_0);
+          return (SocketConnector) ((Object) stackIn_1_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
@@ -226,7 +226,7 @@ final class GrowableIntArray {
           var1 = NetworkGameClient.field_C;
           synchronized (var1) {
             hl.field_g = hl.field_g + 1;
-            je.field_i = CombatState.field_x;
+            ArchiveSourceManager.field_i = CombatState.field_x;
             if (0 > GuestPlayConfirmationForm.field_M) {
               for (var2 = 0; var2 < 112; var2++) {
                 qk.field_e[var2] = false;

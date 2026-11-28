@@ -95,14 +95,14 @@ final class AccountRegistrationPanel extends DequeWidgetContainer implements Tex
         int var1 = 1;
         this.field_J = new te("", (WidgetEventListener) null, var1 != 0);
         this.field_I = new InteractiveWidget(NameSuggestionsPanel.field_K, (WidgetEventListener) null);
-        this.field_P = new InteractiveWidget(ch.field_g, (WidgetEventListener) null);
+        this.field_P = new InteractiveWidget(ProxySocketConnector.field_g, (WidgetEventListener) null);
         this.field_E.field_q = ValidatedTextField.field_Q;
         this.field_G.field_q = field_L;
         this.field_K.field_q = mk.field_l;
         this.field_O.field_q = bf.field_f;
         this.field_D.field_q = DisplayNameSelectionPanel.field_C;
         this.field_M.field_q = ProxyAuthenticationRequiredException.field_b;
-        this.field_J.field_q = wb.field_c;
+        this.field_J.field_q = ArchiveNetworkClient.field_c;
         this.field_E.setFieldValidator(new AccountNameAvailabilityValidator(this.field_E), (byte) 23);
         this.field_G.setFieldValidator(new EmailFormatValidator(this.field_G), (byte) 23);
         this.field_K.setFieldValidator(new ConfirmedEmailAvailabilityValidator(this.field_K, this.field_G), (byte) 23);
@@ -121,7 +121,7 @@ final class AccountRegistrationPanel extends DequeWidgetContainer implements Tex
         di dupTemp$1 = new di(10000536);
         this.field_D.field_i = (WidgetRenderer) ((Object) dupTemp$1);
         this.field_O.field_i = (WidgetRenderer) ((Object) dupTemp$1);
-        String var2 = da.a(new String[]{this.getLinkOpenMarkup((byte) 38), this.getLinkCloseMarkup(14359)}, di.field_y, false);
+        String var2 = MouseInputHandler.a(new String[]{this.getLinkOpenMarkup((byte) 38), this.getLinkCloseMarkup(14359)}, di.field_y, false);
         int var3 = 20;
         var3 = var3 + this.addLabeledField(170, 170, sa.field_a, this.field_G, var3);
         var3 = var3 + (this.addLabeledFieldWithValidationMessage(20, "", true, 170, var3, LoginPanel.field_C, this.field_K) + 5);

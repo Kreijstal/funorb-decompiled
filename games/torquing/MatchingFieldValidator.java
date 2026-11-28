@@ -113,7 +113,7 @@ final class MatchingFieldValidator extends TextFieldValidator {
             MatchingFieldValidator.clearStaticReferences((byte) 48);
           }
           ProgressDialog.field_Q = param2;
-          bo.field_e = param0;
+          ArchiveSourceManager.field_e = param0;
           ka.field_j = param1;
           cl.a(-67, SoftwareRasterizer.field_j / 2, SoftwareRasterizer.field_d / 2);
           nb.a(param2.field_s, -108, param0.field_s, param0.field_t + param0.field_s, param2.field_t + param2.field_s);

@@ -75,7 +75,7 @@ final class NetworkArchiveRequest extends ArchiveRequest {
           if (param2 != -98) {
             field_E = (String) null;
           }
-          ic.field_l = kd.field_p;
+          ProxySocketConnector.field_l = kd.field_p;
           if (param3 == 255) {
             stackIn_7_0 = !(BufferedRandomAccessFile.field_j >= 13);
             vk.field_g = hn.createAccountSuccessResult(stackIn_7_0, (byte) 105);

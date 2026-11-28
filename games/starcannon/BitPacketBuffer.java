@@ -87,7 +87,7 @@ final class BitPacketBuffer extends PacketBuffer {
         try {
           var4 = 112 / ((param1 + 62) / 42);
           param2 = s.a(param2, '_', "", (byte) -10);
-          var3 = vh.a(param0, 0);
+          var3 = SocketArchiveNetworkClient.a(param0, 0);
           stackIn_5_0 = (param2.indexOf(param0) != -1) || (param2.indexOf(var3) != -1);
           return stackIn_5_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

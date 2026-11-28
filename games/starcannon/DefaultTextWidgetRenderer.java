@@ -57,7 +57,7 @@ class DefaultTextWidgetRenderer implements WidgetRenderer, TextWidgetRenderer {
             var11 = this.getTextOriginY((byte) -95, param1, param3) + Math.max(0, var8.field_g);
             var12 = this.getTextOriginY((byte) -42, param1, param3) + Math.min(this.getTextAreaHeight(true, param1), Math.min(var8.field_c, var14.field_d.length <= var7 + 1 ? var8.field_c : var13.field_d[1 + var7].field_g));
             cl.a(true, param1.field_j + param3 + param1.field_f, param1.field_s + param2, param1.field_j + param3, param1.field_i + param1.field_s + param2);
-            eh.field_j.a(this.field_j, var10, var11, var12, var10, false);
+            ArchiveNetworkClient.field_j.a(this.field_j, var10, var11, var12, var10, false);
             wf.a(-82);
           }
         } catch (RuntimeException runtimeException) {
@@ -643,7 +643,7 @@ class DefaultTextWidgetRenderer implements WidgetRenderer, TextWidgetRenderer {
                 }
               }
               var15 = stackIn_21_0;
-              eh.field_j.a(this.field_m >>> 24, this.field_m, var13.field_g + param3.field_q + this.field_e + (param0 + param3.field_j), -var14 + var15, this.getUnalignedTextOriginX(param3, var14, (byte) 125, param1), var13.field_c, (byte) 113);
+              ArchiveNetworkClient.field_j.a(this.field_m >>> 24, this.field_m, var13.field_g + param3.field_q + this.field_e + (param0 + param3.field_j), -var14 + var15, this.getUnalignedTextOriginX(param3, var14, (byte) 125, param1), var13.field_c, (byte) 113);
             }
             wf.a(-76);
             return;

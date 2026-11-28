@@ -205,7 +205,7 @@ final class LevelCamera {
                 }
               }
             }
-            param0.a(0, -10140, var2, 24);
+            param0.writeBytes(0, -10140, var2, 24);
             return;
           } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
             decompiledCaughtException = decompiledCaughtParameter1;

@@ -585,19 +585,19 @@ class ci extends ei {
               var6 = new SectorCacheStore(255, kj.field_a, new BufferedRandomAccessFile(AccountRegistrationPanel.field_N.field_n, 12000, 0), 2097152);
             }
             if (null != kj.field_a) {
-              if (hj.field_n == null) {
-                hj.field_n = new BufferedRandomAccessFile[AccountRegistrationPanel.field_N.field_r.length];
+              if (ArchiveSourceManager.field_n == null) {
+                ArchiveSourceManager.field_n = new BufferedRandomAccessFile[AccountRegistrationPanel.field_N.field_r.length];
               }
-              if (null == hj.field_n[param1]) {
-                hj.field_n[param1] = new BufferedRandomAccessFile(AccountRegistrationPanel.field_N.field_r[param1], 12000, 0);
+              if (null == ArchiveSourceManager.field_n[param1]) {
+                ArchiveSourceManager.field_n[param1] = new BufferedRandomAccessFile(AccountRegistrationPanel.field_N.field_r[param1], 12000, 0);
                 AccountRegistrationPanel.field_N.field_r[param1] = null;
               }
-              var7 = new SectorCacheStore(param1, kj.field_a, hj.field_n[param1], 2097152);
+              var7 = new SectorCacheStore(param1, kj.field_a, ArchiveSourceManager.field_n[param1], 2097152);
             }
             if (param0 != -17288) {
               field_J = (String) null;
             }
-            var8 = FullscreenStatusDialog.field_fb.a((byte) 14, param4, param1, (SectorCacheStore) (var6), (SectorCacheStore) (var7));
+            var8 = FullscreenStatusDialog.field_fb.getOrCreateArchiveSource((byte) 14, param4, param1, (SectorCacheStore) (var6), (SectorCacheStore) (var7));
             if (param3) {
               var8.a((byte) 108);
             }

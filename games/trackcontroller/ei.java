@@ -10,7 +10,7 @@ final class ei extends IntrusiveNode {
     byte[] field_l;
     static String field_j;
 
-    final static void a(byte param0, java.awt.Component param1) {
+    final static void attachMouseListeners(byte param0, java.awt.Component param1) {
         try {
           if (param0 >= -119) {
             Sprite var3 = (Sprite) null;

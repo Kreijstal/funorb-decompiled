@@ -270,10 +270,10 @@ final class ba {
 
     final static void c(byte param0) {
         t.field_b.closeAllDialogs(param0 + 8389890);
-        if (oa.field_k == null) {
-          oa.field_k = new ProgressDialog(t.field_b, jh.field_a);
+        if (ArchiveSourceManager.field_k == null) {
+          ArchiveSourceManager.field_k = new ProgressDialog(t.field_b, jh.field_a);
         }
-        t.field_b.showDialog((byte) 53, (UiComponent) (oa.field_k));
+        t.field_b.showDialog((byte) 53, (UiComponent) (ArchiveSourceManager.field_k));
         if (param0 != 15) {
           ba.a(-4, 102, 101, -116, -9);
         }

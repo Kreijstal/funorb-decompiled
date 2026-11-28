@@ -16,7 +16,7 @@ final class TextLineMetrics {
         var4.field_m = new int[param1];
         StripedProgressWidget.field_O.addLast(false, var4);
         int var5 = 109 / ((72 - param3) / 46);
-        rd.a(param2, var4, (byte) -99);
+        MouseInputHandler.a(param2, var4, (byte) -99);
         return var4;
     }
 

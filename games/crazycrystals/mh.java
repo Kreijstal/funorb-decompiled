@@ -61,7 +61,7 @@ final class mh extends ik {
         RuntimeException var4 = null;
         var8 = CrazyCrystals.field_B;
         try {
-          var4_int = param1.d((byte) -114, param2);
+          var4_int = param1.readBits((byte) -114, param2);
           if (param0 != -2) {
             stackIn_3_0 = (short[]) null;
             return stackIn_3_0;
@@ -73,15 +73,15 @@ final class mh extends ik {
             param3.length != var4_int) {
             param3 = new short[var4_int];
           }
-          var5 = param1.d((byte) -63, 4);
-          var6 = (short)param1.d((byte) -94, 16);
+          var5 = param1.readBits((byte) -63, 4);
+          var6 = (short)param1.readBits((byte) -94, 16);
           if (var5 <= 0) {
             for (var7 = 0; var7 < var4_int; var7++) {
               param3[var7] = (short)var6;
             }
           } else {
             for (var7 = 0; var7 < var4_int; var7++) {
-              param3[var7] = (short)(var6 + param1.d((byte) -51, var5));
+              param3[var7] = (short)(var6 + param1.readBits((byte) -51, var5));
             }
           }
           stackIn_19_0 = (short[]) (param3);

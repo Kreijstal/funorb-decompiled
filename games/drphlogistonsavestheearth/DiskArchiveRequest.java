@@ -29,7 +29,7 @@ final class DiskArchiveRequest extends ArchiveRequest {
     final static void a(String param0, int param1, RgbSprite param2) {
         try {
           InteractiveWidget.field_D = param2;
-          df.field_b = param0;
+          ArchiveSourceManager.field_b = param0;
           if (param1 < 119) {
             RgbSprite var4 = (RgbSprite) null;
             DiskArchiveRequest.a((String) null, -46, (RgbSprite) null);

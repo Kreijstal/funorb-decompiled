@@ -134,7 +134,7 @@ final class TextHotspotBounds extends IntrusiveNode {
             fieldTemp$0 = FullscreenNoticeType.field_c;
             FullscreenNoticeType.field_c = FullscreenNoticeType.field_c + 1;
             var6.field_jb = fieldTemp$0;
-            va.field_f.addFirst(var6, -7044);
+            ArchiveNetworkClient.field_f.addFirst(var6, -7044);
           }
           if (null != var3Lifetime1) {
             var3Lifetime1 = ((String) (var3Lifetime1)).intern();
@@ -142,7 +142,7 @@ final class TextHotspotBounds extends IntrusiveNode {
           var6.field_gb = (String) (var3Lifetime1);
           var6.field_ib = var4_ref_StringLifetime1;
           var6.unlink(10);
-          var7 = (ia) (va.field_f.beginBackward((byte) 51));
+          var7 = (ia) (ArchiveNetworkClient.field_f.beginBackward((byte) 51));
           scanLoop1: while (true) {
             if (var7 != null) {
               stackIn_56_0 = var6;
@@ -150,7 +150,7 @@ final class TextHotspotBounds extends IntrusiveNode {
                 break scanLoop1;
               }
               if (je.a(stackIn_56_0, var7, true)) {
-                var7 = (ia) (va.field_f.nextBackward(-40));
+                var7 = (ia) (ArchiveNetworkClient.field_f.nextBackward(-40));
                 continue;
               }
             }
@@ -158,7 +158,7 @@ final class TextHotspotBounds extends IntrusiveNode {
             break;
           }
           if (stackIn_56_0 == null) {
-            va.field_f.addFirst(var6, -7044);
+            ArchiveNetworkClient.field_f.addFirst(var6, -7044);
             if (var8 == 0) {
               return;
             }

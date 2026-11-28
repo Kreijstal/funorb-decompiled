@@ -606,8 +606,8 @@ public final class BachelorFridge extends NetworkGameClient {
         iw.releaseStatics(-119);
         db.releaseStatics(0);
         ml.releaseStatics((byte) 63);
-        vm.a((byte) -87);
-        kb.releaseStatics(92);
+        ArchiveNetworkClient.a((byte) -87);
+        ArchiveSourceManager.releaseStatics(92);
         BufferedCacheFile.releaseStatics(-203);
         BufferedSocket.releaseStatics(96);
         ResourceArchive.releaseStatics(-19779);
@@ -747,9 +747,9 @@ public final class BachelorFridge extends NetworkGameClient {
         CreatureActor.releaseStatics(false);
         mk.releaseStatics(1);
         ua.releaseStatics(-9);
-        cl.releaseStatics(false);
+        SocketArchiveNetworkClient.releaseStatics(false);
         DualLinkDeque.releaseStatics(-1);
-        qfa.releaseStatics(97);
+        NetworkArchiveRequest.releaseStatics(97);
         SectorCacheStore.a(255);
         DiskCacheRequest.releaseStatics(103);
         fp.releaseStatics(12);

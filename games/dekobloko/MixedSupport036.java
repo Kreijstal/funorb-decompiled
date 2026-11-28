@@ -192,7 +192,7 @@ final class MixedSupport036 {
           integerLocal5 = DekoBlokoClient.obfuscationControl ? 1 : 0;
           try {
             if (MixedSupport119.networkSupport003State0003 != null) {
-              MixedSupport119.networkSupport003State0003.performAction0354((byte) 117);
+              MixedSupport119.networkSupport003State0003.close((byte) 117);
             }
             if (NetworkArchiveRequestManager.cacheWorkQueueState0003 != null) {
               NetworkArchiveRequestManager.cacheWorkQueueState0003.performAction0738((byte) -98);

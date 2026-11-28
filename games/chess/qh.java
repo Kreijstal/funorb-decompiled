@@ -5,7 +5,7 @@ final class qh {
     static eb field_b;
     static int[] field_e;
     static String field_d;
-    static wm field_c;
+    static ArchiveNetworkClient field_c;
     static int field_g;
     private int[] field_f;
     static int field_a;
@@ -13,7 +13,7 @@ final class qh {
     public static void clearStaticReferences(int param0) {
         field_e = null;
         if (param0 > -92) {
-          field_c = (wm) null;
+          field_c = (ArchiveNetworkClient) null;
         }
         field_b = null;
         field_c = null;
@@ -191,12 +191,12 @@ final class qh {
             if (var4 == -1) {
               throw new IllegalStateException();
             }
-            hj.field_l = new String[var4];
-            ArrayBlockSupport.copyObjectRange(n.field_d, 0, hj.field_l, 0, var4);
+            ArchiveSourceManager.field_l = new String[var4];
+            ArrayBlockSupport.copyObjectRange(n.field_d, 0, ArchiveSourceManager.field_l, 0, var4);
             em.field_m = new String[-1 - var4 + var3_int];
             ArrayBlockSupport.copyObjectRange(n.field_d, 1 + var4, em.field_m, 0, -1 + (-var4 + var3_int));
-            if (hj.field_l.length > NodeHashTableIterator.field_a.length) {
-              stackIn_66_0 = hj.field_l.length;
+            if (ArchiveSourceManager.field_l.length > NodeHashTableIterator.field_a.length) {
+              stackIn_66_0 = ArchiveSourceManager.field_l.length;
             } else {
               stackIn_66_0 = NodeHashTableIterator.field_a.length;
             }
@@ -227,10 +227,10 @@ final class qh {
             for (var8Lifetime2 = 0; var5 > var8Lifetime2; var8Lifetime2++) {
               stackIn_76_0 = ka.field_g;
               stackIn_76_1 = var8Lifetime2 + 6;
-              if (0 > -var5 + hj.field_l.length + var8Lifetime2) {
+              if (0 > -var5 + ArchiveSourceManager.field_l.length + var8Lifetime2) {
                 stackIn_77_2 = "";
               } else {
-                stackIn_77_2 = hj.field_l[-var5 + (hj.field_l.length + var8Lifetime2)];
+                stackIn_77_2 = ArchiveSourceManager.field_l[-var5 + (ArchiveSourceManager.field_l.length + var8Lifetime2)];
               }
               stackIn_76_0[stackIn_76_1] = stackIn_77_2;
             }
@@ -281,8 +281,8 @@ final class qh {
               }
             }
           }
-          ca.field_j = -(var3_intLifetime1 >> 1) + (var3_intLifetime1 + ob.field_C);
-          ai.field_j = ob.field_C - (var3_intLifetime1 >> 1);
+          ca.field_j = -(var3_intLifetime1 >> 1) + (var3_intLifetime1 + SocketArchiveNetworkClient.field_C);
+          ai.field_j = SocketArchiveNetworkClient.field_C - (var3_intLifetime1 >> 1);
           in.field_i = (kl.field_i + MouseWheelInput.field_b << 1) * AccountRegistrationPanel.field_R.field_f;
           for (var4Lifetime2 = 0; ka.field_g.length > var4Lifetime2; var4Lifetime2++) {
             stackIn_116_0 = in.field_i;
@@ -302,7 +302,7 @@ final class qh {
             if (var6Lifetime1 >= 0) {
               var7Lifetime2 = SingleChildWidgetContainer.a(true, param0, ka.field_g[var4Lifetime3]);
               var5Lifetime3 = var5Lifetime3 + MouseWheelInput.field_b;
-              var8Lifetime1 = ob.field_C - (var7Lifetime2 >> 1);
+              var8Lifetime1 = SocketArchiveNetworkClient.field_C - (var7Lifetime2 >> 1);
               cb.field_h[var4Lifetime3] = new int[4];
               cb.field_h[var4Lifetime3][0] = -m.field_d + var8Lifetime1;
               cb.field_h[var4Lifetime3][1] = var5Lifetime3;

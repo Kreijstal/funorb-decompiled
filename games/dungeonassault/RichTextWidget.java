@@ -283,11 +283,11 @@ class RichTextWidget extends InteractiveWidget {
               if (pb.field_G > 0) {
                 ld.field_g = true;
               }
-              ac.field_B.a(n.field_f, (byte) -86);
+              ac.field_B.setCipherSeed(n.field_f, (byte) -86);
               for (var8Lifetime1 = 0; 4 > var8Lifetime1; var8Lifetime1++) {
                 n.field_f[var8Lifetime1] = n.field_f[var8Lifetime1] + 50;
               }
-              ra.field_c.a(n.field_f, (byte) -108);
+              ra.field_c.setCipherSeed(n.field_f, (byte) -108);
               stackIn_77_0 = hc.field_c;
               return stackIn_77_0;
             }
@@ -303,7 +303,7 @@ class RichTextWidget extends InteractiveWidget {
               if (hc.field_c == 7) {
                 hc.field_c = 3;
               }
-              tp.field_v = ra.field_c.readString(-96);
+              SocketArchiveNetworkClient.field_v = ra.field_c.readString(-96);
               ResourceArchive.field_e = false;
               stackIn_87_0 = hc.field_c;
               return stackIn_87_0;
@@ -311,9 +311,9 @@ class RichTextWidget extends InteractiveWidget {
             if (null == sp.field_c) {
               if (ResourceArchive.field_e) {
                 if (ClientException.a(123) <= 30000L) {
-                  tp.field_v = fc.field_l;
+                  SocketArchiveNetworkClient.field_v = fc.field_l;
                 } else {
-                  tp.field_v = lh.field_r;
+                  SocketArchiveNetworkClient.field_v = lh.field_r;
                 }
                 ResourceArchive.field_e = false;
                 stackIn_96_0 = 3;

@@ -59,7 +59,7 @@ abstract class NetworkGameClient extends GameAppletShell {
         if (var2 == 0 ||
           var2 == 1) {
           if (mk.field_b[1]) {
-            kh.a(-1, 2);
+            MouseInputHandler.a(-1, 2);
           }
           if (mk.field_b[2]) {
             nb.a((byte) -52, 3);
@@ -71,7 +71,7 @@ abstract class NetworkGameClient extends GameAppletShell {
             gh.a(5, 21121);
           }
           if (mk.field_b[5]) {
-            gi.a(85, 6);
+            KeyboardInputHandler.a(85, 6);
           }
           if (mk.field_b[6]) {
             ArchiveIndex.a((byte) -69, 7);
@@ -305,7 +305,7 @@ abstract class NetworkGameClient extends GameAppletShell {
         if (af.field_u == 11) {
           if (fh.field_c != null && (!fh.field_c.ensureIndexLoaded((byte) 84) ||
             !fh.field_c.tryLoadAllGroups(-1))) {
-            pa.a(true, ValidationStatusIcon.a(ge.field_d, ic.field_g, false, fh.field_c), 0.0f);
+            pa.a(true, ValidationStatusIcon.a(ge.field_d, ProxySocketConnector.field_g, false, fh.field_c), 0.0f);
             decompiledFrameRemainder0 = false;
           }
           else {
@@ -477,7 +477,7 @@ abstract class NetworkGameClient extends GameAppletShell {
         int var3 = (1 & var2) != 0 ? 1 : 0;
         int var4 = rj.field_d - 1;
         byte[] var5 = new byte[var4];
-        kj.field_a.a(var5, 113, var4, param0);
+        kj.field_a.readCipheredBytes(var5, 113, var4, param0);
         Bzip2State.a(RichTextLayout.c(-98), FullscreenStatusDialog.a(var5, 88), 11050, var3 != 0);
     }
 
@@ -633,7 +633,7 @@ abstract class NetworkGameClient extends GameAppletShell {
             }
           }
           if (5 == var4) {
-            uf.a(13, RichTextLayout.c(-84));
+            SocketArchiveNetworkClient.a(13, RichTextLayout.c(-84));
           }
           if (var4 == 6 &&
             jb.field_q) {
@@ -649,7 +649,7 @@ abstract class NetworkGameClient extends GameAppletShell {
             dk.a(RichTextLayout.c(-77), (byte) -27);
           }
           if (var4 == 10) {
-            sn.field_c.d((byte) -51, 17);
+            sn.field_c.writeCipheredByte((byte) -51, 17);
           }
           if (var4 == 11) {
             ne.a(RichTextLayout.c(-108), 30433);

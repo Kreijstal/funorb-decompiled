@@ -51,13 +51,13 @@ final class EmailFormatValidator extends TextFieldValidator {
           NodeHashTableIterator.field_e = DiskCacheWorker.field_a;
           field_i = kk.field_d;
           kk.field_d = false;
-          ContentTransitionDialog.field_ab = ic.field_n;
+          ContentTransitionDialog.field_ab = ProxySocketConnector.field_n;
           wi.field_w = DualLinkNode.field_n;
           GameAppletShell.field_e = DiskArchiveRequest.field_G;
           if (param0 != 10525) {
             return;
           }
-          ic.field_n = 0;
+          ProxySocketConnector.field_n = 0;
         }
     }
 
@@ -69,7 +69,7 @@ final class EmailFormatValidator extends TextFieldValidator {
           if (!PacketBuffer.field_r.ensureIndexLoaded((byte) 107)) {
             return ge.field_d;
           }
-          return ic.field_g;
+          return ProxySocketConnector.field_g;
         }
         if (!hj.field_i.ensureIndexLoaded((byte) 111)) {
           return ul.field_d;

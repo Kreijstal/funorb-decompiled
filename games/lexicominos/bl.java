@@ -77,10 +77,10 @@ class bl {
               var2 = 1;
             }
           } else {
-            if (da.field_a == null) {
+            if (MouseInputHandler.field_a == null) {
               ff.field_b = sg.createFullscreenCanvas(0, 640, 480, 0, 0, jh.field_a);
             } else {
-              ff.field_b = da.field_a.b((byte) -74);
+              ff.field_b = MouseInputHandler.field_a.b((byte) -74);
               ka.a(2, -27844);
             }
             if (null == ff.field_b) {
@@ -99,7 +99,7 @@ class bl {
               var2 = 1;
             }
           } else {
-            if (da.field_a == null) {
+            if (MouseInputHandler.field_a == null) {
               ff.field_b = sg.createFullscreenCanvas(0, 640, 480, 0, 0, jh.field_a);
               if (null == ff.field_b) {
                 var2 = 3;
@@ -108,7 +108,7 @@ class bl {
                 ha.a(ff.field_b, (byte) 65);
               }
             } else {
-              ff.field_b = da.field_a.b((byte) -74);
+              ff.field_b = MouseInputHandler.field_a.b((byte) -74);
               ka.a(2, -27844);
               if (null == ff.field_b) {
                 var2 = 3;
@@ -119,7 +119,7 @@ class bl {
             }
           }
         }
-        if (null != da.field_a) {
+        if (null != MouseInputHandler.field_a) {
           return;
         }
         if (!ne.field_c) {

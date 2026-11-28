@@ -32,10 +32,10 @@ final class CipherPacketBuffer extends PacketBuffer {
         super(param0);
     }
 
-    final void a(int[] param0, int param1) {
+    final void setCipherSeed(int[] param0, int param1) {
         try {
           if (param1 != 8) {
-            this.c(true);
+            this.beginBitAccess(true);
           }
           this.field_r = new IsaacGenerator(param0);
         } catch (RuntimeException runtimeException) {
@@ -43,7 +43,7 @@ final class CipherPacketBuffer extends PacketBuffer {
         }
     }
 
-    final int a(int param0, boolean param1) {
+    final int readBits(int param0, boolean param1) {
         int incrementValue$0 = 0;
         int incrementValue$1 = 0;
         int var4 = 0;
@@ -90,13 +90,13 @@ final class CipherPacketBuffer extends PacketBuffer {
         return var5Lifetime1;
     }
 
-    final void c(boolean param0) {
+    final void beginBitAccess(boolean param0) {
         if (!param0) {
           this.field_x = 8 * this.field_i;
           return;
         }
         byte[] var3 = (byte[]) null;
-        this.a(0, 102, (byte[]) null, (byte) 55);
+        this.readCipheredBytes(0, 102, (byte[]) null, (byte) 55);
         this.field_x = 8 * this.field_i;
     }
 
@@ -113,12 +113,12 @@ final class CipherPacketBuffer extends PacketBuffer {
         }
     }
 
-    final void q(int param0) {
+    final void endBitAccess(int param0) {
         int var2 = -24 % ((55 - param0) / 40);
         this.field_i = (this.field_x + 7) / 8;
     }
 
-    final int p(int param0) {
+    final int readCipheredByte(int param0) {
         int fieldTemp$0 = 0;
         if (param0 == 64) {
           fieldTemp$0 = this.field_i;
@@ -128,7 +128,7 @@ final class CipherPacketBuffer extends PacketBuffer {
         return 42;
     }
 
-    final void a(int param0, int param1, byte[] param2, byte param3) {
+    final void readCipheredBytes(int param0, int param1, byte[] param2, byte param3) {
         int fieldTemp$0 = 0;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
@@ -164,7 +164,7 @@ final class CipherPacketBuffer extends PacketBuffer {
         }
     }
 
-    final void i(int param0, int param1) {
+    final void writeCipheredByte(int param0, int param1) {
         int fieldTemp$0 = this.field_i;
         this.field_i = this.field_i + 1;
         this.field_n[fieldTemp$0] = (byte)(this.field_r.nextInt(true) + param1);

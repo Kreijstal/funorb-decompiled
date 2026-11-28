@@ -113,7 +113,7 @@ final class LoginPanel extends DequeWidgetContainer implements TextFieldListener
           this.field_J = (EditableTextField) ((Object) new ValidatedTextField(param0, (WidgetEventListener) (this), 100));
           this.field_K = (EditableTextField) ((Object) new ValidatedTextField("", (WidgetEventListener) (this), 20));
           if (!this.field_G) {
-            this.field_I = new InteractiveWidget(q.field_f, (WidgetEventListener) null);
+            this.field_I = new InteractiveWidget(ProxySocketConnector.field_f, (WidgetEventListener) null);
             stackIn_18_1 = null;
             stackIn_18_2 = null;
             if (!this.field_E) {
@@ -256,7 +256,7 @@ final class LoginPanel extends DequeWidgetContainer implements TextFieldListener
                   ModalDialogHost.i(92);
                 } else {
                   if (this.field_E) {
-                    a.d((byte) 74);
+                    SocketArchiveNetworkClient.d((byte) 74);
                   } else {
                     td.a((byte) -11);
                   }
@@ -367,7 +367,7 @@ final class LoginPanel extends DequeWidgetContainer implements TextFieldListener
         if (cc.a(77) ||
           !(this.field_J.field_r.length() <= 0) &&
           !(this.field_K.field_r.length() <= 0)) {
-          tl.a(this.field_J.field_r, this.field_K.field_r, param0 ^ 9);
+          SocketConnector.a(this.field_J.field_r, this.field_K.field_r, param0 ^ 9);
         }
     }
 

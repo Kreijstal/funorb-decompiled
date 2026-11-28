@@ -173,12 +173,12 @@ final class AccountNameAvailabilityValidator extends TextFieldValidator {
               this.nameAvailable = var3.success;
               this.checkedName = param1;
             } else {
-              stackIn_12_0 = w.field_e;
+              stackIn_12_0 = ArchiveNetworkClient.field_e;
               return stackIn_12_0;
             }
           }
           if (this.nameAvailable) {
-            stackIn_17_0 = hm.field_b;
+            stackIn_17_0 = SocketConnector.field_b;
           } else {
             stackIn_17_0 = LabeledWidgetContainer.field_K;
           }

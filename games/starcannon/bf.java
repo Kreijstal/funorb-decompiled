@@ -222,8 +222,8 @@ final class bf extends IntrusiveNode {
     }
 
     final static int e(int param0) {
-        bl.field_b.a((byte) -71);
-        if (!jh.field_b.d((byte) -62)) {
+        bl.field_b.pollArchiveSources((byte) -71);
+        if (!jh.field_b.pollNetwork((byte) -62)) {
           return PcmOutputWorker.a((byte) 125);
         }
         if (param0 != 0) {
@@ -1497,7 +1497,7 @@ final class bf extends IntrusiveNode {
               if (var9Lifetime1 != 99) {
                 r.field_c = RichTextWidget.field_F;
                 il.field_g = -1;
-                vh.field_t = var9Lifetime1;
+                SocketArchiveNetworkClient.field_t = var9Lifetime1;
               } else {
                 NetworkGameClient.a(124, gd.a(true));
                 oj.field_g = new Boolean(vf.a(RichTextLayout.field_p, param3 - 6));
@@ -1527,7 +1527,7 @@ final class bf extends IntrusiveNode {
           }
           if (r.field_c == RichTextWidget.field_F &&
             Bzip2State.a(false)) {
-            if (255 == vh.field_t) {
+            if (255 == SocketArchiveNetworkClient.field_t) {
               var9_ref_String = RichTextLayout.field_p.readNullableString((byte) -86);
               if (var9_ref_String != null) {
                 lj.a(var9_ref_String, param3 ^ 121, ll.b(111));
@@ -1537,7 +1537,7 @@ final class bf extends IntrusiveNode {
             }
             ec.a((byte) 27);
             eb.field_f = false;
-            stackIn_52_0 = vh.field_t;
+            stackIn_52_0 = SocketArchiveNetworkClient.field_t;
             return stackIn_52_0;
           }
           if (null == m.field_b) {
@@ -2340,7 +2340,7 @@ final class bf extends IntrusiveNode {
                                 default:
                                   break regionExit1;
                                 case 22:
-                                  fl.field_f[this.field_l].draw(-64 + var4, -64 + this.field_u);
+                                  ProxySocketConnector.field_f[this.field_l].draw(-64 + var4, -64 + this.field_u);
                                   break regionExit1;
                               }
                             }

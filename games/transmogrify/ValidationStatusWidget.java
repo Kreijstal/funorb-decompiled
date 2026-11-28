@@ -133,10 +133,10 @@ final class ValidationStatusWidget extends RichTextWidget {
             TextLayout.field_c[param1] = new IndexedSprite(AccountRegistrationPanel.field_K.field_n, AccountRegistrationPanel.field_K.field_m, 256);
             TextLayout.field_c[param1].field_h = hk.field_a.field_y;
           }
-          if (null == tj.field_s) {
-            tj.field_s = new Sprite(AccountRegistrationPanel.field_K.field_n, AccountRegistrationPanel.field_K.field_m);
+          if (null == SocketArchiveNetworkClient.field_s) {
+            SocketArchiveNetworkClient.field_s = new Sprite(AccountRegistrationPanel.field_K.field_n, AccountRegistrationPanel.field_K.field_m);
           }
-          tj.field_s.bindAsRenderTarget();
+          SocketArchiveNetworkClient.field_s.bindAsRenderTarget();
           SoftwareRasterizer.clearRaster();
           param2.draw(param3, -param2.y, 1, -param2.x);
           var11 = TextLayout.field_c[param1];

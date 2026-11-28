@@ -165,7 +165,7 @@ final class eh {
           int var1_int = 0;
           int var3 = Transmogrify.field_A ? 1 : 0;
           if (null != oh.field_h) {
-            oh.field_h.a(-2025316960);
+            oh.field_h.close(-2025316960);
           }
           if (fd.field_d != null) {
             fd.field_d.shutdown(-20444);

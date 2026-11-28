@@ -592,14 +592,14 @@ final class dd extends ql {
         var7 = HostileSpawn.field_I ? 1 : 0;
         var8 = TextHotspotBounds.field_m[0].field_j;
         if (this.field_d.field_l == 0) {
-          var3 = ih.a(var8, (byte) -77, this.field_m);
+          var3 = SocketArchiveNetworkClient.a(var8, (byte) -77, this.field_m);
           if (var3 <= 4) {
             this.field_d.field_l = this.field_m.field_e * 24 + 24;
           }
         }
         if (this.field_p.field_l == 0) {
           for (var4_int = 0; var4_int < this.field_h.length; var4_int++) {
-            var3Lifetime1 = ih.a(var8, (byte) -102, this.field_h[var4_int]);
+            var3Lifetime1 = SocketArchiveNetworkClient.a(var8, (byte) -102, this.field_h[var4_int]);
             if (var3Lifetime1 < 2) {
               if (var4_int >= 4) {
                 this.field_p.field_l = -200 + 24 * (-2 + this.field_h[var4_int].field_e);
@@ -616,7 +616,7 @@ final class dd extends ql {
         }
         if (9 == ha.field_t &&
           !this.field_g) {
-          var3Lifetime2 = ih.a(var8, (byte) -117, this.field_l);
+          var3Lifetime2 = SocketArchiveNetworkClient.a(var8, (byte) -117, this.field_l);
           if (var3Lifetime2 < 2) {
             this.field_g = true;
             ca.a((double)(this.field_l.field_e + 1), 0, (double)this.field_l.field_g + 1.5, true, 128);

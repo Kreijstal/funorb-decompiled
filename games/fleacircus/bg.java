@@ -111,7 +111,7 @@ final class bg {
           }
           var4_int = param1.getGroupIdByName(param3, (byte) -100);
           var5 = param1.getFileIdByName(param0, (byte) -15, var4_int);
-          stackIn_4_0 = w.a(-37, var5, var4_int, param1);
+          stackIn_4_0 = ArchiveNetworkClient.a(-37, var5, var4_int, param1);
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

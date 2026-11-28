@@ -268,14 +268,14 @@ final class AccountRequestState {
             }
           }
           cc.field_d = dl.field_g + var3_intLifetime1 - (var3_intLifetime1 >> 1);
-          cc.field_e = TextFieldValidator.field_e.field_i * (e.field_i + a.field_o << 1);
+          cc.field_e = TextFieldValidator.field_e.field_i * (e.field_i + SocketArchiveNetworkClient.field_o << 1);
           cb.field_i = dl.field_g - (var3_intLifetime1 >> 1);
           for (var4Lifetime2 = 0; me.field_a.length > var4Lifetime2; var4Lifetime2++) {
             stackIn_115_0 = cc.field_e;
             if (0 > wd.field_d[var4Lifetime2]) {
               stackIn_116_1 = sa.field_d;
             } else {
-              stackIn_116_1 = tl.field_b;
+              stackIn_116_1 = SocketConnector.field_b;
             }
             cc.field_e = stackIn_115_0 + stackIn_116_1;
           }
@@ -294,8 +294,8 @@ final class AccountRequestState {
               ud.field_a[var4Lifetime3][0] = var9 - tc.field_b;
               ud.field_a[var4Lifetime3][1] = var5Lifetime3;
               ud.field_a[var4Lifetime3][2] = var8Lifetime1 + (tc.field_b << 1);
-              var5Lifetime3 = var5Lifetime3 + ((a.field_o << 1) + e.field_i + tl.field_b);
-              ud.field_a[var4Lifetime3][3] = (a.field_o << 1) + tl.field_b;
+              var5Lifetime3 = var5Lifetime3 + ((SocketArchiveNetworkClient.field_o << 1) + e.field_i + SocketConnector.field_b);
+              ud.field_a[var4Lifetime3][3] = (SocketArchiveNetworkClient.field_o << 1) + SocketConnector.field_b;
             } else {
               var5Lifetime3 = var5Lifetime3 + sa.field_d;
             }

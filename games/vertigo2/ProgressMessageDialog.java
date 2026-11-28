@@ -72,7 +72,7 @@ class ProgressMessageDialog extends ContentTransitionDialog implements WidgetAct
             for (var8Lifetime1 = param5; var8Lifetime1 < var7_intLifetime1; var8Lifetime1++) {
               var9Lifetime1 = DropTargetWidgetContainer.field_I[var8Lifetime1];
               var10Lifetime1 = DropTargetWidgetContainer.field_I[1 + var8Lifetime1];
-              if (eg.a(param6, var9Lifetime1, (byte) 98, var10Lifetime1)) {
+              if (SocketArchiveNetworkClient.a(param6, var9Lifetime1, (byte) 98, var10Lifetime1)) {
                 DropTargetWidgetContainer.field_I[var8Lifetime1] = var10Lifetime1;
                 DropTargetWidgetContainer.field_I[1 + var8Lifetime1] = var9Lifetime1;
               }
@@ -212,7 +212,7 @@ class ProgressMessageDialog extends ContentTransitionDialog implements WidgetAct
                 var10[var12Lifetime1 + var14] = param2.field_z[var14];
               } else {
                 var16 = wm.field_k.a(1, var15);
-                var8[var14 + var12Lifetime1] = var16.h(tk.bitwiseXor(param3, 43));
+                var8[var14 + var12Lifetime1] = var16.h(ArchiveNetworkClient.bitwiseXor(param3, 43));
                 var9[var12Lifetime1 + var14] = param2.field_u[var14];
                 if (var9[var12Lifetime1 + var14] <= 0) {
                   var13 = (char)(var13 + 1);

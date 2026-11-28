@@ -116,7 +116,7 @@ final class AgeValidator extends TextFieldValidator {
           }
           if (!TextLayout.field_c &&
             dd.field_l < BufferedSocket.field_c &&
-            df.field_o) {
+            ArchiveSourceManager.field_o) {
             oh.field_e = ClientException.field_c;
             DraggableWidgetContainer.field_Q = Bzip2State.field_B;
             dd.field_l = 0;

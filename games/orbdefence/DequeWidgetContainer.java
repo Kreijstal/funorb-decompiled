@@ -545,11 +545,11 @@ class DequeWidgetContainer extends UiWidget implements WidgetContainerMarker {
               stackIn_40_0 = null;
             }
             var21 = stackIn_40_0;
-            var22 = a.field_t[var15Lifetime1];
+            var22 = SocketArchiveNetworkClient.field_t[var15Lifetime1];
             var23 = NetworkGameClient.field_x[var15Lifetime1];
-            var24 = a.field_t[var16];
+            var24 = SocketArchiveNetworkClient.field_t[var16];
             var25 = NetworkGameClient.field_x[var16];
-            var26 = a.field_t[var17];
+            var26 = SocketArchiveNetworkClient.field_t[var17];
             var27 = NetworkGameClient.field_x[var17];
             if (var18 == var19 &&
               var19 == var20) {

@@ -80,8 +80,8 @@ class IntrusiveNode {
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          AccountRegistrationPanel.a((java.awt.Component) ((Object) param1), (byte) 83);
-          StandardContentDialog.a((java.awt.Component) ((Object) param1), 122);
+          AccountRegistrationPanel.detachKeyboardListeners((java.awt.Component) ((Object) param1), (byte) 83);
+          StandardContentDialog.detachMouseListeners((java.awt.Component) ((Object) param1), 122);
           if (param0 >= -4) {
             field_f = 38;
           }

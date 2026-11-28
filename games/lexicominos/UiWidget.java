@@ -497,18 +497,18 @@ class UiWidget extends IntrusiveNode {
         var5 = this.isFocused(18337) ? 1 : 0;
         if (!param1) {
           if (var5 == 0) {
-            pg.field_f = ul.field_o;
+            ArchiveSourceManager.field_f = ul.field_o;
             sj.a(0, this.getTooltipText(param3 - 2));
             return param1;
           }
           if (NetworkGameClient.field_z == 0) {
-            pg.field_f = ul.field_o;
+            ArchiveSourceManager.field_f = ul.field_o;
             sj.a(0, this.getTooltipText(param3 - 2));
             return param1;
           }
           this.blur((byte) -122);
           if (var7 == 0) {
-            pg.field_f = ul.field_o;
+            ArchiveSourceManager.field_f = ul.field_o;
             sj.a(0, this.getTooltipText(param3 - 2));
             return param1;
           }
@@ -517,7 +517,7 @@ class UiWidget extends IntrusiveNode {
           if (var5 == 0) {
             if (0 == NetworkGameClient.field_z) {
               if (0 == ul.field_o &&
-                0 != pg.field_f) {
+                0 != ArchiveSourceManager.field_f) {
                 this.pointerReleased(this, bk.field_b, param2, 0, param0, ResourceArchive.field_e);
                 var8 = ArchiveRequest.field_t;
                 var6 = var8;
@@ -528,7 +528,7 @@ class UiWidget extends IntrusiveNode {
                   ArchiveRequest.field_t = null;
                 }
               }
-              pg.field_f = ul.field_o;
+              ArchiveSourceManager.field_f = ul.field_o;
               sj.a(0, this.getTooltipText(param3 - 2));
               return param1;
             }
@@ -537,12 +537,12 @@ class UiWidget extends IntrusiveNode {
             } else {
             }
             if (0 != ul.field_o) {
-              pg.field_f = ul.field_o;
+              ArchiveSourceManager.field_f = ul.field_o;
               sj.a(0, this.getTooltipText(param3 - 2));
               return param1;
             }
-            if (0 == pg.field_f) {
-              pg.field_f = ul.field_o;
+            if (0 == ArchiveSourceManager.field_f) {
+              ArchiveSourceManager.field_f = ul.field_o;
               sj.a(0, this.getTooltipText(param3 - 2));
               return param1;
             }
@@ -555,7 +555,7 @@ class UiWidget extends IntrusiveNode {
               }
               ArchiveRequest.field_t = null;
             }
-            pg.field_f = ul.field_o;
+            ArchiveSourceManager.field_f = ul.field_o;
             sj.a(0, this.getTooltipText(param3 - 2));
             return param1;
           }
@@ -563,12 +563,12 @@ class UiWidget extends IntrusiveNode {
         }
         if (0 == NetworkGameClient.field_z) {
           if (0 != ul.field_o) {
-            pg.field_f = ul.field_o;
+            ArchiveSourceManager.field_f = ul.field_o;
             sj.a(0, this.getTooltipText(param3 - 2));
             return param1;
           }
-          if (0 == pg.field_f) {
-            pg.field_f = ul.field_o;
+          if (0 == ArchiveSourceManager.field_f) {
+            ArchiveSourceManager.field_f = ul.field_o;
             sj.a(0, this.getTooltipText(param3 - 2));
             return param1;
           }
@@ -581,7 +581,7 @@ class UiWidget extends IntrusiveNode {
             }
             ArchiveRequest.field_t = null;
           }
-          pg.field_f = ul.field_o;
+          ArchiveSourceManager.field_f = ul.field_o;
           sj.a(0, this.getTooltipText(param3 - 2));
           return param1;
         }
@@ -593,12 +593,12 @@ class UiWidget extends IntrusiveNode {
             if (var7 != 0) {
               param1 = false;
               if (0 != ul.field_o) {
-                pg.field_f = ul.field_o;
+                ArchiveSourceManager.field_f = ul.field_o;
                 sj.a(0, this.getTooltipText(param3 - 2));
                 return param1;
               }
-              if (0 == pg.field_f) {
-                pg.field_f = ul.field_o;
+              if (0 == ArchiveSourceManager.field_f) {
+                ArchiveSourceManager.field_f = ul.field_o;
                 sj.a(0, this.getTooltipText(param3 - 2));
                 return param1;
               }
@@ -610,19 +610,19 @@ class UiWidget extends IntrusiveNode {
                 }
                 ArchiveRequest.field_t = null;
               }
-              pg.field_f = ul.field_o;
+              ArchiveSourceManager.field_f = ul.field_o;
               sj.a(0, this.getTooltipText(param3 - 2));
               return param1;
             }
           }
         }
         if (0 != ul.field_o) {
-          pg.field_f = ul.field_o;
+          ArchiveSourceManager.field_f = ul.field_o;
           sj.a(0, this.getTooltipText(param3 - 2));
           return param1;
         }
-        if (0 == pg.field_f) {
-          pg.field_f = ul.field_o;
+        if (0 == ArchiveSourceManager.field_f) {
+          ArchiveSourceManager.field_f = ul.field_o;
           sj.a(0, this.getTooltipText(param3 - 2));
           return param1;
         }
@@ -634,7 +634,7 @@ class UiWidget extends IntrusiveNode {
           }
           ArchiveRequest.field_t = null;
         }
-        pg.field_f = ul.field_o;
+        ArchiveSourceManager.field_f = ul.field_o;
         sj.a(0, this.getTooltipText(param3 - 2));
         return param1;
     }

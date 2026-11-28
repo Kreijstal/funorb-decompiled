@@ -23,9 +23,9 @@ class dd extends DefaultTextWidgetRenderer {
     final static boolean c(byte param0) {
         if (param0 < 6) {
           dd.clearStaticReferences(30);
-          return ij.field_d.a(-119);
+          return ij.field_d.loadMasterIndex(-119);
         }
-        return ij.field_d.a(-119);
+        return ij.field_d.loadMasterIndex(-119);
     }
 
     final static AccountServiceResult pollAccountCreationResult(byte param0) {

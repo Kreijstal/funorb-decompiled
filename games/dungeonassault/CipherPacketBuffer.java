@@ -9,7 +9,7 @@ final class CipherPacketBuffer extends PacketBuffer {
     static String field_x;
     static wh field_u;
 
-    final void d(byte param0, int param1) {
+    final void writeCipheredByte(byte param0, int param1) {
         int fieldTemp$0 = this.position;
         this.position = this.position + 1;
         this.payload[fieldTemp$0] = (byte)(param1 + this.field_v.nextInt(26979));
@@ -18,7 +18,7 @@ final class CipherPacketBuffer extends PacketBuffer {
         }
     }
 
-    final void a(int[] param0, byte param1) {
+    final void setCipherSeed(int[] param0, byte param1) {
         try {
           int var3_int = -58 % ((-42 - param1) / 36);
           this.field_v = new IsaacRandom(param0);
@@ -27,7 +27,7 @@ final class CipherPacketBuffer extends PacketBuffer {
         }
     }
 
-    final int m(int param0) {
+    final int readCipheredByte(int param0) {
         if (param0 != 255) {
           return -17;
         }
@@ -36,7 +36,7 @@ final class CipherPacketBuffer extends PacketBuffer {
         return 255 & this.payload[fieldTemp$0] - this.field_v.nextInt(26979);
     }
 
-    final int j(int param0, int param1) {
+    final int readBits(int param0, int param1) {
         int incrementValue$0 = 0;
         int var7 = DungeonAssault.field_K;
         int var3 = this.field_t >> 3;
@@ -59,10 +59,10 @@ final class CipherPacketBuffer extends PacketBuffer {
         return var5;
     }
 
-    final void f(byte param0) {
+    final void endBitAccess(byte param0) {
         this.position = (this.field_t + 7) / 8;
         if (param0 <= 19) {
-          this.f((byte) -32);
+          this.endBitAccess((byte) -32);
         }
     }
 
@@ -74,7 +74,7 @@ final class CipherPacketBuffer extends PacketBuffer {
         super(param0);
     }
 
-    final void a(int param0, byte param1, int param2, byte[] param3) {
+    final void readCipheredBytes(int param0, byte param1, int param2, byte[] param3) {
         int var5_int = 0;
         int fieldTemp$0 = 0;
         RuntimeException stackIn_9_0 = null;
@@ -91,7 +91,7 @@ final class CipherPacketBuffer extends PacketBuffer {
             param3[var5_int + param0] = (byte)(this.payload[fieldTemp$0] - this.field_v.nextInt(26979));
           }
           if (param1 != 95) {
-            this.e(true);
+            this.beginBitAccess(true);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -117,7 +117,7 @@ final class CipherPacketBuffer extends PacketBuffer {
         }
     }
 
-    final void e(boolean param0) {
+    final void beginBitAccess(boolean param0) {
         if (param0) {
           return;
         }

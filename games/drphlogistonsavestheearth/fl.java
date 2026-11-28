@@ -3,7 +3,7 @@
  */
 final class fl {
     int field_c;
-    static df field_a;
+    static ArchiveSourceManager field_a;
     static int field_f;
     int field_b;
     int field_g;
@@ -37,7 +37,7 @@ final class fl {
 
     final static boolean b(int param0) {
         if (param0 < 6) {
-          field_a = (df) null;
+          field_a = (ArchiveSourceManager) null;
           return kc.field_k;
         }
         return kc.field_k;

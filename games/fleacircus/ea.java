@@ -62,7 +62,7 @@ final class ea {
         SoftwareRasterizer.drawRectangleOutlineAlpha(param5 - 4, param2 - 4, param4, param3, 16711680, param0 + 128);
     }
 
-    final static void a(int param0, java.awt.Component param1) {
+    final static void attachKeyboardListeners(int param0, java.awt.Component param1) {
         param1.setFocusTraversalKeysEnabled(false);
         if (param0 < 111) {
           return;

@@ -74,8 +74,8 @@ final class DialogMessagePane extends DequeWidgetContainer implements WidgetActi
         bb.field_b.a(var5 + 388 - la.field_a.field_h, -10 + param4);
         la.field_a.a(-var5 + 253, -51 + param4 + param1);
         MusicPatchEnvelope.field_o.a(-MusicPatchEnvelope.field_o.field_h + var5 + 388, -51 + param4 + param1);
-        cl.field_t.a(-var5 + 253, 54 + param4, cl.field_t.field_h, param1 - 105);
-        tb.field_d.a(-la.field_a.field_h + 388 + var5, 54 + param4, cl.field_t.field_h, param1 - 105);
+        SocketArchiveNetworkClient.field_t.a(-var5 + 253, 54 + param4, SocketArchiveNetworkClient.field_t.field_h, param1 - 105);
+        tb.field_d.a(-la.field_a.field_h + 388 + var5, 54 + param4, SocketArchiveNetworkClient.field_t.field_h, param1 - 105);
     }
 
     final static void a(boolean param0, int param1) {

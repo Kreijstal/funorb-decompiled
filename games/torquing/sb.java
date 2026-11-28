@@ -34,7 +34,7 @@ final class sb extends IntrusiveNode {
         if (param0 != -80) {
           return true;
         }
-        return BufferedSocket.field_n.a((byte) -74);
+        return BufferedSocket.field_n.loadMasterIndex((byte) -74);
     }
 
     final void c(int param0) {

@@ -1277,7 +1277,7 @@ final class RenderingSupport007 {
                 MixedSupport121.secondaryNodeHashTableState0005.put(sceneWidgetPart013Local14, -1, (long)integerLocal11);
               }
               MouseInput.performAction1806(true, cipherPacketBufferLocal7, sceneWidgetPart013Local14, (byte) -89);
-              ResourceSupport004.performAction1249(sceneWidgetPart013Local14, (byte) -50);
+              NetworkArchiveRequest.performAction1249(sceneWidgetPart013Local14, (byte) -50);
               return;
             }
             if (integerLocal9 == 9) {
@@ -1320,7 +1320,7 @@ final class RenderingSupport007 {
                     sceneWidgetPart013Local27.integerState0846 = MixedSupport089.integerState0547;
                     sceneWidgetPart013Local27.integerState0844 = integerLocal53;
                   }
-                  ResourceSupport004.performAction1249(sceneWidgetPart013Local27, (byte) -50);
+                  NetworkArchiveRequest.performAction1249(sceneWidgetPart013Local27, (byte) -50);
                 }
                 return;
               }
@@ -1441,7 +1441,7 @@ final class RenderingSupport007 {
             } else {
               sceneWidgetPart013Local34.booleanState0200 = true;
             }
-            ResourceSupport004.performAction1249(sceneWidgetPart013Local34, (byte) -50);
+            NetworkArchiveRequest.performAction1249(sceneWidgetPart013Local34, (byte) -50);
             return;
           }
           sceneWidgetPart012Local12 = (SceneWidgetPart012) (MixedSupport091.nodeDequeState0021.beginBackward((byte) 117));

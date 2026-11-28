@@ -129,12 +129,12 @@ final class SceneWidgetPart012 extends SceneWidget {
     }
 
     final static void performAction1609(boolean booleanArgument1, java.awt.Canvas canvasArgument2) {
-        ReturnedShape.performAction1430(12, (java.awt.Component) ((Object) canvasArgument2));
+        ReturnedShape.detachKeyboardListeners(12, (java.awt.Component) ((Object) canvasArgument2));
         if (booleanArgument1) {
           return;
         }
         try {
-          BirthDateValidator.performAction1349((byte) -35, (java.awt.Component) ((Object) canvasArgument2));
+          BirthDateValidator.detachMouseListeners((byte) -35, (java.awt.Component) ((Object) canvasArgument2));
           if (MixedSupport127.mouseWheelInputState0001 != null) {
             MixedSupport127.mouseWheelInputState0001.detachFromComponent(68, (java.awt.Component) ((Object) canvasArgument2));
           }

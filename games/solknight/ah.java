@@ -89,7 +89,7 @@ final class ah {
         int var4Lifetime1;
         var6 = SolKnight.field_L ? 1 : 0;
         var2 = -ArchiveSource.field_c + 320;
-        var3 = -SingleChildWidgetContainer.field_E + (-ea.field_p[kb.field_b] + 720);
+        var3 = -SingleChildWidgetContainer.field_E + (-SocketArchiveNetworkClient.field_p[kb.field_b] + 720);
         if (param0) {
           var4 = kd.field_b[kb.field_b];
           if (kb.field_b == 1) {

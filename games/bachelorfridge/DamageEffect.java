@@ -199,7 +199,7 @@ final class DamageEffect extends EventEffect {
               ProxySocketConnector.field_g.writePrefixedString(var14, param0 ^ -73);
               ProxySocketConnector.field_g.writePrefixedString(var8, 104);
               var15 = (CharSequence) ((Object) param4);
-              ProxySocketConnector.field_g.writePrefixedString(qfa.a(20, var15), 117);
+              ProxySocketConnector.field_g.writePrefixedString(NetworkArchiveRequest.a(20, var15), 117);
               ProxySocketConnector.field_g.writeShort(param1, -119);
               ProxySocketConnector.field_g.writeByte(param2, param0 + 15);
               ProxySocketConnector.field_g.writeByte(var9, 0);

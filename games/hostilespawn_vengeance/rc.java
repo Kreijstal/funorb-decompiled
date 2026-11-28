@@ -247,7 +247,7 @@ final class rc {
           var2 = var9.readUnsignedByte(32270);
           if (var2 != 0) {
             if (var2 == 1) {
-              var3 = var9.d(param0 ^ 8193);
+              var3 = var9.readInt(param0 ^ 8193);
               var4 = (m) (wk.field_g.beginForward(-90));
               while (var4 != null) {
                 if (~var3 != ~var4.field_o) {
@@ -276,10 +276,10 @@ final class rc {
               var5 = null;
             } else {
               var13 = new byte[var4_int];
-              var9.a(var4_int, 0, var13, -18181);
+              var9.readBytes(var4_int, 0, var13, -18181);
             }
             var9.field_i = var9.field_i + 4;
-            if (!var9.c((byte) -4)) {
+            if (!var9.verifyTrailingCrc32((byte) -4)) {
               le.c((byte) 119);
               return;
             }

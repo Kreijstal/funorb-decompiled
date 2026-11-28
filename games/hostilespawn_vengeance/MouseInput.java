@@ -31,7 +31,7 @@ final class MouseInput implements java.awt.event.MouseListener, java.awt.event.M
         RuntimeException var2 = null;
         try {
           if (null != jc.field_b) {
-            sg.field_o = 0;
+            ArchiveSourceManager.field_o = 0;
             lc.field_d = param0.getX();
             cm.field_b = param0.getY();
             rg.field_e = true;
@@ -143,7 +143,7 @@ final class MouseInput implements java.awt.event.MouseListener, java.awt.event.M
         RuntimeException var2 = null;
         try {
           if (jc.field_b != null) {
-            sg.field_o = 0;
+            ArchiveSourceManager.field_o = 0;
             rf.field_o = param0.getX();
             pa.field_l = param0.getY();
             hn.correctedCurrentTimeMillis((byte) 80);
@@ -192,7 +192,7 @@ final class MouseInput implements java.awt.event.MouseListener, java.awt.event.M
         RuntimeException var2 = null;
         try {
           if (jc.field_b != null) {
-            sg.field_o = 0;
+            ArchiveSourceManager.field_o = 0;
             lc.field_d = param0.getX();
             cm.field_b = param0.getY();
             rg.field_e = true;
@@ -220,7 +220,7 @@ final class MouseInput implements java.awt.event.MouseListener, java.awt.event.M
         RuntimeException var2 = null;
         try {
           if (jc.field_b != null) {
-            sg.field_o = 0;
+            ArchiveSourceManager.field_o = 0;
             lc.field_d = -1;
             cm.field_b = -1;
             rg.field_e = true;
@@ -317,7 +317,7 @@ final class MouseInput implements java.awt.event.MouseListener, java.awt.event.M
         RuntimeException var2 = null;
         try {
           if (jc.field_b != null) {
-            sg.field_o = 0;
+            ArchiveSourceManager.field_o = 0;
             lc.field_d = param0.getX();
             cm.field_b = param0.getY();
             rg.field_e = true;
@@ -345,21 +345,21 @@ final class MouseInput implements java.awt.event.MouseListener, java.awt.event.M
         int var4 = 0;
         try {
           var5 = s.field_b;
-          var5.i(param1 ^ 19317, param0);
+          var5.writeCipheredByte(param1 ^ 19317, param0);
           var5.field_i = var5.field_i + 1;
           var4 = var5.field_i;
           if (param1 != 2) {
             MouseInput.b(-16);
           }
-          var5.d(114, 1);
-          var5.d(94, param2.field_m);
-          var5.d(param1 ^ 96, param2.field_p);
-          var5.b(param2.field_i, param1 + 25249);
-          var5.b(param2.field_k, 25251);
-          var5.b(param2.field_h, 25251);
-          var5.b(param2.field_j, 25251);
-          var5.f(var4, -84);
-          var5.a(var5.field_i - var4, param1 - 19722);
+          var5.writeByte(114, 1);
+          var5.writeByte(94, param2.field_m);
+          var5.writeByte(param1 ^ 96, param2.field_p);
+          var5.writeInt(param2.field_i, param1 + 25249);
+          var5.writeInt(param2.field_k, 25251);
+          var5.writeInt(param2.field_h, 25251);
+          var5.writeInt(param2.field_j, 25251);
+          var5.appendCrc32(var4, -84);
+          var5.patchByteLength(var5.field_i - var4, param1 - 19722);
         } catch (RuntimeException runtimeException) {
           throw AccountCreationResultPanel.wrapClientException((Throwable) ((Object) runtimeException), "ci.A(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
@@ -392,7 +392,7 @@ final class MouseInput implements java.awt.event.MouseListener, java.awt.event.M
         RuntimeException var2 = null;
         try {
           if (null != jc.field_b) {
-            sg.field_o = 0;
+            ArchiveSourceManager.field_o = 0;
             AccountRegistrationPanel.field_I = 0;
             rg.field_e = true;
             var2_int = param0.getModifiers();

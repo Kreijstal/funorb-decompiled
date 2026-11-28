@@ -224,7 +224,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
                 this.e(53);
                 BufferedSocket.field_a = ProxyAuthenticationRequiredException.a(RichTextLayout.field_k, (java.awt.Component) ((Object) field_f), th.field_e, false);
                 this.initializeClient((byte) -69);
-                ge.field_g = ql.a(65280);
+                ArchiveNetworkClient.field_g = ql.a(65280);
                 do {
                   boolean decompiledFrameRemainder0 = true;
                   if (DefaultTextWidgetRenderer.field_o != 0L) {
@@ -236,7 +236,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
                     }
                   }
                   if (decompiledFrameRemainder0) {
-                    m.field_c = ge.field_g.waitAndCountTicks(0, vc.field_j);
+                    m.field_c = ArchiveNetworkClient.field_g.waitAndCountTicks(0, vc.field_j);
                     stackIn_98_0 = 0;
                   }
                   var3 = stackIn_98_0;
@@ -577,7 +577,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
               }
               ih.field_a = 0;
               RichTextLayout.field_k = param3;
-              md.field_j = param3;
+              ProxySocketConnector.field_j = param3;
               aj.field_b = this;
               if (param0 != -10291) {
                 return;
@@ -751,7 +751,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
               ji.correctedCurrentTimeMillis(123) - dc.field_j > 1000L) {
               var2 = param0.getClipBounds();
               if (var2 != null) {
-                if (var2.width < md.field_j) {
+                if (var2.width < ProxySocketConnector.field_j) {
                   return;
                 }
                 if (NetworkGameClient.field_u > var2.height) {

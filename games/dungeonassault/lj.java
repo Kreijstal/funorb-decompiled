@@ -56,7 +56,7 @@ final class lj implements cl {
         }
     }
 
-    final static void a(java.awt.Component param0, byte param1) {
+    final static void attachKeyboardListeners(java.awt.Component param0, byte param1) {
         RuntimeException runtimeException = null;
         int var2_int = 0;
         RuntimeException stackIn_5_0 = null;
@@ -191,7 +191,7 @@ final class lj implements cl {
                 stackIn_39_0 = var2_int * 16;
               }
               var3_int = stackIn_39_0;
-              var4 = je.field_d.length;
+              var4 = ArchiveSourceManager.field_d.length;
               var5_array = new int[var4];
               var6 = new int[var4];
               var7 = 0;
@@ -200,7 +200,7 @@ final class lj implements cl {
                   var7 = 0;
                   break;
                 }
-                var5_array[var7] = hj.a((byte) 113, 12582912, var3_int, je.field_d[var7]);
+                var5_array[var7] = hj.a((byte) 113, 12582912, var3_int, ArchiveSourceManager.field_d[var7]);
                 var6[var7] = hj.a((byte) 127, 65793, var3_int, AccountRegistrationPanel.field_P[var7]);
                 var7++;
               } while (var11 == 0);
@@ -250,7 +250,7 @@ final class lj implements cl {
                   var4 = 0;
                   while (var4 < var3.length) {
                     var5 = var3[var4];
-                    var5.field_e = je.field_d[this.field_a[var2_int]];
+                    var5.field_e = ArchiveSourceManager.field_d[this.field_a[var2_int]];
                     var5.field_h = AccountRegistrationPanel.field_P[this.field_a[var2_int]];
                     var4++;
                   }
@@ -688,7 +688,7 @@ final class lj implements cl {
                     if (var19 == 0) {
                       if (stackIn_18_0) {
                         var15 = this.a((byte) -103, var14);
-                        var16 = je.field_d[this.field_a[var14]];
+                        var16 = ArchiveSourceManager.field_d[this.field_a[var14]];
                         var6_int = var6_int + (192 + ((16711680 & var16) >> 18)) * var15 / 255;
                         var7 = var7 + (192 + (var16 >> 10 & 63)) * var15 / 255;
                         var8 = var8 + (192 + ((var16 & 255) >> 2)) * var15 / 255;
@@ -717,7 +717,7 @@ final class lj implements cl {
             }
             if (decompiledFrameRemainder0) {
               var9Lifetime1 = this.a((byte) -72, param2);
-              var10Lifetime2 = je.field_d[this.field_a[param2]];
+              var10Lifetime2 = ArchiveSourceManager.field_d[this.field_a[param2]];
               var8 = (192 + ((255 & var10Lifetime2) >> 2)) * var9Lifetime1 / 255;
               var6_int = (192 + ((var10Lifetime2 & 16711680) >> 18)) * var9Lifetime1 / 255;
               var7 = var9Lifetime1 * ((var10Lifetime2 >> 10 & 63) + 192) / 255;
@@ -942,21 +942,21 @@ final class lj implements cl {
               var7_int = param2 - 7;
               if (this.field_h.field_p.isBitSet(var7_int, (byte) 110) &&
                 this.field_i.isBitSet(var7_int + 42, (byte) 78)) {
-                PacketBuffer.a(18 + param1, param0, (byte) -80, mf.field_b[0], (je.field_d[this.field_a[var7_int]] >> 1 & 8355711) + 8421504, this.a((byte) -11, var7_int) >> 2);
+                PacketBuffer.a(18 + param1, param0, (byte) -80, mf.field_b[0], (ArchiveSourceManager.field_d[this.field_a[var7_int]] >> 1 & 8355711) + 8421504, this.a((byte) -11, var7_int) >> 2);
               }
             }
             if (param2 % 7 != 6) {
               var7_intLifetime2 = 1 + param2;
               if (this.field_h.field_p.isBitSet(var7_intLifetime2, (byte) 93) &&
                 this.field_i.isBitSet(param2 - param2 / 7, (byte) 121)) {
-                PacketBuffer.a(param1 + 18, param0, (byte) -90, mf.field_b[1], 8421504 + (8355711 & je.field_d[this.field_a[var7_intLifetime2]] >> 1), this.a((byte) -8, var7_intLifetime2) >> 2);
+                PacketBuffer.a(param1 + 18, param0, (byte) -90, mf.field_b[1], 8421504 + (8355711 & ArchiveSourceManager.field_d[this.field_a[var7_intLifetime2]] >> 1), this.a((byte) -8, var7_intLifetime2) >> 2);
               }
             }
             if (param2 < 42) {
               var7_intLifetime3 = 7 + param2;
               if (this.field_h.field_p.isBitSet(var7_intLifetime3, (byte) 104) &&
                 this.field_i.isBitSet(param2 + 42, (byte) 97)) {
-                PacketBuffer.a(param1 + 18, param0, (byte) -128, mf.field_b[2], (8355711 & je.field_d[this.field_a[var7_intLifetime3]] >> 1) + 8421504, this.a((byte) -67, var7_intLifetime3) >> 2);
+                PacketBuffer.a(param1 + 18, param0, (byte) -128, mf.field_b[2], (8355711 & ArchiveSourceManager.field_d[this.field_a[var7_intLifetime3]] >> 1) + 8421504, this.a((byte) -67, var7_intLifetime3) >> 2);
               }
             }
             if (0 == param2 % 7) {
@@ -965,7 +965,7 @@ final class lj implements cl {
             var7_intLifetime4 = -1 + param2;
             if (this.field_h.field_p.isBitSet(var7_intLifetime4, (byte) 114) &&
               this.field_i.isBitSet(var7_intLifetime4 - var7_intLifetime4 / 7, (byte) 101)) {
-              PacketBuffer.a(18 + param1, param0, (byte) -105, mf.field_b[3], ((je.field_d[this.field_a[var7_intLifetime4]] & 16711422) >> 1) + 8421504, this.a((byte) -36, var7_intLifetime4) >> 2);
+              PacketBuffer.a(18 + param1, param0, (byte) -105, mf.field_b[3], ((ArchiveSourceManager.field_d[this.field_a[var7_intLifetime4]] & 16711422) >> 1) + 8421504, this.a((byte) -36, var7_intLifetime4) >> 2);
             }
             if (var10 == 0) {
               return;
@@ -1048,28 +1048,28 @@ final class lj implements cl {
                 var7_intLifetime1Lifetime1 = -7 + param2;
                 if (this.field_h.field_p.isBitSet(var7_intLifetime1Lifetime1, (byte) 106) &&
                   this.field_i.isBitSet(var7_intLifetime1Lifetime1 + 42, (byte) 86)) {
-                  PacketBuffer.a(18 + param1, param0, (byte) -111, mf.field_b[0], 8421504 + ((16711422 & je.field_d[this.field_a[var7_intLifetime1Lifetime1]]) >> 1), this.a((byte) -39, var7_intLifetime1Lifetime1) >> 2);
+                  PacketBuffer.a(18 + param1, param0, (byte) -111, mf.field_b[0], 8421504 + ((16711422 & ArchiveSourceManager.field_d[this.field_a[var7_intLifetime1Lifetime1]]) >> 1), this.a((byte) -39, var7_intLifetime1Lifetime1) >> 2);
                 }
               }
               if (param2 % 7 != 6) {
                 var7_intLifetime1Lifetime1 = param2 + 1;
                 if (this.field_h.field_p.isBitSet(var7_intLifetime1Lifetime1, (byte) 110) &&
                   this.field_i.isBitSet(-(param2 / 7) + param2, (byte) 92)) {
-                  PacketBuffer.a(param1 + 18, param0, (byte) -82, mf.field_b[1], ((je.field_d[this.field_a[var7_intLifetime1Lifetime1]] & 16711422) >> 1) + 8421504, this.a((byte) -57, var7_intLifetime1Lifetime1) >> 2);
+                  PacketBuffer.a(param1 + 18, param0, (byte) -82, mf.field_b[1], ((ArchiveSourceManager.field_d[this.field_a[var7_intLifetime1Lifetime1]] & 16711422) >> 1) + 8421504, this.a((byte) -57, var7_intLifetime1Lifetime1) >> 2);
                 }
               }
               if (param2 < 42) {
                 var7_intLifetime1Lifetime1 = 7 + param2;
                 if (this.field_h.field_p.isBitSet(var7_intLifetime1Lifetime1, (byte) 93) &&
                   this.field_i.isBitSet(param2 + 42, (byte) 92)) {
-                  PacketBuffer.a(param1 + 18, param0, (byte) -111, mf.field_b[2], 8421504 + ((je.field_d[this.field_a[var7_intLifetime1Lifetime1]] & 16711422) >> 1), this.a((byte) -56, var7_intLifetime1Lifetime1) >> 2);
+                  PacketBuffer.a(param1 + 18, param0, (byte) -111, mf.field_b[2], 8421504 + ((ArchiveSourceManager.field_d[this.field_a[var7_intLifetime1Lifetime1]] & 16711422) >> 1), this.a((byte) -56, var7_intLifetime1Lifetime1) >> 2);
                 }
               }
               if (param2 % 7 != 0) {
                 var7_intLifetime1Lifetime1 = param2 - 1;
                 if (this.field_h.field_p.isBitSet(var7_intLifetime1Lifetime1, (byte) 69) &&
                   this.field_i.isBitSet(var7_intLifetime1Lifetime1 - var7_intLifetime1Lifetime1 / 7, (byte) 67)) {
-                  PacketBuffer.a(18 + param1, param0, (byte) -104, mf.field_b[3], 8421504 + (8355711 & je.field_d[this.field_a[var7_intLifetime1Lifetime1]] >> 1), this.a((byte) -52, var7_intLifetime1Lifetime1) >> 2);
+                  PacketBuffer.a(18 + param1, param0, (byte) -104, mf.field_b[3], 8421504 + (8355711 & ArchiveSourceManager.field_d[this.field_a[var7_intLifetime1Lifetime1]] >> 1), this.a((byte) -52, var7_intLifetime1Lifetime1) >> 2);
                 }
               }
             }
@@ -1155,7 +1155,7 @@ final class lj implements cl {
           int var8 = -118 / ((param2 - 32) / 44);
           var7 = -21 + FullscreenNoticeType.field_b[param4] + (168 + 24 * (-(param1 % 7) + param1 / 7)) + this.field_l;
           this.field_a[param1] = param3;
-          this.field_v[param1][param0] = new rh(var6_int, var7, 20, 40, je.field_d[param3], AccountRegistrationPanel.field_P[param3], 256);
+          this.field_v[param1][param0] = new rh(var6_int, var7, 20, 40, ArchiveSourceManager.field_d[param3], AccountRegistrationPanel.field_P[param3], 256);
         } catch (RuntimeException runtimeException) {
           throw AccountServiceResult.wrapClientException((Throwable) ((Object) runtimeException), "lj.O(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }

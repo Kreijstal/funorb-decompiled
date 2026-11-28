@@ -7,7 +7,7 @@ final class ResourceArchive {
     static FullscreenFocusCanvas field_p;
     private int field_h;
     static ik field_c;
-    static mj field_f;
+    static KeyboardInputHandler field_f;
     static String field_b;
     private Object[][] field_l;
     private rf field_m;
@@ -711,9 +711,9 @@ final class ResourceArchive {
           b.field_a = param0;
           mh.field_x = param8;
           tj.field_c = param7;
-          BufferedSocket.field_k = (w) ((Object) new g());
+          BufferedSocket.field_k = (ArchiveNetworkClient) ((Object) new SocketArchiveNetworkClient());
           vg.field_r = new DiskCacheWorker(param8);
-          ByteArrayPoolSupport.field_e = new uf(BufferedSocket.field_k, vg.field_r);
+          ByteArrayPoolSupport.field_e = new ArchiveSourceManager(BufferedSocket.field_k, vg.field_r);
         } catch (RuntimeException runtimeException) {
           throw pf.wrapClientException((Throwable) ((Object) runtimeException), "rh.R(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ',' + param6 + ',' + param7 + ',' + (param8 != null ? "{...}" : "null") + ')');
         }
@@ -968,7 +968,7 @@ final class ResourceArchive {
         field_b = "Previous";
         field_o = "Fullscreen play is an option available to subscribing members only. For more details see the website.";
         field_a = 20;
-        field_f = new mj();
+        field_f = new KeyboardInputHandler();
         field_e = null;
         field_j = new boolean[]{false, false, false, true, true, false, false, false, false, false, false, false, false, false, false, false};
     }

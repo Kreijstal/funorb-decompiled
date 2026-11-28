@@ -30,7 +30,7 @@ final class wk {
         pk.field_k = stackIn_3_0;
         lb.field_b = 127 & var3;
         ja.field_c = var8.readUnsignedByte(32270);
-        TextLineMetrics.field_c = var8.c(10818);
+        TextLineMetrics.field_c = var8.readLong(10818);
         if (!param0) {
           return (ln) null;
         }
@@ -39,23 +39,23 @@ final class wk {
           KeyboardInput.field_c = 0;
         } else {
           KeyboardInput.field_c = var8.readUnsignedShort(8);
-          qa.field_e = var8.h(64);
+          qa.field_e = var8.readUnsignedMedium(64);
         }
         stackIn_11_0 = (var8.readUnsignedByte(32270) != 1) ? 0 : 1;
         var4 = stackIn_11_0;
-        qa.field_f = var8.o(32);
+        qa.field_f = var8.readString(32);
         if (var4 == 0) {
           qg.field_o = qa.field_f;
         } else {
-          qg.field_o = var8.o(32);
+          qg.field_o = var8.readString(32);
         }
         if (lb.field_b == 1) {
           var8.readUnsignedShort(8);
-          var8.o(32);
+          var8.readString(32);
         } else {
           if (lb.field_b == 4) {
             var8.readUnsignedShort(8);
-            var8.o(32);
+            var8.readString(32);
           }
         }
         if (!param1) {

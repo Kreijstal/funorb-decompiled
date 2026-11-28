@@ -480,7 +480,7 @@ final class FullscreenFocusCanvas extends java.awt.Canvas implements java.awt.ev
           }
           var2Lifetime72 = NodeHashTableIterator.a("MUSIC", param1 ^ 131);
           if (var2Lifetime72 != null) {
-            hj.field_a = mj.a((byte) -6, var2Lifetime72);
+            SocketConnector.field_a = mj.a((byte) -6, var2Lifetime72);
           }
           var2Lifetime73 = NodeHashTableIterator.a("CONTINUE", 123);
           if (var2Lifetime73 != null) {
@@ -672,7 +672,7 @@ final class FullscreenFocusCanvas extends java.awt.Canvas implements java.awt.ev
           }
           var2Lifetime120 = NodeHashTableIterator.a("INSTRUCTIONS_CHARGE_CANNON", param1 ^ 131);
           if (null != var2Lifetime120) {
-            hj.field_c = mj.a((byte) 63, var2Lifetime120);
+            SocketConnector.field_c = mj.a((byte) 63, var2Lifetime120);
           }
           var2Lifetime121 = NodeHashTableIterator.a("INSTRUCTIONS_MOVE_SHIP", 125);
           if (var2Lifetime121 != null) {

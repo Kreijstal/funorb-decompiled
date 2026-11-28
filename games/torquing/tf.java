@@ -179,7 +179,7 @@ final class tf {
           if (param0 >= -44) {
             return;
           }
-          og.a((java.awt.Component) ((Object) param1), -1);
+          og.detachKeyboardListeners((java.awt.Component) ((Object) param1), -1);
           LevelCompletionUpdate.detachMouseInput(-90, (java.awt.Component) ((Object) param1));
           if (null != wb.field_u) {
             wb.field_u.detach(0, (java.awt.Component) ((Object) param1));

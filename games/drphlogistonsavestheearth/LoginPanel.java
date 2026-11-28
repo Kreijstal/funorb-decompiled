@@ -117,7 +117,7 @@ final class LoginPanel extends DequeWidgetContainer implements TextFieldListener
             } catch (java.net.MalformedURLException decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var4 = (java.net.MalformedURLException) (Object) decompiledCaughtException;
-              gb.a((Throwable) null, "MGR1: " + param0, 10);
+              ArchiveNetworkClient.a((Throwable) null, "MGR1: " + param0, 10);
             }
             return;
           } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
@@ -238,7 +238,7 @@ final class LoginPanel extends DequeWidgetContainer implements TextFieldListener
               this.field_P.field_l = (WidgetRenderer) ((Object) new uk());
             }
           } else {
-            this.field_P.field_v = ka.field_l;
+            this.field_P.field_v = ProxySocketConnector.field_l;
           }
           this.field_m = 15;
           var7 = DualLinkNode.field_i;
@@ -250,7 +250,7 @@ final class LoginPanel extends DequeWidgetContainer implements TextFieldListener
           if (var9 == p.field_d) {
             var8 = rc.field_c;
           } else {
-            if (var9 == ka.field_q) {
+            if (var9 == ProxySocketConnector.field_q) {
               var8 = gk.field_b;
             }
           }

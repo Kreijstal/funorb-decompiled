@@ -51,12 +51,12 @@ class DualLinkNode extends IntrusiveNode {
         CipherPacketBuffer var3 = null;
         try {
           var3 = s.field_b;
-          var3.i(19319, param1);
-          var3.d(param2 ^ 97, param0.field_m);
+          var3.writeCipheredByte(19319, param1);
+          var3.writeByte(param2 ^ 97, param0.field_m);
           if (param2 != 10) {
             field_m = (int[]) null;
           }
-          var3.a((byte) -120, param0.field_n);
+          var3.writeShort((byte) -120, param0.field_n);
         } catch (RuntimeException runtimeException) {
           throw AccountCreationResultPanel.wrapClientException((Throwable) ((Object) runtimeException), "dk.OB(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }

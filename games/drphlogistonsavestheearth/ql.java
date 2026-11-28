@@ -352,7 +352,7 @@ final class ql {
             if (db.field_a != 0) {
               if (this.field_a == param0) {
                 if (!this.field_g &&
-                  !df.field_o) {
+                  !ArchiveSourceManager.field_o) {
                   return;
                 }
                 if (0 > param1) {
@@ -377,7 +377,7 @@ final class ql {
             return;
           }
           if (!this.field_g &&
-            !df.field_o) {
+            !ArchiveSourceManager.field_o) {
             return;
           }
           if (0 > param1) {
@@ -398,7 +398,7 @@ final class ql {
             if (db.field_a != 0) {
               if (this.field_a == param0) {
                 if (!this.field_g &&
-                  !df.field_o) {
+                  !ArchiveSourceManager.field_o) {
                   return;
                 }
                 if (0 > param1) {
@@ -423,7 +423,7 @@ final class ql {
             return;
           }
           if (!this.field_g &&
-            !df.field_o) {
+            !ArchiveSourceManager.field_o) {
             return;
           }
           if (0 > param1) {
@@ -449,7 +449,7 @@ final class ql {
             return;
           }
           if (!this.field_g &&
-            !df.field_o) {
+            !ArchiveSourceManager.field_o) {
             return;
           }
           if (0 > param1) {
@@ -473,7 +473,7 @@ final class ql {
             return;
           }
           if (!this.field_g &&
-            !df.field_o) {
+            !ArchiveSourceManager.field_o) {
             return;
           }
           if (0 > param1) {
@@ -499,7 +499,7 @@ final class ql {
           return;
         }
         if (this.field_g ||
-          df.field_o) {
+          ArchiveSourceManager.field_o) {
           if (0 > param1) {
             if (!this.field_g) {
               return;

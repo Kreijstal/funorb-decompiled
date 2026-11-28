@@ -11,10 +11,10 @@ abstract class hh {
 
     abstract void a(byte param0, PacketBuffer param1);
 
-    final static oe a(int param0, int param1, String param2) {
-        fl var3 = null;
+    final static SocketConnector a(int param0, int param1, String param2) {
+        ProxySocketConnector var3 = null;
         RuntimeException var3_ref = null;
-        fl stackIn_3_0 = null;
+        ProxySocketConnector stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -23,11 +23,11 @@ abstract class hh {
           if (param0 <= 80) {
             field_a = 32;
           }
-          var3 = new fl();
-          ((oe) ((Object) var3)).field_d = param1;
-          ((oe) ((Object) var3)).field_c = param2;
+          var3 = new ProxySocketConnector();
+          ((SocketConnector) ((Object) var3)).field_d = param1;
+          ((SocketConnector) ((Object) var3)).field_c = param2;
           stackIn_3_0 = var3;
-          return (oe) ((Object) stackIn_3_0);
+          return (SocketConnector) ((Object) stackIn_3_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3_ref = decompiledCaughtException;

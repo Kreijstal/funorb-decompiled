@@ -145,9 +145,9 @@ final class lh {
           this.field_h = 3;
           var4.field_j = 15658734;
           this.field_k = 15658734;
-          var4.a(0, (byte) -115).a(-7695, 15658734).a(bb.a(8947848, false, 7829367, 10066329), true);
-          var4.a(1, (byte) -90).a(bb.a(11184810, false, 13421772, 10066329), true);
-          var4.a(3, (byte) -97).a(bb.a(8947848, false, 10066329, 7829367), true).b(1, -114).c(1, -33);
+          var4.a(0, (byte) -115).a(-7695, 15658734).a(ArchiveNetworkClient.a(8947848, false, 7829367, 10066329), true);
+          var4.a(1, (byte) -90).a(ArchiveNetworkClient.a(11184810, false, 13421772, 10066329), true);
+          var4.a(3, (byte) -97).a(ArchiveNetworkClient.a(8947848, false, 10066329, 7829367), true).b(1, -114).c(1, -33);
           int var6 = -31 / ((param0 + 69) / 45);
           var5 = new RgbSprite[9];
           var17 = new ArgbSprite(32, 32);
@@ -170,7 +170,7 @@ final class lh {
           discarded$1 = new im(param1, 16777215, -1, 125269879, 4473924, 3, 268435455);
           var9 = new an();
           var18.copyStyleTo((byte) 126, var9);
-          var9.a(0, (byte) -99).a(bb.a(15658734, false, 10066329, 7829367), true).a(-7695, 1118481).d(-1, 216);
+          var9.a(0, (byte) -99).a(ArchiveNetworkClient.a(15658734, false, 10066329, 7829367), true).a(-7695, 1118481).d(-1, 216);
           var9.a(4, (byte) -91).a((byte) -111, true).a(var5, true);
           this.field_c = (WidgetRenderer) ((Object) var9);
           var10 = new RgbSprite[9];

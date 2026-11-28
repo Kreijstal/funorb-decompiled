@@ -37,7 +37,7 @@ abstract class ByteStorage {
         TextFieldValidator.a(nj.field_b, 45);
         bl.b();
         SoftwareRasterizer.clearRaster();
-        mj.a(-515966495);
+        KeyboardInputHandler.a(-515966495);
         if (256 > var5) {
           SoftwareRasterizer.fillRectangleAlpha(0, 0, SoftwareRasterizer.field_d, SoftwareRasterizer.field_k, 0, -var5 + 256);
         }
@@ -145,7 +145,7 @@ abstract class ByteStorage {
         int var2Lifetime1;
         var3 = fleas.field_A ? 1 : 0;
         try {
-          var4 = (fg) (jk.field_m.beginForward((byte) 47));
+          var4 = (fg) (ProxySocketConnector.field_m.beginForward((byte) 47));
           var1 = var4;
           if (var1 == null) {
             return false;

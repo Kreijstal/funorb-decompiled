@@ -31,11 +31,11 @@ final class sc {
             }
             if (param0 == 10) {
               var4 = 0;
-              qf.g(-94);
+              SocketArchiveNetworkClient.g(-94);
             }
             if (var4 != 0) {
               if (SectorCacheStore.field_g) {
-                param2 = da.a(new String[]{param2}, Lexicominos.field_F, false);
+                param2 = MouseInputHandler.a(new String[]{param2}, Lexicominos.field_F, false);
               }
               if (lh.field_w) {
                 param2 = id.field_u;

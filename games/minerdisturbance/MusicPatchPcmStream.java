@@ -230,7 +230,7 @@ final class MusicPatchPcmStream extends PcmStream {
           if (param2 > -54) {
             field_A = (String) null;
           }
-          var4_int = param0.c((byte) -122, param1);
+          var4_int = param0.readBits((byte) -122, param1);
           if (var4_int == 0) {
             return null;
           }
@@ -238,11 +238,11 @@ final class MusicPatchPcmStream extends PcmStream {
             var4_int != param3.length) {
             param3 = new short[var4_int];
           }
-          var5 = param0.c((byte) -82, 4);
-          var6 = (short)param0.c((byte) -123, 16);
+          var5 = param0.readBits((byte) -82, 4);
+          var6 = (short)param0.readBits((byte) -123, 16);
           if (0 < var5) {
             for (var7 = 0; var7 < var4_int; var7++) {
-              param3[var7] = (short)(param0.c((byte) -70, var5) + var6);
+              param3[var7] = (short)(param0.readBits((byte) -70, var5) + var6);
             }
           } else {
             for (var7 = 0; var4_int > var7; var7++) {

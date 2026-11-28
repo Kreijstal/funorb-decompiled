@@ -263,12 +263,12 @@ final class nr extends tb implements TextureProvider {
           UiWidget.field_x.writeByte(param2, 101);
           UiWidget.field_x.writeByte(param3, -67);
           UiWidget.field_x.writeShort(param1, param0 ^ -1670);
-          UiWidget.field_x.a(lp.field_E, jm.field_H, 9157);
+          UiWidget.field_x.writeRsaBlock(lp.field_E, jm.field_H, 9157);
           uh.field_Wb.writeCipheredByte(18, param0 + 5);
           fieldTemp$0 = uh.field_Wb.position + 1;
           uh.field_Wb.position = uh.field_Wb.position + 1;
           var4 = fieldTemp$0;
-          uh.field_Wb.a(0, -10140, UiWidget.field_x.payload, UiWidget.field_x.position);
+          uh.field_Wb.writeBytes(0, -10140, UiWidget.field_x.payload, UiWidget.field_x.position);
           uh.field_Wb.patchByteLength((byte) -95, -var4 + uh.field_Wb.position);
           return;
         }
@@ -276,12 +276,12 @@ final class nr extends tb implements TextureProvider {
         UiWidget.field_x.writeByte(param2, 101);
         UiWidget.field_x.writeByte(param3, -67);
         UiWidget.field_x.writeShort(param1, param0 ^ -1670);
-        UiWidget.field_x.a(lp.field_E, jm.field_H, 9157);
+        UiWidget.field_x.writeRsaBlock(lp.field_E, jm.field_H, 9157);
         uh.field_Wb.writeCipheredByte(18, param0 + 5);
         int fieldTemp$1 = uh.field_Wb.position + 1;
         uh.field_Wb.position = uh.field_Wb.position + 1;
         var4Lifetime1 = fieldTemp$1;
-        uh.field_Wb.a(0, -10140, UiWidget.field_x.payload, UiWidget.field_x.position);
+        uh.field_Wb.writeBytes(0, -10140, UiWidget.field_x.payload, UiWidget.field_x.position);
         uh.field_Wb.patchByteLength((byte) -95, -var4Lifetime1 + uh.field_Wb.position);
     }
 

@@ -22,10 +22,10 @@ abstract class bl extends DualLinkNode {
           var3 = MinerDisturbance.field_ab;
           try {
             if (aj.field_c != null) {
-              aj.field_c.b((byte) 35);
+              aj.field_c.close((byte) 35);
             }
-            if (uf.field_r != null) {
-              uf.field_r.shutdown((byte) -32);
+            if (SocketArchiveNetworkClient.field_r != null) {
+              SocketArchiveNetworkClient.field_r.shutdown((byte) -32);
             }
             if (null != UiWidget.field_z) {
               try {

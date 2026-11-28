@@ -60,14 +60,14 @@ abstract class SocketFactory {
         }
     }
 
-    final java.net.Socket computeSocket1795(int integerArgument1) throws IOException {
+    final java.net.Socket openDirectSocket(int integerArgument1) throws IOException {
         if (integerArgument1 != 2) {
           return (java.net.Socket) null;
         }
         return new java.net.Socket(this.stringState0614, this.integerState0927);
     }
 
-    abstract java.net.Socket computeSocket1476(int integerArgument1) throws IOException;
+    abstract java.net.Socket openSocket(int integerArgument1) throws IOException;
 
     public static void clearStaticReferences(byte byteArgument1) {
         stringState0612 = null;

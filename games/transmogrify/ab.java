@@ -107,7 +107,7 @@ final class ab {
         int var7 = 0;
         int var7Lifetime1;
         try {
-          dk.a(param3.field_h, this.field_i, -28018, param3.field_p + param4, param3.field_n + param2, param3.field_l);
+          ArchiveSourceManager.a(param3.field_h, this.field_i, -28018, param3.field_p + param4, param3.field_n + param2, param3.field_l);
           if (null != this.field_d) {
             var6_int = this.field_f + param3.field_p + param4;
             var7 = param2 + param3.field_n + this.field_b;

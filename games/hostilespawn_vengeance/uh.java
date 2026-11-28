@@ -56,8 +56,8 @@ class uh extends ca {
           if (param1 >= -94) {
             field_g = (String) null;
           }
-          param0.b(9201, this.field_n);
-          param0.a((byte) -36, this.field_e);
+          param0.writeLong(9201, this.field_n);
+          param0.writeBase38Name((byte) -36, this.field_e);
         } catch (RuntimeException runtimeException) {
           throw AccountCreationResultPanel.wrapClientException((Throwable) ((Object) runtimeException), "uh.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }

@@ -220,7 +220,7 @@ final class DraggableWidgetContainer extends WidgetWrapper {
             DraggableWidgetContainer.a(-61, -1, -60, -41);
           }
           uh.field_Wb.writeLong((byte) -119, param5);
-          uh.field_Wb.a((byte) 0, param4);
+          uh.field_Wb.writeString((byte) 0, param4);
           uh.field_Wb.writeByte(param1, -75);
           uh.field_Wb.writeByte(param3 ? 1 : 0, 112);
           uh.field_Wb.patchByteLength((byte) -125, uh.field_Wb.position - var7_int);

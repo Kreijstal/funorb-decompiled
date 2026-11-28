@@ -277,8 +277,8 @@ final class ha {
           return;
         }
         try {
-          sg.a((java.awt.Component) ((Object) param0), 2);
-          bi.a((byte) 104, (java.awt.Component) ((Object) param0));
+          sg.attachKeyboardListeners((java.awt.Component) ((Object) param0), 2);
+          KeyboardInputHandler.attachMouseListeners((byte) 104, (java.awt.Component) ((Object) param0));
           if (null != NanoFrameTimer.field_c) {
             NanoFrameTimer.field_c.attach(true, (java.awt.Component) ((Object) param0));
           }

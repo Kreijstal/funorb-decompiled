@@ -92,7 +92,7 @@ final class wb {
           if (ag.field_e != null) {
             vh.field_a.writePrefixedString(ag.field_e, (byte) 113);
           }
-          jf.a(ByteStorage.field_c, hk.field_a, vh.field_a, param3 ^ param3, an.field_r);
+          ArchiveNetworkClient.a(ByteStorage.field_c, hk.field_a, vh.field_a, param3 ^ param3, an.field_r);
           vh.field_a.backpatchShortLength(vh.field_a.position - var5_int, -20);
           tb.a(-1, 105);
           return;
@@ -1576,7 +1576,7 @@ final class wb {
                 }
                 var2 = ha.a("create_u13terms", (byte) 94);
                 if (var2 != null) {
-                  ja.field_g = va.a(0, var2);
+                  ArchiveSourceManager.field_g = va.a(0, var2);
                 }
                 var2 = ha.a("login_username_email", (byte) 71);
                 if (var2 != null) {
@@ -2398,7 +2398,7 @@ final class wb {
                 }
                 var2 = ha.a("secretachievement", (byte) 67);
                 if (var2 != null) {
-                  n.field_e = va.a(param0 - 6, var2);
+                  SocketConnector.field_e = va.a(param0 - 6, var2);
                 }
                 var2 = ha.a("no_highscores", (byte) 52);
                 if (null != var2) {
@@ -3179,7 +3179,7 @@ final class wb {
           if (IntrusiveNode.field_e == 11) {
             dc.e((byte) -61);
           }
-          mk.a(ui.field_b, mk.field_o, og.field_h, -117);
+          mk.a(ui.field_b, mk.field_o, ProxySocketConnector.field_h, -117);
           ll.a(0, param1, param0, -51);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

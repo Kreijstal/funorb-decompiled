@@ -259,7 +259,7 @@ final class AccountRegistrationPanel extends DequeWidgetContainer implements Tex
         wg dupTemp$1 = new wg(10000536);
         this.field_E.field_j = (WidgetRenderer) ((Object) dupTemp$1);
         this.field_A.field_j = (WidgetRenderer) ((Object) dupTemp$1);
-        String var2 = BufferedRandomAccessFile.a(mj.field_j, new String[]{this.getLinkOpenMarkup((byte) 103), this.getLinkCloseMarkup(false)}, (byte) -126);
+        String var2 = BufferedRandomAccessFile.a(BouncedownMenu.field_j, new String[]{this.getLinkOpenMarkup((byte) 103), this.getLinkCloseMarkup(false)}, (byte) -126);
         int var3 = 20;
         var3 = var3 + this.addLabeledField(this.field_B, c.field_d, var3, 120, 170);
         var3 = var3 + (this.addLabeledFieldWithValidationMessage("", l.field_a, 170, this.field_C, (byte) -123, 20, var3) + 5);

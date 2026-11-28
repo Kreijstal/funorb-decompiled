@@ -411,7 +411,7 @@ final class BufferedCacheFile {
             }
             GrowableIntArray.field_g = GrowableIntArray.field_g + 1;
             if (GrowableIntArray.field_g <= 50) {
-              m.a(10, -ea.field_p[kb.field_b] + (720 + bk.a(128, jb.field_g, (byte) 47)) - 64 << 4, bk.a(128, jb.field_g, (byte) -46) - 64 << 4, (byte) -6, 0, 0);
+              m.a(10, -SocketArchiveNetworkClient.field_p[kb.field_b] + (720 + bk.a(128, jb.field_g, (byte) 47)) - 64 << 4, bk.a(128, jb.field_g, (byte) -46) - 64 << 4, (byte) -6, 0, 0);
             }
             if (50 < GrowableIntArray.field_g && (MusicPatchNode.field_F == 1 ||
               fh.field_d[84] ||

@@ -52,7 +52,7 @@ final class w extends ci {
         ci var17 = null;
         int var10Lifetime1;
         try {
-          var17 = new ci(0L, param1, ob.field_y.toUpperCase());
+          var17 = new ci(0L, param1, SocketArchiveNetworkClient.field_y.toUpperCase());
           var17.field_fb = 1;
           this.field_Eb = new ci(0L, param2);
           var8 = new ci(0L, param3);

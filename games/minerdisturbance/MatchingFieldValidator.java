@@ -71,7 +71,7 @@ final class MatchingFieldValidator extends TextFieldValidator {
     final static void a(String param0, String param1, int param2, boolean param3) {
         try {
           pl.field_a = param1;
-          ch.field_g = param0;
+          ArchiveNetworkClient.field_g = param0;
           if (param2 >= -100) {
             MatchingFieldValidator.clearStaticReferences((byte) -17);
           }

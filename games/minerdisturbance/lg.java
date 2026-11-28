@@ -1517,7 +1517,7 @@ final class lg {
                 }
                 var2 = ByteArrayPoolSupport.b(-1, "tutorialOre5,0,0");
                 if (null != var2) {
-                  jh.field_c[0][0] = FullscreenStatusDialog.a(var2, -126);
+                  SocketConnector.field_c[0][0] = FullscreenStatusDialog.a(var2, -126);
                 }
                 var2 = ByteArrayPoolSupport.b(-1, "tutorialOre6,1,0");
                 if (null != var2) {
@@ -1569,7 +1569,7 @@ final class lg {
                 }
                 var2 = ByteArrayPoolSupport.b(-1, "tutorialIceBomb,1,0");
                 if (null != var2) {
-                  jh.field_d[1][0] = FullscreenStatusDialog.a(var2, -122);
+                  SocketConnector.field_d[1][0] = FullscreenStatusDialog.a(var2, -122);
                 }
                 var2 = ByteArrayPoolSupport.b(-1, "tutorialHardIce,1,0");
                 if (var2 != null) {
@@ -1665,7 +1665,7 @@ final class lg {
                 }
                 var2 = ByteArrayPoolSupport.b(-1, "tooltip2X");
                 if (null != var2) {
-                  gi.field_b = FullscreenStatusDialog.a(var2, -127);
+                  KeyboardInputHandler.field_b = FullscreenStatusDialog.a(var2, -127);
                 }
                 var2 = ByteArrayPoolSupport.b(-1, "tooltip3X");
                 if (var2 != null) {
@@ -1773,7 +1773,7 @@ final class lg {
                 }
                 var2 = ByteArrayPoolSupport.b(-1, "shopDrill");
                 if (var2 != null) {
-                  uf.field_u = FullscreenStatusDialog.a(var2, -126);
+                  SocketArchiveNetworkClient.field_u = FullscreenStatusDialog.a(var2, -126);
                 }
                 var2 = ByteArrayPoolSupport.b(-1, "shop2X");
                 if (var2 != null) {
@@ -1833,7 +1833,7 @@ final class lg {
                 }
                 var2 = ByteArrayPoolSupport.b(-1, "pressSpace");
                 if (var2 != null) {
-                  uf.field_v = FullscreenStatusDialog.a(var2, 56);
+                  SocketArchiveNetworkClient.field_v = FullscreenStatusDialog.a(var2, 56);
                 }
                 var2 = ByteArrayPoolSupport.b(-1, "pleaselogin");
                 if (null != var2) {

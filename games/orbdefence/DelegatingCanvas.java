@@ -255,7 +255,7 @@ final class DelegatingCanvas extends java.awt.Canvas {
               }
               var7 = new SectorCacheStore(param2, vg.field_q, ok.field_a[param2], 2097152);
             }
-            var8 = TextLineMetrics.field_b.a(param5, param2, false, (SectorCacheStore) (var6), (SectorCacheStore) (var7));
+            var8 = TextLineMetrics.field_b.getOrCreateArchiveSource(param5, param2, false, (SectorCacheStore) (var6), (SectorCacheStore) (var7));
             if (param4) {
               var8.d((byte) 111);
             }

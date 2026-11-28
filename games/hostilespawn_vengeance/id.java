@@ -334,7 +334,7 @@ final class id implements Serializable {
             if (var4 < 1) {
               this.field_o[var7] = 0;
             } else {
-              this.field_o[var7] = var10.b(true);
+              this.field_o[var7] = var10.readSignedShort(true);
             }
             if (var4 >= 5) {
               this.field_g[var7] = var10.readUnsignedByte(32270);

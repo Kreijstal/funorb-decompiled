@@ -25,9 +25,9 @@ class dfa {
         try {
           LabeledWidgetContainer.field_F = -1L;
           StampedeSpecial.field_s = param4;
-          kb.field_j = param5;
+          ArchiveSourceManager.field_j = param5;
           ld.field_q = param4.length;
-          LevitateEvent.field_r = new byte[(7 + kb.field_j) / 8];
+          LevitateEvent.field_r = new byte[(7 + ArchiveSourceManager.field_j) / 8];
           ce.field_y = false;
           EffectBatch.field_n = null;
           SnowAnimation.field_w = null;

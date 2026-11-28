@@ -171,7 +171,7 @@ abstract class NetworkGameClient extends GameAppletShell {
         int var3 = param0 != (1 & var2) ? 1 : 0;
         int var4 = -1 + jd.field_q;
         byte[] var5 = new byte[var4];
-        sc.field_g.a(0, var4, var5, (byte) 82);
+        sc.field_g.readCipheredBytes(0, var4, var5, (byte) 82);
         ArchiveIndex.a(BufferedRandomAccessFile.c(-1), PcmResampler.a(125, var5), (byte) -97, var3 != 0);
     }
 
@@ -354,7 +354,7 @@ abstract class NetworkGameClient extends GameAppletShell {
             BufferedSocket.a(BufferedRandomAccessFile.c(-1), 200);
           }
           if (var4 == 10) {
-            s.field_b.i(19319, 17);
+            s.field_b.writeCipheredByte(19319, 17);
           }
           if (var4 == 11) {
             o.a((byte) -98, BufferedRandomAccessFile.c(-1));
@@ -742,7 +742,7 @@ abstract class NetworkGameClient extends GameAppletShell {
           }
         }
         if (!param0 &&
-          ih.field_s) {
+          SocketArchiveNetworkClient.field_s) {
           v.a(82, GameAppletShell.field_h);
           this.b(-67);
           ea.a(GameAppletShell.field_h, 0);

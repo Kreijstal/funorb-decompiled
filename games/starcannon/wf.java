@@ -12,8 +12,8 @@ final class wf extends IntrusiveNode {
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          jk.a(param1, (java.awt.Component) ((Object) param0));
-          MouseInput.a((java.awt.Component) ((Object) param0), (byte) -64);
+          jk.detachKeyboardListeners(param1, (java.awt.Component) ((Object) param0));
+          MouseInput.detachMouseListeners((java.awt.Component) ((Object) param0), (byte) -64);
           if (param1) {
             wf.a(1);
           }

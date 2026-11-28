@@ -77,7 +77,7 @@ final class vi {
                 var5 = 1;
                 var4 = 1;
               }
-              nl.field_a = g.a((byte) -74, var2 * var5, var4 * var2);
+              nl.field_a = SocketArchiveNetworkClient.a((byte) -74, var2 * var5, var4 * var2);
               return;
             }
           }
@@ -133,7 +133,7 @@ final class vi {
           var5Lifetime1 = 1;
           var4Lifetime1 = 1;
         }
-        nl.field_a = g.a((byte) -74, var2 * var5Lifetime1, var4Lifetime1 * var2);
+        nl.field_a = SocketArchiveNetworkClient.a((byte) -74, var2 * var5Lifetime1, var4Lifetime1 * var2);
     }
 
     final static String a(int param0, boolean param1, boolean param2, boolean param3) {

@@ -135,7 +135,7 @@ final class oq extends qc {
             if (param2 != 8) {
             } else {
               param2 = 2;
-              if (!tk.field_e) {
+              if (!ArchiveNetworkClient.field_e) {
                 param1 = rr.field_y;
               } else {
                 param1 = ValidationStatusIcon.field_M;
@@ -158,7 +158,7 @@ final class oq extends qc {
             }
             if (param2 != 256 &&
               param2 != 10 &&
-              !tk.field_e) {
+              !ArchiveNetworkClient.field_e) {
               eb.field_d.clearCredentials(15);
               return;
             }

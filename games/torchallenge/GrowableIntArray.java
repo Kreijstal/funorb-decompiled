@@ -192,8 +192,8 @@ final class GrowableIntArray {
             var9 = TextHotspotBounds.field_p[var3];
             var1 = TextLayout.field_d[var3];
             if (1 == kf.field_b &&
-              fl.field_t[var3] != null) {
-              var1 = fl.field_t[var3];
+              SocketArchiveNetworkClient.field_t[var3] != null) {
+              var1 = SocketArchiveNetworkClient.field_t[var3];
             }
             IntrusiveNode.a(var1[1], var1[2], var1[8] + var1[6], param0 ^ -26, var1[3], var3, var9);
           }

@@ -15,7 +15,7 @@ final class MixedSupport076 extends ResourceSupport003 {
     private MixedSupport115 mixedSupport115State0001;
     private byte[] byteArrayState0014;
     static ValidationStatus validationStatusState0004;
-    private NetworkSupport003 networkSupport003State0001;
+    private ArchiveNetworkClient networkSupport003State0001;
     private int integerState0431;
     private int integerState0432;
     static int integerState0433;
@@ -43,10 +43,10 @@ final class MixedSupport076 extends ResourceSupport003 {
           return this.resourceSupport001State0002;
         }
         if (this.mixedSupport115State0001 == null) {
-          if (this.networkSupport003State0001.computeBoolean0346(booleanArgument1)) {
+          if (this.networkSupport003State0001.isPriorityQueueFull(booleanArgument1)) {
             return null;
           }
-          this.mixedSupport115State0001 = (MixedSupport115) ((Object) this.networkSupport003State0001.computeResourceSupport0040347(true, (byte) 0, true, 255, this.integerState0432));
+          this.mixedSupport115State0001 = (MixedSupport115) ((Object) this.networkSupport003State0001.enqueueRequest(true, (byte) 0, true, 255, this.integerState0432));
         }
         if (this.mixedSupport115State0001.booleanState0173) {
           return null;
@@ -71,8 +71,8 @@ final class MixedSupport076 extends ResourceSupport003 {
             caughtExceptionLocal1 = caughtParameterLocal8;
             runtimeExceptionLocal3 = caughtExceptionLocal1;
             this.resourceSupport001State0002 = null;
-            if (!this.networkSupport003State0001.computeBoolean0346(true)) {
-              this.mixedSupport115State0001 = (MixedSupport115) ((Object) this.networkSupport003State0001.computeResourceSupport0040347(true, (byte) 0, booleanArgument1, 255, this.integerState0432));
+            if (!this.networkSupport003State0001.isPriorityQueueFull(true)) {
+              this.mixedSupport115State0001 = (MixedSupport115) ((Object) this.networkSupport003State0001.enqueueRequest(true, (byte) 0, booleanArgument1, 255, this.integerState0432));
             } else {
               this.mixedSupport115State0001 = null;
             }
@@ -87,12 +87,12 @@ final class MixedSupport076 extends ResourceSupport003 {
           } catch (java.lang.RuntimeException caughtParameterLocal9) {
             caughtExceptionLocal1 = caughtParameterLocal9;
             runtimeExceptionLocal3 = caughtExceptionLocal1;
-            this.networkSupport003State0001.performAction0343(8192);
+            this.networkSupport003State0001.resetAfterValidationFailure(8192);
             this.resourceSupport001State0002 = null;
-            if (this.networkSupport003State0001.computeBoolean0346(true)) {
+            if (this.networkSupport003State0001.isPriorityQueueFull(true)) {
               this.mixedSupport115State0001 = null;
             } else {
-              this.mixedSupport115State0001 = (MixedSupport115) ((Object) this.networkSupport003State0001.computeResourceSupport0040347(true, (byte) 0, booleanArgument1, 255, this.integerState0432));
+              this.mixedSupport115State0001 = (MixedSupport115) ((Object) this.networkSupport003State0001.enqueueRequest(true, (byte) 0, booleanArgument1, 255, this.integerState0432));
             }
             return null;
           }
@@ -220,10 +220,10 @@ final class MixedSupport076 extends ResourceSupport003 {
               this.byteArrayState0013[integerArgument2] != -1) {
               objectLocal3 = this.cacheWorkQueueState0001.computeArchiveRequestManager0743(integerArgument2, this.mixedSupport069State0002, -98);
             } else {
-              if (this.networkSupport003State0001.computeBoolean0346(true)) {
+              if (this.networkSupport003State0001.isPriorityQueueFull(true)) {
                 return null;
               }
-              objectLocal3 = this.networkSupport003State0001.computeResourceSupport0040347(true, (byte) 2, true, this.integerState0432, integerArgument2);
+              objectLocal3 = this.networkSupport003State0001.enqueueRequest(true, (byte) 2, true, this.integerState0432, integerArgument2);
             }
           } else {
             if (1 == integerArgument1) {
@@ -241,10 +241,10 @@ final class MixedSupport076 extends ResourceSupport003 {
               if (this.byteArrayState0013[integerArgument2] != -1) {
                 throw new RuntimeException();
               }
-              if (this.networkSupport003State0001.computeBoolean0350(0)) {
+              if (this.networkSupport003State0001.isPrefetchQueueFull(0)) {
                 return null;
               }
-              objectLocal3 = this.networkSupport003State0001.computeResourceSupport0040347(false, (byte) 2, true, this.integerState0432, integerArgument2);
+              objectLocal3 = this.networkSupport003State0001.enqueueRequest(false, (byte) 2, true, this.integerState0432, integerArgument2);
             }
           }
           this.mixedSupport086State0001.performAction1109((long)integerArgument2, -1, (HashNode) (objectLocal3));
@@ -302,8 +302,8 @@ final class MixedSupport076 extends ResourceSupport003 {
             if (!((MixedSupport115) (objectLocal3)).booleanState0172) {
               return null;
             }
-            if (!this.networkSupport003State0001.computeBoolean0346(true)) {
-              objectLocal3 = this.networkSupport003State0001.computeResourceSupport0040347(true, (byte) 2, true, this.integerState0432, integerArgument2);
+            if (!this.networkSupport003State0001.isPriorityQueueFull(true)) {
+              objectLocal3 = this.networkSupport003State0001.enqueueRequest(true, (byte) 2, true, this.integerState0432, integerArgument2);
               this.mixedSupport086State0001.performAction1109((long)integerArgument2, byteArgument3 ^ 19, (HashNode) (objectLocal3));
             }
             return null;
@@ -339,15 +339,15 @@ final class MixedSupport076 extends ResourceSupport003 {
         } catch (java.lang.RuntimeException caughtParameterLocal21) {
           caughtExceptionLocal2 = caughtParameterLocal21;
           runtimeExceptionLocal6 = (RuntimeException) (Object) caughtExceptionLocal2;
-          this.networkSupport003State0001.performAction0343(8192);
+          this.networkSupport003State0001.resetAfterValidationFailure(8192);
           ((MixedSupport115) (objectLocal3)).unlink((byte) 117);
           if (!((MixedSupport115) (objectLocal3)).booleanState0172) {
             return null;
           }
-          if (this.networkSupport003State0001.computeBoolean0346(true)) {
+          if (this.networkSupport003State0001.isPriorityQueueFull(true)) {
             return null;
           }
-          objectLocal3 = this.networkSupport003State0001.computeResourceSupport0040347(true, (byte) 2, true, this.integerState0432, integerArgument2);
+          objectLocal3 = this.networkSupport003State0001.enqueueRequest(true, (byte) 2, true, this.integerState0432, integerArgument2);
           this.mixedSupport086State0001.performAction1109((long)integerArgument2, -1, (HashNode) (objectLocal3));
           return null;
         }
@@ -465,7 +465,7 @@ final class MixedSupport076 extends ResourceSupport003 {
               scanLoop2: while (true) {
                 if (this.integerState0434 < this.resourceSupport001State0002.integerArrayState0011.length) {
                   if (this.resourceSupport001State0002.integerArrayState0011[this.integerState0434] != 0) {
-                    if (this.networkSupport003State0001.computeBoolean0350(0)) {
+                    if (this.networkSupport003State0001.isPrefetchQueueFull(0)) {
                       integerLocal12 = 0;
                       break scanLoop2;
                     }
@@ -528,7 +528,7 @@ final class MixedSupport076 extends ResourceSupport003 {
         return byteArrayLocal2;
     }
 
-    MixedSupport076(int integerArgument1, MixedSupport069 mixedSupport069Argument2, MixedSupport069 mixedSupport069Argument3, NetworkSupport003 networkSupport003Argument4, CacheWorkQueue cacheWorkQueueArgument5, int integerArgument6, byte[] byteArrayArgument7, int integerArgument8, boolean booleanArgument9) {
+    MixedSupport076(int integerArgument1, MixedSupport069 mixedSupport069Argument2, MixedSupport069 mixedSupport069Argument3, ArchiveNetworkClient networkSupport003Argument4, CacheWorkQueue cacheWorkQueueArgument5, int integerArgument6, byte[] byteArrayArgument7, int integerArgument8, boolean booleanArgument9) {
         boolean stackBooleanLocal1 = false;
         RuntimeException stackRuntimeExceptionLocal2 = null;
         StringBuilder stackStringBuilderLocal3 = null;

@@ -27,7 +27,7 @@ final class f extends TextureOperator {
           try {
             SoundCache.field_f = new BitPacketBuffer(param12);
             uh.field_Wb = new BitPacketBuffer(param2);
-            kr.field_g = param3;
+            ArchiveSourceManager.field_g = param3;
             cl.field_d = param6;
             pl.field_i = param8;
             lm.field_G = param10;
@@ -41,9 +41,9 @@ final class f extends TextureOperator {
             DisplayNameSelectionPanel.field_P = param5;
             kj.field_B = param7;
             ff.field_d = param0;
-            if (null != kr.field_g.field_k) {
+            if (null != ArchiveSourceManager.field_g.field_k) {
               try {
-                as.field_d = new BufferedRandomAccessFile(kr.field_g.field_k, 64, 0);
+                as.field_d = new BufferedRandomAccessFile(ArchiveSourceManager.field_g.field_k, 64, 0);
               } catch (java.io.IOException decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;
                 var15 = (IOException) (Object) decompiledCaughtException;
@@ -206,7 +206,7 @@ final class f extends TextureOperator {
             if (MusicPatch.field_t != 4) {
               return -1;
             }
-            kb.field_e.a(fn.field_y, ni.field_f, -128);
+            kb.field_e.attachSocket(fn.field_y, ni.field_f, -128);
             pq.field_f = null;
             fn.field_y = null;
             MusicPatch.field_t = 0;

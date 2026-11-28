@@ -50,7 +50,7 @@ final class PlatformTaskDispatcher implements Runnable {
         return null != this.field_i ? true : false;
     }
 
-    private final static BoundedRandomAccessFile a(int param0, int param1, String param2, String param3) {
+    private final static BoundedRandomAccessFile openPreferencesFile(int param0, int param1, String param2, String param3) {
         try {
           int var6 = 0;
           BoundedRandomAccessFile stackIn_15_0 = null;
@@ -403,11 +403,11 @@ final class PlatformTaskDispatcher implements Runnable {
                         }
                         break;
                       case 13:
-                        var3_ref_wk = PlatformTaskDispatcher.a(-120, field_u, (String) (var8.objectArgument), "");
+                        var3_ref_wk = PlatformTaskDispatcher.openPreferencesFile(-120, field_u, (String) (var8.objectArgument), "");
                         var8.result = var3_ref_wk;
                         break;
                       case 12:
-                        var3_ref_wk = PlatformTaskDispatcher.a(-120, field_u, (String) (var8.objectArgument), field_a);
+                        var3_ref_wk = PlatformTaskDispatcher.openPreferencesFile(-120, field_u, (String) (var8.objectArgument), field_a);
                         var8.result = var3_ref_wk;
                         break;
                       case 7:
@@ -447,7 +447,7 @@ final class PlatformTaskDispatcher implements Runnable {
                     }
                     try {
                       if (false) throw (ProxyAuthenticationRequiredException) null;
-                      var8.result = nc.a((String) (var8.objectArgument), (byte) 40, var8.intArgument).a(-26042);
+                      var8.result = nc.a((String) (var8.objectArgument), (byte) 40, var8.intArgument).openSocket(-26042);
                     } catch (ProxyAuthenticationRequiredException decompiledCaughtParameter2) {
                       decompiledCaughtException = decompiledCaughtParameter2;
                       var3_ref_vc = (ProxyAuthenticationRequiredException) (Object) decompiledCaughtException;

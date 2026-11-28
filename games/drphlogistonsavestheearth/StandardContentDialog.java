@@ -46,23 +46,23 @@ final class StandardContentDialog extends ContentTransitionDialog {
         }
     }
 
-    final static hj a(String param0, int param1, byte param2) {
-        ka var3 = null;
+    final static SocketConnector a(String param0, int param1, byte param2) {
+        ProxySocketConnector var3 = null;
         RuntimeException var3_ref = null;
-        ka stackIn_3_0 = null;
+        ProxySocketConnector stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var3 = new ka();
-          ((hj) ((Object) var3)).field_b = param0;
+          var3 = new ProxySocketConnector();
+          ((SocketConnector) ((Object) var3)).field_b = param0;
           if (param2 <= 20) {
             StandardContentDialog.a(true, 81);
           }
-          ((hj) ((Object) var3)).field_d = param1;
+          ((SocketConnector) ((Object) var3)).field_d = param1;
           stackIn_3_0 = var3;
-          return (hj) ((Object) stackIn_3_0);
+          return (SocketConnector) ((Object) stackIn_3_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3_ref = decompiledCaughtException;

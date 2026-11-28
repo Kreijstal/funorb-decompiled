@@ -88,7 +88,7 @@ final class BoundedRandomAccessFile {
             var3 = (CharSequence) ((Object) var2);
             if (SpriteGeometry.a((byte) -22, var3) != 0L) {
               if (param1 >= -37) {
-                BoundedRandomAccessFile.a(62, 7, 10, -75, 30);
+                BoundedRandomAccessFile.createBeveledPanelSprites(62, 7, 10, -75, 30);
               }
               return;
             }
@@ -161,12 +161,12 @@ final class BoundedRandomAccessFile {
         }
     }
 
-    final static RgbSprite[] a(int param0, int param1, int param2, int param3, int param4) {
+    final static RgbSprite[] createBeveledPanelSprites(int param0, int param1, int param2, int param3, int param4) {
         if (param0 == 18938) {
-          return jk.a(param1, 1, param3, -7139, param4, 1, 3, param2, 1);
+          return LogoMesh.createNineSlicePanelSprites(param1, 1, param3, -7139, param4, 1, 3, param2, 1);
         }
         BoundedRandomAccessFile.a(false, 11);
-        return jk.a(param1, 1, param3, -7139, param4, 1, 3, param2, 1);
+        return LogoMesh.createNineSlicePanelSprites(param1, 1, param3, -7139, param4, 1, 3, param2, 1);
     }
 
     final static boolean a(boolean param0, int param1) {

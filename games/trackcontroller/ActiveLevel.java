@@ -721,7 +721,7 @@ final class ActiveLevel extends LevelGrid {
           this.field_bb = this.field_bb ^ (fieldTemp$1 ^ fieldTemp$2);
           this.field_R = this.field_R - this.field_cb;
           var3 = ContentTransitionDialog.clickX - 467;
-          var4_int = wg.clickY - 138;
+          var4_int = ArchiveSourceManager.clickY - 138;
           if (0 <= var3 &&
             26 + ba.field_b.field_G > var4_int &&
             var3 < 156 &&
@@ -731,7 +731,7 @@ final class ActiveLevel extends LevelGrid {
             sc.field_g = stackIn_20_0;
             return;
           }
-          var4_intLifetime1 = wg.clickY - 178;
+          var4_intLifetime1 = ArchiveSourceManager.clickY - 178;
           if (var3 >= 0 &&
             26 + ba.field_b.field_G > var4_intLifetime1 &&
             156 > var3 &&
@@ -1522,7 +1522,7 @@ final class ActiveLevel extends LevelGrid {
         int discarded$0 = 0;
         int var3 = TrackController.field_F ? 1 : 0;
         if (1 == this.phase) {
-          wg.b(117);
+          ArchiveSourceManager.b(117);
           this.loadLevel(this.level, param0 ^ 97);
         } else {
           if (this.phase != 2) {

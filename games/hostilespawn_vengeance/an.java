@@ -102,7 +102,7 @@ final class an extends ql {
           for (var3Lifetime1 = 0; 2 > var3Lifetime1; var3Lifetime1++) {
             stackIn_19_0 = this.field_e[var3Lifetime1].field_e;
             if (stackIn_19_0 >= 0) {
-              var4Lifetime1 = ih.a(var12.field_j, (byte) -78, this.field_e[var3Lifetime1]);
+              var4Lifetime1 = SocketArchiveNetworkClient.a(var12.field_j, (byte) -78, this.field_e[var3Lifetime1]);
               if (var4Lifetime1 < 2) {
                 stackIn_28_0 = (this.field_e[1 - var3Lifetime1].field_e >= 0) ? 0 : 1;
                 var5 = stackIn_28_0;
@@ -242,7 +242,7 @@ final class an extends ql {
         }
         var2 = ha.field_t;
         if (var2 == 9) {
-          return ih.field_u;
+          return SocketArchiveNetworkClient.field_u;
         }
         if (var2 == 0) {
           return q.field_a;

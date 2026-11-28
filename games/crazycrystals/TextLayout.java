@@ -107,7 +107,7 @@ abstract class TextLayout {
           }
           var8 = tp.field_f;
           var9 = var8;
-          var9.d(8, param0);
+          var9.writeCipheredByte(8, param0);
           var9.position = var9.position + 1;
           var4 = var9.position;
           var9.writeByte(true, 1);

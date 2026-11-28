@@ -54,7 +54,7 @@ public final class DungeonAssault extends NetworkGameClient {
                 if (mn.field_b == -1) {
                   if (ik.field_e != null) {
                     ik.field_e.updateScreen(true);
-                    while (ha.b((byte) 47)) {
+                    while (ProxySocketConnector.b((byte) 47)) {
                       ik.field_e.handleScreenKeyPress();
                     }
                   }
@@ -180,7 +180,7 @@ public final class DungeonAssault extends NetworkGameClient {
             var10.field_A[2] = new Raider(2, 4);
             var10.field_A[3] = new Raider(3, 2);
             var10.setCombatMode(false, 4);
-            ha.d(1);
+            ProxySocketConnector.d(1);
             ik.field_e = new DungeonRaidScreen(false, var10);
             stackIn_127_0 = (!RegistrationAgreementPane.field_Q) ? 0 : 1;
             var4Lifetime1 = stackIn_127_0;
@@ -759,9 +759,9 @@ public final class DungeonAssault extends NetworkGameClient {
           ka.resetStaticState((byte) -67);
           PcmOutputWorker.clearStaticReferences(param0);
           il.clearStaticReferences((byte) 111);
-          bb.clearStaticReferences((byte) 127);
+          ArchiveNetworkClient.clearStaticReferences((byte) 127);
           DiskCacheWorker.clearStaticReferences(-86);
-          je.clearStaticReferences(true);
+          ArchiveSourceManager.clearStaticReferences(true);
           tm.clearStaticReferences(-107);
           GzipDecompressor.clearStaticReferences(0);
           qa.clearStaticReferences(-2544);
@@ -812,7 +812,7 @@ public final class DungeonAssault extends NetworkGameClient {
           eg.clearStaticReferences(-23658);
           hp.clearStaticReferences(35);
           no.resetStaticState((byte) -126);
-          um.a(false);
+          SocketConnector.a(false);
           ProxyAuthenticationRequiredException.clearStaticReferences(98);
           NanoFrameTimer.clearStaticReferences(-102);
           ImageProducerRasterBuffer.clearStaticReferences(false);
@@ -826,7 +826,7 @@ public final class DungeonAssault extends NetworkGameClient {
           gl.clearStaticReferences((byte) -105);
           oc.clearStaticReferences(4296);
           dl.a(51);
-          tp.clearStaticReferences(35);
+          SocketArchiveNetworkClient.clearStaticReferences(35);
           up.a(false);
           NetworkArchiveRequest.resetStaticState(true);
           SectorCacheStore.clearStaticReferences(1148357992);
@@ -867,7 +867,7 @@ public final class DungeonAssault extends NetworkGameClient {
           SecondaryNodeDeque.clearStaticReferences(20);
           wf.clearStaticReferences((byte) -28);
           pb.e((byte) -78);
-          ha.clearStaticReferences(64);
+          ProxySocketConnector.clearStaticReferences(64);
           rc.clearStaticReferences((byte) -127);
           rp.b((byte) -68);
           g.g(-101);
@@ -1087,7 +1087,7 @@ public final class DungeonAssault extends NetworkGameClient {
             this.updateScreensAndTransitions(true, (byte) -98);
           }
           if (!hc.b(1)) {
-            tp.a(10, 100.0f, kj.field_m);
+            SocketArchiveNetworkClient.a(10, 100.0f, kj.field_m);
             g.a(var11, param0 + 18093);
             return;
           }

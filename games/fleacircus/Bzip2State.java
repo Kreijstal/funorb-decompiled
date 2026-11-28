@@ -60,7 +60,7 @@ final class Bzip2State {
 
     final static void a(int param0, int param1, int param2, int param3, int param4) {
         GrowableIntArray.field_h[oe.field_a] = param3;
-        uf.field_e[oe.field_a] = param0;
+        ArchiveSourceManager.field_e[oe.field_a] = param0;
         PcmResampler.field_c[oe.field_a] = param4;
         fg.field_u[oe.field_a] = param2;
         ok.field_s[oe.field_a] = 0;

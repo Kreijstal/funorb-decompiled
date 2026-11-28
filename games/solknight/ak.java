@@ -41,7 +41,7 @@ final class ak {
           }
           Asteroid.field_f = param1;
           id.field_a = param0;
-          ea.field_o = param4;
+          SocketArchiveNetworkClient.field_o = param4;
           qd.field_e = new Sprite[param2.length];
           if (!param3) {
             field_d = (String[]) null;

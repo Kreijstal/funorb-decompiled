@@ -18,7 +18,7 @@ final class dc {
           return;
         }
         java.awt.Component var2 = (java.awt.Component) null;
-        dc.a((java.awt.Component) null, (byte) 101);
+        dc.attachMouseListeners((java.awt.Component) null, (byte) 101);
         if (hj.field_t == null) {
           hj.field_t = new ProgressDialog(im.field_e, GameAppletShell.field_g);
         }
@@ -202,7 +202,7 @@ final class dc {
         }
     }
 
-    final static void a(java.awt.Component param0, byte param1) {
+    final static void attachMouseListeners(java.awt.Component param0, byte param1) {
         param0.addMouseListener(jc.field_b);
         param0.addMouseMotionListener(jc.field_b);
         if (param1 != 48) {

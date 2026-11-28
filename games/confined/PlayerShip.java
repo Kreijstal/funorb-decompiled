@@ -829,7 +829,7 @@ final class PlayerShip extends MovingTunnelEntity {
                     stackIn_196_4 = this.field_A;
                     stackIn_196_5 = var14_ref_h;
                     stackIn_196_6 = var3;
-                    stackIn_196_7 = og.field_g;
+                    stackIn_196_7 = ProxySocketConnector.field_g;
                     stackIn_196_8 = 0.0;
                     stackIn_196_9 = 0.0;
                     if (this.field_Pb <= 0) {
@@ -1072,7 +1072,7 @@ final class PlayerShip extends MovingTunnelEntity {
                   break;
                 }
                 if (var13 != null) {
-                  this.a(var13.field_T, (TunnelEntity) (var11_ref), 0.2, this.field_jb, og.field_g, param0 ^ 11780);
+                  this.a(var13.field_T, (TunnelEntity) (var11_ref), 0.2, this.field_jb, ProxySocketConnector.field_g, param0 ^ 11780);
                 }
                 var12++;
               }
@@ -1140,7 +1140,7 @@ final class PlayerShip extends MovingTunnelEntity {
                   }
                   if (stackIn_527_0 != null) {
                     var19.field_Z.b(param0 ^ 11792);
-                    var19.a(false, var3, 0, og.field_g);
+                    var19.a(false, var3, 0, ProxySocketConnector.field_g);
                     var19.field_Q.a(ud.field_o, var11, var19.field_T[2], var14, var12_double, ProgressMessageDialog.field_sb, rn.field_c, var19.field_T[0], false, var19.field_T[1]);
                     if (null != var19.field_Q.field_Q) {
                       var19.field_Q.field_Q.field_m = this.field_Q * 96 >> 3;
@@ -1209,7 +1209,7 @@ final class PlayerShip extends MovingTunnelEntity {
                 if (this.field_ob == 0) {
                   if (this.field_ub <= 0 ||
                     this.field_A.field_M ||
-                    !mc.field_e[ja.field_d]) {
+                    !mc.field_e[ArchiveSourceManager.field_d]) {
                     if (0 >= this.field_tb ||
                       this.field_A.field_M ||
                       !mc.field_e[StripedProgressWidget.field_W]) {

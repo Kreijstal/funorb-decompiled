@@ -15,7 +15,7 @@ final class qa {
     }
 
     final static void b(int param0) {
-        wb.field_g = null;
+        ArchiveNetworkClient.field_g = null;
         af.field_a = null;
         if (param0 != 0) {
           qa.b(-30);

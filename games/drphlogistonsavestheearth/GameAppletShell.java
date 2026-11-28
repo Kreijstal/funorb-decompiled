@@ -238,7 +238,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
             } catch (java.lang.Throwable decompiledCaughtParameter1) {
               decompiledCaughtException = decompiledCaughtParameter1;
               var1 = decompiledCaughtException;
-              gb.a((Throwable) (var1), (String) null, 10);
+              ArchiveNetworkClient.a((Throwable) (var1), (String) null, 10);
               this.showErrorPage(-51, "crash");
             }
             this.shutdownApplet(0, true);
@@ -926,7 +926,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
             } catch (java.lang.Throwable decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var8_ref = decompiledCaughtException;
-              gb.a(var8_ref, (String) null, 10);
+              ArchiveNetworkClient.a(var8_ref, (String) null, 10);
               this.showErrorPage(param0 - 47, "crash");
             }
             return;

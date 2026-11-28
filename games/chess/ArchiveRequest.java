@@ -96,7 +96,7 @@ abstract class ArchiveRequest extends DualLinkNode {
             stackIn_6_0 = NodeHashTableIterator.field_b;
             return stackIn_6_0;
           }
-          var8 = mn.a(-1, param2);
+          var8 = ProxySocketConnector.a(-1, param2);
           if (param1 != 21250) {
             ArchiveRequest.h(3);
           }
@@ -190,7 +190,7 @@ abstract class ArchiveRequest extends DualLinkNode {
         ModalDialogHost.field_R[13] = rc.field_b;
         ModalDialogHost.field_R[21] = ec.field_g;
         ModalDialogHost.field_R[30] = DequeWidgetContainer.field_H;
-        ModalDialogHost.field_R[32] = hj.field_k;
+        ModalDialogHost.field_R[32] = ArchiveSourceManager.field_k;
         ModalDialogHost.field_R[3] = TextFieldValidator.field_g;
         ModalDialogHost.field_R[18] = dh.field_h;
         ModalDialogHost.field_R[29] = LoginPanel.field_P;
@@ -209,7 +209,7 @@ abstract class ArchiveRequest extends DualLinkNode {
         ModalDialogHost.field_R[9] = gl.field_a;
         ModalDialogHost.field_R[param0] = FullscreenNoticeType.field_d;
         ModalDialogHost.field_R[10] = oh.field_d;
-        ModalDialogHost.field_R[5] = vc.field_c;
+        ModalDialogHost.field_R[5] = KeyboardInputHandler.field_c;
         ModalDialogHost.field_R[25] = ac.field_p;
         ModalDialogHost.field_R[1] = qa.field_a;
         ec.field_d = new eb(0, 0, 120, 24, ModalDialogHost.field_R[9]);

@@ -6,7 +6,7 @@ final class da extends ArchiveProvider {
     private kl field_j;
     static String field_B;
     static String[] field_C;
-    private wm field_s;
+    private ArchiveNetworkClient field_s;
     private byte[] field_u;
     private ArchiveIndex field_n;
     private int field_v;
@@ -290,18 +290,18 @@ final class da extends ArchiveProvider {
             uc.field_b = null;
             if (param2 != null) {
               var9 = 0;
-              mn.field_h.position = 0;
+              ProxySocketConnector.field_h.position = 0;
               if (param6) {
                 var9 = var9 | 1;
               }
-              mn.field_h.writeInt(ph.field_d.nextInt(), (byte) -81);
-              mn.field_h.writeInt(ph.field_d.nextInt(), (byte) -81);
-              mn.field_h.writePrefixedString(true, var7);
-              mn.field_h.writePrefixedString(true, var8);
-              mn.field_h.writePrefixedString(true, q.a((CharSequence) ((Object) param2), (byte) -57));
-              mn.field_h.writeShort(param0, 86);
-              mn.field_h.writeByte(param4, (byte) 92);
-              mn.field_h.writeByte(var9, (byte) -107);
+              ProxySocketConnector.field_h.writeInt(ph.field_d.nextInt(), (byte) -81);
+              ProxySocketConnector.field_h.writeInt(ph.field_d.nextInt(), (byte) -81);
+              ProxySocketConnector.field_h.writePrefixedString(true, var7);
+              ProxySocketConnector.field_h.writePrefixedString(true, var8);
+              ProxySocketConnector.field_h.writePrefixedString(true, q.a((CharSequence) ((Object) param2), (byte) -57));
+              ProxySocketConnector.field_h.writeShort(param0, 86);
+              ProxySocketConnector.field_h.writeByte(param4, (byte) 92);
+              ProxySocketConnector.field_h.writeByte(var9, (byte) -107);
               EditableTextField.field_U.writeByte(18, (byte) 96);
               EditableTextField.field_U.position = EditableTextField.field_U.position + 2;
               var10 = EditableTextField.field_U.position;
@@ -310,15 +310,15 @@ final class da extends ArchiveProvider {
                 var11_ref_String = "";
               }
               EditableTextField.field_U.writeString(-104, var11_ref_String);
-              lk.a(SecondaryNodeHashTable.field_k, mn.field_h, EditableTextField.field_U, 86, RichTextWidget.field_M);
+              lk.a(SecondaryNodeHashTable.field_k, ProxySocketConnector.field_h, EditableTextField.field_U, 86, RichTextWidget.field_M);
               EditableTextField.field_U.backpatchShortLength(EditableTextField.field_U.position - var10, 70);
               decompiledFrameRemainder0 = (var13 != 0);
             }
             if (decompiledFrameRemainder0) {
-              mn.field_h.position = 0;
-              mn.field_h.writeInt(ph.field_d.nextInt(), (byte) -81);
-              mn.field_h.writeInt(ph.field_d.nextInt(), (byte) -81);
-              stackIn_28_0 = mn.field_h;
+              ProxySocketConnector.field_h.position = 0;
+              ProxySocketConnector.field_h.writeInt(ph.field_d.nextInt(), (byte) -81);
+              ProxySocketConnector.field_h.writeInt(ph.field_d.nextInt(), (byte) -81);
+              stackIn_28_0 = ProxySocketConnector.field_h;
               stackIn_28_1 = true;
               if (param1.a(-10585)) {
                 stackIn_29_2 = var7;
@@ -326,7 +326,7 @@ final class da extends ArchiveProvider {
                 stackIn_29_2 = "";
               }
               ((PacketBuffer) (Object) stackIn_28_0).writePrefixedString(stackIn_28_1, stackIn_29_2);
-              stackIn_32_0 = mn.field_h;
+              stackIn_32_0 = ProxySocketConnector.field_h;
               stackIn_32_1 = true;
               if (!param3.a(-10585)) {
                 stackIn_33_2 = "";
@@ -337,7 +337,7 @@ final class da extends ArchiveProvider {
               EditableTextField.field_U.writeByte(16, (byte) 63);
               EditableTextField.field_U.position = EditableTextField.field_U.position + 1;
               var9 = EditableTextField.field_U.position;
-              lk.a(SecondaryNodeHashTable.field_k, mn.field_h, EditableTextField.field_U, 55, RichTextWidget.field_M);
+              lk.a(SecondaryNodeHashTable.field_k, ProxySocketConnector.field_h, EditableTextField.field_U, 55, RichTextWidget.field_M);
               EditableTextField.field_U.backpatchByteLength(EditableTextField.field_U.position - var9, -1);
             }
             vh.a(-1, (byte) -27);
@@ -518,11 +518,11 @@ final class da extends ArchiveProvider {
             return stackIn_5_0;
           }
           if (null == this.field_q) {
-            if (this.field_s.a(true)) {
+            if (this.field_s.isPriorityQueueFull(true)) {
               stackIn_13_0 = null;
               return (ArchiveIndex) (stackIn_13_0);
             }
-            this.field_q = (ArchiveRequest) ((Object) this.field_s.a(107, 255, (byte) 0, true, this.field_v));
+            this.field_q = (ArchiveRequest) ((Object) this.field_s.enqueueRequest(107, 255, (byte) 0, true, this.field_v));
           }
           if (this.field_q.field_s) {
             stackIn_19_0 = null;
@@ -542,10 +542,10 @@ final class da extends ArchiveProvider {
             } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var3 = decompiledCaughtException;
-              this.field_s.c(0);
+              this.field_s.resetAfterValidationFailure(0);
               this.field_n = null;
-              if (!this.field_s.a(true)) {
-                this.field_q = (ArchiveRequest) ((Object) this.field_s.a(109, 255, (byte) 0, true, this.field_v));
+              if (!this.field_s.isPriorityQueueFull(true)) {
+                this.field_q = (ArchiveRequest) ((Object) this.field_s.enqueueRequest(109, 255, (byte) 0, true, this.field_v));
                 if (var4 != 0) {
                   this.field_q = null;
                 }
@@ -571,13 +571,13 @@ final class da extends ArchiveProvider {
               decompiledCaughtException = decompiledCaughtParameter1;
               var3 = decompiledCaughtException;
               this.field_n = null;
-              boolean decompiledSharedTail0 = !(this.field_s.a(true));
+              boolean decompiledSharedTail0 = !(this.field_s.isPriorityQueueFull(true));
               if (!decompiledSharedTail0) {
                 this.field_q = null;
                 decompiledSharedTail0 = (var4 != 0);
               }
               if (decompiledSharedTail0) {
-                this.field_q = (ArchiveRequest) ((Object) this.field_s.a(115, 255, (byte) 0, true, this.field_v));
+                this.field_q = (ArchiveRequest) ((Object) this.field_s.enqueueRequest(115, 255, (byte) 0, true, this.field_v));
               }
               stackIn_39_0 = null;
               return (ArchiveIndex) (stackIn_39_0);
@@ -808,8 +808,8 @@ final class da extends ArchiveProvider {
                 decompiledFrameRemainder2 = false;
               }
               else {
-                if (!this.field_s.a(true)) {
-                  var4 = this.field_s.a(113, this.field_v, (byte) 2, true, param0);
+                if (!this.field_s.isPriorityQueueFull(true)) {
+                  var4 = this.field_s.enqueueRequest(113, this.field_v, (byte) 2, true, param0);
                   decompiledFrameRemainder2 = (var10 != 0);
                 }
                 if (decompiledFrameRemainder2) {
@@ -836,8 +836,8 @@ final class da extends ArchiveProvider {
                 if (this.field_E[param0] != -1) {
                   throw new RuntimeException();
                 }
-                if (!this.field_s.e(-21)) {
-                  var4 = this.field_s.a(88, this.field_v, (byte) 2, false, param0);
+                if (!this.field_s.isPrefetchQueueFull(-21)) {
+                  var4 = this.field_s.enqueueRequest(88, this.field_v, (byte) 2, false, param0);
                   decompiledFrameRemainder2 = (var10 != 0);
                 }
                 if (decompiledFrameRemainder2) {
@@ -912,8 +912,8 @@ final class da extends ArchiveProvider {
               this.field_E[param0] = (byte) -1;
               ((ArchiveRequest) (var4)).unlink(-2193);
               if (((ArchiveRequest) (var4)).field_u &&
-                !this.field_s.a(true)) {
-                var4 = this.field_s.a(96, this.field_v, (byte) 2, true, param0);
+                !this.field_s.isPriorityQueueFull(true)) {
+                var4 = this.field_s.enqueueRequest(96, this.field_v, (byte) 2, true, param0);
                 this.field_j.a(-117, (long)param0, (IntrusiveNode) (var4));
               }
               stackIn_159_0 = null;
@@ -966,11 +966,11 @@ final class da extends ArchiveProvider {
           } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
             decompiledCaughtException = decompiledCaughtParameter1;
             var6_ref = (RuntimeException) (Object) decompiledCaughtException;
-            this.field_s.c(0);
+            this.field_s.resetAfterValidationFailure(0);
             ((ArchiveRequest) (var4)).unlink(-2193);
             if (((ArchiveRequest) (var4)).field_u &&
-              !this.field_s.a(true)) {
-              var4 = this.field_s.a(118, this.field_v, (byte) 2, true, param0);
+              !this.field_s.isPriorityQueueFull(true)) {
+              var4 = this.field_s.enqueueRequest(118, this.field_v, (byte) 2, true, param0);
               this.field_j.a(92, (long)param0, (IntrusiveNode) (var4));
             }
             stackIn_98_0 = null;
@@ -1304,7 +1304,7 @@ final class da extends ArchiveProvider {
                         this.field_r = this.field_r + 1;
                         continue;
                       }
-                      if (this.field_s.e(-21)) {
+                      if (this.field_s.isPrefetchQueueFull(-21)) {
                         var2_intLifetime1 = 0;
                         break;
                       }
@@ -1418,7 +1418,7 @@ final class da extends ArchiveProvider {
         }
     }
 
-    da(int param0, SectorCacheStore param1, SectorCacheStore param2, wm param3, DiskCacheWorker param4, int param5, byte[] param6, int param7, boolean param8) {
+    da(int param0, SectorCacheStore param1, SectorCacheStore param2, ArchiveNetworkClient param3, DiskCacheWorker param4, int param5, byte[] param6, int param7, boolean param8) {
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
         String stackIn_13_2 = null;

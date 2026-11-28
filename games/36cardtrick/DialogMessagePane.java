@@ -77,7 +77,7 @@ final class DialogMessagePane extends DequeWidgetContainer implements WidgetActi
           int var3 = Main.field_T;
           try {
             if (RichTextWidget.field_H != null) {
-              RichTextWidget.field_H.a(82);
+              RichTextWidget.field_H.close(82);
             }
             if (param0 >= -49) {
               DialogMessagePane.clearDeclaredStaticReferences(-66);

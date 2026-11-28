@@ -236,7 +236,7 @@ final class ConfirmedEmailAvailabilityValidator extends TextFieldValidator {
     final static void a(int param0, int param1) {
         GrowableIntArray.field_f = StripedProgressWidget.field_J[param1];
         ge.field_d = kd.field_k[param1];
-        ic.field_g = ra.field_e[param1];
+        ProxySocketConnector.field_g = ra.field_e[param1];
         if (param0 < 77) {
           field_i = (String) null;
         }

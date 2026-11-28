@@ -324,7 +324,7 @@ final class BufferedRandomAccessFile {
           if (param0 != -52) {
             BufferedRandomAccessFile.a(30, true, 104);
           }
-          fh.field_B = he.field_p;
+          fh.field_B = LeaderboardSubmission.field_p;
           if (param2 == 255) {
             stackIn_11_0 = 5579;
             stackIn_12_1 = !(13 <= cg.field_a);
@@ -514,7 +514,7 @@ final class BufferedRandomAccessFile {
         if (fh.field_B == wj.field_a) {
           throw new IllegalStateException();
         }
-        if (fh.field_B != he.field_p) {
+        if (fh.field_B != LeaderboardSubmission.field_p) {
           return null;
         }
         fh.field_B = wj.field_a;
@@ -608,7 +608,7 @@ final class BufferedRandomAccessFile {
         int var1_int = 0;
         int[] var2 = null;
         int var3 = 0;
-        jk var4_ref_jk = null;
+        LogoMesh var4_ref_jk = null;
         int var4 = 0;
         int var5 = 0;
         int var6 = 0;
@@ -622,7 +622,7 @@ final class BufferedRandomAccessFile {
         int var13 = 0;
         int var14 = 0;
         int var16 = 0;
-        jk var17 = null;
+        LogoMesh var17 = null;
         int var19 = 0;
         int[] var20 = null;
         int[] var21 = null;
@@ -646,7 +646,7 @@ final class BufferedRandomAccessFile {
           var2 = var20;
           for (var3 = 0; var3 < var1_int; var3++) {
             var4_ref_jk = DisplayNameSelectionPanel.field_G[var3];
-            var4_ref_jk.a(true);
+            var4_ref_jk.computeVertexBounds(true);
             ResourceArchive.updateLogoPartRotation(var3, -1);
             var5 = var4_ref_jk.field_e + var4_ref_jk.field_n >> 1;
             var6 = var4_ref_jk.field_N + var4_ref_jk.field_H >> 1;
@@ -662,7 +662,7 @@ final class BufferedRandomAccessFile {
           var3Lifetime1 = qh.field_g[9] >> 8;
           var4 = qh.field_g[10] >> 8;
           var5Lifetime1 = qh.field_g[11] >> 8;
-          var6Lifetime1 = oa.field_a << 4;
+          var6Lifetime1 = SocketConnector.field_a << 4;
           var7Lifetime1 = 0;
           var8Lifetime1 = AlphaWidgetContainer.a(var6Lifetime1, true) >> 8;
           var9Lifetime1 = ProxyAuthenticationRequiredException.a(-822, var6Lifetime1) >> 8;

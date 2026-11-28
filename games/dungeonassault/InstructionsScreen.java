@@ -134,7 +134,7 @@ final class InstructionsScreen extends DungeonAssaultScreen {
         super.updateScreen(param0);
         if (!AccountNameAvailabilityValidator.field_s ||
           !param0) {
-          while (ha.b((byte) 47)) {
+          while (ProxySocketConnector.b((byte) 47)) {
             if (mm.field_t == 13) {
               gd.a(hl.field_f, 0, hl.field_f, false);
               continue;

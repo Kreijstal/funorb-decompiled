@@ -18,11 +18,11 @@ final class ej {
         String stackIn_9_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          qj.a(-53, (java.awt.Component) ((Object) param0));
+          qj.attachKeyboardListeners(-53, (java.awt.Component) ((Object) param0));
           if (param1 < 50) {
             return;
           }
-          SecondaryNodeDeque.a((byte) 50, (java.awt.Component) ((Object) param0));
+          SecondaryNodeDeque.attachMouseListeners((byte) 50, (java.awt.Component) ((Object) param0));
           if (null == ByteArrayPoolSupport.field_e) {
             return;
           }

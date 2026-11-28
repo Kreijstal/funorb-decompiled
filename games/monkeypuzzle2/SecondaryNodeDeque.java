@@ -87,12 +87,12 @@ final class SecondaryNodeDeque implements Iterable {
         }
     }
 
-    final static void a(java.awt.Component param0, byte param1) {
+    final static void detachKeyboardListeners(java.awt.Component param0, byte param1) {
         try {
           param0.removeKeyListener(TextFieldValidator.field_k);
           if (param1 > -123) {
             java.awt.Component var3 = (java.awt.Component) null;
-            SecondaryNodeDeque.a((java.awt.Component) null, (byte) -124);
+            SecondaryNodeDeque.detachKeyboardListeners((java.awt.Component) null, (byte) -124);
           }
           param0.removeFocusListener(TextFieldValidator.field_k);
           vf.field_a = -1;

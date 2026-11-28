@@ -341,8 +341,8 @@ final class BufferedRandomAccessFile {
           return;
         }
         try {
-          oc.a((java.awt.Component) ((Object) param0), (byte) 6);
-          qa.a((java.awt.Component) ((Object) param0), (byte) 119);
+          oc.attachKeyboardListeners((java.awt.Component) ((Object) param0), (byte) 6);
+          qa.attachMouseListeners((java.awt.Component) ((Object) param0), (byte) 119);
           if (Main.field_V != null) {
             Main.field_V.attach(0, (java.awt.Component) ((Object) param0));
           }

@@ -623,7 +623,7 @@ final class ro extends kl {
                   }
                   return;
                 }
-                je.a(0, eb.field_O);
+                ArchiveSourceManager.a(0, eb.field_O);
               }
               if (this.field_x != -1 &&
                 this.field_A >= this.field_x) {
@@ -710,7 +710,7 @@ final class ro extends kl {
             this.field_A = this.field_A + 1;
             if (18 <= this.field_A &&
               0 == (7 & -18 + this.field_A)) {
-              je.a(0, eb.field_O);
+              ArchiveSourceManager.a(0, eb.field_O);
             }
             if (this.field_x != -1 &&
               this.field_A >= this.field_x) {
@@ -877,7 +877,7 @@ final class ro extends kl {
         try {
           var3 = ac.field_B;
           int var4 = -85 % ((-8 - param2) / 52);
-          var3.d((byte) -126, param1);
+          var3.writeCipheredByte((byte) -126, param1);
           var3.writeByte(6, param0.field_j);
           var3.writeByte(6, param0.field_i);
         } catch (RuntimeException runtimeException) {

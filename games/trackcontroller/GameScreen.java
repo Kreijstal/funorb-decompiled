@@ -43,7 +43,7 @@ final class GameScreen {
         while (mh.e(127)) {
           this.d((byte) -55);
         }
-        this.field_e.a(-118, this.a((byte) 6, kf.mouseX, fg.mouseY), this.a((byte) 6, ContentTransitionDialog.clickX, wg.clickY));
+        this.field_e.a(-118, this.a((byte) 6, kf.mouseX, fg.mouseY), this.a((byte) 6, ContentTransitionDialog.clickX, ArchiveSourceManager.clickY));
         if (this.field_e.field_e != -1) {
           this.a(this.field_e.field_e, false, true);
         }
@@ -67,16 +67,16 @@ final class GameScreen {
           }
           if (ContentTransitionDialog.clickX >= 576 &&
             ContentTransitionDialog.clickX < 602) {
-            if (67 <= wg.clickY &&
-              wg.clickY < 93) {
+            if (67 <= ArchiveSourceManager.clickY &&
+              ArchiveSourceManager.clickY < 93) {
               var5 = 0;
             }
-            if (wg.clickY >= 431 &&
-              457 > wg.clickY) {
+            if (ArchiveSourceManager.clickY >= 431 &&
+              457 > ArchiveSourceManager.clickY) {
               var5 = 1;
             }
           }
-          if (this.a(ContentTransitionDialog.clickX, 2600, wg.clickY) != null) {
+          if (this.a(ContentTransitionDialog.clickX, 2600, ArchiveSourceManager.clickY) != null) {
             var5 = 2;
           }
           if (uk.clickButton != 0) {
@@ -95,7 +95,7 @@ final class GameScreen {
           }
           if (this.field_e.d(0)) {
             var6 = GrowableIntArray.field_b.levelIndex;
-            var7 = this.a(ContentTransitionDialog.clickX, 2600, wg.clickY);
+            var7 = this.a(ContentTransitionDialog.clickX, 2600, ArchiveSourceManager.clickY);
             if (var7 != null) {
               this.field_e.field_a = true;
               GrowableIntArray.field_b = var7;
@@ -119,7 +119,7 @@ final class GameScreen {
           }
         }
         if (uk.clickButton != 0) {
-          this.field_g = wg.clickY;
+          this.field_g = ArchiveSourceManager.clickY;
           this.field_h = ContentTransitionDialog.clickX;
         }
         var4Lifetime1 = -1;

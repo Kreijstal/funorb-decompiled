@@ -94,19 +94,19 @@ final class wh extends InteractiveWidget {
     }
 
     final static void e(byte param0) {
-        tj.field_w[46] = 72;
-        tj.field_w[61] = 27;
-        tj.field_w[91] = 42;
-        tj.field_w[59] = 57;
-        tj.field_w[44] = 71;
-        tj.field_w[47] = 73;
-        tj.field_w[45] = 26;
-        tj.field_w[192] = 28;
-        tj.field_w[520] = 59;
-        tj.field_w[222] = 58;
+        SocketArchiveNetworkClient.field_w[46] = 72;
+        SocketArchiveNetworkClient.field_w[61] = 27;
+        SocketArchiveNetworkClient.field_w[91] = 42;
+        SocketArchiveNetworkClient.field_w[59] = 57;
+        SocketArchiveNetworkClient.field_w[44] = 71;
+        SocketArchiveNetworkClient.field_w[47] = 73;
+        SocketArchiveNetworkClient.field_w[45] = 26;
+        SocketArchiveNetworkClient.field_w[192] = 28;
+        SocketArchiveNetworkClient.field_w[520] = 59;
+        SocketArchiveNetworkClient.field_w[222] = 58;
         int var1 = 17 / ((param0 - 2) / 42);
-        tj.field_w[92] = 74;
-        tj.field_w[93] = 43;
+        SocketArchiveNetworkClient.field_w[92] = 74;
+        SocketArchiveNetworkClient.field_w[93] = 43;
     }
 
     final static void f(byte param0) {

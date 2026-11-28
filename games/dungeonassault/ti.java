@@ -8,7 +8,7 @@ final class ti extends qa {
     static pp field_A;
     private int field_p;
     private tm field_y;
-    private bb field_t;
+    private ArchiveNetworkClient field_t;
     private byte[] field_s;
     static String field_n;
     static boolean field_f;
@@ -66,10 +66,10 @@ final class ti extends qa {
               this.field_h[param1] != -1) {
               var4 = this.field_B.readNow(this.field_D, param1, -6319);
             } else {
-              if (this.field_t.b(-21431)) {
+              if (this.field_t.isPriorityQueueFull(-21431)) {
                 return null;
               }
-              var4 = this.field_t.a(true, this.field_p, (byte) 2, param1, (byte) 73);
+              var4 = this.field_t.enqueueRequest(true, this.field_p, (byte) 2, param1, (byte) 73);
             }
           } else {
             if (1 != param2) {
@@ -82,10 +82,10 @@ final class ti extends qa {
               if (this.field_h[param1] != -1) {
                 throw new RuntimeException();
               }
-              if (this.field_t.d(20)) {
+              if (this.field_t.isPrefetchQueueFull(20)) {
                 return null;
               }
-              var4 = this.field_t.a(false, this.field_p, (byte) 2, param1, (byte) 118);
+              var4 = this.field_t.enqueueRequest(false, this.field_p, (byte) 2, param1, (byte) 118);
             } else {
               if (this.field_D == null) {
                 throw new RuntimeException();
@@ -148,10 +148,10 @@ final class ti extends qa {
             if (!((ArchiveRequest) (var4)).field_B) {
               return null;
             }
-            if (this.field_t.b(-21431)) {
+            if (this.field_t.isPriorityQueueFull(-21431)) {
               return null;
             }
-            var4 = this.field_t.a(true, this.field_p, (byte) 2, param1, (byte) 77);
+            var4 = this.field_t.enqueueRequest(true, this.field_p, (byte) 2, param1, (byte) 77);
             this.field_l.a((IntrusiveNode) (var4), 12460, (long)param1);
             return null;
           }
@@ -183,15 +183,15 @@ final class ti extends qa {
         } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
           decompiledCaughtException = decompiledCaughtParameter1;
           var6_ref = (RuntimeException) (Object) decompiledCaughtException;
-          this.field_t.f(-118);
+          this.field_t.resetAfterValidationFailure(-118);
           ((ArchiveRequest) (var4)).unlink(false);
           if (!((ArchiveRequest) (var4)).field_B) {
             return null;
           }
-          if (this.field_t.b(-21431)) {
+          if (this.field_t.isPriorityQueueFull(-21431)) {
             return null;
           }
-          var4 = this.field_t.a(true, this.field_p, (byte) 2, param1, (byte) 105);
+          var4 = this.field_t.enqueueRequest(true, this.field_p, (byte) 2, param1, (byte) 105);
           this.field_l.a((IntrusiveNode) (var4), 12460, (long)param1);
           return null;
         }
@@ -291,7 +291,7 @@ final class ti extends qa {
               scanLoop1: while (true) {
                 if (this.field_z < this.field_y.field_k.length) {
                   if (this.field_y.field_k[this.field_z] != 0) {
-                    if (this.field_t.d(20)) {
+                    if (this.field_t.isPrefetchQueueFull(20)) {
                       var2_intLifetime1 = 0;
                       break scanLoop1;
                     }
@@ -370,10 +370,10 @@ final class ti extends qa {
           return this.field_y;
         }
         if (this.field_C == null) {
-          if (this.field_t.b(-21431)) {
+          if (this.field_t.isPriorityQueueFull(-21431)) {
             return null;
           }
-          this.field_C = (ArchiveRequest) ((Object) this.field_t.a(true, 255, (byte) 0, this.field_p, (byte) 79));
+          this.field_C = (ArchiveRequest) ((Object) this.field_t.enqueueRequest(true, 255, (byte) 0, this.field_p, (byte) 79));
         }
         if (param0 != 26538) {
           return (tm) null;
@@ -398,10 +398,10 @@ final class ti extends qa {
             decompiledCaughtException = decompiledCaughtParameter0;
             var3 = decompiledCaughtException;
             this.field_y = null;
-            if (this.field_t.b(-21431)) {
+            if (this.field_t.isPriorityQueueFull(-21431)) {
               this.field_C = null;
             } else {
-              this.field_C = (ArchiveRequest) ((Object) this.field_t.a(true, 255, (byte) 0, this.field_p, (byte) 69));
+              this.field_C = (ArchiveRequest) ((Object) this.field_t.enqueueRequest(true, 255, (byte) 0, this.field_p, (byte) 69));
             }
             return null;
           }
@@ -414,12 +414,12 @@ final class ti extends qa {
           } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
             decompiledCaughtException = decompiledCaughtParameter1;
             var3 = decompiledCaughtException;
-            this.field_t.f(99);
+            this.field_t.resetAfterValidationFailure(99);
             this.field_y = null;
-            if (this.field_t.b(-21431)) {
+            if (this.field_t.isPriorityQueueFull(-21431)) {
               this.field_C = null;
             } else {
-              this.field_C = (ArchiveRequest) ((Object) this.field_t.a(true, 255, (byte) 0, this.field_p, (byte) 71));
+              this.field_C = (ArchiveRequest) ((Object) this.field_t.enqueueRequest(true, 255, (byte) 0, this.field_p, (byte) 71));
             }
             return null;
           }
@@ -492,7 +492,7 @@ final class ti extends qa {
     final int getGroupRequestProgressPercent(int param0, int param1) {
         ArchiveRequest var3 = (ArchiveRequest) (this.field_l.a((long)param0, 8));
         if (param1 != 27318) {
-          this.field_t = (bb) null;
+          this.field_t = (ArchiveNetworkClient) null;
         }
         if (var3 != null) {
           return var3.getProgressPercent((byte) 107);
@@ -524,7 +524,7 @@ final class ti extends qa {
         field_n = null;
     }
 
-    ti(int param0, SectorCacheStore param1, SectorCacheStore param2, bb param3, DiskCacheWorker param4, int param5, byte[] param6, int param7, boolean param8) {
+    ti(int param0, SectorCacheStore param1, SectorCacheStore param2, ArchiveNetworkClient param3, DiskCacheWorker param4, int param5, byte[] param6, int param7, boolean param8) {
         boolean stackIn_7_1 = false;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;

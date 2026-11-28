@@ -123,11 +123,11 @@ final class kl {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         try {
-          AccountRegistrationPanel.a((java.awt.Component) ((Object) param0), param1 ^ -102);
+          AccountRegistrationPanel.detachKeyboardListeners((java.awt.Component) ((Object) param0), param1 ^ -102);
           if (param1 != -114) {
             return;
           }
-          uj.a(param1 + 114, (java.awt.Component) ((Object) param0));
+          uj.detachMouseListeners(param1 + 114, (java.awt.Component) ((Object) param0));
           if (GuestPlayConfirmationForm.field_L != null) {
             GuestPlayConfirmationForm.field_L.detach((java.awt.Component) ((Object) param0), param1 + 116);
           }

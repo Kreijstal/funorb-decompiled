@@ -44,7 +44,7 @@ final class DungeonRaidScreen extends DungeonAssaultScreen {
           if (!this.tryStartRaidActionCooldown(26)) {
             return;
           }
-          ac.field_B.d((byte) -97, 69);
+          ac.field_B.writeCipheredByte((byte) -97, 69);
           ac.field_B.writeShort(param0, -94);
           return;
         }
@@ -84,7 +84,7 @@ final class DungeonRaidScreen extends DungeonAssaultScreen {
               return;
             }
             if (ob.field_Jb == var3_int) {
-              this.setRaidMessage(bb.field_r, -8963);
+              this.setRaidMessage(ArchiveNetworkClient.field_r, -8963);
               return;
             }
             if (ob.field_pc == var3_int) {
@@ -242,12 +242,12 @@ final class DungeonRaidScreen extends DungeonAssaultScreen {
             return;
           }
           if (param1 == 2) {
-            ac.field_B.d((byte) -117, 67);
+            ac.field_B.writeCipheredByte((byte) -117, 67);
           } else {
             if (param1 == 1) {
-              ac.field_B.d((byte) -125, 66);
+              ac.field_B.writeCipheredByte((byte) -125, 66);
             } else {
-              ac.field_B.d((byte) -124, 65);
+              ac.field_B.writeCipheredByte((byte) -124, 65);
             }
           }
           return;
@@ -288,7 +288,7 @@ final class DungeonRaidScreen extends DungeonAssaultScreen {
         this.field_Y.enterDungeonRoom(this.field_Y.field_u, true, 24);
         this.field_Y.setCombatMode(false, 64);
         int var2 = 72 / ((param0 - 17) / 53);
-        this.setRaidMessage(um.field_c, -8963);
+        this.setRaidMessage(SocketConnector.field_c, -8963);
         this.field_b = (kl) ((Object) new ro(this));
     }
 
@@ -338,8 +338,8 @@ final class DungeonRaidScreen extends DungeonAssaultScreen {
         ArchiveRequest.a(32, true, 468, 115, 8);
         ArchiveRequest.a(352, true, 32, -39, 48);
         ArchiveRequest.a(352, true, 600, 103, 48);
-        je.a((byte) -99, 352, 48, pi.field_b, 0, 32);
-        je.a((byte) -113, 352, 48, pi.field_b, 608, 32);
+        ArchiveSourceManager.a((byte) -99, 352, 48, pi.field_b, 0, 32);
+        ArchiveSourceManager.a((byte) -113, 352, 48, pi.field_b, 608, 32);
         AwtRasterBuffer.a(0, 640, 0, (byte) 118);
         AwtRasterBuffer.a(0, 640, 40, (byte) 65);
         vd.a(200, 2, -14561, 0, 0, 400);
@@ -1142,7 +1142,7 @@ final class DungeonRaidScreen extends DungeonAssaultScreen {
               if (!this.field_Y.field_p.isBitSet(var8_int, (byte) 83)) {
                 this.resetDungeonTileAnimation(false, var8_int);
               }
-              je.a(param0 ^ -67, Bzip2State.field_q);
+              ArchiveSourceManager.a(param0 ^ -67, Bzip2State.field_q);
               param1.position = var6;
             } else if (var5 != ob.field_nc &&
               ob.field_Ib != var5 &&
@@ -1181,7 +1181,7 @@ final class DungeonRaidScreen extends DungeonAssaultScreen {
               this.resetDungeonTileAnimation(false, var7);
             }
             if (ob.field_dc == var5) {
-              je.a(0, Bzip2State.field_q);
+              ArchiveSourceManager.a(0, Bzip2State.field_q);
             }
             param1.position = var6;
           }
@@ -1573,13 +1573,13 @@ final class DungeonRaidScreen extends DungeonAssaultScreen {
             param0 = this.field_Y.field_A[0];
           }
           if (!this.field_Y.field_p.isBitSet(param1, (byte) 89)) {
-            je.a(0, Bzip2State.field_q);
+            ArchiveSourceManager.a(0, Bzip2State.field_q);
           }
           if (this.field_w) {
             if (!this.tryStartRaidActionCooldown(51)) {
               return;
             }
-            ac.field_B.d((byte) -101, 63);
+            ac.field_B.writeCipheredByte((byte) -101, 63);
             ac.field_B.writeByte(6, param1);
             ac.field_B.writeByte(6, param0.field_j);
             return;
@@ -2095,7 +2095,7 @@ final class DungeonRaidScreen extends DungeonAssaultScreen {
         int stackIn_19_0 = 0;
         var4 = DungeonAssault.field_K;
         if (this.field_w) {
-          ac.field_B.d((byte) -101, 62);
+          ac.field_B.writeCipheredByte((byte) -101, 62);
           if (nf.field_A) {
             return;
           }
@@ -2172,7 +2172,7 @@ final class DungeonRaidScreen extends DungeonAssaultScreen {
           }
           if (this.field_P[2] > 0 &&
             0 == DraggableWidgetContainer.b(0, 100)) {
-            this.field_B.addFirst(je.a(0, sa.field_v), false);
+            this.field_B.addFirst(ArchiveSourceManager.a(0, sa.field_v), false);
           }
         } else if (this.field_Y.field_q != -1) {
           var3_int = this.field_Y.field_q / 7;
@@ -2197,17 +2197,17 @@ final class DungeonRaidScreen extends DungeonAssaultScreen {
           }
           if (this.field_P[2] > 0 &&
             0 == DraggableWidgetContainer.b(0, 100)) {
-            this.field_B.addFirst(je.a(0, sa.field_v), false);
+            this.field_B.addFirst(ArchiveSourceManager.a(0, sa.field_v), false);
           }
         } else {
           if (this.field_P[2] > 0 &&
             0 == DraggableWidgetContainer.b(0, 100)) {
-            this.field_B.addFirst(je.a(0, sa.field_v), false);
+            this.field_B.addFirst(ArchiveSourceManager.a(0, sa.field_v), false);
           }
         }
         if (this.field_P[3] > 0 &&
           DraggableWidgetContainer.b(0, 100) == 0) {
-          this.field_T.addFirst(je.a(param1 - 251569954, hp.field_c), false);
+          this.field_T.addFirst(ArchiveSourceManager.a(param1 - 251569954, hp.field_c), false);
         }
         this.field_D.setScaledVolume(oo.field_d * (om.field_b.field_a * this.field_P[0]) / 96 >> 8);
         this.field_L.setScaledVolume(this.field_P[1] * (k.field_f.field_a * oo.field_d) / 96 >> 8);
@@ -2496,7 +2496,7 @@ final class DungeonRaidScreen extends DungeonAssaultScreen {
           if (!this.tryStartRaidActionCooldown(56)) {
             return;
           }
-          ac.field_B.d((byte) -114, 64);
+          ac.field_B.writeCipheredByte((byte) -114, 64);
           ac.field_B.writeByte(6, param0.position);
           ac.field_B.writeBytes(param0.payload, 1, param0.position, 0);
           return;
@@ -2644,7 +2644,7 @@ final class DungeonRaidScreen extends DungeonAssaultScreen {
           if (!this.tryStartRaidActionCooldown(105)) {
             return;
           }
-          ac.field_B.d((byte) -78, 68);
+          ac.field_B.writeCipheredByte((byte) -78, 68);
           return;
         }
         this.field_Y.setCombatMode(false, 8);

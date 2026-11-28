@@ -77,19 +77,19 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
           field_h.setVisible(true);
           boolean decompiledSharedTail0 = (DirectByteStorage.field_n == var2);
           if (!decompiledSharedTail0) {
-            field_h.setLocation(sg.field_a, bb.field_d);
+            field_h.setLocation(ArchiveSourceManager.field_a, bb.field_d);
             decompiledSharedTail0 = (var4 != 0);
           }
           if (decompiledSharedTail0) {
             var3 = DirectByteStorage.field_n.getInsets();
-            field_h.setLocation(var3.left + sg.field_a, bb.field_d + var3.top);
+            field_h.setLocation(var3.left + ArchiveSourceManager.field_a, bb.field_d + var3.top);
           }
           field_h.addFocusListener((java.awt.event.FocusListener) (this));
           field_h.requestFocus();
           PcmResampler.field_a = true;
           i.field_i = true;
           pc.field_a = true;
-          ih.field_s = false;
+          SocketArchiveNetworkClient.field_s = false;
           uc.field_c = hn.correctedCurrentTimeMillis((byte) 80);
           if (param0 >= -35) {
             field_h = (java.awt.Canvas) null;
@@ -179,12 +179,12 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
             boolean decompiledSharedTail0 = (DirectByteStorage.field_n != null &&
               PasswordValidator.field_r == null);
             if (!decompiledSharedTail0) {
-              field_h.setLocation(sg.field_a, bb.field_d);
+              field_h.setLocation(ArchiveSourceManager.field_a, bb.field_d);
               decompiledSharedTail0 = (HostileSpawn.field_I);
             }
             if (decompiledSharedTail0) {
               var6 = DirectByteStorage.field_n.getInsets();
-              field_h.setLocation(sg.field_a + var6.left, bb.field_d + var6.top);
+              field_h.setLocation(ArchiveSourceManager.field_a + var6.left, bb.field_d + var6.top);
             }
           }
           this.renderFrame((byte) -48);
@@ -203,7 +203,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
         try {
           var1 = jc.field_b;
           synchronized (var1) {
-            sg.field_o = sg.field_o + 1;
+            ArchiveSourceManager.field_o = ArchiveSourceManager.field_o + 1;
             EditableTextField.field_L = AccountRegistrationPanel.field_I;
             j.field_c = lc.field_d;
             rb.field_m = cm.field_b;
@@ -307,7 +307,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
               SpriteGeometry.field_s = param0;
               he.field_x = param0;
               ql.field_a = param6;
-              sg.field_a = 0;
+              ArchiveSourceManager.field_a = 0;
               RegistrationAgreementPane.field_E = this;
               ByteArrayPoolSupport.field_h = param1;
               gm.field_m = param1;
@@ -932,7 +932,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
                   return;
                 }
               }
-              ih.field_s = true;
+              SocketArchiveNetworkClient.field_s = true;
             }
             return;
           }

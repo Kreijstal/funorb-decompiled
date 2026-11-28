@@ -5,7 +5,7 @@ final class kb implements WidgetListener {
     static BinaryBitmapFont field_c;
     static Sprite[] field_d;
     static GameKeyHandler field_a;
-    static tk field_e;
+    static ArchiveNetworkClient field_e;
     static Archive field_b;
     static String field_f;
 

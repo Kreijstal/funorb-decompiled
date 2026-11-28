@@ -126,13 +126,13 @@ final class o extends ql {
         GridPoint var3 = TextHotspotBounds.field_m[0].field_j;
         int var2Lifetime1;
         if (param0 == ~this.field_d.field_a) {
-          var2 = ih.a(var3, (byte) -126, this.field_i);
+          var2 = SocketArchiveNetworkClient.a(var3, (byte) -126, this.field_i);
           if (var2 < 2) {
             this.field_d.field_a = 1;
           }
         }
         if (this.field_k.field_a == 0) {
-          var2Lifetime1 = ih.a(var3, (byte) -101, this.field_m);
+          var2Lifetime1 = SocketArchiveNetworkClient.a(var3, (byte) -101, this.field_m);
           if (var2Lifetime1 < 2) {
             this.field_h[1].field_e = -1;
             this.field_k.field_a = 1;

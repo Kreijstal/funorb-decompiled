@@ -92,7 +92,7 @@ abstract class FunOrbClient extends GameApplet {
                 integerLocal17 = MixedSupport118.computeInteger1545(MixedSupport002.computeString0025(-48), this.booleanState0008, MixedSupport096.computeString1212(2), (byte) 55, this.integerState0056, false);
                 if (-1 != integerLocal17) {
                   if (integerLocal17 != 0) {
-                    NetworkSupport003.performAction0345(EditableTextField.stringState0483, 0, integerLocal17);
+                    ArchiveNetworkClient.performAction0345(EditableTextField.stringState0483, 0, integerLocal17);
                     EditableTextField.stringState0483 = null;
                   } else {
                     MixedSupport125.longState0049 = GameAssets.longState0046;
@@ -130,7 +130,7 @@ abstract class FunOrbClient extends GameApplet {
               HashNode.performAction0146(-114, DraggableWidgetContainer.computeApplet1485(25144));
             }
             if (10 == integerLocal7) {
-              SocketFactory.cipherPacketBufferState0002.performAction1641(17, -4);
+              SocketFactory.cipherPacketBufferState0002.writeCipheredByte(17, -4);
             }
             if (integerLocal7 == 11) {
               SceneWidgetPart014.performAction1782(DraggableWidgetContainer.computeApplet1485(25144), 30307);
@@ -300,7 +300,7 @@ abstract class FunOrbClient extends GameApplet {
               this.booleanState0009 = false;
               NodeHashTable.performAction1498(79);
               MixedSupport048.performAction0583(false);
-              NetworkSupport003.performAction0345(MixedSupport007.stringState0035, integerArgument2 ^ -11, 2);
+              ArchiveNetworkClient.performAction0345(MixedSupport007.stringState0035, integerArgument2 ^ -11, 2);
               EmailValidationError.clearStaticReferences((byte) 84);
               ResourceSupport003.booleanState0126 = true;
               PlayerBoardUpdateQueue.longState0026 = MixedSupport062.correctedCurrentTimeMillis(integerArgument2 + 15) + 15000L;
@@ -346,18 +346,18 @@ abstract class FunOrbClient extends GameApplet {
               if (MixedSupport052.integerState0269 >= 10) {
                 MixedSupport048.performAction0583(false);
                 if (SceneWidgetPart010.integerState0722 == 3) {
-                  NetworkSupport003.performAction0345(MixedSupport058.stringState0249, 0, 256);
+                  ArchiveNetworkClient.performAction0345(MixedSupport058.stringState0249, 0, 256);
                 } else {
                   if (4 == SceneWidgetPart010.integerState0722) {
-                    NetworkSupport003.performAction0345(MixedSupport126.stringState0549, integerArgument2 + 11, 256);
+                    ArchiveNetworkClient.performAction0345(MixedSupport126.stringState0549, integerArgument2 + 11, 256);
                   } else {
                     if (2 == SceneWidgetPart010.integerState0722) {
-                      NetworkSupport003.performAction0345(MixedSupport067.stringState0298, 0, 256);
+                      ArchiveNetworkClient.performAction0345(MixedSupport067.stringState0298, 0, 256);
                     } else {
                       if (SceneWidgetPart010.integerState0722 != 5) {
-                        NetworkSupport003.performAction0345(ComponentContainer.stringState0307, 0, 256);
+                        ArchiveNetworkClient.performAction0345(ComponentContainer.stringState0307, 0, 256);
                       } else {
-                        NetworkSupport003.performAction0345(MixedSupport005.stringState0018, integerArgument2 + 11, 5);
+                        ArchiveNetworkClient.performAction0345(MixedSupport005.stringState0018, integerArgument2 + 11, 5);
                       }
                     }
                   }
@@ -695,7 +695,7 @@ abstract class FunOrbClient extends GameApplet {
               this.showErrorPage(true, "reconnect");
             }
             MixedSupport048.performAction0583(false);
-            NetworkSupport003.performAction0345(EditableTextField.stringState0483, integerArgument1 ^ integerArgument1, integerLocal8);
+            ArchiveNetworkClient.performAction0345(EditableTextField.stringState0483, integerArgument1 ^ integerArgument1, integerLocal8);
             ResourceSupport003.booleanState0126 = true;
             PlayerBoardUpdateQueue.longState0026 = 15000L + MixedSupport062.correctedCurrentTimeMillis(4);
             stackIntegerLocal6 = integerLocal8;
@@ -916,7 +916,7 @@ abstract class FunOrbClient extends GameApplet {
           integerLocal6 = stackIntegerLocal3;
           integerLocal7 = NetworkSupport012.integerState0759 - 1;
           byteArrayLocal8 = new byte[integerLocal7];
-          LabeledWidgetContainer.cipherPacketBufferState0001.performAction1639(-67, byteArrayLocal8, integerLocal7, 0);
+          LabeledWidgetContainer.cipherPacketBufferState0001.readCipheredBytes(-67, byteArrayLocal8, integerLocal7, 0);
           NetworkSupport002.performAction0175((byte) 84, MixedSupport105.computeString1370(byteArrayLocal8, 2), integerLocal6 != 0, DraggableWidgetContainer.computeApplet1485(25144));
           return;
         } catch (java.lang.RuntimeException caughtParameterLocal9) {

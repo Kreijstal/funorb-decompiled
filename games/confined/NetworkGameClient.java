@@ -286,10 +286,10 @@ abstract class NetworkGameClient extends GameAppletShell {
             bd.a(param0 ^ 1849965388);
           }
           if (TunnelCamera.field_G == null) {
-            TunnelCamera.field_G = n.a(21146);
+            TunnelCamera.field_G = SocketConnector.a(21146);
             LabeledWidgetContainer.field_O = hd.a(58);
           }
-          og.a((byte) 122, tf.field_k, TunnelCamera.field_G, LabeledWidgetContainer.field_O);
+          ProxySocketConnector.a((byte) 122, tf.field_k, TunnelCamera.field_G, LabeledWidgetContainer.field_O);
           tf.field_k = null;
           field_r = null;
           wc.field_Wb = null;
@@ -337,7 +337,7 @@ abstract class NetworkGameClient extends GameAppletShell {
           ac.a(fb.field_b, (byte) -102);
         }
         if (AwtRasterBuffer.field_a[8]) {
-          og.a(false);
+          ProxySocketConnector.a(false);
         }
     }
 
@@ -821,7 +821,7 @@ abstract class NetworkGameClient extends GameAppletShell {
             pe.a(-59, ii.b(false));
           }
           if (var4 == 10) {
-            vh.field_a.b(true, 17);
+            vh.field_a.writeCipheredByte(true, 17);
           }
           if (var4 == 11) {
             AlphaWidgetContainer.a((byte) 102, ii.b(false));
@@ -876,7 +876,7 @@ abstract class NetworkGameClient extends GameAppletShell {
         int var3 = (var2 & 1) != 0 ? 1 : 0;
         int var4 = ai.field_i - 1;
         byte[] var5 = new byte[var4];
-        e.field_c.a(var5, 0, var4, 0);
+        e.field_c.readCipheredBytes(var5, 0, var4, 0);
         pk.a(var3 != 0, va.a(0, var5), ii.b(param0), (byte) 73);
     }
 

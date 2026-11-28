@@ -12,7 +12,7 @@ final class ee extends lk {
     private SectorCacheStore field_l;
     private SectorCacheStore field_i;
     private byte[] field_x;
-    private ob field_w;
+    private ArchiveNetworkClient field_w;
     static RgbSprite field_m;
     private int field_s;
     private byte[] field_h;
@@ -109,7 +109,7 @@ final class ee extends lk {
               scanLoop2: while (true) {
                 if (this.field_o < this.field_p.field_f.length) {
                   if (0 != this.field_p.field_f[this.field_o]) {
-                    if (this.field_w.c(-21)) {
+                    if (this.field_w.isPrefetchQueueFull(-21)) {
                       var2Lifetime2 = 0;
                       break scanLoop2;
                     }
@@ -283,10 +283,10 @@ final class ee extends lk {
               this.field_h[param2] != -1) {
               var4 = this.field_v.readNow(param0, param2, this.field_l);
             } else {
-              if (this.field_w.c((byte) -123)) {
+              if (this.field_w.isPriorityQueueFull((byte) -123)) {
                 return null;
               }
-              var4 = this.field_w.a(true, 18303, param2, this.field_r, (byte) 2);
+              var4 = this.field_w.enqueueRequest(true, 18303, param2, this.field_r, (byte) 2);
             }
           } else {
             if (1 != param1) {
@@ -299,10 +299,10 @@ final class ee extends lk {
               if (this.field_h[param2] != -1) {
                 throw new RuntimeException();
               }
-              if (this.field_w.c(-21)) {
+              if (this.field_w.isPrefetchQueueFull(-21)) {
                 return null;
               }
-              var4 = this.field_w.a(false, 18303, param2, this.field_r, (byte) 2);
+              var4 = this.field_w.enqueueRequest(false, 18303, param2, this.field_r, (byte) 2);
             } else {
               if (null == this.field_l) {
                 throw new RuntimeException();
@@ -362,8 +362,8 @@ final class ee extends lk {
             this.field_h[param2] = (byte)-1;
             ((ArchiveRequest) (var4)).unlink(false);
             if (((ArchiveRequest) (var4)).field_q &&
-              !this.field_w.c((byte) -72)) {
-              var4 = this.field_w.a(true, 18303, param2, this.field_r, (byte) 2);
+              !this.field_w.isPriorityQueueFull((byte) -72)) {
+              var4 = this.field_w.enqueueRequest(true, 18303, param2, this.field_r, (byte) 2);
               this.field_g.a(-22072, (long)param2, (IntrusiveNode) (var4));
             }
             return null;
@@ -399,15 +399,15 @@ final class ee extends lk {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6 = (RuntimeException) (Object) decompiledCaughtException;
-          this.field_w.e(20406);
+          this.field_w.resetAfterValidationFailure(20406);
           stackIn_85_0 = var4;
           stackIn_86_1 = !(param0);
           ((ArchiveRequest) stackIn_85_0).unlink(stackIn_86_1);
           if (((ArchiveRequest) (var4)).field_q) {
-            if (this.field_w.c((byte) -73)) {
+            if (this.field_w.isPriorityQueueFull((byte) -73)) {
               return null;
             }
-            var4 = this.field_w.a(true, 18303, param2, this.field_r, (byte) 2);
+            var4 = this.field_w.enqueueRequest(true, 18303, param2, this.field_r, (byte) 2);
             this.field_g.a(-22072, (long)param2, (IntrusiveNode) (var4));
           }
           return null;
@@ -446,10 +446,10 @@ final class ee extends lk {
           return (qg) null;
         }
         if (this.field_k == null) {
-          if (this.field_w.c((byte) -54)) {
+          if (this.field_w.isPriorityQueueFull((byte) -54)) {
             return null;
           }
-          this.field_k = (ArchiveRequest) ((Object) this.field_w.a(true, 18303, this.field_r, 255, (byte) 0));
+          this.field_k = (ArchiveRequest) ((Object) this.field_w.enqueueRequest(true, 18303, this.field_r, 255, (byte) 0));
         }
         if (this.field_k.field_n) {
           return null;
@@ -473,10 +473,10 @@ final class ee extends lk {
             decompiledCaughtException = decompiledCaughtParameter0;
             var3 = decompiledCaughtException;
             this.field_p = null;
-            if (this.field_w.c((byte) -90)) {
+            if (this.field_w.isPriorityQueueFull((byte) -90)) {
               this.field_k = null;
             } else {
-              this.field_k = (ArchiveRequest) ((Object) this.field_w.a(true, 18303, this.field_r, 255, (byte) 0));
+              this.field_k = (ArchiveRequest) ((Object) this.field_w.enqueueRequest(true, 18303, this.field_r, 255, (byte) 0));
             }
             return null;
           }
@@ -489,10 +489,10 @@ final class ee extends lk {
           } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
             decompiledCaughtException = decompiledCaughtParameter1;
             var3 = decompiledCaughtException;
-            this.field_w.e(20406);
+            this.field_w.resetAfterValidationFailure(20406);
             this.field_p = null;
-            if (!this.field_w.c((byte) -82)) {
-              this.field_k = (ArchiveRequest) ((Object) this.field_w.a(true, 18303, this.field_r, 255, (byte) 0));
+            if (!this.field_w.isPriorityQueueFull((byte) -82)) {
+              this.field_k = (ArchiveRequest) ((Object) this.field_w.enqueueRequest(true, 18303, this.field_r, 255, (byte) 0));
             } else {
               this.field_k = null;
             }
@@ -614,7 +614,7 @@ final class ee extends lk {
               if (!fq.a(1, (byte) 104)) {
                 return false;
               }
-              sm.field_i = ConfirmedEmailAvailabilityValidator.field_n.e(true);
+              sm.field_i = ConfirmedEmailAvailabilityValidator.field_n.readCipheredByte(true);
               ConfirmedEmailAvailabilityValidator.field_n.position = 0;
               rk.field_b = param0[sm.field_i];
             }
@@ -669,7 +669,7 @@ final class ee extends lk {
         int var2 = 42 % ((param0 - 7) / 45);
     }
 
-    ee(int param0, SectorCacheStore param1, SectorCacheStore param2, ob param3, DiskCacheWorker param4, int param5, byte[] param6, int param7, boolean param8) {
+    ee(int param0, SectorCacheStore param1, SectorCacheStore param2, ArchiveNetworkClient param3, DiskCacheWorker param4, int param5, byte[] param6, int param7, boolean param8) {
         boolean stackIn_7_1 = false;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;

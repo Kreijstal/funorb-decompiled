@@ -2013,7 +2013,7 @@ abstract class ByteStorage {
                 }
                 var2 = ah.a("create_password_hint", 5236);
                 if (var2 != null) {
-                  pk.field_f = fa.a((byte) -80, var2);
+                  ArchiveSourceManager.field_f = fa.a((byte) -80, var2);
                 }
                 var2 = ah.a("create_password_confirm_tooltip", 5236);
                 if (var2 != null) {

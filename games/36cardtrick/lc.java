@@ -64,7 +64,7 @@ final class lc {
 
     final static void a(int param0, int param1, vg param2, int param3, vg param4, int param5) {
         e.field_i = param5;
-        a.field_o = param3;
+        SocketArchiveNetworkClient.field_o = param3;
         if (param1 != 4) {
           return;
         }

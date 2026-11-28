@@ -169,7 +169,7 @@ class id extends DefaultTextWidgetRenderer {
               DefaultTextWidgetRenderer.field_g[1] = 5;
             }
           } else {
-            var3_int = cg.a(ug.field_r, pb.field_i, (byte) 91, da.a(new String[]{"<br><%0><br>"}, pl.field_a, false), DequeWidgetContainer.field_x);
+            var3_int = cg.a(ug.field_r, pb.field_i, (byte) 91, MouseInputHandler.a(new String[]{"<br><%0><br>"}, pl.field_a, false), DequeWidgetContainer.field_x);
             var4 = -1;
             for (var5 = 0; var5 < var3_int; var5++) {
               if (!"<%0>".equals(ug.field_r[var5])) {
@@ -186,7 +186,7 @@ class id extends DefaultTextWidgetRenderer {
             qc.field_e = new String[-1 + (-var4 + var3_int)];
             ArrayBlockSupport.copyObjectRange(ug.field_r, 1 + var4, qc.field_e, 0, -1 + var3_int - var4);
             var4 = -1;
-            var3_int = cg.a(ug.field_r, pb.field_i, (byte) 91, da.a(new String[]{"<br><%0><br>"}, SingleChildWidgetContainer.field_z, false), DequeWidgetContainer.field_x);
+            var3_int = cg.a(ug.field_r, pb.field_i, (byte) 91, MouseInputHandler.a(new String[]{"<br><%0><br>"}, SingleChildWidgetContainer.field_z, false), DequeWidgetContainer.field_x);
             for (var5 = 0; var5 < var3_int; var5++) {
               if (!"<%0>".equals(ug.field_r[var5])) {
                 continue;

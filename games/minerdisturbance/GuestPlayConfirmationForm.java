@@ -505,7 +505,7 @@ final class GuestPlayConfirmationForm extends DequeWidgetContainer implements Wi
         GameAppletShell.field_g[16] = dn.field_n;
         GameAppletShell.field_g[13] = te.field_a;
         GameAppletShell.field_g[17] = de.field_c;
-        GameAppletShell.field_g[10] = jh.field_b;
+        GameAppletShell.field_g[10] = SocketConnector.field_b;
         GameAppletShell.field_g[8] = ck.field_c[1];
         GameAppletShell.field_g[23] = ProxyAuthenticationRequiredException.field_d;
         GameAppletShell.field_g[14] = IterableNodeHashTable.field_e;
@@ -531,7 +531,7 @@ final class GuestPlayConfirmationForm extends DequeWidgetContainer implements Wi
         PasswordValidator.field_i[9] = wi.field_x;
         PasswordValidator.field_i[13] = AlphaWidgetContainer.field_M;
         PasswordValidator.field_i[12] = qm.field_g;
-        PasswordValidator.field_i[20] = jh.field_c;
+        PasswordValidator.field_i[20] = SocketConnector.field_c;
         PasswordValidator.field_i[25] = pc.field_e;
         PasswordValidator.field_i[29] = DebouncedFieldValidator.field_d;
         PasswordValidator.field_i[4] = pf.field_d;
@@ -545,7 +545,7 @@ final class GuestPlayConfirmationForm extends DequeWidgetContainer implements Wi
         PasswordValidator.field_i[19] = af.field_n;
         PasswordValidator.field_i[18] = lj.field_u;
         PasswordValidator.field_i[7] = il.field_t;
-        PasswordValidator.field_i[26] = jh.field_d;
+        PasswordValidator.field_i[26] = SocketConnector.field_d;
         PasswordValidator.field_i[24] = jn.field_t;
         PasswordValidator.field_i[34] = nj.field_b;
         PasswordValidator.field_i[28] = pf.field_g;

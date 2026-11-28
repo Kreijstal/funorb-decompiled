@@ -97,7 +97,7 @@ final class SectorCacheStore {
         if (256 > var5) {
           SoftwareRasterizer.fillRectangleAlpha(0, 0, SoftwareRasterizer.field_k, SoftwareRasterizer.field_c, 0, -var5 + 256);
         }
-        cl.d((byte) -106);
+        SocketArchiveNetworkClient.d((byte) -106);
         if (150 <= vb.field_n) {
           ji.field_b.drawWithOpacity(var3 + 15, var4 + 10, var5);
         } else {

@@ -586,8 +586,8 @@ final class GameSession {
         if (param0 != 18042) {
           return -79;
         }
-        ProgressMessageDialog.field_vb.b((byte) 28);
-        if (!om.field_s.a((byte) 14)) {
+        ProgressMessageDialog.field_vb.pollArchiveSources((byte) 28);
+        if (!om.field_s.pollNetwork((byte) 14)) {
           return PowerUpPickup.h((byte) -116);
         }
         return 0;

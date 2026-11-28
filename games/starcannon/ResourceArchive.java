@@ -803,7 +803,7 @@ final class ResourceArchive {
           if (!qb.a((byte) -106, param3, param2, param4)) {
             return null;
           }
-          stackIn_6_0 = oe.a(5, param0.getFile(param3, true, param2));
+          stackIn_6_0 = SocketConnector.a(5, param0.getFile(param3, true, param2));
           return stackIn_6_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

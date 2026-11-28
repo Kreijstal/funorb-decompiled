@@ -40,10 +40,10 @@ final class ad {
           var13 = NetworkArchiveRequest.field_t;
           var15 = var13;
           var2 = var15.readUnsignedByte((byte) 90);
-          var3 = (d) (md.field_h.beginForward((byte) -66));
+          var3 = (d) (ProxySocketConnector.field_h.beginForward((byte) -66));
           while (var3 != null) {
             if (var3.field_f != var2) {
-              var3 = (d) (md.field_h.nextForward(853));
+              var3 = (d) (ProxySocketConnector.field_h.nextForward(853));
               continue;
             }
             break;
@@ -63,9 +63,9 @@ final class ad {
             for (var6_intLifetime1 = 0; var6_intLifetime1 < var4; var6_intLifetime1++) {
               uj.a((byte) -85, var15);
               if (var6_intLifetime1 != 0) {
-                a.a(var6_intLifetime1, TextHotspotBounds.field_l, 9664, LabeledWidgetContainer.field_E, oh.field_b, fd.field_f);
+                SocketArchiveNetworkClient.a(var6_intLifetime1, TextHotspotBounds.field_l, 9664, LabeledWidgetContainer.field_E, oh.field_b, fd.field_f);
               } else {
-                a.a(var6_intLifetime1, TextHotspotBounds.field_l, 9664, LabeledWidgetContainer.field_E, oh.field_b, fd.field_f);
+                SocketArchiveNetworkClient.a(var6_intLifetime1, TextHotspotBounds.field_l, 9664, LabeledWidgetContainer.field_E, oh.field_b, fd.field_f);
               }
             }
             fe.a(var5, true);

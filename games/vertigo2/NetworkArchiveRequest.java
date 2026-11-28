@@ -91,7 +91,7 @@ final class NetworkArchiveRequest extends ArchiveRequest {
           var5.position = var5.position + 1;
           var4 = var5.position;
           var5.writeByte(0, 127);
-          var5.a((byte) 0, param2);
+          var5.writeString((byte) 0, param2);
           var5.patchByteLength((byte) 66, -var4 + var5.position);
           stackIn_29_0 = null;
           return (String) (stackIn_29_0);

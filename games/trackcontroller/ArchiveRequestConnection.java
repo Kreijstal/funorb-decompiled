@@ -25,9 +25,9 @@ abstract class ArchiveRequestConnection {
         return var4;
     }
 
-    abstract void b(byte param0);
+    abstract void resetAfterValidationFailure(byte param0);
 
-    final int a(byte param0) {
+    final int getPriorityRequestCount(byte param0) {
         if (param0 == 105) {
           return this.field_f.c((byte) -117) + this.field_c.c((byte) -79);
         }
@@ -35,28 +35,28 @@ abstract class ArchiveRequestConnection {
         return this.field_f.c((byte) -117) + this.field_c.c((byte) -79);
     }
 
-    abstract void c(byte param0);
+    abstract void close(byte param0);
 
-    final int a(int param0) {
+    final int getPrefetchRequestCount(int param0) {
         if (param0 == 7) {
           return this.field_h.c((byte) -127) + this.field_k.c((byte) -57);
         }
-        this.a((byte) -121);
+        this.getPriorityRequestCount((byte) -121);
         return this.field_h.c((byte) -127) + this.field_k.c((byte) -57);
     }
 
-    final boolean d(int param0) {
+    final boolean isPriorityQueueFull(int param0) {
         if (param0 != -18316) {
           return false;
         }
-        return this.a((byte) 105) >= 20 ? true : false;
+        return this.getPriorityRequestCount((byte) 105) >= 20 ? true : false;
     }
 
-    abstract void a(byte param0, boolean param1, Object param2);
+    abstract void attachSocket(byte param0, boolean param1, Object param2);
 
-    abstract boolean b(int param0);
+    abstract boolean pollNetwork(int param0);
 
-    final NetworkArchiveRequest a(int param0, boolean param1, boolean param2, int param3, byte param4) {
+    final NetworkArchiveRequest enqueueRequest(int param0, boolean param1, boolean param2, int param3, byte param4) {
         NetworkArchiveRequest stackIn_3_0 = null;
         boolean stackIn_4_1 = false;
         NetworkArchiveRequest stackIn_16_0 = null;
@@ -74,13 +74,13 @@ abstract class ArchiveRequestConnection {
           stackIn_16_0.field_q = stackIn_17_1;
           var8.field_B = param4;
           if (!param1) {
-            if (20 <= this.a(7)) {
+            if (20 <= this.getPrefetchRequestCount(7)) {
               throw new RuntimeException();
             }
             this.field_h.a(var8, true);
             return var8;
           }
-          if (this.a((byte) 105) >= 20) {
+          if (this.getPriorityRequestCount((byte) 105) >= 20) {
             throw new RuntimeException();
           }
           this.field_f.a(var8, true);
@@ -95,25 +95,25 @@ abstract class ArchiveRequestConnection {
         stackIn_3_0.field_q = stackIn_4_1;
         var8Lifetime1.field_B = param4;
         if (!param1) {
-          if (20 <= this.a(7)) {
+          if (20 <= this.getPrefetchRequestCount(7)) {
             throw new RuntimeException();
           }
           this.field_h.a(var8Lifetime1, true);
           return var8Lifetime1;
         }
-        if (this.a((byte) 105) >= 20) {
+        if (this.getPriorityRequestCount((byte) 105) >= 20) {
           throw new RuntimeException();
         }
         this.field_f.a(var8Lifetime1, true);
         return var8Lifetime1;
     }
 
-    final boolean c(int param0) {
+    final boolean isPrefetchQueueFull(int param0) {
         if (param0 == -28419) {
-          return this.a(7) >= 20 ? true : false;
+          return this.getPrefetchRequestCount(7) >= 20 ? true : false;
         }
         this.field_b = 112;
-        return this.a(7) >= 20 ? true : false;
+        return this.getPrefetchRequestCount(7) >= 20 ? true : false;
     }
 
     ArchiveRequestConnection() {

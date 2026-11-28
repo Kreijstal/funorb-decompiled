@@ -15,7 +15,7 @@ final class SoundCache {
         int var2 = OrbDefence.field_D ? 1 : 0;
         int var1_intLifetime1;
         try {
-          ge.field_g.resetTiming(0);
+          ArchiveNetworkClient.field_g.resetTiming(0);
           if (param0 <= 23) {
             String var3 = (String) null;
             SoundCache.a(true, -101, (String) null);

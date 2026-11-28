@@ -8,7 +8,7 @@ final class fi {
     static Sprite[] field_a;
 
     final static void b(int param0) {
-        wl.e((byte) 102);
+        ArchiveNetworkClient.e((byte) 102);
         if (ie.field_e != null) {
           ValidationStatusIcon.a(ie.field_e, (byte) -118);
         }

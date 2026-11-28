@@ -228,7 +228,7 @@ final class IsaacRandom {
             if (param1 != 255) {
               field_e = (Sprite) null;
             }
-            var8 = mc.field_c.a(64, (SectorCacheStore) (var7), (SectorCacheStore) (var6), param4, param2);
+            var8 = mc.field_c.getOrCreateArchiveSource(64, (SectorCacheStore) (var7), (SectorCacheStore) (var6), param4, param2);
             if (param3) {
               var8.d(2);
             }

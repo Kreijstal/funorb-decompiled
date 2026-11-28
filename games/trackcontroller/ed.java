@@ -47,11 +47,11 @@ final class ed extends ButtonWidget {
             return;
           }
           if (100 > param1) {
-            ByteStorage.field_c = wg.createAccountErrorResult((byte) -118, param1, param2);
+            ByteStorage.field_c = ArchiveSourceManager.createAccountErrorResult((byte) -118, param1, param2);
             return;
           }
           if (param1 > 105) {
-            ByteStorage.field_c = wg.createAccountErrorResult((byte) -118, param1, param2);
+            ByteStorage.field_c = ArchiveSourceManager.createAccountErrorResult((byte) -118, param1, param2);
             return;
           }
           var5 = args;

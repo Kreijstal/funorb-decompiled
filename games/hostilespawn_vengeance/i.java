@@ -67,7 +67,7 @@ final class i {
             if (param0 != 29821) {
               return;
             }
-            var18.field_h = param1.d(param0 - 21626);
+            var18.field_h = param1.readInt(param0 - 21626);
             var18.field_n = new int[var18.field_t];
             var18.field_q = new int[var18.field_t];
             var18.field_m = new int[var18.field_t];
@@ -82,22 +82,22 @@ final class i {
                   var6_int != 2) {
                   if (var6_int == 3 ||
                     4 == var6_int) {
-                    var20 = param1.o(32);
-                    var21 = param1.o(32);
+                    var20 = param1.readString(32);
+                    var21 = param1.readString(32);
                     var9 = param1.readUnsignedByte(param0 ^ 2675);
                     var10 = new String[var9];
                     for (var11_int = 0; var11_int < var9; var11_int++) {
-                      var10[var11_int] = param1.o(32);
+                      var10[var11_int] = param1.readString(32);
                     }
                     var22 = new byte[var9][];
                     var19 = var22;
                     var11 = var19;
                     if (var6_int == 3) {
                       for (var12_int = 0; var9 > var12_int; var12_int++) {
-                        var13 = param1.d(8195);
+                        var13 = param1.readInt(8195);
                         array$0 = new byte[var13];
                         var11[var12_int] = array$0;
-                        param1.a(var13, 0, var22[var12_int], -18181);
+                        param1.readBytes(var13, 0, var22[var12_int], -18181);
                       }
                     }
                     var18.field_q[var5] = var6_int;
@@ -112,13 +112,13 @@ final class i {
                     var18.field_o[var5] = var22;
                   }
                 } else {
-                  var15 = param1.o(32);
+                  var15 = param1.readString(32);
                   var7 = var15;
-                  var16 = param1.o(param0 - 29789);
+                  var16 = param1.readString(param0 - 29789);
                   var8 = var16;
                   var9 = 0;
                   if (var6_int == 1) {
-                    var9 = param1.d(8195);
+                    var9 = param1.readInt(8195);
                   }
                   var18.field_q[var5] = var6_int;
                   var18.field_n[var5] = var9;

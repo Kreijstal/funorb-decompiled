@@ -65,7 +65,7 @@ abstract class RasterBuffer {
           var5.position = var5.position + 1;
           var6 = var5.position;
           var5.writeByte(1, -96);
-          var5.a((byte) 0, param2);
+          var5.writeString((byte) 0, param2);
           var5.patchByteLength((byte) -100, var5.position - var6);
           stackIn_16_0 = null;
           return (String) (stackIn_16_0);

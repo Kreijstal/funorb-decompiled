@@ -3,7 +3,7 @@
  */
 final class qc {
     static int field_c;
-    static he field_a;
+    static LeaderboardSubmission field_a;
     static String field_b;
 
     public static void clearStaticReferences(int param0) {
@@ -80,13 +80,13 @@ final class qc {
                 jc.field_g.position = jc.field_g.position + 24;
                 return;
               }
-              field_a = (he) null;
+              field_a = (LeaderboardSubmission) null;
               jc.field_g.position = jc.field_g.position + 24;
               return;
             }
           }
           if (param0 != -17184) {
-            field_a = (he) null;
+            field_a = (LeaderboardSubmission) null;
           }
           jc.field_g.position = jc.field_g.position + 24;
         } catch (RuntimeException | Error decompiledUncheckedException) {

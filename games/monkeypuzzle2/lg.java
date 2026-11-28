@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class lg {
-    static wl field_n;
+    static ArchiveNetworkClient field_n;
     PcmSample[] field_h;
     int[] field_k;
     int[] field_J;

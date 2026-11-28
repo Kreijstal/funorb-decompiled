@@ -56,7 +56,7 @@ final class s extends InteractiveWidget {
             stackIn_20_0 = 1;
             return stackIn_20_0;
           }
-          if (ic.field_l != AwtRasterBuffer.field_e) {
+          if (ProxySocketConnector.field_l != AwtRasterBuffer.field_e) {
             stackIn_25_0 = -1;
             return stackIn_25_0;
           }

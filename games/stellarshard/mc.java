@@ -4,7 +4,7 @@
 final class mc {
     static int field_a;
     static String field_b;
-    static vh field_c;
+    static ArchiveSourceManager field_c;
 
     public static void clearStaticReferences(int param0) {
         if (param0 != 17913) {

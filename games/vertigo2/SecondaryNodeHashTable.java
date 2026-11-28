@@ -17,7 +17,7 @@ final class SecondaryNodeHashTable {
         try {
           bf.field_a = param1;
           PacketBuffer.field_t = true;
-          BirthDateValidator.field_l = new ProgressMessageDialog(AccountServiceResult.field_e, sg.field_a, param2, tk.field_e, bf.field_a);
+          BirthDateValidator.field_l = new ProgressMessageDialog(AccountServiceResult.field_e, sg.field_a, param2, ArchiveNetworkClient.field_e, bf.field_a);
           AccountServiceResult.field_e.showDialog(BirthDateValidator.field_l, param0 ^ param0);
         } catch (RuntimeException runtimeException) {
           throw wn.wrapClientException((Throwable) ((Object) runtimeException), "fi.B(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');

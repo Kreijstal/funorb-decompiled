@@ -51,9 +51,9 @@ final class mma {
               StandardContentDialog.field_fb.writeByte(14, 0);
               StandardContentDialog.field_fb.writeByte(uaa.field_f.a((byte) -106).field_b, 0);
               ConfirmedEmailAvailabilityValidator.a(-1, 71);
-              eia.field_a = kb.field_e;
+              eia.field_a = ArchiveSourceManager.field_e;
             }
-            if (kb.field_e == eia.field_a &&
+            if (ArchiveSourceManager.field_e == eia.field_a &&
               CreatureEvent.b(1, 0)) {
               var6_int = ig.field_m.readUnsignedByte(16711935);
               if (var6_int != 0) {

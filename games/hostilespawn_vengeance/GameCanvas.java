@@ -179,7 +179,7 @@ final class GameCanvas extends java.awt.Canvas {
           }
           if (param3.field_e > 4) {
             if (uj.field_l == 1 &&
-              ej.d((byte) 81)) {
+              ArchiveNetworkClient.d((byte) 81)) {
               eh.field_c.playSample(em.field_a[0], 50, uh.field_i);
             }
             if (26 == param3.field_i) {

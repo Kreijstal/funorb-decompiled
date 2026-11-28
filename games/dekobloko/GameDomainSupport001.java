@@ -176,9 +176,9 @@ final class GameDomainSupport001 {
           ModalDialog.sceneWidgetState0008 = new SceneWidget(0L, sceneWidgetLocal30);
           ModalDialog.sceneWidgetState0008.integerState0893 = 2;
           ModalDialog.sceneWidgetState0008.rgbSpriteArrayState0033 = RenderingSupport012.computeRgbSpriteArray1346(false, 30, false, 3815994, 2039583, -26198);
-          NetworkSupport003.sceneWidgetState0018 = new SceneWidget(0L, sceneWidgetLocal30);
-          NetworkSupport003.sceneWidgetState0018.integerState0893 = 2;
-          NetworkSupport003.sceneWidgetState0018.rgbSpriteArrayState0033 = RenderingSupport012.computeRgbSpriteArray1346(true, 30, false, 3815994, 2039583, -26198);
+          ArchiveNetworkClient.sceneWidgetState0018 = new SceneWidget(0L, sceneWidgetLocal30);
+          ArchiveNetworkClient.sceneWidgetState0018.integerState0893 = 2;
+          ArchiveNetworkClient.sceneWidgetState0018.rgbSpriteArrayState0033 = RenderingSupport012.computeRgbSpriteArray1346(true, 30, false, 3815994, 2039583, -26198);
           MixedSupport125.sceneWidgetState0125 = new SceneWidget(0L, (SceneWidget) null);
           MixedSupport125.sceneWidgetState0125.bitmapFontState0020 = (BitmapFont) ((Object) MixedSupport121.renderingSupport009State0006);
           MixedSupport125.sceneWidgetState0125.integerState0908 = ComponentContainer.integerState0377;

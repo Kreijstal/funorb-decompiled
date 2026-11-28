@@ -110,7 +110,7 @@ final class ok {
             var3 = (BitmapFont) null;
             ok.a(-59, 87, -24, (RgbSprite[]) null, 6, 29, -83, 20, 104, 36, 30, (RgbSprite[]) null, 1, -123, 74, (RgbSprite[]) null, 86, 93, -3, (BitmapFont) null, (BitmapFont) null);
           }
-          md.clearIndexedSpriteDecodeBuffersWithIntGuard(-127);
+          ProxySocketConnector.clearIndexedSpriteDecodeBuffersWithIntGuard(-127);
           stackIn_6_0 = var2;
           return stackIn_6_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

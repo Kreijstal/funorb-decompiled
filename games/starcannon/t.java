@@ -19,7 +19,7 @@ final class t extends ti {
     static int field_u;
     static StandardContentDialog field_h;
     private int field_A;
-    private eh field_s;
+    private ArchiveNetworkClient field_s;
     private boolean field_D;
     private int field_F;
     private IntrusiveDeque field_B;
@@ -66,10 +66,10 @@ final class t extends ti {
               this.field_j[param0] != -1) {
               var4 = this.field_y.readNow(this.field_p, -118, param0);
             } else {
-              if (this.field_s.b((byte) -79)) {
+              if (this.field_s.isPriorityQueueFull((byte) -79)) {
                 return null;
               }
-              var4 = this.field_s.a(this.field_k, param0, -28612, true, (byte) 2);
+              var4 = this.field_s.enqueueRequest(this.field_k, param0, -28612, true, (byte) 2);
             }
           } else {
             if (param1 != 1) {
@@ -82,10 +82,10 @@ final class t extends ti {
               if (this.field_j[param0] != -1) {
                 throw new RuntimeException();
               }
-              if (this.field_s.f((byte) -49)) {
+              if (this.field_s.isPrefetchQueueFull((byte) -49)) {
                 return null;
               }
-              var4 = this.field_s.a(this.field_k, param0, -28612, false, (byte) 2);
+              var4 = this.field_s.enqueueRequest(this.field_k, param0, -28612, false, (byte) 2);
             } else {
               if (this.field_p == null) {
                 throw new RuntimeException();
@@ -143,8 +143,8 @@ final class t extends ti {
             this.field_j[param0] = (byte)-1;
             ((ArchiveRequest) (var4)).unlink(4);
             if (((ArchiveRequest) (var4)).field_o &&
-              !this.field_s.b((byte) -124)) {
-              var4 = this.field_s.a(this.field_k, param0, -28612, true, (byte) 2);
+              !this.field_s.isPriorityQueueFull((byte) -124)) {
+              var4 = this.field_s.enqueueRequest(this.field_k, param0, -28612, true, (byte) 2);
               this.field_w.a((long)param0, (byte) -100, (IntrusiveNode) (var4));
             }
             return null;
@@ -180,13 +180,13 @@ final class t extends ti {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6 = (RuntimeException) (Object) decompiledCaughtException;
-          this.field_s.a((byte) 126);
+          this.field_s.resetAfterValidationFailure((byte) 126);
           ((ArchiveRequest) (var4)).unlink(4);
           if (((ArchiveRequest) (var4)).field_o) {
-            if (this.field_s.b((byte) -119)) {
+            if (this.field_s.isPriorityQueueFull((byte) -119)) {
               return null;
             }
-            var4 = this.field_s.a(this.field_k, param0, -28612, true, (byte) 2);
+            var4 = this.field_s.enqueueRequest(this.field_k, param0, -28612, true, (byte) 2);
             this.field_w.a((long)param0, (byte) -100, (IntrusiveNode) (var4));
           }
           return null;
@@ -247,10 +247,10 @@ final class t extends ti {
           return this.field_t;
         }
         if (null == this.field_m) {
-          if (this.field_s.b((byte) -106)) {
+          if (this.field_s.isPriorityQueueFull((byte) -106)) {
             return null;
           }
-          this.field_m = (ArchiveRequest) ((Object) this.field_s.a(255, this.field_k, -28612, true, (byte) 0));
+          this.field_m = (ArchiveRequest) ((Object) this.field_s.enqueueRequest(255, this.field_k, -28612, true, (byte) 0));
         }
         if (this.field_m.field_r) {
           return null;
@@ -275,8 +275,8 @@ final class t extends ti {
             decompiledCaughtException = decompiledCaughtParameter0;
             var4 = decompiledCaughtException;
             this.field_t = null;
-            if (!this.field_s.b((byte) -66)) {
-              this.field_m = (ArchiveRequest) ((Object) this.field_s.a(255, this.field_k, -28612, true, (byte) 0));
+            if (!this.field_s.isPriorityQueueFull((byte) -66)) {
+              this.field_m = (ArchiveRequest) ((Object) this.field_s.enqueueRequest(255, this.field_k, -28612, true, (byte) 0));
             } else {
               this.field_m = null;
             }
@@ -291,12 +291,12 @@ final class t extends ti {
           } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
             decompiledCaughtException = decompiledCaughtParameter1;
             var4 = decompiledCaughtException;
-            this.field_s.a((byte) 124);
+            this.field_s.resetAfterValidationFailure((byte) 124);
             this.field_t = null;
-            if (this.field_s.b((byte) -128)) {
+            if (this.field_s.isPriorityQueueFull((byte) -128)) {
               this.field_m = null;
             } else {
-              this.field_m = (ArchiveRequest) ((Object) this.field_s.a(255, this.field_k, -28612, true, (byte) 0));
+              this.field_m = (ArchiveRequest) ((Object) this.field_s.enqueueRequest(255, this.field_k, -28612, true, (byte) 0));
             }
             return null;
           }
@@ -407,7 +407,7 @@ final class t extends ti {
                   this.field_F = this.field_F + 1;
                   continue;
                 }
-                if (!this.field_s.f((byte) -49)) {
+                if (!this.field_s.isPrefetchQueueFull((byte) -49)) {
                   if (this.field_j[this.field_F] != 1) {
                     discarded$0 = this.a(this.field_F, 2, true);
                   }
@@ -507,7 +507,7 @@ final class t extends ti {
         return 0;
     }
 
-    t(int param0, SectorCacheStore param1, SectorCacheStore param2, eh param3, DiskCacheWorker param4, int param5, byte[] param6, int param7, boolean param8) {
+    t(int param0, SectorCacheStore param1, SectorCacheStore param2, ArchiveNetworkClient param3, DiskCacheWorker param4, int param5, byte[] param6, int param7, boolean param8) {
         boolean stackIn_7_1 = false;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;

@@ -22,8 +22,8 @@ final class jd {
         String stackIn_9_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          DisplayNameSelectionPanel.a((java.awt.Component) ((Object) param0), 20);
-          ByteArrayPoolSupport.a((java.awt.Component) ((Object) param0), 123);
+          DisplayNameSelectionPanel.detachKeyboardListeners((java.awt.Component) ((Object) param0), 20);
+          ByteArrayPoolSupport.detachMouseListeners((java.awt.Component) ((Object) param0), 123);
           if (null != NanoFrameTimer.field_c) {
             NanoFrameTimer.field_c.detach(3, (java.awt.Component) ((Object) param0));
           }

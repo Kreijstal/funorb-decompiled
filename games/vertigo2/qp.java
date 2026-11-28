@@ -52,8 +52,8 @@ final class qp {
             kh.field_b = new PacketBuffer(var7_int);
           }
           kh.field_b.position = 0;
-          kh.field_b.a(param3, param5 ^ -10149, param2, param4);
-          kh.field_b.h(var7_int, 2);
+          kh.field_b.writeBytes(param3, param5 ^ -10149, param2, param4);
+          kh.field_b.padWithZerosToPosition(var7_int, 2);
           kh.field_b.encryptXtea(var13, -12257);
           if (null == hh.field_b ||
             !(100 <= hh.field_b.payload.length)) {
@@ -68,9 +68,9 @@ final class qp {
             var11++;
           }
           hh.field_b.writeShort(param4, param5 - 1846);
-          hh.field_b.a(param0, param1, 9157);
-          param6.a(0, -10140, hh.field_b.payload, hh.field_b.position);
-          param6.a(0, param5 - 10203, kh.field_b.payload, kh.field_b.position);
+          hh.field_b.writeRsaBlock(param0, param1, 9157);
+          param6.writeBytes(0, -10140, hh.field_b.payload, hh.field_b.position);
+          param6.writeBytes(0, param5 - 10203, kh.field_b.payload, kh.field_b.position);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

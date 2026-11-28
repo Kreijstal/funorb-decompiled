@@ -73,8 +73,8 @@ final class tb {
               return true;
             }
             var4 = RichTextWidget.field_P;
-            if (g.field_u != 0.0) {
-              var4 = (int)((double)var4 + ResizableModalDialog.field_R.nextGaussian() * g.field_u);
+            if (SocketArchiveNetworkClient.field_u != 0.0) {
+              var4 = (int)((double)var4 + ResizableModalDialog.field_R.nextGaussian() * SocketArchiveNetworkClient.field_u);
               if (var4 < 0) {
                 var4 = 0;
               }

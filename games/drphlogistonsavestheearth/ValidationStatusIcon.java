@@ -165,7 +165,7 @@ final class ValidationStatusIcon extends InteractiveWidget {
             MouseInput.a(mj.field_v, (byte) 125);
           }
           var12.drawRotatedAboutBilinear(112, 144, var12.field_z << 4, var12.field_C << 4, -this.field_N << 10, 4096);
-          cl.d((byte) -80);
+          SocketArchiveNetworkClient.d((byte) -80);
           mj.field_v.drawAdditive(var5 - var12.field_z, -var12.field_C + var6, 256);
         }
     }

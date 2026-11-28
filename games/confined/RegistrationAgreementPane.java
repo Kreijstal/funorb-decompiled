@@ -262,7 +262,7 @@ final class RegistrationAgreementPane extends DequeWidgetContainer implements Te
           this.field_O = param0;
           this.field_Q = new InteractiveWidget(gi.field_fb, (WidgetEventListener) null);
           this.field_Q.field_n = (WidgetRenderer) ((Object) new je());
-          var7 = b.a(new String[]{this.getAgreementLinkOpeningTag(-99), this.getAgreementLinkClosingTag(99)}, ja.field_g, 1177);
+          var7 = b.a(new String[]{this.getAgreementLinkOpeningTag(-99), this.getAgreementLinkClosingTag(99)}, ArchiveSourceManager.field_g, 1177);
           var3 = 20;
           var4 = new DefaultTextWidgetRenderer(gm.field_cb, 0, 0, 0, 0, 16777215, -1, 3, 0, gm.field_cb.field_C, -1, 2147483647, true);
           this.field_R = new RichTextWidget(var7, var4);

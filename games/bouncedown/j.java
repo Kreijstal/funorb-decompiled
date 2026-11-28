@@ -37,7 +37,7 @@ final class j extends IntrusiveNode {
               }
               var7 = new SectorCacheStore(param3, AlphaWidgetContainer.field_C, pd.field_a[param3], 2097152);
             }
-            var8 = ih.field_Q.a(param2, (SectorCacheStore) (var7), (SectorCacheStore) (var6), param3, -18023);
+            var8 = ih.field_Q.getOrCreateArchiveSource(param2, (SectorCacheStore) (var7), (SectorCacheStore) (var6), param3, -18023);
             if (param0) {
               var8.b((byte) -124);
             }

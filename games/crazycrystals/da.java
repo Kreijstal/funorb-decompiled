@@ -376,7 +376,7 @@ final class da extends ue {
                 var8 = (-var4[0].length + var4.length + 1) / 2;
               }
             }
-            this.field_p = CipherPacketBuffer.a(var9, true, var8, 82, var4);
+            this.field_p = CipherPacketBuffer.copyPuzzleTilesWithBorder(var9, true, var8, 82, var4);
           } else {
             this.field_p = (PuzzleTile[][]) null;
           }

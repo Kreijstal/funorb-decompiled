@@ -232,7 +232,7 @@ final class ByteArrayPoolSupport {
           cl.field_d = param6;
           nn.field_c = (Js5Transport) ((Object) new SocketJs5Transport());
           gh.field_a = new DiskCacheWorker(param4);
-          BufferedSocket.field_n = new bo(nn.field_c, gh.field_a);
+          BufferedSocket.field_n = new ArchiveSourceManager(nn.field_c, gh.field_a);
         } catch (RuntimeException runtimeException) {
           throw RichTextWidget.wrapThrowable((Throwable) ((Object) runtimeException), "mg.A(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ',' + (param6 != null ? "{...}" : "null") + ',' + param7 + ',' + param8 + ')');
         }

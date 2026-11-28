@@ -488,7 +488,7 @@ final class e {
           SoftwareRasterizer.fillRectangleVerticalGradient(0, 0, var5.field_z, var5.field_A / 2, 16180917, 16306250);
           SoftwareRasterizer.fillRectangleVerticalGradient(0, var5.field_A / 2, var5.field_z, var5.field_A, 16306250, 15568919);
           var6 = FullscreenFocusCanvas.field_b;
-          var7 = sg.field_m;
+          var7 = ArchiveSourceManager.field_m;
           this.a(-16, var5.field_A, var8, ra.field_e, 0, var6, 0.5f, param0, var5, var5.field_z);
           this.a(20, var5.field_A, var8, ra.field_e, param0 + 0, var7, 0.5f, 0, var5, var5.field_z);
           this.a(var5.field_A / 2 - ra.field_e.field_y + 12, var5.field_A / 3, var8, ra.field_e, 0, LoginPanel.field_E[this.field_t], 0.699999988079071f, 0, var5, var5.field_z);

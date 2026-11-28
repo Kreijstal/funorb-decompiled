@@ -236,7 +236,7 @@ final class pl {
         }
         this.field_j = 0;
         this.field_b = 0;
-        if (jk.field_r == 0) {
+        if (ProxySocketConnector.field_r == 0) {
           if (this.field_a != 0 &&
             kc.field_f != 0) {
             if (this.field_h <= 0) {
@@ -244,7 +244,7 @@ final class pl {
             }
             this.field_h = this.field_h - 1;
           }
-          if (jk.field_r == 0) {
+          if (ProxySocketConnector.field_r == 0) {
             if (0 != kc.field_f) {
               if (this.field_a == 0 && (this.field_d ||
                 field_c)) {
@@ -297,13 +297,13 @@ final class pl {
           }
         } else {
           this.field_h = kb.field_p;
-          this.field_a = jk.field_r;
-          this.field_b = jk.field_r;
+          this.field_a = ProxySocketConnector.field_r;
+          this.field_b = ProxySocketConnector.field_r;
           this.field_k = param1;
           this.field_d = true;
           if (this.field_a == 0) {
             boolean decompiledFrameRemainder2 = true;
-            if (jk.field_r == 0) {
+            if (ProxySocketConnector.field_r == 0) {
               if (0 != kc.field_f) {
                 if (this.field_a == 0 && (this.field_d ||
                   field_c)) {
@@ -386,7 +386,7 @@ final class pl {
             }
             this.field_h = this.field_h - 1;
           }
-          if (jk.field_r == 0) {
+          if (ProxySocketConnector.field_r == 0) {
             if (0 != kc.field_f) {
               if (this.field_a == 0 && (this.field_d ||
                 field_c)) {

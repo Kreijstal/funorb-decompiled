@@ -9,7 +9,7 @@ final class hp {
 
     final static void a(int param0, byte param1) {
         CipherPacketBuffer var2 = ac.field_B;
-        var2.d((byte) -88, param0);
+        var2.writeCipheredByte((byte) -88, param0);
         if (param1 > 66) {
           var2.writeByte(6, 1);
           var2.writeByte(6, 0);

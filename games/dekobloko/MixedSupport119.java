@@ -10,7 +10,7 @@ final class MixedSupport119 {
     static GameApplet gameAppletState0001;
     static String stringState0522;
     static int integerState0771;
-    static NetworkSupport003 networkSupport003State0003;
+    static ArchiveNetworkClient networkSupport003State0003;
     static int integerState0772;
     static String stringState0523;
 

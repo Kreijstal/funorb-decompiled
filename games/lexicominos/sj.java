@@ -23,9 +23,9 @@ final class sj extends IntrusiveNode {
         var3 = Lexicominos.field_L ? 1 : 0;
         try {
           ug.field_m = ug.field_m + 1;
-          if (~ch.field_e == param0 &&
+          if (~ProxySocketConnector.field_e == param0 &&
             fk.field_e == -1) {
-            ch.field_e = bk.field_b;
+            ProxySocketConnector.field_e = bk.field_b;
             fk.field_e = ResourceArchive.field_e;
           }
           boolean decompiledFrameRemainder0 = true;
@@ -66,14 +66,14 @@ final class sj extends IntrusiveNode {
             } else {
               af.field_b = false;
             }
-            bf.field_g = ch.field_e;
+            bf.field_g = ProxySocketConnector.field_e;
           }
           if (!af.field_b &&
             dj.field_b > ug.field_m &&
             ob.field_c) {
             ug.field_m = 0;
             vf.field_r = fk.field_e;
-            bf.field_g = ch.field_e;
+            bf.field_g = ProxySocketConnector.field_e;
           }
           nc.field_p = param1;
           fk.field_e = -1;
@@ -82,7 +82,7 @@ final class sj extends IntrusiveNode {
             af.field_b = false;
             ug.field_m = 0;
           }
-          ch.field_e = -1;
+          ProxySocketConnector.field_e = -1;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

@@ -9,11 +9,11 @@ final class mm {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         try {
-          mb.a(!param1, (java.awt.Component) ((Object) param0));
+          mb.attachKeyboardListeners(!param1, (java.awt.Component) ((Object) param0));
           if (!param1) {
             mm.countSetBits(-16, (byte) -13);
           }
-          aq.a((byte) 60, (java.awt.Component) ((Object) param0));
+          aq.attachMouseListeners((byte) 60, (java.awt.Component) ((Object) param0));
           if (ok.field_g != null) {
             ok.field_g.attach(13212, (java.awt.Component) ((Object) param0));
           }

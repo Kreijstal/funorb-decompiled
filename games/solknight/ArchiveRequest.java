@@ -59,9 +59,9 @@ abstract class ArchiveRequest extends DualLinkNode {
           }
           q.field_a = param6;
           IntrusiveDeque.field_a = param1;
-          il.field_c = (va) ((Object) new ea());
+          il.field_c = (ArchiveNetworkClient) ((Object) new SocketArchiveNetworkClient());
           pf.field_d = new DiskCacheWorker(param3);
-          d.field_b = new ne(il.field_c, pf.field_d);
+          d.field_b = new ArchiveSourceManager(il.field_c, pf.field_d);
         } catch (RuntimeException runtimeException) {
           throw MusicPatch.wrapClientException((Throwable) ((Object) runtimeException), "sk.F(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + (param8 != null ? "{...}" : "null") + ')');
         }

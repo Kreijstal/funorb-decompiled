@@ -22,7 +22,7 @@ final class EmailFormatValidator extends TextFieldValidator {
           stackIn_5_0 = (pd.a(-94, param1) != null) ? 0 : 1;
           var3_int = stackIn_5_0;
           if (var3_int != 0) {
-            stackIn_9_0 = hm.field_b;
+            stackIn_9_0 = SocketConnector.field_b;
             return stackIn_9_0;
           }
           stackIn_7_0 = LabeledWidgetContainer.field_K;

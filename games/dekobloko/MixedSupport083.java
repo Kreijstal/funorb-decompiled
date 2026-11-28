@@ -463,7 +463,7 @@ final class MixedSupport083 {
 
     final static void performAction1089(boolean booleanArgument1, long longArgument2, int integerArgument3) {
         CipherPacketBuffer cipherPacketBufferLocal1 = SocketFactory.cipherPacketBufferState0002;
-        cipherPacketBufferLocal1.performAction1641(integerArgument3, -4);
+        cipherPacketBufferLocal1.writeCipheredByte(integerArgument3, -4);
         cipherPacketBufferLocal1.position = cipherPacketBufferLocal1.position + 1;
         int integerLocal2 = cipherPacketBufferLocal1.position;
         cipherPacketBufferLocal1.writeByte(true, 7);

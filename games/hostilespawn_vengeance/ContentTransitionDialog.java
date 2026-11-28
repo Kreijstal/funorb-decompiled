@@ -98,7 +98,7 @@ abstract class ContentTransitionDialog extends ResizableModalDialog {
           gf.field_h = dupTemp$1;
           bb.field_c = dupTemp$1;
           if (oa.field_l.status != 1) {
-            rc.field_a = sg.field_c;
+            rc.field_a = ArchiveSourceManager.field_c;
           } else {
             try {
               UiWidget.field_t = new BufferedSocket((java.net.Socket) (oa.field_l.result), uj.field_k);
@@ -115,12 +115,12 @@ abstract class ContentTransitionDialog extends ResizableModalDialog {
             } catch (java.io.IOException decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var2_ref = (IOException) (Object) decompiledCaughtException;
-              rc.field_a = sg.field_c;
+              rc.field_a = ArchiveSourceManager.field_c;
               if (!HostileSpawn.field_I) {
                 oa.field_l = null;
                 return true;
               }
-              rc.field_a = sg.field_c;
+              rc.field_a = ArchiveSourceManager.field_c;
               oa.field_l = null;
               return true;
             }
@@ -264,7 +264,7 @@ abstract class ContentTransitionDialog extends ResizableModalDialog {
         return super.advanceDialogAnimation(65393);
     }
 
-    final static void a(java.awt.Component param0, int param1) {
+    final static void attachKeyboardListeners(java.awt.Component param0, int param1) {
         try {
           param0.setFocusTraversalKeysEnabled(false);
           int var2_int = -39 / ((param1 - 44) / 60);

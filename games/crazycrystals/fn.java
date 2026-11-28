@@ -32,7 +32,7 @@ final class fn extends ScoreModifier {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 == 1) {
-            stackIn_6_0 = (param1.d((byte) -96, 1) == 1);
+            stackIn_6_0 = (param1.readBits((byte) -96, 1) == 1);
             return stackIn_6_0;
           }
           return true;

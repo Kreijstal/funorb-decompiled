@@ -114,7 +114,7 @@ final class GameDomainSupport005 {
             DialogMessagePane.rgbSpriteState0012 = DropTargetWidgetContainer.computeRgbSprite0704(MixedSupport076.resourceArchiveState0011, "headline", "benefits", integerArgument1 + 7802);
             MixedSupport054.rgbSpriteState0019 = DropTargetWidgetContainer.computeRgbSprite0704(MixedSupport076.resourceArchiveState0011, "blurbpane", "benefits", 8192);
             RichTextLayout.rgbSpriteState0015 = DropTargetWidgetContainer.computeRgbSprite0704(MixedSupport076.resourceArchiveState0011, "button", "benefits", 8192);
-            ResourceSupport004.rgbSpriteState0043 = DropTargetWidgetContainer.computeRgbSprite0704(MixedSupport076.resourceArchiveState0011, "signup_text", "benefits", 8192);
+            NetworkArchiveRequest.rgbSpriteState0043 = DropTargetWidgetContainer.computeRgbSprite0704(MixedSupport076.resourceArchiveState0011, "signup_text", "benefits", 8192);
             GzipDecompressor.rgbSpriteState0031 = DropTargetWidgetContainer.computeRgbSprite0704(MixedSupport076.resourceArchiveState0011, "menu_text", "benefits", 8192);
             NetworkSupport002.rgbSpriteState0008 = DropTargetWidgetContainer.computeRgbSprite0704(MixedSupport076.resourceArchiveState0011, "button_frame", "benefits", integerArgument1 ^ 8582);
             RenderingSupport003.rgbSpriteState0017 = DropTargetWidgetContainer.computeRgbSprite0704(MixedSupport076.resourceArchiveState0011, "arrow", "benefits", 8192);
@@ -148,7 +148,7 @@ final class GameDomainSupport005 {
               MatchingFieldValidator.performAction1425(3, 1, 0, 2, MixedSupport140.rgbSpriteArrayState0031[integerLocal18], 0, MixedSupport140.rgbSpriteArrayState0031[integerLocal18].integerState0258, MixedSupport140.rgbSpriteArrayState0031[integerLocal18].integerState0255);
             }
             UiComponentPart009.stringArrayState0008 = null;
-            NetworkSupport008.rgbSpriteState0037 = ResourceSupport004.rgbSpriteState0043.copy();
+            NetworkSupport008.rgbSpriteState0037 = NetworkArchiveRequest.rgbSpriteState0043.copy();
             NetworkSupport008.rgbSpriteState0037.bindAsRenderTarget();
             SceneWidgetPart014.performAction1781(31, 0, 2 * SoftwareRaster.integerState0284 / 3, 0, 64, SoftwareRaster.integerState0285);
             SoftwareRaster.setRasterBuffer(integerArrayLocal28, integerLocal13, integerLocal14);
@@ -283,7 +283,7 @@ final class GameDomainSupport005 {
           if (RichTextLayout.rgbSpriteState0015 != null &&
             null != NetworkSupport002.rgbSpriteState0008) {
             RichTextLayout.rgbSpriteState0015.draw(231, 390);
-            rgbSpriteLocal10 = ResourceSupport004.rgbSpriteState0043;
+            rgbSpriteLocal10 = NetworkArchiveRequest.rgbSpriteState0043;
             if (MixedSupport109.mixedSupport116State0003.integerState0754 == 0) {
               rgbSpriteLocal10 = NetworkSupport008.rgbSpriteState0037;
             }
@@ -382,14 +382,14 @@ final class GameDomainSupport005 {
           cipherPacketBufferLocal6 = new CipherPacketBuffer(resourceArchiveArgument1.getFileByName(0, "", "logo.fo3d"));
           cipherPacketBufferLocal8 = cipherPacketBufferLocal6;
           integerLocal1 = cipherPacketBufferLocal8.readUnsignedByte((byte) -124);
-          cipherPacketBufferLocal8.performAction1645((byte) -108);
+          cipherPacketBufferLocal8.beginBitAccess((byte) -108);
           MixedSupport073.clientExceptionArrayState0001 = ReturnedShape.computeClientExceptionArray1431(122, cipherPacketBufferLocal8);
           NameSuggestionsPanel.integerArrayArrayState0006 = new int[integerLocal1][];
           DiagnosticSupport002.mixedSupport138ArrayState0001 = new MixedSupport138[integerLocal1];
           for (integerLocal2 = 0; integerLocal2 < integerLocal1; integerLocal2++) {
             DiagnosticSupport002.mixedSupport138ArrayState0001[integerLocal2] = MixedSupport133.computeMixedSupport1381681(-128, cipherPacketBufferLocal6);
           }
-          cipherPacketBufferLocal8.performAction1647((byte) -124);
+          cipherPacketBufferLocal8.endBitAccess((byte) -124);
           if (integerArgument2 >= -1) {
             stringState0406 = (String) null;
           }

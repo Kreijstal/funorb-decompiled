@@ -682,7 +682,7 @@ final class GameEntity {
             if (tc.field_u == null) {
               return;
             }
-            stackIn_13_0 = fb.field_d;
+            stackIn_13_0 = ArchiveNetworkClient.field_d;
             stackIn_13_1 = 5284;
             stackIn_13_2 = null;
             stackIn_13_3 = null;

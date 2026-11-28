@@ -232,8 +232,8 @@ final class RandomAccessCacheFile {
           if (param1 != -25) {
             RandomAccessCacheFile.sleepIgnoringInterrupts(-79, 91L);
           }
-          var3 = fl.a(param0, (byte) 117) ? 1 : 0;
-          var4 = fl.a(param0, (byte) 116) ? 1 : 0;
+          var3 = SocketArchiveNetworkClient.a(param0, (byte) 117) ? 1 : 0;
+          var4 = SocketArchiveNetworkClient.a(param0, (byte) 116) ? 1 : 0;
           var5 = new vg();
           var5.field_d = (short)param0.e(16, param1 + 144);
           var5.field_g = DebouncedFieldValidator.a(param0, -119, var5.field_g, 16);
@@ -260,10 +260,10 @@ final class RandomAccessCacheFile {
             var5.field_n = DebouncedFieldValidator.a(param0, -123, var5.field_n, 16);
             var5.field_j = DebouncedFieldValidator.a(param0, -95, var5.field_j, 16);
           }
-          if (fl.a(param0, (byte) 121)) {
+          if (SocketArchiveNetworkClient.a(param0, (byte) 121)) {
             var5.field_M = DebouncedFieldValidator.a(param0, -92, var5.field_M, 16);
           }
-          if (fl.a(param0, (byte) 107)) {
+          if (SocketArchiveNetworkClient.a(param0, (byte) 107)) {
             var5.field_z = hf.a(param1 + 24, var5.field_z, 16, param0);
             var6 = 0;
             for (var7 = 0; var7 < var5.field_z.length; var7++) {

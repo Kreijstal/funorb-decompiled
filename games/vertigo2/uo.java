@@ -389,7 +389,7 @@ final class uo {
               var12.field_pc.a(83, -2 + (-var33_intLifetime1 + 365), Archive.field_f, var31, var33_intLifetime1);
               var34_int = Archive.field_j;
               if ((var14Lifetime1 & 1 << DiskCacheWorker.field_b) != 0) {
-                var50_ref = eg.field_r[var12.field_Ub];
+                var50_ref = SocketArchiveNetworkClient.field_r[var12.field_Ub];
                 var12.field_jc.field_Db = var50_ref;
                 var12.field_jc.a(92, var50_ref.field_x, var12.field_pc.field_db, 0, var34_int);
                 var34_int = var34_int + (Archive.field_j + var50_ref.field_x);

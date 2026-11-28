@@ -211,8 +211,8 @@ final class LevelSession {
             }
             if (decompiledFrameRemainder4) {
               SoftwareRasterizer.fillRectangleVerticalGradient(0, 0, 640, 430, 27648, 512);
-              var3 = gb.field_e.field_d;
-              gb.field_e.a((int)((double)(-var9 * (-640 + var3)) / var7), 0, 128);
+              var3 = ArchiveNetworkClient.field_e.field_d;
+              ArchiveNetworkClient.field_e.a((int)((double)(-var9 * (-640 + var3)) / var7), 0, 128);
               var3 = b.field_k.field_d * 2;
               b.field_k.d((int)((double)(-var9 * (var3 - 640)) / var7), 0);
               b.field_k.d((int)(-((double)((var3 - 640) * var9) / var7) + (double)(var3 / 2)), 0);

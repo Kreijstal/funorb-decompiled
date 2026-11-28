@@ -28,7 +28,7 @@ final class ModalDialogHost extends SingleChildWidgetContainer {
     }
 
     public ModalDialogHost() {
-        super(0, 0, DraggableWidgetContainer.field_y, pk.field_c, (WidgetRenderer) null, (WidgetEventListener) null);
+        super(0, 0, DraggableWidgetContainer.field_y, ArchiveSourceManager.field_c, (WidgetRenderer) null, (WidgetEventListener) null);
         this.field_A = new IntrusiveDeque();
     }
 

@@ -33,9 +33,9 @@ final class GzipInflater {
         }
         param1 = param1 & 8191;
         if (param1 >= 4096) {
-          return param1 >= 6144 ? -hj.field_b[8192 - param1] : -hj.field_b[-4096 + param1];
+          return param1 >= 6144 ? -ArchiveSourceManager.field_b[8192 - param1] : -ArchiveSourceManager.field_b[-4096 + param1];
         }
-        return param1 >= 2048 ? hj.field_b[4096 - param1] : hj.field_b[param1];
+        return param1 >= 2048 ? ArchiveSourceManager.field_b[4096 - param1] : ArchiveSourceManager.field_b[param1];
     }
 
     final static void a(boolean param0, int param1, boolean param2, int param3, dm param4) {
@@ -50,16 +50,16 @@ final class GzipInflater {
         try {
           AccountRegistrationPanel.field_S[0] = ph.field_d.nextInt();
           AccountRegistrationPanel.field_S[1] = ph.field_d.nextInt();
-          mn.field_h.position = 0;
+          ProxySocketConnector.field_h.position = 0;
           AccountRegistrationPanel.field_S[2] = (int)(sj.field_h >> 32);
           AccountRegistrationPanel.field_S[3] = (int)sj.field_h;
-          mn.field_h.writeInt(AccountRegistrationPanel.field_S[0], (byte) -81);
-          mn.field_h.writeInt(AccountRegistrationPanel.field_S[1], (byte) -81);
-          mn.field_h.writeInt(AccountRegistrationPanel.field_S[2], (byte) -81);
-          mn.field_h.writeInt(AccountRegistrationPanel.field_S[3], (byte) -81);
-          sa.a(mn.field_h, 109);
-          mn.field_h.writeShort(param3, param1 + 27463);
-          param4.a(mn.field_h, (byte) 123);
+          ProxySocketConnector.field_h.writeInt(AccountRegistrationPanel.field_S[0], (byte) -81);
+          ProxySocketConnector.field_h.writeInt(AccountRegistrationPanel.field_S[1], (byte) -81);
+          ProxySocketConnector.field_h.writeInt(AccountRegistrationPanel.field_S[2], (byte) -81);
+          ProxySocketConnector.field_h.writeInt(AccountRegistrationPanel.field_S[3], (byte) -81);
+          sa.a(ProxySocketConnector.field_h, 109);
+          ProxySocketConnector.field_h.writeShort(param3, param1 + 27463);
+          param4.a(ProxySocketConnector.field_h, (byte) 123);
           EditableTextField.field_U.position = 0;
           if (param2) {
             EditableTextField.field_U.writeByte(18, (byte) -81);
@@ -95,7 +95,7 @@ final class GzipInflater {
           if (null != AlphaWidgetContainer.field_N) {
             EditableTextField.field_U.writePrefixedString(true, AlphaWidgetContainer.field_N);
           }
-          lk.a(SecondaryNodeHashTable.field_k, mn.field_h, EditableTextField.field_U, 91, RichTextWidget.field_M);
+          lk.a(SecondaryNodeHashTable.field_k, ProxySocketConnector.field_h, EditableTextField.field_U, 91, RichTextWidget.field_M);
           EditableTextField.field_U.backpatchShortLength(EditableTextField.field_U.position - var5_int, 111);
           vh.a(-1, (byte) -42);
           return;

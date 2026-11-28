@@ -59,7 +59,7 @@ final class ra {
         if (!lk.field_c &&
           ModalDialogHost.field_y >= bk.field_d &&
           ModalDialogHost.field_y < ek.field_g + bk.field_d) {
-          return tj.field_v;
+          return SocketArchiveNetworkClient.field_v;
         }
         if (param0 >= 26) {
           return null;

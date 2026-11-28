@@ -338,17 +338,17 @@ final class BufferedSocket implements Runnable {
         int var6Lifetime1;
         int var7Lifetime1;
         var8 = Bounce.field_N;
-        if (oa.field_a < 0) {
+        if (SocketConnector.field_a < 0) {
           return;
         }
         var3 = param2 - 135;
         var4 = -35 + param0;
         var5 = 256;
-        if (oa.field_a < 75) {
-          var5 = (oa.field_a << 8) / 75;
+        if (SocketConnector.field_a < 75) {
+          var5 = (SocketConnector.field_a << 8) / 75;
         }
-        if (200 < oa.field_a) {
-          var5 = (-oa.field_a + 250 << 8) / 50;
+        if (200 < SocketConnector.field_a) {
+          var5 = (-SocketConnector.field_a + 250 << 8) / 50;
         }
         kh.a(bi.field_j, 1);
         qk.c();
@@ -358,12 +358,12 @@ final class BufferedSocket implements Runnable {
           SoftwareRasterizer.fillRectangleAlpha(0, 0, SoftwareRasterizer.field_e, SoftwareRasterizer.field_k, 0, 256 - var5);
         }
         ve.a(-121);
-        if (oa.field_a < 150) {
+        if (SocketConnector.field_a < 150) {
           bi.field_j.drawHalfSize(var3, var4);
         } else {
           jl.field_c.drawWithOpacity(15 + var3, 10 + var4, var5);
         }
-        var6 = -125 + oa.field_a;
+        var6 = -125 + SocketConnector.field_a;
         if (var6 > 0 &&
           var6 < 50) {
           if (var6 >= 20) {
@@ -378,7 +378,7 @@ final class BufferedSocket implements Runnable {
             Bounce.field_G.drawAdditive(var3, var4, var7);
           }
         }
-        var6Lifetime1 = -140 + oa.field_a;
+        var6Lifetime1 = -140 + SocketConnector.field_a;
         if (param1 > -44) {
           field_o = (RgbSprite) null;
         }

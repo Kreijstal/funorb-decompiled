@@ -8,14 +8,14 @@ final class pa {
     static int[][] field_b;
 
     final static AccountServiceResult pollAccountCreationResult(byte param0) {
-        if (ic.field_l == mc.field_t) {
+        if (ProxySocketConnector.field_l == mc.field_t) {
           throw new IllegalStateException();
         }
         if (param0 >= -19) {
           return (AccountServiceResult) null;
         }
-        if (kd.field_p == ic.field_l) {
-          ic.field_l = mc.field_t;
+        if (kd.field_p == ProxySocketConnector.field_l) {
+          ProxySocketConnector.field_l = mc.field_t;
           return vk.field_g;
         }
         return null;

@@ -135,7 +135,7 @@ final class FullscreenStatusDialog extends ResizableModalDialog implements Widge
 
     final static void h(byte param0) {
         int var1 = 120 % ((param0 + 7) / 60);
-        kh.field_a = null;
+        MouseInputHandler.field_a = null;
         pk.field_a = null;
     }
 

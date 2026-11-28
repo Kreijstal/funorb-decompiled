@@ -19,10 +19,10 @@ final class gj extends rh {
 
     final static RgbSprite[] a(int param0, int param1, boolean param2, int param3) {
         if (!param2) {
-          return wb.a(param0, param1, 1, param3, 3);
+          return ArchiveNetworkClient.a(param0, param1, 1, param3, 3);
         }
         field_s = (byte[][]) null;
-        return wb.a(param0, param1, 1, param3, 3);
+        return ArchiveNetworkClient.a(param0, param1, 1, param3, 3);
     }
 
     final boolean d(byte param0) {

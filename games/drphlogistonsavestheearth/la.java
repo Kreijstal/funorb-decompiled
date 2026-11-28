@@ -18,7 +18,7 @@ final class la {
         String stackIn_17_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var4 = cl.a(param0, param1, -124, param2);
+          var4 = SocketArchiveNetworkClient.a(param0, param1, -124, param2);
           var4[3].field_C = var4[3].field_w;
           var4[1].field_z = var4[1].field_y;
           var4[7].field_z = var4[7].field_y;
@@ -116,7 +116,7 @@ final class la {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var16 = null;
         try {
-          hm.a(param3, param10, cb.field_a, a.field_i, param11, param14, DequeWidgetContainer.field_E, 480, param5, new gk(param9), di.field_d, new gk(param7), param0, df.field_h, false, param15, param12, param13, param6, b.field_h, param1);
+          hm.a(param3, param10, cb.field_a, a.field_i, param11, param14, DequeWidgetContainer.field_E, 480, param5, new gk(param9), di.field_d, new gk(param7), param0, ArchiveSourceManager.field_h, false, param15, param12, param13, param6, b.field_h, param1);
           DropTargetWidgetContainer.a((byte) 49, param2, param8);
           if (param4 >= -36) {
             la.a(-76);
@@ -253,7 +253,7 @@ final class la {
               return;
             }
             if (var2 != 4) {
-              gb.a((Throwable) null, "F1: " + al.a(-56), 10);
+              ArchiveNetworkClient.a((Throwable) null, "F1: " + al.a(-56), 10);
               eg.a((byte) 126);
               return;
             }

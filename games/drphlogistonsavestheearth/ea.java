@@ -22,7 +22,7 @@ final class ea {
           vb.field_s.bindAsRenderTarget();
           var2.drawOpaque(0, -ji.field_b.field_w);
           vb.field_s.field_v = ji.field_b.field_w;
-          cl.d((byte) -99);
+          SocketArchiveNetworkClient.d((byte) -99);
         } catch (RuntimeException runtimeException) {
           throw ie.wrapClientException((Throwable) ((Object) runtimeException), "ea.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

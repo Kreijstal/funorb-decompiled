@@ -136,9 +136,9 @@ abstract class ByteArrayStore {
             for (var6_intLifetime1 = 0; var6_intLifetime1 < var4; var6_intLifetime1++) {
               bc.a(false, var14);
               if (var6_intLifetime1 == 0) {
-                a.a(sa.field_a, nl.field_b, TextFieldValidator.field_h, -23576, var6_intLifetime1, Crc32Table.field_c);
+                SocketArchiveNetworkClient.a(sa.field_a, nl.field_b, TextFieldValidator.field_h, -23576, var6_intLifetime1, Crc32Table.field_c);
               } else {
-                a.a(sa.field_a, nl.field_b, TextFieldValidator.field_h, param0 ^ 12691, var6_intLifetime1, Crc32Table.field_c);
+                SocketArchiveNetworkClient.a(sa.field_a, nl.field_b, TextFieldValidator.field_h, param0 ^ 12691, var6_intLifetime1, Crc32Table.field_c);
               }
             }
             rf.a(-23243, var5);
@@ -151,11 +151,11 @@ abstract class ByteArrayStore {
               var11 = re.field_c[var9];
               var6[0][var10] = ad.field_i[var11];
               var18[0][4 * var10] = ConfirmedEmailAvailabilityValidator.field_n[var11];
-              var18[0][1 + var10 * 4] = q.field_h[var11];
+              var18[0][1 + var10 * 4] = ProxySocketConnector.field_h[var11];
               var18[0][2 + 4 * var10] = TextLayout.field_b[var11];
               var18[0][var10 * 4 + 3] = ij.field_c[var11];
               if (rc.a(true, ad.field_i[var11]) &&
-                ij.field_c[var11] + q.field_h[var11] + TextLayout.field_b[var11] == 0) {
+                ij.field_c[var11] + ProxySocketConnector.field_h[var11] + TextLayout.field_b[var11] == 0) {
                 var6[0][var10] = null;
                 var10--;
               }
@@ -169,11 +169,11 @@ abstract class ByteArrayStore {
               var11Lifetime1 = re.field_c[var5 + var9Lifetime1];
               var6[1][var13] = ad.field_i[var11Lifetime1];
               var18[1][var13 * 4] = ConfirmedEmailAvailabilityValidator.field_n[var11Lifetime1];
-              var18[1][1 + 4 * var13] = q.field_h[var11Lifetime1];
+              var18[1][1 + 4 * var13] = ProxySocketConnector.field_h[var11Lifetime1];
               var18[1][2 + 4 * var13] = TextLayout.field_b[var11Lifetime1];
               var18[1][4 * var13 + 3] = ij.field_c[var11Lifetime1];
               if (rc.a(true, ad.field_i[var11Lifetime1]) &&
-                q.field_h[var11Lifetime1] - (-TextLayout.field_b[var11Lifetime1] - ij.field_c[var11Lifetime1]) == 0) {
+                ProxySocketConnector.field_h[var11Lifetime1] - (-TextLayout.field_b[var11Lifetime1] - ij.field_c[var11Lifetime1]) == 0) {
                 var6[1][var13] = null;
                 var13--;
               }

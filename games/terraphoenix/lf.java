@@ -66,7 +66,7 @@ final class lf {
           int var3 = Terraphoenix.field_V;
           try {
             if (null != StandardContentDialog.field_kb) {
-              StandardContentDialog.field_kb.a(-103);
+              StandardContentDialog.field_kb.close(-103);
             }
             if (null != GzipDecompressor.field_c) {
               GzipDecompressor.field_c.shutdown(-109);

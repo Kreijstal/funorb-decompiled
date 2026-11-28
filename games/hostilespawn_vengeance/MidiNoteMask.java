@@ -53,7 +53,7 @@ final class MidiNoteMask extends IntrusiveNode {
         try {
           rc.field_e = 0;
           ng.field_u = ng.field_u + 1;
-          sg.field_i = sg.field_i + 1;
+          ArchiveSourceManager.field_i = ArchiveSourceManager.field_i + 1;
           for (var14_int = 0; ProxySocketFactory.field_j > var14_int; var14_int++) {
             var15_ref_oj = TextHotspotBounds.field_m[var14_int];
             var16_ref_oc = var15_ref_oj.field_j;
@@ -120,7 +120,7 @@ final class MidiNoteMask extends IntrusiveNode {
               var20++;
             }
           }
-          sg.a(true);
+          ArchiveSourceManager.a(true);
           ac.a(param3, param8, param6, param4 - 5176, param9, param5);
           ConfirmedEmailAvailabilityValidator.a((byte) 61, ii.field_d);
           ConfirmedEmailAvailabilityValidator.a(param3, param6, param0, param5, 0);

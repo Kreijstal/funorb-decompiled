@@ -202,11 +202,11 @@ final class PlatformTaskDispatcher implements Runnable {
                         }
                         break;
                       case 13:
-                        var3_ref_ok = PlatformTaskDispatcher.a(field_o, -11227, "", (String) (var9.objectArgument));
+                        var3_ref_ok = PlatformTaskDispatcher.openPreferencesFile(field_o, -11227, "", (String) (var9.objectArgument));
                         var9.result = var3_ref_ok;
                         break;
                       case 12:
-                        var3_ref_ok = PlatformTaskDispatcher.a(field_o, -11227, field_b, (String) (var9.objectArgument));
+                        var3_ref_ok = PlatformTaskDispatcher.openPreferencesFile(field_o, -11227, field_b, (String) (var9.objectArgument));
                         var9.result = var3_ref_ok;
                         break;
                       case 7:
@@ -241,7 +241,7 @@ final class PlatformTaskDispatcher implements Runnable {
                     }
                     try {
                       if (false) throw (ProxyAuthenticationRequiredException) null;
-                      var9.result = je.a(var9.intArgument, (byte) -121, (String) (var9.objectArgument)).b(-19314);
+                      var9.result = je.a(var9.intArgument, (byte) -121, (String) (var9.objectArgument)).openSocket(-19314);
                     } catch (ProxyAuthenticationRequiredException decompiledCaughtParameter2) {
                       decompiledCaughtException = decompiledCaughtParameter2;
                       var3_ref_tk = (ProxyAuthenticationRequiredException) (Object) decompiledCaughtException;
@@ -324,7 +324,7 @@ final class PlatformTaskDispatcher implements Runnable {
         return this.enqueueTask(5, (Object) null, 0, -20766, 0);
     }
 
-    private final static BoundedRandomAccessFile a(int param0, int param1, String param2, String param3) {
+    private final static BoundedRandomAccessFile openPreferencesFile(int param0, int param1, String param2, String param3) {
         try {
           int var6 = 0;
           BoundedRandomAccessFile stackIn_12_0 = null;

@@ -251,7 +251,7 @@ final class d {
         field_u = null;
     }
 
-    final static void a(java.awt.Component param0, int param1) {
+    final static void detachMouseListeners(java.awt.Component param0, int param1) {
         try {
           param0.removeMouseListener(DropTargetWidgetContainer.field_B);
           param0.removeMouseMotionListener(DropTargetWidgetContainer.field_B);

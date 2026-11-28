@@ -75,7 +75,7 @@ final class pg {
             if (var5 != 0) {
               var6_int = var4_ref_sd.field_k;
               Archive.field_a[0].field_c = false;
-              Archive.field_a[0].field_d = ne.field_g;
+              Archive.field_a[0].field_d = ArchiveSourceManager.field_g;
               var7 = var4_ref_sd.field_l;
               Archive.field_a[0].field_a = null;
               for (var8_int = 1; var5 > var8_int; var8_int++) {
@@ -123,7 +123,7 @@ final class pg {
                   }
                   if (var21 != null &&
                     RichTextWidget.a(var21, (byte) -47)) {
-                    var8[1][var13] = ne.field_g;
+                    var8[1][var13] = ArchiveSourceManager.field_g;
                     var9[1][var13] = null;
                     var10[1][var13] = var22;
                     var27.position = var24;
@@ -250,7 +250,7 @@ final class pg {
               stackIn_36_0 = -1;
               return stackIn_36_0;
             }
-            il.field_c.a(la.field_n, (byte) 106, qf.field_a);
+            il.field_c.attachSocket(la.field_n, (byte) 106, qf.field_a);
             SocketConnector.field_f = 0;
             SecondaryNodeDeque.field_b = null;
             qf.field_a = null;

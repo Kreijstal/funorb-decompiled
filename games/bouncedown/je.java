@@ -4,10 +4,10 @@
 final class je {
     static String field_a;
 
-    final static oa a(int param0, byte param1, String param2) {
-        ra var3 = null;
+    final static SocketConnector a(int param0, byte param1, String param2) {
+        ProxySocketConnector var3 = null;
         RuntimeException var3_ref = null;
-        ra stackIn_3_0 = null;
+        ProxySocketConnector stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -16,11 +16,11 @@ final class je {
           if (param1 > -117) {
             field_a = (String) null;
           }
-          var3 = new ra();
-          ((oa) ((Object) var3)).field_e = param0;
-          ((oa) ((Object) var3)).field_d = param2;
+          var3 = new ProxySocketConnector();
+          ((SocketConnector) ((Object) var3)).field_e = param0;
+          ((SocketConnector) ((Object) var3)).field_d = param2;
           stackIn_3_0 = var3;
-          return (oa) ((Object) stackIn_3_0);
+          return (SocketConnector) ((Object) stackIn_3_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3_ref = decompiledCaughtException;

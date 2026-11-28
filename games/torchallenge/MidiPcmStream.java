@@ -40,7 +40,7 @@ final class MidiPcmStream extends PcmStream {
           return;
         }
         try {
-          fl.a(-125, false, param0, param1);
+          SocketArchiveNetworkClient.a(-125, false, param0, param1);
         } catch (RuntimeException runtimeException) {
           throw oj.wrapException((Throwable) ((Object) runtimeException), "kb.LA(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
@@ -137,7 +137,7 @@ final class MidiPcmStream extends PcmStream {
         }
     }
 
-    final static void a(byte param0, java.awt.Component param1) {
+    final static void detachMouseListeners(byte param0, java.awt.Component param1) {
         try {
           param1.removeMouseListener(te.field_b);
           param1.removeMouseMotionListener(te.field_b);
@@ -423,7 +423,7 @@ final class MidiPcmStream extends PcmStream {
         try {
           if (param1 != 16239) {
             java.awt.Component var7 = (java.awt.Component) null;
-            MidiPcmStream.a((byte) 92, (java.awt.Component) null);
+            MidiPcmStream.detachMouseListeners((byte) 92, (java.awt.Component) null);
           }
           LabeledWidgetContainer.a(param5, param0, 1024, param0, param4, param2, -118, param3);
         } catch (RuntimeException runtimeException) {

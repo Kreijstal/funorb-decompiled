@@ -1576,7 +1576,7 @@ final class li implements uj {
                 }
                 var2 = PasswordValidator.a(-117, "create_age_tooltip");
                 if (null != var2) {
-                  uf.field_t = FullscreenStatusDialog.a(var2, 105);
+                  SocketArchiveNetworkClient.field_t = FullscreenStatusDialog.a(var2, 105);
                 }
                 var2 = PasswordValidator.a(-104, "create_optin_news_tooltip");
                 if (null != var2) {
@@ -1632,7 +1632,7 @@ final class li implements uj {
                 }
                 var2 = PasswordValidator.a(param0 - 9218, "create_alert_passchars");
                 if (var2 != null) {
-                  bk.field_b = FullscreenStatusDialog.a(var2, 42);
+                  ArchiveSourceManager.field_b = FullscreenStatusDialog.a(var2, 42);
                 }
                 var2 = PasswordValidator.a(82, "create_alert_passrepeated");
                 if (null != var2) {
@@ -2077,7 +2077,7 @@ final class li implements uj {
                 }
                 var2 = PasswordValidator.a(param0 ^ -9284, "next");
                 if (null != var2) {
-                  jh.field_b = FullscreenStatusDialog.a(var2, 41);
+                  SocketConnector.field_b = FullscreenStatusDialog.a(var2, 41);
                 }
                 var2 = PasswordValidator.a(123, "graphics_colon");
                 if (null != var2) {

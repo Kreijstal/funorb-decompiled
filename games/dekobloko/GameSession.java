@@ -652,15 +652,15 @@ final class GameSession {
                       this.byteArrayState0022[integerLocal2] = (byte)integerLocal31;
                       if ((this.integerState0601 == 20 ||
                         bucketBoardLocal30.landed)) {
-                        SocketFactory.cipherPacketBufferState0002.performAction1641(60, integerArgument1 ^ -2);
+                        SocketFactory.cipherPacketBufferState0002.writeCipheredByte(60, integerArgument1 ^ -2);
                         SocketFactory.cipherPacketBufferState0002.position = SocketFactory.cipherPacketBufferState0002.position + 1;
                         integerLocal33 = SocketFactory.cipherPacketBufferState0002.position;
                         SocketFactory.cipherPacketBufferState0002.writeByte(true, this.integerState0601);
-                        SocketFactory.cipherPacketBufferState0002.performAction1649(integerArgument1 ^ 61);
+                        SocketFactory.cipherPacketBufferState0002.beginBitWrite(integerArgument1 ^ 61);
                         for (integerLocal35 = 0; this.integerState0601 > integerLocal35; integerLocal35++) {
-                          SocketFactory.cipherPacketBufferState0002.performAction1638(5, 0, (int) this.byteArrayState0022[integerLocal35]);
+                          SocketFactory.cipherPacketBufferState0002.writeBits(5, 0, (int) this.byteArrayState0022[integerLocal35]);
                         }
-                        SocketFactory.cipherPacketBufferState0002.performAction1646(integerArgument1 + 18);
+                        SocketFactory.cipherPacketBufferState0002.finishBitWrite(integerArgument1 + 18);
                         SocketFactory.cipherPacketBufferState0002.writeLengthByte(-integerLocal33 + SocketFactory.cipherPacketBufferState0002.position, true);
                         this.integerState0601 = 0;
                       }
@@ -1558,7 +1558,7 @@ final class GameSession {
         if (!this.booleanState0140) {
           throw new IllegalStateException();
         }
-        SocketFactory.cipherPacketBufferState0002.performAction1641(62, -4);
+        SocketFactory.cipherPacketBufferState0002.writeCipheredByte(62, -4);
         int integerLocal1 = -9 / ((integerArgument1 - 24) / 56);
     }
 
@@ -2201,7 +2201,7 @@ final class GameSession {
           if (hashNodeLocal9 instanceof CipherPacketBuffer) {
             cipherPacketBufferLocal14 = (CipherPacketBuffer) (mixedSupport075Local7.nodeDequeState0014.beginBackward((byte) 63));
             mixedSupport075Local7.integerState0421 = cipherPacketBufferLocal14.readUnsignedByte((byte) -29);
-            cipherPacketBufferLocal14.performAction1645((byte) -108);
+            cipherPacketBufferLocal14.beginBitAccess((byte) -108);
           } else {
             if (!(hashNodeLocal9 instanceof ReturnedShapeUpdate)) {
               throw new IllegalStateException(hashNodeLocal9.getClass().getName());
@@ -2257,7 +2257,7 @@ final class GameSession {
         }
         if (mixedSupport075Local7.integerState0421 > 0) {
           cipherPacketBufferLocal17 = (CipherPacketBuffer) (mixedSupport075Local7.nodeDequeState0014.beginBackward((byte) 49));
-          integerLocal10 = cipherPacketBufferLocal17.computeInteger1637(5, (byte) 110);
+          integerLocal10 = cipherPacketBufferLocal17.readBits(5, (byte) 110);
           mixedSupport075Local7.integerState0420 = mixedSupport075Local7.integerState0420 - 1;
           mixedSupport075Local7.integerState0421 = mixedSupport075Local7.integerState0421 - 1;
           if (mixedSupport075Local7.integerState0421 == 0) {
@@ -2280,7 +2280,7 @@ final class GameSession {
         if (!this.booleanState0140) {
           throw new IllegalStateException();
         }
-        SocketFactory.cipherPacketBufferState0002.performAction1641(63, -4);
+        SocketFactory.cipherPacketBufferState0002.writeCipheredByte(63, -4);
     }
 
     private final void performAction1296(int integerArgument1, byte byteArgument2) {
@@ -2599,7 +2599,7 @@ final class GameSession {
         if (integerArgument1 > -51) {
           return;
         }
-        SocketFactory.cipherPacketBufferState0002.performAction1641(61, -4);
+        SocketFactory.cipherPacketBufferState0002.writeCipheredByte(61, -4);
     }
 
     private final void queueAchievementNotification(int integerArgument1, int integerArgument2, int integerArgument3) {

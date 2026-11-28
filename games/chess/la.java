@@ -8,8 +8,8 @@ final class la {
 
     final static int a(byte param0) {
         int var1 = -116 % ((param0 - 50) / 52);
-        FullscreenStatusDialog.field_fb.a(32130);
-        if (!qh.field_c.b(-31259)) {
+        FullscreenStatusDialog.field_fb.pollArchiveSources(32130);
+        if (!qh.field_c.pollNetwork(-31259)) {
           return sh.b(32288);
         }
         return 0;

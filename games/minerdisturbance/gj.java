@@ -17,7 +17,7 @@ final class gj {
         return true;
     }
 
-    final static void a(int param0, java.awt.Component param1) {
+    final static void detachKeyboardListeners(int param0, java.awt.Component param1) {
         try {
           param1.removeKeyListener(MidiPcmStream.field_O);
           param1.removeFocusListener(MidiPcmStream.field_O);

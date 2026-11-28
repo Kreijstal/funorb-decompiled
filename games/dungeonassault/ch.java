@@ -45,7 +45,7 @@ class ch extends hl {
         try {
           var7 = ac.field_B;
           var8 = var7;
-          var8.d((byte) -93, param2);
+          var8.writeCipheredByte((byte) -93, param2);
           var8.position = var8.position + 1;
           var4 = var8.position;
           if (param0 != -16) {

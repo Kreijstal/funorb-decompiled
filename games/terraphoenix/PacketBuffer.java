@@ -245,7 +245,7 @@ class PacketBuffer extends IntrusiveNode {
     }
 
     final static void g(byte param0) {
-        qi.field_b = false;
+        ArchiveSourceManager.field_b = false;
         DefaultTextWidgetRenderer.field_k = false;
         bm.a(-1, (byte) 1);
         if (param0 != -124) {

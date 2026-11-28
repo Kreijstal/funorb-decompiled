@@ -133,8 +133,8 @@ final class SpriteLoader {
         String stackIn_9_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          FullscreenFocusCanvas.a((java.awt.Component) ((Object) param0), 0);
-          DequeWidgetContainer.a((byte) 54, (java.awt.Component) ((Object) param0));
+          FullscreenFocusCanvas.attachKeyboardListeners((java.awt.Component) ((Object) param0), 0);
+          DequeWidgetContainer.attachMouseListeners((byte) 54, (java.awt.Component) ((Object) param0));
           if (null != AccountServiceResult.field_l) {
             AccountServiceResult.field_l.attach((java.awt.Component) ((Object) param0), (byte) 112);
           }

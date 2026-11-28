@@ -199,7 +199,7 @@ final class pa extends PacketBuffer {
           var3 = TorChallenge.field_F ? 1 : 0;
           try {
             if (null != gb.field_d) {
-              gb.field_d.a(param0 - 19424);
+              gb.field_d.close(param0 - 19424);
             }
             if (gi.field_a != null) {
               gi.field_a.shutdown(4);

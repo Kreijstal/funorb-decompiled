@@ -18,7 +18,7 @@ final class ce {
         RuntimeException var1 = null;
         var2 = StarCannon.field_A;
         try {
-          if (!fl.d(897584976)) {
+          if (!ProxySocketConnector.d(897584976)) {
             if (n.field_a != null &&
               n.field_a.focusLost) {
               re.a(0);
@@ -55,7 +55,7 @@ final class ce {
           }
           var4 = (re) (s.field_e.beginForward(-3905));
           while (var4 != null) {
-            vh.a(param0, var4, 0);
+            SocketArchiveNetworkClient.a(param0, var4, 0);
             var4 = (re) (s.field_e.nextForward(-16913));
           }
           var5 = (vc) (ne.field_c.beginForward(-3905));

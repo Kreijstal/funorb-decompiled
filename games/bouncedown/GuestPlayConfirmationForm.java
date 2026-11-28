@@ -63,7 +63,7 @@ final class GuestPlayConfirmationForm extends DequeWidgetContainer implements Wi
             return;
           }
           if (this.field_z == param4) {
-            CipherPacketBuffer.n(8);
+            CipherPacketBuffer.openAccountRegistrationPanel(8);
             return;
           }
           if (this.field_F != param4) {
@@ -104,7 +104,7 @@ final class GuestPlayConfirmationForm extends DequeWidgetContainer implements Wi
         this.field_z.field_n = (WidgetEventListener) (this);
         this.field_z.field_q = ge.field_a;
         this.field_F.field_n = (WidgetEventListener) (this);
-        this.field_F.field_q = nf.field_a;
+        this.field_F.field_q = KeyboardInputHandler.field_a;
         this.addChild(this.field_A, true);
         this.addChild(this.field_z, true);
         this.addChild(this.field_F, true);

@@ -62,14 +62,14 @@ final class MixedSupport050 extends MixedSupport024 {
         CipherPacketBuffer cipherPacketBufferLocal2;
         if (integerArgument2 > 35) {
           cipherPacketBufferLocal1 = SocketFactory.cipherPacketBufferState0002;
-          cipherPacketBufferLocal1.performAction1641(integerArgument1, -4);
+          cipherPacketBufferLocal1.writeCipheredByte(integerArgument1, -4);
           cipherPacketBufferLocal1.writeByte(true, 1);
           cipherPacketBufferLocal1.writeByte(true, 2);
           return;
         }
         stringState0208 = (String) null;
         cipherPacketBufferLocal2 = SocketFactory.cipherPacketBufferState0002;
-        cipherPacketBufferLocal2.performAction1641(integerArgument1, -4);
+        cipherPacketBufferLocal2.writeCipheredByte(integerArgument1, -4);
         cipherPacketBufferLocal2.writeByte(true, 1);
         cipherPacketBufferLocal2.writeByte(true, 2);
     }

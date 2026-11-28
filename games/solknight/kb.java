@@ -76,7 +76,7 @@ final class kb {
           return;
         }
         AlphaWidgetContainer.field_I = new String[20];
-        AlphaWidgetContainer.field_I[3] = ea.field_q;
+        AlphaWidgetContainer.field_I[3] = SocketArchiveNetworkClient.field_q;
         AlphaWidgetContainer.field_I[4] = og.field_d;
         AlphaWidgetContainer.field_I[5] = h.field_f;
         AlphaWidgetContainer.field_I[2] = ti.field_d;

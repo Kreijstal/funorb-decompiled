@@ -160,7 +160,7 @@ final class bf {
                       mh.field_e[var4][var5].field_E = false;
                       mh.field_e[var4][var5].field_v = false;
                       mh.field_e[var4][var5].field_b = false;
-                      uf.field_p[jf.b((byte) 100)] = new gf(var4, var5, om.field_g);
+                      SocketArchiveNetworkClient.field_p[jf.b((byte) 100)] = new gf(var4, var5, om.field_g);
                       return;
                     }
                     je.field_O.d(var5, var4, -5);
@@ -173,7 +173,7 @@ final class bf {
               mh.field_e[var4][var5].field_E = false;
               mh.field_e[var4][var5].field_v = false;
               mh.field_e[var4][var5].field_b = false;
-              uf.field_p[jf.b((byte) 100)] = new gf(var4, var5, om.field_g);
+              SocketArchiveNetworkClient.field_p[jf.b((byte) 100)] = new gf(var4, var5, om.field_g);
             }
             return;
           }
@@ -252,7 +252,7 @@ final class bf {
                   mh.field_e[var4Lifetime1][var5Lifetime1].field_E = false;
                   mh.field_e[var4Lifetime1][var5Lifetime1].field_v = false;
                   mh.field_e[var4Lifetime1][var5Lifetime1].field_b = false;
-                  uf.field_p[jf.b((byte) 100)] = new gf(var4Lifetime1, var5Lifetime1, om.field_g);
+                  SocketArchiveNetworkClient.field_p[jf.b((byte) 100)] = new gf(var4Lifetime1, var5Lifetime1, om.field_g);
                   return;
                 }
                 je.field_O.d(var5Lifetime1, var4Lifetime1, -5);
@@ -265,7 +265,7 @@ final class bf {
           mh.field_e[var4Lifetime1][var5Lifetime1].field_E = false;
           mh.field_e[var4Lifetime1][var5Lifetime1].field_v = false;
           mh.field_e[var4Lifetime1][var5Lifetime1].field_b = false;
-          uf.field_p[jf.b((byte) 100)] = new gf(var4Lifetime1, var5Lifetime1, om.field_g);
+          SocketArchiveNetworkClient.field_p[jf.b((byte) 100)] = new gf(var4Lifetime1, var5Lifetime1, om.field_g);
         }
     }
 

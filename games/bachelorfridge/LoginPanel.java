@@ -117,7 +117,7 @@ final class LoginPanel extends WidgetContainer implements TextFieldListener, Wid
         try {
           if (this.field_M != param1) {
             if (param1 == this.field_O) {
-              qfa.f(-27);
+              NetworkArchiveRequest.f(-27);
             } else {
               if (param1 == this.field_K) {
                 if (!this.field_J) {

@@ -29,9 +29,9 @@ final class q {
           ph.field_f = param2;
           sc.field_c = param4;
           i.field_a = param0;
-          aj.field_c = (ch) ((Object) new uf());
-          uf.field_r = new DiskCacheWorker(param1);
-          ValidatedTextField.field_U = new bk(aj.field_c, uf.field_r);
+          aj.field_c = (ArchiveNetworkClient) ((Object) new SocketArchiveNetworkClient());
+          SocketArchiveNetworkClient.field_r = new DiskCacheWorker(param1);
+          ValidatedTextField.field_U = new ArchiveSourceManager(aj.field_c, SocketArchiveNetworkClient.field_r);
         } catch (RuntimeException runtimeException) {
           throw lj.wrapClientException((Throwable) ((Object) runtimeException), "q.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ')');
         }

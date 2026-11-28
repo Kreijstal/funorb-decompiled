@@ -154,7 +154,7 @@ abstract class NetworkGameClient extends GameApplet {
               }
               var7 = new SectorCacheStore(param1, hc.field_c, tk.field_p[param1], 2097152);
             }
-            var8 = d.field_b.a(-65, (SectorCacheStore) (var7), param3, (SectorCacheStore) (var6), param1);
+            var8 = d.field_b.getOrCreateArchiveSource(-65, (SectorCacheStore) (var7), param3, (SectorCacheStore) (var6), param1);
             if (param5) {
               var8.a((byte) 0);
             }

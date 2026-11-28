@@ -9,7 +9,7 @@ final class ta {
         try {
           DefaultTextWidgetRenderer.field_k = true;
           ok.field_h = param1 ? true : false;
-          nb.field_b = new ProgressMessageDialog(AlphaWidgetContainer.field_I, be.field_x, param0, qi.field_b, ok.field_h);
+          nb.field_b = new ProgressMessageDialog(AlphaWidgetContainer.field_I, be.field_x, param0, ArchiveSourceManager.field_b, ok.field_h);
           if (param2 != 10) {
             CharSequence var4 = (CharSequence) null;
             ta.a((CharSequence) null, 126);
@@ -48,10 +48,10 @@ final class ta {
           if (pe.field_a == k.field_b &&
             param1.equals(DualLinkNode.field_l)) {
             pe.field_a = AccountRequestState.field_a;
-            stackIn_9_0 = h.field_c;
+            stackIn_9_0 = ArchiveNetworkClient.field_c;
             return stackIn_9_0;
           }
-          h.field_c = null;
+          ArchiveNetworkClient.field_c = null;
           DualLinkNode.field_l = param1;
           pe.field_a = SectorCacheStore.field_d;
           stackIn_11_0 = null;

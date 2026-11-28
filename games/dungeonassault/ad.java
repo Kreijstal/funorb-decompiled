@@ -10,7 +10,7 @@ final class ad {
 
     final static ad[] b(int param0) {
         if (param0 == 65280) {
-          return new ad[]{hl.field_c, am.field_b, tp.field_y, DebouncedFieldValidator.field_d, kj.field_p, u.field_U, KeyboardInput.field_c, ib.field_h, RegistrationAgreementPane.field_T, ve.field_e, pm.field_l, ContentTransitionDialog.field_wb, ResizableModalDialog.field_hb, lg.field_n};
+          return new ad[]{hl.field_c, am.field_b, SocketArchiveNetworkClient.field_y, DebouncedFieldValidator.field_d, kj.field_p, u.field_U, KeyboardInput.field_c, ib.field_h, RegistrationAgreementPane.field_T, ve.field_e, pm.field_l, ContentTransitionDialog.field_wb, ResizableModalDialog.field_hb, lg.field_n};
         }
         return (ad[]) null;
     }

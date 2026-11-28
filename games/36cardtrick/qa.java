@@ -198,7 +198,7 @@ final class qa {
         return var3;
     }
 
-    final static void a(java.awt.Component param0, byte param1) {
+    final static void attachMouseListeners(java.awt.Component param0, byte param1) {
         try {
           int var2_int = -45 % ((46 - param1) / 47);
           param0.addMouseListener(DropTargetWidgetContainer.field_B);

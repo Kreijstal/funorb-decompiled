@@ -901,7 +901,7 @@ final class ld {
         SoftwareRasterizer.drawHorizontalLineAlpha(50, var4 + 33, 540, 0, 25);
         var4 += 40;
         wg.field_c.a(50, var4);
-        cb.field_b.drawString(hj.field_c, var5, var4 + var6, 4210752, -1);
+        cb.field_b.drawString(SocketConnector.field_c, var5, var4 + var6, 4210752, -1);
         SoftwareRasterizer.drawHorizontalLineAlpha(50, var4 + 33, 540, 0, 25);
         var4 += 56;
         lc.field_s.a(50, var4);
@@ -1224,7 +1224,7 @@ final class ld {
           stackIn_7_1 = (eh.a(-875)) ? false : true;
           var2 = LoginPanel.updateMembershipSlidesWithIntGuard(stackIn_6_0, stackIn_7_1);
           if (var2 == 3) {
-            if (null != df.field_l) {
+            if (null != ArchiveSourceManager.field_l) {
               ProxyAuthenticationRequiredException.a(true);
             }
             p.openSubscriptionPage(-161, nb.a(97));
@@ -1771,7 +1771,7 @@ final class ld {
                     }
                   } else {
                     if (this.field_e.e(-748)) {
-                      if (null != df.field_l) {
+                      if (null != ArchiveSourceManager.field_l) {
                         ProxyAuthenticationRequiredException.a(true);
                       } else {
                         s.a(param2, (byte) -121);
@@ -1972,7 +1972,7 @@ final class ld {
             }
             var17_ref_he = stackIn_67_0;
             var17_ref_he.a(166, 163 + var4 + var25.field_E);
-            var16_ref = cl.field_q;
+            var16_ref = SocketArchiveNetworkClient.field_q;
           } else {
             di.field_b[var14Lifetime1].a(166, var25.field_E + (var4 + 163));
             var16_ref = vc.field_d;

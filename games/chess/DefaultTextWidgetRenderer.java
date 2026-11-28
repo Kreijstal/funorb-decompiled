@@ -534,13 +534,13 @@ class DefaultTextWidgetRenderer implements WidgetRenderer, TextWidgetRenderer {
     final static RgbSprite a(int param0) {
         int var4_int = 0;
         int var5 = Chess.field_G;
-        int var1 = b.field_c[0] * wm.field_b[0];
+        int var1 = b.field_c[0] * ArchiveNetworkClient.field_b[0];
         byte[] var2 = vk.field_d[0];
         int[] var3 = new int[var1];
         for (var4_int = 0; var1 > var4_int; var4_int++) {
           var3[var4_int] = AccountNameAvailabilityValidator.field_r[ce.bitwiseAnd((int) var2[var4_int], 255)];
         }
-        RgbSprite var4 = new RgbSprite(cd.field_p, MouseWheelInput.field_a, be.field_a[0], FullscreenFocusCanvas.field_c[param0], wm.field_b[0], b.field_c[0], var3);
+        RgbSprite var4 = new RgbSprite(cd.field_p, MouseWheelInput.field_a, be.field_a[0], FullscreenFocusCanvas.field_c[param0], ArchiveNetworkClient.field_b[0], b.field_c[0], var3);
         ProgressDialog.k(4210752);
         return var4;
     }

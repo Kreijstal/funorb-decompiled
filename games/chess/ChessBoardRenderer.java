@@ -560,7 +560,7 @@ final class ChessBoardRenderer extends ChessBoardState {
         int[] var8 = var10;
         int var9 = -420 + (int)((-this.field_t + 3.141592653589793) * 400.0 / 3.141592653589793);
         var8[0] = (int)((double)var8[0] - (double)var9 * EditableTextField.a(-17513, this.field_T));
-        var8[2] = (int)((double)var8[2] - mn.a(this.field_T, 2278) * (double)var9);
+        var8[2] = (int)((double)var8[2] - ProxySocketConnector.a(this.field_T, 2278) * (double)var9);
         if (this.field_F == null) {
           this.field_F = new RgbSprite(640, 480);
           vk.field_e = true;
@@ -811,7 +811,7 @@ final class ChessBoardRenderer extends ChessBoardState {
         if (!param5) {
           SoftwareRasterizer.clearRaster();
         } else {
-          ob.field_B.b(0, param3);
+          SocketArchiveNetworkClient.field_B.b(0, param3);
         }
         var7 = -1;
         if (null != MatchingFieldValidator.field_p &&
@@ -871,7 +871,7 @@ final class ChessBoardRenderer extends ChessBoardState {
               cl.field_c[var22][var23][var19][var18].drawOpaque(var11Lifetime1, var12Lifetime1);
             } else {
               if (rn.field_b != 0) {
-                var26 = rl.field_d[var19][var18].copy();
+                var26 = MouseInputHandler.field_d[var19][var18].copy();
                 for (var22 = 0; 4 > var22; var22++) {
                   var26.addOutline(16711680);
                 }

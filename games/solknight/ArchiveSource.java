@@ -109,7 +109,7 @@ abstract class ArchiveSource {
             var5 = param0.substring(1 + var2_int);
             var6 = BufferedSocket.b((byte) -126, var4);
             if (var6 == null) {
-              return ne.a(var5, 62);
+              return ArchiveSourceManager.a(var5, 62);
             }
             stackIn_11_0 = var6;
             return stackIn_11_0;

@@ -63,7 +63,7 @@ final class td implements WidgetRenderer {
           var4 = var16.readUnsignedByte(255);
           if (0 != var4) {
             var5 = var3.field_h;
-            cg.field_a[0] = ne.field_g;
+            cg.field_a[0] = ArchiveSourceManager.field_g;
             for (var6_int = 1; var4 > var6_int; var6_int++) {
               cg.field_a[var6_int] = var14.readString(20);
             }

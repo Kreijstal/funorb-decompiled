@@ -61,7 +61,7 @@ final class we {
               }
               var7 = new SectorCacheStore(param0, gd.field_q, vh.field_e[param0], 2097152);
             }
-            var8 = ProgressMessageDialog.field_vb.a((SectorCacheStore) (var6), (byte) -60, param1, param0, (SectorCacheStore) (var7));
+            var8 = ProgressMessageDialog.field_vb.getOrCreateArchiveSource((SectorCacheStore) (var6), (byte) -60, param1, param0, (SectorCacheStore) (var7));
             if (param5) {
               var8.b(-2);
             }

@@ -50,7 +50,7 @@ final class DisplayNameSelectionPanel extends DequeWidgetContainer implements Na
     }
 
     final static String n(int param0) {
-        if (ic.field_l == AwtRasterBuffer.field_e) {
+        if (ProxySocketConnector.field_l == AwtRasterBuffer.field_e) {
           return km.field_b;
         }
         if (!PcmResampler.field_f.a(0)) {
@@ -146,10 +146,10 @@ final class DisplayNameSelectionPanel extends DequeWidgetContainer implements Na
           var2 = new IntrusiveDeque();
           while (param0.payload.length > param0.position) {
             var3_int = af.a(param0, var2, -113);
-            if (!ne.a(var3_int, uf.field_q, param0, (byte) -87)) {
+            if (!ne.a(var3_int, SocketArchiveNetworkClient.field_q, param0, (byte) -87)) {
               continue;
             }
-            param0.position = param0.position + (uf.field_q.length - 1);
+            param0.position = param0.position + (SocketArchiveNetworkClient.field_q.length - 1);
             break;
           }
           var3 = new String[var2.size((byte) -121)];

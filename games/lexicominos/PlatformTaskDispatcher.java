@@ -224,11 +224,11 @@ final class PlatformTaskDispatcher implements Runnable {
                         }
                         break;
                       case 12:
-                        var3_ref = PlatformTaskDispatcher.a((String) (var8.objectArgument), 2, field_s, field_l);
+                        var3_ref = PlatformTaskDispatcher.openPreferencesFile((String) (var8.objectArgument), 2, field_s, field_l);
                         var8.result = var3_ref;
                         break;
                       case 13:
-                        var3_ref = PlatformTaskDispatcher.a((String) (var8.objectArgument), 2, "", field_l);
+                        var3_ref = PlatformTaskDispatcher.openPreferencesFile((String) (var8.objectArgument), 2, "", field_l);
                         var8.result = var3_ref;
                         break;
                       case 16:
@@ -329,7 +329,7 @@ final class PlatformTaskDispatcher implements Runnable {
                     }
                     try {
                       if (false) throw (ProxyAuthenticationRequiredException) null;
-                      var8.result = v.a((String) (var8.objectArgument), var8.intArgument, (byte) 127).b(51);
+                      var8.result = v.a((String) (var8.objectArgument), var8.intArgument, (byte) 127).openSocket(51);
                     } catch (ProxyAuthenticationRequiredException decompiledCaughtParameter2) {
                       decompiledCaughtException = decompiledCaughtParameter2;
                       var3_ref3 = (ProxyAuthenticationRequiredException) (Object) decompiledCaughtException;
@@ -450,7 +450,7 @@ final class PlatformTaskDispatcher implements Runnable {
         return var6;
     }
 
-    private final static BoundedRandomAccessFile a(String param0, int param1, String param2, int param3) {
+    private final static BoundedRandomAccessFile openPreferencesFile(String param0, int param1, String param2, int param3) {
         try {
           int var6 = 0;
           BoundedRandomAccessFile stackIn_12_0 = null;
@@ -489,7 +489,7 @@ final class PlatformTaskDispatcher implements Runnable {
             return null;
           }
           var9 = (String) null;
-          PlatformTaskDispatcher.a((String) null, -113, (String) null, 96);
+          PlatformTaskDispatcher.openPreferencesFile((String) null, -113, (String) null, 96);
           return null;
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;

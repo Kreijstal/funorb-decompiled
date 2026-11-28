@@ -28,7 +28,7 @@ final class DelegatingCanvas extends java.awt.Canvas {
             stackIn_4_0 = null;
             return (CoverageBitmapFont) (stackIn_4_0);
           }
-          var2 = new CoverageBitmapFont(param0, be.field_a, FullscreenFocusCanvas.field_c, wm.field_b, b.field_c, AccountNameAvailabilityValidator.field_r, vk.field_d);
+          var2 = new CoverageBitmapFont(param0, be.field_a, FullscreenFocusCanvas.field_c, ArchiveNetworkClient.field_b, b.field_c, AccountNameAvailabilityValidator.field_r, vk.field_d);
           ProgressDialog.k(param1 + 4210625);
           stackIn_6_0 = var2;
           return stackIn_6_0;
@@ -81,7 +81,7 @@ final class DelegatingCanvas extends java.awt.Canvas {
         byte[] var5 = var2.field_m;
         if (param0 == -34) {
           for (var6 = param1 - 1; var6 >= 0; var6--) {
-            var5[var6] = (byte)(int)(mn.a((double)var6 * var3, 2278) * 127.0);
+            var5[var6] = (byte)(int)(ProxySocketConnector.a((double)var6 * var3, 2278) * 127.0);
           }
           return var2;
         }

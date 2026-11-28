@@ -441,7 +441,7 @@ abstract class ModalDialog extends ComponentContainer {
           characterArrayState0003 = (char[]) null;
         }
         MixedSupport005.uiComponentPart016State0001 = new ModalDialogHost();
-        NetworkSupport003.performAction0348(true, true, (byte) 66);
+        ArchiveNetworkClient.performAction0348(true, true, (byte) 66);
     }
 
     public static void clearStaticReferences(int integerArgument1) {

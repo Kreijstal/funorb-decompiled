@@ -17,7 +17,7 @@ final class pj implements WidgetRenderer {
           }
           MusicPatch.a(255);
           ta.c(0);
-          oa.field_a = -fe.field_i + 0;
+          SocketConnector.field_a = -fe.field_i + 0;
         } catch (RuntimeException runtimeException) {
           throw CipherPacketBuffer.wrapClientException((Throwable) ((Object) runtimeException), "pj.F(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
@@ -27,7 +27,7 @@ final class pj implements WidgetRenderer {
         if (param0 < 18) {
           return true;
         }
-        return ij.field_a;
+        return BouncedownClientSupport.field_a;
     }
 
     final static void a(boolean param0, int param1) {

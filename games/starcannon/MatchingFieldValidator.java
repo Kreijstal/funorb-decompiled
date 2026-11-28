@@ -340,7 +340,7 @@ final class MatchingFieldValidator extends TextFieldValidator {
           }
           var2Lifetime34 = BoundedRandomAccessFile.a("lev6c", (byte) -124);
           if (var2Lifetime34 != null) {
-            eh.field_c = DualLinkNode.a(117, var2Lifetime34);
+            ArchiveNetworkClient.field_c = DualLinkNode.a(117, var2Lifetime34);
           }
           var2Lifetime35 = BoundedRandomAccessFile.a("lev6b", (byte) -124);
           if (var2Lifetime35 != null) {
@@ -416,7 +416,7 @@ final class MatchingFieldValidator extends TextFieldValidator {
           }
           var2Lifetime53 = BoundedRandomAccessFile.a("levmedium", (byte) -124);
           if (var2Lifetime53 != null) {
-            fl.field_g = DualLinkNode.a(120, var2Lifetime53);
+            ProxySocketConnector.field_g = DualLinkNode.a(120, var2Lifetime53);
           }
           var2Lifetime54 = BoundedRandomAccessFile.a("leveasy", (byte) -124);
           if (null != var2Lifetime54) {

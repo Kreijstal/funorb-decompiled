@@ -5,7 +5,7 @@ final class di extends kl {
     private DiskCacheWorker field_y;
     private int field_s;
     static Sprite[] field_t;
-    private vb field_G;
+    private ArchiveNetworkClient field_G;
     private SectorCacheStore field_v;
     private ArchiveRequest field_u;
     private int field_z;
@@ -46,10 +46,10 @@ final class di extends kl {
           return this.field_C;
         }
         if (this.field_u == null) {
-          if (this.field_G.b((byte) 100)) {
+          if (this.field_G.isPriorityQueueFull((byte) 100)) {
             return null;
           }
-          this.field_u = (ArchiveRequest) ((Object) this.field_G.a(true, 255, this.field_z, (byte) 0, param0 + 63));
+          this.field_u = (ArchiveRequest) ((Object) this.field_G.enqueueRequest(true, 255, this.field_z, (byte) 0, param0 + 63));
         }
         if (this.field_u.field_v) {
           return null;
@@ -71,8 +71,8 @@ final class di extends kl {
             decompiledCaughtException = decompiledCaughtParameter0;
             var3 = decompiledCaughtException;
             this.field_C = null;
-            if (!this.field_G.b((byte) 100)) {
-              this.field_u = (ArchiveRequest) ((Object) this.field_G.a(true, 255, this.field_z, (byte) 0, 75));
+            if (!this.field_G.isPriorityQueueFull((byte) 100)) {
+              this.field_u = (ArchiveRequest) ((Object) this.field_G.enqueueRequest(true, 255, this.field_z, (byte) 0, 75));
             } else {
               this.field_u = null;
             }
@@ -87,10 +87,10 @@ final class di extends kl {
           } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
             decompiledCaughtException = decompiledCaughtParameter1;
             var3 = decompiledCaughtException;
-            this.field_G.c(-30317);
+            this.field_G.resetAfterValidationFailure(-30317);
             this.field_C = null;
-            if (!this.field_G.b((byte) 100)) {
-              this.field_u = (ArchiveRequest) ((Object) this.field_G.a(true, 255, this.field_z, (byte) 0, 90));
+            if (!this.field_G.isPriorityQueueFull((byte) 100)) {
+              this.field_u = (ArchiveRequest) ((Object) this.field_G.enqueueRequest(true, 255, this.field_z, (byte) 0, 90));
             } else {
               this.field_u = null;
             }
@@ -153,20 +153,20 @@ final class di extends kl {
               if (-1 != this.field_k[param0]) {
                 throw new RuntimeException();
               }
-              if (this.field_G.a(true)) {
+              if (this.field_G.isPrefetchQueueFull(true)) {
                 return null;
               }
-              var4 = this.field_G.a(false, this.field_z, param0, (byte) 2, 60);
+              var4 = this.field_G.enqueueRequest(false, this.field_z, param0, (byte) 2, 60);
             }
           } else {
             if (this.field_v != null &&
               this.field_k[param0] != -1) {
               var4 = this.field_y.readNow(this.field_v, true, param0);
             } else {
-              if (this.field_G.b((byte) 100)) {
+              if (this.field_G.isPriorityQueueFull((byte) 100)) {
                 return null;
               }
-              var4 = this.field_G.a(true, this.field_z, param0, (byte) 2, 92);
+              var4 = this.field_G.enqueueRequest(true, this.field_z, param0, (byte) 2, 92);
             }
           }
           this.field_j.a(-111, (IntrusiveNode) (var4), (long)param0);
@@ -224,8 +224,8 @@ final class di extends kl {
             if (!((ArchiveRequest) (var4)).field_s) {
               return null;
             }
-            if (!this.field_G.b((byte) 100)) {
-              var4 = this.field_G.a(true, this.field_z, param0, (byte) 2, 79);
+            if (!this.field_G.isPriorityQueueFull((byte) 100)) {
+              var4 = this.field_G.enqueueRequest(true, this.field_z, param0, (byte) 2, 79);
               this.field_j.a(-100, (IntrusiveNode) (var4), (long)param0);
             }
             return null;
@@ -261,13 +261,13 @@ final class di extends kl {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6 = (RuntimeException) (Object) decompiledCaughtException;
-          this.field_G.c(-30317);
+          this.field_G.resetAfterValidationFailure(-30317);
           ((ArchiveRequest) (var4)).unlink(true);
           if (((ArchiveRequest) (var4)).field_s) {
-            if (this.field_G.b((byte) 100)) {
+            if (this.field_G.isPriorityQueueFull((byte) 100)) {
               return null;
             }
-            var4 = this.field_G.a(true, this.field_z, param0, (byte) 2, 108);
+            var4 = this.field_G.enqueueRequest(true, this.field_z, param0, (byte) 2, 108);
             this.field_j.a(47, (IntrusiveNode) (var4), (long)param0);
           }
           return null;
@@ -397,7 +397,7 @@ final class di extends kl {
               scanLoop1: while (true) {
                 if (this.field_C.field_e.length > this.field_r) {
                   if (this.field_C.field_e[this.field_r] != 0) {
-                    if (this.field_G.a(true)) {
+                    if (this.field_G.isPrefetchQueueFull(true)) {
                       var2_intLifetime1 = 0;
                       break scanLoop1;
                     }
@@ -514,7 +514,7 @@ final class di extends kl {
         return 0;
     }
 
-    di(int param0, SectorCacheStore param1, SectorCacheStore param2, vb param3, DiskCacheWorker param4, int param5, byte[] param6, int param7, boolean param8) {
+    di(int param0, SectorCacheStore param1, SectorCacheStore param2, ArchiveNetworkClient param3, DiskCacheWorker param4, int param5, byte[] param6, int param7, boolean param8) {
         boolean stackIn_7_1 = false;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;

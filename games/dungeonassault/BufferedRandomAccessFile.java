@@ -112,10 +112,10 @@ final class BufferedRandomAccessFile {
               param1 = new java.awt.Color(140, 17, 17);
             }
             try {
-              if (bb.field_e == null) {
-                bb.field_e = AwtRasterBuffer.field_h.createImage(304, 34);
+              if (ArchiveNetworkClient.field_e == null) {
+                ArchiveNetworkClient.field_e = AwtRasterBuffer.field_h.createImage(304, 34);
               }
-              var10 = bb.field_e.getGraphics();
+              var10 = ArchiveNetworkClient.field_e.getGraphics();
               var10.setColor(param1);
               var10.drawRect(0, 0, 303, 33);
               var10.fillRect(2, 2, param4 * 3, 30);
@@ -128,7 +128,7 @@ final class BufferedRandomAccessFile {
               }
               var10.setColor(java.awt.Color.white);
               var10.drawString(param0, (304 - param0.length() * 6) / 2, 22);
-              var9.drawImage(bb.field_e, up.field_d / 2 - 152, eg.field_d / 2 - 18, (java.awt.image.ImageObserver) null);
+              var9.drawImage(ArchiveNetworkClient.field_e, up.field_d / 2 - 152, eg.field_d / 2 - 18, (java.awt.image.ImageObserver) null);
             } catch (java.lang.Exception decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var6 = (Exception) (Object) decompiledCaughtException;
@@ -144,10 +144,10 @@ final class BufferedRandomAccessFile {
               var9.setColor(java.awt.Color.white);
               var9.drawString(param0, var7 + (-(6 * param0.length()) + 304) / 2, 22 + var8);
             }
-            if (bb.field_f != null) {
+            if (ArchiveNetworkClient.field_f != null) {
               var9.setFont(td.field_a);
               var9.setColor(java.awt.Color.white);
-              var9.drawString(bb.field_f, up.field_d / 2 - 6 * bb.field_f.length() / 2, -26 + eg.field_d / 2);
+              var9.drawString(ArchiveNetworkClient.field_f, up.field_d / 2 - 6 * ArchiveNetworkClient.field_f.length() / 2, -26 + eg.field_d / 2);
             }
           } catch (java.lang.Exception decompiledCaughtParameter1) {
             decompiledCaughtException = decompiledCaughtParameter1;

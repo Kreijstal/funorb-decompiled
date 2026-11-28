@@ -306,7 +306,7 @@ final class ik extends wi {
           return;
         }
         if (ag.field_f < this.field_l - (-this.field_n + this.field_P)) {
-          if (jk.field_r != 0) {
+          if (ProxySocketConnector.field_r != 0) {
             var5Lifetime1 = this.field_S + (-this.field_a - (this.field_D.field_N - kc.field_b));
             this.field_x = var5Lifetime1 / this.field_D.field_N;
           }

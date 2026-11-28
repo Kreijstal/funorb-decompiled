@@ -19,17 +19,17 @@ abstract class Js5Transport {
     volatile int field_k;
     NetworkArchiveRequest field_j;
 
-    abstract boolean b(int param0);
+    abstract boolean pollNetwork(int param0);
 
-    final int c(byte param0) {
+    final int getPriorityRequestCount(byte param0) {
         if (param0 == 0) {
           return this.field_a.b(param0 ^ -24088) + this.field_h.b(param0 ^ -24088);
         }
-        this.a(23);
+        this.isPriorityQueueFull(23);
         return this.field_a.b(param0 ^ -24088) + this.field_h.b(param0 ^ -24088);
     }
 
-    abstract void a(Object param0, boolean param1, byte param2);
+    abstract void attachSocket(Object param0, boolean param1, byte param2);
 
     public static void clearStaticReferences(byte param0) {
         field_p = null;
@@ -38,15 +38,15 @@ abstract class Js5Transport {
         field_e = null;
     }
 
-    final boolean a(int param0) {
+    final boolean isPriorityQueueFull(int param0) {
         if (param0 == 20) {
-          return 20 <= this.c((byte) 0) ? true : false;
+          return 20 <= this.getPriorityRequestCount((byte) 0) ? true : false;
         }
         this.field_a = (gb) null;
-        return 20 <= this.c((byte) 0) ? true : false;
+        return 20 <= this.getPriorityRequestCount((byte) 0) ? true : false;
     }
 
-    final NetworkArchiveRequest a(byte param0, int param1, boolean param2, byte param3, int param4) {
+    final NetworkArchiveRequest enqueueRequest(byte param0, int param1, boolean param2, byte param3, int param4) {
         NetworkArchiveRequest stackIn_3_0 = null;
         boolean stackIn_4_1 = false;
         NetworkArchiveRequest stackIn_15_0 = null;
@@ -62,43 +62,43 @@ abstract class Js5Transport {
           stackIn_16_1 = (!param2) ? false : true;
           stackIn_15_0.field_w = stackIn_16_1;
         } else {
-          this.e((byte) -94);
+          this.resetAfterValidationFailure((byte) -94);
           stackIn_3_0 = var8;
           stackIn_4_1 = (!param2) ? false : true;
           stackIn_3_0.field_w = stackIn_4_1;
         }
         if (param2) {
-          if (this.c((byte) 0) >= 20) {
+          if (this.getPriorityRequestCount((byte) 0) >= 20) {
             throw new RuntimeException();
           }
           this.field_a.a((byte) 119, var8);
           return var8;
         }
-        if (this.c(-6292) >= 20) {
+        if (this.getPrefetchRequestCount(-6292) >= 20) {
           throw new RuntimeException();
         }
         this.field_m.a((byte) 121, var8);
         return var8;
     }
 
-    abstract void e(byte param0);
+    abstract void resetAfterValidationFailure(byte param0);
 
-    final boolean a(byte param0) {
+    final boolean isPrefetchQueueFull(byte param0) {
         if (param0 > 100) {
-          return this.c(-6292) >= 20 ? true : false;
+          return this.getPrefetchRequestCount(-6292) >= 20 ? true : false;
         }
-        this.b((byte) 57);
-        return this.c(-6292) >= 20 ? true : false;
+        this.close((byte) 57);
+        return this.getPrefetchRequestCount(-6292) >= 20 ? true : false;
     }
 
-    final int c(int param0) {
+    final int getPrefetchRequestCount(int param0) {
         if (param0 != -6292) {
           return -67;
         }
         return this.field_m.b(param0 ^ 18052) + this.field_b.b(-24088);
     }
 
-    abstract void b(byte param0);
+    abstract void close(byte param0);
 
     Js5Transport() {
         this.field_a = new gb();

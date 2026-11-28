@@ -63,7 +63,7 @@ final class vf {
           var3 = StarCannon.field_A;
           try {
             if (null != jh.field_b) {
-              jh.field_b.a(-4628);
+              jh.field_b.close(-4628);
             }
             if (bc.field_j != null) {
               bc.field_j.shutdown(6843);

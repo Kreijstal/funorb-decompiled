@@ -26,7 +26,7 @@ final class ByteArrayPoolSupport {
             pj.field_a == b.field_b)) {
             if (0 == hh.field_p.position &&
               fa.correctedCurrentTimeMillis(101) > (10000L + wa.field_e)) {
-              hh.field_p.a(true, param0);
+              hh.field_p.writeCipheredByte(true, param0);
             }
             if (0 < hh.field_p.position) {
               try {

@@ -17,7 +17,7 @@ abstract class SocketConnector {
         return ec.a(3, 5, param3, param1, 1, param4, 1, param0, 1);
     }
 
-    abstract java.net.Socket a(byte param0) throws IOException;
+    abstract java.net.Socket openSocket(byte param0) throws IOException;
 
     public static void releaseStatics(int param0) {
         field_c = null;
@@ -36,7 +36,7 @@ abstract class SocketConnector {
         return SauceOfFlameSpecial.field_p;
     }
 
-    final java.net.Socket a(int param0) throws IOException {
+    final java.net.Socket openDirectSocket(int param0) throws IOException {
         if (param0 == 3332) {
           return new java.net.Socket(this.host, this.port);
         }

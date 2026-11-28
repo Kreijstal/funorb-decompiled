@@ -36,7 +36,7 @@ final class pd extends IntrusiveNode {
             }
             var3 = param1.substring(0, var2_int);
             var4 = param1.substring(1 + var2_int);
-            var5 = jk.a(var3, (byte) 113);
+            var5 = ProxySocketConnector.a(var3, (byte) 113);
             if (var5 == null) {
               stackIn_14_0 = GrowableIntArray.a(var4, 31592);
               return stackIn_14_0;
@@ -95,7 +95,7 @@ final class pd extends IntrusiveNode {
           if (!param1) {
             field_i = (String) null;
           }
-          var2 = new CoverageBitmapFont(param0, vg.field_I, b.field_b, NameSuggestionsPanel.field_H, ob.field_a, rd.field_d, of.field_d);
+          var2 = new CoverageBitmapFont(param0, vg.field_I, b.field_b, NameSuggestionsPanel.field_H, ob.field_a, MouseInputHandler.field_d, of.field_d);
           EditableTextField.o(-28210);
           stackIn_6_0 = var2;
           return stackIn_6_0;

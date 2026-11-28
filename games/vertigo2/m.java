@@ -63,7 +63,7 @@ final class m extends TextureOperator {
     }
 
     final static void d(int param0, int param1, int param2) {
-        tk.a(-1, param2, param2, (double)param1, (double)param1);
+        ArchiveNetworkClient.a(-1, param2, param2, (double)param1, (double)param1);
         if (param0 <= 80) {
           m.d(-49, -25, 24);
         }

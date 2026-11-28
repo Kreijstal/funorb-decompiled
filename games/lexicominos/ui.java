@@ -112,7 +112,7 @@ class ui extends cf {
           if (param0.length() == 0) {
             return true;
           }
-          if (bi.a((byte) -126, param0, param1)) {
+          if (KeyboardInputHandler.a((byte) -126, param0, param1)) {
             return false;
           }
           if (pd.a(param0, param1, 95)) {

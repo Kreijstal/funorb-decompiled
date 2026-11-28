@@ -4,7 +4,7 @@
 final class bl {
     static int field_a;
     static String field_c;
-    static jc field_b;
+    static ArchiveSourceManager field_b;
 
     public static void a(int param0) {
         if (param0 == -29584) {

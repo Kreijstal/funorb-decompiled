@@ -114,7 +114,7 @@ final class PcmOutputWorker implements Runnable {
               MatchingFieldValidator.a(kc.field_b, -127, rf.field_c, ph.field_g, sn.field_c);
               sn.field_c.backpatchByteLength(-1, sn.field_c.position - var9);
             }
-            bk.a((byte) -114, -1);
+            ArchiveSourceManager.a((byte) -114, -1);
             GuestPlayConfirmationForm.field_Q = jn.field_r;
           }
           if (GuestPlayConfirmationForm.field_Q == jn.field_r &&
@@ -189,9 +189,9 @@ final class PcmOutputWorker implements Runnable {
               return stackIn_61_0;
             }
             var9Lifetime3 = SingleChildWidgetContainer.field_E;
-            SingleChildWidgetContainer.field_E = ic.field_h;
+            SingleChildWidgetContainer.field_E = ProxySocketConnector.field_h;
             FrameTimer.field_c = true;
-            ic.field_h = var9Lifetime3;
+            ProxySocketConnector.field_h = var9Lifetime3;
           }
           stackIn_64_0 = -1;
           return stackIn_64_0;

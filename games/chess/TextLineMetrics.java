@@ -137,7 +137,7 @@ final class TextLineMetrics {
               if (var8_ref_ld.field_f == null) {
                 DisplayNameSelectionPanel.field_O = DisplayNameSelectionPanel.field_O + 1;
               }
-              var10 = mn.a((byte) -30, var8_ref_ld);
+              var10 = ProxySocketConnector.a((byte) -30, var8_ref_ld);
               var11 = var10 + BitmapFont.escapeMarkup(var8_ref_ld.field_n);
               var12 = wh.a(param3 ^ -9, var8_ref_ld);
               var8_ref_ld.field_f = new ci(0L, ModalDialog.field_M, var11);

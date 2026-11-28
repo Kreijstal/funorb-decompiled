@@ -67,7 +67,7 @@ final class eq extends rl {
 
     final static void b(int param0, int param1) {
         CipherPacketBuffer var2 = tp.field_f;
-        var2.d(param0 ^ 10, param1);
+        var2.writeCipheredByte(param0 ^ 10, param1);
         var2.writeByte(true, 1);
         var2.writeByte(true, param0);
     }

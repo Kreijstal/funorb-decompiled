@@ -149,7 +149,7 @@ final class kf extends IntrusiveNode {
                 var18.field_r[var5] = -5;
               }
             }
-            jk.field_m.addLast(false, var18);
+            ProxySocketConnector.field_m.addLast(false, var18);
             return;
           } catch (java.lang.RuntimeException decompiledCaughtParameter5) {
             decompiledCaughtException = decompiledCaughtParameter5;

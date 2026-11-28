@@ -140,7 +140,7 @@ final class PcmResampler {
         }
     }
 
-    final static void a(java.awt.Component param0, boolean param1) {
+    final static void attachMouseListeners(java.awt.Component param0, boolean param1) {
         if (!param1) {
           return;
         }

@@ -263,7 +263,7 @@ final class cp extends gd {
           }
           na.field_D.processPointerInput(am.field_e, (byte) 66, GrowableIntArray.field_d, true);
           na.field_D.advanceDialogs(true);
-          while (ha.b((byte) 47)) {
+          while (ProxySocketConnector.b((byte) 47)) {
             na.field_D.processKeyInput(param0 + 30335, mm.field_t, ob.field_Yb);
           }
           if (param0 != -30208) {

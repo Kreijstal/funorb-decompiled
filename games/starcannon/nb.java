@@ -35,7 +35,7 @@ final class nb {
           ci.field_g = new lb[var3];
           PcmOutputWorker.field_h = new int[var3][];
           for (var4 = 0; var3 > var4; var4++) {
-            ci.field_g[var4] = vh.a(var8, 102);
+            ci.field_g[var4] = SocketArchiveNetworkClient.a(var8, 102);
           }
           var10.endBitAccess(118);
           if (param1 <= 87) {

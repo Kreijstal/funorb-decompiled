@@ -779,7 +779,7 @@ public final class TorChallenge extends GameClientBase {
           var9 = SocketConnector.field_l[param5][param6][1][1];
           var10 = SocketConnector.field_l[param5][param6][2][0];
           var11 = SocketConnector.field_l[param5][param6][2][1];
-          var12 = vb.field_a[param5][param6];
+          var12 = ArchiveNetworkClient.field_a[param5][param6];
           if (param3) {
             TorChallenge.q(123);
           }
@@ -1465,7 +1465,7 @@ public final class TorChallenge extends GameClientBase {
             return false;
           }
           if (SingleChildWidgetContainer.field_C != null) {
-            mh.a(vb.field_e, (byte) -125, 90.0f);
+            mh.a(ArchiveNetworkClient.field_e, (byte) -125, 90.0f);
             this.drawFrame(7808);
             this.t(1);
             SingleChildWidgetContainer.field_C = null;
@@ -1887,9 +1887,9 @@ public final class TorChallenge extends GameClientBase {
           SpriteLoader.clearStaticReferences(-89);
           qb.a(2316);
           vd.clearStaticReferences(-38);
-          vb.resetStaticState(0);
+          ArchiveNetworkClient.resetStaticState(0);
           DiskCacheWorker.clearStaticReferences(-98);
-          oa.clearStaticReferences(122);
+          ArchiveSourceManager.clearStaticReferences(122);
           BufferedCacheFile.clearStaticReferences(true);
           BufferedSocket.resetStaticState(true);
           IntrusiveNode.clearStaticReferences((byte) -92);
@@ -1954,7 +1954,7 @@ public final class TorChallenge extends GameClientBase {
           Bzip2State.clearStaticReferences(-113);
           IsaacRandom.resetStaticState(91);
           PcmOutputWorker.clearStaticReferences(6);
-          fl.clearStaticReferences(-25984);
+          SocketArchiveNetworkClient.clearStaticReferences(-25984);
           ii.b(16711680);
           NetworkArchiveRequest.clearStaticReferences(117);
           SectorCacheStore.clearStaticReferences((byte) -64);

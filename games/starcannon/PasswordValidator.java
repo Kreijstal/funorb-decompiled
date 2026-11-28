@@ -103,7 +103,7 @@ final class PasswordValidator extends TextFieldValidator {
             return stackIn_13_0;
           }
           if (this.containsEmailComponent(5, param0)) {
-            stackIn_16_0 = vh.field_s;
+            stackIn_16_0 = SocketArchiveNetworkClient.field_s;
             return stackIn_16_0;
           }
           if (var3.length() <= 0) {

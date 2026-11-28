@@ -101,7 +101,7 @@ final class ValidationStatusIcon extends InteractiveWidget {
                 this.var3 = 0;
             }
             void loadLoginLobbyAndChatText() throws java.lang.RuntimeException {
-                bb.field_b = param1;
+                ArchiveNetworkClient.field_b = param1;
                 var2 = rp.a("loginm3", param0 ^ -27018);
                 if (var2 != null) {
                   lh.field_r = dj.a(var2, false);
@@ -391,7 +391,7 @@ final class ValidationStatusIcon extends InteractiveWidget {
                 }
                 var2 = rp.a("no", 69);
                 if (var2 != null) {
-                  um.field_d = dj.a(var2, false);
+                  SocketConnector.field_d = dj.a(var2, false);
                 }
                 var2 = rp.a("mu_invite_players", 105);
                 if (null != var2) {
@@ -1177,7 +1177,7 @@ final class ValidationStatusIcon extends InteractiveWidget {
                 }
                 var2 = rp.a("connectionlost_reconnecting", 40);
                 if (var2 != null) {
-                  ha.field_o = dj.a(var2, false);
+                  ProxySocketConnector.field_o = dj.a(var2, false);
                 }
                 var2 = rp.a("connectionlost_withreason", param0 + 27171);
                 if (var2 != null) {
@@ -1685,7 +1685,7 @@ final class ValidationStatusIcon extends InteractiveWidget {
                 }
                 var2 = rp.a("create_alert_passcontainsemail", param0 ^ -27056);
                 if (var2 != null) {
-                  tp.field_x = dj.a(var2, false);
+                  SocketArchiveNetworkClient.field_x = dj.a(var2, false);
                 }
                 var2 = rp.a("create_alert_passcontainsname_partial", 96);
                 if (var2 != null) {
@@ -2783,7 +2783,7 @@ final class ValidationStatusIcon extends InteractiveWidget {
                 }
                 var2 = rp.a("mb_including_gamename", param0 + 27187);
                 if (var2 != null) {
-                  je.field_a = dj.a(var2, false);
+                  ArchiveSourceManager.field_a = dj.a(var2, false);
                 }
                 var2 = rp.a("mb_full_access_1", 78);
                 if (null != var2) {
@@ -2803,7 +2803,7 @@ final class ValidationStatusIcon extends InteractiveWidget {
                 }
                 var2 = rp.a("mb_exclusive_1", 66);
                 if (null != var2) {
-                  je.field_l = dj.a(var2, false);
+                  ArchiveSourceManager.field_l = dj.a(var2, false);
                 }
                 var2 = rp.a("mb_exclusive_2", 89);
                 if (null != var2) {
@@ -2911,31 +2911,31 @@ final class ValidationStatusIcon extends InteractiveWidget {
                 }
                 var2 = rp.a("mustlogin2,1", 121);
                 if (null != var2) {
-                  ha.field_n[1] = dj.a(var2, false);
+                  ProxySocketConnector.field_n[1] = dj.a(var2, false);
                 }
                 var2 = rp.a("mustlogin2,2", 50);
                 if (var2 != null) {
-                  ha.field_n[2] = dj.a(var2, false);
+                  ProxySocketConnector.field_n[2] = dj.a(var2, false);
                 }
                 var2 = rp.a("mustlogin2,3", 70);
                 if (null != var2) {
-                  ha.field_n[3] = dj.a(var2, false);
+                  ProxySocketConnector.field_n[3] = dj.a(var2, false);
                 }
                 var2 = rp.a("mustlogin2,4", param0 + 27189);
                 if (var2 != null) {
-                  ha.field_n[4] = dj.a(var2, false);
+                  ProxySocketConnector.field_n[4] = dj.a(var2, false);
                 }
                 var2 = rp.a("mustlogin2,5", 60);
                 if (var2 != null) {
-                  ha.field_n[5] = dj.a(var2, false);
+                  ProxySocketConnector.field_n[5] = dj.a(var2, false);
                 }
                 var2 = rp.a("mustlogin2,6", 51);
                 if (var2 != null) {
-                  ha.field_n[6] = dj.a(var2, false);
+                  ProxySocketConnector.field_n[6] = dj.a(var2, false);
                 }
                 var2 = rp.a("mustlogin2,7", 97);
                 if (null != var2) {
-                  ha.field_n[7] = dj.a(var2, false);
+                  ProxySocketConnector.field_n[7] = dj.a(var2, false);
                 }
                 var2 = rp.a("mustlogin3,1", 45);
                 if (var2 != null) {
@@ -3087,7 +3087,7 @@ final class ValidationStatusIcon extends InteractiveWidget {
                 if (var2 != null) {
                   dj.a(var2, false);
                 }
-                bb.field_b = null;
+                ArchiveNetworkClient.field_b = null;
             }
             void run() {
                 var3 = DungeonAssault.field_K;

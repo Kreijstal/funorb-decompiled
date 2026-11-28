@@ -178,7 +178,7 @@ final class PlatformTaskDispatcher implements Runnable {
         return this.enqueueTask(0, param1, param2, 2, 0);
     }
 
-    private final static BoundedRandomAccessFile a(String param0, String param1, byte param2, int param3) {
+    private final static BoundedRandomAccessFile openPreferencesFile(String param0, String param1, byte param2, int param3) {
         try {
           BoundedRandomAccessFile stackIn_12_0 = null;
           Throwable decompiledCaughtException = null;
@@ -303,7 +303,7 @@ final class PlatformTaskDispatcher implements Runnable {
                     }
                     try {
                       if (false) throw (ProxyAuthenticationRequiredException) null;
-                      var8.result = a.a(var8.intArgument, (String) (var8.objectArgument), -115).b(0);
+                      var8.result = SocketArchiveNetworkClient.a(var8.intArgument, (String) (var8.objectArgument), -115).openSocket(0);
                     } catch (ProxyAuthenticationRequiredException decompiledCaughtParameter1) {
                       decompiledCaughtException = decompiledCaughtParameter1;
                       var3_ref = (ProxyAuthenticationRequiredException) (Object) decompiledCaughtException;
@@ -407,11 +407,11 @@ final class PlatformTaskDispatcher implements Runnable {
                         }
                         break;
                       case 13:
-                        var3_ref3 = PlatformTaskDispatcher.a((String) (var8.objectArgument), "", (byte) -32, field_f);
+                        var3_ref3 = PlatformTaskDispatcher.openPreferencesFile((String) (var8.objectArgument), "", (byte) -32, field_f);
                         var8.result = var3_ref3;
                         break;
                       case 12:
-                        var3_ref3 = PlatformTaskDispatcher.a((String) (var8.objectArgument), field_a, (byte) 123, field_f);
+                        var3_ref3 = PlatformTaskDispatcher.openPreferencesFile((String) (var8.objectArgument), field_a, (byte) 123, field_f);
                         var8.result = var3_ref3;
                         break;
                       case 7:

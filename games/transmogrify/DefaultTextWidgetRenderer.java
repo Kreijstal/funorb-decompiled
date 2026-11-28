@@ -518,10 +518,10 @@ class DefaultTextWidgetRenderer implements WidgetRenderer, TextWidgetRenderer {
         int var4;
         int var5;
         if (param3) {
-          if (dk.field_k[param0] < dk.field_k[param1]) {
+          if (ArchiveSourceManager.field_k[param0] < ArchiveSourceManager.field_k[param1]) {
             return true;
           }
-          if (dk.field_k[param0] > dk.field_k[param1]) {
+          if (ArchiveSourceManager.field_k[param0] > ArchiveSourceManager.field_k[param1]) {
             return false;
           }
           if (tb.field_d[param1] > tb.field_d[param0]) {
@@ -537,10 +537,10 @@ class DefaultTextWidgetRenderer implements WidgetRenderer, TextWidgetRenderer {
           if (tb.field_d[param0] > tb.field_d[param1]) {
             return false;
           }
-          if (dk.field_k[param0] < dk.field_k[param1]) {
+          if (ArchiveSourceManager.field_k[param0] < ArchiveSourceManager.field_k[param1]) {
             return true;
           }
-          if (dk.field_k[param1] < dk.field_k[param0]) {
+          if (ArchiveSourceManager.field_k[param1] < ArchiveSourceManager.field_k[param0]) {
             return false;
           }
         }

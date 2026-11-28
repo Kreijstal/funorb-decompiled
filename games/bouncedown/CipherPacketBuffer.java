@@ -8,7 +8,7 @@ final class CipherPacketBuffer extends PacketBuffer {
     private IsaacRandom field_o;
     private int field_m;
 
-    final void o(int param0) {
+    final void beginBitAccess(int param0) {
         this.field_m = this.position * param0;
     }
 
@@ -20,7 +20,7 @@ final class CipherPacketBuffer extends PacketBuffer {
         field_l = null;
     }
 
-    final static void a(int param0, String param1, int param2, int param3, int param4) {
+    final static void drawCenteredTextWithShadow(int param0, String param1, int param2, int param3, int param4) {
         od.field_f.drawCentred(param1, param0 - 1, param2, 0, 0);
         if (param4 != 8) {
           return;
@@ -33,7 +33,7 @@ final class CipherPacketBuffer extends PacketBuffer {
         }
     }
 
-    final static void n(int param0) {
+    final static void openAccountRegistrationPanel(int param0) {
         FullscreenNoticeType.field_b = new AccountRegistrationPanel();
         if (param0 != 8) {
           String var2 = (String) null;
@@ -44,7 +44,7 @@ final class CipherPacketBuffer extends PacketBuffer {
         TextLayout.field_c.replaceContent(10768, FullscreenNoticeType.field_b);
     }
 
-    final void a(boolean param0, int param1) {
+    final void writeCipheredByte(boolean param0, int param1) {
         int fieldTemp$0 = this.position;
         this.position = this.position + 1;
         this.payload[fieldTemp$0] = (byte)(param1 + this.field_o.nextInt((byte) 123));
@@ -54,27 +54,27 @@ final class CipherPacketBuffer extends PacketBuffer {
         this.field_m = 20;
     }
 
-    final void m(int param0) {
+    final void endBitAccess(int param0) {
         this.position = (this.field_m + 7) / 8;
         if (param0 <= -36) {
           return;
         }
         byte[] var3 = (byte[]) null;
-        this.a(-77, -85, 1, (byte[]) null);
+        this.readCipheredBytes(-77, -85, 1, (byte[]) null);
     }
 
-    final void b(int[] param0, int param1) {
+    final void setCipherSeed(int[] param0, int param1) {
         try {
           this.field_o = new IsaacRandom(param0);
           if (param1 <= 83) {
-            this.f(60, 33);
+            this.readBits(60, 33);
           }
         } catch (RuntimeException runtimeException) {
           throw CipherPacketBuffer.wrapClientException((Throwable) ((Object) runtimeException), "ii.G(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
-    final int h(byte param0) {
+    final int readCipheredByte(byte param0) {
         if (param0 <= 1) {
           return -119;
         }
@@ -102,7 +102,7 @@ final class CipherPacketBuffer extends PacketBuffer {
         return var2;
     }
 
-    final void a(int param0, int param1, int param2, byte[] param3) {
+    final void readCipheredBytes(int param0, int param1, int param2, byte[] param3) {
         int fieldTemp$0 = 0;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
@@ -138,7 +138,7 @@ final class CipherPacketBuffer extends PacketBuffer {
         }
     }
 
-    final int f(int param0, int param1) {
+    final int readBits(int param0, int param1) {
         int incrementValue$0 = 0;
         int var6 = Bounce.field_N;
         int var3 = this.field_m >> 3;

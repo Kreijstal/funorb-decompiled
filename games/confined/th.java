@@ -12,7 +12,7 @@ final class th extends AcceleratingProjectile {
         super(param0, param1, 0.4, 0.02, 64.0, AccountRegistrationPanel.field_cb);
         this.field_db = new DynamicLight((TunnelEntity) (this));
         try {
-          kj.a(n.field_a, 96, param1);
+          kj.a(SocketConnector.field_a, 96, param1);
         } catch (RuntimeException runtimeException) {
           throw TextLineMetrics.a((Throwable) ((Object) runtimeException), "th.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
@@ -22,7 +22,7 @@ final class th extends AcceleratingProjectile {
         super(param0, param1, 0.4, 0.02, 8.0, param2, param3, param4, param5, AccountRegistrationPanel.field_cb);
         this.field_db = new DynamicLight((TunnelEntity) (this));
         try {
-          kj.a(n.field_a, 96, param1);
+          kj.a(SocketConnector.field_a, 96, param1);
         } catch (RuntimeException runtimeException) {
           throw TextLineMetrics.a((Throwable) ((Object) runtimeException), "th.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }

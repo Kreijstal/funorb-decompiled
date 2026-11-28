@@ -288,7 +288,7 @@ final class MusicTrack extends IntrusiveNode {
         var13Lifetime1 = param0.field_i;
         var14Lifetime1 = var2 + var5 + var6 + var7 + var8 + var9 + var10 + var11 + var12;
         for (var15Lifetime1 = 0; var15Lifetime1 < var14Lifetime1; var15Lifetime1++) {
-          param0.m(127);
+          param0.readVarInt(127);
         }
         var4 = var4 + (param0.field_i - var13Lifetime1);
         var15Lifetime2 = param0.field_i;
@@ -422,8 +422,8 @@ final class MusicTrack extends IntrusiveNode {
         param0.field_i = param0.field_i + var5 * 3;
         this.field_h = new byte[var4];
         var51 = new PacketBuffer(this.field_h);
-        var51.b(1297377380, 25251);
-        var51.b(6, 25251);
+        var51.writeInt(1297377380, 25251);
+        var51.writeInt(6, 25251);
         stackIn_84_0 = var51;
         stackIn_84_1 = -117;
         if (var2 <= 1) {
@@ -431,9 +431,9 @@ final class MusicTrack extends IntrusiveNode {
         } else {
           stackIn_85_2 = 1;
         }
-        ((PacketBuffer) (Object) stackIn_84_0).a((byte) stackIn_84_1, stackIn_85_2);
-        var51.a((byte) -121, var2);
-        var51.a((byte) -118, var3);
+        ((PacketBuffer) (Object) stackIn_84_0).writeShort((byte) stackIn_84_1, stackIn_85_2);
+        var51.writeShort((byte) -121, var2);
+        var51.writeShort((byte) -118, var3);
         param0.field_i = var13Lifetime1;
         var52 = 0;
         var53 = 0;
@@ -449,13 +449,13 @@ final class MusicTrack extends IntrusiveNode {
           if (var60 >= var2) {
             return;
           }
-          var51.b(1297379947, 25251);
+          var51.writeInt(1297379947, 25251);
           var51.field_i = var51.field_i + 4;
           var61 = var51.field_i;
           var62 = -1;
           while (true) {
-            var63 = param0.m(127);
-            var51.b(false, var63);
+            var63 = param0.readVarInt(127);
+            var51.writeVarInt(false, var63);
             incrementValue$0 = var29Lifetime1;
             var29Lifetime1++;
             var64 = param0.field_n[incrementValue$0] & 255;
@@ -464,35 +464,35 @@ final class MusicTrack extends IntrusiveNode {
             var62 = var64 & 15;
             if (var64 == 7) {
               if (var65 != 0) {
-                var51.d(85, 255);
+                var51.writeByte(85, 255);
               }
-              var51.d(113, 47);
-              var51.d(114, 0);
-              var51.b(var51.field_i - var61, (byte) -79);
+              var51.writeByte(113, 47);
+              var51.writeByte(114, 0);
+              var51.patchIntLength(var51.field_i - var61, (byte) -79);
               var60++;
               break;
             }
             if (var64 == 23) {
               if (var65 != 0) {
-                var51.d(112, 255);
+                var51.writeByte(112, 255);
               }
-              var51.d(109, 81);
-              var51.d(106, 3);
+              var51.writeByte(109, 81);
+              var51.writeByte(106, 3);
               incrementValue$25 = var50;
               var50++;
-              var51.d(88, (int) param0.field_n[incrementValue$25]);
+              var51.writeByte(88, (int) param0.field_n[incrementValue$25]);
               incrementValue$26 = var50;
               var50++;
-              var51.d(118, (int) param0.field_n[incrementValue$26]);
+              var51.writeByte(118, (int) param0.field_n[incrementValue$26]);
               incrementValue$27 = var50;
               var50++;
-              var51.d(86, (int) param0.field_n[incrementValue$27]);
+              var51.writeByte(86, (int) param0.field_n[incrementValue$27]);
               continue;
             }
             var52 = var52 ^ var64 >> 4;
             if (var62 == 0) {
               if (var65 != 0) {
-                var51.d(92, 144 + var52);
+                var51.writeByte(92, 144 + var52);
               }
               incrementValue$23 = var37;
               var37++;
@@ -500,13 +500,13 @@ final class MusicTrack extends IntrusiveNode {
               incrementValue$24 = var38;
               var38++;
               var54 = var54 + param0.field_n[incrementValue$24];
-              var51.d(114, var53 & 127);
-              var51.d(109, var54 & 127);
+              var51.writeByte(114, var53 & 127);
+              var51.writeByte(109, var54 & 127);
               continue;
             }
             if (var62 == 1) {
               if (var65 != 0) {
-                var51.d(86, 128 + var52);
+                var51.writeByte(86, 128 + var52);
               }
               incrementValue$21 = var37;
               var37++;
@@ -514,14 +514,14 @@ final class MusicTrack extends IntrusiveNode {
               incrementValue$22 = var40;
               var40++;
               var55 = var55 + param0.field_n[incrementValue$22];
-              var51.d(123, var53 & 127);
-              var51.d(93, var55 & 127);
+              var51.writeByte(123, var53 & 127);
+              var51.writeByte(93, var55 & 127);
               continue;
             }
             if (var62 != 2) {
               if (var62 == 3) {
                 if (var65 != 0) {
-                  var51.d(127, 224 + var52);
+                  var51.writeByte(127, 224 + var52);
                 }
                 incrementValue$5 = var45;
                 var45++;
@@ -529,18 +529,18 @@ final class MusicTrack extends IntrusiveNode {
                 incrementValue$6 = var33;
                 var33++;
                 var56 = var56 + (param0.field_n[incrementValue$6] << 7);
-                var51.d(121, var56 & 127);
-                var51.d(81, var56 >> 7 & 127);
+                var51.writeByte(121, var56 & 127);
+                var51.writeByte(81, var56 >> 7 & 127);
                 continue;
               }
               if (var62 == 4) {
                 if (var65 != 0) {
-                  var51.d(99, 208 + var52);
+                  var51.writeByte(99, 208 + var52);
                 }
                 incrementValue$4 = var32;
                 var32++;
                 var57 = var57 + param0.field_n[incrementValue$4];
-                var51.d(103, var57 & 127);
+                var51.writeByte(103, var57 & 127);
                 continue;
               }
               if (var62 != 5) {
@@ -548,15 +548,15 @@ final class MusicTrack extends IntrusiveNode {
                   throw new RuntimeException();
                 }
                 if (var65 != 0) {
-                  var51.d(121, 192 + var52);
+                  var51.writeByte(121, 192 + var52);
                 }
                 incrementValue$1 = var44;
                 var44++;
-                var51.d(127, (int) param0.field_n[incrementValue$1]);
+                var51.writeByte(127, (int) param0.field_n[incrementValue$1]);
                 continue;
               }
               if (var65 != 0) {
-                var51.d(123, 160 + var52);
+                var51.writeByte(123, 160 + var52);
               }
               incrementValue$2 = var37;
               var37++;
@@ -564,17 +564,17 @@ final class MusicTrack extends IntrusiveNode {
               incrementValue$3 = var31;
               var31++;
               var58 = var58 + param0.field_n[incrementValue$3];
-              var51.d(95, var53 & 127);
-              var51.d(124, var58 & 127);
+              var51.writeByte(95, var53 & 127);
+              var51.writeByte(124, var58 & 127);
               continue;
             }
             if (var65 != 0) {
-              var51.d(90, 176 + var52);
+              var51.writeByte(90, 176 + var52);
             }
             incrementValue$7 = var15Lifetime2;
             var15Lifetime2++;
             var28Lifetime1 = var28Lifetime1 + param0.field_n[incrementValue$7] & 127;
-            var51.d(114, var28Lifetime1);
+            var51.writeByte(114, var28Lifetime1);
             if (var28Lifetime1 != 0 &&
               var28Lifetime1 != 32) {
               if (var28Lifetime1 == 1) {
@@ -637,7 +637,7 @@ final class MusicTrack extends IntrusiveNode {
             }
             var66 = var66 + var70[var28Lifetime1];
             var70[var28Lifetime1] = var66;
-            var51.d(127, var66 & 127);
+            var51.writeByte(127, var66 & 127);
           }
         }
     }

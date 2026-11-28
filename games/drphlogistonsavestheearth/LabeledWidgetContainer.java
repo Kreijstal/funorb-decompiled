@@ -159,7 +159,7 @@ final class LabeledWidgetContainer extends SingleChildWidgetContainer {
               var13.field_j = var13.field_k[0];
               var13.unlink(-16175);
             } else {
-              gb.a((Throwable) null, "A1: " + al.a(-99), 10);
+              ArchiveNetworkClient.a((Throwable) null, "A1: " + al.a(-99), 10);
               eg.a((byte) 126);
             }
           }
@@ -201,10 +201,10 @@ final class LabeledWidgetContainer extends SingleChildWidgetContainer {
     }
 
     final static void a(int param0, int param1) {
-        cl.field_o = 3 & param0 >> 4;
+        SocketArchiveNetworkClient.field_o = 3 & param0 >> 4;
         FullscreenFocusCanvas.field_c = (12 & param0) >> 2;
-        if (cl.field_o > 2) {
-          cl.field_o = 2;
+        if (SocketArchiveNetworkClient.field_o > 2) {
+          SocketArchiveNetworkClient.field_o = 2;
         }
         int var2 = -12 % ((-62 - param1) / 40);
         pa.field_f = 3 & param0;

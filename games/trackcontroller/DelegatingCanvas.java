@@ -24,13 +24,13 @@ final class DelegatingCanvas extends java.awt.Canvas {
         }
         if (param0 < -22) {
           BufferedSocket.field_d = true;
-          wg.a(-100, false);
+          ArchiveSourceManager.a(-100, false);
           LoginPanel.field_N = 0;
           return;
         }
         field_b = (FullscreenNoticeType) null;
         BufferedSocket.field_d = true;
-        wg.a(-100, false);
+        ArchiveSourceManager.a(-100, false);
         LoginPanel.field_N = 0;
     }
 
@@ -44,8 +44,8 @@ final class DelegatingCanvas extends java.awt.Canvas {
           if (!param0) {
             DelegatingCanvas.a(-20, 81, -51);
           }
-          ug.a(82, (java.awt.Component) ((Object) param1));
-          ei.a((byte) -125, (java.awt.Component) ((Object) param1));
+          ug.attachKeyboardListeners(82, (java.awt.Component) ((Object) param1));
+          ei.attachMouseListeners((byte) -125, (java.awt.Component) ((Object) param1));
           if (rd.field_l == null) {
             return;
           }

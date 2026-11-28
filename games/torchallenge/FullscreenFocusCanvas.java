@@ -91,7 +91,7 @@ final class FullscreenFocusCanvas extends java.awt.Canvas implements java.awt.ev
         }
     }
 
-    final static void a(java.awt.Component param0, int param1) {
+    final static void attachKeyboardListeners(java.awt.Component param0, int param1) {
         try {
           if (param1 != 0) {
             field_b = (int[][][]) null;

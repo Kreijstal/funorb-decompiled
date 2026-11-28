@@ -222,7 +222,7 @@ final class FullscreenFocusCanvas extends java.awt.Canvas implements java.awt.ev
         }
     }
 
-    final static void a(int param0, java.awt.Component param1) {
+    final static void attachKeyboardListeners(int param0, java.awt.Component param1) {
         try {
           param1.setFocusTraversalKeysEnabled(false);
           int var2_int = 15 / ((param0 - 36) / 59);

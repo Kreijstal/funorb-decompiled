@@ -1129,7 +1129,7 @@ abstract class NetworkGameClient extends GameApplet {
                 }
                 var2 = SectorCacheStore.a("login", (byte) -127);
                 if (var2 != null) {
-                  q.field_f = GzipInflater.a(var2, (byte) 100);
+                  ProxySocketConnector.field_f = GzipInflater.a(var2, (byte) 100);
                 }
                 var2 = SectorCacheStore.a("goback", (byte) -127);
                 if (var2 != null) {
@@ -3228,7 +3228,7 @@ abstract class NetworkGameClient extends GameApplet {
                         }
                         stackIn_82_0 = 24881;
                         stackIn_83_1 = (var2_int == 12);
-                        var3 = tl.a(stackIn_82_0, stackIn_83_1);
+                        var3 = SocketConnector.a(stackIn_82_0, stackIn_83_1);
                         vg.a(var3, -1);
                         if (var4 == 0) {
                           return;
@@ -3529,7 +3529,7 @@ abstract class NetworkGameClient extends GameApplet {
             if (EditableTextField.field_I != 0) {
               lb.field_a = aj.a(1, jj.field_b);
             }
-            jk.field_c = DraggableWidgetContainer.a(true, eb.field_f, 1, false, 2147483647);
+            jk.field_c = DraggableWidgetContainer.a(true, ArchiveSourceManager.field_f, 1, false, 2147483647);
             aa.field_db = DraggableWidgetContainer.a(true, jh.field_b, 1, false, 2147483647);
             sg.field_a = DraggableWidgetContainer.a(true, ia.field_e, 1, false, 2147483647);
             DequeWidgetContainer.field_A = 2;
@@ -3871,7 +3871,7 @@ abstract class NetworkGameClient extends GameApplet {
           EditableTextField.field_I = this.field_m;
           KeyboardInputHandler.a(-115, EditableTextField.field_I);
           vd.a(this.field_l, EditableTextField.field_I, param6, this.field_x, this.field_q, 124, this.field_t, 5000, this.field_s, param2, this.field_o, 5000, jk.field_a, this.field_n);
-          eb.a(jk.field_a, this.field_l, param2, this.field_t, this.field_q, (byte) -62, EditableTextField.field_I, this.field_s, this.field_o);
+          ArchiveSourceManager.a(jk.field_a, this.field_l, param2, this.field_t, this.field_q, (byte) -62, EditableTextField.field_I, this.field_s, this.field_o);
           wh.a(192);
           Main.field_V = PasswordValidator.c((byte) 100);
           BufferedRandomAccessFile.a(tb.field_c, -1);
@@ -3879,7 +3879,7 @@ abstract class NetworkGameClient extends GameApplet {
           bf.field_a = param7;
           ia.field_e = param3;
           jj.field_b = param4;
-          eb.field_f = param1;
+          ArchiveSourceManager.field_f = param1;
           this.initializePacketLengths(90);
           uh.clearStaticReferences((byte) -79);
           return;
@@ -3930,9 +3930,9 @@ abstract class NetworkGameClient extends GameApplet {
               throw new IllegalStateException();
             }
             if (var4_int == 1) {
-              var5_int = ti.a(GzipInflater.a(-23339), a.e(48), param2 ^ 10);
+              var5_int = ti.a(GzipInflater.a(-23339), SocketArchiveNetworkClient.e(48), param2 ^ 10);
               if (-1 != var5_int) {
-                q.a(ll.field_f, var5_int, -106, e.field_a);
+                ProxySocketConnector.a(ll.field_f, var5_int, -106, e.field_a);
                 ll.field_f = null;
                 e.field_a = null;
               }

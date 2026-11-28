@@ -43,7 +43,7 @@ class aa extends DefaultTextWidgetRenderer {
           bl.b();
           SoftwareRasterizer.clearRaster();
           vg.field_z = 0;
-          mj.a(param0 ^ 515966558);
+          KeyboardInputHandler.a(param0 ^ 515966558);
           var2 = var1.copy();
           for (var3 = 0; var3 < 15; var3++) {
             var2.drawSilhouette(-2, -2, 16777215);

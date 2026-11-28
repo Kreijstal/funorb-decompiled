@@ -167,8 +167,8 @@ final class IntrusiveNodeHashTable implements Iterable {
             }
             var2 = (qb) (AlphaWidgetContainer.field_H.nextForward(12684));
           }
-          if (ej.field_g != null) {
-            var2Lifetime1 = (qb) (ej.field_g.beginForward(-69));
+          if (ArchiveNetworkClient.field_g != null) {
+            var2Lifetime1 = (qb) (ArchiveNetworkClient.field_g.beginForward(-69));
             while (var2Lifetime1 != null) {
               stackIn_14_0 = var2Lifetime1.field_j.isLinked(3000);
               if (stackIn_14_0) {
@@ -176,7 +176,7 @@ final class IntrusiveNodeHashTable implements Iterable {
               } else {
                 var2Lifetime1.unlink(119);
               }
-              var2Lifetime1 = (qb) (ej.field_g.nextForward(12684));
+              var2Lifetime1 = (qb) (ArchiveNetworkClient.field_g.nextForward(12684));
             }
             return;
           }

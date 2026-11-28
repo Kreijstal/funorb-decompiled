@@ -19,9 +19,9 @@ final class NetworkArchiveRequest extends ArchiveRequest {
         throw new RuntimeException();
     }
 
-    final static jk a(CipherPacketBuffer param0, byte param1) {
+    final static LogoMesh decodeLogoMesh(CipherPacketBuffer param0, byte param1) {
         int var7 = 0;
-        jk stackIn_26_0 = null;
+        LogoMesh stackIn_26_0 = null;
         RuntimeException stackIn_29_0 = null;
         StringBuilder stackIn_29_1 = null;
         String stackIn_30_2 = null;
@@ -30,33 +30,33 @@ final class NetworkArchiveRequest extends ArchiveRequest {
         RuntimeException var2 = null;
         int var3 = 0;
         int var4 = 0;
-        jk var5 = null;
+        LogoMesh var5 = null;
         int var6 = 0;
         int var8 = 0;
         CipherPacketBuffer var9 = null;
         var8 = Bounce.field_N;
         try {
-          var2_int = param0.f(7, 8);
+          var2_int = param0.readBits(7, 8);
           if (param1 > -32) {
             var9 = (CipherPacketBuffer) null;
-            NetworkArchiveRequest.a((CipherPacketBuffer) null, (byte) -64);
+            NetworkArchiveRequest.decodeLogoMesh((CipherPacketBuffer) null, (byte) -64);
           }
           if (var2_int > 0) {
             throw new IllegalStateException("" + var2_int);
           }
           var3 = re.a(95, param0) ? 1 : 0;
           var4 = re.a(38, param0) ? 1 : 0;
-          var5 = new jk();
-          var5.field_k = (short)param0.f(7, 16);
+          var5 = new LogoMesh();
+          var5.field_k = (short)param0.readBits(7, 16);
           var5.field_g = ne.a(0, 16, var5.field_g, param0);
           var5.field_C = ne.a(0, 16, var5.field_C, param0);
           var5.field_J = ne.a(0, 16, var5.field_J, param0);
-          var5.field_L = (short)param0.f(7, 16);
+          var5.field_L = (short)param0.readBits(7, 16);
           var5.field_O = ne.a(0, 16, var5.field_O, param0);
           var5.field_P = ne.a(0, 16, var5.field_P, param0);
           var5.field_l = ne.a(0, 16, var5.field_l, param0);
           if (var3 != 0) {
-            var5.field_d = (short)param0.f(7, 16);
+            var5.field_d = (short)param0.readBits(7, 16);
             var5.field_f = ne.a(0, 16, var5.field_f, param0);
             var5.field_i = ne.a(0, 16, var5.field_i, param0);
             var5.field_x = ne.a(0, 16, var5.field_x, param0);
@@ -65,7 +65,7 @@ final class NetworkArchiveRequest extends ArchiveRequest {
             var5.field_Q = ne.a(0, 16, var5.field_Q, param0);
           }
           if (var4 != 0) {
-            param0.f(7, 16);
+            param0.readBits(7, 16);
             var5.field_u = ne.a(0, 16, var5.field_u, param0);
             var5.field_s = ne.a(0, 16, var5.field_s, param0);
             var5.field_y = ne.a(0, 16, var5.field_y, param0);

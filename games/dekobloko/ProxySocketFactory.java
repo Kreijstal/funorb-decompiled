@@ -15,7 +15,7 @@ final class ProxySocketFactory extends SocketFactory {
     static String stringState0495;
     static Js5ArchiveManager js5ArchiveManagerState0001;
 
-    final java.net.Socket computeSocket1476(int integerArgument1) throws IOException {
+    final java.net.Socket openSocket(int integerArgument1) throws IOException {
         int integerLocal1 = 0;
         int stackIntegerLocal2 = 0;
         java.net.ProxySelector stackProxySelectorLocal3;
@@ -85,7 +85,7 @@ final class ProxySocketFactory extends SocketFactory {
         } catch (java.net.URISyntaxException caughtParameterLocal32) {
           caughtExceptionLocal18 = caughtParameterLocal32;
           uRISyntaxExceptionLocal22 = (java.net.URISyntaxException) (Object) caughtExceptionLocal18;
-          return this.computeSocket1795(2);
+          return this.openDirectSocket(2);
         }
         listLocal19.addAll((Collection) ((Object) listLocal20));
         objectArrayLocal23 = listLocal19.toArray();
@@ -99,7 +99,7 @@ final class ProxySocketFactory extends SocketFactory {
           proxyLocal27 = (java.net.Proxy) (objectLocal26);
           try {
             if (false) throw (ProxyAuthenticationRequiredException) null;
-            socketLocal28 = this.computeSocket1475((byte) -86, proxyLocal27);
+            socketLocal28 = this.openSocketThroughProxy((byte) -86, proxyLocal27);
             if (socketLocal28 != null) {
               stackSocketLocal17 = socketLocal28;
               return stackSocketLocal17;
@@ -114,12 +114,12 @@ final class ProxySocketFactory extends SocketFactory {
           }
         }
         if (objectLocal24 == null) {
-          return this.computeSocket1795(2);
+          return this.openDirectSocket(2);
         }
         throw ProxySocketFactory.<RuntimeException>throwUnchecked((Throwable) objectLocal24);
     }
 
-    private final java.net.Socket computeSocket1475(byte byteArgument1, java.net.Proxy proxyArgument2) throws IOException {
+    private final java.net.Socket openSocketThroughProxy(byte byteArgument1, java.net.Proxy proxyArgument2) throws IOException {
         java.net.Socket stackSocketLocal1 = null;
         java.net.Socket stackSocketLocal2 = null;
         java.net.Socket stackSocketLocal3 = null;
@@ -144,7 +144,7 @@ final class ProxySocketFactory extends SocketFactory {
         Class classLocal22 = null;
         try {
           if (proxyArgument2.type() == java.net.Proxy.Type.DIRECT) {
-            stackSocketLocal1 = this.computeSocket1795(2);
+            stackSocketLocal1 = this.openDirectSocket(2);
             return stackSocketLocal1;
           }
           if (byteArgument1 >= -82) {
@@ -189,7 +189,7 @@ final class ProxySocketFactory extends SocketFactory {
             caughtExceptionLocal8 = caughtParameterLocal23;
             exceptionLocal14 = (Exception) (Object) caughtExceptionLocal8;
           }
-          stackSocketLocal3 = this.computeSocket1477((String) (objectLocal12), inetSocketAddressLocal11.getPort(), inetSocketAddressLocal11.getHostName(), 1323);
+          stackSocketLocal3 = this.openHttpProxyTunnel((String) (objectLocal12), inetSocketAddressLocal11.getPort(), inetSocketAddressLocal11.getHostName(), 1323);
           return stackSocketLocal3;
         } catch (java.lang.RuntimeException caughtParameterLocal24) {
           caughtExceptionLocal8 = caughtParameterLocal24;
@@ -205,7 +205,7 @@ final class ProxySocketFactory extends SocketFactory {
         }
     }
 
-    private final java.net.Socket computeSocket1477(String stringArgument1, int integerArgument2, String stringArgument3, int integerArgument4) throws IOException {
+    private final java.net.Socket openHttpProxyTunnel(String stringArgument1, int integerArgument2, String stringArgument3, int integerArgument4) throws IOException {
         java.net.Socket stackSocketLocal1 = null;
         Object stackObjectLocal2 = null;
         RuntimeException stackRuntimeExceptionLocal3 = null;

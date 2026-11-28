@@ -76,15 +76,15 @@ final class RaiderRecruitmentScreen extends DungeonAssaultScreen {
         var3 = DungeonAssault.field_K;
         if (gm.field_d.field_s >= ac.field_s) {
           if (!ed.c(true)) {
-            ac.field_B.d((byte) -112, 56);
+            ac.field_B.writeCipheredByte((byte) -112, 56);
             for (var2 = 0; var2 < 8; var2++) {
-              if (um.field_i[var2] == gm.field_d.field_a[var2]) {
+              if (SocketConnector.field_i[var2] == gm.field_d.field_a[var2]) {
                 ac.field_B.writeByte(6, -1);
               } else {
-                if (um.field_i[var2] == null) {
+                if (SocketConnector.field_i[var2] == null) {
                   ac.field_B.writeByte(6, 0);
                 } else {
-                  ac.field_B.writeByte(6, um.field_i[var2].field_c);
+                  ac.field_B.writeByte(6, SocketConnector.field_i[var2].field_c);
                 }
               }
             }
@@ -92,7 +92,7 @@ final class RaiderRecruitmentScreen extends DungeonAssaultScreen {
           var4 = 0;
           var2Lifetime1 = var4;
           while (8 > var4) {
-            gm.field_d.field_a[var4] = um.field_i[var4];
+            gm.field_d.field_a[var4] = SocketConnector.field_i[var4];
             var4++;
           }
           gm.field_d.field_s = gm.field_d.field_s - ac.field_s;
@@ -122,12 +122,12 @@ final class RaiderRecruitmentScreen extends DungeonAssaultScreen {
         this.b(-123);
         var2 = null;
         if (this.field_t != -1 &&
-          null != um.field_i[this.field_t]) {
-          var2 = um.field_i[this.field_t];
+          null != SocketConnector.field_i[this.field_t]) {
+          var2 = SocketConnector.field_i[this.field_t];
         } else {
           if (this.field_C != -1 &&
-            um.field_i[this.field_C] != null) {
-            var2 = um.field_i[this.field_C];
+            SocketConnector.field_i[this.field_C] != null) {
+            var2 = SocketConnector.field_i[this.field_C];
           }
         }
         var3 = null;
@@ -294,8 +294,8 @@ final class RaiderRecruitmentScreen extends DungeonAssaultScreen {
         }
         this.field_t = this.a(-1, eh.field_h, hj.field_S);
         if (this.field_t != -1 &&
-          null != um.field_i[this.field_t]) {
-          var15 = um.field_i[this.field_t];
+          null != SocketConnector.field_i[this.field_t]) {
+          var15 = SocketConnector.field_i[this.field_t];
           if (ld.field_e != var15) {
             j.field_Q = (en) ((Object) new fc((CombatState) null, var15));
             ld.field_e = var15;
@@ -369,10 +369,10 @@ final class RaiderRecruitmentScreen extends DungeonAssaultScreen {
                             if (2 == no.field_d) {
                               var2 = this.a(-1, AchievementIconEntry.field_k, SoundCache.field_c);
                               if (var2 != -1) {
-                                um.field_i[var2] = gm.field_d.field_a[var2];
-                                if (null != um.field_i[var2] &&
-                                  um.field_i[var2].field_b == null) {
-                                  um.field_i[var2].field_b = new SpriteAnimationPlayer(um.field_i[var2].field_n.field_e);
+                                SocketConnector.field_i[var2] = gm.field_d.field_a[var2];
+                                if (null != SocketConnector.field_i[var2] &&
+                                  SocketConnector.field_i[var2].field_b == null) {
+                                  SocketConnector.field_i[var2].field_b = new SpriteAnimationPlayer(SocketConnector.field_i[var2].field_n.field_e);
                                 }
                                 NodeHashTableIterator.b((byte) -36);
                               }
@@ -384,11 +384,11 @@ final class RaiderRecruitmentScreen extends DungeonAssaultScreen {
                             var2 = this.a(-1, AchievementIconEntry.field_k, SoundCache.field_c);
                             if (-1 != var2) {
                               if (op.field_d.field_l == null) {
-                                if (um.field_i[var2] != null) {
+                                if (SocketConnector.field_i[var2] != null) {
                                   op.field_d.a((byte) 80);
                                   this.field_F = null;
                                   this.a((byte) -112, var2);
-                                  var20 = um.field_i[this.field_C];
+                                  var20 = SocketConnector.field_i[this.field_C];
                                   var3_ref = var20;
                                   var21 = var20.field_n;
                                   if (var3_ref != null &&
@@ -402,8 +402,8 @@ final class RaiderRecruitmentScreen extends DungeonAssaultScreen {
                                 }
                               } else {
                                 var19 = ((u) (op.field_d.field_l)).field_Q;
-                                um.field_i[var2] = new Raider(var2, var19.field_w);
-                                um.field_i[var2].field_b = new SpriteAnimationPlayer(var19.field_e);
+                                SocketConnector.field_i[var2] = new Raider(var2, var19.field_w);
+                                SocketConnector.field_i[var2].field_b = new SpriteAnimationPlayer(var19.field_e);
                                 NodeHashTableIterator.b((byte) -36);
                                 op.field_d.a((byte) 80);
                               }
@@ -420,13 +420,13 @@ final class RaiderRecruitmentScreen extends DungeonAssaultScreen {
                 if (-1 == this.field_C) {
                   stackIn_30_0 = null;
                 } else {
-                  stackIn_30_0 = um.field_i[this.field_C];
+                  stackIn_30_0 = SocketConnector.field_i[this.field_C];
                 }
                 var17 = stackIn_30_0;
                 var2_ref_hb = var17;
                 if (var2_ref_hb != null) {
-                  um.field_i[this.field_C] = new Raider(this.field_C, var17.field_c);
-                  um.field_i[this.field_C].field_b = new SpriteAnimationPlayer(var17.field_n.field_e);
+                  SocketConnector.field_i[this.field_C] = new Raider(this.field_C, var17.field_c);
+                  SocketConnector.field_i[this.field_C].field_b = new SpriteAnimationPlayer(var17.field_n.field_e);
                   NodeHashTableIterator.b((byte) -36);
                   this.a((byte) -112, -1);
                 }
@@ -561,9 +561,9 @@ final class RaiderRecruitmentScreen extends DungeonAssaultScreen {
           for (var4 = 0; var4 < 4; var4++) {
             var5 = 195 + 102 * var4;
             var6 = 104 * var3 + 60;
-            if (null != um.field_i[var2]) {
-              um.field_i[var2].field_b.drawAnimation(86, var6 + 5, (byte) 102, 5 + var5, 86);
-              RaiderRecruitmentScreen.drawRaiderStatusIndicators(var5 + 96, 96 + var6, 3, um.field_i[var2], 0);
+            if (null != SocketConnector.field_i[var2]) {
+              SocketConnector.field_i[var2].field_b.drawAnimation(86, var6 + 5, (byte) 102, 5 + var5, 86);
+              RaiderRecruitmentScreen.drawRaiderStatusIndicators(var5 + 96, 96 + var6, 3, SocketConnector.field_i[var2], 0);
             }
             var7 = (int)((te.c(mo.field_a, var2 * 10273, 0.015625) + 2.0) * 64.0);
             if (var7 < 0) {
@@ -571,7 +571,7 @@ final class RaiderRecruitmentScreen extends DungeonAssaultScreen {
             }
             if (this.field_C != var2) {
               if (var2 != this.field_t) {
-                if (um.field_i[var2] != gm.field_d.field_a[var2]) {
+                if (SocketConnector.field_i[var2] != gm.field_d.field_a[var2]) {
                   var8 = (int)((1.0 + Math.cos((double)((float)mo.field_a / 20.0f))) * 64.0) + 128;
                   this.field_I.drawAdditive(var5, var6, var8);
                 }
@@ -596,7 +596,7 @@ final class RaiderRecruitmentScreen extends DungeonAssaultScreen {
         int var5 = DungeonAssault.field_K;
         int var3Lifetime1;
         for (var3 = 0; var3 < 8; var3++) {
-          if (um.field_i[var3] != gm.field_d.field_a[var3]) {
+          if (SocketConnector.field_i[var3] != gm.field_d.field_a[var3]) {
             break;
           }
         }
@@ -747,15 +747,15 @@ final class RaiderRecruitmentScreen extends DungeonAssaultScreen {
           this.field_t = 120;
         }
         for (var2 = 0; var2 < 8; var2++) {
-          um.field_i[var2] = gm.field_d.field_a[var2];
-          if (null != um.field_i[var2]) {
-            if (um.field_i[var2].field_p == 255) {
+          SocketConnector.field_i[var2] = gm.field_d.field_a[var2];
+          if (null != SocketConnector.field_i[var2]) {
+            if (SocketConnector.field_i[var2].field_p == 255) {
               stackIn_10_0 = k.field_c;
             } else {
-              stackIn_10_0 = um.field_i[var2].field_n.field_e;
+              stackIn_10_0 = SocketConnector.field_i[var2].field_n.field_e;
             }
             var3 = stackIn_10_0;
-            um.field_i[var2].field_b = new SpriteAnimationPlayer(var3);
+            SocketConnector.field_i[var2].field_b = new SpriteAnimationPlayer(var3);
           }
         }
         NodeHashTableIterator.b((byte) -36);
@@ -804,7 +804,7 @@ final class RaiderRecruitmentScreen extends DungeonAssaultScreen {
         }
         var3 = null;
         if (this.field_C != -1) {
-          var3 = um.field_i[this.field_C];
+          var3 = SocketConnector.field_i[this.field_C];
         }
         if (var3 == null) {
           mi.a(NetworkGameClient.field_y, sa.field_e, IntrusiveNode.field_c, 13195, jm.field_i);
@@ -874,7 +874,7 @@ final class RaiderRecruitmentScreen extends DungeonAssaultScreen {
         if (!param0) {
           return;
         }
-        while (ha.b((byte) 47)) {
+        while (ProxySocketConnector.b((byte) 47)) {
           if (13 == mm.field_t) {
             this.a((byte) -61, false);
             continue;
@@ -897,7 +897,7 @@ final class RaiderRecruitmentScreen extends DungeonAssaultScreen {
         if (ByteArrayPoolSupport.field_g) {
           bl.a(0);
         }
-        var6 = um.field_i;
+        var6 = SocketConnector.field_i;
         var2 = var6;
         for (var3 = 0; var6.length > var3; var3++) {
           var4 = var6[var3];

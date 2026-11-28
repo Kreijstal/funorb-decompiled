@@ -119,7 +119,7 @@ final class n {
             if (var6Lifetime1 < 20) {
               var7Lifetime1 = 256 * var6Lifetime1 / 20;
             }
-            fb.field_h.drawWithOpacity(15 + var3_int, var4 + 10, var7Lifetime1 * var5 >> 8);
+            ArchiveNetworkClient.field_h.drawWithOpacity(15 + var3_int, var4 + 10, var7Lifetime1 * var5 >> 8);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

@@ -179,7 +179,7 @@ final class dl {
         }
     }
 
-    final static void a(java.awt.Component param0, byte param1) {
+    final static void attachMouseListeners(java.awt.Component param0, byte param1) {
         try {
           param0.addMouseListener(TextHotspotBounds.field_y);
           param0.addMouseMotionListener(TextHotspotBounds.field_y);

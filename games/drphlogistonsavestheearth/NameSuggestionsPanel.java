@@ -1149,7 +1149,7 @@ final class NameSuggestionsPanel extends DequeWidgetContainer implements WidgetA
                 }
                 var2 = wg.a("warning_ifyouquit", 0);
                 if (null != var2) {
-                  ka.field_l = mj.a((byte) 113, var2);
+                  ProxySocketConnector.field_l = mj.a((byte) 113, var2);
                 }
                 var2 = wg.a("warning_ifyouquitorleavepage", param0 ^ 7);
                 if (var2 != null) {
@@ -1401,7 +1401,7 @@ final class NameSuggestionsPanel extends DequeWidgetContainer implements WidgetA
                 }
                 var2 = wg.a("create_displayname", 0);
                 if (null != var2) {
-                  hj.field_h = mj.a((byte) -102, var2);
+                  SocketConnector.field_h = mj.a((byte) -102, var2);
                 }
                 var2 = wg.a("create_password", 0);
                 if (var2 != null) {
@@ -2263,7 +2263,7 @@ final class NameSuggestionsPanel extends DequeWidgetContainer implements WidgetA
                 }
                 var2 = wg.a("notyetachieved", 0);
                 if (var2 != null) {
-                  cl.field_q = mj.a((byte) -94, var2);
+                  SocketArchiveNetworkClient.field_q = mj.a((byte) -94, var2);
                 }
                 var2 = wg.a("achieved", 0);
                 if (var2 != null) {
@@ -2969,55 +2969,55 @@ final class NameSuggestionsPanel extends DequeWidgetContainer implements WidgetA
                 }
                 var2 = wg.a("subscription_cost_monthly,0", 0);
                 if (null != var2) {
-                  ka.field_p[0] = mj.a((byte) -112, var2);
+                  ProxySocketConnector.field_p[0] = mj.a((byte) -112, var2);
                 }
                 var2 = wg.a("subscription_cost_monthly,1", 0);
                 if (null != var2) {
-                  ka.field_p[1] = mj.a((byte) -94, var2);
+                  ProxySocketConnector.field_p[1] = mj.a((byte) -94, var2);
                 }
                 var2 = wg.a("subscription_cost_monthly,2", 0);
                 if (var2 != null) {
-                  ka.field_p[2] = mj.a((byte) 36, var2);
+                  ProxySocketConnector.field_p[2] = mj.a((byte) 36, var2);
                 }
                 var2 = wg.a("subscription_cost_monthly,3", 0);
                 if (null != var2) {
-                  ka.field_p[3] = mj.a((byte) -115, var2);
+                  ProxySocketConnector.field_p[3] = mj.a((byte) -115, var2);
                 }
                 var2 = wg.a("subscription_cost_monthly,4", param0 ^ 7);
                 if (var2 != null) {
-                  ka.field_p[4] = mj.a((byte) -114, var2);
+                  ProxySocketConnector.field_p[4] = mj.a((byte) -114, var2);
                 }
                 var2 = wg.a("subscription_cost_monthly,5", 0);
                 if (null != var2) {
-                  ka.field_p[5] = mj.a((byte) 111, var2);
+                  ProxySocketConnector.field_p[5] = mj.a((byte) 111, var2);
                 }
                 var2 = wg.a("subscription_cost_monthly,6", 0);
                 if (var2 != null) {
-                  ka.field_p[6] = mj.a((byte) -103, var2);
+                  ProxySocketConnector.field_p[6] = mj.a((byte) -103, var2);
                 }
                 var2 = wg.a("subscription_cost_monthly,7", 0);
                 if (var2 != null) {
-                  ka.field_p[7] = mj.a((byte) -94, var2);
+                  ProxySocketConnector.field_p[7] = mj.a((byte) -94, var2);
                 }
                 var2 = wg.a("subscription_cost_monthly,8", param0 - 7);
                 if (var2 != null) {
-                  ka.field_p[8] = mj.a((byte) -19, var2);
+                  ProxySocketConnector.field_p[8] = mj.a((byte) -19, var2);
                 }
                 var2 = wg.a("subscription_cost_monthly,9", param0 - 7);
                 if (null != var2) {
-                  ka.field_p[9] = mj.a((byte) 48, var2);
+                  ProxySocketConnector.field_p[9] = mj.a((byte) 48, var2);
                 }
                 var2 = wg.a("subscription_cost_monthly,10", 0);
                 if (var2 != null) {
-                  ka.field_p[10] = mj.a((byte) 74, var2);
+                  ProxySocketConnector.field_p[10] = mj.a((byte) 74, var2);
                 }
                 var2 = wg.a("subscription_cost_monthly,11", param0 ^ 7);
                 if (var2 != null) {
-                  ka.field_p[11] = mj.a((byte) -104, var2);
+                  ProxySocketConnector.field_p[11] = mj.a((byte) -104, var2);
                 }
                 var2 = wg.a("subscription_cost_monthly,12", 0);
                 if (var2 != null) {
-                  ka.field_p[12] = mj.a((byte) 63, var2);
+                  ProxySocketConnector.field_p[12] = mj.a((byte) 63, var2);
                 }
                 var2 = wg.a("sentence_separator", 0);
                 if (var2 != null) {

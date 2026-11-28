@@ -175,7 +175,7 @@ abstract class SessionGameApplet extends GameApplet {
         RasterBuffer.a(AchievementNotice.field_k, 13861);
         rd.field_a = param4;
         ic.field_a = param5;
-        uh.field_q = param3;
+        ArchiveNetworkClient.field_q = param3;
         q.field_d = param0;
         BoundedRandomAccessFile.field_d = param7;
         this.initializePacketLengths(true);
@@ -528,7 +528,7 @@ abstract class SessionGameApplet extends GameApplet {
         }
         if (ResizableModalDialog.field_L == 1) {
           if (NodeHashTableIterator.field_f != 0) {
-            hg.field_a = MatchingFieldValidator.a((byte) -82, uh.field_q);
+            hg.field_a = MatchingFieldValidator.a((byte) -82, ArchiveNetworkClient.field_q);
           }
           RasterBuffer.field_c = SocketConnector.a(true, (byte) 77, 1, ic.field_a, false);
           wi.field_e = SocketConnector.a(true, (byte) 77, 1, q.field_d, false);
@@ -575,9 +575,9 @@ abstract class SessionGameApplet extends GameApplet {
           }
           if (null == lf.field_d) {
             lf.field_d = kh.a((byte) 91);
-            tj.field_u = hg.b(param0 ^ 10017);
+            SocketArchiveNetworkClient.field_u = hg.b(param0 ^ 10017);
           }
-          WordDictionary.a(lf.field_d, tj.field_u, 22313, DelayedPcmStream.field_n);
+          WordDictionary.a(lf.field_d, SocketArchiveNetworkClient.field_u, 22313, DelayedPcmStream.field_n);
           wi.field_e = null;
           RasterBuffer.field_c = null;
           DelayedPcmStream.field_n = null;

@@ -246,7 +246,7 @@ abstract class dl extends DualLinkNode {
           var2Lifetime33 = GzipDecompressor.a(10, "submit_for_space");
           var3 = 66 % ((param1 - 46) / 51);
           if (var2Lifetime33 != null) {
-            tj.field_z = eg.a(106, var2Lifetime33);
+            SocketArchiveNetworkClient.field_z = eg.a(106, var2Lifetime33);
           }
           var2Lifetime34 = GzipDecompressor.a(10, "submit");
           if (null != var2Lifetime34) {

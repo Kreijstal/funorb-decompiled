@@ -16,14 +16,14 @@ final class kh {
         if (param0 > -39) {
           String var2 = (String) null;
           kh.a((String) null, -3, false, (String) null, 109, (AccountRegistrationPanel) null, (String) null);
-          c.field_h.b(true);
-          if (lg.field_n.a((byte) -122)) {
+          ArchiveSourceManager.field_h.pollArchiveSources(true);
+          if (lg.field_n.pollNetwork((byte) -122)) {
             return 0;
           }
           return lf.a(3);
         }
-        c.field_h.b(true);
-        if (lg.field_n.a((byte) -122)) {
+        ArchiveSourceManager.field_h.pollArchiveSources(true);
+        if (lg.field_n.pollNetwork((byte) -122)) {
           return 0;
         }
         return lf.a(3);

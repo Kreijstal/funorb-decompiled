@@ -139,7 +139,7 @@ final class BirthDateValidator extends DebouncedFieldValidator implements TextFi
         }
     }
 
-    final static void performAction1349(byte byteArgument1, java.awt.Component componentArgument2) {
+    final static void detachMouseListeners(byte byteArgument1, java.awt.Component componentArgument2) {
         try {
           componentArgument2.removeMouseListener(MixedSupport062.mouseInputState0001);
           componentArgument2.removeMouseMotionListener(MixedSupport062.mouseInputState0001);

@@ -313,7 +313,7 @@ final class LoginPanel extends DequeWidgetContainer implements TextFieldListener
           if (this.field_L != null) {
             this.field_L.field_p = (ComponentLayout) ((Object) var6);
           }
-          this.field_H.field_m = uf.field_l;
+          this.field_H.field_m = ArchiveSourceManager.field_l;
           if (this.field_N != null) {
             this.field_N.field_p = (ComponentLayout) ((Object) var6);
           }

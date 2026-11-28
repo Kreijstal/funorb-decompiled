@@ -32,7 +32,7 @@ final class ga {
         RuntimeException var4 = null;
         var8 = HostileSpawn.field_I ? 1 : 0;
         try {
-          var4_int = param1.a(param3, true);
+          var4_int = param1.readBits(param3, true);
           if (var4_int == 0) {
             stackIn_3_0 = null;
             return (byte[]) (stackIn_3_0);
@@ -41,11 +41,11 @@ final class ga {
             var4_int != param2.length) {
             param2 = new byte[var4_int];
           }
-          var5 = param1.a(3, true);
-          var6 = (byte)param1.a(8, true);
+          var5 = param1.readBits(3, true);
+          var6 = (byte)param1.readBits(8, true);
           if (var5 > 0) {
             for (var7 = 0; var4_int > var7; var7++) {
-              param2[var7] = (byte)(var6 + param1.a(var5, true));
+              param2[var7] = (byte)(var6 + param1.readBits(var5, true));
             }
           } else {
             for (var7 = 0; var7 < var4_int; var7++) {

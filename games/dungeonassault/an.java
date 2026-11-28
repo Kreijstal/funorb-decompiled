@@ -130,9 +130,9 @@ final class an extends DefaultTextWidgetRenderer {
           bf.field_k = param1;
           j.field_J = param5;
           CombatState.field_a = param7;
-          Raider.field_a = (bb) ((Object) new tp());
+          Raider.field_a = (ArchiveNetworkClient) ((Object) new SocketArchiveNetworkClient());
           na.field_y = new DiskCacheWorker(param8);
-          bl.field_r = new je(Raider.field_a, na.field_y);
+          bl.field_r = new ArchiveSourceManager(Raider.field_a, na.field_y);
         } catch (RuntimeException runtimeException) {
           throw AccountServiceResult.wrapClientException((Throwable) ((Object) runtimeException), "an.EA(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ',' + param6 + ',' + param7 + ',' + (param8 != null ? "{...}" : "null") + ')');
         }

@@ -670,7 +670,7 @@ final class MusicPatch extends IntrusiveNode {
             return false;
           }
           vg.field_a = ag.field_a[ph.field_h];
-          d.field_Ib = hj.field_a[ph.field_h];
+          d.field_Ib = ArchiveSourceManager.field_a[ph.field_h];
           if (param0 != 18954) {
             var3 = (java.awt.Canvas) null;
             MusicPatch.a(-30, (byte) -26, (java.awt.Canvas) null, 72);

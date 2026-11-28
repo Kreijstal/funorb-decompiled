@@ -47,7 +47,7 @@ final class Bzip2State {
         String stackIn_6_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          h.a((java.awt.Component) ((Object) param0), -8662);
+          h.attachKeyboardListeners((java.awt.Component) ((Object) param0), -8662);
           var2_int = -50 / ((-56 - param1) / 59);
           AudioService.attachMouseAndFocusListeners((java.awt.Component) ((Object) param0), true);
           if (wb.field_u == null) {

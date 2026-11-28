@@ -638,7 +638,7 @@ final class RichTextLayout extends TextLayout {
           }
           var2Lifetime4 = wm.a("keycode_missile1", (byte) 123);
           if (null != var2Lifetime4) {
-            ja.field_d = var2Lifetime4[0] & 255;
+            ArchiveSourceManager.field_d = var2Lifetime4[0] & 255;
           }
           var2Lifetime5 = wm.a("keycode_missile2", (byte) 55);
           if (null != var2Lifetime5) {
@@ -769,83 +769,83 @@ final class RichTextLayout extends TextLayout {
           }
           var2Lifetime36 = wm.a("achievement_criteria,0", (byte) 70);
           if (var2Lifetime36 != null) {
-            jf.field_c[0] = va.a(0, var2Lifetime36);
+            ArchiveNetworkClient.field_c[0] = va.a(0, var2Lifetime36);
           }
           var2Lifetime37 = wm.a("achievement_criteria,1", (byte) 85);
           if (var2Lifetime37 != null) {
-            jf.field_c[1] = va.a(0, var2Lifetime37);
+            ArchiveNetworkClient.field_c[1] = va.a(0, var2Lifetime37);
           }
           var2Lifetime38 = wm.a("achievement_criteria,2", (byte) 110);
           if (null != var2Lifetime38) {
-            jf.field_c[2] = va.a(0, var2Lifetime38);
+            ArchiveNetworkClient.field_c[2] = va.a(0, var2Lifetime38);
           }
           var2Lifetime39 = wm.a("achievement_criteria,3", (byte) 34);
           if (var2Lifetime39 != null) {
-            jf.field_c[3] = va.a(0, var2Lifetime39);
+            ArchiveNetworkClient.field_c[3] = va.a(0, var2Lifetime39);
           }
           var2Lifetime40 = wm.a("achievement_criteria,4", (byte) 72);
           if (null != var2Lifetime40) {
-            jf.field_c[4] = va.a(0, var2Lifetime40);
+            ArchiveNetworkClient.field_c[4] = va.a(0, var2Lifetime40);
           }
           var2Lifetime41 = wm.a("achievement_criteria,5", (byte) 77);
           if (null != var2Lifetime41) {
-            jf.field_c[5] = va.a(0, var2Lifetime41);
+            ArchiveNetworkClient.field_c[5] = va.a(0, var2Lifetime41);
           }
           var2Lifetime42 = wm.a("achievement_criteria,6", (byte) 42);
           if (var2Lifetime42 != null) {
-            jf.field_c[6] = va.a(0, var2Lifetime42);
+            ArchiveNetworkClient.field_c[6] = va.a(0, var2Lifetime42);
           }
           var2Lifetime43 = wm.a("achievement_criteria,7", (byte) 36);
           if (var2Lifetime43 != null) {
-            jf.field_c[7] = va.a(0, var2Lifetime43);
+            ArchiveNetworkClient.field_c[7] = va.a(0, var2Lifetime43);
           }
           var2Lifetime44 = wm.a("achievement_criteria,8", (byte) 76);
           if (null != var2Lifetime44) {
-            jf.field_c[8] = va.a(0, var2Lifetime44);
+            ArchiveNetworkClient.field_c[8] = va.a(0, var2Lifetime44);
           }
           var2Lifetime45 = wm.a("achievement_criteria,9", (byte) 108);
           if (null != var2Lifetime45) {
-            jf.field_c[9] = va.a(0, var2Lifetime45);
+            ArchiveNetworkClient.field_c[9] = va.a(0, var2Lifetime45);
           }
           var2Lifetime46 = wm.a("achievement_criteria,10", (byte) 106);
           if (var2Lifetime46 != null) {
-            jf.field_c[10] = va.a(0, var2Lifetime46);
+            ArchiveNetworkClient.field_c[10] = va.a(0, var2Lifetime46);
           }
           var2Lifetime47 = wm.a("achievement_criteria,11", (byte) 114);
           if (null != var2Lifetime47) {
-            jf.field_c[11] = va.a(0, var2Lifetime47);
+            ArchiveNetworkClient.field_c[11] = va.a(0, var2Lifetime47);
           }
           var2Lifetime48 = wm.a("achievement_criteria,12", (byte) 62);
           if (null != var2Lifetime48) {
-            jf.field_c[12] = va.a(0, var2Lifetime48);
+            ArchiveNetworkClient.field_c[12] = va.a(0, var2Lifetime48);
           }
           var2Lifetime49 = wm.a("achievement_criteria,13", (byte) 59);
           if (null != var2Lifetime49) {
-            jf.field_c[13] = va.a(0, var2Lifetime49);
+            ArchiveNetworkClient.field_c[13] = va.a(0, var2Lifetime49);
           }
           var2Lifetime50 = wm.a("achievement_criteria,14", (byte) 53);
           if (var2Lifetime50 != null) {
-            jf.field_c[14] = va.a(0, var2Lifetime50);
+            ArchiveNetworkClient.field_c[14] = va.a(0, var2Lifetime50);
           }
           var2Lifetime51 = wm.a("achievement_criteria,15", (byte) 33);
           if (null != var2Lifetime51) {
-            jf.field_c[15] = va.a(0, var2Lifetime51);
+            ArchiveNetworkClient.field_c[15] = va.a(0, var2Lifetime51);
           }
           var2Lifetime52 = wm.a("achievement_criteria,16", (byte) 123);
           if (var2Lifetime52 != null) {
-            jf.field_c[16] = va.a(0, var2Lifetime52);
+            ArchiveNetworkClient.field_c[16] = va.a(0, var2Lifetime52);
           }
           var2Lifetime53 = wm.a("achievement_criteria,17", (byte) 57);
           if (null != var2Lifetime53) {
-            jf.field_c[17] = va.a(0, var2Lifetime53);
+            ArchiveNetworkClient.field_c[17] = va.a(0, var2Lifetime53);
           }
           var2Lifetime54 = wm.a("achievement_criteria,18", (byte) 111);
           if (null != var2Lifetime54) {
-            jf.field_c[18] = va.a(0, var2Lifetime54);
+            ArchiveNetworkClient.field_c[18] = va.a(0, var2Lifetime54);
           }
           var2Lifetime55 = wm.a("achievement_criteria,19", (byte) 47);
           if (var2Lifetime55 != null) {
-            jf.field_c[19] = va.a(0, var2Lifetime55);
+            ArchiveNetworkClient.field_c[19] = va.a(0, var2Lifetime55);
           }
           var2Lifetime56 = wm.a("clickToSkip", (byte) 83);
           if (var2Lifetime56 != null) {
@@ -1125,7 +1125,7 @@ final class RichTextLayout extends TextLayout {
           }
           var2Lifetime125 = wm.a("instructions_PowerShots", (byte) 40);
           if (var2Lifetime125 != null) {
-            kd.field_q = va.a(0, var2Lifetime125);
+            SocketArchiveNetworkClient.field_q = va.a(0, var2Lifetime125);
           }
           var2Lifetime126 = wm.a("instructions_Cloak", (byte) 104);
           if (var2Lifetime126 != null) {
@@ -1237,7 +1237,7 @@ final class RichTextLayout extends TextLayout {
           }
           var2Lifetime153 = wm.a("rapidFire", (byte) 29);
           if (null != var2Lifetime153) {
-            kd.field_s = va.a(0, var2Lifetime153);
+            SocketArchiveNetworkClient.field_s = va.a(0, var2Lifetime153);
           }
           var2Lifetime154 = wm.a("youAlreadyHaveRapidFire", (byte) 93);
           if (null != var2Lifetime154) {

@@ -74,7 +74,7 @@ final class ha {
           rc.field_a = param10;
           SecondaryNodeHashTable.field_c = param13;
           ResizableModalDialog.field_O = param0;
-          eg.field_r = gk.a(param14, "lobby", "gameprivacy", true);
+          SocketArchiveNetworkClient.field_r = gk.a(param14, "lobby", "gameprivacy", true);
           DisplayNameSelectionPanel.field_I = gk.a(param14, "lobby", "ratedgame", true);
           mj.field_c = gk.a(param14, "lobby", "opentome", true);
           sf.field_a = gk.a(param14, "lobby", "allowspectators", true);
@@ -175,7 +175,7 @@ final class ha {
           IterableNodeHashTable.field_h[0] = new UiPanel(0L, fm.field_e, PlayerState.field_b);
           LabeledWidgetContainer.field_S[0] = new nk[6];
           for (var17_int = 0; var17_int < 5; var17_int++) {
-            LabeledWidgetContainer.field_S[0][1 + var17_int] = new nk(0L, GameplayScreen.field_l, (UiPanel) null, ja.field_e, eg.field_r[var17_int], gm.field_c[var17_int]);
+            LabeledWidgetContainer.field_S[0][1 + var17_int] = new nk(0L, GameplayScreen.field_l, (UiPanel) null, ja.field_e, SocketArchiveNetworkClient.field_r[var17_int], gm.field_c[var17_int]);
           }
           if (rc.field_a.length >= 2) {
             IterableNodeHashTable.field_h[1] = new UiPanel(0L, fm.field_e, MusicPatchPcmStream.field_v);

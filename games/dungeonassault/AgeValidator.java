@@ -267,7 +267,7 @@ final class AgeValidator extends TextFieldValidator {
           var1[ob.field_ec] = pm.field_k;
           var1[ob.field_Ub] = j.field_S;
           var2 = new String[ob.field_ac][];
-          var2[ob.field_fc] = ha.field_l;
+          var2[ob.field_fc] = ProxySocketConnector.field_l;
           var2[ob.field_hc] = IntrusiveNode.field_f;
           var2[ob.field_Mb] = rp.field_f;
           var2[ob.field_Wb] = DropTargetWidgetContainer.field_H;
@@ -283,8 +283,8 @@ final class AgeValidator extends TextFieldValidator {
           var2[ob.field_Zb] = RichTextWidget.field_N;
           var2[ob.field_Jb] = rp.field_b;
           var2[ob.field_Sb] = BufferedSocket.field_f;
-          var2[ob.field_Ib] = bb.field_l;
-          var2[ob.field_Gb] = um.field_b;
+          var2[ob.field_Ib] = ArchiveNetworkClient.field_l;
+          var2[ob.field_Gb] = SocketConnector.field_b;
           var2[ob.field_pc] = gl.field_Kb;
           var2[ob.field_gc] = uf.field_d;
           var2[ob.field_bc] = LoginPanel.field_N;
@@ -544,7 +544,7 @@ final class AgeValidator extends TextFieldValidator {
             gh.field_i[3].field_z = var3_ref_StringLifetime37;
           }
           var3_ref_StringLifetime38 = DungeonRaidScreen.field_F;
-          var4Lifetime38 = um.field_e;
+          var4Lifetime38 = SocketConnector.field_e;
           var5Lifetime4 = (String) null;
           if (gh.field_i[4] != null) {
             gh.field_i[4].field_o = var5Lifetime4;
@@ -821,7 +821,7 @@ final class AgeValidator extends TextFieldValidator {
           li.field_b[3] = TextLineMetrics.field_n;
           li.field_b[0] = FullscreenFocusCanvas.field_d;
           li.field_b[2] = df.field_d;
-          li.field_b[1] = tp.field_z;
+          li.field_b[1] = SocketArchiveNetworkClient.field_z;
           ByteStorage.field_a[1] = lj.field_j;
           ByteStorage.field_a[0] = SingleChildWidgetContainer.field_E;
           ByteStorage.field_a[3] = DropTargetWidgetContainer.field_J;
@@ -1062,7 +1062,7 @@ final class AgeValidator extends TextFieldValidator {
             TextLineMetrics.field_l.drawCentred(StandardContentDialog.a(new String[]{mj.field_f}, AchievementIconEntry.field_t, 30496), var6, 60, 16777215, -1);
             Bzip2State.field_e.drawCentred(StandardContentDialog.a(new String[]{SecondaryNodeDeque.field_f}, RichTextWidget.field_K, 30496), var6, 110, 16777215, -1);
             TextLineMetrics.field_l.drawCentred(StandardContentDialog.a(new String[]{SecondaryNodeDeque.field_f}, jm.field_b, 30496), var6, 130, 16777215, -1);
-            Bzip2State.field_e.drawCentred(je.field_l, var6, 180, 16777215, -1);
+            Bzip2State.field_e.drawCentred(ArchiveSourceManager.field_l, var6, 180, 16777215, -1);
             TextLineMetrics.field_l.drawCentred(cg.field_c, var6, 200, 16777215, -1);
             StripedProgressWidget.a(1, 3, var12.field_y, var12, 0, var12.field_v, 0, false);
             gn.field_c.bindAsRenderTarget();
@@ -1108,12 +1108,12 @@ final class AgeValidator extends TextFieldValidator {
               lj.field_m = lj.field_m + var9_int;
               MenuScreen.field_z.field_w = MenuScreen.field_z.field_w + var9_int;
               var7Lifetime1 = var7Lifetime1 + var9_int;
-              je.field_b = je.field_b - var9_int;
+              ArchiveSourceManager.field_b = ArchiveSourceManager.field_b - var9_int;
             }
             var8 -= 3;
             if (MenuScreen.field_z.field_E < var7Lifetime1 + var5) {
               var9_intLifetime1 = var5 + (var7Lifetime1 - MenuScreen.field_z.field_E);
-              je.field_b = je.field_b - var9_intLifetime1;
+              ArchiveSourceManager.field_b = ArchiveSourceManager.field_b - var9_intLifetime1;
               var5 = var5 + var9_intLifetime1 * 2;
               MenuScreen.field_z.field_w = MenuScreen.field_z.field_w + var9_intLifetime1;
               lj.field_m = lj.field_m + var9_intLifetime1;
@@ -1147,7 +1147,7 @@ final class AgeValidator extends TextFieldValidator {
             var9.draw(0, 0);
             IntroSequenceScreen.field_r = new RgbSprite(640, 480);
             IntroSequenceScreen.field_r.bindAsRenderTarget();
-            MenuScreen.field_z.drawRotated((MenuScreen.field_z.field_E >> 1) + je.field_b, (MenuScreen.field_z.field_G >> 1) + ig.field_a, IntrusiveDeque.field_f, 4096);
+            MenuScreen.field_z.drawRotated((MenuScreen.field_z.field_E >> 1) + ArchiveSourceManager.field_b, (MenuScreen.field_z.field_G >> 1) + ig.field_a, IntrusiveDeque.field_f, 4096);
             MenuScreen.field_z = null;
             IntroSequenceScreen.field_r.trimTransparentBorders();
             SoftwareRasterizer.setRasterBuffer(var28, var2Lifetime1, var3Lifetime1);
@@ -1160,7 +1160,7 @@ final class AgeValidator extends TextFieldValidator {
             var3Lifetime2 = SoftwareRasterizer.field_c;
             SoftwareRasterizer.saveClip(rp.field_e);
             var16 = new RgbSprite(412, 43);
-            var5_ref_String = StandardContentDialog.a(new String[]{lg.field_m}, je.field_a, 30496);
+            var5_ref_String = StandardContentDialog.a(new String[]{lg.field_m}, ArchiveSourceManager.field_a, 30496);
             lg.field_m = null;
             var16.bindAsRenderTarget();
             TextLineMetrics.field_l.drawParagraph(var5_ref_String, 3, 3, var16.field_y - 6, var16.field_v - 6, 16777215, -1, 0, 1, TextLineMetrics.field_l.field_H + TextLineMetrics.field_l.field_E);

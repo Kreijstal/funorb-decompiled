@@ -33,7 +33,7 @@ final class k {
               return;
             }
             if (param0 == 8) {
-              if (!qi.field_b) {
+              if (!ArchiveSourceManager.field_b) {
                 param1 = bi.field_c;
               } else {
                 param1 = TextLineMetrics.field_b;
@@ -59,7 +59,7 @@ final class k {
               if (param0 == 10) {
                 return;
               }
-              if (!qi.field_b) {
+              if (!ArchiveSourceManager.field_b) {
                 mb.field_s.clearCredentials((byte) -107);
                 return;
               }

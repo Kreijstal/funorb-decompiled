@@ -81,7 +81,7 @@ final class DualLinkDeque implements Iterable {
             }
             var7 = stackIn_24_0;
           }
-          vh.field_h[BufferedSocket.field_b] = var7;
+          ArchiveSourceManager.field_h[BufferedSocket.field_b] = var7;
           if (ce.field_b < var7) {
             ce.field_b = var7;
           }
@@ -105,7 +105,7 @@ final class DualLinkDeque implements Iterable {
             stackIn_57_0 = 0;
           }
           var7Lifetime1 = stackIn_57_0;
-          vh.field_h[BufferedSocket.field_b] = var7Lifetime1;
+          ArchiveSourceManager.field_h[BufferedSocket.field_b] = var7Lifetime1;
           if (ce.field_b < var7Lifetime1) {
             ce.field_b = var7Lifetime1;
           }
@@ -130,7 +130,7 @@ final class DualLinkDeque implements Iterable {
           stackIn_41_0 = 0;
         }
         var7Lifetime2 = stackIn_41_0;
-        vh.field_h[BufferedSocket.field_b] = var7Lifetime2;
+        ArchiveSourceManager.field_h[BufferedSocket.field_b] = var7Lifetime2;
         if (ce.field_b < var7Lifetime2) {
           ce.field_b = var7Lifetime2;
         }
@@ -155,9 +155,9 @@ final class DualLinkDeque implements Iterable {
             byte[] var10 = (byte[]) null;
             DualLinkDeque.a(7, (byte[]) null, -15);
           }
-          od.field_v = (fb) ((Object) new wj());
+          od.field_v = (ArchiveNetworkClient) ((Object) new SocketArchiveNetworkClient());
           ib.field_k = new DiskCacheWorker(param4);
-          mc.field_c = new vh(od.field_v, ib.field_k);
+          mc.field_c = new ArchiveSourceManager(od.field_v, ib.field_k);
         } catch (RuntimeException runtimeException) {
           throw ma.a((Throwable) ((Object) runtimeException), "bg.E(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ',' + (param6 != null ? "{...}" : "null") + ',' + param7 + ',' + param8 + ')');
         }

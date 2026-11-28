@@ -63,7 +63,7 @@ final class di {
               if (!DraggableWidgetContainer.a(-12929, 1)) {
                 return false;
               }
-              pp.field_J = ra.field_c.m(255);
+              pp.field_J = ra.field_c.readCipheredByte(255);
               ra.field_c.position = 0;
               nj.field_b = param0[pp.field_J];
             }

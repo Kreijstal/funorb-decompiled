@@ -238,7 +238,7 @@ final class pt implements WidgetRenderer {
             }
             break;
           }
-          vm.a(stackIn_68_0 != 0, stackIn_68_1, var8, param2, param3);
+          ArchiveNetworkClient.a(stackIn_68_0 != 0, stackIn_68_1, var8, param2, param3);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

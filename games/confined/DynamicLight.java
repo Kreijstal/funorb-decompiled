@@ -176,11 +176,11 @@ final class DynamicLight extends IntrusiveNode {
               if (sg.field_x > 0) {
                 d.field_d = true;
               }
-              vh.field_a.a(ha.field_c, -55);
+              vh.field_a.setCipherSeed(ha.field_c, -55);
               for (var8Lifetime1 = 0; 4 > var8Lifetime1; var8Lifetime1++) {
                 ha.field_c[var8Lifetime1] = ha.field_c[var8Lifetime1] + 50;
               }
-              e.field_c.a(ha.field_c, -121);
+              e.field_c.setCipherSeed(ha.field_c, -121);
               stackIn_76_0 = Confined.field_F;
               return stackIn_76_0;
             }

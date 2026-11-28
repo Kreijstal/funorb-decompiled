@@ -43,14 +43,14 @@ abstract class fb {
             var7 = param1[1].field_n;
             param1[0].draw(param3, param4);
             param1[2].draw(-var6 + (param2 + param3), param4);
-            SoftwareRasterizer.saveClip(ob.field_b);
+            SoftwareRasterizer.saveClip(ArchiveNetworkClient.field_b);
             SoftwareRasterizer.intersectClip(var5_int + param3, param4, -var6 + param2 + param3, param1[param0].field_o + param4);
             var8 = param3 + var5_int;
             var9 = param2 + param3 - var6;
             for (param3 = var8; var9 > param3; param3 = param3 + var7) {
               param1[1].draw(param3, param4);
             }
-            SoftwareRasterizer.restoreClip(ob.field_b);
+            SoftwareRasterizer.restoreClip(ArchiveNetworkClient.field_b);
             return;
           }
           return;

@@ -164,7 +164,7 @@ final class EmailFormatValidator extends TextFieldValidator {
               stackIn_31_0 = -1;
               return stackIn_31_0;
             }
-            kb.field_b.a(Lexicominos.field_E, param0 - 110, ContentTransitionDialog.field_X);
+            kb.field_b.attachSocket(Lexicominos.field_E, param0 - 110, ContentTransitionDialog.field_X);
             lj.field_b = null;
             ContentTransitionDialog.field_X = null;
             gj.field_t = 0;

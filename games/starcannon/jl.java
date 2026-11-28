@@ -555,7 +555,7 @@ final class jl {
             if (!param1) {
               var6 = 16777088;
             }
-            var8 = fl.field_g;
+            var8 = ProxySocketConnector.field_g;
           }
           if (2 == nf.field_l) {
             if (!param1) {

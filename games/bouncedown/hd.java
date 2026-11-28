@@ -5,8 +5,8 @@ final class hd {
     static RgbSprite[] field_a;
 
     final static int a(byte param0) {
-        ih.field_Q.b(-16840);
-        if (!tb.field_p.a((byte) 71)) {
+        ih.field_Q.pollArchiveSources(-16840);
+        if (!SocketArchiveNetworkClient.field_p.pollNetwork((byte) 71)) {
           return hf.b(true);
         }
         if (param0 > 34) {

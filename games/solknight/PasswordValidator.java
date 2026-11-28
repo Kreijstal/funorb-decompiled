@@ -57,7 +57,7 @@ final class PasswordValidator extends TextFieldValidator {
             stackIn_33_0 = SecondaryNodeDeque.field_a;
             return stackIn_33_0;
           }
-          if (ne.a(var5, false, var7)) {
+          if (ArchiveSourceManager.a(var5, false, var7)) {
             stackIn_23_0 = la.field_m;
             return stackIn_23_0;
           }

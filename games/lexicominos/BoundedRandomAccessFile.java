@@ -79,8 +79,8 @@ final class BoundedRandomAccessFile {
         if (param0 <= 98) {
           return -34;
         }
-        nh.field_a.d(72);
-        if (kb.field_b.a((byte) 80)) {
+        nh.field_a.pollArchiveSources(72);
+        if (kb.field_b.pollNetwork((byte) 80)) {
           return 0;
         }
         return EmailFormatValidator.e(0);

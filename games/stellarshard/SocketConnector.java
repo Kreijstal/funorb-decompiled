@@ -38,9 +38,9 @@ abstract class SocketConnector {
         field_a = null;
     }
 
-    abstract java.net.Socket b(int param0) throws IOException;
+    abstract java.net.Socket openSocket(int param0) throws IOException;
 
-    final java.net.Socket a(int param0) throws IOException {
+    final java.net.Socket openDirectSocket(int param0) throws IOException {
         if (param0 == -28548) {
           return new java.net.Socket(this.host, this.port);
         }

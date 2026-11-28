@@ -9,7 +9,7 @@ final class gh extends InteractiveWidget {
     private gh(String param0, WidgetRenderer param1, WidgetEventListener param2) {
         super(param0, param1, param2);
         try {
-          this.field_o = eh.field_j.field_p;
+          this.field_o = ArchiveNetworkClient.field_j.field_p;
         } catch (RuntimeException runtimeException) {
           throw sd.wrapClientException((Throwable) ((Object) runtimeException), "gh.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
@@ -54,9 +54,9 @@ final class gh extends InteractiveWidget {
     }
 
     private gh(String param0, WidgetEventListener param1) {
-        this(param0, eh.field_j.field_d, param1);
+        this(param0, ArchiveNetworkClient.field_j.field_d, param1);
         try {
-          this.field_o = eh.field_j.field_p;
+          this.field_o = ArchiveNetworkClient.field_j.field_p;
         } catch (RuntimeException runtimeException) {
           throw sd.wrapClientException((Throwable) ((Object) runtimeException), "gh.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

@@ -41,9 +41,9 @@ final class gd extends IntrusiveNode {
     final static boolean d(byte param0) {
         if (param0 != -53) {
           gd.d((byte) 85);
-          return nh.field_a.b(-79);
+          return nh.field_a.loadMasterIndex(-79);
         }
-        return nh.field_a.b(-79);
+        return nh.field_a.loadMasterIndex(-79);
     }
 
     public static void clearStaticReferences(byte param0) {

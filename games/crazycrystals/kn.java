@@ -71,7 +71,7 @@ final class kn extends bo implements Cloneable {
           }
           mb.field_g = mb.field_g - 3;
           wd.field_j = wd.field_j - 1;
-          mb.field_g = mb.field_g - ob.field_l;
+          mb.field_g = mb.field_g - ArchiveNetworkClient.field_l;
           tm.field_f.a(32, (param5 + param2) * 12, (param3 + param0) * 12, 60, (byte) -111);
           var9 = (fq) (param1);
           this.field_l.recordTileAttribution(1 << var9.field_u, true, tm.field_e);

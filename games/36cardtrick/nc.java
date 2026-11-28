@@ -6,23 +6,23 @@ final class nc {
     static String field_a;
     static String field_c;
 
-    final static tl a(String param0, byte param1, int param2) {
-        q var3 = null;
+    final static SocketConnector a(String param0, byte param1, int param2) {
+        ProxySocketConnector var3 = null;
         RuntimeException var3_ref = null;
-        q stackIn_3_0 = null;
+        ProxySocketConnector stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var3 = new q();
+          var3 = new ProxySocketConnector();
           if (param1 != 40) {
             field_b = (String) null;
           }
-          ((tl) ((Object) var3)).field_d = param2;
-          ((tl) ((Object) var3)).field_c = param0;
+          ((SocketConnector) ((Object) var3)).field_d = param2;
+          ((SocketConnector) ((Object) var3)).field_c = param0;
           stackIn_3_0 = var3;
-          return (tl) ((Object) stackIn_3_0);
+          return (SocketConnector) ((Object) stackIn_3_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3_ref = decompiledCaughtException;

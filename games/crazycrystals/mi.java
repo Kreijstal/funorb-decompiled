@@ -598,7 +598,7 @@ final class mi extends ea implements Cloneable {
                     ModalDialogHost.field_B = ModalDialogHost.field_B | 1 << var7_int;
                   }
                   wd.field_j = wd.field_j + 1;
-                  fn.field_j = fn.field_j - ob.field_l;
+                  fn.field_j = fn.field_j - ArchiveNetworkClient.field_l;
                 }
               }
               ModalDialogHost.field_B = ModalDialogHost.field_B | 8;
@@ -621,7 +621,7 @@ final class mi extends ea implements Cloneable {
               stackIn_23_0 = this.field_l;
               return stackIn_23_0;
             }
-            ob.field_l = ob.field_l + 1;
+            ArchiveNetworkClient.field_l = ArchiveNetworkClient.field_l + 1;
             mb.field_g = mb.field_g + wd.field_j;
             var7 = new ji(this.field_l, this.field_m * this.field_o, this.field_s * this.field_m);
             if (this.field_s == 0) {
@@ -692,7 +692,7 @@ final class mi extends ea implements Cloneable {
             var6 = (pf) (var5);
             if (var6.field_r) {
               mb.field_g = mb.field_g - wd.field_j;
-              ob.field_l = ob.field_l - 1;
+              ArchiveNetworkClient.field_l = ArchiveNetworkClient.field_l - 1;
               var7 = var6.field_u;
               var8 = var6.field_v;
               if (0 != (var8 | var7) &&

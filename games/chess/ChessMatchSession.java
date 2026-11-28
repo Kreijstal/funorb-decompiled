@@ -715,7 +715,7 @@ final class ChessMatchSession {
         }
         if (this.field_b) {
           qh.field_b.field_q = AchievementNotification.field_l;
-          if (!wn.field_f) {
+          if (!SocketConnector.field_f) {
             if (DisplayNameSelectionPanel.field_O <= 1) {
               if (DisplayNameSelectionPanel.field_O == 1) {
                 qh.field_b.field_q = ModalDialogHost.field_U;
@@ -743,9 +743,9 @@ final class ChessMatchSession {
           if (param0) {
             qh.field_b.c((byte) -95);
             if (qh.field_b.field_d) {
-              stackIn_23_0 = !(wn.field_f);
-              wn.field_f = stackIn_23_0;
-              if (wn.field_f) {
+              stackIn_23_0 = !(SocketConnector.field_f);
+              SocketConnector.field_f = stackIn_23_0;
+              if (SocketConnector.field_f) {
                 DisplayNameSelectionPanel.field_O = 0;
               }
             }
@@ -945,7 +945,7 @@ final class ChessMatchSession {
         if (this.field_B.field_f != -2 &&
           !this.field_p) {
           this.field_p = true;
-          if (hj.field_i &&
+          if (ArchiveSourceManager.field_i &&
             MatchingFieldValidator.field_p != null &&
             MatchingFieldValidator.field_p.field_b) {
             if (MatchingFieldValidator.field_p.field_a == MatchingFieldValidator.field_p.field_B.field_f) {

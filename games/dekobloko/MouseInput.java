@@ -259,7 +259,7 @@ final class MouseInput implements java.awt.event.MouseListener, java.awt.event.M
         RuntimeException caughtExceptionLocal7 = null;
         try {
           integerLocal1 = 82 % ((-69 - byteArgument2) / 43);
-          stackBooleanLocal3 = (cipherPacketBufferArgument1.computeInteger1637(1, (byte) 53) == 1);
+          stackBooleanLocal3 = (cipherPacketBufferArgument1.readBits(1, (byte) 53) == 1);
           return stackBooleanLocal3;
         } catch (java.lang.RuntimeException caughtParameterLocal8) {
           caughtExceptionLocal7 = caughtParameterLocal8;

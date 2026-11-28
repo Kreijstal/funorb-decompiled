@@ -24,7 +24,7 @@ final class lb {
             if (RichTextWidget.field_H.b(true)) {
               var1_int = 1;
             }
-            if (13 != da.field_b) {
+            if (13 != MouseInputHandler.field_b) {
               continue;
             }
             var2 = 1;

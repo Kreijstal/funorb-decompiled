@@ -55,7 +55,7 @@ final class af extends IntrusiveNode {
               var5 = param0.readUnsignedByte((byte) -54);
               if ((~nn.field_l != ~var5 ||
                 var4 != 0) &&
-                (!ne.a(var5, uf.field_q, param0, (byte) -99) ||
+                (!ne.a(var5, SocketArchiveNetworkClient.field_q, param0, (byte) -99) ||
                 var4 != 0)) {
                 if (var5 != el.field_d) {
                   discarded$0 = var8.append((char)var5);
@@ -67,7 +67,7 @@ final class af extends IntrusiveNode {
                     throw new RuntimeException("Unterminated quote!");
                   }
                   var6 = param0.readByte(4);
-                  if (!ne.a(var6, uf.field_q, param0, (byte) -81) &&
+                  if (!ne.a(var6, SocketArchiveNetworkClient.field_q, param0, (byte) -81) &&
                     nn.field_l != var6) {
                     if (var6 == el.field_d) {
                       discarded$1 = var8.append((char)var6);

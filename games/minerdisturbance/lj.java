@@ -58,7 +58,7 @@ final class lj extends IntrusiveNode {
         CipherPacketBuffer var9 = null;
         var8 = MinerDisturbance.field_ab;
         try {
-          var2_int = param0.c((byte) -70, 8);
+          var2_int = param0.readBits((byte) -70, 8);
           if (var2_int > 0) {
             throw new IllegalStateException("" + var2_int);
           }
@@ -69,16 +69,16 @@ final class lj extends IntrusiveNode {
           var3 = ql.a(param0, (byte) 100) ? 1 : 0;
           var4 = ql.a(param0, (byte) 100) ? 1 : 0;
           var5 = new pb();
-          var5.field_y = (short)param0.c((byte) -71, 16);
+          var5.field_y = (short)param0.readBits((byte) -71, 16);
           var5.field_n = MusicPatchPcmStream.a(param0, 16, -125, var5.field_n);
           var5.field_M = MusicPatchPcmStream.a(param0, 16, -87, var5.field_M);
           var5.field_Q = MusicPatchPcmStream.a(param0, 16, -126, var5.field_Q);
-          var5.field_I = (short)param0.c((byte) -81, 16);
+          var5.field_I = (short)param0.readBits((byte) -81, 16);
           var5.field_e = MusicPatchPcmStream.a(param0, 16, -95, var5.field_e);
           var5.field_O = MusicPatchPcmStream.a(param0, 16, -74, var5.field_O);
           var5.field_F = MusicPatchPcmStream.a(param0, 16, -78, var5.field_F);
           if (var3 != 0) {
-            var5.field_g = (short)param0.c((byte) -105, 16);
+            var5.field_g = (short)param0.readBits((byte) -105, 16);
             var5.field_C = MusicPatchPcmStream.a(param0, 16, -100, var5.field_C);
             var5.field_q = MusicPatchPcmStream.a(param0, 16, -83, var5.field_q);
             var5.field_B = MusicPatchPcmStream.a(param0, 16, -128, var5.field_B);
@@ -87,7 +87,7 @@ final class lj extends IntrusiveNode {
             var5.field_d = MusicPatchPcmStream.a(param0, 16, -55, var5.field_d);
           }
           if (var4 != 0) {
-            param0.c((byte) -67, 16);
+            param0.readBits((byte) -67, 16);
             var5.field_s = MusicPatchPcmStream.a(param0, 16, -66, var5.field_s);
             var5.field_u = MusicPatchPcmStream.a(param0, 16, -62, var5.field_u);
             var5.field_i = MusicPatchPcmStream.a(param0, 16, -84, var5.field_i);

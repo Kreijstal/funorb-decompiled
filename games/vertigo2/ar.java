@@ -75,7 +75,7 @@ final class ar {
           var2.writeByte(gd.field_j.field_uc, -116);
           var4 = (gd.field_j.field_xc << 6) + gd.field_j.field_Ub;
           var2.writeByte(var4, -109);
-          var2.a(0, -10140, gd.field_j.field_fc, gd.field_j.field_fc.length);
+          var2.writeBytes(0, -10140, gd.field_j.field_fc, gd.field_j.field_fc.length);
           var2.patchByteLength((byte) 6, -var3 + var2.position);
           return;
         }
@@ -83,7 +83,7 @@ final class ar {
         var2.writeByte(gd.field_j.field_uc, -116);
         var4Lifetime1 = (gd.field_j.field_xc << 6) + gd.field_j.field_Ub;
         var2.writeByte(var4Lifetime1, -109);
-        var2.a(0, -10140, gd.field_j.field_fc, gd.field_j.field_fc.length);
+        var2.writeBytes(0, -10140, gd.field_j.field_fc, gd.field_j.field_fc.length);
         var2.patchByteLength((byte) 6, -var3 + var2.position);
     }
 

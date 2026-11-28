@@ -207,13 +207,13 @@ final class sj {
               }
               var9 = stackIn_46_0;
               if (var9 != null) {
-                var9.a((byte) -122, var1_int, tl.field_b + (a.field_o << 1), var8Lifetime1 - tc.field_b, var7Lifetime1 + (tc.field_b << 1));
+                var9.a((byte) -122, var1_int, SocketConnector.field_b + (SocketArchiveNetworkClient.field_o << 1), var8Lifetime1 - tc.field_b, var7Lifetime1 + (tc.field_b << 1));
               }
-              var1_int = var1_int + a.field_o;
+              var1_int = var1_int + SocketArchiveNetworkClient.field_o;
             }
             if (var4 >= 0) {
               NetworkGameClient.field_u.drawString(var6, var8Lifetime1, var1_int + field_c, var5, -1);
-              var1_int = var1_int + (a.field_o - (-e.field_i - tl.field_b));
+              var1_int = var1_int + (SocketArchiveNetworkClient.field_o - (-e.field_i - SocketConnector.field_b));
             } else {
               mb.field_a.drawString(var6, var8Lifetime1, mg.field_q + var1_int, var5, -1);
               var1_int = var1_int + sa.field_d;

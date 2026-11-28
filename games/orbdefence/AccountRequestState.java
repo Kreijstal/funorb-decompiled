@@ -315,7 +315,7 @@ final class AccountRequestState {
         byte[] var2Lifetime185;
         var3 = OrbDefence.field_D ? 1 : 0;
         try {
-          md.field_d = param0;
+          ProxySocketConnector.field_d = param0;
           var2 = jk.a(1, "orbisdeaded");
           if (null != var2) {
             fd.field_d = ProxyAuthenticationRequiredException.a(var2, -12465);
@@ -1063,7 +1063,7 @@ final class AccountRequestState {
           if (var2Lifetime185 != null) {
             SpriteGeometry.field_r[2] = ProxyAuthenticationRequiredException.a(var2Lifetime185, -12465);
           }
-          md.field_d = null;
+          ProxySocketConnector.field_d = null;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;

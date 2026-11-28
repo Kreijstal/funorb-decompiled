@@ -159,7 +159,7 @@ final class cd {
     final FullscreenFocusCanvas a(byte param0) {
         FullscreenFocusCanvas var2 = null;
         this.field_y = sd.field_c;
-        this.field_r = fl.field_v;
+        this.field_r = SocketArchiveNetworkClient.field_v;
         this.field_t.a(this.field_A, -77, this.field_u);
         if (param0 < -74) {
           sa.field_c = false;
@@ -204,7 +204,7 @@ final class cd {
               if (var2 != sd.field_c) {
                 this.field_t.a(var3, -77, var2);
               } else {
-                if (fl.field_v != var3) {
+                if (SocketArchiveNetworkClient.field_v != var3) {
                   this.field_t.a(var3, -77, var2);
                 }
               }
@@ -224,7 +224,7 @@ final class cd {
             if (var2 != sd.field_c) {
               this.field_t.a(var3, -77, var2);
             } else {
-              if (fl.field_v != var3) {
+              if (SocketArchiveNetworkClient.field_v != var3) {
                 this.field_t.a(var3, -77, var2);
               }
             }
@@ -246,7 +246,7 @@ final class cd {
               if (var2 != sd.field_c) {
                 this.field_t.a(var3, -77, var2);
               } else {
-                if (fl.field_v != var3) {
+                if (SocketArchiveNetworkClient.field_v != var3) {
                   this.field_t.a(var3, -77, var2);
                 }
               }
@@ -264,7 +264,7 @@ final class cd {
                 if (var2 != sd.field_c) {
                   this.field_t.a(var3, -77, var2);
                 } else {
-                  if (fl.field_v != var3) {
+                  if (SocketArchiveNetworkClient.field_v != var3) {
                     this.field_t.a(var3, -77, var2);
                   }
                 }
@@ -281,7 +281,7 @@ final class cd {
               }
               return;
             }
-            if (fl.field_v == var3) {
+            if (SocketArchiveNetworkClient.field_v == var3) {
               if (this.field_i > 0) {
                 ra.field_g = (-sd.field_c + this.field_i) / 2;
               }
@@ -311,7 +311,7 @@ final class cd {
                 }
                 return;
               }
-              if (fl.field_v != var3) {
+              if (SocketArchiveNetworkClient.field_v != var3) {
                 this.field_t.a(var3, -77, var2);
               }
               decompiledFrameRemainder0 = false;
@@ -322,7 +322,7 @@ final class cd {
           if (var2 != sd.field_c) {
             this.field_t.a(var3, -77, var2);
           } else {
-            if (fl.field_v != var3) {
+            if (SocketArchiveNetworkClient.field_v != var3) {
               this.field_t.a(var3, -77, var2);
             }
           }
@@ -390,7 +390,7 @@ final class cd {
           if (this.field_i > sd.field_c) {
             ra.field_g = (this.field_i - sd.field_c) / 2;
             if (sd.field_c == this.field_f &&
-              this.field_n == fl.field_v) {
+              this.field_n == SocketArchiveNetworkClient.field_v) {
               return;
             }
             this.field_t.a(this.field_n, -77, this.field_f);
@@ -398,7 +398,7 @@ final class cd {
           }
           if (this.field_i <= 0) {
             if (sd.field_c == this.field_f &&
-              this.field_n == fl.field_v) {
+              this.field_n == SocketArchiveNetworkClient.field_v) {
               return;
             }
             this.field_t.a(this.field_n, -77, this.field_f);
@@ -409,7 +409,7 @@ final class cd {
         if (sd.field_c != this.field_f) {
           this.field_t.a(this.field_n, -77, this.field_f);
         } else {
-          if (this.field_n != fl.field_v) {
+          if (this.field_n != SocketArchiveNetworkClient.field_v) {
             this.field_t.a(this.field_n, -77, this.field_f);
           }
         }

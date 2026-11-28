@@ -82,7 +82,7 @@ final class rg {
             var5 = var3.field_j;
             ValidationStatusWidget.field_M[0] = qg.field_r;
             for (var6_int = 1; var4 > var6_int; var6_int++) {
-              ValidationStatusWidget.field_M[var6_int] = var14.o(32);
+              ValidationStatusWidget.field_M[var6_int] = var14.readString(32);
             }
             qh.a(var4, var5, param0 + 95);
             for (var6_intLifetime1 = 0; var4 > var6_intLifetime1; var6_intLifetime1++) {

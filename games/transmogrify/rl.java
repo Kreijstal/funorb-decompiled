@@ -89,8 +89,8 @@ final class rl {
         if (param0 != -6) {
           return 92;
         }
-        BufferedRandomAccessFile.field_j.a(false);
-        if (!oh.field_h.c((byte) 124)) {
+        BufferedRandomAccessFile.field_j.pollArchiveSources(false);
+        if (!oh.field_h.pollNetwork((byte) 124)) {
           return ai.a(2);
         }
         return 0;

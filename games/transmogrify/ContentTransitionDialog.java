@@ -28,7 +28,7 @@ abstract class ContentTransitionDialog extends ResizableModalDialog {
           this.finishResize(-97);
           return super.advanceDialogAnimation(0);
         }
-        if (this.field_W == uh.field_r) {
+        if (this.field_W == ArchiveNetworkClient.field_r) {
           fieldTemp$2 = this.field_ab + 1;
           this.field_ab = this.field_ab + 1;
           if (fieldTemp$2 != this.field_P) {
@@ -102,7 +102,7 @@ abstract class ContentTransitionDialog extends ResizableModalDialog {
     }
 
     final void resizeCompleted(byte param0) {
-        if (this.field_W == uh.field_r) {
+        if (this.field_W == ArchiveNetworkClient.field_r) {
           return;
         }
         this.field_ab = 0;
@@ -156,11 +156,11 @@ abstract class ContentTransitionDialog extends ResizableModalDialog {
             this.field_ab = 0;
             return;
           }
-          if (uh.field_r == this.field_W) {
+          if (ArchiveNetworkClient.field_r == this.field_W) {
             return;
           }
           this.field_ab = 0;
-          this.field_W = uh.field_r;
+          this.field_W = ArchiveNetworkClient.field_r;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -176,7 +176,7 @@ abstract class ContentTransitionDialog extends ResizableModalDialog {
         }
     }
 
-    final static void a(int param0, java.awt.Component param1) {
+    final static void detachKeyboardListeners(int param0, java.awt.Component param1) {
         try {
           param1.removeKeyListener(el.field_n);
           param1.removeFocusListener(el.field_n);

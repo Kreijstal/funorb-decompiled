@@ -145,7 +145,7 @@ final class PlatformTaskDispatcher implements Runnable {
         return this.enqueueTask(0, 7, param0, 0, 0);
     }
 
-    private final static BoundedRandomAccessFile a(String param0, byte param1, String param2, int param3) {
+    private final static BoundedRandomAccessFile openPreferencesFile(String param0, byte param1, String param2, int param3) {
         try {
           int var6 = 0;
           BoundedRandomAccessFile stackIn_15_0 = null;
@@ -377,11 +377,11 @@ final class PlatformTaskDispatcher implements Runnable {
                         }
                         break;
                       case 13:
-                        var3_ref2 = PlatformTaskDispatcher.a("", (byte) -77, (String) (var8.objectArgument), field_l);
+                        var3_ref2 = PlatformTaskDispatcher.openPreferencesFile("", (byte) -77, (String) (var8.objectArgument), field_l);
                         var8.result = var3_ref2;
                         break;
                       case 12:
-                        var3_ref2 = PlatformTaskDispatcher.a(field_p, (byte) -77, (String) (var8.objectArgument), field_l);
+                        var3_ref2 = PlatformTaskDispatcher.openPreferencesFile(field_p, (byte) -77, (String) (var8.objectArgument), field_l);
                         var8.result = var3_ref2;
                         break;
                       case 7:
@@ -449,7 +449,7 @@ final class PlatformTaskDispatcher implements Runnable {
                     }
                     try {
                       if (false) throw (ProxyAuthenticationRequiredException) null;
-                      var8.result = StandardContentDialog.a((String) (var8.objectArgument), var8.intArgument, (byte) 58).a(true);
+                      var8.result = StandardContentDialog.a((String) (var8.objectArgument), var8.intArgument, (byte) 58).openSocket(true);
                     } catch (ProxyAuthenticationRequiredException decompiledCaughtParameter2) {
                       decompiledCaughtException = decompiledCaughtParameter2;
                       var3_ref3 = (ProxyAuthenticationRequiredException) (Object) decompiledCaughtException;

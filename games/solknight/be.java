@@ -23,7 +23,7 @@ final class be extends InteractiveWidget {
         int var8;
         var8 = SolKnight.field_L ? 1 : 0;
         var1 = -ArchiveSource.field_c + 320;
-        var2 = -SingleChildWidgetContainer.field_E + (-ea.field_p[kb.field_b] + 720);
+        var2 = -SingleChildWidgetContainer.field_E + (-SocketArchiveNetworkClient.field_p[kb.field_b] + 720);
         if (ClientException.field_b >= 0) {
           var3 = -var1 - ArchiveSource.field_c + ((ArchiveRequest.field_o >> 4) + 320);
           var4 = -var2 - SingleChildWidgetContainer.field_E + (AccountServiceResult.field_e >> 4);
@@ -37,19 +37,19 @@ final class be extends InteractiveWidget {
             wb.field_c != 0) && (!(wb.field_b > 0) ||
             !(kb.field_b >= 7))) {
             if (var5 <= kd.field_b[kb.field_b]) {
-              var4 = ea.field_p[kb.field_b] - 720 + ProgressMessageDialog.field_sb;
+              var4 = SocketArchiveNetworkClient.field_p[kb.field_b] - 720 + ProgressMessageDialog.field_sb;
               var3 = FrameTimer.field_b;
               var5 = (int)Math.sqrt((double)(var3 * var3 + var4 * var4));
             }
             FrameTimer.field_b = (32 + kd.field_b[kb.field_b]) * var3 / var5;
-            ProgressMessageDialog.field_sb = -ea.field_p[kb.field_b] + 720 + (32 + kd.field_b[kb.field_b]) * var4 / var5;
+            ProgressMessageDialog.field_sb = -SocketArchiveNetworkClient.field_p[kb.field_b] + 720 + (32 + kd.field_b[kb.field_b]) * var4 / var5;
             jj.field_t = (int)(Math.atan2((double)(-var3), (double)(-var4)) * 128.0 / 3.141592653589793);
             var3 = FrameTimer.field_b;
-            var4 = ProgressMessageDialog.field_sb + (ea.field_p[kb.field_b] - 720);
+            var4 = ProgressMessageDialog.field_sb + (SocketArchiveNetworkClient.field_p[kb.field_b] - 720);
             break regionExit1;
           }
           var3 = FrameTimer.field_b;
-          var4 = ProgressMessageDialog.field_sb + ea.field_p[kb.field_b] - 720;
+          var4 = ProgressMessageDialog.field_sb + SocketArchiveNetworkClient.field_p[kb.field_b] - 720;
         }
         var5 = (int)Math.sqrt((double)(var3 * var3 + var4 * var4));
         if (ClientException.field_b > 250) {

@@ -18,7 +18,7 @@ final class CipherPacketBuffer extends PacketBuffer {
         super(param0);
     }
 
-    final static boolean l(int param0) {
+    final static boolean hasOpenDialog(int param0) {
         if (param0 >= -59) {
           return false;
         }
@@ -31,7 +31,7 @@ final class CipherPacketBuffer extends PacketBuffer {
         return true;
     }
 
-    final int d(byte param0, int param1) {
+    final int readBits(byte param0, int param1) {
         int incrementValue$0 = 0;
         int incrementValue$1 = 0;
         int var4 = 0;
@@ -41,7 +41,7 @@ final class CipherPacketBuffer extends PacketBuffer {
         int var4Lifetime1;
         int var5Lifetime1;
         if (param0 >= -47) {
-          this.k(-102);
+          this.endBitAccess(-102);
         } else {
           var4 = -(7 & this.field_l) + 8;
           this.field_l = this.field_l + param1;
@@ -78,7 +78,7 @@ final class CipherPacketBuffer extends PacketBuffer {
         return var5Lifetime1;
     }
 
-    final void d(int param0, int param1) {
+    final void writeCipheredByte(int param0, int param1) {
         int fieldTemp$0 = this.position;
         this.position = this.position + 1;
         this.payload[fieldTemp$0] = (byte)(this.field_r.nextInt(false) + param1);
@@ -87,18 +87,18 @@ final class CipherPacketBuffer extends PacketBuffer {
         }
     }
 
-    final void a(int[] param0, boolean param1) {
+    final void setCipherSeed(int[] param0, boolean param1) {
         try {
           this.field_r = new IsaacRandom(param0);
           if (!param1) {
-            this.d(42, 32);
+            this.writeCipheredByte(42, 32);
           }
         } catch (RuntimeException runtimeException) {
           throw dn.wrapClientException((Throwable) ((Object) runtimeException), "md.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
-    final static PuzzleTile[][] a(int param0, boolean param1, int param2, int param3, PuzzleTile[][] param4) {
+    final static PuzzleTile[][] copyPuzzleTilesWithBorder(int param0, boolean param1, int param2, int param3, PuzzleTile[][] param4) {
         int var6 = 0;
         PuzzleTile[][] stackIn_14_0 = null;
         RuntimeException stackIn_17_0 = null;
@@ -146,10 +146,10 @@ final class CipherPacketBuffer extends PacketBuffer {
         }
     }
 
-    final int e(boolean param0) {
+    final int readCipheredByte(boolean param0) {
         int fieldTemp$0 = 0;
         if (!param0) {
-          this.e(false);
+          this.readCipheredByte(false);
           fieldTemp$0 = this.position;
           this.position = this.position + 1;
           return 255 & this.payload[fieldTemp$0] - this.field_r.nextInt(!param0 ? true : false);
@@ -159,7 +159,7 @@ final class CipherPacketBuffer extends PacketBuffer {
         return 255 & this.payload[fieldTemp$1] - this.field_r.nextInt(!param0 ? true : false);
     }
 
-    final void b(int param0, int param1, int param2, byte[] param3) {
+    final void readCipheredBytes(int param0, int param1, int param2, byte[] param3) {
         int var5_int = 0;
         int fieldTemp$0 = 0;
         RuntimeException stackIn_9_0 = null;
@@ -193,7 +193,7 @@ final class CipherPacketBuffer extends PacketBuffer {
         }
     }
 
-    final void k(int param0) {
+    final void endBitAccess(int param0) {
         if (param0 != -2321) {
           ResourceArchive var3 = (ResourceArchive) null;
           CipherPacketBuffer.loadMusicPatch(6, -104, (ResourceArchive) null);
@@ -238,7 +238,7 @@ final class CipherPacketBuffer extends PacketBuffer {
             return (MusicPatch) (stackIn_2_0);
           }
           if (param1 < 74) {
-            CipherPacketBuffer.a(-108, true, 93, 119, (PuzzleTile[][]) null);
+            CipherPacketBuffer.copyPuzzleTilesWithBorder(-108, true, 93, 119, (PuzzleTile[][]) null);
           }
           stackIn_6_0 = new MusicPatch(var4);
           return stackIn_6_0;
@@ -256,7 +256,7 @@ final class CipherPacketBuffer extends PacketBuffer {
         }
     }
 
-    final void f(byte param0) {
+    final void beginBitAccess(byte param0) {
         int var2 = 121 % ((param0 + 48) / 50);
         this.field_l = 8 * this.position;
     }

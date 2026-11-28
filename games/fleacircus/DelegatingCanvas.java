@@ -15,8 +15,8 @@ final class DelegatingCanvas extends java.awt.Canvas {
     }
 
     final static int a(int param0) {
-        ByteArrayPoolSupport.field_e.a(-23608);
-        if (!BufferedSocket.field_k.b((byte) 66)) {
+        ByteArrayPoolSupport.field_e.pollArchiveSources(-23608);
+        if (!BufferedSocket.field_k.pollNetwork((byte) 66)) {
           return NameSuggestionsPanel.a(125);
         }
         if (param0 <= 37) {

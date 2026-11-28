@@ -170,7 +170,7 @@ final class LoginPanel extends DequeWidgetContainer implements TextFieldListener
           fn.field_j = TextLineMetrics.field_c;
           wd.field_j = df.field_c;
           mb.field_g = field_I;
-          ob.field_l = AccountNameAvailabilityValidator.field_k;
+          ArchiveNetworkClient.field_l = AccountNameAvailabilityValidator.field_k;
         }
         MouseInputHandler.field_b = (ue) ((Object) var2);
         var3 = null;

@@ -6,7 +6,7 @@ import java.util.*;
 final class GzipDecompressor {
     private java.util.zip.Inflater field_b;
     static long[] field_a;
-    static nf field_c;
+    static KeyboardInputHandler field_c;
     static BitmapFont field_d;
 
     public GzipDecompressor() {
@@ -80,27 +80,27 @@ final class GzipDecompressor {
     }
 
     final static fe a(byte param0) {
-        if (null == ca.field_b) {
-          ca.field_b = new fe();
-          ca.field_b.a(32, FrameTimer.field_a);
-          ca.field_b.field_m = 2763306;
-          ca.field_b.field_f = 5;
-          ca.field_b.field_n = 14;
-          ca.field_b.field_q = 7697781;
-          ca.field_b.field_d = field_d;
-          ca.field_b.field_k = 6;
-          ca.field_b.field_o = 0;
-          ca.field_b.field_h = 4;
+        if (null == SlimeCollisionSupport.field_b) {
+          SlimeCollisionSupport.field_b = new fe();
+          SlimeCollisionSupport.field_b.a(32, FrameTimer.field_a);
+          SlimeCollisionSupport.field_b.field_m = 2763306;
+          SlimeCollisionSupport.field_b.field_f = 5;
+          SlimeCollisionSupport.field_b.field_n = 14;
+          SlimeCollisionSupport.field_b.field_q = 7697781;
+          SlimeCollisionSupport.field_b.field_d = field_d;
+          SlimeCollisionSupport.field_b.field_k = 6;
+          SlimeCollisionSupport.field_b.field_o = 0;
+          SlimeCollisionSupport.field_b.field_h = 4;
         }
         if (param0 == 67) {
-          return ca.field_b;
+          return SlimeCollisionSupport.field_b;
         }
         field_a = (long[]) null;
-        return ca.field_b;
+        return SlimeCollisionSupport.field_b;
     }
 
     static {
         field_a = new long[32];
-        field_c = new nf();
+        field_c = new KeyboardInputHandler();
     }
 }

@@ -335,16 +335,16 @@ class RichTextWidget extends InteractiveWidget {
               }
               var9 = stackIn_43_0;
               if (var9 != null) {
-                var9.a(var1_int, -jd.field_g + var8Lifetime1, (byte) 103, (n.field_d << 1) + af.field_Z, (jd.field_g << 1) + var7Lifetime1);
+                var9.a(var1_int, -jd.field_g + var8Lifetime1, (byte) 103, (SocketConnector.field_d << 1) + af.field_Z, (jd.field_g << 1) + var7Lifetime1);
               }
-              var1_int = var1_int + n.field_d;
+              var1_int = var1_int + SocketConnector.field_d;
             }
             if (var4 < 0) {
               rn.field_e.drawString(var6, var8Lifetime1, ProgressMessageDialog.field_Ab + var1_int, var5, -1);
               var1_int = var1_int + wm.field_bb;
             } else {
               dn.field_f.drawString(var6, var8Lifetime1, var1_int + nm.field_z, var5, -1);
-              var1_int = var1_int + (n.field_d + kb.field_b + af.field_Z);
+              var1_int = var1_int + (SocketConnector.field_d + kb.field_b + af.field_Z);
             }
           }
           return;

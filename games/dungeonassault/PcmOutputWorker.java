@@ -105,7 +105,7 @@ final class PcmOutputWorker implements Runnable {
               stackIn_36_0 = -1;
               return stackIn_36_0;
             }
-            Raider.field_a.a(pe.field_l, ByteArrayPoolSupport.field_c, (byte) 118);
+            Raider.field_a.attachSocket(pe.field_l, ByteArrayPoolSupport.field_c, (byte) 118);
             pe.field_l = null;
             ba.field_f = 0;
             IterableNodeHashTable.field_e = null;

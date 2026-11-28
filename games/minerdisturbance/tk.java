@@ -67,7 +67,7 @@ final class tk implements uj {
         CipherPacketBuffer var3 = null;
         try {
           var3 = sn.field_c;
-          var3.d((byte) -82, param1);
+          var3.writeCipheredByte((byte) -82, param1);
           var3.writeByte(param0.field_o, 25564);
           if (param2 != -102) {
             tk.b(true);
@@ -181,27 +181,27 @@ final class tk implements uj {
         int var8 = 0;
         var8 = MinerDisturbance.field_ab;
         try {
-          var2_int = param1.c((byte) -104, 8);
+          var2_int = param1.readBits((byte) -104, 8);
           if (var2_int > 0) {
             return null;
           }
-          var3 = param1.c((byte) -122, 12);
+          var3 = param1.readBits((byte) -122, 12);
           var4 = new ud[var3];
           var5 = 0;
           var6 = -77 % ((param0 - 67) / 45);
           while (var5 < var3) {
             if (ql.a(param1, (byte) 100)) {
               var7 = new ud();
-              param1.c((byte) -95, 24);
-              param1.c((byte) -81, 24);
-              var7.field_d = param1.c((byte) -99, 24);
-              param1.c((byte) -72, 9);
-              param1.c((byte) -83, 12);
-              param1.c((byte) -68, 12);
-              param1.c((byte) -126, 12);
+              param1.readBits((byte) -95, 24);
+              param1.readBits((byte) -81, 24);
+              var7.field_d = param1.readBits((byte) -99, 24);
+              param1.readBits((byte) -72, 9);
+              param1.readBits((byte) -83, 12);
+              param1.readBits((byte) -68, 12);
+              param1.readBits((byte) -126, 12);
               var4[var5] = var7;
             } else {
-              var7_int = param1.c((byte) -110, ol.a(var5 - 1, 8));
+              var7_int = param1.readBits((byte) -110, ol.a(var5 - 1, 8));
               var4[var5] = var4[var7_int];
             }
             var5++;

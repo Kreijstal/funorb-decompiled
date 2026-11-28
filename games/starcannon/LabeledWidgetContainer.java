@@ -198,7 +198,7 @@ final class LabeledWidgetContainer extends SingleChildWidgetContainer {
               if (var9 > var3_int) {
                 var3_int = var9;
               }
-              var9 = var4.stringWidth(fl.field_g);
+              var9 = var4.stringWidth(ProxySocketConnector.field_g);
               if (var3_int < var9) {
                 var3_int = var9;
               }

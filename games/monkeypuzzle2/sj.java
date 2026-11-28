@@ -174,7 +174,7 @@ final class sj {
             h.a(3, 16777215, 0, false, NameSuggestionsPanel.field_F[var7].field_j, 0, NameSuggestionsPanel.field_F[var7].field_k, NameSuggestionsPanel.field_F[var7]);
           }
           ac.field_a.setAsRasterTarget((byte) 119);
-          wl.field_f = GuestPlayConfirmationForm.a(false, "", param3, "catapult");
+          ArchiveNetworkClient.field_f = GuestPlayConfirmationForm.a(false, "", param3, "catapult");
           DebouncedFieldValidator.field_d = ma.a(param3, "sun", 16711680, "");
           qa.field_i = ma.a(param3, "moon", param4 ^ 16711680, "");
           Bzip2State.field_D = new Sprite[5];
@@ -214,7 +214,7 @@ final class sj {
           j.field_g = ma.a(param3, "raft", 16711680, "");
           ci.field_d = ma.a(param3, "arrow", 16711680, "");
           ak.field_t = GuestPlayConfirmationForm.a(false, "", param3, "sprite_coconuts");
-          qh.field_a = GuestPlayConfirmationForm.a(false, "", param3, "gecko");
+          MouseInputHandler.field_a = GuestPlayConfirmationForm.a(false, "", param3, "gecko");
           SpriteState.field_p = GuestPlayConfirmationForm.a(false, "", param3, "waterfall_central");
           cl.field_c = GuestPlayConfirmationForm.a(false, "", param3, "waterfall_bottom");
           MouseWheelInput.field_a[0] = GuestPlayConfirmationForm.a(false, "", param3, "fish_a");

@@ -19,39 +19,39 @@ final class aea extends k {
         if ((double)var6 >= -3.141592653589793 &&
           (double)var6 <= -2.356194490192345) {
           AttackUpAllEvent.field_s = param1;
-          kb.field_g = param2;
+          ArchiveSourceManager.field_g = param2;
         } else if (-1.5707963267948966 >= (double)var6 &&
           -2.356194490192345 <= (double)var6) {
           AttackUpAllEvent.field_s = param2;
-          kb.field_g = param1;
+          ArchiveSourceManager.field_g = param1;
         } else if (-0.7853981633974483 >= (double)var6 &&
           -1.5707963267948966 <= (double)var6) {
-          kb.field_g = -param1 + hh.field_d;
+          ArchiveSourceManager.field_g = -param1 + hh.field_d;
           AttackUpAllEvent.field_s = param2;
         } else if (var6 <= 0.0f &&
           (double)var6 >= -0.7853981633974483) {
-          kb.field_g = param2;
+          ArchiveSourceManager.field_g = param2;
           AttackUpAllEvent.field_s = bi.field_g - param1;
         } else if (0.0f <= var6 &&
           0.7853981633974483 >= (double)var6) {
           AttackUpAllEvent.field_s = bi.field_g - param1;
-          kb.field_g = -param2 + hh.field_d;
+          ArchiveSourceManager.field_g = -param2 + hh.field_d;
         } else if (0.7853981633974483 <= (double)var6 &&
           (double)var6 <= 1.5707963267948966) {
-          kb.field_g = -param1 + hh.field_d;
+          ArchiveSourceManager.field_g = -param1 + hh.field_d;
           AttackUpAllEvent.field_s = -param2 + bi.field_g;
         } else if (1.5707963267948966 <= (double)var6 &&
           (double)var6 <= 2.356194490192345) {
           AttackUpAllEvent.field_s = -param2 + bi.field_g;
-          kb.field_g = param1;
+          ArchiveSourceManager.field_g = param1;
         } else {
           if ((double)var6 >= 2.356194490192345 &&
             (double)var6 <= 3.141592653589793) {
-            kb.field_g = -param2 + hh.field_d;
+            ArchiveSourceManager.field_g = -param2 + hh.field_d;
             AttackUpAllEvent.field_s = param1;
           }
         }
-        kb.field_g = kb.field_g & wp.field_r;
+        ArchiveSourceManager.field_g = ArchiveSourceManager.field_g & wp.field_r;
         AttackUpAllEvent.field_s = AttackUpAllEvent.field_s & it.field_r;
     }
 
@@ -76,9 +76,9 @@ final class aea extends k {
           for (var7 = 0; var7 < hh.field_d; var7++) {
             this.a(1, param1, var7);
             var14 = this.a((byte) -91, 0, AttackUpAllEvent.field_s);
-            var4[var7] = var14[0][kb.field_g];
-            var5[var7] = var14[1][kb.field_g];
-            var6[var7] = var14[2][kb.field_g];
+            var4[var7] = var14[0][ArchiveSourceManager.field_g];
+            var5[var7] = var14[1][ArchiveSourceManager.field_g];
+            var6[var7] = var14[2][ArchiveSourceManager.field_g];
           }
         }
         return var10;
@@ -97,7 +97,7 @@ final class aea extends k {
           for (var4 = 0; hh.field_d > var4; var4++) {
             this.a(param1 ^ 1, param0, var4);
             var5 = this.a(0, AttackUpAllEvent.field_s, (byte) 118);
-            var7[var4] = var5[kb.field_g];
+            var7[var4] = var5[ArchiveSourceManager.field_g];
           }
         }
         return var3;

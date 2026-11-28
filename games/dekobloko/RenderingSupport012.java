@@ -60,7 +60,7 @@ final class RenderingSupport012 {
         integerLocal3 = 0;
         integerLocal4 = 0;
         while (integerLocal3 < 8) {
-          this.longArrayState0004[integerLocal3] = ResourceSupport004.bitwiseXor(ResourceSupport004.bitwiseXor(LoginCredentials.bitwiseAnd((long)this.byteArrayState0023[integerLocal4 + 6], 255L) << 8, ResourceSupport004.bitwiseXor(LoginCredentials.bitwiseAnd((long)this.byteArrayState0023[integerLocal4 + 5] << 16, 16711680L), ResourceSupport004.bitwiseXor(LoginCredentials.bitwiseAnd(4278190080L, (long)this.byteArrayState0023[integerLocal4 + 4] << 24), ResourceSupport004.bitwiseXor(LoginCredentials.bitwiseAnd((long)this.byteArrayState0023[3 + integerLocal4] << 32, 1095216660480L), ResourceSupport004.bitwiseXor(ResourceSupport004.bitwiseXor((long)this.byteArrayState0023[integerLocal4] << 56, LoginCredentials.bitwiseAnd((long)this.byteArrayState0023[integerLocal4 + 1] << 48, 71776119061217280L)), LoginCredentials.bitwiseAnd(280375465082880L, (long)this.byteArrayState0023[2 + integerLocal4] << 40)))))), LoginCredentials.bitwiseAnd(255L, (long)this.byteArrayState0023[7 + integerLocal4]));
+          this.longArrayState0004[integerLocal3] = NetworkArchiveRequest.bitwiseXor(NetworkArchiveRequest.bitwiseXor(LoginCredentials.bitwiseAnd((long)this.byteArrayState0023[integerLocal4 + 6], 255L) << 8, NetworkArchiveRequest.bitwiseXor(LoginCredentials.bitwiseAnd((long)this.byteArrayState0023[integerLocal4 + 5] << 16, 16711680L), NetworkArchiveRequest.bitwiseXor(LoginCredentials.bitwiseAnd(4278190080L, (long)this.byteArrayState0023[integerLocal4 + 4] << 24), NetworkArchiveRequest.bitwiseXor(LoginCredentials.bitwiseAnd((long)this.byteArrayState0023[3 + integerLocal4] << 32, 1095216660480L), NetworkArchiveRequest.bitwiseXor(NetworkArchiveRequest.bitwiseXor((long)this.byteArrayState0023[integerLocal4] << 56, LoginCredentials.bitwiseAnd((long)this.byteArrayState0023[integerLocal4 + 1] << 48, 71776119061217280L)), LoginCredentials.bitwiseAnd(280375465082880L, (long)this.byteArrayState0023[2 + integerLocal4] << 40)))))), LoginCredentials.bitwiseAnd(255L, (long)this.byteArrayState0023[7 + integerLocal4]));
           integerLocal3++;
           integerLocal4 += 8;
         }
@@ -68,7 +68,7 @@ final class RenderingSupport012 {
           cachedLongLocal1 = this.longArrayState0006[integerLocal9];
           arrayValue$1 = this.longArrayState0004[integerLocal9];
           this.longArrayState0005[integerLocal9] = cachedLongLocal1;
-          this.longArrayState0007[integerLocal9] = ResourceSupport004.bitwiseXor(arrayValue$1, cachedLongLocal1);
+          this.longArrayState0007[integerLocal9] = NetworkArchiveRequest.bitwiseXor(arrayValue$1, cachedLongLocal1);
         }
         for (integerLocal10 = 1; integerLocal10 <= 10; integerLocal10++) {
           for (integerLocal12 = 0; 8 > integerLocal12; integerLocal12++) {
@@ -76,7 +76,7 @@ final class RenderingSupport012 {
             integerLocal5 = 0;
             integerLocal6 = 56;
             while (integerLocal5 < 8) {
-              this.longArrayState0008[integerLocal12] = ResourceSupport004.bitwiseXor(this.longArrayState0008[integerLocal12], AnimatedTileRegion.longArrayArrayState0002[integerLocal5][PlayerBoardUpdateQueue.bitwiseAnd((int)(this.longArrayState0005[PlayerBoardUpdateQueue.bitwiseAnd(7, -integerLocal5 + integerLocal12)] >>> integerLocal6), 255)]);
+              this.longArrayState0008[integerLocal12] = NetworkArchiveRequest.bitwiseXor(this.longArrayState0008[integerLocal12], AnimatedTileRegion.longArrayArrayState0002[integerLocal5][PlayerBoardUpdateQueue.bitwiseAnd((int)(this.longArrayState0005[PlayerBoardUpdateQueue.bitwiseAnd(7, -integerLocal5 + integerLocal12)] >>> integerLocal6), 255)]);
               integerLocal5++;
               integerLocal6 -= 8;
             }
@@ -84,14 +84,14 @@ final class RenderingSupport012 {
           for (integerLocal15 = 0; integerLocal15 < 8; integerLocal15++) {
             this.longArrayState0005[integerLocal15] = this.longArrayState0008[integerLocal15];
           }
-          this.longArrayState0005[0] = ResourceSupport004.bitwiseXor(this.longArrayState0005[0], AnimatedTileRegion.longArrayState0010[integerLocal10]);
+          this.longArrayState0005[0] = NetworkArchiveRequest.bitwiseXor(this.longArrayState0005[0], AnimatedTileRegion.longArrayState0010[integerLocal10]);
           for (integerLocal16 = 0; integerLocal16 < 8; integerLocal16++) {
             this.longArrayState0008[integerLocal16] = this.longArrayState0005[integerLocal16];
             integerLocal8 = 0;
             integerLocal13 = integerLocal8;
             integerLocal14 = 56;
             while (8 > integerLocal8) {
-              this.longArrayState0008[integerLocal16] = ResourceSupport004.bitwiseXor(this.longArrayState0008[integerLocal16], AnimatedTileRegion.longArrayArrayState0002[integerLocal8][PlayerBoardUpdateQueue.bitwiseAnd((int)(this.longArrayState0007[PlayerBoardUpdateQueue.bitwiseAnd(7, integerLocal16 - integerLocal8)] >>> integerLocal14), 255)]);
+              this.longArrayState0008[integerLocal16] = NetworkArchiveRequest.bitwiseXor(this.longArrayState0008[integerLocal16], AnimatedTileRegion.longArrayArrayState0002[integerLocal8][PlayerBoardUpdateQueue.bitwiseAnd((int)(this.longArrayState0007[PlayerBoardUpdateQueue.bitwiseAnd(7, integerLocal16 - integerLocal8)] >>> integerLocal14), 255)]);
               integerLocal8++;
               integerLocal14 -= 8;
             }
@@ -104,7 +104,7 @@ final class RenderingSupport012 {
           this.byteArrayState0024 = (byte[]) null;
         }
         for (integerLocal11 = 0; integerLocal11 < 8; integerLocal11++) {
-          this.longArrayState0006[integerLocal11] = ResourceSupport004.bitwiseXor(this.longArrayState0006[integerLocal11], ResourceSupport004.bitwiseXor(this.longArrayState0004[integerLocal11], this.longArrayState0007[integerLocal11]));
+          this.longArrayState0006[integerLocal11] = NetworkArchiveRequest.bitwiseXor(this.longArrayState0006[integerLocal11], NetworkArchiveRequest.bitwiseXor(this.longArrayState0004[integerLocal11], this.longArrayState0007[integerLocal11]));
         }
     }
 

@@ -374,7 +374,7 @@ final class MusicPatch extends IntrusiveNode {
               } else {
                 var20Lifetime2 = -1;
               }
-              var22 = var38.a(false);
+              var22 = var38.readVarInt(false);
             }
             this.field_n[var23] = (short)(this.field_n[var23] + (b.bitwiseAnd(2, -1 + var22) << 14));
             var20Lifetime2--;

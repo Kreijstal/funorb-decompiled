@@ -56,7 +56,7 @@ final class PlayerDungeonProfile {
             return;
           }
           for (var1_int = 0; 8 > var1_int; var1_int++) {
-            var2 = um.field_i[var1_int];
+            var2 = SocketConnector.field_i[var1_int];
             if (var2 != null) {
               var2.field_i = DungeonAssaultScreen.buildRaiderStatusIndicators(var2, 0);
             }

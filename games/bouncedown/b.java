@@ -164,11 +164,11 @@ final class b {
               if (TextHotspotBounds.field_m > 0) {
                 EditableTextField.field_B = true;
               }
-              hh.field_p.b(tc.field_r, 126);
+              hh.field_p.setCipherSeed(tc.field_r, 126);
               for (var8Lifetime1 = 0; var8Lifetime1 < 4; var8Lifetime1++) {
                 tc.field_r[var8Lifetime1] = tc.field_r[var8Lifetime1] + 50;
               }
-              jc.field_g.b(tc.field_r, 98);
+              jc.field_g.setCipherSeed(tc.field_r, 98);
               stackIn_74_0 = wa.field_d;
               return stackIn_74_0;
             }

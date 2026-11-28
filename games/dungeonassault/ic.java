@@ -82,7 +82,7 @@ final class ic extends mc {
           return;
         }
         try {
-          var3.field_d = tp.a(ImageProducerRasterBuffer.field_p, "idle", param2, param1 ^ -28249);
+          var3.field_d = SocketArchiveNetworkClient.a(ImageProducerRasterBuffer.field_p, "idle", param2, param1 ^ -28249);
         } catch (RuntimeException runtimeException) {
           throw AccountServiceResult.wrapClientException((Throwable) ((Object) runtimeException), "ic.EA(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }

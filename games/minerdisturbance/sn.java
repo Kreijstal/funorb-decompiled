@@ -24,7 +24,7 @@ final class sn {
         RuntimeException var4 = null;
         var8 = MinerDisturbance.field_ab;
         try {
-          var4_int = param1.c((byte) -110, param2);
+          var4_int = param1.readBits((byte) -110, param2);
           if (var4_int == 0) {
             return null;
           }
@@ -35,11 +35,11 @@ final class sn {
           if (param3 >= -78) {
             sn.a((byte) 80);
           }
-          var5 = param1.c((byte) -114, 3);
-          var6 = (byte)param1.c((byte) -96, 8);
+          var5 = param1.readBits((byte) -114, 3);
+          var6 = (byte)param1.readBits((byte) -96, 8);
           if (var5 > 0) {
             for (var7 = 0; var7 < var4_int; var7++) {
-              param0[var7] = (byte)(param1.c((byte) -115, var5) + var6);
+              param0[var7] = (byte)(param1.readBits((byte) -115, var5) + var6);
             }
           } else {
             for (var7 = 0; var7 < var4_int; var7++) {
@@ -72,7 +72,7 @@ final class sn {
         if (param0 < 81) {
           return false;
         }
-        return ValidatedTextField.field_U.a((byte) 16);
+        return ValidatedTextField.field_U.loadMasterIndex((byte) 16);
     }
 
     public static void clearStaticReferences(byte param0) {

@@ -72,7 +72,7 @@ final class tk extends pe {
         if (param0) {
           return false;
         }
-        return d.field_b.a((byte) -127);
+        return d.field_b.loadMasterIndex((byte) -127);
     }
 
     tk(Object param0, int param1) {

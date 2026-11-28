@@ -86,7 +86,7 @@ final class pd extends rj {
         RuntimeException var2 = null;
         try {
           IntroSequenceScreen.detachKeyboardInput((java.awt.Component) ((Object) param0), -1);
-          gn.a((byte) 127, (java.awt.Component) ((Object) param0));
+          gn.detachMouseListeners((byte) 127, (java.awt.Component) ((Object) param0));
           if (param1 != -32) {
             field_B = (String) null;
           }

@@ -249,10 +249,10 @@ final class hc {
         int var5Lifetime2;
         int var5Lifetime3;
         if (!param1) {
-          if (ij.field_b[param0] < ij.field_b[param2]) {
+          if (BouncedownClientSupport.field_b[param0] < BouncedownClientSupport.field_b[param2]) {
             return true;
           }
-          if (ij.field_b[param0] > ij.field_b[param2]) {
+          if (BouncedownClientSupport.field_b[param0] > BouncedownClientSupport.field_b[param2]) {
             return false;
           }
           if (sj.field_j[param0] < sj.field_j[param2]) {
@@ -288,10 +288,10 @@ final class hc {
         if (sj.field_j[param0] > sj.field_j[param2]) {
           return false;
         }
-        if (ij.field_b[param2] > ij.field_b[param0]) {
+        if (BouncedownClientSupport.field_b[param2] > BouncedownClientSupport.field_b[param0]) {
           return true;
         }
-        if (ij.field_b[param2] < ij.field_b[param0]) {
+        if (BouncedownClientSupport.field_b[param2] < BouncedownClientSupport.field_b[param0]) {
           return false;
         }
         var4Lifetime1 = DelegatingCanvas.field_c[param0] + (FullscreenStatusDialog.field_S[param0] + ResourceArchive.field_i[param0]);

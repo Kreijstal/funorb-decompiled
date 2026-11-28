@@ -137,7 +137,7 @@ final class ue extends IntrusiveNode {
           var3 = param1.e(12, param0 ^ 8171);
           var4 = new ti[var3];
           for (var5 = 0; var5 < var3; var5++) {
-            if (fl.a(param1, (byte) 124)) {
+            if (SocketArchiveNetworkClient.a(param1, (byte) 124)) {
               var6 = new ti();
               param1.e(24, 122);
               param1.e(24, -77);

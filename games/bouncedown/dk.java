@@ -28,7 +28,7 @@ final class dk {
         int var9Lifetime1;
         var10 = Bounce.field_N;
         try {
-          var7_int = ca.a(param0, (byte) 27);
+          var7_int = SlimeCollisionSupport.roundUpToEightByteBlock(param0, (byte) 27);
           if (null == DualLinkNode.field_g) {
             DualLinkNode.field_g = new java.security.SecureRandom();
           }

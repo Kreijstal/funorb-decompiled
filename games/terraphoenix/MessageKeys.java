@@ -1630,7 +1630,7 @@ final class MessageKeys {
                 }
                 var2 = bc.a("create_agreeterms", false);
                 if (null != var2) {
-                  h.field_d = ll.a(param0 - 3, var2);
+                  ArchiveNetworkClient.field_d = ll.a(param0 - 3, var2);
                 }
                 var2 = bc.a("create_u13terms", false);
                 if (var2 != null) {

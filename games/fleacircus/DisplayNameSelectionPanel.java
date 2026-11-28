@@ -203,7 +203,7 @@ final class DisplayNameSelectionPanel extends DequeWidgetContainer implements Na
             return true;
           }
           var4 = var3.getValidationStatus(false);
-          stackIn_8_0 = (var4 == hm.field_b);
+          stackIn_8_0 = (var4 == SocketConnector.field_b);
           return stackIn_8_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

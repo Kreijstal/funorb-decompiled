@@ -12,7 +12,7 @@ final class ProxySocketConnector extends SocketConnector {
     static int field_h;
     static int field_e;
 
-    final java.net.Socket b(int param0) throws IOException {
+    final java.net.Socket openSocket(int param0) throws IOException {
         int var9 = 0;
         int stackIn_5_0 = 0;
         java.net.ProxySelector stackIn_8_0;
@@ -82,7 +82,7 @@ final class ProxySocketConnector extends SocketConnector {
         } catch (java.net.URISyntaxException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6 = (java.net.URISyntaxException) (Object) decompiledCaughtException;
-          return this.a((byte) -39);
+          return this.openDirectSocket((byte) -39);
         }
         if (param0 != 640) {
           return (java.net.Socket) null;
@@ -96,7 +96,7 @@ final class ProxySocketConnector extends SocketConnector {
           var11 = (java.net.Proxy) (var10);
           try {
             if (false) throw (ProxyAuthenticationRequiredException) null;
-            var12 = this.a((byte) 107, var11);
+            var12 = this.openSocketThroughProxy((byte) 107, var11);
             if (var12 != null) {
               stackIn_24_0 = var12;
               return stackIn_24_0;
@@ -113,7 +113,7 @@ final class ProxySocketConnector extends SocketConnector {
         if (var7 != null) {
           throw ProxySocketConnector.<RuntimeException>throwUnchecked((Throwable) var7);
         }
-        return this.a((byte) -39);
+        return this.openDirectSocket((byte) -39);
     }
 
     final static void a(String param0, String param1, byte param2) {
@@ -131,7 +131,7 @@ final class ProxySocketConnector extends SocketConnector {
         }
     }
 
-    private final java.net.Socket a(byte param0, java.net.Proxy param1) throws IOException {
+    private final java.net.Socket openSocketThroughProxy(byte param0, java.net.Proxy param1) throws IOException {
         java.net.Socket stackIn_2_0 = null;
         java.net.Socket stackIn_17_0 = null;
         Object stackIn_21_0 = null;
@@ -155,7 +155,7 @@ final class ProxySocketConnector extends SocketConnector {
         Class var14 = null;
         try {
           if (param1.type() == java.net.Proxy.Type.DIRECT) {
-            stackIn_2_0 = this.a((byte) -39);
+            stackIn_2_0 = this.openDirectSocket((byte) -39);
             return stackIn_2_0;
           }
           var3 = param1.address();
@@ -199,7 +199,7 @@ final class ProxySocketConnector extends SocketConnector {
             decompiledCaughtException = decompiledCaughtParameter0;
             var6_ref = (Exception) (Object) decompiledCaughtException;
           }
-          stackIn_17_0 = this.a(var4.getPort(), 32, var4.getHostName(), (String) (var5));
+          stackIn_17_0 = this.openHttpProxyTunnel(var4.getPort(), 32, var4.getHostName(), (String) (var5));
           return stackIn_17_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
           decompiledCaughtException = decompiledCaughtParameter1;
@@ -215,7 +215,7 @@ final class ProxySocketConnector extends SocketConnector {
         }
     }
 
-    private final java.net.Socket a(int param0, int param1, String param2, String param3) throws IOException {
+    private final java.net.Socket openHttpProxyTunnel(int param0, int param1, String param2, String param3) throws IOException {
         java.net.Socket stackIn_12_0 = null;
         Object stackIn_27_0 = null;
         RuntimeException stackIn_30_0 = null;
@@ -338,7 +338,7 @@ final class ProxySocketConnector extends SocketConnector {
           for (var5 = 0; param2.field_o.length > var5; var5++) {
             var7.writeInt(param2.field_o[var5], 0);
           }
-          var8.c(var4, 25);
+          var8.appendCrc32(var4, 25);
           var8.patchByteLength((byte) -95, -var4 + var8.position);
         } catch (RuntimeException runtimeException) {
           throw wn.wrapClientException((Throwable) ((Object) runtimeException), "aj.L(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');

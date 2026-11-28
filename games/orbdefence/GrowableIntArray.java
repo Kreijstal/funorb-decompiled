@@ -33,7 +33,7 @@ final class GrowableIntArray {
         }
         int var1 = 87 % ((param0 + 3) / 57);
         if (!DebouncedFieldValidator.field_b.ensureIndexLoaded(-1)) {
-          return ge.field_i;
+          return ArchiveNetworkClient.field_i;
         }
         if (!DebouncedFieldValidator.field_b.tryLoadAllGroups(7715)) {
           return fa.field_c + " - " + DebouncedFieldValidator.field_b.getArchiveLoadPercent(20147) + "%";
@@ -279,7 +279,7 @@ final class GrowableIntArray {
           var3[var4_int] = vc.field_g[EditableTextField.bitwiseAnd(255, (int) var2[var4_int])];
         }
         RgbSprite var4 = new RgbSprite(ModalDialog.field_B, MusicPatchNode.field_r, jd.field_g[0], wc.field_a[0], wh.field_b[0], m.field_a[0], var3);
-        md.clearIndexedSpriteDecodeBuffersWithIntGuard(-125);
+        ProxySocketConnector.clearIndexedSpriteDecodeBuffersWithIntGuard(-125);
         return var4;
     }
 

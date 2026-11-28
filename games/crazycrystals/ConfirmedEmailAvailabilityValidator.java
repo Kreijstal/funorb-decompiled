@@ -30,7 +30,7 @@ final class ConfirmedEmailAvailabilityValidator extends TextFieldValidator {
         RuntimeException var1 = null;
         var2 = CrazyCrystals.field_B;
         try {
-          if (!CipherPacketBuffer.l(-81)) {
+          if (!CipherPacketBuffer.hasOpenDialog(-81)) {
             if (RegistrationAgreementPane.field_E != null &&
               RegistrationAgreementPane.field_E.focusLost) {
               AccountNameAvailabilityValidator.e((byte) -23);

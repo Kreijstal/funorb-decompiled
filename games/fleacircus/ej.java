@@ -86,11 +86,11 @@ final class ej {
           oa.field_n = true;
           pg.field_f = -60;
           DiskArchiveRequest.field_y = -250;
-          jk.field_l = 0;
+          ProxySocketConnector.field_l = 0;
           lj.field_c = new int[100];
           GzipDecompressor.field_d = -1;
           nc.field_a = new int[100];
-          uf.field_h = 0;
+          ArchiveSourceManager.field_h = 0;
           mh.field_u = 1;
           for (var3 = 0; 100 > var3; var3++) {
             nc.field_a[var3] = -1000;

@@ -70,7 +70,7 @@ final class ta {
             ta.a((BitmapFont) null, -96, -112, (String) null, -121);
           }
           var3 = ac.field_B;
-          var3.d((byte) -81, param1);
+          var3.writeCipheredByte((byte) -81, param1);
           var3.writeByte(6, 2);
           var3.writeByte(6, 0);
           var3.writeByte(param0 ^ 13, param2.field_j);
@@ -93,7 +93,7 @@ final class ta {
             field_c = (PacketBuffer) null;
           }
           while (mo.b(-101)) {
-            var1.d((byte) -102, 8);
+            var1.writeCipheredByte((byte) -102, 8);
             fieldTemp$0 = var1.position + 1;
             var1.position = var1.position + 1;
             var2 = fieldTemp$0;

@@ -267,7 +267,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
                 return;
               }
               dda.field_j = param4;
-              kb.field_h = param4;
+              ArchiveSourceManager.field_h = param4;
               qw.field_d = 0;
               wk.field_g = 0;
               ej.field_p = param1;
@@ -477,7 +477,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
               -gd.field_l + f.correctedCurrentTimeMillis((byte) 73) > 1000L) {
               var2 = param0.getClipBounds();
               if (var2 != null) {
-                if (var2.width < kb.field_h) {
+                if (var2.width < ArchiveSourceManager.field_h) {
                   return;
                 }
                 if (DreamsSpecial.field_q > var2.height) {

@@ -16,9 +16,9 @@ final class gh {
     final static boolean a(boolean param0) {
         if (param0) {
           field_a = (int[]) null;
-          return c.field_h.a((byte) -111);
+          return ArchiveSourceManager.field_h.loadMasterIndex((byte) -111);
         }
-        return c.field_h.a((byte) -111);
+        return ArchiveSourceManager.field_h.loadMasterIndex((byte) -111);
     }
 
     final static int a(int param0) {

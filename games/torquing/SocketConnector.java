@@ -22,7 +22,7 @@ abstract class SocketConnector {
         return param1 >= 6144 ? bm.field_j[param1 - 6144] : -bm.field_j[6144 - param1];
     }
 
-    final java.net.Socket a(boolean param0) throws IOException {
+    final java.net.Socket openDirectSocket(boolean param0) throws IOException {
         if (!param0) {
           return (java.net.Socket) null;
         }
@@ -71,7 +71,7 @@ abstract class SocketConnector {
         }
     }
 
-    abstract java.net.Socket a(int param0) throws IOException;
+    abstract java.net.Socket openSocket(int param0) throws IOException;
 
     final static void a(int param0, int param1) {
         int var2_int = 0;

@@ -445,17 +445,17 @@ final class pa extends ql {
             }
           }
         }
-        ih.field_y = new GridPoint[6];
-        ih.field_y[0] = new GridPoint(ln.field_a.field_v[0], ln.field_a.field_v[1]);
-        ih.field_y[1] = new GridPoint(ln.field_a.field_v[4], ln.field_a.field_v[5]);
-        ih.field_y[2] = new GridPoint(ln.field_a.field_v[10], ln.field_a.field_v[11]);
-        ih.field_y[3] = new GridPoint(ln.field_a.field_v[12], ln.field_a.field_v[13]);
-        ih.field_y[4] = new GridPoint(ln.field_a.field_v[14], ln.field_a.field_v[15]);
-        ih.field_y[5] = new GridPoint(ln.field_a.field_v[20], ln.field_a.field_v[21]);
+        SocketArchiveNetworkClient.field_y = new GridPoint[6];
+        SocketArchiveNetworkClient.field_y[0] = new GridPoint(ln.field_a.field_v[0], ln.field_a.field_v[1]);
+        SocketArchiveNetworkClient.field_y[1] = new GridPoint(ln.field_a.field_v[4], ln.field_a.field_v[5]);
+        SocketArchiveNetworkClient.field_y[2] = new GridPoint(ln.field_a.field_v[10], ln.field_a.field_v[11]);
+        SocketArchiveNetworkClient.field_y[3] = new GridPoint(ln.field_a.field_v[12], ln.field_a.field_v[13]);
+        SocketArchiveNetworkClient.field_y[4] = new GridPoint(ln.field_a.field_v[14], ln.field_a.field_v[15]);
+        SocketArchiveNetworkClient.field_y[5] = new GridPoint(ln.field_a.field_v[20], ln.field_a.field_v[21]);
         var10 = param0;
         var4Lifetime1 = var10;
         while (var10 < 5) {
-          this.field_h[var10] = new we(ih.field_y[var10 + 1]);
+          this.field_h[var10] = new we(SocketArchiveNetworkClient.field_y[var10 + 1]);
           var10++;
         }
         CrossfadingMidiPcmStream.a(10, param0 ^ 1);
@@ -465,8 +465,8 @@ final class pa extends ql {
         this.field_k = new v(AccountServiceResult.field_h, 0, 0, 200, false);
         this.field_k.field_l = 0;
         this.field_f = new v(StandardContentDialog.field_lb, 0, 0, 200, false);
-        this.field_f.field_l = ih.field_y[0].field_e * 24 - 100;
-        this.field_f.field_d = ih.field_y[0].field_g * 24 + 60;
+        this.field_f.field_l = SocketArchiveNetworkClient.field_y[0].field_e * 24 - 100;
+        this.field_f.field_d = SocketArchiveNetworkClient.field_y[0].field_g * 24 + 60;
         this.field_e = new v(ProxyAuthenticationRequiredException.field_d, 0, 0, 200, false);
         this.field_e.field_l = 0;
     }
@@ -528,9 +528,9 @@ final class pa extends ql {
             var6 = -1;
             for (var7_int = 1; var7_int <= 5; var7_int++) {
               stackIn_10_0 = 0;
-              stackIn_10_1 = ih.field_y[var7_int].field_e;
+              stackIn_10_1 = SocketArchiveNetworkClient.field_y[var7_int].field_e;
               if (stackIn_10_0 <= stackIn_10_1) {
-                var4 = ih.a(var3, (byte) -110, ih.field_y[var7_int]);
+                var4 = SocketArchiveNetworkClient.a(var3, (byte) -110, SocketArchiveNetworkClient.field_y[var7_int]);
                 if (var4 >= 2) {
                   var5 = 1;
                 } else {
@@ -540,8 +540,8 @@ final class pa extends ql {
             }
             if (var6 >= 0) {
               var7_intLifetime1 = 0;
-              var8_double = (double)(1 + ih.field_y[var6].field_e);
-              var10 = 0.5 + (double)ih.field_y[var6].field_g;
+              var8_double = (double)(1 + SocketArchiveNetworkClient.field_y[var6].field_e);
+              var10 = 0.5 + (double)SocketArchiveNetworkClient.field_y[var6].field_g;
               if (var6 == 1) {
                 var10 = var10 + 0.5;
                 var7_intLifetime1 = 64;
@@ -554,7 +554,7 @@ final class pa extends ql {
                 stackIn_25_1 = 0;
               }
               ca.a(stackIn_24_0, stackIn_25_1, var10, true, var7_intLifetime1);
-              ih.field_y[var6].field_e = -1;
+              SocketArchiveNetworkClient.field_y[var6].field_e = -1;
             }
             if (!uf.field_h) {
               for (var8 = 0; this.field_m.length > var8; var8++) {
@@ -563,7 +563,7 @@ final class pa extends ql {
                   if (0 >= var7.field_I) {
                     var7.field_N = false;
                   } else {
-                    var4Lifetime1 = ih.a(var3, (byte) -115, var7.field_j);
+                    var4Lifetime1 = SocketArchiveNetworkClient.a(var3, (byte) -115, var7.field_j);
                     if (var4Lifetime1 < 4) {
                       if (DiskArchiveRequest.a(var7.field_i, true)) {
                         if (var7.field_j.field_e < var3.field_e) {
@@ -596,7 +596,7 @@ final class pa extends ql {
             }
             if (ClientLookupTables.field_d != dn.field_i) {
               CrossfadingMidiPcmStream.a(0, 1);
-              LabeledWidgetContainer.field_E.copyCoordinatesFrom((byte) 46, ih.field_y[0]);
+              LabeledWidgetContainer.field_E.copyCoordinatesFrom((byte) 46, SocketArchiveNetworkClient.field_y[0]);
               this.field_k.field_d = -this.field_k.field_h + var3.field_g * 24 - 60;
               this.field_k.field_l = 24 * var3.field_e - 100;
             } else {
@@ -683,7 +683,7 @@ final class pa extends ql {
         RuntimeException var4 = null;
         var8 = HostileSpawn.field_I ? 1 : 0;
         try {
-          var4_int = param3.a(param2, true);
+          var4_int = param3.readBits(param2, true);
           if (var4_int == 0) {
             return null;
           }
@@ -691,15 +691,15 @@ final class pa extends ql {
             var4_int != param1.length) {
             param1 = new short[var4_int];
           }
-          var5 = param3.a(4, true);
-          var6 = (short)param3.a(16, true);
+          var5 = param3.readBits(4, true);
+          var6 = (short)param3.readBits(16, true);
           if (var5 <= 0) {
             for (var7 = 0; var4_int > var7; var7++) {
               param1[var7] = (short)var6;
             }
           } else {
             for (var7 = 0; var4_int > var7; var7++) {
-              param1[var7] = (short)(var6 + param3.a(var5, true));
+              param1[var7] = (short)(var6 + param3.readBits(var5, true));
             }
           }
           if (param0 != 87) {

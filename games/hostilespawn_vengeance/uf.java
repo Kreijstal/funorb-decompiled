@@ -86,17 +86,17 @@ final class uf extends ql {
     }
 
     final void e(int param0) {
-        ih.field_y = new GridPoint[3];
-        ih.field_y[0] = new GridPoint(ln.field_a.field_v[0], ln.field_a.field_v[1]);
-        ih.field_y[1] = new GridPoint(ln.field_a.field_v[2], ln.field_a.field_v[3]);
-        ih.field_y[2] = new GridPoint(ln.field_a.field_v[4], ln.field_a.field_v[5]);
+        SocketArchiveNetworkClient.field_y = new GridPoint[3];
+        SocketArchiveNetworkClient.field_y[0] = new GridPoint(ln.field_a.field_v[0], ln.field_a.field_v[1]);
+        SocketArchiveNetworkClient.field_y[1] = new GridPoint(ln.field_a.field_v[2], ln.field_a.field_v[3]);
+        SocketArchiveNetworkClient.field_y[2] = new GridPoint(ln.field_a.field_v[4], ln.field_a.field_v[5]);
         CrossfadingMidiPcmStream.a(6, 1);
-        LabeledWidgetContainer.field_E.copyCoordinatesFrom((byte) 46, ih.field_y[0]);
+        LabeledWidgetContainer.field_E.copyCoordinatesFrom((byte) 46, SocketArchiveNetworkClient.field_y[0]);
         vg.field_e = new v[4];
         vg.field_e[0] = new v(MusicPatchNode.field_s, -120 + (ti.field_f.field_e * 24 + 50), 24 * (-7 + ti.field_f.field_g) - 20, 200, false);
-        vg.field_e[1] = new v(ProxySocketFactory.field_g, 24 * ih.field_y[0].field_e - 140, ih.field_y[0].field_g * 24, 200, false);
-        vg.field_e[2] = new v(im.field_d, 24 + (24 * ih.field_y[1].field_e - 100), -90 + ih.field_y[1].field_g * 24, 200, false);
-        vg.field_e[3] = new v(ih.field_z, ih.field_y[2].field_e * 24 + 24 + 40, 40 + 24 * ih.field_y[2].field_g, 200, false);
+        vg.field_e[1] = new v(ProxySocketFactory.field_g, 24 * SocketArchiveNetworkClient.field_y[0].field_e - 140, SocketArchiveNetworkClient.field_y[0].field_g * 24, 200, false);
+        vg.field_e[2] = new v(im.field_d, 24 + (24 * SocketArchiveNetworkClient.field_y[1].field_e - 100), -90 + SocketArchiveNetworkClient.field_y[1].field_g * 24, 200, false);
+        vg.field_e[3] = new v(SocketArchiveNetworkClient.field_z, SocketArchiveNetworkClient.field_y[2].field_e * 24 + 24 + 40, 40 + 24 * SocketArchiveNetworkClient.field_y[2].field_g, 200, false);
         vg.field_e[param0].field_a = 1;
     }
 
@@ -108,7 +108,7 @@ final class uf extends ql {
         RuntimeException decompiledCaughtException = null;
         try {
           if (ha.field_t != 0 &&
-            param0.field_j.hasSameCoordinates(ih.field_y[2], 108)) {
+            param0.field_j.hasSameCoordinates(SocketArchiveNetworkClient.field_y[2], 108)) {
             return true;
           }
           if (param1 != -5) {
@@ -276,45 +276,45 @@ final class uf extends ql {
           return;
         }
         if (vg.field_e[1].field_a != 0) {
-          var3 = ih.a(var4, (byte) -105, ih.field_y[1]);
+          var3 = SocketArchiveNetworkClient.a(var4, (byte) -105, SocketArchiveNetworkClient.field_y[1]);
           if (2 > var3) {
-            ca.a(0.5 + (double)ih.field_y[1].field_e, 1, 1.0 + (double)ih.field_y[1].field_g, true, 64);
+            ca.a(0.5 + (double)SocketArchiveNetworkClient.field_y[1].field_e, 1, 1.0 + (double)SocketArchiveNetworkClient.field_y[1].field_g, true, 64);
             CrossfadingMidiPcmStream.a(0, 1);
-            LabeledWidgetContainer.field_E.copyCoordinatesFrom((byte) 46, ih.field_y[0]);
+            LabeledWidgetContainer.field_E.copyCoordinatesFrom((byte) 46, SocketArchiveNetworkClient.field_y[0]);
             vg.field_e[2].field_a = 1;
           }
           if (0 != vg.field_e[3].field_a) {
             return;
           }
-          if (Math.abs(var4.field_e - ih.field_y[2].field_e) >= 2) {
+          if (Math.abs(var4.field_e - SocketArchiveNetworkClient.field_y[2].field_e) >= 2) {
             return;
           }
-          if (Math.abs(var4.field_g - ih.field_y[2].field_g) >= 2) {
+          if (Math.abs(var4.field_g - SocketArchiveNetworkClient.field_y[2].field_g) >= 2) {
             return;
           }
           vg.field_e[3].field_a = 1;
           return;
         }
-        var3Lifetime1 = ih.a(var4, (byte) -82, ih.field_y[0]);
+        var3Lifetime1 = SocketArchiveNetworkClient.a(var4, (byte) -82, SocketArchiveNetworkClient.field_y[0]);
         if (var3Lifetime1 < 2) {
           CrossfadingMidiPcmStream.a(9, 1);
           vg.field_e[1].field_a = 1;
-          LabeledWidgetContainer.field_E.copyCoordinatesFrom((byte) 46, ih.field_y[1]);
+          LabeledWidgetContainer.field_E.copyCoordinatesFrom((byte) 46, SocketArchiveNetworkClient.field_y[1]);
         }
-        var3Lifetime2 = ih.a(var4, (byte) -105, ih.field_y[1]);
+        var3Lifetime2 = SocketArchiveNetworkClient.a(var4, (byte) -105, SocketArchiveNetworkClient.field_y[1]);
         if (2 > var3Lifetime2) {
-          ca.a(0.5 + (double)ih.field_y[1].field_e, 1, 1.0 + (double)ih.field_y[1].field_g, true, 64);
+          ca.a(0.5 + (double)SocketArchiveNetworkClient.field_y[1].field_e, 1, 1.0 + (double)SocketArchiveNetworkClient.field_y[1].field_g, true, 64);
           CrossfadingMidiPcmStream.a(0, 1);
-          LabeledWidgetContainer.field_E.copyCoordinatesFrom((byte) 46, ih.field_y[0]);
+          LabeledWidgetContainer.field_E.copyCoordinatesFrom((byte) 46, SocketArchiveNetworkClient.field_y[0]);
           vg.field_e[2].field_a = 1;
         }
         if (0 != vg.field_e[3].field_a) {
           return;
         }
-        if (Math.abs(var4.field_e - ih.field_y[2].field_e) >= 2) {
+        if (Math.abs(var4.field_e - SocketArchiveNetworkClient.field_y[2].field_e) >= 2) {
           return;
         }
-        if (Math.abs(var4.field_g - ih.field_y[2].field_g) >= 2) {
+        if (Math.abs(var4.field_g - SocketArchiveNetworkClient.field_y[2].field_g) >= 2) {
           return;
         }
         vg.field_e[3].field_a = 1;

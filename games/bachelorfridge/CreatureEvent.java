@@ -105,7 +105,7 @@ abstract class CreatureEvent extends BattleUpdate {
         this(param0, param1, qi.a(param2, (byte) 80));
     }
 
-    final static void a(int param0, java.awt.Component param1) {
+    final static void attachKeyboardListeners(int param0, java.awt.Component param1) {
         try {
           param1.setFocusTraversalKeysEnabled(false);
           param1.addKeyListener(TextLayout.field_e);

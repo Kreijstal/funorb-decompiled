@@ -44,7 +44,7 @@ final class od {
         for (var5 = 0; var5 < 64; var5++) {
           this.field_i[var5] = 65537 * var5;
           if (var5 > 32) {
-            this.field_i[var5] = ge.bitwiseOr(this.field_i[var5], -8192 + 256 * var5);
+            this.field_i[var5] = ArchiveNetworkClient.bitwiseOr(this.field_i[var5], -8192 + 256 * var5);
           }
         }
         this.field_n = new int[32];

@@ -23,7 +23,7 @@ final class pf {
           if (param1 != 71) {
             pf.clearStaticReferences(-67);
           }
-          kg.field_r[76].drawTransparentWithIntensity(param2 - 32, param3 - 64, 64);
+          SocketArchiveNetworkClient.field_r[76].drawTransparentWithIntensity(param2 - 32, param3 - 64, 64);
         } catch (RuntimeException runtimeException) {
           throw qk.wrapException((Throwable) ((Object) runtimeException), "pf.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }

@@ -140,11 +140,11 @@ final class ModalDialogHost extends ComponentDecorator {
           MixedSupport118.booleanState0181 = false;
         }
         if (MixedSupport050.booleanState0064) {
-          SocketFactory.cipherPacketBufferState0002.performAction1641(58, -4);
+          SocketFactory.cipherPacketBufferState0002.writeCipheredByte(58, -4);
           MixedSupport050.booleanState0064 = false;
         }
         if (BufferedFile.booleanState0120) {
-          SocketFactory.cipherPacketBufferState0002.performAction1641(10, -4);
+          SocketFactory.cipherPacketBufferState0002.writeCipheredByte(10, -4);
           BufferedFile.booleanState0120 = false;
         }
     }

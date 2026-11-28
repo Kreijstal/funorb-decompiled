@@ -159,8 +159,8 @@ final class BoundedRandomAccessFile {
                 AchievementNotification.field_i = ModalDialog.a(false, (String) null, ib.field_d, param5, 112);
               }
               s.field_b.field_i = 0;
-              s.field_b.d(94, 14);
-              s.field_b.d(89, AchievementNotification.field_i.a(false).field_a);
+              s.field_b.writeByte(94, 14);
+              s.field_b.writeByte(89, AchievementNotification.field_i.a(false).field_a);
               RichTextLayout.d(-1, -22370);
               rc.field_a = MouseInput.field_h;
             }
@@ -178,13 +178,13 @@ final class BoundedRandomAccessFile {
             }
             if (dc.field_e == rc.field_a &&
               re.c((byte) 33, 8)) {
-              NetworkGameClient.field_y = sc.field_g.c(10818);
+              NetworkGameClient.field_y = sc.field_g.readLong(10818);
               sc.field_g.field_i = 0;
               ln.a(AchievementNotification.field_i, (byte) -73, param1, param0, param2);
-              rc.field_a = ej.field_q;
+              rc.field_a = ArchiveNetworkClient.field_q;
             }
             boolean decompiledFrameRemainder0 = true;
-            if (ej.field_q == rc.field_a &&
+            if (ArchiveNetworkClient.field_q == rc.field_a &&
               re.c((byte) 33, 1)) {
               var6_intLifetime1 = sc.field_g.readUnsignedByte(32270);
               ImageProducerRasterBuffer.field_k = var6_intLifetime1;
@@ -211,11 +211,11 @@ final class BoundedRandomAccessFile {
             }
             if (rc.field_a == ValidationStatusIcon.field_N &&
               eb.a(13372)) {
-              ib.field_d = sc.field_g.c(10818);
+              ib.field_d = sc.field_g.readLong(10818);
               MatchingFieldValidator.field_q = sc.field_g.readUnsignedByte(32270);
               sc.field_g.readUnsignedByte(32270);
               ResizableModalDialog.field_S = sc.field_g.readUnsignedShort(8);
-              var12 = sc.field_g.a((byte) 28);
+              var12 = sc.field_g.readNullableString((byte) 28);
               var7 = sc.field_g.readUnsignedByte(32270);
               if ((1 & var7) != 0) {
                 SoundCache.storeClientRandomSeed(-6);
@@ -231,14 +231,14 @@ final class BoundedRandomAccessFile {
               if (sd.field_u) {
                 sc.field_g.readUnsignedByte(32270);
                 sc.field_g.readUnsignedByte(32270);
-                sc.field_g.d(8195);
+                sc.field_g.readInt(8195);
                 l.field_a = sc.field_g.readUnsignedShort(8);
                 qj.field_h = new byte[l.field_a];
                 for (var8 = 0; l.field_a > var8; var8++) {
-                  qj.field_h[var8] = sc.field_g.j(0);
+                  qj.field_h[var8] = sc.field_g.readSignedByte(0);
                 }
               }
-              qg.field_r = sc.field_g.o(32);
+              qg.field_r = sc.field_g.readString(32);
               var13 = (CharSequence) ((Object) qg.field_r);
               GameAppletShell.field_c = mf.a(false, var13);
               ca.field_a = sc.field_g.readUnsignedByte(32270);
@@ -273,11 +273,11 @@ final class BoundedRandomAccessFile {
               if (ResizableModalDialog.field_S > 0) {
                 ArchiveIndex.field_g = true;
               }
-              s.field_b.a(he.field_s, 8);
+              s.field_b.setCipherSeed(he.field_s, 8);
               for (var8Lifetime1 = 0; var8Lifetime1 < 4; var8Lifetime1++) {
                 he.field_s[var8Lifetime1] = he.field_s[var8Lifetime1] + 50;
               }
-              sc.field_g.a(he.field_s, 8);
+              sc.field_g.setCipherSeed(he.field_s, 8);
               stackIn_79_0 = ImageProducerRasterBuffer.field_k;
               return stackIn_79_0;
             }
@@ -293,7 +293,7 @@ final class BoundedRandomAccessFile {
               if (7 == ImageProducerRasterBuffer.field_k) {
                 ImageProducerRasterBuffer.field_k = 3;
               }
-              km.field_x = sc.field_g.o(32);
+              km.field_x = sc.field_g.readString(32);
               AlphaWidgetContainer.field_C = false;
               stackIn_90_0 = ImageProducerRasterBuffer.field_k;
               return stackIn_90_0;

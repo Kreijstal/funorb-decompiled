@@ -135,11 +135,11 @@ final class la extends ca {
 
     final void a(PacketBuffer param0, int param1) {
         try {
-          param0.a(120, this.field_j);
+          param0.writeCircumfixedString(120, this.field_j);
           if (param1 >= -94) {
             field_g = -36;
           }
-          param0.a((byte) -119, this.field_f);
+          param0.writeBase38Name((byte) -119, this.field_f);
         } catch (RuntimeException runtimeException) {
           throw AccountCreationResultPanel.wrapClientException((Throwable) ((Object) runtimeException), "la.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }

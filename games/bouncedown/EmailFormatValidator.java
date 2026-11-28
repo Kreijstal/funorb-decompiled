@@ -6,7 +6,7 @@ final class EmailFormatValidator extends TextFieldValidator {
     static PcmStreamMixer field_l;
     static long field_n;
     static int field_p;
-    static rd field_o;
+    static MouseInputHandler field_o;
     static int field_m;
     static String field_j;
 
@@ -154,7 +154,7 @@ final class EmailFormatValidator extends TextFieldValidator {
               DropTargetWidgetContainer.field_E[var5] = ClientException.field_g[var5];
             }
             DropTargetWidgetContainer.field_E[var4 - 3] = "";
-            DropTargetWidgetContainer.field_E[-2 + var4] = tb.field_o;
+            DropTargetWidgetContainer.field_E[-2 + var4] = SocketArchiveNetworkClient.field_o;
             IterableNodeHashTable.field_a[var4 - 2] = 0;
             CipherPacketBuffer.field_n[0] = 4;
             DropTargetWidgetContainer.field_E[-1 + var4] = uk.field_b;
@@ -181,7 +181,7 @@ final class EmailFormatValidator extends TextFieldValidator {
               if (DebouncedFieldValidator.field_e.privilegedTasksEnabled) {
                 var3_int = r.a(EditableTextField.field_E, ClientException.field_g, vg.field_f, param1 + 25699, ResourceArchive.field_a);
               } else {
-                var3_int = r.a(EditableTextField.field_E, ClientException.field_g, ra.field_f, param1 + 25699, ResourceArchive.field_a);
+                var3_int = r.a(EditableTextField.field_E, ClientException.field_g, ProxySocketConnector.field_f, param1 + 25699, ResourceArchive.field_a);
               }
               var4 = 2 + var3_int;
               DropTargetWidgetContainer.field_E = new String[var4];
@@ -404,7 +404,7 @@ final class EmailFormatValidator extends TextFieldValidator {
     static {
         field_k = new ph("email");
         field_m = 64;
-        field_o = new rd();
+        field_o = new MouseInputHandler();
         field_j = "to keep fullscreen or";
     }
 }

@@ -142,7 +142,7 @@ abstract class NetworkGameClient extends GameAppletShell {
                       BoundedRandomAccessFile.a(ri.field_r, 256, 102);
                     }
                   } else {
-                    BoundedRandomAccessFile.a(w.field_j, 256, 109);
+                    BoundedRandomAccessFile.a(ArchiveNetworkClient.field_j, 256, 109);
                   }
                 } else {
                   BoundedRandomAccessFile.a(oc.field_b, 256, 104);
@@ -760,10 +760,10 @@ abstract class NetworkGameClient extends GameAppletShell {
                 var12 = IntrusiveNode.field_g.a(param1 + 86);
                 if (var12 != null) {
                   var7 = pg.decodeCp1252String(var12.position, 0, var12.payload, 0);
-                  w.a(61, var7);
+                  ArchiveNetworkClient.a(61, var7);
                 } else {
                   var9 = (String) null;
-                  w.a(61, (String) null);
+                  ArchiveNetworkClient.a(61, (String) null);
                 }
                 IntrusiveNode.field_g = null;
               }
@@ -772,7 +772,7 @@ abstract class NetworkGameClient extends GameAppletShell {
               var5 = (Exception) (Object) decompiledCaughtException;
               ud.a("S1", (Throwable) ((Object) var5), 0);
               var10 = (String) null;
-              w.a(61, (String) null);
+              ArchiveNetworkClient.a(61, (String) null);
               IntrusiveNode.field_g = null;
             }
           }

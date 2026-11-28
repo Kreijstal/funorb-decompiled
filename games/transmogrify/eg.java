@@ -77,9 +77,9 @@ final class eg {
           boolean decompiledFrameRemainder0 = true;
           ModalDialogHost.field_y = ModalDialogHost.field_y + 1;
           if (param0 != null) {
-            decompiledFrameRemainder0 = !(param0.equals(tj.field_v));
+            decompiledFrameRemainder0 = !(param0.equals(SocketArchiveNetworkClient.field_v));
           } else {
-            decompiledFrameRemainder0 = (tj.field_v == null);
+            decompiledFrameRemainder0 = (SocketArchiveNetworkClient.field_v == null);
           }
           if (decompiledFrameRemainder0) {
             if (!lk.field_c) {
@@ -115,7 +115,7 @@ final class eg {
             MouseInputHandler.field_d = rd.field_f;
             og.field_e = el.field_d;
           }
-          tj.field_v = param0;
+          SocketArchiveNetworkClient.field_v = param0;
           if (param1 <= 121) {
             field_b = -62;
           }

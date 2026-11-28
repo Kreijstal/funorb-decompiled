@@ -97,15 +97,15 @@ final class ProgressDialog extends ResizableModalDialog {
     final static void a(byte param0, int param1) {
         CipherPacketBuffer var2 = s.field_b;
         if (param0 == 51) {
-          var2.i(19319, param1);
-          var2.d(96, 1);
-          var2.d(125, 0);
+          var2.writeCipheredByte(19319, param1);
+          var2.writeByte(96, 1);
+          var2.writeByte(125, 0);
           return;
         }
         ProgressDialog.p(-61);
-        var2.i(19319, param1);
-        var2.d(96, 1);
-        var2.d(125, 0);
+        var2.writeCipheredByte(19319, param1);
+        var2.writeByte(96, 1);
+        var2.writeByte(125, 0);
     }
 
     ProgressDialog(ModalDialogHost param0, String param1) {

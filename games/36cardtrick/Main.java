@@ -158,7 +158,7 @@ public final class Main extends NetworkGameClient {
           if (NanoFrameTimer.field_f >= 2) {
             ImageProducerRasterBuffer.field_n = false;
           }
-          q.field_i = 255;
+          ProxySocketConnector.field_i = 255;
           this.p((byte) 99);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -493,7 +493,7 @@ public final class Main extends NetworkGameClient {
           FullscreenStatusDialog.field_W = FullscreenStatusDialog.field_W + (BufferedRandomAccessFile.field_a << 1);
           nb.field_e = nb.field_e | ue.field_d;
           bc.field_a = bc.field_a + 2;
-          q.field_i = q.field_i - 1;
+          ProxySocketConnector.field_i = ProxySocketConnector.field_i - 1;
           RichTextWidget.field_J = RichTextWidget.field_J + 1;
           ue.field_d = 0;
           rj.field_p = rj.field_p + 1;
@@ -1053,7 +1053,7 @@ public final class Main extends NetworkGameClient {
             this.field_K = (this.field_db + 999) / 1000;
             if (RichTextWidget.field_J > 0 &&
               RichTextWidget.field_J < 6) {
-              th.a(1 + q.field_i, 1, RichTextWidget.field_J - 1);
+              th.a(1 + ProxySocketConnector.field_i, 1, RichTextWidget.field_J - 1);
             }
             var4Lifetime1 = Math.max(-(4 * RichTextWidget.field_J) + 44, 20) - this.field_J;
             if (var4Lifetime1 <= 18) {
@@ -1717,7 +1717,7 @@ public final class Main extends NetworkGameClient {
           var3_array = id.field_a.getFileByName((byte) 7, "font", "");
           var4_ref_wb__ = UiWidget.a("font", "", (byte) 49, mh.field_c);
           qa.field_b = PcmOutputWorker.a(121, var4_ref_wb__, var3_array);
-          eb.field_c = kk.a(var4_ref_wb__, var3_array, 1, 256, 16777215);
+          ArchiveSourceManager.field_c = kk.a(var4_ref_wb__, var3_array, 1, 256, 16777215);
           var5Lifetime1 = qa.field_b.field_s + qa.field_b.field_x;
           sk.field_c = new RgbSprite(var5Lifetime1, var5Lifetime1);
           sk.field_c.bindAsRenderTarget();
@@ -1956,10 +1956,10 @@ public final class Main extends NetworkGameClient {
           DelegatingCanvas.a(-128, "ropein", "", mh.field_c).drawWithOpacity(0, 0, 116);
           SoftwareRasterizer.fillRectangle(198, 33, 415, 415, 1);
           DefaultTextWidgetRenderer.a((byte) 92, 10274800, 269877, 538209, 31, 5671872, 419, 196, 419);
-          a.a(16777215, vk.field_j, -1, 39, 6697779, 113);
-          a.a(16777215, GuestPlayConfirmationForm.field_D, -1, 98, 6697779, 162);
-          a.a(16777215, ti.field_b, -1, 15, 6697779, 262);
-          a.a(16777215, uc.field_o, -1, 36, 6697779, 313);
+          SocketArchiveNetworkClient.a(16777215, vk.field_j, -1, 39, 6697779, 113);
+          SocketArchiveNetworkClient.a(16777215, GuestPlayConfirmationForm.field_D, -1, 98, 6697779, 162);
+          SocketArchiveNetworkClient.a(16777215, ti.field_b, -1, 15, 6697779, 262);
+          SocketArchiveNetworkClient.a(16777215, uc.field_o, -1, 36, 6697779, 313);
           f.field_a = var12.copy();
           f.field_a.bindAsRenderTarget();
           re.a(16777215, 0, 0, (byte) 100, var15);
@@ -2104,7 +2104,7 @@ public final class Main extends NetworkGameClient {
           uf.clearStaticReferences();
           re.clearStaticReferences(-4);
           DiskCacheWorker.clearStaticReferences((byte) 14);
-          eb.clearStaticReferences(true);
+          ArchiveSourceManager.clearStaticReferences(true);
           BufferedRandomAccessFile.resetStaticState(~param0);
           BufferedSocket.resetStaticState((byte) 23);
           gi.clearStaticReferences(1159353185);
@@ -2155,7 +2155,7 @@ public final class Main extends NetworkGameClient {
           ri.clearStaticReferences(-2);
           Bzip2Decompressor.clearStaticReferences();
           Bzip2State.clearStaticReferences(param0 + 18002);
-          a.resetStaticState(param0 ^ -14282);
+          SocketArchiveNetworkClient.resetStaticState(param0 ^ -14282);
           cd.clearStaticReferences((byte) 104);
           NetworkArchiveRequest.clearStaticReferences(false);
           SectorCacheStore.clearStaticReferences(true);
@@ -2201,7 +2201,7 @@ public final class Main extends NetworkGameClient {
           ue.clearStaticReferences(4);
           f.a(-663255224);
           ca.clearStaticReferences((byte) 127);
-          tl.clearStaticReferences(80);
+          SocketConnector.clearStaticReferences(80);
           ProxyAuthenticationRequiredException.a(param0 + 0);
           NanoFrameTimer.resetDeclaredStaticState(param0 ^ 10);
           ImageProducerRasterBuffer.resetStaticState(param0 ^ -14143);
@@ -2236,7 +2236,7 @@ public final class Main extends NetworkGameClient {
           de.resetStaticState(false);
           IterableNodeHashTable.resetStaticState(3663);
           tf.g(-1);
-          q.c(0);
+          ProxySocketConnector.c(0);
           Crc32Table.clearStaticReferences(120);
           NodeHashTableIterator.b((byte) 38);
           cb.clearStaticReferences(-1962269296);

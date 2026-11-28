@@ -133,7 +133,7 @@ final class RegistrationAgreementPane extends ComponentContainer implements Text
           sceneWidgetPart014Local17.unlinkSecondary((byte) 121);
           integerState0502 = integerState0502 - 1;
           cipherPacketBufferLocal18 = SocketFactory.cipherPacketBufferState0002;
-          cipherPacketBufferLocal18.performAction1641(integerArgument1, -4);
+          cipherPacketBufferLocal18.writeCipheredByte(integerArgument1, -4);
           cipherPacketBufferLocal18.position = cipherPacketBufferLocal18.position + 1;
           integerLocal13 = cipherPacketBufferLocal18.position;
           cipherPacketBufferLocal18.writeByte(true, 1);
@@ -240,7 +240,7 @@ final class RegistrationAgreementPane extends ComponentContainer implements Text
 
     final static void performAction1032(int integerArgument1, int integerArgument2, int integerArgument3) {
         CipherPacketBuffer cipherPacketBufferLocal1 = SocketFactory.cipherPacketBufferState0002;
-        cipherPacketBufferLocal1.performAction1641(integerArgument2, -4);
+        cipherPacketBufferLocal1.writeCipheredByte(integerArgument2, -4);
         cipherPacketBufferLocal1.writeByte(true, 3);
         cipherPacketBufferLocal1.writeByte(true, integerArgument1);
         cipherPacketBufferLocal1.writeShort(integerArgument1 ^ -10, integerArgument3);

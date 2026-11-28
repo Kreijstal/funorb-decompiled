@@ -27,16 +27,16 @@ final class ji {
     final static void a(int param0, int param1) {
         byte dupTemp$0 = 0;
         ResizableModalDialog.field_O.field_l[oj.field_c] = (short)(param0 >> 1);
-        ResizableModalDialog.field_O.field_l[eb.field_d] = (short)(param0 >> 1);
+        ResizableModalDialog.field_O.field_l[ArchiveSourceManager.field_d] = (short)(param0 >> 1);
         if (param1 == 24355) {
           dupTemp$0 = 0 != bc.bitwiseAnd(param0, 1) ? StripedProgressWidget.field_H : db.field_p;
-          ResizableModalDialog.field_O.field_O[eb.field_d] = dupTemp$0;
+          ResizableModalDialog.field_O.field_O[ArchiveSourceManager.field_d] = dupTemp$0;
           ResizableModalDialog.field_O.field_O[oj.field_c] = dupTemp$0;
           return;
         }
         field_b = (String) null;
         byte dupTemp$1 = 0 != bc.bitwiseAnd(param0, 1) ? StripedProgressWidget.field_H : db.field_p;
-        ResizableModalDialog.field_O.field_O[eb.field_d] = dupTemp$1;
+        ResizableModalDialog.field_O.field_O[ArchiveSourceManager.field_d] = dupTemp$1;
         ResizableModalDialog.field_O.field_O[oj.field_c] = dupTemp$1;
     }
 
@@ -93,7 +93,7 @@ final class ji {
             ji.a(-42);
           }
           od.field_a = var19.addFace(var7, var5, var9, (byte) 1, cf.field_d, (short) 0, (short) 0);
-          eb.field_d = var19.addFace(var4, var10, var6, (byte) 1, db.field_p, (short) 1, (short) 1);
+          ArchiveSourceManager.field_d = var19.addFace(var4, var10, var6, (byte) 1, db.field_p, (short) 1, (short) 1);
           oj.field_c = var19.addFace(var8, var10, var4, (byte) 1, db.field_p, (short) 1, (short) 1);
           ResizableModalDialog.field_O = (SoftwareModelMesh) (var19.createModel(127, 65535, -1, 0, 0));
           ResizableModalDialog.field_O.field_h = qa.a(-100, var19.field_d);

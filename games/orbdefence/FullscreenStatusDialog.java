@@ -70,7 +70,7 @@ final class FullscreenStatusDialog extends ResizableModalDialog implements Widge
         }
     }
 
-    final static void a(byte param0, java.awt.Component param1) {
+    final static void attachMouseListeners(byte param0, java.awt.Component param1) {
         try {
           param1.addMouseListener(nk.field_q);
           param1.addMouseMotionListener(nk.field_q);

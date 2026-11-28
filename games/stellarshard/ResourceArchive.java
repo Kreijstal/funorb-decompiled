@@ -252,32 +252,32 @@ final class ResourceArchive {
           var4 = ImageProducerRasterBuffer.a(param1, (byte) -44) ? 1 : 0;
           var5 = new n();
           var5.field_n = (short)param1.e(16, 8);
-          var5.field_f = vh.a((byte) 87, var5.field_f, param0, param1);
-          var5.field_b = vh.a((byte) 120, var5.field_b, 16, param1);
-          var5.field_a = vh.a((byte) 91, var5.field_a, 16, param1);
+          var5.field_f = ArchiveSourceManager.a((byte) 87, var5.field_f, param0, param1);
+          var5.field_b = ArchiveSourceManager.a((byte) 120, var5.field_b, 16, param1);
+          var5.field_a = ArchiveSourceManager.a((byte) 91, var5.field_a, 16, param1);
           var5.field_C = (short)param1.e(16, 8);
-          var5.field_l = vh.a((byte) 99, var5.field_l, 16, param1);
-          var5.field_z = vh.a((byte) 96, var5.field_z, 16, param1);
-          var5.field_m = vh.a((byte) 82, var5.field_m, 16, param1);
+          var5.field_l = ArchiveSourceManager.a((byte) 99, var5.field_l, 16, param1);
+          var5.field_z = ArchiveSourceManager.a((byte) 96, var5.field_z, 16, param1);
+          var5.field_m = ArchiveSourceManager.a((byte) 82, var5.field_m, 16, param1);
           if (var3 != 0) {
             var5.field_D = (short)param1.e(16, 8);
-            var5.field_r = vh.a((byte) 106, var5.field_r, 16, param1);
-            var5.field_e = vh.a((byte) 54, var5.field_e, 16, param1);
-            var5.field_K = vh.a((byte) 34, var5.field_K, 16, param1);
-            var5.field_M = vh.a((byte) 110, var5.field_M, 16, param1);
-            var5.field_h = vh.a((byte) 84, var5.field_h, 16, param1);
-            var5.field_v = vh.a((byte) 65, var5.field_v, 16, param1);
+            var5.field_r = ArchiveSourceManager.a((byte) 106, var5.field_r, 16, param1);
+            var5.field_e = ArchiveSourceManager.a((byte) 54, var5.field_e, 16, param1);
+            var5.field_K = ArchiveSourceManager.a((byte) 34, var5.field_K, 16, param1);
+            var5.field_M = ArchiveSourceManager.a((byte) 110, var5.field_M, 16, param1);
+            var5.field_h = ArchiveSourceManager.a((byte) 84, var5.field_h, 16, param1);
+            var5.field_v = ArchiveSourceManager.a((byte) 65, var5.field_v, 16, param1);
           }
           if (var4 != 0) {
             param1.e(16, 8);
-            var5.field_H = vh.a((byte) 23, var5.field_H, 16, param1);
-            var5.field_E = vh.a((byte) 88, var5.field_E, 16, param1);
-            var5.field_P = vh.a((byte) 48, var5.field_P, 16, param1);
-            var5.field_s = vh.a((byte) 84, var5.field_s, 16, param1);
-            var5.field_I = vh.a((byte) 116, var5.field_I, 16, param1);
+            var5.field_H = ArchiveSourceManager.a((byte) 23, var5.field_H, 16, param1);
+            var5.field_E = ArchiveSourceManager.a((byte) 88, var5.field_E, 16, param1);
+            var5.field_P = ArchiveSourceManager.a((byte) 48, var5.field_P, 16, param1);
+            var5.field_s = ArchiveSourceManager.a((byte) 84, var5.field_s, 16, param1);
+            var5.field_I = ArchiveSourceManager.a((byte) 116, var5.field_I, 16, param1);
           }
           if (ImageProducerRasterBuffer.a(param1, (byte) -79)) {
-            var5.field_c = vh.a((byte) 22, var5.field_c, 16, param1);
+            var5.field_c = ArchiveSourceManager.a((byte) 22, var5.field_c, 16, param1);
           }
           if (ImageProducerRasterBuffer.a(param1, (byte) -126)) {
             var5.field_g = wh.a(16, param1, var5.field_g, (byte) 50);

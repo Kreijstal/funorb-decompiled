@@ -79,7 +79,7 @@ final class im implements WidgetRenderer {
         field_e = null;
     }
 
-    final static void a(java.awt.Component param0, byte param1) {
+    final static void attachMouseListeners(java.awt.Component param0, byte param1) {
         try {
           param0.addMouseListener(ib.field_f);
           param0.addMouseMotionListener(ib.field_f);

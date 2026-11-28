@@ -89,7 +89,7 @@ final class gj {
           stackIn_3_0 = (CipherPacketBuffer) (param1);
           stackIn_3_1 = 8;
           stackIn_4_2 = !(param0);
-          var2_int = ((CipherPacketBuffer) (Object) stackIn_3_0).a(stackIn_3_1, stackIn_4_2);
+          var2_int = ((CipherPacketBuffer) (Object) stackIn_3_0).readBits(stackIn_3_1, stackIn_4_2);
           if (0 < var2_int) {
             stackIn_6_0 = null;
             return (u[]) (stackIn_6_0);
@@ -97,24 +97,24 @@ final class gj {
           if (param0) {
             field_h = -34;
           }
-          var3 = param1.a(12, true);
+          var3 = param1.readBits(12, true);
           var4 = new u[var3];
           for (var5 = 0; var5 < var3; var5++) {
-            if (!PacketBuffer.a((byte) 124, param1)) {
-              var6 = param1.a(aa.a(4, var5 - 1), true);
+            if (!PacketBuffer.readBooleanBit((byte) 124, param1)) {
+              var6 = param1.readBits(aa.a(4, var5 - 1), true);
               var4[var5] = var4[var6];
             } else {
               var6_ref_u = new u();
-              param1.a(24, true);
-              param1.a(24, true);
-              var6_ref_u.field_i = param1.a(24, true);
-              param1.a(9, true);
-              param1.a(12, true);
-              param1.a(12, true);
+              param1.readBits(24, true);
+              param1.readBits(24, true);
+              var6_ref_u.field_i = param1.readBits(24, true);
+              param1.readBits(9, true);
+              param1.readBits(12, true);
+              param1.readBits(12, true);
               stackIn_14_0 = (CipherPacketBuffer) (param1);
               stackIn_14_1 = 12;
               stackIn_15_2 = !(param0);
-              ((CipherPacketBuffer) (Object) stackIn_14_0).a(stackIn_14_1, stackIn_15_2);
+              ((CipherPacketBuffer) (Object) stackIn_14_0).readBits(stackIn_14_1, stackIn_15_2);
               var4[var5] = var6_ref_u;
             }
           }

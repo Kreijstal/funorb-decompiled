@@ -25,7 +25,7 @@ final class NetworkArchiveRequest extends ArchiveRequest {
           }
           var9 = new re(param0, param7, param1, param2, param6, param3, param4);
           s.field_e.addLast(68, var9);
-          vh.a(param8, var9, 0);
+          SocketArchiveNetworkClient.a(param8, var9, 0);
           stackIn_3_0 = var9;
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

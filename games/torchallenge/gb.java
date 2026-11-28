@@ -4,7 +4,7 @@
 final class gb {
     static String field_e;
     static int field_b;
-    static vb field_d;
+    static ArchiveNetworkClient field_d;
     static int[] field_c;
     static double field_a;
     static h field_f;

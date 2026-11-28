@@ -150,7 +150,7 @@ final class kp extends PuzzleTile implements Cloneable {
 
     final PuzzleTile a(int param0, byte param1, int param2) {
         wd.field_j = wd.field_j - 1;
-        fn.field_j = fn.field_j + ob.field_l;
+        fn.field_j = fn.field_j + ArchiveNetworkClient.field_l;
         if (param1 == -110) {
           return new pf(param2, param0, (PuzzleTile) (this)).a(param0, (byte) -110, param2);
         }
@@ -170,10 +170,10 @@ final class kp extends PuzzleTile implements Cloneable {
         String stackIn_17_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          ob.field_l = ob.field_l - 1;
+          ArchiveNetworkClient.field_l = ArchiveNetworkClient.field_l - 1;
           mb.field_g = mb.field_g - wd.field_j;
           fn.field_j = fn.field_j + wd.field_j;
-          ob.field_l = ob.field_l - 1;
+          ArchiveNetworkClient.field_l = ArchiveNetworkClient.field_l - 1;
           if (param5 != -87) {
             field_l = (String) null;
           }

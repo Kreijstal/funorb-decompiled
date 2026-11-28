@@ -99,7 +99,7 @@ final class aj extends ig {
           }
           if (sg.field_b == ValidationStatusWidget.field_P &&
             param1.equals(ne.field_h)) {
-            sg.field_b = tl.field_e;
+            sg.field_b = SocketConnector.field_e;
             stackIn_6_0 = nn.field_a;
             return stackIn_6_0;
           }

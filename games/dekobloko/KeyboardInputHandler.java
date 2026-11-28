@@ -39,7 +39,7 @@ final class KeyboardInputHandler implements java.awt.event.KeyListener, java.awt
           BucketBoard.performAction0973(bitmapFontArgument8, true, bitmapFontArgument3, integerArgument9);
           integerLocal13 = 80 % ((integerArgument13 + 81) / 39);
           SceneWidgetPart010.performAction1460(integerArgument7, integerArgument21, (byte) -91, integerArgument1, integerArgument17);
-          ResourceSupport004.performAction1247(31004, integerArgument16, integerArgument15);
+          NetworkArchiveRequest.performAction1247(31004, integerArgument16, integerArgument15);
           MixedSupport018.performAction0253(mixedSupport015Argument11, integerArgument14, integerArgument5, (byte) -63, integerArgument12, mixedSupport015Argument6);
           ProgressMessageDialog.performAction0590(integerArgument20, integerArgument19, (byte) -75, mixedSupport015Argument2);
           SoftwareFramebuffer.performAction1797(integerArgument18, integerArgument4, integerArgument10, true);

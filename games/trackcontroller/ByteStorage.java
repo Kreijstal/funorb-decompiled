@@ -36,7 +36,7 @@ abstract class ByteStorage {
               }
               var7 = new DiskArchiveStore(param1, DiskCacheWorker.field_c, kh.field_e[param1], 2097152);
             }
-            var8 = ij.field_d.a(103, param1, (DiskArchiveStore) (var6), param3, (DiskArchiveStore) (var7));
+            var8 = ij.field_d.getOrCreateArchiveSource(103, param1, (DiskArchiveStore) (var6), param3, (DiskArchiveStore) (var7));
             var9 = 71 % ((param5 + 49) / 56);
             if (param2) {
               var8.b(6054);

@@ -50,7 +50,7 @@ final class DropTargetWidgetContainer extends SingleChildWidgetContainer {
         CipherPacketBuffer var3 = null;
         try {
           var3 = tp.field_f;
-          var3.d(8, param1);
+          var3.writeCipheredByte(8, param1);
           var3.writeByte(true, param2.field_f);
           int var4 = -40 / ((param0 - 4) / 43);
           var3.writeShort(-161478600, param2.field_k);

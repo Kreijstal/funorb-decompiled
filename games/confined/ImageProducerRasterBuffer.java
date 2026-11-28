@@ -32,9 +32,9 @@ final class ImageProducerRasterBuffer extends AwtRasterBuffer implements java.aw
     final static boolean c(byte param0) {
         if (param0 != 6) {
           field_j = (int[]) null;
-          return ProgressMessageDialog.field_vb.a(false);
+          return ProgressMessageDialog.field_vb.loadMasterIndex(false);
         }
-        return ProgressMessageDialog.field_vb.a(false);
+        return ProgressMessageDialog.field_vb.loadMasterIndex(false);
     }
 
     public final synchronized void removeConsumer(java.awt.image.ImageConsumer param0) {

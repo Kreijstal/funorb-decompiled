@@ -21,8 +21,8 @@ abstract class AwtRasterBuffer {
         String stackIn_9_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          gj.a(param1 ^ 2670, (java.awt.Component) ((Object) param0));
-          CrossfadingMidiPcmStream.a((byte) -106, (java.awt.Component) ((Object) param0));
+          gj.detachKeyboardListeners(param1 ^ 2670, (java.awt.Component) ((Object) param0));
+          CrossfadingMidiPcmStream.detachMouseListeners((byte) -106, (java.awt.Component) ((Object) param0));
           if (null != pf.field_e) {
             pf.field_e.detach(1000, (java.awt.Component) ((Object) param0));
           }

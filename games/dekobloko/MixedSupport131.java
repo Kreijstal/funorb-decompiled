@@ -158,7 +158,7 @@ final class MixedSupport131 {
           mixedSupport106State0012 = (MixedSupport106) null;
         }
         CipherPacketBuffer cipherPacketBufferLocal1 = SocketFactory.cipherPacketBufferState0002;
-        cipherPacketBufferLocal1.performAction1641(integerArgument1, -4);
+        cipherPacketBufferLocal1.writeCipheredByte(integerArgument1, -4);
         cipherPacketBufferLocal1.writeByte(true, 1);
         cipherPacketBufferLocal1.writeByte(true, 1);
     }

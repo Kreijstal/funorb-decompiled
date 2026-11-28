@@ -142,7 +142,7 @@ final class jc implements WidgetListener {
           var5.writeInt(param2.field_s, 0);
           var5.writeInt(param2.field_y, param0 + 14499);
           var5.writeInt(param2.field_n, 0);
-          var5.c(var4, 120);
+          var5.appendCrc32(var4, 120);
           var5.patchByteLength((byte) 115, var5.position - var4);
         } catch (RuntimeException runtimeException) {
           throw wn.wrapClientException((Throwable) ((Object) runtimeException), "jc.B(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');

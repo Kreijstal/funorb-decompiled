@@ -227,18 +227,18 @@ final class n {
     final static boolean c(int param0) {
         if (param0 != -2147483648) {
           n.clearStaticReferences(29);
-          if (null == da.field_a) {
+          if (null == MouseInputHandler.field_a) {
             return false;
           }
-          if (da.field_a.a(0)) {
+          if (MouseInputHandler.field_a.a(0)) {
             return true;
           }
           return false;
         }
-        if (null == da.field_a) {
+        if (null == MouseInputHandler.field_a) {
           return false;
         }
-        if (da.field_a.a(0)) {
+        if (MouseInputHandler.field_a.a(0)) {
           return true;
         }
         return false;
@@ -256,7 +256,7 @@ final class n {
           }
           var4 = (f) (dj.field_c.beginForward(true));
           while (var4 != null) {
-            ch.a(18391, param0, var4);
+            ProxySocketConnector.a(18391, param0, var4);
             var4 = (f) (dj.field_c.nextForward(2));
           }
           return;

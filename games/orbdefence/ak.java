@@ -11,7 +11,7 @@ final class ak extends jl {
     private hd field_i;
     private int field_r;
     private byte[] field_g;
-    private ge field_n;
+    private ArchiveNetworkClient field_n;
     private SectorCacheStore field_w;
     private ArchiveRequest field_q;
     private int field_k;
@@ -70,10 +70,10 @@ final class ak extends jl {
                 if (-1 != this.field_g[param0]) {
                   throw new RuntimeException();
                 }
-                if (this.field_n.a(false)) {
+                if (this.field_n.isPrefetchQueueFull(false)) {
                   return null;
                 }
-                var4 = this.field_n.a(15937, param0, false, this.field_t, (byte) 2);
+                var4 = this.field_n.enqueueRequest(15937, param0, false, this.field_t, (byte) 2);
               } else {
                 if (this.field_l == null) {
                   throw new RuntimeException();
@@ -85,11 +85,11 @@ final class ak extends jl {
                 this.field_g[param0] != -1) {
                 var4 = this.field_j.readNow(this.field_l, param0, -126);
               } else {
-                if (this.field_n.d(-110)) {
+                if (this.field_n.isPriorityQueueFull(-110)) {
                   stackIn_15_0 = null;
                   return (ArchiveRequest) (stackIn_15_0);
                 }
-                var4 = this.field_n.a(15937, param0, true, this.field_t, (byte) 2);
+                var4 = this.field_n.enqueueRequest(15937, param0, true, this.field_t, (byte) 2);
               }
             }
             this.field_p.a((long)param0, (byte) 127, (IntrusiveNode) (var4));
@@ -147,8 +147,8 @@ final class ak extends jl {
               if (!((ArchiveRequest) (var4)).field_n) {
                 return null;
               }
-              if (!this.field_n.d(-9)) {
-                var4 = this.field_n.a(15937, param0, true, this.field_t, (byte) 2);
+              if (!this.field_n.isPriorityQueueFull(-9)) {
+                var4 = this.field_n.enqueueRequest(15937, param0, true, this.field_t, (byte) 2);
                 this.field_p.a((long)param0, (byte) -8, (IntrusiveNode) (var4));
               }
               stackIn_84_0 = null;
@@ -185,13 +185,13 @@ final class ak extends jl {
           } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
             var6 = (RuntimeException) (Object) decompiledCaughtException;
-            this.field_n.f(-105);
+            this.field_n.resetAfterValidationFailure(-105);
             ((ArchiveRequest) (var4)).unlink(57);
             if (!((ArchiveRequest) (var4)).field_n) {
               return null;
             }
-            if (!this.field_n.d(-88)) {
-              var4 = this.field_n.a(15937, param0, true, this.field_t, (byte) 2);
+            if (!this.field_n.isPriorityQueueFull(-88)) {
+              var4 = this.field_n.enqueueRequest(15937, param0, true, this.field_t, (byte) 2);
               this.field_p.a((long)param0, (byte) -99, (IntrusiveNode) (var4));
             }
             stackIn_111_0 = null;
@@ -237,10 +237,10 @@ final class ak extends jl {
             return stackIn_5_0;
           }
           if (this.field_q == null) {
-            if (this.field_n.d(-105)) {
+            if (this.field_n.isPriorityQueueFull(-105)) {
               return null;
             }
-            this.field_q = (ArchiveRequest) ((Object) this.field_n.a(15937, this.field_t, true, 255, (byte) 0));
+            this.field_q = (ArchiveRequest) ((Object) this.field_n.enqueueRequest(15937, this.field_t, true, 255, (byte) 0));
           }
           if (this.field_q.field_l) {
             return null;
@@ -261,12 +261,12 @@ final class ak extends jl {
             } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var3 = decompiledCaughtException;
-              this.field_n.f(-128);
+              this.field_n.resetAfterValidationFailure(-128);
               this.field_i = null;
-              if (this.field_n.d(-20)) {
+              if (this.field_n.isPriorityQueueFull(-20)) {
                 this.field_q = null;
               } else {
-                this.field_q = (ArchiveRequest) ((Object) this.field_n.a(param0 ^ -25352, this.field_t, true, 255, (byte) 0));
+                this.field_q = (ArchiveRequest) ((Object) this.field_n.enqueueRequest(param0 ^ -25352, this.field_t, true, 255, (byte) 0));
               }
               stackIn_47_0 = null;
               return (hd) (stackIn_47_0);
@@ -287,8 +287,8 @@ final class ak extends jl {
               decompiledCaughtException = decompiledCaughtParameter1;
               var3 = decompiledCaughtException;
               this.field_i = null;
-              if (!this.field_n.d(-13)) {
-                this.field_q = (ArchiveRequest) ((Object) this.field_n.a(15937, this.field_t, true, 255, (byte) 0));
+              if (!this.field_n.isPriorityQueueFull(-13)) {
+                this.field_q = (ArchiveRequest) ((Object) this.field_n.enqueueRequest(15937, this.field_t, true, 255, (byte) 0));
               } else {
                 this.field_q = null;
               }
@@ -443,7 +443,7 @@ final class ak extends jl {
         ArchiveRequest discarded$0 = null;
         ArchiveRequest discarded$3 = null;
         ArchiveRequest discarded$2 = null;
-        ge stackIn_27_0 = null;
+        ArchiveNetworkClient stackIn_27_0 = null;
         boolean stackIn_28_1 = false;
         RuntimeException decompiledCaughtException = null;
         Object var2 = null;
@@ -533,7 +533,7 @@ final class ak extends jl {
                   }
                   stackIn_27_0 = this.field_n;
                   stackIn_28_1 = !(param0);
-                  if (!((ge) (Object) stackIn_27_0).a(stackIn_28_1)) {
+                  if (!((ArchiveNetworkClient) (Object) stackIn_27_0).isPrefetchQueueFull(stackIn_28_1)) {
                     if (1 != this.field_g[this.field_o]) {
                       discarded$2 = this.a(this.field_o, (byte) 63, 2);
                     }
@@ -630,7 +630,7 @@ final class ak extends jl {
         }
     }
 
-    ak(int param0, SectorCacheStore param1, SectorCacheStore param2, ge param3, DiskCacheWorker param4, int param5, byte[] param6, int param7, boolean param8) {
+    ak(int param0, SectorCacheStore param1, SectorCacheStore param2, ArchiveNetworkClient param3, DiskCacheWorker param4, int param5, byte[] param6, int param7, boolean param8) {
         boolean stackIn_7_1 = false;
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;

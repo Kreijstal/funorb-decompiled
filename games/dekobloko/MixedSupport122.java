@@ -41,7 +41,7 @@ final class MixedSupport122 {
 
     final static void performAction1603(int integerArgument1, boolean booleanArgument2) {
         CipherPacketBuffer cipherPacketBufferLocal1 = SocketFactory.cipherPacketBufferState0002;
-        cipherPacketBufferLocal1.performAction1641(integerArgument1, -4);
+        cipherPacketBufferLocal1.writeCipheredByte(integerArgument1, -4);
         cipherPacketBufferLocal1.position = cipherPacketBufferLocal1.position + 1;
         int integerLocal2 = cipherPacketBufferLocal1.position;
         cipherPacketBufferLocal1.writeByte(true, 2);

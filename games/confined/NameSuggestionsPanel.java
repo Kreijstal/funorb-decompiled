@@ -202,7 +202,7 @@ final class NameSuggestionsPanel extends DequeWidgetContainer implements WidgetA
         }
     }
 
-    final static void a(int param0, java.awt.Component param1) {
+    final static void detachMouseListeners(int param0, java.awt.Component param1) {
         try {
           param1.removeMouseListener(tf.field_a);
           param1.removeMouseMotionListener(tf.field_a);

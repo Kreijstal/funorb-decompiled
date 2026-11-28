@@ -21,18 +21,18 @@ final class bl {
         int var4 = 0;
         try {
           var5 = s.field_b;
-          var5.i(19319, param2);
+          var5.writeCipheredByte(19319, param2);
           var5.field_i = var5.field_i + 1;
           var4 = var5.field_i;
-          var5.d(105, param0);
-          var5.d(96, param1.field_i);
-          var5.c(-97, param1.field_m);
-          var5.b(param1.field_r, 25251);
-          var5.b(param1.field_l, param0 ^ 25250);
-          var5.b(param1.field_k, 25251);
-          var5.b(param1.field_h, 25251);
-          var5.f(var4, param0 - 70);
-          var5.a(-var4 + var5.field_i, -19720);
+          var5.writeByte(105, param0);
+          var5.writeByte(96, param1.field_i);
+          var5.writeSignedSmart(-97, param1.field_m);
+          var5.writeInt(param1.field_r, 25251);
+          var5.writeInt(param1.field_l, param0 ^ 25250);
+          var5.writeInt(param1.field_k, 25251);
+          var5.writeInt(param1.field_h, 25251);
+          var5.appendCrc32(var4, param0 - 70);
+          var5.patchByteLength(-var4 + var5.field_i, -19720);
         } catch (RuntimeException runtimeException) {
           throw AccountCreationResultPanel.wrapClientException((Throwable) ((Object) runtimeException), "bl.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }

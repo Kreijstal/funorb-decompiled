@@ -21,7 +21,7 @@ final class vf {
           if (param3 <= 96) {
             vf.a(false);
           }
-          tj.field_y = param1;
+          SocketArchiveNetworkClient.field_y = param1;
           NanoFrameTimer.field_i = param0;
         } catch (RuntimeException runtimeException) {
           throw ch.wrapClientException((Throwable) ((Object) runtimeException), "vf.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');

@@ -68,14 +68,14 @@ final class kd {
           var8 = new CipherPacketBuffer(param1.getFileByName("logo.fo3d", "", (byte) -113));
           var10 = var8;
           var3 = var10.readUnsignedByte(true);
-          var10.e(false);
+          var10.beginBitAccess(false);
           ch.field_n = lo.a(var10, (byte) -128);
           RaiderRecruitmentScreen.field_w = new qh[var3];
           lk.field_R = new int[var3][];
           for (var4 = 0; var3 > var4; var4++) {
             RaiderRecruitmentScreen.field_w[var4] = df.a(false, var8);
           }
-          var10.f((byte) 32);
+          var10.endBitAccess((byte) 32);
           var9 = 0;
           var4Lifetime1 = var9;
           while (var9 < var3) {

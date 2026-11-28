@@ -160,10 +160,10 @@ final class df implements WidgetRenderer {
           }
           var4 = var16.readUnsignedByte(4);
           if (var4 != 0) {
-            wj.field_t[0] = wf.field_b;
+            SocketArchiveNetworkClient.field_t[0] = wf.field_b;
             var5 = var3.field_t;
             for (var6_int = 1; var4 > var6_int; var6_int++) {
-              wj.field_t[var6_int] = var14.readString((byte) 93);
+              SocketArchiveNetworkClient.field_t[var6_int] = var14.readString((byte) 93);
             }
             UiWidget.a((byte) -26, var4, var5);
             for (var6_intLifetime1 = 0; var4 > var6_intLifetime1; var6_intLifetime1++) {
@@ -182,12 +182,12 @@ final class df implements WidgetRenderer {
             var10 = 0;
             while (var9 < var8) {
               var11 = fj.field_b[var9];
-              var6[0][var10] = wj.field_t[var11];
+              var6[0][var10] = SocketArchiveNetworkClient.field_t[var11];
               var20[0][var10 * 4] = GuestPlayConfirmationForm.field_B[var11];
               var20[0][4 * var10 + 1] = PcmOutputWorker.field_g[var11];
               var20[0][2 + var10 * 4] = wb.field_e[var11];
               var20[0][4 * var10 + 3] = vc.field_f[var11];
-              if (hk.a(120, wj.field_t[var11]) &&
+              if (hk.a(120, SocketArchiveNetworkClient.field_t[var11]) &&
                 vc.field_f[var11] + PcmOutputWorker.field_g[var11] + wb.field_e[var11] == 0) {
                 var6[0][var10] = null;
                 var10--;
@@ -200,12 +200,12 @@ final class df implements WidgetRenderer {
             var10Lifetime1 = var15;
             while (var8 > var9Lifetime1) {
               var11Lifetime1 = fj.field_b[var9Lifetime1 + var5];
-              var6[1][var15] = wj.field_t[var11Lifetime1];
+              var6[1][var15] = SocketArchiveNetworkClient.field_t[var11Lifetime1];
               var20[1][4 * var15] = GuestPlayConfirmationForm.field_B[var11Lifetime1];
               var20[1][4 * var15 + 1] = PcmOutputWorker.field_g[var11Lifetime1];
               var20[1][4 * var15 + 2] = wb.field_e[var11Lifetime1];
               var20[1][3 + var15 * 4] = vc.field_f[var11Lifetime1];
-              if (hk.a(112, wj.field_t[var11Lifetime1]) &&
+              if (hk.a(112, SocketArchiveNetworkClient.field_t[var11Lifetime1]) &&
                 0 == PcmOutputWorker.field_g[var11Lifetime1] - (-wb.field_e[var11Lifetime1] - vc.field_f[var11Lifetime1])) {
                 var6[1][var15] = null;
                 var15--;

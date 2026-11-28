@@ -522,7 +522,7 @@ final class RenderingSupport006 extends HashNode {
         CipherPacketBuffer cipherPacketBufferLocal1 = null;
         try {
           cipherPacketBufferLocal1 = SocketFactory.cipherPacketBufferState0002;
-          cipherPacketBufferLocal1.performAction1641(integerArgument3, byteArgument2 ^ 70);
+          cipherPacketBufferLocal1.writeCipheredByte(integerArgument3, byteArgument2 ^ 70);
           if (byteArgument2 != -70) {
             MixedSupport129 mixedSupport129Local2 = (MixedSupport129) null;
             RenderingSupport006.performAction0748((MixedSupport129) null, (byte) -31, 108);

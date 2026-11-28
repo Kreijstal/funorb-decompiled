@@ -273,7 +273,7 @@ final class d extends InteractiveWidget {
               var3 = var1.readString(true);
               PcmResampler.field_d = ((String) (var3)).intern();
               var4 = var1.readUnsignedByte((byte) -117);
-              ij.a(var4, 2);
+              BouncedownClientSupport.decodePackedClientOptions(var4, 2);
               return;
             }
             ValidatedTextField.a((Throwable) null, (byte) 100, "F1: " + ValidationStatusIcon.a(-114));
@@ -306,7 +306,7 @@ final class d extends InteractiveWidget {
             fieldTemp$1 = kc.field_a;
             kc.field_a = kc.field_a + 1;
             var6_ref.field_mb = fieldTemp$1;
-            oa.field_b.addLast(1, var6_ref);
+            SocketConnector.field_b.addLast(1, var6_ref);
           }
           if (var3Lifetime1 != null) {
             var3Lifetime1 = ((String) (var3Lifetime1)).intern();
@@ -314,7 +314,7 @@ final class d extends InteractiveWidget {
           var6_ref.field_ob = var4_ref_StringLifetime1;
           var6_ref.field_kb = (String) (var3Lifetime1);
           var6_ref.unlink(2);
-          var7_ref = (fb) (oa.field_b.beginForward((byte) -76));
+          var7_ref = (fb) (SocketConnector.field_b.beginForward((byte) -76));
           scanLoop1: while (true) {
             if (null != var7_ref) {
               stackIn_62_0 = var7_ref;
@@ -322,7 +322,7 @@ final class d extends InteractiveWidget {
                 break scanLoop1;
               }
               if (ja.a(stackIn_62_0, 200, var6_ref)) {
-                var7_ref = (fb) (oa.field_b.nextForward((byte) -114));
+                var7_ref = (fb) (SocketConnector.field_b.nextForward((byte) -114));
                 continue;
               }
             }
@@ -335,7 +335,7 @@ final class d extends InteractiveWidget {
               return;
             }
           }
-          oa.field_b.addLast(1, var6_ref);
+          SocketConnector.field_b.addLast(1, var6_ref);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

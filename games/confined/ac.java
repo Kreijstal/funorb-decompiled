@@ -35,11 +35,11 @@ final class ac {
         String stackIn_9_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          ii.a((java.awt.Component) ((Object) param0), 30);
+          ii.attachKeyboardListeners((java.awt.Component) ((Object) param0), 30);
           if (param1 >= -72) {
             return;
           }
-          fa.a(false, (java.awt.Component) ((Object) param0));
+          fa.attachMouseListeners(false, (java.awt.Component) ((Object) param0));
           if (null == jc.field_c) {
             return;
           }

@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class FullscreenStatusDialog extends ResizableModalDialog implements WidgetActivationListener {
-    static hj field_fb;
+    static ArchiveSourceManager field_fb;
     static String field_db;
     private InteractiveWidget field_gb;
     static int field_bb;

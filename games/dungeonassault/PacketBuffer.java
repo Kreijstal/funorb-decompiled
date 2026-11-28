@@ -995,187 +995,187 @@ class PacketBuffer extends IntrusiveNode {
                 }
                 var2 = gm.a("achievement_criteria,0", false);
                 if (var2 != null) {
-                  bb.field_k[0] = dj.a(var2, false);
+                  ArchiveNetworkClient.field_k[0] = dj.a(var2, false);
                 }
                 var2 = gm.a("achievement_criteria,1", false);
                 if (null != var2) {
-                  bb.field_k[1] = dj.a(var2, false);
+                  ArchiveNetworkClient.field_k[1] = dj.a(var2, false);
                 }
                 var2 = gm.a("achievement_criteria,2", false);
                 if (null != var2) {
-                  bb.field_k[2] = dj.a(var2, false);
+                  ArchiveNetworkClient.field_k[2] = dj.a(var2, false);
                 }
                 var2 = gm.a("achievement_criteria,3", false);
                 if (var2 != null) {
-                  bb.field_k[3] = dj.a(var2, false);
+                  ArchiveNetworkClient.field_k[3] = dj.a(var2, false);
                 }
                 var2 = gm.a("achievement_criteria,4", param1);
                 if (null != var2) {
-                  bb.field_k[4] = dj.a(var2, param1);
+                  ArchiveNetworkClient.field_k[4] = dj.a(var2, param1);
                 }
                 var2 = gm.a("achievement_criteria,5", param1);
                 if (var2 != null) {
-                  bb.field_k[5] = dj.a(var2, false);
+                  ArchiveNetworkClient.field_k[5] = dj.a(var2, false);
                 }
                 var2 = gm.a("achievement_criteria,6", false);
                 if (null != var2) {
-                  bb.field_k[6] = dj.a(var2, false);
+                  ArchiveNetworkClient.field_k[6] = dj.a(var2, false);
                 }
                 var2 = gm.a("achievement_criteria,7", false);
                 if (var2 != null) {
-                  bb.field_k[7] = dj.a(var2, param1);
+                  ArchiveNetworkClient.field_k[7] = dj.a(var2, param1);
                 }
                 var2 = gm.a("achievement_criteria,8", false);
                 if (var2 != null) {
-                  bb.field_k[8] = dj.a(var2, param1);
+                  ArchiveNetworkClient.field_k[8] = dj.a(var2, param1);
                 }
                 var2 = gm.a("achievement_criteria,9", false);
                 if (var2 != null) {
-                  bb.field_k[9] = dj.a(var2, false);
+                  ArchiveNetworkClient.field_k[9] = dj.a(var2, false);
                 }
                 var2 = gm.a("achievement_criteria,10", param1);
                 if (null != var2) {
-                  bb.field_k[10] = dj.a(var2, false);
+                  ArchiveNetworkClient.field_k[10] = dj.a(var2, false);
                 }
                 var2 = gm.a("achievement_criteria,11", param1);
                 if (var2 != null) {
-                  bb.field_k[11] = dj.a(var2, param1);
+                  ArchiveNetworkClient.field_k[11] = dj.a(var2, param1);
                 }
                 var2 = gm.a("achievement_criteria,12", false);
                 if (null != var2) {
-                  bb.field_k[12] = dj.a(var2, false);
+                  ArchiveNetworkClient.field_k[12] = dj.a(var2, false);
                 }
                 var2 = gm.a("achievement_criteria,13", false);
                 if (null != var2) {
-                  bb.field_k[13] = dj.a(var2, param1);
+                  ArchiveNetworkClient.field_k[13] = dj.a(var2, param1);
                 }
                 var2 = gm.a("achievement_criteria,14", param1);
                 if (null != var2) {
-                  bb.field_k[14] = dj.a(var2, false);
+                  ArchiveNetworkClient.field_k[14] = dj.a(var2, false);
                 }
                 var2 = gm.a("achievement_criteria,15", false);
                 if (null != var2) {
-                  bb.field_k[15] = dj.a(var2, param1);
+                  ArchiveNetworkClient.field_k[15] = dj.a(var2, param1);
                 }
                 var2 = gm.a("achievement_criteria,16", false);
                 if (var2 != null) {
-                  bb.field_k[16] = dj.a(var2, param1);
+                  ArchiveNetworkClient.field_k[16] = dj.a(var2, param1);
                 }
                 var2 = gm.a("achievement_criteria,17", false);
                 if (var2 != null) {
-                  bb.field_k[17] = dj.a(var2, false);
+                  ArchiveNetworkClient.field_k[17] = dj.a(var2, false);
                 }
                 var2 = gm.a("achievement_criteria,18", false);
                 if (null != var2) {
-                  bb.field_k[18] = dj.a(var2, false);
+                  ArchiveNetworkClient.field_k[18] = dj.a(var2, false);
                 }
                 var2 = gm.a("achievement_criteria,19", false);
                 if (var2 != null) {
-                  bb.field_k[19] = dj.a(var2, false);
+                  ArchiveNetworkClient.field_k[19] = dj.a(var2, false);
                 }
                 var2 = gm.a("achievement_criteria,20", false);
                 if (null != var2) {
-                  bb.field_k[20] = dj.a(var2, false);
+                  ArchiveNetworkClient.field_k[20] = dj.a(var2, false);
                 }
                 var2 = gm.a("achievement_criteria,21", false);
                 if (null != var2) {
-                  bb.field_k[21] = dj.a(var2, false);
+                  ArchiveNetworkClient.field_k[21] = dj.a(var2, false);
                 }
                 var2 = gm.a("achievement_criteria,22", false);
                 if (var2 != null) {
-                  bb.field_k[22] = dj.a(var2, false);
+                  ArchiveNetworkClient.field_k[22] = dj.a(var2, false);
                 }
                 var2 = gm.a("achievement_criteria,23", false);
                 if (var2 != null) {
-                  bb.field_k[23] = dj.a(var2, param1);
+                  ArchiveNetworkClient.field_k[23] = dj.a(var2, param1);
                 }
                 var2 = gm.a("achievement_criteria,24", false);
                 if (null != var2) {
-                  bb.field_k[24] = dj.a(var2, false);
+                  ArchiveNetworkClient.field_k[24] = dj.a(var2, false);
                 }
                 var2 = gm.a("achievement_criteria,25", param1);
                 if (null != var2) {
-                  bb.field_k[25] = dj.a(var2, false);
+                  ArchiveNetworkClient.field_k[25] = dj.a(var2, false);
                 }
                 var2 = gm.a("achievement_criteria,26", false);
                 if (var2 != null) {
-                  bb.field_k[26] = dj.a(var2, false);
+                  ArchiveNetworkClient.field_k[26] = dj.a(var2, false);
                 }
                 var2 = gm.a("achievement_criteria,27", false);
                 if (var2 != null) {
-                  bb.field_k[27] = dj.a(var2, false);
+                  ArchiveNetworkClient.field_k[27] = dj.a(var2, false);
                 }
                 var2 = gm.a("achievement_criteria,28", false);
                 if (var2 != null) {
-                  bb.field_k[28] = dj.a(var2, false);
+                  ArchiveNetworkClient.field_k[28] = dj.a(var2, false);
                 }
                 var2 = gm.a("achievement_criteria,29", param1);
                 if (null != var2) {
-                  bb.field_k[29] = dj.a(var2, false);
+                  ArchiveNetworkClient.field_k[29] = dj.a(var2, false);
                 }
                 var2 = gm.a("achievement_criteria,30", false);
                 if (var2 != null) {
-                  bb.field_k[30] = dj.a(var2, param1);
+                  ArchiveNetworkClient.field_k[30] = dj.a(var2, param1);
                 }
                 var2 = gm.a("achievement_criteria,31", false);
                 if (var2 != null) {
-                  bb.field_k[31] = dj.a(var2, false);
+                  ArchiveNetworkClient.field_k[31] = dj.a(var2, false);
                 }
                 var2 = gm.a("achievement_criteria,32", false);
                 if (null != var2) {
-                  bb.field_k[32] = dj.a(var2, false);
+                  ArchiveNetworkClient.field_k[32] = dj.a(var2, false);
                 }
                 var2 = gm.a("achievement_criteria,33", false);
                 if (var2 != null) {
-                  bb.field_k[33] = dj.a(var2, false);
+                  ArchiveNetworkClient.field_k[33] = dj.a(var2, false);
                 }
                 var2 = gm.a("achievement_criteria,34", false);
                 if (null != var2) {
-                  bb.field_k[34] = dj.a(var2, false);
+                  ArchiveNetworkClient.field_k[34] = dj.a(var2, false);
                 }
                 var2 = gm.a("achievement_criteria,35", false);
                 if (var2 != null) {
-                  bb.field_k[35] = dj.a(var2, false);
+                  ArchiveNetworkClient.field_k[35] = dj.a(var2, false);
                 }
                 var2 = gm.a("achievement_criteria,36", false);
                 if (var2 != null) {
-                  bb.field_k[36] = dj.a(var2, false);
+                  ArchiveNetworkClient.field_k[36] = dj.a(var2, false);
                 }
                 var2 = gm.a("achievement_criteria,37", false);
                 if (null != var2) {
-                  bb.field_k[37] = dj.a(var2, false);
+                  ArchiveNetworkClient.field_k[37] = dj.a(var2, false);
                 }
                 var2 = gm.a("achievement_criteria,38", false);
                 if (var2 != null) {
-                  bb.field_k[38] = dj.a(var2, false);
+                  ArchiveNetworkClient.field_k[38] = dj.a(var2, false);
                 }
                 var2 = gm.a("achievement_criteria,39", false);
                 if (var2 != null) {
-                  bb.field_k[39] = dj.a(var2, false);
+                  ArchiveNetworkClient.field_k[39] = dj.a(var2, false);
                 }
                 var2 = gm.a("achievement_criteria,40", false);
                 if (var2 != null) {
-                  bb.field_k[40] = dj.a(var2, param1);
+                  ArchiveNetworkClient.field_k[40] = dj.a(var2, param1);
                 }
                 var2 = gm.a("achievement_criteria,41", false);
                 if (var2 != null) {
-                  bb.field_k[41] = dj.a(var2, false);
+                  ArchiveNetworkClient.field_k[41] = dj.a(var2, false);
                 }
                 var2 = gm.a("achievement_criteria,42", false);
                 if (null != var2) {
-                  bb.field_k[42] = dj.a(var2, false);
+                  ArchiveNetworkClient.field_k[42] = dj.a(var2, false);
                 }
                 var2 = gm.a("achievement_criteria,43", false);
                 if (null != var2) {
-                  bb.field_k[43] = dj.a(var2, false);
+                  ArchiveNetworkClient.field_k[43] = dj.a(var2, false);
                 }
                 var2 = gm.a("achievement_criteria,44", false);
                 if (var2 != null) {
-                  bb.field_k[44] = dj.a(var2, false);
+                  ArchiveNetworkClient.field_k[44] = dj.a(var2, false);
                 }
                 var2 = gm.a("achievement_criteria,45", param1);
                 if (null != var2) {
-                  bb.field_k[45] = dj.a(var2, false);
+                  ArchiveNetworkClient.field_k[45] = dj.a(var2, false);
                 }
                 var2 = gm.a("intro_captions,0", false);
                 if (var2 != null) {
@@ -1323,7 +1323,7 @@ class PacketBuffer extends IntrusiveNode {
                 }
                 var2 = gm.a("tutorial_raiders2,1", param1);
                 if (null != var2) {
-                  je.field_f[1] = dj.a(var2, false);
+                  ArchiveSourceManager.field_f[1] = dj.a(var2, false);
                 }
                 var2 = gm.a("tutorial_raiders3,1", param1);
                 if (var2 != null) {
@@ -1387,11 +1387,11 @@ class PacketBuffer extends IntrusiveNode {
                 }
                 var2 = gm.a("tutorial_strategies1,0", param1);
                 if (null != var2) {
-                  tp.field_C[0] = dj.a(var2, false);
+                  SocketArchiveNetworkClient.field_C[0] = dj.a(var2, false);
                 }
                 var2 = gm.a("tutorial_strategies1,1", false);
                 if (null != var2) {
-                  tp.field_C[1] = dj.a(var2, false);
+                  SocketArchiveNetworkClient.field_C[1] = dj.a(var2, false);
                 }
                 var2 = gm.a("tutorial_strategies2,1", false);
                 if (var2 != null) {
@@ -1407,11 +1407,11 @@ class PacketBuffer extends IntrusiveNode {
                 }
                 var2 = gm.a("tutorial_trap1,0", false);
                 if (null != var2) {
-                  bb.field_t[0] = dj.a(var2, false);
+                  ArchiveNetworkClient.field_t[0] = dj.a(var2, false);
                 }
                 var2 = gm.a("tutorial_trap1,1", false);
                 if (var2 != null) {
-                  bb.field_t[1] = dj.a(var2, param1);
+                  ArchiveNetworkClient.field_t[1] = dj.a(var2, param1);
                 }
                 var2 = gm.a("tutorial_trap2,1", false);
                 if (null != var2) {
@@ -1463,11 +1463,11 @@ class PacketBuffer extends IntrusiveNode {
                 }
                 var2 = gm.a("tutorial_hoardroom,0", false);
                 if (null != var2) {
-                  ha.field_j[0] = dj.a(var2, false);
+                  ProxySocketConnector.field_j[0] = dj.a(var2, false);
                 }
                 var2 = gm.a("tutorial_hoardroom,1", false);
                 if (null != var2) {
-                  ha.field_j[1] = dj.a(var2, false);
+                  ProxySocketConnector.field_j[1] = dj.a(var2, false);
                 }
                 var2 = gm.a("tutorial_abilities,0", false);
                 if (null != var2) {
@@ -1563,7 +1563,7 @@ class PacketBuffer extends IntrusiveNode {
                 }
                 var2 = gm.a("tutorial_selectraiders,1", param1);
                 if (var2 != null) {
-                  tp.field_A[1] = dj.a(var2, param1);
+                  SocketArchiveNetworkClient.field_A[1] = dj.a(var2, param1);
                 }
                 var2 = gm.a("tutorial_justplay_warning", param1);
                 if (null != var2) {
@@ -2005,7 +2005,7 @@ class PacketBuffer extends IntrusiveNode {
                 }
                 var2 = gm.a("desc_pit", false);
                 if (null != var2) {
-                  um.field_e = dj.a(var2, false);
+                  SocketConnector.field_e = dj.a(var2, false);
                 }
                 var2 = gm.a("desc_snakes", false);
                 if (var2 != null) {
@@ -2417,11 +2417,11 @@ class PacketBuffer extends IntrusiveNode {
                 }
                 var2 = gm.a("ability_boostdef_brief,0", false);
                 if (var2 != null) {
-                  ha.field_l[0] = dj.a(var2, false);
+                  ProxySocketConnector.field_l[0] = dj.a(var2, false);
                 }
                 var2 = gm.a("ability_boostdef_brief,1", false);
                 if (var2 != null) {
-                  ha.field_l[1] = dj.a(var2, param1);
+                  ProxySocketConnector.field_l[1] = dj.a(var2, param1);
                 }
                 var2 = gm.a("ability_boostsneak_brief,0", false);
                 if (var2 != null) {
@@ -2449,11 +2449,11 @@ class PacketBuffer extends IntrusiveNode {
                 }
                 var2 = gm.a("ability_sacrifice_green_brief,0", false);
                 if (var2 != null) {
-                  bb.field_l[0] = dj.a(var2, false);
+                  ArchiveNetworkClient.field_l[0] = dj.a(var2, false);
                 }
                 var2 = gm.a("ability_sacrifice_green_brief,1", false);
                 if (null != var2) {
-                  bb.field_l[1] = dj.a(var2, false);
+                  ArchiveNetworkClient.field_l[1] = dj.a(var2, false);
                 }
                 var2 = gm.a("ability_thief_brief,0", false);
                 if (var2 != null) {
@@ -2481,11 +2481,11 @@ class PacketBuffer extends IntrusiveNode {
                 }
                 var2 = gm.a("ability_circumvent_brief,0", false);
                 if (var2 != null) {
-                  um.field_b[0] = dj.a(var2, false);
+                  SocketConnector.field_b[0] = dj.a(var2, false);
                 }
                 var2 = gm.a("ability_circumvent_brief,1", false);
                 if (var2 != null) {
-                  um.field_b[1] = dj.a(var2, false);
+                  SocketConnector.field_b[1] = dj.a(var2, false);
                 }
                 var2 = gm.a("ability_scout_brief,0", false);
                 if (var2 != null) {
@@ -2627,7 +2627,7 @@ class PacketBuffer extends IntrusiveNode {
                 }
                 var2 = gm.a("orb_majesty", param1);
                 if (null != var2) {
-                  tp.field_z = dj.a(var2, param1);
+                  SocketArchiveNetworkClient.field_z = dj.a(var2, param1);
                 }
                 var2 = gm.a("orb_brilliance", false);
                 if (var2 != null) {
@@ -3123,7 +3123,7 @@ class PacketBuffer extends IntrusiveNode {
                 }
                 var2 = gm.a("text_result", false);
                 if (null != var2) {
-                  bb.field_q = dj.a(var2, false);
+                  ArchiveNetworkClient.field_q = dj.a(var2, false);
                 }
                 var2 = gm.a("text_continue", false);
                 if (var2 != null) {
@@ -3131,7 +3131,7 @@ class PacketBuffer extends IntrusiveNode {
                 }
                 var2 = gm.a("text_dungeon_assault", false);
                 if (var2 != null) {
-                  tp.field_u = dj.a(var2, false);
+                  SocketArchiveNetworkClient.field_u = dj.a(var2, false);
                 }
                 var2 = gm.a("text_instructions", param1);
                 if (var2 != null) {
@@ -3597,7 +3597,7 @@ class PacketBuffer extends IntrusiveNode {
                 }
                 var2 = gm.a("text_hoardroom_hint", false);
                 if (null != var2) {
-                  um.field_c = dj.a(var2, false);
+                  SocketConnector.field_c = dj.a(var2, false);
                 }
                 var2 = gm.a("text_cost", false);
                 if (var2 != null) {
@@ -3633,7 +3633,7 @@ class PacketBuffer extends IntrusiveNode {
                 }
                 var2 = gm.a("text_sort_rooms_by", false);
                 if (null != var2) {
-                  tp.field_w = dj.a(var2, false);
+                  SocketArchiveNetworkClient.field_w = dj.a(var2, false);
                 }
                 var2 = gm.a("text_modifier_stat_increased", false);
                 if (var2 != null) {
@@ -3901,7 +3901,7 @@ class PacketBuffer extends IntrusiveNode {
                 }
                 var2 = gm.a("text_hint_ability_boostsneak", param1);
                 if (null != var2) {
-                  bb.field_r = dj.a(var2, param1);
+                  ArchiveNetworkClient.field_r = dj.a(var2, param1);
                 }
                 var2 = gm.a("text_hint_ability_boostdef", param1);
                 if (var2 != null) {

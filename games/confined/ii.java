@@ -7,7 +7,7 @@ final class ii extends em {
     private String field_h;
     static String field_g;
 
-    final static void a(java.awt.Component param0, int param1) {
+    final static void attachKeyboardListeners(java.awt.Component param0, int param1) {
         param0.setFocusTraversalKeysEnabled(false);
         if (param1 != 30) {
           return;

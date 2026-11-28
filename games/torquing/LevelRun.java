@@ -156,7 +156,7 @@ final class LevelRun {
           if (!je.a((byte) 77)) {
             le.a((byte) 83, 5, var10);
           } else {
-            bo.field_l.addFirst((byte) 54, var10);
+            ArchiveSourceManager.field_l.addFirst((byte) 54, var10);
           }
           if (1 + this.field_L > nh.field_k) {
             nh.field_k = this.field_L + 1;

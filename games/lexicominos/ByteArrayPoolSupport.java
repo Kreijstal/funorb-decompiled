@@ -35,7 +35,7 @@ final class ByteArrayPoolSupport {
         }
     }
 
-    final static void a(java.awt.Component param0, int param1) {
+    final static void detachMouseListeners(java.awt.Component param0, int param1) {
         try {
           param0.removeMouseListener(DraggableWidgetContainer.field_M);
           param0.removeMouseMotionListener(DraggableWidgetContainer.field_M);
@@ -51,7 +51,7 @@ final class ByteArrayPoolSupport {
         field_a = null;
         if (param0 <= 35) {
           java.awt.Component var2 = (java.awt.Component) null;
-          ByteArrayPoolSupport.a((java.awt.Component) null, 91);
+          ByteArrayPoolSupport.detachMouseListeners((java.awt.Component) null, 91);
         }
     }
 

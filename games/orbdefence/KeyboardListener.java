@@ -116,7 +116,7 @@ final class KeyboardListener implements java.awt.event.KeyListener, java.awt.eve
             }
             if (var2_int >= 0) {
               var3 = 127 & 1 + uf.field_a;
-              if (var3 != md.field_g) {
+              if (var3 != ProxySocketConnector.field_g) {
                 NanoFrameTimer.field_g[uf.field_a] = var2_int;
                 ByteStorage.field_b[uf.field_a] = (char)0;
                 uf.field_a = var3;
@@ -169,7 +169,7 @@ final class KeyboardListener implements java.awt.event.KeyListener, java.awt.eve
               var2_int != 65535 &&
               ValidatedTextField.isSupportedCp1252KeyCharacter((char) var2_int, 0)) {
               var3 = 127 & 1 + uf.field_a;
-              if (var3 != md.field_g) {
+              if (var3 != ProxySocketConnector.field_g) {
                 NanoFrameTimer.field_g[uf.field_a] = -1;
                 ByteStorage.field_b[uf.field_a] = (char)var2_int;
                 uf.field_a = var3;

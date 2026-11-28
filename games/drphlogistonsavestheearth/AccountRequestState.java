@@ -93,9 +93,9 @@ final class AccountRequestState {
                 var10 = var10 ^ 285L;
             }
             var12 = var10 ^ var2;
-            field_c[0][var0] = gb.bitwiseOr(var12, gb.bitwiseOr(var4 << 8, gb.bitwiseOr(var8 << 16, gb.bitwiseOr(gb.bitwiseOr(gb.bitwiseOr(var6 << 40, gb.bitwiseOr(var2 << 48, var2 << 56)), var2 << 32), var10 << 24))));
+            field_c[0][var0] = ArchiveNetworkClient.bitwiseOr(var12, ArchiveNetworkClient.bitwiseOr(var4 << 8, ArchiveNetworkClient.bitwiseOr(var8 << 16, ArchiveNetworkClient.bitwiseOr(ArchiveNetworkClient.bitwiseOr(ArchiveNetworkClient.bitwiseOr(var6 << 40, ArchiveNetworkClient.bitwiseOr(var2 << 48, var2 << 56)), var2 << 32), var10 << 24))));
             for (var14 = 1; var14 < 8; var14++) {
-                field_c[var14][var0] = gb.bitwiseOr(field_c[var14 - 1][var0] >>> 8, field_c[-1 + var14][var0] << 56);
+                field_c[var14][var0] = ArchiveNetworkClient.bitwiseOr(field_c[var14 - 1][var0] >>> 8, field_c[-1 + var14][var0] << 56);
             }
             var0++;
         }

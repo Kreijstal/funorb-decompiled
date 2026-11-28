@@ -134,12 +134,12 @@ final class IntrusiveDeque {
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          ob.a(-1, (java.awt.Component) ((Object) param1));
+          ob.detachKeyboardListeners(-1, (java.awt.Component) ((Object) param1));
           if (param0 != 86) {
             var3 = (java.awt.Canvas) null;
             IntrusiveDeque.a((java.awt.Canvas) null, 35, true);
           }
-          sj.a((java.awt.Component) ((Object) param1), -122);
+          sj.detachMouseListeners((java.awt.Component) ((Object) param1), -122);
           if (ah.field_d == null) {
             return;
           }

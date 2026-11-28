@@ -64,7 +64,7 @@ final class wc {
             if (GuestPlayConfirmationForm.field_y == InteractiveWidget.field_z) {
               if (param4) {
                 var11 = (String) null;
-                FullscreenStatusDialog.field_V = dk.a((String) null, ac.field_j, false, param2, 126);
+                FullscreenStatusDialog.field_V = ArchiveSourceManager.a((String) null, ac.field_j, false, param2, 126);
               } else {
                 FullscreenStatusDialog.field_V = bf.a(param5, (byte) 41, false, param2);
               }
@@ -407,7 +407,7 @@ final class wc {
             while (var9 > var10) {
               var12 = lk.field_d[var10];
               var7[0][var11] = NanoFrameTimer.field_k[var12];
-              var20[0][var11 * 4] = dk.field_k[var12];
+              var20[0][var11 * 4] = ArchiveSourceManager.field_k[var12];
               var20[0][1 + var11 * 4] = bh.field_a[var12];
               var20[0][2 + 4 * var11] = AccountRequestState.field_a[var12];
               var20[0][var11 * 4 + 3] = PasswordValidator.field_j[var12];
@@ -425,7 +425,7 @@ final class wc {
             while (var10Lifetime1 < var9) {
               var12Lifetime1 = lk.field_d[var10Lifetime1 + var6];
               var7[1][var15] = NanoFrameTimer.field_k[var12Lifetime1];
-              var20[1][var15 * 4] = dk.field_k[var12Lifetime1];
+              var20[1][var15 * 4] = ArchiveSourceManager.field_k[var12Lifetime1];
               var20[1][var15 * 4 + 1] = bh.field_a[var12Lifetime1];
               var20[1][2 + var15 * 4] = AccountRequestState.field_a[var12Lifetime1];
               var20[1][3 + var15 * 4] = PasswordValidator.field_j[var12Lifetime1];

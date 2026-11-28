@@ -1216,7 +1216,7 @@ public final class Terraphoenix extends GameShell {
           GrowableIntArray.field_a = va.a(2, -117);
           ee.field_G = va.a(3, -128);
           mi.field_h = va.a(4, -118);
-          h.field_j = va.a(5, -125);
+          ArchiveNetworkClient.field_j = va.a(5, -125);
           IntrusiveDeque.field_c = va.a(6, -119);
           aj.field_b = va.a(7, -128);
           NanoFrameTimer.a(109, ByteStorage.field_d, TextFieldValidator.field_i);
@@ -1623,8 +1623,8 @@ public final class Terraphoenix extends GameShell {
               ee.field_G.tryLoadAllGroups((byte) -128)) {
               if (mi.field_h.ensureIndexLoaded(param1 ^ -107) &&
                 mi.field_h.tryLoadAllGroups((byte) -128)) {
-                if (h.field_j.ensureIndexLoaded(0) &&
-                  h.field_j.tryLoadAllGroups((byte) -128)) {
+                if (ArchiveNetworkClient.field_j.ensureIndexLoaded(0) &&
+                  ArchiveNetworkClient.field_j.tryLoadAllGroups((byte) -128)) {
                   if (IntrusiveDeque.field_c.ensureIndexLoaded(0) &&
                     IntrusiveDeque.field_c.tryLoadAllGroups((byte) -128)) {
                     if (ab.field_a.ensureIndexLoaded(0) &&
@@ -1665,7 +1665,7 @@ public final class Terraphoenix extends GameShell {
                   DualLinkNode.a("", (byte) -82, 20.0f);
                   return;
                 }
-                DualLinkNode.a(vf.a("", q.field_Nb, h.field_j, od.field_b, 4650), (byte) 64, 15.0f);
+                DualLinkNode.a(vf.a("", q.field_Nb, ArchiveNetworkClient.field_j, od.field_b, 4650), (byte) 64, 15.0f);
                 return;
               }
               DualLinkNode.a(vf.a("", rk.field_b, mi.field_h, me.field_h, 4650), (byte) -95, 10.0f);
@@ -1693,19 +1693,19 @@ public final class Terraphoenix extends GameShell {
             ea.a((byte) 47);
             return;
           }
-          if (h.field_j != null) {
+          if (ArchiveNetworkClient.field_j != null) {
             DualLinkNode.a(IndexedSpriteState.field_e, (byte) -119, 70.0f);
             this.renderClientFrame((byte) -89);
             ca.field_a = new MusicTrack[8];
-            ca.field_a[7] = MusicTrack.load(h.field_j, "", "terraphoenix_music_title");
-            ca.field_a[0] = MusicTrack.load(h.field_j, "", "terraphoenix_music_title(no voices)");
-            ca.field_a[1] = MusicTrack.load(h.field_j, "", "terraphoenix_music_ingame_rural");
-            ca.field_a[2] = MusicTrack.load(h.field_j, "", "terraphoenix_music_ingame_urban");
-            ca.field_a[3] = MusicTrack.load(h.field_j, "", "terraphoenix_music_ingame_alienbase");
-            ca.field_a[4] = MusicTrack.load(h.field_j, "", "terraphoenix_jingle_success_high_scores");
-            ca.field_a[5] = MusicTrack.load(h.field_j, "", "terraphoenix_jingle_fail_high_scores");
-            ca.field_a[6] = MusicTrack.load(h.field_j, "", "terraphoenix_jingle_mission_completed");
-            h.field_j = null;
+            ca.field_a[7] = MusicTrack.load(ArchiveNetworkClient.field_j, "", "terraphoenix_music_title");
+            ca.field_a[0] = MusicTrack.load(ArchiveNetworkClient.field_j, "", "terraphoenix_music_title(no voices)");
+            ca.field_a[1] = MusicTrack.load(ArchiveNetworkClient.field_j, "", "terraphoenix_music_ingame_rural");
+            ca.field_a[2] = MusicTrack.load(ArchiveNetworkClient.field_j, "", "terraphoenix_music_ingame_urban");
+            ca.field_a[3] = MusicTrack.load(ArchiveNetworkClient.field_j, "", "terraphoenix_music_ingame_alienbase");
+            ca.field_a[4] = MusicTrack.load(ArchiveNetworkClient.field_j, "", "terraphoenix_jingle_success_high_scores");
+            ca.field_a[5] = MusicTrack.load(ArchiveNetworkClient.field_j, "", "terraphoenix_jingle_fail_high_scores");
+            ca.field_a[6] = MusicTrack.load(ArchiveNetworkClient.field_j, "", "terraphoenix_jingle_mission_completed");
+            ArchiveNetworkClient.field_j = null;
             ea.a((byte) 47);
             return;
           }
@@ -4268,7 +4268,7 @@ public final class Terraphoenix extends GameShell {
           lm.clearStaticReferences(false);
           ie.a((byte) -15);
           lb.clearStaticReferences((byte) -22);
-          h.clearStaticReferences(true);
+          ArchiveNetworkClient.clearStaticReferences(true);
           DiskCacheWorker.a((byte) 110);
           BufferedRandomAccessFile.clearStaticReferences(false);
           BufferedSocket.resetStaticState((byte) 102);
@@ -4373,7 +4373,7 @@ public final class Terraphoenix extends GameShell {
           SynthesizerVoice.clearStaticReferences();
           VorbisDecoder.clearStaticReferences();
           VorbisFloor.clearStaticReferences();
-          kg.clearStaticReferences(7087);
+          SocketArchiveNetworkClient.clearStaticReferences(7087);
           hl.clearStaticReferences(54);
           NetworkArchiveRequest.d(30937);
           SectorCacheStore.clearStaticReferences(8);
@@ -5548,7 +5548,7 @@ public final class Terraphoenix extends GameShell {
         try {
           this.field_Gb = true;
           this.field_D = 0;
-          kg.field_q = false;
+          SocketArchiveNetworkClient.field_q = false;
           this.field_hb = 0;
           this.field_wb = null;
           stackIn_5_1 = (ConfirmedEmailAvailabilityValidator.field_q == 0);
@@ -5990,7 +5990,7 @@ public final class Terraphoenix extends GameShell {
           this.field_Gb = param0;
           if (param1 > 0 &&
             !bk.c(-25704) &&
-            !kg.field_q) {
+            !SocketArchiveNetworkClient.field_q) {
             hd.field_q = bm.a(oe.field_c, 23, new int[]{param1}, 3, (byte) 93, 65512, ArchiveIndex.field_e, bh.field_a, oh.field_e);
           }
           return;
@@ -8807,7 +8807,7 @@ public final class Terraphoenix extends GameShell {
               return;
             }
           }
-          kg.field_r = ig.a(ab.field_a, param0 + 2020, "objects", "");
+          SocketArchiveNetworkClient.field_r = ig.a(ab.field_a, param0 + 2020, "objects", "");
           rh.field_b = ig.a(ab.field_a, param0 + 2020, "icons", "");
           PcmPlayerPump.field_g = ig.a(ab.field_a, param0 ^ param0, "faces", "");
           ic.field_t = il.a("combatview", "", ab.field_a, -1);

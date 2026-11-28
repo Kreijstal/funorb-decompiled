@@ -13,7 +13,7 @@ final class gn {
     static int field_h;
     static RgbSprite field_c;
 
-    final static void a(byte param0, java.awt.Component param1) {
+    final static void detachMouseListeners(byte param0, java.awt.Component param1) {
         try {
           param1.removeMouseListener(ib.field_f);
           param1.removeMouseMotionListener(ib.field_f);
@@ -45,7 +45,7 @@ final class gn {
         this.field_a = 10 + la.field_b.field_H * var2;
         if (param0 > -68) {
           java.awt.Component var4 = (java.awt.Component) null;
-          gn.a((byte) 33, (java.awt.Component) null);
+          gn.detachMouseListeners((byte) 33, (java.awt.Component) null);
           if (null == this.field_b) {
             this.field_g = 0;
             return;

@@ -8,7 +8,7 @@ final class kl {
     static String[] field_a;
 
     final static bi a(int param0) {
-        bi var1 = new bi(DefaultTextWidgetRenderer.field_e, uf.field_k, vg.field_I[0], b.field_b[0], NameSuggestionsPanel.field_H[0], ob.field_a[0], of.field_d[0], rd.field_d);
+        bi var1 = new bi(DefaultTextWidgetRenderer.field_e, ArchiveSourceManager.field_k, vg.field_I[0], b.field_b[0], NameSuggestionsPanel.field_H[0], ob.field_a[0], of.field_d[0], MouseInputHandler.field_d);
         EditableTextField.o(-28210);
         int var2 = -70 / ((param0 - 76) / 39);
         return var1;

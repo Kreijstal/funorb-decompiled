@@ -63,7 +63,7 @@ final class lf {
             if (ii.field_T == 2) {
               ProxyAuthenticationRequiredException.field_a = new BufferedSocket((java.net.Socket) (kd.field_a.result), rk.field_g);
               var2 = new PacketBuffer(13);
-              LoginPanel.a(fl.field_d, var2, fa.field_q, false, rb.field_eb);
+              LoginPanel.a(fl.field_d, var2, SocketArchiveNetworkClient.field_q, false, rb.field_eb);
               var2.writeByte(15, -49152);
               var2.writeInt(param0 - 803539347, mk.field_f);
               ProxyAuthenticationRequiredException.field_a.enqueueWrite(var2.payload, 0, (byte) 93, 13);
@@ -88,7 +88,7 @@ final class lf {
             if (ii.field_T != 4) {
               return -1;
             }
-            lg.field_n.a(-105, jf.field_i, ProxyAuthenticationRequiredException.field_a);
+            lg.field_n.attachSocket(-105, jf.field_i, ProxyAuthenticationRequiredException.field_a);
             kd.field_a = null;
             ProxyAuthenticationRequiredException.field_a = null;
             ii.field_T = 0;

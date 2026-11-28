@@ -10,10 +10,10 @@ final class ProxyAuthenticationRequiredException extends IOException {
 
     final static boolean c(int param0) {
         if (param0 == 250) {
-          return 250 < oa.field_a ? true : false;
+          return 250 < SocketConnector.field_a ? true : false;
         }
         ProxyAuthenticationRequiredException.c(84);
-        return 250 < oa.field_a ? true : false;
+        return 250 < SocketConnector.field_a ? true : false;
     }
 
     ProxyAuthenticationRequiredException(String param0) {

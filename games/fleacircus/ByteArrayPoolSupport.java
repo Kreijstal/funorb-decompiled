@@ -4,7 +4,7 @@
 final class ByteArrayPoolSupport {
     static int field_d;
     static String field_a;
-    static uf field_e;
+    static ArchiveSourceManager field_e;
     static String field_b;
     private static int field_c;
     static String field_f;
@@ -38,8 +38,8 @@ final class ByteArrayPoolSupport {
               pg.field_a > 0) {
               fieldTemp$2 = pg.field_a - 1;
               pg.field_a = pg.field_a - 1;
-              var2_ref_byte__ = jk.field_n[fieldTemp$2];
-              jk.field_n[pg.field_a] = null;
+              var2_ref_byte__ = ProxySocketConnector.field_n[fieldTemp$2];
+              ProxySocketConnector.field_n[pg.field_a] = null;
               return var2_ref_byte__;
             }
             if (null != IsaacRandom.field_h) {
@@ -67,8 +67,8 @@ final class ByteArrayPoolSupport {
               pg.field_a > 0) {
               fieldTemp$6 = pg.field_a - 1;
               pg.field_a = pg.field_a - 1;
-              var2_ref_byte__ = jk.field_n[fieldTemp$6];
-              jk.field_n[pg.field_a] = null;
+              var2_ref_byte__ = ProxySocketConnector.field_n[fieldTemp$6];
+              ProxySocketConnector.field_n[pg.field_a] = null;
               return var2_ref_byte__;
             }
             if (null != IsaacRandom.field_h) {
@@ -89,8 +89,8 @@ final class ByteArrayPoolSupport {
           if (CrossfadingMidiPcmStream.field_n > 0) {
             fieldTemp$18 = CrossfadingMidiPcmStream.field_n - 1;
             CrossfadingMidiPcmStream.field_n = CrossfadingMidiPcmStream.field_n - 1;
-            var2_ref_byte__ = rd.field_a[fieldTemp$18];
-            rd.field_a[CrossfadingMidiPcmStream.field_n] = null;
+            var2_ref_byte__ = MouseInputHandler.field_a[fieldTemp$18];
+            MouseInputHandler.field_a[CrossfadingMidiPcmStream.field_n] = null;
             return var2_ref_byte__;
           }
           if (param1 != 5000) {
@@ -98,8 +98,8 @@ final class ByteArrayPoolSupport {
               pg.field_a > 0) {
               fieldTemp$15 = pg.field_a - 1;
               pg.field_a = pg.field_a - 1;
-              var2_ref_byte__ = jk.field_n[fieldTemp$15];
-              jk.field_n[pg.field_a] = null;
+              var2_ref_byte__ = ProxySocketConnector.field_n[fieldTemp$15];
+              ProxySocketConnector.field_n[pg.field_a] = null;
               return var2_ref_byte__;
             }
             if (null != IsaacRandom.field_h) {
@@ -141,8 +141,8 @@ final class ByteArrayPoolSupport {
               if (pg.field_a > 0) {
                 fieldTemp$12 = pg.field_a - 1;
                 pg.field_a = pg.field_a - 1;
-                var2_ref_byte__ = jk.field_n[fieldTemp$12];
-                jk.field_n[pg.field_a] = null;
+                var2_ref_byte__ = ProxySocketConnector.field_n[fieldTemp$12];
+                ProxySocketConnector.field_n[pg.field_a] = null;
                 return var2_ref_byte__;
               }
               if (null != IsaacRandom.field_h) {

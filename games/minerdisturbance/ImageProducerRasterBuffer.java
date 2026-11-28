@@ -210,11 +210,11 @@ final class ImageProducerRasterBuffer extends AwtRasterBuffer implements java.aw
 
     final static void a(String param0, int param1) {
         if (param1 == 1) {
-          System.out.println("Error: " + CipherPacketBuffer.a("\n", param1 ^ -2, param0, "%0a"));
+          System.out.println("Error: " + CipherPacketBuffer.replaceAllLiteral("\n", param1 ^ -2, param0, "%0a"));
           return;
         }
         field_l = (String) null;
-        System.out.println("Error: " + CipherPacketBuffer.a("\n", param1 ^ -2, param0, "%0a"));
+        System.out.println("Error: " + CipherPacketBuffer.replaceAllLiteral("\n", param1 ^ -2, param0, "%0a"));
     }
 
     static {

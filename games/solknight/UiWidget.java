@@ -322,18 +322,18 @@ class UiWidget extends IntrusiveNode {
           var5 = this.isFocused(true) ? 1 : 0;
           if (!param2) {
             if (var5 == 0) {
-              ne.field_j = wb.field_c;
+              ArchiveSourceManager.field_j = wb.field_c;
               RasterBuffer.a(125, this.getTooltipText((byte) 78));
               return param2;
             }
             if (0 == MusicPatchNode.field_F) {
-              ne.field_j = wb.field_c;
+              ArchiveSourceManager.field_j = wb.field_c;
               RasterBuffer.a(125, this.getTooltipText((byte) 78));
               return param2;
             }
             this.blur(0);
             if (var7 == 0) {
-              ne.field_j = wb.field_c;
+              ArchiveSourceManager.field_j = wb.field_c;
               RasterBuffer.a(125, this.getTooltipText((byte) 78));
               return param2;
             }
@@ -352,12 +352,12 @@ class UiWidget extends IntrusiveNode {
               }
             }
             if (wb.field_c != 0) {
-              ne.field_j = wb.field_c;
+              ArchiveSourceManager.field_j = wb.field_c;
               RasterBuffer.a(125, this.getTooltipText((byte) 78));
               return param2;
             }
-            if (ne.field_j == 0) {
-              ne.field_j = wb.field_c;
+            if (ArchiveSourceManager.field_j == 0) {
+              ArchiveSourceManager.field_j = wb.field_c;
               RasterBuffer.a(125, this.getTooltipText((byte) 78));
               return param2;
             }
@@ -369,7 +369,7 @@ class UiWidget extends IntrusiveNode {
               }
               TextLayout.field_a = null;
             }
-            ne.field_j = wb.field_c;
+            ArchiveSourceManager.field_j = wb.field_c;
             RasterBuffer.a(125, this.getTooltipText((byte) 78));
             return param2;
           }
@@ -385,12 +385,12 @@ class UiWidget extends IntrusiveNode {
                 this.blur(0);
               }
               if (wb.field_c != 0) {
-                ne.field_j = wb.field_c;
+                ArchiveSourceManager.field_j = wb.field_c;
                 RasterBuffer.a(125, this.getTooltipText((byte) 78));
                 return param2;
               }
-              if (ne.field_j == 0) {
-                ne.field_j = wb.field_c;
+              if (ArchiveSourceManager.field_j == 0) {
+                ArchiveSourceManager.field_j = wb.field_c;
                 RasterBuffer.a(125, this.getTooltipText((byte) 78));
                 return param2;
               }
@@ -404,18 +404,18 @@ class UiWidget extends IntrusiveNode {
                   TextLayout.field_a = null;
                 }
               }
-              ne.field_j = wb.field_c;
+              ArchiveSourceManager.field_j = wb.field_c;
               RasterBuffer.a(125, this.getTooltipText((byte) 78));
               return param2;
             }
           }
           if (wb.field_c != 0) {
-            ne.field_j = wb.field_c;
+            ArchiveSourceManager.field_j = wb.field_c;
             RasterBuffer.a(125, this.getTooltipText((byte) 78));
             return param2;
           }
-          if (ne.field_j == 0) {
-            ne.field_j = wb.field_c;
+          if (ArchiveSourceManager.field_j == 0) {
+            ArchiveSourceManager.field_j = wb.field_c;
             RasterBuffer.a(125, this.getTooltipText((byte) 78));
             return param2;
           }
@@ -427,7 +427,7 @@ class UiWidget extends IntrusiveNode {
             }
             TextLayout.field_a = null;
           }
-          ne.field_j = wb.field_c;
+          ArchiveSourceManager.field_j = wb.field_c;
           RasterBuffer.a(125, this.getTooltipText((byte) 78));
           return param2;
         }
@@ -436,18 +436,18 @@ class UiWidget extends IntrusiveNode {
         var5Lifetime1 = this.isFocused(true) ? 1 : 0;
         if (!param2) {
           if (var5Lifetime1 == 0) {
-            ne.field_j = wb.field_c;
+            ArchiveSourceManager.field_j = wb.field_c;
             RasterBuffer.a(125, this.getTooltipText((byte) 78));
             return param2;
           }
           if (0 == MusicPatchNode.field_F) {
-            ne.field_j = wb.field_c;
+            ArchiveSourceManager.field_j = wb.field_c;
             RasterBuffer.a(125, this.getTooltipText((byte) 78));
             return param2;
           }
           this.blur(0);
           if (var7 == 0) {
-            ne.field_j = wb.field_c;
+            ArchiveSourceManager.field_j = wb.field_c;
             RasterBuffer.a(125, this.getTooltipText((byte) 78));
             return param2;
           }
@@ -464,43 +464,43 @@ class UiWidget extends IntrusiveNode {
               if (var5Lifetime1 != 0) {
                 this.blur(0);
                 if (wb.field_c != 0) {
-                  ne.field_j = wb.field_c;
+                  ArchiveSourceManager.field_j = wb.field_c;
                   RasterBuffer.a(125, this.getTooltipText((byte) 78));
                   return param2;
                 }
-                if (ne.field_j == 0) {
-                  ne.field_j = wb.field_c;
+                if (ArchiveSourceManager.field_j == 0) {
+                  ArchiveSourceManager.field_j = wb.field_c;
                   RasterBuffer.a(125, this.getTooltipText((byte) 78));
                   return param2;
                 }
                 this.pointerReleased(BufferedSocket.field_m, 0, this, param1, PacketBuffer.field_j, param3);
                 var11 = TextLayout.field_a;
                 if (var11 == null) {
-                  ne.field_j = wb.field_c;
+                  ArchiveSourceManager.field_j = wb.field_c;
                   RasterBuffer.a(125, this.getTooltipText((byte) 78));
                   return param2;
                 }
                 if (!(var11.field_n instanceof WidgetDropListener)) {
                   TextLayout.field_a = null;
-                  ne.field_j = wb.field_c;
+                  ArchiveSourceManager.field_j = wb.field_c;
                   RasterBuffer.a(125, this.getTooltipText((byte) 78));
                   return param2;
                 }
                 ((WidgetDropListener) (var11.field_n)).widgetDropped((DropTargetWidgetContainer) null, -7935, var11);
                 TextLayout.field_a = null;
-                ne.field_j = wb.field_c;
+                ArchiveSourceManager.field_j = wb.field_c;
                 RasterBuffer.a(125, this.getTooltipText((byte) 78));
                 return param2;
               }
             }
           }
           if (wb.field_c != 0) {
-            ne.field_j = wb.field_c;
+            ArchiveSourceManager.field_j = wb.field_c;
             RasterBuffer.a(125, this.getTooltipText((byte) 78));
             return param2;
           }
-          if (ne.field_j == 0) {
-            ne.field_j = wb.field_c;
+          if (ArchiveSourceManager.field_j == 0) {
+            ArchiveSourceManager.field_j = wb.field_c;
             RasterBuffer.a(125, this.getTooltipText((byte) 78));
             return param2;
           }
@@ -512,7 +512,7 @@ class UiWidget extends IntrusiveNode {
             }
             TextLayout.field_a = null;
           }
-          ne.field_j = wb.field_c;
+          ArchiveSourceManager.field_j = wb.field_c;
           RasterBuffer.a(125, this.getTooltipText((byte) 78));
           return param2;
         }
@@ -529,12 +529,12 @@ class UiWidget extends IntrusiveNode {
             }
           }
           if (wb.field_c != 0) {
-            ne.field_j = wb.field_c;
+            ArchiveSourceManager.field_j = wb.field_c;
             RasterBuffer.a(125, this.getTooltipText((byte) 78));
             return param2;
           }
-          if (ne.field_j == 0) {
-            ne.field_j = wb.field_c;
+          if (ArchiveSourceManager.field_j == 0) {
+            ArchiveSourceManager.field_j = wb.field_c;
             RasterBuffer.a(125, this.getTooltipText((byte) 78));
             return param2;
           }
@@ -547,7 +547,7 @@ class UiWidget extends IntrusiveNode {
             }
             TextLayout.field_a = null;
           }
-          ne.field_j = wb.field_c;
+          ArchiveSourceManager.field_j = wb.field_c;
           RasterBuffer.a(125, this.getTooltipText((byte) 78));
           return param2;
         }
@@ -558,12 +558,12 @@ class UiWidget extends IntrusiveNode {
           }
         }
         if (wb.field_c != 0) {
-          ne.field_j = wb.field_c;
+          ArchiveSourceManager.field_j = wb.field_c;
           RasterBuffer.a(125, this.getTooltipText((byte) 78));
           return param2;
         }
-        if (ne.field_j == 0) {
-          ne.field_j = wb.field_c;
+        if (ArchiveSourceManager.field_j == 0) {
+          ArchiveSourceManager.field_j = wb.field_c;
           RasterBuffer.a(125, this.getTooltipText((byte) 78));
           return param2;
         }
@@ -575,7 +575,7 @@ class UiWidget extends IntrusiveNode {
           }
           TextLayout.field_a = null;
         }
-        ne.field_j = wb.field_c;
+        ArchiveSourceManager.field_j = wb.field_c;
         RasterBuffer.a(125, this.getTooltipText((byte) 78));
         return param2;
     }
@@ -675,7 +675,7 @@ class UiWidget extends IntrusiveNode {
           }
           break;
         }
-        var5 = va.a(true);
+        var5 = ArchiveNetworkClient.a(true);
         if (var5 != null) {
           ph.field_f.a(20, kd.field_c, bf.field_a, var5);
         }

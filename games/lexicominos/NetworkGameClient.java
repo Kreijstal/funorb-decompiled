@@ -143,13 +143,13 @@ abstract class NetworkGameClient extends GameAppletShell {
         int var3Lifetime1;
         int var3Lifetime2;
         var5 = Lexicominos.field_L ? 1 : 0;
-        if (null != da.field_a) {
+        if (null != MouseInputHandler.field_a) {
           if (ff.field_b == null) {
             var6 = jd.a(-88);
             var4 = var6.getSize();
-            da.field_a.a(var4.height, (byte) -65, var4.width);
+            MouseInputHandler.field_a.a(var4.height, (byte) -65, var4.width);
           }
-          da.field_a.d(-1);
+          MouseInputHandler.field_a.d(-1);
         }
         AccountCreationResultPanel.j(param1 ^ 6);
         bf.b((byte) -21);
@@ -183,7 +183,7 @@ abstract class NetworkGameClient extends GameAppletShell {
             0 == nc.field_r &&
             ta.field_g == 11 &&
             !d.a((byte) 117)) {
-            wb.b((byte) 50);
+            ArchiveNetworkClient.b((byte) 50);
           }
           if (-1 != nc.field_r &&
             0 != nc.field_r) {
@@ -382,7 +382,7 @@ abstract class NetworkGameClient extends GameAppletShell {
             n.b(7, param0 - 7);
           }
           if (ij.field_o[8]) {
-            pg.a((byte) 92);
+            ArchiveSourceManager.a((byte) 92);
           }
         }
         return var2;
@@ -492,7 +492,7 @@ abstract class NetworkGameClient extends GameAppletShell {
         if (nc.field_r != 0) {
           return var2;
         }
-        wb.b((byte) 50);
+        ArchiveNetworkClient.b((byte) 50);
         return var2;
     }
 
@@ -577,7 +577,7 @@ abstract class NetworkGameClient extends GameAppletShell {
                   MusicPatch.field_p = null;
                 } else {
                   d.field_a = MusicPatchEnvelope.field_f;
-                  wb.b((byte) 50);
+                  ArchiveNetworkClient.b((byte) 50);
                   ta.field_g = 10;
                   qg.field_d = false;
                 }
@@ -679,7 +679,7 @@ abstract class NetworkGameClient extends GameAppletShell {
         if (param0 != -6721) {
           return;
         }
-        var2 = pg.field_d;
+        var2 = ArchiveSourceManager.field_d;
         if (var2 < 64 &&
           ij.field_o[var2]) {
           if (var2 == 0) {
@@ -696,7 +696,7 @@ abstract class NetworkGameClient extends GameAppletShell {
               } else {
                 if (var2 != 4) {
                   if (var2 == 5) {
-                    pg.a(1);
+                    ArchiveSourceManager.a(1);
                   } else {
                     if (var2 == 6) {
                       BufferedSocket.c(param0 ^ -6708);

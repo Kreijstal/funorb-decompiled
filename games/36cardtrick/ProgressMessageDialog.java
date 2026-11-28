@@ -90,11 +90,11 @@ class ProgressMessageDialog extends ContentTransitionDialog implements WidgetAct
               var6 = AccountNameAvailabilityValidator.a(false, true, me.field_a[var3_int]);
               var4 = var4 + e.field_i;
               var7 = -(var6 >> 1) + dl.field_g;
-              if (ProxyAuthenticationRequiredException.containsPoint(tl.field_b + (a.field_o << 1), param2, param0, var4, var7 - tc.field_b, 0, var6 + (tc.field_b << 1))) {
+              if (ProxyAuthenticationRequiredException.containsPoint(SocketConnector.field_b + (SocketArchiveNetworkClient.field_o << 1), param2, param0, var4, var7 - tc.field_b, 0, var6 + (tc.field_b << 1))) {
                 stackIn_8_0 = var5;
                 return stackIn_8_0;
               }
-              var4 = var4 + (e.field_i + ((a.field_o << 1) + tl.field_b));
+              var4 = var4 + (e.field_i + ((SocketArchiveNetworkClient.field_o << 1) + SocketConnector.field_b));
             }
             var3_int++;
           }
@@ -134,8 +134,8 @@ class ProgressMessageDialog extends ContentTransitionDialog implements WidgetAct
     }
 
     final static java.awt.Container t(int param0) {
-        if (null != q.field_g) {
-          return (java.awt.Container) ((Object) q.field_g);
+        if (null != ProxySocketConnector.field_g) {
+          return (java.awt.Container) ((Object) ProxySocketConnector.field_g);
         }
         if (param0 != 3) {
           return (java.awt.Container) null;

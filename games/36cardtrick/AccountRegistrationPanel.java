@@ -330,7 +330,7 @@ final class AccountRegistrationPanel extends DequeWidgetContainer implements Tex
         try {
           var6_int = 37 / ((param1 + 62) / 32);
           if (param3 == this.field_F) {
-            a.d((byte) 63);
+            SocketArchiveNetworkClient.d((byte) 63);
             return;
           }
           if (this.field_O != param3) {

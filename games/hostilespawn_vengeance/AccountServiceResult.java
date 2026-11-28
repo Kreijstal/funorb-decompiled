@@ -89,7 +89,7 @@ final class AccountServiceResult {
     final static void a(int param0, oj param1) {
         try {
           if (uj.field_l == 1 &&
-            ej.d((byte) 90)) {
+            ArchiveNetworkClient.d((byte) 90)) {
             eh.field_c.playSample(NetworkArchiveRequest.field_A[17], 100, uh.field_i / 2);
           }
           AlphaWidgetContainer.field_F[ib.field_c].field_c = (double)(int)(Math.random() * 256.0);

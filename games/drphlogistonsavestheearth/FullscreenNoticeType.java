@@ -54,7 +54,7 @@ final class FullscreenNoticeType {
           ck.field_c = ConfirmedEmailAvailabilityValidator.field_q;
           ob.field_g = mj.field_u;
           var2 = -96 / ((27 - param0) / 56);
-          df.field_o = lk.field_j;
+          ArchiveSourceManager.field_o = lk.field_j;
           lk.field_j = false;
           mh.field_f = f.field_h;
           FullscreenStatusDialog.field_gb = ee.field_d;
@@ -64,7 +64,7 @@ final class FullscreenNoticeType {
     }
 
     final static void a(gk param0, int param1, int param2, int param3) {
-        df.field_h = param2;
+        ArchiveSourceManager.field_h = param2;
         cb.field_a = param0;
         if (param1 != 0) {
           return;

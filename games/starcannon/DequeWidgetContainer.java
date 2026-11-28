@@ -110,7 +110,7 @@ class DequeWidgetContainer extends UiWidget implements WidgetContainerMarker {
           if (var2 != 0) {
             if (var2 != 1) {
               if (2 != var2) {
-                hc.a((Throwable) null, "A1: " + oe.a(87), (byte) 72);
+                hc.a((Throwable) null, "A1: " + SocketConnector.a(87), (byte) 72);
                 ec.a((byte) 27);
                 decompiledFrameRemainder0 = (var8 != 0);
               }
@@ -1157,7 +1157,7 @@ class DequeWidgetContainer extends UiWidget implements WidgetContainerMarker {
               return;
             }
             if (var2 != 4) {
-              hc.a((Throwable) null, "F1: " + oe.a(73), (byte) 106);
+              hc.a((Throwable) null, "F1: " + SocketConnector.a(73), (byte) 106);
               ec.a((byte) 27);
               return;
             }

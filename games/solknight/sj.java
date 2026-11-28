@@ -73,7 +73,7 @@ final class sj implements WidgetRenderer {
         field_d = null;
     }
 
-    final static void a(java.awt.Component param0, int param1) {
+    final static void detachMouseListeners(java.awt.Component param0, int param1) {
         try {
           param0.removeMouseListener(MidiNoteMask.field_j);
           param0.removeMouseMotionListener(MidiNoteMask.field_j);

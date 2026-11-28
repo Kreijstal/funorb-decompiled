@@ -59,13 +59,13 @@ final class hl {
             var6 = bc.field_e[var3];
             stackIn_10_0 = 12286;
             stackIn_11_1 = !(var4 < 0);
-            var7 = hj.a(stackIn_10_0, stackIn_11_1, var6);
+            var7 = SocketConnector.a(stackIn_10_0, stackIn_11_1, var6);
             var8 = -(var7 >> 1) + ProgressMessageDialog.field_wb;
             if (var4 >= 0) {
               if (var4 == ProgressMessageDialog.field_tb.field_f) {
                 stackIn_15_0 = bc.field_c;
               } else {
-                stackIn_15_0 = hj.field_i;
+                stackIn_15_0 = SocketConnector.field_i;
               }
               var9 = stackIn_15_0;
               var2 = var2 + SpriteGeometry.field_F;

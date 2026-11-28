@@ -97,7 +97,7 @@ final class b {
                     }
                   }
                 } else {
-                  if (var14 != wn.field_d[param5]) {
+                  if (var14 != SocketConnector.field_d[param5]) {
                     break scanLoop1;
                   }
                 }
@@ -124,7 +124,7 @@ final class b {
             var9 = 1;
             if (param7) {
               if (param3 == -1) {
-                for (var10 = 0; var10 < wn.field_d.length; var10++) {
+                for (var10 = 0; var10 < SocketConnector.field_d.length; var10++) {
                   if ((DelegatingCanvas.field_f[var10 / 8] & 1 << (var10 & 7)) != 0) {
                     var9 = 0;
                     decompiledFrameCompleted0 = false;
@@ -152,7 +152,7 @@ final class b {
               if (-1 != param3) {
                 stackIn_53_1 = -1 + var18.length;
               } else {
-                stackIn_53_1 = wn.field_d.length;
+                stackIn_53_1 = SocketConnector.field_d.length;
               }
               if (stackIn_52_0 >= stackIn_53_1) {
                 if (var10Lifetime1 != 0) {
@@ -177,7 +177,7 @@ final class b {
                 param5 = var11;
               }
               if (param3 == -1 &&
-                wn.field_d.length == 1) {
+                SocketConnector.field_d.length == 1) {
                 var12 = 1;
               } else {
                 var13 = var8[var11 + 1];
@@ -194,7 +194,7 @@ final class b {
                   var12 = stackIn_77_0;
                 } else {
                   if (param3 == -1) {
-                    stackIn_68_0 = (pd.field_Rb.field_hc != wn.field_d[var11]) ? 0 : 1;
+                    stackIn_68_0 = (pd.field_Rb.field_hc != SocketConnector.field_d[var11]) ? 0 : 1;
                   } else {
                     stackIn_68_0 = (var11 != (pd.field_Rb.field_sc[param3] & 255)) ? 0 : 1;
                   }
@@ -299,7 +299,7 @@ final class b {
           var17 = var16;
           var17.position = -2 + param1.length;
           h.field_n = var17.readUnsignedShort(674914976);
-          wm.field_b = new int[h.field_n];
+          ArchiveNetworkClient.field_b = new int[h.field_n];
           FullscreenFocusCanvas.field_c = new int[h.field_n];
           gg.field_y = new byte[h.field_n][];
           in.field_c = new boolean[h.field_n];
@@ -317,7 +317,7 @@ final class b {
             FullscreenFocusCanvas.field_c[var4Lifetime1] = var17.readUnsignedShort(674914976);
           }
           for (var4Lifetime2 = 0; var4Lifetime2 < h.field_n; var4Lifetime2++) {
-            wm.field_b[var4Lifetime2] = var17.readUnsignedShort(674914976);
+            ArchiveNetworkClient.field_b[var4Lifetime2] = var17.readUnsignedShort(674914976);
           }
           for (var4Lifetime3 = 0; h.field_n > var4Lifetime3; var4Lifetime3++) {
             field_c[var4Lifetime3] = var17.readUnsignedShort(674914976);
@@ -336,7 +336,7 @@ final class b {
             return;
           }
           while (var4Lifetime5 < h.field_n) {
-            var5 = wm.field_b[var4Lifetime5];
+            var5 = ArchiveNetworkClient.field_b[var4Lifetime5];
             var6 = field_c[var4Lifetime5];
             var7 = var6 * var5;
             var20 = new byte[var7];

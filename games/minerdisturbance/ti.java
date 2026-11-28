@@ -79,7 +79,7 @@ final class ti extends InteractiveWidget {
         }
         try {
           var3 = sn.field_c;
-          var3.d((byte) -61, param2);
+          var3.writeCipheredByte((byte) -61, param2);
           var3.writeByte(2, 25564);
           var3.writeByte(0, 25564);
           var3.writeByte(param0.field_n, 25564);

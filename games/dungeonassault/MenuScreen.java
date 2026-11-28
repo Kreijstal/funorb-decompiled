@@ -261,10 +261,10 @@ final class MenuScreen extends DungeonAssaultScreen {
         } else {
           if (var6 == 14) {
             if (this.field_x.b(-1)) {
-              um.a(0, false);
+              SocketConnector.a(0, false);
             }
             if (this.field_x.a(false)) {
-              um.a(256, false);
+              SocketConnector.a(256, false);
             }
             if (this.field_x.b((byte) -87)) {
               var6 = -120 + (this.e(param1, 82) + (this.f(76, param1) + IterableNodeHashTable.field_b)) >> 1;
@@ -272,12 +272,12 @@ final class MenuScreen extends DungeonAssaultScreen {
               var8 = 256 * var7 / 120;
               if (var8 > 0) {
                 if (var8 >= 256) {
-                  um.a(256, false);
+                  SocketConnector.a(256, false);
                 } else {
-                  um.a(var8, false);
+                  SocketConnector.a(var8, false);
                 }
               } else {
-                um.a(0, false);
+                SocketConnector.a(0, false);
               }
             }
             if (this.field_x.a(0)) {
@@ -380,7 +380,7 @@ final class MenuScreen extends DungeonAssaultScreen {
 
     final void releaseScreenResources() {
         super.releaseScreenResources();
-        um.field_g = null;
+        SocketConnector.field_g = null;
         this.field_s = null;
         fj.field_f = null;
         this.field_A = null;
@@ -555,12 +555,12 @@ final class MenuScreen extends DungeonAssaultScreen {
               var6_ref_cn = IntroSequenceScreen.field_s[46];
             }
             if (var4.field_i == GameAppletShell.field_f) {
-              um.field_g.field_g = -var3 + 94 + (16 + var4.field_o);
-              um.field_g.field_b = var4.field_p + 32;
+              SocketConnector.field_g.field_g = -var3 + 94 + (16 + var4.field_o);
+              SocketConnector.field_g.field_b = var4.field_p + 32;
               if (0 == (li.field_k & 1)) {
-                um.field_g.a(var6_ref_cn, -12, 32);
+                SocketConnector.field_g.a(var6_ref_cn, -12, 32);
               } else {
-                um.field_g.a();
+                SocketConnector.field_g.a();
               }
             }
             if (ak.field_n == var4.field_i) {
@@ -628,7 +628,7 @@ final class MenuScreen extends DungeonAssaultScreen {
           }
           var8 = var8 + la.field_b.field_H;
           var8 = var8 + la.field_b.field_H;
-          var9 = new StringBuilder(bb.field_k[var3Lifetime1]);
+          var9 = new StringBuilder(ArchiveNetworkClient.field_k[var3Lifetime1]);
           if (null != gm.field_d &&
             var5 == 0) {
             var10Lifetime2 = null;
@@ -818,7 +818,7 @@ final class MenuScreen extends DungeonAssaultScreen {
         }
         this.field_x.a(false, param0, var2, this.a(eh.field_h, true, hj.field_S));
         GameAppletShell.field_f = -1;
-        um.field_g = null;
+        SocketConnector.field_g = null;
         fj.field_f = null;
         GuestPlayConfirmationForm.field_X = mo.field_a;
         ak.field_n = -1;
@@ -955,7 +955,7 @@ final class MenuScreen extends DungeonAssaultScreen {
         }
         if (!AccountNameAvailabilityValidator.field_s ||
           !param0) {
-          while (ha.b((byte) 47)) {
+          while (ProxySocketConnector.b((byte) 47)) {
             if (mm.field_t != 13) {
               this.handleScreenKeyPress();
               if (this.field_x.field_b == -1) {

@@ -128,7 +128,7 @@ class DualLinkNode extends IntrusiveNode {
                         var13 = param2.readInt(true);
                         array$0 = new byte[var13];
                         var11[var12_int] = array$0;
-                        param2.a(0, var22[var12_int], var13, 105);
+                        param2.readBytes(0, var22[var12_int], var13, 105);
                       }
                     }
                     var18.field_o[var5] = var6_int;

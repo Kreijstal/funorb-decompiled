@@ -8,9 +8,9 @@ final class tg {
     final static boolean a(byte param0) {
         if (param0 != 49) {
           tg.a((byte) -3);
-          return mc.field_c.a(-26);
+          return mc.field_c.loadMasterIndex(-26);
         }
-        return mc.field_c.a(-26);
+        return mc.field_c.loadMasterIndex(-26);
     }
 
     public static void clearStaticReferences(byte param0) {

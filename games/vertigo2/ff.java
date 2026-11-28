@@ -146,7 +146,7 @@ final class ff {
             if (var7 != 0) {
               for (var10Lifetime3 = 0; var10Lifetime3 < this.field_q; var10Lifetime3++) {
                 var21 = new byte[64];
-                var17.a(0, var21, 64, 78);
+                var17.readBytes(0, var21, 64, 78);
                 this.field_s[this.field_e[var10Lifetime3]] = var21;
               }
             }

@@ -135,7 +135,7 @@ abstract class dm {
             SoftwareRasterizer.drawVerticalLine(var8, var8 + 1, 14 - (var8 << 1), 16777215);
           }
           SoftwareRasterizer.setRasterBuffer(var16, var5, var6);
-          ng.field_c = vc.a((byte) 88, AwtRasterBuffer.field_g, va.field_d, wk.field_c, var4);
+          ng.field_c = KeyboardInputHandler.a((byte) 88, AwtRasterBuffer.field_g, va.field_d, wk.field_c, var4);
           rh.field_c.field_I = new IntrusiveDeque();
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

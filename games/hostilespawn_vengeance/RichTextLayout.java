@@ -237,7 +237,7 @@ final class RichTextLayout extends TextLayout {
             le.c((byte) 93);
             return;
           }
-          var4_int = var10.i(param0 - 1);
+          var4_int = var10.readSignedSmart(param0 - 1);
           var5_ref_ne = (ne) (AccountNameAvailabilityValidator.field_v.beginForward(-106));
           while (var5_ref_ne != null) {
             if (var3 != var5_ref_ne.field_i ||
@@ -336,7 +336,7 @@ final class RichTextLayout extends TextLayout {
             MouseInput.field_d == rc.field_a)) {
             if (s.field_b.field_i == 0 &&
               10000L + gf.field_h < hn.correctedCurrentTimeMillis((byte) 80)) {
-              s.field_b.i(param1 + 41689, param0);
+              s.field_b.writeCipheredByte(param1 + 41689, param0);
             }
             if (s.field_b.field_i > 0) {
               try {

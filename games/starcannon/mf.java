@@ -68,8 +68,8 @@ final class mf {
           if (!param0) {
             return;
           }
-          FullscreenFocusCanvas.a((java.awt.Component) ((Object) param1), (byte) 69);
-          TextHotspotBounds.a((java.awt.Component) ((Object) param1), 0);
+          FullscreenFocusCanvas.attachKeyboardListeners((java.awt.Component) ((Object) param1), (byte) 69);
+          TextHotspotBounds.attachMouseListeners((java.awt.Component) ((Object) param1), 0);
           if (null == ContentTransitionDialog.field_eb) {
             return;
           }

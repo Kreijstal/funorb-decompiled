@@ -73,7 +73,7 @@ final class cd extends ea implements Cloneable {
                 }
               }
               wd.field_j = wd.field_j + 1;
-              mb.field_g = mb.field_g + ob.field_l;
+              mb.field_g = mb.field_g + ArchiveNetworkClient.field_l;
               fp.field_a = fp.field_a + 256;
               je.field_j = je.field_j + 128;
               LevelProgressUpdate.field_h = LevelProgressUpdate.field_h + 256;
@@ -568,7 +568,7 @@ final class cd extends ea implements Cloneable {
                   fn.field_j = fn.field_j + 300;
                   fn.field_j = fn.field_j - 50;
                   mb.field_g = mb.field_g - 50;
-                  mb.field_g = mb.field_g - ob.field_l;
+                  mb.field_g = mb.field_g - ArchiveNetworkClient.field_l;
                   wd.field_j = wd.field_j - 1;
                   b.field_a = b.field_a - 1;
                   je.field_j = je.field_j - 1;
@@ -648,7 +648,7 @@ final class cd extends ea implements Cloneable {
           return ProgressMessageDialog.field_eb;
         }
         if (param0 <= this.field_y) {
-          return tl.field_b;
+          return SocketConnector.field_b;
         }
         return mk.field_a;
     }
@@ -779,7 +779,7 @@ final class cd extends ea implements Cloneable {
               this.a(param2, param1, false, this.field_C, param3, this.field_t);
               return;
             }
-            fn.field_j = fn.field_j - ob.field_l;
+            fn.field_j = fn.field_j - ArchiveNetworkClient.field_l;
             wd.field_j = wd.field_j + 1;
             this.copyTileAttribution((byte) 104, param2[this.field_C + param1][param3 + this.field_t]);
             var5_intLifetime1 = -this.field_x;

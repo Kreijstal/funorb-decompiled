@@ -257,14 +257,14 @@ class UiComponent extends IntrusiveNode {
         var5 = this.isFocused(1) ? 1 : 0;
         if (!param2) {
           if (var5 != 0 &&
-            jk.field_r != 0) {
+            ProxySocketConnector.field_r != 0) {
             this.blur(-1);
           }
         } else {
           if (al.field_f == 0) {
             regionExit1: {
-              if (jk.field_r != 0) {
-                if (this.pointerPressed(param0, true, ob.field_e, this, pb.field_d, jk.field_r, param3)) {
+              if (ProxySocketConnector.field_r != 0) {
+                if (this.pointerPressed(param0, true, ob.field_e, this, pb.field_d, ProxySocketConnector.field_r, param3)) {
                   param2 = false;
                 } else {
                   if (var5 != 0) {
@@ -281,7 +281,7 @@ class UiComponent extends IntrusiveNode {
                           }
                           wi.field_e = null;
                         }
-                        if (jk.field_r != 0) {
+                        if (ProxySocketConnector.field_r != 0) {
                           this.blur(-1);
                         }
                       }
@@ -303,7 +303,7 @@ class UiComponent extends IntrusiveNode {
                 }
                 if (var7 != 0 &&
                   var5 != 0 &&
-                  jk.field_r != 0) {
+                  ProxySocketConnector.field_r != 0) {
                   this.blur(-1);
                   SpriteGeometry.field_u = kc.field_f;
                   if (param1 < 38) {
@@ -317,8 +317,8 @@ class UiComponent extends IntrusiveNode {
           } else {
             if (var5 != 0) {
               this.handleWheel(param0, this, kc.field_b, -31628, ag.field_f, param3, al.field_f);
-              if (jk.field_r != 0) {
-                if (this.pointerPressed(param0, true, ob.field_e, this, pb.field_d, jk.field_r, param3)) {
+              if (ProxySocketConnector.field_r != 0) {
+                if (this.pointerPressed(param0, true, ob.field_e, this, pb.field_d, ProxySocketConnector.field_r, param3)) {
                   param2 = false;
                 } else {
                   this.blur(-1);
@@ -335,7 +335,7 @@ class UiComponent extends IntrusiveNode {
                         }
                         wi.field_e = null;
                       }
-                      if (jk.field_r != 0) {
+                      if (ProxySocketConnector.field_r != 0) {
                         this.blur(-1);
                       }
                     }
@@ -374,7 +374,7 @@ class UiComponent extends IntrusiveNode {
                 wi.field_e = null;
               }
               if (var7 != 0 &&
-                jk.field_r != 0) {
+                ProxySocketConnector.field_r != 0) {
                 this.blur(-1);
               }
               SpriteGeometry.field_u = kc.field_f;
@@ -384,8 +384,8 @@ class UiComponent extends IntrusiveNode {
               df.a(0, this.getTooltipText(4));
               return param2;
             }
-            if (jk.field_r != 0) {
-              if (this.pointerPressed(param0, true, ob.field_e, this, pb.field_d, jk.field_r, param3)) {
+            if (ProxySocketConnector.field_r != 0) {
+              if (this.pointerPressed(param0, true, ob.field_e, this, pb.field_d, ProxySocketConnector.field_r, param3)) {
                 param2 = false;
               } else {
               }
@@ -409,7 +409,7 @@ class UiComponent extends IntrusiveNode {
               }
               if (var7 != 0 &&
                 var5 != 0 &&
-                jk.field_r != 0) {
+                ProxySocketConnector.field_r != 0) {
                 this.blur(-1);
                 SpriteGeometry.field_u = kc.field_f;
                 if (param1 < 38) {
@@ -448,14 +448,14 @@ class UiComponent extends IntrusiveNode {
         var3 = new int[var1];
         var4_int = 0;
         while (var1 > var4_int) {
-          var3[var4_int] = rd.field_d[sc.bitwiseAnd((int) var2[var4_int], 255)];
+          var3[var4_int] = MouseInputHandler.field_d[sc.bitwiseAnd((int) var2[var4_int], 255)];
           var4_int++;
           if (var5 == 0) {
             continue;
           }
           break;
         }
-        var4 = new RgbSprite(DefaultTextWidgetRenderer.field_e, uf.field_k, vg.field_I[0], b.field_b[0], NameSuggestionsPanel.field_H[0], ob.field_a[0], var3);
+        var4 = new RgbSprite(DefaultTextWidgetRenderer.field_e, ArchiveSourceManager.field_k, vg.field_I[0], b.field_b[0], NameSuggestionsPanel.field_H[0], ob.field_a[0], var3);
         EditableTextField.o(-28210);
         if (param0 > 75) {
           return var4;

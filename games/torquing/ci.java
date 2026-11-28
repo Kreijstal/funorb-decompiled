@@ -72,7 +72,7 @@ final class ci {
               field_b = (String) null;
             }
             if (null != nn.field_c) {
-              nn.field_c.b((byte) -101);
+              nn.field_c.close((byte) -101);
             }
             if (null != gh.field_a) {
               gh.field_a.shutdown((byte) -95);

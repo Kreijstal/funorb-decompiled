@@ -301,7 +301,7 @@ abstract class MouseWheelInput {
           var3_int = 0;
           boolean decompiledNaturalLoopExit0 = false;
           while (!(decompiledNaturalLoopExit0 = (!(var3_int < param1.length())))) {
-            stackIn_17_0 = og.a(-96, param1.charAt(var3_int));
+            stackIn_17_0 = ProxySocketConnector.a(-96, param1.charAt(var3_int));
             if (var4 == 0) {
               if (!stackIn_17_0) {
                 return false;
@@ -418,7 +418,7 @@ abstract class MouseWheelInput {
         try {
           var2 = new CipherPacketBuffer(param1.getFileByName(param0 ^ -26592, "logo.fo3d", ""));
           var3 = var2.readUnsignedByte(param0 ^ 26581);
-          var2.i(8);
+          var2.beginBitAccess(8);
           im.field_a = EditableTextField.a(var2, 31662);
           Confined.field_K = new rm[var3];
           AccountServiceResult.field_b = new int[var3][];
@@ -428,7 +428,7 @@ abstract class MouseWheelInput {
               if (param0 != 26613) {
                 field_b = (String) null;
               }
-              var2.j(116);
+              var2.endBitAccess(116);
               break;
             }
             Confined.field_K[var4] = kc.a(30035, var2);

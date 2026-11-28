@@ -74,7 +74,7 @@ final class ResourceArchive {
           var4 = -47 % ((param0 - 66) / 59);
           param1 = param1.toLowerCase();
           var5 = (CharSequence) ((Object) param1);
-          var3_int = this.field_f.field_s.a((byte) -71, jh.a(var5, 0));
+          var3_int = this.field_f.field_s.a((byte) -71, SocketConnector.a(var5, 0));
           if (this.validateGroupId(var3_int, 0)) {
             return var3_int;
           }
@@ -151,7 +151,7 @@ final class ResourceArchive {
           }
           param1 = param1.toLowerCase();
           var5 = (CharSequence) ((Object) param1);
-          var3_int = this.field_f.field_s.a((byte) -71, jh.a(var5, 0));
+          var3_int = this.field_f.field_s.a((byte) -71, SocketConnector.a(var5, 0));
           if (param0) {
             var4 = (String) null;
             this.getGroupIdByName(-56, (String) null);
@@ -515,7 +515,7 @@ final class ResourceArchive {
           }
           param0 = param0.toLowerCase();
           var5 = (CharSequence) ((Object) param0);
-          var4_int = this.field_f.field_n[param1].a((byte) -71, jh.a(var5, 0));
+          var4_int = this.field_f.field_n[param1].a((byte) -71, SocketConnector.a(var5, 0));
           if (this.validateFileId(var4_int, param1, 0)) {
             stackIn_9_0 = var4_int;
             return stackIn_9_0;
@@ -577,12 +577,12 @@ final class ResourceArchive {
           param0 = param0.toLowerCase();
           param1 = param1.toLowerCase();
           var6 = (CharSequence) ((Object) param0);
-          var4_int = this.field_f.field_s.a((byte) -71, jh.a(var6, param2 ^ param2));
+          var4_int = this.field_f.field_s.a((byte) -71, SocketConnector.a(var6, param2 ^ param2));
           if (!this.validateGroupId(var4_int, param2 + 16675)) {
             return false;
           }
           var7 = (CharSequence) ((Object) param1);
-          var5 = this.field_f.field_n[var4_int].a((byte) -71, jh.a(var7, param2 + 16675));
+          var5 = this.field_f.field_n[var4_int].a((byte) -71, SocketConnector.a(var7, param2 + 16675));
           stackIn_7_0 = this.tryLoadFile(var4_int, 4397, var5);
           return stackIn_7_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -678,7 +678,7 @@ final class ResourceArchive {
             ResourceArchive.playMusicTrack(22, (MusicTrack) null);
           }
           var5 = (CharSequence) ((Object) param1);
-          var3_int = this.field_f.field_s.a((byte) -71, jh.a(var5, 0));
+          var3_int = this.field_f.field_s.a((byte) -71, SocketConnector.a(var5, 0));
           stackIn_7_0 = this.tryLoadGroup(var3_int, 0);
           return stackIn_7_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -715,7 +715,7 @@ final class ResourceArchive {
           }
           param0 = param0.toLowerCase();
           var4 = (CharSequence) ((Object) param0);
-          var3_int = this.field_f.field_s.a((byte) -71, jh.a(var4, 0));
+          var3_int = this.field_f.field_s.a((byte) -71, SocketConnector.a(var4, 0));
           stackIn_6_0 = this.getGroupLoadPercent(var3_int, true);
           return stackIn_6_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -753,13 +753,13 @@ final class ResourceArchive {
           param2 = param2.toLowerCase();
           param0 = param0.toLowerCase();
           var6 = (CharSequence) ((Object) param2);
-          var4_int = this.field_f.field_s.a((byte) -71, jh.a(var6, 0));
+          var4_int = this.field_f.field_s.a((byte) -71, SocketConnector.a(var6, 0));
           if (!this.validateGroupId(var4_int, param1 ^ 0)) {
             stackIn_5_0 = null;
             return (byte[]) (stackIn_5_0);
           }
           var7 = (CharSequence) ((Object) param0);
-          var5 = this.field_f.field_n[var4_int].a((byte) -71, jh.a(var7, param1));
+          var5 = this.field_f.field_n[var4_int].a((byte) -71, SocketConnector.a(var7, param1));
           stackIn_7_0 = this.getFile(false, var4_int, var5);
           return stackIn_7_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

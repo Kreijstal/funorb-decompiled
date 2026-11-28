@@ -5,7 +5,7 @@ final class hj {
     static int field_a;
     static int field_b;
 
-    final static void bucketVisibleFacesByDepth(boolean param0, byte param1, jk param2, int param3, int param4) {
+    final static void bucketVisibleFacesByDepth(boolean param0, byte param1, LogoMesh param2, int param3, int param4) {
         byte dupTemp$0 = 0;
         boolean stackIn_14_0 = false;
         int stackIn_33_0 = 0;
@@ -67,10 +67,10 @@ final class hj {
             stackIn_14_0 = stackOut_13_0;
             if (var19 == 0) {
               if (stackIn_14_0) {
-                var12 = ca.field_c[var9];
+                var12 = SlimeCollisionSupport.field_c[var9];
                 var13 = kg.field_g[var9];
-                var14 = ca.field_c[var10] - var12;
-                var15 = -var12 + ca.field_c[var11];
+                var14 = SlimeCollisionSupport.field_c[var10] - var12;
+                var15 = -var12 + SlimeCollisionSupport.field_c[var11];
                 var16 = kg.field_g[var10] - var13;
                 var17 = -var13 + kg.field_g[var11];
               }
@@ -164,7 +164,7 @@ final class hj {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 != 24777) {
-            hj.bucketVisibleFacesByDepthWithIntGuard(false, -24, (jk) null, 13, 72);
+            hj.bucketVisibleFacesByDepthWithIntGuard(false, -24, (LogoMesh) null, 13, 72);
           }
           stackIn_4_0 = -bb.field_b + TextHotspotBounds.field_p;
           return stackIn_4_0;
@@ -180,7 +180,7 @@ final class hj {
     }
 
     /* Full JVM integer arguments; original narrow signature preserved. */
-    final static void bucketVisibleFacesByDepthWithIntGuard(boolean param0, int param1, jk param2, int param3, int param4) {
+    final static void bucketVisibleFacesByDepthWithIntGuard(boolean param0, int param1, LogoMesh param2, int param3, int param4) {
         byte dupTemp$0 = 0;
         boolean stackIn_14_0 = false;
         int stackIn_33_0 = 0;
@@ -242,10 +242,10 @@ final class hj {
             stackIn_14_0 = stackOut_13_0;
             if (var19 == 0) {
               if (stackIn_14_0) {
-                var12 = ca.field_c[var9];
+                var12 = SlimeCollisionSupport.field_c[var9];
                 var13 = kg.field_g[var9];
-                var14 = ca.field_c[var10] - var12;
-                var15 = -var12 + ca.field_c[var11];
+                var14 = SlimeCollisionSupport.field_c[var10] - var12;
+                var15 = -var12 + SlimeCollisionSupport.field_c[var11];
                 var16 = kg.field_g[var10] - var13;
                 var17 = -var13 + kg.field_g[var11];
               }

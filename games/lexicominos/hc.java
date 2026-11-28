@@ -78,12 +78,12 @@ final class hc extends ui {
               SpriteGeometry.field_q.writeByte(18, -1);
               SpriteGeometry.field_q.position = SpriteGeometry.field_q.position + 2;
               var10 = SpriteGeometry.field_q.position;
-              var11_ref_String = pg.a(RichTextLayout.c(param3 + 16715), (byte) -28);
+              var11_ref_String = ArchiveSourceManager.a(RichTextLayout.c(param3 + 16715), (byte) -28);
               if (var11_ref_String == null) {
                 var11_ref_String = "";
               }
               SpriteGeometry.field_q.writeTerminatedString(var11_ref_String, (byte) 0);
-              wc.a(wb.field_m, SpriteGeometry.field_q, ContentTransitionDialog.field_T, (byte) 111, of.field_a);
+              wc.a(ArchiveNetworkClient.field_m, SpriteGeometry.field_q, ContentTransitionDialog.field_T, (byte) 111, of.field_a);
               SpriteGeometry.field_q.backpatchShortLength(SpriteGeometry.field_q.position - var10, (byte) 26);
             } else {
               of.field_a.position = 0;
@@ -108,7 +108,7 @@ final class hc extends ui {
               SpriteGeometry.field_q.writeByte(16, -1);
               SpriteGeometry.field_q.position = SpriteGeometry.field_q.position + 1;
               var9 = SpriteGeometry.field_q.position;
-              wc.a(wb.field_m, SpriteGeometry.field_q, ContentTransitionDialog.field_T, (byte) 111, of.field_a);
+              wc.a(ArchiveNetworkClient.field_m, SpriteGeometry.field_q, ContentTransitionDialog.field_T, (byte) 111, of.field_a);
               SpriteGeometry.field_q.backpatchByteLength(SpriteGeometry.field_q.position - var9, (byte) -128);
             }
             kc.a(-1, param3 ^ 30761);
@@ -136,7 +136,7 @@ final class hc extends ui {
               }
               if (var9Lifetime1 != 99) {
                 a.field_c = -1;
-                pg.field_d = var9Lifetime1;
+                ArchiveSourceManager.field_d = var9Lifetime1;
                 AgeValidator.field_m = RichTextWidget.field_F;
               } else {
                 a.b(wg.b(param3 ^ -19296), 10343);
@@ -164,7 +164,7 @@ final class hc extends ui {
           }
           if (RichTextWidget.field_F == AgeValidator.field_m &&
             NetworkArchiveRequest.d(2)) {
-            if (pg.field_d == 255) {
+            if (ArchiveSourceManager.field_d == 255) {
               var9_ref_String = ig.field_a.readNullableString((byte) -49);
               if (var9_ref_String != null) {
                 MouseWheelInput.a(var9_ref_String, -11971, RichTextLayout.c(-14047));
@@ -174,7 +174,7 @@ final class hc extends ui {
             }
             ProxyAuthenticationRequiredException.closeBufferedSocketWithIntGuard(-85);
             fb.field_p = false;
-            stackIn_57_0 = pg.field_d;
+            stackIn_57_0 = ArchiveSourceManager.field_d;
             return stackIn_57_0;
           }
           if (null == DelegatingCanvas.field_b) {

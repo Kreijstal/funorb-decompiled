@@ -81,10 +81,10 @@ final class hd {
               param4 = new java.awt.Color(140, 17, 17);
             }
             try {
-              if (wb.field_g == null) {
-                wb.field_g = ug.field_y.createImage(304, 34);
+              if (ArchiveNetworkClient.field_g == null) {
+                ArchiveNetworkClient.field_g = ug.field_y.createImage(304, 34);
               }
-              var10 = wb.field_g.getGraphics();
+              var10 = ArchiveNetworkClient.field_g.getGraphics();
               var10.setColor(param4);
               var10.drawRect(0, 0, 303, 33);
               var10.fillRect(2, 2, 3 * param0, 30);
@@ -97,7 +97,7 @@ final class hd {
               }
               var10.setColor(java.awt.Color.white);
               var10.drawString(param2, (-(param2.length() * 6) + 304) / 2, 22);
-              var9.drawImage(wb.field_g, -152 + AccountCreationResultPanel.field_sb / 2, bk.field_d / 2 - 18, (java.awt.image.ImageObserver) null);
+              var9.drawImage(ArchiveNetworkClient.field_g, -152 + AccountCreationResultPanel.field_sb / 2, bk.field_d / 2 - 18, (java.awt.image.ImageObserver) null);
             } catch (java.lang.Exception decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var6 = (Exception) (Object) decompiledCaughtException;

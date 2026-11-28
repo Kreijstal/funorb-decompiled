@@ -3,7 +3,7 @@
  */
 final class i {
     static String[] field_b;
-    static qi field_a;
+    static ArchiveSourceManager field_a;
     static String field_d;
     static String field_e;
     static Sprite[] field_c;

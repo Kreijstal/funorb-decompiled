@@ -181,11 +181,11 @@ final class jj {
               if (mo.field_l > 0) {
                 fj.field_d = true;
               }
-              tp.field_f.a(WallTile.field_r, true);
+              tp.field_f.setCipherSeed(WallTile.field_r, true);
               for (var8Lifetime1 = 0; var8Lifetime1 < 4; var8Lifetime1++) {
                 WallTile.field_r[var8Lifetime1] = WallTile.field_r[var8Lifetime1] + 50;
               }
-              ConfirmedEmailAvailabilityValidator.field_n.a(WallTile.field_r, true);
+              ConfirmedEmailAvailabilityValidator.field_n.setCipherSeed(WallTile.field_r, true);
               stackIn_74_0 = FullscreenNoticeType.field_b;
               return stackIn_74_0;
             }

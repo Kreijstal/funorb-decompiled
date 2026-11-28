@@ -17,7 +17,7 @@ final class Raider {
     int field_d;
     int field_f;
     static String field_h;
-    static bb field_a;
+    static ArchiveNetworkClient field_a;
 
     public static void clearStaticReferences(byte param0) {
         field_a = null;

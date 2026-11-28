@@ -1314,7 +1314,7 @@ final class ll {
                 }
                 var2 = te.a("creatingyouraccount", -107);
                 if (var2 != null) {
-                  c.field_j = TextLineMetrics.a(var2, (byte) 64);
+                  ArchiveSourceManager.field_j = TextLineMetrics.a(var2, (byte) 64);
                 }
                 var2 = te.a("create_youmustaccept", param0 - 13);
                 if (null != var2) {
@@ -2914,31 +2914,31 @@ final class ll {
                 }
                 var2 = te.a("mustlogin4,1", -52);
                 if (var2 != null) {
-                  qh.field_c[1] = TextLineMetrics.a(var2, (byte) -56);
+                  MouseInputHandler.field_c[1] = TextLineMetrics.a(var2, (byte) -56);
                 }
                 var2 = te.a("mustlogin4,2", -31);
                 if (null != var2) {
-                  qh.field_c[2] = TextLineMetrics.a(var2, (byte) -117);
+                  MouseInputHandler.field_c[2] = TextLineMetrics.a(var2, (byte) -117);
                 }
                 var2 = te.a("mustlogin4,3", -49);
                 if (var2 != null) {
-                  qh.field_c[3] = TextLineMetrics.a(var2, (byte) 96);
+                  MouseInputHandler.field_c[3] = TextLineMetrics.a(var2, (byte) 96);
                 }
                 var2 = te.a("mustlogin4,4", -85);
                 if (null != var2) {
-                  qh.field_c[4] = TextLineMetrics.a(var2, (byte) 127);
+                  MouseInputHandler.field_c[4] = TextLineMetrics.a(var2, (byte) 127);
                 }
                 var2 = te.a("mustlogin4,5", -18);
                 if (null != var2) {
-                  qh.field_c[5] = TextLineMetrics.a(var2, (byte) 82);
+                  MouseInputHandler.field_c[5] = TextLineMetrics.a(var2, (byte) 82);
                 }
                 var2 = te.a("mustlogin4,6", -64);
                 if (null != var2) {
-                  qh.field_c[6] = TextLineMetrics.a(var2, (byte) 85);
+                  MouseInputHandler.field_c[6] = TextLineMetrics.a(var2, (byte) 85);
                 }
                 var2 = te.a("mustlogin4,7", -51);
                 if (null != var2) {
-                  qh.field_c[7] = TextLineMetrics.a(var2, (byte) 100);
+                  MouseInputHandler.field_c[7] = TextLineMetrics.a(var2, (byte) 100);
                 }
                 var2 = te.a("mustlogin_notloggedin", -128);
                 if (null != var2) {

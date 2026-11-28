@@ -1242,7 +1242,7 @@ final class cg {
                 }
                 var2 = AgeValidator.a((byte) 125, "checking");
                 if (var2 != null) {
-                  he.field_l = c.a(0, var2);
+                  LeaderboardSubmission.field_l = c.a(0, var2);
                 }
                 var2 = AgeValidator.a((byte) 85, "create_namealreadytaken");
                 if (var2 != null) {
@@ -1454,7 +1454,7 @@ final class cg {
                 }
                 var2 = AgeValidator.a((byte) 95, "create_suggestions");
                 if (var2 != null) {
-                  nk.field_e = c.a(param0 ^ -99, var2);
+                  BouncedownMenuEntry.field_e = c.a(param0 ^ -99, var2);
                 }
                 var2 = AgeValidator.a((byte) 98, "create_more_suggestions");
                 if (null != var2) {
@@ -1470,7 +1470,7 @@ final class cg {
                 }
                 var2 = AgeValidator.a((byte) 121, "create_agreeterms");
                 if (null != var2) {
-                  mj.field_j = c.a(0, var2);
+                  BouncedownMenu.field_j = c.a(0, var2);
                 }
                 var2 = AgeValidator.a((byte) 97, "create_u13terms");
                 if (null != var2) {
@@ -1506,7 +1506,7 @@ final class cg {
                 }
                 var2 = AgeValidator.a((byte) 121, "login_justplay_tooltip");
                 if (null != var2) {
-                  nf.field_a = c.a(0, var2);
+                  KeyboardInputHandler.field_a = c.a(0, var2);
                 }
                 var2 = AgeValidator.a((byte) 87, "login_back_tooltip");
                 if (null != var2) {
@@ -1854,7 +1854,7 @@ final class cg {
                 }
                 var2 = AgeValidator.a((byte) 106, "unpacking_graphics");
                 if (null != var2) {
-                  he.field_i = c.a(param0 ^ -99, var2);
+                  LeaderboardSubmission.field_i = c.a(param0 ^ -99, var2);
                 }
                 var2 = AgeValidator.a((byte) 106, "unpacking_models");
                 if (null != var2) {
@@ -2688,7 +2688,7 @@ final class cg {
                 }
                 var2 = AgeValidator.a((byte) 91, "fs_button_members");
                 if (null != var2) {
-                  tb.field_o = c.a(param0 ^ -99, var2);
+                  SocketArchiveNetworkClient.field_o = c.a(param0 ^ -99, var2);
                 }
                 var2 = AgeValidator.a((byte) 115, "fs_unavailable");
                 if (var2 != null) {
@@ -2696,7 +2696,7 @@ final class cg {
                 }
                 var2 = AgeValidator.a((byte) 95, "fs_unavailable_try_signed_applet");
                 if (null != var2) {
-                  ra.field_f = c.a(0, var2);
+                  ProxySocketConnector.field_f = c.a(0, var2);
                 }
                 var2 = AgeValidator.a((byte) 124, "fs_focus");
                 if (var2 != null) {
@@ -2883,31 +2883,31 @@ final class cg {
                 }
                 var2 = AgeValidator.a((byte) 113, "mustlogin3,1");
                 if (null != var2) {
-                  tb.field_r[1] = c.a(0, var2);
+                  SocketArchiveNetworkClient.field_r[1] = c.a(0, var2);
                 }
                 var2 = AgeValidator.a((byte) 111, "mustlogin3,2");
                 if (null != var2) {
-                  tb.field_r[2] = c.a(param0 + 99, var2);
+                  SocketArchiveNetworkClient.field_r[2] = c.a(param0 + 99, var2);
                 }
                 var2 = AgeValidator.a((byte) 126, "mustlogin3,3");
                 if (null != var2) {
-                  tb.field_r[3] = c.a(0, var2);
+                  SocketArchiveNetworkClient.field_r[3] = c.a(0, var2);
                 }
                 var2 = AgeValidator.a((byte) 116, "mustlogin3,4");
                 if (var2 != null) {
-                  tb.field_r[4] = c.a(param0 + 99, var2);
+                  SocketArchiveNetworkClient.field_r[4] = c.a(param0 + 99, var2);
                 }
                 var2 = AgeValidator.a((byte) 97, "mustlogin3,5");
                 if (var2 != null) {
-                  tb.field_r[5] = c.a(0, var2);
+                  SocketArchiveNetworkClient.field_r[5] = c.a(0, var2);
                 }
                 var2 = AgeValidator.a((byte) 116, "mustlogin3,6");
                 if (null != var2) {
-                  tb.field_r[6] = c.a(0, var2);
+                  SocketArchiveNetworkClient.field_r[6] = c.a(0, var2);
                 }
                 var2 = AgeValidator.a((byte) 89, "mustlogin3,7");
                 if (var2 != null) {
-                  tb.field_r[7] = c.a(0, var2);
+                  SocketArchiveNetworkClient.field_r[7] = c.a(0, var2);
                 }
                 var2 = AgeValidator.a((byte) 120, "discard");
                 if (var2 != null) {

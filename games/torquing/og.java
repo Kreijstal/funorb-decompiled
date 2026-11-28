@@ -7,7 +7,7 @@ final class og extends IntrusiveNode {
     int field_l;
     int field_j;
 
-    final static void a(java.awt.Component param0, int param1) {
+    final static void detachKeyboardListeners(java.awt.Component param0, int param1) {
         try {
           param0.removeKeyListener(FrameTimer.field_b);
           param0.removeFocusListener(FrameTimer.field_b);

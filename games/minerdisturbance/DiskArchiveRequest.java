@@ -76,7 +76,7 @@ final class DiskArchiveRequest extends ArchiveRequest {
         MusicPatchPcmStream.field_B = false;
         wc.field_b = false;
         AlphaWidgetContainer.a(param0, 3);
-        ic.field_l = mc.field_t;
+        ProxySocketConnector.field_l = mc.field_t;
         AccountRequestState.field_h = mc.field_t;
     }
 

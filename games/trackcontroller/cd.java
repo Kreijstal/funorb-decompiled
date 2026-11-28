@@ -41,7 +41,7 @@ final class cd {
 
     final void a(int param0, int param1, int param2, boolean param3, int param4) {
         int var6 = this.a(param1, fg.mouseY, param4, -85, param0, param2, kf.mouseX);
-        int var7 = this.a(param1, wg.clickY, param4, -85, param0, param2, ContentTransitionDialog.clickX);
+        int var7 = this.a(param1, ArchiveSourceManager.clickY, param4, -85, param0, param2, ContentTransitionDialog.clickX);
         if (!param3) {
           this.a(-126, var6, var7);
           return;

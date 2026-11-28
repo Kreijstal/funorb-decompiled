@@ -4,7 +4,7 @@
 final class CachedArchiveSource extends ArchiveSource {
     private ArchiveRequest field_x;
     private int field_n;
-    private va field_h;
+    private ArchiveNetworkClient field_h;
     private SectorCacheStore field_v;
     private byte[] field_u;
     private int field_o;
@@ -70,20 +70,20 @@ final class CachedArchiveSource extends ArchiveSource {
               if (this.field_u[param0] != -1) {
                 throw new RuntimeException();
               }
-              if (this.field_h.a(param1 ^ -5868)) {
+              if (this.field_h.isPrefetchQueueFull(param1 ^ -5868)) {
                 return null;
               }
-              var4 = this.field_h.a(this.field_o, false, param0, param1 ^ 437409504, (byte) 2);
+              var4 = this.field_h.enqueueRequest(this.field_o, false, param0, param1 ^ 437409504, (byte) 2);
             }
           } else {
             if (this.field_v != null &&
               this.field_u[param0] != -1) {
               var4 = this.field_p.readNow(this.field_v, param0, -112);
             } else {
-              if (this.field_h.b(-21)) {
+              if (this.field_h.isPriorityQueueFull(-21)) {
                 return null;
               }
-              var4 = this.field_h.a(this.field_o, true, param0, 437409504, (byte) 2);
+              var4 = this.field_h.enqueueRequest(this.field_o, true, param0, 437409504, (byte) 2);
             }
           }
           this.field_w.a((byte) 126, (IntrusiveNode) (var4), (long)param0);
@@ -141,8 +141,8 @@ final class CachedArchiveSource extends ArchiveSource {
             if (!((ArchiveRequest) (var4)).field_r) {
               return null;
             }
-            if (!this.field_h.b(-21)) {
-              var4 = this.field_h.a(this.field_o, true, param0, 437409504, (byte) 2);
+            if (!this.field_h.isPriorityQueueFull(-21)) {
+              var4 = this.field_h.enqueueRequest(this.field_o, true, param0, 437409504, (byte) 2);
               this.field_w.a((byte) 73, (IntrusiveNode) (var4), (long)param0);
             }
             return null;
@@ -178,13 +178,13 @@ final class CachedArchiveSource extends ArchiveSource {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6 = (RuntimeException) (Object) decompiledCaughtException;
-          this.field_h.c((byte) 59);
+          this.field_h.resetAfterValidationFailure((byte) 59);
           ((ArchiveRequest) (var4)).unlink(10);
           if (((ArchiveRequest) (var4)).field_r) {
-            if (this.field_h.b(-21)) {
+            if (this.field_h.isPriorityQueueFull(-21)) {
               return null;
             }
-            var4 = this.field_h.a(this.field_o, true, param0, 437409504, (byte) 2);
+            var4 = this.field_h.enqueueRequest(this.field_o, true, param0, 437409504, (byte) 2);
             this.field_w.a((byte) 79, (IntrusiveNode) (var4), (long)param0);
           }
           return null;
@@ -290,7 +290,7 @@ final class CachedArchiveSource extends ArchiveSource {
                   this.field_q = this.field_q + 1;
                   continue;
                 }
-                if (!this.field_h.a(-5868)) {
+                if (!this.field_h.isPrefetchQueueFull(-5868)) {
                   if (this.field_u[this.field_q] != 1) {
                     discarded$2 = this.a(this.field_q, (byte) 0, 2);
                   }
@@ -351,10 +351,10 @@ final class CachedArchiveSource extends ArchiveSource {
           return this.field_j;
         }
         if (null == this.field_x) {
-          if (this.field_h.b(-21)) {
+          if (this.field_h.isPriorityQueueFull(-21)) {
             return null;
           }
-          this.field_x = (ArchiveRequest) ((Object) this.field_h.a(255, true, this.field_o, 437409504, (byte) 0));
+          this.field_x = (ArchiveRequest) ((Object) this.field_h.enqueueRequest(255, true, this.field_o, 437409504, (byte) 0));
         }
         if (this.field_x.field_m) {
           return null;
@@ -375,8 +375,8 @@ final class CachedArchiveSource extends ArchiveSource {
             decompiledCaughtException = decompiledCaughtParameter0;
             var4 = decompiledCaughtException;
             this.field_j = null;
-            if (!this.field_h.b(-21)) {
-              this.field_x = (ArchiveRequest) ((Object) this.field_h.a(255, true, this.field_o, 437409504, (byte) 0));
+            if (!this.field_h.isPriorityQueueFull(-21)) {
+              this.field_x = (ArchiveRequest) ((Object) this.field_h.enqueueRequest(255, true, this.field_o, 437409504, (byte) 0));
             } else {
               this.field_x = null;
             }
@@ -391,12 +391,12 @@ final class CachedArchiveSource extends ArchiveSource {
           } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
             decompiledCaughtException = decompiledCaughtParameter1;
             var4 = decompiledCaughtException;
-            this.field_h.c((byte) 59);
+            this.field_h.resetAfterValidationFailure((byte) 59);
             this.field_j = null;
-            if (this.field_h.b(-21)) {
+            if (this.field_h.isPriorityQueueFull(-21)) {
               this.field_x = null;
             } else {
-              this.field_x = (ArchiveRequest) ((Object) this.field_h.a(255, true, this.field_o, 437409504, (byte) 0));
+              this.field_x = (ArchiveRequest) ((Object) this.field_h.enqueueRequest(255, true, this.field_o, 437409504, (byte) 0));
             }
             return null;
           }
@@ -489,7 +489,7 @@ final class CachedArchiveSource extends ArchiveSource {
         }
     }
 
-    CachedArchiveSource(int param0, SectorCacheStore param1, SectorCacheStore param2, va param3, DiskCacheWorker param4, int param5, byte[] param6, int param7, boolean param8) {
+    CachedArchiveSource(int param0, SectorCacheStore param1, SectorCacheStore param2, ArchiveNetworkClient param3, DiskCacheWorker param4, int param5, byte[] param6, int param7, boolean param8) {
         boolean stackIn_7_1 = false;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;

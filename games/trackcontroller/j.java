@@ -239,7 +239,7 @@ final class j {
         this.field_g = param1 ? true : false;
     }
 
-    final static void a(java.awt.Component param0, int param1) {
+    final static void detachKeyboardListeners(java.awt.Component param0, int param1) {
         try {
           param0.removeKeyListener(RichTextLayout.field_o);
           param0.removeFocusListener(RichTextLayout.field_o);

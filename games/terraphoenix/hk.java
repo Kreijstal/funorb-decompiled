@@ -114,7 +114,7 @@ final class hk {
         }
     }
 
-    final static void a(java.awt.Component param0, byte param1) {
+    final static void attachKeyboardListeners(java.awt.Component param0, byte param1) {
         try {
           int var2_int = 45 % ((14 - param1) / 43);
           param0.setFocusTraversalKeysEnabled(false);
@@ -150,7 +150,7 @@ final class hk {
             va.field_g = param0;
             if (param1 != 3) {
               var6 = (java.awt.Component) null;
-              hk.a((java.awt.Component) null, (byte) 83);
+              hk.attachKeyboardListeners((java.awt.Component) null, (byte) 83);
             }
             try {
               var7 = param2.getParameter("cookieprefix");
@@ -207,8 +207,8 @@ final class hk {
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          me.a((java.awt.Component) ((Object) param0), (byte) 126);
-          AccountServiceResult.a(-26, (java.awt.Component) ((Object) param0));
+          me.detachKeyboardListeners((java.awt.Component) ((Object) param0), (byte) 126);
+          AccountServiceResult.detachMouseListeners(-26, (java.awt.Component) ((Object) param0));
           var2_int = 42 % ((param1 - 61) / 32);
           if (lk.field_d == null) {
             return;

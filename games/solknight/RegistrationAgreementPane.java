@@ -160,11 +160,11 @@ final class RegistrationAgreementPane extends WidgetContainer implements TextHot
     }
 
     final static String a(byte param0) {
-        if (ne.field_g == null) {
+        if (ArchiveSourceManager.field_g == null) {
           return "";
         }
         int var1 = -98 % ((54 - param0) / 59);
-        return ne.field_g;
+        return ArchiveSourceManager.field_g;
     }
 
     private final String getAgreementLinkClosingTag(int param0) {

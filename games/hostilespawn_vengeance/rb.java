@@ -16,7 +16,7 @@ final class rb extends ArchiveProvider {
     static MusicTrack field_s;
     static RgbSprite field_y;
     private int field_g;
-    private ej field_h;
+    private ArchiveNetworkClient field_h;
     private DiskCacheWorker field_t;
     private IntrusiveDeque field_w;
     private int field_A;
@@ -70,10 +70,10 @@ final class rb extends ArchiveProvider {
               this.field_r[param0] != -1) {
               var4 = this.field_t.readNow(this.field_q, param0, -27337);
             } else {
-              if (this.field_h.a(20)) {
+              if (this.field_h.isPriorityQueueFull(20)) {
                 return null;
               }
-              var4 = this.field_h.a((byte) 2, this.field_g, param0, -18986, true);
+              var4 = this.field_h.enqueueRequest((byte) 2, this.field_g, param0, -18986, true);
             }
           } else {
             if (1 != param1) {
@@ -86,10 +86,10 @@ final class rb extends ArchiveProvider {
               if (-1 != this.field_r[param0]) {
                 throw new RuntimeException();
               }
-              if (this.field_h.b(5)) {
+              if (this.field_h.isPrefetchQueueFull(5)) {
                 return null;
               }
-              var4 = this.field_h.a((byte) 2, this.field_g, param0, -18986, false);
+              var4 = this.field_h.enqueueRequest((byte) 2, this.field_g, param0, -18986, false);
             } else {
               if (this.field_q == null) {
                 throw new RuntimeException();
@@ -150,8 +150,8 @@ final class rb extends ArchiveProvider {
             this.field_r[param0] = (byte)-1;
             ((ArchiveRequest) (var4)).unlink(113);
             if (((ArchiveRequest) (var4)).field_w &&
-              !this.field_h.a(20)) {
-              var4 = this.field_h.a((byte) 2, this.field_g, param0, -18986, true);
+              !this.field_h.isPriorityQueueFull(20)) {
+              var4 = this.field_h.enqueueRequest((byte) 2, this.field_g, param0, -18986, true);
               this.field_i.a(-114, (long)param0, (IntrusiveNode) (var4));
             }
             return null;
@@ -184,13 +184,13 @@ final class rb extends ArchiveProvider {
         } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
           decompiledCaughtException = decompiledCaughtParameter1;
           var6_ref = (RuntimeException) (Object) decompiledCaughtException;
-          this.field_h.c(194);
+          this.field_h.resetAfterValidationFailure(194);
           ((ArchiveRequest) (var4)).unlink(-9);
           if (!((ArchiveRequest) (var4)).field_w) {
             return null;
           }
-          if (!this.field_h.a(20)) {
-            var4 = this.field_h.a((byte) 2, this.field_g, param0, -18986, true);
+          if (!this.field_h.isPriorityQueueFull(20)) {
+            var4 = this.field_h.enqueueRequest((byte) 2, this.field_g, param0, -18986, true);
             this.field_i.a(-106, (long)param0, (IntrusiveNode) (var4));
           }
           return null;
@@ -329,7 +329,7 @@ final class rb extends ArchiveProvider {
                   this.field_A = this.field_A + 1;
                   continue;
                 }
-                if (!this.field_h.b(param0 ^ -6)) {
+                if (!this.field_h.isPrefetchQueueFull(param0 ^ -6)) {
                   if (1 != this.field_r[this.field_A]) {
                     discarded$2 = this.a(this.field_A, 2, false);
                   }
@@ -428,10 +428,10 @@ final class rb extends ArchiveProvider {
           return this.field_x;
         }
         if (null == this.field_j) {
-          if (this.field_h.a(param0 ^ 23)) {
+          if (this.field_h.isPriorityQueueFull(param0 ^ 23)) {
             return null;
           }
-          this.field_j = (ArchiveRequest) ((Object) this.field_h.a((byte) 0, 255, this.field_g, -18986, true));
+          this.field_j = (ArchiveRequest) ((Object) this.field_h.enqueueRequest((byte) 0, 255, this.field_g, -18986, true));
         }
         if (this.field_j.field_v) {
           return null;
@@ -452,12 +452,12 @@ final class rb extends ArchiveProvider {
           } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
             var3 = decompiledCaughtException;
-            this.field_h.c(194);
+            this.field_h.resetAfterValidationFailure(194);
             this.field_x = null;
-            if (this.field_h.a(20)) {
+            if (this.field_h.isPriorityQueueFull(20)) {
               this.field_j = null;
             } else {
-              this.field_j = (ArchiveRequest) ((Object) this.field_h.a((byte) 0, 255, this.field_g, -18986, true));
+              this.field_j = (ArchiveRequest) ((Object) this.field_h.enqueueRequest((byte) 0, 255, this.field_g, -18986, true));
             }
             return null;
           }
@@ -477,8 +477,8 @@ final class rb extends ArchiveProvider {
             decompiledCaughtException = decompiledCaughtParameter1;
             var3 = decompiledCaughtException;
             this.field_x = null;
-            if (!this.field_h.a(20)) {
-              this.field_j = (ArchiveRequest) ((Object) this.field_h.a((byte) 0, 255, this.field_g, -18986, true));
+            if (!this.field_h.isPriorityQueueFull(20)) {
+              this.field_j = (ArchiveRequest) ((Object) this.field_h.enqueueRequest((byte) 0, 255, this.field_g, -18986, true));
             } else {
               this.field_j = null;
             }
@@ -556,7 +556,7 @@ final class rb extends ArchiveProvider {
         }
     }
 
-    rb(int param0, SectorCacheStore param1, SectorCacheStore param2, ej param3, DiskCacheWorker param4, int param5, byte[] param6, int param7, boolean param8) {
+    rb(int param0, SectorCacheStore param1, SectorCacheStore param2, ArchiveNetworkClient param3, DiskCacheWorker param4, int param5, byte[] param6, int param7, boolean param8) {
         boolean stackIn_7_1 = false;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;

@@ -49,16 +49,16 @@ final class ra {
           }
           SoftwareRasterizer.saveClip(ae.field_y);
           SoftwareRasterizer.intersectClip(var9, param1, var10, param4);
-          if ((1 & SingleChildWidgetContainer.field_E[vb.field_a[param0][param2]][param5]) > 0) {
+          if ((1 & SingleChildWidgetContainer.field_E[ArchiveNetworkClient.field_a[param0][param2]][param5]) > 0) {
             sf.field_d[param6][param2][var11].drawOpaque(var9, param1);
           }
-          if ((2 & SingleChildWidgetContainer.field_E[vb.field_a[param0][param2]][param5]) > 0) {
+          if ((2 & SingleChildWidgetContainer.field_E[ArchiveNetworkClient.field_a[param0][param2]][param5]) > 0) {
             sf.field_d[param6][param2][var11].drawOpaque(var9, param1 + 16);
           }
-          if ((SingleChildWidgetContainer.field_E[vb.field_a[param0][param2]][param5] & 4) > 0) {
+          if ((SingleChildWidgetContainer.field_E[ArchiveNetworkClient.field_a[param0][param2]][param5] & 4) > 0) {
             sf.field_d[param6][param2][var11].drawOpaque(var9, 32 + param1);
           }
-          if ((8 & SingleChildWidgetContainer.field_E[vb.field_a[param0][param2]][param5]) > 0) {
+          if ((8 & SingleChildWidgetContainer.field_E[ArchiveNetworkClient.field_a[param0][param2]][param5]) > 0) {
             sf.field_d[param6][param2][var11].drawOpaque(var9, 48 + param1);
           }
           SoftwareRasterizer.restoreClip(ae.field_y);
@@ -285,18 +285,18 @@ final class ra {
                   }
                   p.a(stackIn_25_0, stackIn_25_1, stackIn_25_2, stackIn_25_3, stackIn_26_4, param6, -100, var10_int);
                   if (var19 == 0) {
-                    this.field_n[0][var20] = vb.field_a[var19][var20];
+                    this.field_n[0][var20] = ArchiveNetworkClient.field_a[var19][var20];
                   }
                   var14 = -SocketConnector.field_l[var19][var20][1][0] + SocketConnector.field_l[var19][var20][1][1];
                   if (var14 > 0) {
-                    cf.a(32, this.field_f, this.field_h[vb.field_a[var19][var20]], var14, false);
+                    cf.a(32, this.field_f, this.field_h[ArchiveNetworkClient.field_a[var19][var20]], var14, false);
                     this.field_t[var20][0] = SocketConnector.field_l[var19][var20][1][0];
                     this.field_t[var20][1] = SocketConnector.field_l[var19][var20][1][1];
                     this.field_s[var20][0] = SocketConnector.field_l[var19][var20][2][0];
                     this.field_s[var20][1] = SocketConnector.field_l[var19][var20][2][1];
                     this.field_o[var20][0][0] = SocketConnector.field_l[var19][var20][0][0];
                     this.field_o[var20][0][1] = SocketConnector.field_l[var19][var20][0][1];
-                    var15 = 1 & vb.field_a[var19][var20];
+                    var15 = 1 & ArchiveNetworkClient.field_a[var19][var20];
                     ArchiveRequest.a(var15, -100, this.field_f, var20, this.field_s, this.field_t, var18);
                     if (param3 != null) {
                       param3.bindAsRenderTarget();
@@ -314,8 +314,8 @@ final class ra {
                     this.field_o[var20][1][0] = SocketConnector.field_l[var19][var20][0][1];
                     this.field_o[var20][1][1] = SocketConnector.field_l[var19][var20][1][1];
                   }
-                  var15 = vb.field_a[var19][var20] & 1;
-                  ModalDialogHost.a(var18, this.field_e[vb.field_a[var19][var20]], var20, this.field_o, var15, 1);
+                  var15 = ArchiveNetworkClient.field_a[var19][var20] & 1;
+                  ModalDialogHost.a(var18, this.field_e[ArchiveNetworkClient.field_a[var19][var20]], var20, this.field_o, var15, 1);
                   if (param3 != null) {
                     param3.bindAsRenderTarget();
                   }
@@ -361,11 +361,11 @@ final class ra {
                         var14 = SocketConnector.field_l[var19][var21][1][1] - SocketConnector.field_l[var19][var21][1][0];
                         if (param4 == 3 &&
                           var14 > 0) {
-                          if ((64 & SingleChildWidgetContainer.field_E[vb.field_a[var19][var21]][var20]) <= 0) {
-                            var22 = this.field_u[vb.field_a[var19][var21] >> 1][var20];
+                          if ((64 & SingleChildWidgetContainer.field_E[ArchiveNetworkClient.field_a[var19][var21]][var20]) <= 0) {
+                            var22 = this.field_u[ArchiveNetworkClient.field_a[var19][var21] >> 1][var20];
                             ModalDialog.a((byte) 114, var22, var21, var18, 64 + var12Lifetime1, var19, var12Lifetime1);
                           } else {
-                            var15 = vb.field_a[var19][var21] & 1;
+                            var15 = ArchiveNetworkClient.field_a[var19][var21] & 1;
                             TorChallenge.a(var18, var12Lifetime1, var20, false, var12Lifetime1 + 64, var19, var21, var15);
                           }
                         }
@@ -377,22 +377,22 @@ final class ra {
                         if (6 == param4 &&
                           param0) {
                           SoftwareRasterizer.saveClip(ae.field_y);
-                          var17 = AlphaWidgetContainer.a(param6, vb.field_a[var19][var21], param5, 0, 101, var20);
+                          var17 = AlphaWidgetContainer.a(param6, ArchiveNetworkClient.field_a[var19][var21], param5, 0, 101, var20);
                           SoftwareRasterizer.restoreClip(ae.field_y);
-                          var16 = AlphaWidgetContainer.a(param6, vb.field_a[var19][var21], param5, 1, 115, var20);
+                          var16 = AlphaWidgetContainer.a(param6, ArchiveNetworkClient.field_a[var19][var21], param5, 1, 115, var20);
                           SoftwareRasterizer.restoreClip(ae.field_y);
                         }
                         if (param4 == 6 &&
-                          0 == (16 & SingleChildWidgetContainer.field_E[vb.field_a[var19][var21]][var20])) {
+                          0 == (16 & SingleChildWidgetContainer.field_E[ArchiveNetworkClient.field_a[var19][var21]][var20])) {
                           SoftwareRasterizer.saveClip(ae.field_y);
-                          var22 = this.field_r[vb.field_a[var19][var21]][var20];
+                          var22 = this.field_r[ArchiveNetworkClient.field_a[var19][var21]][var20];
                           this.a(var19, var12Lifetime1, var21, var18, var12Lifetime1 + 64, var20, var22, -10440);
                           SoftwareRasterizer.restoreClip(ae.field_y);
                         }
                         if (param4 == 2 &&
                           param0) {
                           SoftwareRasterizer.saveClip(ae.field_y);
-                          var16 = AlphaWidgetContainer.a(param6, vb.field_a[var19][var21], param5, 2, 113, var20);
+                          var16 = AlphaWidgetContainer.a(param6, ArchiveNetworkClient.field_a[var19][var21], param5, 2, 113, var20);
                           SoftwareRasterizer.restoreClip(ae.field_y);
                         }
                         if (6 == param4) {
@@ -400,10 +400,10 @@ final class ra {
                             var12Lifetime1 <= param8 &&
                             param8 < var12Lifetime1 + 64 &&
                             SocketConnector.field_l[var19][var21][0][1] > param7) {
-                            this.field_l = vb.field_a[var19][var21];
+                            this.field_l = ArchiveNetworkClient.field_a[var19][var21];
                             this.field_i = var20;
                           }
-                          if (vb.field_a[var19][var21] == this.field_l &&
+                          if (ArchiveNetworkClient.field_a[var19][var21] == this.field_l &&
                             this.field_i == var20 &&
                             ol.field_a) {
                             SoftwareRasterizer.saveClip(ae.field_y);
@@ -466,11 +466,11 @@ final class ra {
                         var14 = SocketConnector.field_l[var19][var21][1][1] - SocketConnector.field_l[var19][var21][1][0];
                         if (param4 == 3 &&
                           var14 > 0) {
-                          if ((64 & SingleChildWidgetContainer.field_E[vb.field_a[var19][var21]][var20]) <= 0) {
-                            var22Lifetime2 = this.field_u[vb.field_a[var19][var21] >> 1][var20];
+                          if ((64 & SingleChildWidgetContainer.field_E[ArchiveNetworkClient.field_a[var19][var21]][var20]) <= 0) {
+                            var22Lifetime2 = this.field_u[ArchiveNetworkClient.field_a[var19][var21] >> 1][var20];
                             ModalDialog.a((byte) 114, var22Lifetime2, var21, var18, 64 + var12Lifetime1, var19, var12Lifetime1);
                           } else {
-                            var15 = vb.field_a[var19][var21] & 1;
+                            var15 = ArchiveNetworkClient.field_a[var19][var21] & 1;
                             TorChallenge.a(var18, var12Lifetime1, var20, false, var12Lifetime1 + 64, var19, var21, var15);
                           }
                         }
@@ -482,22 +482,22 @@ final class ra {
                         if (6 == param4 &&
                           param0) {
                           SoftwareRasterizer.saveClip(ae.field_y);
-                          var17 = AlphaWidgetContainer.a(param6, vb.field_a[var19][var21], param5, 0, 101, var20);
+                          var17 = AlphaWidgetContainer.a(param6, ArchiveNetworkClient.field_a[var19][var21], param5, 0, 101, var20);
                           SoftwareRasterizer.restoreClip(ae.field_y);
-                          var16 = AlphaWidgetContainer.a(param6, vb.field_a[var19][var21], param5, 1, 115, var20);
+                          var16 = AlphaWidgetContainer.a(param6, ArchiveNetworkClient.field_a[var19][var21], param5, 1, 115, var20);
                           SoftwareRasterizer.restoreClip(ae.field_y);
                         }
                         if (param4 == 6 &&
-                          0 == (16 & SingleChildWidgetContainer.field_E[vb.field_a[var19][var21]][var20])) {
+                          0 == (16 & SingleChildWidgetContainer.field_E[ArchiveNetworkClient.field_a[var19][var21]][var20])) {
                           SoftwareRasterizer.saveClip(ae.field_y);
-                          var22Lifetime2 = this.field_r[vb.field_a[var19][var21]][var20];
+                          var22Lifetime2 = this.field_r[ArchiveNetworkClient.field_a[var19][var21]][var20];
                           this.a(var19, var12Lifetime1, var21, var18, var12Lifetime1 + 64, var20, var22Lifetime2, -10440);
                           SoftwareRasterizer.restoreClip(ae.field_y);
                         }
                         if (param4 == 2 &&
                           param0) {
                           SoftwareRasterizer.saveClip(ae.field_y);
-                          var16 = AlphaWidgetContainer.a(param6, vb.field_a[var19][var21], param5, 2, 113, var20);
+                          var16 = AlphaWidgetContainer.a(param6, ArchiveNetworkClient.field_a[var19][var21], param5, 2, 113, var20);
                           SoftwareRasterizer.restoreClip(ae.field_y);
                         }
                         if (6 != param4) {
@@ -507,10 +507,10 @@ final class ra {
                           var12Lifetime1 <= param8 &&
                           param8 < var12Lifetime1 + 64 &&
                           SocketConnector.field_l[var19][var21][0][1] > param7) {
-                          this.field_l = vb.field_a[var19][var21];
+                          this.field_l = ArchiveNetworkClient.field_a[var19][var21];
                           this.field_i = var20;
                         }
-                        if (vb.field_a[var19][var21] != this.field_l) {
+                        if (ArchiveNetworkClient.field_a[var19][var21] != this.field_l) {
                           continue;
                         }
                         if (this.field_i != var20) {
@@ -557,11 +557,11 @@ final class ra {
                     var14 = SocketConnector.field_l[var19][var21][1][1] - SocketConnector.field_l[var19][var21][1][0];
                     if (param4 == 3 &&
                       var14 > 0) {
-                      if ((64 & SingleChildWidgetContainer.field_E[vb.field_a[var19][var21]][var20]) <= 0) {
-                        var22Lifetime2 = this.field_u[vb.field_a[var19][var21] >> 1][var20];
+                      if ((64 & SingleChildWidgetContainer.field_E[ArchiveNetworkClient.field_a[var19][var21]][var20]) <= 0) {
+                        var22Lifetime2 = this.field_u[ArchiveNetworkClient.field_a[var19][var21] >> 1][var20];
                         ModalDialog.a((byte) 114, var22Lifetime2, var21, var18, 64 + var12Lifetime1, var19, var12Lifetime1);
                       } else {
-                        var15 = vb.field_a[var19][var21] & 1;
+                        var15 = ArchiveNetworkClient.field_a[var19][var21] & 1;
                         TorChallenge.a(var18, var12Lifetime1, var20, false, var12Lifetime1 + 64, var19, var21, var15);
                       }
                     }
@@ -573,22 +573,22 @@ final class ra {
                     if (6 == param4 &&
                       param0) {
                       SoftwareRasterizer.saveClip(ae.field_y);
-                      var17 = AlphaWidgetContainer.a(param6, vb.field_a[var19][var21], param5, 0, 101, var20);
+                      var17 = AlphaWidgetContainer.a(param6, ArchiveNetworkClient.field_a[var19][var21], param5, 0, 101, var20);
                       SoftwareRasterizer.restoreClip(ae.field_y);
-                      var16 = AlphaWidgetContainer.a(param6, vb.field_a[var19][var21], param5, 1, 115, var20);
+                      var16 = AlphaWidgetContainer.a(param6, ArchiveNetworkClient.field_a[var19][var21], param5, 1, 115, var20);
                       SoftwareRasterizer.restoreClip(ae.field_y);
                     }
                     if (param4 == 6 &&
-                      0 == (16 & SingleChildWidgetContainer.field_E[vb.field_a[var19][var21]][var20])) {
+                      0 == (16 & SingleChildWidgetContainer.field_E[ArchiveNetworkClient.field_a[var19][var21]][var20])) {
                       SoftwareRasterizer.saveClip(ae.field_y);
-                      var22Lifetime2 = this.field_r[vb.field_a[var19][var21]][var20];
+                      var22Lifetime2 = this.field_r[ArchiveNetworkClient.field_a[var19][var21]][var20];
                       this.a(var19, var12Lifetime1, var21, var18, var12Lifetime1 + 64, var20, var22Lifetime2, -10440);
                       SoftwareRasterizer.restoreClip(ae.field_y);
                     }
                     if (param4 == 2 &&
                       param0) {
                       SoftwareRasterizer.saveClip(ae.field_y);
-                      var16 = AlphaWidgetContainer.a(param6, vb.field_a[var19][var21], param5, 2, 113, var20);
+                      var16 = AlphaWidgetContainer.a(param6, ArchiveNetworkClient.field_a[var19][var21], param5, 2, 113, var20);
                       SoftwareRasterizer.restoreClip(ae.field_y);
                     }
                     if (6 == param4) {
@@ -596,10 +596,10 @@ final class ra {
                         var12Lifetime1 <= param8 &&
                         param8 < var12Lifetime1 + 64 &&
                         SocketConnector.field_l[var19][var21][0][1] > param7) {
-                        this.field_l = vb.field_a[var19][var21];
+                        this.field_l = ArchiveNetworkClient.field_a[var19][var21];
                         this.field_i = var20;
                       }
-                      if (vb.field_a[var19][var21] == this.field_l &&
+                      if (ArchiveNetworkClient.field_a[var19][var21] == this.field_l &&
                         this.field_i == var20 &&
                         ol.field_a) {
                         SoftwareRasterizer.saveClip(ae.field_y);
@@ -674,11 +674,11 @@ final class ra {
                       var14Lifetime1 = SocketConnector.field_l[var19][var21Lifetime1][1][1] - SocketConnector.field_l[var19][var21Lifetime1][1][0];
                       if (param4 == 3 &&
                         var14Lifetime1 > 0) {
-                        if ((64 & SingleChildWidgetContainer.field_E[vb.field_a[var19][var21Lifetime1]][var20Lifetime2]) <= 0) {
-                          var22Lifetime1 = this.field_u[vb.field_a[var19][var21Lifetime1] >> 1][var20Lifetime2];
+                        if ((64 & SingleChildWidgetContainer.field_E[ArchiveNetworkClient.field_a[var19][var21Lifetime1]][var20Lifetime2]) <= 0) {
+                          var22Lifetime1 = this.field_u[ArchiveNetworkClient.field_a[var19][var21Lifetime1] >> 1][var20Lifetime2];
                           ModalDialog.a((byte) 114, var22Lifetime1, var21Lifetime1, var18, 64 + var12Lifetime1, var19, var12Lifetime1);
                         } else {
-                          var15Lifetime1 = vb.field_a[var19][var21Lifetime1] & 1;
+                          var15Lifetime1 = ArchiveNetworkClient.field_a[var19][var21Lifetime1] & 1;
                           TorChallenge.a(var18, var12Lifetime1, var20Lifetime2, false, var12Lifetime1 + 64, var19, var21Lifetime1, var15Lifetime1);
                         }
                       }
@@ -690,22 +690,22 @@ final class ra {
                       if (6 == param4 &&
                         param0) {
                         SoftwareRasterizer.saveClip(ae.field_y);
-                        var17 = AlphaWidgetContainer.a(param6, vb.field_a[var19][var21Lifetime1], param5, 0, 101, var20Lifetime2);
+                        var17 = AlphaWidgetContainer.a(param6, ArchiveNetworkClient.field_a[var19][var21Lifetime1], param5, 0, 101, var20Lifetime2);
                         SoftwareRasterizer.restoreClip(ae.field_y);
-                        var16 = AlphaWidgetContainer.a(param6, vb.field_a[var19][var21Lifetime1], param5, 1, 115, var20Lifetime2);
+                        var16 = AlphaWidgetContainer.a(param6, ArchiveNetworkClient.field_a[var19][var21Lifetime1], param5, 1, 115, var20Lifetime2);
                         SoftwareRasterizer.restoreClip(ae.field_y);
                       }
                       if (param4 == 6 &&
-                        0 == (16 & SingleChildWidgetContainer.field_E[vb.field_a[var19][var21Lifetime1]][var20Lifetime2])) {
+                        0 == (16 & SingleChildWidgetContainer.field_E[ArchiveNetworkClient.field_a[var19][var21Lifetime1]][var20Lifetime2])) {
                         SoftwareRasterizer.saveClip(ae.field_y);
-                        var22Lifetime1Lifetime1 = this.field_r[vb.field_a[var19][var21Lifetime1]][var20Lifetime2];
+                        var22Lifetime1Lifetime1 = this.field_r[ArchiveNetworkClient.field_a[var19][var21Lifetime1]][var20Lifetime2];
                         this.a(var19, var12Lifetime1, var21Lifetime1, var18, var12Lifetime1 + 64, var20Lifetime2, var22Lifetime1Lifetime1, -10440);
                         SoftwareRasterizer.restoreClip(ae.field_y);
                       }
                       if (param4 == 2 &&
                         param0) {
                         SoftwareRasterizer.saveClip(ae.field_y);
-                        var16 = AlphaWidgetContainer.a(param6, vb.field_a[var19][var21Lifetime1], param5, 2, 113, var20Lifetime2);
+                        var16 = AlphaWidgetContainer.a(param6, ArchiveNetworkClient.field_a[var19][var21Lifetime1], param5, 2, 113, var20Lifetime2);
                         SoftwareRasterizer.restoreClip(ae.field_y);
                       }
                       if (6 == param4) {
@@ -713,10 +713,10 @@ final class ra {
                           var12Lifetime1 <= param8 &&
                           param8 < var12Lifetime1 + 64 &&
                           SocketConnector.field_l[var19][var21Lifetime1][0][1] > param7) {
-                          this.field_l = vb.field_a[var19][var21Lifetime1];
+                          this.field_l = ArchiveNetworkClient.field_a[var19][var21Lifetime1];
                           this.field_i = var20Lifetime2;
                         }
-                        if (vb.field_a[var19][var21Lifetime1] == this.field_l &&
+                        if (ArchiveNetworkClient.field_a[var19][var21Lifetime1] == this.field_l &&
                           this.field_i == var20Lifetime2 &&
                           ol.field_a) {
                           SoftwareRasterizer.saveClip(ae.field_y);

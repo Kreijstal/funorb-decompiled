@@ -17,8 +17,8 @@ final class sc extends IntrusiveNode {
     }
 
     final static int a(byte param0) {
-        GrowableIntArray.field_d.a(true);
-        if (!oi.field_d.b((byte) 94)) {
+        GrowableIntArray.field_d.pollArchiveSources(true);
+        if (!oi.field_d.pollNetwork((byte) 94)) {
           return StripedProgressWidget.i(1);
         }
         if (param0 > -56) {

@@ -48,7 +48,7 @@ final class vh {
           ClientException.a((byte) 126);
           IntrusiveNode.field_e = 11;
         } else {
-          if (!ja.c((byte) -126)) {
+          if (!ArchiveSourceManager.c((byte) -126)) {
             ClientException.a((byte) 126);
             IntrusiveNode.field_e = 11;
           }

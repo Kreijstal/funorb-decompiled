@@ -4,21 +4,21 @@
 final class rk {
     static int field_a;
 
-    final static void a(int param0, byte param1) {
+    final static void resendPendingPlayerData(int param0, byte param1) {
         int var3 = 0;
         sa var4 = null;
-        he var5 = null;
+        LeaderboardSubmission var5 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         var3 = Bounce.field_N;
         try {
-          var5 = (he) (of.field_b.beginForward((byte) -105));
+          var5 = (LeaderboardSubmission) (of.field_b.beginForward((byte) -105));
           if (param1 != -29) {
             return;
           }
           while (var5 != null) {
-            mi.a(param0, -115, var5);
-            var5 = (he) (of.field_b.nextForward((byte) -18));
+            mi.writeLeaderboardSubmissionPacket(param0, -115, var5);
+            var5 = (LeaderboardSubmission) (of.field_b.nextForward((byte) -18));
           }
           var4 = (sa) (jl.field_f.beginForward((byte) -58));
           while (var4 != null) {
@@ -145,9 +145,9 @@ final class rk {
           pe.field_c = param1;
           Bzip2State.field_s = param7;
           fk.field_d = param8;
-          tb.field_p = (v) ((Object) new tb());
+          SocketArchiveNetworkClient.field_p = (ArchiveNetworkClient) ((Object) new SocketArchiveNetworkClient());
           LabeledWidgetContainer.field_F = new DiskCacheWorker(param6);
-          ih.field_Q = new oj(tb.field_p, LabeledWidgetContainer.field_F);
+          ih.field_Q = new ArchiveSourceManager(SocketArchiveNetworkClient.field_p, LabeledWidgetContainer.field_F);
         } catch (RuntimeException runtimeException) {
           throw CipherPacketBuffer.wrapClientException((Throwable) ((Object) runtimeException), "rk.C(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ',' + param5 + ',' + (param6 != null ? "{...}" : "null") + ',' + param7 + ',' + param8 + ')');
         }

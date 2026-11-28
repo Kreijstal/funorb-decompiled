@@ -90,9 +90,9 @@ final class tb {
             rh.a(0, param0);
           }
           if (wj.field_g.field_L != 0) {
-            if (1 == wn.field_d.length &&
-              mk.field_c != wn.field_d[0]) {
-              mk.field_c = wn.field_d[0];
+            if (1 == SocketConnector.field_d.length &&
+              mk.field_c != SocketConnector.field_d[0]) {
+              mk.field_c = SocketConnector.field_d[0];
             }
             cd.a(0, mc.field_a, true, param0, mk.field_c, 121);
           }
@@ -130,9 +130,9 @@ final class tb {
           }
         }
         if (wj.field_g.field_L != 0) {
-          if (1 == wn.field_d.length &&
-            mk.field_c != wn.field_d[0]) {
-            mk.field_c = wn.field_d[0];
+          if (1 == SocketConnector.field_d.length &&
+            mk.field_c != SocketConnector.field_d[0]) {
+            mk.field_c = SocketConnector.field_d[0];
             cd.a(0, mc.field_a, true, param0, mk.field_c, 121);
             if (of.field_i.field_L != 0) {
               ModalDialogHost.field_V = false;

@@ -36,8 +36,8 @@ final class ll {
               }
               wc.field_i = hh.field_a;
               hh.field_a = SecondaryNodeDeque.field_d;
-              SecondaryNodeDeque.field_d = vh.field_t;
-              vh.field_t = var4_ref_q.field_f;
+              SecondaryNodeDeque.field_d = SocketArchiveNetworkClient.field_t;
+              SocketArchiveNetworkClient.field_t = var4_ref_q.field_f;
               return true;
             }
           }
@@ -60,8 +60,8 @@ final class ll {
             if (jl.field_h == 0) {
               wc.field_i = hh.field_a;
               hh.field_a = SecondaryNodeDeque.field_d;
-              SecondaryNodeDeque.field_d = vh.field_t;
-              vh.field_t = t.field_C;
+              SecondaryNodeDeque.field_d = SocketArchiveNetworkClient.field_t;
+              SocketArchiveNetworkClient.field_t = t.field_C;
               t.field_C = -1;
               return true;
             }

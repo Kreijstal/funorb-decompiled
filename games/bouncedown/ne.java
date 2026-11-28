@@ -31,7 +31,7 @@ final class ne extends DualLinkNode {
         RuntimeException var4 = null;
         var8 = Bounce.field_N;
         try {
-          var4_int = param3.f(7, param1);
+          var4_int = param3.readBits(7, param1);
           if (var4_int == 0) {
             stackIn_3_0 = null;
             return (short[]) (stackIn_3_0);
@@ -40,15 +40,15 @@ final class ne extends DualLinkNode {
             var4_int != param2.length) {
             param2 = new short[var4_int];
           }
-          var5 = param3.f(param0 + 7, 4);
-          var6 = (short)param3.f(param0 ^ 7, 16);
+          var5 = param3.readBits(param0 + 7, 4);
+          var6 = (short)param3.readBits(param0 ^ 7, 16);
           if (var5 <= param0) {
             for (var7 = 0; var7 < var4_int; var7++) {
               param2[var7] = (short)var6;
             }
           } else {
             for (var7 = 0; var7 < var4_int; var7++) {
-              param2[var7] = (short)(param3.f(7, var5) + var6);
+              param2[var7] = (short)(param3.readBits(7, var5) + var6);
             }
           }
           stackIn_16_0 = (short[]) (param2);
@@ -99,7 +99,7 @@ final class ne extends DualLinkNode {
         byte[] var2 = ph.field_c[0];
         int[] var3 = new int[var1];
         for (var4_int = 0; var4_int < var1; var4_int++) {
-          var3[var4_int] = he.field_k[da.bitwiseAnd(255, (int) var2[var4_int])];
+          var3[var4_int] = LeaderboardSubmission.field_k[da.bitwiseAnd(255, (int) var2[var4_int])];
         }
         RgbSprite var4 = new RgbSprite(DropTargetWidgetContainer.field_C, fk.field_e, ConfirmedEmailAvailabilityValidator.field_n[0], ae.field_c[0], ih.field_V[0], qh.field_i[0], var3);
         vb.a((byte) 122);

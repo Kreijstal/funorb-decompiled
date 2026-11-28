@@ -158,7 +158,7 @@ final class ie {
           var4_ref_dhLifetime1.field_b.a(true, var5, 0, var6, 0);
         }
         int var4 = 89 / ((param1 + 25) / 46);
-        vc.a((byte) 68, param0, param2);
+        KeyboardInputHandler.a((byte) 68, param0, param2);
     }
 
     static {

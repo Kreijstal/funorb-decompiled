@@ -526,7 +526,7 @@ final class MidiPcmStream extends PcmStream {
           if (64 > var6Lifetime3) {
             this.field_o[var4Lifetime4] = EditableTextField.bitwiseAnd(this.field_o[var4Lifetime4], -2);
           } else {
-            this.field_o[var4Lifetime4] = ge.bitwiseOr(this.field_o[var4Lifetime4], 1);
+            this.field_o[var4Lifetime4] = ArchiveNetworkClient.bitwiseOr(this.field_o[var4Lifetime4], 1);
           }
         }
         if (65 == var5Lifetime4) {
@@ -534,7 +534,7 @@ final class MidiPcmStream extends PcmStream {
             this.releaseUnmappedVoices((byte) -66, var4Lifetime4);
             this.field_o[var4Lifetime4] = EditableTextField.bitwiseAnd(this.field_o[var4Lifetime4], -3);
           } else {
-            this.field_o[var4Lifetime4] = ge.bitwiseOr(this.field_o[var4Lifetime4], 2);
+            this.field_o[var4Lifetime4] = ArchiveNetworkClient.bitwiseOr(this.field_o[var4Lifetime4], 2);
           }
         }
         if (var5Lifetime4 == 99) {
@@ -578,7 +578,7 @@ final class MidiPcmStream extends PcmStream {
         }
         if (var5Lifetime4 == 81) {
           if (64 <= var6Lifetime3) {
-            this.field_o[var4Lifetime4] = ge.bitwiseOr(this.field_o[var4Lifetime4], 4);
+            this.field_o[var4Lifetime4] = ArchiveNetworkClient.bitwiseOr(this.field_o[var4Lifetime4], 4);
           } else {
             this.resetChannelVoicePhases(120, var4Lifetime4);
             this.field_o[var4Lifetime4] = EditableTextField.bitwiseAnd(this.field_o[var4Lifetime4], -5);

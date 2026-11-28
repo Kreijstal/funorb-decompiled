@@ -609,7 +609,7 @@ final class f {
                   MouseInputListener.a(mh.field_a[55], (byte) -11);
                   hd.field_j = fd.field_d;
                   wl.field_a = 320;
-                  md.field_f = 240;
+                  ProxySocketConnector.field_f = 240;
                   var3Lifetime1 = 1;
                 }
                 var4_ref_pdLifetime1 = (pd) (this.field_r.nextForward(853));
@@ -766,7 +766,7 @@ final class f {
           lb.field_g = lb.field_g | var3_int;
           oj.field_r.addLast(-74, new kg(param0));
           if (!DirectByteStorage.field_d) {
-            MouseWheelInput.field_b.addLast(-105, new ha(param0, param1, AccountNameAvailabilityValidator.field_r, DropTargetWidgetContainer.field_C, a.field_r, nh.field_b - wf.field_c.field_e[0].field_d));
+            MouseWheelInput.field_b.addLast(-105, new ha(param0, param1, AccountNameAvailabilityValidator.field_r, DropTargetWidgetContainer.field_C, SocketArchiveNetworkClient.field_r, nh.field_b - wf.field_c.field_e[0].field_d));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

@@ -45,7 +45,7 @@ class c extends v {
             PacketBuffer var4 = (PacketBuffer) null;
             this.a((PacketBuffer) null, 82);
           }
-          param0.b(param1 ^ 47, this.field_d);
+          param0.writeBase38Name(param1 ^ 47, this.field_d);
         } catch (RuntimeException runtimeException) {
           throw wn.wrapClientException((Throwable) ((Object) runtimeException), "c.H(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }

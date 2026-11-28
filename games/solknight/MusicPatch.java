@@ -139,8 +139,8 @@ final class MusicPatch extends IntrusiveNode {
                   NanoFrameTimer.field_l[var8] = AlphaWidgetContainer.field_N.readByte((byte) -14);
                 }
               }
-              ne.field_g = AlphaWidgetContainer.field_N.readString(16);
-              var13 = (CharSequence) ((Object) ne.field_g);
+              ArchiveSourceManager.field_g = AlphaWidgetContainer.field_N.readString(16);
+              var13 = (CharSequence) ((Object) ArchiveSourceManager.field_g);
               ModalDialog.field_D = FullscreenFocusCanvas.a(var13, -2);
               StripedProgressWidget.field_H = AlphaWidgetContainer.field_N.readUnsignedByte(255);
               AccountRequestState.field_e = jj.field_Y;

@@ -220,7 +220,7 @@ final class v {
     final static void a(int param0, String param1, Sprite param2) {
         try {
           ProxySocketConnector.field_n = param1;
-          va.field_g = param2;
+          ArchiveNetworkClient.field_g = param2;
           if (param0 != -98) {
             field_g = (mc) null;
           }

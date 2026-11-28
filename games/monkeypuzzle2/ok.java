@@ -96,10 +96,10 @@ final class ok {
     final static void a(int param0) {
         if (param0 != 15376) {
           ok.a(-54, '>');
-          qh.a(4, true);
+          MouseInputHandler.a(4, true);
           return;
         }
-        qh.a(4, true);
+        MouseInputHandler.a(4, true);
     }
 
     static {

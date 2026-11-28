@@ -57,7 +57,7 @@ final class tf extends wm {
           int var8 = 33 % ((-45 - param2) / 39);
           var9.writeByte(param0, 108);
           if (param0 == 2) {
-            var9.a((byte) 0, param1);
+            var9.writeString((byte) 0, param1);
           }
           if (param3 == null) {
             var9.writeShort(param5, -1783);

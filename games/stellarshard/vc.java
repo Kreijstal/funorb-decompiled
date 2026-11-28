@@ -139,7 +139,7 @@ final class vc {
               stackIn_34_0 = -1;
               return stackIn_34_0;
             }
-            od.field_v.a(ScorePopup.field_i, k.field_b, 70);
+            od.field_v.attachSocket(ScorePopup.field_i, k.field_b, 70);
             DraggableWidgetContainer.field_A = null;
             k.field_b = null;
             kc.field_b = 0;

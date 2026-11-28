@@ -204,7 +204,7 @@ final class jn {
               ProgressDialog.field_Q.drawString(var6, var8Lifetime1, var1_int + LevelRun.field_p, var5, -1);
               var1_int = var1_int + (WidgetContainer.field_z + (ModalDialogHost.field_D + TextLineMetrics.field_d));
             } else {
-              bo.field_e.drawString(var6, var8Lifetime1, var1_int + bp.field_f, var5, -1);
+              ArchiveSourceManager.field_e.drawString(var6, var8Lifetime1, var1_int + bp.field_f, var5, -1);
               var1_int = var1_int + bp.field_e;
             }
           }

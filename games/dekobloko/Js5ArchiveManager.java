@@ -8,8 +8,8 @@ final class Js5ArchiveManager {
     private CacheWorkQueue cacheWorkQueueState0002;
     static String stringState0360;
     static String stringState0361;
-    private ResourceSupport004 resourceSupport004State0002;
-    private NetworkSupport003 networkSupport003State0002;
+    private NetworkArchiveRequest resourceSupport004State0002;
+    private ArchiveNetworkClient networkSupport003State0002;
     private java.math.BigInteger bigIntegerState0002;
     private java.math.BigInteger bigIntegerState0003;
 
@@ -46,10 +46,10 @@ final class Js5ArchiveManager {
           return true;
         }
         if (null == this.resourceSupport004State0002) {
-          if (this.networkSupport003State0002.computeBoolean0346(true)) {
+          if (this.networkSupport003State0002.isPriorityQueueFull(true)) {
             return false;
           }
-          this.resourceSupport004State0002 = this.networkSupport003State0002.computeResourceSupport0040347(true, (byte) 0, booleanArgument1, 255, 255);
+          this.resourceSupport004State0002 = this.networkSupport003State0002.enqueueRequest(true, (byte) 0, booleanArgument1, 255, 255);
         }
         if (this.resourceSupport004State0002.booleanState0173) {
           return false;
@@ -162,7 +162,7 @@ final class Js5ArchiveManager {
         return null != MixedSupport020.fullscreenCanvasState0001 ? (java.awt.Canvas) ((Object) MixedSupport020.fullscreenCanvasState0001) : GameDomainSupport004.canvasState0001;
     }
 
-    Js5ArchiveManager(NetworkSupport003 networkSupport003Argument1, CacheWorkQueue cacheWorkQueueArgument2) {
+    Js5ArchiveManager(ArchiveNetworkClient networkSupport003Argument1, CacheWorkQueue cacheWorkQueueArgument2) {
         this(networkSupport003Argument1, cacheWorkQueueArgument2, (java.math.BigInteger) null, (java.math.BigInteger) null);
     }
 
@@ -219,7 +219,7 @@ final class Js5ArchiveManager {
         }
     }
 
-    private Js5ArchiveManager(NetworkSupport003 networkSupport003Argument1, CacheWorkQueue cacheWorkQueueArgument2, java.math.BigInteger bigIntegerArgument3, java.math.BigInteger bigIntegerArgument4) {
+    private Js5ArchiveManager(ArchiveNetworkClient networkSupport003Argument1, CacheWorkQueue cacheWorkQueueArgument2, java.math.BigInteger bigIntegerArgument3, java.math.BigInteger bigIntegerArgument4) {
         RuntimeException runtimeException = null;
         RuntimeException stackRuntimeExceptionLocal2 = null;
         StringBuilder stackStringBuilderLocal3 = null;
@@ -236,8 +236,8 @@ final class Js5ArchiveManager {
           this.bigIntegerState0003 = bigIntegerArgument3;
           this.bigIntegerState0002 = bigIntegerArgument4;
           this.networkSupport003State0002 = networkSupport003Argument1;
-          if (!this.networkSupport003State0002.computeBoolean0346(true)) {
-            this.resourceSupport004State0002 = this.networkSupport003State0002.computeResourceSupport0040347(true, (byte) 0, true, 255, 255);
+          if (!this.networkSupport003State0002.isPriorityQueueFull(true)) {
+            this.resourceSupport004State0002 = this.networkSupport003State0002.enqueueRequest(true, (byte) 0, true, 255, 255);
           }
           return;
         } catch (java.lang.RuntimeException caughtParameterLocal12) {

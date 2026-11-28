@@ -153,7 +153,7 @@ final class pf extends pn implements Cloneable {
             return (PuzzleTile) (this);
           }
           fn.field_j = fn.field_j + wd.field_j;
-          ob.field_l = ob.field_l - 1;
+          ArchiveNetworkClient.field_l = ArchiveNetworkClient.field_l - 1;
           fp.field_a = fp.field_a + 32;
           LevelProgressUpdate.field_h = LevelProgressUpdate.field_h + 32;
           je.field_j = je.field_j + 16;
@@ -631,7 +631,7 @@ final class pf extends pn implements Cloneable {
           var5_int = 76 % ((param2 + 43) / 51);
           if (this.field_r) {
             fn.field_j = fn.field_j + wd.field_j;
-            ob.field_l = ob.field_l - 1;
+            ArchiveNetworkClient.field_l = ArchiveNetworkClient.field_l - 1;
             fp.field_a = fp.field_a + 2;
             je.field_j = je.field_j + 1;
             b.field_a = b.field_a + 1;

@@ -485,7 +485,7 @@ abstract class ModalDialog extends WidgetContainer {
               fieldTemp$1 = RichTextWidget.field_F;
               RichTextWidget.field_F = RichTextWidget.field_F + 1;
               var6_ref.field_gb = fieldTemp$1;
-              wl.field_d.addFirst(-8212, var6_ref);
+              ArchiveNetworkClient.field_d.addFirst(-8212, var6_ref);
             }
             var6_ref.field_db = var5_ref_String;
             return;

@@ -258,8 +258,8 @@ final class gi extends pn implements Cloneable {
               fn.field_j = fn.field_j + 20;
               mb.field_g = mb.field_g + 20;
               fn.field_j = fn.field_j - wd.field_j;
-              ob.field_l = ob.field_l + 1;
-              ob.field_l = ob.field_l - 1;
+              ArchiveNetworkClient.field_l = ArchiveNetworkClient.field_l + 1;
+              ArchiveNetworkClient.field_l = ArchiveNetworkClient.field_l - 1;
               fn.field_j = fn.field_j + wd.field_j;
               LevelProgressUpdate.field_h = LevelProgressUpdate.field_h + 40;
               fp.field_a = fp.field_a + 40;

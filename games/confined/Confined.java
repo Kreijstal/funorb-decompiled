@@ -102,9 +102,9 @@ public final class Confined extends NetworkGameClient {
           t.clearStaticReferences();
           uh.clearStaticReferences((byte) -56);
           p.clearStaticReferences(101);
-          jf.b((byte) -88);
+          ArchiveNetworkClient.b((byte) -88);
           DiskCacheWorker.clearStaticReferences((byte) -119);
-          ja.clearStaticReferences((byte) -35);
+          ArchiveSourceManager.clearStaticReferences((byte) -35);
           BufferedRandomAccessFile.clearStaticReferences(param0 ^ -172);
           BufferedSocket.clearStaticReferences(116);
           tb.clearStaticReferences((byte) 116);
@@ -164,7 +164,7 @@ public final class Confined extends NetworkGameClient {
           wb.b(-8854);
           kn.resetStaticState(-126);
           lh.clearStaticReferences(0);
-          kd.clearStaticReferences((byte) 104);
+          SocketArchiveNetworkClient.clearStaticReferences((byte) 104);
           NetworkArchiveRequest.clearStaticReferences(false);
           SectorCacheStore.a(param0 ^ 128);
           DiskArchiveRequest.clearStaticReferences((byte) 81);
@@ -217,7 +217,7 @@ public final class Confined extends NetworkGameClient {
           fh.clearStaticReferences(true);
           mc.resetStaticState((byte) 58);
           qa.clearStaticReferences(param0 ^ -234);
-          n.clearStaticReferences((byte) 122);
+          SocketConnector.clearStaticReferences((byte) 122);
           ProxyAuthenticationRequiredException.resetStaticState((byte) -95);
           NanoFrameTimer.clearStaticReferences(-93);
           ImageProducerRasterBuffer.clearStaticReferences(-45);
@@ -255,7 +255,7 @@ public final class Confined extends NetworkGameClient {
           IntrusiveDeque.clearStaticReferences((byte) 108);
           nd.clearStaticReferences(30661);
           oj.resetStaticState(20);
-          og.clearStaticReferences(param0 ^ -211);
+          ProxySocketConnector.clearStaticReferences(param0 ^ -211);
           qk.clearStaticReferences(param0 - 81);
           IntrusiveNodeHashTableIterator.clearStaticReferences((byte) -91);
           SecondaryNodeDequeIterator.clearStaticReferences(-125);
@@ -852,7 +852,7 @@ public final class Confined extends NetworkGameClient {
             jb.a((byte) -86, var2_double, FrameTimer.field_b);
             di.field_d = MeshData.load(ka.field_N, "", "player/wingpod");
             var2_doubleLifetime2 = 0.1 / (double)di.field_d.scaleToRadius(51);
-            jb.a((byte) -99, var2_doubleLifetime2, og.field_g);
+            jb.a((byte) -99, var2_doubleLifetime2, ProxySocketConnector.field_g);
             DisplayNameSelectionPanel.field_R[0][0] = MeshData.load(ka.field_N, "", "rocks/0");
             DisplayNameSelectionPanel.field_R[0][1] = MeshData.load(ka.field_N, "", "rocks/1");
             DisplayNameSelectionPanel.field_R[0][2] = MeshData.load(ka.field_N, "", "rocks/2");
@@ -1143,7 +1143,7 @@ public final class Confined extends NetworkGameClient {
             da.field_g = SynthesizedSoundEffect.loadByName(jd.field_b, "", "normal-mine-explode").toPcmSample();
             ji.field_a = SynthesizedSoundEffect.loadByName(jd.field_b, "", "cluster-mine-explode").toPcmSample();
             d.field_g = SynthesizedSoundEffect.loadByName(jd.field_b, "", "friend-shot-fire").toPcmSample();
-            og.field_f = SynthesizedSoundEffect.loadByName(jd.field_b, "", "friend-shot-hit").toPcmSample();
+            ProxySocketConnector.field_f = SynthesizedSoundEffect.loadByName(jd.field_b, "", "friend-shot-hit").toPcmSample();
             qj.field_b = SynthesizedSoundEffect.loadByName(jd.field_b, "", "friend-power-shot-fire").toPcmSample();
             DequeCursor.field_f = SynthesizedSoundEffect.loadByName(jd.field_b, "", "friend-power-shot-hit").toPcmSample();
             HomingProjectile.field_T = SynthesizedSoundEffect.loadByName(jd.field_b, "", "friend-laser-ambient").toPcmSample();
@@ -1158,7 +1158,7 @@ public final class Confined extends NetworkGameClient {
             th.field_bb = SynthesizedSoundEffect.loadByName(jd.field_b, "", "disruption-charge").toPcmSample();
             fg.field_mb = SynthesizedSoundEffect.loadByName(jd.field_b, "", "disruption-fire").toPcmSample();
             LightningArc.field_pb = SynthesizedSoundEffect.loadByName(jd.field_b, "", "disruption-ambient").toPcmSample();
-            n.field_a = SynthesizedSoundEffect.loadByName(jd.field_b, "", "concussion-missile-fire").toPcmSample();
+            SocketConnector.field_a = SynthesizedSoundEffect.loadByName(jd.field_b, "", "concussion-missile-fire").toPcmSample();
             EditableTextField.field_P = SynthesizedSoundEffect.loadByName(jd.field_b, "", "homing-missile-fire").toPcmSample();
             pe.field_o = SynthesizedSoundEffect.loadByName(jd.field_b, "", "cluster-missile-fire").toPcmSample();
             MatchingFieldValidator.field_i = SynthesizedSoundEffect.loadByName(jd.field_b, "", "nuclear-missile-fire").toPcmSample();
@@ -1184,10 +1184,10 @@ public final class Confined extends NetworkGameClient {
             ResourceArchive.field_b[1] = VorbisSample.loadByName(AccountCreationResultPanel.field_Bb, "", "boss-cube-ambient").decodeAllToPcm();
             ResourceArchive.field_b[2] = SynthesizedSoundEffect.loadByName(jd.field_b, "", "boss-bird-ambient").toPcmSample();
             ResourceArchive.field_b[3] = SynthesizedSoundEffect.loadByName(jd.field_b, "", "boss-humanoid-ambient").toPcmSample();
-            ja.field_b[0] = VorbisSample.loadByName(AccountCreationResultPanel.field_Bb, "", "boss-sphere-breakdown").decodeAllToPcm();
-            ja.field_b[1] = VorbisSample.loadByName(AccountCreationResultPanel.field_Bb, "", "boss-cube-breakdown").decodeAllToPcm();
-            ja.field_b[2] = SynthesizedSoundEffect.loadByName(jd.field_b, "", "boss-bird-breakdown").toPcmSample();
-            ja.field_b[3] = SynthesizedSoundEffect.loadByName(jd.field_b, "", "boss-humanoid-breakdown").toPcmSample();
+            ArchiveSourceManager.field_b[0] = VorbisSample.loadByName(AccountCreationResultPanel.field_Bb, "", "boss-sphere-breakdown").decodeAllToPcm();
+            ArchiveSourceManager.field_b[1] = VorbisSample.loadByName(AccountCreationResultPanel.field_Bb, "", "boss-cube-breakdown").decodeAllToPcm();
+            ArchiveSourceManager.field_b[2] = SynthesizedSoundEffect.loadByName(jd.field_b, "", "boss-bird-breakdown").toPcmSample();
+            ArchiveSourceManager.field_b[3] = SynthesizedSoundEffect.loadByName(jd.field_b, "", "boss-humanoid-breakdown").toPcmSample();
             lk.field_e[0] = SynthesizedSoundEffect.loadByName(jd.field_b, "", "boss-sphere-explode").toPcmSample();
             lk.field_e[1] = VorbisSample.loadByName(AccountCreationResultPanel.field_Bb, "", "boss-cube-explode").decodeAllToPcm();
             lk.field_e[2] = SynthesizedSoundEffect.loadByName(jd.field_b, "", "boss-bird-explode").toPcmSample();
@@ -1237,7 +1237,7 @@ public final class Confined extends NetworkGameClient {
           md.d(param0 ^ 39);
           mm.a(480, 320, lh.field_c, cj.field_a, AcceleratingProjectile.field_T, 4243584, (byte) -126, 240, 9805732, 30, 5, 16777215, pn.field_a, 20, pn.field_a, 16, 50, 20, 0, 20, 16);
           he.field_d.addListener(WingPod.field_R);
-          da.field_e = og.a(false, (byte) 55);
+          da.field_e = ProxySocketConnector.a(false, (byte) 55);
           qa.field_a = true;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -1456,7 +1456,7 @@ public final class Confined extends NetworkGameClient {
               WingPod.field_R.d();
               WingPod.field_R.b(hd.field_f * 64 >> 7);
               WingPod.field_R.b(DirectByteStorage.field_j[0], 32);
-              da.field_e = og.a(false, (byte) 55);
+              da.field_e = ProxySocketConnector.a(false, (byte) 55);
               sf.a(false, 36);
               qn.field_v.stopSceneSoundSources(-87);
               qn.field_v = new GameSession();
@@ -1483,7 +1483,7 @@ public final class Confined extends NetworkGameClient {
             !of.field_a &&
             da.field_e == null &&
             !cc.a((byte) 91)) {
-            da.field_e = og.a(true, (byte) 55);
+            da.field_e = ProxySocketConnector.a(true, (byte) 55);
           }
           boolean decompiledFrameCompleted0 = true;
           boolean decompiledFrameRemainder1 = true;
@@ -1567,13 +1567,13 @@ public final class Confined extends NetworkGameClient {
                   13 != gk.field_r) {
                   continue;
                 }
-                da.field_e = og.a(true, (byte) 55);
+                da.field_e = ProxySocketConnector.a(true, (byte) 55);
                 continue;
               }
               if (gk.field_r != 13) {
                 continue;
               }
-              da.field_e = og.a(true, (byte) 55);
+              da.field_e = ProxySocketConnector.a(true, (byte) 55);
             }
           }
           if (decompiledFrameCompleted0) {

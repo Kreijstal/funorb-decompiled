@@ -73,7 +73,7 @@ final class sh {
             stackIn_4_0 = null;
             return (BinaryBitmapFont) (stackIn_4_0);
           }
-          var2 = new BinaryBitmapFont(param1, be.field_a, FullscreenFocusCanvas.field_c, wm.field_b, b.field_c, vk.field_d);
+          var2 = new BinaryBitmapFont(param1, be.field_a, FullscreenFocusCanvas.field_c, ArchiveNetworkClient.field_b, b.field_c, vk.field_d);
           ProgressDialog.k(4210752);
           stackIn_6_0 = var2;
           return stackIn_6_0;
@@ -179,7 +179,7 @@ final class sh {
               stackIn_34_0 = -1;
               return stackIn_34_0;
             }
-            qh.field_c.a((byte) 45, jj.field_a, oh.field_b);
+            qh.field_c.attachSocket((byte) 45, jj.field_a, oh.field_b);
             jj.field_a = null;
             dm.field_b = null;
             TextFieldValidator.field_k = 0;

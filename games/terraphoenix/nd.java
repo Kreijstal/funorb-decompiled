@@ -305,7 +305,7 @@ final class nd extends IntrusiveNode {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var1_ref = null;
         try {
-          if (!qi.field_b) {
+          if (!ArchiveSourceManager.field_b) {
             throw new IllegalStateException();
           }
           if (nb.field_b != null) {

@@ -15,7 +15,7 @@ final class ja extends IntrusiveNode {
         if (!param0) {
           ja.a('ﾠ', (byte) 38);
         }
-        return qi.field_b;
+        return ArchiveSourceManager.field_b;
     }
 
     final static boolean a(char param0, byte param1) {

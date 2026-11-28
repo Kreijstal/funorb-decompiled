@@ -136,7 +136,7 @@ final class kd implements WidgetRenderer {
             }
             if (jl.field_j == 1) {
               ValidationStatusWidget.a(1, 0, sg.field_p, dc.field_a);
-              var4_int = var4_int + (tj.field_s.field_m - hk.field_a.field_y);
+              var4_int = var4_int + (SocketArchiveNetworkClient.field_s.field_m - hk.field_a.field_y);
               var5_ref = FullscreenStatusDialog.field_W;
             }
             if (jl.field_j == 2) {
@@ -145,7 +145,7 @@ final class kd implements WidgetRenderer {
             if (var5_ref != null) {
               var6 = 4 + (hk.field_a.field_t + hk.field_a.field_y);
               var7 = hk.field_a.lineCount((String) (var5_ref), 160) * var6;
-              dk.a(var4_int + 10 + var7, ModalDialog.field_B, -28018, 451, o.field_i + 237 + param1, 180);
+              ArchiveSourceManager.a(var4_int + 10 + var7, ModalDialog.field_B, -28018, 451, o.field_i + 237 + param1, 180);
               hk.field_a.drawParagraph((String) (var5_ref), 461, o.field_i + 247 + param1, 160, var7, 0, -1, 1, 0, var6);
             }
           } else {
@@ -190,7 +190,7 @@ final class kd implements WidgetRenderer {
                 var8_int = 128 + (int)(Math.sin(3.141592653589793 * (double)dc.field_a / 50.0) * 64.0);
                 ImageProducerRasterBuffer.a(param1 + 376, 264, (byte) 98, 164, 13, GuestPlayConfirmationForm.field_x.a(true) - 10, NetworkArchiveRequest.field_x, var8_int);
               }
-              pa.a(param1 + 376, tj.field_z + var7Lifetime1, 39935, 16776867, 164, 16710412, 264, -10, 39935);
+              pa.a(param1 + 376, SocketArchiveNetworkClient.field_z + var7Lifetime1, 39935, 16776867, 164, 16710412, 264, -10, 39935);
             } else {
               pa.a(param1 + 376, ModalDialogHost.field_z, 39935, 8421504, 164, 8421504, 264, -10, 39935);
             }
@@ -289,7 +289,7 @@ final class kd implements WidgetRenderer {
           hk.field_a.drawString(ValidationStatusIcon.field_D, 464, 197 + param1, 16711680, -1);
           hk.field_a.drawRightAligned(Integer.toString(eh.totalScore), 627, 197 + param1, 16711680, -1);
           if (WordDictionary.field_e) {
-            dk.a(136, ModalDialog.field_B, -28018, 180, param1 + 88, 280);
+            ArchiveSourceManager.a(136, ModalDialog.field_B, -28018, 180, param1 + 88, 280);
             IntrusiveNode.field_d.drawParagraph(he.skipRoundPrompt, 190, param1 + 93, 260, 80, 0, -1, 1, 0, IntrusiveNode.field_d.field_y + 3);
             stackIn_103_0 = 65280;
             stackIn_103_1 = 80;

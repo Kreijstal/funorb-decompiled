@@ -142,7 +142,7 @@ abstract class DebouncedFieldValidator implements FieldValidator {
             var6 = var6 | 16;
           }
           SpriteGeometry.field_q.writeByte(var6, -1);
-          var7 = pg.a(RichTextLayout.c(-14047), (byte) -28);
+          var7 = ArchiveSourceManager.a(RichTextLayout.c(-14047), (byte) -28);
           if (var7 == null) {
             var7 = "";
           }
@@ -150,7 +150,7 @@ abstract class DebouncedFieldValidator implements FieldValidator {
           if (null != og.field_b) {
             SpriteGeometry.field_q.writePrefixedString((byte) -38, og.field_b);
           }
-          wc.a(wb.field_m, SpriteGeometry.field_q, ContentTransitionDialog.field_T, (byte) 111, of.field_a);
+          wc.a(ArchiveNetworkClient.field_m, SpriteGeometry.field_q, ContentTransitionDialog.field_T, (byte) 111, of.field_a);
           SpriteGeometry.field_q.backpatchShortLength(-var5_int + SpriteGeometry.field_q.position, (byte) 26);
           if (param3 != -82) {
             field_f = (String) null;

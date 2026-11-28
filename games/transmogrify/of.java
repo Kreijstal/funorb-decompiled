@@ -24,7 +24,7 @@ final class of {
 
     final static void b(int param0) {
         de.field_c[21] = SectorCacheStore.field_c;
-        de.field_c[19] = dk.field_a;
+        de.field_c[19] = ArchiveSourceManager.field_a;
         de.field_c[12] = SecondaryNodeDeque.field_f;
         de.field_c[8] = TextLineMetrics.field_c;
         de.field_c[15] = BufferedRandomAccessFile.field_b;

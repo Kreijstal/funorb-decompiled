@@ -192,9 +192,9 @@ final class AccountCreationResultPanel extends ProgressMessageDialog implements 
           field_yb = -95L;
         }
         CipherPacketBuffer var2 = s.field_b;
-        var2.i(param0 + 28739, param1);
-        var2.d(90, 1);
-        var2.d(param0 ^ -9403, 2);
+        var2.writeCipheredByte(param0 + 28739, param1);
+        var2.writeByte(90, 1);
+        var2.writeByte(param0 ^ -9403, 2);
     }
 
     private final void showAccountCreationResult(AccountServiceResult param0, boolean param1, boolean param2) {

@@ -140,7 +140,7 @@ final class gh extends ea implements Cloneable {
                   b.field_a = b.field_a + 3;
                   je.field_j = je.field_j + 3;
                   mb.field_g = mb.field_g + wd.field_j;
-                  ob.field_l = ob.field_l + 1;
+                  ArchiveNetworkClient.field_l = ArchiveNetworkClient.field_l + 1;
                   if (BoundedRandomAccessFile.field_e == 0) {
                     ProxyAuthenticationRequiredException.field_d = ProxyAuthenticationRequiredException.field_d | 1 << var7;
                   }
@@ -254,7 +254,7 @@ final class gh extends ea implements Cloneable {
               var6_ref_ro.copyTileAttribution((byte) 127, (PuzzleTile) (this));
               this.field_v = true;
               this.a(param2, param1, false, this.field_x, param3, this.field_G);
-              mb.field_g = mb.field_g + ob.field_l;
+              mb.field_g = mb.field_g + ArchiveNetworkClient.field_l;
               wd.field_j = wd.field_j + 1;
               return;
             }
@@ -287,7 +287,7 @@ final class gh extends ea implements Cloneable {
           if (var6 != 0) {
             EditableTextField.field_B.a(64, param3 * 12, 12 * param1, 60, (byte) -111);
           }
-          mb.field_g = mb.field_g + ob.field_l;
+          mb.field_g = mb.field_g + ArchiveNetworkClient.field_l;
           wd.field_j = wd.field_j + 1;
           this.field_v = true;
           this.a(param2, param1, false, this.field_x, param3, this.field_G);
@@ -402,7 +402,7 @@ final class gh extends ea implements Cloneable {
         if (param0 != 79) {
           return (RgbSprite) null;
         }
-        return tl.field_b;
+        return SocketConnector.field_b;
     }
 
     final nj showTileTooltip(int param0, nj param1) {

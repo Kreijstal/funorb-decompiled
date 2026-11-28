@@ -173,7 +173,7 @@ final class PlatformTaskDispatcher implements Runnable {
         return this.enqueueTask(1, 0, param1, 4, 0);
     }
 
-    private final static BoundedRandomAccessFile a(String param0, String param1, int param2, int param3) {
+    private final static BoundedRandomAccessFile openPreferencesFile(String param0, String param1, int param2, int param3) {
         try {
           int var6 = 0;
           BoundedRandomAccessFile stackIn_15_0 = null;
@@ -318,7 +318,7 @@ final class PlatformTaskDispatcher implements Runnable {
                         }
                         break;
                       case 13:
-                        var3_ref = PlatformTaskDispatcher.a("", (String) (var8.objectArgument), 90, field_b);
+                        var3_ref = PlatformTaskDispatcher.openPreferencesFile("", (String) (var8.objectArgument), 90, field_b);
                         var8.result = var3_ref;
                         break;
                       case 16:
@@ -380,7 +380,7 @@ final class PlatformTaskDispatcher implements Runnable {
                         }
                         break;
                       case 12:
-                        var3_ref = PlatformTaskDispatcher.a(field_j, (String) (var8.objectArgument), 91, field_b);
+                        var3_ref = PlatformTaskDispatcher.openPreferencesFile(field_j, (String) (var8.objectArgument), 91, field_b);
                         var8.result = var3_ref;
                         break;
                       case 7:
@@ -430,7 +430,7 @@ final class PlatformTaskDispatcher implements Runnable {
                     }
                     try {
                       if (false) throw (ProxyAuthenticationRequiredException) null;
-                      var8.result = IterableNodeHashTable.a(0, var8.intArgument, (String) (var8.objectArgument)).a((byte) -101);
+                      var8.result = IterableNodeHashTable.a(0, var8.intArgument, (String) (var8.objectArgument)).openSocket((byte) -101);
                     } catch (ProxyAuthenticationRequiredException decompiledCaughtParameter2) {
                       decompiledCaughtException = decompiledCaughtParameter2;
                       var3_ref3 = (ProxyAuthenticationRequiredException) (Object) decompiledCaughtException;

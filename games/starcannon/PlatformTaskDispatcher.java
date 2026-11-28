@@ -65,7 +65,7 @@ final class PlatformTaskDispatcher implements Runnable {
         return this.enqueueTask(4, 0, 0, 16266, param1);
     }
 
-    private final static BoundedRandomAccessFile a(byte param0, String param1, String param2, int param3) {
+    private final static BoundedRandomAccessFile openPreferencesFile(byte param0, String param1, String param2, int param3) {
         try {
           int var6 = 0;
           BoundedRandomAccessFile stackIn_12_0 = null;
@@ -104,7 +104,7 @@ final class PlatformTaskDispatcher implements Runnable {
             return null;
           }
           var9 = (String) null;
-          PlatformTaskDispatcher.a((byte) 123, (String) null, (String) null, -123);
+          PlatformTaskDispatcher.openPreferencesFile((byte) 123, (String) null, (String) null, -123);
           return null;
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -147,7 +147,7 @@ final class PlatformTaskDispatcher implements Runnable {
     final PlatformTask requestFullscreenExit(java.awt.Frame param0, int param1) {
         if (param1 != 12250) {
           String var4 = (String) null;
-          PlatformTaskDispatcher.a((byte) 6, (String) null, (String) null, 38);
+          PlatformTaskDispatcher.openPreferencesFile((byte) 6, (String) null, (String) null, 38);
         }
         return this.enqueueTask(7, 0, 0, param1 + 4016, param0);
     }
@@ -223,7 +223,7 @@ final class PlatformTaskDispatcher implements Runnable {
                     }
                     try {
                       if (false) throw (ProxyAuthenticationRequiredException) null;
-                      var8.result = hh.a(91, var8.intArgument, (String) (var8.objectArgument)).a((byte) -42);
+                      var8.result = hh.a(91, var8.intArgument, (String) (var8.objectArgument)).openSocket((byte) -42);
                     } catch (ProxyAuthenticationRequiredException decompiledCaughtParameter1) {
                       decompiledCaughtException = decompiledCaughtParameter1;
                       var3_ref = (ProxyAuthenticationRequiredException) (Object) decompiledCaughtException;
@@ -317,11 +317,11 @@ final class PlatformTaskDispatcher implements Runnable {
                         }
                         break;
                       case 13:
-                        var3_ref3 = PlatformTaskDispatcher.a((byte) -70, "", (String) (var8.objectArgument), field_a);
+                        var3_ref3 = PlatformTaskDispatcher.openPreferencesFile((byte) -70, "", (String) (var8.objectArgument), field_a);
                         var8.result = var3_ref3;
                         break;
                       case 12:
-                        var3_ref3 = PlatformTaskDispatcher.a((byte) -73, field_j, (String) (var8.objectArgument), field_a);
+                        var3_ref3 = PlatformTaskDispatcher.openPreferencesFile((byte) -73, field_j, (String) (var8.objectArgument), field_a);
                         var8.result = var3_ref3;
                         break;
                       case 7:

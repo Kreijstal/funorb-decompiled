@@ -2132,7 +2132,7 @@ final class BucketBoard {
           EditableTextField.bitmapFontState0019 = bitmapFontArgument3;
           MixedSupport093.integerState0568 = integerArgument4;
           MixedSupport010.bitmapFontState0005 = bitmapFontArgument1;
-          ResourceSupport004.performAction1247(31004, SoftwareRaster.integerState0285 / 2, SoftwareRaster.integerState0284 / 2);
+          NetworkArchiveRequest.performAction1247(31004, SoftwareRaster.integerState0285 / 2, SoftwareRaster.integerState0284 / 2);
           SceneWidgetPart010.performAction1460(bitmapFontArgument3.integerState0517, bitmapFontArgument1.integerState0523 + bitmapFontArgument1.integerState0517, (byte) -91, bitmapFontArgument1.integerState0517, bitmapFontArgument3.integerState0517 + bitmapFontArgument3.integerState0523);
           if (!booleanArgument2) {
             stringState0336 = (String) null;

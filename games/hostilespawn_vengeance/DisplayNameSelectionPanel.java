@@ -149,8 +149,8 @@ final class DisplayNameSelectionPanel extends DequeWidgetContainer implements Na
         int var1;
         int var2;
         var1 = MidiPcmStream.field_r;
-        if (sg.field_i > 0) {
-          var1 = var1 + MidiPcmStream.field_r * 5000 / sg.field_i;
+        if (ArchiveSourceManager.field_i > 0) {
+          var1 = var1 + MidiPcmStream.field_r * 5000 / ArchiveSourceManager.field_i;
         }
         vj.field_s = var1;
         var2 = fl.d(-64);

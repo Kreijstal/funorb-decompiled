@@ -279,8 +279,8 @@ class RichTextWidget extends InteractiveWidget {
         BufferedSocket.a(-118);
         bl.a(true);
         if (NetworkGameClient.l(-1)) {
-          sn.field_c.d((byte) -75, 1);
-          bk.a((byte) 83, 0);
+          sn.field_c.writeCipheredByte((byte) -75, 1);
+          ArchiveSourceManager.a((byte) 83, 0);
         }
         si.a(-126);
     }

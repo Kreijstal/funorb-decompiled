@@ -119,7 +119,7 @@ final class FramedPanelLayer extends MenuLayer {
           var19 = this.field_e * var9 / (var10 + var9) + var5;
         }
         rh.a(var4, this.field_e, (byte) 71, var5, this.field_g, SocketConnector.field_a);
-        SoftwareRasterizer.fillRectangle(var17, var19, var18 - var17, var20 - var19, bo.field_d);
+        SoftwareRasterizer.fillRectangle(var17, var19, var18 - var17, var20 - var19, ArchiveSourceManager.field_d);
         SoftwareRasterizer.saveClip(tj.field_m);
         if (null != wp.field_v[0]) {
           SoftwareRasterizer.intersectClip(var4, var5, var17, var19);

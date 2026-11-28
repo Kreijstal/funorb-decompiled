@@ -308,14 +308,14 @@ final class ByteArrayPoolSupport {
 
     final static void a(int param0, boolean param1, MusicTrack param2) {
         if (param2 == null ||
-          param2 == hj.field_g) {
+          param2 == SocketConnector.field_g) {
           return;
         }
         try {
           s.field_a.stop((byte) -114);
           StandardContentDialog.field_sb.flushAndMarkDrainCheck();
-          hj.field_g = param2;
-          s.field_a.playTrack(hj.field_g, param1, (byte) 120);
+          SocketConnector.field_g = param2;
+          s.field_a.playTrack(SocketConnector.field_g, param1, (byte) 120);
           if (param0 != -1) {
             ByteArrayPoolSupport.acquireByteArray(-73, -118);
           }

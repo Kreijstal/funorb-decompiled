@@ -362,16 +362,16 @@ abstract class ByteStorage {
             }
           }
           if (1 == param4) {
-            var11Lifetime3 = 6 + oa.field_a[1];
+            var11Lifetime3 = 6 + ArchiveSourceManager.field_a[1];
             var20Lifetime4 = 8;
-            var10Lifetime3 = oa.field_a[0] + 7;
+            var10Lifetime3 = ArchiveSourceManager.field_a[0] + 7;
             if (null != cj.field_f) {
               rl.field_h[fh.field_e].drawTransparent(var10Lifetime3, var11Lifetime3);
             }
-            var11Lifetime3Lifetime1 = oa.field_a[1] + (oa.field_a[3] - mb.field_d[1].fullHeight >> 1);
-            var10Lifetime3Lifetime1 = oa.field_a[0] - (-10 - rl.field_h[fh.field_e].fullWidth);
-            var13Lifetime1 = oa.field_a[3];
-            var12Lifetime3 = -rl.field_h[fh.field_e].fullWidth + (oa.field_a[2] - 20 - var20Lifetime4 + 1);
+            var11Lifetime3Lifetime1 = ArchiveSourceManager.field_a[1] + (ArchiveSourceManager.field_a[3] - mb.field_d[1].fullHeight >> 1);
+            var10Lifetime3Lifetime1 = ArchiveSourceManager.field_a[0] - (-10 - rl.field_h[fh.field_e].fullWidth);
+            var13Lifetime1 = ArchiveSourceManager.field_a[3];
+            var12Lifetime3 = -rl.field_h[fh.field_e].fullWidth + (ArchiveSourceManager.field_a[2] - 20 - var20Lifetime4 + 1);
             var21Lifetime1 = var12Lifetime3 / var20Lifetime4;
             var22Lifetime1 = (-(var21Lifetime1 * var20Lifetime4) + var12Lifetime3) / 2 + var10Lifetime3Lifetime1;
             var12Lifetime3Lifetime1 = var21Lifetime1 * var20Lifetime4;

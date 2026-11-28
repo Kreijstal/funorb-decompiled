@@ -116,7 +116,7 @@ final class ValidatedTextField extends EditableTextField implements FieldValidat
         int var1 = 0;
         int var2 = 0;
         if (param0 == 62) {
-          var1 = fl.f(param0 - 62);
+          var1 = SocketArchiveNetworkClient.f(param0 - 62);
           var2 = o.a(18);
           gb.field_f.a(var2 + (mg.field_d << 1), FrameTimer.field_e - mg.field_d, -1, -AccountNameAvailabilityValidator.field_m + LevelEntity.field_R, var1 + (AccountNameAvailabilityValidator.field_m << 1));
           GrowableIntArray.a((byte) 118);

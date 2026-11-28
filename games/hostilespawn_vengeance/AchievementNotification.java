@@ -50,7 +50,7 @@ final class AchievementNotification extends IntrusiveNode {
     }
 
     final static void readPlayerDisplayName(byte param0) {
-        qg.field_r = sc.field_g.o(32);
+        qg.field_r = sc.field_g.readString(32);
         if (param0 <= 113) {
           field_k = (String[]) null;
         }

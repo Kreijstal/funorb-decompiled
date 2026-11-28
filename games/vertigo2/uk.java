@@ -11,7 +11,7 @@ final class uk extends ab {
     private ArchiveRequest field_s;
     private jl field_q;
     static UiPanel field_e;
-    private tk field_w;
+    private ArchiveNetworkClient field_w;
     private int field_t;
     static String field_u;
     private SectorCacheStore field_k;
@@ -206,7 +206,7 @@ final class uk extends ab {
                   this.field_B = this.field_B + 1;
                   continue;
                 }
-                if (!this.field_w.f(6)) {
+                if (!this.field_w.isPrefetchQueueFull(6)) {
                   if (this.field_g[this.field_B] != 1) {
                     discarded$2 = this.a(-102, 2, this.field_B);
                   }
@@ -258,7 +258,7 @@ final class uk extends ab {
 
     final ff a(boolean param0) {
         Object stackIn_31_0;
-        tk stackIn_31_1;
+        ArchiveNetworkClient stackIn_31_1;
         int stackIn_31_2;
         int stackIn_31_3;
         boolean stackIn_31_4;
@@ -277,10 +277,10 @@ final class uk extends ab {
           return this.field_x;
         }
         if (this.field_s == null) {
-          if (this.field_w.a(20)) {
+          if (this.field_w.isPriorityQueueFull(20)) {
             return null;
           }
-          this.field_s = (ArchiveRequest) ((Object) this.field_w.a(this.field_t, 255, true, (byte) 0, false));
+          this.field_s = (ArchiveRequest) ((Object) this.field_w.enqueueRequest(this.field_t, 255, true, (byte) 0, false));
         }
         if (this.field_s.field_z) {
           return null;
@@ -301,9 +301,9 @@ final class uk extends ab {
           } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
             var3 = decompiledCaughtException;
-            this.field_w.e(0);
+            this.field_w.resetAfterValidationFailure(0);
             this.field_x = null;
-            if (!this.field_w.a(20)) {
+            if (!this.field_w.isPriorityQueueFull(20)) {
               stackIn_31_0 = this;
               stackIn_31_1 = this.field_w;
               stackIn_31_2 = this.field_t;
@@ -317,7 +317,7 @@ final class uk extends ab {
                 stackIn_32_0 = this;
                 stackIn_32_6 = true;
               }
-              this.field_s = (ArchiveRequest) ((Object) ((tk) (Object) stackIn_31_1).a(stackIn_31_2, stackIn_31_3, stackIn_31_4, (byte) stackIn_31_5, stackIn_32_6));
+              this.field_s = (ArchiveRequest) ((Object) ((ArchiveNetworkClient) (Object) stackIn_31_1).enqueueRequest(stackIn_31_2, stackIn_31_3, stackIn_31_4, (byte) stackIn_31_5, stackIn_32_6));
             } else {
               this.field_s = null;
             }
@@ -339,8 +339,8 @@ final class uk extends ab {
             decompiledCaughtException = decompiledCaughtParameter1;
             var3 = decompiledCaughtException;
             this.field_x = null;
-            if (!this.field_w.a(20)) {
-              this.field_s = (ArchiveRequest) ((Object) this.field_w.a(this.field_t, 255, true, (byte) 0, false));
+            if (!this.field_w.isPriorityQueueFull(20)) {
+              this.field_s = (ArchiveRequest) ((Object) this.field_w.enqueueRequest(this.field_t, 255, true, (byte) 0, false));
             } else {
               this.field_s = null;
             }
@@ -397,10 +397,10 @@ final class uk extends ab {
               if (this.field_g[param2] != -1) {
                 throw new RuntimeException();
               }
-              if (this.field_w.f(6)) {
+              if (this.field_w.isPrefetchQueueFull(6)) {
                 return null;
               }
-              var5 = this.field_w.a(param2, this.field_t, false, (byte) 2, false);
+              var5 = this.field_w.enqueueRequest(param2, this.field_t, false, (byte) 2, false);
             } else {
               if (null == this.field_i) {
                 throw new RuntimeException();
@@ -412,10 +412,10 @@ final class uk extends ab {
               -1 != this.field_g[param2]) {
               var5 = this.field_p.readNow(true, this.field_i, param2);
             } else {
-              if (this.field_w.a(20)) {
+              if (this.field_w.isPriorityQueueFull(20)) {
                 return null;
               }
-              var5 = this.field_w.a(param2, this.field_t, true, (byte) 2, false);
+              var5 = this.field_w.enqueueRequest(param2, this.field_t, true, (byte) 2, false);
             }
           }
           this.field_q.a((IntrusiveNode) (var5), (long)param2, false);
@@ -468,8 +468,8 @@ final class uk extends ab {
             this.field_g[param2] = (byte)-1;
             ((ArchiveRequest) (var5)).unlink(2);
             if (((ArchiveRequest) (var5)).field_u &&
-              !this.field_w.a(20)) {
-              var5 = this.field_w.a(param2, this.field_t, true, (byte) 2, false);
+              !this.field_w.isPriorityQueueFull(20)) {
+              var5 = this.field_w.enqueueRequest(param2, this.field_t, true, (byte) 2, false);
               this.field_q.a((IntrusiveNode) (var5), (long)param2, false);
             }
             return null;
@@ -505,13 +505,13 @@ final class uk extends ab {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var7 = (RuntimeException) (Object) decompiledCaughtException;
-          this.field_w.e(0);
+          this.field_w.resetAfterValidationFailure(0);
           ((ArchiveRequest) (var5)).unlink(2);
           if (!((ArchiveRequest) (var5)).field_u) {
             return null;
           }
-          if (!this.field_w.a(20)) {
-            var5 = this.field_w.a(param2, this.field_t, true, (byte) 2, false);
+          if (!this.field_w.isPriorityQueueFull(20)) {
+            var5 = this.field_w.enqueueRequest(param2, this.field_t, true, (byte) 2, false);
             this.field_q.a((IntrusiveNode) (var5), (long)param2, false);
           }
           return null;
@@ -553,7 +553,7 @@ final class uk extends ab {
         return var3.getProgressPercent(109);
     }
 
-    uk(int param0, SectorCacheStore param1, SectorCacheStore param2, tk param3, DiskCacheWorker param4, int param5, byte[] param6, int param7, boolean param8) {
+    uk(int param0, SectorCacheStore param1, SectorCacheStore param2, ArchiveNetworkClient param3, DiskCacheWorker param4, int param5, byte[] param6, int param7, boolean param8) {
         boolean stackIn_7_1 = false;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;

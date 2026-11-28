@@ -16,7 +16,7 @@ final class tb extends uj {
     private DiskCacheWorker field_s;
     private byte[] field_n;
     private SectorCacheStore field_m;
-    private h field_r;
+    private ArchiveNetworkClient field_r;
     private SectorCacheStore field_t;
     private boolean field_o;
     private int field_z;
@@ -409,7 +409,7 @@ final class tb extends uj {
               scanLoop1: while (true) {
                 if (this.field_z < this.field_j.field_d.length) {
                   if (this.field_j.field_d[this.field_z] != 0) {
-                    if (this.field_r.b(true)) {
+                    if (this.field_r.isPrefetchQueueFull(true)) {
                       var2_intLifetime1 = 0;
                       break scanLoop1;
                     }
@@ -510,10 +510,10 @@ final class tb extends uj {
               this.field_n[param1] != -1) {
               var4 = this.field_s.readNow(this.field_m, param1, 2);
             } else {
-              if (this.field_r.d(-21)) {
+              if (this.field_r.isPriorityQueueFull(-21)) {
                 return null;
               }
-              var4 = this.field_r.a(param1, true, this.field_f, (byte) 110, (byte) 2);
+              var4 = this.field_r.enqueueRequest(param1, true, this.field_f, (byte) 110, (byte) 2);
             }
           } else {
             if (1 == param0) {
@@ -531,10 +531,10 @@ final class tb extends uj {
               if (this.field_n[param1] != -1) {
                 throw new RuntimeException();
               }
-              if (this.field_r.b(true)) {
+              if (this.field_r.isPrefetchQueueFull(true)) {
                 return null;
               }
-              var4 = this.field_r.a(param1, false, this.field_f, (byte) 115, (byte) 2);
+              var4 = this.field_r.enqueueRequest(param1, false, this.field_f, (byte) 115, (byte) 2);
             }
           }
           this.field_q.a((IntrusiveNode) (var4), (long)param1, (byte) -71);
@@ -587,8 +587,8 @@ final class tb extends uj {
             this.field_n[param1] = (byte)-1;
             ((ArchiveRequest) (var4)).unlink((byte) 12);
             if (((ArchiveRequest) (var4)).field_x &&
-              !this.field_r.d(-21)) {
-              var4 = this.field_r.a(param1, true, this.field_f, (byte) 91, (byte) 2);
+              !this.field_r.isPriorityQueueFull(-21)) {
+              var4 = this.field_r.enqueueRequest(param1, true, this.field_f, (byte) 91, (byte) 2);
               this.field_q.a((IntrusiveNode) (var4), (long)param1, (byte) -101);
             }
             return null;
@@ -624,15 +624,15 @@ final class tb extends uj {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6 = (RuntimeException) (Object) decompiledCaughtException;
-          this.field_r.b(-12948);
+          this.field_r.resetAfterValidationFailure(-12948);
           ((ArchiveRequest) (var4)).unlink((byte) 12);
           if (!((ArchiveRequest) (var4)).field_x) {
             return null;
           }
-          if (this.field_r.d(-21)) {
+          if (this.field_r.isPriorityQueueFull(-21)) {
             return null;
           }
-          var4 = this.field_r.a(param1, true, this.field_f, (byte) 77, (byte) 2);
+          var4 = this.field_r.enqueueRequest(param1, true, this.field_f, (byte) 77, (byte) 2);
           this.field_q.a((IntrusiveNode) (var4), (long)param1, (byte) -100);
           return null;
         }
@@ -674,10 +674,10 @@ final class tb extends uj {
           return this.field_j;
         }
         if (this.field_h == null) {
-          if (this.field_r.d(-21)) {
+          if (this.field_r.isPriorityQueueFull(-21)) {
             return null;
           }
-          this.field_h = (ArchiveRequest) ((Object) this.field_r.a(this.field_f, true, 255, (byte) 105, (byte) 0));
+          this.field_h = (ArchiveRequest) ((Object) this.field_r.enqueueRequest(this.field_f, true, 255, (byte) 105, (byte) 0));
         }
         if (this.field_h.field_A) {
           return null;
@@ -699,10 +699,10 @@ final class tb extends uj {
             decompiledCaughtException = decompiledCaughtParameter0;
             var3 = decompiledCaughtException;
             this.field_j = null;
-            if (this.field_r.d(-21)) {
+            if (this.field_r.isPriorityQueueFull(-21)) {
               this.field_h = null;
             } else {
-              this.field_h = (ArchiveRequest) ((Object) this.field_r.a(this.field_f, true, 255, (byte) 61, (byte) 0));
+              this.field_h = (ArchiveRequest) ((Object) this.field_r.enqueueRequest(this.field_f, true, 255, (byte) 61, (byte) 0));
             }
             return null;
           }
@@ -715,12 +715,12 @@ final class tb extends uj {
           } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
             decompiledCaughtException = decompiledCaughtParameter1;
             var3 = decompiledCaughtException;
-            this.field_r.b(-12948);
+            this.field_r.resetAfterValidationFailure(-12948);
             this.field_j = null;
-            if (this.field_r.d(-21)) {
+            if (this.field_r.isPriorityQueueFull(-21)) {
               this.field_h = null;
             } else {
-              this.field_h = (ArchiveRequest) ((Object) this.field_r.a(this.field_f, true, 255, (byte) 93, (byte) 0));
+              this.field_h = (ArchiveRequest) ((Object) this.field_r.enqueueRequest(this.field_f, true, 255, (byte) 93, (byte) 0));
             }
             return null;
           }
@@ -779,7 +779,7 @@ final class tb extends uj {
         }
     }
 
-    tb(int param0, SectorCacheStore param1, SectorCacheStore param2, h param3, DiskCacheWorker param4, int param5, byte[] param6, int param7, boolean param8) {
+    tb(int param0, SectorCacheStore param1, SectorCacheStore param2, ArchiveNetworkClient param3, DiskCacheWorker param4, int param5, byte[] param6, int param7, boolean param8) {
         boolean stackIn_7_1 = false;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;

@@ -60,7 +60,7 @@ final class GuestPlayConfirmationForm extends DequeWidgetContainer implements Wi
           if (this.field_M != param3) {
             if (param3 != this.field_L) {
               if (param3 == this.field_J) {
-                ka.a((byte) -123);
+                ProxySocketConnector.a((byte) -123);
               }
             } else {
               IsaacRandom.b(false);

@@ -54,7 +54,7 @@ final class PlatformTaskDispatcher implements Runnable {
         return this.enqueueTask(0, 9, new Object[]{param2, param1}, true, 0);
     }
 
-    private final static BoundedRandomAccessFile a(String param0, int param1, int param2, String param3) {
+    private final static BoundedRandomAccessFile openPreferencesFile(String param0, int param1, int param2, String param3) {
         try {
           BoundedRandomAccessFile stackIn_14_0 = null;
           int decompiledRegionSelector0 = 0;
@@ -321,7 +321,7 @@ final class PlatformTaskDispatcher implements Runnable {
                     }
                     try {
                       if (false) throw (ProxyAuthenticationRequiredException) null;
-                      var8.result = sj.a(var8.intArgument, (String) (var8.objectArgument), (byte) 122).a(true);
+                      var8.result = sj.a(var8.intArgument, (String) (var8.objectArgument), (byte) 122).openSocket(true);
                     } catch (ProxyAuthenticationRequiredException decompiledCaughtParameter1) {
                       decompiledCaughtException = decompiledCaughtParameter1;
                       var3_ref = (ProxyAuthenticationRequiredException) (Object) decompiledCaughtException;
@@ -386,7 +386,7 @@ final class PlatformTaskDispatcher implements Runnable {
                         }
                         break;
                       case 13:
-                        var3_ref2 = PlatformTaskDispatcher.a((String) (var8.objectArgument), -26, field_c, "");
+                        var3_ref2 = PlatformTaskDispatcher.openPreferencesFile((String) (var8.objectArgument), -26, field_c, "");
                         var8.result = var3_ref2;
                         break;
                       case 16:
@@ -448,7 +448,7 @@ final class PlatformTaskDispatcher implements Runnable {
                         }
                         break;
                       case 12:
-                        var3_ref2 = PlatformTaskDispatcher.a((String) (var8.objectArgument), -63, field_c, field_a);
+                        var3_ref2 = PlatformTaskDispatcher.openPreferencesFile((String) (var8.objectArgument), -63, field_c, field_a);
                         var8.result = var3_ref2;
                         break;
                       case 7:

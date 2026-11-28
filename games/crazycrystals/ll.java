@@ -74,7 +74,7 @@ final class ll {
           var9 = CrazyCrystals.field_B;
           try {
             df.field_c = wd.field_j;
-            AccountNameAvailabilityValidator.field_k = ob.field_l;
+            AccountNameAvailabilityValidator.field_k = ArchiveNetworkClient.field_l;
             if (param0 >= -80) {
               return;
             }
@@ -112,7 +112,7 @@ final class ll {
             to.field_c = 0;
             BoundedRandomAccessFile.field_e = 0;
             gm.field_c = new int[2];
-            tm.field_d = CipherPacketBuffer.a(var8, false, var7, -93, var4);
+            tm.field_d = CipherPacketBuffer.copyPuzzleTilesWithBorder(var8, false, var7, -93, var4);
             AccountNameAvailabilityValidator.a(var8, -8383, var7, tm.field_d);
             if (null == rn.field_q ||
               !rn.field_q.equals(hf.field_b[var10.field_d])) {

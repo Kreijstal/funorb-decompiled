@@ -98,7 +98,7 @@ final class fb {
         }
     }
 
-    final static void a(int param0, java.awt.Component param1) {
+    final static void detachMouseListeners(int param0, java.awt.Component param1) {
         try {
           param1.removeMouseListener(ConfirmedEmailAvailabilityValidator.mouseHandler);
           param1.removeMouseMotionListener(ConfirmedEmailAvailabilityValidator.mouseHandler);

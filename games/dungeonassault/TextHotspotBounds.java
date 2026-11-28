@@ -26,11 +26,11 @@ final class TextHotspotBounds extends IntrusiveNode {
         RuntimeException decompiledCaughtException = null;
         try {
           if (DualLinkNode.field_r.hasFileName(param0, "", (byte) -82)) {
-            stackIn_3_0 = ha.field_k.getMusicSampleByName(param0, (byte) 126, "");
+            stackIn_3_0 = ProxySocketConnector.field_k.getMusicSampleByName(param0, (byte) 126, "");
             return stackIn_3_0;
           }
           if (GuestPlayConfirmationForm.field_W.hasFileName(param0, "", (byte) -82)) {
-            stackIn_7_0 = ha.field_k.getSoundEffectByName(param0, "", param1 + 47712);
+            stackIn_7_0 = ProxySocketConnector.field_k.getSoundEffectByName(param0, "", param1 + 47712);
             return stackIn_7_0;
           }
           if (param1 == -10396) {

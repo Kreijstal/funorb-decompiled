@@ -855,7 +855,7 @@ public final class Transmogrify extends SessionGameApplet {
             for (var8_int = 0; var8_int < 3; var8_int++) {
               tb.field_b[var8_int] = new Sprite(var5_int, var7_int);
               tb.field_b[var8_int].bindAsRenderTarget();
-              dk.a(var7_int, ModalDialog.field_B, -28018, 0, 0, var5_int);
+              ArchiveSourceManager.a(var7_int, ModalDialog.field_B, -28018, 0, 0, var5_int);
               for (var9_int = 0; SoftwareRasterizer.field_h.length > var9_int; var9_int++) {
                 if (SoftwareRasterizer.field_h[var9_int] != 0 &&
                   7500402 > SoftwareRasterizer.field_h[var9_int]) {
@@ -882,7 +882,7 @@ public final class Transmogrify extends SessionGameApplet {
             rk.field_r[4] = new Sprite(640, 480);
             var12 = new Sprite(640, 480);
             var12.bindAsRenderTarget();
-            dk.a(377, DisplayNameSelectionPanel.field_C, -28018, 258, 72, 361);
+            ArchiveSourceManager.a(377, DisplayNameSelectionPanel.field_C, -28018, 258, 72, 361);
             ModalDialog.field_y.drawSilhouette(337, 14, 0);
             for (var4Lifetime2 = 0; var4Lifetime2 < SoftwareRasterizer.field_h.length; var4Lifetime2++) {
               if (SoftwareRasterizer.field_h[var4Lifetime2] != 0) {
@@ -1048,7 +1048,7 @@ public final class Transmogrify extends SessionGameApplet {
         }
         try {
           var2.setChannelProgram(128, 9, -23780);
-          uh.a((java.awt.Component) ((Object) AchievementNotice.field_k), 22050, -21, lk.field_b, var2, true);
+          ArchiveNetworkClient.a((java.awt.Component) ((Object) AchievementNotice.field_k), 22050, -21, lk.field_b, var2, true);
           uc.a(128, (byte) -119);
           u.field_b = 4473924;
           field_D = 128;
@@ -1140,9 +1140,9 @@ public final class Transmogrify extends SessionGameApplet {
           kb.clearStaticReferences(false);
           ub.clearStaticReferences(-31455);
           i.clearStaticReferences(true);
-          uh.c(-21);
+          ArchiveNetworkClient.c(-21);
           DiskCacheWorker.clearStaticReferences(107);
-          dk.clearStaticReferences((byte) 127);
+          ArchiveSourceManager.clearStaticReferences((byte) 127);
           BufferedRandomAccessFile.clearStaticReferences(-11509);
           BufferedSocket.clearStaticReferences(-102);
           ResourceArchive.clearStaticReferences(-120);
@@ -1234,7 +1234,7 @@ public final class Transmogrify extends SessionGameApplet {
           mc.clearStaticReferences(true);
           PcmOutputWorker.clearStaticReferences(-106);
           DelayedPcmStream.clearStaticReferences(0);
-          tj.clearStaticReferences((byte) 107);
+          SocketArchiveNetworkClient.clearStaticReferences((byte) 107);
           bk.clearStaticReferences(-123);
           NetworkArchiveRequest.clearStaticReferences(124);
           SectorCacheStore.clearStaticReferences((byte) 116);

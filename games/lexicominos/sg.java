@@ -59,7 +59,7 @@ final class sg {
             if (this.field_d != 4 &&
               this.field_d != 11) {
               if (this.field_d == 8) {
-                if (da.field_b == 98) {
+                if (MouseInputHandler.field_b == 98) {
                   if (this.field_c.field_d != -1 &&
                     1 >= this.field_c.field_d) {
                     this.field_c.a(2, 101);
@@ -67,14 +67,14 @@ final class sg {
                     this.field_c.a(0, 91);
                   }
                 }
-                if (da.field_b == 99) {
+                if (MouseInputHandler.field_b == 99) {
                   if (this.field_c.field_d == 2) {
                     this.field_c.a(0, 91);
                   } else {
                     this.field_c.a(2, 108);
                   }
                 }
-                if (da.field_b == 96) {
+                if (MouseInputHandler.field_b == 96) {
                   if (1 > this.field_c.field_d) {
                     this.field_c.a(1, 113);
                   } else {
@@ -83,7 +83,7 @@ final class sg {
                     }
                   }
                 }
-                if (97 == da.field_b) {
+                if (97 == MouseInputHandler.field_b) {
                   if (this.field_c.field_d != 0) {
                     if (this.field_c.field_d < 2) {
                       this.field_c.a(0, 89);
@@ -97,7 +97,7 @@ final class sg {
               }
               if (this.field_d > 8 &&
                 this.field_d < 11) {
-                if (98 == da.field_b) {
+                if (98 == MouseInputHandler.field_b) {
                   if (this.field_c.field_d != -1 &&
                     this.field_c.field_d <= 2) {
                     this.field_c.a(3, 126);
@@ -105,14 +105,14 @@ final class sg {
                     this.field_c.a(1, 114);
                   }
                 }
-                if (da.field_b == 99) {
+                if (MouseInputHandler.field_b == 99) {
                   if (this.field_c.field_d == 3) {
                     this.field_c.a(1, param0 ^ -17167);
                   } else {
                     this.field_c.a(3, 88);
                   }
                 }
-                if (da.field_b == 96) {
+                if (MouseInputHandler.field_b == 96) {
                   if (this.field_c.field_d < 1) {
                     this.field_c.a(2, 97);
                   } else {
@@ -121,7 +121,7 @@ final class sg {
                     }
                   }
                 }
-                if (da.field_b == 97) {
+                if (MouseInputHandler.field_b == 97) {
                   if (0 != this.field_c.field_d) {
                     if (this.field_c.field_d != 1) {
                       if (3 > this.field_c.field_d) {
@@ -140,7 +140,7 @@ final class sg {
               this.field_c.a((byte) -123);
               return;
             }
-            if (da.field_b == 98) {
+            if (MouseInputHandler.field_b == 98) {
               if (this.field_c.field_d != -1 &&
                 this.field_c.field_d <= 1) {
                 this.field_c.a(2, 107);
@@ -148,14 +148,14 @@ final class sg {
                 this.field_c.a(1, param0 + 17376);
               }
             }
-            if (da.field_b == 99) {
+            if (MouseInputHandler.field_b == 99) {
               if (this.field_c.field_d != 2) {
                 this.field_c.a(2, param0 ^ -17213);
               } else {
                 this.field_c.a(1, 86);
               }
             }
-            if (96 == da.field_b) {
+            if (96 == MouseInputHandler.field_b) {
               if (this.field_c.field_d < 1) {
                 this.field_c.a(1, 116);
               } else {
@@ -164,7 +164,7 @@ final class sg {
                 }
               }
             }
-            if (da.field_b == 97) {
+            if (MouseInputHandler.field_b == 97) {
               if (0 == this.field_c.field_d) {
                 this.field_c.a(1, 109);
               } else {
@@ -185,7 +185,7 @@ final class sg {
         }
     }
 
-    final static void a(java.awt.Component param0, int param1) {
+    final static void attachKeyboardListeners(java.awt.Component param0, int param1) {
         RuntimeException runtimeException = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
@@ -257,9 +257,9 @@ final class sg {
           var4 = -50 / ((param1 + 36) / 58);
           if (this.field_e <= -1) {
             if (!AccountRequestState.a((byte) -116)) {
-              bi.field_a.drawParagraph(TextFieldValidator.field_k, 48, 50, 242, qc.field_c[this.field_d] - 100, 0, -1, 1, 1, bi.field_a.field_C);
+              KeyboardInputHandler.field_a.drawParagraph(TextFieldValidator.field_k, 48, 50, 242, qc.field_c[this.field_d] - 100, 0, -1, 1, 1, KeyboardInputHandler.field_a.field_C);
             } else {
-              bi.field_a.drawParagraph(TextFieldValidator.field_k + "<br><br>" + ModalDialog.field_G, 48, 50, 242, qc.field_c[this.field_d] - 100, 0, -1, 1, 1, bi.field_a.field_C);
+              KeyboardInputHandler.field_a.drawParagraph(TextFieldValidator.field_k + "<br><br>" + ModalDialog.field_G, 48, 50, 242, qc.field_c[this.field_d] - 100, 0, -1, 1, 1, KeyboardInputHandler.field_a.field_C);
             }
             return;
           }
@@ -271,50 +271,50 @@ final class sg {
             stackIn_16_0 = (var5 == 0) ? 1 : 0;
           }
           var6 = stackIn_16_0;
-          bi.field_a.drawCentred(df.field_d[this.field_e], 155, 58, 0, -1);
-          var7 = bi.field_a.field_C;
+          KeyboardInputHandler.field_a.drawCentred(df.field_d[this.field_e], 155, 58, 0, -1);
+          var7 = KeyboardInputHandler.field_a.field_C;
           var8 = 58 + var7;
           if (var5 == 0) {
-            bi.field_a.drawCentred(ProgressMessageDialog.field_mb, 155, var8, 16711680, -1);
+            KeyboardInputHandler.field_a.drawCentred(ProgressMessageDialog.field_mb, 155, var8, 16711680, -1);
             this.a(e.field_u, 0, 91, var8);
           } else {
-            bi.field_a.drawCentred(ni.field_c, 155, var8, 0, -1);
+            KeyboardInputHandler.field_a.drawCentred(ni.field_c, 155, var8, 0, -1);
             this.a(ef.field_d[this.field_e], 0, 91, var8);
           }
-          var8 = var8 + (128 + bi.field_a.field_E);
+          var8 = var8 + (128 + KeyboardInputHandler.field_a.field_E);
           var9 = hc.field_ib[this.field_e];
           if (var6 != 0) {
             var9 = of.field_b;
             var10 = var9;
             var10Lifetime2 = var9;
           }
-          bi.field_a.drawParagraph(var9, 48, -bi.field_a.field_E + var8, 242, 1000, 0, -1, 1, 0, var7);
+          KeyboardInputHandler.field_a.drawParagraph(var9, 48, -KeyboardInputHandler.field_a.field_E + var8, 242, 1000, 0, -1, 1, 0, var7);
           var8 = var8 + 2 * var7;
           var10Lifetime1 = Integer.toString(hi.field_c[this.field_e] * 100);
           if (var6 != 0) {
             var10Lifetime1 = "?";
           }
-          bi.field_a.drawCentred(UiWidget.field_s + var10Lifetime1, 169, var8, 0, -1);
+          KeyboardInputHandler.field_a.drawCentred(UiWidget.field_s + var10Lifetime1, 169, var8, 0, -1);
           var8 = var8 + var7;
-          var11 = bi.field_a.stringWidth(he.field_i);
+          var11 = KeyboardInputHandler.field_a.stringWidth(he.field_i);
           if (var6 == 0) {
             var12 = hi.field_c[this.field_e];
             var13 = (var12 - 1) * 10 + (var11 + (ob.field_e.field_p >> 2));
             var14 = -var13 + 338 >> 1;
-            bi.field_a.drawString(he.field_i, var14, var8, 0, -1);
+            KeyboardInputHandler.field_a.drawString(he.field_i, var14, var8, 0, -1);
             var14 = var14 + var11;
             while (0 < var12) {
-              ob.field_e.drawQuarterSizeAveraged(var14, -bi.field_a.field_E + var8);
+              ob.field_e.drawQuarterSizeAveraged(var14, -KeyboardInputHandler.field_a.field_E + var8);
               var14 += 10;
               var12--;
             }
           } else {
-            var12 = var11 - (-(ob.field_e.field_p >> 2) - bi.field_a.stringWidth(id.field_t));
+            var12 = var11 - (-(ob.field_e.field_p >> 2) - KeyboardInputHandler.field_a.stringWidth(id.field_t));
             var13 = 338 - var12 >> 1;
-            bi.field_a.drawString(he.field_i, var13, var8, 0, -1);
+            KeyboardInputHandler.field_a.drawString(he.field_i, var13, var8, 0, -1);
             var13 = var13 + var11;
-            ob.field_e.drawQuarterSizeAveraged(var13, var8 - bi.field_a.field_E);
-            bi.field_a.drawString(id.field_t, var13 + (ob.field_e.field_p >> 2), var8, 0, -1);
+            ob.field_e.drawQuarterSizeAveraged(var13, var8 - KeyboardInputHandler.field_a.field_E);
+            KeyboardInputHandler.field_a.drawString(id.field_t, var13 + (ob.field_e.field_p >> 2), var8, 0, -1);
           }
           var8 = var8 + ob.field_e.field_u;
           return;
@@ -581,7 +581,7 @@ final class sg {
                                           if (this.field_c.d(0)) {
                                             if (null == ff.field_b) {
                                               var4_int = param1 ? 1 : 0;
-                                              DiskCacheWorker.a(3 * bi.field_a.field_E >> 1, 4, 320, jh.field_b, 12, bi.field_a, 4, (byte) -33, nh.field_c, var4_int != 0, 1 + bi.field_a.field_E, 240);
+                                              DiskCacheWorker.a(3 * KeyboardInputHandler.field_a.field_E >> 1, 4, 320, jh.field_b, 12, KeyboardInputHandler.field_a, 4, (byte) -33, nh.field_c, var4_int != 0, 1 + KeyboardInputHandler.field_a.field_E, 240);
                                             } else {
                                               af.a(-85);
                                             }
@@ -1092,7 +1092,7 @@ final class sg {
           }
           if (!param1) {
             var4 = (java.awt.Component) null;
-            sg.a((java.awt.Component) null, -7);
+            sg.attachKeyboardListeners((java.awt.Component) null, -7);
           }
           if (this.field_d == 3) {
             var3_int = 1;
@@ -1432,11 +1432,11 @@ final class sg {
                       var10 = id.field_w[63 & var19[var8_int]].field_h;
                       stackIn_88_0 = (var6 != var8_int) ? 0 : 10161935;
                       var11 = stackIn_88_0;
-                      bi.field_a.drawString(var9, 66, pa.field_d + (var7 + (24 - pa.field_d) / 2), var11, -1);
-                      bi.field_a.drawRightAligned(Integer.toString(var19[var8_int] >> 6), 301, pa.field_d + (var7 + (24 - pa.field_d) / 2), var11, -1);
+                      KeyboardInputHandler.field_a.drawString(var9, 66, pa.field_d + (var7 + (24 - pa.field_d) / 2), var11, -1);
+                      KeyboardInputHandler.field_a.drawRightAligned(Integer.toString(var19[var8_int] >> 6), 301, pa.field_d + (var7 + (24 - pa.field_d) / 2), var11, -1);
                       this.a(-(var10.field_u / 2) + var7 + 12, param0 ^ -109, 64, var10, -(var10.field_p / 2) + 36);
                       var2 = "";
-                      bi.field_a.drawRightAligned(1 + var8_int + ".", 50, var7 - (-pa.field_d - (24 - pa.field_d) / 2), var11, -1);
+                      KeyboardInputHandler.field_a.drawRightAligned(1 + var8_int + ".", 50, var7 - (-pa.field_d - (24 - pa.field_d) / 2), var11, -1);
                     }
                     var7 += 27;
                   }
@@ -1444,8 +1444,8 @@ final class sg {
                     ((var6 == -1))) {
                     var8 = og.field_c;
                     var16 = el.field_c.field_m.field_h;
-                    bi.field_a.drawString(var8, 66, var7 + pa.field_d + (-pa.field_d + 24) / 2, 10161935, -1);
-                    bi.field_a.drawRightAligned(Integer.toString(el.field_c.field_J), 301, pa.field_d + var7 + (-pa.field_d + 24) / 2, 10161935, -1);
+                    KeyboardInputHandler.field_a.drawString(var8, 66, var7 + pa.field_d + (-pa.field_d + 24) / 2, 10161935, -1);
+                    KeyboardInputHandler.field_a.drawRightAligned(Integer.toString(el.field_c.field_J), 301, pa.field_d + var7 + (-pa.field_d + 24) / 2, 10161935, -1);
                     this.a(12 + var7 - var16.field_u / 2, param0 ^ -102, 64, var16, 36 - var16.field_p / 2);
                   }
                   decompiledFrameRemainder0 = false;
@@ -1460,16 +1460,16 @@ final class sg {
               var2 = PcmOutputWorker.field_a;
               jh.field_d.drawParagraph(ModalDialog.field_G, 20, -jh.field_d.field_E + 280, 271, 1000, 0, -1, 1, 0, var3);
             }
-            bi.field_a.drawParagraph(var2, 20, -bi.field_a.field_E + 200, 271, 1000, 0, -1, 1, 0, var3);
+            KeyboardInputHandler.field_a.drawParagraph(var2, 20, -KeyboardInputHandler.field_a.field_E + 200, 271, 1000, 0, -1, 1, 0, var3);
           } else {
             if (this.field_d != 5) {
               if (7 != this.field_d) {
                 if (this.field_d == 6) {
-                  var2_intLifetime1 = 50 + bi.field_a.field_E;
-                  var3 = bi.field_a.field_G + (bi.field_a.field_t + 4);
-                  var2_intLifetime1 = var2_intLifetime1 + var3 * bi.field_a.drawParagraph(me.field_u, 40, -bi.field_a.field_E + var2_intLifetime1, 254, 1000, 0, -1, 1, 0, var3);
+                  var2_intLifetime1 = 50 + KeyboardInputHandler.field_a.field_E;
+                  var3 = KeyboardInputHandler.field_a.field_G + (KeyboardInputHandler.field_a.field_t + 4);
+                  var2_intLifetime1 = var2_intLifetime1 + var3 * KeyboardInputHandler.field_a.drawParagraph(me.field_u, 40, -KeyboardInputHandler.field_a.field_E + var2_intLifetime1, 254, 1000, 0, -1, 1, 0, var3);
                   stackIn_50_0 = var2_intLifetime1;
-                  stackIn_50_1 = bi.field_a;
+                  stackIn_50_1 = KeyboardInputHandler.field_a;
                   if (MouseWheelInput.field_a == 0) {
                     stackIn_51_2 = 0;
                   } else {
@@ -1491,10 +1491,10 @@ final class sg {
                     stackIn_55_2 = stackIn_51_2;
                     stackIn_55_5 = true;
                   }
-                  var2_intLifetime1 = stackIn_55_0 + ((BinaryBitmapFont) (Object) stackIn_55_1).drawParagraph(FullscreenStatusDialog.a(stackIn_55_2 != 0, stackIn_54_3, stackIn_54_4, stackIn_55_5), 40, var2_intLifetime1 - bi.field_a.field_E, 254, 1000, 0, -1, 1, 0, var3) * var3;
+                  var2_intLifetime1 = stackIn_55_0 + ((BinaryBitmapFont) (Object) stackIn_55_1).drawParagraph(FullscreenStatusDialog.a(stackIn_55_2 != 0, stackIn_54_3, stackIn_54_4, stackIn_55_5), 40, var2_intLifetime1 - KeyboardInputHandler.field_a.field_E, 254, 1000, 0, -1, 1, 0, var3) * var3;
                   var2_intLifetime1 = var2_intLifetime1 + (gg.field_a[0].field_x * 2 + var3);
                   stackIn_58_0 = var2_intLifetime1;
-                  stackIn_58_1 = bi.field_a;
+                  stackIn_58_1 = KeyboardInputHandler.field_a;
                   stackIn_58_2 = 0;
                   stackIn_58_3 = param0 - 102;
                   if (MouseWheelInput.field_a == 0) {
@@ -1522,11 +1522,11 @@ final class sg {
                     stackIn_63_4 = stackIn_59_4;
                     stackIn_63_5 = true;
                   }
-                  var2_intLifetime1 = stackIn_63_0 + ((BinaryBitmapFont) (Object) stackIn_63_1).drawParagraph(ac.a(stackIn_63_2 != 0, stackIn_63_3, stackIn_63_4 != 0, stackIn_63_5), 40, -bi.field_a.field_E + var2_intLifetime1, 254, 1000, 0, -1, 1, 0, var3) * var3;
+                  var2_intLifetime1 = stackIn_63_0 + ((BinaryBitmapFont) (Object) stackIn_63_1).drawParagraph(ac.a(stackIn_63_2 != 0, stackIn_63_3, stackIn_63_4 != 0, stackIn_63_5), 40, -KeyboardInputHandler.field_a.field_E + var2_intLifetime1, 254, 1000, 0, -1, 1, 0, var3) * var3;
                   var2_intLifetime1 = var2_intLifetime1 + gg.field_a[0].field_x;
                   stackIn_66_0 = var2_intLifetime1;
                   stackIn_66_1 = var3;
-                  stackIn_66_2 = bi.field_a;
+                  stackIn_66_2 = KeyboardInputHandler.field_a;
                   if (el.field_c.field_J == 0) {
                     stackIn_67_3 = 0;
                   } else {
@@ -1549,7 +1549,7 @@ final class sg {
                     stackIn_71_3 = stackIn_67_3;
                     stackIn_71_4 = true;
                   }
-                  var2_intLifetime1 = stackIn_71_0 + stackIn_71_1 * ((BinaryBitmapFont) (Object) stackIn_71_2).drawParagraph(AwtRasterBuffer.a(stackIn_71_3 != 0, stackIn_71_4, false, -11902), 40, var2_intLifetime1 - bi.field_a.field_E, 254, 1000, 0, -1, 1, 0, var3);
+                  var2_intLifetime1 = stackIn_71_0 + stackIn_71_1 * ((BinaryBitmapFont) (Object) stackIn_71_2).drawParagraph(AwtRasterBuffer.a(stackIn_71_3 != 0, stackIn_71_4, false, -11902), 40, var2_intLifetime1 - KeyboardInputHandler.field_a.field_E, 254, 1000, 0, -1, 1, 0, var3);
                 } else {
                   if (this.field_d != 3 &&
                     this.field_d != 12) {
@@ -1724,9 +1724,9 @@ final class sg {
               if (200 < var2_intLifetime1) {
                 var2_intLifetime1 = 200;
               }
-              eh.a(0, lg.field_c, 10 + 24 * ((12 - sj.field_l.length()) / 2), 0, sj.field_l, var2_intLifetime1);
-              eh.a(0, lg.field_c, 10 + (-eb.field_a.length() + 12) / 2 * 24, 0, eb.field_a, 24 + var2_intLifetime1);
-              eh.a(0, lg.field_c, 10 + 24 * ((-td.field_g.length() + 12) / 2), param0 - 48, td.field_g, 48 + var2_intLifetime1);
+              eh.a(0, SocketConnector.field_c, 10 + 24 * ((12 - sj.field_l.length()) / 2), 0, sj.field_l, var2_intLifetime1);
+              eh.a(0, SocketConnector.field_c, 10 + (-eb.field_a.length() + 12) / 2 * 24, 0, eb.field_a, 24 + var2_intLifetime1);
+              eh.a(0, SocketConnector.field_c, 10 + 24 * ((-td.field_g.length() + 12) / 2), param0 - 48, td.field_g, 48 + var2_intLifetime1);
               var11 = (gd) (this.field_m.field_j.beginForward(true));
               while (var11 != null) {
                 var11.a((byte) -34);
@@ -1986,7 +1986,7 @@ final class sg {
         var3 = Lexicominos.field_L ? 1 : 0;
         try {
           while (IterableNodeHashTable.a((byte) -72)) {
-            if (da.field_b != 13) {
+            if (MouseInputHandler.field_b != 13) {
               this.a(-17253);
               if (this.field_c.field_d == -1) {
                 continue;
@@ -2010,7 +2010,7 @@ final class sg {
           this.field_c.a(this.a(ef.field_a, ProxyAuthenticationRequiredException.field_a, 640), this.a(bk.field_b, ResourceArchive.field_e, 640), param0 ^ 49);
           if (param0 != -88) {
             var4 = (java.awt.Component) null;
-            sg.a((java.awt.Component) null, -97);
+            sg.attachKeyboardListeners((java.awt.Component) null, -97);
           }
           if (this.field_c.field_d != -1) {
             this.a(95, true, this.field_c.field_d);

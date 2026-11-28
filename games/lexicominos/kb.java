@@ -3,7 +3,7 @@
  */
 abstract class kb {
     static int field_a;
-    static wb field_b;
+    static ArchiveNetworkClient field_b;
 
     public static void a(boolean param0) {
         RuntimeException decompiledCaughtException = null;
@@ -1083,7 +1083,7 @@ abstract class kb {
                 }
                 var2 = StandardContentDialog.a(33, "goback");
                 if (null != var2) {
-                  ch.field_g = ni.a((byte) -55, var2);
+                  ProxySocketConnector.field_g = ni.a((byte) -55, var2);
                 }
                 var2 = StandardContentDialog.a(33, "otheroptions");
                 if (var2 != null) {
@@ -1563,7 +1563,7 @@ abstract class kb {
                 }
                 var2 = StandardContentDialog.a(33, "create_optin_news_tooltip");
                 if (null != var2) {
-                  wb.field_c = ni.a((byte) -55, var2);
+                  ArchiveNetworkClient.field_c = ni.a((byte) -55, var2);
                 }
                 var2 = StandardContentDialog.a(33, "create_u13_email_tooltip");
                 if (null != var2) {
@@ -1771,7 +1771,7 @@ abstract class kb {
                 }
                 var2 = StandardContentDialog.a(33, "waitingfor_graphics");
                 if (var2 != null) {
-                  qf.field_s = ni.a((byte) -55, var2);
+                  SocketArchiveNetworkClient.field_s = ni.a((byte) -55, var2);
                 }
                 var2 = StandardContentDialog.a(33, "waitingfor_models");
                 if (var2 != null) {

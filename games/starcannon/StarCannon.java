@@ -740,7 +740,7 @@ public final class StarCannon extends NetworkGameClient {
                                             if (1 == nf.field_l) {
                                                 /* Inlined CFG state: 112. */
                                                 {
-                                                    var10_ref_String = d.field_n + var9 + eh.field_c;
+                                                    var10_ref_String = d.field_n + var9 + ArchiveNetworkClient.field_c;
                                                     statePc = 115;
                                                     continue scanLoop1;
                                                 }
@@ -1231,7 +1231,7 @@ public final class StarCannon extends NetworkGameClient {
                   mj.a(255, 12, 0, 41, 100);
                   ti.field_f.removeOwnedListener(ResizableModalDialog.field_P);
                   ResizableModalDialog.field_P.f();
-                  ResizableModalDialog.field_P = fl.field_h;
+                  ResizableModalDialog.field_P = ProxySocketConnector.field_h;
                   ti.field_f.addListener(ResizableModalDialog.field_P);
                   ResizableModalDialog.field_P.a(ByteArrayPoolSupport.field_b);
                   break regionExit1;
@@ -1245,7 +1245,7 @@ public final class StarCannon extends NetworkGameClient {
                   mj.a(255, 12, 0, 41, 100);
                   ti.field_f.removeOwnedListener(ResizableModalDialog.field_P);
                   ResizableModalDialog.field_P.f();
-                  ResizableModalDialog.field_P = fl.field_h;
+                  ResizableModalDialog.field_P = ProxySocketConnector.field_h;
                   ti.field_f.addListener(ResizableModalDialog.field_P);
                   ResizableModalDialog.field_P.a(ByteArrayPoolSupport.field_b);
                   break regionExit1;
@@ -1275,7 +1275,7 @@ public final class StarCannon extends NetworkGameClient {
                       mj.a(255, param0 ^ -244, 0, 41, 100);
                       ti.field_f.removeOwnedListener(ResizableModalDialog.field_P);
                       ResizableModalDialog.field_P.f();
-                      ResizableModalDialog.field_P = fl.field_h;
+                      ResizableModalDialog.field_P = ProxySocketConnector.field_h;
                       ti.field_f.addListener(ResizableModalDialog.field_P);
                       ResizableModalDialog.field_P.a(ByteArrayPoolSupport.field_b);
                     }
@@ -1420,7 +1420,7 @@ public final class StarCannon extends NetworkGameClient {
                             mj.a(255, 12, 0, 41, 100);
                             ti.field_f.removeOwnedListener(ResizableModalDialog.field_P);
                             ResizableModalDialog.field_P.f();
-                            ResizableModalDialog.field_P = fl.field_h;
+                            ResizableModalDialog.field_P = ProxySocketConnector.field_h;
                             ti.field_f.addListener(ResizableModalDialog.field_P);
                             ResizableModalDialog.field_P.a(ByteArrayPoolSupport.field_b);
                           }
@@ -1792,7 +1792,7 @@ public final class StarCannon extends NetworkGameClient {
           ModalDialogHost.j(32);
           return;
         }
-        if (fl.field_f == null) {
+        if (ProxySocketConnector.field_f == null) {
           ma.a(sj.field_C, -13923, 80.0f);
           this.renderClientFrame((byte) 22);
           gg.field_f = SecondaryNodeDequeIterator.a("smlships", 126, "", ValidationStatusIcon.field_F);
@@ -1828,22 +1828,22 @@ public final class StarCannon extends NetworkGameClient {
             var17.trimTransparentBorders();
           }
           DisplayNameSelectionPanel.field_y.setAsRasterTarget(param1 + 1333);
-          fl.field_f = SecondaryNodeDequeIterator.a("debris", 96, "", ValidationStatusIcon.field_F);
+          ProxySocketConnector.field_f = SecondaryNodeDequeIterator.a("debris", 96, "", ValidationStatusIcon.field_F);
           var4 = new Sprite[40];
           for (var5_int = 0; var5_int < 4; var5_int++) {
-            var4[36 + var5_int] = fl.field_f[var5_int + 12];
+            var4[36 + var5_int] = ProxySocketConnector.field_f[var5_int + 12];
           }
           var13 = 0;
           var5_intLifetime1 = var13;
           while (var13 < 12) {
-            var4[var13] = fl.field_f[var13];
-            var4[12 + var13] = fl.field_f[var13].copy();
+            var4[var13] = ProxySocketConnector.field_f[var13];
+            var4[12 + var13] = ProxySocketConnector.field_f[var13].copy();
             var4[12 + var13].rotateClockwise();
-            var4[24 + var13] = fl.field_f[var13].copy();
+            var4[24 + var13] = ProxySocketConnector.field_f[var13].copy();
             var4[24 + var13].rotateCounterclockwise();
             var13++;
           }
-          fl.field_f = var4;
+          ProxySocketConnector.field_f = var4;
           ma.field_e = SecondaryNodeDequeIterator.a("fr_thin_sqr_in", -49, "", ValidationStatusIcon.field_F);
           gb.field_v = SecondaryNodeDequeIterator.a("fr_thin_sqr_ex", 119, "", ValidationStatusIcon.field_F);
           ha.field_a = SecondaryNodeDequeIterator.a("fr_grid_sql_in", 119, "", ValidationStatusIcon.field_F);
@@ -1986,7 +1986,7 @@ public final class StarCannon extends NetworkGameClient {
         nf.field_e = 0;
         eg.field_f = new wd(fb.field_t);
         gd.field_a = new wd(TextFieldValidator.field_i);
-        fl.field_h = new wd(r.field_b);
+        ProxySocketConnector.field_h = new wd(r.field_b);
         ResizableModalDialog.field_P = eg.field_f;
         ResizableModalDialog.field_P.a(ByteArrayPoolSupport.field_b);
         ti.field_f.addListener(ResizableModalDialog.field_P);
@@ -3082,7 +3082,7 @@ public final class StarCannon extends NetworkGameClient {
                               mj.a(255, 12, 0, 41, 100);
                               ti.field_f.removeOwnedListener(ResizableModalDialog.field_P);
                               ResizableModalDialog.field_P.f();
-                              ResizableModalDialog.field_P = fl.field_h;
+                              ResizableModalDialog.field_P = ProxySocketConnector.field_h;
                               ti.field_f.addListener(ResizableModalDialog.field_P);
                               ResizableModalDialog.field_P.a(ByteArrayPoolSupport.field_b);
                               break regionExit1;
@@ -3228,7 +3228,7 @@ public final class StarCannon extends NetworkGameClient {
         lh.a((byte) -113);
         wd.clearStaticReferences();
         AudioOutput.clearStaticReferences();
-        eh.g((byte) 101);
+        ArchiveNetworkClient.g((byte) 101);
         DiskCacheWorker.resetStaticState((byte) 27);
         BufferedRandomAccessFile.clearStaticReferences(-12539);
         BufferedSocket.resetStaticState(105);
@@ -3279,7 +3279,7 @@ public final class StarCannon extends NetworkGameClient {
         v.clearStaticReferences((byte) -63);
         s.clearStaticReferences((byte) -104);
         hh.a((byte) -22);
-        vh.h((byte) -98);
+        SocketArchiveNetworkClient.h((byte) -98);
         jh.b(126);
         NetworkArchiveRequest.clearDeclaredStaticReferences((byte) 108);
         DiskArchiveRequest.clearDeclaredStaticReferences(-64);
@@ -3336,7 +3336,7 @@ public final class StarCannon extends NetworkGameClient {
         b.clearStaticReferences(true);
         ic.clearStaticReferences((byte) -120);
         wj.a(false);
-        oe.b(12);
+        SocketConnector.b(12);
         ProxyAuthenticationRequiredException.clearStaticReferences(-11434);
         NanoFrameTimer.b(-22720);
         ImageProducerRasterBuffer.clearStaticReferences(0);
@@ -3368,7 +3368,7 @@ public final class StarCannon extends NetworkGameClient {
         SecondaryNodeDeque.clearStaticReferences(-110);
         mi.clearStaticReferences(1);
         ej.clearDeclaredStaticReferences(99);
-        fl.clearStaticReferences(115);
+        ProxySocketConnector.clearStaticReferences(115);
         cd.clearStaticReferences(8192);
         NodeHashTableIterator.a(true);
         SecondaryNodeDequeIterator.d(-18147);
@@ -3648,24 +3648,24 @@ public final class StarCannon extends NetworkGameClient {
         int fieldTemp$0 = 0;
         int var3;
         var3 = field_A;
-        oe.field_a = oe.field_a - 1;
+        SocketConnector.field_a = SocketConnector.field_a - 1;
         SoundCache.field_d = SoundCache.field_d + 1;
         if (kg.field_a != 0) {
           na.field_d = na.field_d + fc.field_e;
           il.field_i = il.field_i + 2;
-          oe.field_a = oe.field_a + 1;
+          SocketConnector.field_a = SocketConnector.field_a + 1;
           SoundCache.field_d = SoundCache.field_d + 1;
           fc.field_e = fc.field_e - jl.field_d * fc.field_e;
         }
         if (wc.field_c[98]) {
           jl.field_d = jl.field_d + pe.field_d;
           SoundCache.field_d = SoundCache.field_d + 5;
-          oe.field_a = oe.field_a + 5;
+          SocketConnector.field_a = SocketConnector.field_a + 5;
           il.field_i = il.field_i + 10;
           fc.field_e = fc.field_e - pe.field_d * na.field_d;
         }
         if (wc.field_c[99]) {
-          oe.field_a = oe.field_a + 3;
+          SocketConnector.field_a = SocketConnector.field_a + 3;
           na.field_d = na.field_d - ResizableModalDialog.field_Q;
           fc.field_e = fc.field_e + jl.field_d * ResizableModalDialog.field_Q;
           SoundCache.field_d = SoundCache.field_d + 7;
@@ -3674,7 +3674,7 @@ public final class StarCannon extends NetworkGameClient {
         if (wc.field_c[84]) {
           fc.field_e = fc.field_e - na.field_d;
           jl.field_d = jl.field_d + 1;
-          oe.field_a = oe.field_a + 10;
+          SocketConnector.field_a = SocketConnector.field_a + 10;
           SoundCache.field_d = SoundCache.field_d - 10;
         }
         va.field_f = va.field_f + 1;
@@ -3893,7 +3893,7 @@ public final class StarCannon extends NetworkGameClient {
                                 mj.a(255, 12, 0, 41, 100);
                                 ti.field_f.removeOwnedListener(ResizableModalDialog.field_P);
                                 ResizableModalDialog.field_P.f();
-                                ResizableModalDialog.field_P = fl.field_h;
+                                ResizableModalDialog.field_P = ProxySocketConnector.field_h;
                                 ti.field_f.addListener(ResizableModalDialog.field_P);
                                 ResizableModalDialog.field_P.a(ByteArrayPoolSupport.field_b);
                               }

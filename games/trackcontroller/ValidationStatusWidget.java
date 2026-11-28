@@ -25,7 +25,7 @@ final class ValidationStatusWidget extends RichTextWidget {
           int var1_int = 0;
           int var3 = TrackController.field_F ? 1 : 0;
           if (SecondaryNodeDeque.field_d != null) {
-            SecondaryNodeDeque.field_d.c((byte) 101);
+            SecondaryNodeDeque.field_d.close((byte) 101);
           }
           if (param0 != 10228) {
             return;

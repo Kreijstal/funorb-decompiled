@@ -123,7 +123,7 @@ final class jf {
               stackIn_11_0 = 0;
               return stackIn_11_0;
             }
-            if (uf.field_p[var1_int] != null) {
+            if (SocketArchiveNetworkClient.field_p[var1_int] != null) {
               var1_int++;
               continue;
             }

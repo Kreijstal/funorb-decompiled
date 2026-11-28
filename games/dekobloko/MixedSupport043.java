@@ -39,7 +39,7 @@ abstract class MixedSupport043 {
         try {
           cipherPacketBufferLocal4 = SocketFactory.cipherPacketBufferState0002;
           cipherPacketBufferLocal5 = cipherPacketBufferLocal4;
-          cipherPacketBufferLocal5.performAction1641(integerArgument2, -4);
+          cipherPacketBufferLocal5.writeCipheredByte(integerArgument2, -4);
           cipherPacketBufferLocal5.position = cipherPacketBufferLocal5.position + 1;
           integerLocal2 = cipherPacketBufferLocal5.position;
           cipherPacketBufferLocal5.writeByte(true, 1);

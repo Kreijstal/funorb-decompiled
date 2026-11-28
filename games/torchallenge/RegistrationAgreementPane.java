@@ -98,10 +98,10 @@ final class RegistrationAgreementPane extends DequeWidgetContainer implements Te
         if (0 != param0 &&
           param0 != 2) {
           if (param0 == 1) {
-            var3Lifetime3 = oa.field_a[1];
-            var2Lifetime3 = oa.field_a[0];
-            var4Lifetime3 = oa.field_a[2];
-            var5Lifetime3 = oa.field_a[3];
+            var3Lifetime3 = ArchiveSourceManager.field_a[1];
+            var2Lifetime3 = ArchiveSourceManager.field_a[0];
+            var4Lifetime3 = ArchiveSourceManager.field_a[2];
+            var5Lifetime3 = ArchiveSourceManager.field_a[3];
             sf.a(DraggableWidgetContainer.field_N, InteractiveWidget.field_L, var3Lifetime3, var5Lifetime3, var2Lifetime3, var4Lifetime3, (byte) -55);
           }
         } else {

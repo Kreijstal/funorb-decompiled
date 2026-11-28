@@ -9,7 +9,7 @@ final class vf {
         if (param0) {
           return;
         }
-        qh.a(17, true);
+        MouseInputHandler.a(17, true);
     }
 
     final static void a(byte param0) {
